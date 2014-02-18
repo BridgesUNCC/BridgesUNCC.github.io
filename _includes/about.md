@@ -1,0 +1,2 @@
+The objective of this project is to transform the student experience in computing education through a software infrastructure termed BRIDGES. BRIDGES (Bridging Real-world Infrastructure Designed to Goal-align, Engage, and Stimulate) will provide easy-to-use interfaces to real-world, Internet-based information systems that are exciting, engaging, and commonly used by undergraduate students, such as Facebook, Twitter, and Google Maps. 
+<hr/>

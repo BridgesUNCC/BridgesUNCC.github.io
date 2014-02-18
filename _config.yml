@@ -1,0 +1,53 @@
+# General Jekyll Config
+pygments: true
+url: http://example.com
+lsi: false
+exclude: [LICENSE, CNAME, README.md, .gitignore]
+
+# Theme customization - please change from the defaults!
+theme:
+  # Color for top bar, links, etc
+  highlight_color: '#53BF6B'
+
+  # Profile links on the left sidebar, leave blank to ignore
+  social:
+    github: stevemacn/bridgesAPI 
+    #bitbucket: philipj
+    #stackexchange: 348619
+    #stackoverflow: 348619
+    twitter: bridgesuncc 
+    #facebook: zuck
+    #tumblr: animalygifs
+    #linkedin: philipjagielski
+    #gplus: 110552447039675960964
+
+  # "Welcome to  _______"
+  name: Bridges
+  email: smacnei2@uncc.edu 
+  tagline: "Connecting students with datasources"
+
+  # Google Analytics key, leave blank to ignore
+  google_analytics_key: UA-xxxx-x
+
+  # Toggle "Postings are my own" disclaimer in footer
+  show_disclaimer: true
+
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title/
+
+markdown: kramdown
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
+
+  coderay:
+    coderay_line_numbers: 
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: class
