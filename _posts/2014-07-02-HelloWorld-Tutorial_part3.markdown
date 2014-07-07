@@ -32,7 +32,7 @@ HelloWorld.setColor("red"); OR HelloWorld.setColor("#FF0000");
 
 ## Step 2: Changing the size of a vertex
 
-> This only requires further method calls on the same vertex to change its properties. We should also go ahead and create another vertex to prepare for the next part of the tutorial.
+> This only requires further method calls on the same vertex to access its properties and change its size. We should also go ahead and create another vertex to prepare for the next part of the tutorial.
 
 {% highlight java %}
 
@@ -48,9 +48,11 @@ Vertex GoodByeWorld = new Vertex("GoodByeWorld", gv);
 
 > We only need the two vertices that we want to connect and one method call.
 
+> Note: Pay special attention to the order that this line is written.
+
 {% highlight java %}
 
-HellowWorld.createEdge(GoodByeWorld);
+HelloWorld.createEdge(GoodByeWorld);
 
 {% endhighlight %}
 
