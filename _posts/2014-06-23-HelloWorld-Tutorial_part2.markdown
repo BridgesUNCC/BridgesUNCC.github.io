@@ -8,20 +8,20 @@ categories: jekyll update
 -----
 To give you a preview, this is what we will be creating in this part of the tutorial.
 
-![drawing](/images/screenshot_9.png)
+![drawing](/img/Tutorial/screenshot_9.png)
 
 
 **Step 1:**
 
 > Lets create a new class within our project. `File`->`Class`.
 
-![drawing](/images/screenshot_6.png)
+![drawing](/img/Tutorial/screenshot_6.png)
 
 **Step 2:**
 
 > In the new window set the `Package` field to your name. Set the `Name` field to HelloWorld (this is the name of the class). Tick the box to create `public static void main(String[] args)` (this will have Eclipse create a main method for us within our newly created class). Then click `Finish` in the lower right corner.
 
-![drawing](/images/screenshot_7.png)
+![drawing](/img/Tutorial/screenshot_7.png)
 
 **Step 3:**
 
@@ -84,8 +84,8 @@ In the console there will be a string, similar to the one below, giving you a li
 
 Congratulations on creating your very first visualization with Bridges! Below is a sample of what your visualization should look like.
 
-![drawing](/images/screenshot_9.png)
+![drawing](/img/Tutorial/screenshot_9.png)
 
-[Continue to Part 3](http://dismembered.github.io/jekyll/update/2014/07/02/HelloWorld-Tutorial_part3/)
+[Continue to Part 3](http://BridgesUNCC.github.io/jekyll/update/2014/07/02/HelloWorld-Tutorial_part3/)
 
-[Return to Part 1](http://dismembered.github.io/jekyll/update/2014/06/23/HelloWorld-Tutorial_part1/)
+[Return to Part 1](http://BridgesUNCC.github.io/jekyll/update/2014/06/23/HelloWorld-Tutorial_part1/)
