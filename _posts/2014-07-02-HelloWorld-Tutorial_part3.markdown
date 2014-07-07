@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hello World Visualization - Part 3"
-categories: jekyll update
+categories: main
 ---
 
 ## Continuing our graph visualization:
