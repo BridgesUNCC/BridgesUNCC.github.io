@@ -16,13 +16,13 @@ Go to the Bridges website found [here](http://bridges.cs.uncc.edu/login) and cre
 
 > Open Eclipse and create a new Java Project. `File`->`Java Project`
 
-![drawing](/images/screenshot_0.png)
+![drawing](/Tutorial/images/screenshot_0.png)
 
 **Step 2:**
 
 > In the new window change the `Project name` field to your name. Then click `Finish` in the lower right hand corner.
 
-![drawing](/images/screenshot_1.png)
+![drawing](/Tutorial/images/screenshot_1.png)
 
 **Step 3:**
 
@@ -34,13 +34,13 @@ Go to the Bridges website found [here](http://bridges.cs.uncc.edu/login) and cre
 
 > In the new window change the `Artifact Id` field to HelloWorld then click `Finish` in the lower right hand corner.
 
-![drawing](/images/screenshot_3.png)
+![drawing](/Tutorial/images/screenshot_3.png)
 
 **Step 5:**
 
 > Double-click `pom.xml` in the `Package Explorer` in your newly created package to open it. Click the `pom.xml` tab at the bottom of the screen to activate it. You should now see something like this.
 
-![drawing](/images/screenshot_4.png)
+![drawing](/Tutorial/images/screenshot_4.png)
 
 **Step 6:**
 
@@ -68,7 +68,7 @@ Go to the Bridges website found [here](http://bridges.cs.uncc.edu/login) and cre
   </dependencies>
 {% endhighlight %}
 
-![drawing](/images/screenshot_5.png)
+![drawing](/Tutorial/images/screenshot_5.png)
 
 Congratulations, you are now ready to start writing code!
 
