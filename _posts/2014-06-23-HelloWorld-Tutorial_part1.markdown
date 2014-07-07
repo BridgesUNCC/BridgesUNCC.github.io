@@ -28,7 +28,7 @@ Go to the Bridges website found [here](http://bridges.cs.uncc.edu/login) and cre
 
 > Right-click your package (which should be your name) in the `Package Explorer` then click `Configure`->`Convert to Maven Project`.
 
-![drawing](/images/screenshot_2.png)
+![drawing](/img/Tutorial/screenshot_2.png)
 
 **Step 4:**
 
