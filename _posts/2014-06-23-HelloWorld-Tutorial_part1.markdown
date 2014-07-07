@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hello World Visualization - Part 1"
-categories: jekyll update
+categories: main
 ---
 
 ## Installation and Setup:
