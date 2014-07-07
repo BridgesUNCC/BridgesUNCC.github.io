@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hello World Visualization - Part 2"
-categories: jekyll update
+categories: main
 ---
 
 ## Writing your first code:
