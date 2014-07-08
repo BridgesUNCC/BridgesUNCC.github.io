@@ -72,4 +72,4 @@ Go to the Bridges website found [here](http://bridges.cs.uncc.edu/login) and cre
 
 Congratulations, you are now ready to start writing code!
 
-[Continue to Part 2](http://BridgesUNCC.github.io/main/update/2014/06/23/HelloWorld-Tutorial_part2/)
+[Continue to Part 2](http://BridgesUNCC.github.io/main/2014/06/23/HelloWorld-Tutorial_part2/)
