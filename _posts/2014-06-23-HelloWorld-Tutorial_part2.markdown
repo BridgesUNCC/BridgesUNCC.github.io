@@ -86,6 +86,6 @@ Congratulations on creating your very first visualization with Bridges! Below is
 
 ![drawing](/img/Tutorial/screenshot_9.png)
 
-[Continue to Part 3](http://BridgesUNCC.github.io/jekyll/update/2014/07/02/HelloWorld-Tutorial_part3/)
+[Continue to Part 3](http://BridgesUNCC.github.io/main/HelloWorld-Tutorial_part3/)
 
-[Return to Part 1](http://BridgesUNCC.github.io/jekyll/update/2014/06/23/HelloWorld-Tutorial_part1/)
+[Return to Part 1](http://BridgesUNCC.github.io/main/HelloWorld-Tutorial_part1/)
