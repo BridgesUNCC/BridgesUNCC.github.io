@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hello World Visualization - Part 3"
-categories: main
+categories: tutorial
 ---
 
 ## Continuing our graph visualization:
