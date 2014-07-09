@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hello World Visualization - Part 1"
+title:  "Hello World Visualization Tutorial"
 categories: main
 ---
 
