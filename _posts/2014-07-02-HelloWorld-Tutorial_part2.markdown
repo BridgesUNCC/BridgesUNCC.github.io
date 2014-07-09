@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hello World Visualization - Part 2"
-categories: main
+categories: tutorial
 ---
 
 ## Writing your first code:
