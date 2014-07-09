@@ -77,7 +77,7 @@ Developers, on the other hand, should use a different version, as seen below:
   	<dependency>
   		<groupId>edu.uncc.cs.bridges</groupId>
   		<artifactId>bridges</artifactId>
-  		<version>[0.4.0,0.5.0)</version>
+  		<version>[0.99.0,1.0.0)</version>
   	</dependency>
   </dependencies>
 {% endhighlight %}
