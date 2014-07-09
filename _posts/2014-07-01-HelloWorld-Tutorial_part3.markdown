@@ -76,4 +76,4 @@ Congratulations, you have just finished your first graph representation!
 
 [Return to Part 1](http://BridgesUNCC.github.io/main/HelloWorld-Tutorial_part1/)
 
-[Return to Part 2](http://BridgesUNCC.github.io/main/HelloWorld-Tutorial_part2/)
+[Return to Part 2](http://BridgesUNCC.github.io/tutorial/HelloWorld-Tutorial_part2/)
