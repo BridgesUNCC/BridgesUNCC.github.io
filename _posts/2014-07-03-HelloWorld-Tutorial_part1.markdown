@@ -49,9 +49,23 @@ Go to the Bridges website found [here](http://bridges.cs.uncc.edu/login) and cre
 > and for later updates. Later on, you can update easily by opening your project folder
 > in the left panel and pressing Alt-F5
 
-> Note to developers: For the latest, possibly broken version, replace the version with:
-> [0.99.0,1.0.0)
+{% highlight xml %}
+  <repositories>
+    <repository>
+      <id>UNCC Bridges Updates</id>
+      <url>https://googledrive.com/host/0B8wOEC5-v5lXSlIyancyMXJpY28/releases/</url>
+    </repository>
+  </repositories>
+  <dependencies>
+  	<dependency>
+  		<groupId>edu.uncc.cs.bridges</groupId>
+  		<artifactId>bridges</artifactId>
+  		<version>[0.4.0,0.5.0)</version>
+  	</dependency>
+  </dependencies>
+{% endhighlight %}
 
+Developers, on the other hand, should use a different version, as seen below:
 {% highlight xml %}
   <repositories>
     <repository>
