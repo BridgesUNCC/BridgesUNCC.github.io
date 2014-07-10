@@ -32,34 +32,34 @@ categories: main
 
 ![drawing](/img/Tutorial/screenshot_1.png)
 
-**Step 5:**
+**Step 4:** Converting Maven
 
-> Right-click your package (which should be your name) in the `Package Explorer` then click `Configure`->`Convert to Maven Project`.
+> * Right-click your package (which should be your name) in the `Package Explorer` then click `Configure`->`Convert to Maven Project`.
 
 > Note: If you do not see `Convert to Maven Project` revisit Step 1.
 
 ![drawing](/img/Tutorial/screenshot_2.png)
 
-**Step 6:**
+**Step 5:** Setting up Maven
 
-> In the new window change the `Artifact Id` field to HelloWorld then click `Finish`.
+> * In the new window change the `Artifact Id` field to HelloWorld then click `Finish`.
 
 ![drawing](/img/Tutorial/screenshot_3.png)
 
-**Step 7:**
+**Step 6: ** Setting up Maven continued
 
-> Double-click `pom.xml` in the `Package Explorer` in your newly created package to open it. Click the `pom.xml` tab at the bottom of the screen to activate it. You should now see something like this.
+> * Double-click `pom.xml` in the `Package Explorer` in your newly created package to open it. Click the `pom.xml` tab at the bottom of the screen to activate it. You should now see something like this.
 
 ![drawing](/img/Tutorial/screenshot_4.png)
 
-**Step 8:**
+**Step 7:**
 
-> Paste the following bits into your maven `pom.xml`. It adds a dependency to your
+> * Paste the following bits into your maven `pom.xml`. It adds a dependency to your
 > project for Bridges, and also installs a repository for fetching that dependency
 > and for later updates. Later on, you can update easily by opening your project folder
 > in the left panel and pressing Alt-F5
 
-> After copying and pasting the following code into your pom.xml, be sure to save it. `File`->`Save`
+> * After copying and pasting the following code into your pom.xml, be sure to save it. `File`->`Save`
 
 {% highlight xml %}
   <repositories>
@@ -79,7 +79,7 @@ categories: main
 
 ![drawing](/img/Tutorial/screenshot_5.png)
 
-> To verify that you did everything correctly in the pom.xml click the `Dependencies` tab and check that `bridges : [o.99.0,1.0.0]`. If it is not there make sure you copied all of the above code and that it is in the correct spot.
+> * To verify that you did everything correctly in the pom.xml click the `Dependencies` tab and check that `bridges : [o.99.0,1.0.0]`. If it is not there make sure you copied all of the above code and that it is in the correct spot.
 
 ![drawing](/img/Tutorial/dependencies.png)
 
