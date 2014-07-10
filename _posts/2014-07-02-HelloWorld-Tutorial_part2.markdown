@@ -13,7 +13,7 @@ To give you a preview, this is what we will be creating in this part of the tuto
 
 **Step 1:**
 
-> Lets create a new class within our project. `File`->`Class`.
+> Lets create a new class within our project. `File`->`New'->`Class`.
 
 ![drawing](/img/Tutorial/screenshot_6.png)
 
