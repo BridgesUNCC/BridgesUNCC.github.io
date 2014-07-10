@@ -74,7 +74,7 @@ HelloWorld.getEdge(GoodByeWorld).setColor("yellow");
 
 ![drawing](/img/Tutorial/sampleCode2.png)
 
-> This is what our visualization should look like.
+> This is what our visualization should look like, again, minus the API key which has been removed for security purposes.
 
 ![drawing](/img/Tutorial/screenshot_10.png)
 
