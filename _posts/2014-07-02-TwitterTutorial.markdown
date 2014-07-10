@@ -8,7 +8,7 @@ categories: main
 
 > Lets create a new class within our project. `File`->`New`->`Class`.
 
-![image]()
+![drawing](/img/Tutorial/newClass.png)
 
 > Note: Lets make sure it is set up like I previous class.
 
