@@ -8,7 +8,7 @@ categories: main
 
 -----
 
-Download and install Eclipse found [here](https://www.eclipse.org/downloads/index-java8.php). Under Package Solutions choose `Eclipse IDE for Java Developers` from the list.
+Download and install Eclipse found [here](https://www.eclipse.org/downloads/index-java8.php). There are several choices here so make sure you choose the correct one. Under Package Solutions choose `Eclipse IDE for Java Developers` from the list. The important thing here is that it has Maven integration, which is required to use Bridges.
 
 Go to the Bridges website found [here](http://bridges.cs.uncc.edu/login) and create an account. After you create your account, click on your profile name in the upper right corner to view your profile. Once in your profile, click `Generate new API key` you will need this number in Part 2.
 
