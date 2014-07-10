@@ -28,3 +28,13 @@ public class TwitterDriver {
 
 {% endhighlight %}
 
+**Step 2:** Finding a person on Twitter
+
+> * First we need to get a url of someones twitter. You can try someone random or you can choose someone that you know. In this case we chose `twitter.com/Joey`.
+
+{% highlight java  %}
+String name = "twitter.com/Joey";
+		 
+Vertex joey = new Vertex(name, gv);
+{% endhighlight %}
+
