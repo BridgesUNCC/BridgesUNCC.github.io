@@ -20,7 +20,7 @@ categories: main
 
 **Step 3:**
 
-> Open Eclipse and create a new Java Project. `File`->'New'->`Java Project`
+> Open Eclipse and create a new Java Project. `File`->`New`->`Java Project`
 
 ![drawing](/img/Tutorial/screenshot_0.png)
 
