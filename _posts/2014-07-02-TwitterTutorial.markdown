@@ -8,14 +8,8 @@ categories: main
 
 import bridges.*;
 
-public class TwitterDriver {
+GraphVisualizer gv = new GraphVisualizer();
+Bridge.init(0, "796340034401", gv);
+Bridge.complete();
 
-	public static void main(String[] args) throws Exception {
-		GraphVisualizer gv = new GraphVisualizer();
-		Bridge.init(0, "796340034401", gv);
-		
-		Bridge.complete();
-	}
-}
-		
 {% endhighlight %}
