@@ -79,6 +79,10 @@ Bridge.complete();
 
 {% endhighlight %}
 
+> Your final code should look just like the image below, minus the API key that has been blurred out for security purposes.
+
+![drawing](/img/Tutorial/sampleCode.png)
+
 **Step 8:**
 
 > Finally we need to run our program.
