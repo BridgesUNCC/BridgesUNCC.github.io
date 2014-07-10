@@ -8,29 +8,27 @@ categories: main
 
 -----
 
-**Step 1:**
+**Step 1: ** Installing Eclipse
 
-> Download and install Eclipse found [here](https://www.eclipse.org/downloads/index-java8.php). There are several choices here so make sure you choose the correct one. 
+> * Download and install Eclipse found [here](https://www.eclipse.org/downloads/index-java8.php). There are several choices here so make sure you choose the correct one. 
 
-> Under Package Solutions choose `Eclipse IDE for Java Developers` from the list. The important thing here is that it has 'Maven integration', which is required to use Bridges.
+> * Under Package Solutions choose `Eclipse IDE for Java Developers` from the list. The important thing here is that it has 'Maven integration', which is required to use Bridges.
 
-> To verify you have Maven installed correctly `Eclipse`->`About Eclipse` (on Mac) or `Help`-> `About Eclipse` (on Linux) and you should see the Maven icon as illustrated below.
+> * To verify you have Maven installed correctly `Eclipse`->`About Eclipse` (on Mac) or `Help`-> `About Eclipse` (on Linux) and you should see the Maven icon as illustrated below.
 
 ![drawing](/img/Tutorial/verifyMaven.png)
 
-**Step 2:**
+**Step 2: ** Creating a Bridges account
 
-> Go to the Bridges website found [here](http://bridges.cs.uncc.edu/login) and create an account. After you create your account, click on your profile name in the upper right corner to view your profile. Once in your profile, click `Generate new API key` you will need this number in Part 2 of the tutorial.
+> * Go to the Bridges website found [here](http://bridges.cs.uncc.edu/login) and create an account. After you create your account, click on your profile name in the upper right corner to view your profile. Once in your profile, click `Generate new API key` you will need this number in Part 2 of the tutorial.
 
-**Step 3:**
+**Step 3: ** Creating a Java Project
 
-> Open Eclipse and create a new Java Project. `File`->`New`->`Java Project`
+> * Open Eclipse and create a new Java Project. `File`->`New`->`Java Project`
 
 ![drawing](/img/Tutorial/screenshot_0.png)
 
-**Step 4:**
-
-> In the new window change the `Project name` field to your name. Then click `Finish` in the lower right hand corner.
+> * In the new window change the `Project name` field to your name. Then click `Finish` in the lower right hand corner.
 
 ![drawing](/img/Tutorial/screenshot_1.png)
 
