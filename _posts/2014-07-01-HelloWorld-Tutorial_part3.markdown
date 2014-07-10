@@ -70,11 +70,11 @@ HelloWorld.getEdge(GoodByeWorld).setColor("yellow");
 
 {% endhighlight %}
 
-> Our code should now look like this.
+> Our code should now look like this, again, minus the API key which has been removed for security purposes..
 
 ![drawing](/img/Tutorial/sampleCode2.png)
 
-> This is what our visualization should look like, again, minus the API key which has been removed for security purposes.
+> This is what our visualization should look like.
 
 ![drawing](/img/Tutorial/screenshot_10.png)
 
