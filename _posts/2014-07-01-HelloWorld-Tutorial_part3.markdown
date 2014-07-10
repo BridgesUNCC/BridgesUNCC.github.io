@@ -70,6 +70,12 @@ HelloWorld.getEdge(GoodByeWorld).setColor("yellow");
 
 {% endhighlight %}
 
+> Our code should now look like this.
+
+![drawing](/img/Tutorial/sampleCode2.png)
+
+> This is what our visualization should look like.
+
 ![drawing](/img/Tutorial/screenshot_10.png)
 
 Congratulations, you have just finished your first graph representation!
