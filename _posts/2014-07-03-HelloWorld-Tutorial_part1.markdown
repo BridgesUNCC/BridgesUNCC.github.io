@@ -44,7 +44,7 @@ categories: main
 
 **Step 6:**
 
-> In the new window change the `Artifact Id` field to HelloWorld then click `Finish` in the lower right hand corner.
+> In the new window change the `Artifact Id` field to HelloWorld then click `Finish`.
 
 ![drawing](/img/Tutorial/screenshot_3.png)
 
