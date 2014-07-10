@@ -82,6 +82,7 @@ categories: main
 ![drawing](/img/Tutorial/screenshot_5.png)
 
 > To verify that you did everything correctly in the pom.xml click the `Dependencies` tab and check that `bridges : [o.99.0,1.0.0]`. If it is not there make sure you copied all of the above code and that it is in the correct spot.
+
 ![drawing](/img/Tutorial/dependencies.png)
 
 Congratulations, you are now ready to start writing code!
