@@ -4,9 +4,13 @@ title:  "Twitter Tutorial"
 categories: main
 ---
 
-**Step 1:** Set up class
+**Step 1:** Setting up our class
 
-> Make sure the class is set up like the previous class in HelloWorld.
+> Lets create a new class within our project. `File`->`New`->`Class`.
+
+![image]()
+
+> Note: Lets make sure it is set up like I previous class.
 
 {% highlight java  %}
 
@@ -23,3 +27,4 @@ public class TwitterDriver {
 }
 
 {% endhighlight %}
+
