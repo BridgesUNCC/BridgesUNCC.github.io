@@ -16,7 +16,7 @@ public class TwitterDriver {
 
 	public static void main(String[] args) throws Exception {
 		GraphVisualizer gv = new GraphVisualizer();
-		Bridge.init(0, "796340034401", gv);
+		Bridge.init(0, "Your_API_Key_Here", gv);
 		
 		Bridge.complete();
 	}
