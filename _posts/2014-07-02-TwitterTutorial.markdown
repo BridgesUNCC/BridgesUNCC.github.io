@@ -6,9 +6,9 @@ categories: main
 
 **Step 1:** Setting up our class
 
-> Lets create a `new class` like we did before in our package. This time will will call it TwitterDriver.
+> * Lets create a `new class` like we did before in our package. This time will will call it TwitterDriver.
 
-> `File` -> `New` -> `Class`
+> * `File` -> `New` -> `Class`
 
 > Note: Lets make sure it is set up like I previous class with a main and all the appropriate function calls.
 
