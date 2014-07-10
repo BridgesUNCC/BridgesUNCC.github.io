@@ -4,7 +4,7 @@ title:  "Hello World Visualization - Part 2"
 categories: tutorial
 ---
 
-## Writing your first code:
+## Writing our first code:
 -----
 To give you a preview, this is what we will be creating in this part of the tutorial.
 
