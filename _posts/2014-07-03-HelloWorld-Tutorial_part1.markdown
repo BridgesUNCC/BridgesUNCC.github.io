@@ -8,7 +8,7 @@ categories: main
 
 -----
 
-**Step 1: ** Installing Eclipse
+**Step 1:** Installing Eclipse
 
 > * Download and install Eclipse found [here](https://www.eclipse.org/downloads/index-java8.php). There are several choices here so make sure you choose the correct one. 
 
@@ -18,11 +18,11 @@ categories: main
 
 ![drawing](/img/Tutorial/verifyMaven.png)
 
-**Step 2: ** Creating a Bridges account
+**Step 2:** Creating a Bridges account
 
 > * Go to the Bridges website found [here](http://bridges.cs.uncc.edu/login) and create an account. After you create your account, click on your profile name in the upper right corner to view your profile. Once in your profile, click `Generate new API key` you will need this number in Part 2 of the tutorial.
 
-**Step 3: ** Creating a Java Project
+**Step 3:** Creating a Java Project
 
 > * Open Eclipse and create a new Java Project. `File`->`New`->`Java Project`
 
@@ -46,13 +46,13 @@ categories: main
 
 ![drawing](/img/Tutorial/screenshot_3.png)
 
-**Step 6: ** Setting up Maven continued
+**Step 6:** Setting up Maven continued
 
 > * Double-click `pom.xml` in the `Package Explorer` in your newly created package to open it. Click the `pom.xml` tab at the bottom of the screen to activate it. You should now see something like this.
 
 ![drawing](/img/Tutorial/screenshot_4.png)
 
-**Step 7:**
+**Step 7:** Editting the pom.xml
 
 > * Paste the following bits into your maven `pom.xml`. It adds a dependency to your
 > project for Bridges, and also installs a repository for fetching that dependency
