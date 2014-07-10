@@ -38,6 +38,8 @@ categories: main
 
 > Right-click your package (which should be your name) in the `Package Explorer` then click `Configure`->`Convert to Maven Project`.
 
+> Note: If you do not see `Convert to Maven Project` revisit Step 1.
+
 ![drawing](/img/Tutorial/screenshot_2.png)
 
 **Step 6:**
