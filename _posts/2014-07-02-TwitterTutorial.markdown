@@ -6,7 +6,7 @@ categories: main
 
 **Step 1:** Set up class
 
-> Make sure the class is set up like the previous class in HelloWorkd.
+> Make sure the class is set up like the previous class in HelloWorld.
 
 {% highlight java  %}
 
