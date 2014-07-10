@@ -25,7 +25,7 @@ To give you a preview, this is what we will be creating in this part of the tuto
 
 > Tick the box to create `public static void main(String[] args)` (this will have Eclipse create a main method for us within our newly created class).
 
-> Then click `Finish` in the lower right corner.
+> Then click `Finish`.
 
 ![drawing](/img/Tutorial/screenshot_7.png)
 
