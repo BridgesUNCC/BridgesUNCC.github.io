@@ -54,7 +54,7 @@ categories: main
 
 **Step 7:** Editting the pom.xml
 
-> * Paste the following text into your maven `pom.xml` below `<version>0.0.1-SNAPSHOT</version>'. It adds a dependency to your
+> * Paste the following text into your maven `pom.xml` below `<version>0.0.1-SNAPSHOT</version>`. It adds a dependency to your
 > project for Bridges, and also installs a repository for fetching that dependency
 > and for later updates. Later on, you can update easily by opening your project folder
 > in the left panel and pressing Alt-F5
