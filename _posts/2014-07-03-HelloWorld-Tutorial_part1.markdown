@@ -14,6 +14,10 @@ categories: main
 
 > Under Package Solutions choose `Eclipse IDE for Java Developers` from the list. The important thing here is that it has 'Maven integration', which is required to use Bridges.
 
+> To verify you have Maven installed correctly `Eclipse`->`About Eclipse` (on Mac) or `Help`-> `About Eclipse` (on Linux) and you should see the Maven icon as illustrated below.
+
+![drawing](/img/Tutorial/verifyMaven.png)
+
 **Step 2:**
 
 > Go to the Bridges website found [here](http://bridges.cs.uncc.edu/login) and create an account. After you create your account, click on your profile name in the upper right corner to view your profile. Once in your profile, click `Generate new API key` you will need this number in Part 2 of the tutorial.
