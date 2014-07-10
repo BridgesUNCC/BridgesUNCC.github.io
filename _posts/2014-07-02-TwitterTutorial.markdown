@@ -5,6 +5,7 @@ categories: main
 ---
 
 {% highlight java %}
+
 import bridges.*;
 
 public class TwitterDriver {
@@ -14,4 +15,5 @@ public class TwitterDriver {
 		Bridge.init(0, "796340034401", gv);
 		
 		Bridge.complete();
+		
 {% endhighlight %}
