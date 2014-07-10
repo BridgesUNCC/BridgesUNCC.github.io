@@ -61,6 +61,8 @@ categories: main
 > and for later updates. Later on, you can update easily by opening your project folder
 > in the left panel and pressing Alt-F5
 
+> After copying and pasting the following code into your pom.xml, be sure to save it. `File`->`Save`
+
 {% highlight xml %}
   <repositories>
     <repository>
