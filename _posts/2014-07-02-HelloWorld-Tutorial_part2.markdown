@@ -4,7 +4,7 @@ title:  "Hello World Visualization - Part 2"
 categories: tutorial
 ---
 
-## Writing your first code:
+## Writing our first code:
 -----
 To give you a preview, this is what we will be creating in this part of the tutorial.
 
@@ -78,6 +78,10 @@ Vertex HelloWorld = new Vertex("HelloWorld", gv);
 Bridge.complete();
 
 {% endhighlight %}
+
+> Our final code should look just like the image below, minus the API key which has been removed for security purposes.
+
+![drawing](/img/Tutorial/sampleCode.png)
 
 **Step 8:**
 
