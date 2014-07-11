@@ -40,3 +40,10 @@ String name = "twitter.com/Joey";
 Vertex joey = new Vertex(name, gv);
 {% endhighlight %}
 
+**Step 3:** Checking associations
+
+> * Now we get to check if the person we chose actually has friends.
+{% highlight js  %}
+System.out.println(Bridge.getAssociations(joey.getIdentifier(), 50));
+{% endhighlight %}
+
