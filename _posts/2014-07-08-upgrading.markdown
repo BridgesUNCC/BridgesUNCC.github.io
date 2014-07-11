@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Upgrading Your Bridges Client"
-categories: main
+categories: maven
 ---
 
 Upgrading your Bridges client is very simple.
