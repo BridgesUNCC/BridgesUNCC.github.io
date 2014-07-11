@@ -43,7 +43,7 @@ import bridges.*;
 
 > Create a new GraphVisualizer object. This is an object that will contain all the graph data.
 
-{% highlight java  %}
+{% highlight c++  %}
 
 GraphVisualizer gv = new GraphVisualizer();
 
