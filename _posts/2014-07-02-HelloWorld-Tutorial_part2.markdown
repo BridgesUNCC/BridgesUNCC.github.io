@@ -33,7 +33,7 @@ To give you a preview, this is what we will be creating in this part of the tuto
 
 > Import the Bridges package. This gives us access to all the classes/methods needed to create a graph or any other data structure visualization.
 
-{% highlight java  %}
+{% highlight c++  %}
 
 import bridges.*;
 
