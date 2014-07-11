@@ -22,7 +22,7 @@ Lets start off by managing the properties of that vertice. Each vertex and edge 
 
 > Note: If you do not choose a value that is in our list you will recieve an InvalidValueException. Thats okay just choose a different color.
 
-{% highlight java %}
+{% highlight js %}
 
 HelloWorld.setColor("red"); OR HelloWorld.setColor("#FF0000");
 
@@ -34,7 +34,7 @@ HelloWorld.setColor("red"); OR HelloWorld.setColor("#FF0000");
 
 > This only requires further method calls on the same vertex to access its properties and change its size. We should also go ahead and create another vertex to prepare for the next part of the tutorial.
 
-{% highlight java %}
+{% highlight js %}
 
 HelloWorld.setSize(15);
 
@@ -50,7 +50,7 @@ Vertex GoodByeWorld = new Vertex("GoodByeWorld", gv);
 
 > Note: Pay special attention to the order that this line is written.
 
-{% highlight java %}
+{% highlight js %}
 
 HelloWorld.createEdge(GoodByeWorld);
 
@@ -64,7 +64,7 @@ HelloWorld.createEdge(GoodByeWorld);
 
 > Note: You have to call .getEdge() in the same order that you called .createEdge(). HelloWorld.getEdge(GoodByeWorld); will not return the same edge as GoodByeWorld.getEdge(HelloWorld);
 
-{% highlight java %}
+{% highlight js %}
 
 HelloWorld.getEdge(GoodByeWorld).setColor("yellow");
 
