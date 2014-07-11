@@ -9,8 +9,8 @@ Upgrading your Bridges client is very simple.
 On many systems, all you have to do is open your project on the left pane, and press `Alt-F5`.
 But in case you want to take the pictoral route, simply:
 
-- Right click your project and select `Maven > Update Project`
-- In the dialog, tick the option to `Force update of snapshots / releases.`
+- Right click your project and select `Maven > Update Project`.
+- In the dialog, tick the option to `Force update of snapshots / releases`.
 
 
 ![drawing](/img/Updating/context_menu.png)
