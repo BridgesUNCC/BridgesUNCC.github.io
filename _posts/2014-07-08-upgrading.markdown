@@ -10,7 +10,7 @@ On many systems, all you have to do is open your project on the left pane, and p
 But in case you want to take the pictoral route, simply:
 
 - Right click your project and select `Maven > Update Project`.
-- In the dialog, tick the option to `Force update of snapshots / releases`.
+- In the dialog, tick the option to `Force Update of Snapshots/Releases`.
 
 
 ![drawing](/img/Updating/context_menu.png)
