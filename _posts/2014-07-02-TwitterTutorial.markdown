@@ -32,6 +32,8 @@ public class TwitterDriver {
 
 > * First we need to get a url of someones twitter. You can try someone random or you can choose someone that you know. In this case we chose `twitter.com/Joey`.
 
+> * Next we create a vertex out of the twitter handle that we chose. Doing this allows that twitter handle to be the focus of our graph.
+
 {% highlight js  %}
 String name = "twitter.com/Joey";
 		 
