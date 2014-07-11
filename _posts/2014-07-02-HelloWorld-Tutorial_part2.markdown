@@ -53,7 +53,7 @@ GraphVisualizer gv = new GraphVisualizer();
 
 > Initialize Bridges. Your API key should have been generated in Part 1, this is where it goes.
 
-{% highlight java  %}
+{% highlight js  %}
 
 Bridge.init(0, "Your API key here", gv);
 
@@ -63,7 +63,7 @@ Bridge.init(0, "Your API key here", gv);
 
 > Create our first Vertex. HelloWorld is what we are going to name our first vertex. The Vertex object is looking for a name (what we want to call it) and a Graph (where we want to store it).
 
-{% highlight java  %}
+{% highlight js  %}
 
 Vertex HelloWorld = new Vertex("HelloWorld", gv);
 
@@ -73,7 +73,7 @@ Vertex HelloWorld = new Vertex("HelloWorld", gv);
 
 > Submit the visualization data. This tells Bridges that we are ready to submit our data to be visualized.
 
-{% highlight java  %}
+{% highlight js  %}
 
 Bridge.complete();
 
