@@ -54,8 +54,7 @@ categories: main
 
 > * Paste the following text into your maven `pom.xml` below `<version>0.0.1-SNAPSHOT</version>`. It adds a dependency to your
 > project for Bridges, and also installs a repository for fetching that dependency
-> and for later updates. Later on, you can update easily by opening your project folder
-> in the left panel and pressing Alt-F5
+> and for later updates. If you need to update you check out [Upgrading Maven](http://bridgesuncc.github.io/main/upgrading/) for instructions on how to do so.
 * After copying and pasting the following code into your pom.xml, be sure to save it. `File`->`Save`
 
 {% highlight xml %}
