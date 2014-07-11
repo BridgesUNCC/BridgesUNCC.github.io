@@ -43,6 +43,7 @@ Vertex joey = new Vertex(name, gv);
 **Step 3:** Checking associations
 
 > * Now we get to check if the person we chose actually has friends.
+* This will print, in this case 50, associations of the twitter handle that we created earlier.
 {% highlight js  %}
 System.out.println(Bridge.getAssociations(joey.getIdentifier(), 50));
 {% endhighlight %}
