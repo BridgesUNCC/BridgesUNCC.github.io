@@ -13,25 +13,22 @@ To give you a preview, this is what we will be creating in this part of the tuto
 
 **Step 1:**
 
-> Lets create a new class within our project. `File`->`New`->`Class`.
+> * Lets create a new class within our project. `File`->`New`->`Class`.
 
 ![drawing](/img/Tutorial/screenshot_6.png)
 
 **Step 2:**
 
-> In the new window set the `Package` field to your name.
-
-> Set the `Name` field to HelloWorld (this is the name of the class).
-
-> Tick the box to create `public static void main(String[] args)` (this will have Eclipse create a main method for us within our newly created class).
-
-> Then click `Finish`.
+> * In the new window set the `Package` field to your name.
+* Set the `Name` field to HelloWorld (this is the name of the class).
+* Tick the box to create `public static void main(String[] args)` (this will have Eclipse create a main method for us within our newly created class).
+*Then click `Finish`.
 
 ![drawing](/img/Tutorial/screenshot_7.png)
 
 **Step 3:**
 
-> Import the Bridges package. This gives us access to all the classes/methods needed to create a graph or any other data structure visualization.
+> * Import the Bridges package. This gives us access to all the classes/methods needed to create a graph or any other data structure visualization.
 
 {% highlight js  %}
 
@@ -41,7 +38,7 @@ import bridges.*;
 
 **Step 4:**
 
-> Create a new GraphVisualizer object. This is an object that will contain all the graph data.
+> * Create a new GraphVisualizer object. This is an object that will contain all the graph data.
 
 {% highlight js  %}
 
@@ -51,7 +48,7 @@ GraphVisualizer gv = new GraphVisualizer();
 
 **Step 5:**
 
-> Initialize Bridges. Your API key should have been generated in Part 1, this is where it goes.
+> * Initialize Bridges. Your API key should have been generated in Part 1, this is where it goes.
 
 {% highlight js  %}
 
@@ -61,7 +58,7 @@ Bridge.init(0, "Your API key here", gv);
 
 **Step 6:**
 
-> Create our first Vertex. HelloWorld is what we are going to name our first vertex. The Vertex object is looking for a name (what we want to call it) and a Graph (where we want to store it).
+> * Create our first Vertex. HelloWorld is what we are going to name our first vertex. The Vertex object is looking for a name (what we want to call it) and a Graph (where we want to store it).
 
 {% highlight js  %}
 
@@ -71,7 +68,7 @@ Vertex HelloWorld = new Vertex("HelloWorld", gv);
 
 **Step 7:**
 
-> Submit the visualization data. This tells Bridges that we are ready to submit our data to be visualized.
+> * Submit the visualization data. This tells Bridges that we are ready to submit our data to be visualized.
 
 {% highlight js  %}
 
@@ -79,18 +76,18 @@ Bridge.complete();
 
 {% endhighlight %}
 
-> Our final code should look just like the image below, minus the API key which has been removed for security purposes.
+> * Our final code should look just like the image below, minus the API key which has been removed for security purposes.
 
 ![drawing](/img/Tutorial/sampleCode.png)
 
 **Step 8:**
 
-> Finally we need to run our program.
+> * Finally we need to run our program.
 In the console there will be a string, similar to the one below, giving you a link to view the visualization.
 
 `Check out your visuals at http://bridges.cs.uncc.edu/assignments/0/YOUR_USERNAME?apikey=YOUR_API_KEY_WILL_BE_HERE`
 
-> Copy and paste the URL into your favorite browser in order to view the visualization. Where the URL says `YOUR_USERNAME` be sure to replace it with the user name that you created on the Bridges website in Part 1.
+> * Copy and paste the URL into your favorite browser in order to view the visualization. Where the URL says `YOUR_USERNAME` be sure to replace it with the user name that you created on the Bridges website in Part 1.
 
 Congratulations on creating your very first visualization with Bridges! Below is a sample of what your visualization should look like.
 
