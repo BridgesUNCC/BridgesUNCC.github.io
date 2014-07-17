@@ -32,7 +32,7 @@ categories: main
 
 **Step 4:** Converting Maven
 
-> * Right-click your package (which should be your name) in the `Package Explorer` then click `Configure`->`Convert to Maven Project`.
+> * Right-click your project (which should be your name) in the `Package Explorer` then click `Configure`->`Convert to Maven Project`.
 
 > Note: If you do not see `Convert to Maven Project` go to Step 1.
 
