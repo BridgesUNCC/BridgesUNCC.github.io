@@ -22,7 +22,7 @@ To give you a preview, this is what we will be creating in this part of the tuto
 > * In the new window set the `Package` field to your name.
 * Set the `Name` field to HelloWorld (this is the name of the class).
 * Tick the box to create `public static void main(String[] args)` (this will have Eclipse create a main method for us within our newly created class).
-*Then click `Finish`.
+* Then click `Finish`.
 
 ![drawing](/img/Tutorial/screenshot_7.png)
 
