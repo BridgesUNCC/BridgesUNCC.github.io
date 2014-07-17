@@ -79,6 +79,6 @@ categories: main
 
 ![drawing](/img/Tutorial/dependencies.png)
 
-Congratulations, you are now ready to start writing code!
+You are now ready to start writing code!
 
 [Continue to Part 2](http://BridgesUNCC.github.io/tutorial/HelloWorld-Tutorial_part2/)
