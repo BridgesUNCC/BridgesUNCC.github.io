@@ -11,13 +11,13 @@ To give you a preview, this is what we will be creating in this part of the tuto
 ![drawing](/img/Tutorial/screenshot_9.png)
 
 
-**Step 1:**
+**Step 1:** Creating our class
 
 > * Lets create a new class within our project. `File`->`New`->`Class`.
 
 ![drawing](/img/Tutorial/screenshot_6.png)
 
-**Step 2:**
+**Step 2:** Creating our class continued
 
 > * In the new window set the `Package` field to your name.
 * Set the `Name` field to HelloWorld (this is the name of the class).
@@ -26,7 +26,7 @@ To give you a preview, this is what we will be creating in this part of the tuto
 
 ![drawing](/img/Tutorial/screenshot_7.png)
 
-**Step 3:**
+**Step 3:** Importing Bridges
 
 > * Import the Bridges package. This gives us access to all the classes/methods needed to create a graph or any other data structure visualization.
 
@@ -36,7 +36,7 @@ import edu.uncc.cs.bridges.*;
 
 {% endhighlight %}
 
-**Step 4:**
+**Step 4:** Creating our Graph object
 
 > * Create a new GraphVisualizer object. This is an object that will contain all the graph data.
 
@@ -46,7 +46,7 @@ GraphVisualizer gv = new GraphVisualizer();
 
 {% endhighlight %}
 
-**Step 5:**
+**Step 5:** Initializing Bridges
 
 > * Initialize Bridges. Your API key should have been generated in Part 1, this is where it goes along with your User Name.
 
@@ -56,7 +56,7 @@ Bridge.init(0, "Your API key here", gv, "Your user name here");
 
 {% endhighlight %}
 
-**Step 6:**
+**Step 6:** Creating our first vertex
 
 > * Create our first Vertex. HelloWorld is what we are going to name our first vertex. The Vertex object is looking for a name (what we want to call it) and a Graph (where we want to store it).
 
@@ -66,7 +66,7 @@ Vertex HelloWorld = new Vertex("HelloWorld", gv);
 
 {% endhighlight %}
 
-**Step 7:**
+**Step 7:** Submitting our visualization
 
 > * Submit the visualization data. This tells Bridges that we are ready to submit our data to be visualized.
 
@@ -80,7 +80,7 @@ Bridge.complete();
 
 ![drawing](/img/Tutorial/sampleCode.png)
 
-**Step 8:**
+**Step 8:** Running our program
 
 > * Finally we need to run our program.
 In the console there will be a string, similar to the one below, giving you a link to view the visualization.
