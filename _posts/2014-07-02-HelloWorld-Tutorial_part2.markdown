@@ -76,7 +76,7 @@ Bridge.complete();
 
 {% endhighlight %}
 
-> * Our final code should look just like the image below, minus the API key which has been removed for security purposes.
+> * Our final code should look just like the image below, minus the API key and User Name which has been removed for security purposes.
 
 ![drawing](/img/Tutorial/sampleCode.png)
 
