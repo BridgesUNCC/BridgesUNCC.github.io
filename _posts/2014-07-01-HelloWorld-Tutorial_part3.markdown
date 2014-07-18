@@ -78,7 +78,7 @@ HelloWorld.getEdge(GoodByeWorld).setColor("yellow");
 
 ![drawing](/img/Tutorial/screenshot_10.png)
 
-Congratulations, you have just finished your first graph representation!
+You have just finished your first graph representation!
 
 [Return to Part 1](http://BridgesUNCC.github.io/main/HelloWorld-Tutorial_part1/)
 
