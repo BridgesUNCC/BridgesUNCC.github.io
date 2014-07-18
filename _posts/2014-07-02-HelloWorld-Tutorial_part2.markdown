@@ -48,7 +48,7 @@ GraphVisualizer gv = new GraphVisualizer();
 
 **Step 5:**
 
-> * Initialize Bridges. Your API key should have been generated in Part 1, this is where it goes.
+> * Initialize Bridges. Your API key should have been generated in Part 1, this is where it goes along with your User Name.
 
 {% highlight js  %}
 
