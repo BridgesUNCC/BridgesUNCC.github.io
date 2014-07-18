@@ -52,7 +52,7 @@ GraphVisualizer gv = new GraphVisualizer();
 
 {% highlight js  %}
 
-Bridge.init(0, "Your API key here", gv);
+Bridge.init(0, "Your API key here", gv, "Your user name here");
 
 {% endhighlight %}
 
