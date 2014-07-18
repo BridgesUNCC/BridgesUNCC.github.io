@@ -87,7 +87,7 @@ In the console there will be a string, similar to the one below, giving you a li
 
 `Check out your visuals at http://bridges.cs.uncc.edu/assignments/0/YOUR_USERNAME?apikey=YOUR_API_KEY_WILL_BE_HERE`
 
-> * Copy and paste the URL into your favorite browser in order to view the visualization. Where the URL says `YOUR_USERNAME` be sure to replace it with the user name that you created on the Bridges website in Part 1.
+> * Copy and paste the URL into your favorite browser in order to view the visualization.
 
 Below is a sample of what your visualization should look like at this point.
 
