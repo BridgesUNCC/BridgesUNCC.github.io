@@ -32,7 +32,7 @@ To give you a preview, this is what we will be creating in this part of the tuto
 
 {% highlight js  %}
 
-import bridges.*;
+import edu.uncc.cs.bridges.*;
 
 {% endhighlight %}
 
