@@ -19,7 +19,7 @@ categories: main
 
 **Step 2:** Creating a Bridges account
 
-> * Go to the [Bridges website](http://bridges-cs.herokuapp.com/login) and create an account. After you create your account, click on your profile name in the upper right corner to view your profile. Once in your profile, click `Generate new API key` you will need this number in Part 2 of the tutorial.
+> * Go to the [Bridges website](http://bridges-cs.herokuapp.com/login) and create an account. After you create your account, click on your profile name in the upper right corner to view your profile. Once in your profile, click `Generate new API key` you will need this number in Part 2 of the tutorial. Make sure to remember your password; there is no option for password recovery and you can only have one account per email address.
 
 **Step 3:** Creating a Java Project
 
