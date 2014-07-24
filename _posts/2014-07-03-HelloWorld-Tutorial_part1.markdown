@@ -13,6 +13,7 @@ categories: main
 > * Download and install [Eclipse](https://www.eclipse.org/downloads/index-java8.php). There are several choices here so make sure you choose the correct one. 
 * Under Package Solutions choose `Eclipse IDE for Java Developers` from the list. The important thing here is that it has 'Maven integration', which is required to use Bridges.
 * To verify you have Maven installed correctly `Eclipse`->`About Eclipse` (on Mac) or `Help`-> `About Eclipse` (on Linux) and you should see the Maven icon as illustrated below.
+NOTE: If you already have Eclipse installed, you can just install the [Maven](https://www.eclipse.org/m2e/download/) plugin by dragging and dropping the "Install" image into a running Eclipse workspace. It installs automatically.
 
 ![drawing](/img/Tutorial/verifyMaven.png)
 
