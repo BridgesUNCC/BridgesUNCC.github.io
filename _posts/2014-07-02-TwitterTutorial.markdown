@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Twitter Tutorial"
-categories: main
+categories: hidden
 ---
 
 **Step 1:** Setting up our class
