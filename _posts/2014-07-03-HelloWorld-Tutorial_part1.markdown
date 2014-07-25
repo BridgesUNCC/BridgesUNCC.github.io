@@ -19,7 +19,8 @@ categories: main
 
 **Step 2:** Creating a Bridges account
 
-> * Go to the [Bridges website](http://bridges-cs.herokuapp.com/login) and create an account. After you create your account, click on your profile name in the upper right corner to view your profile. Once in your profile, click `Generate new API key` you will need this number in Part 2 of the tutorial. Make sure to remember your password; there is no option for password recovery and you can only have one account per email address.
+> * Go to the [Bridges website](http://bridges-cs.herokuapp.com/login) and create an account. After you create your account, click on your profile name in the upper right corner to view your profile. Once in your profile there will be a number under `API Key`, you will need this number in Part 2 of the tutorial. 
+* NOTE: Make sure to remember your password; there is no option for password recovery and you can only have one account per email address.
 
 **Step 3:** Creating a Java Project
 
@@ -34,6 +35,7 @@ categories: main
 **Step 4:** Converting Maven
 
 > * Right-click your project (which should be your name) in the `Package Explorer` then click `Configure`->`Convert to Maven Project`.
+* NOTE: If you can not see your project make sure the Welcome Screen is closed (this should only be an issue if you fresh installed Eclipse. If it is still not showing up you can click `Window` -> `Show View` -> `Package Explorer`.
 
 > Note: If you do not see `Convert to Maven Project` go to Step 1.
 
