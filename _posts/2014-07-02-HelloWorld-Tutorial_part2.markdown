@@ -88,7 +88,7 @@ In the console there will be a string, similar to the one below, giving you a li
 `Check out your visuals at http://bridges-herokuapp.com/assignments/0/YOUR_USERNAME?apikey=YOUR_API_KEY_WILL_BE_HERE`
 
 > * USERNAME is case-sensitive and should be your actual user name (seen on the top right when logged in)
-
+* The website above will be reflected in the eclipse console. Note that the website located in the console should be used rather than the sample shown above. 
 > * Copy and paste the URL into your favorite browser in order to view the visualization.
 
 Below is a sample of what your visualization should look like at this point.
