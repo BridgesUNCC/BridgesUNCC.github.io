@@ -37,7 +37,7 @@ categories: main
 > * Right-click your project (which should be your name) in the `Package Explorer` then click `Configure`->`Convert to Maven Project`.
 * NOTE: If you can not see your project make sure the Welcome Screen is closed (this should only be an issue if you fresh installed Eclipse. If it is still not showing up you can click `Window` -> `Show View` -> `Package Explorer`.
 
-> Note: If you do not see `Convert to Maven Project` go to Step 1.
+> * Note: If you do not see `Convert to Maven Project` go to Step 1.
 
 ![drawing](/img/Tutorial/screenshot_2.png)
 
