@@ -85,7 +85,9 @@ Bridge.complete();
 > * Finally we need to run our program.
 In the console there will be a string, similar to the one below, giving you a link to view the visualization.
 
-`Check out your visuals at http://bridges.cs.uncc.edu/assignments/0/YOUR_USERNAME?apikey=YOUR_API_KEY_WILL_BE_HERE`
+`Check out your visuals at http://bridges-herokuapp.com/assignments/0/YOUR_USERNAME?apikey=YOUR_API_KEY_WILL_BE_HERE`
+
+> * USERNAME is case-sensitive and should be your actual user name (seen on the top right when logged in)
 
 > * Copy and paste the URL into your favorite browser in order to view the visualization.
 
