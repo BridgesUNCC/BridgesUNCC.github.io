@@ -31,7 +31,8 @@ and the second is the name of the user or item. The results from getAssociations
 
 {% highlight java %}
 // Possible identifiers include: "twitter.com/Joey", "actor/Tom Hanks", and "movie/Top Gun"
-List<String> associations = Bridge.getAssociations("provider name/item name");
+// 10 is how many followers to retrieve at most
+List<String> associations = Bridge.getAssociations("provider name/item name", 10);
 
 // This allows convenient iteration as well:
 for (String follower : Bridge.getAssociations("twitter.com/Joey")) {
@@ -44,7 +45,7 @@ for (String follower : Bridge.getAssociations("twitter.com/Joey")) {
 You can also get a user's followers specifically. You still need to use the same identifiers, and it will return the same identifiers, for consistency. The only difference is a tiny reduction in delay and a different method name.
 
 {% highlight java %}
-for (String follower : Bridge.followers("twitter.com/Joey")) {
+for (String follower : Bridge.followers("twitter.com/Joey", 15)) {
     System.out.println(follower + "follows Joey");
 }
 {% endhighlight %}
@@ -56,6 +57,6 @@ The most major concern with the Twitter source, which exists whether it is calle
 Actors' filmographies and Movies' casts go hand in hand. You can use them interchangably with getAssociations, which may be helpful in generating and using graphs based on them.
 
 {% highlight java %}
-List<String> cast = Bridge.actors("movie/Top Gun");
-List<String> filmography = Bridge.movies("movie/Tom Hanks");
+List<String> cast = Bridge.actors("movie/Top Gun", 15);
+List<String> filmography = Bridge.movies("movie/Tom Hanks", 3);
 {% endhighlight %}
