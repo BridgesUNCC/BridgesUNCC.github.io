@@ -38,7 +38,7 @@ HelloWorld.setColor("red"); OR HelloWorld.setColor("#FF0000");
 
 HelloWorld.setSize(15);
 
-Vertex GoodByeWorld = new Vertex("GoodByeWorld", gv);
+Vertex<String> GoodByeWorld = new Vertex<String>("GoodByeWorld", gv);
 
 {% endhighlight %}
 
