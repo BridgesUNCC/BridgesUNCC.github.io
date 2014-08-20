@@ -58,11 +58,11 @@ Bridge.init(0, "Your API key here", gv, "Your user name here");
 
 **Step 6:** Creating our first vertex
 
-> * Create our first Vertex. HelloWorld is what we are going to name our first vertex. The Vertex object is looking for a name (what we want to call it) and a Graph (where we want to store it).
+> * Create our first Vertex. HelloWorld is what we are going to name our first vertex. The Vertex object is looking for a name (what we want to call it) and a Graph (where we want to store it). We tell the Vertex that it will contain a String in this case, but later we will want Followers for Twitter, or any other type you find convenient.
 
 {% highlight js  %}
 
-Vertex HelloWorld = new Vertex("HelloWorld", gv);
+Vertex<String> HelloWorld = new Vertex<String>("HelloWorld", gv);
 
 {% endhighlight %}
 
@@ -78,7 +78,23 @@ Bridge.complete();
 
 > * Our final code should look just like the image below, minus the API key and User Name which has been removed for security purposes.
 
-![drawing](/img/Tutorial/sampleCode.png)
+{% highlight js  %}
+
+package studentNameHere;
+import edu.uncc.cs.bridges.*;
+
+public class HelloWorld {
+  public static void main(String[] args) {
+    GraphVisualizer gv = new GraphVisualizer();
+    Bridge.init(0, "Your API key", gv, "Your username");
+    Vertex<String> HelloWorld = new Vertex<String>("HelloWorld", gv);
+    Bridge.complete();
+  }
+}
+
+Bridge.complete();
+
+{% endhighlight %}
 
 **Step 8:** Running our program
 
