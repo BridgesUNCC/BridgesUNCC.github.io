@@ -101,7 +101,7 @@ Bridge.complete();
 > * Finally we need to run our program.
 In the console there will be a string, similar to the one below, giving you a link to view the visualization.
 
-`Check out your visuals at http://bridges-herokuapp.com/assignments/0/YOUR_USERNAME?apikey=YOUR_API_KEY_WILL_BE_HERE`
+`Check out your visuals at http://bridges-cs.herokuapp.com/assignments/0/YOUR_USERNAME?apikey=YOUR_API_KEY_WILL_BE_HERE`
 
 > * USERNAME is case-sensitive and should be your actual user name (seen on the top right when logged in)
 * The website above will be reflected in the eclipse console. Note that the website located in the console should be used rather than the sample shown above. 
