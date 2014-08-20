@@ -92,8 +92,6 @@ public class HelloWorld {
   }
 }
 
-Bridge.complete();
-
 {% endhighlight %}
 
 **Step 8:** Running our program
