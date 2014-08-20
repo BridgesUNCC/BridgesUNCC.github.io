@@ -66,13 +66,36 @@ HelloWorld.createEdge(GoodByeWorld);
 
 {% highlight js %}
 
-HelloWorld.getEdge(GoodByeWorld).setColor("yellow");
+HelloWorld.getEdge(GoodByeWorld)
+HelloWorld.setColor("yellow");
 
 {% endhighlight %}
 
 > * Our code should now look like this, again, minus the API key and User Name which has been removed for security purposes..
 
-![drawing](/img/Tutorial/sampleCode2.png)
+{% highlight js  %}
+
+package studentNameHere;
+import edu.uncc.cs.bridges.*;
+
+public class HelloWorld {
+  public static void main(String[] args) {
+    GraphVisualizer gv = new GraphVisualizer();
+    Bridge.init(0, "Your API key", gv, "Your username");
+    Vertex<String> HelloWorld = new Vertex<String>("HelloWorld", gv);
+    HelloWorld.setColor("red");
+    HelloWorld.setSize(15);
+    
+    Vertex<String> GoodByeWorld = new Vertex<String>("GoodByeWorld", gv);
+    HelloWorld.createEdge(GoodByeWorld);
+    HelloWorld.getEdge(GoodByeWorld)
+    HelloWorld.setColor("yellow");
+    
+    Bridge.complete();
+  }
+}
+
+{% endhighlight %}
 
 > * This is what our visualization should look like.
 
