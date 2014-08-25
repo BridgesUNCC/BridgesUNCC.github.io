@@ -88,8 +88,7 @@ public class HelloWorld {
     
     Vertex<String> GoodByeWorld = new Vertex<String>("GoodByeWorld", gv);
     HelloWorld.createEdge(GoodByeWorld);
-    HelloWorld.getEdge(GoodByeWorld)
-    HelloWorld.setColor("yellow");
+    HelloWorld.getEdge(GoodByeWorld).setColor("yellow");
     
     Bridge.complete();
   }
