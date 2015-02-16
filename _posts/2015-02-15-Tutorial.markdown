@@ -67,51 +67,51 @@ NOTE: Make sure to remember your password. There is no password recovery option,
 > * In your *HelloWorld.java* class, enter the following code snippets:
 > * Import the bridgesV2 packages to give access to all the classes/methods needed to interact with Bridges
 
-```
+`
 import edu.uncc.cs.bridgesV2.connect.Bridges;
 import edu.uncc.cs.bridgesV2.base.SLelement;
-```
+`
 > * Add exception information to the end of the main function
 
-```
+`
 public static void main(String[] args) throws Exception{...}
-```
+`
 > * Create the bridges object with your API Key and Student Name. Since we want our project to print out "Hello World," we'll use String as the type.
 
-```
+`
 Bridges<String> bridge = new Bridges<String>(0, "API_KEY", "StudentName")
-```
+`
 > * Create two singly-linked elements. Singly-linked elements can be linked together to create a linked-list structure.
 
-```
+`
 SLelement e0 = new SLelement<String>("Hello", "");
 SLelement e1 = new SLelement<String>("World", "");
-```
+`
 > * Set the links for the elements you created
 
-```
+`
 e0.setNext(e1);
-```
+`
 > * Edit some visual properties of your elements
 
-```
+`
 e0.getVisualizer().setColor("black");
 e0.getVisualizer().setOpacity(0.5);
 e1.getVisualizer().setColor("green");
-```
+`
 > * Pass the first element of your data structure and the type of data structure to the bridges object we created
 
-```
+`
 bridge.setDataStructure(e0, "llist");
-```
+`
 > * Call the visualization function
 
-```
+`
 bridge.visualize();
-```
+`
 > * To summarize, your HelloWorld.java file should look like this:
 
-```
+{% highlight java %}
 package StudentName;
 
 import edu.uncc.cs.bridgesV2.connect.Bridges;
@@ -142,7 +142,7 @@ public class HelloWorld {
         bridge.visualize();
     }
 }
-```
+{% endhighlight %}
 
 **Step 3:** Running our project
 
