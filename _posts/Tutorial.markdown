@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "Hello World Visualization Tutorial"
-categories: main
+title:  Hello World Visualization Tutorial
+categories:
+- main
 ---
 
 ## Part 1: Setup
