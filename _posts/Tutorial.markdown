@@ -1,0 +1,161 @@
+---
+layout: post
+title:  "Hello World Visualization Tutorial"
+categories: main
+---
+
+## Part 1: Setup
+
+---
+
+**Step 1:** Eclipse
+
+> * If you don't already have Eclipse installed, download it here: ([link](https://www.eclipse.org/downloads/index-java8.php)) and install it on your computer.
+
+**Step 2:** Bridges Account
+
+> * Visit the Bridges website ([link](http://bridges-cs.herokuapp.com/login)) and create an account. After creating your account, click on your profile name in the upper right corner to view your profile. Once in your profile, there will be a number under `API Key`; write this down or keep this page open, because you'll need this API key in the second half of the tutorial.
+NOTE: Make sure to remember your password. There is no password recovery option, and you can only have one account per email address.
+
+**Step 3:** Creating a Java Project
+
+> * Open Eclipse and create a new Java Project. `File`->`New`->`Java Project`
+
+![drawing](/img/Tutorialv2/newJavaProject.png)
+
+> * In the new window change the `Project name` field to your user name, then make sure the `Execution Environment JRE` is JavaSE-1.5 or above. Click `Finish` in the lower right-hand corner.
+
+![drawing](/img/Tutorialv2/JavaProject.png)
+
+**Step 4:** Importing Bridges
+
+> * Download the Bridges.jar file and save it somewhere you can easily locate it. ([link](/jar/bridges_all_2.0.jar))
+> * In Eclipse, right-click your project in the *Package Explorer* window then click:
+`Build Path` -> `Add External Archives...`
+
+![drawing](/img/Tutorialv2/addArchive.png)
+
+> * Locate and select the Bridges.jar file you saved earlier to import it into your new project
+
+![drawing](/img/Tutorialv2/jar.png)
+
+> * To verify that you've successfully imported the .jar file, look under the `Referenced Libraries` section of your project in the *Package Explorer* window in Eclipse.
+
+![drawing](/img/Tutorialv2/ReferencedLib.png)
+
+> * If you've got a Project in the Eclipse *Package Explorer* with your username as the project name, and the referenced libraries section shows the bridges jar file, you've completed the setup and are ready to build the Hello World class!
+
+## Part 2: Hello World!
+
+**Step 1:** Creating our class
+
+> * Create a new class within your project
+> * `File` -> `New` -> `Class`
+
+![drawing](/img/Tutorialv2/newClass.png)
+
+> * In the New Java Class window set the **Package** field to your name
+> * Set the **Name** field to *HelloWorld* (this is the name of the class)
+> * Tick the box to create *public static void main(String[] args)* to make Eclipse create a main method in our new class
+> * Click `Finish` in the bottom right-hand corner
+
+![drawing](/img/Tutorialv2/class.png)
+
+**Step 2:** Code
+
+> * In your *HelloWorld.java* class, enter the following code snippets:
+> * Import the bridgesV2 packages to give access to all the classes/methods needed to interact with Bridges
+
+```java
+import edu.uncc.cs.bridgesV2.connect.Bridges;
+import edu.uncc.cs.bridgesV2.base.SLelement;
+```
+> * Add exception information to the end of the main function
+
+```java
+public static void main(String[] args) throws Exception{...}
+```
+> * Create the bridges object with your API Key and Student Name. Since we want our project to print out "Hello World," we'll use String as the type.
+
+```java
+Bridges<String> bridge = new Bridges<String>(0, "API_KEY", "StudentName")
+```
+> * Create two singly-linked elements. Singly-linked elements can be linked together to create a linked-list structure.
+
+```java
+SLelement e0 = new SLelement<String>("Hello", "");
+SLelement e1 = new SLelement<String>("World", "");
+```
+> * Set the links for the elements you created
+
+```java
+e0.setNext(e1);
+```
+> * Edit some visual properties of your elements
+
+```java
+e0.getVisualizer().setColor("black");
+e0.getVisualizer().setOpacity(0.5);
+e1.getVisualizer().setColor("green");
+```
+> * Pass the first element of your data structure and the type of data structure to the bridges object we created
+
+```java
+bridge.setDataStructure(e0, "llist");
+```
+> * Call the visualization function
+
+```java
+bridge.visualize();
+```
+> * To summarize, your HelloWorld.java file should look like this:
+
+```java
+package StudentName;
+
+import edu.uncc.cs.bridgesV2.connect.Bridges;
+import edu.uncc.cs.bridgesV2.base.SLelement;
+
+public class HelloWorld {
+    public static void main(String[] args) throws Exception{
+
+        //create the Bridges object
+        Bridges<String> bridge = new Bridges<String>(0, "YOUR_API_KEY", "YOUR_STUDENT_NAME");
+
+        //create singly-linked elements
+        SLelement e0 = new SLelement<String>("Hello", "");
+        SLelement e1 = new SLelement<String>("World", "");
+
+        //create a singly-linked list by adding e1 as e0's next element
+        e0.setNext(e1);
+
+        //edit some visual properties of the two elements
+        e0.getVisualizer().setColor("black");
+        e0.getVisualizer().setOpacity(0.5);
+        e1.getVisualizer().setColor("green");
+
+        //pass the first element of the list and the type to the bridges object
+        bridge.setDataStructure(e0, "llist");
+
+        // visualize the list
+        bridge.visualize();
+    }
+}
+```
+
+**Step 3:** Running our project
+
+> * Once all your code is in order, run your project:
+> * `Run` -> `Run`  *OR*
+> * `Run` -> `Run As` -> `Java Application`
+
+![drawing](/img/Tutorialv2/runAs.png)
+
+**Step 4:** Bridges Visualization
+> * Assuming all your code is correct and it compiles correctly, the Eclipse console will give you a link to the Bridges website.
+> * Copy/paste this link into your favorite browser to view a visualization of the data structure you've just created.
+> * It should look something like this:
+
+![drawing](/img/Tutorialv2/HelloWorld.png)
+
+Well done! You've just created your first Bridges project!

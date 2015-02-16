@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hello World Visualization Tutorial"
-categories: main
+categories: tutorial
 ---
 
 ## Installation and Setup:
@@ -10,7 +10,7 @@ categories: main
 
 **Step 1:** Installing Eclipse
 
-> * Download and install [Eclipse](https://www.eclipse.org/downloads/index-java8.php). There are several choices here so make sure you choose the correct one. 
+> * Download and install [Eclipse](https://www.eclipse.org/downloads/index-java8.php). There are several choices here so make sure you choose the correct one.
 * Under Package Solutions choose `Eclipse IDE for Java Developers` from the list. The important thing here is that it has 'Maven integration', which is required to use Bridges.
 * To verify you have Maven installed correctly `Eclipse`->`About Eclipse` (on Mac) or `Help`-> `About Eclipse` (on Linux) and you should see the Maven icon as illustrated below.
 * NOTE: If you already have Eclipse installed, you can just install the [Maven](https://www.eclipse.org/m2e/download/) plugin by dragging and dropping the "Install" image into a running Eclipse workspace. It installs automatically.
@@ -19,7 +19,7 @@ categories: main
 
 **Step 2:** Creating a Bridges account
 
-> * Go to the [Bridges website](http://bridges-cs.herokuapp.com/login) and create an account. After you create your account, click on your profile name in the upper right corner to view your profile. Once in your profile there will be a number under `API Key`, you will need this number in Part 2 of the tutorial. 
+> * Go to the [Bridges website](http://bridges-cs.herokuapp.com/login) and create an account. After you create your account, click on your profile name in the upper right corner to view your profile. Once in your profile there will be a number under `API Key`, you will need this number in Part 2 of the tutorial.
 * NOTE: Make sure to remember your password; there is no option for password recovery and you can only have one account per email address.
 
 **Step 3:** Creating a Java Project
