@@ -1,14 +1,6 @@
 var searchData=
 [
-  ['validate_5fadt_5fsize',['validate_ADT_size',['../classbridges_1_1_validation.html#a79c78d43b8226b0b53da078458941117',1,'bridges::Validation']]],
-  ['validatecolor',['validateColor',['../classbridges_1_1_validation.html#ae996957e1fc7f77ef49c31fbdb787933',1,'bridges::Validation']]],
-  ['validateopacity',['validateOpacity',['../classbridges_1_1_validation.html#a1e3a732becc5d60df177ac2db2795885',1,'bridges::Validation']]],
-  ['validateshape',['validateShape',['../classbridges_1_1_validation.html#aeb22afdeb015c9d9015889a240918542',1,'bridges::Validation']]],
-  ['validatesize',['validateSize',['../classbridges_1_1_validation.html#a323312df77e8efe8382a25ff7295819d',1,'bridges::Validation']]],
-  ['validatethickness',['validateThickness',['../classbridges_1_1_validation.html#a234922474be2e46f8b34d50c618716a3',1,'bridges::Validation']]],
-  ['validateweight',['validateWeight',['../classbridges_1_1_validation.html#a75e8636360983f0b12fb7e6581a02357',1,'bridges::Validation']]],
-  ['validation',['Validation',['../classbridges_1_1_validation.html#af96b099ca6ce6cd4f408f1cead574d72',1,'bridges::Validation']]],
-  ['validation',['Validation',['../classbridges_1_1_validation.html',1,'bridges']]],
-  ['validation_2eh',['Validation.h',['../_validation_8h.html',1,'']]],
-  ['visualize',['visualize',['../classbridges_1_1_bridges.html#a9dc056c51e3eadff68d637badb0bc3d9',1,'bridges::Bridges']]]
+  ['treeelement',['TreeElement',['../classbridges_1_1_tree_element.html',1,'bridges']]],
+  ['treeelement',['TreeElement',['../classbridges_1_1_tree_element.html#a75e7d67cc9357820e9e5ce6ab0370be8',1,'bridges::TreeElement::TreeElement()'],['../classbridges_1_1_tree_element.html#a03a6eb569c829d3a70364f93e5241d72',1,'bridges::TreeElement::TreeElement(const TreeElement&lt; E &gt; &amp;te)'],['../classbridges_1_1_tree_element.html#ab0f11470f6983709436c700956398d78',1,'bridges::TreeElement::TreeElement(E e)'],['../classbridges_1_1_tree_element.html#a6b5c2150ee4297fb7b341eb7d373492e',1,'bridges::TreeElement::TreeElement(string label, E e)'],['../classbridges_1_1_tree_element.html#aa7af1081512887f5ce22ab47fe8f8624',1,'bridges::TreeElement::TreeElement(TreeElement&lt; E &gt; *left, TreeElement&lt; E &gt; *right)'],['../classbridges_1_1_tree_element.html#a23151bf7f36d7f3f9e311a032d932c88',1,'bridges::TreeElement::TreeElement(E e, TreeElement&lt; E &gt; *left, TreeElement&lt; E &gt; *right)']]],
+  ['treeelement_2eh',['TreeElement.h',['../_tree_element_8h.html',1,'']]]
 ];
