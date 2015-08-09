@@ -1,581 +1,755 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-.codeExample {
-	color: blue;
-	font-family: "Courier";
-	padding-left: 20px;
-}
-
-.graphExample {
-	font-family: "Courier";
-	padding-left: 20px;
-}
-
-.codeComment {
-	color: green;
-	font-family: "Courier";
-	padding-left: 20px;
-}
-
-.section {
-	padding-bottom: 40px;
-}
-</style>
 <meta charset="utf-8">
-<title>Bridges FAQ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:600,800" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.min.css">
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+	</script>
+
+<script>
+
+$(document).ready(function(){
+	hideAllContent();
+	$('#overview').show();
+
+	$('.menu a').click(function() {
+		hideAllContent();
+
+		var id = $(this).attr('name');
+		$(id).show();
+		$(window).scrollTop(0);
+	});
+
+
+
+	function hideAllContent(){
+		$('#content').children('*').hide();
+	}
+
+
+});
+
+
+</script>
+
+	<link rel="stylesheet" href="style.css">
 </head>
-<body style="max-width: 1000px">
 
 
-	<div class="section">
-		<h1>Getting Started</h1>
-		See the <a href="http://bridgesuncc.github.io/main/Tutorial/">Hello World Tutorial</a>.
-		<br><br>
-		Or, see <a href="#GraphCode">What is the code to get started making a
-			graph?<br></a> for more information on building graphs and connecting edges.
-	</div>
+	<body>
+		<div class="main">
+
+		<!-- THIS IS THE SIDE MENU -->
+		 <nav id="nav">
+		 	<img src="res/logo.png" style="max-width: 100%"></img>
+		 	<ul>
+		 		<li class = "menu"><a name="#overview">Overview<a></li>
+		 		<ul class = "subMenu1">
+		 			<li class="menu"><a name="#element">Bridges Elements</a></li>
+		 			<li class="menu"><a name="#generic">Generics</a></li>
+		 			<li class="menu"><a name="#containers">Graphs/Arrays</a></li>
+		 		</ul>
+		 		<li class="topMenu">Element Concepts</li>
+		 		<ul class="subMenu1">
+		 			<li class="menu"><a name="#sleConcept">Single Linked Element</a></li>
+		 			<li class="menu"><a name="#dleConcept">Double Linked Eleemnt</a></li>
+		 			<li class="menu"><a name="#treeConcept">Tree Elements</a></li>
+		 			<li class="menu"><a name="#bstConcept">BST Elements</a></li>
+		 			<li class="menu"><a name="#arrayConcept">Array Elements</a></li>
+		 			<li class="menu"><a name="#graphListConcept">Graph Adjacency List and GraphAdjMatrix</a></li>
+	 			</ul>
+	 			<li class = "topMenu">Code Examples</li>		
+	 			<ul class = "subMenu1">
+	 				<li class="menu"><a name="#sleCode">Single Linked Code</a></li>
+	 				<li class="menu"><a name="#dleCode">Double Linked Code</a></li>
+					<li class="menu"><a name="#treeCode">Tree Code</a></li>
+					<li class="menu"><a name="#arrayCode">Array Code</a></li>
+					<li class="menu"><a name="#graphListCode">Graph Adjacency List Code</a></li>
+					<li class="menu"><a name="#graphMatrixCode">Graph Adjacency Matrix Code</a></li>
+ 				</ul>	
+
+	 			<li class="topMenu">Adjusting the Visualization</li>
+	 			<ul class = "subMenu1">
+	 				<li class="menu"><a name="#vertexProperties">Changing the Vertex Visualization</a></li>
+	 				<li class="menu"><a name="#edgeProperties">Changing the Edge Visualization</a></li>
+
+	 			</ul>
+		 	</ul>
+   		 </nav>  
 
 
-	<div class="section">
-		<h1>Element FAQ</h1>
-		<a href="#element">What is an Element&lt;E&gt;?<br>
-		</a> <a href="#generic">What is the &lt;E&gt;? <br></a> <a
-			href="#SlElement">How does the SLelement&lt;E&gt; work?<br></a>
-		<a href="#DlElement">How does the DLelement&lt;E&gt; work?<br></a>
-		<a href="#TreeElement">How does the TreeElement&lt;E&gt; work?<br></a>
-		<a href="#TreeVsDLE">How does a TreeElement&lt;E&gt; differ from a
-			DLelement&lt;E&gt;?<br>
-		</a> <a href="#ArrayElement">How does the ArrayElement&lt;E&gt; work?<br></a>
-		<a href="#GraphElement">There is no GraphElement&lt;E&gt;. How is
-			a graph represented?<br>
-		</a> <a href="#GraphCode">What is the code to get started making a
-			graph?<br>
-		</a> <a href="#GraphMistake">Why are my graph edges connecting to
-			vertices that I didn't assign?<br>
-		</a> <a href="#GraphNotVisible">I've connected my graph edges, but the
-			visualization doesn't show any nodes.<br>
-		</a>
-
-	</div>
+   		 <!-- ALL CONTENT IS A CHILD OF <div id="content"  -->
+		<div id="content">
 
 
-	<div class="section">
+			<div id="overview">
+					<h1>
+						<a id="visualize">What is Bridges?</a>
+					</h1>
+					<p>
+						Bridges is a set of libraries that allow the user to build data structures using the building blocks from the Bridges Elements class.<br><br>
 
-		<h1>Bridges Visualization FAQ</h1>
-		<a href="#BasicVisualize">How do I get Bridges to visualize?<br>
-		</a> <a href="#SetDataStructure">What do I pass to setDataStructure()?<br></a>
+						Bridges currently supports the following types of Elements:
+						<ul style="">
+							<li>Single Linked Elements - elements that only point to one other element</li>
+							<li>Double Linked Elements - elements that point to two other element</li>
+							<li>Tree Elements - elements that only point to a left and right child element</li>
+							<li>BST Elements - a tree element with a "key", to be used in binary search implementations</li>
+							<li>Array Elements - elements designed to be used in array structures</li>
+							<li>GraphAdjMatrix - containers designed to be used as graphs</li>
+							<li>GraphListMatrix - containers designed to be used as graphs</li>
+						</ul>
+						Bridges also contains a visualization server that allows the user to send their code and see the data structure that they have built. The user can change the size, shape, color, and opacity of the elements in the visualization. <br><br>
 
-		<a href="#Refresh">How do I refresh the visualization?<br></a> <a
-			href="#VisualizeTiming">When should I call visualize()?<br></a>
-		<a href="#TextVisualization">How do I change the text field on the
-			Visualization?<br>
-		</a> <a href="#NodeColor">How do I change the node color, size, or
-			opacity on the Visualization?<br>
-		</a> <a href="#Projects">How do I start a new visualization without
-			overwriting the old one?<br>
-		</a>
-	</div>
+					</p>
+				</div>
+	
 
+			<div id="element">
+					<h1>
+						<a id="element">What is an Element&lt;E&gt;?</a>
+					</h1>
+					<p>
+						Element&lt;E&gt; is the superclass of SLelement&lt;E&gt;,
+						DLelement&lt;E&gt;, TreeElement&lt;E&gt;, and ArrayElement&lt;E&gt;.
+						<br> <br> <img src="res/ClassStructure.png"
+							style="max-width: 100%"> <br> <br> You will normally
+						be using these classes to build data structures. Since they are
+						subclasses of Element&lt;E&gt;, they inherit a common set of methods
+						and instance variables, so to a certain extent they will share a
+						common set of behavior. However, since they are all different
+						classes, they will have methods and instance variables that are
+						unique to their particular class.
 
-
-	<div class="section">
-		<h1>
-			<a id="element">What is an Element&lt;E&gt;?</a>
-		</h1>
-		<p>
-			Element&lt;E&gt; is the superclass of SLelement&lt;E&gt;,
-			DLelement&lt;E&gt;, TreeElement&lt;E&gt;, and ArrayElement&lt;E&gt;.
-			<br> <br> <img src="res/ClassStructure.png"
-				style="max-width: 100%"> <br> <br> You will normally
-			be using these classes to build data structures. Since they are
-			subclasses of Element&lt;E&gt;, they inherit a common set of methods
-			and instance variables, so to a certain extent they will share a
-			common set of behavior. However, since they are all different
-			classes, they will have methods and instance variables that are
-			unique to their particular class.
-
-		</p>
-	</div>
+					</p>
+				</div>
 	
 
 
-	<div class="section">
-		<h1>
-			<a id="generic">What is the &lt;E&gt;?</a>
-		</h1>
-		<p>
-			&lt;E&gt; is the Java generic parameter. It represents any class, so
-			you can have an SLelement&lt;String&gt; or an
-			SLelement&lt;Integer&gt; or any other class. <br> <br> You
-			may be wondering, if &lt;E&gt; can be any class, then how does
-			Element know how to behave since a Boolean does not have the same
-			methods available as a String? <br> <br> Since we didn’t
-			put any restrictions on &lt;E&gt; inside the Element class signature,
-			we can only call methods of &lt;E&gt; that are common to ALL java
-			objects. We will not be allowed to call a method on E that is
-			particular to any one class. <br> <br> In this way, we can
-			allow the Element&lt;E&gt; class to function as a container. The
-			container doesn't care what it's holding, and whatever the container
-			is holding doesn't influence the behavior of the container. <img
-				src="res/Bucket.png" style="max-width: 100%">
+			<div id="containers">
+				<h1>
+					<a id="element">What about Graphs and Arrays?</a>
+				</h1>
+				<p>
+					Bridges also contains classes for ArrayOfElements, GraphAdjacencyList, and GraphAdjacencyMatrix, however, these do not subclass from the Element class.<br><br>
 
-		</p>
-	</div>
+					This is because Graphs and Arrays themselves are containers that hold Bridges classes. Internally, Bridges graphs and arrays will hold subclasses of Element. When you interact with the graphs and arrays, you will typically be adding an Element to them or retrieving an Element from them. 
+				</p>
+			</div>
 
 
-	<div class="section">
 
-		<h1>
-			<a id="SlElement">How does the SLelement&lt;E&gt; work?</a>
-		</h1>
-		<p>
-			SLelement&lt;E&gt; stands for Singly Linked Element and is a type of
-			container that only has one pointer which points to another
-			SLelement&lt;E&gt;. So an SLelement&lt;E&gt; "knows" who it's
-			pointing at but it does not know who pointed at it. <br> <br>
-			<img src="res/SLelement.png" style="max-width: 100%"> <br>
-			<br> In this case SLelement1 points to SLelement2. <br> <br>
-			Calling getNext() on SLelement1 will return SLelement2, and calling
-			getNext() on SLelement2 will return SLelement3. <br> <br>
-			In this example, SLelement3 is not pointing to another SLelement so
-			calling getNext() on SLelement3 will return Null. This is desirable
-			since you will know that you’ve reached the end of all of the linked
-			SLelements when one of them returns Null. <br> <br> Notice
-			that there is no getPrev(). SLelement2 has no idea what element came
-			before it. So, you CANNOT go backwards.
+			<div id="generic">
+					<h1>
+						<a>What is the &lt;E&gt;?</a>
+					</h1>
+					<p>
+						&lt;E&gt; is the Java generic parameter. It represents any class, so
+						you can have an SLelement&lt;String&gt; or an
+						SLelement&lt;Integer&gt; or any other class. <br> <br> You
+						may be wondering, if &lt;E&gt; can be any class, then how does
+						Element know how to behave since a Boolean does not have the same
+						methods available as a String? <br> <br> Since we didn’t
+						put any restrictions on &lt;E&gt; inside the Element class signature,
+						we can only call methods of &lt;E&gt; that are common to ALL java
+						objects. We will not be allowed to call a method on E that is
+						particular to any one class. <br> <br> In this way, we can
+						allow the Element&lt;E&gt; class to function as a container. The
+						container doesn't care what it's holding, and whatever the container
+						is holding doesn't influence the behavior of the container.<br><br> <img
+							src="res/Bucket.png" style="max-width: 100%">
 
-		</p>
-	</div>
+					</p>
+			</div>
 
+			<div id="containers">
+					<h1>
+						<a>What is the &lt;E&gt;?</a>
+					</h1>
+					<p>
+						&lt;E&gt; is the Java generic parameter. It represents any class, so
+						you can have an SLelement&lt;String&gt; or an
+						SLelement&lt;Integer&gt; or any other class. <br> <br> You
+						may be wondering, if &lt;E&gt; can be any class, then how does
+						Element know how to behave since a Boolean does not have the same
+						methods available as a String? <br> <br> Since we didn’t
+						put any restrictions on &lt;E&gt; inside the Element class signature,
+						we can only call methods of &lt;E&gt; that are common to ALL java
+						objects. We will not be allowed to call a method on E that is
+						particular to any one class. <br> <br> In this way, we can
+						allow the Element&lt;E&gt; class to function as a container. The
+						container doesn't care what it's holding, and whatever the container
+						is holding doesn't influence the behavior of the container. <img
+							src="res/Bucket.png" style="max-width: 100%">
 
-	<div class="section">
-
-		<h1>
-			<a id="DlElement">How does the DLelement&lt;E&gt; work?</a>
-		</h1>
-		<p>
-			DLelement&lt;E&gt; stands for Doubly Linked Element, and is a type of
-			container that has two pointers that point to other
-			DLelement&lt;E&gt;. So a DLelement&lt;E&gt; “knows” who it’s pointing
-			at, AND it knows who pointed at it. <br> <br> <img
-				src="res/DLelement.png" style="max-width: 100%"> <br> <br>
-		</p>
-		In this example, calling getNext() on DLelement2 will return
-		DLelement3. <br> <br> Calling getPrev() on DLelement2 will
-		return DLelement1. <br> <br> In this example, DLelement3
-		does not have a next pointer pointing to another DLelement so calling
-		getNext() on DLelement3 will return Null, indicating the end of the
-		linked elements. Since DLelement &lt;;E&gt;; have a getPrev() method,
-		they can move forwards AND backwards through the linked elements.
-	</div>
-
-
-	<div class="section">
-
-		<h1>
-			<a id="TreeElement">How does the TreeElement&lt;E&gt; work?</a>
-		</h1>
-		<p>
-			TreeElement&lt;E&gt; is another type of container that has two
-			pointers that point to two child TreeElement&lt;E&gt;. By convention,
-			these two pointers are called "left" and "right". <br> <img
-				src="res/TreeElement.png" style="max-width: 100%"> <br>
-			By convention, the “top” of the tree is called the root. <br> <br>
-			Root has two pointers, so calling Root.getLeft() will return the
-			TreeElement T1 and calling Root.getRight() will return the
-			TreeElement T2. <br> <br> Note that there is no pointer
-			from T1 or any other element back to its root.
-	</div>
-
-	<div class="section">
-
-		<h1>
-			<a id="TreeVsDLE">How does a TreeElement&lt;E&gt; differ from a
-				DLelement&lt;E&gt;?<br>
-			</a>
-		</h1>
-		<p>
-			DLelement&lt;E&gt; also has two pointers, but one points to the
-			previous element. TreeElement&lt;E&gt; does not point to the previous
-			element, but points at two different children. <br> <br>
-			DLelement&lt;E&gt; has a next and previous element, by convention, a
-			TreeElement&lt;E&gt; has a right and left element. <br> <br>
-			Generally a TreeElement&lt;E&gt; will be used in a recursive data
-			structure and that data structure that will specify a particular
-			relationship that all of the right elements have relative to it’s
-			root and a different relationship that all left elements have
-			relative to it’s root (a binary search tree, for example).
-		</p>
-	</div>
+					</p>
+			</div>
 
 
-	<div class="section">
-		<h1>
-			<a id="ArrayElement">How does the ArrayElement&lt;E&gt; work?</a>
-		</h1>
-		<p>
-			ArrayElement&lt;E&gt; is a building block for an array of elements. <br>
-			<br> It has NO POINTERS to other objects. Unlike all of the
-			other elements, it is designed to enable direct access to a
-			particular element at a particular index. <br> <img
-				src="res/ArrayElement.png" style="max-width: 100%"> <br>
-			In this case once you’ve made an array of ArrayElements, you get
-			access to the element by using the index, just like a normal Java
-			array. <br> <br> For example myArray[2] would return
-			ArrayElement2
 
-		</p>
-	</div>
+			<div id="sleConcept">
 
+					<h1>
+						<a id="SlElement">How does the SLelement&lt;E&gt; work?</a>
+					</h1>
+					<p>
+						SLelement&lt;E&gt; stands for Singly Linked Element and is a type of
+						container that only has one pointer which points to another
+						SLelement&lt;E&gt;. So an SLelement&lt;E&gt; "knows" who it's
+						pointing at but it does not know who pointed at it. <br> <br>
+						<img src="res/SLelement.png" style="max-width: 100%"> <br>
+						<br> In this case SLelement1 points to SLelement2. <br> <br>
+						Calling getNext() on SLelement1 will return SLelement2, and calling
+						getNext() on SLelement2 will return SLelement3. <br> <br>
+						In this example, SLelement3 is not pointing to another SLelement so
+						calling getNext() on SLelement3 will return Null. This is desirable
+						since you will know that you’ve reached the end of all of the linked
+						SLelements when one of them returns Null. <br> <br> Notice
+						that there is no getPrev(). SLelement2 has no idea what element came
+						before it. So, you CANNOT go backwards.
+						<br><br>
+						<p class="menu">See a <a name="#sleCode" href="#sleCode">code example</a></p>
 
-	<div class="section">
-		<h1>
-			<a id="GraphElement">There is no GraphElement&lt;E&gt;. How is a
-				graph represented?<br>
-			</a>
-		</h1>
-		<p>
-			In Bridges, graphs use an adjacency list representation and are built
-			by using the Java HashMap&lt;String, SLelement&lt;E&gt;&gt;. <br>
-			<br> In this case, the "key" is the identifier of the vertex,
-			and the "value" is a set of linked SLelements representing the edges
-			of the graph. <br> <br> In most graph representations, the
-			key is the vertex, and the value assigned to it is the list of
-			vertices that are connected to it <br> <br> Bridges is
-			slightly different because the linked list mapped to the vertex
-			starts with the vertex itself, and the subsequent links are the
-			edges. <br> <br> <img src="res/SimpleGraph.png"> <br>
-			For example, if we have vertices Vertex_A, Vertex_B, Vertex_C, and
-			Vertex_D with Vertex_A connected to both Vertex_B and Vertex_C, and
-			Vertex_C connected to Vertex_D, the classical representation would
-			look as follows: <br> <br>
-		<div class="graphExample">
-			Vertex_A: Vertex_B--&gt;Vertex_C <br> Vertex_C: Vertex_D <br>
-			<br>
-		</div>
-		Bridges representation would look like the following: <br>
-		<div class="graphExample">
-			<p>
-				Vertex_A: Vertex_A--&gt;EdgeToB--&gt;EdgeToC <br> Vertex_C:
-				Vertex_C--&gt;EdgeToD <br> <br>
-		</div>
-	</div>
-
-	<div class="section">
-		<h1>
-			<a id="GraphCode">What is the code to get started making a graph?<br>
-			</a>
-		</h1>
-		<ol>
-			<li>Construct a BRIDGES object with an assignment number and
-				your credentials. In this example, the assignment number is 61.<br>
-				<br>
-				<div class="codeExample">Bridges&lt;String&gt; bridges = new
-					Bridges&lt;String&gt;(61, “yourNumericAPIKey”, “yourUserName”);</div> <br>
-				<br>
-			<li>Construct a HashMap to hold the adjacency list
-				representation. of the graph <br> <br>
-				<div class="codeExample">HashMap&lt;String,
-					SLelement&lt;String&gt;&gt; graph = new HashMap&lt;String,
-					SLelement&lt;String&gt;&gt;();</div> <br> <br>
-			<li>Create some vertices.<br> <br>
-				<div class="codeExample">
-					SLelement v1 = new SLelement&lt;String&gt;("v1", "v1"); <br>
-					SLelement v2 = new SLelement&lt;String&gt;("v2", "v2"); <br>
-					SLelement v3 = new SLelement&lt;String&gt;("v3", "v3"); <br>
-					SLelement v4 = new SLelement&lt;String&gt;("v4", "v4"); <br>
-				</div> <br> <br>
-			<li>Add those vertices to the HashMap. <br> <br>
-				<div class="codeExample">
-					graph.put(v1.getIdentifier(), v1); <br>
-					graph.put(v2.getIdentifier(), v2); <br>
-					graph.put(v3.getIdentifier(), v3); <br>
-					graph.put(v4.getIdentifier(), v4);
-				</div> <br> <br> Note what is happening here. The vertices we
-				made in step three are being mapped to keys in the HashMap. Those
-				vertices are the starting points of what will become a linked list
-				of Edges.<br> <br>
-			<li>Create some edges.<br> <br>
-				<div class="codeExample">
-
-					SLelement&lt;Edge&gt; edgeToV1 = new SLelement&lt;Edge&gt;("edge1",
-					new Edge(0, v1.getIdentifier())); <br> SLelement&lt;Edge&gt;
-					edgeToV2 = new SLelement&lt;Edge&gt;("edge2", new Edge(0,
-					v2.getIdentifier())); <br> SLelement&lt;Edge&gt; edgeToV3 =
-					new SLelement&lt;Edge&gt;("edge3", new Edge(0,
-					v3.getIdentifier())); <br> SLelement&lt;Edge&gt; edgeToV4 =
-					new SLelement&lt;Edge&gt;("edge4", new Edge(0,
-					v4.getIdentifier())); <br> <br>
-				</div> WARNING: It's best that you do not reuse an Edge once it's been
-				added to a list.<br> See <a href="#GraphMistake">"Why are
-					my graph edges connecting to vertices that I didn't assign?" </a> for
-				further discussion<br> <br>
-			<li>Build the linked list of edges. Let's say we want to make
-				the following graph:<br> <br>
-				<div class="graphExample">
-					v1: v2 <br> v1: v3 <br> v1: v4 <br> <br>
-				</div> Then we need the following code to add our SLelement&lt;Edge&gt;
-				objects to the appropriate vertex<br> <br>
-
-				<div class="codeComment">//add the edgeToV2 to v1's linked
-					list</div>
-				<div class="codeExample">
-					v1.setNext(edgeToV2); <br> <br>
-				</div>
-				<div class="codeComment">
-					//since v1 already has an edge, we do not want to call v1.setNext()
-					<br> //we need to get v1's next pointer and set that to
-					edgeToV3 <br>
-				</div>
-				<div class="codeExample">
-					v1.getNext().setNext(edgeToV3); <br> <br>
-				</div>
-				<div class="codeComment">
-					//since v1 already has two edges, we do not want to call
-					v1.setNext() <br> //we need to get v1's next next pointer and
-					set that to edgeToV4 <br> //this is just for illustration, in
-					a real program, you'd need a more <br> //systematic of adding
-					an edge to the end of a list <br>
+					</p>
 				</div>
 
-				<div class="codeExample">
-					v1.getNext().getNext().setNext(edgeToV4); <br> <br>
+
+				<div id="dleConcept">
+
+					<h1>
+						<a id="DlElement">How does the DLelement&lt;E&gt; work?</a>
+					</h1>
+					<p>
+						DLelement&lt;E&gt; stands for Doubly Linked Element, and is a type of
+						container that has two pointers that point to other
+						DLelement&lt;E&gt;. So a DLelement&lt;E&gt; “knows” who it’s pointing
+						at, AND it knows who pointed at it. <br> <br> <img
+							src="res/DLelement.png" style="max-width: 100%"> <br> <br>
+					</p>
+					In this example, calling getNext() on DLelement2 will return
+					DLelement3. <br> <br> Calling getPrev() on DLelement2 will
+					return DLelement1. <br> <br> DLelement3
+					does not have a next pointer pointing to another DLelement so calling
+					getNext() on DLelement3 will return Null, indicating the end of the
+					linked elements. Since DLelement &lt;E&gt; have a getPrev() method,
+					they can move forwards AND backwards through the linked elements.
+					<br><br>
+						<p class="menu">See a <a name="#dleCode" href="#sleCode">code example</a></p>
 				</div>
-			<li>Call setDataStructure and pass the graph.<br> <br>
-				<br>
-				<div class="codeExample">bridges.setDataStructure(graph,
-					"graphl");</div> <br> <br>
-			<li>Call visualize<br> <br>
+
+
+				<div id="treeConcept">
+
+					<h1>
+						<a id="TreeElement">How does the TreeElement&lt;E&gt; work?</a>
+					</h1>
+					<p>
+						TreeElement&lt;E&gt; is another type of container that has two
+						pointers that point to two child TreeElement&lt;E&gt;. By convention,
+						these two pointers are called "left" and "right and the top of the tree 
+						is referred to as the "root". <br> <img
+							src="res/TreeElement.png" style="max-width: 100%"></img> <br>
+						By convention, the “top” of the tree is called the root. <br> <br>
+						Root has two pointers, so calling Root.getLeft() will return the
+						TreeElement T1 and calling Root.getRight() will return the
+						TreeElement T2. <br> <br> Note that there is no pointer
+						from T1 or any other element back to its root.
+					</p>
+										<p class="menu">See a <a name="#treeCode" href="#sleCode">code example</a></p>
+
+
+
+					<h1>
+						<a id="TreeVsDLE">How does a TreeElement&lt;E&gt; differ from a
+						DLelement&lt;E&gt;?<br>
+						</a>
+					</h1>
+					<p>
+						DLelement&lt;E&gt; also has two pointers, but one points to the
+						previous element. TreeElement&lt;E&gt; does not point to the previous
+						element, but points at two different children. <br> <br>
+						DLelement&lt;E&gt; has a next and previous element, by convention, a
+						TreeElement&lt;E&gt; has a right and left element. <br> <br>
+						Generally a TreeElement&lt;E&gt; will be used in a recursive data
+						structure and that data structure that will specify a particular
+						relationship that all of the right elements have relative to it’s
+						root and a different relationship that all left elements have
+						relative to it’s root (a binary search tree, for example).
+					</p>
+
+				</div>
+
+				<div id="bstConcept">
+
+					<h1>
+						<a id="BSTElement">How does the BSTElement&lt;E&gt; work?</a>
+					</h1>
+					<p>
+						BSTElement&lt;E&gt; is another type of container that has two
+						pointers that point to two child BSTElement&lt;E&gt;. By convention,
+						these two pointers are called "left" and "right", and the top of the tree is called the "root". <br><br>
+						At this point, you may be wondering how a BSTElement&lt;E&gt; differs from a regular
+						TreeElement&lt;E&gt;. The fundamental difference between the two classes is that the 
+						BSTElement&lt;E&gt; holds an additional piece of data called the "key". The key is used
+						to enforce a logical ordering on the tree structure independent of the element that is being held. <br><br>
+						A typical example would be a binary search tree where all of the keys of the left child are smaller than the keys of the right child. 
+						<img
+							src="res/BSTElement.png" style="max-width: 100%"></img> <br>
+						 <br> <br>
+						 Notice that the key for BST1 is smaller than the key for the root so it's to the left of the root. <br><br>
+						 Also notice that the key for BST3 is smaller than the key for BST2, but larger than the key for the root. So BST3 sits on the left child of BST2, but in the right child of the root.
+					</p>
+
+
+
+
+				</div>
+
+				<div id="arrayConcept">
+					<h1>
+						<a id="ArrayElement">How does the ArrayElement&lt;E&gt; work?</a>
+					</h1>
+					<p>
+						ArrayElement&lt;E&gt; is a building block for an array of elements. <br>
+						<br> It has NO POINTERS to other objects. Unlike all of the
+						other elements, it is designed to enable direct access to a
+						particular element at a particular index. <br> <img
+							src="res/ArrayElement.png" style="max-width: 100%"> <br>
+						In this case once you’ve made an array of ArrayElements, you get
+						access to the element by using the index, just like a normal Java
+						array. <br> <br> For example myArray[2] would return
+						ArrayElement2
+
+					</p>
+					<br><br>
+						<p class="menu">See a <a name="#arrayCode" href="#sleCode">code example</a></p>
+				</div>
+
+
+
+			<div id="graphListConcept">
+				<h1>
+					<a id="GraphElement">How do the GraphAdjList&lt;K, E&gt; and GraphAdjMatrix work&lt;K, E&gt;?<br>
+					</a>
+				</h1>
+				<p>
+					A graph is a set of vertices connected by edges. Unlike tree structures, a graph can have any number of vertices with any number of edges connecting them. In fact, a tree structure is just a special case of a graph.<br><br>
+					<img src="res/Graph.png" style="max-width: 50%"></img><br>
+
+					Bridges represents graph structures in one of two ways: either using an adjacency list representation or an adjacency matrix representation.<br><br>
+
+					In the adjacency list representation, the GraphAdjList is holding a HashMap of vertices associated with a linked list of the adjoining vertices.<br><br>
+					In the adjacency matrix representation, the GraphAdjMatrix is mimicing a 2 dimensional array to describe which vertices are connected (due to limitations with using generics and arrays in Java, Bridges actually uses nested HashMaps).<br><br>
+					Typically, the reason to use one version over the other revolve around space versus time trade offs. Since the GraphAdjList representation uses a linked list to track neighboring nodes, searching for a particular neighbor is an O(n) operation. The GraphAdjMatrix has O(1) access to any particular neighbor, but it is essentially holding a two dimensional array. On sparse graphs, this can waste a considerable amount of space.
+					
+						<p class="menu">See a GraphAdjacencyList <a name="#graphListCode" href="#sleCode">code example</a></p>
+						
+						<p class="menu">See a GraphAdjacencyMatrix <a name="#graphMatrixCode" href="#sleCode">code example</a></p>
+
+
+		
+			</div>
+
+
+
+			<div id="sleCode">
+				<h1>Java Code example for a Single Linked Element</h1>
+
+			    <div class="codeExample">
+			    	<div class="codeComment"> //create the Bridges object<br>
+			    		//note, you need to replace "yourAPIKey" and "yourUserName" <br>
+			    		//with the information you received from the Bridges website when you created an account<br></div>
+					Bridges<String, Tweet> bridges = new Bridges<String, Tweet>(1, 
+										"yourAPIKey", "yourUserName");
+			        <br><br>
+					<div class="codeComment">//create  a linked list stack</div>
+
+					SLelement<Tweet> el0 = new SLelement<Tweet>("0", new Tweet("0"));<br>
+					SLelement<Tweet> el1 = new SLelement<Tweet>("1", new Tweet("1"));<br>
+					SLelement<Tweet> el2 = new SLelement<Tweet>("2", new Tweet("2"));<br>
+					SLelement<Tweet> el3 = new SLelement<Tweet>("3", new Tweet("3"));<br>
+					<br>
+					<br>
+			    	<div class="codeComment"> //set the "next" pointer to link the elements together into a list</div>	
+					el0.setNext(el1);<br>
+					el1.setNext(el2);<br>
+					el2.setNext(el3);<br>
+					<br>
+					<br>
+
+			    	<div class="codeComment"> //change the color of the edge from el0 to edge el1</div>
+					el0.getLinkVisualizer(el1).setColor("red");<br><br>
+
+			    	<div class="codeComment"> //change the color of the edge from el1 to edge el2</div>
+					el1.getLinkVisualizer(el2).setColor("blue");<br><br>
+
+			    	<div class="codeComment"> //change the color of the edge from el2 to edge el3</div>
+					el2.getLinkVisualizer(el3).setColor("cyan");<br><br>
+
+			    	<div class="codeComment"> //change the color of the el0 vertex</div>
+					el0.getVisualizer().setColor("red");
+					<br><br>
+			    	<div class="codeComment"> //pass the head of list to bridges to set the visualization</div>
+					bridges.setDataStructure(el0);<br><br>
+			        
+			        <div class="codeComment"> //Print the JSON to the console<br>//The JSON is what the server interprets, but it can also be useful for debugging</div>
+					bridges.getVisualizer().setVisualizeJSON(true);
+					<br><br>
+			    	<div class="codeComment"> //this command sends your list to the bridges server to visualize
+			    		<br>//after it's accepted, you should see the web address in the console</div>
+			        
+					bridges.visualize();
+					</div>
+					<br><br>
+					<h1>Results</h1>
+					When you run your code, you should see a similar message output to the console:<br>
+					<div class="console">
+					Check out your visuals at http://bridges-cs.herokuapp.com/assignments/1.00/yourUserName?apikey=yourAPIKey</div><br><br>
+					So, now you can go to the website and see the following visualization:<br>
+					<img src="res/sleCodeVis.png"><br><br>
+					If you mouse over the vertices, you can see the labels.
+			</div>
+
+
+
+			<div id="dleCode">
+				<h1>Java Code example for a Double Linked Element</h1>
+
+			    <div class="codeExample">
+			    	<div class="codeComment"> //create the Bridges object<br>
+			    		//note, you need to replace "yourAPIKey" and "yourUserName" <br>
+			    		//with the information you received from the Bridges website when you created an account<br></div>
+					Bridges<String, Tweet> bridges = new Bridges<String, Tweet>(1, 
+										"yourAPIKey", "yourUserName");
+			        <br><br><br>
+					<div class="codeComment">//create  a linked list stack</div>
+
+					DLelement<Tweet> el0 = new DLelement<Tweet>("0", new Tweet("0"));<br>
+					DLelement<Tweet> el1 = new DLelement<Tweet>("1", new Tweet("1"));<br>
+					DLelement<Tweet> el2 = new DLelement<Tweet>("2", new Tweet("2"));<br>
+					DLelement<Tweet> el3 = new DLelement<Tweet>("3", new Tweet("3"));<br>
+					<br>
+					<br>
+					<br>
+			    	<div class="codeComment"> //set the "next"  and previous pointers<br>
+			    	//to link the elements together into a list</div>	
+					el0.setNext(el1);<br>
+					el1.setNext(el2);<br>
+					el2.setNext(el3);<br>
+					el1.setPrev(el0);<br>
+					el2.setPrev(el1);<br>
+					el3.setPrev(el2);<br>
+					<br>
+					<br><br>
+			    	<div class="codeComment"> //change the color  and opacity of the el0 vertex</div>
+					el0.getVisualizer().setColor("red");
+					el0.getVisualizer().setOpacity(0.5);
+					<br><br><br>
+
+			    	<div class="codeComment"> //change the color and thickness of the various edges</div>
+					el0.getLinkVisualizer(el1).setColor("green");<br>
+					el1.getLinkVisualizer(el2).setColor("red");<br>
+					el2.getLinkVisualizer(el3).setColor("turquoise");<br>
+					el3.getLinkVisualizer(el2).setColor("magenta");<br>
+					el3.getLinkVisualizer(el2).setThickness(10.0);<br>
+					el2.getLinkVisualizer(el1).setColor("blue");<br>
+					el2.getLinkVisualizer(el1).setThickness(10.0);<br>
+					el1.getLinkVisualizer(el0).setColor("red");<br>
+					el1.getLinkVisualizer(el0).setThickness(10.0);<br>
+					<br><br>
+        			    	<div class="codeComment"> //pass the head of list to bridges to set the visualization</div>
+					bridges.setDataStructure(el0);<br><br>
+			        
+			        <div class="codeComment"> //Print the JSON to the console<br>//The JSON is what the server interprets, but it can also be useful for debugging</div>
+					bridges.getVisualizer().setVisualizeJSON(true);
+					<br><br>
+			    	<div class="codeComment"> //this command sends your list to the bridges server to visualize
+			    		<br>//after it's accepted, you should see the web address in the console</div>
+			        
+					bridges.visualize();
+					</div>
+					<br><br>
+					<h1>Results</h1>
+					When you run your code, you should see a similar message output to the console:<br>
+					<div class="console">
+					Check out your visuals at http://bridges-cs.herokuapp.com/assignments/1.00/yourUserName?apikey=yourAPIKey</div><br><br>
+					So, now you can go to the website and see the following visualization:<br>
+					<img src="res/dleCodeVis.png"><<br><br>
+					If you mouse over the vertices, you can see the labels.
+			</div>
+
+
+			<div id="treeCode">
+				<h1>Java Code example for Tree Elements</h1>
+  			 	<div class="codeExample">
+					<div class="codeComment"> //create the Bridges object<br>
+			    		//note, you need to replace "yourAPIKey" and "yourUserName" <br>
+			    		//with the information you received from the Bridges website when you created an account<br></div>
+			    		<br>
+					Bridges<String, Integer> bridges = new Bridges<String, Integer>(1, 
+										"yourAPIKey", "yourUserName");
+			        <br><br><br>
+					<div class="codeComment">//create  tree elements</div>
+						TreeElement<String> root = new TreeElement<String>("root", "root");<br>
+						TreeElement<String> t1 = new TreeElement<String>("t1", "t1");<br><br>
+					<div class="codeComment">//assign left/right children</div>
+						root.setLeft(t1);<br>
+						root.setRight(new TreeElement<String>("t2", "t2"));<br>
+						t1.setLeft(new TreeElement<String>("t3", "t3"));<br>
+						t1.setRight(new TreeElement<String>("t4", "t4"));<br><br>
+
+
+
+
+
+					<div class="codeComment"> //pass the root of the tree to bridges to set the visualization</div>
+					bridges.setDataStructure(root);<br><br><br>
+			        
+			        <div class="codeComment"> //Print the JSON to the console<br>//The JSON is what the server interprets, but it can also be useful for debugging</div>
+					bridges.getVisualizer().setVisualizeJSON(true);
+					<br><br><br>
+			    	<div class="codeComment"> //this command sends your list to the bridges server to visualize
+			    		<br>//after it's accepted, you should see the web address in the console</div>
+			        
+					bridges.visualize();
+					</div>
+					<br><br>
+					<h1>Results</h1>
+					When you run your code, you should see a similar message output to the console:<br>
+					<div class="console">
+					Check out your visuals at http://bridges-cs.herokuapp.com/assignments/1.00/yourUserName?apikey=yourAPIKey</div><br><br>
+					So, now you can go to the website and see the following visualization:<br>
+					<img src="res/treeVis.png"><br><br>
+					If you mouse over the vertices, you can see the labels.
+				</div>
+			
+
+
+			<div id="arrayCode">
+				<h1>Java Code example for an Array of Array Elements</h1>
+
+			    <div class="codeExample">
+			    	<div class="codeComment"> //create the Bridges object<br>
+			    		//note, you need to replace "yourAPIKey" and "yourUserName" <br>
+			    		//with the information you received from the Bridges website when you created an account<br></div>
+			    		<br>
+					Bridges<String, Integer> bridges = new Bridges<String, Integer>(1, 
+										"yourAPIKey", "yourUserName");
+			        <br><br><br>
+		
+		    	<div class="codeComment"> //create an array of 10 objects</div>
+					Element<Integer>[] myArray = (Element<Integer>[]) new Element[10];
+					<br><br><br>
+		    	<div class="codeComment"> //use a loop to make 10 new elements and put them in the array</div>
+				for (int k = 0; k < 10; k++)<br>
+					&nbsp&nbsp&nbsp
+					myArray[k] = new Element<Integer>(String.valueOf(k), k*k);<br><br><br>
+
+
+
+
+
+			    	<div class="codeComment"> //pass the head of list to bridges to set the visualization</div>
+					bridges.setDataStructure(el0);<br><br><br>
+			        
+			        <div class="codeComment"> //Print the JSON to the console<br>//The JSON is what the server interprets, but it can also be useful for debugging</div>
+					bridges.getVisualizer().setVisualizeJSON(true);
+					<br><br><br>
+			    	<div class="codeComment"> //this command sends your list to the bridges server to visualize
+			    		<br>//after it's accepted, you should see the web address in the console</div>
+			        
+					bridges.visualize();
+					</div>
+					<br><br>
+					<h1>Results</h1>
+					When you run your code, you should see a similar message output to the console:<br>
+					<div class="console">
+					Check out your visuals at http://bridges-cs.herokuapp.com/assignments/1.00/yourUserName?apikey=yourAPIKey</div><br><br>
+					So, now you can go to the website and see the following visualization:<br>
+					<img src="res/arrayVis.png"><br><br>
+					If you mouse over the vertices, you can see the labels.
+			</div>
+
+
+
+
+
+			<div id="graphListCode">
+				<h1>Java Code example for a GraphAdjList</h1>
+
+			    <div class="codeExample">
+			    	<div class="codeComment"> //create the Bridges object<br>
+			    		//note, you need to replace "yourAPIKey" and "yourUserName" <br>
+			    		//with the information you received from the Bridges website when you created an account</div>
+			  
+					Bridges<String, Integer> bridges = new Bridges<String, Integer>(1, 
+										"yourAPIKey", "yourUserName");
+					<br><br>
+
+
+					<div class="codeComment"> //create the GraphAdjMatrix object<br></div>
+					GraphAdjList<String, String> gr = new GraphAdjList<>();
+									<br><br>
+					<div class="codeComment"> //create the vertices and put them in the graph<br></div>
+
+									
+						gr.addVertex("John", "John");<br>
+						gr.addVertex("Becky", "Becky");<br>
+						gr.addVertex("Sam", "Sam");<br>
+						<br><br>
+					<div class="codeComment"> //create the edges between the vertices<br></div>
+						gr.addEdge("John", "Becky", 5);<br>
+						gr.addEdge("John","Sam", 1);<br>
+						gr.addEdge("Becky", "John", 1);<br>
+						gr.addEdge("Becky", "Sam", 1);<br>
+						<br><br>
+
+					<div class="codeComment"> //pass the graph to bridges to set the visualization</div>
+						bridges.setDataStructure(gr);<br><br>
+				        
+						  <div class="codeComment"> //Print the JSON to the console<br>//The JSON is what the server interprets, but it can also be useful for debugging</div>
+					bridges.getVisualizer().setVisualizeJSON(true);
+					<br><br><br>
+			    	<div class="codeComment"> //this command sends your list to the bridges server to visualize
+			    		<br>//after it's accepted, you should see the web address in the console</div>
+			        
+					bridges.visualize();
+					</div>
+					<br><br>
+					<h1>Results</h1>
+					When you run your code, you should see a similar message output to the console:<br>
+					<div class="console">
+					Check out your visuals at http://bridges-cs.herokuapp.com/assignments/1.00/yourUserName?apikey=yourAPIKey</div><br><br>
+					So, now you can go to the website and see the following visualization:<br>
+					<img src="res/grMatrixVis.png"><br><br>
+					If you mouse over the vertices, you can see the labels.
+
+		</div>
+
+
+
+
+			<div id="graphMatrixCode">
+				<h1>Java Code example for a GraphAdjMatrix</h1>
+
+			    <div class="codeExample">
+			    	<div class="codeComment"> //create the Bridges object<br>
+			    		//note, you need to replace "yourAPIKey" and "yourUserName" <br>
+			    		//with the information you received from the Bridges website when you created an account</div>
+			  
+					Bridges<String, Integer> bridges = new Bridges<String, Integer>(1, 
+										"yourAPIKey", "yourUserName");
+					<br><br>
+
+
+					<div class="codeComment"> //create the GraphAdjMatrix object<br></div>
+					GraphAdjMatrixString, String> gr = 
+									new GraphAdjMatrix<String, String>(10);
+									<br><br>
+					<div class="codeComment"> //create the vertices and put them in the graph<br></div>
+
+									
+						gr.addVertex("John", "John");<br>
+						gr.addVertex("Becky", "Becky");<br>
+						gr.addVertex("Sam", "Sam");<br>
+						<br><br>
+					<div class="codeComment"> //create the edges between the vertices<br></div>
+						gr.addEdge("John", "Becky", 5);<br>
+						gr.addEdge("John","Sam", 1);<br>
+						gr.addEdge("Becky", "John", 1);<br>
+						gr.addEdge("Becky", "Sam", 1);<br>
+						<br><br>
+
+					<div class="codeComment"> //pass the graph to bridges to set the visualization</div>
+						bridges.setDataStructure(gr);<br><br>
+				        
+						  <div class="codeComment"> //Print the JSON to the console<br>//The JSON is what the server interprets, but it can also be useful for debugging</div>
+					bridges.getVisualizer().setVisualizeJSON(true);
+					<br><br><br>
+			    	<div class="codeComment"> //this command sends your list to the bridges server to visualize
+			    		<br>//after it's accepted, you should see the web address in the console</div>
+			        
+					bridges.visualize();
+					</div>
+					<br><br>
+					<h1>Results</h1>
+					When you run your code, you should see a similar message output to the console:<br>
+					<div class="console">
+					Check out your visuals at http://bridges-cs.herokuapp.com/assignments/1.00/yourUserName?apikey=yourAPIKey</div><br><br>
+					So, now you can go to the website and see the following visualization:<br>
+					<img src="res/grMatrixVis.png"><br><br>
+					If you mouse over the vertices, you can see the labels.
+
+		</div>
+
+			<div id="vertexProperties">
+				<h1>Changing Element visualization properties</h1>
+				Each Element class has an ElementVisualizer that controls how the visualization looks. You can change how an Element is visualized by interacting with that Element's ElementVisualizer. You can use the ElementVisualizer to change the size, shape, color, and opacity.  See the following code examples:<br><br>
+
 				<div class="codeExample">
-					bridges.visualize(); <br> <br>
-				</div> You should see something like this with the vertices connected<br>
-				<br> <img src="res/FourVertexGraph.png">
-		</ol>
-	</div>
+					<div class="codeComment">//create an SLelement<br></div>
+					SLelement<String> sle = new SLelement<String>("A", "A");
+					<br><br>
+
+					<div class="codeComment">//change the color<br></div>
+					sle.getVisualizer().setColor("magenta");
+					<br><br>
+
+					<div class="codeComment">//change the shape<br></div>
+					sle.getVisualizer().setShape("diamond");
+					<br><br>
+
+					<div class="codeComment">//change the size<br></div>
+					sle.getVisualizer().setSize(50);
+					<br><br>
+
+					<div class="codeComment">//change the opacity<br></div>
+					sle.getVisualizer().setOpacity(.25);
+					<br><br>
+				</div>
+				<p>
+				The end result should have been to transform your Element visualization from the green circle on the left to the big pink diamond on the right.</p>
+				<img src="res/originalVertex.png"><img src="res/changedVertex.png">
 
 
-	<div class="section">
-		<h1>
-			<a id="GraphMistake">Why are my graph edges connecting to
-				vertices that I didn't assign?</a>
-		</h1>
-		You've likely reused an SLelement&lt;Edge&gt; that setNext() had
-		already been called on. <br> <br> For example, say we wanted
-		to change the previous graph slightly so that there's an additional
-		edge going from V2 to V3. <br>
-		<div class="graphExample">
-			v1: v2 <br> v1: v3 <br> v1: v4 <br> v2: v3 <br> <br>
+				
+
+			</div>
+
+
+			<div id="edgeProperties">
+				<h1>Changing Edge visualization properties</h1>
+				Each Element class has an LinkVisualizer that controls how the edges between the nodes appear.. You can change how an edge is visualized by interacting with that Element's LinkVisualizer. You can use the ElementVisualizer to change the thickness, color, and opacity.  See the following code examples:<br><br>
+
+				<div class="codeExample">
+					<div class="codeComment">//create two SLelement<br></div>
+					SLelement<String> sle0 = new SLelement<String>("A", "A");<br>
+					SLelement<String> sle1 = new SLelement<String>("B", "B");
+					<br><br>
+
+					<div class="codeComment">//change the color<br></div>
+					sle0.getLinkVisualizer(sle1).setColor("green");
+					<br><br>
+
+
+					<div class="codeComment">//change the size<br></div>
+					sle0.getLinkVisualizer(sle1).setThickness(5);
+					<br><br>
+
+					<div class="codeComment">//change the opacity<br></div>
+					sle0.getLinkVisualizer(sle1).setOpacity(.25);
+					<br><br>
+				</div>
+				<p>
+				The end result should have been to transform your the edge connecting the two nodes from the original black line on the left to the faint green line on the right.</p>
+				<img src="res/originalEdge.png"><img src="res/changedEdge.png">
+
+			</div>
+
+
 		</div>
-		It seems like we just need to add the following line of code and we'd
-		be done: <br>
-		<div class="codeExample">
-			v2.setNext(edgeToV3); <br> <br>
-		</div>
-		But, you would get the following result: <br> <img
-			src="res/MistakeGraph.png"> <br> Note that we did get an
-		edge between V2 to V3, but we also got an edge between V2 and V4. But
-		why? <br> <br> The trouble is coming from this line of code:
-		<br>
-		<div class="codeExample">
-			v1.getNext().getNext().setNext(edgeToV4); <br> <br>
-		</div>
-		v1.getNext().getNext() will return v3 and we've set v3's next edge to
-		v4. <br> <br> So when we call v2.setNext(edgeToV3), we're
-		really passing the following:
-		<div class="graphExample">edgeToV3--&gt;edgeToV4</div>
-		<br> So we end up with:
-		<div class="graphExample">v2: v2--&gt;edgeToV3--&gt;edgeToV4</div>
-		<br> <br> Instead of this, which is what we wanted:
-		<div class="graphExample">v2: v2--&gt;edgeToV3</div>
-		<br> <br> You can prevent this by not re-using your edges.
-		For example, this will map v2 to a new edge: <br> <br>
-		<div class="codeExample">
-			v2.setNext(new SLelement&lt;Edge&gt;("newEdge", new Edge(0,
-			v3.getIdentifier()))); <br> <br>
-		</div>
-		You should get the following result now: <br> <img
-			src="res/CorrectGraph.png">
-	</div>
-
-	<div class="section">
-		<h1>
-			<a id="GraphNotVisible">I've connected my graph edges, but the
-				visualization doesn't show any nodes.<br>
-			</a>
-		</h1>
-		Likely you've made a mistake in the hashmap that you're are passing to
-		setDataStructure. You may have inadvertently added an edge to an
-		element that does not exist in that hashmap by creating a NEW element
-		instead of getting the identifier for the element from the hashmap.
-		<br><br>
-		Carefully check your HashMap.
-
-	</div>
-
-	<div class="section">
-		<h1>
-			<a id="BasicVisualize">How do I get Bridges to visualize?</a>
-		</h1>
-		<p>
-			At a minimum, Bridges needs four things to provide a visualization. <br>
-			<br>
-		<ol>
-			<li>Construct a BRIDGES object with an assignment number and
-				your credentials. In this example, the assignment number is 61.<br>
-				<br>
-				<div class="codeExample">Bridges&lt;String&gt; bridges = new
-					Bridges&lt;String&gt;(61, “yourNumericAPIKey”, “yourUserName”);</div> <br>
-				<br>
-			<li>Construct one of the element objects<br> <br>
-				<div class="codeExample">SLelement&lt;String&gt; sle = new
-					SLelement&lt;String&gt;(“ABC”, “XYZ”);</div> <br> <br>
-			<li>Call setDataStructure() from your Bridges object and pass it
-				the element and the type of structure<br> <br>
-				<div class="codeExample">bridges.setDataStructure(sle,
-					“llist”);</div> <br> <br>
-			<li>Call complete() or visualize() from your Bridges object. The
-				URL will populate in the console window<br> <br>
-				<div class="codeExample">bridges.visualize();</div> <br> <br>
-				Or <br> <br>
-				<div class="codeExample">bridges.complete();</div> <br> <br>
-		</ol>
-	</div>
-
-
-	<div class="section">
-		<h1>
-			<a id="SetDataStructure">What do I pass to setDataStructure()?</a>
-		</h1>
-		setDataStructure() needs two things:
-		<ol>
-			<li>A subclass of Element or a HashMap of SLelements (for
-				graphs)<br> <br>
-			<li>The type of visualization:
-				<ul>
-					<li>"graphl"
-					<li>"stack"
-					<li>"queue"
-					<li>"tree"
-					<li>"llist"
-					<li>"dlist"
-				</ul>
-		</ol>
-		<br> Normally, you would pass the first element of the list, so
-		that the whole list is visualized. There is nothing to prevent you
-		from passing any element of the list, but you will only see that
-		element and it's children when the list is visualized. <br> <br>
-		For example, say I have three SLelements linked to together and pass
-		it the first element. I should see the following <br> <img
-			src="res/ThreeLinks.png"> <br> <br> But if I pass it
-		the second SLelement instead, I would see this in the visualization: <img
-			src="res/TwoLinks.png"> <br>
-	</div>
-
-
-	<div class="section">
-		<h1>
-			<a id="Refresh">How do I refresh the visualization?</a>
-		</h1>
-		<p>
-			If your program has made changes to your data structure and you would
-			like to see the new visualization, call visualize() from your Bridges
-			object when you want to see the new visualization. <br> <br>
-		<div class="codeExample">bridges.visualize();</div>
-		<br> <br> The new URL will populate in the console. The new
-		assignment number will be the prior assignment incremented by .01.
-	</div>
-
-
-	<div class="section">
-		<h1>
-			<a id="VisualizeTiming">When should I call visualize()?</a>
-		</h1>
-		<p>
-			Generally, this will be dictated by the project that you are working
-			on. <br> <br> If the project only requires the
-			visualization of the finished structure, then it makes sense to only
-			call visualize() once, after you’ve linked together your elements. <br>
-			<br> If the project requires showing some intermediate steps,
-			you can call visualize() multiple times and it will increment your
-			assignment number by .01, and provide you a new URL in the console
-			window.
-		</p>
-	</div>
-
-
-	<div class="section">
-		<h1>
-			<a id="TextVisualization">How do I change the text field on the
-				Visualization?</a>
-		</h1>
-		<p>
-			All Elements have a setLabel(String s) method. Setting this will
-			change the text that appears on screen. <br> <br> For
-			example, if sle is an SLelement:
-		<div class="codeExample">sle.setLabel(“This is a new label”);</div>
-	</div>
-
-
-	<div class="section">
-		<h1>
-			<a id="NodeColor">How do I change the node color, size, or
-				opacity on the Visualization?<br>
-			</a>
-		</h1>
-		<p>
-			Each element has a getVisualizer() method. This will return an
-			ElementVisualizer object. <br> <br> The ElementVisualizer
-			is the object that controls how the visualization looks. <br> <br>
-			The ElementVisualizer can be changed using the setColor(),
-			setOpacity(), setShape(), and setSize() methods. <br> <br>
-			The easiest way to change the ElementVisualizer is to chain together
-			methods. For example if sle is an SLelement:
-		<div class="codeComment">//change the node color to blue</div>
-		<div class="codeExample">sle.getVisualizer().setColor(“blue”);</div>
-		<br> <br>
-		<div class="codeComment">//make the node INVISIBLE!!!</div>
-		<div class="codeExample">sle.getVisualizer().setOpacity(0);</div>
-		<br> <br>
-		<div class="codeComment">//make the node half transparent</div>
-		<div class="codeExample">sle.getVisualizer().setOpacity(.5);</div>
-		<br> <br>
-		<div class="codeComment">//make the node HUGE!!!</div>
-		<div class="codeExample">sle.getVisualizer().setSize(40);</div>
-		<br> <br>
-		<div class="codeComment">//make the node square shaped instead
-			of circular</div>
-		<div class="codeExample">sle.getVisualizer().setShape("square");</div>
-
-
-		<br> <br> Generally, there is no need to assign the
-		ElementVisualizer that comes back from the getVisualizer() method to a
-		new object.
-	</div>
-
-
-	<div class="section">
-		<h1>
-			<a id="Projects">How do I start a new visualization without
-				overwriting the old one?</a>
-		</h1>
-		<p>
-			You can keep different projects separated by changing the assignment
-			number. <br> <br> Normally, you will set the assignment
-			number at the beginning of your project when you construct the
-			Bridges object. <br> <br>
-		<div class="codeExample">Bridges&lt;String&gt; bridges = new
-			Bridges&lt;String&gt;(61, “yourNumericAPIKey”, “yourUserName”);</div>
-		<br> <br> If you've already constructed a Bridges object in
-		your program, and would like to store it as a separate project, you
-		can call setAssignment() from the Bridges object and pass it a new
-		assignment number. <br> <br>
-		<div class="codeExample">bridges.setAssignment(12);</div>
-		<br> <br> This will set the assignment number to 12. All
-		changes to the data structure will take place on assignment 12 instead
-		of assignment 61.
-	</div>
-
-</body>
+	</body>
 </html>
