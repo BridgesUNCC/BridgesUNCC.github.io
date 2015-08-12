@@ -25,9 +25,31 @@ title: Blog Posts
 
 </div>
 </div>
-<script>
-
-</script>
+<script src="js/flux.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" charset="utf-8">
+			$(function(){
+				if(!flux.browser.supportsTransitions)
+					alert("Flux Slider requires a browser that supports CSS3 transitions");
+					
+				window.f = new flux.slider('#slider', {
+					pagination: true,
+					transition: bars3d
+				});
+			});
+		</script>
+		<section class="container">
+			<h1><span class="flux">Flux</span> <span class="slider">Slider</span></h1>
+			<h2>Hardware accelerated image transitions using CSS3.</h2>
+			<div id="slider">
+				<img src="img/tree.jpg" alt="" />
+				<img src="img/graph.jpg" alt="" />
+				<img src="img/alist.jpg" alt="" />
+			</div>
+			<footer>
+				<p>Flux Slider &copy; Copyright 2011 Joe Lambert. All Rights Reserved. Follow me on Twitter <a href="http://www.twitter.com/joelambert">@joelambert</a></p>
+				<img src="img/html5.png" alt="HTML5" width="35px" />
+			</footer>
+		</section>
 
 
 </div>
