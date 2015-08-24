@@ -76,10 +76,10 @@ import bridges.base.SLelement;
 {% highlight java %}
 public static void main(String[] args) throws Exception{...}
 {% endhighlight %}
-> * Create the bridges object with your API Key and Student Name. Since we want our project to print out "Hello World," we'll use String as the type.
+> * Create the bridges object with your API Key and User ID. Since we want our project to print out "Hello World," we'll use String as the type.
 
 {% highlight java %}
-Bridges<String> bridge = new Bridges<String>(0, "API_KEY", "StudentName")
+Bridges<String> bridge = new Bridges<String>(0, "YOUR_API_KEY", "YOUR_USER_ID")
 {% endhighlight %}
 > * Create two singly-linked elements. Singly-linked elements can be linked together to create a linked-list structure.
 
@@ -121,7 +121,7 @@ public class HelloWorld {
     public static void main(String[] args) throws Exception{
 
         //create the Bridges object
-        Bridges<String> bridge = new Bridges<String>(0, "YOUR_API_KEY", "YOUR_STUDENT_NAME");
+        Bridges<String> bridge = new Bridges<String>(0, "YOUR_API_KEY", "YOUR_USER_ID");
 
         //create singly-linked elements
         SLelement e0 = new SLelement<String>("Hello", "");
