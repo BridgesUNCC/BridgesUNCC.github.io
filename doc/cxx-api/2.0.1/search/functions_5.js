@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['getadjacencylist',['getAdjacencyList',['../classbridges_1_1_graph_adj_list.html#a72f55641dabb692491639451c026496f',1,'bridges::GraphAdjList::getAdjacencyList()'],['../classbridges_1_1_graph_adj_list.html#a4246f696bdec73aa2c4bdbcce5f66adf',1,'bridges::GraphAdjList::getAdjacencyList(Key vertex)']]],
+  ['getadjacencylist',['getAdjacencyList',['../classbridges_1_1_graph_adj_list.html#a72f55641dabb692491639451c026496f',1,'bridges::GraphAdjList::getAdjacencyList()'],['../classbridges_1_1_graph_adj_list.html#a4246f696bdec73aa2c4bdbcce5f66adf',1,'bridges::GraphAdjList::getAdjacencyList(Key vertex)'],['../class_graph_list.html#aeb59329c39f397c65a9379f7c18e7ad6',1,'GraphList::getAdjacencyList()']]],
   ['getarraysize',['getArraySize',['../classbridges_1_1_a_d_t_visualizer.html#a2a88784e70202d2f782e9bfe5570ed54',1,'bridges::ADTVisualizer']]],
   ['getassignment',['getAssignment',['../classbridges_1_1_bridges.html#ae48d408d66c6f6d41da2339daedf2b69',1,'bridges::Bridges']]],
   ['getbridgesobject',['getBridgesObject',['../classbridges_1_1_bridges.html#a54c3af04fd7be9b059d547a8af138b99',1,'bridges::Bridges']]],
@@ -14,7 +14,7 @@ var searchData=
   ['getlabel',['getLabel',['../classbridges_1_1_element.html#a506d0f16ebe84cf1351e9d8726b57c14',1,'bridges::Element']]],
   ['getleft',['getLeft',['../classbridges_1_1_b_s_t_element.html#aed62cfb1cc9c4954c19232193b8ec3bf',1,'bridges::BSTElement::getLeft()'],['../classbridges_1_1_tree_element.html#ad40ac069fa73faa46ff0398af1045c66',1,'bridges::TreeElement::getLeft()']]],
   ['getlinkvisualizer',['getLinkVisualizer',['../classbridges_1_1_element.html#a28a5d72ff03d6a66726a2c93ad2a9632',1,'bridges::Element']]],
-  ['getmatrix',['getMatrix',['../classbridges_1_1_graph_adj_matrix.html#a3407ab17167b1148e963a4aa687ac1a5',1,'bridges::GraphAdjMatrix']]],
+  ['getmatrix',['getMatrix',['../classbridges_1_1_graph_adj_matrix.html#a7ef3cd7500be77ad8a775d696f5e0020',1,'bridges::GraphAdjMatrix']]],
   ['getnext',['getNext',['../classbridges_1_1_d_lelement.html#a0f638cca77375d6bdc2ff8a23700568c',1,'bridges::DLelement::getNext()'],['../classbridges_1_1_s_lelement.html#aa11794bee00e3573c2e28786d57697dc',1,'bridges::SLelement::getNext()']]],
   ['getopacity',['getOpacity',['../classbridges_1_1_element_visualizer.html#ae806977ebc8ff1c5bce81c90b31902b5',1,'bridges::ElementVisualizer::getOpacity()'],['../classbridges_1_1_link_visualizer.html#a2e4946875ccf1b02c7a7f1f0dea0e28d',1,'bridges::LinkVisualizer::getOpacity()']]],
   ['getprev',['getPrev',['../classbridges_1_1_d_lelement.html#aa3093474809715575f4c5145d71e6db9',1,'bridges::DLelement']]],
@@ -24,14 +24,16 @@ var searchData=
   ['getserverurl',['getServerURL',['../classbridges_1_1_connector.html#a509ca5ef39f5d8ee5a4f6c0dd9228f8f',1,'bridges::Connector']]],
   ['getshape',['getShape',['../classbridges_1_1_element_visualizer.html#afebf55de6095e3e23756cc0ce1d57f65',1,'bridges::ElementVisualizer']]],
   ['getsize',['getSize',['../classbridges_1_1_element_visualizer.html#a00b71f8c783eec23124e925c591b85c0',1,'bridges::ElementVisualizer']]],
+  ['getsourcevertex',['getSourceVertex',['../class_graph_list.html#ad90f5acc9d87133c8fe14f813894d673',1,'GraphList']]],
   ['getthickness',['getThickness',['../classbridges_1_1_link_visualizer.html#a4544e4ac8e7196ccc2998d5ab757c0e3',1,'bridges::LinkVisualizer']]],
   ['getusername',['getUserName',['../classbridges_1_1_bridges.html#a72e0a71fa6eab84d010b33b475e931a5',1,'bridges::Bridges']]],
   ['getvalue',['getValue',['../classbridges_1_1_element.html#a9b11b247ebb6ea584a9df414d47a9abc',1,'bridges::Element']]],
-  ['getvertex',['getVertex',['../classbridges_1_1_edge.html#aa604e71bc9068ca68d95e49adcf63920',1,'bridges::Edge']]],
+  ['getvertex',['getVertex',['../classbridges_1_1_edge.html#aa604e71bc9068ca68d95e49adcf63920',1,'bridges::Edge::getVertex()'],['../classbridges_1_1_graph_adj_list.html#af2f6fe517dcbd5573979d083ad2cf3f4',1,'bridges::GraphAdjList::getVertex()'],['../classbridges_1_1_graph_adj_matrix.html#a30728b2cb2fe40379355c1a8831b64cf',1,'bridges::GraphAdjMatrix::getVertex()']]],
   ['getvertices',['getVertices',['../classbridges_1_1_graph_adj_list.html#a07ac6ad2cb0aebab37103de72e2e6719',1,'bridges::GraphAdjList::getVertices()'],['../classbridges_1_1_graph_adj_matrix.html#a992b4773b79ccd97716f20f88a14e444',1,'bridges::GraphAdjMatrix::getVertices()']]],
   ['getvisualizer',['getVisualizer',['../classbridges_1_1_bridges.html#a8d3c56a05d697828e6e8c9f43f761972',1,'bridges::Bridges::getVisualizer()'],['../classbridges_1_1_element.html#a358f350ae6e33d55c4ac9f9213d0c5bc',1,'bridges::Element::getVisualizer()']]],
   ['getvisualizertype',['getVisualizerType',['../classbridges_1_1_a_d_t_visualizer.html#af64c11473910177160374c7ab10088ee',1,'bridges::ADTVisualizer']]],
   ['getweight',['getWeight',['../classbridges_1_1_edge.html#abb0a90b93b1ee135dd19464780d25620',1,'bridges::Edge::getWeight()'],['../classbridges_1_1_link_visualizer.html#a2e2b6554eed8ba623d77c1adf239d40d',1,'bridges::LinkVisualizer::getWeight()']]],
   ['graphadjlist',['GraphAdjList',['../classbridges_1_1_graph_adj_list.html#a0a185744acc43305f73a8db0e3bbb7e2',1,'bridges::GraphAdjList']]],
-  ['graphadjmatrix',['GraphAdjMatrix',['../classbridges_1_1_graph_adj_matrix.html#a3c6caf98cf52a41cc446115967571975',1,'bridges::GraphAdjMatrix']]]
+  ['graphadjmatrix',['GraphAdjMatrix',['../classbridges_1_1_graph_adj_matrix.html#a3c6caf98cf52a41cc446115967571975',1,'bridges::GraphAdjMatrix']]],
+  ['graphlist',['GraphList',['../class_graph_list.html#a1e0502011ffec80af5b99d5dff383a8a',1,'GraphList']]]
 ];
