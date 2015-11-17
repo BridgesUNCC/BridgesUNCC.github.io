@@ -132,6 +132,12 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>This class maintains the visual properties of links that part of linked data structures. </p>
 <p>This class is used to keep the visual properties of links that are part of data structures such as linked lists, pointer based trees, link based graph representations, etc. Relevant attributes include color, thickness, opacity, line end point attributes. </p>
 <p>Objects of this class are stored as properties of all <a class="el" href="classbridges_1_1_element.html" title="This is the fundamental building block used in building all data structures in BRIDGES. ">Element</a> subclasses. Generally, a user will manipulate the <a class="el" href="classbridges_1_1_link_visualizer.html" title="This class maintains the visual properties of links that part of linked data structures. ">LinkVisualizer</a> returned from the <a class="el" href="classbridges_1_1_element.html" title="This is the fundamental building block used in building all data structures in BRIDGES. ">Element</a>'s getLinkVisualizer() method, and then call the setLinkVisualizer() method on the <a class="el" href="classbridges_1_1_element.html" title="This is the fundamental building block used in building all data structures in BRIDGES. ">Element</a> after changes have been made.</p>
+<p>BRIDGES supports the following named colors(passed into either via the constructor or as a parameter to <a class="el" href="classbridges_1_1_link_visualizer.html#ab7a6ed8f3e10eec5a8f1c0a5864ceb6b">setColor()</a>:</p>
+<p>"aliceblue", "antiquewhite", "aqua", "aquamarine", "azure", "beige", "bisque", "black", "blanchedalmond", "blue", "blueviolet", "brown", "burlywood", "cadetblue", "chartreuse", "chocolate", "coral", "cornflowerblue", "cornsilk", "crimson", "cyan", "darkblue", "darkcyan", "darkgoldenrod", "darkgray", "darkgreen", "darkgrey", "darkkhaki", "darkmagenta", "darkolivegreen", "darkorange", "darkorchid", "darkred", "darksalmon", "darkseagreen", "darkslateblue", "darkslategray", "darkslategrey", "darkturquoise", "darkviolet", "deeppink", "deepskyblue", "dimgray", "dimgrey", "dodgerblue", "firebrick", "floralwhite", "forestgreen", "fuchsia", "gainsboro", "ghostwhite", "gold", "goldenrod", "gray", "green", "greenyellow", "grey", "honeydew", "hotpink", "indianred", "indigo", "ivory", "khaki", "lavender", "lavenderblush", "lawngreen", "lemonchiffon", "lightblue", "lightcoral", "lightcyan", "lightgoldenrodyellow", "lightgray", "lightgreen", "lightgrey", "lightpink", "lightsalmon", "lightseagreen", "lightskyblue", "lightslategray", "lightslategrey", "lightsteelblue", "lightyellow", "lime", "limegreen", "linen", "magenta", "maroon", "mediumaquamarine", "mediumblue", "mediumorchid", "mediumpurple", "mediumseagreen", "mediumslateblue", "mediumspringgreen", "mediumturquoise", "mediumvioletred", "midnightblue", "mintcream", "mistyrose", "moccasin", "navajowhite", "navy", "oldlace", "olive", "olivedrab", "orange", "orangered", "orchid", "palegoldenrod", "palegreen", "paleturquoise", "palevioletred", "papayawhip", "peachpuff", "peru", "pink", "plum", "powderblue", "purple", "red", "rosybrown", "royalblue", "saddlebrown", "salmon", "sandybrown", "seagreen", "seashell", "sienna", "silver", "skyblue", "slateblue", "slategray", "slategrey", "snow", "springgreen", "steelblue", "tan", "teal", "thistle", "tomato", "turquoise", "violet", "wheat", "white", "whitesmoke", "yellow", "yellowgreen"</p>
+<p>BRIDGES supports the following shapes:</p>
+<p>"circle", "square", "diamond", "cross", "triangle-down", "triangle-up"</p>
+<p>Opacity: Opacity values must be within 0.0(fully transparent) - 1.0(fully opaque, Default: 1.0</p>
+<p>Thickness: Thickness values must be in the range (0.0-10.0) pixels. Default: 1.0 pixel</p>
 <dl class="section author"><dt>Author</dt><dd>Kalpathi Subramanian, 6/29/15 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>6/29/15 </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -413,7 +419,7 @@ Public Member Functions</h2></td></tr>
 <p>Set the thickness of the link in the Bridge Visualization in pixels</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">thickness</td><td>the pixel size of the <a class="el" href="classbridges_1_1_element.html" title="This is the fundamental building block used in building all data structures in BRIDGES. ">Element</a> in the <a class="el" href="classbridges_1_1_bridges.html" title="This class contains methods to connect and transmit a user&#39;s data structure representation to the Bri...">Bridges</a> Visualization </td></tr>
+    <tr><td class="paramname">thickness</td><td>the pixel size of the <a class="el" href="classbridges_1_1_element.html" title="This is the fundamental building block used in building all data structures in BRIDGES. ">Element</a> in the <a class="el" href="classbridges_1_1_bridges.html" title="This class contains methods to connect and transmit a user&#39;s data structure representation to the Bri...">Bridges</a> Visualization (between 0.0-10.0, Default: 1.0) </td></tr>
   </table>
   </dd>
 </dl>
@@ -457,7 +463,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 16 2015 17:27:34 for Bridges-C++-2.0 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 17 2015 12:10:54 for Bridges-C++-2.0 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>
