@@ -187,12 +187,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <span class="keywordflow">return</span> json;</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        }</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;};</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;}</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno"><a class="line" href="classbridges_1_1_b_s_t_element.html#a963f4ac95a92d44ef37258c2c86c3c1e">  197</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classbridges_1_1_b_s_t_element.html#a963f4ac95a92d44ef37258c2c86c3c1e">cleanup</a>(<a class="code" href="classbridges_1_1_b_s_t_element.html">BSTElement&lt;K,E&gt;</a> *root) {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <span class="keywordflow">if</span> (root) {</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                <span class="keywordflow">if</span> (root-&gt;<a class="code" href="classbridges_1_1_b_s_t_element.html#aed62cfb1cc9c4954c19232193b8ec3bf">getLeft</a>()) <span class="comment">// cleanup left subtree</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                    cleanup(root-&gt;<a class="code" href="classbridges_1_1_b_s_t_element.html#aed62cfb1cc9c4954c19232193b8ec3bf">getLeft</a>());</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                <span class="keywordflow">if</span> (root-&gt;<a class="code" href="classbridges_1_1_b_s_t_element.html#a6b1ef2135ded7cfdde9b4ac7c634a642">getRight</a>()) <span class="comment">// cleanup right subtree</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                    cleanup(root-&gt;<a class="code" href="classbridges_1_1_b_s_t_element.html#a6b1ef2135ded7cfdde9b4ac7c634a642">getRight</a>());</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                    <span class="comment">// left and right subtrees deallocated, remove root</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                <span class="keyword">delete</span> root;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            }</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        }</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;};</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;}</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classbridges_1_1_b_s_t_element_html_a43719ed15f0be72ef2977c829f7e770d"><div class="ttname"><a href="classbridges_1_1_b_s_t_element.html#a43719ed15f0be72ef2977c829f7e770d">bridges::BSTElement::BSTElement</a></div><div class="ttdeci">BSTElement(BSTElement&lt; K, E &gt; *left, BSTElement&lt; K, E &gt; *right)</div><div class="ttdef"><b>Definition:</b> BSTElement.h:127</div></div>
 <div class="ttc" id="classbridges_1_1_b_s_t_element_html_a004e0fa6559f3ed54914cbed870f036d"><div class="ttname"><a href="classbridges_1_1_b_s_t_element.html#a004e0fa6559f3ed54914cbed870f036d">bridges::BSTElement::BSTElement</a></div><div class="ttdeci">BSTElement(K k, E e)</div><div class="ttdef"><b>Definition:</b> BSTElement.h:101</div></div>
+<div class="ttc" id="classbridges_1_1_b_s_t_element_html_a963f4ac95a92d44ef37258c2c86c3c1e"><div class="ttname"><a href="classbridges_1_1_b_s_t_element.html#a963f4ac95a92d44ef37258c2c86c3c1e">bridges::BSTElement::cleanup</a></div><div class="ttdeci">static void cleanup(BSTElement&lt; K, E &gt; *root)</div><div class="ttdef"><b>Definition:</b> BSTElement.h:197</div></div>
 <div class="ttc" id="classbridges_1_1_b_s_t_element_html_a6b1ef2135ded7cfdde9b4ac7c634a642"><div class="ttname"><a href="classbridges_1_1_b_s_t_element.html#a6b1ef2135ded7cfdde9b4ac7c634a642">bridges::BSTElement::getRight</a></div><div class="ttdeci">BSTElement&lt; K, E &gt; * getRight()</div><div class="ttdef"><b>Definition:</b> BSTElement.h:171</div></div>
 <div class="ttc" id="_tree_element_8h_html"><div class="ttname"><a href="_tree_element_8h.html">TreeElement.h</a></div></div>
 <div class="ttc" id="classbridges_1_1_b_s_t_element_html_a67edefc2250bb683409f66afa07c7930"><div class="ttname"><a href="classbridges_1_1_b_s_t_element.html#a67edefc2250bb683409f66afa07c7930">bridges::BSTElement::BSTElement</a></div><div class="ttdeci">BSTElement(K k, E e, BSTElement&lt; K, E &gt; *l, BSTElement&lt; K, E &gt; *r)</div><div class="ttdef"><b>Definition:</b> BSTElement.h:78</div></div>
@@ -212,7 +225,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 17 2015 12:10:52 for Bridges-C++-2.0 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 17 2015 15:50:40 for Bridges-C++-2.0 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

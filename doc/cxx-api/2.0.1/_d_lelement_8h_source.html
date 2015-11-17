@@ -147,11 +147,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="classbridges_1_1_d_lelement.html#a2d869da6b21a40324c6946429b55a040">  114</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classbridges_1_1_d_lelement.html#a2d869da6b21a40324c6946429b55a040">setPrev</a>(<a class="code" href="classbridges_1_1_d_lelement.html">DLelement&lt;E&gt;</a> *prv) {</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            this-&gt;prev = prv;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        }</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;};</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="classbridges_1_1_d_lelement.html#acf035651f24602d6a65e2a48734bb900">  125</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classbridges_1_1_d_lelement.html#acf035651f24602d6a65e2a48734bb900">cleanup</a>(<a class="code" href="classbridges_1_1_d_lelement.html">DLelement&lt;E&gt;</a> *head) {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <a class="code" href="classbridges_1_1_d_lelement.html">DLelement&lt;E&gt;</a> *next = NULL;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="classbridges_1_1_d_lelement.html">DLelement&lt;E&gt;</a> *l = head; l != NULL; ){  </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                next = l-&gt;<a class="code" href="classbridges_1_1_d_lelement.html#a0f638cca77375d6bdc2ff8a23700568c">getNext</a>();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                <span class="keyword">delete</span> l;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                l = next;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;};</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classbridges_1_1_d_lelement_html"><div class="ttname"><a href="classbridges_1_1_d_lelement.html">bridges::DLelement</a></div><div class="ttdoc">The basic doubly linked list element, derived from Element. </div><div class="ttdef"><b>Definition:</b> DLelement.h:26</div></div>
 <div class="ttc" id="classbridges_1_1_d_lelement_html_a1897fad94722f833241e7a665fe57124"><div class="ttname"><a href="classbridges_1_1_d_lelement.html#a1897fad94722f833241e7a665fe57124">bridges::DLelement::DLelement</a></div><div class="ttdeci">DLelement(string label, E e)</div><div class="ttdef"><b>Definition:</b> DLelement.h:53</div></div>
 <div class="ttc" id="classbridges_1_1_d_lelement_html_a0f638cca77375d6bdc2ff8a23700568c"><div class="ttname"><a href="classbridges_1_1_d_lelement.html#a0f638cca77375d6bdc2ff8a23700568c">bridges::DLelement::getNext</a></div><div class="ttdeci">DLelement&lt; E &gt; * getNext()</div><div class="ttdef"><b>Definition:</b> DLelement.h:88</div></div>
@@ -163,11 +172,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classbridges_1_1_d_lelement_html_aa3093474809715575f4c5145d71e6db9"><div class="ttname"><a href="classbridges_1_1_d_lelement.html#aa3093474809715575f4c5145d71e6db9">bridges::DLelement::getPrev</a></div><div class="ttdeci">DLelement&lt; E &gt; * getPrev()</div><div class="ttdef"><b>Definition:</b> DLelement.h:106</div></div>
 <div class="ttc" id="classbridges_1_1_element_html"><div class="ttname"><a href="classbridges_1_1_element.html">bridges::Element</a></div><div class="ttdoc">This is the fundamental building block used in building all data structures in BRIDGES. </div><div class="ttdef"><b>Definition:</b> Element.h:42</div></div>
 <div class="ttc" id="classbridges_1_1_d_lelement_html_a79e05d2d74eab75a987531250037b40b"><div class="ttname"><a href="classbridges_1_1_d_lelement.html#a79e05d2d74eab75a987531250037b40b">bridges::DLelement::DLelement</a></div><div class="ttdeci">DLelement()</div><div class="ttdef"><b>Definition:</b> DLelement.h:38</div></div>
+<div class="ttc" id="classbridges_1_1_d_lelement_html_acf035651f24602d6a65e2a48734bb900"><div class="ttname"><a href="classbridges_1_1_d_lelement.html#acf035651f24602d6a65e2a48734bb900">bridges::DLelement::cleanup</a></div><div class="ttdeci">static void cleanup(DLelement&lt; E &gt; *head)</div><div class="ttdef"><b>Definition:</b> DLelement.h:125</div></div>
 <div class="ttc" id="classbridges_1_1_d_lelement_html_a390e4b9d52e814e5f392a651a89c8413"><div class="ttname"><a href="classbridges_1_1_d_lelement.html#a390e4b9d52e814e5f392a651a89c8413">bridges::DLelement::DLelement</a></div><div class="ttdeci">DLelement(E e, DLelement&lt; E &gt; *nxt, DLelement&lt; E &gt; *prv)</div><div class="ttdef"><b>Definition:</b> DLelement.h:78</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 17 2015 12:10:52 for Bridges-C++-2.0 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 17 2015 15:50:40 for Bridges-C++-2.0 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

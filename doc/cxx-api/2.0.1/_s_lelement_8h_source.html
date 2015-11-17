@@ -132,11 +132,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classbridges_1_1_s_lelement.html#aa9165cdf196b43b155a1100f4a2d18dd">   97</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classbridges_1_1_s_lelement.html#aa9165cdf196b43b155a1100f4a2d18dd">setNext</a>(<a class="code" href="classbridges_1_1_s_lelement.html">SLelement&lt;E&gt;</a> *nxt) {</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            this-&gt;next = nxt;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;};</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classbridges_1_1_s_lelement.html#ab866e4264669a2394d5ce49b5c7f394c">  108</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classbridges_1_1_s_lelement.html#ab866e4264669a2394d5ce49b5c7f394c">cleanup</a>(<a class="code" href="classbridges_1_1_s_lelement.html">SLelement&lt;E&gt;</a> *head) {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <a class="code" href="classbridges_1_1_s_lelement.html">SLelement&lt;E&gt;</a> *next = NULL;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="classbridges_1_1_s_lelement.html">SLelement&lt;E&gt;</a> *l = head; l != NULL; ){  </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                next = l-&gt;<a class="code" href="classbridges_1_1_s_lelement.html#aa11794bee00e3573c2e28786d57697dc">getNext</a>();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                <span class="keyword">delete</span> l;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                l = next;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        }   </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;};</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classbridges_1_1_s_lelement_html_ab866e4264669a2394d5ce49b5c7f394c"><div class="ttname"><a href="classbridges_1_1_s_lelement.html#ab866e4264669a2394d5ce49b5c7f394c">bridges::SLelement::cleanup</a></div><div class="ttdeci">static void cleanup(SLelement&lt; E &gt; *head)</div><div class="ttdef"><b>Definition:</b> SLelement.h:108</div></div>
 <div class="ttc" id="classbridges_1_1_s_lelement_html_a3e6d801b38ff3b1c4d2f5af50c070064"><div class="ttname"><a href="classbridges_1_1_s_lelement.html#a3e6d801b38ff3b1c4d2f5af50c070064">bridges::SLelement::SLelement</a></div><div class="ttdeci">SLelement()</div><div class="ttdef"><b>Definition:</b> SLelement.h:43</div></div>
 <div class="ttc" id="classbridges_1_1_s_lelement_html"><div class="ttname"><a href="classbridges_1_1_s_lelement.html">bridges::SLelement</a></div><div class="ttdoc">The singly linked list element, derived from Element. </div><div class="ttdef"><b>Definition:</b> SLelement.h:28</div></div>
 <div class="ttc" id="classbridges_1_1_s_lelement_html_a04f5aac53435b59ee78dedccd5ceb2c9"><div class="ttname"><a href="classbridges_1_1_s_lelement.html#a04f5aac53435b59ee78dedccd5ceb2c9">bridges::SLelement::SLelement</a></div><div class="ttdeci">SLelement(string label, E e)</div><div class="ttdef"><b>Definition:</b> SLelement.h:54</div></div>
@@ -150,7 +159,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 17 2015 12:10:52 for Bridges-C++-2.0 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 17 2015 15:50:40 for Bridges-C++-2.0 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

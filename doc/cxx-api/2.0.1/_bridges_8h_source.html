@@ -476,14 +476,47 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;        <span class="keywordtype">void</span> setRoot(Element&lt;E&gt; *r) {</div>
 <div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;            root = r;</div>
 <div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;        }</div>
-<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;}; <span class="comment">// Bridges template definition ends</span></div>
-<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;                                <span class="comment">// declare static variables</span></div>
-<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;</div>
-<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> E&gt; Bridges&lt;K, E&gt;* Bridges&lt;K, E&gt;::current = NULL;</div>
-<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;</div>
-<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;} <span class="comment">// namespace definition ends</span></div>
-<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;</div>
-<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00599"></a><span class="lineno"><a class="line" href="classbridges_1_1_bridges.html#acadbd2ec49ec54b316e870e2cdb7dc65">  599</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classbridges_1_1_bridges.html#acadbd2ec49ec54b316e870e2cdb7dc65">cleanup</a>() {</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;            <span class="keywordflow">if</span> (root == NULL)</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;            <span class="keywordtype">string</span> ds = visualizer-&gt;<a class="code" href="classbridges_1_1_a_d_t_visualizer.html#af64c11473910177160374c7ab10088ee">getVisualizerType</a>();</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;            <span class="keywordflow">if</span> (ds == <span class="stringliteral">&quot;Array&quot;</span>)  <span class="comment">// nothing to do - user&#39;s responsibility</span></div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;                ;</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ds == <span class="stringliteral">&quot;llist&quot;</span>) {</div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;                <a class="code" href="classbridges_1_1_s_lelement.html">SLelement&lt;E&gt;</a> *sle = <span class="keyword">static_cast&lt;</span><a class="code" href="classbridges_1_1_s_lelement.html">SLelement&lt;E&gt;</a> *<span class="keyword">&gt;</span>(root);</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;                <a class="code" href="classbridges_1_1_s_lelement.html">SLelement&lt;E&gt;::cleanup</a>(sle);</div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;            }</div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ds == <span class="stringliteral">&quot;dllist&quot;</span>) {</div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;                <a class="code" href="classbridges_1_1_d_lelement.html">DLelement&lt;E&gt;</a> *dle = <span class="keyword">static_cast&lt;</span><a class="code" href="classbridges_1_1_d_lelement.html">DLelement&lt;E&gt;</a> *<span class="keyword">&gt;</span>(root);</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;                <a class="code" href="classbridges_1_1_d_lelement.html">DLelement&lt;E&gt;::cleanup</a>(dle);</div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;            }</div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;<span class="comment">//          else if (ds == &quot;tree&quot;) {</span></div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;<span class="comment">//              TreeElement&lt;E&gt; *tree = static_cast&lt;TreeElement&lt;E&gt; *&gt;(root);</span></div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;<span class="comment">//              TreeElement&lt;E&gt;::cleanup(tree);</span></div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;<span class="comment">//          }</span></div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ds == <span class="stringliteral">&quot;tree&quot;</span>) {</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;                <a class="code" href="classbridges_1_1_b_s_t_element.html">BSTElement&lt;K,E&gt;</a> *bst = <span class="keyword">static_cast&lt;</span><a class="code" href="classbridges_1_1_b_s_t_element.html">BSTElement&lt;K,E&gt;</a> *<span class="keyword">&gt;</span>(root);</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;                <a class="code" href="classbridges_1_1_b_s_t_element.html">BSTElement&lt;K,E&gt;::cleanup</a>(bst);</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;            }</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ds == <span class="stringliteral">&quot;graphl&quot;</span>)</div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;                <span class="keyword">delete</span> graph_adj_list;</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ds == <span class="stringliteral">&quot;graphm&quot;</span>)</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;                <span class="keyword">delete</span> graph_adj_matrix;</div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;            root = NULL;</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;        }</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;}; <span class="comment">// Bridges template definition ends</span></div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;                                <span class="comment">// declare static variables</span></div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> E&gt; Bridges&lt;K, E&gt;* Bridges&lt;K, E&gt;::current = NULL;</div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;} <span class="comment">// namespace definition ends</span></div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;</div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classbridges_1_1_d_lelement_html"><div class="ttname"><a href="classbridges_1_1_d_lelement.html">bridges::DLelement</a></div><div class="ttdoc">The basic doubly linked list element, derived from Element. </div><div class="ttdef"><b>Definition:</b> DLelement.h:26</div></div>
 <div class="ttc" id="classbridges_1_1_bridges_html_a5ff36234e3b9f53fa2db9eafa1151188"><div class="ttname"><a href="classbridges_1_1_bridges.html#a5ff36234e3b9f53fa2db9eafa1151188">bridges::Bridges::setAssignment</a></div><div class="ttdeci">void setAssignment(int assignment_number)</div><div class="ttdef"><b>Definition:</b> Bridges.h:154</div></div>
 <div class="ttc" id="classbridges_1_1_a_d_t_visualizer_html"><div class="ttname"><a href="classbridges_1_1_a_d_t_visualizer.html">bridges::ADTVisualizer</a></div><div class="ttdoc">The ADTVisualizer class generates each data structure&#39;s JSON representation. </div><div class="ttdef"><b>Definition:</b> ADTVisualizer.h:39</div></div>
@@ -494,6 +527,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classbridges_1_1_bridges_html_a72e0a71fa6eab84d010b33b475e931a5"><div class="ttname"><a href="classbridges_1_1_bridges.html#a72e0a71fa6eab84d010b33b475e931a5">bridges::Bridges::getUserName</a></div><div class="ttdeci">string getUserName()</div><div class="ttdef"><b>Definition:</b> Bridges.h:170</div></div>
 <div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdoc">STL namespace. </div></div>
 <div class="ttc" id="classbridges_1_1_bridges_html_a93c02344480d84125c482ceaf8f76dd6"><div class="ttname"><a href="classbridges_1_1_bridges.html#a93c02344480d84125c482ceaf8f76dd6">bridges::Bridges::Bridges</a></div><div class="ttdeci">Bridges()</div><div class="ttdef"><b>Definition:</b> Bridges.h:75</div></div>
+<div class="ttc" id="classbridges_1_1_bridges_html_acadbd2ec49ec54b316e870e2cdb7dc65"><div class="ttname"><a href="classbridges_1_1_bridges.html#acadbd2ec49ec54b316e870e2cdb7dc65">bridges::Bridges::cleanup</a></div><div class="ttdeci">void cleanup()</div><div class="ttdef"><b>Definition:</b> Bridges.h:599</div></div>
 <div class="ttc" id="classbridges_1_1_bridges_html_ae48d408d66c6f6d41da2339daedf2b69"><div class="ttname"><a href="classbridges_1_1_bridges.html#ae48d408d66c6f6d41da2339daedf2b69">bridges::Bridges::getAssignment</a></div><div class="ttdeci">string getAssignment()</div><div class="ttdef"><b>Definition:</b> Bridges.h:142</div></div>
 <div class="ttc" id="classbridges_1_1_a_d_t_visualizer_html_a804d83b3b21c18df6b12f7b9ca493a36"><div class="ttname"><a href="classbridges_1_1_a_d_t_visualizer.html#a804d83b3b21c18df6b12f7b9ca493a36">bridges::ADTVisualizer::getDataStructureRepresentation</a></div><div class="ttdeci">string getDataStructureRepresentation(GraphAdjMatrix&lt; K, E &gt; *graph_adj_matrix)</div><div class="ttdef"><b>Definition:</b> ADTVisualizer.h:149</div></div>
 <div class="ttc" id="classbridges_1_1_bridges_html_a8d3c56a05d697828e6e8c9f43f761972"><div class="ttname"><a href="classbridges_1_1_bridges.html#a8d3c56a05d697828e6e8c9f43f761972">bridges::Bridges::getVisualizer</a></div><div class="ttdeci">ADTVisualizer&lt; K, E &gt; * getVisualizer()</div><div class="ttdef"><b>Definition:</b> Bridges.h:210</div></div>
@@ -531,7 +565,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 17 2015 12:10:52 for Bridges-C++-2.0 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 17 2015 15:50:40 for Bridges-C++-2.0 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>
