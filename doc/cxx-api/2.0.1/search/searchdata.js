@@ -1,11 +1,11 @@
 var indexSectionsWithContent =
 {
-  0: "abcdegilmopstv~",
+  0: "abcdegilopstv~",
   1: "abcdeglstv",
   2: "b",
-  3: "abcdeglmstv",
+  3: "abcdeglstv",
   4: "abcdegilopstv~",
-  5: "b"
+  5: "a"
 };
 
 var indexSectionNames =
@@ -15,7 +15,7 @@ var indexSectionNames =
   2: "namespaces",
   3: "files",
   4: "functions",
-  5: "pages"
+  5: "typedefs"
 };
 
 var indexSectionLabels =
@@ -25,6 +25,6 @@ var indexSectionLabels =
   2: "Namespaces",
   3: "Files",
   4: "Functions",
-  5: "Pages"
+  5: "Typedefs"
 };
 
