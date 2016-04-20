@@ -56,14 +56,18 @@ h3::before
 	line-height: 22px;
 }
 
-nav
+header nav
 {
     background-color: #3498db;
 	font-size: 12px;
 	display:inline-block;
 	width:100%;
 }
-nav a 
+header nav span
+{
+	cursor:default;
+}
+header nav a 
 {
     display:inline-block;
     color: white;
@@ -71,19 +75,18 @@ nav a
     padding: 8px 16px;
     text-decoration: none;
 }
-nav > *
+header nav > *
 {
 	float:left;
 	background-color: #3498db;
 }
-/* Highlights tabs darker blue on hover */
-nav > *:hover {background-color: #2387ca;}
-nav *.dropdown-contents
+header nav > *:hover {background-color: #2387ca;}
+header nav *.dropdown-contents
 {
 	display: none;
 	position:absolute;
 }
-nav *.dropdown-contents * 
+header nav *.dropdown-contents * 
 {
     color: black;
     display: block;
@@ -92,10 +95,10 @@ nav *.dropdown-contents *
 }
 
 /* Highlights drop menu options lighter blue on hover */
-nav *.dropdown-contents *:hover {background-color: #45a9ec}
+header nav *.dropdown-contents *:hover {background-color: #45a9ec}
 
 /* Displays drop menu options on hover */
-nav > *:hover .dropdown-contents{display: block;}
+header nav > *:hover .dropdown-contents{display: block;}
 
 
 
@@ -124,10 +127,23 @@ main code
 	font-size: 85%;
 	padding: 0em .2em;
 }
+main *.iframe-container
+{
+	text-align:center;
+}
+main *.iframe-wrapper
+{
+	width:530px;
+	display:inline-block;
+	overflow:hidden;
+	height:650px;
+}
 main iframe
 {
+	position:relative;
+	left:-35px;
 	border: none;
-	width: 100%;
+	width: 565px;
 	height: 650px;
 	overflow:hidden;
 }

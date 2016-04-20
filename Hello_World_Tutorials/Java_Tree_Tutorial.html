@@ -21,12 +21,11 @@
   <a href="http://bridgesuncc.github.io/">Home</a>
   
   <span>
-    <a>JAVA</a>
-	<!--
+    <a>Languages</a>
     <div class="dropdown-contents">
-      <a href="#Home">C++</a>
-	  <a href="#Home">JAVA</a>
-    </div>-->
+      <a href="./Cpp_SLL_Tutorial.html">C++</a>
+	  <a href="./Java_SLL_Tutorial.html">JAVA</a>
+    </div>
   </span>
 
   <span>
@@ -79,7 +78,7 @@
 <h3>Inside our Main</h3>
   <ul>
     <li>First we need to create our Bridges object and initialize our Bridges Credentials</li>
-      <code>Bridges<String> bridge = new Bridges<String>(0, "YOUR_API_KEY", "YOUR_USER_ID");</code>
+      <code>Bridges<String> bridge = new Bridges<String>(3, "YOUR_API_KEY", "YOUR_USER_ID");</code>
     <li>Then we can create our TreeElements</li>
       <code>
 	    TreeElement e0 = new TreeElement&lt;String&gt;("", "");<br/>
@@ -105,7 +104,7 @@
       {<br/>
 &nbsp; &nbsp; public static void main(String[] args) throws Exception<br/>
 &nbsp; &nbsp; {<br/>
-&nbsp; &nbsp; &nbsp; &nbsp; Bridges<String> bridge = new Bridges<String>(0, "YOUR_API_KEY", "YOUR_USER_ID");<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; Bridges<String> bridge = new Bridges<String>(3, "YOUR_API_KEY", "YOUR_USER_ID");<br/>
 &nbsp; &nbsp; &nbsp; &nbsp; TreeElement e0 = new TreeElement&lt;String&gt;("", "");<br/>
 &nbsp; &nbsp; &nbsp; &nbsp; TreeElement e1 = new TreeElement&lt;String&gt;("Hello", "");<br/>
 &nbsp; &nbsp; &nbsp; &nbsp; TreeElement e2 = new TreeElement&lt;String&gt;("World", "");<br/>
@@ -124,9 +123,11 @@
     <li>Copy/paste this link into your favorite browser to view a visualization of the data structure you’ve just created.</li>
     <li>It should look something like this:</li>
   </ul>
-  <iframe src="http://bridges-cs.herokuapp.com/assignments/1/bridges_public#vis0">
-    <p>Sorry, your browser doesn't seem to support iframes - <a href="http://bridges-cs.herokuapp.com/assignments/1/bridges_public#vis0">Frame Link</a></p>
-  </iframe>
+  <div class="iframe-container"><div class="iframe-wrapper">
+	  <iframe src="http://bridges-cs.herokuapp.com/assignments/3/bridges_public#vis0" scrolling="no">
+		<p>Sorry, your browser doesn't seem to support iframes - <a href="http://bridges-cs.herokuapp.com/assignments/3/bridges_public#vis0">Frame Link</a></p>
+	  </iframe>
+  </div></div>
 
 <p>Well done! You’ve just created your first Bridges project!</p>
 </main>
