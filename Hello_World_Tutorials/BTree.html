@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="author" content="Bridges"/>
+  <meta name="description" content="Bridges Tutorials"/>
+  
+  <link rel="stylesheet" type="text/css" href="./tutorial.css" />
+  <link rel="shortcut icon" href="http://bridgesuncc.github.io/favicon.png"/>
+  <script src="./tutorial.js"></script>
+  <title>Bridges - Hello World Visualization Tutorial</title>
+</head>
+
+<body>
+<div>
+
+<header w3-include-html="./Tutorial_Header.html"></header>
+
+<main>
+  <h2>How does the TreeElement&lt;E&gt; work?</h2>
+  <p>
+    TreeElement&lt;E&gt; is another type of container that has two pointers that point 
+    to two child TreeElement&lt;E&gt;. By convention, these two pointers are called "left" 
+    and "right and the top of the tree is referred to as the "root".
+    <br/><br/><img width="600em" src="./TreeElement.png"/><br/><br/>
+    Root has two pointers, so calling Root.getLeft() will return 
+    the TreeElement T1 and calling Root.getRight() will return the TreeElement T2. 
+    <br/><br/>
+    Note that there is no pointer from T1 or any other element back to its root.
+  </p>
+
+  <h2>How does a TreeElement&lt;E&gt; differ from a DLelement&lt;E&gt;?</h2>
+  <p>
+    DLelement&lt;E&gt; also has two pointers, but one points to the previous element. 
+    TreeElement&lt;E&gt; does not point to the previous element, but points at two different 
+    children. By convention a DLelement&lt;E&gt; has a next and previous element while 
+    a TreeElement&lt;E&gt; has a right and left element. 
+    <br/><br/>
+    Generally a TreeElement&lt;E&gt; will be used in a recursive data structure and 
+    that data structure that will specify a particular relationship that all 
+    of the right elements have relative to it's root and a different relationship 
+    that all left elements have relative to it's root (a binary search tree, for example).
+  </p>
+
+  <hr/>
+
+  <h2>TreeElement - Hello World</h2>
+  <div class="tabs">
+    <div onclick="displayCode('Java',this)">Java</div>
+    <div onclick="displayCode('C++',this)" >C++</div>
+  </div>
+  <div class="tabContents">
+    <div id="Java" w3-include-html="./Java_BTree.html"></div>
+    <div id="C++"  w3-include-html="./Cpp_BTree.html"></div>
+  </div>
+  
+  <h3>Bridges Visualization</h3>
+  <ul>
+    <li>Once all your code is in order, run your file.</li>
+    <li>Assuming all your code is correct and it compiles correctly, a link to the Bridges website will be generated.</li>
+    <li>Copy/paste this link into your favorite browser to view a visualization of the data structure you’ve just created.</li>
+    <li>It should look something like this:</li>
+  </ul>
+  <div class="iframe-wrapper">
+    <iframe src="http://bridges-cs.herokuapp.com/assignments/3/bridges_public" scrolling="no">
+      <p>Sorry, your browser doesn't seem to support iframes - 
+        <a href="http://bridges-cs.herokuapp.com/assignments/3/bridges_public">Frame Link</a>
+      </p>
+    </iframe>
+  </div>
+  <p>Well done! You’ve just created your third Bridges project!</p>
+</main>
+
+<footer w3-include-html="./Tutorial_Footer.html"></footer>
+
+</div>
+<script>
+  w3IncludeHTML();
+  document.querySelector("*.tabs > *").click();
+</script>
+</body>
+</html>

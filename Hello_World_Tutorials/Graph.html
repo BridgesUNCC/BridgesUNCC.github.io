@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="author" content="Bridges"/>
+  <meta name="description" content="Bridges Tutorials"/>
+  
+  <link rel="stylesheet" type="text/css" href="./tutorial.css" />
+  <link rel="shortcut icon" href="http://bridgesuncc.github.io/favicon.png"/>
+  <script src="./tutorial.js"></script>
+  <title>Bridges - Hello World Visualization Tutorial</title>
+</head>
+
+<body>
+<div>
+
+<header w3-include-html="./Tutorial_Header.html"></header>
+
+<main>
+  <h2>How do the GraphAdjList&lt;K,E&gt; and GraphAdjMatrix work&lt;K,E&gt;?</h2>
+  <p>
+    A graph is a set of vertices connected by edges. Unlike tree structures, a 
+    graph can have any number of vertices with any number of edges connecting 
+    them. In fact, a tree structure is just a special case of a graph.
+    <br/><br/><img width="400em" src="./Graph.png"/><br/><br/>
+    Bridges represents graph structures in one of two ways: either using an 
+    adjacency list representation or an adjacency matrix representation.
+    <br/><br/>
+    In the adjacency list representation, the GraphAdjList is holding a Map 
+    of vertices associated with a linked list of the adjoining vertices.
+    <br/><br/>
+    In the adjacency matrix representation, the GraphAdjMatrix is mimicking a 2 
+    dimensional array to describe which vertices are connected (Bridges actually uses nested Maps).
+    <br/><br/>
+    Typically, the reason to use one version over the other revolve around space 
+    versus time trade offs. Since the GraphAdjList representation uses a linked 
+    list to track neighboring nodes, searching for a particular neighbor is an 
+    O(n) operation. The GraphAdjMatrix has O(1) access to any particular neighbor, 
+    but it is essentially holding a two dimensional array. On sparse graphs, this 
+    can waste a considerable amount of space.
+  </p>
+
+  <hr/>
+
+  <h2>AdjacencyGraph - Hello World</h2>
+  <div class="tabs">
+    <div onclick="displayCode('Java',this)">Java</div>
+    <div onclick="displayCode('C++',this)" >C++</div>
+  </div>
+  <div class="tabContents">
+    <div id="Java" w3-include-html="./Java_GL.html"></div>
+    <div id="C++"  w3-include-html="./Cpp_GL.html"></div>
+  </div>
+  
+  <h3>Bridges Visualization</h3>
+  <ul>
+    <li>Once all your code is in order, run your file.</li>
+    <li>Assuming all your code is correct and it compiles correctly, a link to the Bridges website will be generated.</li>
+    <li>Copy/paste this link into your favorite browser to view a visualization of the data structure you’ve just created.</li>
+    <li>It should look something like this:</li>
+  </ul>
+  <div class="iframe-wrapper">
+    <iframe src="http://bridges-cs.herokuapp.com/assignments/5/bridges_public" scrolling="no">
+      <p>Sorry, your browser doesn't seem to support iframes - 
+        <a href="http://bridges-cs.herokuapp.com/assignments/5/bridges_public">Frame Link</a>
+      </p>
+    </iframe>
+  </div>
+  <p>Well done! You’ve just created your fifth Bridges project!</p>
+</main>
+
+<footer w3-include-html="./Tutorial_Footer.html"></footer>
+
+</div>
+<script>
+	w3IncludeHTML();
+	document.querySelector("*.tabs > *").click();
+</script>
+</body>
+</html>

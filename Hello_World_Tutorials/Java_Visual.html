@@ -1,0 +1,17 @@
+<h3>Create an Element</h3>
+  <ul><code>Element&lt;String&gt; e = new Element&lt;&gt;;</code></ul>
+
+<h3>Visualization changing</h3>
+<ul>
+  <li>For Java, Bridges stores visualization properties in an ElementVisualizer class owned by each element.</li>
+  <li>So, to get change each property we must retrieve the element's ElementVisualizer.</li>
+  <li>Color can be changed like this:</li>
+    <code>e.getVisualizer().setColor("black");</code>
+  <li>For Java, Bridges handles opacity seperately from color.</li>
+  <li>Opacity can be changed like this:</li>
+    <code>e.getVisualizer().setOpacity(.5);</code>
+  <li>Size can be changed like this:</li>
+    <code>e.getVisualizer().setSize(20);</code>
+  <li>Shape can be changed like this:</li>
+    <code>e.getVisualizer().setShape("diamond");</code>
+</ul>

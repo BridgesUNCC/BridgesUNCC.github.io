@@ -1,0 +1,72 @@
+<h3>Create a new .java file</h3>
+
+<h3>Imports</h3>
+<ul>
+  <li>We need to include these Bridges files to give access to all the classes/methods needed to interact with Bridges</li>
+  <li>In your .java file, enter the following code snippets:</li>
+    <code>
+      import bridges.connect.Bridges;
+      import bridges.base.DLelement;
+    </code>
+</ul>
+
+<h3>Main Exception</h3>
+  <ul>
+    <li>By adding a throw exception we can forgo messy try/catch blocks in our code for our Bridges calls</li>
+    <li>In your .java file, add a throw exception to the main function so it looks like this:</li>
+      <code>public static void main(String[] args) throws Exception</code>
+  </ul>
+
+<h3>Inside our Main</h3>
+<ul>
+  <li>First we need to create our Bridges object and initialize our Bridges Credentials</li>
+    <code>Bridges&lt;String&gt; bridge = new Bridges&lt;&gt;(2, "YOUR_API_KEY", "YOUR_USER_ID");</code>
+  <li>Then we can create our DLelements</li>
+    <code>
+      DLelement&lt;String&gt; e0 = new DLelement&lt;&gt;("Hello", "");
+      DLelement&lt;String&gt; e1 = new DLelement&lt;&gt;("World", "");
+      DLelement&lt;String&gt; e2 = new DLelement&lt;&gt;("!", "");
+    </code>
+  <li>Now link the DLelements together</li>
+    <code>
+      e0.setNext(e1);
+      e1.setNext(e2);
+      e2.setPrev(e1);
+      e1.setPrev(e0);
+    </code>
+  <li>Now we pass the first element of our datastruture to Bridges</li>
+    <code>bridge.setDataStructure(e0);</code>
+  <li>Finnaly we call the visualize function</li>
+    <code>bridge.visualize();</code>
+</ul>
+<h4><strong>Code Summary:</strong> Your .java file should look like this</h4>
+  <code>
+    import bridges.connect.Bridges;
+    import bridges.base.DLelement;
+    
+    public class HelloWorld
+    {
+        public static void main(String[] args) throws Exception
+        {
+            //create the Bridges object
+            Bridges&lt;String&gt; bridge = new Bridges&lt;&gt;(2, "YOUR_API_KEY", "YOUR_USER_ID");
+            
+            //create elements
+            DLelement&lt;String&gt; e0 = new DLelement&lt;&gt;("Hello", "");
+            DLelement&lt;String&gt; e1 = new DLelement&lt;&gt;("World", "");
+            DLelement&lt;String&gt; e2 = new DLelement&lt;&gt;("!", "");
+            
+            //link elements
+            e0.setNext(e1);
+            e1.setNext(e2);
+            e2.setPrev(e1);
+            e1.setPrev(e0);
+            
+            //pass first element of data structure
+            bridge.setDataStructure(e0);
+            
+            //visualize data structure
+            bridge.visualize();
+        }
+    }
+  </code>

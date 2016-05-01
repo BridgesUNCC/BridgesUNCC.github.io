@@ -1,0 +1,81 @@
+<h3>Create a new .java file</h3>
+
+<h3>Imports</h3>
+<ul>
+  <li>We need to include these Bridges files to give access to all the classes/methods needed to interact with Bridges</li>
+  <li>In your .java file, enter the following code snippets:</li>
+    <code>
+      import bridges.connect.Bridges;
+      import bridges.base.GraphAdjList;
+    </code>
+</ul>
+
+<h3>Main Exception</h3>
+<ul>
+  <li>By adding a throw exception we can forgo messy try/catch blocks in our code for our Bridges calls</li>
+  <li>In your .java file, add a throw exception to the main function so it looks like this:</li>
+    <code>public static void main(String[] args) throws Exception</code>
+</ul>
+
+<h3>Inside our Main</h3>
+<ul>
+  <li>First we need to create our Bridges object and initialize our Bridges Credentials</li>
+    <code>Bridges&lt;String&gt; bridge = new Bridges&lt;&gt;(5, "YOUR_API_KEY", "YOUR_USER_ID");</code>
+  <li>Then we can create our GraphAdjList</li>
+    <code>GraphAdjList&lt;String,String&gt; g = new GraphAdjList&lt;&gt;();</code>
+  <li>Now add some verticies to the graph</li>
+    <code>
+      g.addVertex("He","");
+      g.addVertex("llo","");
+      g.addVertex("Wo","");
+      g.addVertex("rld","");
+    </code>
+  <li>And add some edges to the graph</li>
+    <code>
+      g.addEdge("He","llo",1);
+      g.addEdge("llo","Wo",1);
+      g.addEdge("Wo","rld",1);
+      g.addEdge("He","Wo",1);
+      g.addEdge("He","rld",1);
+    </code>
+  <li>Now we pass the first element of our datastruture to Bridges</li>
+    <code>bridge.setDataStructure(g);</code>
+  <li>Finnaly we call the visualize function</li>
+    <code>bridge.visualize();</code>
+</ul>
+<h4><strong>Code Summary:</strong> Your .java file should look like this</h4>
+  <code>
+    import bridges.connect.Bridges;
+    import bridges.base.GraphAdjList;
+    
+    public class HelloWorld
+    {
+        public static void main(String[] args) throws Exception
+        {
+            //create the Bridges object
+            Bridges&lt;String&gt; bridge = new Bridges&lt;&gt;(5, "YOUR_API_KEY", "YOUR_USER_ID");
+            
+            //create graph
+            GraphAdjList&lt;String,String&gt; g = new GraphAdjList&lt;&gt;();
+            
+            //add nodes
+            g.addVertex("He","");
+            g.addVertex("llo","");
+            g.addVertex("Wo","");
+            g.addVertex("rld","");
+            
+            //add edges
+            g.addEdge("He","llo",1);
+            g.addEdge("llo","Wo",1);
+            g.addEdge("Wo","rld",1);
+            g.addEdge("He","Wo",1);
+            g.addEdge("He","rld",1);
+            
+            //pass graph
+            bridge.setDataStructure(g);
+            
+            //visualize data structure
+            bridge.visualize();
+        }
+    }
+  </code>

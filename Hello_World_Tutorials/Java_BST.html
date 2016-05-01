@@ -1,0 +1,68 @@
+<h3>Create a new .java file</h3>
+
+<h3>Imports</h3>
+<ul>
+  <li>We need to include these Bridges files to give access to all the classes/methods needed to interact with Bridges</li>
+  <li>In your .java file, enter the following code snippets:</li>
+    <code>
+      import bridges.connect.Bridges;
+      import bridges.base.BSTElement;
+    </code>
+</ul>
+
+<h3>Main Exception</h3>
+<ul>
+  <li>By adding a throw exception we can forgo messy try/catch blocks in our code for our Bridges calls</li>
+  <li>In your .java file, add a throw exception to the main function so it looks like this:</li>
+    <code>public static void main(String[] args) throws Exception</code>
+</ul>
+
+<h3>Inside our Main</h3>
+<ul>
+  <li>First we need to create our Bridges object and initialize our Bridges Credentials</li>
+    <code>Bridges&lt;String&gt; bridge = new Bridges&lt;&gt;(4, "YOUR_API_KEY", "YOUR_USER_ID");</code>
+  <li>Then we can create our TreeElements</li>
+    <code>
+      BSTElement&lt;Integer,String&gt; e0 = new BSTElement&lt;&gt;("",0, "");
+      BSTElement&lt;Integer,String&gt; e1 = new BSTElement&lt;&gt;("Hello",-1, "");
+      BSTElement&lt;Integer,String&gt; e2 = new BSTElement&lt;&gt;("World",1, "");
+    </code>
+<li>Now link the BSTElements together</li>
+    <code>
+      e0.setLeft(e1);
+      e0.setRight(e2);
+    </code>
+  <li>Now we pass the first element of our datastruture to Bridges</li>
+    <code>bridge.setDataStructure(e0);</code>
+  <li>Finnaly we call the visualize function</li>
+    <code>bridge.visualize();</code>
+</ul>
+<h4><strong>Code Summary:</strong> Your .java file should look like this</h4>
+  <code>
+    import bridges.connect.Bridges;
+    import bridges.base.BSTElement;
+
+    public class HelloWorld
+    {
+        public static void main(String[] args) throws Exception
+        {
+            //create the Bridges object
+            Bridges&lt;String&gt; bridge = new Bridges&lt;&gt;(4, "YOUR_API_KEY", "YOUR_USER_ID");
+            
+            //create elements
+            BSTElement&lt;Integer,String&gt; e0 = new BSTElement&lt;&gt;("",0, "");
+            BSTElement&lt;Integer,String&gt; e1 = new BSTElement&lt;&gt;("Hello",-1, "");
+            BSTElement&lt;Integer,String&gt; e2 = new BSTElement&lt;&gt;("World",1, "");
+            
+            //link elements
+            e0.setLeft(e1);
+            e0.setRight(e2);
+            
+            //pass first element of data structure
+            bridge.setDataStructure(e0);
+            
+            //visualize data structure
+            bridge.visualize();
+        }
+    }
+  </code>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="author" content="Bridges"/>
+  <meta name="description" content="Bridges Tutorials"/>
+  
+  <link rel="stylesheet" type="text/css" href="./tutorial.css" />
+  <link rel="shortcut icon" href="http://bridgesuncc.github.io/favicon.png"/>
+  <script src="http://www.w3schools.com/lib/w3data.js"></script>
+  <title>Bridges - Hello World Visualization Tutorial</title>
+</head>
+
+<body>
+<div class="container">
+<header w3-include-html="Tutorial_Header.html"></header>
+<main>
+<h2>What is Bridges?</h2>
+<p>
+Bridges is a set of libraries that allow the user to build data structures using 
+the building blocks from the Bridges Elements class.
+Bridges currently supports the following types of Elements:
+<ul>
+<li><strong>Element</strong>
+	- the basic element that just holds data</li>
+<li><strong>Single Linked Elements</strong> 
+	- elements that point to one other element</li>
+<li><strong>Double Linked Elements</strong> 
+	- elements that point to two other elements</li>
+<li><strong>Binary Tree Elements</strong> 
+	- elements that only point to a left and right child element</li>
+<li><strong>Binary Search Tree Elements</strong> 
+	- a binary tree element with a "key", to be used in binary search implementations</li>
+<li><strong>Adjacency List Graphs</strong> 
+	- containers that hold element connections with linked lists</li>
+<li><strong>Adjcacency Matrix Graphs</strong> 
+	- containers that hold element concections with a matrix</li>
+</ul>
+Bridges also contains a visualization server that allows the user to send their code and see the data 
+structure that they have built. The user can also change various visualization features such as size, 
+shape, or color of the elements and their links.
+</p>
+
+<h2>What is an Element&lt;E&gt;?</h2>
+<p>
+Element&lt;E&gt; is the superclass of SLelement&lt;E&gt; and TreeElement&lt;E&gt;.
+<br/><br/><img width="600em" src="./Element_Higherarchy.png"/><br/><br/>
+You will normally be using these classes to build data structures. Since they are subclasses of Element&lt;E&gt;, 
+they inherit a common set of methods and instance variables, so to a certain extent they will share a common 
+set of behavior. However, since they are all different classes, they will have methods and instance variables 
+that are unique to their particular class.
+</p>
+
+<h2>What is the &lt;E&gt;?</h2>
+<p>
+&lt;E&gt; is a generic parameter. It represents any class, so you can 
+have an SLelement&lt;string&gt; or an SLelement&lt;int&gt; or any other class. 
+<br/>
+You may be wondering, if &lt;E&gt; can be any class, then how does Element 
+know how to behave since a boolean does not have the same methods available 
+as a string?
+<br/>
+Since we didn't put any restrictions on &lt;E&gt; inside the Element definition, 
+we can only call methods of &lt;E&gt; that are common to ALL classes. We will 
+not be allowed to call a method on E that is particular to any one class.
+<br/>
+In this way, we can allow the Element&lt;E&gt; class to function as a container. 
+The container doesn't care what it's holding and whatever the container is holding 
+doesn't influence the behavior of the container.
+<br/><br/><img width="600em" src="./Element_Buckets.png"/>
+</p>
+
+<h2>What about Graphs?</h2>
+<p>
+Bridges also contains the GraphAdjacencyList and GraphAdjacencyMatrix classes, 
+however, these do not subclass from Element.
+<br/>
+This is because Graphs themselves are containers holding Bridges classes. Internally Bridges graphs will 
+hold subclasses of Element. When you interact with the graphs you will typically be 
+adding an Element to them or retrieving an Element from them.
+</p>
+</main>
+<footer w3-include-html="Tutorial_Footer.html"></footer>
+</div>
+  <script>w3IncludeHTML();</script>
+</body>
+</html>

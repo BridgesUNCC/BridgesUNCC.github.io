@@ -1,26 +1,20 @@
 body
 {
 	border-top: 7px solid #3498db;
-	line-height: 22px;
 	margin: 0px;
-	font-family: 'open sans', sans-serif;
-	padding-left: 40px;
-	padding-top: 25px;
-	min-height: 400px;
+	padding: 25px 40px 0px;
 	text-align: center;
+  display:inline-block;
+  min-width:100%;
+  box-sizing: border-box;
 }
-/* 
-Would like to add, but all doesn't have much support
-body > *
+body > *:not(script)
 {
-	all: initial;
+  line-height: 22px;
+  font-family: 'open sans', sans-serif;
 	display:inline-block;
-}
-*/
-*.container
-{
-	display:inline-block;
-	text-align: initial;		
+	text-align: initial;
+	max-width:70em;	
 }
 h1
 {
@@ -58,7 +52,7 @@ h3::before
 
 header nav
 {
-    background-color: #3498db;
+  background-color: #3498db;
 	font-size: 12px;
 	display:inline-block;
 	width:100%;
@@ -69,11 +63,11 @@ header nav span
 }
 header nav a 
 {
-    display:inline-block;
-    color: white;
-	box-sizing: border-box;
-    padding: 8px 16px;
-    text-decoration: none;
+  display:inline-block;
+  color: white;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  text-decoration: none;
 }
 header nav > *
 {
@@ -88,10 +82,10 @@ header nav *.dropdown-contents
 }
 header nav *.dropdown-contents * 
 {
-    color: black;
-    display: block;
+  color: black;
+  display: block;
 	background-color: #f9f9f9;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
 }
 
 /* Highlights drop menu options lighter blue on hover */
@@ -99,11 +93,6 @@ header nav *.dropdown-contents *:hover {background-color: #45a9ec}
 
 /* Displays drop menu options on hover */
 header nav > *:hover .dropdown-contents{display: block;}
-
-
-
-
-
 
 
 
@@ -118,33 +107,76 @@ main li
 	line-height: 18px;
 	margin-bottom: 12px;
 }
+main *.tabs
+{
+	height:1.6em;
+}
+main *.tabs > *
+{
+	float:left;
+	box-sizing: border-box;
+	text-align:center;
+	padding-top:2px;
+	width:4em;
+	height:inherit;
+	border-radius: .5em .5em 0em 0em;
+	border: 1px solid #999;
+  border-bottom: none;
+	cursor: pointer;
+	background-color:#f8f8f8;
+	box-shadow: 0px -4px 8px rgba(0,0,0,0.1) inset;
+}
+main *.tabs > * + *
+{
+	margin-left: -1px;
+}
+main *.tabs > *[active=true]
+{
+	color: #2387ca;
+  background-color:white;
+	height:calc(100% + 1px);
+	cursor:default;
+	box-shadow: none;
+}
+main *.tabContents
+{
+	padding: 0em 2em;
+	border: 1px solid #999;
+}
+main *.tabContents > *
+{
+	display:none;
+}
+main *.tabContents > *[active=true]
+{
+	display:block;
+}
 main code
 {
-	display: block; 
+	display: block;
+  white-space:pre;
 	border: 1px solid #ddd;
 	background-color: #eef;
 	margin-bottom: 20px;
 	font-size: 85%;
 	padding: 0em .2em;
 }
-main *.iframe-container
-{
-	text-align:center;
-}
+
 main *.iframe-wrapper
 {
 	width:530px;
-	display:inline-block;
 	overflow:hidden;
 	height:650px;
+	margin:auto;
 }
 main iframe
 {
 	position:relative;
+	top:-110px;
 	left:-35px;
 	border: none;
-	width: 565px;
-	height: 650px;
+	width: calc(100% + 35px);
+	height: calc(100% + 110px);
 	overflow:hidden;
 }
 footer *

@@ -1,0 +1,80 @@
+<h3>Create a new .cpp file</h3>
+
+<h3>Includes</h3>
+<ul>
+  <li>We need to include these Bridges headers to give access to all the classes/methods needed to interact with Bridges</li>
+  <li>In your .cpp file, enter the following code snippets:</li>
+    <code>
+      #include "GraphAdjList.h"
+      #include "Bridges.h"
+    </code>
+</ul>
+
+<h3>Namespace</h3>
+<ul>
+  <li>By using this namespace we can forgo messy scope specifiers in our code for our Bridges calls</li>
+  <li>In your .cpp file, enter the following code snippet:</li>
+    <code>using namespace bridges;</code>
+</ul>
+
+<h3>Inside our Main</h3>
+<ul>
+  <li>First we need to initialize our Bridges Credentials</li>
+    <code>Bridges::initialize("YOUR_API_KEY","YOUR_USER_ID",5);</code>
+  <li>Then we can create our GraphAdjList</li>
+    <code>GraphAdjList&lt;string,int&gt; g;</code>
+  <li>Now add some verticies to the graph</li>
+    <code>
+      g.addVertex("He",0);
+      g.addVertex("llo",0);
+      g.addVertex("Wo",0);
+      g.addVertex("rld",0);
+    </code>
+  <li>Now add some verticies to the graph</li>
+    <code>
+      g.addEdge("He","llo",1);
+      g.addEdge("llo","Wo",1);
+      g.addEdge("Wo","rld",1);
+      g.addEdge("He","Wo",1);
+      g.addEdge("He","rld",1);
+    </code>
+  <li>Now we pass the first element of our datastruture to Bridges</li>
+    <code>Bridges::setDataStructure(&g);</code>
+  <li>Finnaly we call the visualize function</li>
+    <code>Bridges::visualize();</code>
+</ul>
+<h4><strong>Code Summary:</strong> Your .cpp file should look like this</h4>
+  <code>
+    #include "GraphAdjList.h"
+    #include "Bridges.h"
+  
+    using namespace bridges;
+  
+    int main()
+    {
+        //create the Bridges object
+        Bridges::initialize("YOUR_API_KEY","YOUR_USER_ID",5);
+        
+        //create graph
+        GraphAdjList&lt;string,int&gt; g;
+        
+        //add nodes
+        g.addVertex("He",0);
+        g.addVertex("llo",0);
+        g.addVertex("Wo",0);
+        g.addVertex("rld",0);
+        
+        //add edges
+        g.addEdge("He","llo",1);
+        g.addEdge("llo","Wo",1);
+        g.addEdge("Wo","rld",1);
+        g.addEdge("He","Wo",1);
+        g.addEdge("He","rld",1);
+        
+        //pass graph
+        Bridges::setDataStructure(&g);
+        
+        //visualize data structure
+        Bridges::visualize();
+    }
+  </code>
