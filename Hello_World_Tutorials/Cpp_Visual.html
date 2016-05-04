@@ -1,14 +1,40 @@
-<h3>Create an Element</h3>
-  <ul><code>Element&lt;string&gt; e;</code></ul>
+<p>
+  Note: For C++, Bridges represents colors with its own color 
+  class. The class supports, rgb, rgba, hex, and named color values
+</p>
 
-<h3>Visualization changing</h3>
+<h3>Setup our DataStructure</h3>
+  <ul>
+    <li>To showcase both element and edge visualization changes we will use DLelements</li>
+    <code>
+      //See DLelement Guide
+      DLelement&lt;string&gt; e0("","Original");
+      DLelement&lt;string&gt; e1("","Changed");
+      e0.setNext(e1);
+      e1.setPrev(e0);
+    </code>
+    <li>
+      In this example we will keep e0 and e0's next edge default, 
+      while changing e1 and e1's prev edge.
+    </li>
+  </ul>
+
+<h3>Element Visualization changing</h3>
 <ul>
-  <li>For C++, Bridges represents colors with its own color class</li>
-  <li>The class supports, rgb, rgba, hex, and named color values</li>
   <li>Color can be changed like this:</li>
-    <code>e.setColor(Color(0,0,0,128));</code>
+    <code>e1.setColor(Color(0,0,255,128));</code>
   <li>Size can be changed like this:</li>
-    <code>e.setSize(20);</code>
+    <code>e1.setSize(20);</code>
   <li>Shape can be changed like this:</li>
-    <code>e.setShape(DIAMOND);</code>
+    <code>e1.setShape(DIAMOND);</code>
+</ul>
+
+<h3>Edge Visualization changing</h3>
+<ul>
+  <li>Obtain the LinkVisualizer between the elements.</li>
+    <code>LinkVisualizer* lv = e1.getLinkVisualizer(&e0);</code>
+  <li>Color can be changed like this:</li>
+    <code>lv-&gt;setColor(Color(255,0,0,128));</code>
+  <li>Thickness can be changed like this:</li>
+    <code>lv-&gt;setThickness(5);</code>
 </ul>

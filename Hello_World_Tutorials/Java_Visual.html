@@ -1,17 +1,44 @@
-<h3>Create an Element</h3>
-  <ul><code>Element&lt;String&gt; e = new Element&lt;&gt;;</code></ul>
+<p>
+  Note: For Java, Bridges stores visualization properties in an 
+  ElementVisualizer class owned by each element. So, to get change 
+  each property we must retrieve the element's ElementVisualizer. 
+  Also Java handles opacity seperately from color.
+</p>
 
-<h3>Visualization changing</h3>
+<h3>Setup our DataStructure</h3>
+  <ul>
+    <li>To showcase both element and edge visualization changes we will use DLelements</li>
+    <code>
+      //See DLelement Guide
+      DLelement&lt;String&gt; e0 = new DLelement&lt;&gt;("","Original");
+      DLelement&lt;String&gt; e1 = new DLelement&lt;&gt;("","Changed");
+      e0.setNext(e1);
+      e1.setPrev(e0);
+    </code>
+    <li>
+      In this example we will keep e0 and e0's next edge default, 
+      while changing e1 and e1's prev edge.
+    </li>
+  </ul>
+
+<h3>Element Visualization changing</h3>
 <ul>
-  <li>For Java, Bridges stores visualization properties in an ElementVisualizer class owned by each element.</li>
-  <li>So, to get change each property we must retrieve the element's ElementVisualizer.</li>
   <li>Color can be changed like this:</li>
-    <code>e.getVisualizer().setColor("black");</code>
-  <li>For Java, Bridges handles opacity seperately from color.</li>
+    <code>e.getVisualizer().setColor("blue");</code>
   <li>Opacity can be changed like this:</li>
     <code>e.getVisualizer().setOpacity(.5);</code>
   <li>Size can be changed like this:</li>
     <code>e.getVisualizer().setSize(20);</code>
   <li>Shape can be changed like this:</li>
     <code>e.getVisualizer().setShape("diamond");</code>
+</ul>
+
+<h3>Edge Visualization changing</h3>
+<ul>
+  <li>Color can be changed like this:</li>
+    <code>e1.getLinkVisualizer(e0).setColor("red");</code>
+  <li>Opacity can be changed like this:</li>
+    <code>e1.getLinkVisualizer(e0).setOpacity(.5);</code>
+  <li>Thickness can be changed like this:</li>
+    <code>e1.getLinkVisualizer(e0).setThickness(5);</code>
 </ul>
