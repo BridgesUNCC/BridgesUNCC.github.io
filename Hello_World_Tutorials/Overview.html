@@ -77,16 +77,20 @@ that are unique to their type.
 BRIDGES uses generic parameters(consistent with most data structures textbooks
 today); &lt;E&gt; is a generic parameter. It represents any basic type or 
 object(class), so you can have an SLelement&lt;string&gt; or an 
-SLelement&lt;int&gt; or any other type. 
+SLelement&lt;int&gt; or any other type. In particular, this facilitates 
+Element to contain application specific type, for example, a record containing
+a (Twittter) Tweet, Earthquake, hospital, airport  or a movie record.
 <p>
-You may be wondering, if &lt;E&gt; can be any class, then how does Element 
+You may be wondering, if &lt;E&gt; can be any type, then how does Element 
 know how to behave since a boolean does not have the same methods available 
 as a string?
 <p>
 Since we did not put any restrictions on &lt;E&gt; inside the Element 
 definition, 
 we can only call methods of &lt;E&gt; that are common to ALL classes. We will 
-not be allowed to call a method on E that is particular to any one class.
+not be allowed to call a method on E that is particular to any one class. Also,
+as Element&lt;E&gt; is an abstract class, users only access it indirectly 
+via its subclasses.
 <p>
 In this way, we can allow the Element&lt;E&gt; class to function as a container. 
 The container doesn't care what it's holding and whatever the container is holding 
