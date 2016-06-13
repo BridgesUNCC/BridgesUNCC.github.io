@@ -19,34 +19,32 @@
 <header w3-include-html="./Tutorial_Header.html"></header>
 
 <main>
-  <h2>How does the TreeElement&lt;E&gt; work?</h2>
-  <p>
-    TreeElement&lt;E&gt; is another type of container that has two pointers that point 
-    to two child TreeElement&lt;E&gt;. By convention, these two pointers are called "left" 
-    and "right and the top of the tree is referred to as the "root".
-    <br/><br/><img width="600em" src="./TreeElement.png"/><br/><br/>
-    Root has two pointers, so calling Root.getLeft() will return 
-    the TreeElement T1 and calling Root.getRight() will return the TreeElement T2. 
-    <br/><br/>
-    Note that there is no pointer from T1 or any other element back to its root.
-  </p>
+<h2>How does the TreeElement&lt;E&gt; work?</h2>
+<p>
+TreeElement&lt;E&gt; is another type of container that has two links 
+pointing to its two children, also binary tree elements. By convention, 
+these two links are called "left" and "right and the top of the tree is 
+referred to as the "root".
+<br/><br/><img width="600em" src="./TreeElement.png"/><br/><br/>
+In the example above, Root has two links, so calling Root.getLeft() will 
+return the TreeElement T1 and calling Root.getRight() will return the 
+TreeElement T2. 
+<br/><br/>
+Note that there is no pointer from T1 or any other element back to its root.
+</p>
 
-  <h2>How does a TreeElement&lt;E&gt; differ from a DLelement&lt;E&gt;?</h2>
-  <p>
-    DLelement&lt;E&gt; also has two pointers, but one points to the previous element. 
-    TreeElement&lt;E&gt; does not point to the previous element, but points at two different 
-    children. By convention a DLelement&lt;E&gt; has a next and previous element while 
-    a TreeElement&lt;E&gt; has a right and left element. 
-    <br/><br/>
-    Generally a TreeElement&lt;E&gt; will be used in a recursive data structure and 
-    that data structure that will specify a particular relationship that all 
-    of the right elements have relative to it's root and a different relationship 
-    that all left elements have relative to it's root (a binary search tree, for example).
-  </p>
+<h2>How does a TreeElement&lt;E&gt; differ from a DLelement&lt;E&gt;?</h2>
+<p>
+Structurally, DLelement&lt;E&gt;  and TreeElement&lt;E&gt; are similar with 2 emanating links, but they are used in very different data structures. In a doubly
+linked list, the links point to the immediately following and previous 
+element, while in the binary tree they point to its two children(recursively,
+as can be seen in the above example). 
+
+</p>
 
   <hr/>
 
-  <h2>TreeElement - Hello World</h2>
+<h2>TreeElement - BRIDGES Example</h2>
   <div class="tabs">
     <div onclick="displayCode('Java',this)">Java</div>
     <div onclick="displayCode('C++',this)" >C++</div>
@@ -58,7 +56,7 @@
   
   <h3>Bridges Visualization</h3>
   <ul>
-    <li>Once all your code is in order, run your file.</li>
+    <li>Once all your code is in order, run your program.</li>
     <li>Assuming all your code is correct and it compiles correctly, a link to the Bridges website will be generated.</li>
     <li>Copy/paste this link into your favorite browser to view a visualization of the data structure you’ve just created.</li>
     <li>It should look something like this:</li>

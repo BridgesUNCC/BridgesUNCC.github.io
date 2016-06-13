@@ -19,9 +19,9 @@
 
 <h3>Inside our Main</h3>
 <ul>
-  <li>First we need to create our Bridges object and initialize our Bridges Credentials</li>
+  <li>First we need to create our BRIDGES object and initialize our BRIDGES Credentials</li>
     <code>Bridges&lt;String&gt; bridge = new Bridges&lt;&gt;(1, "YOUR_API_KEY", "YOUR_USER_ID");</code>
-	Note that you will need to replace the two fields in this call with your BRIDGES credentials.
+	Note that you will need to replace the two fields in this call with your BRIDGES credentials. <p>
   <li>Then we can create our SLelements</li>
     <code>
       SLelement&lt;String&gt; e0 = new SLelement&lt;&gt;("Hello", "");
@@ -33,7 +33,7 @@
       e0.setNext(e1);
       e1.setNext(e2);
     </code>
-  <li>Now we pass the first element of our datastruture to Bridges</li>
+  <li>Now we pass the first element(head) of our data structure to BRIDGES</li>
     <code>bridge.setDataStructure(e0);</code>
   <li>Finnaly we call the visualize function</li>
     <code>bridge.visualize();</code>

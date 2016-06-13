@@ -2,7 +2,7 @@
 
 <h3>Imports</h3>
 <ul>
-  <li>We need to include these Bridges files to give access to all the classes/methods needed to interact with Bridges</li>
+  <li>We need to include these BRIDGES files to give access to all the classes/methods needed to interact with BRIDGES</li>
   <li>In your .java file, enter the following code snippets:</li>
     <code>
       import bridges.connect.Bridges;
@@ -12,7 +12,7 @@
 
 <h3>Main Exception</h3>
 <ul>
-  <li>By adding a throw exception we can forgo messy try/catch blocks in our code for our Bridges calls</li>
+  <li>By adding a throw exception we can forgo messy try/catch blocks in our code for our BRIDGES calls</li>
   <li>In your .java file, add a throw exception to the main function so it looks like this:</li>
     <code>public static void main(String[] args) throws Exception</code>
 </ul>
@@ -21,6 +21,10 @@
 <ul>
   <li>First we need to create our Bridges object and initialize our Bridges Credentials</li>
     <code>Bridges&lt;String&gt; bridge = new Bridges&lt;&gt;(3, "YOUR_API_KEY", "YOUR_USER_ID");</code>
+<p>
+Please note that the two fields above need to be replaced by your BRIDGES 
+credentials.
+<p>
   <li>Then we can create our TreeElements</li>
     <code>
       TreeElement&lt;String&gt; e0 = new TreeElement&lt;&gt;("", "");
@@ -32,7 +36,7 @@
       e0.setLeft(e1);
       e0.setRight(e2);
     </code>
-  <li>Now we pass the first element of our datastruture to Bridges</li>
+  <li>Now we pass the root of our binary tree to BRIDGES</li>
     <code>bridge.setDataStructure(e0);</code>
   <li>Finnaly we call the visualize function</li>
     <code>bridge.visualize();</code>

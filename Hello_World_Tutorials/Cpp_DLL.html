@@ -21,6 +21,9 @@
 <ul>
   <li>First we need to initialize our Bridges Credentials</li>
     <code>Bridges::initialize("YOUR_API_KEY","YOUR_USER_ID",2);</code>
+<p>
+Note that you must  replace the two strings above with your BRIDGES credentials.
+<p>
   <li>Then we can create our DLelements</li>
     <code>
       DLelement&lt;int&gt; e0(0,"Hello");
@@ -34,7 +37,7 @@
       e2.setPrev(&e1);
       e1.setPrev(&e0);
     </code>
-  <li>Now we pass the first element of our datastruture to Bridges</li>
+  <li>Now we pass the first element of the doubly linked list to Bridges</li>
     <code>Bridges::setDataStructure(&e0);</code>
   <li>Finnaly we call the visualize function</li>
     <code>Bridges::visualize();</code>
