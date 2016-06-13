@@ -20,7 +20,7 @@
 <h2>What is Bridges?</h2>
 <p>
 The BRIDGES(Bridging Real-world Infrastructure Designed to Goal-align, 
-Engage, and Stimulate) project(NSF TUES project) is focused on providing 
+Engage, and Stimulate) project(an NSF TUES project) is focused on providing 
 easy-to-use interfaces to real-world internet-based information systems, 
 that are exciting, engaging and commonly used by undergraduate students, 
 such as social network data, scientific or engineering data.  
@@ -35,19 +35,23 @@ constructed by the student as part of his/her project.
 BRIDGES currently supports the following types of Elements:
 <ul>
 <li><strong>Element</strong>
-	- the basic element that just holds data</li>
-<li><strong>Single Linked Elements</strong> 
-	- elements that point to one other element</li>
-<li><strong>Double Linked Elements</strong> 
-	- elements that point to two other elements</li>
-<li><strong>Binary Tree Elements</strong> 
-	- elements that only point to a left and right child element</li>
-<li><strong>Binary Search Tree Elements</strong> 
-	- a binary tree element with a "key", to be used in binary search implementations</li>
-<li><strong>Adjacency List Graphs</strong> 
-	- containers that hold element connections with linked lists</li>
-<li><strong>Adjcacency Matrix Graphs</strong> 
-	- containers that hold element concections with a matrix</li>
+	- the basic element(abstract) that just holds application specific data and supports some basic operations</li>
+<li><strong>Singly Linked List Element</strong> 
+	- element that points to one other element</li>
+<li><strong>Doubly Linked List Element</strong> 
+	- element that points to two other elements</li>
+<li><strong>Binary Tree Element</strong> 
+	- element that only point to a left and right child element</li>
+<li><strong>Binary Search Tree Element</strong> 
+	- a binary tree element with an orderable "key" value, to be used in 
+		binary search implementations</li>
+<li><strong>Graph(Adjacency List) </strong> 
+	- graph container that holds vertices in an array type list and 
+		element connections with singly linked lists</li>
+<li><strong>Graph(Adjcacency Matrix)</strong> 
+	- graph container whose representation is an adjacency matrix, with 
+		vertex ids	for the two dimension, and the matrix element containing 
+		a boolean(presence/absence of edge) or edge weight.</li>
 </ul>
 Bridges also contains a visualization server that allows the user to send their code and see the data 
 structure that they have built. The user can also change various visualization features such as size, 
