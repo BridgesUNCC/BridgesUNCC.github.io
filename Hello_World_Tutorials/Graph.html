@@ -19,56 +19,73 @@
 <header w3-include-html="./Tutorial_Header.html"></header>
 
 <main>
-  <h2>How do the GraphAdjList&lt;K,E&gt; and GraphAdjMatrix work&lt;K,E&gt;?</h2>
-  <p>
-    A graph is a set of vertices connected by edges. Unlike tree structures, a 
-    graph can have any number of vertices with any number of edges connecting 
-    them. In fact, a tree structure is just a special case of a graph.
-    <br/><br/><img width="400em" src="./Graph.png"/><br/><br/>
-    Bridges represents graph structures in one of two ways: either using an 
-    adjacency list representation or an adjacency matrix representation.
-    <br/><br/>
-    In the adjacency list representation, the GraphAdjList is holding a Map 
-    of vertices associated with a linked list of the adjoining vertices.
-    <br/><br/>
-    In the adjacency matrix representation, the GraphAdjMatrix is mimicking a 2 
-    dimensional array to describe which vertices are connected (Bridges actually uses nested Maps).
-    <br/><br/>
-    Typically, the reason to use one version over the other revolve around space 
-    versus time trade offs. Since the GraphAdjList representation uses a linked 
-    list to track neighboring nodes, searching for a particular neighbor is an 
-    O(n) operation. The GraphAdjMatrix has O(1) access to any particular neighbor, 
-    but it is essentially holding a two dimensional array. On sparse graphs, this 
-    can waste a considerable amount of space.
-  </p>
+<h2>How do the GraphAdjList&lt;K,E&gt; and GraphAdjMatrix work&lt;K,E&gt;?</h2>
+<p>
+A graph is a set of vertices connected by edges. Unlike tree structures, a 
+vertex can be an ancestor or a child and can have multiple emanating edges.
+In fact, a tree structure is just a special case of a graph.
+<br/><br/><img width="400em" src="./Graph.png"/><br/><br/>
+Bridges represents graph structures in one of two ways: either using an 
+adjacency list representation or an adjacency matrix representation. 
+Access to the vertices is similar to indexing into an array (O(1) complexity).
+The main difference is that vertex ids can be numerical values or strings;
+BRIDGES implements constant access to vertices using maps (in Java and C++).
+<br/><br/>
+In the adjacency list representation, the GraphAdjList is holding a Map 
+of vertices, each  of which associated with a linked list of the vertices 
+representing the terminating vertex of the edge. These <i>Edge</i> vertices
+are of type SLElement&lt;E&gt; with the generic object E used to hold the 
+vertex id and possibly, edge weight.
+<br/><br/>
+In the adjacency matrix representation, the GraphAdjMatrix is mimicking a 2 
+dimensional array to describe which vertices are connected (BRIDGES implements 
+this using nested Maps). 
 
-  <hr/>
+Finally these classes provide some convenient methods to add vertices and edges
+(GraphAdjList::addVertex(), GraphAdjList::addEdge()) to build the graph.
+<br/><br/>
+Typically, the reason to use one version over the other revolves around space 
+/time trade offs, end-user application and the density of the graph. 
+Since the GraphAdjList representation uses a linked list to track 
+neighboring nodes, searching for a particular vertex is a linear 
+(O(n)) operation. The GraphAdjMatrix has O(1) access to any 
+particular neighbor, but it is essentially holding a two dimensional array,
+regardless of the graph density; on sparse graphs, this can waste a 
+considerable amount of space.
+</p>
 
-  <h2>AdjacencyGraph - Hello World</h2>
-  <div class="tabs">
+<hr/>
+
+<h2>Graph - BRIDGES Example</h2>
+<div class="tabs">
     <div onclick="displayCode('Java',this)">Java</div>
     <div onclick="displayCode('C++',this)" >C++</div>
-  </div>
-  <div class="tabContents">
+</div>
+<div class="tabContents">
     <div id="Java" w3-include-html="./Java_GL.html"></div>
     <div id="C++"  w3-include-html="./Cpp_GL.html"></div>
-  </div>
+</div>
   
-  <h3>Bridges Visualization</h3>
-  <ul>
+<h3>Bridges Visualization</h3>
+<ul>
     <li>Once all your code is in order, run your file.</li>
     <li>Assuming all your code is correct and it compiles correctly, a link to the Bridges website will be generated.</li>
     <li>Copy/paste this link into your favorite browser to view a visualization of the data structure you’ve just created.</li>
     <li>It should look something like this:</li>
-  </ul>
-  <div class="iframe-wrapper">
+</ul>
+<div class="iframe-wrapper">
     <iframe src="http://bridges-cs.herokuapp.com/assignments/5/bridges_public" scrolling="no">
       <p>Sorry, your browser doesn't seem to support iframes - 
         <a href="http://bridges-cs.herokuapp.com/assignments/5/bridges_public">Frame Link</a>
       </p>
     </iframe>
-  </div>
-  <p>Well done! You’ve just created your fifth Bridges project!</p>
+</div>
+<p>Well done! You’ve just created your fifth Bridges project!</p>
+
+<p>
+<b> Note that this example illustrates a Graph using Adjacency Lists; an 
+example using Adjacency Matrix (using Bridges::GraphAdjacencyMatrix) is 
+nearly identical, by replacing the class name.</b>
 </main>
 
 <footer w3-include-html="./Tutorial_Footer.html"></footer>

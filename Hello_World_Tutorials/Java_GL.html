@@ -20,10 +20,12 @@
 <h3>Inside our Main</h3>
 <ul>
   <li>First we need to create our Bridges object and initialize our Bridges Credentials</li>
-    <code>Bridges&lt;String&gt; bridge = new Bridges&lt;&gt;(5, "YOUR_API_KEY", "YOUR_USER_ID");</code>
+    <code>Bridges&lt;String&gt; bridges = new Bridges&lt;&gt;(5, "YOUR_API_KEY", "YOUR_USER_ID");</code>
+Note that you must replace the above strings with your BRIDGES credentials.
   <li>Then we can create our GraphAdjList</li>
     <code>GraphAdjList&lt;String,String&gt; g = new GraphAdjList&lt;&gt;();</code>
-  <li>Now add some verticies to the graph</li>
+  <li>Now add some verticies to the graph. In this example, vertex ids are 
+strings</li>
     <code>
       g.addVertex("He","");
       g.addVertex("llo","");
@@ -38,10 +40,10 @@
       g.addEdge("He","Wo",1);
       g.addEdge("He","rld",1);
     </code>
-  <li>Now we pass the first element of our datastruture to Bridges</li>
-    <code>bridge.setDataStructure(g);</code>
-  <li>Finnaly we call the visualize function</li>
-    <code>bridge.visualize();</code>
+  <li>Now we pass the graph object to BRIDGES</li>
+    <code>bridges.setDataStructure(g);</code>
+  <li>Finaly we call the visualize function</li>
+    <code>bridges.visualize();</code>
 </ul>
 <h4><strong>Code Summary:</strong> Your .java file should look like this</h4>
   <code>
@@ -53,7 +55,7 @@
         public static void main(String[] args) throws Exception
         {
             //create the Bridges object
-            Bridges&lt;String&gt; bridge = new Bridges&lt;&gt;(5, "YOUR_API_KEY", "YOUR_USER_ID");
+            Bridges&lt;String&gt; bridges = new Bridges&lt;&gt;(5, "YOUR_API_KEY", "YOUR_USER_ID");
             
             //create graph
             GraphAdjList&lt;String,String&gt; g = new GraphAdjList&lt;&gt;();

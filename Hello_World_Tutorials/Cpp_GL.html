@@ -21,16 +21,17 @@
 <ul>
   <li>First we need to initialize our Bridges Credentials</li>
     <code>Bridges::initialize("YOUR_API_KEY","YOUR_USER_ID",5);</code>
+	Note that you must replace the above 2 strings with your BRIDGES credentials
   <li>Then we can create our GraphAdjList</li>
     <code>GraphAdjList&lt;string,int&gt; g;</code>
-  <li>Now add some verticies to the graph</li>
+  <li>Now add some verticies to the graph. We use strings as vertex ids in this example</li>
     <code>
       g.addVertex("He",0);
       g.addVertex("llo",0);
       g.addVertex("Wo",0);
       g.addVertex("rld",0);
     </code>
-  <li>Now add some verticies to the graph</li>
+  <li>Now add some edges between these vertices to the graph</li>
     <code>
       g.addEdge("He","llo",1);
       g.addEdge("llo","Wo",1);
@@ -38,9 +39,9 @@
       g.addEdge("He","Wo",1);
       g.addEdge("He","rld",1);
     </code>
-  <li>Now we pass the first element of our datastruture to Bridges</li>
+  <li>Now we pass the graph object to BRIDGES</li>
     <code>Bridges::setDataStructure(&g);</code>
-  <li>Finnaly we call the visualize function</li>
+  <li>Finaly we visualize the graph</li>
     <code>Bridges::visualize();</code>
 </ul>
 <h4><strong>Code Summary:</strong> Your .cpp file should look like this</h4>

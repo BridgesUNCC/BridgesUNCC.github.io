@@ -20,7 +20,7 @@
 <h3>Inside our Main</h3>
 <ul>
   <li>First we need to create our Bridges object and initialize our Bridges Credentials</li>
-    <code>Bridges&lt;String&gt; bridge = new Bridges&lt;&gt;(4, "YOUR_API_KEY", "YOUR_USER_ID");</code>
+    <code>Bridges&lt;String&gt; bridges = new Bridges&lt;&gt;(4, "YOUR_API_KEY", "YOUR_USER_ID");</code>
   <li>Then we can create our TreeElements</li>
     <code>
       BSTElement&lt;Integer,String&gt; e0 = new BSTElement&lt;&gt;("",0, "");
@@ -32,10 +32,10 @@
       e0.setLeft(e1);
       e0.setRight(e2);
     </code>
-  <li>Now we pass the first element of our datastruture to Bridges</li>
-    <code>bridge.setDataStructure(e0);</code>
-  <li>Finnaly we call the visualize function</li>
-    <code>bridge.visualize();</code>
+  <li>Now we pass the root of our Binary Search Tree to Bridges</li>
+    <code>bridges.setDataStructure(e0);</code>
+  <li>Finnaly we visualize the tree </li>
+    <code>bridges.visualize();</code>
 </ul>
 <h4><strong>Code Summary:</strong> Your .java file should look like this</h4>
   <code>
@@ -47,7 +47,7 @@
         public static void main(String[] args) throws Exception
         {
             //create the Bridges object
-            Bridges&lt;String&gt; bridge = new Bridges&lt;&gt;(4, "YOUR_API_KEY", "YOUR_USER_ID");
+            Bridges&lt;String&gt; bridges = new Bridges&lt;&gt;(4, "YOUR_API_KEY", "YOUR_USER_ID");
             
             //create elements
             BSTElement&lt;Integer,String&gt; e0 = new BSTElement&lt;&gt;("",0, "");
@@ -59,10 +59,10 @@
             e0.setRight(e2);
             
             //pass first element of data structure
-            bridge.setDataStructure(e0);
+            bridges.setDataStructure(e0);
             
             //visualize data structure
-            bridge.visualize();
+            bridges.visualize();
         }
     }
   </code>
