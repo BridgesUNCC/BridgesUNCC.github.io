@@ -19,39 +19,51 @@
 <header w3-include-html="./Tutorial_Header.html"></header>
 
 <main>
-  <h2>Changing Element visualization properties</h2>
-  <p>
-    Each Element contains properties that control how its visualization looks. You can 
-    change how an Element is visualized by interacting with these properties. You can 
-    use them to change the size, shape, and color of each Element.
-  </p>
-  
-  <h2>Changing Edge visualization properties</h2>
-  <p>
-    Each Element also contains a LinkVisualizer class that controls how the edges between 
-    the nodes appear. You can change how an edge is visualized by interacting with that 
-    Element's LinkVisualizer. You can use the LinkVisualizer to change the thickness and color of each edge:
-    <br/><br/>
-    Note that because Element is the superclass of all other element types, that 
-    these same methods will also apply to them as well. 
-  </p>
+BRIDGES associates <i>visual attributes</i> with all of its elements, so as make
+visualizations appealing, and highlight important aspects of the data 
+structure. For instance, you might want to show the parth traversed in 
+a binary search tree, the shortest path in an implementation of Dijkstra's
+algorithm, the computed Minimum Spanning Tree of a graph. Alternately, 
+particaular application specific dataset might dictate what needs to be 
+highlighted, for instance, display all of you friends in a Twitter graph,
+earthquakes that happened in the last week, etc.
 
-  <h2>Visualization Syntax</h2>
+<h2>Changing Element visualization properties</h2>
+<p>
+Each Element contains properties that control how its visualization looks. 
+You can change how an Element is visualized by interacting with these 
+properties. You can use them to change the size, shape, color, and opacity
+of each Element.
+</p>
+  
+<h2>Changing Edge visualization properties</h2>
+<p>
+	Each Element also contains a LinkVisualizer class that controls how 
+	the edges between itself and the node it is connected to 
+	appears. You can change how an edge is visualized by interacting with that 
+	Element's LinkVisualizer. You can use the LinkVisualizer to change the 
+	thickness,  color and opacity of each edge:
+<br/><br/>
+    Note that because Element is the superclass of all other element types, 
+	that these same methods will also apply to them as well. 
+</p>
+
+<h2>Visualization Syntax</h2>
   <div class="tabs">
     <div onclick="displayCode('Java',this)">Java</div>
     <div onclick="displayCode('C++',this)" >C++</div>
-  </div>
-  <div class="tabContents">
+</div>
+<div class="tabContents">
     <div id="Java" w3-include-html="./Java_Visual.html"></div>
     <div id="C++"  w3-include-html="./Cpp_Visual.html"></div>
-  </div>
+</div>
   
-  <h3>Bridges Visualization</h3>
-  <ul>
-    <li>Here is a comparison of the default element to your changed element</li>
+<h3>Bridges Visualization</h3>
+<ul>
+    <li>Here is a comparison of the element with default properties to your changed element</li>
     <li>It should look something like this:</li>
-  </ul>
-  <div class="iframe-wrapper">
+</ul>
+<div class="iframe-wrapper">
     <iframe src="http://bridges-cs.herokuapp.com/assignments/6/bridges_public" scrolling="no">
       <p>Sorry, your browser doesn't seem to support iframes - 
         <a href="http://bridges-cs.herokuapp.com/assignments/6/bridges_public">Frame Link</a>
