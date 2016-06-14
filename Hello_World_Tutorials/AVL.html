@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="author" content="Bridges"/>
+  <meta name="description" content="Bridges Tutorials"/>
+  
+  <link rel="stylesheet" type="text/css" href="./tutorial.css" />
+  <link rel="shortcut icon" href="http://bridgesuncc.github.io/favicon.png"/>
+  <script src="./tutorial.js"></script>
+  <title>Bridges - Hello World Visualization Tutorial</title>
+</head>
+
+<body>
+<div>
+
+<header w3-include-html="./Tutorial_Header.html"></header>
+
+<main>
+<h2>How does the AVLTreeElement&lt;K,E&gt; work?</h2>
+<p>
+AVLTreeElement&lt;K,E&gt; is a container that has two links that point 
+to two child AVLTreeElements. It uses the same conventions as the 
+BSTElement&ltE&gt;.  
+<br><br>
+AVLTreeElement&lt;K,E&gt; is nearly identical to BSTElement&lt;K,E&gt;, however,
+it is to be used for building AVL trees, a type of balanced binary search trees
+(Other examples of balanced search trees include Red-Black Trees, 2-3 Trees).
+AVL tree inherits all data members and methods of a binary search tree, but
+includes two additional attributes: a <i>balance factor</i>, which measures the
+difference between the heights of its left and right subtrees, and 
+<i>height</i>, that keeps track of the height of the tree at the node. 
+<p>
+<b>To Do: Need a figure for an AVL tree and a BRIDGES example - need to replace the example below</b>
+<p>
+
+<hr>
+
+<h2>AVL Tree - BRIDGES Example</h2>
+<div class="tabs">
+    <div onclick="displayCode('Java',this)">Java</div>
+    <div onclick="displayCode('C++',this)" >C++</div>
+</div>
+<div class="tabContents">
+    <div id="Java" w3-include-html="./Java_BST.html"></div>
+    <div id="C++"  w3-include-html="./Cpp_BST.html"></div>
+</div>
+  
+<h3>Bridges Visualization</h3>
+<ul>
+    <li>Once all your code is in order, run your program.</li>
+    <li>Assuming all your code is correct and it compiles correctly, a link to the Bridges website will be generated.</li>
+    <li>Copy/paste this link into your favorite browser to view a visualization of the data structure you’ve just created.</li>
+    <li>It should look something like this:</li>
+</ul>
+<div class="iframe-wrapper">
+    <iframe src="http://bridges-cs.herokuapp.com/assignments/4/bridges_public" scrolling="no">
+      <p>Sorry, your browser doesn't seem to support iframes - 
+        <a href="http://bridges-cs.herokuapp.com/assignments/4/bridges_public">Frame Link</a>
+      </p>
+    </iframe>
+</div>
+<p>Well done! You’ve just created your fourth Bridges project!</p>
+</main>
+
+<footer w3-include-html="./Tutorial_Footer.html"></footer>
+
+</div>
+<script>
+	w3IncludeHTML();
+	document.querySelector("*.tabs > *").click();
+</script>
+</body>
+</html>
