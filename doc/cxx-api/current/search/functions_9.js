@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['post',['post',['../classbridges_1_1_connector.html#a6ea360ff4c37ae03a81ec0ac44ec8740',1,'bridges::Connector']]]
+  ['removetrailingzeros',['removeTrailingZeros',['../classbridges_1_1_data_structure.html#a2dfc9d9b970680e2b19f7196cf36783a',1,'bridges::DataStructure']]]
 ];
