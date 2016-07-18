@@ -41,11 +41,15 @@ BRIDGES currently supports the following types of Elements:
 	- element that points to one other element</li>
 <li><strong>Doubly Linked List Element</strong> 
 	- element that points to two other elements</li>
+<li><strong>Tree Element</strong> 
+	- a general tree element with some number of children defined by 
+	the user</li>
 <li><strong>Binary Tree Element</strong> 
-	- element that only point to a left and right child element</li>
+	- element that has 2 children, pointing to a left and right child 
+	element</li>
 <li><strong>Binary Search Tree Element</strong> 
 	- a binary tree element with an orderable "key" value, to be used in 
-		binary search implementations</li>
+		binary search tree implementations</li>
 <li><strong>Graph(Adjacency List) </strong> 
 	- graph container that holds vertices in an array type list and 
 		element connections with singly linked lists</li>
@@ -54,16 +58,18 @@ BRIDGES currently supports the following types of Elements:
 		vertex ids	for the two dimensions, and matrix elements containing 
 		a boolean(presence/absence of edge) or edge weight.</li>
 </ul>
-Bridges also contains a visualization server that allows the user to send their code and see the data 
-structure that they have built. The user can also change various visualization features such as size, 
-shape, or color of the elements and their links.
+Bridges also contains a visualization component that allows the user to send 
+a representation of their data structure to a server, to see the data 
+structure that they have built. The user can also change various 
+visualization features such as size, shape, or color of the elements and 
+their links.
 </p>
 
 <h2>What is an Element&lt;E&gt;?</h2>
 <p>
 Element&lt;E&gt; is the abstract superclass of all BRIDGES elements, as shown
 below:
-<br/><br/><img width="600em" src="./bridges-elements-hier.png"/><br/><br/>
+<br/><br/><img width="600em" src="./images/bridges-elements-hier.png"/><br/><br/>
 You will normally be using these classes to build data structures. Since 
 they are subclasses of Element&lt;E&gt;, they inherit a common set of 
 methods and instance variables, so to a certain extent they will 
