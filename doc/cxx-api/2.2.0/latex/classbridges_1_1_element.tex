@@ -1,0 +1,329 @@
+\hypertarget{classbridges_1_1_element}{}\section{bridges\+:\+:Element$<$ E $>$ Class Template Reference}
+\label{classbridges_1_1_element}\index{bridges\+::\+Element$<$ E $>$@{bridges\+::\+Element$<$ E $>$}}
+
+
+This is the fundamental building block used in building all data structures in B\+R\+I\+D\+G\+E\+S.  
+
+
+
+
+{\ttfamily \#include $<$Data\+Structure.\+h$>$}
+
+Inheritance diagram for bridges\+:\+:Element$<$ E $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classbridges_1_1_element}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbridges_1_1_element_abc7131584142ea48faf3b7a8033d1fef}{Element} (const E \&val=E(), const string \&lab=string())
+\item 
+virtual const string \hyperlink{classbridges_1_1_element_a9e71af13963e8cc7ec35053797e49155}{get\+D\+Stype} () const  override
+\item 
+\hyperlink{classbridges_1_1_element_visualizer}{Element\+Visualizer} $\ast$ \hyperlink{classbridges_1_1_element_a358f350ae6e33d55c4ac9f9213d0c5bc}{get\+Visualizer} ()
+\item 
+const \hyperlink{classbridges_1_1_element_visualizer}{Element\+Visualizer} $\ast$ \hyperlink{classbridges_1_1_element_a7672ce8623ab561d457b4a91e19c4e53}{get\+Visualizer} () const 
+\item 
+\hyperlink{classbridges_1_1_link_visualizer}{Link\+Visualizer} $\ast$ \hyperlink{classbridges_1_1_element_aa8dd91d04c22c697f7c500a18642282f}{get\+Link\+Visualizer} (const \hyperlink{classbridges_1_1_element}{Element} $\ast$el)
+\item 
+const \hyperlink{classbridges_1_1_link_visualizer}{Link\+Visualizer} $\ast$ \hyperlink{classbridges_1_1_element_a9cacc23e7eedff13338b8f5180e4b82a}{get\+Link\+Visualizer} (const \hyperlink{classbridges_1_1_element}{Element} $\ast$el) const 
+\item 
+string \hyperlink{classbridges_1_1_element_aa5e02165249d5d55066132d3128cb6a8}{get\+Label} () const 
+\item 
+void \hyperlink{classbridges_1_1_element_a22313b74452175d07650168a701daa99}{set\+Label} (const string \&lab)
+\item 
+E \hyperlink{classbridges_1_1_element_a20290b80dca1c052d9fdb71abf4f0b5e}{get\+Value} () const 
+\item 
+void \hyperlink{classbridges_1_1_element_a737cb19281b6aa45a5a1dc9d592dad93}{set\+Value} (const E \&val)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual const string \hyperlink{classbridges_1_1_element_a4e949dc2eb3c68874104692e086d08c7}{get\+Representation} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const string \hyperlink{classbridges_1_1_element_a89d57f5de9663d23e6e2a7aa82d1d1bc}{get\+J\+S\+O\+Nrepresentation} (const \hyperlink{classbridges_1_1_link_visualizer}{Link\+Visualizer} \&lv, const string \&src, const string \&dest)
+\item 
+static const string \hyperlink{classbridges_1_1_element_afdff7e2e492144055bf532a73a28b9b1}{get\+C\+S\+Srep} (const \hyperlink{classbridges_1_1_color}{Color} \&col)
+\item 
+static const pair$<$ string, string $>$ \hyperlink{classbridges_1_1_element_aec115a60c9bac006a01bf9825a74aeac}{generate\+J\+S\+O\+N} (const unordered\+\_\+set$<$ const \hyperlink{classbridges_1_1_element}{Element} $\ast$ $>$ \&nodes)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unordered\+\_\+map$<$ \hyperlink{classbridges_1_1_element}{Element} $\ast$, \hyperlink{classbridges_1_1_link_visualizer}{Link\+Visualizer} $>$ \hyperlink{classbridges_1_1_element_a6fb53728edc378f26238543b26238496}{links}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename K , typename T $>$ }\\class \hyperlink{classbridges_1_1_element_a1ec5df26ff2381673c41d5a8d1f222e2}{Graph\+Adj\+List}
+\item 
+{\footnotesize template$<$typename K , typename T $>$ }\\class \hyperlink{classbridges_1_1_element_ae8ba4af32b14c8ac8a3f8f861e914444}{Graph\+Adj\+Matrix}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename E$>$class bridges\+::\+Element$<$ E $>$}
+
+This is the fundamental building block used in building all data structures in B\+R\+I\+D\+G\+E\+S. 
+
+This is the Superclass \hyperlink{classbridges_1_1_element}{Element} with \hyperlink{classbridges_1_1_s_lelement}{S\+Lelement}, \hyperlink{classbridges_1_1_d_lelement}{D\+Lelement}, \hyperlink{classbridges_1_1_tree_element}{Tree\+Element}, \hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element} subclasses.
+
+Generic Parameters\+: E the application data type
+
+The label field(string type) is used to label the visualization of the element.
+
+\hyperlink{classbridges_1_1_element}{Element} holds a \hyperlink{classbridges_1_1_link_visualizer}{Link\+Visualizer} for each of its links and an \hyperlink{classbridges_1_1_element_visualizer}{Element\+Visualizer} for itself
+
+\begin{DoxyAuthor}{Author}
+Kalpathi Subramanian 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+6/11/15 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbridges_1_1_element_abc7131584142ea48faf3b7a8033d1fef}{}\index{bridges\+::\+Element@{bridges\+::\+Element}!Element@{Element}}
+\index{Element@{Element}!bridges\+::\+Element@{bridges\+::\+Element}}
+\subsubsection[{Element(const E \&val=\+E(), const string \&lab=string())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E$>$ {\bf bridges\+::\+Element}$<$ E $>$\+::{\bf Element} (
+\begin{DoxyParamCaption}
+\item[{const E \&}]{val = {\ttfamily E()}, }
+\item[{const string \&}]{lab = {\ttfamily string()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_element_abc7131584142ea48faf3b7a8033d1fef}
+Constructs an element with the provided value and label. The defaults will be used if not provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The data to hold \\
+\hline
+{\em lab} & The label to show \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbridges_1_1_element_aec115a60c9bac006a01bf9825a74aeac}{}\index{bridges\+::\+Element@{bridges\+::\+Element}!generate\+J\+S\+O\+N@{generate\+J\+S\+O\+N}}
+\index{generate\+J\+S\+O\+N@{generate\+J\+S\+O\+N}!bridges\+::\+Element@{bridges\+::\+Element}}
+\subsubsection[{generate\+J\+S\+O\+N(const unordered\+\_\+set$<$ const Element $\ast$ $>$ \&nodes)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E$>$ static const pair$<$string,string$>$ {\bf bridges\+::\+Element}$<$ E $>$\+::generate\+J\+S\+O\+N (
+\begin{DoxyParamCaption}
+\item[{const unordered\+\_\+set$<$ const {\bf Element}$<$ E $>$ $\ast$ $>$ \&}]{nodes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\label{classbridges_1_1_element_aec115a60c9bac006a01bf9825a74aeac}
+Generates the J\+S\+O\+N of the given the nodes and associated links
+
+
+\begin{DoxyParams}{Parameters}
+{\em nodes} & List of nodes \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em string} & If maximum elements exceeded \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+A pair holding the nodes and links J\+S\+O\+N strings respectively 
+\end{DoxyReturn}
+\hypertarget{classbridges_1_1_element_afdff7e2e492144055bf532a73a28b9b1}{}\index{bridges\+::\+Element@{bridges\+::\+Element}!get\+C\+S\+Srep@{get\+C\+S\+Srep}}
+\index{get\+C\+S\+Srep@{get\+C\+S\+Srep}!bridges\+::\+Element@{bridges\+::\+Element}}
+\subsubsection[{get\+C\+S\+Srep(const Color \&col)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E$>$ static const string {\bf bridges\+::\+Element}$<$ E $>$\+::get\+C\+S\+Srep (
+\begin{DoxyParamCaption}
+\item[{const {\bf Color} \&}]{col}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\label{classbridges_1_1_element_afdff7e2e492144055bf532a73a28b9b1}
+Gets the J\+S\+O\+N representation of this color
+
+
+\begin{DoxyParams}{Parameters}
+{\em col} & The \hyperlink{classbridges_1_1_color}{Color} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Equivilant Legal C\+S\+S color representation 
+\end{DoxyReturn}
+\hypertarget{classbridges_1_1_element_a9e71af13963e8cc7ec35053797e49155}{}\index{bridges\+::\+Element@{bridges\+::\+Element}!get\+D\+Stype@{get\+D\+Stype}}
+\index{get\+D\+Stype@{get\+D\+Stype}!bridges\+::\+Element@{bridges\+::\+Element}}
+\subsubsection[{get\+D\+Stype() const  override}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E$>$ virtual const string {\bf bridges\+::\+Element}$<$ E $>$\+::get\+D\+Stype (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\label{classbridges_1_1_element_a9e71af13963e8cc7ec35053797e49155}
+This is really not used but getting compile errors otherwise. Need to fix. \begin{DoxyReturn}{Returns}
+The string representation of this data structure type 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classbridges_1_1_data_structure_ab6973cdb2a22b7e664b895f1f9c8ad54}{bridges\+::\+Data\+Structure}.
+
+
+
+Reimplemented in \hyperlink{classbridges_1_1_b_s_t_element_a56fdac281f5270446cf7ad98ff6c7a80}{bridges\+::\+B\+S\+T\+Element$<$ K, E $>$}, \hyperlink{classbridges_1_1_d_lelement_a5deee8b106a2f3f7d221152bf244016d}{bridges\+::\+D\+Lelement$<$ E $>$}, \hyperlink{classbridges_1_1_bin_tree_element_ae0bf807e8fd653574d161b4847c92e4e}{bridges\+::\+Bin\+Tree\+Element$<$ E $>$}, \hyperlink{classbridges_1_1_s_lelement_a74aece34b334c1d4318694312d70ce89}{bridges\+::\+S\+Lelement$<$ E $>$}, \hyperlink{classbridges_1_1_s_lelement_a74aece34b334c1d4318694312d70ce89}{bridges\+::\+S\+Lelement$<$ bridges\+::\+Edge$<$ K $>$ $>$}, \hyperlink{classbridges_1_1_a_v_l_tree_element_a408f7c79eb3414b54a8c9bdc6b31d972}{bridges\+::\+A\+V\+L\+Tree\+Element$<$ K, E $>$}, and \hyperlink{classbridges_1_1_tree_element_a2990457495ddecc77fa1dda4f47f3010}{bridges\+::\+Tree\+Element$<$ E $>$}.
+
+\hypertarget{classbridges_1_1_element_a89d57f5de9663d23e6e2a7aa82d1d1bc}{}\index{bridges\+::\+Element@{bridges\+::\+Element}!get\+J\+S\+O\+Nrepresentation@{get\+J\+S\+O\+Nrepresentation}}
+\index{get\+J\+S\+O\+Nrepresentation@{get\+J\+S\+O\+Nrepresentation}!bridges\+::\+Element@{bridges\+::\+Element}}
+\subsubsection[{get\+J\+S\+O\+Nrepresentation(const Link\+Visualizer \&lv, const string \&src, const string \&dest)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E$>$ static const string {\bf bridges\+::\+Element}$<$ E $>$\+::get\+J\+S\+O\+Nrepresentation (
+\begin{DoxyParamCaption}
+\item[{const {\bf Link\+Visualizer} \&}]{lv, }
+\item[{const string \&}]{src, }
+\item[{const string \&}]{dest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\label{classbridges_1_1_element_a89d57f5de9663d23e6e2a7aa82d1d1bc}
+Gets the J\+S\+O\+N representation of this link visualizer using the supplied source and destination strings
+
+
+\begin{DoxyParams}{Parameters}
+{\em lv} & The \hyperlink{classbridges_1_1_link_visualizer}{Link\+Visualizer} \\
+\hline
+{\em src} & The source vertex \\
+\hline
+{\em dest} & The destination vertex \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The J\+S\+O\+N of this link visualizer 
+\end{DoxyReturn}
+\hypertarget{classbridges_1_1_element_aa5e02165249d5d55066132d3128cb6a8}{}\index{bridges\+::\+Element@{bridges\+::\+Element}!get\+Label@{get\+Label}}
+\index{get\+Label@{get\+Label}!bridges\+::\+Element@{bridges\+::\+Element}}
+\subsubsection[{get\+Label() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E$>$ string {\bf bridges\+::\+Element}$<$ E $>$\+::get\+Label (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_element_aa5e02165249d5d55066132d3128cb6a8}
+\begin{DoxyReturn}{Returns}
+The label of the element 
+\end{DoxyReturn}
+\hypertarget{classbridges_1_1_element_aa8dd91d04c22c697f7c500a18642282f}{}\index{bridges\+::\+Element@{bridges\+::\+Element}!get\+Link\+Visualizer@{get\+Link\+Visualizer}}
+\index{get\+Link\+Visualizer@{get\+Link\+Visualizer}!bridges\+::\+Element@{bridges\+::\+Element}}
+\subsubsection[{get\+Link\+Visualizer(const Element $\ast$el)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E$>$ {\bf Link\+Visualizer}$\ast$ {\bf bridges\+::\+Element}$<$ E $>$\+::get\+Link\+Visualizer (
+\begin{DoxyParamCaption}
+\item[{const {\bf Element}$<$ E $>$ $\ast$}]{el}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_element_aa8dd91d04c22c697f7c500a18642282f}
+Returns the \hyperlink{classbridges_1_1_link_visualizer}{Link\+Visualizer} to element \char`\"{}el\char`\"{} or N\+U\+L\+L if no link exists
+
+
+\begin{DoxyParams}{Parameters}
+{\em el} & The terminating element of the link\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{classbridges_1_1_link_visualizer}{Link\+Visualizer} 
+\end{DoxyReturn}
+\hypertarget{classbridges_1_1_element_a9cacc23e7eedff13338b8f5180e4b82a}{}\index{bridges\+::\+Element@{bridges\+::\+Element}!get\+Link\+Visualizer@{get\+Link\+Visualizer}}
+\index{get\+Link\+Visualizer@{get\+Link\+Visualizer}!bridges\+::\+Element@{bridges\+::\+Element}}
+\subsubsection[{get\+Link\+Visualizer(const Element $\ast$el) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E$>$ const {\bf Link\+Visualizer}$\ast$ {\bf bridges\+::\+Element}$<$ E $>$\+::get\+Link\+Visualizer (
+\begin{DoxyParamCaption}
+\item[{const {\bf Element}$<$ E $>$ $\ast$}]{el}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_element_a9cacc23e7eedff13338b8f5180e4b82a}
+Constant version
+
+
+\begin{DoxyParams}{Parameters}
+{\em el} & The terminating element of the link\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{classbridges_1_1_link_visualizer}{Link\+Visualizer} 
+\end{DoxyReturn}
+\hypertarget{classbridges_1_1_element_a4e949dc2eb3c68874104692e086d08c7}{}\index{bridges\+::\+Element@{bridges\+::\+Element}!get\+Representation@{get\+Representation}}
+\index{get\+Representation@{get\+Representation}!bridges\+::\+Element@{bridges\+::\+Element}}
+\subsubsection[{get\+Representation() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E$>$ virtual const string {\bf bridges\+::\+Element}$<$ E $>$\+::get\+Representation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{classbridges_1_1_element_a4e949dc2eb3c68874104692e086d08c7}
+\begin{DoxyReturn}{Returns}
+The J\+S\+O\+N string of this element\textquotesingle{}s properties 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classbridges_1_1_b_s_t_element_adc7e6fbdbad566308374995920054b6e}{bridges\+::\+B\+S\+T\+Element$<$ K, E $>$}.
+
+\hypertarget{classbridges_1_1_element_a20290b80dca1c052d9fdb71abf4f0b5e}{}\index{bridges\+::\+Element@{bridges\+::\+Element}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!bridges\+::\+Element@{bridges\+::\+Element}}
+\subsubsection[{get\+Value() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E$>$ E {\bf bridges\+::\+Element}$<$ E $>$\+::get\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_element_a20290b80dca1c052d9fdb71abf4f0b5e}
+\begin{DoxyReturn}{Returns}
+The value of the element 
+\end{DoxyReturn}
+\hypertarget{classbridges_1_1_element_a358f350ae6e33d55c4ac9f9213d0c5bc}{}\index{bridges\+::\+Element@{bridges\+::\+Element}!get\+Visualizer@{get\+Visualizer}}
+\index{get\+Visualizer@{get\+Visualizer}!bridges\+::\+Element@{bridges\+::\+Element}}
+\subsubsection[{get\+Visualizer()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E$>$ {\bf Element\+Visualizer}$\ast$ {\bf bridges\+::\+Element}$<$ E $>$\+::get\+Visualizer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_element_a358f350ae6e33d55c4ac9f9213d0c5bc}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{classbridges_1_1_element_visualizer}{Element\+Visualizer} of this element 
+\end{DoxyReturn}
+\hypertarget{classbridges_1_1_element_a7672ce8623ab561d457b4a91e19c4e53}{}\index{bridges\+::\+Element@{bridges\+::\+Element}!get\+Visualizer@{get\+Visualizer}}
+\index{get\+Visualizer@{get\+Visualizer}!bridges\+::\+Element@{bridges\+::\+Element}}
+\subsubsection[{get\+Visualizer() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E$>$ const {\bf Element\+Visualizer}$\ast$ {\bf bridges\+::\+Element}$<$ E $>$\+::get\+Visualizer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_element_a7672ce8623ab561d457b4a91e19c4e53}
+Constant version
+
+\begin{DoxyReturn}{Returns}
+The \hyperlink{classbridges_1_1_element_visualizer}{Element\+Visualizer} of this element 
+\end{DoxyReturn}
+\hypertarget{classbridges_1_1_element_a22313b74452175d07650168a701daa99}{}\index{bridges\+::\+Element@{bridges\+::\+Element}!set\+Label@{set\+Label}}
+\index{set\+Label@{set\+Label}!bridges\+::\+Element@{bridges\+::\+Element}}
+\subsubsection[{set\+Label(const string \&lab)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E$>$ void {\bf bridges\+::\+Element}$<$ E $>$\+::set\+Label (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{lab}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_element_a22313b74452175d07650168a701daa99}
+Sets label to \char`\"{}lab\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em lab} & The label of the element \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbridges_1_1_element_a737cb19281b6aa45a5a1dc9d592dad93}{}\index{bridges\+::\+Element@{bridges\+::\+Element}!set\+Value@{set\+Value}}
+\index{set\+Value@{set\+Value}!bridges\+::\+Element@{bridges\+::\+Element}}
+\subsubsection[{set\+Value(const E \&val)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E$>$ void {\bf bridges\+::\+Element}$<$ E $>$\+::set\+Value (
+\begin{DoxyParamCaption}
+\item[{const E \&}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_element_a737cb19281b6aa45a5a1dc9d592dad93}
+Sets value to \char`\"{}val\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The value of the element \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classbridges_1_1_element_a1ec5df26ff2381673c41d5a8d1f222e2}{}\index{bridges\+::\+Element@{bridges\+::\+Element}!Graph\+Adj\+List@{Graph\+Adj\+List}}
+\index{Graph\+Adj\+List@{Graph\+Adj\+List}!bridges\+::\+Element@{bridges\+::\+Element}}
+\subsubsection[{Graph\+Adj\+List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E$>$ template$<$typename K , typename T $>$ friend class {\bf Graph\+Adj\+List}\hspace{0.3cm}{\ttfamily [friend]}}\label{classbridges_1_1_element_a1ec5df26ff2381673c41d5a8d1f222e2}
+\hypertarget{classbridges_1_1_element_ae8ba4af32b14c8ac8a3f8f861e914444}{}\index{bridges\+::\+Element@{bridges\+::\+Element}!Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix}}
+\index{Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix}!bridges\+::\+Element@{bridges\+::\+Element}}
+\subsubsection[{Graph\+Adj\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E$>$ template$<$typename K , typename T $>$ friend class {\bf Graph\+Adj\+Matrix}\hspace{0.3cm}{\ttfamily [friend]}}\label{classbridges_1_1_element_ae8ba4af32b14c8ac8a3f8f861e914444}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classbridges_1_1_element_a6fb53728edc378f26238543b26238496}{}\index{bridges\+::\+Element@{bridges\+::\+Element}!links@{links}}
+\index{links@{links}!bridges\+::\+Element@{bridges\+::\+Element}}
+\subsubsection[{links}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E$>$ unordered\+\_\+map$<${\bf Element}$\ast$, {\bf Link\+Visualizer}$>$ {\bf bridges\+::\+Element}$<$ E $>$\+::links\hspace{0.3cm}{\ttfamily [protected]}}\label{classbridges_1_1_element_a6fb53728edc378f26238543b26238496}
+This element\textquotesingle{}s collection of links 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/krs/gr/bridges/cxx/git-\/cxx/src/\hyperlink{_data_structure_8h}{Data\+Structure.\+h}\item 
+/\+Users/krs/gr/bridges/cxx/git-\/cxx/src/\hyperlink{_element_8h}{Element.\+h}\end{DoxyCompactItemize}

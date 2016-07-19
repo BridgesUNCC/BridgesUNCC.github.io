@@ -1,0 +1,162 @@
+\hypertarget{classbridges_1_1base_1_1_edge}{}\section{bridges.\+base.\+Edge$<$ Key $>$ Class Template Reference}
+\label{classbridges_1_1base_1_1_edge}\index{bridges.\+base.\+Edge$<$ Key $>$@{bridges.\+base.\+Edge$<$ Key $>$}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbridges_1_1base_1_1_edge_ac070f05141bfbc7c575591e59d508476}{Edge} ()
+\item 
+\hyperlink{classbridges_1_1base_1_1_edge_a8567ee2a3d4d655f0a2a2258767238d6}{Edge} (int wt)
+\item 
+\hyperlink{classbridges_1_1base_1_1_edge_a503c093e63f5df1071233427496d9d08}{Edge} (int wt, Key v)
+\item 
+void \hyperlink{classbridges_1_1base_1_1_edge_a5b671fc2589d95b125b0b2cedbab0f1a}{set\+Weight} (int wt)
+\item 
+int \hyperlink{classbridges_1_1base_1_1_edge_a4cc9219e5842cafb7c5891ba15147ec1}{get\+Weight} ()
+\item 
+void \hyperlink{classbridges_1_1base_1_1_edge_a596d119b0bcfe8c455acae65832bf25d}{set\+Vertex} (Key v)
+\item 
+Key \hyperlink{classbridges_1_1base_1_1_edge_ada8056d4944cfea69f438af8274c1f79}{get\+Vertex} ()
+\item 
+void \hyperlink{classbridges_1_1base_1_1_edge_a02f0ad2a38fff319ccc8e9619f7db7f9}{set\+Edge} (int wt, Key v)
+\item 
+\hyperlink{classbridges_1_1base_1_1_edge}{Edge}$<$ Key $>$ \hyperlink{classbridges_1_1base_1_1_edge_a666bb076c206e572d9fca072b58db162}{get\+Edge} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is used to represent the edges in a graph and will appear as links in the B\+R\+I\+D\+G\+E\+S graph visualization 
+
+Bridges will represent these as arrows between pairs of elements The starting \hyperlink{classbridges_1_1base_1_1_element}{Element} of the arrow will be referred to as the source \hyperlink{classbridges_1_1base_1_1_element}{Element} and the ending \hyperlink{classbridges_1_1base_1_1_element}{Element} of the arrow will be referred to as the terminating \hyperlink{classbridges_1_1base_1_1_element}{Element}.
+
+\begin{DoxyAuthor}{Author}
+K.\+R. Subramanian
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em generic} & parameter $<$\+Key$>$ \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbridges_1_1base_1_1_edge_ac070f05141bfbc7c575591e59d508476}{}\index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!Edge@{Edge}}
+\index{Edge@{Edge}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
+\subsubsection[{Edge()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bridges.\+base.\+Edge}$<$ Key $>$.{\bf Edge} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classbridges_1_1base_1_1_edge_ac070f05141bfbc7c575591e59d508476}
+Constructors \hypertarget{classbridges_1_1base_1_1_edge_a8567ee2a3d4d655f0a2a2258767238d6}{}\index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!Edge@{Edge}}
+\index{Edge@{Edge}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
+\subsubsection[{Edge(int wt)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bridges.\+base.\+Edge}$<$ Key $>$.{\bf Edge} (
+\begin{DoxyParamCaption}
+\item[{int}]{wt}
+\end{DoxyParamCaption}
+)}\label{classbridges_1_1base_1_1_edge_a8567ee2a3d4d655f0a2a2258767238d6}
+Construct an edge with thickness equal to \char`\"{}wt\char`\"{} and no terminating \hyperlink{classbridges_1_1base_1_1_element}{Element}
+\begin{DoxyItemize}
+\item used only for graphs. 
+\begin{DoxyParams}{Parameters}
+{\em wt} & integer representing the thickness of the arrow in the Bridges Visualization \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\hypertarget{classbridges_1_1base_1_1_edge_a503c093e63f5df1071233427496d9d08}{}\index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!Edge@{Edge}}
+\index{Edge@{Edge}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
+\subsubsection[{Edge(int wt, Key v)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bridges.\+base.\+Edge}$<$ Key $>$.{\bf Edge} (
+\begin{DoxyParamCaption}
+\item[{int}]{wt, }
+\item[{Key}]{v}
+\end{DoxyParamCaption}
+)}\label{classbridges_1_1base_1_1_edge_a503c093e63f5df1071233427496d9d08}
+Construct an edge with thickness equal to \char`\"{}wt\char`\"{} and a terminating \hyperlink{classbridges_1_1base_1_1_element}{Element} with an identifer equal to \char`\"{}v\char`\"{} -\/ used only for graphs 
+\begin{DoxyParams}{Parameters}
+{\em wt} & integer, representint edge weight \\
+\hline
+{\em v} & the terminating vertex of the edge \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbridges_1_1base_1_1_edge_a666bb076c206e572d9fca072b58db162}{}\index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!get\+Edge@{get\+Edge}}
+\index{get\+Edge@{get\+Edge}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
+\subsubsection[{get\+Edge()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Edge}$<$Key$>$ {\bf bridges.\+base.\+Edge}$<$ Key $>$.get\+Edge (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classbridges_1_1base_1_1_edge_a666bb076c206e572d9fca072b58db162}
+Returns this edge \hypertarget{classbridges_1_1base_1_1_edge_ada8056d4944cfea69f438af8274c1f79}{}\index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!get\+Vertex@{get\+Vertex}}
+\index{get\+Vertex@{get\+Vertex}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
+\subsubsection[{get\+Vertex()}]{\setlength{\rightskip}{0pt plus 5cm}Key {\bf bridges.\+base.\+Edge}$<$ Key $>$.get\+Vertex (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classbridges_1_1base_1_1_edge_ada8056d4944cfea69f438af8274c1f79}
+Get identifer of the terminating \hyperlink{classbridges_1_1base_1_1_element}{Element} of edge
+
+\begin{DoxyReturn}{Returns}
+the string identifier of the terminating \hyperlink{classbridges_1_1base_1_1_element}{Element} 
+\end{DoxyReturn}
+\hypertarget{classbridges_1_1base_1_1_edge_a4cc9219e5842cafb7c5891ba15147ec1}{}\index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!get\+Weight@{get\+Weight}}
+\index{get\+Weight@{get\+Weight}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
+\subsubsection[{get\+Weight()}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf bridges.\+base.\+Edge}$<$ Key $>$.get\+Weight (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classbridges_1_1base_1_1_edge_a4cc9219e5842cafb7c5891ba15147ec1}
+Get edge weight
+
+\begin{DoxyReturn}{Returns}
+the thickness of the arrow in the Bridges Visualization 
+\end{DoxyReturn}
+\hypertarget{classbridges_1_1base_1_1_edge_a02f0ad2a38fff319ccc8e9619f7db7f9}{}\index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!set\+Edge@{set\+Edge}}
+\index{set\+Edge@{set\+Edge}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
+\subsubsection[{set\+Edge(int wt, Key v)}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf bridges.\+base.\+Edge}$<$ Key $>$.set\+Edge (
+\begin{DoxyParamCaption}
+\item[{int}]{wt, }
+\item[{Key}]{v}
+\end{DoxyParamCaption}
+)}\label{classbridges_1_1base_1_1_edge_a02f0ad2a38fff319ccc8e9619f7db7f9}
+Set edge to thickness of \char`\"{}wt\char`\"{} and terminating Elememt of \char`\"{}v\char`\"{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em wt} & integer representing the thickness of the arrow in the Bridges Visualization \\
+\hline
+{\em v} & the string identifier of the terminating \hyperlink{classbridges_1_1base_1_1_element}{Element} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbridges_1_1base_1_1_edge_a596d119b0bcfe8c455acae65832bf25d}{}\index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!set\+Vertex@{set\+Vertex}}
+\index{set\+Vertex@{set\+Vertex}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
+\subsubsection[{set\+Vertex(\+Key v)}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf bridges.\+base.\+Edge}$<$ Key $>$.set\+Vertex (
+\begin{DoxyParamCaption}
+\item[{Key}]{v}
+\end{DoxyParamCaption}
+)}\label{classbridges_1_1base_1_1_edge_a596d119b0bcfe8c455acae65832bf25d}
+Set terminating \hyperlink{classbridges_1_1base_1_1_element}{Element} of the edge
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & the string identifier of the terminating \hyperlink{classbridges_1_1base_1_1_element}{Element} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbridges_1_1base_1_1_edge_a5b671fc2589d95b125b0b2cedbab0f1a}{}\index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!set\+Weight@{set\+Weight}}
+\index{set\+Weight@{set\+Weight}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
+\subsubsection[{set\+Weight(int wt)}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf bridges.\+base.\+Edge}$<$ Key $>$.set\+Weight (
+\begin{DoxyParamCaption}
+\item[{int}]{wt}
+\end{DoxyParamCaption}
+)}\label{classbridges_1_1base_1_1_edge_a5b671fc2589d95b125b0b2cedbab0f1a}
+Set edge weight to \char`\"{}wt\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em wt} & -\/ graph edge weight \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+link/base/\hyperlink{_edge_8java}{Edge.\+java}\end{DoxyCompactItemize}
