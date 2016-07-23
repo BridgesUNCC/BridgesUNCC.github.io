@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>BRIDGES Setup Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/Users/krs/Downloads/bootstrap-3.3.6/dist/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="/Users/krs/Downloads/bootstrap-3.3.6/dist/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./bridges.css">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+			</button>
+			<a class="navbar-brand" href="#">Logo</a>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Projects</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+  
+<div class="container-fluid text-left">
+	<div class="row content">
+		<div class="col-md-2 sidenav">
+			<img src = "./img/bridges_logo.png" width = "200"></img>
+			<div>
+				<p><a href="https://bridgesuncc.github.io/index.html">Home</a></p>
+				<p><a href="#">Contact Us</a></p>
+				<p><a href="#">BRIDGES Team</a></p>
+			</div>
+		<div class = "documentation" role = "navigation">
+			<h4>Documentation</h4>
+			<p><a href="#">BRIDGES Setup</a></p>
+			<p><a href= "http://bridgesuncc.github.io/Hello_World_Tutorials/Overview.html"> User Guide/Tutorials</a></p>
+			<p><a href="http://bridgesuncc.github.io/doc/java-api/current/index.html">Java API</a></p>
+			<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/index.html">C++ API</a></p>
+		</div>
+	</div>
+	<div class="col-md-10 text-left"> 
+		<h3 class = "sep_heading">BRIDGES:Getting Started(Setup)</h3>
+		<table class == "setup_table-part1">
+			<thead>
+				<tr> 
+					<b>Step 1: Install Eclipse </b>
+						<ul> <li> If you do not have Eclipse 
+							installed, download it from the 
+							<a href = "https://www.eclipse.org/"> Eclipse site</a> 
+							and install it on your computer. 
+						</ul>
+				</tr>
+				<tr> 
+					<b>Step 2: Create Bridges Account</b> 
+						<ul> <li> > Visit the Bridges 
+							<a href = "https://bridgesuncc.github.io"> main page</a> 
+							and create yourself an account by clicking the login button
+							on the top navigation bar. After creating your account, click 
+							on your profile name in the upper right corner to 
+							view your profile. Once in your profile, you will see your
+							API Key; you will need this API key in part 2 
+							of the tutorial(as well as in every BRIDGES program 
+							you write). <b>NOTE:</b> Make sure to remember 
+							your password. There is no password recovery option, 
+							and you can only have one account per email address.
+						</ul>
+				</tr>
+				<tr>
+					<td class = "col-md-2"> <b>Step 3: Create a Java Project</b> 
+						<ul> 
+							<li> <i> File-->New-->Java Project</i> 
+						</ul>
+					</td>
+					<td class = "col-md-8">  
+						<img src = "../img/Tutorialv2/newJavaProject.png" width = "800"></img> 
+					</td>
+				</tr>
+				<tr>
+					<td class = "col-md-2"> <b>Step 4: Check Java version </b>
+						<ul> 
+							<li> In the new window change the <i>Project name</i> 
+								field to your user name, then make sure the 
+								<i>Execution Environment JRE</i> is JavaSE-1.5 or above. 
+									Click <i>Finish</i>  n the lower right-hand corner.
+						</ul>
+					</td>
+					<td class = "col-md-8">  
+						<img src = "../img/Tutorialv2/JavaProject.png" width = "800"></img>
+					</td>
+				</tr>
+				<tr> <td class = "col-md-2"> <b>Step 5a: Import Jar File into project</b>
+					<ul>
+						<li> Download the Bridges.jar file from 
+							<a href = "http://bridgesuncc.github.io/sw/bridges-2.2.0.jar">
+								here </a> and save it somewhere convenient on your drive.
+						<li> On Eclipse, right-click your project in the 
+								Package Explorer window then click: 
+								<i> Build Path --> Add External Archives</i>
+					</ul>
+					<td class = "col-md-8"> <img src = "../img/Tutorialv2/addArchive.png" width = "800"></img>
+                    </td>
+				</tr>
+				<tr>
+					<td class = "col-md-2"> <b>Step 5b: Import BRIDGES Jar file</b>
+						<ul> 
+							<li>  Locate and select the Bridges.jar file you saved 
+								earlier to import it into your new project
+						</ul>
+					</td>
+					<td class = "col-md-8">  
+						<img src = "../img/Tutorialv2/jar.png" width = "800"></img>
+					</td>
+				</tr>
+				<tr>
+					<td class = "col-md-2"> <b>Step 6: Verification</b>
+						<ul>
+							<li> To verify that youâve successfully imported the Jar 
+								file, look under the Referenced Libraries section of 
+								your project in the Package Explorer window in Eclipse.  
+							<li> If you have  got a Project in the Eclipse Package 
+								Explorer with your username as the project name, and the 
+								referenced libraries section shows the bridges Jar file, 
+								you have completed the setup and are ready to build 
+								the Hello World class!
+						</ul>
+					</td>
+					<td class = "col-md-8">  
+						<img src = "../img/Tutorialv2/ReferencedLib.png" width = "800"></img>
+					</td>
+				</tr>
+			</thead>
+		</table>
+		<h3 class = "sep_heading">BRIDGES:Getting Started(Your First Bridges Program)</h3>
+<table class = "table table-bordered">
+			<tbody>
+				<tr>
+				<td class = "col-md-2">  TEMPORARY </td>
+				<td class = "col-md-8"> TEMPORARY </td>
+				</tr>
+			</tbody>
+		</table>
+<table class = "table table-bordered">
+    <tbody>
+      <tr>
+        <td class = "col-md-2" >John</td>
+        <td class = "col-md-2" >Doe</td>
+        <td class = col-md-2"> <img src = "./img/bridges_logo.png" width = "200"></img></td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+	</div>
+</div>
+</div>
+<footer class="container-fluid text-center">
+	<p>Footer Text</p>
+</footer>
+</body>
+</html>
+
