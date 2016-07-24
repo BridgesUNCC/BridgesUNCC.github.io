@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>BRIDGES team Page</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../bootstrap-3.3.6/dist/css/bootstrap.min.css">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="../bootstrap-3.3.6/dist/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="./bridges.css">
+	<title>BRIDGES team Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./bootstrap-3.3.6/dist/css/bootstrap.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="./bootstrap-3.3.6/dist/js/bootstrap.min.js"></script>
+	<script src="http://www.w3schools.com/lib/w3data.js"></script> 
+
+	<link rel="stylesheet" type="text/css" href="./bootstrap/bridges.css">
 </head>
 <body>
 
@@ -37,161 +39,156 @@
 </nav>
   
 <div class="container-fluid text-left">
-  <div class="row content">
-    <div class="col-md-2 sidenav">
-		<a href = "http://bridgesuncc.github.io/" title = "Bridges Home"><img src = "./img/bridges_logo.png" width = "200"></img></a>
-		<div class = "documentation" role = "navigation">
-		<h4>Documentation</h4>
-		<p><a href="./bridges_setup.html">BRIDGES: Getting<br>Started </a></p>
-		<p><a href= "http://bridgesuncc.github.io/Hello_World_Tutorials/Overview.html"> User Guide/Tutorials</a></p>
-		<p><a href="http://bridgesuncc.github.io/doc/java-api/current/index.html">Java API</a></p>
-		<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/index.html">C++ API</a></p>
+	<div class="row content">
+		<div class="col-md-2 sidenav">
+			<div w3-include-html="http://bridgesuncc.github.io/left_sidebar.html"></div>
+				<script>
+					w3IncludeHTML(); 
+				</script>   
+    	</div>
+		<div class = "col-md-10" text-left>
+			<h3> <u>BRIDGES Team</u></h3>
+			<h4 style = "text-align:left"> <u>Faculty Investigators</u> </h4>
+			<table class ="bridges_team_tbl">
+			<tbody> 
+			<tr> 
+				<td> 
+					<img src = "./img/kalpathi.jpg" class="img-circle" width = "250"></img>
+				</td>
+				<td> 
+					Dr. Kalpathi Subramanian<br>
+					Associate Professor<br>
+					Charlotte Visualization Center<br>
+					Department of Computer Science<br>
+					The University of North Carolina at Charlotte<br>
+					email: <a href = "mailto:krs@uncc.edu">krs@uncc.edu</a><br> 
+				</td>
+				<td>
+					<img src = "./img/jamie.jpg" class="img-circle" width = "200"></img>
+				</td>
+				<td>
+					Dr. Jamie Payton <br>
+					Associate Professor <br>
+					Department of Computer Science <br>
+					The University of North Carolina at Charlotte <br>
+					email: <a href = "mailto:payton@uncc.edu">payton@uncc.edu</a><br> 
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img src = "./img/michael.jpg" class="img-circle" width = "200"></img>
+				</td>
+				<td>
+					Dr. Michael Youngblood<br>
+					Senior AI Systems Architect and Researcher<br>
+					Interactive Intelligence Area<br>
+					PARC, a Xerox company<br>
+					email: <a href = "mailto:gmyoungblood@uncc.edu">gmyoungblood@uncc.edu</a><br> 
+				</td>
+				<td>
+					<img src = "./img/robert.png" class="img-circle" width = "200"></img>
+				</td>
+				<td>
+					Dr. Robert Kosara<br>
+					Tableau Software<br>
+					Seattle, Washington<br>
+					email: <a href = "mailto:rkosara@uncc.edu">rkosara@uncc.edu</a><br> 
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img src = "./img/paula.jpg" class="img-circle" width = "200"></img>
+				</td>
+				<td>
+					Dr. Paula Gookasian<br>
+					Department of Psychology <br>
+					The University of North Carolina at Charlotte <br>
+					email: <a href = "mailto:pagoolka@uncc.edu">pagoolka@uncc.edu</a><br> 
+				</td>
+			</tr>
+			</tbody>
+			</table>
+		<h4 style = "text-align:left"> <u>Student Investigators </u></h4>
+		<table class ="bridges_std_team_tbl">
+		<tbody> 
+			<tr> 
+				<td> 
+					<img src = "./img/burlinson.jpg" class="img-circle" width = "200"></img>
+				</td>
+				<td> 
+					David Burlinson <br>
+					PhD student <br>
+					Charlotte Visualization Center<br>
+					Department of Computer Science<br>
+					The University of North Carolina at Charlotte<br>
+					email: <a href = "mailto:dburlins@uncc.edu">dburlins@uncc.edu</a><br> 
+				</td>
+				<td> 
+					<img src = "./img/mmehedint.jpg" class="img-circle" width = "250"></img>
+				</td>
+				<td> 
+					Mihai Mehedint<br>
+					BS student <br>
+					Charlotte Visualization Center<br>
+					Department of Computer Science<br>
+					The University of North Carolina at Charlotte<br>
+					email: <a href = "mailto:mmehedin@uncc.edu">mmehedin@uncc.edu</a><br> 
+				</td>
+			</tr>
+			<tr>
+				<td> 
+					<img src = "./img/dakota.jpg" class="img-circle" width = "250"></img>
+				</td>
+				<td> 
+					Dakota Carmer<br>
+					BS student <br>
+					Charlotte Visualization Center<br>
+					Department of Computer Science<br>
+					The University of North Carolina at Charlotte<br>
+					email: <a href = "mailto:dcarmer@uncc.edu">dcarmer@uncc.edu</a><br> 
+				</td>
+			</tr>
+			</tbody>
+			</table>
+			<h4 style = "text-align:left"> <u>Past Students</u></h4>
+			<table class ="bridges_std_team2_tbl">
+			<tbody> 
+			<tr> 
+				<td> 
+					<img src = "./img/stephen.jpg" class="img-circle" width = "250"></img>
+				</td>
+				<td> 
+					Stephen Macneil <br>
+					PhD student <br>
+					Department of Sofware and Inf. Systems<br>
+					The University of North Carolina at Charlotte<br>
+					email: <a href = "mailto:smacneil01@gmail.com.edu">smacneil01@gmail.com</a><br> 
+				</td>
+				<td> 
+					<img src = "./img/sean.jpeg" class="img-circle" width = "275"></img>
+				</td>
+				<td> 
+					Sean Gallagher<br>
+					PhD student <br>
+					Charlotte Visualization Center<br>
+					Department of Computer Science<br>
+					The University of North Carolina at Charlotte<br>
+					email: <a href = "mailto:mmehedin@uncc.edu">mmehedin@uncc.edu</a><br> 
+				</td>
+			</tr>
+			</tbody>
+			</table>
 		</div>
-		<p><p>
-		<div class = "reference" role = "navigation">
-		<h4>Reference</h4>
-		<p><a href="./bridges_design.html">BRIDGES Design</a></p>
-		<p><a href="http://github.com/krs-world/bridges">Client Sources[Java]</a></p>
-		<p><a href="http://github.com/krs-world/bridges-cxx">Client Sources[C++]</a></p>
-		<p><a href="http://github.com/stevemacn/bridgesAPI">Server Sources</a></p>
-		</div>
-		
-    </div>
-	<div class = "col-md-10" text-left>
-	<h3> BRIDGES Team</h3>
-	<h4 style = "text-align:left"> Faculty Investigators </h4>
-	<table class ="bridges_team_tbl">
-	<tbody> 
-	<tr> 
-		<td> 
-			<img src = "../img/kalpathi.jpg" class="img-circle" width = "250"></img>
-		</td>
-		<td> 
-			Dr. Kalpathi Subramanian<br>
-			Associate Professor<br>
-			Charlotte Visualization Center<br>
-			Department of Computer Science<br>
-			The University of North Carolina at Charlotte<br>
-			email: <a href = "mailto:krs@uncc.edu">krs@uncc.edu</a><br> 
-		</td>
-		<td>
-			<img src = "../img/jamie.jpg" class="img-circle" width = "200"></img>
-		</td>
-		<td>
-			Dr. Jamie Payton <br>
-			Associate Professor <br>
-			Department of Computer Science <br>
-			The University of North Carolina at Charlotte <br>
-			email: <a href = "mailto:payton@uncc.edu">payton@uncc.edu</a><br> 
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<img src = "../img/michael.jpg" class="img-circle" width = "200"></img>
-		</td>
-		<td>
-			Dr. Michael Youngblood<br>
-			Senior AI Systems Architect and Researcher<br>
-			Interactive Intelligence Area<br>
-			PARC, a Xerox company<br>
-			email: <a href = "mailto:gmyoungblood@uncc.edu">gmyoungblood@uncc.edu</a><br> 
-		</td>
-		<td>
-			<img src = "../img/robert.png" class="img-circle" width = "200"></img>
-		</td>
-		<td>
-			Dr. Robert Kosara<br>
-			Tableau Software<br>
-			Seattle, Washington<br>
-			email: <a href = "mailto:rkosara@uncc.edu">rkosara@uncc.edu</a><br> 
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<img src = "../img/paula.jpg" class="img-circle" width = "200"></img>
-		</td>
-		<td>
-			Dr. Paula Gookasian<br>
-			Department of Psychology <br>
-			The University of North Carolina at Charlotte <br>
-			email: <a href = "mailto:pagoolka@uncc.edu">pagoolka@uncc.edu</a><br> 
-		</td>
-	</tr>
-	</tr>
-	</tbody>
-	</table>
-	<h4 style = "text-align:left"> Student Investigators </h4>
-	<table class ="bridges_std_team_tbl">
-	<tbody> 
-	<tr> 
-		<td> 
-			<img src = "../img/burlinson.jpg" class="img-circle" width = "200"></img>
-		</td>
-		<td> 
-			David Burlinson <br>
-			PhD student <br>
-			Charlotte Visualization Center<br>
-			Department of Computer Science<br>
-			The University of North Carolina at Charlotte<br>
-			email: <a href = "mailto:dburlins@uncc.edu">dburlins@uncc.edu</a><br> 
-		</td>
-		<td> 
-			<img src = "../img/mmehedint.jpg" class="img-circle" width = "250"></img>
-		</td>
-		<td> 
-			Mihai Mehedint<br>
-			BS student <br>
-			Charlotte Visualization Center<br>
-			Department of Computer Science<br>
-			The University of North Carolina at Charlotte<br>
-			email: <a href = "mailto:mmehedin@uncc.edu">mmehedin@uncc.edu</a><br> 
-		</td>
-		</tr>
-		<tr>
-		<td> 
-			<img src = "../img/dakota.jpg" class="img-circle" width = "250"></img>
-		</td>
-		<td> 
-			Dakota Carmer<br>
-			BS student <br>
-			Charlotte Visualization Center<br>
-			Department of Computer Science<br>
-			The University of North Carolina at Charlotte<br>
-			email: <a href = "mailto:dcarmer@uncc.edu">dcarmer@uncc.edu</a><br> 
-		</td>
-		</tr>
-	</tbody>
-	</table>
-	<h4 style = "text-align:left"> Past Students</h4>
-	<table class ="bridges_std_team2_tbl">
-	<tbody> 
-	<tr> 
-		<td> 
-			<img src = "../img/stephen.jpg" class="img-circle" width = "250"></img>
-		</td>
-		<td> 
-			Stephen Macneil <br>
-			PhD student <br>
-			Department of Sofware and Inf. Systems<br>
-			The University of North Carolina at Charlotte<br>
-			email: <a href = "mailto:smacneil01@gmail.com.edu">smacneil01@gmail.com</a><br> 
-		</td>
-		<td> 
-			<img src = "../img/sean.jpeg" class="img-circle" width = "275"></img>
-		</td>
-		<td> 
-			Sean Gallagher<br>
-			PhD student <br>
-			Charlotte Visualization Center<br>
-			Department of Computer Science<br>
-			The University of North Carolina at Charlotte<br>
-			email: <a href = "mailto:mmehedin@uncc.edu">mmehedin@uncc.edu</a><br> 
-		</td>
-		</tr>
 	</div>
 </div>
+<p>
+<div>
+</div>
+<!--
 <footer class="container-fluid text-center">
   <p>All rights reserved, Copyright @2016, The University of North Carolinat at Charlotte</p>
+-->
+
 </footer>
 </body>
 </html>
