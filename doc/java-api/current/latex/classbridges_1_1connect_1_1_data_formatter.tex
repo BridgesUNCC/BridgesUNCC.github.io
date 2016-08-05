@@ -1,0 +1,341 @@
+\hypertarget{classbridges_1_1connect_1_1_data_formatter}{}\section{bridges.\+connect.\+Data\+Formatter Class Reference}
+\label{classbridges_1_1connect_1_1_data_formatter}\index{bridges.\+connect.\+Data\+Formatter@{bridges.\+connect.\+Data\+Formatter}}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static String \hyperlink{classbridges_1_1connect_1_1_data_formatter_a4abc8f8b0970d6c07c680ac485e299c7}{get\+Server\+U\+R\+L} ()
+\item 
+static void \hyperlink{classbridges_1_1connect_1_1_data_formatter_a8490f20e53678329c1f74fcfc0088230}{set\+Server\+U\+R\+L} (String server\+\_\+url)
+\item 
+static String\+Builder \hyperlink{classbridges_1_1connect_1_1_data_formatter_af36897a55374e4922aabc19adb885052}{trim\+Comma} (String\+Builder in)
+\item 
+static List$<$ \hyperlink{classbridges_1_1data__src__dependent_1_1_follower}{Follower} $>$ \hyperlink{classbridges_1_1connect_1_1_data_formatter_a3877fbdef4320f03dba7f2a6832adfbb}{get\+Associations} (\hyperlink{classbridges_1_1data__src__dependent_1_1_follower}{Follower} identifier, int max)
+\item 
+static List$<$ \hyperlink{classbridges_1_1data__src__dependent_1_1_tweet}{Tweet} $>$ \hyperlink{classbridges_1_1connect_1_1_data_formatter_ab72a69ec0d2a1bf85d9d1fc6c6c3af54}{get\+Associations} (\hyperlink{classbridges_1_1data__src__dependent_1_1_twitter_account}{Twitter\+Account} identifier, int max)
+\item 
+static List$<$ \hyperlink{classbridges_1_1data__src__dependent_1_1_earthquake_u_s_g_s}{Earthquake\+U\+S\+G\+S} $>$ \hyperlink{classbridges_1_1connect_1_1_data_formatter_abdcbc3c914dc045cb532fae291d4f3a5}{get\+Associations} (\hyperlink{classbridges_1_1data__src__dependent_1_1_u_s_g_saccount}{U\+S\+G\+Saccount} identifier, int max)
+\item 
+static List$<$ \hyperlink{classbridges_1_1data__src__dependent_1_1_earthquake_tweet}{Earthquake\+Tweet} $>$ \hyperlink{classbridges_1_1connect_1_1_data_formatter_ad87ca06456fa4dc110e167e84f2d4447}{convert\+Tweet} (List$<$ \hyperlink{classbridges_1_1data__src__dependent_1_1_tweet}{Tweet} $>$ a\+List)
+\item 
+static List$<$ \hyperlink{classbridges_1_1data__src__dependent_1_1_actor}{Actor} $>$ \hyperlink{classbridges_1_1connect_1_1_data_formatter_a5e9f400a020b99e0bbba1fd5332a8f88}{get\+Associations} (\hyperlink{classbridges_1_1data__src__dependent_1_1_actor}{Actor} identifier, int max)
+\item 
+static List$<$ \hyperlink{classbridges_1_1data__src__dependent_1_1_movie}{Movie} $>$ \hyperlink{classbridges_1_1connect_1_1_data_formatter_ad0377b692c07836fb1016e5fb296e79c}{get\+Associations} (\hyperlink{classbridges_1_1data__src__dependent_1_1_movie}{Movie} identifier, int max)
+\item 
+static List$<$ \hyperlink{classbridges_1_1data__src__dependent_1_1_tweet}{Tweet} $>$ \hyperlink{classbridges_1_1connect_1_1_data_formatter_a3d0b2d2e0384d2a537bb61fbeb3d00a4}{next} (List$<$ \hyperlink{classbridges_1_1data__src__dependent_1_1_tweet}{Tweet} $>$ a\+List, int max)
+\item 
+static List$<$ \hyperlink{classbridges_1_1data__src__dependent_1_1_earthquake_u_s_g_s}{Earthquake\+U\+S\+G\+S} $>$ \hyperlink{classbridges_1_1connect_1_1_data_formatter_ad451dd96b927702127d383e85fc98661}{next} (List$<$ \hyperlink{classbridges_1_1data__src__dependent_1_1_earthquake_u_s_g_s}{Earthquake\+U\+S\+G\+S} $>$ a\+List, int max, \hyperlink{classbridges_1_1data__src__dependent_1_1_u_s_g_saccount}{U\+S\+G\+Saccount} acu)
+\item 
+static int \hyperlink{classbridges_1_1connect_1_1_data_formatter_ad17084ac8b0f28837ebb1d77905cefb8}{valid\+Number\+Of\+Tweets} (int max)
+\item 
+static double \hyperlink{classbridges_1_1connect_1_1_data_formatter_a2637c733e7f4efccfb56de0940506318}{get\+Edge\+Weight} (String source, String target)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbridges_1_1connect_1_1_data_formatter_a31efd2251e98942e58e743dff213ef27}{Data\+Formatter} ()
+\item 
+\hyperlink{classbridges_1_1connect_1_1_connector}{Connector} \hyperlink{classbridges_1_1connect_1_1_data_formatter_a29cf4c2b0c5629d63a76b60569355c65}{get\+Backend} ()
+\item 
+void \hyperlink{classbridges_1_1connect_1_1_data_formatter_af9b878e5c092234a6ab5f8c11bee1fbd}{set\+Backend} (\hyperlink{classbridges_1_1connect_1_1_connector}{Connector} backend)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Connection to the Data\+Formatters server.
+
+Initialize this class before using it, and call complete() afterward.
+
+\begin{DoxyAuthor}{Author}
+Sean Gallagher 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em $<$\+E$>$} & Mihai Mehedint \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbridges_1_1connect_1_1_data_formatter_a31efd2251e98942e58e743dff213ef27}{}\index{bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}!Data\+Formatter@{Data\+Formatter}}
+\index{Data\+Formatter@{Data\+Formatter}!bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}}
+\subsubsection[{Data\+Formatter()}]{\setlength{\rightskip}{0pt plus 5cm}bridges.\+connect.\+Data\+Formatter.\+Data\+Formatter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{classbridges_1_1connect_1_1_data_formatter_a31efd2251e98942e58e743dff213ef27}
+Constructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classbridges_1_1connect_1_1_data_formatter_ad87ca06456fa4dc110e167e84f2d4447}{}\index{bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}!convert\+Tweet@{convert\+Tweet}}
+\index{convert\+Tweet@{convert\+Tweet}!bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}}
+\subsubsection[{convert\+Tweet(\+List$<$ Tweet $>$ a\+List)}]{\setlength{\rightskip}{0pt plus 5cm}static List$<${\bf Earthquake\+Tweet}$>$ bridges.\+connect.\+Data\+Formatter.\+convert\+Tweet (
+\begin{DoxyParamCaption}
+\item[{List$<$ {\bf Tweet} $>$}]{a\+List}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classbridges_1_1connect_1_1_data_formatter_ad87ca06456fa4dc110e167e84f2d4447}
+This method change the tweet object into an earthquake tweet object with more data extracted from the tweet content, like magnitude 
+\begin{DoxyParams}{Parameters}
+{\em a\+List} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classbridges_1_1connect_1_1_data_formatter_a3877fbdef4320f03dba7f2a6832adfbb}{}\index{bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}!get\+Associations@{get\+Associations}}
+\index{get\+Associations@{get\+Associations}!bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}}
+\subsubsection[{get\+Associations(\+Follower identifier, int max)}]{\setlength{\rightskip}{0pt plus 5cm}static List$<${\bf Follower}$>$ bridges.\+connect.\+Data\+Formatter.\+get\+Associations (
+\begin{DoxyParamCaption}
+\item[{{\bf Follower}}]{identifier, }
+\item[{int}]{max}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classbridges_1_1connect_1_1_data_formatter_a3877fbdef4320f03dba7f2a6832adfbb}
+Automatically choose whether to open a node identifier with\+: Twitter via followers(), T\+M\+Db with movies(), or Rotten\+Tomatoes with actors()
+
+
+\begin{DoxyParams}{Parameters}
+{\em identifier} & \\
+\hline
+{\em max} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a list of identifiers 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Query\+Limit\+Exception} & This Method returns the list of followers \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em identifier} & holds the name of the \\
+\hline
+{\em max} & holds the max number of followers \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classbridges_1_1connect_1_1_data_formatter_ab72a69ec0d2a1bf85d9d1fc6c6c3af54}{}\index{bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}!get\+Associations@{get\+Associations}}
+\index{get\+Associations@{get\+Associations}!bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}}
+\subsubsection[{get\+Associations(\+Twitter\+Account identifier, int max)}]{\setlength{\rightskip}{0pt plus 5cm}static List$<${\bf Tweet}$>$ bridges.\+connect.\+Data\+Formatter.\+get\+Associations (
+\begin{DoxyParamCaption}
+\item[{{\bf Twitter\+Account}}]{identifier, }
+\item[{int}]{max}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classbridges_1_1connect_1_1_data_formatter_ab72a69ec0d2a1bf85d9d1fc6c6c3af54}
+This Method returns the list of tweets 
+\begin{DoxyParams}{Parameters}
+{\em identifier} & holds the name of the \\
+\hline
+{\em max} & holds the max number of tweets \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em My\+Exception\+Class} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classbridges_1_1connect_1_1_data_formatter_abdcbc3c914dc045cb532fae291d4f3a5}{}\index{bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}!get\+Associations@{get\+Associations}}
+\index{get\+Associations@{get\+Associations}!bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}}
+\subsubsection[{get\+Associations(\+U\+S\+G\+Saccount identifier, int max)}]{\setlength{\rightskip}{0pt plus 5cm}static List$<${\bf Earthquake\+U\+S\+G\+S}$>$ bridges.\+connect.\+Data\+Formatter.\+get\+Associations (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+S\+G\+Saccount}}]{identifier, }
+\item[{int}]{max}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classbridges_1_1connect_1_1_data_formatter_abdcbc3c914dc045cb532fae291d4f3a5}
+This Method returns the list of earthquakes 
+\begin{DoxyParams}{Parameters}
+{\em identifier} & holds the name of the \\
+\hline
+{\em max} & holds the max number of earthquakes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em My\+Exception\+Class} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classbridges_1_1connect_1_1_data_formatter_a5e9f400a020b99e0bbba1fd5332a8f88}{}\index{bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}!get\+Associations@{get\+Associations}}
+\index{get\+Associations@{get\+Associations}!bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}}
+\subsubsection[{get\+Associations(\+Actor identifier, int max)}]{\setlength{\rightskip}{0pt plus 5cm}static List$<${\bf Actor}$>$ bridges.\+connect.\+Data\+Formatter.\+get\+Associations (
+\begin{DoxyParamCaption}
+\item[{{\bf Actor}}]{identifier, }
+\item[{int}]{max}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classbridges_1_1connect_1_1_data_formatter_a5e9f400a020b99e0bbba1fd5332a8f88}
+This Method returns the list of actors 
+\begin{DoxyParams}{Parameters}
+{\em identifier} & holds the name of the movie \\
+\hline
+{\em max} & holds the max number of actors \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classbridges_1_1connect_1_1_data_formatter_ad0377b692c07836fb1016e5fb296e79c}{}\index{bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}!get\+Associations@{get\+Associations}}
+\index{get\+Associations@{get\+Associations}!bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}}
+\subsubsection[{get\+Associations(\+Movie identifier, int max)}]{\setlength{\rightskip}{0pt plus 5cm}static List$<${\bf Movie}$>$ bridges.\+connect.\+Data\+Formatter.\+get\+Associations (
+\begin{DoxyParamCaption}
+\item[{{\bf Movie}}]{identifier, }
+\item[{int}]{max}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classbridges_1_1connect_1_1_data_formatter_ad0377b692c07836fb1016e5fb296e79c}
+This Method returns the list of movies 
+\begin{DoxyParams}{Parameters}
+{\em identifier} & holds the name of the movie \\
+\hline
+{\em max} & holds the max number of movies \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classbridges_1_1connect_1_1_data_formatter_a29cf4c2b0c5629d63a76b60569355c65}{}\index{bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}!get\+Backend@{get\+Backend}}
+\index{get\+Backend@{get\+Backend}!bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}}
+\subsubsection[{get\+Backend()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Connector} bridges.\+connect.\+Data\+Formatter.\+get\+Backend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{classbridges_1_1connect_1_1_data_formatter_a29cf4c2b0c5629d63a76b60569355c65}
+\begin{DoxyReturn}{Returns}
+the backend 
+\end{DoxyReturn}
+\hypertarget{classbridges_1_1connect_1_1_data_formatter_a2637c733e7f4efccfb56de0940506318}{}\index{bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}!get\+Edge\+Weight@{get\+Edge\+Weight}}
+\index{get\+Edge\+Weight@{get\+Edge\+Weight}!bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}}
+\subsubsection[{get\+Edge\+Weight(\+String source, String target)}]{\setlength{\rightskip}{0pt plus 5cm}static double bridges.\+connect.\+Data\+Formatter.\+get\+Edge\+Weight (
+\begin{DoxyParamCaption}
+\item[{String}]{source, }
+\item[{String}]{target}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classbridges_1_1connect_1_1_data_formatter_a2637c733e7f4efccfb56de0940506318}
+Generate a sample Edge weight for two nodes 
+\begin{DoxyParams}{Parameters}
+{\em source} & \\
+\hline
+{\em target} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classbridges_1_1connect_1_1_data_formatter_a4abc8f8b0970d6c07c680ac485e299c7}{}\index{bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}!get\+Server\+U\+R\+L@{get\+Server\+U\+R\+L}}
+\index{get\+Server\+U\+R\+L@{get\+Server\+U\+R\+L}!bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}}
+\subsubsection[{get\+Server\+U\+R\+L()}]{\setlength{\rightskip}{0pt plus 5cm}static String bridges.\+connect.\+Data\+Formatter.\+get\+Server\+U\+R\+L (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classbridges_1_1connect_1_1_data_formatter_a4abc8f8b0970d6c07c680ac485e299c7}
+\hypertarget{classbridges_1_1connect_1_1_data_formatter_a3d0b2d2e0384d2a537bb61fbeb3d00a4}{}\index{bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}!next@{next}}
+\index{next@{next}!bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}}
+\subsubsection[{next(\+List$<$ Tweet $>$ a\+List, int max)}]{\setlength{\rightskip}{0pt plus 5cm}static List$<${\bf Tweet}$>$ bridges.\+connect.\+Data\+Formatter.\+next (
+\begin{DoxyParamCaption}
+\item[{List$<$ {\bf Tweet} $>$}]{a\+List, }
+\item[{int}]{max}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classbridges_1_1connect_1_1_data_formatter_a3d0b2d2e0384d2a537bb61fbeb3d00a4}
+The \hyperlink{classbridges_1_1connect_1_1_data_formatter_a3d0b2d2e0384d2a537bb61fbeb3d00a4}{next(\+List$<$\+Tweet$>$, int)} method retrieves the next batch of tweets and adds deep copy of those tweets to the current list 
+\begin{DoxyParams}{Parameters}
+{\em a\+List} & holds the reference to the current list of tweets \\
+\hline
+{\em max} & the number of tweets in the new batch of tweets \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the list of tweets containing the old and the new batch of tweets 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em My\+Exception\+Class} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classbridges_1_1connect_1_1_data_formatter_ad451dd96b927702127d383e85fc98661}{}\index{bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}!next@{next}}
+\index{next@{next}!bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}}
+\subsubsection[{next(\+List$<$ Earthquake\+U\+S\+G\+S $>$ a\+List, int max, U\+S\+G\+Saccount acu)}]{\setlength{\rightskip}{0pt plus 5cm}static List$<${\bf Earthquake\+U\+S\+G\+S}$>$ bridges.\+connect.\+Data\+Formatter.\+next (
+\begin{DoxyParamCaption}
+\item[{List$<$ {\bf Earthquake\+U\+S\+G\+S} $>$}]{a\+List, }
+\item[{int}]{max, }
+\item[{{\bf U\+S\+G\+Saccount}}]{acu}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classbridges_1_1connect_1_1_data_formatter_ad451dd96b927702127d383e85fc98661}
+The next(\+List$<$\+Earthquake\+U\+S\+G\+S$>$, int) method retrieves the next batch of eq and adds deep copy of those eq to the current list 
+\begin{DoxyParams}{Parameters}
+{\em a\+List} & holds the reference to the current list of eq \\
+\hline
+{\em max} & the number of eq in the new batch of eq \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the list of eq containing the old and the new batch of tweets 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em My\+Exception\+Class} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classbridges_1_1connect_1_1_data_formatter_af9b878e5c092234a6ab5f8c11bee1fbd}{}\index{bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}!set\+Backend@{set\+Backend}}
+\index{set\+Backend@{set\+Backend}!bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}}
+\subsubsection[{set\+Backend(\+Connector backend)}]{\setlength{\rightskip}{0pt plus 5cm}void bridges.\+connect.\+Data\+Formatter.\+set\+Backend (
+\begin{DoxyParamCaption}
+\item[{{\bf Connector}}]{backend}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{classbridges_1_1connect_1_1_data_formatter_af9b878e5c092234a6ab5f8c11bee1fbd}
+
+\begin{DoxyParams}{Parameters}
+{\em backend} & the backend to set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbridges_1_1connect_1_1_data_formatter_a8490f20e53678329c1f74fcfc0088230}{}\index{bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}!set\+Server\+U\+R\+L@{set\+Server\+U\+R\+L}}
+\index{set\+Server\+U\+R\+L@{set\+Server\+U\+R\+L}!bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}}
+\subsubsection[{set\+Server\+U\+R\+L(\+String server\+\_\+url)}]{\setlength{\rightskip}{0pt plus 5cm}static void bridges.\+connect.\+Data\+Formatter.\+set\+Server\+U\+R\+L (
+\begin{DoxyParamCaption}
+\item[{String}]{server\+\_\+url}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classbridges_1_1connect_1_1_data_formatter_a8490f20e53678329c1f74fcfc0088230}
+\hypertarget{classbridges_1_1connect_1_1_data_formatter_af36897a55374e4922aabc19adb885052}{}\index{bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}!trim\+Comma@{trim\+Comma}}
+\index{trim\+Comma@{trim\+Comma}!bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}}
+\subsubsection[{trim\+Comma(\+String\+Builder in)}]{\setlength{\rightskip}{0pt plus 5cm}static String\+Builder bridges.\+connect.\+Data\+Formatter.\+trim\+Comma (
+\begin{DoxyParamCaption}
+\item[{String\+Builder}]{in}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classbridges_1_1connect_1_1_data_formatter_af36897a55374e4922aabc19adb885052}
+Internal method for J\+S\+O\+N preparation 
+\begin{DoxyParams}{Parameters}
+{\em in} & The original string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a string with all but the last character 
+\end{DoxyReturn}
+\hypertarget{classbridges_1_1connect_1_1_data_formatter_ad17084ac8b0f28837ebb1d77905cefb8}{}\index{bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}!valid\+Number\+Of\+Tweets@{valid\+Number\+Of\+Tweets}}
+\index{valid\+Number\+Of\+Tweets@{valid\+Number\+Of\+Tweets}!bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}}
+\subsubsection[{valid\+Number\+Of\+Tweets(int max)}]{\setlength{\rightskip}{0pt plus 5cm}static int bridges.\+connect.\+Data\+Formatter.\+valid\+Number\+Of\+Tweets (
+\begin{DoxyParamCaption}
+\item[{int}]{max}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classbridges_1_1connect_1_1_data_formatter_ad17084ac8b0f28837ebb1d77905cefb8}
+Check the validity of number of Tweets requested 
+\begin{DoxyParams}{Parameters}
+{\em max} & the number of tweets \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns true if the number is in the range 0 -\/ 500 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em My\+Exception\+Class} & otherwise \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+link/connect/\hyperlink{_data_formatter_8java}{Data\+Formatter.\+java}\end{DoxyCompactItemize}

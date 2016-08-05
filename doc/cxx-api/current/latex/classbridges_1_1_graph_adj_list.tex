@@ -1,0 +1,174 @@
+\hypertarget{classbridges_1_1_graph_adj_list}{}\section{bridges\+:\+:Graph\+Adj\+List$<$ K, E $>$ Class Template Reference}
+\label{classbridges_1_1_graph_adj_list}\index{bridges\+::\+Graph\+Adj\+List$<$ K, E $>$@{bridges\+::\+Graph\+Adj\+List$<$ K, E $>$}}
+
+
+This class provides methods to represent adjacency list based graphs.  
+
+
+
+
+{\ttfamily \#include $<$Element.\+h$>$}
+
+Inheritance diagram for bridges\+:\+:Graph\+Adj\+List$<$ K, E $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbridges_1_1_graph_adj_list}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classbridges_1_1_graph_adj_list_a72a783f3136b10b5abef0c32364e9ea1}{$\sim$\+Graph\+Adj\+List} () override
+\item 
+virtual const string \hyperlink{classbridges_1_1_graph_adj_list_a598803ce2292ce3fa23fbd3f37f12176}{get\+D\+Stype} () const  override
+\item 
+void \hyperlink{classbridges_1_1_graph_adj_list_a8e97b282f1fc28f1ecda90bf3fc38d76}{add\+Vertex} (const K \&k, const E \&e=E())
+\item 
+void \hyperlink{classbridges_1_1_graph_adj_list_a0e53ad3b952a149e48e785c55ea2d6f6}{add\+Edge} (const K \&src, const K \&dest, const unsigned int \&wt, const string \&data=string())
+\item 
+const unordered\+\_\+map$<$ K, \hyperlink{classbridges_1_1_element}{Element}$<$ E $>$ $>$ \& \hyperlink{classbridges_1_1_graph_adj_list_aee986c1bcb793ce3caea4e978560def2}{get\+Vertices} () const 
+\item 
+const unordered\+\_\+map$<$ K, \hyperlink{classbridges_1_1_s_lelement}{S\+Lelement}$<$ \hyperlink{classbridges_1_1_edge}{Edge}$<$ K $>$ $>$ $\ast$ $>$ \& \hyperlink{classbridges_1_1_graph_adj_list_aa6b4508c108c14b2c254356370b3f8e5}{get\+Adjacency\+List} () const 
+\item 
+const \hyperlink{classbridges_1_1_s_lelement}{S\+Lelement}$<$ \hyperlink{classbridges_1_1_edge}{Edge}$<$ K $>$ $>$ $\ast$ \hyperlink{classbridges_1_1_graph_adj_list_a59c23d9bd8327b84abe4c5cb85aea986}{get\+Adjacency\+List} (const K \&k) const 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename K, typename E$>$class bridges\+::\+Graph\+Adj\+List$<$ K, E $>$}
+
+This class provides methods to represent adjacency list based graphs. 
+
+The class is simply a wrapper around the C++ S\+T\+L unordered\+\_\+map class and thus derives all its operations from it.
+
+Generic Parameters\+: K that is used as an index, E the application data type
+
+\begin{DoxyAuthor}{Author}
+Kalpathi Subramanian 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+6/29/15 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbridges_1_1_graph_adj_list_a72a783f3136b10b5abef0c32364e9ea1}{}\index{bridges\+::\+Graph\+Adj\+List@{bridges\+::\+Graph\+Adj\+List}!````~Graph\+Adj\+List@{$\sim$\+Graph\+Adj\+List}}
+\index{````~Graph\+Adj\+List@{$\sim$\+Graph\+Adj\+List}!bridges\+::\+Graph\+Adj\+List@{bridges\+::\+Graph\+Adj\+List}}
+\subsubsection[{$\sim$\+Graph\+Adj\+List() override}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename E $>$ virtual {\bf bridges\+::\+Graph\+Adj\+List}$<$ K, E $>$\+::$\sim${\bf Graph\+Adj\+List} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\label{classbridges_1_1_graph_adj_list_a72a783f3136b10b5abef0c32364e9ea1}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbridges_1_1_graph_adj_list_a0e53ad3b952a149e48e785c55ea2d6f6}{}\index{bridges\+::\+Graph\+Adj\+List@{bridges\+::\+Graph\+Adj\+List}!add\+Edge@{add\+Edge}}
+\index{add\+Edge@{add\+Edge}!bridges\+::\+Graph\+Adj\+List@{bridges\+::\+Graph\+Adj\+List}}
+\subsubsection[{add\+Edge(const K \&src, const K \&dest, const unsigned int \&wt, const string \&data=string())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename E $>$ void {\bf bridges\+::\+Graph\+Adj\+List}$<$ K, E $>$\+::add\+Edge (
+\begin{DoxyParamCaption}
+\item[{const K \&}]{src, }
+\item[{const K \&}]{dest, }
+\item[{const unsigned int \&}]{wt, }
+\item[{const string \&}]{data = {\ttfamily string()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_graph_adj_list_a0e53ad3b952a149e48e785c55ea2d6f6}
+Sets the edge from \char`\"{}src\char`\"{} to \char`\"{}dest\char`\"{}, weight to \char`\"{}wt\char`\"{} and data to \char`\"{}data\char`\"{}. This will overwrite the existing edge weight. If data is not provided the default will be used;
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & The key of the source Vertex \\
+\hline
+{\em dest} & The key of the destination Vertex \\
+\hline
+{\em wt} & The weight of the edge \\
+\hline
+{\em data} & The edge data \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em out\+\_\+of\+\_\+range} & If \char`\"{}src\char`\"{} or \char`\"{}dest\char`\"{} is non-\/existenet within this graph \\
+\hline
+{\em bad\+\_\+alloc} & If allocation of a graph adjacency list item failed \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classbridges_1_1_graph_adj_list_a8e97b282f1fc28f1ecda90bf3fc38d76}{}\index{bridges\+::\+Graph\+Adj\+List@{bridges\+::\+Graph\+Adj\+List}!add\+Vertex@{add\+Vertex}}
+\index{add\+Vertex@{add\+Vertex}!bridges\+::\+Graph\+Adj\+List@{bridges\+::\+Graph\+Adj\+List}}
+\subsubsection[{add\+Vertex(const K \&k, const E \&e=\+E())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename E $>$ void {\bf bridges\+::\+Graph\+Adj\+List}$<$ K, E $>$\+::add\+Vertex (
+\begin{DoxyParamCaption}
+\item[{const K \&}]{k, }
+\item[{const E \&}]{e = {\ttfamily E()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_graph_adj_list_a8e97b282f1fc28f1ecda90bf3fc38d76}
+Adds a vertex of key \char`\"{}k\char`\"{} and value \char`\"{}e\char`\"{} to the graph, and initializes its adjacency list. If this key already exists its value and all source associated edges with be overwriten. If value \char`\"{}e\char`\"{} is not provided the default will be used.
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The vertex key \\
+\hline
+{\em e} & The vertex data \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbridges_1_1_graph_adj_list_aa6b4508c108c14b2c254356370b3f8e5}{}\index{bridges\+::\+Graph\+Adj\+List@{bridges\+::\+Graph\+Adj\+List}!get\+Adjacency\+List@{get\+Adjacency\+List}}
+\index{get\+Adjacency\+List@{get\+Adjacency\+List}!bridges\+::\+Graph\+Adj\+List@{bridges\+::\+Graph\+Adj\+List}}
+\subsubsection[{get\+Adjacency\+List() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename E $>$ const unordered\+\_\+map$<$K, {\bf S\+Lelement}$<${\bf Edge}$<$K$>$ $>$$\ast$$>$\& {\bf bridges\+::\+Graph\+Adj\+List}$<$ K, E $>$\+::get\+Adjacency\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_graph_adj_list_aa6b4508c108c14b2c254356370b3f8e5}
+\begin{DoxyReturn}{Returns}
+The adjacency list of the graph 
+\end{DoxyReturn}
+\hypertarget{classbridges_1_1_graph_adj_list_a59c23d9bd8327b84abe4c5cb85aea986}{}\index{bridges\+::\+Graph\+Adj\+List@{bridges\+::\+Graph\+Adj\+List}!get\+Adjacency\+List@{get\+Adjacency\+List}}
+\index{get\+Adjacency\+List@{get\+Adjacency\+List}!bridges\+::\+Graph\+Adj\+List@{bridges\+::\+Graph\+Adj\+List}}
+\subsubsection[{get\+Adjacency\+List(const K \&k) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename E $>$ const {\bf S\+Lelement}$<${\bf Edge}$<$K$>$ $>$$\ast$ {\bf bridges\+::\+Graph\+Adj\+List}$<$ K, E $>$\+::get\+Adjacency\+List (
+\begin{DoxyParamCaption}
+\item[{const K \&}]{k}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_graph_adj_list_a59c23d9bd8327b84abe4c5cb85aea986}
+Returns adjacency list of a vertex with name k
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The key of the source vertex \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em out\+\_\+of\+\_\+range} & If key is non-\/existent within this graph\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+The adjacency list of key \char`\"{}k\char`\"{} 
+\end{DoxyReturn}
+\hypertarget{classbridges_1_1_graph_adj_list_a598803ce2292ce3fa23fbd3f37f12176}{}\index{bridges\+::\+Graph\+Adj\+List@{bridges\+::\+Graph\+Adj\+List}!get\+D\+Stype@{get\+D\+Stype}}
+\index{get\+D\+Stype@{get\+D\+Stype}!bridges\+::\+Graph\+Adj\+List@{bridges\+::\+Graph\+Adj\+List}}
+\subsubsection[{get\+D\+Stype() const  override}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename E $>$ virtual const string {\bf bridges\+::\+Graph\+Adj\+List}$<$ K, E $>$\+::get\+D\+Stype (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\label{classbridges_1_1_graph_adj_list_a598803ce2292ce3fa23fbd3f37f12176}
+\begin{DoxyReturn}{Returns}
+The string representation of this data structure type 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classbridges_1_1_data_structure_ab6973cdb2a22b7e664b895f1f9c8ad54}{bridges\+::\+Data\+Structure}.
+
+\hypertarget{classbridges_1_1_graph_adj_list_aee986c1bcb793ce3caea4e978560def2}{}\index{bridges\+::\+Graph\+Adj\+List@{bridges\+::\+Graph\+Adj\+List}!get\+Vertices@{get\+Vertices}}
+\index{get\+Vertices@{get\+Vertices}!bridges\+::\+Graph\+Adj\+List@{bridges\+::\+Graph\+Adj\+List}}
+\subsubsection[{get\+Vertices() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename E $>$ const unordered\+\_\+map$<$K, {\bf Element}$<$E$>$ $>$\& {\bf bridges\+::\+Graph\+Adj\+List}$<$ K, E $>$\+::get\+Vertices (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_graph_adj_list_aee986c1bcb793ce3caea4e978560def2}
+\begin{DoxyReturn}{Returns}
+The vertex list of this graph 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/krs/gr/bridges/cxx/git-\/cxx/src/\hyperlink{_element_8h}{Element.\+h}\item 
+/\+Users/krs/gr/bridges/cxx/git-\/cxx/src/\hyperlink{_graph_adj_list_8h}{Graph\+Adj\+List.\+h}\end{DoxyCompactItemize}

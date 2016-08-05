@@ -1,0 +1,243 @@
+\hypertarget{classbridges_1_1_a_v_l_tree_element}{}\section{bridges\+:\+:A\+V\+L\+Tree\+Element$<$ K, E $>$ Class Template Reference}
+\label{classbridges_1_1_a_v_l_tree_element}\index{bridges\+::\+A\+V\+L\+Tree\+Element$<$ K, E $>$@{bridges\+::\+A\+V\+L\+Tree\+Element$<$ K, E $>$}}
+
+
+This class can be used to create avl tree elements, derived from \hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element}.  
+
+
+
+
+{\ttfamily \#include $<$A\+V\+L\+Tree\+Element.\+h$>$}
+
+Inheritance diagram for bridges\+:\+:A\+V\+L\+Tree\+Element$<$ K, E $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classbridges_1_1_a_v_l_tree_element}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbridges_1_1_a_v_l_tree_element_a24d1dfb65f00f2fef96a57a3f869a263}{A\+V\+L\+Tree\+Element} (const K \&k, const E \&val=E(), const string \&lab=string())
+\item 
+virtual const string \hyperlink{classbridges_1_1_a_v_l_tree_element_a408f7c79eb3414b54a8c9bdc6b31d972}{get\+D\+Stype} () const  override
+\item 
+int \hyperlink{classbridges_1_1_a_v_l_tree_element_a1e8eefa30079525f6214ad4c30428b45}{get\+Height} () const 
+\item 
+void \hyperlink{classbridges_1_1_a_v_l_tree_element_acbf2a222b954e5d9221b109634822f96}{set\+Height} (const int \&h)
+\item 
+int \hyperlink{classbridges_1_1_a_v_l_tree_element_aa18e57e48d4cd8e1c3415637bec458c2}{get\+Balance\+Factor} () const 
+\item 
+void \hyperlink{classbridges_1_1_a_v_l_tree_element_a076ec482874d248764348e62dd4652d2}{set\+Balance\+Factor} (const int \&bf)
+\item 
+virtual \hyperlink{classbridges_1_1_a_v_l_tree_element}{A\+V\+L\+Tree\+Element} $\ast$ \hyperlink{classbridges_1_1_a_v_l_tree_element_a7b5d05660da127f5f6164120d9846d90}{get\+Left} () override
+\item 
+virtual const \hyperlink{classbridges_1_1_a_v_l_tree_element}{A\+V\+L\+Tree\+Element} $\ast$ \hyperlink{classbridges_1_1_a_v_l_tree_element_a4e1d2bd4430627ef759479b9fcf5c98b}{get\+Left} () const  override
+\item 
+void \hyperlink{classbridges_1_1_a_v_l_tree_element_a19980980e712d10a1158272ecc44ef10}{set\+Left} (\hyperlink{classbridges_1_1_a_v_l_tree_element}{A\+V\+L\+Tree\+Element} $\ast$l)
+\item 
+virtual \hyperlink{classbridges_1_1_a_v_l_tree_element}{A\+V\+L\+Tree\+Element} $\ast$ \hyperlink{classbridges_1_1_a_v_l_tree_element_a909b46ebf3e8c6a3434762a1f01499e2}{get\+Right} () override
+\item 
+virtual const \hyperlink{classbridges_1_1_a_v_l_tree_element}{A\+V\+L\+Tree\+Element} $\ast$ \hyperlink{classbridges_1_1_a_v_l_tree_element_a45214b0f2d3b8acb78a5ce34333becd2}{get\+Right} () const  override
+\item 
+void \hyperlink{classbridges_1_1_a_v_l_tree_element_a2e048abe8e79232effa92dfdbeac4a54}{set\+Right} (\hyperlink{classbridges_1_1_a_v_l_tree_element}{A\+V\+L\+Tree\+Element} $\ast$r)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename K, typename E$>$class bridges\+::\+A\+V\+L\+Tree\+Element$<$ K, E $>$}
+
+This class can be used to create avl tree elements, derived from \hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element}. 
+
+This class extends the \hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element} class by adding height and balance factor attributes to allow for easier use in a avl tree implementation.
+
+Generic Parameters\+: K that is the search key type, E the application data type
+
+\begin{DoxyAuthor}{Author}
+Kalpathi Subramanian 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+6/18/15, 7/15/16 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbridges_1_1_a_v_l_tree_element_a24d1dfb65f00f2fef96a57a3f869a263}{}\index{bridges\+::\+A\+V\+L\+Tree\+Element@{bridges\+::\+A\+V\+L\+Tree\+Element}!A\+V\+L\+Tree\+Element@{A\+V\+L\+Tree\+Element}}
+\index{A\+V\+L\+Tree\+Element@{A\+V\+L\+Tree\+Element}!bridges\+::\+A\+V\+L\+Tree\+Element@{bridges\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection[{A\+V\+L\+Tree\+Element(const K \&k, const E \&val=\+E(), const string \&lab=string())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename E $>$ {\bf bridges\+::\+A\+V\+L\+Tree\+Element}$<$ K, E $>$\+::{\bf A\+V\+L\+Tree\+Element} (
+\begin{DoxyParamCaption}
+\item[{const K \&}]{k, }
+\item[{const E \&}]{val = {\ttfamily E()}, }
+\item[{const string \&}]{lab = {\ttfamily string()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_a_v_l_tree_element_a24d1dfb65f00f2fef96a57a3f869a263}
+Constructs a \hyperlink{classbridges_1_1_a_v_l_tree_element}{A\+V\+L\+Tree\+Element} with the provided value, label, key, setting the left and right A\+V\+L\+Tree\+Elements to N\+U\+L\+L. The defaults will be used if not provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The data to hold \\
+\hline
+{\em lab} & The label to show \\
+\hline
+{\em k} & The key for ordering \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbridges_1_1_a_v_l_tree_element_aa18e57e48d4cd8e1c3415637bec458c2}{}\index{bridges\+::\+A\+V\+L\+Tree\+Element@{bridges\+::\+A\+V\+L\+Tree\+Element}!get\+Balance\+Factor@{get\+Balance\+Factor}}
+\index{get\+Balance\+Factor@{get\+Balance\+Factor}!bridges\+::\+A\+V\+L\+Tree\+Element@{bridges\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection[{get\+Balance\+Factor() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename E $>$ int {\bf bridges\+::\+A\+V\+L\+Tree\+Element}$<$ K, E $>$\+::get\+Balance\+Factor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_a_v_l_tree_element_aa18e57e48d4cd8e1c3415637bec458c2}
+\begin{DoxyReturn}{Returns}
+The balance factor of this \hyperlink{classbridges_1_1_a_v_l_tree_element}{A\+V\+L\+Tree\+Element} 
+\end{DoxyReturn}
+\hypertarget{classbridges_1_1_a_v_l_tree_element_a408f7c79eb3414b54a8c9bdc6b31d972}{}\index{bridges\+::\+A\+V\+L\+Tree\+Element@{bridges\+::\+A\+V\+L\+Tree\+Element}!get\+D\+Stype@{get\+D\+Stype}}
+\index{get\+D\+Stype@{get\+D\+Stype}!bridges\+::\+A\+V\+L\+Tree\+Element@{bridges\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection[{get\+D\+Stype() const  override}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename E $>$ virtual const string {\bf bridges\+::\+A\+V\+L\+Tree\+Element}$<$ K, E $>$\+::get\+D\+Stype (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\label{classbridges_1_1_a_v_l_tree_element_a408f7c79eb3414b54a8c9bdc6b31d972}
+\begin{DoxyReturn}{Returns}
+the data structure type 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classbridges_1_1_b_s_t_element_a56fdac281f5270446cf7ad98ff6c7a80}{bridges\+::\+B\+S\+T\+Element$<$ K, E $>$}.
+
+\hypertarget{classbridges_1_1_a_v_l_tree_element_a1e8eefa30079525f6214ad4c30428b45}{}\index{bridges\+::\+A\+V\+L\+Tree\+Element@{bridges\+::\+A\+V\+L\+Tree\+Element}!get\+Height@{get\+Height}}
+\index{get\+Height@{get\+Height}!bridges\+::\+A\+V\+L\+Tree\+Element@{bridges\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection[{get\+Height() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename E $>$ int {\bf bridges\+::\+A\+V\+L\+Tree\+Element}$<$ K, E $>$\+::get\+Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_a_v_l_tree_element_a1e8eefa30079525f6214ad4c30428b45}
+\begin{DoxyReturn}{Returns}
+The height of this \hyperlink{classbridges_1_1_a_v_l_tree_element}{A\+V\+L\+Tree\+Element} 
+\end{DoxyReturn}
+\hypertarget{classbridges_1_1_a_v_l_tree_element_a7b5d05660da127f5f6164120d9846d90}{}\index{bridges\+::\+A\+V\+L\+Tree\+Element@{bridges\+::\+A\+V\+L\+Tree\+Element}!get\+Left@{get\+Left}}
+\index{get\+Left@{get\+Left}!bridges\+::\+A\+V\+L\+Tree\+Element@{bridges\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection[{get\+Left() override}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename E $>$ virtual {\bf A\+V\+L\+Tree\+Element}$\ast$ {\bf bridges\+::\+A\+V\+L\+Tree\+Element}$<$ K, E $>$\+::get\+Left (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\label{classbridges_1_1_a_v_l_tree_element_a7b5d05660da127f5f6164120d9846d90}
+\begin{DoxyReturn}{Returns}
+The left child 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classbridges_1_1_b_s_t_element_a4d8987373c75b51fca94e3c0b78b87a6}{bridges\+::\+B\+S\+T\+Element$<$ K, E $>$}.
+
+\hypertarget{classbridges_1_1_a_v_l_tree_element_a4e1d2bd4430627ef759479b9fcf5c98b}{}\index{bridges\+::\+A\+V\+L\+Tree\+Element@{bridges\+::\+A\+V\+L\+Tree\+Element}!get\+Left@{get\+Left}}
+\index{get\+Left@{get\+Left}!bridges\+::\+A\+V\+L\+Tree\+Element@{bridges\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection[{get\+Left() const  override}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename E $>$ virtual const {\bf A\+V\+L\+Tree\+Element}$\ast$ {\bf bridges\+::\+A\+V\+L\+Tree\+Element}$<$ K, E $>$\+::get\+Left (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\label{classbridges_1_1_a_v_l_tree_element_a4e1d2bd4430627ef759479b9fcf5c98b}
+Constant version
+
+\begin{DoxyReturn}{Returns}
+The left child 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classbridges_1_1_b_s_t_element_a6dc35e175e993ebed845297264cfbc06}{bridges\+::\+B\+S\+T\+Element$<$ K, E $>$}.
+
+\hypertarget{classbridges_1_1_a_v_l_tree_element_a909b46ebf3e8c6a3434762a1f01499e2}{}\index{bridges\+::\+A\+V\+L\+Tree\+Element@{bridges\+::\+A\+V\+L\+Tree\+Element}!get\+Right@{get\+Right}}
+\index{get\+Right@{get\+Right}!bridges\+::\+A\+V\+L\+Tree\+Element@{bridges\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection[{get\+Right() override}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename E $>$ virtual {\bf A\+V\+L\+Tree\+Element}$\ast$ {\bf bridges\+::\+A\+V\+L\+Tree\+Element}$<$ K, E $>$\+::get\+Right (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\label{classbridges_1_1_a_v_l_tree_element_a909b46ebf3e8c6a3434762a1f01499e2}
+\begin{DoxyReturn}{Returns}
+The right child 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classbridges_1_1_b_s_t_element_a35e93bce32de933522dccde5f2b5ffd9}{bridges\+::\+B\+S\+T\+Element$<$ K, E $>$}.
+
+\hypertarget{classbridges_1_1_a_v_l_tree_element_a45214b0f2d3b8acb78a5ce34333becd2}{}\index{bridges\+::\+A\+V\+L\+Tree\+Element@{bridges\+::\+A\+V\+L\+Tree\+Element}!get\+Right@{get\+Right}}
+\index{get\+Right@{get\+Right}!bridges\+::\+A\+V\+L\+Tree\+Element@{bridges\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection[{get\+Right() const  override}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename E $>$ virtual const {\bf A\+V\+L\+Tree\+Element}$\ast$ {\bf bridges\+::\+A\+V\+L\+Tree\+Element}$<$ K, E $>$\+::get\+Right (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\label{classbridges_1_1_a_v_l_tree_element_a45214b0f2d3b8acb78a5ce34333becd2}
+Constant version
+
+\begin{DoxyReturn}{Returns}
+The right child 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classbridges_1_1_b_s_t_element_af783aa676fe3fcbf4896f1dc21aabb9a}{bridges\+::\+B\+S\+T\+Element$<$ K, E $>$}.
+
+\hypertarget{classbridges_1_1_a_v_l_tree_element_a076ec482874d248764348e62dd4652d2}{}\index{bridges\+::\+A\+V\+L\+Tree\+Element@{bridges\+::\+A\+V\+L\+Tree\+Element}!set\+Balance\+Factor@{set\+Balance\+Factor}}
+\index{set\+Balance\+Factor@{set\+Balance\+Factor}!bridges\+::\+A\+V\+L\+Tree\+Element@{bridges\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection[{set\+Balance\+Factor(const int \&bf)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename E $>$ void {\bf bridges\+::\+A\+V\+L\+Tree\+Element}$<$ K, E $>$\+::set\+Balance\+Factor (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{bf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_a_v_l_tree_element_a076ec482874d248764348e62dd4652d2}
+Set the balance factor to \char`\"{}bf\char`\"{} 
+\begin{DoxyParams}{Parameters}
+{\em bf} & The balance factor of this \hyperlink{classbridges_1_1_a_v_l_tree_element}{A\+V\+L\+Tree\+Element}\\
+\hline
+{\em bf} & the balance factor to set at this node \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbridges_1_1_a_v_l_tree_element_acbf2a222b954e5d9221b109634822f96}{}\index{bridges\+::\+A\+V\+L\+Tree\+Element@{bridges\+::\+A\+V\+L\+Tree\+Element}!set\+Height@{set\+Height}}
+\index{set\+Height@{set\+Height}!bridges\+::\+A\+V\+L\+Tree\+Element@{bridges\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection[{set\+Height(const int \&h)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename E $>$ void {\bf bridges\+::\+A\+V\+L\+Tree\+Element}$<$ K, E $>$\+::set\+Height (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_a_v_l_tree_element_acbf2a222b954e5d9221b109634822f96}
+Set the height to \char`\"{}h\char`\"{} 
+\begin{DoxyParams}{Parameters}
+{\em h} & The height of this \hyperlink{classbridges_1_1_a_v_l_tree_element}{A\+V\+L\+Tree\+Element}\\
+\hline
+{\em h} & the height of the tree at this node \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbridges_1_1_a_v_l_tree_element_a19980980e712d10a1158272ecc44ef10}{}\index{bridges\+::\+A\+V\+L\+Tree\+Element@{bridges\+::\+A\+V\+L\+Tree\+Element}!set\+Left@{set\+Left}}
+\index{set\+Left@{set\+Left}!bridges\+::\+A\+V\+L\+Tree\+Element@{bridges\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection[{set\+Left(\+A\+V\+L\+Tree\+Element $\ast$l)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename E $>$ void {\bf bridges\+::\+A\+V\+L\+Tree\+Element}$<$ K, E $>$\+::set\+Left (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+V\+L\+Tree\+Element}$<$ K, E $>$ $\ast$}]{l}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_a_v_l_tree_element_a19980980e712d10a1158272ecc44ef10}
+Sets left to \char`\"{}l\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & The left tree element \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbridges_1_1_a_v_l_tree_element_a2e048abe8e79232effa92dfdbeac4a54}{}\index{bridges\+::\+A\+V\+L\+Tree\+Element@{bridges\+::\+A\+V\+L\+Tree\+Element}!set\+Right@{set\+Right}}
+\index{set\+Right@{set\+Right}!bridges\+::\+A\+V\+L\+Tree\+Element@{bridges\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection[{set\+Right(\+A\+V\+L\+Tree\+Element $\ast$r)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename E $>$ void {\bf bridges\+::\+A\+V\+L\+Tree\+Element}$<$ K, E $>$\+::set\+Right (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+V\+L\+Tree\+Element}$<$ K, E $>$ $\ast$}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_a_v_l_tree_element_a2e048abe8e79232effa92dfdbeac4a54}
+Sets right to \char`\"{}r\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The right \hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element} \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/krs/gr/bridges/cxx/git-\/cxx/src/\hyperlink{_a_v_l_tree_element_8h}{A\+V\+L\+Tree\+Element.\+h}\end{DoxyCompactItemize}
