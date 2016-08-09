@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>BRIDGES Java Setup Page(for IntellJ IDE)</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./bootstrap-3.3.6/dist/css/bootstrap.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="./bootstrap-3.3.6/dist/js/bootstrap.min.js"></script>
+	<script src="http://www.w3schools.com/lib/w3data.js"></script>
+	<link rel="stylesheet" type="text/css" href="./bootstrap/bridges.css">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="http://bridgesuncc.github.io">Home</a></li>
+				<li><a href="./bridges_team.html">BRIDGES Team</a></li>
+				<li><a href="mailto:tues-bridges-group@uncc.edu?Subject=Bridges%20Query">Contact Us</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="http://bridges-cs.herokuapp.com/login"><span class="glyphicon glyphicon-log-in"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+  
+<div class="container-fluid text-left">
+	<div class="row content">
+	<div class="col-md-2 sidenav">
+			<div w3-include-html="./left_sidebar.html"></div>
+			<script>
+				w3IncludeHTML(); 
+			</script>  
+	</div>
+	<div class="col-md-10 text-left"> 
+		<h3 class = "sep_heading">BRIDGES(Java): Getting Started(Using IntelliJ)</h3>
+		<table class = "table table-bordered">
+			<thead>
+				<tr> 
+					<td colspan = "2">
+					<b>Step 1: Install IntelliJ IDE</b>
+						<ul> 
+						<li> If you do not have BlueJ 
+							installed, download it from the 
+							<a href = "https://www.jetbrains.com/idea/"> 
+							IntelliJ IDEA site</a> and install it on your computer. 
+						<li> IntelliJ comes with  Java JDK 1.8, or you can configure
+							to point to your Java installation.
+						<li> Open IntelliJ application after installation
+					</td>
+				</tr>
+				<tr> 
+					<td colspan = "2">
+					<b>Step 2: Create Bridges Account</b> 
+						<ul> <li>  Visit the Bridges 
+							<a href = "http://bridgesuncc.github.io"> main page</a> 
+							and create yourself an account by clicking the login button
+							on the top navigation bar. After creating your account, click 
+							on your profile name in the upper right corner to 
+							view your profile. Once in your profile, you will see your
+							API Key; you will need this API key in part 2 
+							of the tutorial(as well as in every BRIDGES program 
+							you write). <b>NOTE:</b> Make sure to remember 
+							your password. There is no password recovery option, 
+							and you can only have one account per email address.
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class = "col-md-2"> <b>Step 3: Create a Java Project</b> 
+						<ul> 
+							<li> Open <i> File-->New-->Project</i> 
+							<li> Follow the Project menu directions and create a project
+								at a convenient location. This will create a new folder
+								on your drive.
+							<li> Create a new class file by clicking on the Project and
+								selecting(right click) <i> sllist-->New-->File</i> to 
+								create sllist.java
+							<li> Example on right shows a class named <b>sllist</b> that 
+									has been created.
+						</ul>
+					</td> 
+					<td class = "col-md-8">  
+						<img src = "./img/Tutorial/java/intellij/new_proj.png" width = "400"></img> 
+						<img src = "./img/Tutorial/java/intellij/new_file.png" width = "400"></img> 
+					</td>
+				</tr>
+				<tr>
+					<td class = "col-md-2"> <b>Step 4: Create a Bridges Program</b>
+						<ul> 
+							<li> We will illustrate a Singly Linked List Bridges program
+								here - for more details of this program, refer to the 
+								<a href = "http://bridgesuncc.github.io/Hello_World_Tutorials/Overview.html"> User Guide /Tutorials</a> 
+								that  provides fully documented Bridges examples for each 
+								data structure. 
+							<li> You may type in or copy/paste the BRIDGES program 
+									to <b>sllist.java</b> created in <b>Step 3</b>
+						</ul>
+					</td>
+					<td class = "col-md-8">  
+						<img src = "./img/Tutorial/java/intellij/sllist_src.png" width = "800"></img>
+					</td>
+				</tr>
+				<tr> <td class = "col-md-2"> <b>Step 5: Import Jar File into project</b>
+					<ul>
+						<li> Download the Bridges.jar file from 
+							<a href = "http://bridgesuncc.github.io/sw/bridges-2.2.0.jar">
+								this link </a> and save it somewhere convenient 
+								on your drive.
+						<li> On IntelliJ, right click on your project and select 
+							<i>Open  Module Settings</i> Select <i>Modules</i> which will
+								show all the modules/Jars currently loaded.
+						<li> Click on the <i>+ </i> button on the bottom left of the 
+							window, and select <i>1. Jars or Directories</i>. Navigate
+							to the folder containing the BRIDGES Jar file and load it in.
+						<li> You should now see the BRIDGES Jar file as part of the 
+								project. Hit Ok to get rid of the window.
+					</ul>
+					</td>
+					<td class = "col-md-8"> 
+					<img src = "./img/Tutorial/java/intellij/settings1.png" width = "400"></img>
+					<img src = "./img/Tutorial/java/intellij/settings2.png" width = "400"></img>
+                    </td>
+				</tr>
+				<tr>
+					<td class = "col-md-2"> <b>Step 6: Compile and Execute Bridges 
+											Program</b>
+						<ul> 
+							<li> To compile the project, click on the 
+								<i>Build-->Make Project </i> button on the main window
+								or click on the Project and select 
+								<i>Make Module sllist</i>
+							<li> To execute the program, either select 
+							<i> Run-->sllist</i> on the main application or in the editor
+								right click on the main() method and select 
+							<i> Run-->sllist.main()</i>.
+							<li> On the console window, the user will be pointed to a
+								web link for viewing the visualization of the 
+								singly linked list.
+						</ul>
+					</td>
+					<td class = "col-md-8">  
+						<img src = "./img/Tutorial/java/intellij/run.png" width = "400"></img>
+						<img src = "./img/Tutorial/java/intellij/run2.png" width = "400"></img>
+					</td>
+				</tr>
+				<tr>
+					<td class = "col-md-2"> <b>Step 7: Visualization</b>
+						<ul>
+							<li> If your program compiles and executes  without errors 
+								the weblink points to a visualization of your data 
+								structure.
+							<li> Click/Paste this link in your browser and see the result.
+							<li> Your visualization should look something like this.
+							<li> You can do limited interactive operations on  the
+								display window - move the nodes, mouse over to see labels,									move the entire visualization, etc.
+						</ul>
+					</td>
+					<td class = "col-md-8">  
+						<img src = "./img/Tutorial/java/intellij/vis.png" width = "800"></img>
+					</td>
+				</tr>
+			</thead>
+		</table>
+	</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
