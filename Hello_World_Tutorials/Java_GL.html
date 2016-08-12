@@ -20,7 +20,7 @@
 <h3>Inside our Main</h3>
 <ul>
   <li>First we need to create our Bridges object and initialize our Bridges Credentials</li>
-    <code>Bridges&lt;String&gt; bridges = new Bridges&lt;&gt;(5, "YOUR_API_KEY", "YOUR_USER_ID");</code>
+    <code>Bridges&lt;String, String&gt; bridges = new Bridges&lt;&gt;(5, "YOUR_API_KEY", "YOUR_USER_ID");</code>
 Note that you must replace the above strings with your BRIDGES credentials.
   <li>Then we can create our GraphAdjList</li>
     <code>GraphAdjList&lt;String,String&gt; g = new GraphAdjList&lt;&gt;();</code>
@@ -55,7 +55,7 @@ strings</li>
         public static void main(String[] args) throws Exception
         {
             //create the Bridges object
-            Bridges&lt;String&gt; bridges = new Bridges&lt;&gt;(5, "YOUR_API_KEY", "YOUR_USER_ID");
+            Bridges&lt;String, String&gt; bridges = new Bridges&lt;&gt;(5, "YOUR_API_KEY", "YOUR_USER_ID");
             
             //create graph
             GraphAdjList&lt;String,String&gt; g = new GraphAdjList&lt;&gt;();

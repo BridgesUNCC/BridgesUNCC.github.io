@@ -20,7 +20,7 @@
 <h3>Inside our Main</h3>
 <ul>
   <li>First we need to create our Bridges object and initialize our Bridges Credentials</li>
-    <code>Bridges&lt;String&gt; bridge = new Bridges&lt;&gt;(3, "YOUR_API_KEY", "YOUR_USER_ID");</code>
+    <code>Bridges&lt;String, String&gt; bridge = new Bridges&lt;&gt;(3, "YOUR_API_KEY", "YOUR_USER_ID");</code>
 <p>
 Please note that the two fields above need to be replaced by your BRIDGES 
 credentials.
@@ -51,7 +51,7 @@ credentials.
         public static void main(String[] args) throws Exception
         {
             //create the Bridges object
-            Bridges&lt;String&gt; bridge = new Bridges&lt;&gt;(3, "YOUR_API_KEY", "YOUR_USER_ID");
+            Bridges&lt;String, String&gt; bridge = new Bridges&lt;&gt;(3, "YOUR_API_KEY", "YOUR_USER_ID");
             
             //create elements
             TreeElement&lt;String&gt; e0 = new TreeElement&lt;&gt;("", "");

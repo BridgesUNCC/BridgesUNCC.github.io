@@ -20,7 +20,7 @@
 <h3>Inside our Main</h3>
 <ul>
   <li>First we need to create our Bridges object and initialize our Bridges Credentials</li>
-    <code>Bridges&lt;String&gt; bridges = new Bridges&lt;&gt;(4, "YOUR_API_KEY", "YOUR_USER_ID");</code>
+    <code>Bridges&lt;Integer, String&gt; bridges = new Bridges&lt;&gt;(4, "YOUR_API_KEY", "YOUR_USER_ID");</code>
   <li>Then we can create our TreeElements</li>
     <code>
       BSTElement&lt;Integer,String&gt; e0 = new BSTElement&lt;&gt;("",0, "");
@@ -47,7 +47,7 @@
         public static void main(String[] args) throws Exception
         {
             //create the Bridges object
-            Bridges&lt;String&gt; bridges = new Bridges&lt;&gt;(4, "YOUR_API_KEY", "YOUR_USER_ID");
+            Bridges&lt;Integer, String&gt; bridges = new Bridges&lt;&gt;(4, "YOUR_API_KEY", "YOUR_USER_ID");
             
             //create elements
             BSTElement&lt;Integer,String&gt; e0 = new BSTElement&lt;&gt;("",0, "");
