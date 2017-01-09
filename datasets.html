@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>BRIDGES Assignments(UNC Charlotte)</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./bootstrap-3.3.6/dist/css/bootstrap.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="./bootstrap-3.3.6/dist/js/bootstrap.min.js"></script>
+	<script src="http://www.w3schools.com/lib/w3data.js"></script> 
+	<link rel="stylesheet" type="text/css" href="./bootstrap/bridges.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="http://bridgesuncc.github.io">Home</a></li>
+        <li><a href="./bridges_team.html">BRIDGES Team</a></li>
+        <li><a href="mailto:tues-bridges-group@uncc.edu?Subject=Bridges%20Query">Contact Us</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://bridges-cs.herokuapp.com/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid text-left">
+	<div class="row content">
+		<div class="col-md-2 sidenav">
+			<div w3-include-html="./left_sidebar.html"> </div>
+			<script>
+				w3IncludeHTML(); 
+			</script>
+		</div>
+    	<div class="col-md-6 text-left"> 
+			<div>
+			<h3 class = "sep_heading">BRIDGES Datasets(UNC Charlotte)</h3>
+			<p class = "vert_space"> </p>
+			<p> <i> Most BRIDGES datasets are  held  in a Mongo 
+				database with BRIDGES API calls to access them, including
+				on-demand streaming data; some of the older datasets that
+				were held in files are included below in their original
+				form. Currently ongoing effort to access 
+				<a href="http://think.cs.vt.edu/corgis/"> Corgis Datasets</a>, 				via BRIDGES.  </i><p>
+			<ul style = "list-style-type:circle"> 
+				<li> <a href = "./project_data/datasets/large_imdb.txt"> 
+						Curated IMDB (Actor/Movie) Data</a></li>
+				<li> USGS Earthquake Twitter Feed Data
+					(Accessed in a sane manner as a list of objects via
+					the BRIDGES API)
+					<a href = 
+						"http://earthquakes-uncc.herokuapp.com/eq/latest/100"> 
+						Example command to retrieve 100 most  recent 
+						earthquake Tweets</a>" 
+				<li> Video Game Review Data (extracted via BRIDGES API)
+					<a href ="http://bridgesdata.herokuapp.com/api/games">
+					Example query to retrieve Video Game Review Data</a>
+				<li> Shakespeare Books, Plays, Poems (Metadata only)
+					(Accessed in a sane manner as a list of objects via
+					the BRIDGES API)
+					<a href="http://bridgesdata.herokuapp.com/api/shakespeare/">
+					Example query to retrieve Video Game Review Data</a>
+				<li> Books
+					(Accessed in a sane manner as a list of objects via
+					the BRIDGES API)
+					<a href = "http://bridgesdata.herokuapp.com/api/books/">
+					Example query to retrieve Book Data</a>
+			</ul>
+			</div>
+			<p> <p>
+		</div>
+	</div>
+<p>
+<p>
+</div>
+<footer class="container-fluid text-center">
+  <p>All rights reserved, Copyright @2016, The University of North Carolinat at Charlotte</p>
+</footer>
+</body>
+</html>
+
