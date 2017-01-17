@@ -5,7 +5,7 @@
 %%For: 
 %Magnification: 1.00
 %%Orientation: Portrait
-%%BoundingBox: 0 0 500 124.481328
+%%BoundingBox: 0 0 500 165.975104
 %%Pages: 0
 %%BeginSetup
 %%EndSetup
@@ -19,13 +19,13 @@
 /marginwidth 10 def
 /distx 20 def
 /disty 40 def
-/boundaspect 4.016667 def  % aspect ratio of the BoundingBox (width/height)
+/boundaspect 3.012500 def  % aspect ratio of the BoundingBox (width/height)
 /boundx 500 def
 /boundy boundx boundaspect div def
 /xspacing 0 def
 /yspacing 0 def
 /rows 6 def
-/cols 4 def
+/cols 3 def
 /scalefactor 0 def
 /boxfont /Times-Roman findfont fontheight scalefont def
 
@@ -175,10 +175,11 @@ boxfont setfont
 1 boundaspect scale
 (bridges.base.Element< E >) cw
 (bridges.base.DataStruct) cw
-(bridges.base.ArrayElement< E >) cw
 (bridges.base.DLelement< E >) cw
 (bridges.base.SLelement< E >) cw
 (bridges.base.TreeElement< E >) cw
+(bridges.base.CircDLelement< E >) cw
+(bridges.base.CircSLelement< E >) cw
 (bridges.base.BinTreeElement< E >) cw
 (bridges.base.BSTElement< K, E >) cw
 (bridges.base.AVLTreeElement< K, E >) cw
@@ -193,43 +194,50 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (bridges.base.Element< E >) 1.500000 4.000000 box
- (bridges.base.DataStruct) 1.500000 5.000000 box
- (bridges.base.ArrayElement< E >) 0.000000 3.000000 box
- (bridges.base.DLelement< E >) 1.000000 3.000000 box
- (bridges.base.SLelement< E >) 2.000000 3.000000 box
- (bridges.base.TreeElement< E >) 3.000000 3.000000 box
- (bridges.base.BinTreeElement< E >) 3.000000 2.000000 box
- (bridges.base.BSTElement< K, E >) 3.000000 1.000000 box
- (bridges.base.AVLTreeElement< K, E >) 3.000000 0.000000 box
+ (bridges.base.Element< E >) 1.000000 4.000000 box
+ (bridges.base.DataStruct) 1.000000 5.000000 box
+ (bridges.base.DLelement< E >) 0.000000 3.000000 box
+ (bridges.base.SLelement< E >) 1.000000 3.000000 box
+ (bridges.base.TreeElement< E >) 2.000000 3.000000 box
+ (bridges.base.CircDLelement< E >) 0.000000 2.000000 box
+ (bridges.base.CircSLelement< E >) 1.000000 2.000000 box
+ (bridges.base.BinTreeElement< E >) 2.000000 2.000000 box
+ (bridges.base.BSTElement< K, E >) 2.000000 1.000000 box
+ (bridges.base.AVLTreeElement< K, E >) 2.000000 0.000000 box
 
 % ----- relations -----
 
 solid
-0 1.500000 4.000000 out
+0 1.000000 4.000000 out
 solid
-1 1.500000 5.000000 in
+1 1.000000 5.000000 in
 solid
-1 1.500000 3.250000 out
+1 1.000000 3.250000 out
 solid
-0.000000 3.000000 4.000000 conn
+0.000000 2.000000 4.000000 conn
 solid
 0 0.000000 3.750000 in
 solid
+1 0.000000 2.250000 out
+solid
 0 1.000000 3.750000 in
+solid
+1 1.000000 2.250000 out
 solid
 0 2.000000 3.750000 in
 solid
-0 3.000000 3.750000 in
+1 2.000000 2.250000 out
 solid
-1 3.000000 2.250000 out
+0 0.000000 2.750000 in
 solid
-0 3.000000 2.750000 in
+0 1.000000 2.750000 in
 solid
-1 3.000000 1.250000 out
+0 2.000000 2.750000 in
 solid
-0 3.000000 1.750000 in
+1 2.000000 1.250000 out
 solid
-1 3.000000 0.250000 out
+0 2.000000 1.750000 in
 solid
-0 3.000000 0.750000 in
+1 2.000000 0.250000 out
+solid
+0 2.000000 0.750000 in
