@@ -6,13 +6,13 @@
 <h3>Setup our DataStructure</h3>
   <ul>
     <li>To showcase both element and edge visualization changes we will use DLelements</li>
-    <code>
+    <pre class="prettyprint">
       //See DLelement Guide
       DLelement&lt;string&gt; e0("","Original");
       DLelement&lt;string&gt; e1("","Changed");
       e0.setNext(e1);
       e1.setPrev(e0);
-    </code>
+    </pre>
     <li>
       In this example we will keep e0 and e0's next edge default, 
       while changing e1 and e1's prev edge.
@@ -22,19 +22,19 @@
 <h3>Element Visualization changing</h3>
 <ul>
   <li>Color can be changed like this:</li>
-    <code>e1.setColor(Color(0,0,255,128));</code>
+    <pre class="prettyprint">e1.setColor(Color(0,0,255,128));</pre>
   <li>Size can be changed like this:</li>
-    <code>e1.setSize(20);</code>
+    <pre class="prettyprint">e1.setSize(20);</pre>
   <li>Shape can be changed like this:</li>
-    <code>e1.setShape(DIAMOND);</code>
+    <pre class="prettyprint">e1.setShape(DIAMOND);</pre>
 </ul>
 
 <h3>Edge Visualization changing</h3>
 <ul>
   <li>Obtain the LinkVisualizer between the elements.</li>
-    <code>LinkVisualizer* lv = e1.getLinkVisualizer(&e0);</code>
+    <pre class="prettyprint">LinkVisualizer* lv = e1.getLinkVisualizer(&e0);</pre>
   <li>Color can be changed like this:</li>
-    <code>lv-&gt;setColor(Color(255,0,0,128));</code>
+    <pre class="prettyprint">lv-&gt;setColor(Color(255,0,0,128));</pre>
   <li>Thickness can be changed like this:</li>
-    <code>lv-&gt;setThickness(5);</code>
+    <pre class="prettyprint">lv-&gt;setThickness(5);</pre>
 </ul>

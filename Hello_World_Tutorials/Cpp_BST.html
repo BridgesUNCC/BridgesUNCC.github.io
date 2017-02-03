@@ -4,43 +4,43 @@
 <ul>
   <li>We need to include these Bridges headers to give access to all the classes/methods needed to interact with Bridges</li>
   <li>In your .cpp file, enter the following code snippets:</li>
-    <code>
+    <pre class="prettyprint">
         #include "BSTElement.h"
         #include "Bridges.h"
-    </code>
+    </pre>
 </ul>
 
 <h3>Namespace</h3>
 <ul>
   <li>By using this namespace we can forgo messy scope specifiers in our code for our Bridges calls</li>
   <li>In your .cpp file, enter the following code snippet:</li>
-    <code>using namespace bridges;</code>
+    <pre class="prettyprint">using namespace bridges;</pre>
 </ul>
 
 <h3>Inside our Main</h3>
 <ul>
   <li>First we need to initialize our Bridges Credentials</li>
-    <code>Bridges::initialize(4, "YOUR_API_KEY","YOUR_USER_ID",4);</code>
+    <pre class="prettyprint">Bridges::initialize(4, "YOUR_API_KEY","YOUR_USER_ID",4);</pre>
 Note that the above 2 parameters  need to be replaced by your BRIDGES 
 credentials.
   <li>Then we can create our BSTElements</li>
-    <code>
+    <pre class="prettyprint">
       BSTElement&lt;int,string&gt; e0(0,"","");
       BSTElement&lt;int,string&gt; e1(-1,"","Hello");
       BSTElement&lt;int,string&gt; e2(1,"","World");
-    </code>
+    </pre>
   <li>Now link the TreeElements together</li>
-    <code>
+    <pre class="prettyprint">
       e0.setLeft(&e1);
       e0.setRight(&e2);
-    </code>
+    </pre>
   <li>Now we pass the first element of our datastruture to Bridges</li>
-    <code>Bridges::setDataStructure(&e0);</code>
+    <pre class="prettyprint">Bridges::setDataStructure(&e0);</pre>
   <li>Finnaly we call the visualize function</li>
-    <code>Bridges::visualize();</code>
+    <pre class="prettyprint">Bridges::visualize();</pre>
 </ul>
 <h4><strong>Code Summary:</strong> Your .cpp file should look like this</h4>
-  <code>
+  <pre class="prettyprint">
     #include "BSTElement.h"
     #include "Bridges.h"
     
@@ -66,4 +66,4 @@ credentials.
         //visualize data structure
         Bridges::visualize();
     }
-  </code>
+  </pre>

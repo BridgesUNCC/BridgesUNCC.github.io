@@ -7,9 +7,13 @@
   <meta name="author" content="Bridges"/>
   <meta name="description" content="Bridges Tutorials"/>
 
+<script src="//rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true&skin=desert&lang=java" defer></script>
+
+
   <link rel="stylesheet" type="text/css" href="./tutorial.css" />
   <link rel="shortcut icon" href="http://bridgesuncc.github.io/favicon.png"/>
-  <script src="./tutorial.js"></script>
+  <script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="./tutorial.js"></script>
   <title>Bridges - Hello World Visualization Tutorial</title>
 </head>
 
@@ -53,45 +57,45 @@
         <ul>
           <li>We need to include these Bridges files to give access to all the classes/methods needed to interact with Bridges</li>
           <li>In your .java file, enter the following code snippets:</li>
-            <code>
+            <pre class="prettyprint">
               import bridges.connect.Bridges;
               import bridges.base.CircDLelement;
-            </code>
+            </pre>
         </ul>
 
         <h3>Main Exception</h3>
           <ul>
             <li>By adding a throw exception we can forgo messy try/catch blocks in our code for our Bridges calls</li>
             <li>In your .java file, add a throw exception to the main function so it looks like this:</li>
-              <code>public static void main(String[] args) throws Exception</code>
+              <pre class="prettyprint">public static void main(String[] args) throws Exception</pre>
           </ul>
 
         <h3>Inside our Main</h3>
         <ul>
           <li>First we need to create our Bridges object and initialize our Bridges Credentials</li>
-            <code>Bridges&lt;String, String&gt; bridge = new Bridges&lt;String,String&gt;(2, "YOUR_API_KEY", "YOUR_USER_ID");</code>
+            <pre class="prettyprint">Bridges&lt;String, String&gt; bridge = new Bridges&lt;String,String&gt;(2, "YOUR_API_KEY", "YOUR_USER_ID");</pre>
         <p>
         	Note that you must replace the above strings with your BRIDGES credentials.
         <p>
           <li>Then we can create our CircDLelement</li>
-            <code>
+            <pre class="prettyprint">
               CircDLelement&lt;String&gt; e0 = new CircDLelement&lt;&gt;("Hello", "");
               CircDLelement&lt;String&gt; e1 = new CircDLelement&lt;&gt;("World", "");
               CircDLelement&lt;String&gt; e2 = new CircDLelement&lt;&gt;("!", "");
-            </code>
+            </pre>
           <li>Now insert the CircDLelement into the list.</li>
-            <code>
+            <pre class="prettyprint">
                 CircDLelement<String> tail = el0;
                 tail = insertFront(tail, el1);
                 tail = insertFront(tail, el2);
-            </code>
+            </pre>
           <li>Now we pass the first element of our datastruture to Bridges</li>
-            <code>bridge.setDataStructure(e0);</code>
+            <pre class="prettyprint">bridge.setDataStructure(e0);</pre>
           <li>Finally we call the visualize function</li>
-            <code>bridge.visualize();</code>
+            <pre class="prettyprint">bridge.visualize();</pre>
         </ul>
         <h4><strong>Code Summary:</strong> Your .java file should look like this</h4>
-          <code>
+          <pre class="prettyprint">
             import bridges.connect.Bridges;
             import bridges.base.CircDLelement;
 
@@ -119,7 +123,7 @@
                     bridge.visualize();
                 &#125;
             &#125;
-          </code>
+          </pre>
 
       </div>
 
@@ -130,34 +134,34 @@
         <ul>
           <li>We need to include these Bridges headers to give access to all the classes/methods needed to interact with Bridges</li>
           <li>In your .cpp file, enter the following code snippets:</li>
-            <code>
+            <pre class="prettyprint">
               #include "Bridges.h"
               #include "CircDLelement.h"
-            </code>
+            </pre>
         </ul>
 
         <h3>Namespace</h3>
         <ul>
           <li>By using this namespace we can forgo messy scope specifiers in our code for our Bridges calls</li>
           <li>In your .cpp file, enter the following code snippet:</li>
-            <code>using namespace bridges;</code>
+            <pre class="prettyprint">using namespace bridges;</pre>
         </ul>
 
         <h3>Inside our Main</h3>
         <ul>
           <li>First we need to initialize our Bridges Credentials</li>
-            <code>Bridges::initialize(2, "YOUR_API_KEY","YOUR_USER_ID");</code>
+            <pre class="prettyprint">Bridges::initialize(2, "YOUR_API_KEY","YOUR_USER_ID");</pre>
         <p>
         Note that you must  replace the two strings above with your BRIDGES credentials.
         <p>
           <li>Then we can create our CircDLelements</li>
-            <code>
+            <pre class="prettyprint">
               CircDLelement&lt;int&gt; *el0 = new CircDLelement&lt;int&gt;(0,"Hello");
               CircDLelement&lt;int&gt; *el1 = new CircDLelement&lt;int&gt;(0,"World");
               CircDLelement&lt;int&gt; *el2 = new CircDLelement&lt;int&gt;(0, "!");
-            </code>
+            </pre>
           <li>Now link the CircDLelements together</li>
-            <code>
+            <pre class="prettyprint">
               //forward links
               el0.setNext(el1);
               el1.setNext(el2);
@@ -169,14 +173,14 @@
               el1.setNext(el0);
               el2.setPrev(el1);
               el1.setPrev(el2);
-            </code>
+            </pre>
           <li>Now we pass the first element of the doubly linked list to Bridges</li>
-            <code>Bridges::setDataStructure(el0);</code>
+            <pre class="prettyprint">Bridges::setDataStructure(el0);</pre>
           <li>Finally we call the visualize function</li>
-            <code>Bridges::visualize();</code>
+            <pre class="prettyprint">Bridges::visualize();</pre>
         </ul>
         <h4><strong>Code Summary:</strong> Your .cpp file should look like this</h4>
-          <code>
+          <pre class="prettyprint">
             #include "Bridges.h"
             #include "CircDLelement.h"
 
@@ -212,7 +216,7 @@
                 //visualize data structure
                 Bridges::visualize();
             &#125;
-          </code>
+          </pre>
 
       </div>
     </div>

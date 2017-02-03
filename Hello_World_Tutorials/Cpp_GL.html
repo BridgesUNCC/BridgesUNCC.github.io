@@ -4,48 +4,48 @@
 <ul>
   <li>We need to include these Bridges headers to give access to all the classes/methods needed to interact with Bridges</li>
   <li>In your .cpp file, enter the following code snippets:</li>
-    <code>
+    <pre class="prettyprint">
       #include "GraphAdjList.h"
       #include "Bridges.h"
-    </code>
+    </pre>
 </ul>
 
 <h3>Namespace</h3>
 <ul>
   <li>By using this namespace we can forgo messy scope specifiers in our code for our Bridges calls</li>
   <li>In your .cpp file, enter the following code snippet:</li>
-    <code>using namespace bridges;</code>
+    <pre class="prettyprint">using namespace bridges;</pre>
 </ul>
 
 <h3>Inside our Main</h3>
 <ul>
   <li>First we need to initialize our Bridges Credentials</li>
-    <code>Bridges::initialize(5, "YOUR_API_KEY","YOUR_USER_ID");</code>
+    <pre class="prettyprint">Bridges::initialize(5, "YOUR_API_KEY","YOUR_USER_ID");</pre>
 	Note that you must replace the above 2 strings with your BRIDGES credentials
   <li>Then we can create our GraphAdjList</li>
-    <code>GraphAdjList&lt;string,int&gt; g;</code>
+    <pre class="prettyprint">GraphAdjList&lt;string,int&gt; g;</pre>
   <li>Now add some verticies to the graph. We use strings as vertex ids in this example</li>
-    <code>
+    <pre class="prettyprint">
       g.addVertex("He",0);
       g.addVertex("llo",0);
       g.addVertex("Wo",0);
       g.addVertex("rld",0);
-    </code>
+    </pre>
   <li>Now add some edges between these vertices to the graph</li>
-    <code>
+    <pre class="prettyprint">
       g.addEdge("He","llo",1);
       g.addEdge("llo","Wo",1);
       g.addEdge("Wo","rld",1);
       g.addEdge("He","Wo",1);
       g.addEdge("He","rld",1);
-    </code>
+    </pre>
   <li>Now we pass the graph object to BRIDGES</li>
-    <code>Bridges::setDataStructure(&g);</code>
+    <pre class="prettyprint">Bridges::setDataStructure(&g);</pre>
   <li>Finaly we visualize the graph</li>
-    <code>Bridges::visualize();</code>
+    <pre class="prettyprint">Bridges::visualize();</pre>
 </ul>
 <h4><strong>Code Summary:</strong> Your .cpp file should look like this</h4>
-  <code>
+  <pre class="prettyprint">
     #include "GraphAdjList.h"
     #include "Bridges.h"
   
@@ -78,4 +78,4 @@
         //visualize data structure
         Bridges::visualize();
     }
-  </code>
+  </pre>

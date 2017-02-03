@@ -7,9 +7,15 @@
   <meta name="author" content="Bridges"/>
   <meta name="description" content="Bridges Tutorials"/>
 
+  <script src="//rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true&amp;skin=desert&amp;lang=java" defer></script>
+
   <link rel="stylesheet" type="text/css" href="./tutorial.css" />
   <link rel="shortcut icon" href="http://bridgesuncc.github.io/favicon.png"/>
+  <script src="http://www.w3schools.com/lib/w3data.js"></script>
   <script src="./tutorial.js"></script>
+
+
+
   <title>Bridges - Hello World Visualization Tutorial</title>
 </head>
 
@@ -20,7 +26,7 @@
 
 <main>
   <br>
-  Array&lt;E&gt; implements a <i>array</i> in BRIDGES, and it can be used to create arrays of type Element&lt;E&gt;
+  Array&lt;E&amp;gt; implements a <i>array</i> in BRIDGES, and it can be used to create arrays of type Element&lt;E&gt;
 <!-- SLelement&lt;E&gt; implements a <i>doubly linked list</i> in BRIDGES and is
 inherited from Element&lt;E&gt;
 <br><br><img width="175em" src="./images/slelement-cd.png"><br><br>
@@ -58,27 +64,27 @@ element came before it. So, you CANNOT go backwards.
                     <ul>
                         <li>We need to include these Bridges files to give access to all the classes/methods needed to interact with Bridges</li>
                         <li>In your .java file, enter the following code snippets:</li>
-                        <code>
+                        <pre class="prettyprint">
 import bridges.connect.Bridges;
 import bridges.base.Array;
 import bridges.base.Element;
-          </code>
+          </pre>
                     </ul>
 
                     <h3>Main Exception</h3>
                     <ul>
                         <li>By adding a throw exception we can forgo messy try/catch blocks in our code for our Bridges calls</li>
                         <li>In your .java file, add a throw exception to the main function so it looks like this:</li>
-                        <code>public static void main(String[] args) throws Exception</code>
+                        <pre class="prettyprint">public static void main(String[] args) throws Exception</pre>
                     </ul>
 
                     <h3>Inside our Main</h3>
                     <ul>
                         <li>First we need to create our BRIDGES object and initialize our BRIDGES Credentials</li>
-                        <code>Bridges&lt;String, String&gt; bridge = new Bridges&lt;String,String&gt;(1, "YOUR_API_KEY", "YOUR_USER_ID");</code> Note that you will need to replace the two fields in this call with your BRIDGES credentials.
+                        <pre class="prettyprint">Bridges&lt;String, String&gt; bridge = new Bridges&lt;String,String&gt;(1, "YOUR_API_KEY", "YOUR_USER_ID");</pre> Note that you will need to replace the two fields in this call with your BRIDGES credentials.
                         <p>
                             <li>Then we can create our Array</li>
-                            <code>
+                            <pre class="prettyprint">
 //declare array size
 int arraySize = 10;
 
@@ -86,33 +92,33 @@ int arraySize = 10;
 //(10,1,1) for 1D array, where 10 is the array size
 int[] dims = &#123;arraySize, 1, 1&#125;;
 Array&lt;Integer&gt; my_array = new Array&lt;Integer&gt; (1, dims);
-          </code>
+          </pre>
                             <li>Now populate the array with dummy data.</li>
-                            <code>
+                            <pre class="prettyprint">
 for (int k = 0; k &lt; my_array.getSize(); k++)&#123;
     my_array.setValue(k, new Element&lt;Integer&gt;(String.valueOf(k), k*k));
     my_array.getValue(k).getVisualizer().setColor("red");
 &#125;
-          </code>
+          </pre>
 
 
                             <li>Now change the color of the elements.</li>
-<code>
+<pre class="prettyprint">
 my_array.getValue(1).getVisualizer().setColor("green");
 my_array.getValue(3).getVisualizer().setColor("blue");
 my_array.getValue(5).getVisualizer().setColor("magenta");
 my_array.getValue(7).getVisualizer().setColor("cyan");
 my_array.getValue(9).getVisualizer().setColor("yellow");
-</code>
+</pre>
 
 
                             <li>Now we pass the array object to BRIDGES</li>
-                            <code>bridge.setDataStructure(my_array);</code>
+                            <pre class="prettyprint">bridge.setDataStructure(my_array);</pre>
                             <li>Finally we call the visualize function</li>
-                            <code>bridge.visualize();</code>
+                            <pre class="prettyprint">bridge.visualize();</pre>
                     </ul>
                     <h4><strong>Code Summary:</strong> Your .java file should look like this</h4>
-                    <code>
+                    <pre class="prettyprint">
 
 import bridges.connect.Bridges;
 import bridges.base.Array;
@@ -152,7 +158,7 @@ public static void main(String[] args) throws Exception&#123;
     bridges.visualize();
     &#125;
 &#125;
-</code>
+</pre>
 
                 </div>
                 <div id="C++" class="tab">
@@ -162,52 +168,52 @@ public static void main(String[] args) throws Exception&#123;
                     <ul>
                         <li>We need to include these Bridges headers to give access to all the classes/methods needed to interact with Bridges</li>
                         <li>In your .cpp file, enter the following code snippets:</li>
-                        <code>
+                        <pre class="prettyprint">
 #include "Bridges.h"
 #include "Element.h"
-          </code>
+          </pre>
                     </ul>
 
                     <h3>Namespace</h3>
                     <ul>
                         <li>By using this namespace we can forgo messy scope specifiers in our code for our Bridges calls</li>
                         <li>In your .cpp file, enter the following code snippet:</li>
-                        <code>using namespace bridges;</code>
+                        <pre class="prettyprint">using namespace bridges;</pre>
                     </ul>
 
                     <h3>Inside our Main</h3>
                     <ul>
                         <li>First we need to initialize our Bridges Credentials</li>
-                        <code>Bridges::initialize(1, "YOUR_API_KEY","YOUR_USER_ID");</code>
+                        <pre class="prettyprint">Bridges::initialize(1, "YOUR_API_KEY","YOUR_USER_ID");</pre>
                         <p>
                             Note that you must replace the two strings above with your BRIDGES credentials.
                             <p>
                                 <li>Then we can create our Array.</li>
-                                <code>
+                                <pre class="prettyprint">
 Element&lt;string> *el_array = new Element&lt;string>[10];
 
-          </code>
+          </pre>
                                 <li>Now populate the array with dummy data.</li>
-                                <code>
+                                <pre class="prettyprint">
 for (int k = 0; k &lt; 10; k++)
     el_array[k].setLabel("Element " + to_string(k));
-          </code>
+          </pre>
                                 <li>Now change the color of the elements.</li>
-                                <code>
+                                <pre class="prettyprint">
 el_array[0].getVisualizer()-&gt;setColor(Color("red"));
 el_array[1].getVisualizer()-&gt;setColor(Color("green"));
 el_array[3].getVisualizer()-&gt;setColor(Color("blue"));
 el_array[5].getVisualizer()-&gt;setColor("magenta");
 el_array[7].getVisualizer()-&gt;setColor("cyan");
 el_array[9].getVisualizer()-&gt;setColor("yellow");
-          </code>
+          </pre>
                                 <li>Now we pass the first element of our singly linked list to Bridges</li>
-                                <code>Bridges::setDataStructure(el_array, 10);</code>
+                                <pre class="prettyprint">Bridges::setDataStructure(el_array, 10);</pre>
                                 <li>Finally we call the visualize function</li>
-                                <code>Bridges::visualize();</code>
+                                <pre class="prettyprint">Bridges::visualize();</pre>
                     </ul>
                     <h4><strong>Code Summary:</strong> Your .cpp file should look like this</h4>
-                    <code>
+                    <pre class="prettyprint">
 #include &lt;iostream&gt;
 #include &lt;string&gt;
 
@@ -249,7 +255,7 @@ int main() &#123;
 
 	return 0;
 &#125;
-        </code>
+        </pre>
 
                 </div>
             </div>

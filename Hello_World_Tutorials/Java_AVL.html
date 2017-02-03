@@ -4,59 +4,59 @@
 <ul>
   <li>We need to include these Bridges files to give access to all the classes/methods needed to interact with Bridges</li>
   <li>In your .java file, enter the following code snippets:</li>
-    <code>
+    <pre class="prettyprint">
       import bridges.connect.Bridges;
       import bridges.base.BSTElement;
-    </code>
+    </pre>
 </ul>
 
 <h3>Main Exception</h3>
 <ul>
   <li>By adding a throw exception we can forgo messy try/catch blocks in our code for our Bridges calls</li>
   <li>In your .java file, add a throw exception to the main function so it looks like this:</li>
-    <code>public static void main(String[] args) throws Exception</code>
+    <pre class="prettyprint">public static void main(String[] args) throws Exception</pre>
 </ul>
 
 <h3>Inside our Main</h3>
 <ul>
   <li>First we need to create our Bridges object and initialize our Bridges Credentials</li>
-    <code>Bridges&lt;Integer, String&gt; bridges = new Bridges&lt;&gt;(4, "YOUR_API_KEY", "YOUR_USER_ID");</code>
+    <pre class="prettyprint">Bridges&lt;Integer, String&gt; bridges = new Bridges&lt;&gt;(4, "YOUR_API_KEY", "YOUR_USER_ID");</pre>
   <li>Then we can create our AVL Tree elements; here we will show a simple example of an AVL tree manually created with balance factors manually put in; in a 
 real project, students will implement insert/delete/find operations on the tree that will automatically maintain these balance factors after AVL tree 
 rotations.</li>
-<code>
+<pre class="prettyprint">
 	AVLTreeElement avl_root = new AVLTreeElement<Integer, String>(50, "Hello");
 	AVLTreeElement avl_2 = new AVLTreeElement<Integer, String>(30, "This");
 	AVLTreeElement avl_3 = new AVLTreeElement<Integer, String>(70, "is");
 	AVLTreeElement avl_4 = new AVLTreeElement<Integer, String>(20, "an");
 	AVLTreeElement avl_5 = new AVLTreeElement<Integer, String>(40, "AVL");
 	AVLTreeElement avl_6 = new AVLTreeElement<Integer, String>(90, "Tree");
-    </code>
+    </pre>
 <li>Now set the balance factors as the labels of the nodes, so we can see them 
 in the BRIDGES visualization by mousing over the nodes</li>
-<code>
+<pre class="prettyprint">
 	avl_root.setLabel("0");
 	avl_2.setLabel("0");
 	avl_3.setLabel("-1");
 	avl_4.setLabel("0");
 	avl_5.setLabel("0");
 	avl_6.setLabel("0");
-</code>
+</pre>
 <li>Now link the AVL Tree elements to build the tree </li>
-<code>
+<pre class="prettyprint">
 	avl_root.setLeft(avl_2);
 	avl_root.setRight(avl_3);
 	avl_2.setLeft(avl_4);
 	avl_2.setRight(avl_5);
 	avl_3.setRight(avl_6);
-</code>
+</pre>
 <li>Now we pass the root of our AVL Tree to Bridges</li>
-    <code>bridges.setDataStructure(avl_root);</code>
+    <pre class="prettyprint">bridges.setDataStructure(avl_root);</pre>
 <li>Finally we visualize the tree </li>
-    <code>bridges.visualize();</code>
+    <pre class="prettyprint">bridges.visualize();</pre>
 </ul>
 <h4><strong>Code Summary:</strong> Your .java file should look like this</h4>
-<code>
+<pre class="prettyprint">
 import bridges.connect.Bridges;
 import bridges.data_src_dependent.Tweet;
 import bridges.base.BSTElement;
@@ -103,4 +103,4 @@ public class avlDriver {
         bridges.visualize();
     }
 }
-</code>
+</pre>

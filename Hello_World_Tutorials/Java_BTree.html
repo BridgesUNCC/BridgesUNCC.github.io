@@ -4,45 +4,45 @@
 <ul>
   <li>We need to include these BRIDGES files to give access to all the classes/methods needed to interact with BRIDGES</li>
   <li>In your .java file, enter the following code snippets:</li>
-    <code>
+    <pre class="prettyprint">
       import bridges.connect.Bridges;
       import bridges.base.TreeElement;
-    </code>
+    </pre>
 </ul>
 
 <h3>Main Exception</h3>
 <ul>
   <li>By adding a throw exception we can forgo messy try/catch blocks in our code for our BRIDGES calls</li>
   <li>In your .java file, add a throw exception to the main function so it looks like this:</li>
-    <code>public static void main(String[] args) throws Exception</code>
+    <pre class="prettyprint">public static void main(String[] args) throws Exception</pre>
 </ul>
 
 <h3>Inside our Main</h3>
 <ul>
   <li>First we need to create our Bridges object and initialize our Bridges Credentials</li>
-    <code>Bridges&lt;String, String&gt; bridge = new Bridges&lt;&gt;(3, "YOUR_API_KEY", "YOUR_USER_ID");</code>
+    <pre class="prettyprint">Bridges&lt;String, String&gt; bridge = new Bridges&lt;&gt;(3, "YOUR_API_KEY", "YOUR_USER_ID");</pre>
 <p>
 Please note that the two fields above need to be replaced by your BRIDGES 
 credentials.
 <p>
   <li>Then we can create our TreeElements</li>
-    <code>
+    <pre class="prettyprint">
       TreeElement&lt;String&gt; e0 = new TreeElement&lt;&gt;("", "");
       TreeElement&lt;String&gt; e1 = new TreeElement&lt;&gt;("Hello", "");
       TreeElement&lt;String&gt; e2 = new TreeElement&lt;&gt;("World", "");
-    </code>
+    </pre>
   <li>Now link the TreeElements together</li>
-    <code>
+    <pre class="prettyprint">
       e0.setLeft(e1);
       e0.setRight(e2);
-    </code>
+    </pre>
   <li>Now we pass the root of our binary tree to BRIDGES</li>
-    <code>bridge.setDataStructure(e0);</code>
+    <pre class="prettyprint">bridge.setDataStructure(e0);</pre>
   <li>Finnaly we call the visualize function</li>
-    <code>bridge.visualize();</code>
+    <pre class="prettyprint">bridge.visualize();</pre>
 </ul>
 <h4><strong>Code Summary:</strong> Your .java file should look like this</h4>
-  <code>
+  <pre class="prettyprint">
     import bridges.connect.Bridges;
     import bridges.base.TreeElement;
 
@@ -69,4 +69,4 @@ credentials.
             bridge.visualize();
         }
     }
-  </code>
+  </pre>
