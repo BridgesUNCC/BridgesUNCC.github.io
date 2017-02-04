@@ -4,10 +4,10 @@
 <ul>
   <li>We need to include these Bridges files to give access to all the classes/methods needed to interact with Bridges</li>
   <li>In your .java file, enter the following code snippets:</li>
-    <pre class="prettyprint">
+	<pre class="prettyprint">
       import bridges.connect.Bridges;
       import bridges.base.SLelement;
-    </pre>
+	</pre>
 </ul>
 
 <h3>Main Exception</h3>
@@ -19,51 +19,181 @@
 
 <h3>Inside our Main</h3>
 <ul>
-  <li>First we need to create our BRIDGES object and initialize our BRIDGES Credentials</li>
-    <pre class="prettyprint">Bridges&lt;String, String&gt; bridge = new Bridges&lt;&gt;(1, "YOUR_API_KEY", "YOUR_USER_ID");</pre>
-	Note that you will need to replace the two fields in this call with your BRIDGES credentials. <p>
-  <li>Then we can create our SLelements</li>
-    <pre class="prettyprint">
-      SLelement&lt;String&gt; e0 = new SLelement&lt;&gt;("Hello", "");
-      SLelement&lt;String&gt; e1 = new SLelement&lt;&gt;("World", "");
-      SLelement&lt;String&gt; e2 = new SLelement&lt;&gt;("!", "");
-    </pre>
+  <li>First we need to create our BRIDGES object and initialize our BRIDGES Credentials; here we use for our example a StudentInfo object class, which will
+be a generic parameter.</li>
+<pre class="prettyprint">Bridges&lt;String, StudentInfo&gt; bridges = new Bridges&lt;&gt;(1, "YOUR_API_KEY", "YOUR_USER_ID");</pre>
+	In the above call, the parameter 1 is the assignment id (can be any
+	positive integer), and the remaining two parameters are your BRIDGES
+	credentials.  You will need to replace the two fields in this call
+	with your own BRIDGES credentials. <p>
+  <li>Then we can create our SLelements with the StudentInfo objects</li>
+	<pre class="prettyprint">
+SLelement<StudentInfo> el0 = new SLelement<StudentInfo>( "",
+	new StudentInfo(
+		"00000000000", 
+		"Gretel Chaney", 
+		"CS", 
+		"g.chaney@generated.com", 
+		"magenta", 
+		"blue", 
+		 9.0,
+		 "https://randomuser.me/api/portraits/med/women/45.jpg"
+	));
+SLelement<StudentInfo> el1 = new SLelement<StudentInfo>( "",
+	new StudentInfo( 
+		"00000000001", 
+		"Karol Soderman", 
+		"SIS", 
+		"k.soderman@generated.com", 
+		"magenta", 
+		"red", 
+		 11.0,
+		"https://randomuser.me/api/portraits/med/women/46.jpg"
+	));
+SLelement<StudentInfo> el2 = new SLelement<StudentInfo>( "",
+	new StudentInfo( 
+		"00000000002", 
+		"Lamont Kyler", 
+		"BIO", 
+		"l.kyler@generated.com",
+		"yellow", 
+		"green", 
+		 12.0,
+		"https://randomuser.me/api/portraits/med/men/80.jpg"
+	));
+SLelement<StudentInfo> el3 = new SLelement<StudentInfo>( "",
+	new StudentInfo( 
+		"00000000003", 
+		"Gladys Serino", 
+		"CS",
+		"g.serino@generated.com", 
+		"blue", 
+		"magenta", 
+		 9.0,
+		"https://randomuser.me/api/portraits/med/women/2.jpg"
+	));
+SLelement<StudentInfo> el4 = new SLelement<StudentInfo>( "",
+	new StudentInfo(
+		"00000000004", 
+		"Starr Mcginn", 
+		"CS", 
+		"s.mcginn@generated.com", 
+		"red", 
+		"yellow", 
+		 15.0,
+		"https://randomuser.me/api/portraits/med/men/87.jpg"
+	));
+	</pre>
 <li>Now link the SLelements together</li>
-    <pre class="prettyprint">
-      e0.setNext(e1);
-      e1.setNext(e2);
-    </pre>
-  <li>Now we pass the first element(head) of our data structure to BRIDGES</li>
-    <pre class="prettyprint">bridge.setDataStructure(e0);</pre>
-  <li>Finnaly we call the visualize function</li>
-    <pre class="prettyprint">bridge.visualize();</pre>
+<pre class="prettyprint">
+e0.setNext(e1);
+e1.setNext(e2);
+e2.setNext(e3);
+e3.setNext(e4);
+</pre>
+<li> Next add some visualization attributes to the elements</li>
+<pre class="prettyprint">
+SLelement<StudentInfo> currentElement = el0;
+while(currentElement != null){
+	System.out.println(currentElement.getValue().getFullName());
+
+	// color the node
+	currentElement.getVisualizer().setColor(currentElement.getValue().getFavoriteColor());
+
+	// color the link between two successive element,
+	// change the link thickness
+	if(currentElement.getNext() != null){
+		currentElement.getLinkVisualizer(currentElement.getNext())
+					  .setColor(currentElement.getValue().getDislikeColor());
+		
+		currentElement.getLinkVisualizer(currentElement.getNext())
+					  .setThickness(currentElement.getValue().getStudentCreditHours() * 0.75);//75 percent thinner
+	}
+	
+	// set the label of the element to print student info
+	currentElement.setLabel(
+						 currentElement.getValue().getFullName() + "\n"+
+			 "Email: " + currentElement.getValue().getEmail() + "\n"   +
+		   "Program: " + currentElement.getValue().getProgram() + "\n"   +
+		"Student ID: " + currentElement.getValue().getStudentID() + "\n"   +
+	"Favorite Color: " + currentElement.getValue().getFavoriteColor() + "\n"
+	);
+	currentElement = currentElement.getNext();
+}
+</pre>
+<li>Now we pass the first element(head) of our data structure to BRIDGES</li>
+<pre class="prettyprint">bridge.setDataStructure(el0);</pre>
+<li>Finaly we call the visualize function</li>
+<pre class="prettyprint">bridge.visualize();</pre>
 </ul>
-<h4><strong>Code Summary:</strong> Your .java file should look like this</h4>
-  <pre class="prettyprint">
-    import bridges.connect.Bridges;
-    import bridges.base.SLelement;
-  
-    public class HelloWorld
-    {
-        public static void main(String[] args) throws Exception
-        {
-            //create the Bridges object
-            Bridges&lt;String,String&gt; bridge = new Bridges&lt;&gt;(1, "YOUR_API_KEY", "YOUR_USER_ID");
-            
-            //create elements
-            SLelement&lt;String&gt; e0 = new SLelement&lt;&gt;("Hello", "");
-            SLelement&lt;String&gt; e1 = new SLelement&lt;&gt;("World", "");
-            SLelement&lt;String&gt; e2 = new SLelement&lt;&gt;("!", "");
-            
-            //link elements
-            e0.setNext(e1);
-            e1.setNext(e2);
-            
-            //pass first element of data structure
-            bridge.setDataStructure(e0);
-            
-            //visualize data structure
-            bridge.visualize();
-        }
-    }
-  </pre>
+<h3>StudentInfo Class </h3>
+<ul>
+<li> Next we illustrate the StudentInfo class below</li>
+<pre class="prettyprint">
+public class StudentInfo {
+	private String studentID, fullName, program, email, dislikeColor, favoriteColor, avatar;
+	private double studentCreditHours;
+
+	public StudentInfo(String studentID, String fullName, String program, String email, String dislikeColor,
+			String favoriteColor, double studentCreditHours, String avatar) {
+		this.studentID = studentID;
+		this.fullName = fullName;
+		this.program = program;
+		this.email = email;
+		this.dislikeColor = dislikeColor;
+		this.favoriteColor = favoriteColor;
+		this.studentCreditHours = studentCreditHours;
+		this.avatar = avatar;
+	}
+	public String getStudentID() {
+		return studentID;
+	}
+	public void setStudentID(String studentID) {
+		this.studentID = studentID;
+	}
+	public String getFullName() {
+		return fullName;
+	}
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
+	public String getProgram() {
+		return program;
+	}
+	public void setProgram(String program) {
+		this.program = program;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getFavoriteColor() {
+		return favoriteColor;
+	}
+	public void setFavoriteColor(String favoriteColor) {
+		this.favoriteColor = favoriteColor;
+	}
+	public String getAvatar() {
+		return avatar;
+	}
+	public void setAvatar(String avatar) {
+		this.avatar = avatar;
+	}
+	public String getDislikeColor() {
+		return dislikeColor;
+	}
+	public void setDislikeColor(String dislikeColor) {
+		this.dislikeColor = dislikeColor;
+	}
+	public double getStudentCreditHours() {
+		return studentCreditHours;
+	}
+	public void setStudentCreditHours(double studentCreditHours) {
+		this.studentCreditHours = studentCreditHours;
+	}
+}
+</pre>
+</ul>
