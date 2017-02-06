@@ -6,7 +6,7 @@
   <li>In your .java file, enter the following code snippets:</li>
 	<pre class="prettyprint">
     import bridges.connect.Bridges;
-    import bridges.base.DLelement;
+    import bridges.base.CircDLelement;
 	</pre>
 </ul>
 
@@ -21,22 +21,24 @@
 <ul>
   <li>First we need to create our BRIDGES object and initialize our BRIDGES Credentials; here we use for our example a Student object class, which will
 be a generic parameter.</li>
-<pre class="prettyprint">   Bridges&lt;String, Student&gt; bridges = new Bridges&lt;&gt;(2, "YOUR_API_KEY", "YOUR_USER_ID");</pre>
+<pre class="prettyprint">   Bridges&lt;String, Student&gt; bridges = new Bridges&lt;&gt;(4, "YOUR_API_KEY", "YOUR_USER_ID");</pre>
 	In the above call, the parameter 1 is the assignment id (can be any
 	positive integer), and the remaining two parameters are your BRIDGES
 	credentials.  You will need to replace the two fields in this call
 	with your own BRIDGES credentials. <p>
-  <li>Then we can create our DLelements with the Student objects and link the DLements together.</li>
+  <li>Then we can create our CircDLelements with the Student objects and link the DLements together.</li>
 	<pre class="prettyprint">
 
+    /**
+     * new CircDLelement<>(label, genericData)
+     */
     //initializing all elements with empty labels, and with the student data. See Object model.Student.java
-    DLelement<Student> el0 = null;
-    for(int i = 0; i < StudentProvider.getStudents().length; i++){
-        if(i > 1){
-            el0 = insertFront(el0, new DLelement<>("",StudentProvider.getStudentAt(i)));
-        }else if(i == 0){
-            el0 = new DLelement<>("",StudentProvider.getStudentAt(0));
-            el0.setNext(new DLelement<>("",StudentProvider.getStudentAt(1)));
+    CircDLelement<Student> el0 = null;
+    for(int i = 0; i < StudentProvider.getStudents().length; i++) {
+        if(i > 0) {
+            el0 = insertFront(el0, new CircDLelement("",StudentProvider.getStudentAt(i)));
+        }else{
+            el0 = new CircDLelement("",StudentProvider.getStudentAt(i));
         }
     }
 
@@ -44,25 +46,20 @@ be a generic parameter.</li>
 
 <li> Next add some visualization attributes to the elements</li>
 <pre class="prettyprint">
-    DLelement<Student> current = el0;
-    while(current != null){
-        current.setLabel(current.getValue().getStudentLabel());
-        current.getVisualizer().setColor(current.getValue().getFavoriteColor());
+  CircDLelement<Student> current = el0;
+  do{
+      current.setLabel(current.getValue().getStudentLabel());
+      current.getVisualizer().setColor(current.getValue().getFavoriteColor());
 
-        if(current.getNext() != null){
-              current
-                    .getLinkVisualizer(current.getNext())
-                    .setColor(current.getValue().getDislikeColor());
-        }
+      current.getLinkVisualizer(current.getNext()).setColor(current.getValue().getDislikeColor());
+      current.getLinkVisualizer(current.getNext()).setThickness(current.getValue().getStudentCreditHours()*.75);
 
-        if(current.getPrev() != null){
-              current
-                    .getLinkVisualizer(current.getPrev())
-                    .setColor(current.getValue().getDislikeColor());
-        }
+      current.getLinkVisualizer(current.getPrev()).setColor(current.getValue().getDislikeColor());
+      current.getLinkVisualizer(current.getPrev()).setThickness(current.getValue().getStudentCreditHours()*.75);
 
-        current = current.getNext();
-    }
+      current = current.getNext();
+  }while(current.getIdentifier() != el0.getIdentifier());
+
 </pre>
 <li>Now we pass the first element(head) of our data structure to BRIDGES</li>
 <pre class="prettyprint">   bridge.setDataStructure(el0);</pre>
@@ -84,12 +81,12 @@ be a generic parameter.</li>
     <div class="tab-content">
         <div class="tab-pane fade in active" id="tab1">
 <pre class="prettyprint">
-package dllist;
+package cdllist;
 /**
 * Created by Lucas Estrella on 1/31/2017.
 * lestrell@uncc.edu
 */
-import bridges.base.DLelement;
+import bridges.base.CircDLelement;
 import bridges.connect.Bridges;
 import model.Student;
 import provider.StudentProvider;
@@ -98,34 +95,34 @@ public class Main {
 
   public static void main(String[] args) throws , ParseException {
 
-      Bridges<String, Student> bridge = new Bridges<String, Student>(2, "YOUR_API_KEY", "YOUR_USER_ID");
+      Bridges<String, Student> bridge = new Bridges<String, Student>(4, "YOUR_API_KEY", "YOUR_USER_ID");
 
       /**
-       * new DLelement<>(label, genericData)
+       * new CircDLelement<>(label, genericData)
        */
-
       //initializing all elements with empty labels, and with the student data. See Object model.Student.java
-      DLelement<Student> el0 = null;
+      CircDLelement<Student> el0 = null;
+      for(int i = 0; i < StudentProvider.getStudents().length; i++) {
+          if(i > 0) {
+              el0 = insertFront(el0, new CircDLelement("",StudentProvider.getStudentAt(i)));
+          }else{
+              el0 = new CircDLelement("",StudentProvider.getStudentAt(i));
+          }
+      }
 
-        for(int i = 0; i < StudentProvider.getStudents().length; i++){
-            if(i > 1){
-                el0 = insertFront(el0, new DLelement<>("",StudentProvider.getStudentAt(i)));
-            }else if(i == 0){
-                el0 = new DLelement<>("",StudentProvider.getStudentAt(0));
-                el0.setNext(new DLelement<>("",StudentProvider.getStudentAt(1)));
-            }
-        }
+      CircDLelement<Student> current = el0;
+      do{
+          current.setLabel(current.getValue().getStudentLabel());
+          current.getVisualizer().setColor(current.getValue().getFavoriteColor());
 
-        DLelement<Student> current = el0;
-        while(current != null){
-            current.setLabel(current.getValue().getStudentLabel());
-            current.getVisualizer().setColor(current.getValue().getFavoriteColor());
+          current.getLinkVisualizer(current.getNext()).setColor(current.getValue().getDislikeColor());
+          current.getLinkVisualizer(current.getNext()).setThickness(current.getValue().getStudentCreditHours()*.75);
 
-            if(current.getNext() != null)current.getLinkVisualizer(current.getNext()).setColor(current.getValue().getDislikeColor());
-            if(current.getPrev() != null)current.getLinkVisualizer(current.getPrev()).setColor(current.getValue().getDislikeColor());
+          current.getLinkVisualizer(current.getPrev()).setColor(current.getValue().getDislikeColor());
+          current.getLinkVisualizer(current.getPrev()).setThickness(current.getValue().getStudentCreditHours()*.75);
 
-            current = current.getNext();
-        }
+          current = current.getNext();
+      }while(current.getIdentifier() != el0.getIdentifier());
 
       bridge.setDataStructure(el0);
       bridge.visualize();
@@ -133,22 +130,18 @@ public class Main {
 
   }
 
-  public static DLelement insertFront(DLelement tail,
-                                      DLelement newElement){
-      DLelement tailNext = tail.getNext();
 
-      newElement.setNext(tailNext);
-      newElement.setPrev(tail);
+  public static CircDLelement insertFront(CircDLelement tailElement,
+                                          CircDLelement newElement){
+      CircDLelement tailNextElement = tailElement.getNext();
 
-      tailNext.setPrev(newElement);
-      tail.setNext(newElement);
-      return tail;
+      newElement.setNext(tailNextElement);
+      newElement.setPrev(tailElement);
+
+      tailNextElement.setPrev(newElement);
+      tailElement.setNext(newElement);
+      return tailElement;
   }
-
-
-
-
-
 }
 </pre>
         </div>

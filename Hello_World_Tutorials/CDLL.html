@@ -7,7 +7,11 @@
   <meta name="author" content="Bridges"/>
   <meta name="description" content="Bridges Tutorials"/>
 
-<script src="//rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true&skin=desert&lang=java" defer></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script src="//rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true&skin=desert&lang=java" defer></script>
 
 
   <link rel="stylesheet" type="text/css" href="./tutorial.css" />
@@ -50,177 +54,9 @@
         <div onclick="displayCode('C++',this)" >C++</div>
     </div>
     <div class="tabContents">
-      <div id="Java">
-        <h3>Create a new .java file</h3>
-
-        <h3>Imports</h3>
-        <ul>
-          <li>We need to include these Bridges files to give access to all the classes/methods needed to interact with Bridges</li>
-          <li>In your .java file, enter the following code snippets:</li>
-            <pre class="prettyprint">
-              import bridges.connect.Bridges;
-              import bridges.base.CircDLelement;
-            </pre>
-        </ul>
-
-        <h3>Main Exception</h3>
-          <ul>
-            <li>By adding a throw exception we can forgo messy try/catch blocks in our code for our Bridges calls</li>
-            <li>In your .java file, add a throw exception to the main function so it looks like this:</li>
-              <pre class="prettyprint">public static void main(String[] args) throws Exception</pre>
-          </ul>
-
-        <h3>Inside our Main</h3>
-        <ul>
-          <li>First we need to create our Bridges object and initialize our Bridges Credentials</li>
-            <pre class="prettyprint">Bridges&lt;String, String&gt; bridge = new Bridges&lt;String,String&gt;(2, "YOUR_API_KEY", "YOUR_USER_ID");</pre>
-        <p>
-        	Note that you must replace the above strings with your BRIDGES credentials.
-        <p>
-          <li>Then we can create our CircDLelement</li>
-            <pre class="prettyprint">
-              CircDLelement&lt;String&gt; e0 = new CircDLelement&lt;&gt;("Hello", "");
-              CircDLelement&lt;String&gt; e1 = new CircDLelement&lt;&gt;("World", "");
-              CircDLelement&lt;String&gt; e2 = new CircDLelement&lt;&gt;("!", "");
-            </pre>
-          <li>Now insert the CircDLelement into the list.</li>
-            <pre class="prettyprint">
-                CircDLelement<String> tail = el0;
-                tail = insertFront(tail, el1);
-                tail = insertFront(tail, el2);
-            </pre>
-          <li>Now we pass the first element of our datastruture to Bridges</li>
-            <pre class="prettyprint">bridge.setDataStructure(e0);</pre>
-          <li>Finally we call the visualize function</li>
-            <pre class="prettyprint">bridge.visualize();</pre>
-        </ul>
-        <h4><strong>Code Summary:</strong> Your .java file should look like this</h4>
-          <pre class="prettyprint">
-            import bridges.connect.Bridges;
-            import bridges.base.CircDLelement;
-
-            public class HelloWorld
-            &#123;
-                public static void main(String[] args) throws Exception
-                &#123;
-                    //create the Bridges object
-                    Bridges&lt;String, String&gt; bridge = new Bridges&lt;String,String&gt;(2, "YOUR_API_KEY", "YOUR_USER_ID");
-
-                    //create elements
-                    CircDLelement&lt;String&gt; e0 = new CircDLelement&lt;&gt;("Hello", "");
-                    CircDLelement&lt;String&gt; e1 = new CircDLelement&lt;&gt;("World", "");
-                    CircDLelement&lt;String&gt; e2 = new CircDLelement&lt;&gt;("!", "");
-
-                    // insert elements into list
-                    CircDLelement&lt;String&gt; tail = el0;
-                    tail = insertFront(tail, el1);
-                    tail = insertFront(tail, el2);
-
-                    //pass first element of data structure
-                    bridge.setDataStructure(e0);
-
-                    //visualize data structure
-                    bridge.visualize();
-                &#125;
-            &#125;
-          </pre>
-
-      </div>
-
-      <div id="C++" style="display:none;"class="tab">
-        <h3>Create a new .cpp file</h3>
-
-        <h3>Includes</h3>
-        <ul>
-          <li>We need to include these Bridges headers to give access to all the classes/methods needed to interact with Bridges</li>
-          <li>In your .cpp file, enter the following code snippets:</li>
-            <pre class="prettyprint">
-              #include "Bridges.h"
-              #include "CircDLelement.h"
-            </pre>
-        </ul>
-
-        <h3>Namespace</h3>
-        <ul>
-          <li>By using this namespace we can forgo messy scope specifiers in our code for our Bridges calls</li>
-          <li>In your .cpp file, enter the following code snippet:</li>
-            <pre class="prettyprint">using namespace bridges;</pre>
-        </ul>
-
-        <h3>Inside our Main</h3>
-        <ul>
-          <li>First we need to initialize our Bridges Credentials</li>
-            <pre class="prettyprint">Bridges::initialize(2, "YOUR_API_KEY","YOUR_USER_ID");</pre>
-        <p>
-        Note that you must  replace the two strings above with your BRIDGES credentials.
-        <p>
-          <li>Then we can create our CircDLelements</li>
-            <pre class="prettyprint">
-              CircDLelement&lt;int&gt; *el0 = new CircDLelement&lt;int&gt;(0,"Hello");
-              CircDLelement&lt;int&gt; *el1 = new CircDLelement&lt;int&gt;(0,"World");
-              CircDLelement&lt;int&gt; *el2 = new CircDLelement&lt;int&gt;(0, "!");
-            </pre>
-          <li>Now link the CircDLelements together</li>
-            <pre class="prettyprint">
-              //forward links
-              el0.setNext(el1);
-              el1.setNext(el2);
-              el2.setPrev(el3);
-              el1.setPrev(el0);
-
-              //backward links
-              el0.setNext(el3);
-              el1.setNext(el0);
-              el2.setPrev(el1);
-              el1.setPrev(el2);
-            </pre>
-          <li>Now we pass the first element of the doubly linked list to Bridges</li>
-            <pre class="prettyprint">Bridges::setDataStructure(el0);</pre>
-          <li>Finally we call the visualize function</li>
-            <pre class="prettyprint">Bridges::visualize();</pre>
-        </ul>
-        <h4><strong>Code Summary:</strong> Your .cpp file should look like this</h4>
-          <pre class="prettyprint">
-            #include "Bridges.h"
-            #include "CircDLelement.h"
-
-            using namespace std;
-            using namespace bridges;
-
-            int main()
-            &#123;
-                //create the Bridges object
-                Bridges::initialize("YOUR_API_KEY","YOUR_USER_ID",2);
-                Bridges::setTitle("An Example Circular Linked List");
-
-                //create elements
-                CircDLelement&lt;int&gt; *el0 = new CircDLelement&lt;int&gt;(0,"Hello");
-                CircDLelement&lt;int&gt; *el1 = new CircDLelement&lt;int&gt;(0,"World");
-                CircDLelement&lt;int&gt; *el2 = new CircDLelement&lt;int&gt;(0, "!");
-
-                //forward links
-                el0.setNext(el1);
-                el1.setNext(el2);
-                el2.setPrev(el3);
-                el1.setPrev(el0);
-
-                //backward links
-                el0.setNext(el3);
-                el1.setNext(el0);
-                el2.setPrev(el1);
-                el1.setPrev(el2);
-
-                //pass first element of data structure
-                Bridges::setDataStructure(el0);
-
-                //visualize data structure
-                Bridges::visualize();
-            &#125;
-          </pre>
-
-      </div>
+      <div id="Java" w3-include-html="./Java_CDLL.html"></div>
+      <div id="C++"  w3-include-html="./Cpp_DDLL.html"></div>
     </div>
-
 
 
   <h3>Bridges Visualization</h3>
@@ -233,9 +69,9 @@ of the data structure you just created.</li>
 <li>It should look something like this:</li>
 </ul>
   <div class="iframe-wrapper">
-    <iframe src="http://bridges-cs.herokuapp.com/assignments/1/bridges_public" scrolling="no">
+    <iframe src="http://bridges-api-lestrell.herokuapp.com/assignments/4/bridges_public#onlyshowvis0" scrolling="no">
       <p>Sorry, your browser doesn't seem to support iframes -
-        <a href="http://bridges-cs.herokuapp.com/assignments/1/bridges_public">Frame Link</a>
+        <a href="http://bridges-api-lestrell.herokuapp.com/assignments/4/bridges_public#onlyshowvis0">Frame Link</a>
       </p>
     </iframe>
   </div>
