@@ -7,9 +7,13 @@
   <meta name="author" content="Bridges"/>
   <meta name="description" content="Bridges Tutorials"/>
 
-<script src="//rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true&skin=desert&lang=java" defer></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  
+  <script src="//rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true&skin=desert&lang=java" defer></script>
+
+
   <link rel="stylesheet" type="text/css" href="./tutorial.css" />
   <link rel="shortcut icon" href="http://bridgesuncc.github.io/favicon.png"/>
   <script src="http://www.w3schools.com/lib/w3data.js"></script>
@@ -28,21 +32,21 @@ inherited from Element&lt;E&gt;
 <br><br><img width="175em" src="./images/slelement-cd.png"><br><br>
   <h2>How does the SLelement&lt;E&gt; work?</h2>
   <p>
-SLelement&lt;E&gt; stands for Singly Linked Element and is a type 
-of container that has one link, pointing to another SLelement&lt;E&gt;. 
-So an SLelement&lt;E&gt; "knows" who it is pointing at but it does not know 
-who is pointing at it(if any). 
+SLelement&lt;E&gt; stands for Singly Linked Element and is a type
+of container that has one link, pointing to another SLelement&lt;E&gt;.
+So an SLelement&lt;E&gt; "knows" who it is pointing at but it does not know
+who is pointing at it(if any).
 <br/><br/><img width="600em" src="./SLelement.png"/><br/><br/>
-In the above example,  SLelement1 points to SLelement2. Calling getNext() 
-on SLelement1 will return  a link to SLelement2, and calling getNext() on 
-SLelement2 will return a link to SLelement3.  SLelement3 is not pointing 
-to another SLelement so calling getNext() on SLelement3 will return NULL. 
-This is desirable since you will know that you have reached the end of the 
+In the above example,  SLelement1 points to SLelement2. Calling getNext()
+on SLelement1 will return  a link to SLelement2, and calling getNext() on
+SLelement2 will return a link to SLelement3.  SLelement3 is not pointing
+to another SLelement so calling getNext() on SLelement3 will return NULL.
+This is desirable since you will know that you have reached the end of the
 singly linked list (as NULL is a unique value and not  a legal memory address
 for an object).
     <br/><br/>
-Also notice that there is no getPrev(). SLelement2 has no idea what 
-element came before it. So, you CANNOT go backwards. 
+Also notice that there is no getPrev(). SLelement2 has no idea what
+element came before it. So, you CANNOT go backwards.
   </p>
 
   <hr/>
@@ -56,19 +60,19 @@ element came before it. So, you CANNOT go backwards.
     <div id="Java" w3-include-html="./Java_SLL.html"></div>
     <div id="C++"  w3-include-html="./Cpp_SLL.html"></div>
   </div>
-  
+
   <h3>Bridges Visualization</h3>
 <ul>
 <li>Once all your code is in order, run your file.</li>
-<li>Assuming all your code is correct and it compiles correctly, a 
+<li>Assuming all your code is correct and it compiles correctly, a
 link to the Bridges website will be generated on the console.</li>
-<li>Copy/paste this link into your favorite browser to view a visualization 
+<li>Copy/paste this link into your favorite browser to view a visualization
 of the data structure you just created.</li>
 <li>It should look something like this:</li>
 </ul>
   <div class="iframe-wrapper">
     <iframe src="http://bridges-api-lestrell.herokuapp.com/assignments/3/bridges_public#onlyshowvis0" scrolling="no">
-      <p>Sorry, your browser doesn't seem to support iframes - 
+      <p>Sorry, your browser doesn't seem to support iframes -
         <a href="http://bridges-api-lestrell.herokuapp.com/assignments/3/bridges_public#onlyshowvis0">Frame Link</a>
       </p>
     </iframe>
