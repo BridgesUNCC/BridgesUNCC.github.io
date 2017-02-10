@@ -1,4 +1,4 @@
-package cdllist;
+package dllist;
 
 import bridges.base.CircDLelement;
 import bridges.connect.Bridges;
@@ -8,7 +8,7 @@ public class Main {
 
   public static void main(String[] args) throws , ParseException {
 
-      Bridges<String, Student> bridge = new Bridges<String, Student>(6, "YOUR_API_KEY", "YOUR_USER_ID");
+      Bridges<String, Student> bridge = new Bridges<String, Student>(4, "YOUR_API_KEY", "YOUR_USER_ID");
 
       Student[] students = {
               new Student(
@@ -61,31 +61,30 @@ public class Main {
       };
 
       /**
-       * new CircDLelement<>(label, genericData)
+       * new DLelement<>(label, genericData)
        */
-      //initializing all elements with empty labels, and with the student data. See Object model.Student.java
-      CircDLelement<Student> el0 = null;
-      for(int i = 0; i < students.length; i++) {
-          if(i > 0) {
-              el0 = insertFront(el0, new CircDLelement("",students[i]));
-          }else{
-              el0 = new CircDLelement("",students[i]);
-          }
-      }
+       //initializing all elements with empty labels, and with the student data. See Object model.Student.java
+       DLelement<Student> el0 = null;
 
-      CircDLelement<Student> current = el0;
-      do{
-          current.setLabel(current.getValue().getStudentLabel());
-          current.getVisualizer().setColor(current.getValue().getFavoriteColor());
+       for(int i = 0; i < students.length; i++){
+           if(i > 1){
+               el0 = insertFront(el0, new DLelement<>("",students[i]));
+           }else if(i == 0){
+               el0 = new DLelement<>("",students[0]);
+               el0.setNext(new DLelement<>("",students[1]));
+           }
+       }
 
-          current.getLinkVisualizer(current.getNext()).setColor(current.getValue().getDislikeColor());
-          current.getLinkVisualizer(current.getNext()).setThickness(current.getValue().getStudentCreditHours()*.75);
+       DLelement<Student> current = el0;
+       while(current != null){
+           current.setLabel(current.getValue().getStudentLabel());
+           current.getVisualizer().setColor(current.getValue().getFavoriteColor());
 
-          current.getLinkVisualizer(current.getPrev()).setColor(current.getValue().getDislikeColor());
-          current.getLinkVisualizer(current.getPrev()).setThickness(current.getValue().getStudentCreditHours()*.75);
+           if(current.getNext() != null)current.getLinkVisualizer(current.getNext()).setColor(current.getValue().getDislikeColor());
+           if(current.getPrev() != null)current.getLinkVisualizer(current.getPrev()).setColor(current.getValue().getDislikeColor());
 
-          current = current.getNext();
-      }while(current.getIdentifier() != el0.getIdentifier());
+           current = current.getNext();
+       }
 
       bridge.setDataStructure(el0);
       bridge.visualize();
@@ -94,16 +93,16 @@ public class Main {
   }
 
 
-  public static CircDLelement insertFront(CircDLelement tailElement,
-                                          CircDLelement newElement){
-      CircDLelement tailNextElement = tailElement.getNext();
+  public static DLelement insertFront(DLelement tail,
+                                      DLelement newElement){
+      DLelement tailNext = tail.getNext();
 
-      newElement.setNext(tailNextElement);
-      newElement.setPrev(tailElement);
+      newElement.setNext(tailNext);
+      newElement.setPrev(tail);
 
-      tailNextElement.setPrev(newElement);
-      tailElement.setNext(newElement);
-      return tailElement;
+      tailNext.setPrev(newElement);
+      tail.setNext(newElement);
+      return tail;
   }
 
 }
