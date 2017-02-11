@@ -1,6 +1,6 @@
-/**
-* Created by Lucas Estrella on 1/31/2017.
-*/
+  /**
+   * Created by Lucas Estrella on 1/31/2017.
+   */
   public class Student {
       private String studentID,
                      fullName,
