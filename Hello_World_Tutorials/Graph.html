@@ -3,13 +3,18 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"/> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
   <meta name="author" content="Bridges"/>
   <meta name="description" content="Bridges Tutorials"/>
 
 <script src="//rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true&skin=desert&lang=java" defer></script>
 
-  
+<link rel="stylesheet" href="../bootstrap-3.3.6/dist/css/bootstrap.min.css">
+
   <link rel="stylesheet" type="text/css" href="./tutorial.css" />
   <link rel="shortcut icon" href="http://bridgesuncc.github.io/favicon.png"/>
   <script src="http://www.w3schools.com/lib/w3data.js"></script>
@@ -25,36 +30,36 @@
 <main>
 <h2>How do the GraphAdjList&lt;K,E&gt; and GraphAdjMatrix work&lt;K,E&gt;?</h2>
 <p>
-A graph is a set of vertices connected by edges. Unlike tree structures, a 
+A graph is a set of vertices connected by edges. Unlike tree structures, a
 vertex can be an ancestor or a child and can have multiple emanating edges.
 In fact, a tree structure is just a special case of a graph.
-<br/><br/><img width="400em" src="./Graph.png"/><br/><br/>
-Bridges represents graph structures in one of two ways: either using an 
-adjacency list representation or an adjacency matrix representation. 
+<br/><br/><img class="img-responsive" width="400em" src="./Graph.png"/><br/><br/>
+Bridges represents graph structures in one of two ways: either using an
+adjacency list representation or an adjacency matrix representation.
 Access to the vertices is similar to indexing into an array (O(1) complexity).
 The main difference is that vertex ids can be numerical values or strings;
 BRIDGES implements constant access to vertices using maps (in Java and C++).
 <br/><br/>
-In the adjacency list representation, the GraphAdjList is holding a Map 
-of vertices, each  of which associated with a linked list of the vertices 
+In the adjacency list representation, the GraphAdjList is holding a Map
+of vertices, each  of which associated with a linked list of the vertices
 representing the terminating vertex of the edge. These <i>Edge</i> vertices
-are of type SLElement&lt;E&gt; with the generic object E used to hold the 
+are of type SLElement&lt;E&gt; with the generic object E used to hold the
 vertex id and possibly, edge weight.
 <br/><br/>
-In the adjacency matrix representation, the GraphAdjMatrix is mimicking a 2 
-dimensional array to describe which vertices are connected (BRIDGES implements 
-this using nested Maps). 
+In the adjacency matrix representation, the GraphAdjMatrix is mimicking a 2
+dimensional array to describe which vertices are connected (BRIDGES implements
+this using nested Maps).
 
 Finally these classes provide some convenient methods to add vertices and edges
 (GraphAdjList::addVertex(), GraphAdjList::addEdge()) to build the graph.
 <br/><br/>
-Typically, the reason to use one version over the other revolves around space 
-/time trade offs, end-user application and the density of the graph. 
-Since the GraphAdjList representation uses a linked list to track 
-neighboring nodes, searching for a particular vertex is a linear 
-(O(n)) operation. The GraphAdjMatrix has O(1) access to any 
+Typically, the reason to use one version over the other revolves around space
+/time trade offs, end-user application and the density of the graph.
+Since the GraphAdjList representation uses a linked list to track
+neighboring nodes, searching for a particular vertex is a linear
+(O(n)) operation. The GraphAdjMatrix has O(1) access to any
 particular neighbor, but it is essentially holding a two dimensional array,
-regardless of the graph density; on sparse graphs, this can waste a 
+regardless of the graph density; on sparse graphs, this can waste a
 considerable amount of space.
 </p>
 
@@ -69,7 +74,7 @@ considerable amount of space.
     <div id="Java" w3-include-html="./Java_GL2.html"></div>
     <div id="C++"  w3-include-html="./Cpp_GL.html"></div>
 </div>
-  
+
 <h3>Bridges Visualization</h3>
 <ul>
     <li>Once all your code is in order, run your file.</li>
@@ -78,17 +83,17 @@ considerable amount of space.
     <li>It should look something like this:</li>
 </ul>
 <div class="iframe-wrapper">
-    <iframe src="http://bridges-cs.herokuapp.com/assignments/11/bridges_public" scrolling="no">
-      <p>Sorry, your browser doesn't seem to support iframes - 
-        <a href="http://bridges-cs.herokuapp.com/assignments/11/bridges_public">Frame Link</a>
+    <iframe src="http://bridges-api-lestrell.herokuapp.com/assignments/11/bridges_public#onlyshowvis0" scrolling="no">
+      <p>Sorry, your browser doesn't seem to support iframes -
+        <a href="http://bridges-api-lestrell.herokuapp.com/assignments/11/bridges_public#onlyshowvis0">Frame Link</a>
       </p>
     </iframe>
 </div>
 <p>Well done! You’ve just created your fifth Bridges project!</p>
 
 <p>
-<b> Note that this example illustrates a Graph using Adjacency Lists; an 
-example using Adjacency Matrix (using Bridges::GraphAdjacencyMatrix) is 
+<b> Note that this example illustrates a Graph using Adjacency Lists; an
+example using Adjacency Matrix (using Bridges::GraphAdjacencyMatrix) is
 nearly identical, by replacing the class name.</b>
 </main>
 
