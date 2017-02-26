@@ -143,14 +143,14 @@ public class StudentInfo {
 
 	public String getStudentLabel() {
 		String $label =
-				fullName      +  "\n"   +
-						"Email: " + email         +  "\n"   +
-						"Program: " + program       +  "\n"   +
-						"Student ID: " + studentID     +  "\n"   +
-						"Favorite Color: " + favoriteColor +  "\n";
+					       fullName      +  "\n"   +
+		"Email: " +		       email         +  "\n"   +
+		"Program: " + 			 program       +  "\n"   +
+		"Student ID: " + 		 studentID     +  "\n"   +
+		"Favorite Color: " + favoriteColor +  "\n";
 
 		if(avatar != null)
-			$label += "<img width='100' src='" + avatar        +  "'/>";
+				$label += "&lt;img width='100' src='" + avatar        +  "'/&gt;";
 
 
 		return $label;

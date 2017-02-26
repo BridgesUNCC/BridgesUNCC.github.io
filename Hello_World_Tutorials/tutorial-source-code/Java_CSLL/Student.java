@@ -153,7 +153,7 @@ package Java_CSLL;
                         "Favorite Color: " + favoriteColor +  "\n";
 
           if(avatar != null)
-              $label += "<img width='100' src='" + avatar        +  "'/>";
+              $label += "&lt;img width='100' src='" + avatar        +  "'/&gt;";
 
 
           return $label;
