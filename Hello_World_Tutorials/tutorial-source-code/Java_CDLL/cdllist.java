@@ -1,15 +1,15 @@
-/**
-* Created by Lucas Estrella on 1/31/2017.
-*/
+package Java_CDLL;
+
 import bridges.base.CircDLelement;
 import bridges.connect.Bridges;
-import model.Student;
 
-public class Main {
+public class cdllist {
 
-  public static void main(String[] args) throws , ParseException {
+  public static void main(String[] args) throws Exception{
 
-      Bridges<String, Student> bridge = new Bridges<String, Student>(6, "YOUR_API_KEY", "YOUR_USER_ID");
+      final String YOUR_API_KEY = "";
+      final String YOUR_USER_ID = "";
+      Bridges<String, Student> bridge = new Bridges<String, Student>(6, YOUR_API_KEY, YOUR_USER_ID);
 
       Student[] students = {
               new Student(

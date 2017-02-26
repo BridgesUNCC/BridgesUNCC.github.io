@@ -1,23 +1,18 @@
-/**
+package Java_SLL;
+ /**
  * Created by Lucas Estrella on 1/31/2017.
  * lestrell@uncc.edu
  */
 import bridges.connect.Bridges;
 import bridges.base.SLelement;
-import com.google.gson.JsonObject;
-import model.Student;
-import org.json.simple.parser.ParseException;
-import provider.StudentProvider;
-import util.Auth;
 
-import java.io.FileNotFoundException;
+public class sllist {
 
-public class Main {
+    public static void main(String[] args) throws Exception {
 
-    public static void main(String[] args) throws FileNotFoundException, ParseException {
-
-
-		Bridges<String, StudentInfo> bridges = new <String, StudentInfo>(1, "YOUR_API_KEY", "YOUR_USER_ID");
+		final String YOUR_API_KEY = "";
+		final String YOUR_USER_ID = "";
+		Bridges<String, StudentInfo> bridges = new Bridges<String, StudentInfo>(3, YOUR_API_KEY, YOUR_USER_ID);
 
 
         /**
@@ -86,7 +81,7 @@ public class Main {
         el2.setNext(el3);
         el3.setNext(el4);
 
-        SLelement<Student> currentElement = el0;
+        SLelement<StudentInfo> currentElement = el0;
 
         while(currentElement != null){
             currentElement.getVisualizer().setColor(currentElement.getValue().getFavoriteColor());
@@ -108,8 +103,8 @@ public class Main {
             currentElement = currentElement.getNext();
         }
 
-        bridge.setDataStructure(el0);
-        bridge.visualize();
+		bridges.setDataStructure(el0);
+		bridges.visualize();
 
 
     }

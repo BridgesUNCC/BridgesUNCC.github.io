@@ -1,12 +1,15 @@
-import bridges.base.CircDLelement;
+package Java_DLL;
+
+import bridges.base.DLelement;
 import bridges.connect.Bridges;
-import model.Student;
 
-public class Main {
+public class dllist {
 
-  public static void main(String[] args) throws , ParseException {
+  public static void main(String[] args) throws Exception {
 
-      Bridges<String, Student> bridge = new Bridges<String, Student>(4, "YOUR_API_KEY", "YOUR_USER_ID");
+      final String YOUR_API_KEY = "";
+      final String YOUR_USER_ID = "";
+      Bridges<String, Student> bridge = new Bridges<String, Student>(4, YOUR_API_KEY, YOUR_USER_ID);
 
       Student[] students = {
               new Student(

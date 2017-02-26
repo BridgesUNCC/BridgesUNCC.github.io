@@ -1,3 +1,5 @@
+package Java_CDLL;
+
 /**
 * Created by Lucas Estrella on 1/31/2017.
 */
@@ -151,7 +153,7 @@
                         "Favorite Color: " + favoriteColor +  "\n";
 
           if(avatar != null)
-              $label += "&lt;img width='100' src='" + avatar        +  "'/&gt;";
+              $label += "<img width='100' src='" + avatar        +  "'/>";
 
 
           return $label;
