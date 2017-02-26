@@ -1,4 +1,3 @@
-package Java_SLL;
  /**
  * Created by Lucas Estrella on 1/31/2017.
  * lestrell@uncc.edu
@@ -12,13 +11,12 @@ public class sllist {
 
 		final String YOUR_API_KEY = "";
 		final String YOUR_USER_ID = "";
-		Bridges<String, StudentInfo> bridges = new Bridges<String, StudentInfo>(3, YOUR_API_KEY, YOUR_USER_ID);
+		Bridges<String, StudentInfo> bridges = 
+			new Bridges<String, StudentInfo>(100, "YOUR-BRIDGES-API-KEY" , 
+				"YOUR-BRIDGES-USER-ID");
 
-
-        /**
-         * new SLelement<>(label, genericData)
-         */
-        //initializing all elements with empty labels, and with the student data. See Object model.Student.java
+         					// create the linked list elements with 
+							// student data 
 		SLelement<StudentInfo> el0 = new SLelement<StudentInfo>( "",
 			new StudentInfo(
 				"00000000000",
@@ -75,31 +73,33 @@ public class sllist {
 				"https://randomuser.me/api/portraits/med/men/87.jpg"
 			));
 
-        //Linking the Singly LinkedList Element1 -> Element2 -> Element3 -> Element4 -> NULL
+        					//  link the elements
         el0.setNext(el1);
         el1.setNext(el2);
         el2.setNext(el3);
         el3.setNext(el4);
 
         SLelement<StudentInfo> currentElement = el0;
-
+						// iterate through the list and add visual attributes
+						// to the elements
         while(currentElement != null){
+						// color the node
             currentElement.getVisualizer().setColor(currentElement.getValue().getFavoriteColor());
 
             if(currentElement.getNext() != null){
 
+						// color the link
                 currentElement
                         .getLinkVisualizer(currentElement.getNext())
                         .setColor(currentElement.getValue().getDislikeColor());
-
+						// adjust link thickness
                 currentElement
                         .getLinkVisualizer(currentElement.getNext())
-                        .setThickness(currentElement.getValue().getStudentCreditHours() * 0.75);//75 percent thinner
-
+                        .setThickness(currentElement.getValue()
+						.getStudentCreditHours() * 0.75);//75 percent thinner
             }
 
             currentElement.setLabel(currentElement.getValue().getStudentLabel());
-
             currentElement = currentElement.getNext();
         }
 
