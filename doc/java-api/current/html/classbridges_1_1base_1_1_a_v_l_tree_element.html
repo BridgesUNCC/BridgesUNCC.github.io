@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.12"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Bridges-Java-2.3: bridges.base.AVLTreeElement&lt; K, E &gt; Class Template Reference</title>
+<title>Bridges-Java-2.3.1: bridges.base.AVLTreeElement&lt; K, E &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,8 +22,8 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Bridges-Java-2.3
-   &#160;<span id="projectnumber">2.3.0</span>
+   <div id="projectname">Bridges-Java-2.3.1
+   &#160;<span id="projectnumber">2.3.1</span>
    </div>
    <div id="projectbrief">Bridges(JavaAPI)</div>
   </td>
@@ -72,6 +72,9 @@ $(function() {
 <div class="title">bridges.base.AVLTreeElement&lt; K, E &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This class extends the <a class="el" href="classbridges_1_1base_1_1_b_s_t_element.html" title="This class extends the BinTreeElement class by adding a &#39;key&#39; value for use in a binary search tree i...">BSTElement</a> class for use in building AVL trees. AVL tree elements include a 'height' and a 'balFactor' value, representing the height and balance factor of the AVL tree at that node, respectively. This is useful in representing AVL trees.  
+ <a href="classbridges_1_1base_1_1_a_v_l_tree_element.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for bridges.base.AVLTreeElement&lt; K, E &gt;:</div>
 <div class="dyncontent">
@@ -80,7 +83,7 @@ Inheritance diagram for bridges.base.AVLTreeElement&lt; K, E &gt;:</div>
   <map id="bridges.base.AVLTreeElement_3C_20K_2C_20E_20_3E_map" name="bridges.base.AVLTreeElement&lt; K, E &gt;_map">
 <area href="classbridges_1_1base_1_1_b_s_t_element.html" title="This class extends the BinTreeElement class by adding a &#39;key&#39; value for use in a binary search tree i..." alt="bridges.base.BSTElement&lt; K, E &gt;" shape="rect" coords="0,224,233,248"/>
 <area href="classbridges_1_1base_1_1_bin_tree_element.html" title="This class can be used to create tree element objects with left and right pointers. " alt="bridges.base.BinTreeElement&lt; E &gt;" shape="rect" coords="0,168,233,192"/>
-<area href="classbridges_1_1base_1_1_tree_element.html" alt="bridges.base.TreeElement&lt; E &gt;" shape="rect" coords="0,112,233,136"/>
+<area href="classbridges_1_1base_1_1_tree_element.html" title="This class extends Element to represent general trees with arbitrary number of children. " alt="bridges.base.TreeElement&lt; E &gt;" shape="rect" coords="0,112,233,136"/>
 <area href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays..." alt="bridges.base.Element&lt; E &gt;" shape="rect" coords="0,56,233,80"/>
 <area href="classbridges_1_1base_1_1_data_struct.html" title="This is an abstract super class that is extended by all Bridges subclasses and provides some methods ..." alt="bridges.base.DataStruct" shape="rect" coords="0,0,233,24"/>
 </map>
@@ -227,7 +230,12 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:aac4a6ea28f44676274120ba1dddafc1f inherit pro_attribs_classbridges_1_1base_1_1_data_struct"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1base_1_1_data_struct.html#aac4a6ea28f44676274120ba1dddafc1f">QUOTE</a> = &quot;\&quot;&quot;</td></tr>
 <tr class="separator:aac4a6ea28f44676274120ba1dddafc1f inherit pro_attribs_classbridges_1_1base_1_1_data_struct"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class extends the <a class="el" href="classbridges_1_1base_1_1_b_s_t_element.html" title="This class extends the BinTreeElement class by adding a &#39;key&#39; value for use in a binary search tree i...">BSTElement</a> class for use in building AVL trees. AVL tree elements include a 'height' and a 'balFactor' value, representing the height and balance factor of the AVL tree at that node, respectively. This is useful in representing AVL trees. </p>
+<p>Generic paramaters: K - key value, E - appl dependent data component</p>
+<dl class="section author"><dt>Author</dt><dd>Kalpathi Subramanian </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>8/8/16 </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8fe4490d3d5d16991736bd1a7243b904"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8fe4490d3d5d16991736bd1a7243b904">&sect;&nbsp;</a></span>AVLTreeElement() <span class="overload">[1/2]</span></h2>
 
@@ -242,7 +250,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Construct an <a class="el" href="classbridges_1_1base_1_1_a_v_l_tree_element.html">AVLTreeElement</a> with default values </p>
+<p>Construct an <a class="el" href="classbridges_1_1base_1_1_a_v_l_tree_element.html" title="This class extends the BSTElement class for use in building AVL trees. AVL tree elements include a &#39;h...">AVLTreeElement</a> with default values </p>
 
 </div>
 </div>
@@ -271,7 +279,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Construct an <a class="el" href="classbridges_1_1base_1_1_a_v_l_tree_element.html">AVLTreeElement</a> holding a key value "k" and an object "e"</p>
+<p>Construct an <a class="el" href="classbridges_1_1base_1_1_a_v_l_tree_element.html" title="This class extends the BSTElement class for use in building AVL trees. AVL tree elements include a &#39;h...">AVLTreeElement</a> holding a key value "k" and an object "e"</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">k</td><td>the search key </td></tr>
@@ -429,12 +437,12 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/Users/kalpathi/gr/bridges/client/java/bridges16/src/main/java/edu/uncc/cs/bridges_v21/base/<a class="el" href="_a_v_l_tree_element_8java.html">AVLTreeElement.java</a></li>
+<li>link/base/<a class="el" href="_a_v_l_tree_element_8java.html">AVLTreeElement.java</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 16 2017 19:48:45 for Bridges-Java-2.3 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 26 2017 20:27:41 for Bridges-Java-2.3.1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.12
 </small></address>

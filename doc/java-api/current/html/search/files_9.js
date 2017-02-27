@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['movie_2ejava',['Movie.java',['../_movie_8java.html',1,'']]]
+  ['linkvisualizer_2ejava',['LinkVisualizer.java',['../_link_visualizer_8java.html',1,'']]]
 ];
