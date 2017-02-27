@@ -1,0 +1,207 @@
+\hypertarget{classbridges_1_1base_1_1_color}{}\section{bridges.\+base.\+Color Class Reference}
+\label{classbridges_1_1base_1_1_color}\index{bridges.\+base.\+Color@{bridges.\+base.\+Color}}
+
+
+This class is used to represent colors in B\+R\+I\+D\+G\+ES.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbridges_1_1base_1_1_color_ab6d71ac2ee1430fb2db2fbe34e692de8}{Color} ()
+\item 
+\hyperlink{classbridges_1_1base_1_1_color_a15f56590ca3c9cc161c7bfa47060ad21}{Color} (int r, int g, int b, float a)
+\item 
+\hyperlink{classbridges_1_1base_1_1_color_a5fab564fa4eec8bece64f847ebd42948}{Color} (int r, int g, int b)
+\item 
+void \hyperlink{classbridges_1_1base_1_1_color_a5559b1c7eb4c3901526b1012029b528f}{set\+Color} (int r, int g, int b, float a)
+\item 
+void \hyperlink{classbridges_1_1base_1_1_color_a1d78967703924b709e76def5b2b3ee9a}{set\+Red} (int r)
+\item 
+int \hyperlink{classbridges_1_1base_1_1_color_af1a30dc925b35d6bfe609f8838651025}{get\+Red} ()
+\item 
+void \hyperlink{classbridges_1_1base_1_1_color_a415a28133ade4e216c02ecdfc8a32a1d}{set\+Green} (int g)
+\item 
+int \hyperlink{classbridges_1_1base_1_1_color_a8f3fdd23cf785704faa2e3701e25978f}{get\+Green} ()
+\item 
+void \hyperlink{classbridges_1_1base_1_1_color_a0e04156b1573cf8002c4d9cb69825657}{set\+Blue} (int b)
+\item 
+int \hyperlink{classbridges_1_1base_1_1_color_ad4b82e1eb9ff59857d2868edd8d4ce65}{get\+Blue} ()
+\item 
+void \hyperlink{classbridges_1_1base_1_1_color_afab07ce64efa1fa5797795670b0effb6}{set\+Alpha} (float a)
+\item 
+float \hyperlink{classbridges_1_1base_1_1_color_a7c4247e31ecd8fcc61ef208d5deefe68}{get\+Alpha} ()
+\item 
+void \hyperlink{classbridges_1_1base_1_1_color_a54dcd31227bde0f5d0a4f5d3b5a24ed2}{set\+Color} (String col\+\_\+name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is used to represent colors in B\+R\+I\+D\+G\+ES. 
+
+We use an R\+G\+BA model to represent colors, with each component in the range 0-\/255. B\+R\+I\+D\+G\+ES also supports named colors for user convenience, but these are converted into \mbox{[}R\+G\+BA\mbox{]} prior to transmission to the server for visualization.
+
+\begin{DoxyAuthor}{Author}
+K.\+R. Subramanian, 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7/14/16 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbridges_1_1base_1_1_color_ab6d71ac2ee1430fb2db2fbe34e692de8}{}\label{classbridges_1_1base_1_1_color_ab6d71ac2ee1430fb2db2fbe34e692de8} 
+\index{bridges\+::base\+::\+Color@{bridges\+::base\+::\+Color}!Color@{Color}}
+\index{Color@{Color}!bridges\+::base\+::\+Color@{bridges\+::base\+::\+Color}}
+\subsubsection{\texorpdfstring{Color()}{Color()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bridges.\+base.\+Color.\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructors \hypertarget{classbridges_1_1base_1_1_color_a15f56590ca3c9cc161c7bfa47060ad21}{}\label{classbridges_1_1base_1_1_color_a15f56590ca3c9cc161c7bfa47060ad21} 
+\index{bridges\+::base\+::\+Color@{bridges\+::base\+::\+Color}!Color@{Color}}
+\index{Color@{Color}!bridges\+::base\+::\+Color@{bridges\+::base\+::\+Color}}
+\subsubsection{\texorpdfstring{Color()}{Color()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bridges.\+base.\+Color.\+Color (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{g,  }\item[{int}]{b,  }\item[{float}]{a }\end{DoxyParamCaption})}
+
+Constructor, given r, g, b, a components
+
+
+\begin{DoxyParams}{Parameters}
+{\em r,g,b,a} & -\/ checked to be in the range 0-\/255 \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbridges_1_1base_1_1_color_a5fab564fa4eec8bece64f847ebd42948}{}\label{classbridges_1_1base_1_1_color_a5fab564fa4eec8bece64f847ebd42948} 
+\index{bridges\+::base\+::\+Color@{bridges\+::base\+::\+Color}!Color@{Color}}
+\index{Color@{Color}!bridges\+::base\+::\+Color@{bridges\+::base\+::\+Color}}
+\subsubsection{\texorpdfstring{Color()}{Color()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bridges.\+base.\+Color.\+Color (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{g,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+Constructor, given r, g, b components alpha (opacity) defaults to 255
+
+
+\begin{DoxyParams}{Parameters}
+{\em r,g,b,a} & -\/ checked to be in the range 0-\/255 \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbridges_1_1base_1_1_color_a7c4247e31ecd8fcc61ef208d5deefe68}{}\label{classbridges_1_1base_1_1_color_a7c4247e31ecd8fcc61ef208d5deefe68} 
+\index{bridges\+::base\+::\+Color@{bridges\+::base\+::\+Color}!get\+Alpha@{get\+Alpha}}
+\index{get\+Alpha@{get\+Alpha}!bridges\+::base\+::\+Color@{bridges\+::base\+::\+Color}}
+\subsubsection{\texorpdfstring{get\+Alpha()}{getAlpha()}}
+{\footnotesize\ttfamily float bridges.\+base.\+Color.\+get\+Alpha (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+gets the alpha component
+
+\begin{DoxyReturn}{Returns}
+alpha -\/ returns the alpha(opacity) component of the color 
+\end{DoxyReturn}
+\hypertarget{classbridges_1_1base_1_1_color_ad4b82e1eb9ff59857d2868edd8d4ce65}{}\label{classbridges_1_1base_1_1_color_ad4b82e1eb9ff59857d2868edd8d4ce65} 
+\index{bridges\+::base\+::\+Color@{bridges\+::base\+::\+Color}!get\+Blue@{get\+Blue}}
+\index{get\+Blue@{get\+Blue}!bridges\+::base\+::\+Color@{bridges\+::base\+::\+Color}}
+\subsubsection{\texorpdfstring{get\+Blue()}{getBlue()}}
+{\footnotesize\ttfamily int bridges.\+base.\+Color.\+get\+Blue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+gets the blue component
+
+\begin{DoxyReturn}{Returns}
+blue -\/ returns the blue component of the color 
+\end{DoxyReturn}
+\hypertarget{classbridges_1_1base_1_1_color_a8f3fdd23cf785704faa2e3701e25978f}{}\label{classbridges_1_1base_1_1_color_a8f3fdd23cf785704faa2e3701e25978f} 
+\index{bridges\+::base\+::\+Color@{bridges\+::base\+::\+Color}!get\+Green@{get\+Green}}
+\index{get\+Green@{get\+Green}!bridges\+::base\+::\+Color@{bridges\+::base\+::\+Color}}
+\subsubsection{\texorpdfstring{get\+Green()}{getGreen()}}
+{\footnotesize\ttfamily int bridges.\+base.\+Color.\+get\+Green (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+gets the green component
+
+\begin{DoxyReturn}{Returns}
+green -\/ returns the green component of the color 
+\end{DoxyReturn}
+\hypertarget{classbridges_1_1base_1_1_color_af1a30dc925b35d6bfe609f8838651025}{}\label{classbridges_1_1base_1_1_color_af1a30dc925b35d6bfe609f8838651025} 
+\index{bridges\+::base\+::\+Color@{bridges\+::base\+::\+Color}!get\+Red@{get\+Red}}
+\index{get\+Red@{get\+Red}!bridges\+::base\+::\+Color@{bridges\+::base\+::\+Color}}
+\subsubsection{\texorpdfstring{get\+Red()}{getRed()}}
+{\footnotesize\ttfamily int bridges.\+base.\+Color.\+get\+Red (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+gets the red component
+
+\begin{DoxyReturn}{Returns}
+red -\/ returns the red component of the color 
+\end{DoxyReturn}
+\hypertarget{classbridges_1_1base_1_1_color_afab07ce64efa1fa5797795670b0effb6}{}\label{classbridges_1_1base_1_1_color_afab07ce64efa1fa5797795670b0effb6} 
+\index{bridges\+::base\+::\+Color@{bridges\+::base\+::\+Color}!set\+Alpha@{set\+Alpha}}
+\index{set\+Alpha@{set\+Alpha}!bridges\+::base\+::\+Color@{bridges\+::base\+::\+Color}}
+\subsubsection{\texorpdfstring{set\+Alpha()}{setAlpha()}}
+{\footnotesize\ttfamily void bridges.\+base.\+Color.\+set\+Alpha (\begin{DoxyParamCaption}\item[{float}]{a }\end{DoxyParamCaption})}
+
+sets the alpha(opacity) component
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & -\/ checked to be in the range 0-\/255 \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbridges_1_1base_1_1_color_a0e04156b1573cf8002c4d9cb69825657}{}\label{classbridges_1_1base_1_1_color_a0e04156b1573cf8002c4d9cb69825657} 
+\index{bridges\+::base\+::\+Color@{bridges\+::base\+::\+Color}!set\+Blue@{set\+Blue}}
+\index{set\+Blue@{set\+Blue}!bridges\+::base\+::\+Color@{bridges\+::base\+::\+Color}}
+\subsubsection{\texorpdfstring{set\+Blue()}{setBlue()}}
+{\footnotesize\ttfamily void bridges.\+base.\+Color.\+set\+Blue (\begin{DoxyParamCaption}\item[{int}]{b }\end{DoxyParamCaption})}
+
+sets the blue component
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & -\/ checked to be in the range 0-\/255 \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbridges_1_1base_1_1_color_a5559b1c7eb4c3901526b1012029b528f}{}\label{classbridges_1_1base_1_1_color_a5559b1c7eb4c3901526b1012029b528f} 
+\index{bridges\+::base\+::\+Color@{bridges\+::base\+::\+Color}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!bridges\+::base\+::\+Color@{bridges\+::base\+::\+Color}}
+\subsubsection{\texorpdfstring{set\+Color()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void bridges.\+base.\+Color.\+set\+Color (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{g,  }\item[{int}]{b,  }\item[{float}]{a }\end{DoxyParamCaption})}
+
+sets color to the given r, g, b, a components
+
+
+\begin{DoxyParams}{Parameters}
+{\em r,g,b,a} & -\/ checked to be in the range 0-\/255 \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbridges_1_1base_1_1_color_a54dcd31227bde0f5d0a4f5d3b5a24ed2}{}\label{classbridges_1_1base_1_1_color_a54dcd31227bde0f5d0a4f5d3b5a24ed2} 
+\index{bridges\+::base\+::\+Color@{bridges\+::base\+::\+Color}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!bridges\+::base\+::\+Color@{bridges\+::base\+::\+Color}}
+\subsubsection{\texorpdfstring{set\+Color()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void bridges.\+base.\+Color.\+set\+Color (\begin{DoxyParamCaption}\item[{String}]{col\+\_\+name }\end{DoxyParamCaption})}
+
+\hypertarget{classbridges_1_1base_1_1_color_a415a28133ade4e216c02ecdfc8a32a1d}{}\label{classbridges_1_1base_1_1_color_a415a28133ade4e216c02ecdfc8a32a1d} 
+\index{bridges\+::base\+::\+Color@{bridges\+::base\+::\+Color}!set\+Green@{set\+Green}}
+\index{set\+Green@{set\+Green}!bridges\+::base\+::\+Color@{bridges\+::base\+::\+Color}}
+\subsubsection{\texorpdfstring{set\+Green()}{setGreen()}}
+{\footnotesize\ttfamily void bridges.\+base.\+Color.\+set\+Green (\begin{DoxyParamCaption}\item[{int}]{g }\end{DoxyParamCaption})}
+
+sets the green component
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & -\/ checked to be in the range 0-\/255 \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbridges_1_1base_1_1_color_a1d78967703924b709e76def5b2b3ee9a}{}\label{classbridges_1_1base_1_1_color_a1d78967703924b709e76def5b2b3ee9a} 
+\index{bridges\+::base\+::\+Color@{bridges\+::base\+::\+Color}!set\+Red@{set\+Red}}
+\index{set\+Red@{set\+Red}!bridges\+::base\+::\+Color@{bridges\+::base\+::\+Color}}
+\subsubsection{\texorpdfstring{set\+Red()}{setRed()}}
+{\footnotesize\ttfamily void bridges.\+base.\+Color.\+set\+Red (\begin{DoxyParamCaption}\item[{int}]{r }\end{DoxyParamCaption})}
+
+sets the red component
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & -\/ checked to be in the range 0-\/255 \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+link/base/\hyperlink{_color_8java}{Color.\+java}\end{DoxyCompactItemize}
