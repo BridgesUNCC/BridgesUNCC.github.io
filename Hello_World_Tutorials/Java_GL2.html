@@ -39,7 +39,7 @@ Note that you must replace the above strings with your BRIDGES credentials.
 <li>Then we can create our GraphAdjList</li>
 <pre class="prettyprint">
 
-      GraphAdjList&lt;String,String&gt; g = new GraphAdjList&lt;&gt;();
+      GraphAdjList&lt;String,String&gt; g = new GraphAdjList&lt;String, String&gt;();
     </pre>
 <li> Set a title for the visualization.</li>
 		// set a title for the visualization
@@ -64,7 +64,7 @@ the actors.</li>
 <pre class="prettyprint">
 
     // create an adjacency list based graph
-    GraphAdjList<String, String> g = new GraphAdjList<String, String>();
+    GraphAdjList&lt;String, String&gt; g = new GraphAdjList&lt;String, String&gt;();
 
     // first create vertices for two actors and add them to the graph
     String a1 = "Kevin_Bacon_(I)", a2 = "Denzel_Washington";
@@ -111,20 +111,20 @@ the actors.</li>
       	g.getVertices().get(m).getVisualizer().setOpacity(0.5f);
       	cnt2++;
     }
-
-</pre class="prettyprint">
+</pre>
+<pre class="prettyprint">
 <li> Next, we illustrate traversing the adacency list and color the
 	movie nodes adjacent to the Kevin Bacon node.</li>
 <pre class="prettyprint">
 
     // first get the adjacency list for Kevin Bacon
-    SLelement<Edge<String>>  head = g.getAdjacencyList().get("Kevin_Bacon_(I)");
+    SLelement&lt;Edge&lt;String&gt;&gt;  head = g.getAdjacencyList().get("Kevin_Bacon_(I)");
     // traverse the adjacency list
-    for (SLelement<Edge<String>>  sle = head; sle != null; sle = sle.getNext() ) {
+    for (SLelement&lt;Edge&lt;String&gt;&gt; sle = head; sle != null; sle = sle.getNext() ) {
       	// get the terminating vertex
       	String term_vertex = sle.getValue().getVertex();
       	// find the corresponding element
-      	Element<String> el = g.getVertices().get(term_vertex);
+      	Element&lt;String&gt; el = g.getVertices().get(term_vertex);
       	// set the  color of the node except the Denzel W. node
       	if (!term_vertex.equals("Denzel_Washington"))
       		  el.getVisualizer().setColor("green");
