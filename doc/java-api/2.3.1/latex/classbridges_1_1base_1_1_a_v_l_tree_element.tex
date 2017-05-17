@@ -2,7 +2,7 @@
 \label{classbridges_1_1base_1_1_a_v_l_tree_element}\index{bridges.\+base.\+A\+V\+L\+Tree\+Element$<$ K, E $>$@{bridges.\+base.\+A\+V\+L\+Tree\+Element$<$ K, E $>$}}
 
 
-This class extends the \hyperlink{classbridges_1_1base_1_1_b_s_t_element}{B\+S\+T\+Element} class for use in building A\+VL trees. A\+VL tree elements include a \textquotesingle{}height\textquotesingle{} and a \textquotesingle{}bal\+Factor\textquotesingle{} value, representing the height and balance factor of the A\+VL tree at that node, respectively. This is useful in representing A\+VL trees.  
+This class extends the \hyperlink{classbridges_1_1base_1_1_b_s_t_element}{B\+S\+T\+Element} class by adding a height and balance factor fields that are useful in A\+VL trees.  
 
 
 Inheritance diagram for bridges.\+base.\+A\+V\+L\+Tree\+Element$<$ K, E $>$\+:\begin{figure}[H]
@@ -36,16 +36,31 @@ void \hyperlink{classbridges_1_1base_1_1_a_v_l_tree_element_a0dc3c83e750cc39535a
 
 
 \subsection{Detailed Description}
-This class extends the \hyperlink{classbridges_1_1base_1_1_b_s_t_element}{B\+S\+T\+Element} class for use in building A\+VL trees. A\+VL tree elements include a \textquotesingle{}height\textquotesingle{} and a \textquotesingle{}bal\+Factor\textquotesingle{} value, representing the height and balance factor of the A\+VL tree at that node, respectively. This is useful in representing A\+VL trees. 
+This class extends the \hyperlink{classbridges_1_1base_1_1_b_s_t_element}{B\+S\+T\+Element} class by adding a height and balance factor fields that are useful in A\+VL trees. 
 
-Generic paramaters\+: K -\/ key value, E -\/ appl dependent data component
+A\+VL tree elements include a \textquotesingle{}height\textquotesingle{} and a \textquotesingle{}bal\+Factor\textquotesingle{} value, representing the height and balance factor of the A\+VL tree at that node, respectively. This is useful in representing A\+VL trees.
 
+A\+V\+L\+Tree elements contain a visualizer (\hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Visualizer}) object for setting visual attributes (color, shape, opacity, size), necessary for displaying them in a web browser.
+
+A\+V\+L\+Tree elements also have a \hyperlink{classbridges_1_1base_1_1_link_visualizer}{Link\+Visualizer} object, that is used when they are linked to another element, appropriate for setting link attributes, for instance, between $\ast$ the current element and its left or right child
+
+
+\begin{DoxyParams}{Parameters}
+{\em E} & he generic parameter object that is part of this element, representing application specific data. \\
+\hline
+{\em K} & is the search key parameter in the A\+VL tree node; K must be orderable, such as integer, float, string, etc., on which relational operators work.\\
+\hline
+\end{DoxyParams}
 \begin{DoxyAuthor}{Author}
-Kalpathi Subramanian 
+Kalpathi Subramanian, Mihai Mehedint
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
-8/8/16 
+6/22/16, 1/7/17, 5/17/17
 \end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+Example tutorial using \hyperlink{classbridges_1_1base_1_1_a_v_l_tree_element}{A\+V\+L\+Tree\+Element} at ~\newline
+ \href{http://bridgesuncc.github.io/Hello_World_Tutorials/AVL.html}{\tt http\+://bridgesuncc.\+github.\+io/\+Hello\+\_\+\+World\+\_\+\+Tutorials/\+A\+V\+L.\+html} 
+\end{DoxySeeAlso}
 
 
 \subsection{Constructor \& Destructor Documentation}

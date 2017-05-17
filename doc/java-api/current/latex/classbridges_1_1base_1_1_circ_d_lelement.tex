@@ -38,23 +38,31 @@ void \hyperlink{classbridges_1_1base_1_1_circ_d_lelement_ade2cf166a572c051cd284f
 \subsection{Detailed Description}
 This class can be used to instantiate Circular Doubly Linked List Elements. 
 
-Structurally they are the same as doubly linked elements except that each node constructed with the next and the previous pointers pointing to itself.
+Structurally they are the same as doubly linked elements except that each node constructed with the next and the previous pointers points to itself.
 
 User\textquotesingle{}s implementation of the circularly linked list needs to ensure that the last node\textquotesingle{}s next pointer points to the first node and the first node\textquotesingle{}s previous pointer points to the last node, as the visualization generation is dependent on this.
 
-Elements have labels (string) that are displayed on the visualization. Elements take an generic object E as a user defined parameter, which can any native type or object. Elements contain a visualizer object for setting visual attributes (color, shape, opacity, size), necessary for displaying them in a web browser
+Elements have labels (string) that are displayed on the visualization. Elements take an generic object E as a user defined parameter, which can be any native type or object.
+
+Elements contain a visualizer (\hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Visualizer}) object for setting visual attributes (color, shape, opacity, size), necessary for displaying them in a web browser.
+
+Elements also have a \hyperlink{classbridges_1_1base_1_1_link_visualizer}{Link\+Visualizer} object that is used when they are linked to another element, appropriate for setting link attributes, between the element and its previous or next nodes.
 
 \begin{DoxyAuthor}{Author}
-Kalpathi Subramanian 
+Kalpathi Subramanian
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
 7/17/16, 1/16/17
 \end{DoxyDate}
 
 \begin{DoxyParams}{Parameters}
-{\em $<$\+E$>$} & the generic parameter that is defined by the application \\
+{\em $<$\+E$>$} & the generic parameter object that contains application specific data, defined by the user when instantiating this object.\\
 \hline
 \end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Example Tutorial at ~\newline
+ \href{http://bridgesuncc.github.io/Hello_World_Tutorials/CDLL.html}{\tt http\+://bridgesuncc.\+github.\+io/\+Hello\+\_\+\+World\+\_\+\+Tutorials/\+C\+D\+L\+L.\+html} 
+\end{DoxySeeAlso}
 
 
 \subsection{Constructor \& Destructor Documentation}

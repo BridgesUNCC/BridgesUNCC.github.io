@@ -97,12 +97,46 @@ This method change the tweet object into an earthquake tweet object with more da
 \subsubsection{\texorpdfstring{get\+Actor\+Movie\+I\+M\+D\+B\+Data()}{getActorMovieIMDBData()}}
 {\footnotesize\ttfamily static Array\+List$<$\hyperlink{classbridges_1_1data__src__dependent_1_1_actor_movie_i_m_d_b}{Actor\+Movie\+I\+M\+DB}$>$ bridges.\+connect.\+Data\+Formatter.\+get\+Actor\+Movie\+I\+M\+D\+B\+Data (\begin{DoxyParamCaption}\item[{String}]{name,  }\item[{int}]{max\+Elem }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
 
+Get Actor\+Movie I\+M\+DB Data retrieved, formatted into a list of Actor\+Movie\+I\+M\+DB objects
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & should be \char`\"{}\+I\+M\+D\+B\char`\"{} \\
+\hline
+{\em max\+Elements} & the number of actor/movie pairs, but currently unused, returns all records. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the request fails\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+a list of Actor\+Movie\+I\+M\+DB objects, but only actor and movie fields in this version 
+\end{DoxyReturn}
 \hypertarget{classbridges_1_1connect_1_1_data_formatter_a9b599616c4d7a502f9fab8663173db6d}{}\label{classbridges_1_1connect_1_1_data_formatter_a9b599616c4d7a502f9fab8663173db6d} 
 \index{bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}!get\+Actor\+Movie\+I\+M\+D\+B\+Data2@{get\+Actor\+Movie\+I\+M\+D\+B\+Data2}}
 \index{get\+Actor\+Movie\+I\+M\+D\+B\+Data2@{get\+Actor\+Movie\+I\+M\+D\+B\+Data2}!bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}}
 \subsubsection{\texorpdfstring{get\+Actor\+Movie\+I\+M\+D\+B\+Data2()}{getActorMovieIMDBData2()}}
 {\footnotesize\ttfamily static Array\+List$<$\hyperlink{classbridges_1_1data__src__dependent_1_1_actor_movie_i_m_d_b}{Actor\+Movie\+I\+M\+DB}$>$ bridges.\+connect.\+Data\+Formatter.\+get\+Actor\+Movie\+I\+M\+D\+B\+Data2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
 
+Get Actor\+Movie I\+M\+DB Data retrieved, formatted into a list of Actor\+Movie\+I\+M\+DB objects
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & should be \char`\"{}\+I\+M\+D\+B\char`\"{} \\
+\hline
+{\em max\+Elements} & the number of actor/movie pairs, but currently unused, returns all records. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the request fails\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+a list of Actor\+Movie\+I\+M\+DB objects, but only actor, movie, movie genre and movie rating are returned. 
+\end{DoxyReturn}
 \hypertarget{classbridges_1_1connect_1_1_data_formatter_a3877fbdef4320f03dba7f2a6832adfbb}{}\label{classbridges_1_1connect_1_1_data_formatter_a3877fbdef4320f03dba7f2a6832adfbb} 
 \index{bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}!get\+Associations@{get\+Associations}}
 \index{get\+Associations@{get\+Associations}!bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}}
@@ -225,6 +259,23 @@ the backend
 \subsubsection{\texorpdfstring{get\+Earthquake\+U\+S\+G\+S\+Data()}{getEarthquakeUSGSData()}}
 {\footnotesize\ttfamily static Array\+List$<$\hyperlink{classbridges_1_1data__src__dependent_1_1_earthquake_u_s_g_s}{Earthquake\+U\+S\+GS}$>$ bridges.\+connect.\+Data\+Formatter.\+get\+Earthquake\+U\+S\+G\+S\+Data (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1data__src__dependent_1_1_u_s_g_saccount}{U\+S\+G\+Saccount}}]{acct\+Name,  }\item[{int}]{max\+Elem }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
 
+Get U\+S\+GS earthquake data U\+S\+GS Tweet data (\href{https://earthquake.usgs.gov/earthquakes/map/}{\tt https\+://earthquake.\+usgs.\+gov/earthquakes/map/}) retrieved, formatted into a list of Earthquake\+U\+S\+GS objects
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & U\+S\+GS account name -\/ must be \char`\"{}earthquake\char`\"{} to create account \\
+\hline
+{\em max\+Elements} & the number of earthquake records retrieved, limited to 5000 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the request fails\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+a list of earthquake records 
+\end{DoxyReturn}
 \hypertarget{classbridges_1_1connect_1_1_data_formatter_a2637c733e7f4efccfb56de0940506318}{}\label{classbridges_1_1connect_1_1_data_formatter_a2637c733e7f4efccfb56de0940506318} 
 \index{bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}!get\+Edge\+Weight@{get\+Edge\+Weight}}
 \index{get\+Edge\+Weight@{get\+Edge\+Weight}!bridges\+::connect\+::\+Data\+Formatter@{bridges\+::connect\+::\+Data\+Formatter}}

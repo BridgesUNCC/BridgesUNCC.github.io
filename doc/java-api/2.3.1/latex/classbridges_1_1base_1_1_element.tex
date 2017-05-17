@@ -63,14 +63,20 @@ void \hyperlink{classbridges_1_1base_1_1_element_af1a60f4e6a91d379179f7d56e6dc38
 \subsection{Detailed Description}
 This is the main superclass in B\+R\+I\+D\+G\+ES for deriving a number of objects used in building arrays, lists, trees and graph data structures. 
 
-\hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}, \hyperlink{classbridges_1_1base_1_1_circ_s_lelement}{Circ\+S\+Lelement}, \hyperlink{classbridges_1_1base_1_1_circ_d_lelement}{Circ\+D\+Lelement}, \hyperlink{classbridges_1_1base_1_1_tree_element}{Tree\+Element}, \hyperlink{classbridges_1_1base_1_1_bin_tree_element}{Bin\+Tree\+Element}, \hyperlink{classbridges_1_1base_1_1_b_s_t_element}{B\+S\+T\+Element}, \hyperlink{classbridges_1_1base_1_1_a_v_l_tree_element}{A\+V\+L\+Tree\+Element} are all subclasses. \hyperlink{classbridges_1_1base_1_1_element}{Element} contains visualizer objects (\hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Visualizer}, \hyperlink{classbridges_1_1base_1_1_link_visualizer}{Link\+Visualizer}) for specifying visual attributes. It also contains a label that is used in the visualization.
+\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}, \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}, \hyperlink{classbridges_1_1base_1_1_circ_s_lelement}{Circ\+S\+Lelement}, \hyperlink{classbridges_1_1base_1_1_circ_d_lelement}{Circ\+D\+Lelement}, \hyperlink{classbridges_1_1base_1_1_tree_element}{Tree\+Element}, \hyperlink{classbridges_1_1base_1_1_bin_tree_element}{Bin\+Tree\+Element}, \hyperlink{classbridges_1_1base_1_1_b_s_t_element}{B\+S\+T\+Element}, \hyperlink{classbridges_1_1base_1_1_circ_s_lelement}{Circ\+S\+Lelement}, \hyperlink{classbridges_1_1base_1_1_circ_d_lelement}{Circ\+D\+Lelement}, \hyperlink{classbridges_1_1base_1_1_a_v_l_tree_element}{A\+V\+L\+Tree\+Element} are all subclasses (see class hierarchy above). \hyperlink{classbridges_1_1base_1_1_element}{Element} contains two visualizer objects (\hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Visualizer}, \hyperlink{classbridges_1_1base_1_1_link_visualizer}{Link\+Visualizer}) for specifying visual attributes for nodes and links respectively. It also contains a label that that can be displayed in B\+R\+I\+D\+G\+ES visualizations.
+
+All the tutorials under
+
+\href{http://bridgesuncc.github.io/Hello_World_Tutorials/Overview.html}{\tt http\+://bridgesuncc.\+github.\+io/\+Hello\+\_\+\+World\+\_\+\+Tutorials/\+Overview.\+html}
+
+illustrate examples of using different types of \hyperlink{classbridges_1_1base_1_1_element}{Element} objects and how to manipulate their visual attributes.
 
 \begin{DoxyAuthor}{Author}
 Mihai Mehedint, Kalpathi Subramanian
 \end{DoxyAuthor}
 
 \begin{DoxyParams}{Parameters}
-{\em generic} & $<$\+E$>$ \\
+{\em generic} & $<$\+E$>$ Elements are defined with an application specific generic parameter, that is defined by the user. These can be any legal Java type and manipulated using \hyperlink{classbridges_1_1base_1_1_element_ab3cf1241da0bc4c59cea9d6f0fd7aaf4}{set\+Value()}/get\+Value() methods. For more information on Java generics, see for example, \href{https://docs.oracle.com/javase/tutorial/java/generics/types.html}{\tt https\+://docs.\+oracle.\+com/javase/tutorial/java/generics/types.\+html} \\
 \hline
 \end{DoxyParams}
 
@@ -88,9 +94,11 @@ Mihai Mehedint, Kalpathi Subramanian
 \subsubsection{\texorpdfstring{Element()}{Element()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
 {\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}$<$ E $>$.\hyperlink{classbridges_1_1base_1_1_element}{Element} (\begin{DoxyParamCaption}\item[{E}]{val }\end{DoxyParamCaption})}
 
-the constructor of \hyperlink{classbridges_1_1base_1_1_element}{Element} 
+the constructor of \hyperlink{classbridges_1_1base_1_1_element}{Element}
+
+
 \begin{DoxyParams}{Parameters}
-{\em val} & will be used to construct \hyperlink{classbridges_1_1base_1_1_element}{Element} \\
+{\em val} & generic parameter value used to construct \hyperlink{classbridges_1_1base_1_1_element}{Element} \\
 \hline
 \end{DoxyParams}
 \hypertarget{classbridges_1_1base_1_1_element_a14e857e8050eac518900a458f0364d8e}{}\label{classbridges_1_1base_1_1_element_a14e857e8050eac518900a458f0364d8e} 
@@ -103,7 +111,7 @@ the constructor of \hyperlink{classbridges_1_1base_1_1_element}{Element}
 \begin{DoxyParams}{Parameters}
 {\em label} & the string that is visible on the Bridges Visualization \\
 \hline
-{\em val} & will be used to construct \hyperlink{classbridges_1_1base_1_1_element}{Element} \\
+{\em val} & generic parameter value used to construct \hyperlink{classbridges_1_1base_1_1_element}{Element} \\
 \hline
 \end{DoxyParams}
 \hypertarget{classbridges_1_1base_1_1_element_a91db9de70b65a1d7b5f27c1c0b909832}{}\label{classbridges_1_1base_1_1_element_a91db9de70b65a1d7b5f27c1c0b909832} 
@@ -112,7 +120,9 @@ the constructor of \hyperlink{classbridges_1_1base_1_1_element}{Element}
 \subsubsection{\texorpdfstring{Element()}{Element()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
 {\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}$<$ E $>$.\hyperlink{classbridges_1_1base_1_1_element}{Element} (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_element}{Element}$<$ E $>$}]{original }\end{DoxyParamCaption})}
 
-performing deep copy of an element when needed 
+performing deep copy of an element when needed
+
+
 \begin{DoxyParams}{Parameters}
 {\em original} & the \hyperlink{classbridges_1_1base_1_1_element}{Element} that is to be copied \\
 \hline
@@ -126,15 +136,17 @@ performing deep copy of an element when needed
 \subsubsection{\texorpdfstring{arrange\+Label()}{arrangeLabel()}}
 {\footnotesize\ttfamily String \hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}$<$ E $>$.arrange\+Label (\begin{DoxyParamCaption}\item[{String}]{label,  }\item[{int}]{word\+Number }\end{DoxyParamCaption})}
 
-This method formats the label string using a predefine pattern (D\+I\+V\+I\+D\+E\+\_\+\+K\+EY) and replaces the pattern with the string characters hold by the I\+N\+S\+E\+R\+T\+\_\+\+S\+T\+R\+I\+NG global variable 
+This method formats the label string using a predefine pattern (D\+I\+V\+I\+D\+E\+\_\+\+K\+EY) and replaces the pattern with the string characters hold by the I\+N\+S\+E\+R\+T\+\_\+\+S\+T\+R\+I\+NG global variable
+
+
 \begin{DoxyParams}{Parameters}
-{\em label} & \\
+{\em label} & the input label string\\
 \hline
 {\em word\+Number} & in very long strings in the case where the whitespace \textbackslash{}s is chosen as a key the word\+Number can be set to replace the whitespace with a newline character \textbackslash{}n at a given number of words (every second or third word) The default value is 0. In most situations we want to replace all patterns found. for more complex patterns the key must be changed like so \char`\"{}((\+John) (.+?))\char`\"{} returns \char`\"{}\+John first\+Word\+After\+John\char`\"{}\+: John writes, John doe, John eats etc. (\textbackslash{}w) matches any word (\textbackslash{}s) one white space (\textbackslash{}s$\ast$) zero or more white spaces, (\textbackslash{}s+) one or more\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-
+the formatted label 
 \end{DoxyReturn}
 \hypertarget{classbridges_1_1base_1_1_element_a6cd4c4f15c6a4f87f59e443cffe87a20}{}\label{classbridges_1_1base_1_1_element_a6cd4c4f15c6a4f87f59e443cffe87a20} 
 \index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!compare\+To@{compare\+To}}
@@ -194,8 +206,10 @@ the string identifier
 \subsubsection{\texorpdfstring{get\+Label()}{getLabel()}}
 {\footnotesize\ttfamily String \hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}$<$ E $>$.get\+Label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-This method returns the existing value of the label fields \begin{DoxyReturn}{Returns}
-the label of the \hyperlink{classbridges_1_1base_1_1_element}{Element} that shows up on the Bridges Visualization 
+This method returns the existing value of the label fields
+
+\begin{DoxyReturn}{Returns}
+the label of the \hyperlink{classbridges_1_1base_1_1_element}{Element}; the label is typically displayed on B\+R\+I\+D\+G\+ES visualizations. 
 \end{DoxyReturn}
 \hypertarget{classbridges_1_1base_1_1_element_a7978552c7b36e28c302f611fc1958e7f}{}\label{classbridges_1_1base_1_1_element_a7978552c7b36e28c302f611fc1958e7f} 
 \index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!get\+Link\+Visualizer@{get\+Link\+Visualizer}}
@@ -203,7 +217,13 @@ the label of the \hyperlink{classbridges_1_1base_1_1_element}{Element} that show
 \subsubsection{\texorpdfstring{get\+Link\+Visualizer()}{getLinkVisualizer()}}
 {\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_link_visualizer}{Link\+Visualizer} \hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}$<$ E $>$.get\+Link\+Visualizer (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_element}{Element}$<$ E $>$}]{el }\end{DoxyParamCaption})}
 
-Returns the \hyperlink{classbridges_1_1base_1_1_element}{Element}\textquotesingle{}s link visualizer object that is linked to element el  \hyperlink{classbridges_1_1base_1_1_element}{Element} el -- the element terminating the link \begin{DoxyReturn}{Returns}
+Returns the \hyperlink{classbridges_1_1base_1_1_element}{Element}\textquotesingle{}s link visualizer object
+
+The link visualizer object links this element to another element, which is specified by the argument to this method. This method is typically used to set the visual attributes of the links, such as in graphs or binary tree structures.
+
+\hyperlink{classbridges_1_1base_1_1_element}{Element} el -- the element terminating the link
+
+\begin{DoxyReturn}{Returns}
 the link visualizer 
 \end{DoxyReturn}
 \hypertarget{classbridges_1_1base_1_1_element_a16c4c7e0d511fbf0e205d5606b9d690e}{}\label{classbridges_1_1base_1_1_element_a16c4c7e0d511fbf0e205d5606b9d690e} 
@@ -221,7 +241,9 @@ the encoded J\+S\+ON string
 \subsubsection{\texorpdfstring{get\+Value()}{getValue()}}
 {\footnotesize\ttfamily E \hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}$<$ E $>$.get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-this method returns the value E for the current \hyperlink{classbridges_1_1base_1_1_element}{Element} \begin{DoxyReturn}{Returns}
+This method returns the generic parameter value held in the element.
+
+\begin{DoxyReturn}{Returns}
 the value 
 \end{DoxyReturn}
 \hypertarget{classbridges_1_1base_1_1_element_a42c84d41dfb7bd05a586e303cb33de72}{}\label{classbridges_1_1base_1_1_element_a42c84d41dfb7bd05a586e303cb33de72} 
@@ -230,8 +252,10 @@ the value
 \subsubsection{\texorpdfstring{get\+Visualizer()}{getVisualizer()}}
 {\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Visualizer} \hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}$<$ E $>$.get\+Visualizer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Returns the \hyperlink{classbridges_1_1base_1_1_element}{Element}\textquotesingle{}s visualizer object \begin{DoxyReturn}{Returns}
-the visualizer 
+Returns the \hyperlink{classbridges_1_1base_1_1_element}{Element}\textquotesingle{}s visualizer object
+
+\begin{DoxyReturn}{Returns}
+the visualizer object 
 \end{DoxyReturn}
 \hypertarget{classbridges_1_1base_1_1_element_a942ccd766aeca0c4fdbe27ef8cbe78d9}{}\label{classbridges_1_1base_1_1_element_a942ccd766aeca0c4fdbe27ef8cbe78d9} 
 \index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!set\+Label@{set\+Label}}
@@ -239,7 +263,9 @@ the visualizer
 \subsubsection{\texorpdfstring{set\+Label()}{setLabel()}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}$<$ E $>$.set\+Label (\begin{DoxyParamCaption}\item[{String}]{label }\end{DoxyParamCaption})}
 
-This method sets the label 
+This method sets the label
+
+
 \begin{DoxyParams}{Parameters}
 {\em label} & the label to set \\
 \hline
@@ -250,7 +276,9 @@ This method sets the label
 \subsubsection{\texorpdfstring{set\+Value()}{setValue()}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}$<$ E $>$.set\+Value (\begin{DoxyParamCaption}\item[{E}]{value }\end{DoxyParamCaption})}
 
-This method sets the value field to the E argument value 
+This method sets the generic parameter value for this element.
+
+
 \begin{DoxyParams}{Parameters}
 {\em value} & the value to set \\
 \hline
@@ -261,7 +289,9 @@ This method sets the value field to the E argument value
 \subsubsection{\texorpdfstring{set\+Visualizer()}{setVisualizer()}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}$<$ E $>$.set\+Visualizer (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Visualizer}}]{visualizer }\end{DoxyParamCaption})}
 
-This method sets the visualizer object for the current element object 
+This method sets the visualizer object for the current element object
+
+
 \begin{DoxyParams}{Parameters}
 {\em visualizer} & the visualizer to set \\
 \hline

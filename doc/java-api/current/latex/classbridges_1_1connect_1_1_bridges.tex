@@ -143,12 +143,46 @@ Constructors
 \subsubsection{\texorpdfstring{get\+Actor\+Movie\+I\+M\+D\+B\+Data()}{getActorMovieIMDBData()}}
 {\footnotesize\ttfamily static List$<$\hyperlink{classbridges_1_1data__src__dependent_1_1_actor_movie_i_m_d_b}{Actor\+Movie\+I\+M\+DB}$>$ \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.get\+Actor\+Movie\+I\+M\+D\+B\+Data (\begin{DoxyParamCaption}\item[{String}]{name,  }\item[{int}]{max\+Elements }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
 
+Get Actor\+Movie I\+M\+DB Data retrieved, formatted into a list of Actor\+Movie\+I\+M\+DB objects
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & should be \char`\"{}\+I\+M\+D\+B\char`\"{} \\
+\hline
+{\em max\+Elements} & the number of actor/movie pairs, but currently unused, returns all records. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the request fails\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+a list of Actor\+Movie\+I\+M\+DB objects, but only actor, movie, movie genre and movie rating are returned. 
+\end{DoxyReturn}
 \hypertarget{classbridges_1_1connect_1_1_bridges_a02031d2a33b708588774473d36ba35c2}{}\label{classbridges_1_1connect_1_1_bridges_a02031d2a33b708588774473d36ba35c2} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!get\+Actor\+Movie\+I\+M\+D\+B\+Data2@{get\+Actor\+Movie\+I\+M\+D\+B\+Data2}}
 \index{get\+Actor\+Movie\+I\+M\+D\+B\+Data2@{get\+Actor\+Movie\+I\+M\+D\+B\+Data2}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
 \subsubsection{\texorpdfstring{get\+Actor\+Movie\+I\+M\+D\+B\+Data2()}{getActorMovieIMDBData2()}}
 {\footnotesize\ttfamily static List$<$\hyperlink{classbridges_1_1data__src__dependent_1_1_actor_movie_i_m_d_b}{Actor\+Movie\+I\+M\+DB}$>$ \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.get\+Actor\+Movie\+I\+M\+D\+B\+Data2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
 
+Get Actor\+Movie I\+M\+DB Data retrieved, formatted into a list of Actor\+Movie\+I\+M\+DB objects
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & should be \char`\"{}\+I\+M\+D\+B\char`\"{} \\
+\hline
+{\em max\+Elements} & the number of actor/movie pairs, but currently unused, returns all records. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the request fails\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+a list of Actor\+Movie\+I\+M\+DB objects, but only actor and movie fields in this version 
+\end{DoxyReturn}
 \hypertarget{classbridges_1_1connect_1_1_bridges_ae488b9bf0d696adb7f5a6ba7ce4ff2fd}{}\label{classbridges_1_1connect_1_1_bridges_ae488b9bf0d696adb7f5a6ba7ce4ff2fd} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!get\+Assignment@{get\+Assignment}}
 \index{get\+Assignment@{get\+Assignment}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
@@ -173,6 +207,23 @@ Constructors
 \subsubsection{\texorpdfstring{get\+Earthquake\+U\+S\+G\+S\+Data()}{getEarthquakeUSGSData()}}
 {\footnotesize\ttfamily static List$<$\hyperlink{classbridges_1_1data__src__dependent_1_1_earthquake_u_s_g_s}{Earthquake\+U\+S\+GS}$>$ \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.get\+Earthquake\+U\+S\+G\+S\+Data (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1data__src__dependent_1_1_u_s_g_saccount}{U\+S\+G\+Saccount}}]{name,  }\item[{int}]{max\+Elements }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
 
+Get U\+S\+GS earthquake data U\+S\+GS Tweet data (\href{https://earthquake.usgs.gov/earthquakes/map/}{\tt https\+://earthquake.\+usgs.\+gov/earthquakes/map/}) retrieved, formatted into a list of Earthquake\+U\+S\+GS objects
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & U\+S\+GS account name -\/ must be \char`\"{}earthquake\char`\"{} to create account \\
+\hline
+{\em max\+Elements} & the number of earthquake records retrieved, limited to 5000 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the request fails\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+a list of earthquake records 
+\end{DoxyReturn}
 \hypertarget{classbridges_1_1connect_1_1_bridges_abcd1c3465d8963cd635a63e248f33525}{}\label{classbridges_1_1connect_1_1_bridges_abcd1c3465d8963cd635a63e248f33525} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!get\+Game\+Data@{get\+Game\+Data}}
 \index{get\+Game\+Data@{get\+Game\+Data}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}

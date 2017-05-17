@@ -2,7 +2,7 @@
 \label{classbridges_1_1base_1_1_bin_tree_element}\index{bridges.\+base.\+Bin\+Tree\+Element$<$ E $>$@{bridges.\+base.\+Bin\+Tree\+Element$<$ E $>$}}
 
 
-This class can be used to create tree element objects with left and right pointers.  
+This class is extended from the \hyperlink{classbridges_1_1base_1_1_tree_element}{Tree\+Element} class and can be used to create binary tree element objects.  
 
 
 Inheritance diagram for bridges.\+base.\+Bin\+Tree\+Element$<$ E $>$\+:\begin{figure}[H]
@@ -38,16 +38,29 @@ void \hyperlink{classbridges_1_1base_1_1_bin_tree_element_abc40e3ed4cfaf4b74aacf
 
 
 \subsection{Detailed Description}
-This class can be used to create tree element objects with left and right pointers. 
+This class is extended from the \hyperlink{classbridges_1_1base_1_1_tree_element}{Tree\+Element} class and can be used to create binary tree element objects. 
 
-Added to be a subclass of \hyperlink{classbridges_1_1base_1_1_tree_element}{Tree\+Element}
+The Bin\+Tree element class is the building block for creating binary tree structures. It contains two children (viz., left, right).
 
-\begin{DoxyDate}{Date}
-6/22/16, 
-\end{DoxyDate}
+\hyperlink{classbridges_1_1base_1_1_bin_tree_element}{Bin\+Tree\+Element} contains a visualizer (\hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Visualizer}) object for setting visual attributes (color, shape, opacity, size), necessary for displaying them in a web browser.
+
+Elements also have a \hyperlink{classbridges_1_1base_1_1_link_visualizer}{Link\+Visualizer} object, that is used when they are linked to another element, appropriate for setting link attributes, for instance, between the current element and its left or right child
+
+
+\begin{DoxyParams}{Parameters}
+{\em E} & he generic parameter object that is part of this element, representing application specific data.\\
+\hline
+\end{DoxyParams}
 \begin{DoxyAuthor}{Author}
-Kalpathi Subramanian, Mihai Mehedint 
+Kalpathi Subramanian, Mihai Mehedint
 \end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+6/22/16, 1/7/17, 5/17/17
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+Example Tutorial at ~\newline
+ \href{http://bridgesuncc.github.io/Hello_World_Tutorials/BTree.html}{\tt http\+://bridgesuncc.\+github.\+io/\+Hello\+\_\+\+World\+\_\+\+Tutorials/\+B\+Tree.\+html} 
+\end{DoxySeeAlso}
 
 
 \subsection{Constructor \& Destructor Documentation}

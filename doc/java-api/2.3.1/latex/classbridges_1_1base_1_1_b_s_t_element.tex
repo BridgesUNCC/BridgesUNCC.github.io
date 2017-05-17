@@ -2,7 +2,7 @@
 \label{classbridges_1_1base_1_1_b_s_t_element}\index{bridges.\+base.\+B\+S\+T\+Element$<$ K, E $>$@{bridges.\+base.\+B\+S\+T\+Element$<$ K, E $>$}}
 
 
-This class extends the \hyperlink{classbridges_1_1base_1_1_bin_tree_element}{Bin\+Tree\+Element} class by adding a \textquotesingle{}key\textquotesingle{} value for use in a binary search tree implementations.  
+The \hyperlink{classbridges_1_1base_1_1_b_s_t_element}{B\+S\+T\+Element} class is the building block for creating binary search trees.  
 
 
 Inheritance diagram for bridges.\+base.\+B\+S\+T\+Element$<$ K, E $>$\+:\begin{figure}[H]
@@ -44,14 +44,33 @@ void \hyperlink{classbridges_1_1base_1_1_b_s_t_element_a51990b684df6998dc25b324d
 
 
 \subsection{Detailed Description}
-This class extends the \hyperlink{classbridges_1_1base_1_1_bin_tree_element}{Bin\+Tree\+Element} class by adding a \textquotesingle{}key\textquotesingle{} value for use in a binary search tree implementations. 
+The \hyperlink{classbridges_1_1base_1_1_b_s_t_element}{B\+S\+T\+Element} class is the building block for creating binary search trees. 
 
+The \hyperlink{classbridges_1_1base_1_1_b_s_t_element}{B\+S\+T\+Element} class is the building block for creating binary search tree structures. It contains two children (viz., left, right), and a search key, to be used in search operations .
+
+\hyperlink{classbridges_1_1base_1_1_b_s_t_element}{B\+S\+T\+Element} contains a visualizer (\hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Visualizer}) object for setting visual attributes (color, shape, opacity, size), necessary for displaying them in a web browser.
+
+B\+ST Elements also have a \hyperlink{classbridges_1_1base_1_1_link_visualizer}{Link\+Visualizer} object, that is used when they are linked to another element, appropriate for setting link attributes, for instance, between the current element and its left or right child
+
+
+\begin{DoxyParams}{Parameters}
+{\em E} & he generic parameter object that is part of this element, representing application specific data. \\
+\hline
+{\em K} & is the search key parameter in the B\+ST node; K must be orderable, such as integer, float, string, etc., on which relational operators work.\\
+\hline
+\end{DoxyParams}
 \begin{DoxyAuthor}{Author}
-Mihai Mehedint, K.\+R.\+Subramanian
+Kalpathi Subramanian, Mihai Mehedint
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
-6/22/16 
+6/22/16, 1/7/17, 5/17/17
 \end{DoxyDate}
+This class extends the \hyperlink{classbridges_1_1base_1_1_bin_tree_element}{Bin\+Tree\+Element} class by adding a \textquotesingle{}key\textquotesingle{} value for use in a binary search tree implementations.
+
+\begin{DoxySeeAlso}{See also}
+Example tutorial using \hyperlink{classbridges_1_1base_1_1_b_s_t_element}{B\+S\+T\+Element} at ~\newline
+ \href{http://bridgesuncc.github.io/Hello_World_Tutorials/BST.html}{\tt http\+://bridgesuncc.\+github.\+io/\+Hello\+\_\+\+World\+\_\+\+Tutorials/\+B\+S\+T.\+html} 
+\end{DoxySeeAlso}
 
 
 \subsection{Constructor \& Destructor Documentation}

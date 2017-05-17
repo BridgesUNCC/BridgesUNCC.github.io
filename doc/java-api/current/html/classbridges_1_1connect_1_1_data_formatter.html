@@ -228,6 +228,21 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get ActorMovie IMDB Data retrieved, formatted into a list of ActorMovieIMDB objects</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>should be "IMDB" </td></tr>
+    <tr><td class="paramname">maxElements</td><td>the number of actor/movie pairs, but currently unused, returns all records. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception</td><td>if the request fails</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a list of ActorMovieIMDB objects, but only actor and movie fields in this version </dd></dl>
 
 </div>
 </div>
@@ -253,6 +268,21 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get ActorMovie IMDB Data retrieved, formatted into a list of ActorMovieIMDB objects</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>should be "IMDB" </td></tr>
+    <tr><td class="paramname">maxElements</td><td>the number of actor/movie pairs, but currently unused, returns all records. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception</td><td>if the request fails</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a list of ActorMovieIMDB objects, but only actor, movie, movie genre and movie rating are returned. </dd></dl>
 
 </div>
 </div>
@@ -562,6 +592,21 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get USGS earthquake data USGS Tweet data (<a href="https://earthquake.usgs.gov/earthquakes/map/">https://earthquake.usgs.gov/earthquakes/map/</a>) retrieved, formatted into a list of EarthquakeUSGS objects</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>USGS account name - must be "earthquake" to create account </td></tr>
+    <tr><td class="paramname">maxElements</td><td>the number of earthquake records retrieved, limited to 5000 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception</td><td>if the request fails</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a list of earthquake records </dd></dl>
 
 </div>
 </div>
@@ -951,7 +996,7 @@ Protected Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 19 2017 17:26:03 for Bridges-Java-2.3.1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 17 2017 17:55:05 for Bridges-Java-2.3.1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.12
 </small></address>

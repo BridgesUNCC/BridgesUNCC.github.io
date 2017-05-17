@@ -1,5 +1,8 @@
 var searchData=
 [
+  ['cancerincidence',['CancerIncidence',['../classbridges_1_1data__src__dependent_1_1_cancer_incidence.html',1,'bridges::data_src_dependent']]],
+  ['cancerincidence',['CancerIncidence',['../classbridges_1_1data__src__dependent_1_1_cancer_incidence.html#a92db1eb4292c77f07619019587caf5cc',1,'bridges.data_src_dependent.CancerIncidence.CancerIncidence()'],['../classbridges_1_1data__src__dependent_1_1_cancer_incidence.html#a3db553c2769892563c3f1ebb033ba4c6',1,'bridges.data_src_dependent.CancerIncidence.CancerIncidence(String canc_label)']]],
+  ['cancerincidence_2ejava',['CancerIncidence.java',['../_cancer_incidence_8java.html',1,'']]],
   ['capturedstream',['capturedStream',['../classbridges_1_1validation_1_1_output_log.html#a0f6ae61da2727193baf2d79a78f68614',1,'bridges::validation::OutputLog']]],
   ['circdlelement',['CircDLelement',['../classbridges_1_1base_1_1_circ_d_lelement.html',1,'bridges::base']]],
   ['circdlelement',['CircDLelement',['../classbridges_1_1base_1_1_circ_d_lelement.html#ad14ccb772d52c36802c118f2b3f15d59',1,'bridges.base.CircDLelement.CircDLelement()'],['../classbridges_1_1base_1_1_circ_d_lelement.html#a84b2ebf47d2ca24077a800b240d8d157',1,'bridges.base.CircDLelement.CircDLelement(String label, E e)'],['../classbridges_1_1base_1_1_circ_d_lelement.html#a98a471fc3225ed80595e1ffdb377e336',1,'bridges.base.CircDLelement.CircDLelement(CircDLelement&lt; E &gt; next, CircDLelement&lt; E &gt; prev)'],['../classbridges_1_1base_1_1_circ_d_lelement.html#a86e04c826251be9a1a92c4649844e5e7',1,'bridges.base.CircDLelement.CircDLelement(E e, CircDLelement&lt; E &gt; next, CircDLelement&lt; E &gt; prev)']]],
@@ -14,8 +17,8 @@ var searchData=
   ['color_5fnames',['COLOR_NAMES',['../classbridges_1_1validation_1_1_validation.html#a580ab67e2b85bc3ee6ee8af138180624',1,'bridges::validation::Validation']]],
   ['color_5fpatterns',['COLOR_PATTERNS',['../classbridges_1_1validation_1_1_validation.html#a16e87ec9f7fe5ef76aea76277a612c76',1,'bridges::validation::Validation']]],
   ['compareto',['compareTo',['../classbridges_1_1base_1_1_element.html#a6cd4c4f15c6a4f87f59e443cffe87a20',1,'bridges.base.Element.compareTo()'],['../classbridges_1_1data__src__dependent_1_1_earthquake_tweet.html#a6b4de2a600b93ed96f6cde8b719ea645',1,'bridges.data_src_dependent.EarthquakeTweet.compareTo()'],['../classbridges_1_1data__src__dependent_1_1_earthquake_u_s_g_s.html#a60cad0a286825f77cd2900265acae982',1,'bridges.data_src_dependent.EarthquakeUSGS.compareTo()']]],
-  ['connector',['Connector',['../classbridges_1_1connect_1_1_connector.html#a167800699b2d191bd625d9c8c8cd9e6f',1,'bridges::connect::Connector']]],
   ['connector',['Connector',['../classbridges_1_1connect_1_1_connector.html',1,'bridges::connect']]],
+  ['connector',['Connector',['../classbridges_1_1connect_1_1_connector.html#a167800699b2d191bd625d9c8c8cd9e6f',1,'bridges::connect::Connector']]],
   ['connector_2ejava',['Connector.java',['../_connector_8java.html',1,'']]],
   ['converttweet',['convertTweet',['../classbridges_1_1connect_1_1_data_formatter.html#ad87ca06456fa4dc110e167e84f2d4447',1,'bridges::connect::DataFormatter']]],
   ['coordinates',['Coordinates',['../classbridges_1_1data__src__dependent_1_1_usgs_foo_1_1_geometry_1_1_coordinates.html',1,'bridges::data_src_dependent::UsgsFoo::Geometry']]],

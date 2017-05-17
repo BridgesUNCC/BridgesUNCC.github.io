@@ -84,13 +84,13 @@ Inheritance diagram for bridges.base.Element&lt; E &gt;:</div>
   <map id="bridges.base.Element_3C_20E_20_3E_map" name="bridges.base.Element&lt; E &gt;_map">
 <area href="classbridges_1_1base_1_1_data_struct.html" title="This is an abstract super class that is extended by all Bridges subclasses and provides some methods ..." alt="bridges.base.DataStruct" shape="rect" coords="243,0,476,24"/>
 <area href="classbridges_1_1base_1_1_d_lelement.html" title="This class is used to create doubly linked element objects. " alt="bridges.base.DLelement&lt; E &gt;" shape="rect" coords="0,112,233,136"/>
-<area href="classbridges_1_1base_1_1_s_lelement.html" title="This class can be used to instantiate Singly List Elements. " alt="bridges.base.SLelement&lt; E &gt;" shape="rect" coords="243,112,476,136"/>
+<area href="classbridges_1_1base_1_1_s_lelement.html" title="This class can be used to instantiate Singly Linked Elements. " alt="bridges.base.SLelement&lt; E &gt;" shape="rect" coords="243,112,476,136"/>
 <area href="classbridges_1_1base_1_1_tree_element.html" title="This class extends Element to represent general trees with arbitrary number of children. " alt="bridges.base.TreeElement&lt; E &gt;" shape="rect" coords="486,112,719,136"/>
 <area href="classbridges_1_1base_1_1_circ_d_lelement.html" title="This class can be used to instantiate Circular Doubly Linked List Elements. " alt="bridges.base.CircDLelement&lt; E &gt;" shape="rect" coords="0,168,233,192"/>
 <area href="classbridges_1_1base_1_1_circ_s_lelement.html" title="This class can be used to instantiate Singly Linked Circular List Elements. " alt="bridges.base.CircSLelement&lt; E &gt;" shape="rect" coords="243,168,476,192"/>
-<area href="classbridges_1_1base_1_1_bin_tree_element.html" title="This class can be used to create tree element objects with left and right pointers. " alt="bridges.base.BinTreeElement&lt; E &gt;" shape="rect" coords="486,168,719,192"/>
-<area href="classbridges_1_1base_1_1_b_s_t_element.html" title="This class extends the BinTreeElement class by adding a &#39;key&#39; value for use in a binary search tree i..." alt="bridges.base.BSTElement&lt; K, E &gt;" shape="rect" coords="486,224,719,248"/>
-<area href="classbridges_1_1base_1_1_a_v_l_tree_element.html" title="This class extends the BSTElement class for use in building AVL trees. AVL tree elements include a &#39;h..." alt="bridges.base.AVLTreeElement&lt; K, E &gt;" shape="rect" coords="486,280,719,304"/>
+<area href="classbridges_1_1base_1_1_bin_tree_element.html" title="This class is extended from the TreeElement class and can be used to create binary tree element objec..." alt="bridges.base.BinTreeElement&lt; E &gt;" shape="rect" coords="486,168,719,192"/>
+<area href="classbridges_1_1base_1_1_b_s_t_element.html" title="The BSTElement class is the building block for creating binary search trees. " alt="bridges.base.BSTElement&lt; K, E &gt;" shape="rect" coords="486,224,719,248"/>
+<area href="classbridges_1_1base_1_1_a_v_l_tree_element.html" title="This class extends the BSTElement class by adding a height and balance factor fields that are useful ..." alt="bridges.base.AVLTreeElement&lt; K, E &gt;" shape="rect" coords="486,280,719,304"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -151,11 +151,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This is the main superclass in BRIDGES for deriving a number of objects used in building arrays, lists, trees and graph data structures. </p>
-<p><a class="el" href="classbridges_1_1base_1_1_d_lelement.html" title="This class is used to create doubly linked element objects. ">DLelement</a>, <a class="el" href="classbridges_1_1base_1_1_circ_s_lelement.html" title="This class can be used to instantiate Singly Linked Circular List Elements. ">CircSLelement</a>, <a class="el" href="classbridges_1_1base_1_1_circ_d_lelement.html" title="This class can be used to instantiate Circular Doubly Linked List Elements. ">CircDLelement</a>, <a class="el" href="classbridges_1_1base_1_1_tree_element.html" title="This class extends Element to represent general trees with arbitrary number of children. ">TreeElement</a>, <a class="el" href="classbridges_1_1base_1_1_bin_tree_element.html" title="This class can be used to create tree element objects with left and right pointers. ">BinTreeElement</a>, <a class="el" href="classbridges_1_1base_1_1_b_s_t_element.html" title="This class extends the BinTreeElement class by adding a &#39;key&#39; value for use in a binary search tree i...">BSTElement</a>, <a class="el" href="classbridges_1_1base_1_1_a_v_l_tree_element.html" title="This class extends the BSTElement class for use in building AVL trees. AVL tree elements include a &#39;h...">AVLTreeElement</a> are all subclasses. <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> contains visualizer objects (<a class="el" href="classbridges_1_1base_1_1_element_visualizer.html" title="This class is used to store the visual attributes of BRIDGES elements. ">ElementVisualizer</a>, <a class="el" href="classbridges_1_1base_1_1_link_visualizer.html" title="This class maintains visual properties of links in all relevant data structures using BRIDGES...">LinkVisualizer</a>) for specifying visual attributes. It also contains a label that is used in the visualization.</p>
+<p><a class="el" href="classbridges_1_1base_1_1_s_lelement.html" title="This class can be used to instantiate Singly Linked Elements. ">SLelement</a>, <a class="el" href="classbridges_1_1base_1_1_d_lelement.html" title="This class is used to create doubly linked element objects. ">DLelement</a>, <a class="el" href="classbridges_1_1base_1_1_circ_s_lelement.html" title="This class can be used to instantiate Singly Linked Circular List Elements. ">CircSLelement</a>, <a class="el" href="classbridges_1_1base_1_1_circ_d_lelement.html" title="This class can be used to instantiate Circular Doubly Linked List Elements. ">CircDLelement</a>, <a class="el" href="classbridges_1_1base_1_1_tree_element.html" title="This class extends Element to represent general trees with arbitrary number of children. ">TreeElement</a>, <a class="el" href="classbridges_1_1base_1_1_bin_tree_element.html" title="This class is extended from the TreeElement class and can be used to create binary tree element objec...">BinTreeElement</a>, <a class="el" href="classbridges_1_1base_1_1_b_s_t_element.html" title="The BSTElement class is the building block for creating binary search trees. ">BSTElement</a>, <a class="el" href="classbridges_1_1base_1_1_circ_s_lelement.html" title="This class can be used to instantiate Singly Linked Circular List Elements. ">CircSLelement</a>, <a class="el" href="classbridges_1_1base_1_1_circ_d_lelement.html" title="This class can be used to instantiate Circular Doubly Linked List Elements. ">CircDLelement</a>, <a class="el" href="classbridges_1_1base_1_1_a_v_l_tree_element.html" title="This class extends the BSTElement class by adding a height and balance factor fields that are useful ...">AVLTreeElement</a> are all subclasses (see class hierarchy above). <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> contains two visualizer objects (<a class="el" href="classbridges_1_1base_1_1_element_visualizer.html" title="This class is used to store the visual attributes of BRIDGES elements. ">ElementVisualizer</a>, <a class="el" href="classbridges_1_1base_1_1_link_visualizer.html" title="This class maintains visual properties of links in all relevant data structures using BRIDGES...">LinkVisualizer</a>) for specifying visual attributes for nodes and links respectively. It also contains a label that that can be displayed in BRIDGES visualizations.</p>
+<p>All the tutorials under</p>
+<p><a href="http://bridgesuncc.github.io/Hello_World_Tutorials/Overview.html">http://bridgesuncc.github.io/Hello_World_Tutorials/Overview.html</a></p>
+<p>illustrate examples of using different types of <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> objects and how to manipulate their visual attributes.</p>
 <dl class="section author"><dt>Author</dt><dd>Mihai Mehedint, Kalpathi Subramanian</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">generic</td><td>&lt;E&gt; </td></tr>
+    <tr><td class="paramname">generic</td><td>&lt;E&gt; Elements are defined with an application specific generic parameter, that is defined by the user. These can be any legal Java type and manipulated using <a class="el" href="classbridges_1_1base_1_1_element.html#ab3cf1241da0bc4c59cea9d6f0fd7aaf4">setValue()</a>/getValue() methods. For more information on Java generics, see for example, <a href="https://docs.oracle.com/javase/tutorial/java/generics/types.html">https://docs.oracle.com/javase/tutorial/java/generics/types.html</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -193,9 +196,10 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>the constructor of <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> </p><dl class="params"><dt>Parameters</dt><dd>
+<p>the constructor of <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">val</td><td>will be used to construct <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> </td></tr>
+    <tr><td class="paramname">val</td><td>generic parameter value used to construct <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -230,7 +234,7 @@ Additional Inherited Members</h2></td></tr>
 <p>the constructor of <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">label</td><td>the string that is visible on the Bridges Visualization </td></tr>
-    <tr><td class="paramname">val</td><td>will be used to construct <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> </td></tr>
+    <tr><td class="paramname">val</td><td>generic parameter value used to construct <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -252,7 +256,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>performing deep copy of an element when needed </p><dl class="params"><dt>Parameters</dt><dd>
+<p>performing deep copy of an element when needed</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">original</td><td>the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> that is to be copied </td></tr>
   </table>
@@ -287,14 +292,15 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This method formats the label string using a predefine pattern (DIVIDE_KEY) and replaces the pattern with the string characters hold by the INSERT_STRING global variable </p><dl class="params"><dt>Parameters</dt><dd>
+<p>This method formats the label string using a predefine pattern (DIVIDE_KEY) and replaces the pattern with the string characters hold by the INSERT_STRING global variable</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td></td></tr>
+    <tr><td class="paramname">label</td><td>the input label string</td></tr>
     <tr><td class="paramname">wordNumber</td><td>in very long strings in the case where the whitespace \s is chosen as a key the wordNumber can be set to replace the whitespace with a newline character \n at a given number of words (every second or third word) The default value is 0. In most situations we want to replace all patterns found. for more complex patterns the key must be changed like so "((John) (.+?))" returns "John firstWordAfterJohn": John writes, John doe, John eats etc. (\w) matches any word (\s) one white space (\s*) zero or more white spaces, (\s+) one or more</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the formatted label </dd></dl>
 
 </div>
 </div>
@@ -423,7 +429,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This method returns the existing value of the label fields </p><dl class="section return"><dt>Returns</dt><dd>the label of the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> that shows up on the Bridges Visualization </dd></dl>
+<p>This method returns the existing value of the label fields</p>
+<dl class="section return"><dt>Returns</dt><dd>the label of the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a>; the label is typically displayed on BRIDGES visualizations. </dd></dl>
 
 </div>
 </div>
@@ -442,7 +449,10 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a>'s link visualizer object that is linked to element el  <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> el &ndash; the element terminating the link </p><dl class="section return"><dt>Returns</dt><dd>the link visualizer </dd></dl>
+<p>Returns the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a>'s link visualizer object</p>
+<p>The link visualizer object links this element to another element, which is specified by the argument to this method. This method is typically used to set the visual attributes of the links, such as in graphs or binary tree structures.</p>
+<p><a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> el &ndash; the element terminating the link</p>
+<dl class="section return"><dt>Returns</dt><dd>the link visualizer </dd></dl>
 
 </div>
 </div>
@@ -478,7 +488,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>this method returns the value E for the current <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> </p><dl class="section return"><dt>Returns</dt><dd>the value </dd></dl>
+<p>This method returns the generic parameter value held in the element.</p>
+<dl class="section return"><dt>Returns</dt><dd>the value </dd></dl>
 
 </div>
 </div>
@@ -496,7 +507,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a>'s visualizer object </p><dl class="section return"><dt>Returns</dt><dd>the visualizer </dd></dl>
+<p>Returns the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a>'s visualizer object</p>
+<dl class="section return"><dt>Returns</dt><dd>the visualizer object </dd></dl>
 
 </div>
 </div>
@@ -515,7 +527,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This method sets the label </p><dl class="params"><dt>Parameters</dt><dd>
+<p>This method sets the label</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">label</td><td>the label to set </td></tr>
   </table>
@@ -539,7 +552,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This method sets the value field to the E argument value </p><dl class="params"><dt>Parameters</dt><dd>
+<p>This method sets the generic parameter value for this element.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">value</td><td>the value to set </td></tr>
   </table>
@@ -563,7 +577,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This method sets the visualizer object for the current element object </p><dl class="params"><dt>Parameters</dt><dd>
+<p>This method sets the visualizer object for the current element object</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">visualizer</td><td>the visualizer to set </td></tr>
   </table>
@@ -627,7 +642,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 19 2017 17:26:02 for Bridges-Java-2.3.1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 17 2017 17:55:04 for Bridges-Java-2.3.1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.12
 </small></address>

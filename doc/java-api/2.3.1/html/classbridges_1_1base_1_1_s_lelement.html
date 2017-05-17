@@ -74,7 +74,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>This class can be used to instantiate Singly List Elements.  
+<p>This class can be used to instantiate Singly Linked Elements.  
  <a href="classbridges_1_1base_1_1_s_lelement.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for bridges.base.SLelement&lt; E &gt;:</div>
@@ -164,15 +164,21 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a3bae9d0d68a85e517a34be482e90fdd4 inherit pro_methods_classbridges_1_1base_1_1_data_struct"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class can be used to instantiate Singly List Elements. </p>
-<p>This class extends <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> and takes a generic parameter &lt;E&gt; for representing application specific data.</p>
+<div class="textblock"><p>This class can be used to instantiate Singly Linked Elements. </p>
+<p>This class extends <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> and takes a generic parameter &lt;E&gt; representing application specific data. This element forms the basic building block for singly linked lists. Singly linked elements have a field pointing to the next element along the list.</p>
+<pre class="fragment">Elements contain a visualizer (ElementVisualizer) object for setting visual 
+</pre><p> attributes (color, shape, opacity, size), necessary for displaying them in a web browser.</p>
+<p>Elements also have a <a class="el" href="classbridges_1_1base_1_1_link_visualizer.html" title="This class maintains visual properties of links in all relevant data structures using BRIDGES...">LinkVisualizer</a> object, that is used when they are linked to another element, appropriate for setting link attributes, for instance, between the current element and its next element.</p>
 <dl class="section author"><dt>Author</dt><dd>Mihai Mehedint, Kalpathi Subramanian</dd></dl>
+<dl class="section date"><dt>Date</dt><dd>6/22/16, 1/7/17, 5/17/17</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">&lt;E&gt;</td><td></td></tr>
+    <tr><td class="paramname">&lt;E&gt;</td><td>The generic parameter object that is part of this element, representing application specific data.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section see"><dt>See also</dt><dd>Example Tutorial at <br />
+ <a href="http://bridgesuncc.github.io/Hello_World_Tutorials/SLL.html">http://bridgesuncc.github.io/Hello_World_Tutorials/SLL.html</a> </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab9c8a08dadd76d7e0c29d7c41cf277c4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab9c8a08dadd76d7e0c29d7c41cf277c4">&sect;&nbsp;</a></span>SLelement() <span class="overload">[1/4]</span></h2>
@@ -188,7 +194,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This constructor creates an <a class="el" href="classbridges_1_1base_1_1_s_lelement.html" title="This class can be used to instantiate Singly List Elements. ">SLelement</a> object and sets the next pointer to null </p>
+<p>This constructor creates an <a class="el" href="classbridges_1_1base_1_1_s_lelement.html" title="This class can be used to instantiate Singly Linked Elements. ">SLelement</a> object and sets the next pointer to null </p>
 
 </div>
 </div>
@@ -217,10 +223,11 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This constructor creates an <a class="el" href="classbridges_1_1base_1_1_s_lelement.html" title="This class can be used to instantiate Singly List Elements. ">SLelement</a> object of value "e" and label "label" and sets the next pointer to null </p><dl class="params"><dt>Parameters</dt><dd>
+<p>This constructor creates an <a class="el" href="classbridges_1_1base_1_1_s_lelement.html" title="This class can be used to instantiate Singly Linked Elements. ">SLelement</a> object of generic parameter object E, and label "label" and sets the next pointer to null</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the label of <a class="el" href="classbridges_1_1base_1_1_s_lelement.html" title="This class can be used to instantiate Singly List Elements. ">SLelement</a> that shows up on the Bridges visualization </td></tr>
-    <tr><td class="paramname">e</td><td>the generic object that this <a class="el" href="classbridges_1_1base_1_1_s_lelement.html" title="This class can be used to instantiate Singly List Elements. ">SLelement</a> will hold </td></tr>
+    <tr><td class="paramname">label</td><td>the label of <a class="el" href="classbridges_1_1base_1_1_s_lelement.html" title="This class can be used to instantiate Singly Linked Elements. ">SLelement</a> that shows up on the Bridges visualization </td></tr>
+    <tr><td class="paramname">e</td><td>the generic object that this <a class="el" href="classbridges_1_1base_1_1_s_lelement.html" title="This class can be used to instantiate Singly Linked Elements. ">SLelement</a> will hold </td></tr>
   </table>
   </dd>
 </dl>
@@ -252,10 +259,11 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Creates a new element with value "e" and sets the next pointer to the <a class="el" href="classbridges_1_1base_1_1_s_lelement.html" title="This class can be used to instantiate Singly List Elements. ">SLelement</a> referenced by the "next" argument </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Creates a new element with value "e" and sets the next pointer to the <a class="el" href="classbridges_1_1base_1_1_s_lelement.html" title="This class can be used to instantiate Singly Linked Elements. ">SLelement</a> referenced by the "next" argument</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">e</td><td>the generic object that this <a class="el" href="classbridges_1_1base_1_1_s_lelement.html" title="This class can be used to instantiate Singly List Elements. ">SLelement</a> will hold </td></tr>
-    <tr><td class="paramname">next</td><td>the <a class="el" href="classbridges_1_1base_1_1_s_lelement.html" title="This class can be used to instantiate Singly List Elements. ">SLelement</a> that should be assigned to the next pointer </td></tr>
+    <tr><td class="paramname">e</td><td>the generic object that this element will hold </td></tr>
+    <tr><td class="paramname">next</td><td>the element that should be assigned to the next pointer </td></tr>
   </table>
   </dd>
 </dl>
@@ -277,9 +285,9 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Creates a new element and sets the next pointer to the <a class="el" href="classbridges_1_1base_1_1_s_lelement.html" title="This class can be used to instantiate Singly List Elements. ">SLelement</a> "next" </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Creates a new element and sets the next pointer to the <a class="el" href="classbridges_1_1base_1_1_s_lelement.html" title="This class can be used to instantiate Singly Linked Elements. ">SLelement</a> "next" </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">next</td><td>the <a class="el" href="classbridges_1_1base_1_1_s_lelement.html" title="This class can be used to instantiate Singly List Elements. ">SLelement</a> that should be assigned to the next pointer </td></tr>
+    <tr><td class="paramname">next</td><td>the <a class="el" href="classbridges_1_1base_1_1_s_lelement.html" title="This class can be used to instantiate Singly Linked Elements. ">SLelement</a> that should be assigned to the next pointer </td></tr>
   </table>
   </dd>
 </dl>
@@ -320,7 +328,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Retrieves the next <a class="el" href="classbridges_1_1base_1_1_s_lelement.html" title="This class can be used to instantiate Singly List Elements. ">SLelement</a> </p><dl class="section return"><dt>Returns</dt><dd>SLelement&lt;E&gt; assigned to next </dd></dl>
+<p>Retrieves the element following this element</p>
+<dl class="section return"><dt>Returns</dt><dd>SLelement&lt;E&gt; assigned to next </dd></dl>
 
 </div>
 </div>
@@ -339,7 +348,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sets the pointer to the next <a class="el" href="classbridges_1_1base_1_1_s_lelement.html" title="This class can be used to instantiate Singly List Elements. ">SLelement</a> </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Sets the element to point to the next <a class="el" href="classbridges_1_1base_1_1_s_lelement.html" title="This class can be used to instantiate Singly Linked Elements. ">SLelement</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">next</td><td>SLelement&lt;E&gt; that should be assigned to the next pointer </td></tr>
   </table>
@@ -394,7 +404,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 19 2017 17:26:03 for Bridges-Java-2.3.1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 17 2017 17:55:04 for Bridges-Java-2.3.1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.12
 </small></address>

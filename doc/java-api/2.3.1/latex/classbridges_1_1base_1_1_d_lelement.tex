@@ -46,9 +46,27 @@ void \hyperlink{classbridges_1_1base_1_1_d_lelement_a60b1f5bdaf33ad1dfcc493ebc51
 This class is used to create doubly linked element objects. 
 
 \begin{DoxyAuthor}{Author}
-Mihai Mehedint
+Mihai Mehedint, Kalpathi Subramanian
 \end{DoxyAuthor}
-It is derived from \hyperlink{classbridges_1_1base_1_1_element}{Element}, and and has two links, next and previous, pointing to the previous and succeeding nodes. 
+\begin{DoxyDate}{Date}
+6/22/16, 1/7/17, 5/17/17
+\end{DoxyDate}
+This class extends \hyperlink{classbridges_1_1base_1_1_element}{Element} and takes a generic parameter $<$\+E$>$ representing application specific data. This element forms the basic building block for doubly linked lists. Doubly linked elements have two links, \char`\"{}next\char`\"{} and \char`\"{}previous\char`\"{}, that point to the previous and succeeding nodes along the list.
+
+Elements contain a visualizer (\hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Visualizer}) object for setting visual attributes (color, shape, opacity, size), necessary for displaying them in a web browser.
+
+Elements also have a \hyperlink{classbridges_1_1base_1_1_link_visualizer}{Link\+Visualizer} object that is used when they are linked to another element, appropriate for setting link attributes, such as in linked lists, between the current element and its next or previous nodes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$\+E$>$} & The generic parameter object that is part of this element, representing application specific data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Example Tutorial at ~\newline
+ \href{http://bridgesuncc.github.io/Hello_World_Tutorials/DLL.html}{\tt http\+://bridgesuncc.\+github.\+io/\+Hello\+\_\+\+World\+\_\+\+Tutorials/\+D\+L\+L.\+html} 
+\end{DoxySeeAlso}
+
 
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{classbridges_1_1base_1_1_d_lelement_a525b572340e161d9c430baff10b64ab2}{}\label{classbridges_1_1base_1_1_d_lelement_a525b572340e161d9c430baff10b64ab2} 
@@ -63,11 +81,13 @@ Constructs an empty \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}
 \subsubsection{\texorpdfstring{D\+Lelement()}{DLelement()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
 {\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_d_lelement}{bridges.\+base.\+D\+Lelement}$<$ E $>$.\hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} (\begin{DoxyParamCaption}\item[{String}]{label,  }\item[{E}]{e }\end{DoxyParamCaption})}
 
-Constructs a \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} labeled \char`\"{}label\char`\"{}, holding an object \char`\"{}e\char`\"{}, with next and prev pointers set to null. 
+Constructs a \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} labeled \char`\"{}label\char`\"{}, holding an object \char`\"{}e\char`\"{}, with next and prev pointers set to null.
+
+
 \begin{DoxyParams}{Parameters}
 {\em label} & the label for this \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} that shows up on the Bridges visualization \\
 \hline
-{\em e} & the genereic object that this \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} is holding \\
+{\em e} & the genereic object that is held in this element. \\
 \hline
 \end{DoxyParams}
 \hypertarget{classbridges_1_1base_1_1_d_lelement_ab1e4eace66bb1b097463c4f04e964cd0}{}\label{classbridges_1_1base_1_1_d_lelement_ab1e4eace66bb1b097463c4f04e964cd0} 
@@ -122,7 +142,9 @@ The date structure type as a string
 \subsubsection{\texorpdfstring{get\+Next()}{getNext()}}
 {\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}$<$E$>$ \hyperlink{classbridges_1_1base_1_1_d_lelement}{bridges.\+base.\+D\+Lelement}$<$ E $>$.get\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-This method returns the pointer to the next \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} \begin{DoxyReturn}{Returns}
+This method returns the pointer to the next \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}
+
+\begin{DoxyReturn}{Returns}
 the \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} assigned to the next pointer 
 \end{DoxyReturn}
 \hypertarget{classbridges_1_1base_1_1_d_lelement_a859f08f38513ecdfff0eb11bd2b98ce7}{}\label{classbridges_1_1base_1_1_d_lelement_a859f08f38513ecdfff0eb11bd2b98ce7} 
@@ -131,7 +153,9 @@ the \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} assigned to the
 \subsubsection{\texorpdfstring{get\+Prev()}{getPrev()}}
 {\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}$<$E$>$ \hyperlink{classbridges_1_1base_1_1_d_lelement}{bridges.\+base.\+D\+Lelement}$<$ E $>$.get\+Prev (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-This method returns the pointer to the previous \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} \begin{DoxyReturn}{Returns}
+This method returns the pointer to the previous \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}
+
+\begin{DoxyReturn}{Returns}
 the \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} assigned to the prev pointer 
 \end{DoxyReturn}
 \hypertarget{classbridges_1_1base_1_1_d_lelement_a1dfea3f7b47901d539aefcba2cd900d9}{}\label{classbridges_1_1base_1_1_d_lelement_a1dfea3f7b47901d539aefcba2cd900d9} 
@@ -153,7 +177,9 @@ This method sets the pointer to the next \hyperlink{classbridges_1_1base_1_1_d_l
 \subsubsection{\texorpdfstring{set\+Prev()}{setPrev()}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1base_1_1_d_lelement}{bridges.\+base.\+D\+Lelement}$<$ E $>$.set\+Prev (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}$<$ E $>$}]{prev }\end{DoxyParamCaption})}
 
-This method sets the pointer to the previous \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} 
+This method sets the pointer to the previous \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}
+
+
 \begin{DoxyParams}{Parameters}
 {\em prev} & the \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} that should be assigned to the prev pointer \\
 \hline

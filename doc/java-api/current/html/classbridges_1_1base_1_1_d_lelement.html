@@ -169,8 +169,19 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class is used to create doubly linked element objects. </p>
-<dl class="section author"><dt>Author</dt><dd>Mihai Mehedint</dd></dl>
-<p>It is derived from <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a>, and and has two links, next and previous, pointing to the previous and succeeding nodes. </p>
+<dl class="section author"><dt>Author</dt><dd>Mihai Mehedint, Kalpathi Subramanian</dd></dl>
+<dl class="section date"><dt>Date</dt><dd>6/22/16, 1/7/17, 5/17/17</dd></dl>
+<p>This class extends <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> and takes a generic parameter &lt;E&gt; representing application specific data. This element forms the basic building block for doubly linked lists. Doubly linked elements have two links, "next" and "previous", that point to the previous and succeeding nodes along the list.</p>
+<p>Elements contain a visualizer (<a class="el" href="classbridges_1_1base_1_1_element_visualizer.html" title="This class is used to store the visual attributes of BRIDGES elements. ">ElementVisualizer</a>) object for setting visual attributes (color, shape, opacity, size), necessary for displaying them in a web browser.</p>
+<p>Elements also have a <a class="el" href="classbridges_1_1base_1_1_link_visualizer.html" title="This class maintains visual properties of links in all relevant data structures using BRIDGES...">LinkVisualizer</a> object that is used when they are linked to another element, appropriate for setting link attributes, such as in linked lists, between the current element and its next or previous nodes.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">&lt;E&gt;</td><td>The generic parameter object that is part of this element, representing application specific data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>Example Tutorial at <br />
+ <a href="http://bridgesuncc.github.io/Hello_World_Tutorials/DLL.html">http://bridgesuncc.github.io/Hello_World_Tutorials/DLL.html</a> </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a525b572340e161d9c430baff10b64ab2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a525b572340e161d9c430baff10b64ab2">&sect;&nbsp;</a></span>DLelement() <span class="overload">[1/4]</span></h2>
@@ -215,10 +226,11 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Constructs a <a class="el" href="classbridges_1_1base_1_1_d_lelement.html" title="This class is used to create doubly linked element objects. ">DLelement</a> labeled "label", holding an object "e", with next and prev pointers set to null. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Constructs a <a class="el" href="classbridges_1_1base_1_1_d_lelement.html" title="This class is used to create doubly linked element objects. ">DLelement</a> labeled "label", holding an object "e", with next and prev pointers set to null.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">label</td><td>the label for this <a class="el" href="classbridges_1_1base_1_1_d_lelement.html" title="This class is used to create doubly linked element objects. ">DLelement</a> that shows up on the Bridges visualization </td></tr>
-    <tr><td class="paramname">e</td><td>the genereic object that this <a class="el" href="classbridges_1_1base_1_1_d_lelement.html" title="This class is used to create doubly linked element objects. ">DLelement</a> is holding </td></tr>
+    <tr><td class="paramname">e</td><td>the genereic object that is held in this element. </td></tr>
   </table>
   </dd>
 </dl>
@@ -338,7 +350,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This method returns the pointer to the next <a class="el" href="classbridges_1_1base_1_1_d_lelement.html" title="This class is used to create doubly linked element objects. ">DLelement</a> </p><dl class="section return"><dt>Returns</dt><dd>the <a class="el" href="classbridges_1_1base_1_1_d_lelement.html" title="This class is used to create doubly linked element objects. ">DLelement</a> assigned to the next pointer </dd></dl>
+<p>This method returns the pointer to the next <a class="el" href="classbridges_1_1base_1_1_d_lelement.html" title="This class is used to create doubly linked element objects. ">DLelement</a></p>
+<dl class="section return"><dt>Returns</dt><dd>the <a class="el" href="classbridges_1_1base_1_1_d_lelement.html" title="This class is used to create doubly linked element objects. ">DLelement</a> assigned to the next pointer </dd></dl>
 
 </div>
 </div>
@@ -356,7 +369,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This method returns the pointer to the previous <a class="el" href="classbridges_1_1base_1_1_d_lelement.html" title="This class is used to create doubly linked element objects. ">DLelement</a> </p><dl class="section return"><dt>Returns</dt><dd>the <a class="el" href="classbridges_1_1base_1_1_d_lelement.html" title="This class is used to create doubly linked element objects. ">DLelement</a> assigned to the prev pointer </dd></dl>
+<p>This method returns the pointer to the previous <a class="el" href="classbridges_1_1base_1_1_d_lelement.html" title="This class is used to create doubly linked element objects. ">DLelement</a></p>
+<dl class="section return"><dt>Returns</dt><dd>the <a class="el" href="classbridges_1_1base_1_1_d_lelement.html" title="This class is used to create doubly linked element objects. ">DLelement</a> assigned to the prev pointer </dd></dl>
 
 </div>
 </div>
@@ -400,7 +414,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This method sets the pointer to the previous <a class="el" href="classbridges_1_1base_1_1_d_lelement.html" title="This class is used to create doubly linked element objects. ">DLelement</a> </p><dl class="params"><dt>Parameters</dt><dd>
+<p>This method sets the pointer to the previous <a class="el" href="classbridges_1_1base_1_1_d_lelement.html" title="This class is used to create doubly linked element objects. ">DLelement</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">prev</td><td>the <a class="el" href="classbridges_1_1base_1_1_d_lelement.html" title="This class is used to create doubly linked element objects. ">DLelement</a> that should be assigned to the prev pointer </td></tr>
   </table>
@@ -460,7 +475,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 19 2017 17:26:02 for Bridges-Java-2.3.1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 17 2017 17:55:03 for Bridges-Java-2.3.1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.12
 </small></address>

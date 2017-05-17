@@ -2,7 +2,7 @@
 \label{classbridges_1_1base_1_1_s_lelement}\index{bridges.\+base.\+S\+Lelement$<$ E $>$@{bridges.\+base.\+S\+Lelement$<$ E $>$}}
 
 
-This class can be used to instantiate Singly List Elements.  
+This class can be used to instantiate Singly Linked Elements.  
 
 
 Inheritance diagram for bridges.\+base.\+S\+Lelement$<$ E $>$\+:\begin{figure}[H]
@@ -39,18 +39,31 @@ String \hyperlink{classbridges_1_1base_1_1_s_lelement_af0ec4da5b29d0f5ab6ab38e91
 
 
 \subsection{Detailed Description}
-This class can be used to instantiate Singly List Elements. 
+This class can be used to instantiate Singly Linked Elements. 
 
-This class extends \hyperlink{classbridges_1_1base_1_1_element}{Element} and takes a generic parameter $<$\+E$>$ for representing application specific data.
+This class extends \hyperlink{classbridges_1_1base_1_1_element}{Element} and takes a generic parameter $<$\+E$>$ representing application specific data. This element forms the basic building block for singly linked lists. Singly linked elements have a field pointing to the next element along the list.
+
+\begin{DoxyVerb}Elements contain a visualizer (ElementVisualizer) object for setting visual 
+\end{DoxyVerb}
+ attributes (color, shape, opacity, size), necessary for displaying them in a web browser.
+
+Elements also have a \hyperlink{classbridges_1_1base_1_1_link_visualizer}{Link\+Visualizer} object, that is used when they are linked to another element, appropriate for setting link attributes, for instance, between the current element and its next element.
 
 \begin{DoxyAuthor}{Author}
 Mihai Mehedint, Kalpathi Subramanian
 \end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+6/22/16, 1/7/17, 5/17/17
+\end{DoxyDate}
 
 \begin{DoxyParams}{Parameters}
-{\em $<$\+E$>$} & \\
+{\em $<$\+E$>$} & The generic parameter object that is part of this element, representing application specific data.\\
 \hline
 \end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Example Tutorial at ~\newline
+ \href{http://bridgesuncc.github.io/Hello_World_Tutorials/SLL.html}{\tt http\+://bridgesuncc.\+github.\+io/\+Hello\+\_\+\+World\+\_\+\+Tutorials/\+S\+L\+L.\+html} 
+\end{DoxySeeAlso}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -66,7 +79,9 @@ This constructor creates an \hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+L
 \subsubsection{\texorpdfstring{S\+Lelement()}{SLelement()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
 {\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_s_lelement}{bridges.\+base.\+S\+Lelement}$<$ E $>$.\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement} (\begin{DoxyParamCaption}\item[{String}]{label,  }\item[{E}]{e }\end{DoxyParamCaption})}
 
-This constructor creates an \hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement} object of value \char`\"{}e\char`\"{} and label \char`\"{}label\char`\"{} and sets the next pointer to null 
+This constructor creates an \hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement} object of generic parameter object E, and label \char`\"{}label\char`\"{} and sets the next pointer to null
+
+
 \begin{DoxyParams}{Parameters}
 {\em label} & the label of \hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement} that shows up on the Bridges visualization \\
 \hline
@@ -79,11 +94,13 @@ This constructor creates an \hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+L
 \subsubsection{\texorpdfstring{S\+Lelement()}{SLelement()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
 {\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_s_lelement}{bridges.\+base.\+S\+Lelement}$<$ E $>$.\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement} (\begin{DoxyParamCaption}\item[{E}]{e,  }\item[{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}$<$ E $>$}]{next }\end{DoxyParamCaption})}
 
-Creates a new element with value \char`\"{}e\char`\"{} and sets the next pointer to the \hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement} referenced by the \char`\"{}next\char`\"{} argument 
+Creates a new element with value \char`\"{}e\char`\"{} and sets the next pointer to the \hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement} referenced by the \char`\"{}next\char`\"{} argument
+
+
 \begin{DoxyParams}{Parameters}
-{\em e} & the generic object that this \hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement} will hold \\
+{\em e} & the generic object that this element will hold \\
 \hline
-{\em next} & the \hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement} that should be assigned to the next pointer \\
+{\em next} & the element that should be assigned to the next pointer \\
 \hline
 \end{DoxyParams}
 \hypertarget{classbridges_1_1base_1_1_s_lelement_ab5b1c20ba1d1923fad0780052fb51c99}{}\label{classbridges_1_1base_1_1_s_lelement_ab5b1c20ba1d1923fad0780052fb51c99} 
@@ -117,7 +134,9 @@ The date structure type as a string
 \subsubsection{\texorpdfstring{get\+Next()}{getNext()}}
 {\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}$<$E$>$ \hyperlink{classbridges_1_1base_1_1_s_lelement}{bridges.\+base.\+S\+Lelement}$<$ E $>$.get\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Retrieves the next \hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement} \begin{DoxyReturn}{Returns}
+Retrieves the element following this element
+
+\begin{DoxyReturn}{Returns}
 S\+Lelement$<$\+E$>$ assigned to next 
 \end{DoxyReturn}
 \hypertarget{classbridges_1_1base_1_1_s_lelement_afdd42f03071b2614822b73729e1a5a1a}{}\label{classbridges_1_1base_1_1_s_lelement_afdd42f03071b2614822b73729e1a5a1a} 
@@ -126,7 +145,9 @@ S\+Lelement$<$\+E$>$ assigned to next
 \subsubsection{\texorpdfstring{set\+Next()}{setNext()}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1base_1_1_s_lelement}{bridges.\+base.\+S\+Lelement}$<$ E $>$.set\+Next (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}$<$ E $>$}]{next }\end{DoxyParamCaption})}
 
-Sets the pointer to the next \hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement} 
+Sets the element to point to the next \hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}
+
+
 \begin{DoxyParams}{Parameters}
 {\em next} & S\+Lelement$<$\+E$>$ that should be assigned to the next pointer \\
 \hline

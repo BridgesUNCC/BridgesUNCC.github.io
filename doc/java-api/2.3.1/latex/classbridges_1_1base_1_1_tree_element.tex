@@ -42,12 +42,27 @@ This class extends \hyperlink{classbridges_1_1base_1_1_element}{Element} to repr
 
 \hyperlink{classbridges_1_1base_1_1_tree_element}{Tree\+Element} nodes can have an arbitrary number of child nodes(held in in a vector in the order in which they were added). The visualization of trees assumes that the children are drawn in order from left to right.
 
+Tree Elements have labels (string) that are displayed on the visualization. Elements take an generic object E as a user defined parameter, which can be any native type or object.
+
+Elements contain a visualizer (\hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Visualizer}) object for setting visual attributes (color, shape, opacity, size), necessary for displaying them in a web browser.
+
+Elements also have a \hyperlink{classbridges_1_1base_1_1_link_visualizer}{Link\+Visualizer} object that is used when they are linked to another element, appropriate for setting link attributes, between parent and child nodes.
+
 \begin{DoxyAuthor}{Author}
-Kalpathi Subramanian 
+Kalpathi Subramanian
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
-6/22/16 
+6/22/16, 5/17/17
 \end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em $<$\+E$>$} & The generic parameter object that is part of this element, representing application specific data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Example tutorial at ~\newline
+ ?? 
+\end{DoxySeeAlso}
 
 
 \subsection{Constructor \& Destructor Documentation}
