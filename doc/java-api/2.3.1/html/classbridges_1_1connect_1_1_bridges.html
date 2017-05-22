@@ -75,6 +75,9 @@ $(function() {
 <div class="title">bridges.connect.Bridges&lt; K, E &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The <a class="el" href="classbridges_1_1connect_1_1_bridges.html" title="The Bridges class is the main class that provides interfaces to datasets, maintains user and assignme...">Bridges</a> class is the main class that provides interfaces to datasets, maintains user and assignment information, and connects to the <a class="el" href="classbridges_1_1connect_1_1_bridges.html" title="The Bridges class is the main class that provides interfaces to datasets, maintains user and assignme...">Bridges</a> server.  
+ <a href="classbridges_1_1connect_1_1_bridges.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -90,8 +93,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7193b48c9dc01b04dfcf0d66fa2f59fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad627f604914734646e92fac9e7b385d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1connect_1_1_bridges.html#ad627f604914734646e92fac9e7b385d8">setVisualizer</a> (<a class="el" href="classbridges_1_1base_1_1_a_d_t_visualizer.html">ADTVisualizer</a>&lt; K, E &gt; <a class="el" href="classbridges_1_1connect_1_1_bridges.html#af3fc35779b31c976ed8bf2e173310502">visualizer</a>)</td></tr>
 <tr class="separator:ad627f604914734646e92fac9e7b385d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cc12a419997a8ef0ef54afe9e65d1e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1connect_1_1_bridges.html#a0cc12a419997a8ef0ef54afe9e65d1e9">setDataStructure</a> (<a class="el" href="classbridges_1_1base_1_1_element.html">Element</a>&lt; E &gt;[] el_array, int size)</td></tr>
-<tr class="separator:a0cc12a419997a8ef0ef54afe9e65d1e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cd9af150b77b8337327ea67544a0e8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1connect_1_1_bridges.html#a2cd9af150b77b8337327ea67544a0e8f">setDataStructure</a> (<a class="el" href="classbridges_1_1base_1_1_array.html">Array</a>&lt; E &gt; arr)</td></tr>
 <tr class="separator:a2cd9af150b77b8337327ea67544a0e8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae41b3d86963350ace304d8951c1863ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1connect_1_1_bridges.html#ae41b3d86963350ace304d8951c1863ad">setDataStructure</a> (<a class="el" href="classbridges_1_1base_1_1_s_lelement.html">SLelement</a>&lt; E &gt; head)</td></tr>
@@ -176,7 +177,18 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:af3fc35779b31c976ed8bf2e173310502"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbridges_1_1base_1_1_a_d_t_visualizer.html">ADTVisualizer</a>&lt; K, E &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1connect_1_1_bridges.html#af3fc35779b31c976ed8bf2e173310502">visualizer</a></td></tr>
 <tr class="separator:af3fc35779b31c976ed8bf2e173310502"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="classbridges_1_1connect_1_1_bridges.html" title="The Bridges class is the main class that provides interfaces to datasets, maintains user and assignme...">Bridges</a> class is the main class that provides interfaces to datasets, maintains user and assignment information, and connects to the <a class="el" href="classbridges_1_1connect_1_1_bridges.html" title="The Bridges class is the main class that provides interfaces to datasets, maintains user and assignme...">Bridges</a> server. </p>
+<p>The <a class="el" href="classbridges_1_1connect_1_1_bridges.html" title="The Bridges class is the main class that provides interfaces to datasets, maintains user and assignme...">Bridges</a> class is responsible for initializing the <a class="el" href="classbridges_1_1connect_1_1_bridges.html" title="The Bridges class is the main class that provides interfaces to datasets, maintains user and assignme...">Bridges</a> system, specifying parameters (user id, assignment id, title, description, data structure type, etc) for the student assignment, generating the data structure representation and transmission to the <a class="el" href="classbridges_1_1connect_1_1_bridges.html" title="The Bridges class is the main class that provides interfaces to datasets, maintains user and assignme...">Bridges</a> server. In addition, it provides interfaces to a number of real-world datasets, that makes it easy to access the data for use algorithms/data structure assignments. <br />
+</p>
+<p><b>Datasets.</b> The datasets that are currently supported through the BRIDGES API include USGS Earthquake Data, IMDB Actor/Movie Data (2 versions), Gutenberg Book Collection Meta Data, a Video Game Dataset and Shakespeare Dataset. More information is found in the respective methods (below) and at </p>
+<p><a href="http://bridgesuncc.github.io/datasets.html">http://bridgesuncc.github.io/datasets.html</a> </p>
+<p>A typical <a class="el" href="classbridges_1_1connect_1_1_bridges.html" title="The Bridges class is the main class that provides interfaces to datasets, maintains user and assignme...">Bridges</a> program includes creating the <a class="el" href="classbridges_1_1connect_1_1_bridges.html" title="The Bridges class is the main class that provides interfaces to datasets, maintains user and assignme...">Bridges</a> object, followed by creation of the data structure by the user, assigning visual attributes to elements of the data structure, followed by specification of teh data structure type and the call to visualize the data structure (<a class="el" href="classbridges_1_1connect_1_1_bridges.html#a2cd9af150b77b8337327ea67544a0e8f">Bridges::setDataStructure()</a> and <a class="el" href="classbridges_1_1connect_1_1_bridges.html#a6881ed6e3f3a1db1d3cda249eb8543a1">visualize()</a> methods).</p>
+<dl class="section author"><dt>Author</dt><dd>Sean Gallagher, Kalpathi Subramanaian, Mihai Mehedint.</dd></dl>
+<dl class="section date"><dt>Date</dt><dd>1/16/17, 5/19/17</dd></dl>
+<dl class="section see"><dt>See also</dt><dd>Tutorial examples at <br />
+ <a href="http://bridgesuncc.github.io/Hello_World_Tutorials/Overview.html">http://bridgesuncc.github.io/Hello_World_Tutorials/Overview.html</a> </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4925cf146eff9ff84e89351ab574795d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4925cf146eff9ff84e89351ab574795d">&sect;&nbsp;</a></span>Bridges() <span class="overload">[1/2]</span></h2>
 
@@ -191,12 +203,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Constructors </p><dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">Exception</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Constructors </p>
 
 </div>
 </div>
@@ -231,17 +238,12 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Initialize <a class="el" href="classbridges_1_1connect_1_1_bridges.html" title="The Bridges class is the main class that provides interfaces to datasets, maintains user and assignme...">Bridges</a> (Constructor)</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">assignment</td><td>this is an integer value; </td></tr>
-    <tr><td class="paramname">key</td><td></td></tr>
-    <tr><td class="paramname">username</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">Exception</td><td></td></tr>
+    <tr><td class="paramname">assignment</td><td>this is the assignmen id (integer) </td></tr>
+    <tr><td class="paramname">appl_id</td><td>this is the appl authentication key(from the Bridges account) </td></tr>
+    <tr><td class="paramname">username</td><td>this is the username (from the <a class="el" href="classbridges_1_1connect_1_1_bridges.html" title="The Bridges class is the main class that provides interfaces to datasets, maintains user and assignme...">Bridges</a> account) </td></tr>
   </table>
   </dd>
 </dl>
@@ -282,11 +284,14 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get ActorMovie IMDB Data retrieved, formatted into a list of ActorMovieIMDB objects</p>
+<p>This helper function provides access to a small curated IMDB dataset. The data is retrieved, formatted into a list of ActorMovieIMDB objects (about 1800 pairs).</p>
+<p>This curated data set has only actor and movie name pairs. refer to </p>
+<p>&#160;&#160;&#160;&#160;&#160;<a href="http://bridgesuncc.github.io/datasets.html">http://bridgesuncc.github.io/datasets.html</a> </p>
+<p>for more information and to look at the dataset.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>should be "IMDB" </td></tr>
-    <tr><td class="paramname">maxElements</td><td>the number of actor/movie pairs, but currently unused, returns all records. </td></tr>
+    <tr><td class="paramname">maxElements</td><td>the number of actor/movie pairs(but currently unused), returns all records. </td></tr>
   </table>
   </dd>
 </dl>
@@ -322,7 +327,10 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get ActorMovie IMDB Data retrieved, formatted into a list of ActorMovieIMDB objects</p>
+<p>This helper function provides access to a second curated IMDB dataset; the data is retrieved, formatted into a list of ActorMovieIMDB objects</p>
+<p>This version of the IMDB Actor/Movie data contains for each record, actor name, movie name, movie genres, movie rating; refer to </p>
+<p>&#160;&#160;&#160;&#160;&#160;<a href="http://bridgesuncc.github.io/datasets.html">http://bridgesuncc.github.io/datasets.html</a> </p>
+<p>for more information and to look at the dataset.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>should be "IMDB" </td></tr>
@@ -336,7 +344,7 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>a list of ActorMovieIMDB objects, but only actor and movie fields in this version </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a list of ActorMovieIMDB objects </dd></dl>
 
 </div>
 </div>
@@ -362,6 +370,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get the assignment id</p>
+<dl class="section return"><dt>Returns</dt><dd>assignment as a string </dd></dl>
 
 </div>
 </div>
@@ -470,7 +480,9 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get USGS earthquake data USGS Tweet data (<a href="https://earthquake.usgs.gov/earthquakes/map/">https://earthquake.usgs.gov/earthquakes/map/</a>) retrieved, formatted into a list of EarthquakeUSGS objects</p>
+<p>This helper function provides a simple API to retrieve current USGS earthquake Tweet data from the USGS website (<a href="https://earthquake.usgs.gov/earthquakes/map/">https://earthquake.usgs.gov/earthquakes/map/</a>); The data is retrieved and formatted into a list of EarthquakeUSGS objects.</p>
+<p>More information on the dataset can be found at </p>
+<p>&#160;&#160;&#160;&#160;&#160;<a href="http://bridgesuncc.github.io/datasets.html">http://bridgesuncc.github.io/datasets.html</a> </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>USGS account name - must be "earthquake" to create account </td></tr>
@@ -510,6 +522,16 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>This helper function provides access to the meta-data of the video game collection.</p>
+<p>Each record in this collection has information on game title, platform, rating, and genre. For more information and to look at the data, refer to </p>
+<p>&#160;&#160;&#160;&#160;&#160;<a href="http://bridgesuncc.github.io/datasets.html">http://bridgesuncc.github.io/datasets.html</a> </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception</td><td>if the request fails</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a list of Game objects. </dd></dl>
 
 </div>
 </div>
@@ -535,6 +557,17 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>This helper function provides access to the meta-data of the Gutenberg book collection (about 1000 books); the data is retrieved, formatted into a list of GutenbergBook objects.</p>
+<p>Each book in this collection has for each record, information on author (name, birth, death), title, languages, genres, subjects, metrics(number of chars, words, sentences, difficult words), url downloads. More information and commands to access the data can be found at </p>
+<p>&#160;&#160;&#160;&#160;&#160;<a href="http://bridgesuncc.github.io/datasets.html">http://bridgesuncc.github.io/datasets.html</a> <br />
+ for more information and to look at the dataset.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception</td><td>if the request fails</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a list of GutenbergBook objects </dd></dl>
 
 </div>
 </div>
@@ -560,6 +593,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get application key</p>
+<dl class="section return"><dt>Returns</dt><dd>application key value (string) </dd></dl>
 
 </div>
 </div>
@@ -603,6 +638,18 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>This helper function provides access to a collection of Shakespeare plays, poems and plays.</p>
+<p>Each record in this collection has information on title, type (poem, Sonnet, play) and text. <br />
+</p>
+<p>For more information and to look at the data, refer to </p>
+<p>&#160;&#160;&#160;&#160;&#160;<a href="http://bridgesuncc.github.io/datasets.html">http://bridgesuncc.github.io/datasets.html</a> </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception</td><td>if the request fails</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a list of Shakespeare objects. </dd></dl>
 
 </div>
 </div>
@@ -628,6 +675,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>This exists to prevent duplicate error traces.</p>
+<dl class="section return"><dt>Returns</dt><dd>user id (string) </dd></dl>
 
 </div>
 </div>
@@ -645,7 +694,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This method returns the current visualizer </p><dl class="section return"><dt>Returns</dt><dd>visualizer </dd></dl>
+<p>This method returns the current visualizer (for internal use only)</p>
+<dl class="section return"><dt>Returns</dt><dd>visualizer </dd></dl>
 
 </div>
 </div>
@@ -682,44 +732,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a0cc12a419997a8ef0ef54afe9e65d1e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0cc12a419997a8ef0ef54afe9e65d1e9">&sect;&nbsp;</a></span>setDataStructure() <span class="overload">[1/12]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classbridges_1_1connect_1_1_bridges.html">bridges.connect.Bridges</a>&lt; K, E &gt;.setDataStructure </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classbridges_1_1base_1_1_element.html">Element</a>&lt; E &gt; []&#160;</td>
-          <td class="paramname"><em>el_array</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>This method sets the array data type and infers the data structure from the handle that is passed in, which may be one of SinglyLinkedList, DoublyLinkedList,Tree, BinaryTree, BinarySearchTree, AVLTree, GraphAdjacencyList, GraphAdjacencyMatrix</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">e</td><td>The array of elements, Element&lt;E&gt;[] </td></tr>
-    <tr><td class="paramname">size</td><td>The size of the array </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="a2cd9af150b77b8337327ea67544a0e8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2cd9af150b77b8337327ea67544a0e8f">&sect;&nbsp;</a></span>setDataStructure() <span class="overload">[2/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cd9af150b77b8337327ea67544a0e8f">&sect;&nbsp;</a></span>setDataStructure() <span class="overload">[1/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -733,10 +747,10 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This method sets the array data type(1D, 2D and 3D arrays supported)</p>
+<p>This method sets the array data type as the current data structure. Arrays of upto 3 dimensions are suppported.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">Array</td><td>The array of elements, of type Element&lt;E&gt;[] </td></tr>
+    <tr><td class="paramname">Array&lt;E&gt;</td><td>The array of elements, Array&lt;E&gt; </td></tr>
   </table>
   </dd>
 </dl>
@@ -744,7 +758,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <a id="ae41b3d86963350ace304d8951c1863ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae41b3d86963350ace304d8951c1863ad">&sect;&nbsp;</a></span>setDataStructure() <span class="overload">[3/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae41b3d86963350ace304d8951c1863ad">&sect;&nbsp;</a></span>setDataStructure() <span class="overload">[2/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -758,9 +772,10 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This method sets the first element of the singly linked list </p><dl class="params"><dt>Parameters</dt><dd>
+<p>This method sets the first element of the singly linked list</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">head</td><td>- is a SLelement&lt;E&gt; </td></tr>
+    <tr><td class="paramname">head</td><td>first element of the list </td></tr>
   </table>
   </dd>
 </dl>
@@ -768,7 +783,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a383877f85bb048d47560e76f359e1bda"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a383877f85bb048d47560e76f359e1bda">&sect;&nbsp;</a></span>setDataStructure() <span class="overload">[4/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a383877f85bb048d47560e76f359e1bda">&sect;&nbsp;</a></span>setDataStructure() <span class="overload">[3/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -785,7 +800,7 @@ Protected Attributes</h2></td></tr>
 <p>This method sets the first element of the doubly linked list</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">head</td><td>- is a DLelement&lt;E&gt; </td></tr>
+    <tr><td class="paramname">head</td><td>- first element of the list </td></tr>
   </table>
   </dd>
 </dl>
@@ -793,7 +808,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a285a7af5ad0594d4eeca51277e627c89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a285a7af5ad0594d4eeca51277e627c89">&sect;&nbsp;</a></span>setDataStructure() <span class="overload">[5/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a285a7af5ad0594d4eeca51277e627c89">&sect;&nbsp;</a></span>setDataStructure() <span class="overload">[4/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -810,7 +825,7 @@ Protected Attributes</h2></td></tr>
 <p>This method sets the first element of the singly linked circular list</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">head</td><td>- start node of the circular singly linked list </td></tr>
+    <tr><td class="paramname">head</td><td>- first element of the circular singly linked list </td></tr>
   </table>
   </dd>
 </dl>
@@ -818,7 +833,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a4e5809b18d15854b54509f9d434a4fd7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e5809b18d15854b54509f9d434a4fd7">&sect;&nbsp;</a></span>setDataStructure() <span class="overload">[6/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e5809b18d15854b54509f9d434a4fd7">&sect;&nbsp;</a></span>setDataStructure() <span class="overload">[5/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -835,7 +850,7 @@ Protected Attributes</h2></td></tr>
 <p>This method sets the first element of the doubly linked circular list</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">head</td><td>- is a CircDLelement&lt;E&gt; </td></tr>
+    <tr><td class="paramname">head</td><td>- first element of the circular doubly linked list </td></tr>
   </table>
   </dd>
 </dl>
@@ -843,7 +858,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a0788905a16b9a8f3deb0b4a344f2b42d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0788905a16b9a8f3deb0b4a344f2b42d">&sect;&nbsp;</a></span>setDataStructure() <span class="overload">[7/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0788905a16b9a8f3deb0b4a344f2b42d">&sect;&nbsp;</a></span>setDataStructure() <span class="overload">[6/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -860,7 +875,7 @@ Protected Attributes</h2></td></tr>
 <p>This method sets the root of a general tree (can have any number of children at each node</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">tree_root</td><td>The root of the tree </td></tr>
+    <tr><td class="paramname">tree_root</td><td>The root of the generalized tree </td></tr>
   </table>
   </dd>
 </dl>
@@ -868,7 +883,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a02a3d74b381473b5d97a8f8194df9b40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02a3d74b381473b5d97a8f8194df9b40">&sect;&nbsp;</a></span>setDataStructure() <span class="overload">[8/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a02a3d74b381473b5d97a8f8194df9b40">&sect;&nbsp;</a></span>setDataStructure() <span class="overload">[7/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -882,7 +897,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This method sets the first element of the binary tree data structure.</p>
+<p>This method sets the root of the binary tree data structure.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tree_root</td><td>The root of the binary tree </td></tr>
@@ -893,7 +908,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <a id="adb01a9385de48ef267bdfd22758fb361"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb01a9385de48ef267bdfd22758fb361">&sect;&nbsp;</a></span>setDataStructure() <span class="overload">[9/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adb01a9385de48ef267bdfd22758fb361">&sect;&nbsp;</a></span>setDataStructure() <span class="overload">[8/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -907,7 +922,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This method sets the first element of the binary search tree data structure.</p>
+<p>This method sets the root of the binary search tree data structure.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tree_root</td><td>- The root of the binary search tree </td></tr>
@@ -918,7 +933,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a702c3f88840e100ad0182110627e60f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a702c3f88840e100ad0182110627e60f5">&sect;&nbsp;</a></span>setDataStructure() <span class="overload">[10/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a702c3f88840e100ad0182110627e60f5">&sect;&nbsp;</a></span>setDataStructure() <span class="overload">[9/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -932,7 +947,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This method sets the first element of an AVL tree data structure.</p>
+<p>This method sets the root of an AVL tree data structure.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tree_root</td><td>The root of the AVL tree </td></tr>
@@ -943,7 +958,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <a id="aa5dc1d094955a486e649fdb05d66502f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5dc1d094955a486e649fdb05d66502f">&sect;&nbsp;</a></span>setDataStructure() <span class="overload">[11/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5dc1d094955a486e649fdb05d66502f">&sect;&nbsp;</a></span>setDataStructure() <span class="overload">[10/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -960,7 +975,7 @@ Protected Attributes</h2></td></tr>
 <p>This method passes the handle to the input graph (represented using adjacency lists)</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">input</td><td>graph </td></tr>
+    <tr><td class="paramname">graph</td><td>adjacency list based graph </td></tr>
   </table>
   </dd>
 </dl>
@@ -968,7 +983,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a1ac1f8a7c5e95500712c2edaa5e8971f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ac1f8a7c5e95500712c2edaa5e8971f">&sect;&nbsp;</a></span>setDataStructure() <span class="overload">[12/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ac1f8a7c5e95500712c2edaa5e8971f">&sect;&nbsp;</a></span>setDataStructure() <span class="overload">[11/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -985,7 +1000,7 @@ Protected Attributes</h2></td></tr>
 <p>This method passes the handle to the input graph (represented using adjacency matrix)</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">input</td><td>graph </td></tr>
+    <tr><td class="paramname">graph</td><td>adjacency matrix based graph </td></tr>
   </table>
   </dd>
 </dl>
@@ -1039,6 +1054,13 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Set application key</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>application key value (string) </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1113,6 +1135,13 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>set User id</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userName</td><td>(string) </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1131,7 +1160,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This method sets the new <a class="el" href="classbridges_1_1connect_1_1_data_formatter.html">DataFormatter</a> visualizer </p><dl class="params"><dt>Parameters</dt><dd>
+<p>This method sets visualizer (for internal use only)</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">visualizer</td><td></td></tr>
   </table>
@@ -1154,7 +1184,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This method calls the updateGraph() or updateSL() methods depending upon the type of ADT being created. These methods send the JSON to post() which ultimately executes the http request from the server </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p>This method generates the representation of the current data structure (JSON) and sends that to the <a class="el" href="classbridges_1_1connect_1_1_bridges.html" title="The Bridges class is the main class that provides interfaces to datasets, maintains user and assignme...">Bridges</a> server.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">InvocationTargetException</td><td></td></tr>
     <tr><td class="paramname">IllegalAccessException</td><td></td></tr>
@@ -1401,7 +1432,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 17 2017 17:55:05 for Bridges-Java-2.3.1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 22 2017 16:46:34 for Bridges-Java-2.3.1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.12
 </small></address>

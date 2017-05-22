@@ -73,7 +73,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>The <a class="el" href="classbridges_1_1base_1_1_graph_adj_list.html" title="The GraphAdjList class can be used to represent adjacency list based graphs in BRIDGES with E represn...">GraphAdjList</a> class can be used to represent adjacency list based graphs in BRIDGES with E represnting a data specific generic parameter. The class is simply a wrapper around the C++ STL unordered_map class and, thus, derives all its operations from it. BRIDGES provides methods to visualize the graph and its contents.  
+<p>The <a class="el" href="classbridges_1_1base_1_1_graph_adj_list.html" title="The GraphAdjList class can be used to represent adjacency list based graphs in BRIDGES. ">GraphAdjList</a> class can be used to represent adjacency list based graphs in BRIDGES.  
  <a href="classbridges_1_1base_1_1_graph_adj_list.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for bridges.base.GraphAdjList&lt; K, E &gt;:</div>
@@ -93,6 +93,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6995a5dcee3b07e041e12e27241f9423"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fdb7b6c143d1beb245a333db105372c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1base_1_1_graph_adj_list.html#a2fdb7b6c143d1beb245a333db105372c">addVertex</a> (K k, E e)</td></tr>
 <tr class="separator:a2fdb7b6c143d1beb245a333db105372c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cd649af7e518193912f3a752859a8c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1base_1_1_graph_adj_list.html#a2cd649af7e518193912f3a752859a8c7">addEdge</a> (K src, K dest)</td></tr>
+<tr class="separator:a2cd649af7e518193912f3a752859a8c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a955fd8c7211f482826b47ad800702c10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1base_1_1_graph_adj_list.html#a955fd8c7211f482826b47ad800702c10">addEdge</a> (K src, K dest, int weight)</td></tr>
 <tr class="separator:a955fd8c7211f482826b47ad800702c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19abf0bd09f0420e61cc144aec141f0a"><td class="memItemLeft" align="right" valign="top">HashMap&lt; K, <a class="el" href="classbridges_1_1base_1_1_element.html">Element</a>&lt; E &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1base_1_1_graph_adj_list.html#a19abf0bd09f0420e61cc144aec141f0a">getVertices</a> ()</td></tr>
@@ -114,15 +116,21 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:aac4a6ea28f44676274120ba1dddafc1f inherit pro_attribs_classbridges_1_1base_1_1_data_struct"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The <a class="el" href="classbridges_1_1base_1_1_graph_adj_list.html" title="The GraphAdjList class can be used to represent adjacency list based graphs in BRIDGES with E represn...">GraphAdjList</a> class can be used to represent adjacency list based graphs in BRIDGES with E represnting a data specific generic parameter. The class is simply a wrapper around the C++ STL unordered_map class and, thus, derives all its operations from it. BRIDGES provides methods to visualize the graph and its contents. </p>
-<dl class="section author"><dt>Author</dt><dd>Kalpathi Subramanian </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>6/29/15</dd></dl>
+<div class="textblock"><p>The <a class="el" href="classbridges_1_1base_1_1_graph_adj_list.html" title="The GraphAdjList class can be used to represent adjacency list based graphs in BRIDGES. ">GraphAdjList</a> class can be used to represent adjacency list based graphs in BRIDGES. </p>
+<p>The <a class="el" href="classbridges_1_1base_1_1_graph_adj_list.html" title="The GraphAdjList class can be used to represent adjacency list based graphs in BRIDGES. ">GraphAdjList</a> class can be used to represent adjacency list based graphs in BRIDGES; it takes 2 generic parameters: (1) K, which is an orderable key value used in accessing vertices (in constant time) using a hashmap. This permits data sets that need to be accessed by keys that are strings, and (2) E, an application defined type, and used in the <a class="el" href="classbridges_1_1base_1_1_edge.html" title="This class is used to represent the edges in a graph and will appear as links in the BRIDGES graph vi...">Edge</a> representation. The class is simply a wrapper around the Java Hashmap class and, thus, derives all its operations from it. BRIDGES provides methods to visualize the graph and its contents.</p>
+<p>The vertices of the graph are held in a Java hashmap, for near constant time access; this lets us use strings or integral ids for vertices. The adjacency lists, also a Java hashmap are built for each vertex and contain the edge (terminating vertex id, weight) in the <a class="el" href="classbridges_1_1base_1_1_edge.html" title="This class is used to represent the edges in a graph and will appear as links in the BRIDGES graph vi...">Edge</a> structure, defined separately. Adjacency lists are singly linked lists using the BRIDGES <a class="el" href="classbridges_1_1base_1_1_s_lelement.html" title="This class can be used to instantiate Singly Linked Elements. ">SLelement</a>.</p>
+<p>Convenience methods are provided to add vertices and edges to the graph as well as retrieve the adjacency list of a vertex, given its id.</p>
+<dl class="section author"><dt>Author</dt><dd>Kalpathi Subramanian</dd></dl>
+<dl class="section date"><dt>Date</dt><dd>6/29/15, 5/18/17</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">Element&lt;E&gt;</td><td></td></tr>
+    <tr><td class="paramname">&lt;E&gt;</td><td>application/user defined type used as part of vertices and edges </td></tr>
+    <tr><td class="paramname">&lt;K&gt;</td><td>orderable key (string, int, etc) that is used to index into vertex structure, for fast access</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section see"><dt>See also</dt><dd>Example tutorial at </dd></dl>
+<p><a href="http://bridgesuncc.github.io/Hello_World_Tutorials/Graph.html">http://bridgesuncc.github.io/Hello_World_Tutorials/Graph.html</a> </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a822f5f0981773a227c98c463850a0700"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a822f5f0981773a227c98c463850a0700">&sect;&nbsp;</a></span>GraphAdjList()</h2>
@@ -143,8 +151,44 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2cd649af7e518193912f3a752859a8c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cd649af7e518193912f3a752859a8c7">&sect;&nbsp;</a></span>addEdge() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classbridges_1_1base_1_1_graph_adj_list.html">bridges.base.GraphAdjList</a>&lt; K, E &gt;.addEdge </td>
+          <td>(</td>
+          <td class="paramtype">K&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">K&#160;</td>
+          <td class="paramname"><em>dest</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Adds a new edge to the graph, adds it to that vertex's adjacency list; user is responsible for checking if the vertex already exists. This version assumes a default edge weight of 1.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>- source vertex of edge </td></tr>
+    <tr><td class="paramname">dest</td><td>- destination vertex of edge </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a955fd8c7211f482826b47ad800702c10"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a955fd8c7211f482826b47ad800702c10">&sect;&nbsp;</a></span>addEdge()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a955fd8c7211f482826b47ad800702c10">&sect;&nbsp;</a></span>addEdge() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -183,7 +227,6 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
 
 </div>
 </div>
@@ -215,7 +258,8 @@ Additional Inherited Members</h2></td></tr>
 <p>Adds a new vertex to the graph, initializes the adjacency list; user is responsible for checking if the vertex already exists. This method will replace the value for this key</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">K</td><td>- vertex key value </td></tr>
+    <tr><td class="paramname">k</td><td>- vertex id </td></tr>
+    <tr><td class="paramname">E</td><td>- vertex info, currently used as a label by default</td></tr>
   </table>
   </dd>
 </dl>
@@ -257,7 +301,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Gets the adjacency list (of type SLelement&lt;Edge&gt; of a vertex)</p>
+<p>Gets the adjacency list (of type <a class="el" href="classbridges_1_1base_1_1_s_lelement.html" title="This class can be used to instantiate Singly Linked Elements. ">SLelement</a>&lt;<a class="el" href="classbridges_1_1base_1_1_edge.html" title="This class is used to represent the edges in a graph and will appear as links in the BRIDGES graph vi...">Edge</a> &lt;K&gt; &gt; of a vertex)</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">-</td><td>vertex key</td></tr>
@@ -303,7 +347,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>This is a convenience method to retrieve a vertex given its key</p>
-<dl class="section return"><dt>Returns</dt><dd>&ndash; graph vertex corresponding to its key </dd></dl>
+<p>return &ndash; graph vertex corresponding to its key </p>
 
 </div>
 </div>
@@ -322,7 +366,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>This method returns the graph nodes</p>
-<dl class="section return"><dt>Returns</dt><dd>&ndash; vertices held in an unordered map </dd></dl>
+<p>return &ndash; vertices held in in the hashmap </p>
 
 </div>
 </div>
@@ -332,7 +376,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 17 2017 17:55:04 for Bridges-Java-2.3.1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 22 2017 16:46:33 for Bridges-Java-2.3.1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.12
 </small></address>
