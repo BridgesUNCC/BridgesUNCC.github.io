@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.12"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Bridges-Java-2.3.1: bridges.base.ElementVisualizer Class Reference</title>
+<title>Bridges-Java-2.3.2: bridges.base.ElementVisualizer Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,8 +22,8 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Bridges-Java-2.3.1
-   &#160;<span id="projectnumber">2.3.1</span>
+   <div id="projectname">Bridges-Java-2.3.2
+   &#160;<span id="projectnumber">2.3.2</span>
    </div>
    <div id="projectbrief">Bridges(JavaAPI)</div>
   </td>
@@ -73,7 +73,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>This class is used to store the visual attributes of BRIDGES elements.  
+<p>This class maintains the visual attributes of each BRIDGES element.  
  <a href="classbridges_1_1base_1_1_element_visualizer.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -114,8 +114,22 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a04f3416447f2042de7cd21ce5b6a0598"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class is used to store the visual attributes of BRIDGES elements. </p>
-<p>Visual properties include color, shape, opacity, and size. Objects of this class are stored as part of the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> class. Generally, a user will manipulate the <a class="el" href="classbridges_1_1base_1_1_element_visualizer.html" title="This class is used to store the visual attributes of BRIDGES elements. ">ElementVisualizer</a> returned from the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a>'s getVisualizer() method, and then set attributes using its methods. </p>
+<div class="textblock"><p>This class maintains the visual attributes of each BRIDGES element. </p>
+<p>Visual properties include color, shape, opacity, size and location. Objects of this class are stored as part of the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> class. Generally, a user will manipulate the <a class="el" href="classbridges_1_1base_1_1_element_visualizer.html" title="This class maintains the visual attributes of each BRIDGES element. ">ElementVisualizer</a> returned from the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a>'s getVisualizer() method, and then set attributes using its methods. Supported attributed values are as follows:<br />
+</p>
+<p><b>Supported Colors (by name)</b>: </p>
+<p>"red", "green", "blue","yellow","cyan","magenta", "white",, "black", "orange", "turquoise", "maroon", <br />
+ "aquamarine", "azure", "beige", "brown", "tan", "olive", "chartreuse", "khaki", "bisque", "coral", <br />
+ "pink", "lavender", "purple", "gold" </p>
+<p><b> <a class="el" href="classbridges_1_1base_1_1_color.html" title="This class is used to represent colors in BRIDGES. ">Color</a> by RGBA Specification :</b> Range: 0-255 for each component </p>
+<p><b>Supported Shapes: </b></p>
+<p>"square", "circle", "square","diamond","cross", "triangle-down", triangle-up" </p>
+<p><b> Shape Size</b> : Range (0-50) </p>
+<p><b> Opacity: </b> Range (0.0-1.0) </p>
+<dl class="section author"><dt>Author</dt><dd>Mihai Mehedint, Kalpathi Subramanian</dd></dl>
+<dl class="section date"><dt>Date</dt><dd>6/22/16, 1/7/17, 5/17/17</dd></dl>
+<dl class="section see"><dt>See also</dt><dd>Example Tutorial at <br />
+ <a href="http://bridgesuncc.github.io/Hello_World_Tutorials/SLL.html">http://bridgesuncc.github.io/Hello_World_Tutorials/SLL.html</a> </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="acbca874876ec1e8dbbde6484a4fc056e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acbca874876ec1e8dbbde6484a4fc056e">&sect;&nbsp;</a></span>ElementVisualizer() <span class="overload">[1/6]</span></h2>
@@ -131,7 +145,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Construct an <a class="el" href="classbridges_1_1base_1_1_element_visualizer.html" title="This class is used to store the visual attributes of BRIDGES elements. ">ElementVisualizer</a> with the default visualization settings. The default settings are color = green, opacity = 1.0, size = 10.0, shape = circle. </p>
+<p>Construct an <a class="el" href="classbridges_1_1base_1_1_element_visualizer.html" title="This class maintains the visual attributes of each BRIDGES element. ">ElementVisualizer</a> with the default visualization settings.</p>
+<p>The default settings are color = green, opacity = 1.0, size = 10.0, shape = circle. </p>
 
 </div>
 </div>
@@ -150,7 +165,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Construct an <a class="el" href="classbridges_1_1base_1_1_element_visualizer.html" title="This class is used to store the visual attributes of BRIDGES elements. ">ElementVisualizer</a> with its color set to "aColor".</p>
+<p>Construct an <a class="el" href="classbridges_1_1base_1_1_element_visualizer.html" title="This class maintains the visual attributes of each BRIDGES element. ">ElementVisualizer</a> with its color set to "aColor".</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">aColor</td><td>the string that represents one of the Bridges colors. </td></tr>
@@ -185,7 +200,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Construct an <a class="el" href="classbridges_1_1base_1_1_element_visualizer.html" title="This class is used to store the visual attributes of BRIDGES elements. ">ElementVisualizer</a> with its color set to "aColor" and shape set to "aShape".</p>
+<p>Construct an <a class="el" href="classbridges_1_1base_1_1_element_visualizer.html" title="This class maintains the visual attributes of each BRIDGES element. ">ElementVisualizer</a> with its color set to "aColor" and shape set to "aShape".</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">aColor</td><td>the string that represents one of the Bridges colors. </td></tr>
@@ -211,10 +226,10 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Construct an <a class="el" href="classbridges_1_1base_1_1_element_visualizer.html" title="This class is used to store the visual attributes of BRIDGES elements. ">ElementVisualizer</a> with its size set to "size".</p>
+<p>Construct an <a class="el" href="classbridges_1_1base_1_1_element_visualizer.html" title="This class maintains the visual attributes of each BRIDGES element. ">ElementVisualizer</a> with its size set to "size".</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">size</td><td>the double that represents the size in pixels of the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> on the Bridges Visualization </td></tr>
+    <tr><td class="paramname">size</td><td>the value that represents the size in pixels of the Bridges <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -258,12 +273,12 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Construct an <a class="el" href="classbridges_1_1base_1_1_element_visualizer.html" title="This class is used to store the visual attributes of BRIDGES elements. ">ElementVisualizer</a> with its color set to "aColor", its shape set to "aShape", its opacity set to "opacity" and size set to "size".</p>
+<p>Construct an <a class="el" href="classbridges_1_1base_1_1_element_visualizer.html" title="This class maintains the visual attributes of each BRIDGES element. ">ElementVisualizer</a> with its color set to "aColor", its shape set to "aShape", its opacity set to "opacity" and size set to "size".</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">aColor</td><td>the string that represents one of the Bridges colors. </td></tr>
     <tr><td class="paramname">aShape</td><td>the string that represents one of the Bridges shapes </td></tr>
-    <tr><td class="paramname">opacity</td><td>a double between 0 and 1 representing how transparent the node should be on the Bridges Visualization. 0 for invisible, 1 for fully visible, a decimal between 0 and 1 for varying transparency. </td></tr>
+    <tr><td class="paramname">opacity</td><td>a double between 0 and 1 representing how transparent the node should be on the Bridges Visualization. 0 for invisible, 1 for fully visible, 0-1 for varying transparency. </td></tr>
     <tr><td class="paramname">size</td><td>the double that represents the size of the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> on the Bridges Visualization </td></tr>
   </table>
   </dd>
@@ -286,10 +301,10 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Construct a new <a class="el" href="classbridges_1_1base_1_1_element_visualizer.html" title="This class is used to store the visual attributes of BRIDGES elements. ">ElementVisualizer</a> with the same color, shape, opacity, and size as "v"</p>
+<p>Construct a new <a class="el" href="classbridges_1_1base_1_1_element_visualizer.html" title="This class maintains the visual attributes of each BRIDGES element. ">ElementVisualizer</a> with the same color, shape, opacity, and size as "v"</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">v</td><td>the <a class="el" href="classbridges_1_1base_1_1_element_visualizer.html" title="This class is used to store the visual attributes of BRIDGES elements. ">ElementVisualizer</a> whose settings you want to copy. </td></tr>
+    <tr><td class="paramname">v</td><td>the <a class="el" href="classbridges_1_1base_1_1_element_visualizer.html" title="This class maintains the visual attributes of each BRIDGES element. ">ElementVisualizer</a> whose settings you want to copy. </td></tr>
   </table>
   </dd>
 </dl>
@@ -312,7 +327,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Get the color of the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> in the Bridges Visualization</p>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classbridges_1_1base_1_1_color.html" title="This class is used to represent colors in BRIDGES. ">Color</a> string representing the color of the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> as an [R G B A] in the range 0-255 </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classbridges_1_1base_1_1_color.html" title="This class is used to represent colors in BRIDGES. ">Color</a> object representing the color of the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> as R,G,B,A components, each in the range 0-255 </dd></dl>
 
 </div>
 </div>
@@ -348,7 +363,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Get the shape of the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> in the Bridges Visualization. </p><dl class="section return"><dt>Returns</dt><dd>the string that represents the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a>'s shape in the Bridges Visualization. </dd></dl>
+<p>Get the shape of the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> in the Bridges Visualization.</p>
+<dl class="section return"><dt>Returns</dt><dd>the string that represents the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a>'s shape in the Bridges Visualization. </dd></dl>
 
 </div>
 </div>
@@ -386,7 +402,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Set the color of the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> in the Bridges Visualization to "aColor". </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Set the color of the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> in the Bridges Visualization to "aColor".</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">col_name</td><td>the string reprsenting the color of the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> in the Bridges Visualization; supported named colors are "red", "green", "blue", "yellow", "cyan", "magenta", "white", "black", "orange", "turquoise", "maroon", "aquamarine", "azure", "beige", "brown", "tan", "olive", "chartreuse", "khaki", "bisque", "coral", "pink", "lavender", "purple", "gold" </td></tr>
   </table>
@@ -432,7 +449,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Set the color of the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> in the Bridges Visualization to "aColor". give RGBA components</p>
+<p>Set the color of the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> in the Bridges Visualization given RGBA components (0-255 range)</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">r,g,b,a</td><td>color components </td></tr>
@@ -460,7 +477,7 @@ Public Member Functions</h2></td></tr>
 <p>Set the color of the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> in the Bridges Visualization to "aColor". given a <a class="el" href="classbridges_1_1base_1_1_color.html" title="This class is used to represent colors in BRIDGES. ">Color</a> object</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">col</td><td>object </td></tr>
+    <tr><td class="paramname">col</td><td><a class="el" href="classbridges_1_1base_1_1_color.html" title="This class is used to represent colors in BRIDGES. ">Color</a> object </td></tr>
   </table>
   </dd>
 </dl>
@@ -492,7 +509,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Set the location(X,Y) of the element - used for displaying elements in maps</p>
+<p>Set the location (x, y) of the element - used for displaying elements in maps</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">location</td><td>the X,Y location(array of 2 doubles) to be set </td></tr>
@@ -542,7 +559,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sets the shape of the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> in the Bridges Visualization</p>
+<p>Sets the shape of the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> in the Bridges Visualization. Supported shapes include "square", "circle", "square", "diamond", "cross", "triangle-down", "triangle-up".</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">aShape</td><td>the string representing the shape of the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> in the Bridges Visualization </td></tr>
@@ -567,7 +584,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Set the size of the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> in the Bridge Visualization in pixels</p>
+<p>Set the size of the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> in the Bridge Visualization (in pixel units)</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">size</td><td>the pixel size of the <a class="el" href="classbridges_1_1base_1_1_element.html" title="This is the main superclass in BRIDGES for deriving a number of objects used in building arrays...">Element</a> in the Bridges Visualization </td></tr>
@@ -583,7 +600,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 17 2017 17:55:04 for Bridges-Java-2.3.1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 22 2017 17:51:09 for Bridges-Java-2.3.2 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.12
 </small></address>

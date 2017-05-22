@@ -1,5 +1,10 @@
 \hypertarget{classbridges_1_1connect_1_1_bridges}{}\section{bridges.\+connect.\+Bridges$<$ K, E $>$ Class Template Reference}
 \label{classbridges_1_1connect_1_1_bridges}\index{bridges.\+connect.\+Bridges$<$ K, E $>$@{bridges.\+connect.\+Bridges$<$ K, E $>$}}
+
+
+The \hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges} class is the main class that provides interfaces to datasets, maintains user and assignment information, and connects to the \hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges} server.  
+
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -14,8 +19,6 @@ void \hyperlink{classbridges_1_1connect_1_1_bridges_a161206b37c2acdf435f44446796
 \hyperlink{classbridges_1_1base_1_1_a_d_t_visualizer}{A\+D\+T\+Visualizer}$<$ K, E $>$ \hyperlink{classbridges_1_1connect_1_1_bridges_a7193b48c9dc01b04dfcf0d66fa2f59fb}{get\+Visualizer} ()
 \item 
 void \hyperlink{classbridges_1_1connect_1_1_bridges_ad627f604914734646e92fac9e7b385d8}{set\+Visualizer} (\hyperlink{classbridges_1_1base_1_1_a_d_t_visualizer}{A\+D\+T\+Visualizer}$<$ K, E $>$ \hyperlink{classbridges_1_1connect_1_1_bridges_af3fc35779b31c976ed8bf2e173310502}{visualizer})
-\item 
-void \hyperlink{classbridges_1_1connect_1_1_bridges_a0cc12a419997a8ef0ef54afe9e65d1e9}{set\+Data\+Structure} (\hyperlink{classbridges_1_1base_1_1_element}{Element}$<$ E $>$\mbox{[}$\,$\mbox{]} el\+\_\+array, int size)
 \item 
 void \hyperlink{classbridges_1_1connect_1_1_bridges_a2cd9af150b77b8337327ea67544a0e8f}{set\+Data\+Structure} (\hyperlink{classbridges_1_1base_1_1_array}{Array}$<$ E $>$ arr)
 \item 
@@ -102,6 +105,30 @@ void \hyperlink{classbridges_1_1connect_1_1_bridges_a13c154c2a656dd4c19f2ff0e767
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+The \hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges} class is the main class that provides interfaces to datasets, maintains user and assignment information, and connects to the \hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges} server. 
+
+The \hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges} class is responsible for initializing the \hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges} system, specifying parameters (user id, assignment id, title, description, data structure type, etc) for the student assignment, generating the data structure representation and transmission to the \hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges} server. In addition, it provides interfaces to a number of real-\/world datasets, that makes it easy to access the data for use algorithms/data structure assignments. ~\newline
+
+
+{\bfseries Datasets.} The datasets that are currently supported through the B\+R\+I\+D\+G\+ES A\+PI include U\+S\+GS Earthquake Data, I\+M\+DB Actor/\+Movie Data (2 versions), Gutenberg Book Collection Meta Data, a Video Game Dataset and Shakespeare Dataset. More information is found in the respective methods (below) and at 
+
+\href{http://bridgesuncc.github.io/datasets.html}{\tt http\+://bridgesuncc.\+github.\+io/datasets.\+html} 
+
+A typical \hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges} program includes creating the \hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges} object, followed by creation of the data structure by the user, assigning visual attributes to elements of the data structure, followed by specification of teh data structure type and the call to visualize the data structure (\hyperlink{classbridges_1_1connect_1_1_bridges_a2cd9af150b77b8337327ea67544a0e8f}{Bridges\+::set\+Data\+Structure()} and \hyperlink{classbridges_1_1connect_1_1_bridges_a6881ed6e3f3a1db1d3cda249eb8543a1}{visualize()} methods).
+
+\begin{DoxyAuthor}{Author}
+Sean Gallagher, Kalpathi Subramanaian, Mihai Mehedint.
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+1/16/17, 5/19/17
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+Tutorial examples at ~\newline
+ \href{http://bridgesuncc.github.io/Hello_World_Tutorials/Overview.html}{\tt http\+://bridgesuncc.\+github.\+io/\+Hello\+\_\+\+World\+\_\+\+Tutorials/\+Overview.\+html} 
+\end{DoxySeeAlso}
+
+
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{classbridges_1_1connect_1_1_bridges_a4925cf146eff9ff84e89351ab574795d}{}\label{classbridges_1_1connect_1_1_bridges_a4925cf146eff9ff84e89351ab574795d} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!Bridges@{Bridges}}
@@ -109,31 +136,23 @@ void \hyperlink{classbridges_1_1connect_1_1_bridges_a13c154c2a656dd4c19f2ff0e767
 \subsubsection{\texorpdfstring{Bridges()}{Bridges()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.\hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Constructors 
-\begin{DoxyExceptions}{Exceptions}
-{\em Exception} & \\
-\hline
-\end{DoxyExceptions}
-\hypertarget{classbridges_1_1connect_1_1_bridges_a297e7ca95c725fa20bce0768c2d9aa64}{}\label{classbridges_1_1connect_1_1_bridges_a297e7ca95c725fa20bce0768c2d9aa64} 
+Constructors \hypertarget{classbridges_1_1connect_1_1_bridges_a297e7ca95c725fa20bce0768c2d9aa64}{}\label{classbridges_1_1connect_1_1_bridges_a297e7ca95c725fa20bce0768c2d9aa64} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!Bridges@{Bridges}}
 \index{Bridges@{Bridges}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
 \subsubsection{\texorpdfstring{Bridges()}{Bridges()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.\hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges} (\begin{DoxyParamCaption}\item[{int}]{assignment,  }\item[{String}]{appl\+\_\+id,  }\item[{String}]{username }\end{DoxyParamCaption})}
 
+Initialize \hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges} (Constructor)
+
 
 \begin{DoxyParams}{Parameters}
-{\em assignment} & this is an integer value; \\
+{\em assignment} & this is the assignmen id (integer) \\
 \hline
-{\em key} & \\
+{\em appl\+\_\+id} & this is the appl authentication key(from the Bridges account) \\
 \hline
-{\em username} & \\
+{\em username} & this is the username (from the \hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges} account) \\
 \hline
 \end{DoxyParams}
-
-\begin{DoxyExceptions}{Exceptions}
-{\em Exception} & \\
-\hline
-\end{DoxyExceptions}
 
 
 \subsection{Member Function Documentation}
@@ -143,13 +162,19 @@ Constructors
 \subsubsection{\texorpdfstring{get\+Actor\+Movie\+I\+M\+D\+B\+Data()}{getActorMovieIMDBData()}}
 {\footnotesize\ttfamily static List$<$\hyperlink{classbridges_1_1data__src__dependent_1_1_actor_movie_i_m_d_b}{Actor\+Movie\+I\+M\+DB}$>$ \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.get\+Actor\+Movie\+I\+M\+D\+B\+Data (\begin{DoxyParamCaption}\item[{String}]{name,  }\item[{int}]{max\+Elements }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
 
-Get Actor\+Movie I\+M\+DB Data retrieved, formatted into a list of Actor\+Movie\+I\+M\+DB objects
+This helper function provides access to a small curated I\+M\+DB dataset. The data is retrieved, formatted into a list of Actor\+Movie\+I\+M\+DB objects (about 1800 pairs).
+
+This curated data set has only actor and movie name pairs. refer to 
+
+~~~~~\href{http://bridgesuncc.github.io/datasets.html}{\tt http\+://bridgesuncc.\+github.\+io/datasets.\+html} 
+
+for more information and to look at the dataset.
 
 
 \begin{DoxyParams}{Parameters}
 {\em name} & should be \char`\"{}\+I\+M\+D\+B\char`\"{} \\
 \hline
-{\em max\+Elements} & the number of actor/movie pairs, but currently unused, returns all records. \\
+{\em max\+Elements} & the number of actor/movie pairs(but currently unused), returns all records. \\
 \hline
 \end{DoxyParams}
 
@@ -166,7 +191,13 @@ a list of Actor\+Movie\+I\+M\+DB objects, but only actor, movie, movie genre and
 \subsubsection{\texorpdfstring{get\+Actor\+Movie\+I\+M\+D\+B\+Data2()}{getActorMovieIMDBData2()}}
 {\footnotesize\ttfamily static List$<$\hyperlink{classbridges_1_1data__src__dependent_1_1_actor_movie_i_m_d_b}{Actor\+Movie\+I\+M\+DB}$>$ \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.get\+Actor\+Movie\+I\+M\+D\+B\+Data2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
 
-Get Actor\+Movie I\+M\+DB Data retrieved, formatted into a list of Actor\+Movie\+I\+M\+DB objects
+This helper function provides access to a second curated I\+M\+DB dataset; the data is retrieved, formatted into a list of Actor\+Movie\+I\+M\+DB objects
+
+This version of the I\+M\+DB Actor/\+Movie data contains for each record, actor name, movie name, movie genres, movie rating; refer to 
+
+~~~~~\href{http://bridgesuncc.github.io/datasets.html}{\tt http\+://bridgesuncc.\+github.\+io/datasets.\+html} 
+
+for more information and to look at the dataset.
 
 
 \begin{DoxyParams}{Parameters}
@@ -181,7 +212,7 @@ Get Actor\+Movie I\+M\+DB Data retrieved, formatted into a list of Actor\+Movie\
 \hline
 \end{DoxyExceptions}
 \begin{DoxyReturn}{Returns}
-a list of Actor\+Movie\+I\+M\+DB objects, but only actor and movie fields in this version 
+a list of Actor\+Movie\+I\+M\+DB objects 
 \end{DoxyReturn}
 \hypertarget{classbridges_1_1connect_1_1_bridges_ae488b9bf0d696adb7f5a6ba7ce4ff2fd}{}\label{classbridges_1_1connect_1_1_bridges_ae488b9bf0d696adb7f5a6ba7ce4ff2fd} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!get\+Assignment@{get\+Assignment}}
@@ -189,6 +220,11 @@ a list of Actor\+Movie\+I\+M\+DB objects, but only actor and movie fields in thi
 \subsubsection{\texorpdfstring{get\+Assignment()}{getAssignment()}}
 {\footnotesize\ttfamily static String \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.get\+Assignment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+Get the assignment id
+
+\begin{DoxyReturn}{Returns}
+assignment as a string 
+\end{DoxyReturn}
 \hypertarget{classbridges_1_1connect_1_1_bridges_ad8f145f95222730fad3c0628b42f0128}{}\label{classbridges_1_1connect_1_1_bridges_ad8f145f95222730fad3c0628b42f0128} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!get\+Associations@{get\+Associations}}
 \index{get\+Associations@{get\+Associations}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
@@ -207,7 +243,11 @@ a list of Actor\+Movie\+I\+M\+DB objects, but only actor and movie fields in thi
 \subsubsection{\texorpdfstring{get\+Earthquake\+U\+S\+G\+S\+Data()}{getEarthquakeUSGSData()}}
 {\footnotesize\ttfamily static List$<$\hyperlink{classbridges_1_1data__src__dependent_1_1_earthquake_u_s_g_s}{Earthquake\+U\+S\+GS}$>$ \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.get\+Earthquake\+U\+S\+G\+S\+Data (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1data__src__dependent_1_1_u_s_g_saccount}{U\+S\+G\+Saccount}}]{name,  }\item[{int}]{max\+Elements }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
 
-Get U\+S\+GS earthquake data U\+S\+GS Tweet data (\href{https://earthquake.usgs.gov/earthquakes/map/}{\tt https\+://earthquake.\+usgs.\+gov/earthquakes/map/}) retrieved, formatted into a list of Earthquake\+U\+S\+GS objects
+This helper function provides a simple A\+PI to retrieve current U\+S\+GS earthquake Tweet data from the U\+S\+GS website (\href{https://earthquake.usgs.gov/earthquakes/map/}{\tt https\+://earthquake.\+usgs.\+gov/earthquakes/map/}); The data is retrieved and formatted into a list of Earthquake\+U\+S\+GS objects.
+
+More information on the dataset can be found at 
+
+~~~~~\href{http://bridgesuncc.github.io/datasets.html}{\tt http\+://bridgesuncc.\+github.\+io/datasets.\+html} 
 
 
 \begin{DoxyParams}{Parameters}
@@ -230,18 +270,52 @@ a list of earthquake records
 \subsubsection{\texorpdfstring{get\+Game\+Data()}{getGameData()}}
 {\footnotesize\ttfamily static List$<$\hyperlink{classbridges_1_1data__src__dependent_1_1_game}{Game}$>$ \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.get\+Game\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
 
+This helper function provides access to the meta-\/data of the video game collection.
+
+Each record in this collection has information on game title, platform, rating, and genre. For more information and to look at the data, refer to 
+
+~~~~~\href{http://bridgesuncc.github.io/datasets.html}{\tt http\+://bridgesuncc.\+github.\+io/datasets.\+html} 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the request fails\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+a list of Game objects. 
+\end{DoxyReturn}
 \hypertarget{classbridges_1_1connect_1_1_bridges_a123d445316be7e9927b5642a3b8c71ba}{}\label{classbridges_1_1connect_1_1_bridges_a123d445316be7e9927b5642a3b8c71ba} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!get\+Gutenberg\+Book\+Meta\+Data@{get\+Gutenberg\+Book\+Meta\+Data}}
 \index{get\+Gutenberg\+Book\+Meta\+Data@{get\+Gutenberg\+Book\+Meta\+Data}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
 \subsubsection{\texorpdfstring{get\+Gutenberg\+Book\+Meta\+Data()}{getGutenbergBookMetaData()}}
 {\footnotesize\ttfamily static List$<$\hyperlink{classbridges_1_1data__src__dependent_1_1_gutenberg_book}{Gutenberg\+Book}$>$ \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.get\+Gutenberg\+Book\+Meta\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
 
+This helper function provides access to the meta-\/data of the Gutenberg book collection (about 1000 books); the data is retrieved, formatted into a list of Gutenberg\+Book objects.
+
+Each book in this collection has for each record, information on author (name, birth, death), title, languages, genres, subjects, metrics(number of chars, words, sentences, difficult words), url downloads. More information and commands to access the data can be found at 
+
+~~~~~\href{http://bridgesuncc.github.io/datasets.html}{\tt http\+://bridgesuncc.\+github.\+io/datasets.\+html} ~\newline
+ for more information and to look at the dataset.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the request fails\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+a list of Gutenberg\+Book objects 
+\end{DoxyReturn}
 \hypertarget{classbridges_1_1connect_1_1_bridges_a813a1783f7b547fdb964f8af87c66f4b}{}\label{classbridges_1_1connect_1_1_bridges_a813a1783f7b547fdb964f8af87c66f4b} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!get\+Key@{get\+Key}}
 \index{get\+Key@{get\+Key}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
 \subsubsection{\texorpdfstring{get\+Key()}{getKey()}}
 {\footnotesize\ttfamily static String \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.get\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+Get application key
+
+\begin{DoxyReturn}{Returns}
+application key value (string) 
+\end{DoxyReturn}
 \hypertarget{classbridges_1_1connect_1_1_bridges_ad46be93cba155fa93fd9082d9d813466}{}\label{classbridges_1_1connect_1_1_bridges_ad46be93cba155fa93fd9082d9d813466} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!get\+Root@{get\+Root}}
 \index{get\+Root@{get\+Root}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
@@ -257,19 +331,43 @@ the root
 \subsubsection{\texorpdfstring{get\+Shakespeare\+Data()}{getShakespeareData()}}
 {\footnotesize\ttfamily static List$<$\hyperlink{classbridges_1_1data__src__dependent_1_1_shakespeare}{Shakespeare}$>$ \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.get\+Shakespeare\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
 
+This helper function provides access to a collection of Shakespeare plays, poems and plays.
+
+Each record in this collection has information on title, type (poem, Sonnet, play) and text. ~\newline
+
+
+For more information and to look at the data, refer to 
+
+~~~~~\href{http://bridgesuncc.github.io/datasets.html}{\tt http\+://bridgesuncc.\+github.\+io/datasets.\+html} 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the request fails\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+a list of Shakespeare objects. 
+\end{DoxyReturn}
 \hypertarget{classbridges_1_1connect_1_1_bridges_a5ff3fdd97d4c71c9c2141c3355e417aa}{}\label{classbridges_1_1connect_1_1_bridges_a5ff3fdd97d4c71c9c2141c3355e417aa} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!get\+User\+Name@{get\+User\+Name}}
 \index{get\+User\+Name@{get\+User\+Name}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
 \subsubsection{\texorpdfstring{get\+User\+Name()}{getUserName()}}
 {\footnotesize\ttfamily static String \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.get\+User\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+This exists to prevent duplicate error traces.
+
+\begin{DoxyReturn}{Returns}
+user id (string) 
+\end{DoxyReturn}
 \hypertarget{classbridges_1_1connect_1_1_bridges_a7193b48c9dc01b04dfcf0d66fa2f59fb}{}\label{classbridges_1_1connect_1_1_bridges_a7193b48c9dc01b04dfcf0d66fa2f59fb} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!get\+Visualizer@{get\+Visualizer}}
 \index{get\+Visualizer@{get\+Visualizer}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
 \subsubsection{\texorpdfstring{get\+Visualizer()}{getVisualizer()}}
 {\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_a_d_t_visualizer}{A\+D\+T\+Visualizer}$<$K, E$>$ \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.get\+Visualizer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-This method returns the current visualizer \begin{DoxyReturn}{Returns}
+This method returns the current visualizer (for internal use only)
+
+\begin{DoxyReturn}{Returns}
 visualizer 
 \end{DoxyReturn}
 \hypertarget{classbridges_1_1connect_1_1_bridges_a24c91901a59ab8b715a864ab8a4d9cdc}{}\label{classbridges_1_1connect_1_1_bridges_a24c91901a59ab8b715a864ab8a4d9cdc} 
@@ -285,104 +383,91 @@ set the assignment id
 {\em assignment} & number (int) \\
 \hline
 \end{DoxyParams}
-\hypertarget{classbridges_1_1connect_1_1_bridges_a0cc12a419997a8ef0ef54afe9e65d1e9}{}\label{classbridges_1_1connect_1_1_bridges_a0cc12a419997a8ef0ef54afe9e65d1e9} 
-\index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!set\+Data\+Structure@{set\+Data\+Structure}}
-\index{set\+Data\+Structure@{set\+Data\+Structure}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
-\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [1/12]}}
-{\footnotesize\ttfamily void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.set\+Data\+Structure (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_element}{Element}$<$ E $>$ \mbox{[}$\,$\mbox{]}}]{el\+\_\+array,  }\item[{int}]{size }\end{DoxyParamCaption})}
-
-This method sets the array data type and infers the data structure from the handle that is passed in, which may be one of Singly\+Linked\+List, Doubly\+Linked\+List,Tree, Binary\+Tree, Binary\+Search\+Tree, A\+V\+L\+Tree, Graph\+Adjacency\+List, Graph\+Adjacency\+Matrix
-
-
-\begin{DoxyParams}{Parameters}
-{\em e} & The array of elements, Element$<$\+E$>$\mbox{[}\mbox{]} \\
-\hline
-{\em size} & The size of the array \\
-\hline
-\end{DoxyParams}
 \hypertarget{classbridges_1_1connect_1_1_bridges_a2cd9af150b77b8337327ea67544a0e8f}{}\label{classbridges_1_1connect_1_1_bridges_a2cd9af150b77b8337327ea67544a0e8f} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!set\+Data\+Structure@{set\+Data\+Structure}}
 \index{set\+Data\+Structure@{set\+Data\+Structure}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
-\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [2/12]}}
+\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [1/11]}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.set\+Data\+Structure (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_array}{Array}$<$ E $>$}]{arr }\end{DoxyParamCaption})}
 
-This method sets the array data type(1\+D, 2\+D and 3\+D arrays supported)
+This method sets the array data type as the current data structure. Arrays of upto 3 dimensions are suppported.
 
 
 \begin{DoxyParams}{Parameters}
-{\em Array} & The array of elements, of type Element$<$\+E$>$\mbox{[}\mbox{]} \\
+{\em Array$<$\+E$>$} & The array of elements, Array$<$\+E$>$ \\
 \hline
 \end{DoxyParams}
 \hypertarget{classbridges_1_1connect_1_1_bridges_ae41b3d86963350ace304d8951c1863ad}{}\label{classbridges_1_1connect_1_1_bridges_ae41b3d86963350ace304d8951c1863ad} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!set\+Data\+Structure@{set\+Data\+Structure}}
 \index{set\+Data\+Structure@{set\+Data\+Structure}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
-\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [3/12]}}
+\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [2/11]}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.set\+Data\+Structure (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}$<$ E $>$}]{head }\end{DoxyParamCaption})}
 
-This method sets the first element of the singly linked list 
+This method sets the first element of the singly linked list
+
+
 \begin{DoxyParams}{Parameters}
-{\em head} & -\/ is a S\+Lelement$<$\+E$>$ \\
+{\em head} & first element of the list \\
 \hline
 \end{DoxyParams}
 \hypertarget{classbridges_1_1connect_1_1_bridges_a383877f85bb048d47560e76f359e1bda}{}\label{classbridges_1_1connect_1_1_bridges_a383877f85bb048d47560e76f359e1bda} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!set\+Data\+Structure@{set\+Data\+Structure}}
 \index{set\+Data\+Structure@{set\+Data\+Structure}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
-\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [4/12]}}
+\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [3/11]}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.set\+Data\+Structure (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}$<$ E $>$}]{head }\end{DoxyParamCaption})}
 
 This method sets the first element of the doubly linked list
 
 
 \begin{DoxyParams}{Parameters}
-{\em head} & -\/ is a D\+Lelement$<$\+E$>$ \\
+{\em head} & -\/ first element of the list \\
 \hline
 \end{DoxyParams}
 \hypertarget{classbridges_1_1connect_1_1_bridges_a285a7af5ad0594d4eeca51277e627c89}{}\label{classbridges_1_1connect_1_1_bridges_a285a7af5ad0594d4eeca51277e627c89} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!set\+Data\+Structure@{set\+Data\+Structure}}
 \index{set\+Data\+Structure@{set\+Data\+Structure}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
-\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [5/12]}}
+\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [4/11]}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.set\+Data\+Structure (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_circ_s_lelement}{Circ\+S\+Lelement}$<$ E $>$}]{head }\end{DoxyParamCaption})}
 
 This method sets the first element of the singly linked circular list
 
 
 \begin{DoxyParams}{Parameters}
-{\em head} & -\/ start node of the circular singly linked list \\
+{\em head} & -\/ first element of the circular singly linked list \\
 \hline
 \end{DoxyParams}
 \hypertarget{classbridges_1_1connect_1_1_bridges_a4e5809b18d15854b54509f9d434a4fd7}{}\label{classbridges_1_1connect_1_1_bridges_a4e5809b18d15854b54509f9d434a4fd7} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!set\+Data\+Structure@{set\+Data\+Structure}}
 \index{set\+Data\+Structure@{set\+Data\+Structure}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
-\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [6/12]}}
+\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [5/11]}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.set\+Data\+Structure (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_circ_d_lelement}{Circ\+D\+Lelement}$<$ E $>$}]{head }\end{DoxyParamCaption})}
 
 This method sets the first element of the doubly linked circular list
 
 
 \begin{DoxyParams}{Parameters}
-{\em head} & -\/ is a Circ\+D\+Lelement$<$\+E$>$ \\
+{\em head} & -\/ first element of the circular doubly linked list \\
 \hline
 \end{DoxyParams}
 \hypertarget{classbridges_1_1connect_1_1_bridges_a0788905a16b9a8f3deb0b4a344f2b42d}{}\label{classbridges_1_1connect_1_1_bridges_a0788905a16b9a8f3deb0b4a344f2b42d} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!set\+Data\+Structure@{set\+Data\+Structure}}
 \index{set\+Data\+Structure@{set\+Data\+Structure}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
-\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [7/12]}}
+\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [6/11]}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.set\+Data\+Structure (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_tree_element}{Tree\+Element}$<$ E $>$}]{tree\+\_\+root }\end{DoxyParamCaption})}
 
 This method sets the root of a general tree (can have any number of children at each node
 
 
 \begin{DoxyParams}{Parameters}
-{\em tree\+\_\+root} & The root of the tree \\
+{\em tree\+\_\+root} & The root of the generalized tree \\
 \hline
 \end{DoxyParams}
 \hypertarget{classbridges_1_1connect_1_1_bridges_a02a3d74b381473b5d97a8f8194df9b40}{}\label{classbridges_1_1connect_1_1_bridges_a02a3d74b381473b5d97a8f8194df9b40} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!set\+Data\+Structure@{set\+Data\+Structure}}
 \index{set\+Data\+Structure@{set\+Data\+Structure}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
-\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [8/12]}}
+\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [7/11]}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.set\+Data\+Structure (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_bin_tree_element}{Bin\+Tree\+Element}$<$ E $>$}]{tree\+\_\+root }\end{DoxyParamCaption})}
 
-This method sets the first element of the binary tree data structure.
+This method sets the root of the binary tree data structure.
 
 
 \begin{DoxyParams}{Parameters}
@@ -392,10 +477,10 @@ This method sets the first element of the binary tree data structure.
 \hypertarget{classbridges_1_1connect_1_1_bridges_adb01a9385de48ef267bdfd22758fb361}{}\label{classbridges_1_1connect_1_1_bridges_adb01a9385de48ef267bdfd22758fb361} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!set\+Data\+Structure@{set\+Data\+Structure}}
 \index{set\+Data\+Structure@{set\+Data\+Structure}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
-\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [9/12]}}
+\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [8/11]}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.set\+Data\+Structure (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_b_s_t_element}{B\+S\+T\+Element}$<$ K, E $>$}]{tree\+\_\+root }\end{DoxyParamCaption})}
 
-This method sets the first element of the binary search tree data structure.
+This method sets the root of the binary search tree data structure.
 
 
 \begin{DoxyParams}{Parameters}
@@ -405,10 +490,10 @@ This method sets the first element of the binary search tree data structure.
 \hypertarget{classbridges_1_1connect_1_1_bridges_a702c3f88840e100ad0182110627e60f5}{}\label{classbridges_1_1connect_1_1_bridges_a702c3f88840e100ad0182110627e60f5} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!set\+Data\+Structure@{set\+Data\+Structure}}
 \index{set\+Data\+Structure@{set\+Data\+Structure}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
-\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [10/12]}}
+\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [9/11]}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.set\+Data\+Structure (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_a_v_l_tree_element}{A\+V\+L\+Tree\+Element}$<$ K, E $>$}]{tree\+\_\+root }\end{DoxyParamCaption})}
 
-This method sets the first element of an A\+VL tree data structure.
+This method sets the root of an A\+VL tree data structure.
 
 
 \begin{DoxyParams}{Parameters}
@@ -418,27 +503,27 @@ This method sets the first element of an A\+VL tree data structure.
 \hypertarget{classbridges_1_1connect_1_1_bridges_aa5dc1d094955a486e649fdb05d66502f}{}\label{classbridges_1_1connect_1_1_bridges_aa5dc1d094955a486e649fdb05d66502f} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!set\+Data\+Structure@{set\+Data\+Structure}}
 \index{set\+Data\+Structure@{set\+Data\+Structure}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
-\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [11/12]}}
+\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [10/11]}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.set\+Data\+Structure (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_graph_adj_list}{Graph\+Adj\+List}$<$ K, E $>$}]{graph }\end{DoxyParamCaption})}
 
 This method passes the handle to the input graph (represented using adjacency lists)
 
 
 \begin{DoxyParams}{Parameters}
-{\em input} & graph \\
+{\em graph} & adjacency list based graph \\
 \hline
 \end{DoxyParams}
 \hypertarget{classbridges_1_1connect_1_1_bridges_a1ac1f8a7c5e95500712c2edaa5e8971f}{}\label{classbridges_1_1connect_1_1_bridges_a1ac1f8a7c5e95500712c2edaa5e8971f} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!set\+Data\+Structure@{set\+Data\+Structure}}
 \index{set\+Data\+Structure@{set\+Data\+Structure}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
-\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [12/12]}}
+\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [11/11]}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.set\+Data\+Structure (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_graph_adj_matrix}{Graph\+Adj\+Matrix}$<$ K, E $>$}]{graph }\end{DoxyParamCaption})}
 
 This method passes the handle to the input graph (represented using adjacency matrix)
 
 
 \begin{DoxyParams}{Parameters}
-{\em input} & graph \\
+{\em graph} & adjacency matrix based graph \\
 \hline
 \end{DoxyParams}
 \hypertarget{classbridges_1_1connect_1_1_bridges_a161206b37c2acdf435f4444679616eec}{}\label{classbridges_1_1connect_1_1_bridges_a161206b37c2acdf435f4444679616eec} 
@@ -458,6 +543,13 @@ This method passes the handle to the input graph (represented using adjacency ma
 \subsubsection{\texorpdfstring{set\+Key()}{setKey()}}
 {\footnotesize\ttfamily static void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.set\+Key (\begin{DoxyParamCaption}\item[{String}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+Set application key
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & application key value (string) \\
+\hline
+\end{DoxyParams}
 \hypertarget{classbridges_1_1connect_1_1_bridges_aa05295718a1fefa2917dbaf874c79415}{}\label{classbridges_1_1connect_1_1_bridges_aa05295718a1fefa2917dbaf874c79415} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!set\+Root@{set\+Root}}
 \index{set\+Root@{set\+Root}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
@@ -486,13 +578,22 @@ This method passes the handle to the input graph (represented using adjacency ma
 \subsubsection{\texorpdfstring{set\+User\+Name()}{setUserName()}}
 {\footnotesize\ttfamily static void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.set\+User\+Name (\begin{DoxyParamCaption}\item[{String}]{user\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+set User id
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Name} & (string) \\
+\hline
+\end{DoxyParams}
 \hypertarget{classbridges_1_1connect_1_1_bridges_ad627f604914734646e92fac9e7b385d8}{}\label{classbridges_1_1connect_1_1_bridges_ad627f604914734646e92fac9e7b385d8} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!set\+Visualizer@{set\+Visualizer}}
 \index{set\+Visualizer@{set\+Visualizer}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
 \subsubsection{\texorpdfstring{set\+Visualizer()}{setVisualizer()}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.set\+Visualizer (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_a_d_t_visualizer}{A\+D\+T\+Visualizer}$<$ K, E $>$}]{visualizer }\end{DoxyParamCaption})}
 
-This method sets the new \hyperlink{classbridges_1_1connect_1_1_data_formatter}{Data\+Formatter} visualizer 
+This method sets visualizer (for internal use only)
+
+
 \begin{DoxyParams}{Parameters}
 {\em visualizer} & \\
 \hline
@@ -503,7 +604,9 @@ This method sets the new \hyperlink{classbridges_1_1connect_1_1_data_formatter}{
 \subsubsection{\texorpdfstring{visualize()}{visualize()}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.visualize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-This method calls the update\+Graph() or update\+S\+L() methods depending upon the type of A\+DT being created. These methods send the J\+S\+ON to post() which ultimately executes the http request from the server 
+This method generates the representation of the current data structure (J\+S\+ON) and sends that to the \hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges} server.
+
+
 \begin{DoxyExceptions}{Exceptions}
 {\em Invocation\+Target\+Exception} & \\
 \hline

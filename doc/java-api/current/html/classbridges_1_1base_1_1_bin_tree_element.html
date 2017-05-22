@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.12"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Bridges-Java-2.3.1: bridges.base.BinTreeElement&lt; E &gt; Class Template Reference</title>
+<title>Bridges-Java-2.3.2: bridges.base.BinTreeElement&lt; E &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,8 +22,8 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Bridges-Java-2.3.1
-   &#160;<span id="projectnumber">2.3.1</span>
+   <div id="projectname">Bridges-Java-2.3.2
+   &#160;<span id="projectnumber">2.3.2</span>
    </div>
    <div id="projectbrief">Bridges(JavaAPI)</div>
   </td>
@@ -187,8 +187,8 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class is extended from the <a class="el" href="classbridges_1_1base_1_1_tree_element.html" title="This class extends Element to represent general trees with arbitrary number of children. ">TreeElement</a> class and can be used to create binary tree element objects. </p>
 <p>The BinTree element class is the building block for creating binary tree structures. It contains two children (viz., left, right).</p>
-<p><a class="el" href="classbridges_1_1base_1_1_bin_tree_element.html" title="This class is extended from the TreeElement class and can be used to create binary tree element objec...">BinTreeElement</a> contains a visualizer (<a class="el" href="classbridges_1_1base_1_1_element_visualizer.html" title="This class is used to store the visual attributes of BRIDGES elements. ">ElementVisualizer</a>) object for setting visual attributes (color, shape, opacity, size), necessary for displaying them in a web browser.</p>
-<p>Elements also have a <a class="el" href="classbridges_1_1base_1_1_link_visualizer.html" title="This class maintains visual properties of links in all relevant data structures using BRIDGES...">LinkVisualizer</a> object, that is used when they are linked to another element, appropriate for setting link attributes, for instance, between the current element and its left or right child</p>
+<p><a class="el" href="classbridges_1_1base_1_1_bin_tree_element.html" title="This class is extended from the TreeElement class and can be used to create binary tree element objec...">BinTreeElement</a> contains a visualizer (<a class="el" href="classbridges_1_1base_1_1_element_visualizer.html" title="This class maintains the visual attributes of each BRIDGES element. ">ElementVisualizer</a>) object for setting visual attributes (color, shape, opacity, size), necessary for displaying them in a web browser.</p>
+<p>Elements also have a <a class="el" href="classbridges_1_1base_1_1_link_visualizer.html" title="This class maintains the visual attributes of links that join Bridges elements. ">LinkVisualizer</a> object, that is used when they are linked to another element, appropriate for setting link attributes, for instance, between the current element and its left or right child</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">E</td><td>he generic parameter object that is part of this element, representing application specific data.</td></tr>
@@ -271,7 +271,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructs a <a class="el" href="classbridges_1_1base_1_1_tree_element.html" title="This class extends Element to represent general trees with arbitrary number of children. ">TreeElement</a> with label set to "label", holding an object "e".</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the label of <a class="el" href="classbridges_1_1base_1_1_tree_element.html" title="This class extends Element to represent general trees with arbitrary number of children. ">TreeElement</a> that shows up on the Bridges visualization </td></tr>
+    <tr><td class="paramname">label</td><td>the label of <a class="el" href="classbridges_1_1base_1_1_tree_element.html" title="This class extends Element to represent general trees with arbitrary number of children. ">TreeElement</a> that shows up on the Bridges visualization</td></tr>
     <tr><td class="paramname">e</td><td>the generic object that <a class="el" href="classbridges_1_1base_1_1_tree_element.html" title="This class extends Element to represent general trees with arbitrary number of children. ">TreeElement</a> will hold </td></tr>
   </table>
   </dd>
@@ -304,7 +304,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Constructs an empty <a class="el" href="classbridges_1_1base_1_1_tree_element.html" title="This class extends Element to represent general trees with arbitrary number of children. ">TreeElement</a> left pointer pointing to "left" and right pointer pointing to "right". </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Constructs an empty <a class="el" href="classbridges_1_1base_1_1_tree_element.html" title="This class extends Element to represent general trees with arbitrary number of children. ">TreeElement</a> left pointer pointing to "left" and right pointer pointing to "right".</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">left</td><td>the <a class="el" href="classbridges_1_1base_1_1_tree_element.html" title="This class extends Element to represent general trees with arbitrary number of children. ">TreeElement</a> to be assigned to the left pointer of this <a class="el" href="classbridges_1_1base_1_1_tree_element.html" title="This class extends Element to represent general trees with arbitrary number of children. ">TreeElement</a> </td></tr>
     <tr><td class="paramname">right</td><td>the <a class="el" href="classbridges_1_1base_1_1_tree_element.html" title="This class extends Element to represent general trees with arbitrary number of children. ">TreeElement</a> to be assigned to the right pointer of this <a class="el" href="classbridges_1_1base_1_1_tree_element.html" title="This class extends Element to represent general trees with arbitrary number of children. ">TreeElement</a> </td></tr>
@@ -409,7 +410,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This method returns the right tree element pointer </p><dl class="section return"><dt>Returns</dt><dd>the right child of this <a class="el" href="classbridges_1_1base_1_1_tree_element.html" title="This class extends Element to represent general trees with arbitrary number of children. ">TreeElement</a> </dd></dl>
+<p>This method returns the right tree element pointer</p>
+<dl class="section return"><dt>Returns</dt><dd>the right child of this <a class="el" href="classbridges_1_1base_1_1_tree_element.html" title="This class extends Element to represent general trees with arbitrary number of children. ">TreeElement</a> </dd></dl>
 
 </div>
 </div>
@@ -452,7 +454,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This method sets the right tree element pointer </p><dl class="params"><dt>Parameters</dt><dd>
+<p>This method sets the right tree element pointer</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">right</td><td>the <a class="el" href="classbridges_1_1base_1_1_tree_element.html" title="This class extends Element to represent general trees with arbitrary number of children. ">TreeElement</a> that should be assigned to the right child </td></tr>
   </table>
@@ -467,7 +470,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 17 2017 17:55:02 for Bridges-Java-2.3.1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 22 2017 17:51:08 for Bridges-Java-2.3.2 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.12
 </small></address>

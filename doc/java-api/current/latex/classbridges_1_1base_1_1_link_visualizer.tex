@@ -2,7 +2,7 @@
 \label{classbridges_1_1base_1_1_link_visualizer}\index{bridges.\+base.\+Link\+Visualizer@{bridges.\+base.\+Link\+Visualizer}}
 
 
-This class maintains visual properties of links in all relevant data structures using B\+R\+I\+D\+G\+ES.  
+This class maintains the visual attributes of links that join Bridges elements.  
 
 
 \subsection*{Public Member Functions}
@@ -33,18 +33,34 @@ String \hyperlink{classbridges_1_1base_1_1_link_visualizer_ab64d9b7e2b99f7ebce80
 
 
 \subsection{Detailed Description}
-This class maintains visual properties of links in all relevant data structures using B\+R\+I\+D\+G\+ES. 
+This class maintains the visual attributes of links that join Bridges elements. 
 
-This class is used to keep the visual properties of links in data structures such as linked lists, tree structures, and graphs. Relevant attributes include color, thickness, opacity, line end point attributes.
+Visual properties include color, thickness, and opacity. Objects of this class are stored as part of the \hyperlink{classbridges_1_1base_1_1_element}{Element} class. Generally, a user will manipulate the \hyperlink{classbridges_1_1base_1_1_link_visualizer}{Link\+Visualizer} returned from the \hyperlink{classbridges_1_1base_1_1_element}{Element}\textquotesingle{}s get\+Link\+Visualizer(\+Element it) method (which it is the Bridges element this element is linked to), and then set attributes using its methods. Links are utilized in all types of linked lists, tree and graph structures.
 
-Objects of this class are stored as properties of all \hyperlink{classbridges_1_1base_1_1_element}{Element} subclasses. Generally, a user will manipulate the \hyperlink{classbridges_1_1base_1_1_link_visualizer}{Link\+Visualizer} returned from the \hyperlink{classbridges_1_1base_1_1_element}{Element}\textquotesingle{}s get\+Link\+Visualizer() method.
+Supported attribute values are as follows\+:
+
+{\bfseries Supported Colors (by name)}\+: 
+
+\char`\"{}red\char`\"{}, \char`\"{}green\char`\"{}, \char`\"{}blue\char`\"{},\char`\"{}yellow\char`\"{},\char`\"{}cyan\char`\"{},\char`\"{}magenta\char`\"{}, \char`\"{}white\char`\"{},, \char`\"{}black\char`\"{}, \char`\"{}orange\char`\"{}, \char`\"{}turquoise\char`\"{}, \char`\"{}maroon\char`\"{}, ~\newline
+ \char`\"{}aquamarine\char`\"{}, \char`\"{}azure\char`\"{}, \char`\"{}beige\char`\"{}, \char`\"{}brown\char`\"{}, \char`\"{}tan\char`\"{}, \char`\"{}olive\char`\"{}, \char`\"{}chartreuse\char`\"{}, \char`\"{}khaki\char`\"{}, \char`\"{}bisque\char`\"{}, \char`\"{}coral\char`\"{}, ~\newline
+ \char`\"{}pink\char`\"{}, \char`\"{}lavender\char`\"{}, \char`\"{}purple\char`\"{}, \char`\"{}gold\char`\"{} 
+
+{\bfseries  \hyperlink{classbridges_1_1base_1_1_color}{Color} by R\+G\+BA Specification \+:} Range\+: 0-\/255 for each component 
+
+{\bfseries  Thickness\+: } Range \+: 0.\+0-\/50.\+0
+
+{\bfseries  Opacity\+: } Range (0.\+0-\/1.\+0) 
 
 \begin{DoxyAuthor}{Author}
-Mihai Mehedint, Kalpathi Subramanian 
+Mihai Mehedint, Kalpathi Subramanian
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
-2015, 1/16/17 
+6/22/16, 1/16/17, 5/17/17
 \end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+Example Tutorial at ~\newline
+ \href{http://bridgesuncc.github.io/Hello_World_Tutorials/SLL.html}{\tt http\+://bridgesuncc.\+github.\+io/\+Hello\+\_\+\+World\+\_\+\+Tutorials/\+S\+L\+L.\+html} 
+\end{DoxySeeAlso}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -63,8 +79,10 @@ Mihai Mehedint, Kalpathi Subramanian
 \subsubsection{\texorpdfstring{get\+Color()}{getColor()}}
 {\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_color}{Color} bridges.\+base.\+Link\+Visualizer.\+get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Get the color of the link in the Bridges Visualization \begin{DoxyReturn}{Returns}
-the string reprsenting the color of the \hyperlink{classbridges_1_1base_1_1_element}{Element} in the Bridges Visualization 
+Get the color of the link in the Bridges Visualization
+
+\begin{DoxyReturn}{Returns}
+the \hyperlink{classbridges_1_1base_1_1_color}{Color} object representing the color of the link 
 \end{DoxyReturn}
 \hypertarget{classbridges_1_1base_1_1_link_visualizer_ab64d9b7e2b99f7ebce80cbabfe4adf2a}{}\label{classbridges_1_1base_1_1_link_visualizer_ab64d9b7e2b99f7ebce80cbabfe4adf2a} 
 \index{bridges\+::base\+::\+Link\+Visualizer@{bridges\+::base\+::\+Link\+Visualizer}!get\+Link\+Properties@{get\+Link\+Properties}}
@@ -78,7 +96,9 @@ the string reprsenting the color of the \hyperlink{classbridges_1_1base_1_1_elem
 \subsubsection{\texorpdfstring{get\+Opacity()}{getOpacity()}}
 {\footnotesize\ttfamily float bridges.\+base.\+Link\+Visualizer.\+get\+Opacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Get the opacity of the link in the Bridges Visualization \begin{DoxyReturn}{Returns}
+Get the opacity of the link in the Bridges Visualization
+
+\begin{DoxyReturn}{Returns}
 the opacity value (in the range 0.\+0-\/1.\+0 
 \end{DoxyReturn}
 \hypertarget{classbridges_1_1base_1_1_link_visualizer_af1592d2a8664b00c1a51fdc0f8d1860a}{}\label{classbridges_1_1base_1_1_link_visualizer_af1592d2a8664b00c1a51fdc0f8d1860a} 
@@ -101,7 +121,7 @@ the size in pixels of the \hyperlink{classbridges_1_1base_1_1_element}{Element} 
 Get the weight of the link
 
 \begin{DoxyReturn}{Returns}
-the size in pixels of the \hyperlink{classbridges_1_1base_1_1_element}{Element} in the Bridges Visualization 
+the stored edge weight 
 \end{DoxyReturn}
 \hypertarget{classbridges_1_1base_1_1_link_visualizer_a92f306dbd73b961befa8ab4c0620a89e}{}\label{classbridges_1_1base_1_1_link_visualizer_a92f306dbd73b961befa8ab4c0620a89e} 
 \index{bridges\+::base\+::\+Link\+Visualizer@{bridges\+::base\+::\+Link\+Visualizer}!set\+Color@{set\+Color}}
@@ -109,7 +129,9 @@ the size in pixels of the \hyperlink{classbridges_1_1base_1_1_element}{Element} 
 \subsubsection{\texorpdfstring{set\+Color()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void bridges.\+base.\+Link\+Visualizer.\+set\+Color (\begin{DoxyParamCaption}\item[{String}]{col\+\_\+name }\end{DoxyParamCaption})}
 
-Set the color of the link in the Bridges Visualization to \char`\"{}a\+Color\char`\"{}. 
+Set the color of the link in the Bridges Visualization to \char`\"{}a\+Color\char`\"{}.
+
+
 \begin{DoxyParams}{Parameters}
 {\em col\+\_\+name} & the string reprsenting the color of the \hyperlink{classbridges_1_1base_1_1_element}{Element} in the Bridges Visualization; supported named colors are \char`\"{}red\char`\"{}, \char`\"{}green\char`\"{}, \char`\"{}blue\char`\"{}, \char`\"{}yellow\char`\"{}, \char`\"{}cyan\char`\"{}, \char`\"{}magenta\char`\"{}, \char`\"{}white\char`\"{}, \char`\"{}black\char`\"{}, \char`\"{}orange\char`\"{}, \char`\"{}turquoise\char`\"{}, \char`\"{}maroon\char`\"{}, \char`\"{}aquamarine\char`\"{}, \char`\"{}azure\char`\"{}, \char`\"{}beige\char`\"{}, \char`\"{}brown\char`\"{}, \char`\"{}tan\char`\"{}, \char`\"{}olive\char`\"{}, \char`\"{}chartreuse\char`\"{}, \char`\"{}khaki\char`\"{}, \char`\"{}bisque\char`\"{}, \char`\"{}coral\char`\"{}, \char`\"{}pink\char`\"{}, \char`\"{}lavender\char`\"{}, \char`\"{}purple\char`\"{}, \char`\"{}gold\char`\"{} \\
 \hline
@@ -127,12 +149,7 @@ Set the color of the link given R\+G\+BA components
 {\em r,g,b,a} & components\\
 \hline
 \end{DoxyParams}
-check to ensure they are in 0-\/255 range, else throw exception
-
-\begin{DoxyReturn}{Returns}
-the size in pixels of the \hyperlink{classbridges_1_1base_1_1_element}{Element} in the Bridges Visualization 
-\end{DoxyReturn}
-\hypertarget{classbridges_1_1base_1_1_link_visualizer_ac0d59614dbc65ed0a19c25c493a1deaa}{}\label{classbridges_1_1base_1_1_link_visualizer_ac0d59614dbc65ed0a19c25c493a1deaa} 
+check to ensure they are in 0-\/255 range, else throw exception \hypertarget{classbridges_1_1base_1_1_link_visualizer_ac0d59614dbc65ed0a19c25c493a1deaa}{}\label{classbridges_1_1base_1_1_link_visualizer_ac0d59614dbc65ed0a19c25c493a1deaa} 
 \index{bridges\+::base\+::\+Link\+Visualizer@{bridges\+::base\+::\+Link\+Visualizer}!set\+Opacity@{set\+Opacity}}
 \index{set\+Opacity@{set\+Opacity}!bridges\+::base\+::\+Link\+Visualizer@{bridges\+::base\+::\+Link\+Visualizer}}
 \subsubsection{\texorpdfstring{set\+Opacity()}{setOpacity()}}
@@ -151,7 +168,7 @@ Sets the opacity of the link in the Bridges Visualization
 \subsubsection{\texorpdfstring{set\+Thickness()}{setThickness()}}
 {\footnotesize\ttfamily void bridges.\+base.\+Link\+Visualizer.\+set\+Thickness (\begin{DoxyParamCaption}\item[{double}]{th }\end{DoxyParamCaption})}
 
-Set the thickness of the link in the Bridge Visualization in pixels
+Set the thickness of the link in the Bridge Visualization in pixels; thickness shoudl be in the range 0-\/50.\+0
 
 
 \begin{DoxyParams}{Parameters}
@@ -164,7 +181,7 @@ Set the thickness of the link in the Bridge Visualization in pixels
 \subsubsection{\texorpdfstring{set\+Weight()}{setWeight()}}
 {\footnotesize\ttfamily void bridges.\+base.\+Link\+Visualizer.\+set\+Weight (\begin{DoxyParamCaption}\item[{double}]{wt }\end{DoxyParamCaption})}
 
-Set the weight of the link, useful in graph algorithms, for example
+Set the weight of the link, useful in graph algorithms, for example. weight value is user defined, and determined by the input graph specification.
 
 
 \begin{DoxyParams}{Parameters}

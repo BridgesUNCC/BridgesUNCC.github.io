@@ -1,5 +1,5 @@
-\hypertarget{classbridges_1_1base_1_1_edge}{}\section{bridges.\+base.\+Edge$<$ Key $>$ Class Template Reference}
-\label{classbridges_1_1base_1_1_edge}\index{bridges.\+base.\+Edge$<$ Key $>$@{bridges.\+base.\+Edge$<$ Key $>$}}
+\hypertarget{classbridges_1_1base_1_1_edge}{}\section{bridges.\+base.\+Edge$<$ K $>$ Class Template Reference}
+\label{classbridges_1_1base_1_1_edge}\index{bridges.\+base.\+Edge$<$ K $>$@{bridges.\+base.\+Edge$<$ K $>$}}
 
 
 This class is used to represent the edges in a graph and will appear as links in the B\+R\+I\+D\+G\+ES graph visualization.  
@@ -8,71 +8,73 @@ This class is used to represent the edges in a graph and will appear as links in
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classbridges_1_1base_1_1_edge_ac070f05141bfbc7c575591e59d508476}{Edge} ()
+\hyperlink{classbridges_1_1base_1_1_edge_a2535dd24e430ae90d2837db13824f8f2}{Edge} ()
 \item 
-\hyperlink{classbridges_1_1base_1_1_edge_a8567ee2a3d4d655f0a2a2258767238d6}{Edge} (int wt)
+\hyperlink{classbridges_1_1base_1_1_edge_a82c37eae608b774535c4bc79079cfeec}{Edge} (int wt)
 \item 
-\hyperlink{classbridges_1_1base_1_1_edge_a503c093e63f5df1071233427496d9d08}{Edge} (int wt, Key v)
+\hyperlink{classbridges_1_1base_1_1_edge_afe54a7f07ad28ef551720f365e07b610}{Edge} (int wt, K v)
 \item 
-void \hyperlink{classbridges_1_1base_1_1_edge_a5b671fc2589d95b125b0b2cedbab0f1a}{set\+Weight} (int wt)
+void \hyperlink{classbridges_1_1base_1_1_edge_a25eadea2591fb65c9fb681cc297ac7a8}{set\+Weight} (int wt)
 \item 
-int \hyperlink{classbridges_1_1base_1_1_edge_a4cc9219e5842cafb7c5891ba15147ec1}{get\+Weight} ()
+int \hyperlink{classbridges_1_1base_1_1_edge_a2b6a382a0a4a4c2c55a40c5954c7845d}{get\+Weight} ()
 \item 
-void \hyperlink{classbridges_1_1base_1_1_edge_a596d119b0bcfe8c455acae65832bf25d}{set\+Vertex} (Key v)
+void \hyperlink{classbridges_1_1base_1_1_edge_aad504e0c684d897986abf96cbea0d54b}{set\+Vertex} (K v)
 \item 
-Key \hyperlink{classbridges_1_1base_1_1_edge_ada8056d4944cfea69f438af8274c1f79}{get\+Vertex} ()
+K \hyperlink{classbridges_1_1base_1_1_edge_a3108d7f80c0b033b1be1185daf715836}{get\+Vertex} ()
 \item 
-void \hyperlink{classbridges_1_1base_1_1_edge_a02f0ad2a38fff319ccc8e9619f7db7f9}{set\+Edge} (int wt, Key v)
+void \hyperlink{classbridges_1_1base_1_1_edge_ae7764323dbfbaba26ed79be07ab0762d}{set\+Edge} (int wt, K v)
 \item 
-\hyperlink{classbridges_1_1base_1_1_edge}{Edge}$<$ Key $>$ \hyperlink{classbridges_1_1base_1_1_edge_a666bb076c206e572d9fca072b58db162}{get\+Edge} ()
+\hyperlink{classbridges_1_1base_1_1_edge}{Edge}$<$ K $>$ \hyperlink{classbridges_1_1base_1_1_edge_a342c3a936fd39d8ea9b345707b4b2237}{get\+Edge} ()
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 This class is used to represent the edges in a graph and will appear as links in the B\+R\+I\+D\+G\+ES graph visualization. 
 
-This object is used in graph algorithms, such as D\+FS, B\+FS and shortest path algorithms that need to visit graph edges. The adjacency list representation uses them as the generic paramter, as S\+Lelement$<$\+Edge$>$ Bridges will represent Edges as links between pairs of elements
+This object is used in graphs and graph algorithms such as D\+FS, B\+FS and shortest path algorithms that need to visit graph edges. The adjacency list representation uses them as the generic paramter, as S\+Lelement$<$\+Edge$>$ Bridges represents Edges as links between pairs of elements
 
 \begin{DoxyAuthor}{Author}
 K.\+R. Subramanian
 \end{DoxyAuthor}
 
 \begin{DoxyParams}{Parameters}
-{\em generic} & parameter $<$\+Key$>$ \\
+{\em generic} & parameter $<$\+K$>$ usually an Element$<$\+E$>$ type used to hold the terminating vertex \\
 \hline
 \end{DoxyParams}
 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{classbridges_1_1base_1_1_edge_ac070f05141bfbc7c575591e59d508476}{}\label{classbridges_1_1base_1_1_edge_ac070f05141bfbc7c575591e59d508476} 
+\hypertarget{classbridges_1_1base_1_1_edge_a2535dd24e430ae90d2837db13824f8f2}{}\label{classbridges_1_1base_1_1_edge_a2535dd24e430ae90d2837db13824f8f2} 
 \index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!Edge@{Edge}}
 \index{Edge@{Edge}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
 \subsubsection{\texorpdfstring{Edge()}{Edge()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}$<$ Key $>$.\hyperlink{classbridges_1_1base_1_1_edge}{Edge} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}$<$ K $>$.\hyperlink{classbridges_1_1base_1_1_edge}{Edge} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Constructors \hypertarget{classbridges_1_1base_1_1_edge_a8567ee2a3d4d655f0a2a2258767238d6}{}\label{classbridges_1_1base_1_1_edge_a8567ee2a3d4d655f0a2a2258767238d6} 
+Constructors \hypertarget{classbridges_1_1base_1_1_edge_a82c37eae608b774535c4bc79079cfeec}{}\label{classbridges_1_1base_1_1_edge_a82c37eae608b774535c4bc79079cfeec} 
 \index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!Edge@{Edge}}
 \index{Edge@{Edge}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
 \subsubsection{\texorpdfstring{Edge()}{Edge()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}$<$ Key $>$.\hyperlink{classbridges_1_1base_1_1_edge}{Edge} (\begin{DoxyParamCaption}\item[{int}]{wt }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}$<$ K $>$.\hyperlink{classbridges_1_1base_1_1_edge}{Edge} (\begin{DoxyParamCaption}\item[{int}]{wt }\end{DoxyParamCaption})}
 
-Construct an edge with thickness equal to \char`\"{}wt\char`\"{} and no terminating \hyperlink{classbridges_1_1base_1_1_element}{Element}
+Construct an edge with weight equal to \char`\"{}wt\char`\"{} and no terminating \hyperlink{classbridges_1_1base_1_1_element}{Element}
 \begin{DoxyItemize}
 \item used only for graphs. 
 \begin{DoxyParams}{Parameters}
-{\em wt} & integer representing the thickness of the arrow in the Bridges Visualization \\
+{\em wt} & integer representing the weight of the edge \\
 \hline
 \end{DoxyParams}
 
-\end{DoxyItemize}\hypertarget{classbridges_1_1base_1_1_edge_a503c093e63f5df1071233427496d9d08}{}\label{classbridges_1_1base_1_1_edge_a503c093e63f5df1071233427496d9d08} 
+\end{DoxyItemize}\hypertarget{classbridges_1_1base_1_1_edge_afe54a7f07ad28ef551720f365e07b610}{}\label{classbridges_1_1base_1_1_edge_afe54a7f07ad28ef551720f365e07b610} 
 \index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!Edge@{Edge}}
 \index{Edge@{Edge}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
 \subsubsection{\texorpdfstring{Edge()}{Edge()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}$<$ Key $>$.\hyperlink{classbridges_1_1base_1_1_edge}{Edge} (\begin{DoxyParamCaption}\item[{int}]{wt,  }\item[{Key}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}$<$ K $>$.\hyperlink{classbridges_1_1base_1_1_edge}{Edge} (\begin{DoxyParamCaption}\item[{int}]{wt,  }\item[{K}]{v }\end{DoxyParamCaption})}
 
-Construct an edge with thickness equal to \char`\"{}wt\char`\"{} and a terminating \hyperlink{classbridges_1_1base_1_1_element}{Element} with an identifer equal to \char`\"{}v\char`\"{} -\/ used only for graphs 
+Construct an edge with weight \char`\"{}wt\char`\"{} and a terminating \hyperlink{classbridges_1_1base_1_1_element}{Element} with an identifer equal to \char`\"{}v\char`\"{} -\/ used only for graphs
+
+
 \begin{DoxyParams}{Parameters}
-{\em wt} & integer, representint edge weight \\
+{\em wt} & integer, representing edge weight \\
 \hline
 {\em v} & the terminating vertex of the edge \\
 \hline
@@ -80,67 +82,67 @@ Construct an edge with thickness equal to \char`\"{}wt\char`\"{} and a terminati
 
 
 \subsection{Member Function Documentation}
-\hypertarget{classbridges_1_1base_1_1_edge_a666bb076c206e572d9fca072b58db162}{}\label{classbridges_1_1base_1_1_edge_a666bb076c206e572d9fca072b58db162} 
+\hypertarget{classbridges_1_1base_1_1_edge_a342c3a936fd39d8ea9b345707b4b2237}{}\label{classbridges_1_1base_1_1_edge_a342c3a936fd39d8ea9b345707b4b2237} 
 \index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!get\+Edge@{get\+Edge}}
 \index{get\+Edge@{get\+Edge}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
 \subsubsection{\texorpdfstring{get\+Edge()}{getEdge()}}
-{\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_edge}{Edge}$<$Key$>$ \hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}$<$ Key $>$.get\+Edge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_edge}{Edge}$<$K$>$ \hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}$<$ K $>$.get\+Edge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Returns this edge \hypertarget{classbridges_1_1base_1_1_edge_ada8056d4944cfea69f438af8274c1f79}{}\label{classbridges_1_1base_1_1_edge_ada8056d4944cfea69f438af8274c1f79} 
+Returns this edge \hypertarget{classbridges_1_1base_1_1_edge_a3108d7f80c0b033b1be1185daf715836}{}\label{classbridges_1_1base_1_1_edge_a3108d7f80c0b033b1be1185daf715836} 
 \index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!get\+Vertex@{get\+Vertex}}
 \index{get\+Vertex@{get\+Vertex}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
 \subsubsection{\texorpdfstring{get\+Vertex()}{getVertex()}}
-{\footnotesize\ttfamily Key \hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}$<$ Key $>$.get\+Vertex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily K \hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}$<$ K $>$.get\+Vertex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 Get identifer of the terminating \hyperlink{classbridges_1_1base_1_1_element}{Element} of edge
 
 \begin{DoxyReturn}{Returns}
 the string identifier of the terminating \hyperlink{classbridges_1_1base_1_1_element}{Element} 
 \end{DoxyReturn}
-\hypertarget{classbridges_1_1base_1_1_edge_a4cc9219e5842cafb7c5891ba15147ec1}{}\label{classbridges_1_1base_1_1_edge_a4cc9219e5842cafb7c5891ba15147ec1} 
+\hypertarget{classbridges_1_1base_1_1_edge_a2b6a382a0a4a4c2c55a40c5954c7845d}{}\label{classbridges_1_1base_1_1_edge_a2b6a382a0a4a4c2c55a40c5954c7845d} 
 \index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!get\+Weight@{get\+Weight}}
 \index{get\+Weight@{get\+Weight}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
 \subsubsection{\texorpdfstring{get\+Weight()}{getWeight()}}
-{\footnotesize\ttfamily int \hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}$<$ Key $>$.get\+Weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int \hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}$<$ K $>$.get\+Weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 Get edge weight
 
 \begin{DoxyReturn}{Returns}
-the thickness of the arrow in the Bridges Visualization 
+the weight of edge 
 \end{DoxyReturn}
-\hypertarget{classbridges_1_1base_1_1_edge_a02f0ad2a38fff319ccc8e9619f7db7f9}{}\label{classbridges_1_1base_1_1_edge_a02f0ad2a38fff319ccc8e9619f7db7f9} 
+\hypertarget{classbridges_1_1base_1_1_edge_ae7764323dbfbaba26ed79be07ab0762d}{}\label{classbridges_1_1base_1_1_edge_ae7764323dbfbaba26ed79be07ab0762d} 
 \index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!set\+Edge@{set\+Edge}}
 \index{set\+Edge@{set\+Edge}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
 \subsubsection{\texorpdfstring{set\+Edge()}{setEdge()}}
-{\footnotesize\ttfamily void \hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}$<$ Key $>$.set\+Edge (\begin{DoxyParamCaption}\item[{int}]{wt,  }\item[{Key}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void \hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}$<$ K $>$.set\+Edge (\begin{DoxyParamCaption}\item[{int}]{wt,  }\item[{K}]{v }\end{DoxyParamCaption})}
 
-Set edge to thickness of \char`\"{}wt\char`\"{} and terminating Elememt of \char`\"{}v\char`\"{}.
+Set edge to weight of \char`\"{}wt\char`\"{} and terminating Elememt of \char`\"{}v\char`\"{}.
 
 
 \begin{DoxyParams}{Parameters}
-{\em wt} & integer representing the thickness of the arrow in the Bridges Visualization \\
+{\em wt} & edge weight \\
 \hline
-{\em v} & the string identifier of the terminating \hyperlink{classbridges_1_1base_1_1_element}{Element} \\
+{\em v} & the identifier of the terminating \hyperlink{classbridges_1_1base_1_1_element}{Element} \\
 \hline
 \end{DoxyParams}
-\hypertarget{classbridges_1_1base_1_1_edge_a596d119b0bcfe8c455acae65832bf25d}{}\label{classbridges_1_1base_1_1_edge_a596d119b0bcfe8c455acae65832bf25d} 
+\hypertarget{classbridges_1_1base_1_1_edge_aad504e0c684d897986abf96cbea0d54b}{}\label{classbridges_1_1base_1_1_edge_aad504e0c684d897986abf96cbea0d54b} 
 \index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!set\+Vertex@{set\+Vertex}}
 \index{set\+Vertex@{set\+Vertex}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
 \subsubsection{\texorpdfstring{set\+Vertex()}{setVertex()}}
-{\footnotesize\ttfamily void \hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}$<$ Key $>$.set\+Vertex (\begin{DoxyParamCaption}\item[{Key}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void \hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}$<$ K $>$.set\+Vertex (\begin{DoxyParamCaption}\item[{K}]{v }\end{DoxyParamCaption})}
 
 Set terminating \hyperlink{classbridges_1_1base_1_1_element}{Element} of the edge
 
 
 \begin{DoxyParams}{Parameters}
-{\em v} & the string identifier of the terminating \hyperlink{classbridges_1_1base_1_1_element}{Element} \\
+{\em v} & the identifier of the terminating \hyperlink{classbridges_1_1base_1_1_element}{Element} \\
 \hline
 \end{DoxyParams}
-\hypertarget{classbridges_1_1base_1_1_edge_a5b671fc2589d95b125b0b2cedbab0f1a}{}\label{classbridges_1_1base_1_1_edge_a5b671fc2589d95b125b0b2cedbab0f1a} 
+\hypertarget{classbridges_1_1base_1_1_edge_a25eadea2591fb65c9fb681cc297ac7a8}{}\label{classbridges_1_1base_1_1_edge_a25eadea2591fb65c9fb681cc297ac7a8} 
 \index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!set\+Weight@{set\+Weight}}
 \index{set\+Weight@{set\+Weight}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
 \subsubsection{\texorpdfstring{set\+Weight()}{setWeight()}}
-{\footnotesize\ttfamily void \hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}$<$ Key $>$.set\+Weight (\begin{DoxyParamCaption}\item[{int}]{wt }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void \hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}$<$ K $>$.set\+Weight (\begin{DoxyParamCaption}\item[{int}]{wt }\end{DoxyParamCaption})}
 
 Set edge weight to \char`\"{}wt\char`\"{}
 
