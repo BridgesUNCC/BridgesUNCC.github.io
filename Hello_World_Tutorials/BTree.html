@@ -23,12 +23,12 @@
 <header w3-include-html="./Tutorial_Header.html"></header>
 
 <main>
-TreeElement&lt;E&gt; implements a <i>binary tree element</i> in BRIDGES
+BinTreeElement&lt;E&gt; implements a <i>binary tree element</i> in BRIDGES
 and is inherited from Element&lt;E&gt;
 <br><br><img width="175em" src="./images/btelement-cd.png"><br><br>
-<h2>How does the TreeElement&lt;E&gt; work?</h2>
+<h2>How does the BinTreeElement&lt;E&gt; work?</h2>
 <p>
-TreeElement&lt;E&gt; is another type of container that has two links 
+BinTreeElement&lt;E&gt; is another type of container that has two links 
 pointing to its two children, also binary tree elements. By convention, 
 these two links are called "left" and "right and the top of the tree is 
 referred to as the "root".
@@ -40,7 +40,7 @@ TreeElement T2.
 Note that there is no pointer from T1 or any other element back to its root.
 </p>
 
-<h2>How does a TreeElement&lt;E&gt; differ from a DLelement&lt;E&gt;?</h2>
+<h2>How does a BinTreeElement&lt;E&gt; differ from a DLelement&lt;E&gt;?</h2>
 <p>
 Structurally, DLelement&lt;E&gt;  and TreeElement&lt;E&gt; are similar with 2 emanating links, but they are used in very different data structures. In a doubly
 linked list, the links point to the immediately following and previous 
@@ -48,10 +48,9 @@ element, while in the binary tree they point to its two children(recursively,
 as can be seen in the above example). 
 
 </p>
+<hr/>
 
-  <hr/>
-
-<h2>TreeElement - BRIDGES Example</h2>
+<h2>BinTreeElement - BRIDGES Example: A Huffman Coding Tree</h2>
   <div class="tabs">
     <div onclick="displayCode('Java',this)">Java</div>
     <div onclick="displayCode('C++',this)" >C++</div>
