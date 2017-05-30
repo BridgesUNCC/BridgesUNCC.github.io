@@ -21,11 +21,13 @@
 <ul>
   <li>First we need to create our BRIDGES object and initialize our BRIDGES Credentials; here we use for our example a StudentInfo object class, which will
 be a generic parameter.</li>
-<pre class="prettyprint">Bridges&lt;String, StudentInfo&gt; bridges = new Bridges&lt;&gt;(1, "YOUR_API_KEY", "YOUR_USER_ID");</pre>
+<pre class="prettyprint">Bridges&lt;String, StudentInfo&gt; 
+	bridges = new Bridges&lt;&gt;(1, "YOUR_API_KEY", "YOUR_USER_ID");
+</pre>
 	In the above call, the parameter 1 is the assignment id (can be any
 	positive integer), and the remaining two parameters are your BRIDGES
-	credentials.  You will need to replace the two fields in this call
-	with your own BRIDGES credentials. <p>
+	credentials.  <b> You will need to replace the two fields in this call
+	with your own BRIDGES credentials</b>. <p>
   <li>Then we can create our SLelements with the StudentInfo objects</li>
 	<pre class="prettyprint">
 SLelement<StudentInfo> el0 = new SLelement<StudentInfo>( "",
@@ -47,8 +49,7 @@ SLelement<StudentInfo> el1 = new SLelement<StudentInfo>( "",
 		"k.soderman@generated.com",
 		"magenta",
 		"red",
-		 11.0,
-		"https://randomuser.me/api/portraits/med/women/46.jpg"
+		 11.0
 	));
 SLelement<StudentInfo> el2 = new SLelement<StudentInfo>( "",
 	new StudentInfo(
@@ -58,8 +59,7 @@ SLelement<StudentInfo> el2 = new SLelement<StudentInfo>( "",
 		"l.kyler@generated.com",
 		"yellow",
 		"green",
-		 12.0,
-		"https://randomuser.me/api/portraits/med/men/80.jpg"
+		 12.0
 	));
 SLelement<StudentInfo> el3 = new SLelement<StudentInfo>( "",
 	new StudentInfo(
@@ -69,8 +69,7 @@ SLelement<StudentInfo> el3 = new SLelement<StudentInfo>( "",
 		"g.serino@generated.com",
 		"blue",
 		"magenta",
-		 9.0,
-		"https://randomuser.me/api/portraits/med/women/2.jpg"
+		 9.0
 	));
 SLelement<StudentInfo> el4 = new SLelement<StudentInfo>( "",
 	new StudentInfo(
@@ -80,8 +79,7 @@ SLelement<StudentInfo> el4 = new SLelement<StudentInfo>( "",
 		"s.mcginn@generated.com",
 		"red",
 		"yellow",
-		 15.0,
-		"https://randomuser.me/api/portraits/med/men/87.jpg"
+		 15.0
 	));
 	</pre>
 <li>Now link the SLelements together</li>
@@ -91,40 +89,44 @@ e1.setNext(e2);
 e2.setNext(e3);
 e3.setNext(e4);
 </pre>
-<li> Next add some visualization attributes to the elements</li>
+<li> Next add some visualization attributes to the elements, and iterating 
+through the student records </li>
 <pre class="prettyprint">
+                        // iterate through the list and add visual attributes
+                        // to the elements; set the element color to the favorite
+                        // color and the link to the disliked color
 SLelement<StudentInfo> currentElement = el0;
 while(currentElement != null){
-	System.out.println(currentElement.getValue().getFullName());
-
-	// color the node
+                        // color the node
 	currentElement.getVisualizer().setColor(currentElement.getValue().getFavoriteColor());
 
-	// color the link between two successive element,
-	// change the link thickness
 	if(currentElement.getNext() != null){
-		currentElement.getLinkVisualizer(currentElement.getNext())
-					  .setColor(currentElement.getValue().getDislikeColor());
 
-		currentElement.getLinkVisualizer(currentElement.getNext())
-					  .setThickness(currentElement.getValue().getStudentCreditHours() * 0.75);//75 percent thinner
+                        // color the link
+	currentElement
+		.getLinkVisualizer(currentElement.getNext())
+		.setColor(currentElement.getValue().getDislikeColor());
+                        // adjust link thickness
+	currentElement
+		.getLinkVisualizer(currentElement.getNext())
+		.setThickness(currentElement.getValue()
+		.getStudentCreditHours() * 0.75);//75 percent thinner
 	}
+						// set the label to the student info (label created in
+						// StudentInfo class
+	currentElement.setLabel(currentElement.getValue().getStudentLabel());
 
-	// set the label of the element to print student info
-	currentElement.setLabel(
-						 currentElement.getValue().getFullName() + "\n"+
-			 "Email: " + currentElement.getValue().getEmail() + "\n"   +
-		   "Program: " + currentElement.getValue().getProgram() + "\n"   +
-		"Student ID: " + currentElement.getValue().getStudentID() + "\n"   +
-	"Favorite Color: " + currentElement.getValue().getFavoriteColor() + "\n"
-	);
 	currentElement = currentElement.getNext();
 }
 </pre>
 <li>Now we pass the first element(head) of our data structure to BRIDGES</li>
-<pre class="prettyprint">bridge.setDataStructure(el0);</pre>
+<pre class="prettyprint">
+	bridge.setDataStructure(el0);
+</pre>
 <li>Finaly we call the visualize function</li>
-<pre class="prettyprint">bridge.visualize();</pre>
+<pre class="prettyprint">
+	bridge.visualize();
+</pre>
 </ul>
 <h3>StudentInfo Class </h3>
 <ul>
@@ -132,8 +134,6 @@ while(currentElement != null){
 <pre w3-include-html="./tutorial-source-code/Java_SLL/StudentInfo.java" class="prettyprint"></pre>
 
 </ul>
-
-
 
 <h3>Here's the final code:</h3>
 

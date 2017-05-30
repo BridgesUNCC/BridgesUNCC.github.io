@@ -1,4 +1,4 @@
- /**
+/**
  * Created by Lucas Estrella on 1/31/2017.
  * lestrell@uncc.edu
  */
@@ -12,9 +12,7 @@ public class sllist {
 		final String YOUR_API_KEY = "";
 		final String YOUR_USER_ID = "";
 		Bridges<String, StudentInfo> bridges = 
-			new Bridges<String, StudentInfo>(100, "YOUR-BRIDGES-API-KEY" , 
-				"YOUR-BRIDGES-USER-ID");
-
+			new Bridges<String, StudentInfo>(4, "997924677918", "bridges_public");
          					// create the linked list elements with 
 							// student data 
 		SLelement<StudentInfo> el0 = new SLelement<StudentInfo>( "",
@@ -25,8 +23,7 @@ public class sllist {
 				"g.chaney@generated.com",
 				"magenta",
 				"blue",
-				 9.0,
-				 "https://randomuser.me/api/portraits/med/women/45.jpg"
+				 9.0
 			));
 		SLelement<StudentInfo> el1 = new SLelement<StudentInfo>( "",
 			new StudentInfo(
@@ -36,8 +33,7 @@ public class sllist {
 				"k.soderman@generated.com",
 				"magenta",
 				"red",
-				 11.0,
-				"https://randomuser.me/api/portraits/med/women/46.jpg"
+				 11.0
 			));
 		SLelement<StudentInfo> el2 = new SLelement<StudentInfo>( "",
 			new StudentInfo(
@@ -47,8 +43,7 @@ public class sllist {
 				"l.kyler@generated.com",
 				"yellow",
 				"green",
-				 12.0,
-				"https://randomuser.me/api/portraits/med/men/80.jpg"
+				 12.0
 			));
 		SLelement<StudentInfo> el3 = new SLelement<StudentInfo>( "",
 			new StudentInfo(
@@ -56,10 +51,9 @@ public class sllist {
 				"Gladys Serino",
 				"CS",
 				"g.serino@generated.com",
-				"blue",
+				"green",
 				"magenta",
-				 9.0,
-				"https://randomuser.me/api/portraits/med/women/2.jpg"
+				 9.0
 			));
 		SLelement<StudentInfo> el4 = new SLelement<StudentInfo>( "",
 			new StudentInfo(
@@ -68,9 +62,8 @@ public class sllist {
 				"CS",
 				"s.mcginn@generated.com",
 				"red",
-				"yellow",
-				 15.0,
-				"https://randomuser.me/api/portraits/med/men/87.jpg"
+				"cyan",
+				 15.0
 			));
 
         					//  link the elements
@@ -79,9 +72,10 @@ public class sllist {
         el2.setNext(el3);
         el3.setNext(el4);
 
-        SLelement<StudentInfo> currentElement = el0;
 						// iterate through the list and add visual attributes
-						// to the elements
+						// to the elements; set the element color to the favorite
+						// color and the link to the disliked color
+        SLelement<StudentInfo> currentElement = el0;
         while(currentElement != null){
 						// color the node
             currentElement.getVisualizer().setColor(currentElement.getValue().getFavoriteColor());
@@ -99,7 +93,10 @@ public class sllist {
 						.getStudentCreditHours() * 0.75);//75 percent thinner
             }
 
+						// set the label to the student info (label created in 
+						// StudentInfo class
             currentElement.setLabel(currentElement.getValue().getStudentLabel());
+
             currentElement = currentElement.getNext();
         }
 
@@ -108,9 +105,4 @@ public class sllist {
 
 
     }
-
-
-
-
-
 }

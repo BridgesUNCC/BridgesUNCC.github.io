@@ -1,5 +1,3 @@
-package Java_DLL;
-
 import bridges.base.DLelement;
 import bridges.connect.Bridges;
 
@@ -9,101 +7,89 @@ public class dllist {
 
       final String YOUR_API_KEY = "";
       final String YOUR_USER_ID = "";
-      Bridges<String, Student> bridge = new Bridges<String, Student>(4, YOUR_API_KEY, YOUR_USER_ID);
+      Bridges<String, StudentInfo> bridge = new Bridges<String, StudentInfo>(5, "997924677918", "bridges_public");
 
-      Student[] students = {
-              new Student(
+						// load student info
+      StudentInfo[] students = {
+              new StudentInfo(
                       "00000000000",
                       "Gretel Chaney",
                       "CS",
                       "g.chaney@generated.com",
                       "magenta",
                       "blue",
-                      9.0,
-                      "https://randomuser.me/api/portraits/med/women/45.jpg"
+                      9.0 
               ),
-              new Student(
+              new StudentInfo(
                       "00000000001",
                       "Karol Soderman",
                       "SIS",
                       "k.soderman@generated.com",
                       "magenta",
                       "red",
-                      11.0,
-                      "https://randomuser.me/api/portraits/med/women/46.jpg"
+                      11.0
               ),
-              new Student(
+              new StudentInfo(
                       "00000000002",
                       "Lamont Kyler",
                       "BIO",
                       "l.kyler@generated.com",
-                      "yellow",
+                      "purple",
                       "green",
-                      12.0,
-                      "https://randomuser.me/api/portraits/med/men/80.jpg"
+                      12.0
               ),
-              new Student(
+              new StudentInfo(
                       "00000000003",
                       "Gladys Serino",
                       "CS","g.serino@generated.com",
                       "blue",
-                      "magenta",
-                      9.0,
-                      "https://randomuser.me/api/portraits/med/women/2.jpg"
+                      "black",
+                      9.0
               ),
-              new Student("00000000004",
+              new StudentInfo("00000000004",
                       "Starr Mcginn",
                       "CS",
                       "s.mcginn@generated.com",
                       "red",
-                      "yellow",
-                      15.0,
-                      "https://randomuser.me/api/portraits/med/men/87.jpg")
+                      "cyan",
+                      15.0)
       };
 
-      /**
-       * new DLelement<>(label, genericData)
-       */
-       //initializing all elements with empty labels, and with the student data. See Object model.Student.java
-       DLelement<Student> el0 = null;
-
+							// insert the students in front of the list
+       DLelement<StudentInfo> head = null;
        for(int i = 0; i < students.length; i++){
-           if(i > 1){
-               el0 = insertFront(el0, new DLelement<>("",students[i]));
-           }else if(i == 0){
-               el0 = new DLelement<>("",students[0]);
-               el0.setNext(new DLelement<>("",students[1]));
-           }
+	      head = insertFront(head, new DLelement<StudentInfo>("", students[i]));
+       }
+							// add visual attributes 
+       DLelement<StudentInfo> curr = head, next;
+       while(curr != null){
+           curr.setLabel(curr.getValue().getStudentLabel());
+           curr.getVisualizer().setColor(curr.getValue().getFavoriteColor());
+
+		   DLelement<StudentInfo> n1, n2;
+           if (curr.getNext() != null) {
+				next = curr.getNext();
+				curr.getLinkVisualizer(next).setColor(curr.getValue().getDislikeColor());
+				next.getLinkVisualizer(curr).setColor(curr.getValue().getDislikeColor());
+			}
+
+           curr = curr.getNext();
        }
 
-       DLelement<Student> current = el0;
-       while(current != null){
-           current.setLabel(current.getValue().getStudentLabel());
-           current.getVisualizer().setColor(current.getValue().getFavoriteColor());
-
-           if(current.getNext() != null)current.getLinkVisualizer(current.getNext()).setColor(current.getValue().getDislikeColor());
-           if(current.getPrev() != null)current.getLinkVisualizer(current.getPrev()).setColor(current.getValue().getDislikeColor());
-
-           current = current.getNext();
-       }
-
-      bridge.setDataStructure(el0);
+      bridge.setDataStructure(head);
       bridge.visualize();
 
 
   }
 
+  public static DLelement<StudentInfo> insertFront(DLelement<StudentInfo> front,
+                                      DLelement<StudentInfo> new_el){
+	if (front == null)
+		return new_el;
 
-  public static DLelement insertFront(DLelement tail,
-                                      DLelement newElement){
-      DLelement tailNext = tail.getNext();
-
-      newElement.setNext(tailNext);
-      newElement.setPrev(tail);
-
-      tailNext.setPrev(newElement);
-      tail.setNext(newElement);
-      return tail;
+	new_el.setNext(front);
+	front.setPrev(new_el);
+	
+	return new_el;
   }
-
 }

@@ -1,6 +1,5 @@
-package Java_DLL;
 
-/**
+  /**
    * Created by Lucas Estrella on 1/31/2017.
    */
   public class Student {
@@ -9,8 +8,7 @@ package Java_DLL;
                      program,
                      email,
                      dislikeColor,
-                     favoriteColor,
-                     avatar;
+                     favoriteColor;
 
       private boolean visited;
 
@@ -36,8 +34,7 @@ package Java_DLL;
                      String email,
                      String dislikeColor,
                      String favoriteColor,
-                     double studentCreditHours,
-                     String avatar) {
+                     double studentCreditHours) {
           this.studentID = studentID;
           this.fullName = fullName;
           this.program = program;
@@ -45,7 +42,6 @@ package Java_DLL;
           this.dislikeColor = dislikeColor;
           this.favoriteColor = favoriteColor;
           this.studentCreditHours = studentCreditHours;
-          this.avatar = avatar;
       }
 
       /**
@@ -120,14 +116,6 @@ package Java_DLL;
       }
 
 
-      public String getAvatar() {
-          return avatar;
-      }
-
-      public void setAvatar(String avatar) {
-          this.avatar = avatar;
-      }
-
       public String getDislikeColor() {
           return dislikeColor;
       }
@@ -150,10 +138,9 @@ package Java_DLL;
                                  "Email: " + email         +  "\n"   +
                                "Program: " + program       +  "\n"   +
                             "Student ID: " + studentID     +  "\n"   +
-                        "Favorite Color: " + favoriteColor +  "\n";
+                        "Favorite Color: " + favoriteColor +  "\n"   + 
+                        "Disliked  Color: " + dislikeColor +  "\n";
 
-          if(avatar != null)
-              $label += "&lt;img width='100' src='" + avatar        +  "'/&gt;";
 
 
           return $label;
