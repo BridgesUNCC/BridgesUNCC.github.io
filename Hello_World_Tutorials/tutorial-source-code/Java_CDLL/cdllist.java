@@ -1,110 +1,101 @@
-package Java_CDLL;
 
 import bridges.base.CircDLelement;
 import bridges.connect.Bridges;
 
 public class cdllist {
 
-  public static void main(String[] args) throws Exception{
+	public static void main(String[] args) throws Exception{
 
-      final String YOUR_API_KEY = "";
-      final String YOUR_USER_ID = "";
-      Bridges<String, Student> bridge = new Bridges<String, Student>(6, YOUR_API_KEY, YOUR_USER_ID);
+		final String YOUR_API_KEY = "";
+		final String YOUR_USER_ID = "";
+		Bridges<String, StudentInfo> bridge = new Bridges<String, StudentInfo>(6, YOUR_API_KEY, YOUR_USER_ID);
 
-      Student[] students = {
-              new Student(
-                      "00000000000",
-                      "Gretel Chaney",
-                      "CS",
-                      "g.chaney@generated.com",
-                      "magenta",
-                      "blue",
-                      9.0,
-                      "https://randomuser.me/api/portraits/med/women/45.jpg"
-              ),
-              new Student(
-                      "00000000001",
-                      "Karol Soderman",
-                      "SIS",
-                      "k.soderman@generated.com",
-                      "magenta",
-                      "red",
-                      11.0,
-                      "https://randomuser.me/api/portraits/med/women/46.jpg"
-              ),
-              new Student(
-                      "00000000002",
-                      "Lamont Kyler",
-                      "BIO",
-                      "l.kyler@generated.com",
-                      "yellow",
-                      "green",
-                      12.0,
-                      "https://randomuser.me/api/portraits/med/men/80.jpg"
-              ),
-              new Student(
-                      "00000000003",
-                      "Gladys Serino",
-                      "CS","g.serino@generated.com",
-                      "blue",
-                      "magenta",
-                      9.0,
-                      "https://randomuser.me/api/portraits/med/women/2.jpg"
-              ),
-              new Student("00000000004",
-                      "Starr Mcginn",
-                      "CS",
-                      "s.mcginn@generated.com",
-                      "red",
-                      "yellow",
-                      15.0,
-                      "https://randomuser.me/api/portraits/med/men/87.jpg")
-      };
+		StudentInfo[] students = {
+			new StudentInfo(
+					"00000000000",
+					"Gretel Chaney",
+					"CS",
+					"g.chaney@generated.com",
+					"magenta",
+					"blue",
+					9.0
+			),
+			new StudentInfo(
+					"00000000001",
+					"Karol Soderman",
+					"SIS",
+					"k.soderman@generated.com",
+					"magenta",
+					"red",
+					11.0
+			),
+			new StudentInfo(
+					"00000000002",
+					"Lamont Kyler",
+					"BIO",
+					"l.kyler@generated.com",
+					"yellow",
+					"green",
+					12.0
+			),
+			new StudentInfo(
+					"00000000003",
+					"Gladys Serino",
+					"CS","g.serino@generated.com",
+					"blue",
+					"magenta",
+					9.0
+			),
+			new StudentInfo("00000000004",
+					"Starr Mcginn",
+					"CS",
+					"s.mcginn@generated.com",
+					"red",
+					"yellow",
+					15.0)
+			};
 
-      /**
-       * new CircDLelement<>(label, genericData)
-       */
-      //initializing all elements with empty labels, and with the student data. See Object model.Student.java
-      CircDLelement<Student> el0 = null;
-      for(int i = 0; i < students.length; i++) {
-          if(i > 0) {
-              el0 = insertFront(el0, new CircDLelement("",students[i]));
-          }else{
-              el0 = new CircDLelement("",students[i]);
-          }
-      }
+      					//initializing all student elements 
+		CircDLelement<StudentInfo> head = null;
 
-      CircDLelement<Student> current = el0;
-      do{
-          current.setLabel(current.getValue().getStudentLabel());
-          current.getVisualizer().setColor(current.getValue().getFavoriteColor());
+		for(int i = 0; i < students.length; i++) {
+			if (i > 0)
+				head = insertFront(head, new CircDLelement<StudentInfo>("",students[i]));
+			else
+				head = new CircDLelement<StudentInfo>("",students[i]);
+      	}
 
-          current.getLinkVisualizer(current.getNext()).setColor(current.getValue().getDislikeColor());
-          current.getLinkVisualizer(current.getNext()).setThickness(current.getValue().getStudentCreditHours()*.75);
+      	CircDLelement<StudentInfo> current = head;
+						// add visual attributes
+		do {
+			current.setLabel(current.getValue().getStudentLabel());
+			current.getVisualizer().setColor(current.getValue().getFavoriteColor());
+		
+			current.getLinkVisualizer(current.getNext()).setColor(current.getValue().getDislikeColor());
+			current.getLinkVisualizer(current.getNext()).setThickness(current.getValue().getStudentCreditHours()*.75);
 
-          current.getLinkVisualizer(current.getPrev()).setColor(current.getValue().getDislikeColor());
-          current.getLinkVisualizer(current.getPrev()).setThickness(current.getValue().getStudentCreditHours()*.75);
+			current.getLinkVisualizer(current.getPrev()).setColor(current.getValue().getDislikeColor());
+			current.getLinkVisualizer(current.getPrev()).setThickness(current.getValue().getStudentCreditHours()*.75);
 
-          current = current.getNext();
-      }while(current.getIdentifier() != el0.getIdentifier());
+			current = current.getNext();
+		}	while (current != head);
 
-      bridge.setDataStructure(el0);
-      bridge.visualize();
+		bridge.setDataStructure(head);
 
+		bridge.visualize();
+	}
 
-  }
+	public static CircDLelement<StudentInfo> insertFront(
+				CircDLelement<StudentInfo> tailElement,
+				CircDLelement<StudentInfo> newElement) {
+		CircDLelement<StudentInfo> tailNextElement = tailElement.getNext();
 
+		newElement.setNext(tailNextElement);
+		newElement.setPrev(tailElement);
 
-  public static CircDLelement insertFront(CircDLelement tailElement,
-                                          CircDLelement newElement){
-      CircDLelement tailNextElement = tailElement.getNext();
+		tailNextElement.setPrev(newElement);
+		tailElement.setNext(newElement);
 
-      newElement.setNext(tailNextElement);
-      newElement.setPrev(tailElement);
-
-      tailNextElement.setPrev(newElement);
-      tailElement.setNext(newElement);
-      return tailElement;
-  }
-
+		return tailElement;
+	}
 }

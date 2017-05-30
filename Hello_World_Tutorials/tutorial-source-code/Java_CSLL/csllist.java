@@ -1,4 +1,3 @@
-package Java_CSLL;
 
 import bridges.base.CircSLelement;
 import bridges.connect.Bridges;
@@ -9,74 +8,70 @@ public class csllist {
 
       final String YOUR_API_KEY = "";
       final String YOUR_USER_ID = "";
-      Bridges<String, Student> bridge = new Bridges<String, Student>(5, YOUR_API_KEY, YOUR_USER_ID);
+      Bridges<String, StudentInfo> bridge = new Bridges<String, StudentInfo>(6, YOUR_API_KEY, YOUR_USER_ID);
 
-      Student[] students = {
-                      new Student(
+      StudentInfo[] students = {
+                      new StudentInfo(
                               "00000000000",
                               "Gretel Chaney",
                               "CS",
                               "g.chaney@generated.com",
                               "magenta",
                               "blue",
-                              9.0,
-                              "https://randomuser.me/api/portraits/med/women/45.jpg"
+                              9.0
                       ),
-                      new Student(
+                      new StudentInfo(
                               "00000000001",
                               "Karol Soderman",
                               "SIS",
                               "k.soderman@generated.com",
                               "magenta",
                               "red",
-                              11.0,
-                              "https://randomuser.me/api/portraits/med/women/46.jpg"
+                              11.0
                       ),
-                      new Student(
+                      new StudentInfo(
                               "00000000002",
                               "Lamont Kyler",
                               "BIO",
                               "l.kyler@generated.com",
                               "yellow",
                               "green",
-                              12.0,
-                              "https://randomuser.me/api/portraits/med/men/80.jpg"
+                              12.0
                       ),
-                      new Student(
+                      new StudentInfo(
                               "00000000003",
                               "Gladys Serino",
                               "CS","g.serino@generated.com",
                               "blue",
                               "magenta",
-                              9.0,
-                              "https://randomuser.me/api/portraits/med/women/2.jpg"
+                              9.0
                       ),
-                      new Student("00000000004",
+                      new StudentInfo("00000000004",
                               "Starr Mcginn",
                               "CS",
                               "s.mcginn@generated.com",
                               "red",
                               "yellow",
-                              15.0,
-                              "https://randomuser.me/api/portraits/med/men/87.jpg")
+                              15.0)
       };
 
       /**
          * new CircSLelement<>(label, genericData)
          */
-        CircSLelement<Student> el0 = new CircSLelement("",students[0]);
-        CircSLelement<Student> current = el0;
+        CircSLelement<StudentInfo> head = new CircSLelement<StudentInfo>("",students[0]);
+        CircSLelement<StudentInfo> current = head;
 
         for(int i = 1; i < students.length; i++){
-            current.setNext(new CircSLelement("", students[i]));
+            current.setNext(new CircSLelement<StudentInfo>("", students[i]));
 
-            //handles the last element
+									//handle the last element
             if(i == students.length-1){
-                //getting the last element
+									//getting the last element
                 current = current.getNext();
 
-                //point the last element to the first element, so the list becomes circular.
-                current.getNext().setNext(el0);
+						//	point the last element to the first element, 
+						// 	so the list becomes circular.
+                current.getNext().setNext(head);
             }
 
             //set the current element to be the next element
@@ -84,9 +79,10 @@ public class csllist {
         }
 
 
-        current = el0;
+        current = head;
 
-        do{
+							// add visual attributes
+        do {
             current.setLabel(current.getValue().getStudentLabel());
             current.getVisualizer().setColor(current.getValue().getFavoriteColor());
 
@@ -94,11 +90,9 @@ public class csllist {
             current.getLinkVisualizer(current.getNext()).setThickness(current.getValue().getStudentCreditHours()*0.75);
 
             current = current.getNext();
-        }while(current.getIdentifier() != el0.getIdentifier());
+        }	while(current.getIdentifier() != head.getIdentifier());
 
-        bridge.setDataStructure(el0);
+        bridge.setDataStructure(head);
         bridge.visualize();
-
   }
-
 }

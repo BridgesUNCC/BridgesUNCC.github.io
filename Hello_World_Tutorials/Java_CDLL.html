@@ -21,112 +21,123 @@
 <ul>
   <li>First we need to create our BRIDGES object and initialize our BRIDGES Credentials; here we use for our example a Student object class, which will
 be a generic parameter.</li>
-<pre class="prettyprint">   Bridges&lt;String, Student&gt; bridges = new Bridges&lt;&gt;(4, "YOUR_API_KEY", "YOUR_USER_ID");</pre>
+<pre class="prettyprint">   
+	Bridges&lt;String, StudentInfo&gt; bridges = new Bridges&ltString, StudentInfo&gt;(4, "YOUR_API_KEY", "YOUR_USER_ID");
+</pre>
 	In the above call, the parameter 1 is the assignment id (can be any
 	positive integer), and the remaining two parameters are your BRIDGES
-	credentials.  You will need to replace the two fields in this call
-	with your own BRIDGES credentials. <p>
+	credentials.  <b>You will need to replace the two fields in this call
+	with your own BRIDGES credentials.</b> <p>
   <li>Now create an array to hold Student objects.</li>
   <pre class="prettyprint">
-    Student[] students = {
-            new Student(
-                    "00000000000",
-                    "Gretel Chaney",
-                    "CS",
-                    "g.chaney@generated.com",
-                    "magenta",
-                    "blue",
-                    9.0,
-                    "https://randomuser.me/api/portraits/med/women/45.jpg"
-            ),
-            new Student(
-                    "00000000001",
-                    "Karol Soderman",
-                    "SIS",
-                    "k.soderman@generated.com",
-                    "magenta",
-                    "red",
-                    11.0,
-                    "https://randomuser.me/api/portraits/med/women/46.jpg"
-            ),
-            new Student(
-                    "00000000002",
-                    "Lamont Kyler",
-                    "BIO",
-                    "l.kyler@generated.com",
-                    "yellow",
-                    "green",
-                    12.0,
-                    "https://randomuser.me/api/portraits/med/men/80.jpg"
-            ),
-            new Student(
-                    "00000000003",
-                    "Gladys Serino",
-                    "CS","g.serino@generated.com",
-                    "blue",
-                    "magenta",
-                    9.0,
-                    "https://randomuser.me/api/portraits/med/women/2.jpg"
-            ),
-            new Student("00000000004",
-                    "Starr Mcginn",
-                    "CS",
-                    "s.mcginn@generated.com",
-                    "red",
-                    "yellow",
-                    15.0,
-                    "https://randomuser.me/api/portraits/med/men/87.jpg")
-    };
-  </pre>
 
-  <li>Then we can create our CircDLelements with the Student objects and link the DLements together.</li>
-	<pre class="prettyprint">
+		StudentInfo[] students = {
+			new StudentInfo(
+					"00000000000",
+					"Gretel Chaney",
+					"CS",
+					"g.chaney@generated.com",
+					"magenta",
+					"blue",
+					9.0
+			),
+			new StudentInfo(
+					"00000000001",
+					"Karol Soderman",
+					"SIS",
+					"k.soderman@generated.com",
+					"magenta",
+					"red",
+					11.0
+			),
+			new StudentInfo(
+					"00000000002",
+					"Lamont Kyler",
+					"BIO",
+					"l.kyler@generated.com",
+					"yellow",
+					"green",
+					12.0
+			),
+			new StudentInfo(
+					"00000000003",
+					"Gladys Serino",
+					"CS","g.serino@generated.com",
+					"blue",
+					"magenta",
+					9.0
+			),
+			new StudentInfo("00000000004",
+					"Starr Mcginn",
+					"CS",
+					"s.mcginn@generated.com",
+					"red",
+					"yellow",
+					15.0)
+			};
+	</pre>
+      					//initializing all student elements 
+<li>Then we can create our CircDLelements with the Student objects and link the DLements together.</li>
+<pre class="prettyprint">
+	CircDLelement<StudentInfo> head = null;
 
-    /**
-     * new CircDLelement<>(label, genericData)
-     */
-    //initializing all elements with empty labels, and with the student data. See Object model.Student.java
-    CircDLelement<Student> el0 = null;
-    for(int i = 0; i < students.length; i++) {
-        if(i > 0) {
-            el0 = insertFront(el0, new CircDLelement("",students[i]));
-        }else{
-            el0 = new CircDLelement("",students[i]);
-        }
+	for(int i = 0; i < students.length; i++) {
+		if (i > 0)
+			head = insertFront(head, new CircDLelement<StudentInfo>("",students[i]));
+		else
+			head = new CircDLelement<StudentInfo>("",students[i]);
     }
 
-	</pre>
-
+</pre>
 <li> Next add some visualization attributes to the elements</li>
 <pre class="prettyprint">
-  CircDLelement<Student> current = el0;
-  do{
-      current.setLabel(current.getValue().getStudentLabel());
-      current.getVisualizer().setColor(current.getValue().getFavoriteColor());
+	CircDLelement<StudentInfo> current = head;
+						// add visual attributes
+	do {
+		current.setLabel(current.getValue().getStudentLabel());
+		current.getVisualizer().setColor(current.getValue().getFavoriteColor());
+		
+		current.getLinkVisualizer(current.getNext()).setColor(current.getValue().getDislikeColor());
+		current.getLinkVisualizer(current.getNext()).setThickness(current.getValue().getStudentCreditHours()*.75);
 
-      current.getLinkVisualizer(current.getNext()).setColor(current.getValue().getDislikeColor());
-      current.getLinkVisualizer(current.getNext()).setThickness(current.getValue().getStudentCreditHours()*.75);
+		current.getLinkVisualizer(current.getPrev()).setColor(current.getValue().getDislikeColor());
+		current.getLinkVisualizer(current.getPrev()).setThickness(current.getValue().getStudentCreditHours()*.75);
 
-      current.getLinkVisualizer(current.getPrev()).setColor(current.getValue().getDislikeColor());
-      current.getLinkVisualizer(current.getPrev()).setThickness(current.getValue().getStudentCreditHours()*.75);
-
-      current = current.getNext();
-  }while(current.getIdentifier() != el0.getIdentifier());
-
+		current = current.getNext();
+	}	while (current != head);
 </pre>
 <li>Now we pass the first element(head) of our data structure to BRIDGES</li>
-<pre class="prettyprint">   bridge.setDataStructure(el0);</pre>
+<pre class="prettyprint">   
+	bridge.setDataStructure(el0);
+</pre>
 <li>Finaly we call the visualize function</li>
-<pre class="prettyprint">   bridge.visualize();</pre>
+<pre class="prettyprint">   
+	bridge.visualize();
+</pre>
+<li>Here is the insertFront() function.
+<pre class="prettyprint">   
+	public static CircDLelement<StudentInfo> insertFront(
+				CircDLelement<StudentInfo> tailElement,
+				CircDLelement<StudentInfo> newElement) {
+		CircDLelement<StudentInfo> tailNextElement = tailElement.getNext();
+
+		newElement.setNext(tailNextElement);
+		newElement.setPrev(tailElement);
+
+		tailNextElement.setPrev(newElement);
+		tailElement.setNext(newElement);
+
+		return tailElement;
+	}
+}
+</pre>
 </ul>
-
-
-    <h3>Here's the final code:</h3>
+<h3>Here's the final code:</h3>
 
 <div class="panel-heading">
         <ul class="nav nav-tabs">
-            <li class="active"><a href="#tab1" data-toggle="tab">Main.java</a></li>
-            <li><a href="#tab2" data-toggle="tab">Student.java</a></li>
+            <li class="active"><a href="#tab1" data-toggle="tab">csdllist.java</a></li>
+            <li><a href="#tab2" data-toggle="tab">StudentInfo.java</a></li>
             <li class="pull-right">
                 <a href="tutorial-source-code/Java_CDLL.zip" class="btn btn-primary">
                         <span class="glyphicon glyphicon-download-alt"></span> Download All
@@ -141,7 +152,7 @@ be a generic parameter.</li>
         </div>
 
         <div class="tab-pane fade" id="tab2">
-              <pre w3-include-html="tutorial-source-code/Java_CDLL/Student.java" class="prettyprint"></pre>
+              <pre w3-include-html="tutorial-source-code/Java_CDLL/StudentInfo.java" class="prettyprint"></pre>
         </div>
     </div>
 </div>
