@@ -2,67 +2,125 @@
 
 <h3>Imports</h3>
 <ul>
-  <li>We need to include these Bridges files to give access to all the classes/methods needed to interact with Bridges</li>
-  <li>In your .java file, enter the following code snippets:</li>
-    <pre class="prettyprint">
-      import bridges.connect.Bridges;
-      import bridges.base.BSTElement;
-    </pre>
+<li> We need to include these Bridges files to give access to all the classes/methods needed to interact with Bridges</li>
+<li> In your .java file, enter the following code snippets:</li>
+<pre class="prettyprint">
+	import bridges.connect.Bridges;
+	import bridges.base.BSTElement;
+	import bridges.data_src_dependent.EarthquakeUSGS;
+	import bridges.data_src_dependent.Tweet;
+	import bridges.data_src_dependent.USGSaccount;
+	import java.util.List;
+</pre>
 </ul>
 
 <h3>Main Exception</h3>
 <ul>
-  <li>By adding a throw exception we can forgo messy try/catch blocks in our code for our Bridges calls</li>
-  <li>In your .java file, add a throw exception to the main function so it looks like this:</li>
+<li>By adding a throw exception we can forgo messy try/catch blocks in our code for our Bridges calls</li>
+<li>In your .java file, add a throw exception to the main function so it looks like this:</li>
     <pre class="prettyprint">public static void main(String[] args) throws Exception</pre>
 </ul>
 
 <h3>Inside our Main</h3>
 <ul>
-  <li>First we need to create our Bridges object and initialize our Bridges Credentials</li>
-    <pre class="prettyprint">Bridges&lt;Integer, String&gt; bridges = new Bridges&lt;&gt;(4, "YOUR_API_KEY", "YOUR_USER_ID");</pre>
-  <li>Then we can create our TreeElements</li>
-    <pre class="prettyprint">
-      BSTElement&lt;Integer,String&gt; e0 = new BSTElement&lt;&gt;("",0, "");
-      BSTElement&lt;Integer,String&gt; e1 = new BSTElement&lt;&gt;("Hello",-1, "");
-      BSTElement&lt;Integer,String&gt; e2 = new BSTElement&lt;&gt;("World",1, "");
-    </pre>
-<li>Now link the BSTElements together</li>
-    <pre class="prettyprint">
-      e0.setLeft(e1);
-      e0.setRight(e2);
-    </pre>
-  <li>Now we pass the root of our Binary Search Tree to Bridges</li>
-    <pre class="prettyprint">bridges.setDataStructure(e0);</pre>
-  <li>Finnaly we visualize the tree </li>
-    <pre class="prettyprint">bridges.visualize();</pre>
+<li>First we need to create our Bridges object and initialize our Bridges Credentials</li>
+<pre class="prettyprint">
+	Bridges&lt;Double, EarthquakeUSGS&gt; bridges = 
+		new Bridges&lt Double, EarthquakeUSGS&gt;(9, "YOUR_API_KEY", "YOUR_USER_ID");
+</pre>
+<li>Now we use the BRIDGES API to retrieve Earthquake data from USGS</li>
+<pre class="prettyprint">
+			// Retrieve a list of 10 earthquake  records  from USGS using the BRIDGES API
+	USGSaccount name = new USGSaccount( "earthquake" );
+	List<EarthquakeUSGS> eqlist = Bridges.getEarthquakeUSGSData(name, 10);
+</pre>
+<li>Then we can create our TreeElements and build the binary search tree</li>
+<pre class="prettyprint">
+			// create BST nodes and insert into a tree
+	BSTElement<Double, EarthquakeUSGS> root = null;
+	for (int k = 0; k < 10; k++) {
+			// create the node, with magnitude as the search key
+		BSTElement<Double, EarthquakeUSGS> bst_node =
+			new BSTElement<Double, EarthquakeUSGS>(eqlist.get(k).getMagnitude(), eqlist.get(k));
+			// set label of the node
+		bst_node.setLabel(eqlist.get(k).getTitle() + "\n\nLat/Long: ( " +
+			eqlist.get(k).getLatit() + "," + eqlist.get(k).getLongit() + " )\n\n" +
+			eqlist.get(k).getTime());
+
+			// use the insert method to put the node into the tree
+		root = insert_R (root, bst_node);
+	}
+</pre>
+<li> color the root node </li>
+<pre class="prettyprint">
+	root.getVisualizer().setColor("red");
+</pre>
+<li>Now we pass the root of our Binary Search Tree to Bridges</li>
+<pre class="prettyprint">
+	bridges.setDataStructure(root);</pre>
+</pre>
+<li>Visualize the tree </li>
+<pre class="prettyprint">
+	bridges.visualize();
+</pre>
 </ul>
 <h4><strong>Code Summary:</strong> Your .java file should look like this</h4>
   <pre class="prettyprint">
-    import bridges.connect.Bridges;
-    import bridges.base.BSTElement;
 
-    public class HelloWorld
-    {
-        public static void main(String[] args) throws Exception
-        {
-            //create the Bridges object
-            Bridges&lt;Integer, String&gt; bridges = new Bridges&lt;&gt;(4, "YOUR_API_KEY", "YOUR_USER_ID");
-            
-            //create elements
-            BSTElement&lt;Integer,String&gt; e0 = new BSTElement&lt;&gt;("",0, "");
-            BSTElement&lt;Integer,String&gt; e1 = new BSTElement&lt;&gt;("Hello",-1, "");
-            BSTElement&lt;Integer,String&gt; e2 = new BSTElement&lt;&gt;("World",1, "");
-            
-            //link elements
-            e0.setLeft(e1);
-            e0.setRight(e2);
-            
-            //pass first element of data structure
-            bridges.setDataStructure(e0);
-            
-            //visualize data structure
-            bridges.visualize();
-        }
+import bridges.connect.Bridges;
+import bridges.base.BSTElement;
+import bridges.data_src_dependent.EarthquakeUSGS;
+import bridges.data_src_dependent.Tweet;
+import bridges.data_src_dependent.USGSaccount;
+import java.util.List;
+
+public class bst_eq {
+	public static void main(String[] args) throws Exception{
+    	
+   					//create the Bridges object
+//		Bridges<Double, EarthquakeUSGS> bridges = new Bridges<Double, EarthquakeUSGS>(9,
+//								"YOUR_API_KEY", "YOUR_USER_ID");
+		Bridges<Double, EarthquakeUSGS> bridges = new Bridges<Double, EarthquakeUSGS>(9,
+								"997924677918", "bridges_public");
+
+		bridges.setTitle("A Binary Search Tree Example with Earthquake Data");
+
+					// Retrieve a list of 10 earthquake  records  from USGS using the BRIDGES API
+		USGSaccount name = new USGSaccount( "earthquake" );
+		List<EarthquakeUSGS> eqlist = Bridges.getEarthquakeUSGSData(name, 10);
+
+					// create BST nodes and insert into a tree
+		BSTElement<Double, EarthquakeUSGS> root = null; 
+		for (int k = 0; k < 10; k++) {
+			BSTElement<Double, EarthquakeUSGS> bst_node = 
+				new BSTElement<Double, EarthquakeUSGS>(eqlist.get(k).getMagnitude(), eqlist.get(k)); 
+					// set label of the node
+			bst_node.setLabel(eqlist.get(k).getTitle() + "\n\nLat/Long: ( " + 
+				eqlist.get(k).getLatit() + "," + eqlist.get(k).getLongit() + " )\n\n" + 
+				eqlist.get(k).getTime());
+			root = insert_R (root, bst_node);
+		}
+
+
+								// set some visual attributes
+		root.getVisualizer().setColor("red");
+
+             					//set visualizer type
+		bridges.setDataStructure(root);
+        						// visualize the tree
+		bridges.visualize();
     }
+						// recursive insert method to insert nodes into a binary search tree
+	public static BSTElement<Double, EarthquakeUSGS> insert_R (BSTElement<Double, EarthquakeUSGS> rt, 
+					BSTElement<Double, EarthquakeUSGS> new_el) {
+		if (rt == null)
+			return new_el;
+		else if (new_el.getKey() < rt.getKey())
+			 rt.setLeft(insert_R(rt.getLeft(), new_el));
+		else 
+			 rt.setRight(insert_R(rt.getRight(), new_el));
+		return rt;
+	}
+}
+
   </pre>
