@@ -28,20 +28,23 @@
 	Bridges&lt;Double, EarthquakeUSGS&gt; bridges = 
 		new Bridges&lt Double, EarthquakeUSGS&gt;(9, "YOUR_API_KEY", "YOUR_USER_ID");
 </pre>
+<p>
+	You must enter your own BRIDGES credentials in the above call.
+</p>
 <li>Now we use the BRIDGES API to retrieve Earthquake data from USGS</li>
 <pre class="prettyprint">
 			// Retrieve a list of 10 earthquake  records  from USGS using the BRIDGES API
 	USGSaccount name = new USGSaccount( "earthquake" );
-	List<EarthquakeUSGS> eqlist = Bridges.getEarthquakeUSGSData(name, 10);
+	List&ltEarthquakeUSGS&gt eqlist = Bridges.getEarthquakeUSGSData(name, 10);
 </pre>
 <li>Then we can create our TreeElements and build the binary search tree</li>
 <pre class="prettyprint">
 			// create BST nodes and insert into a tree
-	BSTElement<Double, EarthquakeUSGS> root = null;
+	BSTElement &ltDouble, EarthquakeUSGS&gt root = null;
 	for (int k = 0; k < 10; k++) {
 			// create the node, with magnitude as the search key
-		BSTElement<Double, EarthquakeUSGS> bst_node =
-			new BSTElement<Double, EarthquakeUSGS>(eqlist.get(k).getMagnitude(), eqlist.get(k));
+		BSTElement&ltDouble, EarthquakeUSGS&gt bst_node =
+			new BSTElement&lt Double, EarthquakeUSGS&gt (eqlist.get(k).getMagnitude(), eqlist.get(k));
 			// set label of the node
 		bst_node.setLabel(eqlist.get(k).getTitle() + "\n\nLat/Long: ( " +
 			eqlist.get(k).getLatit() + "," + eqlist.get(k).getLongit() + " )\n\n" +
@@ -78,10 +81,8 @@ public class bst_eq {
 	public static void main(String[] args) throws Exception{
     	
    					//create the Bridges object
-//		Bridges<Double, EarthquakeUSGS> bridges = new Bridges<Double, EarthquakeUSGS>(9,
-//								"YOUR_API_KEY", "YOUR_USER_ID");
-		Bridges<Double, EarthquakeUSGS> bridges = new Bridges<Double, EarthquakeUSGS>(9,
-								"997924677918", "bridges_public");
+		Bridges&ltDouble, EarthquakeUSGS&gt bridges = new Bridges&ltDouble, EarthquakeUSGS&gt(9,
+								"YOUR_API_KEY", "YOUR_USER_ID");
 
 		bridges.setTitle("A Binary Search Tree Example with Earthquake Data");
 
@@ -90,10 +91,10 @@ public class bst_eq {
 		List<EarthquakeUSGS> eqlist = Bridges.getEarthquakeUSGSData(name, 10);
 
 					// create BST nodes and insert into a tree
-		BSTElement<Double, EarthquakeUSGS> root = null; 
+		BSTElement&ltDouble, EarthquakeUSGS&gt root = null; 
 		for (int k = 0; k < 10; k++) {
-			BSTElement<Double, EarthquakeUSGS> bst_node = 
-				new BSTElement<Double, EarthquakeUSGS>(eqlist.get(k).getMagnitude(), eqlist.get(k)); 
+			BSTElement&ltDouble, EarthquakeUSGS&gt bst_node = 
+				new BSTElement&ltDouble, EarthquakeUSGS&gt(eqlist.get(k).getMagnitude(), eqlist.get(k)); 
 					// set label of the node
 			bst_node.setLabel(eqlist.get(k).getTitle() + "\n\nLat/Long: ( " + 
 				eqlist.get(k).getLatit() + "," + eqlist.get(k).getLongit() + " )\n\n" + 
@@ -111,8 +112,8 @@ public class bst_eq {
 		bridges.visualize();
     }
 						// recursive insert method to insert nodes into a binary search tree
-	public static BSTElement<Double, EarthquakeUSGS> insert_R (BSTElement<Double, EarthquakeUSGS> rt, 
-					BSTElement<Double, EarthquakeUSGS> new_el) {
+	public static BSTElement&ltDouble, EarthquakeUSGS&gt insert_R (BSTElement&gtDouble, EarthquakeUSGS&gt rt, 
+					BSTElement&ltDouble, EarthquakeUSGS&gt new_el) {
 		if (rt == null)
 			return new_el;
 		else if (new_el.getKey() < rt.getKey())
