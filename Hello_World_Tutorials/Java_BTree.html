@@ -19,9 +19,9 @@
 
 <h3>Inside our Main</h3>
 <ul>
-  <li>First we need to create our Bridges object and initialize our Bridges Credentials; also set title, description of the project </li>
+  <li>First we need to create our Bridges object and initialize our Bridges Credentials; also set title, description of the project 
 <pre class="prettyprint">
-	Bridges&lt;Integer, Integer&gt; bridge = new Bridges&lt; Integer, Integer&gt;(8, "YOUR_API_KEY", "YOUR_USER_ID");</pre>
+	Bridges&lt;Integer, Integer&gt; bridge = new Bridges&lt; Integer, Integer&gt; (8, "YOUR_API_KEY", "YOUR_USER_ID");</pre>
 	bridges.setTitle("A Huffman Coding Tree Example");
 	bridges.setDescription("[Binary Tree Application]: Huffman tree coding the symbols C, D, E, K, L, M, U, Z with frequencies 32, 42, 120, 7, 42, 24, 37, 2");
 </pre>
@@ -30,7 +30,7 @@
 credentials. </b>
 <p>
 <li>Then we can create our Binary Tree Elements; in this example we manually create
-the huffman tree for illustration, in reality, an algortihm will do this work </li>
+the huffman tree for illustration, in reality, an algortihm will do this work 
 <pre class="prettyprint">
 	BinTreeElement<Integer> t0 = new BinTreeElement<Integer>("306", 0);
 	BinTreeElement<Integer> t1 = new BinTreeElement<Integer>("120\\nE", 1);
@@ -84,7 +84,7 @@ the huffman tree for illustration, in reality, an algortihm will do this work </
 <pre class="prettyprint">
 	bridges.setDataStructure(e0);
 </pre>
-<li>Finally we call the visualize function</li>
+<li>Finally we call the visualize function
 <pre class="prettyprint">
 	bridges.visualize();
 </pre>
