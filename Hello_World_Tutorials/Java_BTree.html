@@ -65,6 +65,20 @@ the huffman tree for illustration, in reality, an algortihm will do this work </
 	t11.setLeft(t12);
 	t11.setRight(t13);
 </pre>
+<li> Set some visual attributes: color the leaf nodes (containing the alphabet codes)
+<pre class="prettyprint">
+                                    // set some visual attributes
+	t0.getVisualizer().setColor("red");
+                                    // color the leaf nodes that represent the code letters
+	t1.getVisualizer().setColor("orange");
+	t4.getVisualizer().setColor("orange");
+	t5.getVisualizer().setColor("orange");
+	t6.getVisualizer().setColor("orange");
+	t9.getVisualizer().setColor("orange");
+	t12.getVisualizer().setColor("orange");
+	t13.getVisualizer().setColor("orange");
+	t14.getVisualizer().setColor("orange");
+</pre>
 
 <li>Now we pass the root of our binary tree to BRIDGES</li>
 <pre class="prettyprint">
@@ -82,7 +96,7 @@ import bridges.connect.Bridges;
 import bridges.base.BinTreeElement;
 
 
-public class bintree{
+public class bintree {
 	public static void main(String[] args) throws Exception{
     	
    					//create the Bridges object
@@ -122,6 +136,18 @@ public class bintree{
 		t10.setRight(t14);
 		t11.setLeft(t12);
 		t11.setRight(t13);
+
+		t0.getVisualizer().setColor("red");
+                                    // color the leaf nodes that represent the code letters
+		t1.getVisualizer().setColor("orange");
+		t4.getVisualizer().setColor("orange");
+		t5.getVisualizer().setColor("orange");
+		t6.getVisualizer().setColor("orange");
+		t9.getVisualizer().setColor("orange");
+		t12.getVisualizer().setColor("orange");
+		t13.getVisualizer().setColor("orange");
+		t14.getVisualizer().setColor("orange");
+		
              					//set visualizer type
 		bridges.setDataStructure(t0);
         						// visualize the tree

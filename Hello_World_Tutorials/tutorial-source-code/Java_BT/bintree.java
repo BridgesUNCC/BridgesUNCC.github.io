@@ -7,8 +7,10 @@ public class bintree{
 	public static void main(String[] args) throws Exception{
     	
    					//create the Bridges object
+//		Bridges<Integer, Integer> bridges = new Bridges<Integer, Integer>(8,
+//								"YOUR_API_KEY", "YOUR_USER_ID");
 		Bridges<Integer, Integer> bridges = new Bridges<Integer, Integer>(8,
-								"YOUR_API_KEY", "YOUR_USER_ID");
+								"997924677918", "bridges_public");
 
 		bridges.setTitle("A Huffman Coding Tree Example");
 		bridges.setDescription("[Binary Tree Application]: Huffman tree coding the symbols C, D, E, K, L, M, U, Z with frequencies 32, 42, 120, 7, 42, 24, 37, 2");
@@ -48,9 +50,6 @@ public class bintree{
 					// for illustration, but in a real project, the user will
 					// implement this as part of the insert/delete
 					// operations on the tree to maintain a balanced tree
-
-
-
 		t0.setLeft(t1);
 		t0.setRight(t2);
 		t2.setLeft(t3);
@@ -65,11 +64,17 @@ public class bintree{
 		t10.setRight(t14);
 		t11.setLeft(t12);
 		t11.setRight(t13);
-
-
-									// set some attributes
-		t0.getVisualizer().setColor("cyan");
-		t0.getVisualizer().setOpacity(0.4f);
+									// set some visual attributes
+		t0.getVisualizer().setColor("red");
+									// color the leaf nodes that represent the code letters
+		t1.getVisualizer().setColor("orange");
+		t4.getVisualizer().setColor("orange");
+		t5.getVisualizer().setColor("orange");
+		t6.getVisualizer().setColor("orange");
+		t9.getVisualizer().setColor("orange");
+		t12.getVisualizer().setColor("orange");
+		t13.getVisualizer().setColor("orange");
+		t14.getVisualizer().setColor("orange");
 
                                   //Print the JSON to console
 //		bridges.getVisualizer().setVisualizeJSON(true);
