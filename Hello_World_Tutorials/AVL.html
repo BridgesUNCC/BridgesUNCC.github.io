@@ -28,15 +28,11 @@ is inherited from BSTElement&ltE&gt;.
 <br><br><img width="200em" src="./images/avlelement-cd.png"><br><br>
 <h2>How does the AVLTreeElement&lt;K,E&gt; work?</h2>
 <p>
-AVLTreeElement&lt;K,E&gt; is a container that has two links that point 
-to two child AVLTreeElements. It uses the same conventions as the 
-BSTElement&ltE&gt;.  
-<br><br>
 AVLTreeElement&lt;K,E&gt; is nearly identical to BSTElement&lt;K,E&gt;, however,
 it is to be used for building AVL trees, a type of balanced binary search trees
 (Other examples of balanced search trees include Red-Black Trees, 2-3 Trees).
-AVL tree inherits all data members and methods of a binary search tree, but
-includes two additional attributes: a <i>balance factor</i>, which measures the
+AVL tree inherits all data members and methods of a BSTElement&lt;K,E&gt;, but
+includes two additional attributes: a <i>balance factor</i>, which represents the
 difference between the heights of its left and right subtrees, and 
 <i>height</i>, that keeps track of the height of the tree at the node. 
 <p>
@@ -66,7 +62,7 @@ to get real live examples working for both</b>
     <li>Once all your code is in order, run your program.</li>
     <li>Assuming all your code is correct and it compiles correctly, a link to the Bridges website will be generated.</li>
     <li>Copy/paste this link into your favorite browser to view a visualization of the data structure you’ve just created.</li>
-    <li>It should look something like this:</li>
+    <li>It should look something like this; mouse over the nodes or hit 'l' to turn on the labels. You will see the balance factors for each node.</li>
 </ul>
 <div class="iframe-wrapper">
     <iframe src="http://bridges-cs.herokuapp.com/assignments/10/bridges_public" scrolling="no" >
@@ -76,7 +72,7 @@ to get real live examples working for both</b>
       </p>
     </iframe>
 </div>
-<p>Well done! You’ve just created your fourth Bridges project!</p>
+<p>Well done! You’ve just created an AVL Tree!</p>
 </main>
 
 <footer w3-include-html="./Tutorial_Footer.html"></footer>

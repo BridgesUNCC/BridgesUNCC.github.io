@@ -19,22 +19,28 @@
 
 <h3>Inside our Main</h3>
 <ul>
-  <li>First we need to create our Bridges object and initialize our Bridges Credentials</li>
-    <pre class="prettyprint">Bridges&lt;Integer, String&gt; bridges = new Bridges&lt;&gt;(4, "YOUR_API_KEY", "YOUR_USER_ID");</pre>
-  <li>Then we can create our AVL Tree elements; here we will show a simple example of an AVL tree manually created with balance factors manually put in; in a 
-real project, students will implement insert/delete/find operations on the tree that will automatically maintain these balance factors after AVL tree 
-rotations.</li>
+<li>First we need to create our Bridges object and initialize our Bridges Credentials</li>
 <pre class="prettyprint">
-	AVLTreeElement avl_root = new AVLTreeElement<Integer, String>(50, "Hello");
-	AVLTreeElement avl_2 = new AVLTreeElement<Integer, String>(30, "This");
-	AVLTreeElement avl_3 = new AVLTreeElement<Integer, String>(70, "is");
-	AVLTreeElement avl_4 = new AVLTreeElement<Integer, String>(20, "an");
-	AVLTreeElement avl_5 = new AVLTreeElement<Integer, String>(40, "AVL");
-	AVLTreeElement avl_6 = new AVLTreeElement<Integer, String>(90, "Tree");
-    </pre>
+	Bridges&lt;Integer, String&gt; bridges = 
+			new Bridges&lt;Integer, String&gt;(4, "YOUR_API_KEY", "YOUR_USER_ID");</pre>
+<li> Next we  create our AVL Tree elements; here we will show a simple example of an 
+	AVL tree manually created with balance factors manually put in; in a real project, 
+	students will implement insert/delete/find operations and subsequent tree 
+	rotations on the tree, to automatically maintain a balanced tree.</li>
+<pre class="prettyprint">
+	AVLTreeElement&ltInteger,String&gt avl_2 = new AVLTreeElement&ltInteger,String&gt(30, "This");
+	AVLTreeElement&ltInteger,String&gt avl_3 = new AVLTreeElement&ltInteger,String&gt(70, "is");
+	AVLTreeElement&ltInteger,String&gt avl_4 = new AVLTreeElement&ltInteger,String&gt(20, "an");
+	AVLTreeElement&ltInteger,String&gt avl_5 = new AVLTreeElement&ltInteger,String&gt(40, "AVL");
+	AVLTreeElement&ltInteger,String&gt avl_6 = new AVLTreeElement&ltInteger,String&gt(90, "Tree");
+</pre>
 <li>Now set the balance factors as the labels of the nodes, so we can see them 
 in the BRIDGES visualization by mousing over the nodes</li>
 <pre class="prettyprint">
+				// put in the balance factors - done manually  here
+				// for illustration, but in a real project, the user will
+				// implement this as part of the insert/delete
+				// operations on the tree to maintain a balanced tree
 	avl_root.setLabel("0");
 	avl_2.setLabel("0");
 	avl_3.setLabel("-1");
@@ -51,56 +57,62 @@ in the BRIDGES visualization by mousing over the nodes</li>
 	avl_3.setRight(avl_6);
 </pre>
 <li>Now we pass the root of our AVL Tree to Bridges</li>
-    <pre class="prettyprint">bridges.setDataStructure(avl_root);</pre>
+<pre class="prettyprint">
+	bridges.setDataStructure(avl_root);
+</pre>
 <li>Finally we visualize the tree </li>
-    <pre class="prettyprint">bridges.visualize();</pre>
+<pre class="prettyprint">
+	bridges.visualize();
+</pre>
 </ul>
 <h4><strong>Code Summary:</strong> Your .java file should look like this</h4>
 <pre class="prettyprint">
+
 import bridges.connect.Bridges;
 import bridges.data_src_dependent.Tweet;
-import bridges.base.BSTElement;
+import bridges.base.AVLTreeElement;
 
-
-public class avlDriver {
+public class avl {
     public static void main(String[] args) throws Exception{
         
                     //create the Bridges object
-        Bridges<Integer, String> bridges = new Bridges<Integer, String>(15,
-                                "YOU_API_KEY", "YOUR_USER_ID");
+		Bridges&ltInteger, String&gt 
+			bridges = new Bridges&ltInteger, String&gt(10, "YOU_API_KEY", "YOUR_USER_ID");
 
-                    //create  an  AVL tree
-        AVLTreeElement avl_root = new AVLTreeElement<Integer, String>(50, 
-                                            "Hello");
-        AVLTreeElement avl_2 = new AVLTreeElement<Integer, String>(30, "This");
-        AVLTreeElement avl_3 = new AVLTreeElement<Integer, String>(70, "is");
-        AVLTreeElement avl_4 = new AVLTreeElement<Integer, String>(20, "an");
-        AVLTreeElement avl_5 = new AVLTreeElement<Integer, String>(40, "AVL");
-        AVLTreeElement avl_6 = new AVLTreeElement<Integer, String>(90, "Tree");
+                    //create  an  AVL tree elements
+		AVLTreeElement<Integer,String> avl_root = new AVLTreeElement<Integer,String>(50, 
+													"Hello");
+		AVLTreeElement&ltInteger,String&gt avl_2 = new AVLTreeElement&ltInteger,String&gt(30, "This");
+		AVLTreeElement&ltInteger,String&gt avl_3 = new AVLTreeElement&ltInteger,String&gt(70, "is");
+		AVLTreeElement&ltInteger,String&gt avl_4 = new AVLTreeElement&ltInteger,String&gt(20, "an");
+		AVLTreeElement&ltInteger,String&gt avl_5 = new AVLTreeElement&ltInteger,String&gt(40, "AVL");
+		AVLTreeElement&ltInteger,String&gt avl_6 = new AVLTreeElement&ltInteger,String&gt(90, "Tree");
                     // put in the balance factors - done manually  here 
                     // for illustration, but in a real project, the user will
                     // implement this as part of the insert/delete
                     // operations on the tree to maintain a balanced tree
-        avl_root.setLabel("0");
-        avl_2.setLabel("0");
-        avl_3.setLabel("-1");
-        avl_4.setLabel("0");
-        avl_5.setLabel("0");
-        avl_6.setLabel("0");
+		avl_root.setLabel("0");
+		avl_2.setLabel("0");
+		avl_3.setLabel("-1");
+		avl_4.setLabel("0");
+		avl_5.setLabel("0");
+		avl_6.setLabel("0");
 
-        avl_root.setLeft(avl_2);
-        avl_root.setRight(avl_3);
-        avl_2.setLeft(avl_4);
-        avl_2.setRight(avl_5);
-        avl_3.setRight(avl_6);
+					// add the links between nodes
+		avl_root.setLeft(avl_2);
+		avl_root.setRight(avl_3);
+		avl_2.setLeft(avl_4);
+		avl_2.setRight(avl_5);
+		avl_3.setRight(avl_6);
                                     // set some attributes
-        avl_root.getVisualizer().setColor("cyan");
-        avl_root.getVisualizer().setOpacity(0.1);
-                                    //set visualizer type
-        bridges.setDataStructure(avl_root);
-        
-                                    // visualize the list
-        bridges.visualize();
+		avl_root.getVisualizer().setColor("magenta");
+		avl_root.getVisualizer().setOpacity(0.8f);
+
+									//set visualizer type
+		bridges.setDataStructure(avl_root);
+				
+									// visualize the list
+		bridges.visualize();
     }
 }
 </pre>

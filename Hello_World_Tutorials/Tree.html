@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="author" content="Bridges"/>
+  <meta name="description" content="Bridges Tutorials"/>
+
+<script src="//rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true&skin=desert&lang=java" defer></script>
+
+  
+  <link rel="stylesheet" type="text/css" href="./tutorial.css" />
+  <link rel="shortcut icon" href="http://bridgesuncc.github.io/favicon.png"/>
+  <script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="./tutorial.js"></script>
+  <title>Bridges - Hello World Visualization Tutorial</title>
+</head>
+
+<body>
+<div>
+
+<header w3-include-html="./Tutorial_Header.html"></header>
+
+<main>
+TreeElement&lt;E&gt; implements a generalized <i>tree element</i> in BRIDGES
+and is inherited from Element&lt;E&gt;
+<br><br><img width="175em" src="./images/btelement-cd.png"><br><br>
+<h2>How does the TreeElement&lt;E&gt; work?</h2>
+<p>
+TreeElement&lt;E&gt; is a superclass for tree structures and can represent tree structures
+with arbitrary number of children at each node. The top node of the tree is 
+referred to as the "root".
+<br/><br/><img width="600em" src="./TreeElement.png"/><br/><br/>
+In the example above, root node  has 3 children, while its children has 2, 1 and 0 children
+respectively. The childrent of a node is accessed by by set/getChild() methods, with an index
+k, referring to its k'th child. <p>
+</p>
+
+</p>
+<hr/>
+
+<h2>TreeElement - BRIDGES Example</h2>
+Here we illustrate a simple example to illustrate tree structure using the TreeElement.
+  <div class="tabs">
+    <div onclick="displayCode('Java',this)">Java</div>
+    <div onclick="displayCode('C++',this)" >C++</div>
+  </div>
+  <div class="tabContents">
+    <div id="Java" w3-include-html="./Java_Tree.html"></div>
+    <div id="C++"  w3-include-html="./Cpp_BTree.html"></div>
+  </div>
+  
+  <h3>Bridges Visualization</h3>
+  <ul>
+    <li>Once all your code is in order, run your program.</li>
+    <li>Assuming all your code is correct and it compiles correctly, a link to the Bridges website will be generated.</li>
+    <li>Copy/paste this link into your favorite browser to view a visualization of the data structure you’ve just created.</li>
+    <li>It should look something like this:</li>
+  </ul>
+  <div class="iframe-wrapper">
+    <iframe src="http://bridges-cs.herokuapp.com/assignments/11/bridges_public" scrolling="no">
+      <p>Sorry, your browser doesn't seem to support iframes - 
+        <a href="http://bridges-cs.herokuapp.com/assignments/11/bridges_public">Frame Link</a>
+      </p>
+    </iframe>
+  </div>
+  <p>Well done! You’ve just created your third Bridges project!</p>
+</main>
+
+<footer w3-include-html="./Tutorial_Footer.html"></footer>
+
+</div>
+<script>
+  w3IncludeHTML();
+  document.querySelector("*.tabs > *").click();
+</script>
+</body>
+</html>

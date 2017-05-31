@@ -1,0 +1,137 @@
+<h3>Create a new .java file</h3>
+
+<h3>Imports</h3>
+<ul>
+  <li>We need to include these BRIDGES files to give access to all the classes/methods needed to interact with BRIDGES</li>
+  <li>In your .java file, enter the following code snippets:</li>
+    <pre class="prettyprint">
+      import bridges.connect.Bridges;
+      import bridges.base.TreeElement;
+    </pre>
+</ul>
+
+<h3>Main Exception</h3>
+<ul>
+<li>By adding a throw exception we can forgo messy try/catch blocks in our code for our BRIDGES calls</li>
+<li>In your .java file, add a throw exception to the main function so it looks like this:</li>
+<pre class="prettyprint">
+	public static void main(String[] args) throws Exception
+</pre>
+</ul>
+
+<h3>Inside our Main</h3>
+<ul>
+<li>First we need to create our Bridges object and initialize our Bridges Credentials; also set title, description of the project 
+<pre class="prettyprint">
+	Bridges&lt;Integer, String&gt; bridge = 
+			new Bridges&lt; Integer, String&gt; (8, "YOUR_API_KEY", "YOUR_USER_ID");
+</pre>
+	bridges.setTitle("A Generalized Tree Example");
+</pre>
+<p>
+<b>Please note that the two fields above need to be replaced by your BRIDGES 
+credentials. </b>
+<p>
+<li>Then we can create our Tree Elements; in this example we manually create
+the tree for illustration, in reality, an algortihm will do this work 
+<pre class="prettyprint">
+	TreeElement&ltString&gt t0 = new TreeElement&ltString&gt(Hello");
+	TreeElement&ltString&gt t2 = new TreeElement&ltString&gt(This");
+	TreeElement&ltString&gt t3 = new TreeElement&ltString&gt(is");
+	TreeElement&ltString&gt t4 = new TreeElement&ltString&gt(a");
+	TreeElement&ltString&gt t5 = new TreeElement&ltString&gt(generic");
+	TreeElement&ltString&gt t6 = new TreeElement&ltString&gt(Tree");
+	TreeElement&ltString&gt t7 = new TreeElement&ltString&gt(Representation");
+</pre>
+<li> Put some labels to the nodes</li>
+<pre class="prettyprint">
+                    // put in labels for each node; we simply use integers
+	t0.setLabel("10");
+	t2.setLabel("20");
+	t3.setLabel("30");
+	t4.setLabel("40");
+	t5.setLabel("50");
+	t6.setLabel("60");
+	t7.setLabel("100");
+</pre>
+<li> Next set up the links and build the tree 
+<pre class="prettyprint">
+					// add links to children
+	t0.addChild(t2);
+	t0.addChild(t3);
+	t0.addChild(t7);
+	t2.addChild(t4);
+	t2.addChild(t5);
+	t3.addChild(t6);
+</pre>
+<li> Set some visual attributes: color the leaf nodes (containing the alphabet codes)
+<pre class="prettyprint">
+					// set some visual attributes
+	t0.getVisualizer().setColor("red");
+	t0.getVisualizer().setOpacity(0.3f);
+</pre>
+
+<li>Now we pass the root of our tree to BRIDGES</li>
+<pre class="prettyprint">
+	bridges.setDataStructure(to);
+</pre>
+<li>Finally we call the visualize function
+<pre class="prettyprint">
+	bridges.visualize();
+</pre>
+</ul>
+<h4><strong>Code Summary:</strong> Your .java file should look like this</h4>
+<pre class="prettyprint">
+
+import bridges.connect.Bridges;
+import bridges.base.TreeElement;
+
+public class tree{
+	public static void main(String[] args) throws Exception{
+    	
+   					//create the Bridges object
+		Bridges&ltInteger, String&gt( bridges = new Bridges&ltInteger, String&gt(11,
+								"486749122386", "kalpathi60");
+
+   					//create   tree nodes
+		TreeElement&ltString&gt t0 = new TreeElement&ltString&gt(Hello");
+		TreeElement&ltString&gt t2 = new TreeElement&ltString&gt(This");
+		TreeElement&ltString&gt t3 = new TreeElement&ltString&gt(is");
+		TreeElement&ltString&gt t4 = new TreeElement&ltString&gt(a");
+		TreeElement&ltString&gt t5 = new TreeElement&ltString&gt(generic");
+		TreeElement&ltString&gt t6 = new TreeElement&ltString&gt(Tree");
+		TreeElement&ltString&gt t7 = new TreeElement&ltString&gt(Representation");
+
+					// put in labels for each node; we simply use integers 
+
+		t0.setLabel("10");
+		t2.setLabel("20");
+		t3.setLabel("30");
+		t4.setLabel("40");
+		t5.setLabel("50");
+		t6.setLabel("60");
+		t7.setLabel("100");
+
+					// add links to children
+
+		t0.addChild(t2);
+		t0.addChild(t3);
+		t0.addChild(t7);
+		t2.addChild(t4);
+		t2.addChild(t5);
+		t3.addChild(t6);
+
+									// set some visual attributes
+		t0.getVisualizer().setColor("red");
+		t0.getVisualizer().setOpacity(0.3f);
+
+		bridges.setTitle("A General Tree Example");
+             					//set visualizer type
+		bridges.setDataStructure(t0);
+        						// visualize the tree
+		bridges.visualize();
+    }
+}
+
+
+</pre>

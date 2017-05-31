@@ -7,7 +7,7 @@ public class dllist {
 
       final String YOUR_API_KEY = "";
       final String YOUR_USER_ID = "";
-      Bridges<String, StudentInfo> bridge = new Bridges<String, StudentInfo>(5, "997924677918", "bridges_public");
+      Bridges<String, StudentInfo> bridge = new Bridges<String, StudentInfo>(5, "YOUR_API_KEY", "YOUR_USER_ID");
 
 						// load student info
       StudentInfo[] students = {

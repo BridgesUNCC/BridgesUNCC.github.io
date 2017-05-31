@@ -12,7 +12,7 @@ public class sllist {
 		final String YOUR_API_KEY = "";
 		final String YOUR_USER_ID = "";
 		Bridges<String, StudentInfo> bridges = 
-			new Bridges<String, StudentInfo>(4, "997924677918", "bridges_public");
+			new Bridges<String, StudentInfo>(4, "YOUR_API_KEY", "YOUR_USER_ID");
          					// create the linked list elements with 
 							// student data 
 		SLelement<StudentInfo> el0 = new SLelement<StudentInfo>( "",
