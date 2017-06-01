@@ -28,6 +28,10 @@ String \hyperlink{classbridges_1_1base_1_1_a_d_t_visualizer_a7e3ecfc9522596bd12f
 \item 
 String \hyperlink{classbridges_1_1base_1_1_a_d_t_visualizer_a8bfd44ca6eef7b19feb6061cb7e141ef}{get\+S\+L\+Representation} (\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}$<$ E $>$ first\+\_\+element)
 \item 
+String \hyperlink{classbridges_1_1base_1_1_a_d_t_visualizer_a27fa70e9eaeb169697fac3ad8cb8a0ec}{get\+M\+L\+Representation} (\hyperlink{classbridges_1_1base_1_1_m_lelement}{M\+Lelement}$<$ E $>$ first\+\_\+element)
+\item 
+void \hyperlink{classbridges_1_1base_1_1_a_d_t_visualizer_a1619f140d9a1d46f83c0881f6380286b}{get\+M\+L\+Representation\+\_\+R} (\hyperlink{classbridges_1_1base_1_1_m_lelement}{M\+Lelement}$<$ E $>$ first\+\_\+el, Linked\+List$<$ \hyperlink{classbridges_1_1base_1_1_m_lelement}{M\+Lelement}$<$ E $>$$>$ nodes, Linked\+List$<$ \hyperlink{classbridges_1_1base_1_1_m_lelement}{M\+Lelement}$<$ E $>$$>$ links)
+\item 
 String \hyperlink{classbridges_1_1base_1_1_a_d_t_visualizer_a43eeb9f3321477f58edc3aff52631f3b}{get\+D\+L\+Representation} (\hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}$<$ E $>$ first\+\_\+element)
 \item 
 String \hyperlink{classbridges_1_1base_1_1_a_d_t_visualizer_ab3e96c568b11f9ef683191d1e03d5719}{get\+Array\+Representation} (\hyperlink{classbridges_1_1base_1_1_array}{Array}$<$ E $>$ br\+\_\+array)
@@ -41,6 +45,8 @@ String \hyperlink{classbridges_1_1base_1_1_a_d_t_visualizer_a1f37c20302432878a91
 String \hyperlink{classbridges_1_1base_1_1_a_d_t_visualizer_a309d4f0521b66bb1329c0362f1ca5d33}{generate\+J\+S\+O\+N\+\_\+\+Array} (\hyperlink{classbridges_1_1base_1_1_element}{Element}$<$ E $>$\mbox{[}$\,$\mbox{]} el\+\_\+array, int size)
 \item 
 String \hyperlink{classbridges_1_1base_1_1_a_d_t_visualizer_adf2164b7f4b3befb8b2cb2904efd8c91}{generate\+J\+S\+O\+N\+\_\+\+S\+LL} (Linked\+List$<$ \hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}$<$ E $>$$>$ nodes, Linked\+List$<$ \hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}$<$ E $>$$>$ links)
+\item 
+String \hyperlink{classbridges_1_1base_1_1_a_d_t_visualizer_a5c65bf6d0132b8cab58dd1038e48fa79}{generate\+J\+S\+O\+N\+\_\+\+ML} (Linked\+List$<$ \hyperlink{classbridges_1_1base_1_1_m_lelement}{M\+Lelement}$<$ E $>$$>$ nodes, Linked\+List$<$ \hyperlink{classbridges_1_1base_1_1_m_lelement}{M\+Lelement}$<$ E $>$$>$ links)
 \item 
 String \hyperlink{classbridges_1_1base_1_1_a_d_t_visualizer_a866df531965d152d5686304f07e15a4a}{generate\+J\+S\+O\+N\+\_\+\+D\+LL} (Linked\+List$<$ \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}$<$ E $>$$>$ nodes, Linked\+List$<$ \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}$<$ E $>$$>$ links)
 \item 
@@ -211,23 +217,41 @@ complete J\+S\+ON string for the current A\+DT This method builds the J\+S\+ON f
 \begin{DoxyReturn}{Returns}
 complete J\+S\+ON string for the current A\+DT 
 \end{DoxyReturn}
+\hypertarget{classbridges_1_1base_1_1_a_d_t_visualizer_a5c65bf6d0132b8cab58dd1038e48fa79}{}\label{classbridges_1_1base_1_1_a_d_t_visualizer_a5c65bf6d0132b8cab58dd1038e48fa79} 
+\index{bridges\+::base\+::\+A\+D\+T\+Visualizer@{bridges\+::base\+::\+A\+D\+T\+Visualizer}!generate\+J\+S\+O\+N\+\_\+\+ML@{generate\+J\+S\+O\+N\+\_\+\+ML}}
+\index{generate\+J\+S\+O\+N\+\_\+\+ML@{generate\+J\+S\+O\+N\+\_\+\+ML}!bridges\+::base\+::\+A\+D\+T\+Visualizer@{bridges\+::base\+::\+A\+D\+T\+Visualizer}}
+\subsubsection{\texorpdfstring{generate\+J\+S\+O\+N\+\_\+\+M\+L()}{generateJSON\_ML()}}
+{\footnotesize\ttfamily String \hyperlink{classbridges_1_1base_1_1_a_d_t_visualizer}{bridges.\+base.\+A\+D\+T\+Visualizer}$<$ K, E $>$.generate\+J\+S\+O\+N\+\_\+\+ML (\begin{DoxyParamCaption}\item[{Linked\+List$<$ \hyperlink{classbridges_1_1base_1_1_m_lelement}{M\+Lelement}$<$ E $>$$>$}]{nodes,  }\item[{Linked\+List$<$ \hyperlink{classbridges_1_1base_1_1_m_lelement}{M\+Lelement}$<$ E $>$$>$}]{links }\end{DoxyParamCaption})}
+
+Generating the J\+S\+ON string of a multi list, given a set of nodes and links.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nodes} & \\
+\hline
+{\em links} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+J\+S\+ON string 
+\end{DoxyReturn}
 \hypertarget{classbridges_1_1base_1_1_a_d_t_visualizer_adf2164b7f4b3befb8b2cb2904efd8c91}{}\label{classbridges_1_1base_1_1_a_d_t_visualizer_adf2164b7f4b3befb8b2cb2904efd8c91} 
 \index{bridges\+::base\+::\+A\+D\+T\+Visualizer@{bridges\+::base\+::\+A\+D\+T\+Visualizer}!generate\+J\+S\+O\+N\+\_\+\+S\+LL@{generate\+J\+S\+O\+N\+\_\+\+S\+LL}}
 \index{generate\+J\+S\+O\+N\+\_\+\+S\+LL@{generate\+J\+S\+O\+N\+\_\+\+S\+LL}!bridges\+::base\+::\+A\+D\+T\+Visualizer@{bridges\+::base\+::\+A\+D\+T\+Visualizer}}
 \subsubsection{\texorpdfstring{generate\+J\+S\+O\+N\+\_\+\+S\+L\+L()}{generateJSON\_SLL()}}
 {\footnotesize\ttfamily String \hyperlink{classbridges_1_1base_1_1_a_d_t_visualizer}{bridges.\+base.\+A\+D\+T\+Visualizer}$<$ K, E $>$.generate\+J\+S\+O\+N\+\_\+\+S\+LL (\begin{DoxyParamCaption}\item[{Linked\+List$<$ \hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}$<$ E $>$$>$}]{nodes,  }\item[{Linked\+List$<$ \hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}$<$ E $>$$>$}]{links }\end{DoxyParamCaption})}
 
-Generating the J\+S\+ON string given a set of nodes and links for the singly linked list 
+Generating the J\+S\+ON string of a singly linked list, given a set of nodes and links
+
+
 \begin{DoxyParams}{Parameters}
 {\em nodes} & \\
 \hline
 {\em links} & \\
 \hline
-{\em data} & structure type \\
-\hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-string 
+J\+S\+ON string 
 \end{DoxyReturn}
 \hypertarget{classbridges_1_1base_1_1_a_d_t_visualizer_ab3e96c568b11f9ef683191d1e03d5719}{}\label{classbridges_1_1base_1_1_a_d_t_visualizer_ab3e96c568b11f9ef683191d1e03d5719} 
 \index{bridges\+::base\+::\+A\+D\+T\+Visualizer@{bridges\+::base\+::\+A\+D\+T\+Visualizer}!get\+Array\+Representation@{get\+Array\+Representation}}
@@ -292,6 +316,23 @@ This method creates a J\+S\+ON representation of the graph -\/ Adjacency Matrix
 \begin{DoxyReturn}{Returns}
 -\/ this method returns the J\+S\+ON 
 \end{DoxyReturn}
+\hypertarget{classbridges_1_1base_1_1_a_d_t_visualizer_a27fa70e9eaeb169697fac3ad8cb8a0ec}{}\label{classbridges_1_1base_1_1_a_d_t_visualizer_a27fa70e9eaeb169697fac3ad8cb8a0ec} 
+\index{bridges\+::base\+::\+A\+D\+T\+Visualizer@{bridges\+::base\+::\+A\+D\+T\+Visualizer}!get\+M\+L\+Representation@{get\+M\+L\+Representation}}
+\index{get\+M\+L\+Representation@{get\+M\+L\+Representation}!bridges\+::base\+::\+A\+D\+T\+Visualizer@{bridges\+::base\+::\+A\+D\+T\+Visualizer}}
+\subsubsection{\texorpdfstring{get\+M\+L\+Representation()}{getMLRepresentation()}}
+{\footnotesize\ttfamily String \hyperlink{classbridges_1_1base_1_1_a_d_t_visualizer}{bridges.\+base.\+A\+D\+T\+Visualizer}$<$ K, E $>$.get\+M\+L\+Representation (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_m_lelement}{M\+Lelement}$<$ E $>$}]{first\+\_\+element }\end{DoxyParamCaption})}
+
+This method returns the J\+S\+ON string of a multi-\/list
+
+\begin{DoxyReturn}{Returns}
+J\+S\+ON string 
+\end{DoxyReturn}
+\hypertarget{classbridges_1_1base_1_1_a_d_t_visualizer_a1619f140d9a1d46f83c0881f6380286b}{}\label{classbridges_1_1base_1_1_a_d_t_visualizer_a1619f140d9a1d46f83c0881f6380286b} 
+\index{bridges\+::base\+::\+A\+D\+T\+Visualizer@{bridges\+::base\+::\+A\+D\+T\+Visualizer}!get\+M\+L\+Representation\+\_\+R@{get\+M\+L\+Representation\+\_\+R}}
+\index{get\+M\+L\+Representation\+\_\+R@{get\+M\+L\+Representation\+\_\+R}!bridges\+::base\+::\+A\+D\+T\+Visualizer@{bridges\+::base\+::\+A\+D\+T\+Visualizer}}
+\subsubsection{\texorpdfstring{get\+M\+L\+Representation\+\_\+\+R()}{getMLRepresentation\_R()}}
+{\footnotesize\ttfamily void \hyperlink{classbridges_1_1base_1_1_a_d_t_visualizer}{bridges.\+base.\+A\+D\+T\+Visualizer}$<$ K, E $>$.get\+M\+L\+Representation\+\_\+R (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_m_lelement}{M\+Lelement}$<$ E $>$}]{first\+\_\+el,  }\item[{Linked\+List$<$ \hyperlink{classbridges_1_1base_1_1_m_lelement}{M\+Lelement}$<$ E $>$$>$}]{nodes,  }\item[{Linked\+List$<$ \hyperlink{classbridges_1_1base_1_1_m_lelement}{M\+Lelement}$<$ E $>$$>$}]{links }\end{DoxyParamCaption})}
+
 \hypertarget{classbridges_1_1base_1_1_a_d_t_visualizer_a8bfd44ca6eef7b19feb6061cb7e141ef}{}\label{classbridges_1_1base_1_1_a_d_t_visualizer_a8bfd44ca6eef7b19feb6061cb7e141ef} 
 \index{bridges\+::base\+::\+A\+D\+T\+Visualizer@{bridges\+::base\+::\+A\+D\+T\+Visualizer}!get\+S\+L\+Representation@{get\+S\+L\+Representation}}
 \index{get\+S\+L\+Representation@{get\+S\+L\+Representation}!bridges\+::base\+::\+A\+D\+T\+Visualizer@{bridges\+::base\+::\+A\+D\+T\+Visualizer}}
@@ -415,6 +456,7 @@ Validates whether the \char`\"{}type\char`\"{} is recognized by \hyperlink{class
                 \{
                     put(\textcolor{stringliteral}{"Array"}, \textcolor{stringliteral}{"Array"});
                     put(\textcolor{stringliteral}{"SinglyLinkedList"}, \textcolor{stringliteral}{"SinglyLinkedList"});
+                    put(\textcolor{stringliteral}{"MultiList"}, \textcolor{stringliteral}{"MultiList"});
                     put(\textcolor{stringliteral}{"DoublyLinkedList"}, \textcolor{stringliteral}{"DoublyLinkedList"});
                     put(\textcolor{stringliteral}{"CircularSinglyLinkedList"}, \textcolor{stringliteral}{"CircularSinglyLinkedList"});
                     put(\textcolor{stringliteral}{"CircularDoublyLinkedList"}, \textcolor{stringliteral}{"CircularDoublyLinkedList"});

@@ -18,5 +18,6 @@ var searchData=
   ['visualizegraphadjacencymatrix',['visualizeGraphAdjacencyMatrix',['../classbridges_1_1connect_1_1_bridges.html#a13c154c2a656dd4c19f2ff0e767f63c3',1,'bridges::connect::Bridges']]],
   ['visualizejson',['visualizeJSON',['../classbridges_1_1base_1_1_a_d_t_visualizer.html#a1aa47f3633239060197b523cb6b86e06',1,'bridges::base::ADTVisualizer']]],
   ['visualizelinkedlist',['visualizeLinkedList',['../classbridges_1_1connect_1_1_bridges.html#ae9ce2673d2eef1da7f6e1359c494f6fe',1,'bridges::connect::Bridges']]],
+  ['visualizemultilist',['visualizeMultiList',['../classbridges_1_1connect_1_1_bridges.html#af3b189a5b95710e3bc3685e85572478f',1,'bridges::connect::Bridges']]],
   ['visualizetree',['visualizeTree',['../classbridges_1_1connect_1_1_bridges.html#abd8fa1ef8d6c5d3e6c533ee069d24d85',1,'bridges::connect::Bridges']]]
 ];

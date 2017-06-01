@@ -178,12 +178,14 @@ boxfont setfont
 (bridges.base.Element< E >) cw
 (bridges.base.GraphAdjList< K, E >) cw
 (bridges.base.GraphAdjMatrix< K, E >) cw
-(bridges.base.DLelement< E >) cw
+(bridges.base.ArrayElement< E >) cw
 (bridges.base.SLelement< E >) cw
 (bridges.base.TreeElement< E >) cw
-(bridges.base.CircDLelement< E >) cw
 (bridges.base.CircSLelement< E >) cw
+(bridges.base.DLelement< E >) cw
+(bridges.base.MLelement< E >) cw
 (bridges.base.BinTreeElement< E >) cw
+(bridges.base.CircDLelement< E >) cw
 (bridges.base.BSTElement< K, E >) cw
 (bridges.base.AVLTreeElement< K, E >) cw
 /boxwidth boxwidth marginwidth 2 mul add def
@@ -202,14 +204,16 @@ boundx scalefactor div boundy scalefactor div scale
  (bridges.base.Element< E >) 1.000000 4.000000 box
  (bridges.base.GraphAdjList< K, E >) 2.000000 4.000000 box
  (bridges.base.GraphAdjMatrix< K, E >) 3.000000 4.000000 box
- (bridges.base.DLelement< E >) 0.000000 3.000000 box
+ (bridges.base.ArrayElement< E >) 0.000000 3.000000 box
  (bridges.base.SLelement< E >) 1.000000 3.000000 box
- (bridges.base.TreeElement< E >) 2.000000 3.000000 box
- (bridges.base.CircDLelement< E >) 0.000000 2.000000 box
- (bridges.base.CircSLelement< E >) 1.000000 2.000000 box
- (bridges.base.BinTreeElement< E >) 2.000000 2.000000 box
- (bridges.base.BSTElement< K, E >) 2.000000 1.000000 box
- (bridges.base.AVLTreeElement< K, E >) 2.000000 0.000000 box
+ (bridges.base.TreeElement< E >) 3.000000 3.000000 box
+ (bridges.base.CircSLelement< E >) 0.000000 2.000000 box
+ (bridges.base.DLelement< E >) 1.000000 2.000000 box
+ (bridges.base.MLelement< E >) 2.000000 2.000000 box
+ (bridges.base.BinTreeElement< E >) 3.000000 2.000000 box
+ (bridges.base.CircDLelement< E >) 1.000000 1.000000 box
+ (bridges.base.BSTElement< K, E >) 3.000000 1.000000 box
+ (bridges.base.AVLTreeElement< K, E >) 3.000000 0.000000 box
 
 % ----- relations -----
 
@@ -224,7 +228,7 @@ solid
 solid
 1 1.000000 3.250000 out
 solid
-0.000000 2.000000 4.000000 conn
+0.000000 3.000000 4.000000 conn
 solid
 0 2.000000 4.750000 in
 solid
@@ -232,26 +236,32 @@ solid
 solid
 0 0.000000 3.750000 in
 solid
-1 0.000000 2.250000 out
-solid
 0 1.000000 3.750000 in
 solid
 1 1.000000 2.250000 out
 solid
-0 2.000000 3.750000 in
+0.000000 2.000000 3.000000 conn
 solid
-1 2.000000 2.250000 out
+0 3.000000 3.750000 in
+solid
+1 3.000000 2.250000 out
 solid
 0 0.000000 2.750000 in
 solid
 0 1.000000 2.750000 in
 solid
+1 1.000000 1.250000 out
+solid
 0 2.000000 2.750000 in
 solid
-1 2.000000 1.250000 out
+0 3.000000 2.750000 in
 solid
-0 2.000000 1.750000 in
+1 3.000000 1.250000 out
 solid
-1 2.000000 0.250000 out
+0 1.000000 1.750000 in
 solid
-0 2.000000 0.750000 in
+0 3.000000 1.750000 in
+solid
+1 3.000000 0.250000 out
+solid
+0 3.000000 0.750000 in

@@ -24,6 +24,8 @@ void \hyperlink{classbridges_1_1connect_1_1_bridges_a2cd9af150b77b8337327ea67544
 \item 
 void \hyperlink{classbridges_1_1connect_1_1_bridges_ae41b3d86963350ace304d8951c1863ad}{set\+Data\+Structure} (\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}$<$ E $>$ head)
 \item 
+void \hyperlink{classbridges_1_1connect_1_1_bridges_aa0538ceb84f553a9c5a1cbc7a93a46ae}{set\+Data\+Structure} (\hyperlink{classbridges_1_1base_1_1_m_lelement}{M\+Lelement}$<$ E $>$ head)
+\item 
 void \hyperlink{classbridges_1_1connect_1_1_bridges_a383877f85bb048d47560e76f359e1bda}{set\+Data\+Structure} (\hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}$<$ E $>$ head)
 \item 
 void \hyperlink{classbridges_1_1connect_1_1_bridges_a285a7af5ad0594d4eeca51277e627c89}{set\+Data\+Structure} (\hyperlink{classbridges_1_1base_1_1_circ_s_lelement}{Circ\+S\+Lelement}$<$ E $>$ head)
@@ -83,6 +85,8 @@ static void \hyperlink{classbridges_1_1connect_1_1_bridges_a484992ce3fce273ca2ca
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{classbridges_1_1connect_1_1_bridges_ae9ce2673d2eef1da7f6e1359c494f6fe}{visualize\+Linked\+List} ()
+\item 
+void \hyperlink{classbridges_1_1connect_1_1_bridges_af3b189a5b95710e3bc3685e85572478f}{visualize\+Multi\+List} ()
 \item 
 void \hyperlink{classbridges_1_1connect_1_1_bridges_ac1ac1db8cf7123aefb83ab05af83375d}{visualize\+Doubly\+Linked\+List} ()
 \item 
@@ -386,7 +390,7 @@ set the assignment id
 \hypertarget{classbridges_1_1connect_1_1_bridges_a2cd9af150b77b8337327ea67544a0e8f}{}\label{classbridges_1_1connect_1_1_bridges_a2cd9af150b77b8337327ea67544a0e8f} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!set\+Data\+Structure@{set\+Data\+Structure}}
 \index{set\+Data\+Structure@{set\+Data\+Structure}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
-\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [1/11]}}
+\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [1/12]}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.set\+Data\+Structure (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_array}{Array}$<$ E $>$}]{arr }\end{DoxyParamCaption})}
 
 This method sets the array data type as the current data structure. Arrays of upto 3 dimensions are suppported.
@@ -399,7 +403,7 @@ This method sets the array data type as the current data structure. Arrays of up
 \hypertarget{classbridges_1_1connect_1_1_bridges_ae41b3d86963350ace304d8951c1863ad}{}\label{classbridges_1_1connect_1_1_bridges_ae41b3d86963350ace304d8951c1863ad} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!set\+Data\+Structure@{set\+Data\+Structure}}
 \index{set\+Data\+Structure@{set\+Data\+Structure}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
-\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [2/11]}}
+\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [2/12]}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.set\+Data\+Structure (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}$<$ E $>$}]{head }\end{DoxyParamCaption})}
 
 This method sets the first element of the singly linked list
@@ -409,10 +413,23 @@ This method sets the first element of the singly linked list
 {\em head} & first element of the list \\
 \hline
 \end{DoxyParams}
+\hypertarget{classbridges_1_1connect_1_1_bridges_aa0538ceb84f553a9c5a1cbc7a93a46ae}{}\label{classbridges_1_1connect_1_1_bridges_aa0538ceb84f553a9c5a1cbc7a93a46ae} 
+\index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!set\+Data\+Structure@{set\+Data\+Structure}}
+\index{set\+Data\+Structure@{set\+Data\+Structure}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
+\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [3/12]}}
+{\footnotesize\ttfamily void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.set\+Data\+Structure (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_m_lelement}{M\+Lelement}$<$ E $>$}]{head }\end{DoxyParamCaption})}
+
+This method sets the first element of the multi list
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & first element of the multi-\/list \\
+\hline
+\end{DoxyParams}
 \hypertarget{classbridges_1_1connect_1_1_bridges_a383877f85bb048d47560e76f359e1bda}{}\label{classbridges_1_1connect_1_1_bridges_a383877f85bb048d47560e76f359e1bda} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!set\+Data\+Structure@{set\+Data\+Structure}}
 \index{set\+Data\+Structure@{set\+Data\+Structure}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
-\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [3/11]}}
+\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [4/12]}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.set\+Data\+Structure (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}$<$ E $>$}]{head }\end{DoxyParamCaption})}
 
 This method sets the first element of the doubly linked list
@@ -425,7 +442,7 @@ This method sets the first element of the doubly linked list
 \hypertarget{classbridges_1_1connect_1_1_bridges_a285a7af5ad0594d4eeca51277e627c89}{}\label{classbridges_1_1connect_1_1_bridges_a285a7af5ad0594d4eeca51277e627c89} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!set\+Data\+Structure@{set\+Data\+Structure}}
 \index{set\+Data\+Structure@{set\+Data\+Structure}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
-\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [4/11]}}
+\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [5/12]}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.set\+Data\+Structure (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_circ_s_lelement}{Circ\+S\+Lelement}$<$ E $>$}]{head }\end{DoxyParamCaption})}
 
 This method sets the first element of the singly linked circular list
@@ -438,7 +455,7 @@ This method sets the first element of the singly linked circular list
 \hypertarget{classbridges_1_1connect_1_1_bridges_a4e5809b18d15854b54509f9d434a4fd7}{}\label{classbridges_1_1connect_1_1_bridges_a4e5809b18d15854b54509f9d434a4fd7} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!set\+Data\+Structure@{set\+Data\+Structure}}
 \index{set\+Data\+Structure@{set\+Data\+Structure}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
-\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [5/11]}}
+\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [6/12]}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.set\+Data\+Structure (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_circ_d_lelement}{Circ\+D\+Lelement}$<$ E $>$}]{head }\end{DoxyParamCaption})}
 
 This method sets the first element of the doubly linked circular list
@@ -451,7 +468,7 @@ This method sets the first element of the doubly linked circular list
 \hypertarget{classbridges_1_1connect_1_1_bridges_a0788905a16b9a8f3deb0b4a344f2b42d}{}\label{classbridges_1_1connect_1_1_bridges_a0788905a16b9a8f3deb0b4a344f2b42d} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!set\+Data\+Structure@{set\+Data\+Structure}}
 \index{set\+Data\+Structure@{set\+Data\+Structure}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
-\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [6/11]}}
+\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [7/12]}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.set\+Data\+Structure (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_tree_element}{Tree\+Element}$<$ E $>$}]{tree\+\_\+root }\end{DoxyParamCaption})}
 
 This method sets the root of a general tree (can have any number of children at each node
@@ -464,7 +481,7 @@ This method sets the root of a general tree (can have any number of children at 
 \hypertarget{classbridges_1_1connect_1_1_bridges_a02a3d74b381473b5d97a8f8194df9b40}{}\label{classbridges_1_1connect_1_1_bridges_a02a3d74b381473b5d97a8f8194df9b40} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!set\+Data\+Structure@{set\+Data\+Structure}}
 \index{set\+Data\+Structure@{set\+Data\+Structure}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
-\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [7/11]}}
+\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [8/12]}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.set\+Data\+Structure (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_bin_tree_element}{Bin\+Tree\+Element}$<$ E $>$}]{tree\+\_\+root }\end{DoxyParamCaption})}
 
 This method sets the root of the binary tree data structure.
@@ -477,7 +494,7 @@ This method sets the root of the binary tree data structure.
 \hypertarget{classbridges_1_1connect_1_1_bridges_adb01a9385de48ef267bdfd22758fb361}{}\label{classbridges_1_1connect_1_1_bridges_adb01a9385de48ef267bdfd22758fb361} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!set\+Data\+Structure@{set\+Data\+Structure}}
 \index{set\+Data\+Structure@{set\+Data\+Structure}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
-\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [8/11]}}
+\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [9/12]}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.set\+Data\+Structure (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_b_s_t_element}{B\+S\+T\+Element}$<$ K, E $>$}]{tree\+\_\+root }\end{DoxyParamCaption})}
 
 This method sets the root of the binary search tree data structure.
@@ -490,7 +507,7 @@ This method sets the root of the binary search tree data structure.
 \hypertarget{classbridges_1_1connect_1_1_bridges_a702c3f88840e100ad0182110627e60f5}{}\label{classbridges_1_1connect_1_1_bridges_a702c3f88840e100ad0182110627e60f5} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!set\+Data\+Structure@{set\+Data\+Structure}}
 \index{set\+Data\+Structure@{set\+Data\+Structure}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
-\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [9/11]}}
+\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [10/12]}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.set\+Data\+Structure (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_a_v_l_tree_element}{A\+V\+L\+Tree\+Element}$<$ K, E $>$}]{tree\+\_\+root }\end{DoxyParamCaption})}
 
 This method sets the root of an A\+VL tree data structure.
@@ -503,7 +520,7 @@ This method sets the root of an A\+VL tree data structure.
 \hypertarget{classbridges_1_1connect_1_1_bridges_aa5dc1d094955a486e649fdb05d66502f}{}\label{classbridges_1_1connect_1_1_bridges_aa5dc1d094955a486e649fdb05d66502f} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!set\+Data\+Structure@{set\+Data\+Structure}}
 \index{set\+Data\+Structure@{set\+Data\+Structure}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
-\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [10/11]}}
+\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [11/12]}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.set\+Data\+Structure (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_graph_adj_list}{Graph\+Adj\+List}$<$ K, E $>$}]{graph }\end{DoxyParamCaption})}
 
 This method passes the handle to the input graph (represented using adjacency lists)
@@ -516,7 +533,7 @@ This method passes the handle to the input graph (represented using adjacency li
 \hypertarget{classbridges_1_1connect_1_1_bridges_a1ac1f8a7c5e95500712c2edaa5e8971f}{}\label{classbridges_1_1connect_1_1_bridges_a1ac1f8a7c5e95500712c2edaa5e8971f} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!set\+Data\+Structure@{set\+Data\+Structure}}
 \index{set\+Data\+Structure@{set\+Data\+Structure}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
-\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [11/11]}}
+\subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}\hspace{0.1cm}{\footnotesize\ttfamily [12/12]}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.set\+Data\+Structure (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_graph_adj_matrix}{Graph\+Adj\+Matrix}$<$ K, E $>$}]{graph }\end{DoxyParamCaption})}
 
 This method passes the handle to the input graph (represented using adjacency matrix)
@@ -657,7 +674,13 @@ Update visualization metadata of Graph with Adjacency List. This may be called m
 \subsubsection{\texorpdfstring{visualize\+Linked\+List()}{visualizeLinkedList()}}
 {\footnotesize\ttfamily void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.visualize\+Linked\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
-visualize a singly linked list. \hypertarget{classbridges_1_1connect_1_1_bridges_abd8fa1ef8d6c5d3e6c533ee069d24d85}{}\label{classbridges_1_1connect_1_1_bridges_abd8fa1ef8d6c5d3e6c533ee069d24d85} 
+visualize a singly linked list. \hypertarget{classbridges_1_1connect_1_1_bridges_af3b189a5b95710e3bc3685e85572478f}{}\label{classbridges_1_1connect_1_1_bridges_af3b189a5b95710e3bc3685e85572478f} 
+\index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!visualize\+Multi\+List@{visualize\+Multi\+List}}
+\index{visualize\+Multi\+List@{visualize\+Multi\+List}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
+\subsubsection{\texorpdfstring{visualize\+Multi\+List()}{visualizeMultiList()}}
+{\footnotesize\ttfamily void \hyperlink{classbridges_1_1connect_1_1_bridges}{bridges.\+connect.\+Bridges}$<$ K, E $>$.visualize\+Multi\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+visualize a multi list. \hypertarget{classbridges_1_1connect_1_1_bridges_abd8fa1ef8d6c5d3e6c533ee069d24d85}{}\label{classbridges_1_1connect_1_1_bridges_abd8fa1ef8d6c5d3e6c533ee069d24d85} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!visualize\+Tree@{visualize\+Tree}}
 \index{visualize\+Tree@{visualize\+Tree}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
 \subsubsection{\texorpdfstring{visualize\+Tree()}{visualizeTree()}}

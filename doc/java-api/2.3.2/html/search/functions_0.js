@@ -8,6 +8,8 @@ var searchData=
   ['adtvisualizer',['ADTVisualizer',['../classbridges_1_1base_1_1_a_d_t_visualizer.html#a3d5098e4c0609c19a547f19f0d538eeb',1,'bridges.base.ADTVisualizer.ADTVisualizer()'],['../classbridges_1_1base_1_1_a_d_t_visualizer.html#af722d7ea9506b1ca8119ae39c43130ff',1,'bridges.base.ADTVisualizer.ADTVisualizer(Object type)']]],
   ['arrangelabel',['arrangeLabel',['../classbridges_1_1base_1_1_element.html#acd2191242df8a7bf2e8b6ced87880ba6',1,'bridges::base::Element']]],
   ['array',['Array',['../classbridges_1_1base_1_1_array.html#ad5dbf7bbd9811c2dac16a5c135465d4b',1,'bridges.base.Array.Array()'],['../classbridges_1_1base_1_1_array.html#ab37dbe6efe0c34242456971e430763f7',1,'bridges.base.Array.Array(int num_dims, int[] dims)']]],
+  ['arrayelement',['ArrayElement',['../classbridges_1_1base_1_1_array_element.html#a90cbba952d50ff26fd2b89e9f3f81322',1,'bridges::base::ArrayElement']]],
+  ['arrayofelement',['ArrayOfElement',['../classbridges_1_1base_1_1_array_of_element.html#a325453e27b174f2fea687d1e19e33cae',1,'bridges::base::ArrayOfElement']]],
   ['asjsonarray',['asJSONArray',['../classbridges_1_1connect_1_1_connector.html#aa5bd647713545fa24c6d730eacb6bc54',1,'bridges::connect::Connector']]],
   ['asjsonobject',['asJSONObject',['../classbridges_1_1connect_1_1_connector.html#aac3fb75dd7975c4439cfd1bf6cefe0a6',1,'bridges::connect::Connector']]],
   ['avltreeelement',['AVLTreeElement',['../classbridges_1_1base_1_1_a_v_l_tree_element.html#a8fe4490d3d5d16991736bd1a7243b904',1,'bridges.base.AVLTreeElement.AVLTreeElement()'],['../classbridges_1_1base_1_1_a_v_l_tree_element.html#a060ec94b52675313ad15388e3f292df5',1,'bridges.base.AVLTreeElement.AVLTreeElement(K k, E e)']]]

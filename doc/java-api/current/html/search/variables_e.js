@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['visualizer',['visualizer',['../classbridges_1_1connect_1_1_bridges.html#af3fc35779b31c976ed8bf2e173310502',1,'bridges::connect::Bridges']]],
-  ['visualizertype',['visualizerType',['../classbridges_1_1base_1_1_a_d_t_visualizer.html#a288aece657b5641f48e839b34f3884b9',1,'bridges::base::ADTVisualizer']]]
+  ['url',['url',['../classbridges_1_1data__src__dependent_1_1_usgs_foo_1_1_properties.html#a42e5d1f2c28c6708921861ed95aa5e5f',1,'bridges::data_src_dependent::UsgsFoo::Properties']]]
 ];
