@@ -42,9 +42,16 @@ BRIDGES currently supports the following types of Elements:
 <li><strong>Element</strong>
 	- the basic element(abstract) that just holds application specific data and supports some basic operations</li>
 <li><strong>Singly Linked List Element</strong> 
-	- element that points to one other element</li>
+	- element that points to one following element</li>
 <li><strong>Doubly Linked List Element</strong> 
-	- element that points to two other elements</li>
+	- element that points to the following and previous  elements</li>
+<li><strong>Circular Singly Linked List Element</strong> 
+	- singly linked element that points to itself </li>
+<li><strong>Circular Doubly Linked List Element</strong> 
+	- doubly  linked element that points to itself </li>
+<li><strong>Multilist Element</strong> 
+	- Generalization of singly linked list element, that permits any element
+		to be a sublist (recursively)</li>
 <li><strong>Tree Element</strong> 
 	- a general tree element with some number of children defined by 
 	the user</li>
@@ -54,6 +61,9 @@ BRIDGES currently supports the following types of Elements:
 <li><strong>Binary Search Tree Element</strong> 
 	- a binary tree element with an orderable "key" value, to be used in 
 		binary search tree implementations</li>
+<li><strong>AVL Tree Element</strong> 
+	- a binary search tree element that also maintains balance factor  and
+		tree height values. </li>
 <li><strong>Graph(Adjacency List) </strong> 
 	- graph container that holds vertices in an array type list and 
 		element connections with singly linked lists</li>

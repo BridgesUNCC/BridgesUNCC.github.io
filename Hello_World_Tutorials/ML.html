@@ -27,37 +27,33 @@
 <header w3-include-html="./Tutorial_Header.html"></header>
 
 <main>
-  <br>
-  CircDLelement&lt;E&gt; implements a <i>circular doubly linked list</i> in BRIDGES and is
-  inherited from DElement&lt;E&gt;
-  <br><br><img width="175em" src="./images/circ_dle.png"><br><br>
-  <h2>How does the CircDLelement&lt;E&gt; work?</h2>
+MLelement&lt;E&gt; is the basic element used to implement a 
+<i>Multilist</i> in BRIDGES and is inherited from SLelement&lt;E&gt;
+<br><br><img width="175em" src="./images/mle.png"><br><br>
+  <h2>How does the MLelement&lt;E&gt; work?</h2>
   <p>
-  CircDLelement&lt;E&gt; stands for Circular Doubly Linked Element, and is a container
-  that has two links,  pointing to two other doubly linked elements. So
-  a CircDLelement&lt;E&gt; “knows” who
-  it’s pointing at, AND it knows who pointed at it.
-  <br><br><img class="img-responsive" width="600em" src="./images/svg/cdl.svg"/><br><br>
-  In this example, calling getNext() on CircDLelement2 will return CircDLelement3.
-  Calling getPrev() on CircDLelement2 will return CircDLelement1. CircDLelement3 points to CircDLelement1, and CircDLelement1 points to CircDLelement3.
-  <br><br>
-  Notice that, since CircDLelement&lt;E&gt; has a getPrev() method, they can move
-  forwards AND backwards through the linked elements.
-  <p>
+<br><br><center><img width="500em" src="./images/ml_list.png"></img></center><br><br>
+This class extends SLelement (singly linked list element) to build multi-lists;
+multilists extend singly linked lists, by allowing any element of the list to be a list.
+Multilist elements contain a tag (getTag()/setTag())  that indicates if the element is a 
+sublist or not; If the element points to a sublist, then the sublist field is the 
+beginning of this sublist. If not, the data field contains the user specified data item and 
+list continues (getNext()/setNext()). As in singly linked elements, the next pointer points 
+to the following list element of the list or sublist. Full class documentation at
+<a href= ""> MLElement </a>.
+</p>
 
   <hr/>
 
-
-  <h2>CircDLelement - BRIDGES Example</h2>
-    <div class="tabs">
-        <div class="tutorial-active-language-tab" onclick="displayCode('Java',this)">Java</div>
-        <div onclick="displayCode('C++',this)" >C++</div>
-    </div>
-    <div class="tabContents">
-      <div id="Java" w3-include-html="./Java_CDLL.html"></div>
-      <div id="C++"  w3-include-html="./Cpp_DDLL.html"></div>
-    </div>
-
+  <h2>MLelement - An Example BRIDGES program</h2>
+  <div class="tabs">
+    <div onclick="displayCode('Java',this)">Java</div>
+    <div onclick="displayCode('C++',this)" >C++</div>
+  </div>
+  <div class="tabContents">
+    <div id="Java" w3-include-html="./Java_ML.html"></div>
+    <div id="C++"  w3-include-html="./Cpp_ML.html"></div>
+  </div>
 
   <h3>Bridges Visualization</h3>
 <ul>
@@ -69,13 +65,13 @@ of the data structure you just created.</li>
 <li>It should look something like this:</li>
 </ul>
   <div class="iframe-wrapper">
-    <iframe src="http://bridges-cs.herokuapp.com/assignments/7/bridges_public#onlyshowvis0" scrolling="no">
+    <iframe src="http://bridges-cs.herokuapp.com/assignments/13/bridges_public#onlyshowvis0" scrolling="no">
       <p>Sorry, your browser doesn't seem to support iframes -
-        <a href="http://bridges-cs.herokuapp.com/assignments/7/bridges_public#onlyshowvis0">Frame Link</a>
+        <a href="http://bridges-cs.herokuapp.com/assignments/4/bridges_public#onlyshowvis0" scrolling="no">Frame Link</a>
       </p>
     </iframe>
   </div>
-  <p>Well done! You’ve just created your doubly linked circular list!</p>
+  <p>Well done! You’ve just created your Multilist!</p>
 </main>
 
 <footer w3-include-html="./Tutorial_Footer.html"></footer>
