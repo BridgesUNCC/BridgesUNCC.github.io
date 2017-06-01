@@ -25,147 +25,118 @@
 <main>
   <br>
   Array&lt;E&gt; implements a <i>array</i> in BRIDGES, and it can be used to create arrays of type Element&lt;E&gt;
-<!-- SLelement&lt;E&gt; implements a <i>doubly linked list</i> in BRIDGES and is
-inherited from Element&lt;E&gt;
-<br><br><img width="175em" src="./images/slelement-cd.png"><br><br>
-  <h2>How does the SLelement&lt;E&gt; work?</h2>
-  <p>
-SLelement&lt;E&gt; stands for Singly Linked Element and is a type
-of container that has one link, pointing to another SLelement&lt;E&gt;.
-So an SLelement&lt;E&gt; "knows" who it is pointing at but it does not know
-who is pointing at it(if any).
-<br/><br/><img width="600em" src="./SLelement.png"/><br/><br/>
-In the above example,  SLelement1 points to SLelement2. Calling getNext()
-on SLelement1 will return  a link to SLelement2, and calling getNext() on
-SLelement2 will return a link to SLelement3.  SLelement3 is not pointing
-to another SLelement so calling getNext() on SLelement3 will return NULL.
-This is desirable since you will know that you have reached the end of the
-singly linked list (as NULL is a unique value and not  a legal memory address
-for an object).
-    <br/><br/>
-Also notice that there is no getPrev(). SLelement2 has no idea what
-element came before it. So, you CANNOT go backwards.
-  </p>
-
-  <hr/> -->
-
-  <h2>2D Array - An Example BRIDGES program</h2>
-            <div class="tabs">
-              <div onclick="displayCode('Java',this)">Java</div>
-              <div onclick="displayCode('C++',this)">C++</div>
-            </div>
-          <div class="tabContents">
-              <div id="Java" class="tab">
-                  <h3>Create a new .java file</h3>
-
-                  <h3>Imports</h3>
-                  <ul>
-                      <li>We need to include these Bridges files to give access to all the classes/methods needed to interact with Bridges</li>
-                      <li>In your .java file, enter the following code snippets:</li>
-                      <pre class="prettyprint">
-import bridges.connect.Bridges;
-import bridges.base.Array;
-import bridges.base.Element;
-        </pre>
-                  </ul>
-
-                  <h3>Main Exception</h3>
-                  <ul>
-                      <li>By adding a throw exception we can forgo messy try/catch blocks in our code for our Bridges calls</li>
-                      <li>In your .java file, add a throw exception to the main function so it looks like this:</li>
+<h2>2D Array - An Example BRIDGES program</h2>
+<div class="tabs">
+	<div onclick="displayCode('Java',this)">Java</div>
+	<div onclick="displayCode('C++',this)">C++</div>
+</div>
+<div class="tabContents">
+<div id="Java" class="tab">
+<h3>Create a new .java file</h3>
+<h3>Imports</h3>
+<ul>
+<li>We need to include these Bridges files to give access to all the classes/methods needed to interact with Bridges</li>
+<li>In your .java file, enter the following code snippets:</li>
 <pre class="prettyprint">
-public static void main(String[] args) throws Exception
+	import bridges.connect.Bridges;
+	import bridges.base.Array;
+	import bridges.base.Element;
 </pre>
-                  </ul>
-
-                  <h3>Inside our Main</h3>
-                  <ul>
+</ul>
+<h3>Main Exception</h3>
+<ul>
+<li>By adding a throw exception we can forgo messy try/catch blocks in our code for our Bridges calls</li>
+<li>In your .java file, add a throw exception to the main function so it looks like this:</li>
+<pre class="prettyprint">
+	public static void main(String[] args) throws Exception
+</pre>
+</ul>
+<h3>Inside our Main</h3>
+<ul>
 <li>First we need to create our BRIDGES object and initialize our BRIDGES Credentials</li>
 <pre class="prettyprint">
-Bridges&lt;String, String&gt; bridge = new Bridges&lt;String,String&gt;(1, "YOUR_API_KEY", "YOUR_USER_ID");
-
+	Bridges&lt;String, String&gt; bridge = new Bridges&lt;String,String&gt;(1, "YOUR_API_KEY", "YOUR_USER_ID");
 </pre>
-
-<p>Note that you will need to replace the two fields in this call with your BRIDGES credentials.</p>
-
+<p><b>Note that you will need to replace the two fields in this call with your BRIDGES credentials.</b></p>
 <li>Then we can create our 2D Array</li>
 <pre class="prettyprint">
-//  for 2D array 5x5
-int columns = 5;
-int rows = 5;
-int[] dims = &#123;columns, rows, 1&#125;;
-Array&lt;Integer&gt; my_array = new Array&lt;Integer&gt; (2, dims);
-
+	int columns = 5;
+	int rows = 5;
+	int[] dims = {columns, rows, 1}
+	Array&lt;Integer&gt; my_array = new Array&lt;Integer&gt; (2, dims);
 </pre>
-
 <li>Now populate the 2d array with dummy data.</li>
 <pre class="prettyprint">
-for (int rowAt = 0; rowAt &lt; rows; k++)&#123;
-  for (int columnAt = 0; columnAt &lt; columns; k++)&#123;
-      my_array.setValue(rowAt, columnAt,  new Element&lt;Integer&gt;(String.valueOf(k), k*k));
-      my_array.getValue(rowAt, columnAt).getVisualizer().setColor(circ_dllist.getRandomColor());
-  &#125;
-&#125;
-
+	for (int rowAt = 0; rowAt &lt; rows; k++) {
+		for (int columnAt = 0; columnAt &lt; columns; k++) {
+			my_array.setValue(rowAt, columnAt,  new Element&lt;Integer&gt;(String.valueOf(k), k*k));
+			k++;
+		}
+	}
 </pre>
 
 
 <li>Now change the color of the elements.</li>
 <pre class="prettyprint">
-my_array.getValue(0,0).getVisualizer().setColor("green");
-my_array.getValue(0,3).getVisualizer().setColor("blue");
-my_array.getValue(3,0).getVisualizer().setColor("magenta");
-my_array.getValue(3,3).getVisualizer().setColor("cyan");
-my_array.getValue(1,1).getVisualizer().setColor("yellow");
-
+	my_array.getValue(0,0).getVisualizer().setColor("green");
+	my_array.getValue(0,4).getVisualizer().setColor("blue");
+	my_array.getValue(2,2).getVisualizer().setColor("magenta");
+	my_array.getValue(4,0).getVisualizer().setColor("cyan");
+	my_array.getValue(4,4).getVisualizer().setColor("yellow");
 </pre>
 
-
-                          <li>Now we pass the array object to BRIDGES</li>
-                          <pre class="prettyprint">bridge.setDataStructure(my_array);</pre>
-                          <li>Finally we call the visualize function</li>
-                          <pre class="prettyprint">bridge.visualize();</pre>
-                  </ul>
-                  <h4><strong>Code Summary:</strong> Your .java file should look like this</h4>
-                  <pre class="prettyprint">
-
+<li>Now we pass the array object to BRIDGES</li>
+<pre class="prettyprint">
+	bridge.setDataStructure(my_array);
+</pre>
+<li>Finally we call the visualize function</li>
+<pre class="prettyprint">
+	bridge.visualize();
+</pre>
+<h4><strong>Code Summary:</strong> Your .java file should look like this</h4>
+<pre class="prettyprint">
 import bridges.connect.Bridges;
 import bridges.base.Array;
 import bridges.base.Element;
 
-public class Array1DExample &#123;
-public static void main(String[] args) throws Exception&#123;
+public class arr2d {
+	public static void main(String[] args) throws Exception{
 
-  //create the Bridges object
-  Bridges&lt;String, Integer&lt; bridges = new Bridges&lt;String, Integer&lt;(10, "YOUR_API_KEY", "YOUR_USER_ID");
+						//create the Bridges object
+		Bridges&ltString, Integer&gt bridges = 
+					new Bridges&ltString, Integer&gt(2, "YOUR_API_KEY", "YOUR_USER_ID");
 
+						//  for 2D array 5x5
+		int columns = 5;
+		int rows = 5;
+						// set dimensions, create array
+		int[] dims = {columns, rows, 1};
+		Array<Integer> my_array = new Array<Integer> (2, dims);
 
-  //  for 2D array 5x5
-  int columns = 5;
-  int rows = 5;
-  int[] dims = &#123;columns, rows, 1&#125;;
-  Array&lt;Integer&gt; my_array = new Array&lt;Integer&gt; (2, dims);
+						// populate the array
+		int k = 0;
+		for (int row = 0; row < rows; row++){
+			for (int col = 0; col < columns; col++){
+				my_array.setValue(row, col,  new Element<Integer>(String.valueOf(k), k*k));
+				k++;
+			}
+		}
 
-  for (int rowAt = 0; rowAt &lt; rows; k++)&#123;
-      for (int columnAt = 0; columnAt &lt; columns; k++)&#123;
-          my_array.setValue(rowAt, columnAt,  new Element&lt;Integer&gt;(String.valueOf(k), k*k));
-          my_array.getValue(rowAt, columnAt).getVisualizer().setColor(circ_dllist.getRandomColor());
-      &#125;
-  &#125;
+						// color some of the elements
+		my_array.getValue(0,0).getVisualizer().setColor("green");
+		my_array.getValue(0,4).getVisualizer().setColor("blue");
+		my_array.getValue(2,2).getVisualizer().setColor("cyan");
+		my_array.getValue(4,0).getVisualizer().setColor("magenta");
+		my_array.getValue(4,4).getVisualizer().setColor("yellow");
 
-  my_array.getValue(0,0).getVisualizer().setColor("green");
-  my_array.getValue(0,3).getVisualizer().setColor("blue");
-  my_array.getValue(3,0).getVisualizer().setColor("magenta");
-  my_array.getValue(3,3).getVisualizer().setColor("cyan");
-  my_array.getValue(1,1).getVisualizer().setColor("yellow");
+							//set visualizer type
+		bridges.setDataStructure(my_array);
 
-  //set visualizer type
-  bridges.setDataStructure(my_array);
+							// visualize the array
+		bridges.visualize();
+	}
+}
 
-  // visualize the list
-  bridges.visualize();
-  &#125;
-&#125;
 </pre>
 
               </div>
@@ -224,8 +195,8 @@ arr->getValue(2,2).getVisualizer()->setColor(Color("yellow"));
                               <li>Finally we call the visualize function.</li>
                               <pre class="prettyprint">Bridges::visualize();</pre>
                   </ul>
-                  <h4><strong>Code Summary:</strong> Your .cpp file should look like this</h4>
-                  <pre class="prettyprint">
+<h4><strong>Code Summary:</strong> Your .cpp file should look like this</h4>
+<pre class="prettyprint">
 #include &lt;iostream&gt;
 #include &lt;string&gt;
 
@@ -276,13 +247,13 @@ of the data structure you just created.</li>
 <li>It should look something like this:</li>
 </ul>
   <div class="iframe-wrapper">
-    <iframe src="http://bridges-api-lestrell.herokuapp.com/assignments/1/bridges_public#onlyshowvis0" scrolling="no">
+    <iframe src="http://bridges-cs.herokuapp.com/assignments/2/bridges_public#onlyshowvis0" scrolling="no">
       <p>Sorry, your browser doesn't seem to support iframes -
-        <a href="http://bridges-api-lestrell.herokuapp.com/assignments/1/bridges_public#onlyshowvis0">Frame Link</a>
+        <a href="http://bridges-cs.herokuapp.com/assignments/2/bridges_public#onlyshowvis0">Frame Link</a>
       </p>
     </iframe>
   </div>
-  <p>Well done! You’ve just created your first Bridges project!</p>
+  <p>Well done! You’ve just created your 2D array!</p>
 </main>
 
 <footer w3-include-html="./Tutorial_Footer.html"></footer>
