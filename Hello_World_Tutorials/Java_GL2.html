@@ -29,8 +29,7 @@
 <ul>
 <li>First we need to create our Bridges object and initialize our Bridges Credentials</li>
 <pre class="prettyprint">
-	Bridges&lt;String, String&gt; bridges = 
-			new Bridges&lt;&gt;(5, "YOUR_API_KEY", "YOUR_USER_ID");
+	Bridges bridges = new Bridges(5, "YOUR_API_KEY", "YOUR_USER_ID");
 </pre>
 <b>Note that you must replace the above strings with your BRIDGES credentials.</b>
 <li>Then we can create our GraphAdjList</li>
@@ -145,14 +144,13 @@ public class graph_al {
 	public static void main(String[] args) throws Exception {
 
 					// initialize Bridges
-		Bridges&ltString, String&gt bridges = 
-				new Bridges&ltString, String&gt(12, "YOUR_API_KEY", "YOUR_USER_ID");
+		Bridges bridges = new Bridges(12, "YOUR_API_KEY", "YOUR_USER_ID");
 
 					// set a title for the visualization
 		bridges.setTitle("A Simple Graph Example using IMDB Actor/Movie Data");
 
 		ArrayList&ltActorMovieIMDB&gt  actor_movie_data = 
-				(ArrayList&ltActorMovieIMDB&gt bridges.getActorMovieIMDBData("IMDB", 1800);
+				(ArrayList&ltActorMovieIMDB&gt) bridges.getActorMovieIMDBData("IMDB", 1800);
 
 					// create an adjacency list based graph
 		GraphAdjList&ltString, String&gt g = new GraphAdjList&ltString, String&gt();
