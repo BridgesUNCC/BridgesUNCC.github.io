@@ -1,0 +1,362 @@
+\hypertarget{class_element_1_1_element}{}\section{Element.\+Element Class Reference}
+\label{class_element_1_1_element}\index{Element.\+Element@{Element.\+Element}}
+
+
+This is the main superclass in B\+R\+I\+D\+G\+ES for deriving a number of objects used in building arrays, lists, trees and graph data structures.  
+
+
+Inheritance diagram for Element.\+Element\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_element_1_1_element}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{class_element_1_1_element_ad731077bce6c6caede6bdb6609672f68}{get\+Data\+Struct\+Type} (self)
+\item 
+def \hyperlink{class_element_1_1_element_a977b7da08b2c2ffb8d2f0c90e1fee284}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_element_1_1_element}{Element} constructor creates an \hyperlink{namespace_element_visualizer}{Element\+Visualizer} object sets a unique identifier for the current \hyperlink{class_element_1_1_element}{Element} normally used from subclasses. \end{DoxyCompactList}\item 
+def \hyperlink{class_element_1_1_element_aac5918af79bb6bd95cf429d1a219901e}{get\+Identifier} (self)
+\begin{DoxyCompactList}\small\item\em this method returns the element\textquotesingle{}s unique identifier \end{DoxyCompactList}\item 
+def \hyperlink{class_element_1_1_element_a83844b6ce0a822dfb09b4cdd16691ac5}{get\+Visualizer} (self)
+\begin{DoxyCompactList}\small\item\em Returns the \hyperlink{class_element_1_1_element}{Element}\textquotesingle{}s visualizer object. \end{DoxyCompactList}\item 
+def \hyperlink{class_element_1_1_element_a79f1e429c47e65341273e9971ff1ece0}{set\+Visualizer} (self, \hyperlink{class_element_1_1_element_a7a5b8e1891bf065fa81f51a8f6b4212e}{visualizer})
+\begin{DoxyCompactList}\small\item\em This method sets the visualizer object for the current element object. \end{DoxyCompactList}\item 
+def \hyperlink{class_element_1_1_element_aad4a71d78f6c60de5bf871fd7632d720}{get\+Link\+Visualizer} (self, el)
+\begin{DoxyCompactList}\small\item\em Returns the \hyperlink{class_element_1_1_element}{Element}\textquotesingle{}s link visualizer object. \end{DoxyCompactList}\item 
+def \hyperlink{class_element_1_1_element_a6aac3e4778ae009406417439c778f904}{set\+Link\+Visualizer} (self, el)
+\begin{DoxyCompactList}\small\item\em Sets the link from this element to a new incoming element. \end{DoxyCompactList}\item 
+def \hyperlink{class_element_1_1_element_a2dde72f6339b9d052df50bb4a5de2502}{remove\+Link\+Visualizer} (self, el)
+\item 
+def \hyperlink{class_element_1_1_element_ae864741d8f6e980b2ecb4bed62e87e96}{validate\+Val} (self, \hyperlink{class_element_1_1_element_ae9c30f7574a4356686d93e4567cf61f8}{value})
+\begin{DoxyCompactList}\small\item\em Validates the \hyperlink{class_element_1_1_element}{Element}\textquotesingle{}s value when the \hyperlink{class_element_1_1_element}{Element} is created A non null value is expected this will be unnecessary after we modify the server. \end{DoxyCompactList}\item 
+def \hyperlink{class_element_1_1_element_a5e7edd71cdc182f6449cdb47fb6d396b}{get\+Class\+Name} (self)
+\item 
+def \hyperlink{class_element_1_1_element_acc377fb2d5856281eb9804b2a3275edc}{compare\+To} (self, e1)
+\item 
+def \hyperlink{class_element_1_1_element_adf032a6f79735b75e3f1071cc708f626}{equals} (self, e1)
+\item 
+def \hyperlink{class_element_1_1_element_a5fa599166de5a0053b235d012fbfc42c}{get\+Element\+Representation} (self)
+\item 
+def \hyperlink{class_element_1_1_element_a87e09915bdcd4d07efb293d54ca5b270}{get\+Link\+Representation} (self, lv, src, dest)
+\item 
+def \hyperlink{class_element_1_1_element_a52a3e2777d110a86950a6e88dfcdd0a4}{get\+Label} (self)
+\item 
+def \hyperlink{class_element_1_1_element_a21af17ef037212f8ab693ec66952e4ac}{set\+Label} (self, \hyperlink{class_element_1_1_element_a1eaadb79747dd83097612cac742976fa}{label})
+\item 
+def \hyperlink{class_element_1_1_element_ab68f114977f0cc57c9499444d2bc8799}{arrange\+Label} (self, \hyperlink{class_element_1_1_element_a1eaadb79747dd83097612cac742976fa}{label}, \hyperlink{class_element_1_1_element_a58cc88e7f79da391e25e4fa98845b8cc}{word\+Number})
+\item 
+def \hyperlink{class_element_1_1_element_a55c19f29f1c643e13e11441c4f3491e0}{get\+Value} (self)
+\item 
+def \hyperlink{class_element_1_1_element_a267a7f5770e823ca3b6e5bc88fa6dfa9}{set\+Value} (self, \hyperlink{class_element_1_1_element_ae9c30f7574a4356686d93e4567cf61f8}{value})
+\item 
+def \hyperlink{class_element_1_1_element_a2ffb262087576d15a2e93b864d4ce13a}{\+\_\+\+\_\+str\+\_\+\+\_\+} (self)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_element_1_1_element_a219a21d962bfef58ad39c9762876588f}{ids} = 0
+\item 
+\hyperlink{class_element_1_1_element_a1eaadb79747dd83097612cac742976fa}{label} = str()
+\item 
+\hyperlink{class_element_1_1_element_a2202a62a079908d52afc0b7796be2981}{identifier} = str()
+\item 
+\hyperlink{class_element_1_1_element_a7a5b8e1891bf065fa81f51a8f6b4212e}{visualizer} = Element\+Visualizer()
+\item 
+\hyperlink{class_element_1_1_element_a130630f8ecfe9255c9e0a514949be201}{lvisualizer} = Hash\+Map()
+\item 
+\hyperlink{class_element_1_1_element_ae9c30f7574a4356686d93e4567cf61f8}{value} = E()
+\item 
+int \hyperlink{class_element_1_1_element_a58cc88e7f79da391e25e4fa98845b8cc}{word\+Number} = 0
+\item 
+string \hyperlink{class_element_1_1_element_a346648cd57ba439d8b4913a645ab81ba}{I\+N\+S\+E\+R\+T\+\_\+\+S\+T\+R\+I\+NG} = \char`\"{}\textbackslash{}\textbackslash{}n\char`\"{}
+\item 
+string \hyperlink{class_element_1_1_element_ae06a0f0ca0e5499c532f2550cf1ffea6}{D\+I\+V\+I\+D\+E\+\_\+\+K\+EY} = \char`\"{}(\textbackslash{}r?\textbackslash{}n)$\vert$(\textbackslash{}n)$\vert$(\textbackslash{}f)$\vert$(\textbackslash{}r)$\vert$(\%n)\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the main superclass in B\+R\+I\+D\+G\+ES for deriving a number of objects used in building arrays, lists, trees and graph data structures. 
+
+\hyperlink{namespace_s_lelement}{S\+Lelement}, D\+Lelement, \hyperlink{namespace_circ_s_lelement}{Circ\+S\+Lelement}, \hyperlink{namespace_circ_d_lelement}{Circ\+D\+Lelement}, Tree\+Element, \hyperlink{namespace_bin_tree_element}{Bin\+Tree\+Element}, B\+S\+T\+Element, \hyperlink{namespace_circ_s_lelement}{Circ\+S\+Lelement}, \hyperlink{namespace_circ_d_lelement}{Circ\+D\+Lelement}, \hyperlink{namespace_a_v_l_tree_element}{A\+V\+L\+Tree\+Element} are all subclasses (see class hierarchy above). \hyperlink{class_element_1_1_element}{Element} contains two visualizer objects (\hyperlink{namespace_element_visualizer}{Element\+Visualizer}, \hyperlink{namespace_link_visualizer}{Link\+Visualizer}) for specifying visual attributes for nodes and links respectively. It also contains a label that that can be displayed in B\+R\+I\+D\+G\+ES visualizations.
+
+All the tutorials under
+
+\href{http://bridgesuncc.github.io/Hello_World_Tutorials/Overview.html}{\tt http\+://bridgesuncc.\+github.\+io/\+Hello\+\_\+\+World\+\_\+\+Tutorials/\+Overview.\+html}
+
+illustrate examples of using different types of \hyperlink{class_element_1_1_element}{Element} objects and how to manipulate their visual attributes.
+
+\begin{DoxyAuthor}{Author}
+Mihai Mehedint, Kalpathi Subramanian
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em generic} & $<$\+E$>$ Elements are defined with an application specific generic parameter, that is defined by the user. These can be any legal Java type and manipulated using \hyperlink{class_element_1_1_element_a267a7f5770e823ca3b6e5bc88fa6dfa9}{set\+Value()}/get\+Value() methods. For more information on Java generics, see for example, \href{https://docs.oracle.com/javase/tutorial/java/generics/types.html@verbatim}{\tt https\+://docs.\+oracle.\+com/javase/tutorial/java/generics/types.\+html@verbatim} generated source for class \hyperlink{class_element_1_1_element}{Element}  \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_element_1_1_element_a977b7da08b2c2ffb8d2f0c90e1fee284}{}\label{class_element_1_1_element_a977b7da08b2c2ffb8d2f0c90e1fee284} 
+\index{Element\+::\+Element@{Element\+::\+Element}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Element\+::\+Element@{Element\+::\+Element}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Element.\+Element.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_element_1_1_element}{Element} constructor creates an \hyperlink{namespace_element_visualizer}{Element\+Visualizer} object sets a unique identifier for the current \hyperlink{class_element_1_1_element}{Element} normally used from subclasses. 
+
+\begin{DoxyVerb}generated source for method __init__ \end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_element_1_1_element_a2ffb262087576d15a2e93b864d4ce13a}{}\label{class_element_1_1_element_a2ffb262087576d15a2e93b864d4ce13a} 
+\index{Element\+::\+Element@{Element\+::\+Element}!\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}!Element\+::\+Element@{Element\+::\+Element}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+str\+\_\+\+\_\+()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def Element.\+Element.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generated source for method toString \end{DoxyVerb}
+ \hypertarget{class_element_1_1_element_ab68f114977f0cc57c9499444d2bc8799}{}\label{class_element_1_1_element_ab68f114977f0cc57c9499444d2bc8799} 
+\index{Element\+::\+Element@{Element\+::\+Element}!arrange\+Label@{arrange\+Label}}
+\index{arrange\+Label@{arrange\+Label}!Element\+::\+Element@{Element\+::\+Element}}
+\subsubsection{\texorpdfstring{arrange\+Label()}{arrangeLabel()}}
+{\footnotesize\ttfamily def Element.\+Element.\+arrange\+Label (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{label,  }\item[{}]{word\+Number }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generated source for method arrangeLabel \end{DoxyVerb}
+ \hypertarget{class_element_1_1_element_acc377fb2d5856281eb9804b2a3275edc}{}\label{class_element_1_1_element_acc377fb2d5856281eb9804b2a3275edc} 
+\index{Element\+::\+Element@{Element\+::\+Element}!compare\+To@{compare\+To}}
+\index{compare\+To@{compare\+To}!Element\+::\+Element@{Element\+::\+Element}}
+\subsubsection{\texorpdfstring{compare\+To()}{compareTo()}}
+{\footnotesize\ttfamily def Element.\+Element.\+compare\+To (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{e1 }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generated source for method compareTo \end{DoxyVerb}
+ \hypertarget{class_element_1_1_element_adf032a6f79735b75e3f1071cc708f626}{}\label{class_element_1_1_element_adf032a6f79735b75e3f1071cc708f626} 
+\index{Element\+::\+Element@{Element\+::\+Element}!equals@{equals}}
+\index{equals@{equals}!Element\+::\+Element@{Element\+::\+Element}}
+\subsubsection{\texorpdfstring{equals()}{equals()}}
+{\footnotesize\ttfamily def Element.\+Element.\+equals (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{e1 }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generated source for method equals \end{DoxyVerb}
+ \hypertarget{class_element_1_1_element_a5e7edd71cdc182f6449cdb47fb6d396b}{}\label{class_element_1_1_element_a5e7edd71cdc182f6449cdb47fb6d396b} 
+\index{Element\+::\+Element@{Element\+::\+Element}!get\+Class\+Name@{get\+Class\+Name}}
+\index{get\+Class\+Name@{get\+Class\+Name}!Element\+::\+Element@{Element\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Class\+Name()}{getClassName()}}
+{\footnotesize\ttfamily def Element.\+Element.\+get\+Class\+Name (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generated source for method getClassName \end{DoxyVerb}
+ \hypertarget{class_element_1_1_element_ad731077bce6c6caede6bdb6609672f68}{}\label{class_element_1_1_element_ad731077bce6c6caede6bdb6609672f68} 
+\index{Element\+::\+Element@{Element\+::\+Element}!get\+Data\+Struct\+Type@{get\+Data\+Struct\+Type}}
+\index{get\+Data\+Struct\+Type@{get\+Data\+Struct\+Type}!Element\+::\+Element@{Element\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Data\+Struct\+Type()}{getDataStructType()}}
+{\footnotesize\ttfamily def Element.\+Element.\+get\+Data\+Struct\+Type (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generated source for method getDataStructType \end{DoxyVerb}
+ \hypertarget{class_element_1_1_element_a5fa599166de5a0053b235d012fbfc42c}{}\label{class_element_1_1_element_a5fa599166de5a0053b235d012fbfc42c} 
+\index{Element\+::\+Element@{Element\+::\+Element}!get\+Element\+Representation@{get\+Element\+Representation}}
+\index{get\+Element\+Representation@{get\+Element\+Representation}!Element\+::\+Element@{Element\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Element\+Representation()}{getElementRepresentation()}}
+{\footnotesize\ttfamily def Element.\+Element.\+get\+Element\+Representation (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generated source for method getElementRepresentation \end{DoxyVerb}
+ \hypertarget{class_element_1_1_element_aac5918af79bb6bd95cf429d1a219901e}{}\label{class_element_1_1_element_aac5918af79bb6bd95cf429d1a219901e} 
+\index{Element\+::\+Element@{Element\+::\+Element}!get\+Identifier@{get\+Identifier}}
+\index{get\+Identifier@{get\+Identifier}!Element\+::\+Element@{Element\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Identifier()}{getIdentifier()}}
+{\footnotesize\ttfamily def Element.\+Element.\+get\+Identifier (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+this method returns the element\textquotesingle{}s unique identifier 
+
+\begin{DoxyReturn}{Returns}
+the string identifier\begin{DoxyVerb}generated source for method getIdentifier \end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{class_element_1_1_element_a52a3e2777d110a86950a6e88dfcdd0a4}{}\label{class_element_1_1_element_a52a3e2777d110a86950a6e88dfcdd0a4} 
+\index{Element\+::\+Element@{Element\+::\+Element}!get\+Label@{get\+Label}}
+\index{get\+Label@{get\+Label}!Element\+::\+Element@{Element\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Label()}{getLabel()}}
+{\footnotesize\ttfamily def Element.\+Element.\+get\+Label (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generated source for method getLabel \end{DoxyVerb}
+ \hypertarget{class_element_1_1_element_a87e09915bdcd4d07efb293d54ca5b270}{}\label{class_element_1_1_element_a87e09915bdcd4d07efb293d54ca5b270} 
+\index{Element\+::\+Element@{Element\+::\+Element}!get\+Link\+Representation@{get\+Link\+Representation}}
+\index{get\+Link\+Representation@{get\+Link\+Representation}!Element\+::\+Element@{Element\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Link\+Representation()}{getLinkRepresentation()}}
+{\footnotesize\ttfamily def Element.\+Element.\+get\+Link\+Representation (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lv,  }\item[{}]{src,  }\item[{}]{dest }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generated source for method getLinkRepresentation \end{DoxyVerb}
+ \hypertarget{class_element_1_1_element_aad4a71d78f6c60de5bf871fd7632d720}{}\label{class_element_1_1_element_aad4a71d78f6c60de5bf871fd7632d720} 
+\index{Element\+::\+Element@{Element\+::\+Element}!get\+Link\+Visualizer@{get\+Link\+Visualizer}}
+\index{get\+Link\+Visualizer@{get\+Link\+Visualizer}!Element\+::\+Element@{Element\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Link\+Visualizer()}{getLinkVisualizer()}}
+{\footnotesize\ttfamily def Element.\+Element.\+get\+Link\+Visualizer (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{el }\end{DoxyParamCaption})}
+
+
+
+Returns the \hyperlink{class_element_1_1_element}{Element}\textquotesingle{}s link visualizer object. 
+
+The link visualizer object links this element to another element, which is specified by the argument to this method. This method is typically used to set the visual attributes of the links, such as in graphs or binary tree structures.
+
+\hyperlink{class_element_1_1_element}{Element} el -- the element terminating the link
+
+\begin{DoxyReturn}{Returns}
+the link visualizer\begin{DoxyVerb}generated source for method getLinkVisualizer \end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{class_element_1_1_element_a55c19f29f1c643e13e11441c4f3491e0}{}\label{class_element_1_1_element_a55c19f29f1c643e13e11441c4f3491e0} 
+\index{Element\+::\+Element@{Element\+::\+Element}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!Element\+::\+Element@{Element\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Value()}{getValue()}}
+{\footnotesize\ttfamily def Element.\+Element.\+get\+Value (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generated source for method getValue \end{DoxyVerb}
+ \hypertarget{class_element_1_1_element_a83844b6ce0a822dfb09b4cdd16691ac5}{}\label{class_element_1_1_element_a83844b6ce0a822dfb09b4cdd16691ac5} 
+\index{Element\+::\+Element@{Element\+::\+Element}!get\+Visualizer@{get\+Visualizer}}
+\index{get\+Visualizer@{get\+Visualizer}!Element\+::\+Element@{Element\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Visualizer()}{getVisualizer()}}
+{\footnotesize\ttfamily def Element.\+Element.\+get\+Visualizer (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Returns the \hyperlink{class_element_1_1_element}{Element}\textquotesingle{}s visualizer object. 
+
+\begin{DoxyReturn}{Returns}
+the visualizer object\begin{DoxyVerb}generated source for method getVisualizer \end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{class_element_1_1_element_a2dde72f6339b9d052df50bb4a5de2502}{}\label{class_element_1_1_element_a2dde72f6339b9d052df50bb4a5de2502} 
+\index{Element\+::\+Element@{Element\+::\+Element}!remove\+Link\+Visualizer@{remove\+Link\+Visualizer}}
+\index{remove\+Link\+Visualizer@{remove\+Link\+Visualizer}!Element\+::\+Element@{Element\+::\+Element}}
+\subsubsection{\texorpdfstring{remove\+Link\+Visualizer()}{removeLinkVisualizer()}}
+{\footnotesize\ttfamily def Element.\+Element.\+remove\+Link\+Visualizer (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{el }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generated source for method removeLinkVisualizer \end{DoxyVerb}
+ \hypertarget{class_element_1_1_element_a21af17ef037212f8ab693ec66952e4ac}{}\label{class_element_1_1_element_a21af17ef037212f8ab693ec66952e4ac} 
+\index{Element\+::\+Element@{Element\+::\+Element}!set\+Label@{set\+Label}}
+\index{set\+Label@{set\+Label}!Element\+::\+Element@{Element\+::\+Element}}
+\subsubsection{\texorpdfstring{set\+Label()}{setLabel()}}
+{\footnotesize\ttfamily def Element.\+Element.\+set\+Label (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{label }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generated source for method setLabel \end{DoxyVerb}
+ \hypertarget{class_element_1_1_element_a6aac3e4778ae009406417439c778f904}{}\label{class_element_1_1_element_a6aac3e4778ae009406417439c778f904} 
+\index{Element\+::\+Element@{Element\+::\+Element}!set\+Link\+Visualizer@{set\+Link\+Visualizer}}
+\index{set\+Link\+Visualizer@{set\+Link\+Visualizer}!Element\+::\+Element@{Element\+::\+Element}}
+\subsubsection{\texorpdfstring{set\+Link\+Visualizer()}{setLinkVisualizer()}}
+{\footnotesize\ttfamily def Element.\+Element.\+set\+Link\+Visualizer (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{el }\end{DoxyParamCaption})}
+
+
+
+Sets the link from this element to a new incoming element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em el} & the element to be linked to.\begin{DoxyVerb}generated source for method setLinkVisualizer \end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_element_1_1_element_a267a7f5770e823ca3b6e5bc88fa6dfa9}{}\label{class_element_1_1_element_a267a7f5770e823ca3b6e5bc88fa6dfa9} 
+\index{Element\+::\+Element@{Element\+::\+Element}!set\+Value@{set\+Value}}
+\index{set\+Value@{set\+Value}!Element\+::\+Element@{Element\+::\+Element}}
+\subsubsection{\texorpdfstring{set\+Value()}{setValue()}}
+{\footnotesize\ttfamily def Element.\+Element.\+set\+Value (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generated source for method setValue \end{DoxyVerb}
+ \hypertarget{class_element_1_1_element_a79f1e429c47e65341273e9971ff1ece0}{}\label{class_element_1_1_element_a79f1e429c47e65341273e9971ff1ece0} 
+\index{Element\+::\+Element@{Element\+::\+Element}!set\+Visualizer@{set\+Visualizer}}
+\index{set\+Visualizer@{set\+Visualizer}!Element\+::\+Element@{Element\+::\+Element}}
+\subsubsection{\texorpdfstring{set\+Visualizer()}{setVisualizer()}}
+{\footnotesize\ttfamily def Element.\+Element.\+set\+Visualizer (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{visualizer }\end{DoxyParamCaption})}
+
+
+
+This method sets the visualizer object for the current element object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em visualizer} & the visualizer to set\begin{DoxyVerb}generated source for method setVisualizer \end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_element_1_1_element_ae864741d8f6e980b2ecb4bed62e87e96}{}\label{class_element_1_1_element_ae864741d8f6e980b2ecb4bed62e87e96} 
+\index{Element\+::\+Element@{Element\+::\+Element}!validate\+Val@{validate\+Val}}
+\index{validate\+Val@{validate\+Val}!Element\+::\+Element@{Element\+::\+Element}}
+\subsubsection{\texorpdfstring{validate\+Val()}{validateVal()}}
+{\footnotesize\ttfamily def Element.\+Element.\+validate\+Val (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+
+
+Validates the \hyperlink{class_element_1_1_element}{Element}\textquotesingle{}s value when the \hyperlink{class_element_1_1_element}{Element} is created A non null value is expected this will be unnecessary after we modify the server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em E\+Lement} & value\begin{DoxyVerb}generated source for method validateVal \end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_element_1_1_element_ae06a0f0ca0e5499c532f2550cf1ffea6}{}\label{class_element_1_1_element_ae06a0f0ca0e5499c532f2550cf1ffea6} 
+\index{Element\+::\+Element@{Element\+::\+Element}!D\+I\+V\+I\+D\+E\+\_\+\+K\+EY@{D\+I\+V\+I\+D\+E\+\_\+\+K\+EY}}
+\index{D\+I\+V\+I\+D\+E\+\_\+\+K\+EY@{D\+I\+V\+I\+D\+E\+\_\+\+K\+EY}!Element\+::\+Element@{Element\+::\+Element}}
+\subsubsection{\texorpdfstring{D\+I\+V\+I\+D\+E\+\_\+\+K\+EY}{DIVIDE\_KEY}}
+{\footnotesize\ttfamily string Element.\+Element.\+D\+I\+V\+I\+D\+E\+\_\+\+K\+EY = \char`\"{}(\textbackslash{}r?\textbackslash{}n)$\vert$(\textbackslash{}n)$\vert$(\textbackslash{}f)$\vert$(\textbackslash{}r)$\vert$(\%n)\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_element_1_1_element_a2202a62a079908d52afc0b7796be2981}{}\label{class_element_1_1_element_a2202a62a079908d52afc0b7796be2981} 
+\index{Element\+::\+Element@{Element\+::\+Element}!identifier@{identifier}}
+\index{identifier@{identifier}!Element\+::\+Element@{Element\+::\+Element}}
+\subsubsection{\texorpdfstring{identifier}{identifier}}
+{\footnotesize\ttfamily Element.\+Element.\+identifier = str()\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_element_1_1_element_a219a21d962bfef58ad39c9762876588f}{}\label{class_element_1_1_element_a219a21d962bfef58ad39c9762876588f} 
+\index{Element\+::\+Element@{Element\+::\+Element}!ids@{ids}}
+\index{ids@{ids}!Element\+::\+Element@{Element\+::\+Element}}
+\subsubsection{\texorpdfstring{ids}{ids}}
+{\footnotesize\ttfamily int Element.\+Element.\+ids = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_element_1_1_element_a346648cd57ba439d8b4913a645ab81ba}{}\label{class_element_1_1_element_a346648cd57ba439d8b4913a645ab81ba} 
+\index{Element\+::\+Element@{Element\+::\+Element}!I\+N\+S\+E\+R\+T\+\_\+\+S\+T\+R\+I\+NG@{I\+N\+S\+E\+R\+T\+\_\+\+S\+T\+R\+I\+NG}}
+\index{I\+N\+S\+E\+R\+T\+\_\+\+S\+T\+R\+I\+NG@{I\+N\+S\+E\+R\+T\+\_\+\+S\+T\+R\+I\+NG}!Element\+::\+Element@{Element\+::\+Element}}
+\subsubsection{\texorpdfstring{I\+N\+S\+E\+R\+T\+\_\+\+S\+T\+R\+I\+NG}{INSERT\_STRING}}
+{\footnotesize\ttfamily string Element.\+Element.\+I\+N\+S\+E\+R\+T\+\_\+\+S\+T\+R\+I\+NG = \char`\"{}\textbackslash{}\textbackslash{}n\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_element_1_1_element_a1eaadb79747dd83097612cac742976fa}{}\label{class_element_1_1_element_a1eaadb79747dd83097612cac742976fa} 
+\index{Element\+::\+Element@{Element\+::\+Element}!label@{label}}
+\index{label@{label}!Element\+::\+Element@{Element\+::\+Element}}
+\subsubsection{\texorpdfstring{label}{label}}
+{\footnotesize\ttfamily Element.\+Element.\+label = str()\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_element_1_1_element_a130630f8ecfe9255c9e0a514949be201}{}\label{class_element_1_1_element_a130630f8ecfe9255c9e0a514949be201} 
+\index{Element\+::\+Element@{Element\+::\+Element}!lvisualizer@{lvisualizer}}
+\index{lvisualizer@{lvisualizer}!Element\+::\+Element@{Element\+::\+Element}}
+\subsubsection{\texorpdfstring{lvisualizer}{lvisualizer}}
+{\footnotesize\ttfamily Element.\+Element.\+lvisualizer = Hash\+Map()\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_element_1_1_element_ae9c30f7574a4356686d93e4567cf61f8}{}\label{class_element_1_1_element_ae9c30f7574a4356686d93e4567cf61f8} 
+\index{Element\+::\+Element@{Element\+::\+Element}!value@{value}}
+\index{value@{value}!Element\+::\+Element@{Element\+::\+Element}}
+\subsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily Element.\+Element.\+value = E()\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_element_1_1_element_a7a5b8e1891bf065fa81f51a8f6b4212e}{}\label{class_element_1_1_element_a7a5b8e1891bf065fa81f51a8f6b4212e} 
+\index{Element\+::\+Element@{Element\+::\+Element}!visualizer@{visualizer}}
+\index{visualizer@{visualizer}!Element\+::\+Element@{Element\+::\+Element}}
+\subsubsection{\texorpdfstring{visualizer}{visualizer}}
+{\footnotesize\ttfamily Element.\+Element.\+visualizer = Element\+Visualizer()\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_element_1_1_element_a58cc88e7f79da391e25e4fa98845b8cc}{}\label{class_element_1_1_element_a58cc88e7f79da391e25e4fa98845b8cc} 
+\index{Element\+::\+Element@{Element\+::\+Element}!word\+Number@{word\+Number}}
+\index{word\+Number@{word\+Number}!Element\+::\+Element@{Element\+::\+Element}}
+\subsubsection{\texorpdfstring{word\+Number}{wordNumber}}
+{\footnotesize\ttfamily int Element.\+Element.\+word\+Number = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/python/src/\hyperlink{_element_8py}{Element.\+py}\end{DoxyCompactItemize}

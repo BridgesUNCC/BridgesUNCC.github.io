@@ -1,0 +1,140 @@
+\hypertarget{class_circ_d_lelement_1_1_circ_d_lelement}{}\section{Circ\+D\+Lelement.\+Circ\+D\+Lelement Class Reference}
+\label{class_circ_d_lelement_1_1_circ_d_lelement}\index{Circ\+D\+Lelement.\+Circ\+D\+Lelement@{Circ\+D\+Lelement.\+Circ\+D\+Lelement}}
+
+
+This class can be used to instantiate Circular Doubly Linked List Elements.  
+
+
+Inheritance diagram for Circ\+D\+Lelement.\+Circ\+D\+Lelement\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_circ_d_lelement_1_1_circ_d_lelement}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{class_circ_d_lelement_1_1_circ_d_lelement_a02986166d6a1a8ab414cbac1e90c26e4}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em Constructs an empty \hyperlink{class_circ_d_lelement_1_1_circ_d_lelement}{Circ\+D\+Lelement} with next and prev pointers set to itself. \end{DoxyCompactList}\item 
+def \hyperlink{class_circ_d_lelement_1_1_circ_d_lelement_aa15b8fd836d6fb25b69f4be07b0e8247}{get\+Data\+Struct\+Type} (self)
+\begin{DoxyCompactList}\small\item\em This method gets the data structure type. \end{DoxyCompactList}\item 
+def \hyperlink{class_circ_d_lelement_1_1_circ_d_lelement_a17f5b17575fc29e7671fc7d543460cc9}{get\+Next} (self)
+\begin{DoxyCompactList}\small\item\em This method returns the pointer to the next D\+Lelement. \end{DoxyCompactList}\item 
+def \hyperlink{class_circ_d_lelement_1_1_circ_d_lelement_a834d1744b8e043bee01898cadb33ec7f}{get\+Prev} (self)
+\begin{DoxyCompactList}\small\item\em This method returns the pointer to the previous D\+Lelement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_circ_d_lelement_1_1_circ_d_lelement_a58f067bcf3daa5c7a0e944bc91961af9}{next}
+\item 
+\hyperlink{class_circ_d_lelement_1_1_circ_d_lelement_a71d1419a7eb3687a3351e5ea0bcd55b4}{prev}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class can be used to instantiate Circular Doubly Linked List Elements. 
+
+Structurally they are the same as doubly linked elements except that each node constructed with the next and the previous pointers points to itself.
+
+User\textquotesingle{}s implementation of the circularly linked list needs to ensure that the last node\textquotesingle{}s next pointer points to the first node and the first node\textquotesingle{}s previous pointer points to the last node, as the visualization generation is dependent on this.
+
+Elements have labels (string) that are displayed on the visualization. Elements take an generic object E as a user defined parameter, which can be any native type or object.
+
+Elements contain a visualizer (\hyperlink{namespace_element_visualizer}{Element\+Visualizer}) object for setting visual attributes (color, shape, opacity, size), necessary for displaying them in a web browser.
+
+Elements also have a \hyperlink{namespace_link_visualizer}{Link\+Visualizer} object that is used when they are linked to another element, appropriate for setting link attributes, between the element and its previous or next nodes.
+
+\begin{DoxyAuthor}{Author}
+Kalpathi Subramanian
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7/17/16, 1/16/17
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em $<$\+E$>$} & the generic parameter object that contains application specific data, defined by the user when instantiating this object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Example Tutorial at ~\newline
+ \href{http://bridgesuncc.github.io/Hello_World_Tutorials/CDLL.html@verbatim}{\tt http\+://bridgesuncc.\+github.\+io/\+Hello\+\_\+\+World\+\_\+\+Tutorials/\+C\+D\+L\+L.\+html@verbatim} generated source for class \hyperlink{class_circ_d_lelement_1_1_circ_d_lelement}{Circ\+D\+Lelement}  
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_circ_d_lelement_1_1_circ_d_lelement_a02986166d6a1a8ab414cbac1e90c26e4}{}\label{class_circ_d_lelement_1_1_circ_d_lelement_a02986166d6a1a8ab414cbac1e90c26e4} 
+\index{Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Circ\+D\+Lelement.\+Circ\+D\+Lelement.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Constructs an empty \hyperlink{class_circ_d_lelement_1_1_circ_d_lelement}{Circ\+D\+Lelement} with next and prev pointers set to itself. 
+
+\begin{DoxyVerb}generated source for method __init__ \end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_circ_d_lelement_1_1_circ_d_lelement_aa15b8fd836d6fb25b69f4be07b0e8247}{}\label{class_circ_d_lelement_1_1_circ_d_lelement_aa15b8fd836d6fb25b69f4be07b0e8247} 
+\index{Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}!get\+Data\+Struct\+Type@{get\+Data\+Struct\+Type}}
+\index{get\+Data\+Struct\+Type@{get\+Data\+Struct\+Type}!Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}}
+\subsubsection{\texorpdfstring{get\+Data\+Struct\+Type()}{getDataStructType()}}
+{\footnotesize\ttfamily def Circ\+D\+Lelement.\+Circ\+D\+Lelement.\+get\+Data\+Struct\+Type (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This method gets the data structure type. 
+
+\begin{DoxyReturn}{Returns}
+The date structure type as a string\begin{DoxyVerb}generated source for method getDataStructType \end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{class_circ_d_lelement_1_1_circ_d_lelement_a17f5b17575fc29e7671fc7d543460cc9}{}\label{class_circ_d_lelement_1_1_circ_d_lelement_a17f5b17575fc29e7671fc7d543460cc9} 
+\index{Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}!get\+Next@{get\+Next}}
+\index{get\+Next@{get\+Next}!Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}}
+\subsubsection{\texorpdfstring{get\+Next()}{getNext()}}
+{\footnotesize\ttfamily def Circ\+D\+Lelement.\+Circ\+D\+Lelement.\+get\+Next (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This method returns the pointer to the next D\+Lelement. 
+
+\begin{DoxyReturn}{Returns}
+the D\+Lelement assigned to the next pointer\begin{DoxyVerb}generated source for method getNext \end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{class_circ_d_lelement_1_1_circ_d_lelement_a834d1744b8e043bee01898cadb33ec7f}{}\label{class_circ_d_lelement_1_1_circ_d_lelement_a834d1744b8e043bee01898cadb33ec7f} 
+\index{Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}!get\+Prev@{get\+Prev}}
+\index{get\+Prev@{get\+Prev}!Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}}
+\subsubsection{\texorpdfstring{get\+Prev()}{getPrev()}}
+{\footnotesize\ttfamily def Circ\+D\+Lelement.\+Circ\+D\+Lelement.\+get\+Prev (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This method returns the pointer to the previous D\+Lelement. 
+
+\begin{DoxyReturn}{Returns}
+the D\+Lelement assigned to the prev pointer\begin{DoxyVerb}generated source for method getPrev \end{DoxyVerb}
+ 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_circ_d_lelement_1_1_circ_d_lelement_a58f067bcf3daa5c7a0e944bc91961af9}{}\label{class_circ_d_lelement_1_1_circ_d_lelement_a58f067bcf3daa5c7a0e944bc91961af9} 
+\index{Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}!next@{next}}
+\index{next@{next}!Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}}
+\subsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily Circ\+D\+Lelement.\+Circ\+D\+Lelement.\+next}
+
+\hypertarget{class_circ_d_lelement_1_1_circ_d_lelement_a71d1419a7eb3687a3351e5ea0bcd55b4}{}\label{class_circ_d_lelement_1_1_circ_d_lelement_a71d1419a7eb3687a3351e5ea0bcd55b4} 
+\index{Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}!prev@{prev}}
+\index{prev@{prev}!Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}}
+\subsubsection{\texorpdfstring{prev}{prev}}
+{\footnotesize\ttfamily Circ\+D\+Lelement.\+Circ\+D\+Lelement.\+prev}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/python/src/\hyperlink{_circ_d_lelement_8py}{Circ\+D\+Lelement.\+py}\end{DoxyCompactItemize}

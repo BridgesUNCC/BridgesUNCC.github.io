@@ -1,0 +1,176 @@
+\hypertarget{class_s_lelement_1_1_s_lelement}{}\section{S\+Lelement.\+S\+Lelement Class Reference}
+\label{class_s_lelement_1_1_s_lelement}\index{S\+Lelement.\+S\+Lelement@{S\+Lelement.\+S\+Lelement}}
+
+
+package\+: bridges.\+base  
+
+
+Inheritance diagram for S\+Lelement.\+S\+Lelement\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_s_lelement_1_1_s_lelement}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{class_s_lelement_1_1_s_lelement_ae26eaba46cd18873ff98829d5219e326}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em This constructor creates an \hyperlink{class_s_lelement_1_1_s_lelement}{S\+Lelement} object and sets the next pointer to null. \end{DoxyCompactList}\item 
+def \hyperlink{class_s_lelement_1_1_s_lelement_a690bf89d74bf33c3f1e612fb755bc4b5}{get\+Data\+Struct\+Type} (self)
+\begin{DoxyCompactList}\small\item\em This method gets the data structure type. \end{DoxyCompactList}\item 
+def \hyperlink{class_s_lelement_1_1_s_lelement_a7fccca213f1f7c743ee91b296d47d748}{get\+Next} (self)
+\begin{DoxyCompactList}\small\item\em Retrieves the element following this element. \end{DoxyCompactList}\item 
+def \hyperlink{class_s_lelement_1_1_s_lelement_a7afcfe543e4e652c9f28a3d97c8b04bf}{set\+Next} (self, \hyperlink{class_s_lelement_1_1_s_lelement_a2d83afedba3b70183c90c3454ac99a29}{next})
+\begin{DoxyCompactList}\small\item\em Sets the element to point to the next \hyperlink{class_s_lelement_1_1_s_lelement}{S\+Lelement}. \end{DoxyCompactList}\item 
+def \hyperlink{class_s_lelement_1_1_s_lelement_ac33402fd5847218346937547e451f52d}{\+\_\+\+\_\+str\+\_\+\+\_\+} (self)
+\item 
+def \hyperlink{class_s_lelement_1_1_s_lelement_a16059f50cdc8f93201984418042b70b5}{get\+Data\+Structure\+Representation} (self)
+\begin{DoxyCompactList}\small\item\em Get the J\+S\+ON representation of the the data structure. \end{DoxyCompactList}\item 
+def \hyperlink{class_s_lelement_1_1_s_lelement_ac9d7ae06a680c795138ee3eff910b25f}{get\+List\+Elements} (self, nodes)
+\begin{DoxyCompactList}\small\item\em Get the elements of the list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_s_lelement_1_1_s_lelement_a2d83afedba3b70183c90c3454ac99a29}{next} = None
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+package\+: bridges.\+base 
+
+This class can be used to instantiate Singly Linked Elements. This class extends \hyperlink{namespace_element}{Element} and takes a generic parameter $<$\+E$>$ representing application specific data. This element forms the basic building block for singly linked lists. Singly linked elements have a field pointing to the next element along the list.
+
+\begin{DoxyVerb}Elements contain a visualizer (ElementVisualizer) object for setting visual
+attributes (color, shape, opacity, size), necessary for displaying them in a
+web browser.
+
+Elements also have a LinkVisualizer object, that is used when they are linked to
+another element, appropriate for setting link attributes, for instance, between
+the current element and its next element.
+\end{DoxyVerb}
+
+
+\begin{DoxyAuthor}{Author}
+Mihai Mehedint, Kalpathi Subramanian
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+6/22/16, 1/7/17, 5/17/17
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em $<$\+E$>$} & The generic parameter object that is part of this element, representing application specific data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Example Tutorial at ~\newline
+ \href{http://bridgesuncc.github.io/Hello_World_Tutorials/SLL.html@verbatim}{\tt http\+://bridgesuncc.\+github.\+io/\+Hello\+\_\+\+World\+\_\+\+Tutorials/\+S\+L\+L.\+html@verbatim} generated source for class \hyperlink{class_s_lelement_1_1_s_lelement}{S\+Lelement}  
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_s_lelement_1_1_s_lelement_ae26eaba46cd18873ff98829d5219e326}{}\label{class_s_lelement_1_1_s_lelement_ae26eaba46cd18873ff98829d5219e326} 
+\index{S\+Lelement\+::\+S\+Lelement@{S\+Lelement\+::\+S\+Lelement}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!S\+Lelement\+::\+S\+Lelement@{S\+Lelement\+::\+S\+Lelement}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def S\+Lelement.\+S\+Lelement.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This constructor creates an \hyperlink{class_s_lelement_1_1_s_lelement}{S\+Lelement} object and sets the next pointer to null. 
+
+\begin{DoxyVerb}generated source for method __init__ \end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_s_lelement_1_1_s_lelement_ac33402fd5847218346937547e451f52d}{}\label{class_s_lelement_1_1_s_lelement_ac33402fd5847218346937547e451f52d} 
+\index{S\+Lelement\+::\+S\+Lelement@{S\+Lelement\+::\+S\+Lelement}!\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}!S\+Lelement\+::\+S\+Lelement@{S\+Lelement\+::\+S\+Lelement}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+str\+\_\+\+\_\+()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def S\+Lelement.\+S\+Lelement.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generated source for method toString \end{DoxyVerb}
+ \hypertarget{class_s_lelement_1_1_s_lelement_a690bf89d74bf33c3f1e612fb755bc4b5}{}\label{class_s_lelement_1_1_s_lelement_a690bf89d74bf33c3f1e612fb755bc4b5} 
+\index{S\+Lelement\+::\+S\+Lelement@{S\+Lelement\+::\+S\+Lelement}!get\+Data\+Struct\+Type@{get\+Data\+Struct\+Type}}
+\index{get\+Data\+Struct\+Type@{get\+Data\+Struct\+Type}!S\+Lelement\+::\+S\+Lelement@{S\+Lelement\+::\+S\+Lelement}}
+\subsubsection{\texorpdfstring{get\+Data\+Struct\+Type()}{getDataStructType()}}
+{\footnotesize\ttfamily def S\+Lelement.\+S\+Lelement.\+get\+Data\+Struct\+Type (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This method gets the data structure type. 
+
+\begin{DoxyReturn}{Returns}
+The date structure type as a string\begin{DoxyVerb}generated source for method getDataStructType \end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{class_s_lelement_1_1_s_lelement_a16059f50cdc8f93201984418042b70b5}{}\label{class_s_lelement_1_1_s_lelement_a16059f50cdc8f93201984418042b70b5} 
+\index{S\+Lelement\+::\+S\+Lelement@{S\+Lelement\+::\+S\+Lelement}!get\+Data\+Structure\+Representation@{get\+Data\+Structure\+Representation}}
+\index{get\+Data\+Structure\+Representation@{get\+Data\+Structure\+Representation}!S\+Lelement\+::\+S\+Lelement@{S\+Lelement\+::\+S\+Lelement}}
+\subsubsection{\texorpdfstring{get\+Data\+Structure\+Representation()}{getDataStructureRepresentation()}}
+{\footnotesize\ttfamily def S\+Lelement.\+S\+Lelement.\+get\+Data\+Structure\+Representation (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the J\+S\+ON representation of the the data structure. 
+
+\begin{DoxyVerb}generated source for method getDataStructureRepresentation \end{DoxyVerb}
+ \hypertarget{class_s_lelement_1_1_s_lelement_ac9d7ae06a680c795138ee3eff910b25f}{}\label{class_s_lelement_1_1_s_lelement_ac9d7ae06a680c795138ee3eff910b25f} 
+\index{S\+Lelement\+::\+S\+Lelement@{S\+Lelement\+::\+S\+Lelement}!get\+List\+Elements@{get\+List\+Elements}}
+\index{get\+List\+Elements@{get\+List\+Elements}!S\+Lelement\+::\+S\+Lelement@{S\+Lelement\+::\+S\+Lelement}}
+\subsubsection{\texorpdfstring{get\+List\+Elements()}{getListElements()}}
+{\footnotesize\ttfamily def S\+Lelement.\+S\+Lelement.\+get\+List\+Elements (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{nodes }\end{DoxyParamCaption})}
+
+
+
+Get the elements of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nodes} & a vector of the ndoes in the list\begin{DoxyVerb}generated source for method getListElements \end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_s_lelement_1_1_s_lelement_a7fccca213f1f7c743ee91b296d47d748}{}\label{class_s_lelement_1_1_s_lelement_a7fccca213f1f7c743ee91b296d47d748} 
+\index{S\+Lelement\+::\+S\+Lelement@{S\+Lelement\+::\+S\+Lelement}!get\+Next@{get\+Next}}
+\index{get\+Next@{get\+Next}!S\+Lelement\+::\+S\+Lelement@{S\+Lelement\+::\+S\+Lelement}}
+\subsubsection{\texorpdfstring{get\+Next()}{getNext()}}
+{\footnotesize\ttfamily def S\+Lelement.\+S\+Lelement.\+get\+Next (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Retrieves the element following this element. 
+
+\begin{DoxyReturn}{Returns}
+S\+Lelement$<$\+E$>$ assigned to next\begin{DoxyVerb}generated source for method getNext \end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{class_s_lelement_1_1_s_lelement_a7afcfe543e4e652c9f28a3d97c8b04bf}{}\label{class_s_lelement_1_1_s_lelement_a7afcfe543e4e652c9f28a3d97c8b04bf} 
+\index{S\+Lelement\+::\+S\+Lelement@{S\+Lelement\+::\+S\+Lelement}!set\+Next@{set\+Next}}
+\index{set\+Next@{set\+Next}!S\+Lelement\+::\+S\+Lelement@{S\+Lelement\+::\+S\+Lelement}}
+\subsubsection{\texorpdfstring{set\+Next()}{setNext()}}
+{\footnotesize\ttfamily def S\+Lelement.\+S\+Lelement.\+set\+Next (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{next }\end{DoxyParamCaption})}
+
+
+
+Sets the element to point to the next \hyperlink{class_s_lelement_1_1_s_lelement}{S\+Lelement}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em next} & S\+Lelement$<$\+E$>$ that should be assigned to the next pointer\begin{DoxyVerb}generated source for method setNext \end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_s_lelement_1_1_s_lelement_a2d83afedba3b70183c90c3454ac99a29}{}\label{class_s_lelement_1_1_s_lelement_a2d83afedba3b70183c90c3454ac99a29} 
+\index{S\+Lelement\+::\+S\+Lelement@{S\+Lelement\+::\+S\+Lelement}!next@{next}}
+\index{next@{next}!S\+Lelement\+::\+S\+Lelement@{S\+Lelement\+::\+S\+Lelement}}
+\subsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily S\+Lelement.\+S\+Lelement.\+next = None\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/python/src/\hyperlink{_s_lelement_8py}{S\+Lelement.\+py}\end{DoxyCompactItemize}

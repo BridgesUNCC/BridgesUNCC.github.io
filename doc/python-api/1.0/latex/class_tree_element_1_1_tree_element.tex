@@ -1,0 +1,201 @@
+\hypertarget{class_tree_element_1_1_tree_element}{}\section{Tree\+Element.\+Tree\+Element Class Reference}
+\label{class_tree_element_1_1_tree_element}\index{Tree\+Element.\+Tree\+Element@{Tree\+Element.\+Tree\+Element}}
+
+
+package\+: bridges.\+base  
+
+
+Inheritance diagram for Tree\+Element.\+Tree\+Element\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tree_element_1_1_tree_element}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{class_tree_element_1_1_tree_element_ab58d73eaa251245c300b2ef98f6df82e}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em Constructs an empty \hyperlink{class_tree_element_1_1_tree_element}{Tree\+Element} with first two children set to null. \end{DoxyCompactList}\item 
+def \hyperlink{class_tree_element_1_1_tree_element_a8df62ace8d1ba7131fe348a87bfd1d28}{get\+Data\+Struct\+Type} (self)
+\begin{DoxyCompactList}\small\item\em This method gets the data structure type. \end{DoxyCompactList}\item 
+def \hyperlink{class_tree_element_1_1_tree_element_ae5e92bcded51f4931c2f5c47d44ff26c}{add\+Child} (self, child)
+\begin{DoxyCompactList}\small\item\em Adds a child to the node. \end{DoxyCompactList}\item 
+def \hyperlink{class_tree_element_1_1_tree_element_a927788740a1a6ada175c22cf11d20e6b}{get\+Number\+Of\+Children} (self)
+\begin{DoxyCompactList}\small\item\em Returns the number of children at this node. \end{DoxyCompactList}\item 
+def \hyperlink{class_tree_element_1_1_tree_element_a76f31a2d5d1481c1c314024fbcd73ea0}{set\+Child} (self, index, child)
+\begin{DoxyCompactList}\small\item\em adds a child to the node -\/ will be added at the next open position \end{DoxyCompactList}\item 
+def \hyperlink{class_tree_element_1_1_tree_element_a5e1fc58ee2948c44f827969d3a817a38}{get\+Child} (self, index)
+\begin{DoxyCompactList}\small\item\em gets a child at a particular index \end{DoxyCompactList}\item 
+def \hyperlink{class_tree_element_1_1_tree_element_a2353e72eb93c7f9d3670f3d790fbb78d}{get\+Data\+Structure\+Representation} (self)
+\begin{DoxyCompactList}\small\item\em Get hierarchical J\+S\+ON of the tree representation. \end{DoxyCompactList}\item 
+def \hyperlink{class_tree_element_1_1_tree_element_a748905d6bd1a29c0e1de3609781afa7c}{pre\+Order} (self, root)
+\begin{DoxyCompactList}\small\item\em Use a preorder traversal to directly extract a hierarchical J\+S\+ON representation of the tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tree_element_1_1_tree_element_aebd379cad696c2537f6a055f087b906a}{children} = Vector()
+\begin{DoxyCompactList}\small\item\em holds all children of the node \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+package\+: bridges.\+base 
+
+This class extends \hyperlink{namespace_element}{Element} to represent general trees with arbitrary number of children.
+
+\hyperlink{class_tree_element_1_1_tree_element}{Tree\+Element} nodes can have an arbitrary number of child nodes(held in in a vector in the order in which they were added). The visualization of trees assumes that the children are drawn in order from left to right.
+
+Tree Elements have labels (string) that are displayed on the visualization. Elements take an generic object E as a user defined parameter, which can be any native type or object.
+
+Elements contain a visualizer (\hyperlink{namespace_element_visualizer}{Element\+Visualizer}) object for setting visual attributes (color, shape, opacity, size), necessary for displaying them in a web browser.
+
+Elements also have a \hyperlink{namespace_link_visualizer}{Link\+Visualizer} object that is used when they are linked to another element, appropriate for setting link attributes, between parent and child nodes.
+
+\begin{DoxyAuthor}{Author}
+Matthew Mc\+Quaigue
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+12/16/17
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em $<$\+E$>$} & The generic parameter object that is part of this element, representing application specific data. \begin{DoxyVerb}generated source for class TreeElement \end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_tree_element_1_1_tree_element_ab58d73eaa251245c300b2ef98f6df82e}{}\label{class_tree_element_1_1_tree_element_ab58d73eaa251245c300b2ef98f6df82e} 
+\index{Tree\+Element\+::\+Tree\+Element@{Tree\+Element\+::\+Tree\+Element}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Tree\+Element\+::\+Tree\+Element@{Tree\+Element\+::\+Tree\+Element}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Tree\+Element.\+Tree\+Element.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Constructs an empty \hyperlink{class_tree_element_1_1_tree_element}{Tree\+Element} with first two children set to null. 
+
+\begin{DoxyVerb}generated source for method __init__ \end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_tree_element_1_1_tree_element_ae5e92bcded51f4931c2f5c47d44ff26c}{}\label{class_tree_element_1_1_tree_element_ae5e92bcded51f4931c2f5c47d44ff26c} 
+\index{Tree\+Element\+::\+Tree\+Element@{Tree\+Element\+::\+Tree\+Element}!add\+Child@{add\+Child}}
+\index{add\+Child@{add\+Child}!Tree\+Element\+::\+Tree\+Element@{Tree\+Element\+::\+Tree\+Element}}
+\subsubsection{\texorpdfstring{add\+Child()}{addChild()}}
+{\footnotesize\ttfamily def Tree\+Element.\+Tree\+Element.\+add\+Child (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{child }\end{DoxyParamCaption})}
+
+
+
+Adds a child to the node. 
+
+\begin{DoxyVerb}generated source for method addChild \end{DoxyVerb}
+ \hypertarget{class_tree_element_1_1_tree_element_a5e1fc58ee2948c44f827969d3a817a38}{}\label{class_tree_element_1_1_tree_element_a5e1fc58ee2948c44f827969d3a817a38} 
+\index{Tree\+Element\+::\+Tree\+Element@{Tree\+Element\+::\+Tree\+Element}!get\+Child@{get\+Child}}
+\index{get\+Child@{get\+Child}!Tree\+Element\+::\+Tree\+Element@{Tree\+Element\+::\+Tree\+Element}}
+\subsubsection{\texorpdfstring{get\+Child()}{getChild()}}
+{\footnotesize\ttfamily def Tree\+Element.\+Tree\+Element.\+get\+Child (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{index }\end{DoxyParamCaption})}
+
+
+
+gets a child at a particular index 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & into the list of children\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+child to be returned\begin{DoxyVerb}generated source for method getChild \end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{class_tree_element_1_1_tree_element_a8df62ace8d1ba7131fe348a87bfd1d28}{}\label{class_tree_element_1_1_tree_element_a8df62ace8d1ba7131fe348a87bfd1d28} 
+\index{Tree\+Element\+::\+Tree\+Element@{Tree\+Element\+::\+Tree\+Element}!get\+Data\+Struct\+Type@{get\+Data\+Struct\+Type}}
+\index{get\+Data\+Struct\+Type@{get\+Data\+Struct\+Type}!Tree\+Element\+::\+Tree\+Element@{Tree\+Element\+::\+Tree\+Element}}
+\subsubsection{\texorpdfstring{get\+Data\+Struct\+Type()}{getDataStructType()}}
+{\footnotesize\ttfamily def Tree\+Element.\+Tree\+Element.\+get\+Data\+Struct\+Type (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This method gets the data structure type. 
+
+\begin{DoxyReturn}{Returns}
+The date structure type as a string\begin{DoxyVerb}generated source for method getDataStructType \end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{class_tree_element_1_1_tree_element_a2353e72eb93c7f9d3670f3d790fbb78d}{}\label{class_tree_element_1_1_tree_element_a2353e72eb93c7f9d3670f3d790fbb78d} 
+\index{Tree\+Element\+::\+Tree\+Element@{Tree\+Element\+::\+Tree\+Element}!get\+Data\+Structure\+Representation@{get\+Data\+Structure\+Representation}}
+\index{get\+Data\+Structure\+Representation@{get\+Data\+Structure\+Representation}!Tree\+Element\+::\+Tree\+Element@{Tree\+Element\+::\+Tree\+Element}}
+\subsubsection{\texorpdfstring{get\+Data\+Structure\+Representation()}{getDataStructureRepresentation()}}
+{\footnotesize\ttfamily def Tree\+Element.\+Tree\+Element.\+get\+Data\+Structure\+Representation (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get hierarchical J\+S\+ON of the tree representation. 
+
+\begin{DoxyReturn}{Returns}
+the J\+S\+ON string\begin{DoxyVerb}generated source for method getDataStructureRepresentation \end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{class_tree_element_1_1_tree_element_a927788740a1a6ada175c22cf11d20e6b}{}\label{class_tree_element_1_1_tree_element_a927788740a1a6ada175c22cf11d20e6b} 
+\index{Tree\+Element\+::\+Tree\+Element@{Tree\+Element\+::\+Tree\+Element}!get\+Number\+Of\+Children@{get\+Number\+Of\+Children}}
+\index{get\+Number\+Of\+Children@{get\+Number\+Of\+Children}!Tree\+Element\+::\+Tree\+Element@{Tree\+Element\+::\+Tree\+Element}}
+\subsubsection{\texorpdfstring{get\+Number\+Of\+Children()}{getNumberOfChildren()}}
+{\footnotesize\ttfamily def Tree\+Element.\+Tree\+Element.\+get\+Number\+Of\+Children (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Returns the number of children at this node. 
+
+\begin{DoxyReturn}{Returns}
+number of children \begin{DoxyVerb}generated source for method getNumberOfChildren \end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{class_tree_element_1_1_tree_element_a748905d6bd1a29c0e1de3609781afa7c}{}\label{class_tree_element_1_1_tree_element_a748905d6bd1a29c0e1de3609781afa7c} 
+\index{Tree\+Element\+::\+Tree\+Element@{Tree\+Element\+::\+Tree\+Element}!pre\+Order@{pre\+Order}}
+\index{pre\+Order@{pre\+Order}!Tree\+Element\+::\+Tree\+Element@{Tree\+Element\+::\+Tree\+Element}}
+\subsubsection{\texorpdfstring{pre\+Order()}{preOrder()}}
+{\footnotesize\ttfamily def Tree\+Element.\+Tree\+Element.\+pre\+Order (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{root }\end{DoxyParamCaption})}
+
+
+
+Use a preorder traversal to directly extract a hierarchical J\+S\+ON representation of the tree. 
+
+\begin{DoxyVerb}generated source for method preOrder \end{DoxyVerb}
+ \hypertarget{class_tree_element_1_1_tree_element_a76f31a2d5d1481c1c314024fbcd73ea0}{}\label{class_tree_element_1_1_tree_element_a76f31a2d5d1481c1c314024fbcd73ea0} 
+\index{Tree\+Element\+::\+Tree\+Element@{Tree\+Element\+::\+Tree\+Element}!set\+Child@{set\+Child}}
+\index{set\+Child@{set\+Child}!Tree\+Element\+::\+Tree\+Element@{Tree\+Element\+::\+Tree\+Element}}
+\subsubsection{\texorpdfstring{set\+Child()}{setChild()}}
+{\footnotesize\ttfamily def Tree\+Element.\+Tree\+Element.\+set\+Child (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{index,  }\item[{}]{child }\end{DoxyParamCaption})}
+
+
+
+adds a child to the node -\/ will be added at the next open position 
+
+
+\begin{DoxyParams}{Parameters}
+{\em child} & to be added\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none \begin{DoxyVerb}generated source for method setChild \end{DoxyVerb}
+ 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_tree_element_1_1_tree_element_aebd379cad696c2537f6a055f087b906a}{}\label{class_tree_element_1_1_tree_element_aebd379cad696c2537f6a055f087b906a} 
+\index{Tree\+Element\+::\+Tree\+Element@{Tree\+Element\+::\+Tree\+Element}!children@{children}}
+\index{children@{children}!Tree\+Element\+::\+Tree\+Element@{Tree\+Element\+::\+Tree\+Element}}
+\subsubsection{\texorpdfstring{children}{children}}
+{\footnotesize\ttfamily Tree\+Element.\+Tree\+Element.\+children = Vector()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+holds all children of the node 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/python/src/\hyperlink{_tree_element_8py}{Tree\+Element.\+py}\end{DoxyCompactItemize}

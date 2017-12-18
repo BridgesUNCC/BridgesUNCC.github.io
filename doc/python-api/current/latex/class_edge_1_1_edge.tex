@@ -1,0 +1,221 @@
+\hypertarget{class_edge_1_1_edge}{}\section{Edge.\+Edge Class Reference}
+\label{class_edge_1_1_edge}\index{Edge.\+Edge@{Edge.\+Edge}}
+
+
+This class is used to represent the edges in a graph and will appear as links in the B\+R\+I\+D\+G\+ES graph visualization.  
+
+
+Inheritance diagram for Edge.\+Edge\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_edge_1_1_edge}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{class_edge_1_1_edge_a34341733ffb907488ec5b7498f668cb0}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em Constructors. \end{DoxyCompactList}\item 
+def \hyperlink{class_edge_1_1_edge_a4989022829dad911692cbfa1a32809b0}{set\+Weight} (self, wt)
+\begin{DoxyCompactList}\small\item\em Set edge weight to \char`\"{}wt\char`\"{}. \end{DoxyCompactList}\item 
+def \hyperlink{class_edge_1_1_edge_ab0a0b2adc8d1662581d56557a3fc0df3}{get\+Weight} (self)
+\begin{DoxyCompactList}\small\item\em Get edge weight. \end{DoxyCompactList}\item 
+def \hyperlink{class_edge_1_1_edge_acc0e90e6ab08122159f5130768e8cb6b}{set\+Vertex} (self, v)
+\begin{DoxyCompactList}\small\item\em Set terminating \hyperlink{namespace_element}{Element} of the edge. \end{DoxyCompactList}\item 
+def \hyperlink{class_edge_1_1_edge_ab5783c6a39d90dbd42653a9d07682929}{get\+Vertex} (self)
+\begin{DoxyCompactList}\small\item\em Get identifer of the terminating \hyperlink{namespace_element}{Element} of edge. \end{DoxyCompactList}\item 
+def \hyperlink{class_edge_1_1_edge_afe129e75ba6c6cb076ec6780e06e31be}{set\+Edge} (self, wt, v)
+\begin{DoxyCompactList}\small\item\em Set edge to weight of \char`\"{}wt\char`\"{} and terminating Elememt of \char`\"{}v\char`\"{}. \end{DoxyCompactList}\item 
+def \hyperlink{class_edge_1_1_edge_a07ec26da674c890cd63bc384a309f57a}{set\+Edge\+Data} (self, data)
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{class_edge_1_1_edge}{Edge} data (represented as a string for now) \end{DoxyCompactList}\item 
+def \hyperlink{class_edge_1_1_edge_af1ad9cb4a110bd498051374523eb725c}{get\+Edge\+Data} (self)
+\begin{DoxyCompactList}\small\item\em Get edge data. \end{DoxyCompactList}\item 
+def \hyperlink{class_edge_1_1_edge_a889f02a79ded7ba366a0f1dfd7c6158a}{get\+Edge} (self)
+\begin{DoxyCompactList}\small\item\em Returns this edge. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_edge_1_1_edge_a0f1b80578fe4bafb45c269111bf9822c}{weight} = int()
+\item 
+\hyperlink{class_edge_1_1_edge_a024c98580ed6649429e1996725333c7b}{vertex} = K()
+\item 
+\hyperlink{class_edge_1_1_edge_a7c92348b4e8e4f5027bc2fd230e353e7}{edge\+\_\+data} = str()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is used to represent the edges in a graph and will appear as links in the B\+R\+I\+D\+G\+ES graph visualization. 
+
+This object is used in graphs and graph algorithms such as D\+FS, B\+FS and shortest path algorithms that need to visit graph edges. The adjacency list representation uses them as the generic paramter, as S\+Lelement$<$\+Edge$>$ Bridges represents Edges as links between pairs of elements
+
+\begin{DoxyAuthor}{Author}
+K.\+R. Subramanian
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em generic} & parameter $<$\+K$>$ usually an Element$<$\+E$>$ type used to hold the terminating vertex\begin{DoxyVerb}generated source for class Edge \end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_edge_1_1_edge_a34341733ffb907488ec5b7498f668cb0}{}\label{class_edge_1_1_edge_a34341733ffb907488ec5b7498f668cb0} 
+\index{Edge\+::\+Edge@{Edge\+::\+Edge}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Edge\+::\+Edge@{Edge\+::\+Edge}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Edge.\+Edge.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Constructors. 
+
+\begin{DoxyVerb}generated source for method __init__ \end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_edge_1_1_edge_a889f02a79ded7ba366a0f1dfd7c6158a}{}\label{class_edge_1_1_edge_a889f02a79ded7ba366a0f1dfd7c6158a} 
+\index{Edge\+::\+Edge@{Edge\+::\+Edge}!get\+Edge@{get\+Edge}}
+\index{get\+Edge@{get\+Edge}!Edge\+::\+Edge@{Edge\+::\+Edge}}
+\subsubsection{\texorpdfstring{get\+Edge()}{getEdge()}}
+{\footnotesize\ttfamily def Edge.\+Edge.\+get\+Edge (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Returns this edge. 
+
+\begin{DoxyVerb}generated source for method getEdge \end{DoxyVerb}
+ \hypertarget{class_edge_1_1_edge_af1ad9cb4a110bd498051374523eb725c}{}\label{class_edge_1_1_edge_af1ad9cb4a110bd498051374523eb725c} 
+\index{Edge\+::\+Edge@{Edge\+::\+Edge}!get\+Edge\+Data@{get\+Edge\+Data}}
+\index{get\+Edge\+Data@{get\+Edge\+Data}!Edge\+::\+Edge@{Edge\+::\+Edge}}
+\subsubsection{\texorpdfstring{get\+Edge\+Data()}{getEdgeData()}}
+{\footnotesize\ttfamily def Edge.\+Edge.\+get\+Edge\+Data (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get edge data. 
+
+\begin{DoxyReturn}{Returns}
+the edge data\begin{DoxyVerb}generated source for method getEdgeData \end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{class_edge_1_1_edge_ab5783c6a39d90dbd42653a9d07682929}{}\label{class_edge_1_1_edge_ab5783c6a39d90dbd42653a9d07682929} 
+\index{Edge\+::\+Edge@{Edge\+::\+Edge}!get\+Vertex@{get\+Vertex}}
+\index{get\+Vertex@{get\+Vertex}!Edge\+::\+Edge@{Edge\+::\+Edge}}
+\subsubsection{\texorpdfstring{get\+Vertex()}{getVertex()}}
+{\footnotesize\ttfamily def Edge.\+Edge.\+get\+Vertex (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get identifer of the terminating \hyperlink{namespace_element}{Element} of edge. 
+
+\begin{DoxyReturn}{Returns}
+the string identifier of the terminating \hyperlink{namespace_element}{Element}\begin{DoxyVerb}generated source for method getVertex \end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{class_edge_1_1_edge_ab0a0b2adc8d1662581d56557a3fc0df3}{}\label{class_edge_1_1_edge_ab0a0b2adc8d1662581d56557a3fc0df3} 
+\index{Edge\+::\+Edge@{Edge\+::\+Edge}!get\+Weight@{get\+Weight}}
+\index{get\+Weight@{get\+Weight}!Edge\+::\+Edge@{Edge\+::\+Edge}}
+\subsubsection{\texorpdfstring{get\+Weight()}{getWeight()}}
+{\footnotesize\ttfamily def Edge.\+Edge.\+get\+Weight (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get edge weight. 
+
+\begin{DoxyReturn}{Returns}
+the weight of edge\begin{DoxyVerb}generated source for method getWeight \end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{class_edge_1_1_edge_afe129e75ba6c6cb076ec6780e06e31be}{}\label{class_edge_1_1_edge_afe129e75ba6c6cb076ec6780e06e31be} 
+\index{Edge\+::\+Edge@{Edge\+::\+Edge}!set\+Edge@{set\+Edge}}
+\index{set\+Edge@{set\+Edge}!Edge\+::\+Edge@{Edge\+::\+Edge}}
+\subsubsection{\texorpdfstring{set\+Edge()}{setEdge()}}
+{\footnotesize\ttfamily def Edge.\+Edge.\+set\+Edge (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{wt,  }\item[{}]{v }\end{DoxyParamCaption})}
+
+
+
+Set edge to weight of \char`\"{}wt\char`\"{} and terminating Elememt of \char`\"{}v\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wt} & edge weight \\
+\hline
+{\em v} & the identifier of the terminating \hyperlink{namespace_element}{Element}\begin{DoxyVerb}generated source for method setEdge \end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_edge_1_1_edge_a07ec26da674c890cd63bc384a309f57a}{}\label{class_edge_1_1_edge_a07ec26da674c890cd63bc384a309f57a} 
+\index{Edge\+::\+Edge@{Edge\+::\+Edge}!set\+Edge\+Data@{set\+Edge\+Data}}
+\index{set\+Edge\+Data@{set\+Edge\+Data}!Edge\+::\+Edge@{Edge\+::\+Edge}}
+\subsubsection{\texorpdfstring{set\+Edge\+Data()}{setEdgeData()}}
+{\footnotesize\ttfamily def Edge.\+Edge.\+set\+Edge\+Data (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+
+
+Set \hyperlink{class_edge_1_1_edge}{Edge} data (represented as a string for now) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & application data\begin{DoxyVerb}generated source for method setEdgeData \end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_edge_1_1_edge_acc0e90e6ab08122159f5130768e8cb6b}{}\label{class_edge_1_1_edge_acc0e90e6ab08122159f5130768e8cb6b} 
+\index{Edge\+::\+Edge@{Edge\+::\+Edge}!set\+Vertex@{set\+Vertex}}
+\index{set\+Vertex@{set\+Vertex}!Edge\+::\+Edge@{Edge\+::\+Edge}}
+\subsubsection{\texorpdfstring{set\+Vertex()}{setVertex()}}
+{\footnotesize\ttfamily def Edge.\+Edge.\+set\+Vertex (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{v }\end{DoxyParamCaption})}
+
+
+
+Set terminating \hyperlink{namespace_element}{Element} of the edge. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & the identifier of the terminating \hyperlink{namespace_element}{Element}\begin{DoxyVerb}generated source for method setVertex \end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_edge_1_1_edge_a4989022829dad911692cbfa1a32809b0}{}\label{class_edge_1_1_edge_a4989022829dad911692cbfa1a32809b0} 
+\index{Edge\+::\+Edge@{Edge\+::\+Edge}!set\+Weight@{set\+Weight}}
+\index{set\+Weight@{set\+Weight}!Edge\+::\+Edge@{Edge\+::\+Edge}}
+\subsubsection{\texorpdfstring{set\+Weight()}{setWeight()}}
+{\footnotesize\ttfamily def Edge.\+Edge.\+set\+Weight (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{wt }\end{DoxyParamCaption})}
+
+
+
+Set edge weight to \char`\"{}wt\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wt} & -\/ graph edge weight\begin{DoxyVerb}generated source for method setWeight \end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_edge_1_1_edge_a7c92348b4e8e4f5027bc2fd230e353e7}{}\label{class_edge_1_1_edge_a7c92348b4e8e4f5027bc2fd230e353e7} 
+\index{Edge\+::\+Edge@{Edge\+::\+Edge}!edge\+\_\+data@{edge\+\_\+data}}
+\index{edge\+\_\+data@{edge\+\_\+data}!Edge\+::\+Edge@{Edge\+::\+Edge}}
+\subsubsection{\texorpdfstring{edge\+\_\+data}{edge\_data}}
+{\footnotesize\ttfamily Edge.\+Edge.\+edge\+\_\+data = str()\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_edge_1_1_edge_a024c98580ed6649429e1996725333c7b}{}\label{class_edge_1_1_edge_a024c98580ed6649429e1996725333c7b} 
+\index{Edge\+::\+Edge@{Edge\+::\+Edge}!vertex@{vertex}}
+\index{vertex@{vertex}!Edge\+::\+Edge@{Edge\+::\+Edge}}
+\subsubsection{\texorpdfstring{vertex}{vertex}}
+{\footnotesize\ttfamily Edge.\+Edge.\+vertex = K()\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_edge_1_1_edge_a0f1b80578fe4bafb45c269111bf9822c}{}\label{class_edge_1_1_edge_a0f1b80578fe4bafb45c269111bf9822c} 
+\index{Edge\+::\+Edge@{Edge\+::\+Edge}!weight@{weight}}
+\index{weight@{weight}!Edge\+::\+Edge@{Edge\+::\+Edge}}
+\subsubsection{\texorpdfstring{weight}{weight}}
+{\footnotesize\ttfamily Edge.\+Edge.\+weight = int()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/python/src/\hyperlink{_edge_8py}{Edge.\+py}\end{DoxyCompactItemize}

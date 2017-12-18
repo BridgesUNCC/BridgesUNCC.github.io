@@ -1,0 +1,206 @@
+\hypertarget{class_a_v_l_tree_element_1_1_a_v_l_tree_element}{}\section{A\+V\+L\+Tree\+Element.\+A\+V\+L\+Tree\+Element Class Reference}
+\label{class_a_v_l_tree_element_1_1_a_v_l_tree_element}\index{A\+V\+L\+Tree\+Element.\+A\+V\+L\+Tree\+Element@{A\+V\+L\+Tree\+Element.\+A\+V\+L\+Tree\+Element}}
+
+
+This class extends the B\+S\+T\+Element class by adding a height and balance factor fields that are useful in A\+VL trees.  
+
+
+Inheritance diagram for A\+V\+L\+Tree\+Element.\+A\+V\+L\+Tree\+Element\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.744548cm]{class_a_v_l_tree_element_1_1_a_v_l_tree_element}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{class_a_v_l_tree_element_1_1_a_v_l_tree_element_a8e6be662898e513509f1d10368efa8da}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em Construct an \hyperlink{class_a_v_l_tree_element_1_1_a_v_l_tree_element}{A\+V\+L\+Tree\+Element} with default values. \end{DoxyCompactList}\item 
+def \hyperlink{class_a_v_l_tree_element_1_1_a_v_l_tree_element_a640287202eba6921fbd438adb7cb49bf}{get\+Data\+Struct\+Type} (self)
+\begin{DoxyCompactList}\small\item\em This method gets the data structure type. \end{DoxyCompactList}\item 
+def \hyperlink{class_a_v_l_tree_element_1_1_a_v_l_tree_element_a6e03fb5147748af1b465285787d5a780}{get\+Height} (self)
+\begin{DoxyCompactList}\small\item\em This method returns the height of the tree at this node. \end{DoxyCompactList}\item 
+def \hyperlink{class_a_v_l_tree_element_1_1_a_v_l_tree_element_af068e3b5c1afb520aeff8bd75dd252ee}{set\+Height} (self, h)
+\begin{DoxyCompactList}\small\item\em This method sets the height of the tree at this node. \end{DoxyCompactList}\item 
+def \hyperlink{class_a_v_l_tree_element_1_1_a_v_l_tree_element_afb67818659c75a5e5105b26ee8ed94e4}{get\+Balance\+Factor} (self)
+\begin{DoxyCompactList}\small\item\em This method returns the balance factor of the tree at this node. \end{DoxyCompactList}\item 
+def \hyperlink{class_a_v_l_tree_element_1_1_a_v_l_tree_element_a3bccfd80115ddc1fe76912fdcae57520}{set\+Balance\+Factor} (self, bf)
+\begin{DoxyCompactList}\small\item\em This method sets the balance factor of the tree at this node. \end{DoxyCompactList}\item 
+def \hyperlink{class_a_v_l_tree_element_1_1_a_v_l_tree_element_a21513833c84670f79d8022300f1546e0}{get\+Left} (self)
+\begin{DoxyCompactList}\small\item\em This method returns the left child of the tree node. \end{DoxyCompactList}\item 
+def \hyperlink{class_a_v_l_tree_element_1_1_a_v_l_tree_element_a6bd26e8d779e5f04ef41604178061d71}{get\+Right} (self)
+\begin{DoxyCompactList}\small\item\em This method returns the right child of tree node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_a_v_l_tree_element_1_1_a_v_l_tree_element_acf75c045d479489e7a3add1b547d2624}{height} = int()
+\item 
+\hyperlink{class_a_v_l_tree_element_1_1_a_v_l_tree_element_a4fa786c8cd6c10a83b249979e19d2e2a}{bal\+Factor} = int()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class extends the B\+S\+T\+Element class by adding a height and balance factor fields that are useful in A\+VL trees. 
+
+A\+VL tree elements include a \textquotesingle{}height\textquotesingle{} and a \textquotesingle{}bal\+Factor\textquotesingle{} value, representing the height and balance factor of the A\+VL tree at that node, respectively. This is useful in representing A\+VL trees.
+
+A\+V\+L\+Tree elements contain a visualizer (\hyperlink{namespace_element_visualizer}{Element\+Visualizer}) object for setting visual attributes (color, shape, opacity, size), necessary for displaying them in a web browser.
+
+A\+V\+L\+Tree elements also have a \hyperlink{namespace_link_visualizer}{Link\+Visualizer} object, that is used when they are linked to another element, appropriate for setting link attributes, for instance, between $\ast$ the current element and its left or right child
+
+
+\begin{DoxyParams}{Parameters}
+{\em E} & he generic parameter object that is part of this element, representing application specific data. \\
+\hline
+{\em K} & is the search key parameter in the A\+VL tree node; K must be orderable, such as integer, float, string, etc., on which relational operators work.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Kalpathi Subramanian, Mihai Mehedint
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+6/22/16, 1/7/17, 5/17/17
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+Example tutorial using \hyperlink{class_a_v_l_tree_element_1_1_a_v_l_tree_element}{A\+V\+L\+Tree\+Element} at ~\newline
+ \href{http://bridgesuncc.github.io/Hello_World_Tutorials/AVL.html@verbatim}{\tt http\+://bridgesuncc.\+github.\+io/\+Hello\+\_\+\+World\+\_\+\+Tutorials/\+A\+V\+L.\+html@verbatim} generated source for class \hyperlink{class_a_v_l_tree_element_1_1_a_v_l_tree_element}{A\+V\+L\+Tree\+Element}  
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_a_v_l_tree_element_1_1_a_v_l_tree_element_a8e6be662898e513509f1d10368efa8da}{}\label{class_a_v_l_tree_element_1_1_a_v_l_tree_element_a8e6be662898e513509f1d10368efa8da} 
+\index{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element@{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element@{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def A\+V\+L\+Tree\+Element.\+A\+V\+L\+Tree\+Element.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Construct an \hyperlink{class_a_v_l_tree_element_1_1_a_v_l_tree_element}{A\+V\+L\+Tree\+Element} with default values. 
+
+\begin{DoxyVerb}generated source for method __init__ \end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_a_v_l_tree_element_1_1_a_v_l_tree_element_afb67818659c75a5e5105b26ee8ed94e4}{}\label{class_a_v_l_tree_element_1_1_a_v_l_tree_element_afb67818659c75a5e5105b26ee8ed94e4} 
+\index{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element@{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element}!get\+Balance\+Factor@{get\+Balance\+Factor}}
+\index{get\+Balance\+Factor@{get\+Balance\+Factor}!A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element@{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection{\texorpdfstring{get\+Balance\+Factor()}{getBalanceFactor()}}
+{\footnotesize\ttfamily def A\+V\+L\+Tree\+Element.\+A\+V\+L\+Tree\+Element.\+get\+Balance\+Factor (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This method returns the balance factor of the tree at this node. 
+
+\begin{DoxyReturn}{Returns}
+balance factor\begin{DoxyVerb}generated source for method getBalanceFactor \end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{class_a_v_l_tree_element_1_1_a_v_l_tree_element_a640287202eba6921fbd438adb7cb49bf}{}\label{class_a_v_l_tree_element_1_1_a_v_l_tree_element_a640287202eba6921fbd438adb7cb49bf} 
+\index{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element@{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element}!get\+Data\+Struct\+Type@{get\+Data\+Struct\+Type}}
+\index{get\+Data\+Struct\+Type@{get\+Data\+Struct\+Type}!A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element@{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection{\texorpdfstring{get\+Data\+Struct\+Type()}{getDataStructType()}}
+{\footnotesize\ttfamily def A\+V\+L\+Tree\+Element.\+A\+V\+L\+Tree\+Element.\+get\+Data\+Struct\+Type (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This method gets the data structure type. 
+
+\begin{DoxyReturn}{Returns}
+The date structure type as a string\begin{DoxyVerb}generated source for method getDataStructType \end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{class_a_v_l_tree_element_1_1_a_v_l_tree_element_a6e03fb5147748af1b465285787d5a780}{}\label{class_a_v_l_tree_element_1_1_a_v_l_tree_element_a6e03fb5147748af1b465285787d5a780} 
+\index{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element@{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element}!get\+Height@{get\+Height}}
+\index{get\+Height@{get\+Height}!A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element@{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection{\texorpdfstring{get\+Height()}{getHeight()}}
+{\footnotesize\ttfamily def A\+V\+L\+Tree\+Element.\+A\+V\+L\+Tree\+Element.\+get\+Height (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This method returns the height of the tree at this node. 
+
+\begin{DoxyReturn}{Returns}
+height\begin{DoxyVerb}generated source for method getHeight \end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{class_a_v_l_tree_element_1_1_a_v_l_tree_element_a21513833c84670f79d8022300f1546e0}{}\label{class_a_v_l_tree_element_1_1_a_v_l_tree_element_a21513833c84670f79d8022300f1546e0} 
+\index{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element@{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element}!get\+Left@{get\+Left}}
+\index{get\+Left@{get\+Left}!A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element@{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection{\texorpdfstring{get\+Left()}{getLeft()}}
+{\footnotesize\ttfamily def A\+V\+L\+Tree\+Element.\+A\+V\+L\+Tree\+Element.\+get\+Left (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This method returns the left child of the tree node. 
+
+\begin{DoxyReturn}{Returns}
+the left child of this node\begin{DoxyVerb}generated source for method getLeft \end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{class_a_v_l_tree_element_1_1_a_v_l_tree_element_a6bd26e8d779e5f04ef41604178061d71}{}\label{class_a_v_l_tree_element_1_1_a_v_l_tree_element_a6bd26e8d779e5f04ef41604178061d71} 
+\index{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element@{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element}!get\+Right@{get\+Right}}
+\index{get\+Right@{get\+Right}!A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element@{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection{\texorpdfstring{get\+Right()}{getRight()}}
+{\footnotesize\ttfamily def A\+V\+L\+Tree\+Element.\+A\+V\+L\+Tree\+Element.\+get\+Right (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This method returns the right child of tree node. 
+
+\begin{DoxyReturn}{Returns}
+the right child of this node\begin{DoxyVerb}generated source for method getRight \end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{class_a_v_l_tree_element_1_1_a_v_l_tree_element_a3bccfd80115ddc1fe76912fdcae57520}{}\label{class_a_v_l_tree_element_1_1_a_v_l_tree_element_a3bccfd80115ddc1fe76912fdcae57520} 
+\index{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element@{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element}!set\+Balance\+Factor@{set\+Balance\+Factor}}
+\index{set\+Balance\+Factor@{set\+Balance\+Factor}!A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element@{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection{\texorpdfstring{set\+Balance\+Factor()}{setBalanceFactor()}}
+{\footnotesize\ttfamily def A\+V\+L\+Tree\+Element.\+A\+V\+L\+Tree\+Element.\+set\+Balance\+Factor (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{bf }\end{DoxyParamCaption})}
+
+
+
+This method sets the balance factor of the tree at this node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em balance} & factor bf\begin{DoxyVerb}generated source for method setBalanceFactor \end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_a_v_l_tree_element_1_1_a_v_l_tree_element_af068e3b5c1afb520aeff8bd75dd252ee}{}\label{class_a_v_l_tree_element_1_1_a_v_l_tree_element_af068e3b5c1afb520aeff8bd75dd252ee} 
+\index{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element@{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element}!set\+Height@{set\+Height}}
+\index{set\+Height@{set\+Height}!A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element@{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection{\texorpdfstring{set\+Height()}{setHeight()}}
+{\footnotesize\ttfamily def A\+V\+L\+Tree\+Element.\+A\+V\+L\+Tree\+Element.\+set\+Height (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{h }\end{DoxyParamCaption})}
+
+
+
+This method sets the height of the tree at this node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em height} & h\begin{DoxyVerb}generated source for method setHeight \end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_a_v_l_tree_element_1_1_a_v_l_tree_element_a4fa786c8cd6c10a83b249979e19d2e2a}{}\label{class_a_v_l_tree_element_1_1_a_v_l_tree_element_a4fa786c8cd6c10a83b249979e19d2e2a} 
+\index{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element@{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element}!bal\+Factor@{bal\+Factor}}
+\index{bal\+Factor@{bal\+Factor}!A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element@{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection{\texorpdfstring{bal\+Factor}{balFactor}}
+{\footnotesize\ttfamily A\+V\+L\+Tree\+Element.\+A\+V\+L\+Tree\+Element.\+bal\+Factor = int()\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_a_v_l_tree_element_1_1_a_v_l_tree_element_acf75c045d479489e7a3add1b547d2624}{}\label{class_a_v_l_tree_element_1_1_a_v_l_tree_element_acf75c045d479489e7a3add1b547d2624} 
+\index{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element@{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element}!height@{height}}
+\index{height@{height}!A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element@{A\+V\+L\+Tree\+Element\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily A\+V\+L\+Tree\+Element.\+A\+V\+L\+Tree\+Element.\+height = int()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/python/src/\hyperlink{_a_v_l_tree_element_8py}{A\+V\+L\+Tree\+Element.\+py}\end{DoxyCompactItemize}

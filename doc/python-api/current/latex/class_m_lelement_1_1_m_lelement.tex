@@ -1,0 +1,192 @@
+\hypertarget{class_m_lelement_1_1_m_lelement}{}\section{M\+Lelement.\+M\+Lelement Class Reference}
+\label{class_m_lelement_1_1_m_lelement}\index{M\+Lelement.\+M\+Lelement@{M\+Lelement.\+M\+Lelement}}
+
+
+package\+: bridges.\+base  
+
+
+Inheritance diagram for M\+Lelement.\+M\+Lelement\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_m_lelement_1_1_m_lelement}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{class_m_lelement_1_1_m_lelement_a766cf6410bcce3cf8f4f9dd6a671c7f5}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em This constructor creates an \hyperlink{namespace_s_lelement}{S\+Lelement} object and sets the next pointer to null. \end{DoxyCompactList}\item 
+def \hyperlink{class_m_lelement_1_1_m_lelement_a6cbd06fbe5d77837a736c035601d4d60}{set\+Sub\+List} (self, sl)
+\begin{DoxyCompactList}\small\item\em Sets the start of a new sublist. \end{DoxyCompactList}\item 
+def \hyperlink{class_m_lelement_1_1_m_lelement_a9372242ef8c51e4ab6f792e90a1eeab4}{get\+Sub\+List} (self)
+\item 
+def \hyperlink{class_m_lelement_1_1_m_lelement_a50e032338abeb140c1bc4b108a3070b9}{get\+Data\+Struct\+Type} (self)
+\item 
+def \hyperlink{class_m_lelement_1_1_m_lelement_af9b63925595587439f941da816b59e49}{get\+Next} (self)
+\item 
+def \hyperlink{class_m_lelement_1_1_m_lelement_a76d2c74303e1d8d33adb4670aafaf0de}{set\+Tag} (self, t)
+\item 
+def \hyperlink{class_m_lelement_1_1_m_lelement_a8c1b0ffc862b9aa99e6ac801e799a554}{get\+Tag} (self)
+\item 
+def \hyperlink{class_m_lelement_1_1_m_lelement_ad1856535489fc39dbaf8539f88ff6e45}{get\+Data\+Structure\+Representation} (self)
+\item 
+def \hyperlink{class_m_lelement_1_1_m_lelement_a71b7855b0790079c585465d013508d45}{get\+List\+Elements} (self, nodes)
+\item 
+def \hyperlink{class_m_lelement_1_1_m_lelement_ae189cb2ff22dbd868ff104647852d8c1}{get\+List\+Elements\+\_\+R} (self, list\+\_\+, nodes)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_m_lelement_1_1_m_lelement_ae7e3455395f34a27e1a7e8fa26adce50}{tag}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_m_lelement_1_1_m_lelement_a03b2df3aa731f864b628ff60dda11a30}{sub\+\_\+list} = None
+\item 
+bool \hyperlink{class_m_lelement_1_1_m_lelement_a73d6150c8466884ef6a5be9995494ad0}{tag} = False
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+package\+: bridges.\+base 
+
+This class can be used to instantiate Multi-\/list Elements. This class extends \hyperlink{namespace_s_lelement}{S\+Lelement} (singly linked list element) to build multi-\/lists; Multilist elements contain a tag that indicates if the element is a sublist or not; If the element points to a sublist, then the sublist field is the beginning of this sublist. If not, the data field contains the user specified data item and list continues (\hyperlink{class_m_lelement_1_1_m_lelement_af9b63925595587439f941da816b59e49}{get\+Next()}/set\+Next()). As in singly linked elements, the next pointer points to the following list element of the list or sublist.
+
+Multi-\/list elements contain a visualizer (\hyperlink{namespace_element_visualizer}{Element\+Visualizer}) object for setting visual attributes (color, shape, opacity, size), necessary for displaying them in a web browser.
+
+Elements also have a \hyperlink{namespace_link_visualizer}{Link\+Visualizer} object, that is used when they are linked to another element, appropriate for setting link attributes, for instance, between the current element and its next element. In this case, the link in question is that which connects the element to the following elements; a similar logic follows for sublists.
+
+\begin{DoxyAuthor}{Author}
+, Kalpathi Subramanian
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/24/17
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em $<$\+E$>$} & The generic parameter object that is part of this element, representing either application specific data, or a pointer to a sublist.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Example Tutorial at ~\newline
+ ??\begin{DoxyVerb}generated source for class MLelement \end{DoxyVerb}
+ 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_m_lelement_1_1_m_lelement_a766cf6410bcce3cf8f4f9dd6a671c7f5}{}\label{class_m_lelement_1_1_m_lelement_a766cf6410bcce3cf8f4f9dd6a671c7f5} 
+\index{M\+Lelement\+::\+M\+Lelement@{M\+Lelement\+::\+M\+Lelement}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!M\+Lelement\+::\+M\+Lelement@{M\+Lelement\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def M\+Lelement.\+M\+Lelement.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This constructor creates an \hyperlink{namespace_s_lelement}{S\+Lelement} object and sets the next pointer to null. 
+
+\begin{DoxyVerb}generated source for method __init__ \end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_m_lelement_1_1_m_lelement_a50e032338abeb140c1bc4b108a3070b9}{}\label{class_m_lelement_1_1_m_lelement_a50e032338abeb140c1bc4b108a3070b9} 
+\index{M\+Lelement\+::\+M\+Lelement@{M\+Lelement\+::\+M\+Lelement}!get\+Data\+Struct\+Type@{get\+Data\+Struct\+Type}}
+\index{get\+Data\+Struct\+Type@{get\+Data\+Struct\+Type}!M\+Lelement\+::\+M\+Lelement@{M\+Lelement\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{get\+Data\+Struct\+Type()}{getDataStructType()}}
+{\footnotesize\ttfamily def M\+Lelement.\+M\+Lelement.\+get\+Data\+Struct\+Type (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generated source for method getDataStructType \end{DoxyVerb}
+ \hypertarget{class_m_lelement_1_1_m_lelement_ad1856535489fc39dbaf8539f88ff6e45}{}\label{class_m_lelement_1_1_m_lelement_ad1856535489fc39dbaf8539f88ff6e45} 
+\index{M\+Lelement\+::\+M\+Lelement@{M\+Lelement\+::\+M\+Lelement}!get\+Data\+Structure\+Representation@{get\+Data\+Structure\+Representation}}
+\index{get\+Data\+Structure\+Representation@{get\+Data\+Structure\+Representation}!M\+Lelement\+::\+M\+Lelement@{M\+Lelement\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{get\+Data\+Structure\+Representation()}{getDataStructureRepresentation()}}
+{\footnotesize\ttfamily def M\+Lelement.\+M\+Lelement.\+get\+Data\+Structure\+Representation (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generated source for method getDataStructureRepresentation \end{DoxyVerb}
+ \hypertarget{class_m_lelement_1_1_m_lelement_a71b7855b0790079c585465d013508d45}{}\label{class_m_lelement_1_1_m_lelement_a71b7855b0790079c585465d013508d45} 
+\index{M\+Lelement\+::\+M\+Lelement@{M\+Lelement\+::\+M\+Lelement}!get\+List\+Elements@{get\+List\+Elements}}
+\index{get\+List\+Elements@{get\+List\+Elements}!M\+Lelement\+::\+M\+Lelement@{M\+Lelement\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{get\+List\+Elements()}{getListElements()}}
+{\footnotesize\ttfamily def M\+Lelement.\+M\+Lelement.\+get\+List\+Elements (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{nodes }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generated source for method getListElements \end{DoxyVerb}
+ \hypertarget{class_m_lelement_1_1_m_lelement_ae189cb2ff22dbd868ff104647852d8c1}{}\label{class_m_lelement_1_1_m_lelement_ae189cb2ff22dbd868ff104647852d8c1} 
+\index{M\+Lelement\+::\+M\+Lelement@{M\+Lelement\+::\+M\+Lelement}!get\+List\+Elements\+\_\+R@{get\+List\+Elements\+\_\+R}}
+\index{get\+List\+Elements\+\_\+R@{get\+List\+Elements\+\_\+R}!M\+Lelement\+::\+M\+Lelement@{M\+Lelement\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{get\+List\+Elements\+\_\+\+R()}{getListElements\_R()}}
+{\footnotesize\ttfamily def M\+Lelement.\+M\+Lelement.\+get\+List\+Elements\+\_\+R (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{list\+\_\+,  }\item[{}]{nodes }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generated source for method getListElements_R \end{DoxyVerb}
+ \hypertarget{class_m_lelement_1_1_m_lelement_af9b63925595587439f941da816b59e49}{}\label{class_m_lelement_1_1_m_lelement_af9b63925595587439f941da816b59e49} 
+\index{M\+Lelement\+::\+M\+Lelement@{M\+Lelement\+::\+M\+Lelement}!get\+Next@{get\+Next}}
+\index{get\+Next@{get\+Next}!M\+Lelement\+::\+M\+Lelement@{M\+Lelement\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{get\+Next()}{getNext()}}
+{\footnotesize\ttfamily def M\+Lelement.\+M\+Lelement.\+get\+Next (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generated source for method getNext \end{DoxyVerb}
+ \hypertarget{class_m_lelement_1_1_m_lelement_a9372242ef8c51e4ab6f792e90a1eeab4}{}\label{class_m_lelement_1_1_m_lelement_a9372242ef8c51e4ab6f792e90a1eeab4} 
+\index{M\+Lelement\+::\+M\+Lelement@{M\+Lelement\+::\+M\+Lelement}!get\+Sub\+List@{get\+Sub\+List}}
+\index{get\+Sub\+List@{get\+Sub\+List}!M\+Lelement\+::\+M\+Lelement@{M\+Lelement\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{get\+Sub\+List()}{getSubList()}}
+{\footnotesize\ttfamily def M\+Lelement.\+M\+Lelement.\+get\+Sub\+List (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generated source for method getSubList \end{DoxyVerb}
+ \hypertarget{class_m_lelement_1_1_m_lelement_a8c1b0ffc862b9aa99e6ac801e799a554}{}\label{class_m_lelement_1_1_m_lelement_a8c1b0ffc862b9aa99e6ac801e799a554} 
+\index{M\+Lelement\+::\+M\+Lelement@{M\+Lelement\+::\+M\+Lelement}!get\+Tag@{get\+Tag}}
+\index{get\+Tag@{get\+Tag}!M\+Lelement\+::\+M\+Lelement@{M\+Lelement\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{get\+Tag()}{getTag()}}
+{\footnotesize\ttfamily def M\+Lelement.\+M\+Lelement.\+get\+Tag (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generated source for method getTag \end{DoxyVerb}
+ \hypertarget{class_m_lelement_1_1_m_lelement_a6cbd06fbe5d77837a736c035601d4d60}{}\label{class_m_lelement_1_1_m_lelement_a6cbd06fbe5d77837a736c035601d4d60} 
+\index{M\+Lelement\+::\+M\+Lelement@{M\+Lelement\+::\+M\+Lelement}!set\+Sub\+List@{set\+Sub\+List}}
+\index{set\+Sub\+List@{set\+Sub\+List}!M\+Lelement\+::\+M\+Lelement@{M\+Lelement\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{set\+Sub\+List()}{setSubList()}}
+{\footnotesize\ttfamily def M\+Lelement.\+M\+Lelement.\+set\+Sub\+List (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sl }\end{DoxyParamCaption})}
+
+
+
+Sets the start of a new sublist. 
+
+to the \hyperlink{namespace_s_lelement}{S\+Lelement} \char`\"{}next\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em sl} & the \hyperlink{class_m_lelement_1_1_m_lelement}{M\+Lelement} that is the beginning of a sublist\begin{DoxyVerb}generated source for method setSubList \end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_m_lelement_1_1_m_lelement_a76d2c74303e1d8d33adb4670aafaf0de}{}\label{class_m_lelement_1_1_m_lelement_a76d2c74303e1d8d33adb4670aafaf0de} 
+\index{M\+Lelement\+::\+M\+Lelement@{M\+Lelement\+::\+M\+Lelement}!set\+Tag@{set\+Tag}}
+\index{set\+Tag@{set\+Tag}!M\+Lelement\+::\+M\+Lelement@{M\+Lelement\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{set\+Tag()}{setTag()}}
+{\footnotesize\ttfamily def M\+Lelement.\+M\+Lelement.\+set\+Tag (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{t }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}generated source for method setTag \end{DoxyVerb}
+ 
+
+\subsection{Member Data Documentation}
+\hypertarget{class_m_lelement_1_1_m_lelement_a03b2df3aa731f864b628ff60dda11a30}{}\label{class_m_lelement_1_1_m_lelement_a03b2df3aa731f864b628ff60dda11a30} 
+\index{M\+Lelement\+::\+M\+Lelement@{M\+Lelement\+::\+M\+Lelement}!sub\+\_\+list@{sub\+\_\+list}}
+\index{sub\+\_\+list@{sub\+\_\+list}!M\+Lelement\+::\+M\+Lelement@{M\+Lelement\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{sub\+\_\+list}{sub\_list}}
+{\footnotesize\ttfamily M\+Lelement.\+M\+Lelement.\+sub\+\_\+list = None\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_m_lelement_1_1_m_lelement_a73d6150c8466884ef6a5be9995494ad0}{}\label{class_m_lelement_1_1_m_lelement_a73d6150c8466884ef6a5be9995494ad0} 
+\index{M\+Lelement\+::\+M\+Lelement@{M\+Lelement\+::\+M\+Lelement}!tag@{tag}}
+\index{tag@{tag}!M\+Lelement\+::\+M\+Lelement@{M\+Lelement\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{tag}{tag}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool M\+Lelement.\+M\+Lelement.\+tag = False\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_m_lelement_1_1_m_lelement_ae7e3455395f34a27e1a7e8fa26adce50}{}\label{class_m_lelement_1_1_m_lelement_ae7e3455395f34a27e1a7e8fa26adce50} 
+\index{M\+Lelement\+::\+M\+Lelement@{M\+Lelement\+::\+M\+Lelement}!tag@{tag}}
+\index{tag@{tag}!M\+Lelement\+::\+M\+Lelement@{M\+Lelement\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{tag}{tag}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily M\+Lelement.\+M\+Lelement.\+tag}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/python/src/\hyperlink{_m_lelement_8py}{M\+Lelement.\+py}\end{DoxyCompactItemize}

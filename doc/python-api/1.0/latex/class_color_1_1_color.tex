@@ -1,0 +1,272 @@
+\hypertarget{class_color_1_1_color}{}\section{Color.\+Color Class Reference}
+\label{class_color_1_1_color}\index{Color.\+Color@{Color.\+Color}}
+
+
+This class is used to represent colors in B\+R\+I\+D\+G\+ES.  
+
+
+Inheritance diagram for Color.\+Color\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_color_1_1_color}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{class_color_1_1_color_a54e49ab0562f1754ee309481f889734b}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em Constructors. \end{DoxyCompactList}\item 
+def \hyperlink{class_color_1_1_color_afa03ead21a88146b5ddbc89a53ffcda8}{set\+Color} (self, r, g, b, a)
+\begin{DoxyCompactList}\small\item\em sets color to the given r, g, b, a components \end{DoxyCompactList}\item 
+def \hyperlink{class_color_1_1_color_ac9000b54846a4d69171dd81172e53f96}{set\+Red} (self, r)
+\begin{DoxyCompactList}\small\item\em sets the red component \end{DoxyCompactList}\item 
+def \hyperlink{class_color_1_1_color_af714dcb6373051df8548d41ea4160896}{get\+Red} (self)
+\begin{DoxyCompactList}\small\item\em gets the red component \end{DoxyCompactList}\item 
+def \hyperlink{class_color_1_1_color_a3ea676f0ace46e02292527acc7915d0b}{set\+Green} (self, g)
+\begin{DoxyCompactList}\small\item\em sets the green component \end{DoxyCompactList}\item 
+def \hyperlink{class_color_1_1_color_acf5013ef6e09f0d3a86b6f4044e60abb}{get\+Green} (self)
+\begin{DoxyCompactList}\small\item\em gets the green component \end{DoxyCompactList}\item 
+def \hyperlink{class_color_1_1_color_a2fad4bb66a79ba2b51acfa875f376c3b}{set\+Blue} (self, b)
+\begin{DoxyCompactList}\small\item\em sets the blue component \end{DoxyCompactList}\item 
+def \hyperlink{class_color_1_1_color_a00ee33a98b9243f68dd02d4882698ff6}{get\+Blue} (self)
+\begin{DoxyCompactList}\small\item\em gets the blue component \end{DoxyCompactList}\item 
+def \hyperlink{class_color_1_1_color_a794d9889de916d2d45f29437547feddd}{set\+Alpha} (self, a)
+\begin{DoxyCompactList}\small\item\em sets the alpha(opacity) component \end{DoxyCompactList}\item 
+def \hyperlink{class_color_1_1_color_a2d8eedef0a8731d96e2a1f802d04b42e}{get\+Alpha} (self)
+\begin{DoxyCompactList}\small\item\em gets the alpha component \end{DoxyCompactList}\item 
+def \hyperlink{class_color_1_1_color_ab17d74d2318751b06e1fc9688f7ee273}{set\+Color\+\_\+0} (self, col\+\_\+name)
+\begin{DoxyCompactList}\small\item\em sets the color to the R\+G\+BA components given the color name \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_color_1_1_color_ad6b9578f975c4f066a1e34dff6ac557a}{red} = int()
+\item 
+\hyperlink{class_color_1_1_color_a608f39a75b991c1ffda8bd91d9744d2b}{green} = int()
+\item 
+\hyperlink{class_color_1_1_color_aae0c5d7ff0540d207fac048534b7e8bf}{blue} = int()
+\item 
+\hyperlink{class_color_1_1_color_a27e8f74882075cc184a9bbc2da65f8a3}{alpha} = float()
+\item 
+\hyperlink{class_color_1_1_color_ade3e7466d27087359ca123a8406c6f3f}{Color\+Names} = Hash\+Map()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is used to represent colors in B\+R\+I\+D\+G\+ES. 
+
+We use an R\+G\+BA model to represent colors, with each component in the range 0-\/255. B\+R\+I\+D\+G\+ES also supports named colors for user convenience, but these are converted into \mbox{[}R\+G\+BA\mbox{]} prior to transmission to the server for visualization.
+
+\begin{DoxyAuthor}{Author}
+K.\+R. Subramanian, 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7/14/16\begin{DoxyVerb}generated source for class Color \end{DoxyVerb}
+ 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_color_1_1_color_a54e49ab0562f1754ee309481f889734b}{}\label{class_color_1_1_color_a54e49ab0562f1754ee309481f889734b} 
+\index{Color\+::\+Color@{Color\+::\+Color}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Color\+::\+Color@{Color\+::\+Color}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Color.\+Color.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Constructors. 
+
+\begin{DoxyVerb}generated source for method __init__ \end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_color_1_1_color_a2d8eedef0a8731d96e2a1f802d04b42e}{}\label{class_color_1_1_color_a2d8eedef0a8731d96e2a1f802d04b42e} 
+\index{Color\+::\+Color@{Color\+::\+Color}!get\+Alpha@{get\+Alpha}}
+\index{get\+Alpha@{get\+Alpha}!Color\+::\+Color@{Color\+::\+Color}}
+\subsubsection{\texorpdfstring{get\+Alpha()}{getAlpha()}}
+{\footnotesize\ttfamily def Color.\+Color.\+get\+Alpha (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+gets the alpha component 
+
+\begin{DoxyReturn}{Returns}
+alpha -\/ returns the alpha(opacity) component of the color\begin{DoxyVerb}generated source for method getAlpha \end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{class_color_1_1_color_a00ee33a98b9243f68dd02d4882698ff6}{}\label{class_color_1_1_color_a00ee33a98b9243f68dd02d4882698ff6} 
+\index{Color\+::\+Color@{Color\+::\+Color}!get\+Blue@{get\+Blue}}
+\index{get\+Blue@{get\+Blue}!Color\+::\+Color@{Color\+::\+Color}}
+\subsubsection{\texorpdfstring{get\+Blue()}{getBlue()}}
+{\footnotesize\ttfamily def Color.\+Color.\+get\+Blue (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+gets the blue component 
+
+\begin{DoxyReturn}{Returns}
+blue -\/ returns the blue component of the color\begin{DoxyVerb}generated source for method getBlue \end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{class_color_1_1_color_acf5013ef6e09f0d3a86b6f4044e60abb}{}\label{class_color_1_1_color_acf5013ef6e09f0d3a86b6f4044e60abb} 
+\index{Color\+::\+Color@{Color\+::\+Color}!get\+Green@{get\+Green}}
+\index{get\+Green@{get\+Green}!Color\+::\+Color@{Color\+::\+Color}}
+\subsubsection{\texorpdfstring{get\+Green()}{getGreen()}}
+{\footnotesize\ttfamily def Color.\+Color.\+get\+Green (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+gets the green component 
+
+\begin{DoxyReturn}{Returns}
+green -\/ returns the green component of the color\begin{DoxyVerb}generated source for method getGreen \end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{class_color_1_1_color_af714dcb6373051df8548d41ea4160896}{}\label{class_color_1_1_color_af714dcb6373051df8548d41ea4160896} 
+\index{Color\+::\+Color@{Color\+::\+Color}!get\+Red@{get\+Red}}
+\index{get\+Red@{get\+Red}!Color\+::\+Color@{Color\+::\+Color}}
+\subsubsection{\texorpdfstring{get\+Red()}{getRed()}}
+{\footnotesize\ttfamily def Color.\+Color.\+get\+Red (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+gets the red component 
+
+\begin{DoxyReturn}{Returns}
+red -\/ returns the red component of the color\begin{DoxyVerb}generated source for method getRed \end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{class_color_1_1_color_a794d9889de916d2d45f29437547feddd}{}\label{class_color_1_1_color_a794d9889de916d2d45f29437547feddd} 
+\index{Color\+::\+Color@{Color\+::\+Color}!set\+Alpha@{set\+Alpha}}
+\index{set\+Alpha@{set\+Alpha}!Color\+::\+Color@{Color\+::\+Color}}
+\subsubsection{\texorpdfstring{set\+Alpha()}{setAlpha()}}
+{\footnotesize\ttfamily def Color.\+Color.\+set\+Alpha (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{a }\end{DoxyParamCaption})}
+
+
+
+sets the alpha(opacity) component 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & -\/ checked to be in the range 0-\/255\begin{DoxyVerb}generated source for method setAlpha \end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_color_1_1_color_a2fad4bb66a79ba2b51acfa875f376c3b}{}\label{class_color_1_1_color_a2fad4bb66a79ba2b51acfa875f376c3b} 
+\index{Color\+::\+Color@{Color\+::\+Color}!set\+Blue@{set\+Blue}}
+\index{set\+Blue@{set\+Blue}!Color\+::\+Color@{Color\+::\+Color}}
+\subsubsection{\texorpdfstring{set\+Blue()}{setBlue()}}
+{\footnotesize\ttfamily def Color.\+Color.\+set\+Blue (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{b }\end{DoxyParamCaption})}
+
+
+
+sets the blue component 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & -\/ checked to be in the range 0-\/255\begin{DoxyVerb}generated source for method setBlue \end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_color_1_1_color_afa03ead21a88146b5ddbc89a53ffcda8}{}\label{class_color_1_1_color_afa03ead21a88146b5ddbc89a53ffcda8} 
+\index{Color\+::\+Color@{Color\+::\+Color}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!Color\+::\+Color@{Color\+::\+Color}}
+\subsubsection{\texorpdfstring{set\+Color()}{setColor()}}
+{\footnotesize\ttfamily def Color.\+Color.\+set\+Color (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{r,  }\item[{}]{g,  }\item[{}]{b,  }\item[{}]{a }\end{DoxyParamCaption})}
+
+
+
+sets color to the given r, g, b, a components 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r,g,b,a} & -\/ checked to be in the range 0-\/255\begin{DoxyVerb}generated source for method setColor \end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_color_1_1_color_ab17d74d2318751b06e1fc9688f7ee273}{}\label{class_color_1_1_color_ab17d74d2318751b06e1fc9688f7ee273} 
+\index{Color\+::\+Color@{Color\+::\+Color}!set\+Color\+\_\+0@{set\+Color\+\_\+0}}
+\index{set\+Color\+\_\+0@{set\+Color\+\_\+0}!Color\+::\+Color@{Color\+::\+Color}}
+\subsubsection{\texorpdfstring{set\+Color\+\_\+0()}{setColor\_0()}}
+{\footnotesize\ttfamily def Color.\+Color.\+set\+Color\+\_\+0 (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{col\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+sets the color to the R\+G\+BA components given the color name 
+
+
+\begin{DoxyParams}{Parameters}
+{\em col\+\_\+name} & color name\begin{DoxyVerb}generated source for method setColor_0 \end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_color_1_1_color_a3ea676f0ace46e02292527acc7915d0b}{}\label{class_color_1_1_color_a3ea676f0ace46e02292527acc7915d0b} 
+\index{Color\+::\+Color@{Color\+::\+Color}!set\+Green@{set\+Green}}
+\index{set\+Green@{set\+Green}!Color\+::\+Color@{Color\+::\+Color}}
+\subsubsection{\texorpdfstring{set\+Green()}{setGreen()}}
+{\footnotesize\ttfamily def Color.\+Color.\+set\+Green (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{g }\end{DoxyParamCaption})}
+
+
+
+sets the green component 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & -\/ checked to be in the range 0-\/255\begin{DoxyVerb}generated source for method setGreen \end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_color_1_1_color_ac9000b54846a4d69171dd81172e53f96}{}\label{class_color_1_1_color_ac9000b54846a4d69171dd81172e53f96} 
+\index{Color\+::\+Color@{Color\+::\+Color}!set\+Red@{set\+Red}}
+\index{set\+Red@{set\+Red}!Color\+::\+Color@{Color\+::\+Color}}
+\subsubsection{\texorpdfstring{set\+Red()}{setRed()}}
+{\footnotesize\ttfamily def Color.\+Color.\+set\+Red (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{r }\end{DoxyParamCaption})}
+
+
+
+sets the red component 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & -\/ checked to be in the range 0-\/255\begin{DoxyVerb}generated source for method setRed \end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_color_1_1_color_a27e8f74882075cc184a9bbc2da65f8a3}{}\label{class_color_1_1_color_a27e8f74882075cc184a9bbc2da65f8a3} 
+\index{Color\+::\+Color@{Color\+::\+Color}!alpha@{alpha}}
+\index{alpha@{alpha}!Color\+::\+Color@{Color\+::\+Color}}
+\subsubsection{\texorpdfstring{alpha}{alpha}}
+{\footnotesize\ttfamily Color.\+Color.\+alpha = float()\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_color_1_1_color_aae0c5d7ff0540d207fac048534b7e8bf}{}\label{class_color_1_1_color_aae0c5d7ff0540d207fac048534b7e8bf} 
+\index{Color\+::\+Color@{Color\+::\+Color}!blue@{blue}}
+\index{blue@{blue}!Color\+::\+Color@{Color\+::\+Color}}
+\subsubsection{\texorpdfstring{blue}{blue}}
+{\footnotesize\ttfamily Color.\+Color.\+blue = int()\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_color_1_1_color_ade3e7466d27087359ca123a8406c6f3f}{}\label{class_color_1_1_color_ade3e7466d27087359ca123a8406c6f3f} 
+\index{Color\+::\+Color@{Color\+::\+Color}!Color\+Names@{Color\+Names}}
+\index{Color\+Names@{Color\+Names}!Color\+::\+Color@{Color\+::\+Color}}
+\subsubsection{\texorpdfstring{Color\+Names}{ColorNames}}
+{\footnotesize\ttfamily Color.\+Color.\+Color\+Names = Hash\+Map()\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_color_1_1_color_a608f39a75b991c1ffda8bd91d9744d2b}{}\label{class_color_1_1_color_a608f39a75b991c1ffda8bd91d9744d2b} 
+\index{Color\+::\+Color@{Color\+::\+Color}!green@{green}}
+\index{green@{green}!Color\+::\+Color@{Color\+::\+Color}}
+\subsubsection{\texorpdfstring{green}{green}}
+{\footnotesize\ttfamily Color.\+Color.\+green = int()\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_color_1_1_color_ad6b9578f975c4f066a1e34dff6ac557a}{}\label{class_color_1_1_color_ad6b9578f975c4f066a1e34dff6ac557a} 
+\index{Color\+::\+Color@{Color\+::\+Color}!red@{red}}
+\index{red@{red}!Color\+::\+Color@{Color\+::\+Color}}
+\subsubsection{\texorpdfstring{red}{red}}
+{\footnotesize\ttfamily Color.\+Color.\+red = int()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/python/src/\hyperlink{_color_8py}{Color.\+py}\end{DoxyCompactItemize}

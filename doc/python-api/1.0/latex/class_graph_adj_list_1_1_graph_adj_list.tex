@@ -1,0 +1,276 @@
+\hypertarget{class_graph_adj_list_1_1_graph_adj_list}{}\section{Graph\+Adj\+List.\+Graph\+Adj\+List Class Reference}
+\label{class_graph_adj_list_1_1_graph_adj_list}\index{Graph\+Adj\+List.\+Graph\+Adj\+List@{Graph\+Adj\+List.\+Graph\+Adj\+List}}
+
+
+The \hyperlink{class_graph_adj_list_1_1_graph_adj_list}{Graph\+Adj\+List} class can be used to represent adjacency list based graphs in B\+R\+I\+D\+G\+ES.  
+
+
+Inheritance diagram for Graph\+Adj\+List.\+Graph\+Adj\+List\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_graph_adj_list_1_1_graph_adj_list}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{class_graph_adj_list_1_1_graph_adj_list_a045be8de7a7695b8eac07feb9011b73d}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+def \hyperlink{class_graph_adj_list_1_1_graph_adj_list_a19fd235cb56eaaf5335331088bb52c37}{get\+Data\+Struct\+Type} (self)
+\begin{DoxyCompactList}\small\item\em This method gets the data structure type. \end{DoxyCompactList}\item 
+def \hyperlink{class_graph_adj_list_1_1_graph_adj_list_ab2f7025978821c01436cc773957bb9c5}{add\+Vertex} (self, k, e)
+\begin{DoxyCompactList}\small\item\em Adds a new vertex to the graph, initializes the adjacency list; user is responsible for checking if the vertex already exists. \end{DoxyCompactList}\item 
+def \hyperlink{class_graph_adj_list_1_1_graph_adj_list_a52d80ff8e432cabad99cc77feb82a295}{add\+Edge} (self, src, dest)
+\begin{DoxyCompactList}\small\item\em Adds a new edge to the graph, adds it to that vertex\textquotesingle{}s adjacency list; user is responsible for checking if the vertex already exists. \end{DoxyCompactList}\item 
+def \hyperlink{class_graph_adj_list_1_1_graph_adj_list_a33234517232ecd8a4fab8ded3dcdd85d}{add\+Edge\+\_\+0} (self, src, dest, weight)
+\begin{DoxyCompactList}\small\item\em Adds a new edge to the graph, adds it to that vertex\textquotesingle{}s adjacency list; user is responsible for checking if the vertex already exists. \end{DoxyCompactList}\item 
+def \hyperlink{class_graph_adj_list_1_1_graph_adj_list_a5921cc09aba4d4b61d5cb5e97ee6473f}{get\+Vertices} (self)
+\begin{DoxyCompactList}\small\item\em This method returns the graph nodes. \end{DoxyCompactList}\item 
+def \hyperlink{class_graph_adj_list_1_1_graph_adj_list_a8f0e2f62373963562f2c28bfb1513bc1}{get\+Vertex} (self, key)
+\begin{DoxyCompactList}\small\item\em This is a convenience method to retrieve a vertex given its key. \end{DoxyCompactList}\item 
+def \hyperlink{class_graph_adj_list_1_1_graph_adj_list_ae5fe3c73d73d417121b0d3f39d9a6ccf}{get\+Adjacency\+List} (self)
+\begin{DoxyCompactList}\small\item\em Gets the adjacency list (of type S\+Lelement$<$\+Edge$>$ ) \end{DoxyCompactList}\item 
+def \hyperlink{class_graph_adj_list_1_1_graph_adj_list_ae446e3a3cd1c8e04faf600ac46dbfddc}{get\+Adjacency\+List\+\_\+0} (self, vertex)
+\begin{DoxyCompactList}\small\item\em Gets the adjacency list (of type \hyperlink{namespace_s_lelement}{S\+Lelement}$<$\hyperlink{namespace_edge}{Edge} $<$\+K$>$ $>$ of a vertex) \end{DoxyCompactList}\item 
+def \hyperlink{class_graph_adj_list_1_1_graph_adj_list_ac8e04d8c44a0a7f117e38215c593845e}{get\+Link\+Visualizer} (self, src, dest)
+\begin{DoxyCompactList}\small\item\em This is a convenience method to simplify access to the link visualizer; the method assumes the vertex names point to existing vertices, else an exception is thrown. \end{DoxyCompactList}\item 
+def \hyperlink{class_graph_adj_list_1_1_graph_adj_list_ac5526b72818cd4f4f939a42cb173ada3}{get\+Visualizer} (self, vertex)
+\begin{DoxyCompactList}\small\item\em This is a convenience method to simplify access to the element visualizer; the method assumes the vertex name points to an existing vertice, else an exception is thrown. \end{DoxyCompactList}\item 
+def \hyperlink{class_graph_adj_list_1_1_graph_adj_list_abb989d64385323cd0032c74c85b449fa}{get\+Data\+Structure\+Representation} (self)
+\begin{DoxyCompactList}\small\item\em Get the J\+S\+ON representation of the the data structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_graph_adj_list_1_1_graph_adj_list_a47f4552a36c0fdc7d7599a7b5b47177d}{vertices} = Hash\+Map()
+\item 
+\hyperlink{class_graph_adj_list_1_1_graph_adj_list_adf27f860d178d9d0f0aa3c3a6c45afe9}{adj\+\_\+list} = Hash\+Map()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_graph_adj_list_1_1_graph_adj_list}{Graph\+Adj\+List} class can be used to represent adjacency list based graphs in B\+R\+I\+D\+G\+ES. 
+
+The \hyperlink{class_graph_adj_list_1_1_graph_adj_list}{Graph\+Adj\+List} class can be used to represent adjacency list based graphs in B\+R\+I\+D\+G\+ES; it takes 2 generic parameters\+: (1) K, which is an orderable key value used in accessing vertices (in constant time) using a hashmap. This permits data sets that need to be accessed by keys that are strings, and (2) E, an application defined type, and used in the \hyperlink{namespace_edge}{Edge} representation. The class is simply a wrapper around the Java Hashmap class and, thus, derives all its operations from it. B\+R\+I\+D\+G\+ES provides methods to visualize the graph and its contents.
+
+The vertices of the graph are held in a Java hashmap, for near constant time access; this lets us use strings or integral ids for vertices. The adjacency lists, also a Java hashmap are built for each vertex and contain the edge (terminating vertex id, weight) in the \hyperlink{namespace_edge}{Edge} structure, defined separately. Adjacency lists are singly linked lists using the B\+R\+I\+D\+G\+ES \hyperlink{namespace_s_lelement}{S\+Lelement}.
+
+Convenience methods are provided to add vertices and edges to the graph as well as retrieve the adjacency list of a vertex, given its id.
+
+\begin{DoxyAuthor}{Author}
+Kalpathi Subramanian
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+6/29/15, 5/18/17
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em $<$\+E$>$} & application/user defined type used as part of vertices and edges \\
+\hline
+{\em $<$\+K$>$} & orderable key (string, int, etc) that is used to index into vertex structure, for fast access\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Example tutorial at 
+\end{DoxySeeAlso}
+\href{http://bridgesuncc.github.io/Hello_World_Tutorials/Graph.html@verbatim}{\tt http\+://bridgesuncc.\+github.\+io/\+Hello\+\_\+\+World\+\_\+\+Tutorials/\+Graph.\+html@verbatim} generated source for class \hyperlink{class_graph_adj_list_1_1_graph_adj_list}{Graph\+Adj\+List}  
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_graph_adj_list_1_1_graph_adj_list_a045be8de7a7695b8eac07feb9011b73d}{}\label{class_graph_adj_list_1_1_graph_adj_list_a045be8de7a7695b8eac07feb9011b73d} 
+\index{Graph\+Adj\+List\+::\+Graph\+Adj\+List@{Graph\+Adj\+List\+::\+Graph\+Adj\+List}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Graph\+Adj\+List\+::\+Graph\+Adj\+List@{Graph\+Adj\+List\+::\+Graph\+Adj\+List}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Graph\+Adj\+List.\+Graph\+Adj\+List.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+\begin{DoxyVerb}generated source for method __init__ \end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_graph_adj_list_1_1_graph_adj_list_a52d80ff8e432cabad99cc77feb82a295}{}\label{class_graph_adj_list_1_1_graph_adj_list_a52d80ff8e432cabad99cc77feb82a295} 
+\index{Graph\+Adj\+List\+::\+Graph\+Adj\+List@{Graph\+Adj\+List\+::\+Graph\+Adj\+List}!add\+Edge@{add\+Edge}}
+\index{add\+Edge@{add\+Edge}!Graph\+Adj\+List\+::\+Graph\+Adj\+List@{Graph\+Adj\+List\+::\+Graph\+Adj\+List}}
+\subsubsection{\texorpdfstring{add\+Edge()}{addEdge()}}
+{\footnotesize\ttfamily def Graph\+Adj\+List.\+Graph\+Adj\+List.\+add\+Edge (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{src,  }\item[{}]{dest }\end{DoxyParamCaption})}
+
+
+
+Adds a new edge to the graph, adds it to that vertex\textquotesingle{}s adjacency list; user is responsible for checking if the vertex already exists. 
+
+This version assumes a default edge weight of 1.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & -\/ source vertex of edge \\
+\hline
+{\em dest} & -\/ destination vertex of edge\begin{DoxyVerb}generated source for method addEdge \end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_graph_adj_list_1_1_graph_adj_list_a33234517232ecd8a4fab8ded3dcdd85d}{}\label{class_graph_adj_list_1_1_graph_adj_list_a33234517232ecd8a4fab8ded3dcdd85d} 
+\index{Graph\+Adj\+List\+::\+Graph\+Adj\+List@{Graph\+Adj\+List\+::\+Graph\+Adj\+List}!add\+Edge\+\_\+0@{add\+Edge\+\_\+0}}
+\index{add\+Edge\+\_\+0@{add\+Edge\+\_\+0}!Graph\+Adj\+List\+::\+Graph\+Adj\+List@{Graph\+Adj\+List\+::\+Graph\+Adj\+List}}
+\subsubsection{\texorpdfstring{add\+Edge\+\_\+0()}{addEdge\_0()}}
+{\footnotesize\ttfamily def Graph\+Adj\+List.\+Graph\+Adj\+List.\+add\+Edge\+\_\+0 (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{src,  }\item[{}]{dest,  }\item[{}]{weight }\end{DoxyParamCaption})}
+
+
+
+Adds a new edge to the graph, adds it to that vertex\textquotesingle{}s adjacency list; user is responsible for checking if the vertex already exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & -\/ source vertex of edge \\
+\hline
+{\em dest} & -\/ destination vertex of edge \\
+\hline
+{\em weight} & -\/ edge weight\begin{DoxyVerb}generated source for method addEdge_0 \end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_graph_adj_list_1_1_graph_adj_list_ab2f7025978821c01436cc773957bb9c5}{}\label{class_graph_adj_list_1_1_graph_adj_list_ab2f7025978821c01436cc773957bb9c5} 
+\index{Graph\+Adj\+List\+::\+Graph\+Adj\+List@{Graph\+Adj\+List\+::\+Graph\+Adj\+List}!add\+Vertex@{add\+Vertex}}
+\index{add\+Vertex@{add\+Vertex}!Graph\+Adj\+List\+::\+Graph\+Adj\+List@{Graph\+Adj\+List\+::\+Graph\+Adj\+List}}
+\subsubsection{\texorpdfstring{add\+Vertex()}{addVertex()}}
+{\footnotesize\ttfamily def Graph\+Adj\+List.\+Graph\+Adj\+List.\+add\+Vertex (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{k,  }\item[{}]{e }\end{DoxyParamCaption})}
+
+
+
+Adds a new vertex to the graph, initializes the adjacency list; user is responsible for checking if the vertex already exists. 
+
+This method will replace the value for this key
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & -\/ vertex id \\
+\hline
+{\em E} & -\/ vertex info, currently used as a label by default\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none\begin{DoxyVerb}generated source for method addVertex \end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{class_graph_adj_list_1_1_graph_adj_list_ae5fe3c73d73d417121b0d3f39d9a6ccf}{}\label{class_graph_adj_list_1_1_graph_adj_list_ae5fe3c73d73d417121b0d3f39d9a6ccf} 
+\index{Graph\+Adj\+List\+::\+Graph\+Adj\+List@{Graph\+Adj\+List\+::\+Graph\+Adj\+List}!get\+Adjacency\+List@{get\+Adjacency\+List}}
+\index{get\+Adjacency\+List@{get\+Adjacency\+List}!Graph\+Adj\+List\+::\+Graph\+Adj\+List@{Graph\+Adj\+List\+::\+Graph\+Adj\+List}}
+\subsubsection{\texorpdfstring{get\+Adjacency\+List()}{getAdjacencyList()}}
+{\footnotesize\ttfamily def Graph\+Adj\+List.\+Graph\+Adj\+List.\+get\+Adjacency\+List (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Gets the adjacency list (of type S\+Lelement$<$\+Edge$>$ ) 
+
+\begin{DoxyReturn}{Returns}
+-\/ the graph\textquotesingle{}s adjacency lists\begin{DoxyVerb}generated source for method getAdjacencyList \end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{class_graph_adj_list_1_1_graph_adj_list_ae446e3a3cd1c8e04faf600ac46dbfddc}{}\label{class_graph_adj_list_1_1_graph_adj_list_ae446e3a3cd1c8e04faf600ac46dbfddc} 
+\index{Graph\+Adj\+List\+::\+Graph\+Adj\+List@{Graph\+Adj\+List\+::\+Graph\+Adj\+List}!get\+Adjacency\+List\+\_\+0@{get\+Adjacency\+List\+\_\+0}}
+\index{get\+Adjacency\+List\+\_\+0@{get\+Adjacency\+List\+\_\+0}!Graph\+Adj\+List\+::\+Graph\+Adj\+List@{Graph\+Adj\+List\+::\+Graph\+Adj\+List}}
+\subsubsection{\texorpdfstring{get\+Adjacency\+List\+\_\+0()}{getAdjacencyList\_0()}}
+{\footnotesize\ttfamily def Graph\+Adj\+List.\+Graph\+Adj\+List.\+get\+Adjacency\+List\+\_\+0 (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{vertex }\end{DoxyParamCaption})}
+
+
+
+Gets the adjacency list (of type \hyperlink{namespace_s_lelement}{S\+Lelement}$<$\hyperlink{namespace_edge}{Edge} $<$\+K$>$ $>$ of a vertex) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & vertex key\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ the graph\textquotesingle{}s adjacency list corresponding to this vertex\begin{DoxyVerb}generated source for method getAdjacencyList_0 \end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{class_graph_adj_list_1_1_graph_adj_list_a19fd235cb56eaaf5335331088bb52c37}{}\label{class_graph_adj_list_1_1_graph_adj_list_a19fd235cb56eaaf5335331088bb52c37} 
+\index{Graph\+Adj\+List\+::\+Graph\+Adj\+List@{Graph\+Adj\+List\+::\+Graph\+Adj\+List}!get\+Data\+Struct\+Type@{get\+Data\+Struct\+Type}}
+\index{get\+Data\+Struct\+Type@{get\+Data\+Struct\+Type}!Graph\+Adj\+List\+::\+Graph\+Adj\+List@{Graph\+Adj\+List\+::\+Graph\+Adj\+List}}
+\subsubsection{\texorpdfstring{get\+Data\+Struct\+Type()}{getDataStructType()}}
+{\footnotesize\ttfamily def Graph\+Adj\+List.\+Graph\+Adj\+List.\+get\+Data\+Struct\+Type (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This method gets the data structure type. 
+
+\begin{DoxyReturn}{Returns}
+The date structure type as a string\begin{DoxyVerb}generated source for method getDataStructType \end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{class_graph_adj_list_1_1_graph_adj_list_abb989d64385323cd0032c74c85b449fa}{}\label{class_graph_adj_list_1_1_graph_adj_list_abb989d64385323cd0032c74c85b449fa} 
+\index{Graph\+Adj\+List\+::\+Graph\+Adj\+List@{Graph\+Adj\+List\+::\+Graph\+Adj\+List}!get\+Data\+Structure\+Representation@{get\+Data\+Structure\+Representation}}
+\index{get\+Data\+Structure\+Representation@{get\+Data\+Structure\+Representation}!Graph\+Adj\+List\+::\+Graph\+Adj\+List@{Graph\+Adj\+List\+::\+Graph\+Adj\+List}}
+\subsubsection{\texorpdfstring{get\+Data\+Structure\+Representation()}{getDataStructureRepresentation()}}
+{\footnotesize\ttfamily def Graph\+Adj\+List.\+Graph\+Adj\+List.\+get\+Data\+Structure\+Representation (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the J\+S\+ON representation of the the data structure. 
+
+\begin{DoxyVerb}generated source for method getDataStructureRepresentation \end{DoxyVerb}
+ \hypertarget{class_graph_adj_list_1_1_graph_adj_list_ac8e04d8c44a0a7f117e38215c593845e}{}\label{class_graph_adj_list_1_1_graph_adj_list_ac8e04d8c44a0a7f117e38215c593845e} 
+\index{Graph\+Adj\+List\+::\+Graph\+Adj\+List@{Graph\+Adj\+List\+::\+Graph\+Adj\+List}!get\+Link\+Visualizer@{get\+Link\+Visualizer}}
+\index{get\+Link\+Visualizer@{get\+Link\+Visualizer}!Graph\+Adj\+List\+::\+Graph\+Adj\+List@{Graph\+Adj\+List\+::\+Graph\+Adj\+List}}
+\subsubsection{\texorpdfstring{get\+Link\+Visualizer()}{getLinkVisualizer()}}
+{\footnotesize\ttfamily def Graph\+Adj\+List.\+Graph\+Adj\+List.\+get\+Link\+Visualizer (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{src,  }\item[{}]{dest }\end{DoxyParamCaption})}
+
+
+
+This is a convenience method to simplify access to the link visualizer; the method assumes the vertex names point to existing vertices, else an exception is thrown. 
+
+\begin{DoxyVerb}generated source for method getLinkVisualizer \end{DoxyVerb}
+ \hypertarget{class_graph_adj_list_1_1_graph_adj_list_a8f0e2f62373963562f2c28bfb1513bc1}{}\label{class_graph_adj_list_1_1_graph_adj_list_a8f0e2f62373963562f2c28bfb1513bc1} 
+\index{Graph\+Adj\+List\+::\+Graph\+Adj\+List@{Graph\+Adj\+List\+::\+Graph\+Adj\+List}!get\+Vertex@{get\+Vertex}}
+\index{get\+Vertex@{get\+Vertex}!Graph\+Adj\+List\+::\+Graph\+Adj\+List@{Graph\+Adj\+List\+::\+Graph\+Adj\+List}}
+\subsubsection{\texorpdfstring{get\+Vertex()}{getVertex()}}
+{\footnotesize\ttfamily def Graph\+Adj\+List.\+Graph\+Adj\+List.\+get\+Vertex (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{key }\end{DoxyParamCaption})}
+
+
+
+This is a convenience method to retrieve a vertex given its key. 
+
+return -- graph vertex corresponding to its key\begin{DoxyVerb}generated source for method getVertex \end{DoxyVerb}
+ \hypertarget{class_graph_adj_list_1_1_graph_adj_list_a5921cc09aba4d4b61d5cb5e97ee6473f}{}\label{class_graph_adj_list_1_1_graph_adj_list_a5921cc09aba4d4b61d5cb5e97ee6473f} 
+\index{Graph\+Adj\+List\+::\+Graph\+Adj\+List@{Graph\+Adj\+List\+::\+Graph\+Adj\+List}!get\+Vertices@{get\+Vertices}}
+\index{get\+Vertices@{get\+Vertices}!Graph\+Adj\+List\+::\+Graph\+Adj\+List@{Graph\+Adj\+List\+::\+Graph\+Adj\+List}}
+\subsubsection{\texorpdfstring{get\+Vertices()}{getVertices()}}
+{\footnotesize\ttfamily def Graph\+Adj\+List.\+Graph\+Adj\+List.\+get\+Vertices (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This method returns the graph nodes. 
+
+return -- vertices held in in the hashmap\begin{DoxyVerb}generated source for method getVertices \end{DoxyVerb}
+ \hypertarget{class_graph_adj_list_1_1_graph_adj_list_ac5526b72818cd4f4f939a42cb173ada3}{}\label{class_graph_adj_list_1_1_graph_adj_list_ac5526b72818cd4f4f939a42cb173ada3} 
+\index{Graph\+Adj\+List\+::\+Graph\+Adj\+List@{Graph\+Adj\+List\+::\+Graph\+Adj\+List}!get\+Visualizer@{get\+Visualizer}}
+\index{get\+Visualizer@{get\+Visualizer}!Graph\+Adj\+List\+::\+Graph\+Adj\+List@{Graph\+Adj\+List\+::\+Graph\+Adj\+List}}
+\subsubsection{\texorpdfstring{get\+Visualizer()}{getVisualizer()}}
+{\footnotesize\ttfamily def Graph\+Adj\+List.\+Graph\+Adj\+List.\+get\+Visualizer (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{vertex }\end{DoxyParamCaption})}
+
+
+
+This is a convenience method to simplify access to the element visualizer; the method assumes the vertex name points to an existing vertice, else an exception is thrown. 
+
+\begin{DoxyVerb}generated source for method getVisualizer \end{DoxyVerb}
+ 
+
+\subsection{Member Data Documentation}
+\hypertarget{class_graph_adj_list_1_1_graph_adj_list_adf27f860d178d9d0f0aa3c3a6c45afe9}{}\label{class_graph_adj_list_1_1_graph_adj_list_adf27f860d178d9d0f0aa3c3a6c45afe9} 
+\index{Graph\+Adj\+List\+::\+Graph\+Adj\+List@{Graph\+Adj\+List\+::\+Graph\+Adj\+List}!adj\+\_\+list@{adj\+\_\+list}}
+\index{adj\+\_\+list@{adj\+\_\+list}!Graph\+Adj\+List\+::\+Graph\+Adj\+List@{Graph\+Adj\+List\+::\+Graph\+Adj\+List}}
+\subsubsection{\texorpdfstring{adj\+\_\+list}{adj\_list}}
+{\footnotesize\ttfamily Graph\+Adj\+List.\+Graph\+Adj\+List.\+adj\+\_\+list = Hash\+Map()\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_graph_adj_list_1_1_graph_adj_list_a47f4552a36c0fdc7d7599a7b5b47177d}{}\label{class_graph_adj_list_1_1_graph_adj_list_a47f4552a36c0fdc7d7599a7b5b47177d} 
+\index{Graph\+Adj\+List\+::\+Graph\+Adj\+List@{Graph\+Adj\+List\+::\+Graph\+Adj\+List}!vertices@{vertices}}
+\index{vertices@{vertices}!Graph\+Adj\+List\+::\+Graph\+Adj\+List@{Graph\+Adj\+List\+::\+Graph\+Adj\+List}}
+\subsubsection{\texorpdfstring{vertices}{vertices}}
+{\footnotesize\ttfamily Graph\+Adj\+List.\+Graph\+Adj\+List.\+vertices = Hash\+Map()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/python/src/\hyperlink{_graph_adj_list_8py}{Graph\+Adj\+List.\+py}\end{DoxyCompactItemize}
