@@ -9,10 +9,8 @@ public class sllist {
 
     public static void main(String[] args) throws Exception {
 
-		final String YOUR_API_KEY = "";
-		final String YOUR_USER_ID = "";
-		Bridges<String, StudentInfo> bridges = 
-			new Bridges<String, StudentInfo>(4, "YOUR_API_KEY", "YOUR_USER_ID");
+						// note: you must fill in with your Bridges credentials
+		Bridges bridges = new Bridges(4, "YOUR_API_KEY", "YOUR_USER_ID");
          					// create the linked list elements with 
 							// student data 
 		SLelement<StudentInfo> el0 = new SLelement<StudentInfo>( "",
@@ -78,24 +76,24 @@ public class sllist {
         SLelement<StudentInfo> currentElement = el0;
         while(currentElement != null){
 						// color the node
-            currentElement.getVisualizer().setColor(currentElement.getValue().getFavoriteColor());
+			StudentInfo si = currentElement.getValue();
+            currentElement.getVisualizer().setColor(si.getFavoriteColor());
 
             if(currentElement.getNext() != null){
 
 						// color the link
                 currentElement
                         .getLinkVisualizer(currentElement.getNext())
-                        .setColor(currentElement.getValue().getDislikeColor());
+                        .setColor(si.getDislikeColor());
 						// adjust link thickness
                 currentElement
                         .getLinkVisualizer(currentElement.getNext())
-                        .setThickness(currentElement.getValue()
-						.getStudentCreditHours() * 0.75);//75 percent thinner
+                        .setThickness(si.getStudentCreditHours() * 0.75);//75 percent thinner
             }
 
 						// set the label to the student info (label created in 
 						// StudentInfo class
-            currentElement.setLabel(currentElement.getValue().getStudentLabel());
+            currentElement.setLabel(si.getStudentLabel());
 
             currentElement = currentElement.getNext();
         }
