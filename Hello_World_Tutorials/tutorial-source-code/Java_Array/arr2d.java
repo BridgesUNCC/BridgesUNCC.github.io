@@ -6,8 +6,7 @@ public class arr2d {
 	public static void main(String[] args) throws Exception{
 
 						//create the Bridges object
-		Bridges<String, Integer> bridges = 
-					new Bridges<String, Integer>(2, "YOUR_API_KEY", "YOUR_USER_ID");
+		Bridges bridges = new Bridges(2, "YOUR_API_KEY", "YOUR_USER_ID");
 
 						//  for 2D array 5x5
 		int columns = 5;

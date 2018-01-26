@@ -56,7 +56,7 @@
 <ul>
 <li>First we need to create our BRIDGES object and initialize our BRIDGES Credentials</li>
 <pre class="prettyprint">
-	Bridges&lt;String, String&gt; bridge = new Bridges&lt;String,String&gt;(1, "YOUR_API_KEY", "YOUR_USER_ID");
+	Bridges bridge = new Bridges(1, "YOUR_API_KEY", "YOUR_USER_ID");
 
 </pre> 
 <b>Note that you will need to replace the two fields in this call with your BRIDGES 
@@ -107,7 +107,7 @@ public class arr3d {
 	public static void main(String[] args) throws Exception{
 
 							//create the Bridges object
-		Bridges&ltString, Integer&gt bridges = new Bridges&ltString, Integer&gt(3, "YOUR_API_KEY", "YOUR_USER_ID");
+		Bridges bridges = new Bridges(3, "YOUR_API_KEY", "YOUR_USER_ID");
 
 						// specify array dimensions and create 3D array
 		int[] dims = {4, 4, 4};
