@@ -76,7 +76,7 @@ public class sllist {
         SLelement<StudentInfo> currentElement = el0;
         while(currentElement != null){
 						// color the node
-			StudentInfo si = currentElement.getValue();
+            StudentInfo si = currentElement.getValue();
             currentElement.getVisualizer().setColor(si.getFavoriteColor());
 
             if(currentElement.getNext() != null){
