@@ -22,7 +22,7 @@
 <li>First we need to create our BRIDGES object and initialize our BRIDGES Credentials; here we use for our example a StudentInfo object class, which will
 be a generic parameter.</li>
 <pre class="prettyprint">Bridges&lt;String, String&gt; 
-	bridges = new Bridges&ltString,String&gt;(1, "YOUR_API_KEY", "YOUR_USER_ID");
+	bridges = new Bridges(1, "YOUR_API_KEY", "YOUR_USER_ID");
 </pre>
 In the above call, the parameter 1 is the assignment id (can be any
 positive integer), and the remaining two parameters are your BRIDGES
@@ -34,11 +34,11 @@ with strings, with sublists from 2 nodes</li>
 <li> First, create the main list with 5 nodes and link them; this is just a normal singly 
 linked list. </li>
 <pre class="prettyprint">
-	MLelement&ltString&gt el0 = new MLelement&ltString&gt(0", "0");
-	MLelement&ltString&gt el1 = new MLelement&ltString&gt(1", "1");
-	MLelement&ltString&gt el2 = new MLelement&ltString&gt(2", "2");
-	MLelement&ltString&gt el3 = new MLelement&ltString&gt(3", "3");
-	MLelement&ltString&gt el4 = new MLelement&ltString&gt(4", "4");
+	MLelement&ltString&gt el0 = new MLelement&ltString&gt("0", "0");
+	MLelement&ltString&gt el1 = new MLelement&ltString&gt("1", "1");
+	MLelement&ltString&gt el2 = new MLelement&ltString&gt("2", "2");
+	MLelement&ltString&gt el3 = new MLelement&ltString&gt("3", "3");
+	MLelement&ltString&gt el4 = new MLelement&ltString&gt("4", "4");
 							// link them
 	el0.setNext(el1);
 	el1.setNext(el2);
@@ -48,9 +48,9 @@ linked list. </li>
 <li> Next create a sublist of 3 elements and make it a sublist of node 2</li>
 <pre class="prettyprint">
 							// create a sublist from node 2
-	MLelement&ltString&gt el5 = new MLelement&ltString&gt(5", "5");
-	MLelement&ltString&gt el6 = new MLelement&ltString&gt(6", "6");
-	MLelement&ltString&gt el7 = new MLelement&ltString&gt(7", "7");
+	MLelement&ltString&gt el5 = new MLelement&ltString&gt("5", "5");
+	MLelement&ltString&gt el6 = new MLelement&ltString&gt("6", "6");
+	MLelement&ltString&gt el7 = new MLelement&ltString&gt("7", "7");
 							// link the sublist
 	el5.setNext(el6);
 	el6.setNext(el7);
@@ -59,8 +59,8 @@ linked list. </li>
 <li> Next, create a second sublist of 2 nodes from node 3 </li>
 <pre class="prettyprint">
 							// create a second sublist from 3
-	MLelement&ltString&gt el8 = new MLelement&ltString&gt(8", "8");
-	MLelement&ltString&gt el9 = new MLelement&ltString&gt(9", "9");
+	MLelement&ltString&gt el8 = new MLelement&ltString&gt("8", "8");
+	MLelement&ltString&gt el9 = new MLelement&ltString&gt("9", "9");
 
 							// link the sublist
 	el8.setNext(el9);
@@ -70,8 +70,8 @@ linked list. </li>
 </li>
 <pre class="prettyprint">
 							// create a (sub)sublist from 5
-	MLelement&ltString&gt el10 = new MLelement&ltString&gt(10", "10");
-	MLelement&ltString&gt el11 = new MLelement&ltString&gt(11", "11");
+	MLelement&ltString&gt el10 = new MLelement&ltString&gt("10", "10");
+	MLelement&ltString&gt el11 = new MLelement&ltString&gt("11", "11");
 							// link the sublist
 	el10.setNext(el11);
 	el6.setSubList(el10);
@@ -106,18 +106,17 @@ public class mllist {
 	public static void main(String[] args) throws Exception{
     	
     								//create the Bridges object
-		Bridges<String, String> bridges = new Bridges<String,String>(33, 
-								"486749122386", "kalpathi60");
+		Bridges<String, String> bridges = new Bridges<String,String>(33, "YOUR API KEY", "YOUR USER ID");
         
 		bridges.setTitle("A Multilist Example");
 
    							//create  nodes for the main list
 
-		MLelement&ltString&gt el0 = new MLelement&ltString&gt("0", "0");
-		MLelement&ltString&gt el1 = new MLelement&ltString&gt("1", "1");
-		MLelement&ltString&gt el2 = new MLelement&ltString&gt("2", "2");
-		MLelement&ltString&gt el3 = new MLelement&ltString&gt("3", "3");
-		MLelement&ltString&gt el4 = new MLelement&ltString&gt("4", "4");
+		MLelement&lt;String&gt; el0 = new MLelement&lt;String&gt;("0", "0");
+		MLelement&lt;String&gt; el1 = new MLelement&lt;String&gt;("1", "1");
+		MLelement&lt;String&gt; el2 = new MLelement&lt;String&gt;("2", "2");
+		MLelement&lt;String&gt; el3 = new MLelement&lt;String&gt;("3", "3");
+		MLelement&lt;String&gt; el4 = new MLelement&lt;String&gt;("4", "4");
 
 							// link them
 		el0.setNext(el1);
@@ -125,9 +124,9 @@ public class mllist {
 		el2.setNext(el3);
 		el3.setNext(el4);
 							// create a sublist from node 2
-		MLelement<String> el5 = new MLelement&ltString&gt(5", "5");
-		MLelement<String> el6 = new MLelement&ltString&gt(6", "6");
-		MLelement<String> el7 = new MLelement&ltString&gt(7", "7");
+		MLelement&lt;String&gt; el5 = new MLelement&lt;String&gt;("5", "5");
+		MLelement&lt;String&gt; el6 = new MLelement&lt;String&gt;("6", "6");
+		MLelement&lt;String&gt; el7 = new MLelement&lt;String&gt;("7", "7");
 
 							// link the sublist
 		el5.setNext(el6);
@@ -135,16 +134,16 @@ public class mllist {
 		el2.setSubList(el5);
 
 							// create a second sublist from 3
-		MLelement&ltString&gt el8 = new MLelement&ltString&gt(8", "8");
-		MLelement&ltString&gt el9 = new MLelement&ltString&gt(9", "9");
+		MLelement&lt;String&gt; el8 = new MLelement&lt;String&gt;("8", "8");
+		MLelement&lt;String&gt; el9 = new MLelement&lt;String&gt;("9", "9");
 
 							// link the sublist
 		el8.setNext(el9);
 		el3.setSubList(el8);
 
 							// create a (sub)sublist from 5
-		MLelement&ltString&gt el10 = new MLelement&ltString&gt(10", "10");
-		MLelement&ltString&gt el11 = new MLelement&ltString&gt(11", "11");
+		MLelement&lt;String&gt; el10 = new MLelement&lt;String&gt;("10", "10");
+		MLelement&lt;String&gt; el11 = new MLelement&lt;String&gt;("11", "11");
 
 							// link the sublist
 		el10.setNext(el11);
