@@ -76,8 +76,8 @@ public class dllist {
            curr = curr.getNext();
        }
 
-      bridge.setDataStructure(head);
-      bridge.visualize();
+      bridges.setDataStructure(head);
+      bridges.visualize();
 
 
   }
