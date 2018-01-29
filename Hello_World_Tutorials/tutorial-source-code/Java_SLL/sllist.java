@@ -13,7 +13,7 @@ public class sllist {
 		Bridges bridges = new Bridges(4, "YOUR_API_KEY", "YOUR_USER_ID");
          					// create the linked list elements with 
 							// student data 
-		SLelement<StudentInfo> el0 = new SLelement<StudentInfo>( "",
+		SLelement&lt;StudentInfo&gt; el0 = new SLelement&lt;StudentInfo&gt;( "",
 			new StudentInfo(
 				"00000000000",
 				"Gretel Chaney",
