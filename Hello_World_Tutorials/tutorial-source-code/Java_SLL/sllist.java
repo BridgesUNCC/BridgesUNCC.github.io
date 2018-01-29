@@ -23,7 +23,7 @@ public class sllist {
 				"blue",
 				 9.0
 			));
-		SLelement<StudentInfo> el1 = new SLelement<StudentInfo>( "",
+		SLelement&lt;StudentInfo&gt; el1 = new SLelement&lt;StudentInfo&gt;( "",
 			new StudentInfo(
 				"00000000001",
 				"Karol Soderman",
@@ -33,7 +33,7 @@ public class sllist {
 				"red",
 				 11.0
 			));
-		SLelement<StudentInfo> el2 = new SLelement<StudentInfo>( "",
+		SLelement&lt;StudentInfo&gt; el2 = new SLelement&lt;StudentInfo&gt;( "",
 			new StudentInfo(
 				"00000000002",
 				"Lamont Kyler",
@@ -43,7 +43,7 @@ public class sllist {
 				"green",
 				 12.0
 			));
-		SLelement<StudentInfo> el3 = new SLelement<StudentInfo>( "",
+		SLelement&lt;StudentInfo&gt; el3 = new SLelement&lt;StudentInfo&gt;( "",
 			new StudentInfo(
 				"00000000003",
 				"Gladys Serino",
@@ -53,7 +53,7 @@ public class sllist {
 				"magenta",
 				 9.0
 			));
-		SLelement<StudentInfo> el4 = new SLelement<StudentInfo>( "",
+		SLelement&lt;StudentInfo&gt; el4 = new SLelement&lt;StudentInfo&gt;( "",
 			new StudentInfo(
 				"00000000004",
 				"Starr Mcginn",
@@ -73,7 +73,7 @@ public class sllist {
 						// iterate through the list and add visual attributes
 						// to the elements; set the element color to the favorite
 						// color and the link to the disliked color
-        SLelement<StudentInfo> currentElement = el0;
+        SLelement&lt;StudentInfo&gt; currentElement = el0;
         while(currentElement != null){
 						// color the node
             StudentInfo si = currentElement.getValue();
