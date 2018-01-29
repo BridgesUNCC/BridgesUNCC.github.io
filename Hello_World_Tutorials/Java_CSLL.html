@@ -21,7 +21,7 @@
 <ul>
   <li>First we need to create our BRIDGES object and initialize our BRIDGES Credentials; here we use for our example a StudentInfo object class, which will
 be a generic parameter.</li>
-<pre class="prettyprint">   Bridges&lt;String, StudentInfo&gt; bridges = new Bridges&lt;&gt;(3, "YOUR_API_KEY", "YOUR_USER_ID");</pre>
+<pre class="prettyprint">   Bridges bridges = new Bridges(3, "YOUR_API_KEY", "YOUR_USER_ID");</pre>
 	In the above call, the parameter 1 is the assignment id (can be any
 	positive integer), and the remaining two parameters are your BRIDGES
 	credentials.  <b>You will need to replace the two fields in this call
@@ -77,11 +77,11 @@ be a generic parameter.</li>
 
   <li>Then we can create our CircSLelements with the StudentInfo objects and link the DLements together.</li>
 	<pre class="prettyprint">
-	CircSLelement<StudentInfo> head = new CircSLelement<StudentInfo>("",students[0]);
-	CircSLelement<StudentInfo> current = head;
+	CircSLelement&lt;StudentInfo&gt; head = new CircSLelement&lt;StudentInfo&gt;("",students[0]);
+	CircSLelement&lt;StudentInfo&gt; current = head;
 
 	for(int i = 1; i < students.length; i++){
-		current.setNext(new CircSLelement<StudentInfo>("", students[i]));
+		current.setNext(new CircSLelement&lt;StudentInfo&gt;(students[i]));
 
                                     //handle the last element
 		if (i == students.length-1){
@@ -113,11 +113,11 @@ be a generic parameter.</li>
 </pre>
 <li>Now we pass the first element(head) of our data structure to BRIDGES</li>
 <pre class="prettyprint">   
-	bridge.setDataStructure(head);
+	bridges.setDataStructure(head);
 </pre>
 <li>Finaly we call the visualize function</li>
 <pre class="prettyprint">   
-	bridge.visualize();</pre>
+	bridges.visualize();</pre>
 </ul>
 
 

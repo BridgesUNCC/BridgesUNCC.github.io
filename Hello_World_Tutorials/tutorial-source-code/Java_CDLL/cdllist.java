@@ -6,9 +6,7 @@ public class cdllist {
 
 	public static void main(String[] args) throws Exception{
 
-		final String YOUR_API_KEY = "";
-		final String YOUR_USER_ID = "";
-		Bridges<String, StudentInfo> bridge = new Bridges<String, StudentInfo>(6, YOUR_API_KEY, YOUR_USER_ID);
+		Bridges bridges = new Bridges(6, "YOUR_API_KEY", "YOUR_USER_ID");
 
 		StudentInfo[] students = {
 			new StudentInfo(
@@ -56,16 +54,16 @@ public class cdllist {
 			};
 
       					//initializing all student elements 
-		CircDLelement<StudentInfo> head = null;
+		CircDLelement&lt;StudentInfo&gt; head = null;
 
 		for(int i = 0; i < students.length; i++) {
 			if (i > 0)
-				head = insertFront(head, new CircDLelement<StudentInfo>("",students[i]));
+				head = insertFront(head, new CircDLelement&lt;StudentInfo&gt;("",students[i]));
 			else
-				head = new CircDLelement<StudentInfo>("",students[i]);
+				head = new CircDLelement&lt;StudentInfo&gt;("",students[i]);
       	}
 
-      	CircDLelement<StudentInfo> current = head;
+      	CircDLelement&lt;StudentInfo&gt; current = head;
 						// add visual attributes
 		do {
 			current.setLabel(current.getValue().getStudentLabel());
@@ -80,15 +78,15 @@ public class cdllist {
 			current = current.getNext();
 		}	while (current != head);
 
-		bridge.setDataStructure(head);
+		bridges.setDataStructure(head);
 
-		bridge.visualize();
+		bridges.visualize();
 	}
 
-	public static CircDLelement<StudentInfo> insertFront(
-				CircDLelement<StudentInfo> tailElement,
-				CircDLelement<StudentInfo> newElement) {
-		CircDLelement<StudentInfo> tailNextElement = tailElement.getNext();
+	public static CircDLelement&lt;StudentInfo&gt; insertFront(
+				CircDLelement&lt;StudentInfo&gt; tailElement,
+				CircDLelement&lt;StudentInfo&gt; newElement) {
+		CircDLelement&lt;StudentInfo&gt; tailNextElement = tailElement.getNext();
 
 		newElement.setNext(tailNextElement);
 		newElement.setPrev(tailElement);

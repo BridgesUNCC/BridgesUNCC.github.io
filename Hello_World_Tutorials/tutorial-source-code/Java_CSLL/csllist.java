@@ -6,9 +6,7 @@ public class csllist {
 
   public static void main(String[] args) throws Exception {
 
-      final String YOUR_API_KEY = "";
-      final String YOUR_USER_ID = "";
-      Bridges<String, StudentInfo> bridge = new Bridges<String, StudentInfo>(6, YOUR_API_KEY, YOUR_USER_ID);
+      Bridges bridges = new Bridges(6, "YOUR_API_KEY", "YOUR_USER_ID");
 
       StudentInfo[] students = {
                       new StudentInfo(
@@ -55,16 +53,13 @@ public class csllist {
                               15.0)
       };
 
-      /**
-         * new CircSLelement<>(label, genericData)
-         */
-        CircSLelement<StudentInfo> head = new CircSLelement<StudentInfo>("",students[0]);
-        CircSLelement<StudentInfo> current = head;
+        CircSLelement&lt;StudentInfo&gt; head = new CircSLelement&lt;StudentInfo&gt;("",students[0]);
+        CircSLelement&lt;StudentInfo&gt; current = head;
 
         for(int i = 1; i < students.length; i++){
-            current.setNext(new CircSLelement<StudentInfo>("", students[i]));
+            current.setNext(new CircSLelement&lt;StudentInfo&gt;("", students[i]));
 
-									//handle the last element
+						//handle the last element
             if(i == students.length-1){
 									//getting the last element
                 current = current.getNext();
@@ -74,7 +69,7 @@ public class csllist {
                 current.getNext().setNext(head);
             }
 
-            //set the current element to be the next element
+						//set the current element to be the next element
             current = current.getNext();
         }
 
@@ -92,7 +87,7 @@ public class csllist {
             current = current.getNext();
         }	while(current.getIdentifier() != head.getIdentifier());
 
-        bridge.setDataStructure(head);
-        bridge.visualize();
+        bridges.setDataStructure(head);
+        bridges.visualize();
   }
 }
