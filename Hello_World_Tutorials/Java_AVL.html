@@ -21,8 +21,7 @@
 <ul>
 <li>First we need to create our Bridges object and initialize our Bridges Credentials</li>
 <pre class="prettyprint">
-	Bridges&lt;Integer, String&gt; bridges = 
-			new Bridges&lt;Integer, String&gt;(4, "YOUR_API_KEY", "YOUR_USER_ID");</pre>
+	Bridges bridges = new Bridges(4, "YOUR_API_KEY", "YOUR_USER_ID");</pre>
 <li> Next we  create our AVL Tree elements; here we will show a simple example of an 
 	AVL tree manually created with balance factors manually put in; in a real project, 
 	students will implement insert/delete/find operations and subsequent tree 
@@ -76,11 +75,10 @@ public class avl {
     public static void main(String[] args) throws Exception{
         
                     //create the Bridges object
-		Bridges&ltInteger, String&gt 
-			bridges = new Bridges&ltInteger, String&gt(10, "YOU_API_KEY", "YOUR_USER_ID");
+		Bridges bridges = new Bridges(10, "YOU_API_KEY", "YOUR_USER_ID");
 
                     //create  an  AVL tree elements
-		AVLTreeElement<Integer,String> avl_root = new AVLTreeElement<Integer,String>(50, 
+		AVLTreeElement&lt;Integer,String&gt; avl_root = new AVLTreeElement&lt;Integer,String&gt;(50, 
 													"Hello");
 		AVLTreeElement&ltInteger,String&gt avl_2 = new AVLTreeElement&ltInteger,String&gt(30, "This");
 		AVLTreeElement&ltInteger,String&gt avl_3 = new AVLTreeElement&ltInteger,String&gt(70, "is");

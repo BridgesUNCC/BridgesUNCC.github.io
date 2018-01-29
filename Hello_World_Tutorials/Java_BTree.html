@@ -21,8 +21,7 @@
 <ul>
   <li>First we need to create our Bridges object and initialize our Bridges Credentials; also set title, description of the project 
 <pre class="prettyprint">
-	Bridges&lt;Integer, Integer&gt; bridge = 
-			new Bridges&lt; Integer, Integer&gt; (8, "YOUR_API_KEY", "YOUR_USER_ID");
+	Bridges bridges = new Bridges(8, "YOUR_API_KEY", "YOUR_USER_ID");
 </pre>
 	bridges.setTitle("A Huffman Coding Tree Example");
 	bridges.setDescription("[Binary Tree Application]: Huffman tree coding the symbols C, D, E, K, L, M, U, Z with frequencies 32, 42, 120, 7, 42, 24, 37, 2");
@@ -34,21 +33,21 @@ credentials. </b>
 <li>Then we can create our Binary Tree Elements; in this example we manually create
 the huffman tree for illustration, in reality, an algortihm will do this work 
 <pre class="prettyprint">
-	BinTreeElement&ltInteger&gt t0 = new BinTreeElement&ltInteger&gt(306", 0);
-	BinTreeElement&ltInteger&gt t1 = new BinTreeElement&ltInteger&gt(120\\nE", 1);
-	BinTreeElement&ltInteger&gt t2 = new BinTreeElement&ltInteger&gt(186", 2);
-	BinTreeElement&ltInteger&gt t3 = new BinTreeElement&ltInteger&gt(79", 3);
-	BinTreeElement&ltInteger&gt t4 = new BinTreeElement&ltInteger&gt(37\\nU", 4);
-	BinTreeElement&ltInteger&gt t5 = new BinTreeElement&ltInteger&gt(42\\nD", 5);
-	BinTreeElement&ltInteger&gt t6 = new BinTreeElement&ltInteger&gt(42\\nL", 6);
-	BinTreeElement&ltInteger&gt t7 = new BinTreeElement&ltInteger&gt(107", 7);
-	BinTreeElement&ltInteger&gt t8 = new BinTreeElement&ltInteger&gt(65", 8);
-	BinTreeElement&ltInteger&gt t9 = new BinTreeElement&ltInteger&gt(32\\nC", 9);
-	BinTreeElement&ltInteger&gt t10 = new BinTreeElement&ltInteger&gt(33", 10);
-	BinTreeElement&ltInteger&gt t11 = new BinTreeElement&ltInteger&gt(9", 11);
-	BinTreeElement&ltInteger&gt t12 = new BinTreeElement&ltInteger&gt(2\\nZ", 12);
-	BinTreeElement&ltInteger&gt t13 = new BinTreeElement&ltInteger&gt(7\\nK", 13);
-	BinTreeElement&ltInteger&gt t14 = new BinTreeElement&ltInteger&gt(24\\nM", 14);
+	BinTreeElement&ltInteger&gt t0 = new BinTreeElement&ltInteger&gt("306", 0);
+	BinTreeElement&ltInteger&gt t1 = new BinTreeElement&ltInteger&gt("120\\nE", 1);
+	BinTreeElement&ltInteger&gt t2 = new BinTreeElement&ltInteger&gt("186", 2);
+	BinTreeElement&ltInteger&gt t3 = new BinTreeElement&ltInteger&gt("79", 3);
+	BinTreeElement&ltInteger&gt t4 = new BinTreeElement&ltInteger&gt("37\\nU", 4);
+	BinTreeElement&ltInteger&gt t5 = new BinTreeElement&ltInteger&gt("42\\nD", 5);
+	BinTreeElement&ltInteger&gt t6 = new BinTreeElement&ltInteger&gt("42\\nL", 6);
+	BinTreeElement&ltInteger&gt t7 = new BinTreeElement&ltInteger&gt("107", 7);
+	BinTreeElement&ltInteger&gt t8 = new BinTreeElement&ltInteger&gt("65", 8);
+	BinTreeElement&ltInteger&gt t9 = new BinTreeElement&ltInteger&gt("32\\nC", 9);
+	BinTreeElement&ltInteger&gt t10 = new BinTreeElement&ltInteger&gt("33", 10);
+	BinTreeElement&ltInteger&gt t11 = new BinTreeElement&ltInteger&gt("9", 11);
+	BinTreeElement&ltInteger&gt t12 = new BinTreeElement&ltInteger&gt("2\\nZ", 12);
+	BinTreeElement&ltInteger&gt t13 = new BinTreeElement&ltInteger&gt("7\\nK", 13);
+	BinTreeElement&ltInteger&gt t14 = new BinTreeElement&ltInteger&gt("24\\nM", 14);
 </pre>
 <li> Next set up the links and build the Huffman tree 
 <pre class="prettyprint">
@@ -102,27 +101,26 @@ public class bintree {
 	public static void main(String[] args) throws Exception{
     	
    					//create the Bridges object
-		Bridges&ltInteger, Integer&gt bridges = new Bridges&ltInteger, Integer&gt(8,
-								"YOUR_API_KEY", "YOUR_USER_ID");
+		Bridges bridges = new Bridges(8, "YOUR_API_KEY", "YOUR_USER_ID");
 
 		bridges.setTitle("A Huffman Coding Tree Example");
 		bridges.setDescription("[Binary Tree Application]: Huffman tree coding the symbols C, D, E, K, L, M, U, Z with frequencies 32, 42, 120, 7, 42, 24, 37, 2");
    					//create  an   tree
-		BinTreeElement&ltInteger&gt t0 = new BinTreeElement&ltInteger&gt(306", 0);
-		BinTreeElement&ltInteger&gt t1 = new BinTreeElement&ltInteger&gt(120\\nE", 1);
-		BinTreeElement&ltInteger&gt t2 = new BinTreeElement&ltInteger&gt(186", 2);
-		BinTreeElement&ltInteger&gt t3 = new BinTreeElement&ltInteger&gt(79", 3);
-		BinTreeElement&ltInteger&gt t4 = new BinTreeElement&ltInteger&gt(37\\nU", 4);
-		BinTreeElement&ltInteger&gt t5 = new BinTreeElement&ltInteger&gt(42\\nD", 5);
-		BinTreeElement&ltInteger&gt t6 = new BinTreeElement&ltInteger&gt(42\\nL", 6);
-		BinTreeElement&ltInteger&gt t7 = new BinTreeElement&ltInteger&gt(107", 7);
-		BinTreeElement&ltInteger&gt t8 = new BinTreeElement&ltInteger&gt(65", 8);
-		BinTreeElement&ltInteger&gt t9 = new BinTreeElement&ltInteger&gt(32\\nC", 9);
-		BinTreeElement&ltInteger&gt t10 = new BinTreeElement&ltInteger&gt(33", 10);
-		BinTreeElement&ltInteger&gt t11 = new BinTreeElement&ltInteger&gt(9", 11);
-		BinTreeElement&ltInteger&gt t12 = new BinTreeElement&ltInteger&gt(2\\nZ", 12);
-		BinTreeElement&ltInteger&gt t13 = new BinTreeElement&ltInteger&gt(7\\nK", 13);
-		BinTreeElement&ltInteger&gt t14 = new BinTreeElement&ltInteger&gt(24\\nM", 14);
+		BinTreeElement&ltInteger&gt t0 = new BinTreeElement&ltInteger&gt("306", 0);
+		BinTreeElement&ltInteger&gt t1 = new BinTreeElement&ltInteger&gt("120\\nE", 1);
+		BinTreeElement&ltInteger&gt t2 = new BinTreeElement&ltInteger&gt("186", 2);
+		BinTreeElement&ltInteger&gt t3 = new BinTreeElement&ltInteger&gt("79", 3);
+		BinTreeElement&ltInteger&gt t4 = new BinTreeElement&ltInteger&gt("37\\nU", 4);
+		BinTreeElement&ltInteger&gt t5 = new BinTreeElement&ltInteger&gt("42\\nD", 5);
+		BinTreeElement&ltInteger&gt t6 = new BinTreeElement&ltInteger&gt("42\\nL", 6);
+		BinTreeElement&ltInteger&gt t7 = new BinTreeElement&ltInteger&gt("107", 7);
+		BinTreeElement&ltInteger&gt t8 = new BinTreeElement&ltInteger&gt("65", 8);
+		BinTreeElement&ltInteger&gt t9 = new BinTreeElement&ltInteger&gt("32\\nC", 9);
+		BinTreeElement&ltInteger&gt t10 = new BinTreeElement&ltInteger&gt("33", 10);
+		BinTreeElement&ltInteger&gt t11 = new BinTreeElement&ltInteger&gt("9", 11);
+		BinTreeElement&ltInteger&gt t12 = new BinTreeElement&ltInteger&gt("2\\nZ", 12);
+		BinTreeElement&ltInteger&gt t13 = new BinTreeElement&ltInteger&gt("7\\nK", 13);
+		BinTreeElement&ltInteger&gt t14 = new BinTreeElement&ltInteger&gt("24\\nM", 14);
 
 		t0.setLeft(t1);
 		t0.setRight(t2);

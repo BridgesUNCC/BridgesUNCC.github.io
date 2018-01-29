@@ -40,7 +40,7 @@
 <li>Then we can create our TreeElements and build the binary search tree</li>
 <pre class="prettyprint">
 			// create BST nodes and insert into a tree
-	BSTElement &ltDouble, EarthquakeUSGS&gt root = null;
+	BSTElement &lt;Double, EarthquakeUSGS&gt; root = null;
 	for (int k = 0; k < 10; k++) {
 			// create the node, with magnitude as the search key
 		BSTElement&ltDouble, EarthquakeUSGS&gt bst_node =
@@ -81,14 +81,13 @@ public class bst_eq {
 	public static void main(String[] args) throws Exception{
     	
    					//create the Bridges object
-		Bridges&ltDouble, EarthquakeUSGS&gt bridges = new Bridges&ltDouble, EarthquakeUSGS&gt(9,
-								"YOUR_API_KEY", "YOUR_USER_ID");
+		Bridges bridges = new Bridges(9, "YOUR_API_KEY", "YOUR_USER_ID");
 
 		bridges.setTitle("A Binary Search Tree Example with Earthquake Data");
 
 					// Retrieve a list of 10 earthquake  records  from USGS using the BRIDGES API
 		USGSaccount name = new USGSaccount( "earthquake" );
-		List<EarthquakeUSGS> eqlist = Bridges.getEarthquakeUSGSData(name, 10);
+		List&lt;EarthquakeUSGS&gt; eqlist = Bridges.getEarthquakeUSGSData(name, 10);
 
 					// create BST nodes and insert into a tree
 		BSTElement&ltDouble, EarthquakeUSGS&gt root = null; 
@@ -111,8 +110,8 @@ public class bst_eq {
         						// visualize the tree
 		bridges.visualize();
     }
-						// recursive insert method to insert nodes into a binary search tree
-	public static BSTElement&ltDouble, EarthquakeUSGS&gt insert_R (BSTElement&gtDouble, EarthquakeUSGS&gt rt, 
+				// recursive insert method to insert nodes into a binary search tree
+	public static BSTElement&ltDouble, EarthquakeUSGS&gt insert_R (BSTElement&lt;Double, EarthquakeUSGS&gt; rt, 
 					BSTElement&ltDouble, EarthquakeUSGS&gt new_el) {
 		if (rt == null)
 			return new_el;
