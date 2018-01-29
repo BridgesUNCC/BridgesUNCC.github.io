@@ -77,19 +77,19 @@ be a generic parameter.</li>
 <li> Insert the students in front of the list
 <pre class="prettyprint">
                       // insert the students in front of the list
-	DLelement<Student> head = null;
+	DLelement&lt;StudentInfo&gt; head = null;
 	for(int i = 0; i < students.length; i++){
-		head = insertFront(head, new DLelement<Student>("", students[i]));
+		head = insertFront(head, new DLelement&lt;StudentInfo&gt;("", students[i]));
 	}
 </pre>
 <li> Next add some visualization attributes to the elements</li>
 <pre class="prettyprint">
-	DLelement<Student> curr = head, next;
+	DLelement&lt;StudentInfo&gt; curr = head, next;
 	while(curr != null){
 		curr.setLabel(curr.getValue().getStudentLabel());
 		curr.getVisualizer().setColor(curr.getValue().getFavoriteColor());
 
-		DLelement<Student> n1, n2;
+		DLelement&lt;Student&gt; n1, n2;
 		if (curr.getNext() != null) {
 			next = curr.getNext();
 			curr.getLinkVisualizer(next).setColor(curr.getValue().getDislikeColor());
@@ -107,8 +107,8 @@ be a generic parameter.</li>
 </ul>
 <li> And here is the insertFront() method
 <pre class="prettyprint">
-public static DLelement<StudentInfo> insertFront(DLelement<StudentInfo> front,
-								DLelement<StudentInfo> new_el){
+public static DLelement&lt;StudentInfo&gt; insertFront(DLelement&lt;StudentInfo&gt; front,
+								DLelement&lt;StudentInfo&gt; new_el){
 	if (front == null)
 		return new_el;
 

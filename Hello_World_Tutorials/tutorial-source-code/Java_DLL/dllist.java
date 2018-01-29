@@ -7,7 +7,7 @@ public class dllist {
 
       final String YOUR_API_KEY = "";
       final String YOUR_USER_ID = "";
-      Bridges<String, StudentInfo> bridge = new Bridges<String, StudentInfo>(5, "YOUR_API_KEY", "YOUR_USER_ID");
+      Bridges bridges = new Bridges(5, "YOUR_API_KEY", "YOUR_USER_ID");
 
 						// load student info
       StudentInfo[] students = {
@@ -56,17 +56,17 @@ public class dllist {
       };
 
 							// insert the students in front of the list
-       DLelement<StudentInfo> head = null;
+       DLelement&lt;StudentInfo&gt; head = null;
        for(int i = 0; i < students.length; i++){
-	      head = insertFront(head, new DLelement<StudentInfo>("", students[i]));
+	      head = insertFront(head, new DLelement&lt;StudentInfo&gt;(students[i]));
        }
 							// add visual attributes 
-       DLelement<StudentInfo> curr = head, next;
+       DLelement&lt;StudentInfo&gt; curr = head, next;
        while(curr != null){
            curr.setLabel(curr.getValue().getStudentLabel());
            curr.getVisualizer().setColor(curr.getValue().getFavoriteColor());
 
-		   DLelement<StudentInfo> n1, n2;
+		   DLelement&lt;StudentInfo&gt; n1, n2;
            if (curr.getNext() != null) {
 				next = curr.getNext();
 				curr.getLinkVisualizer(next).setColor(curr.getValue().getDislikeColor());
@@ -82,8 +82,8 @@ public class dllist {
 
   }
 
-  public static DLelement<StudentInfo> insertFront(DLelement<StudentInfo> front,
-                                      DLelement<StudentInfo> new_el){
+  public static DLelement&lt;StudentInfo&gt; insertFront(DLelement&lt;StudentInfo&gt; front,
+                                      DLelement&lt;StudentInfo&gt; new_el){
 	if (front == null)
 		return new_el;
 
