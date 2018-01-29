@@ -7,8 +7,7 @@ public class tree{
 	public static void main(String[] args) throws Exception{
     	
    					//create the Bridges object
-		Bridges<Integer, String> bridges = new Bridges<Integer, String>(11,
-								"YOUR_API_KEY", "YOUR_USER_ID");
+		Bridges bridges = new Bridges<Integer, String>(11, "YOUR_API_KEY", "YOUR_USER_ID");
 
 		bridges.setTitle("A Generalized Tree Example");
 
