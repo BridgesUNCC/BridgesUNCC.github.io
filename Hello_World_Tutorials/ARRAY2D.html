@@ -148,6 +148,7 @@ public class arr2d {
                       <pre class="prettyprint">
 #include "Bridges.h"
 #include "Element.h"
+#include "Array.h"
         </pre>
                   </ul>
 
@@ -161,7 +162,7 @@ public class arr2d {
                   <h3>Inside our Main</h3>
                   <ul>
                       <li>First we need to initialize our Bridges Credentials</li>
-                      <pre class="prettyprint">Bridges::initialize(1, "YOUR_API_KEY","YOUR_USER_ID");</pre>
+                      <pre class="prettyprint">Bridges::initialize(1, "YOUR_USER_ID", "YOUR_API_KEY");</pre>
                       <p>
                           Note that you must replace the two strings above with your BRIDGES credentials.
                           <p>
@@ -174,8 +175,9 @@ Array&lt;string&gt; *arr = new Array&lt;string&gt;(2, dims);
 
 <li>Now populate the 2d array with dummy data.</li>
 <pre class="prettyprint">
-for (int k = 0; k&lt;10; k++)
-    el_array[k].setLabel("Element " + to_string(k));
+for (int i = 0; i &lt; dims[1]; i++)
+for (int j = 0; j &lt; dims[0]; j++)
+	arr->getValue(i,j).setLabel("El " + to_string(i*dims[0]+j));
 
 </pre>
 
@@ -188,11 +190,11 @@ arr->getValue(3,3).getVisualizer()->setColor(Color("magenta"));
 arr->getValue(1,1).getVisualizer()->setColor(Color("cyan"));
 arr->getValue(2,2).getVisualizer()->setColor(Color("yellow"));
 </pre>
-                              <li>Now we pass the array object to BRIDGES.</li>
-                              <pre class="prettyprint">Bridges::setDataStructure(&e0;);</pre>
-                              <li>Finally we call the visualize function.</li>
-                              <pre class="prettyprint">Bridges::visualize();</pre>
-                  </ul>
+<li>Now we pass the array object to BRIDGES.</li>
+<pre class="prettyprint">Bridges::setDataStructure(&e0;);</pre>
+<li>Finally we call the visualize function.</li>
+<pre class="prettyprint">Bridges::visualize();</pre>
+</ul>
 <h4><strong>Code Summary:</strong> Your .cpp file should look like this</h4>
 <pre class="prettyprint">
 #include &lt;iostream&gt;
@@ -202,33 +204,35 @@ using namespace std;
 
 #include "Bridges.h"
 #include "Element.h"
+#include "Array.h"
 
 using namespace bridges;
-int main() &#123;
+int main() {
+    Bridges::initialize(1, "YOUR_USER_ID", "YOUR_API_KEY");
 
-Bridges::initialize(0, "YOUR_API_KEY", "YOUR_USER_ID");
+    int dims[3] = {4, 4, 1};
+    Array&lt;string&gt; *arr = new Array&lt;string&gt;(2, dims);
 
-Element&lt;string&gt; *arr = new Element&lt;string&gt;[10];
+    for (int i = 0; i &lt; dims[1]; i++)
+    for (int j = 0; j &lt; dims[0]; j++)
+        arr->getValue(i,j).setLabel("El " + to_string(i*dims[0]+j));
 
-for (int i = 0; i &lt; dims[1]; k++)
-for (int j = 0; j &lt; dims[0]; j++)
-    arr-&lt;arr(i,j).setLabel("Element " + to_string(i*dims[0]+j));
-
-arr-&gt;getValue(0,0).getVisualizer()-&gt;setColor(Color("red"));
-arr-&gt;getValue(0,3).getVisualizer()-&gt;setColor(Color("green"));
-arr-&gt;getValue(3,0).getVisualizer()-&gt;setColor(Color("blue"));
-arr-&gt;getValue(3,3).getVisualizer()-&gt;setColor(Color("magenta"));
-arr-&gt;getValue(1,1).getVisualizer()-&gt;setColor(Color("cyan"));
-arr-&gt;getValue(2,2).getVisualizer()-&gt;setColor(Color("yellow"));
+    arr->getValue(0,0).getVisualizer()->setColor(Color("red"));
+    arr->getValue(0,3).getVisualizer()->setColor(Color("green"));
+    arr->getValue(3,0).getVisualizer()->setColor(Color("blue"));
+    arr->getValue(3,3).getVisualizer()->setColor(Color("magenta"));
+    arr->getValue(1,1).getVisualizer()->setColor(Color("cyan"));
+    arr->getValue(2,2).getVisualizer()->setColor(Color("yellow"));
 
 
-Bridges::setTitle("Array 2D Example");
-Bridges::setDataStructure(arr);
-Bridges::visualize();
+    Bridges::setTitle("Array Example");
+    Bridges::setDataStructure(arr);
+    Bridges::visualize();
 
-return 0;
-&#125;
-      </pre>
+    return 0;
+}
+
+</pre>
 
               </div>
           </div>

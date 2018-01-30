@@ -145,6 +145,7 @@ public static void main(String[] args) throws Exception&#123;
 <pre class="prettyprint">
 	#include "Bridges.h"
 	#include "Element.h"
+~	#include "Array.h"
 </pre>
 </ul>
 
@@ -158,79 +159,91 @@ public static void main(String[] args) throws Exception&#123;
                     <h3>Inside our Main</h3>
                     <ul>
                         <li>First we need to initialize our Bridges Credentials</li>
-                        <pre class="prettyprint">Bridges::initialize(1, "YOUR_API_KEY","YOUR_USER_ID");</pre>
+                        <pre class="prettyprint">Bridges::initialize(1, "YOUR_USER_ID", "YOUR_API_KEY",);</pre>
                         <p>
                             Note that you must replace the two strings above with your BRIDGES credentials.
                             <p>
-                                <li>Then we can create our Array.</li>
+                                <li>Then we can create our Array, by specifying the dimensions.</li>
                                 <pre class="prettyprint">
-Element&lt;string> *el_array = new Element&lt;string>[10];
+int dims[3] = {10, 1, 1};
+Array&lt;int> *el_array = new Array&lt;int>(1, dims);
 
           </pre>
                                 <li>Now populate the array with dummy data.</li>
                                 <pre class="prettyprint">
-for (int k = 0; k &lt; 10; k++)
-    el_array[k].setLabel("Element " + to_string(k));
+for (int j = 0; j &lt; 10; j++)
+    el_array[j].setLabel("Element " + to_string(j));
           </pre>
                                 <li>Now change the color of the elements.</li>
-                                <pre class="prettyprint">
-el_array[0].getVisualizer()-&gt;setColor(Color("red"));
-el_array[1].getVisualizer()-&gt;setColor(Color("green"));
-el_array[3].getVisualizer()-&gt;setColor(Color("blue"));
-el_array[5].getVisualizer()-&gt;setColor("magenta");
-el_array[7].getVisualizer()-&gt;setColor("cyan");
-el_array[9].getVisualizer()-&gt;setColor("yellow");
-          </pre>
-                                <li>Now we pass the first element of our singly linked list to Bridges</li>
-                                <pre class="prettyprint">Bridges::setDataStructure(el_array, 10);</pre>
-                                <li>Finally we call the visualize function</li>
-                                <pre class="prettyprint">Bridges::visualize();</pre>
-                    </ul>
-                    <h4><strong>Code Summary:</strong> Your .cpp file should look like this</h4>
+<pre class="prettyprint">
+arr->getValue(0).getVisualizer()->setColor(Color("red"));
+arr->getValue(1).getVisualizer()->setColor(Color("green"));
+arr->getValue(2).getVisualizer()->setColor(Color("blue"));
+arr->getValue(3).getVisualizer()->setColor(Color("cyan"));
+arr->getValue(4).getVisualizer()->setColor(Color("magenta"));
+arr->getValue(5).getVisualizer()->setColor(Color("yellow"));
+arr->getValue(6).getVisualizer()->setColor(Color("red"));
+arr->getValue(7).getVisualizer()->setColor(Color("green"));
+arr->getValue(8).getVisualizer()->setColor(Color("blue"));
+arr->getValue(9).getVisualizer()->setColor(Color("black"));
+</pre>
+<li>Now we pass the first element of our singly linked list to Bridges</li>
+<pre class="prettyprint">
+Bridges::setDataStructure(el_array, 10);
+</pre>
+<li>Finally we call the visualize function</li>
+<pre class="prettyprint">Bridges::visualize();</pre>
+</ul>
+<h4><strong>Code Summary:</strong> Your .cpp file should look like this</h4>
                     <pre class="prettyprint">
 #include &lt;iostream&gt;
 #include &lt;string&gt;
 
 using namespace std;
 
-#define LOCAL_SERVER 0
-
 #include "Bridges.h"
 #include "Element.h"
+#include "Array.h"
 
 using namespace bridges;
-int main() &#123;
+int main() {
+                        // initialize BRIDGES with credentials
+    Bridges::initialize(0, "YOUR_USER_ID", "YOUR API KEY");
 
-	Bridges&lt;string, string&gt; *bridges = new Bridges&lt;string, string&gt;(0,
-			"YOUR_API_KEY", "YOUR_USER_ID");
+                        // allocate a 1D array
+    int dims[3] = {10, 1, 1};
+    Array&lt;int&gt; *arr = new Array&lt;int&gt;(1, dims);
 
-	Element&lt;string&gt; *el_array = new Element&lt;string&gt;[10];
+    for (int j = 0; j < dims[0]; j++)
+        arr->getValue(j).setLabel("El " + to_string(j));
 
-	el_array[0].setLabel("Element 0");
+                        // color the elements of the array
+    arr->getValue(0).getVisualizer()->setColor(Color("red"));
+    arr->getValue(1).getVisualizer()->setColor(Color("green"));
+    arr->getValue(2).getVisualizer()->setColor(Color("blue"));
+    arr->getValue(3).getVisualizer()->setColor(Color("cyan"));
+    arr->getValue(4).getVisualizer()->setColor(Color("magenta"));
+    arr->getValue(5).getVisualizer()->setColor(Color("yellow"));
+    arr->getValue(6).getVisualizer()->setColor(Color("red"));
+    arr->getValue(7).getVisualizer()->setColor(Color("green"));
+    arr->getValue(8).getVisualizer()->setColor(Color("blue"));
+    arr->getValue(9).getVisualizer()->setColor(Color("black"));
 
-	for (int k = 0; k &lt; 10; k++)
-		  el_array[k].setLabel("Element " + to_string(k));
 
-	el_array[0].getVisualizer()-&gt;setColor(Color("red"));
-	el_array[1].getVisualizer()-&gt;setColor(Color("green"));
-	el_array[3].getVisualizer()-&gt;setColor(Color("blue"));
-	el_array[5].getVisualizer()-&gt;setColor("magenta");
-	el_array[7].getVisualizer()-&gt;setColor("cyan");
-	el_array[9].getVisualizer()-&gt;setColor("yellow");
+                        // set title
+    Bridges::setTitle("Array Example");
+                        // tell BRIDGES what data structure you are using
+    Bridges::setDataStructure(arr);
+                        // visualize
+    Bridges::visualize();
 
+    return 0;
+}
 
-	Bridges::setTitle("Array Example");
-	Bridges::setDataStructure(el_array, 10);
-	Bridges::visualize();
+</div>
+</div>
 
-	return 0;
-&#125;
-        </pre>
-
-                </div>
-            </div>
-
-  <h3>Bridges Visualization</h3>
+<h3>Bridges Visualization</h3>
 <ul>
 <li>Once all your code is in order, run your file.</li>
 <li>Assuming all your code is correct and it compiles correctly, a

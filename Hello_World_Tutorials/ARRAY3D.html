@@ -165,29 +165,30 @@ using namespace bridges;
 </pre>
                     </ul>
 
-                    <h3>Inside our Main</h3>
-                    <ul>
-                        <li>First we need to initialize our Bridges Credentials</li>
-                        <pre class="prettyprint">
-Bridges::initialize(1, "YOUR_API_KEY","YOUR_USER_ID");
-
+<h3>Inside our Main</h3>
+<ul>
+<li>First we need to initialize our Bridges Credentials</li>
+<pre class="prettyprint">
+Bridges::initialize(1, "YOUR_USER_ID", "YOUR_API_KEY");
 </pre>
-                        <p>
-                            Note that you must replace the two strings above with your BRIDGES credentials.
-                            <p>
+<p>
+Note that you must replace the two strings above with your BRIDGES credentials.
+<p>
 
 <li>Then we can create our 3D Array</li>
 <pre class="prettyprint">
 int dims[3] = {4, 4, 4};
 Array<string> *arr = new Array<string>(3, dims);
-
 </pre>
+
+
 
 <li>Now populate the 3d array with dummy data.</li>
 <pre class="prettyprint">
-for (int k = 0; k&lt;10; k++)
-    el_array[k].setLabel("Element " + to_string(k));
-
+for (int k = 0; k &lt; dims[0]; i++)
+for (int j = 0; j &lt; dims[1]; j++)
+for (int i = 0; i &lt; dims[2]; i++)
+      arr->getValue(i, j, k).setLabel("El " + to_string(i*dims[0]+j));
 </pre>
 
 
@@ -206,9 +207,9 @@ arr-&gt;getValue(2,2,0).getVisualizer()-&gt;setColor(Color("yellow"));
 <li>Finally we call the visualize function</li>
 <pre class="prettyprint">Bridges::visualize();</pre>
 
-                    </ul>
-                    <h4><strong>Code Summary:</strong> Your .cpp file should look like this</h4>
-                    <pre class="prettyprint">
+</ul>
+<h4><strong>Code Summary:</strong> Your .cpp file should look like this</h4>
+<pre class="prettyprint">
 #include &lt;iostream&gt;
 #include &lt;string&gt;
 
@@ -217,21 +218,22 @@ using namespace std;
 
 #include "Bridges.h"
 #include "Element.h"
+#include "Array.h"
 
 using namespace bridges;
-int main() &#123;
+int main() {
 
 	Bridges::initialize(0, "YOUR_API_KEY", "YOUR_USER_ID");
 
-  int dims[3] = &#123;4, 4, 4&#125;;
-  Array&lt;string&gt; *arr = new Array&lt;string&gt; (3, dims);
+	int dims[3] = &#123;4, 4, 4&#125;;
+	Array&lt;string&gt; *arr = new Array&lt;string&gt; (3, dims);
 
-  for (int k = 0; k < dims[0]; i++)
-  for (int j = 0; j < dims[1]; j++)
-  for (int i = 0; i < dims[2]; i++)
-      arr-&gt;getValue(i, j, k).setLabel("El " + to_string(i*dims[0]+j));
+	for (int k = 0; k < dims[0]; k++)
+	for (int j = 0; j &lt; dims[1]; j++)
+	for (int i = 0; i &lt; dims[2]; i++)
+		arr->getValue(i, j, k).setLabel("El " + to_string(i*dims[0]+j));
 
-  arr-&gt;getValue(0,0,0).getVisualizer()-&gt;setColor(Color("red"));
+	arr-&gt;getValue(0,0,0).getVisualizer()-&gt;setColor(Color("red"));
 	arr-&gt;getValue(0,3,0).getVisualizer()-&gt;setColor(Color("green"));
 	arr-&gt;getValue(3,0,0).getVisualizer()-&gt;setColor(Color("blue"));
 	arr-&gt;getValue(3,3,0).getVisualizer()-&gt;setColor(Color("magenta"));
@@ -240,15 +242,14 @@ int main() &#123;
 
 
 	Bridges::setTitle("Array 3D Example");
-	Bridges::setDataStructure(el_array, 10);
+	Bridges::setDataStructure(arr);
 	Bridges::visualize();
 
 	return 0;
-&#125;
-        </pre>
-
-                </div>
-            </div>
+}
+</pre>
+</div>
+</div>
 
 
 
