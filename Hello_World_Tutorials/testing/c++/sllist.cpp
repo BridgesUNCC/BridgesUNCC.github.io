@@ -71,6 +71,8 @@ int main () {
         el2->setNext(el3);
         el3->setNext(el4);
 
+cout << "Label: " << el0->getValue().getFullName() << endl;
+
 						// iterate through the list and add visual attributes
 						// to the elements; set the element color to the favorite
 						// color and the link to the disliked color
