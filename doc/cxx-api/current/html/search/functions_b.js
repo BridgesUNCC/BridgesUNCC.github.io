@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['treeelement',['TreeElement',['../classbridges_1_1_tree_element.html#a4e96ffab9a6c711ead687dd8a42e80a0',1,'bridges::TreeElement']]]
+  ['removetrailingzeros',['removeTrailingZeros',['../classbridges_1_1_element.html#a0b905a076a71771a20ee4fb0ec858cfa',1,'bridges::Element']]]
 ];
