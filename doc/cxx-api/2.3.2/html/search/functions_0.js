@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['actormovieimdb',['ActorMovieIMDB',['../classbridges_1_1_actor_movie_i_m_d_b.html#acd1db3914821a79a7d8fb506151d36a4',1,'bridges::ActorMovieIMDB::ActorMovieIMDB()'],['../classbridges_1_1_actor_movie_i_m_d_b.html#a4dff1ed0200a4c1013bd33d566e57640',1,'bridges::ActorMovieIMDB::ActorMovieIMDB(string a, string m)'],['../classbridges_1_1_actor_movie_i_m_d_b.html#a8d9cba2169fb26d97754a524c348cf86',1,'bridges::ActorMovieIMDB::ActorMovieIMDB(string a, string m, float r, vector&lt; string &gt; genr)']]],
   ['addchild',['addChild',['../classbridges_1_1_tree_element.html#a5e252fa16df0e673526ba4b08c8d3203',1,'bridges::TreeElement::addChild(TreeElement *child)'],['../classbridges_1_1_tree_element.html#a5e252fa16df0e673526ba4b08c8d3203',1,'bridges::TreeElement::addChild(TreeElement *child)']]],
   ['addedge',['addEdge',['../classbridges_1_1_graph_adj_list.html#a0e53ad3b952a149e48e785c55ea2d6f6',1,'bridges::GraphAdjList::addEdge()'],['../classbridges_1_1_graph_adj_matrix.html#a98accd921cace9f9d9cff0925aa1e3b2',1,'bridges::GraphAdjMatrix::addEdge()']]],
   ['addvertex',['addVertex',['../classbridges_1_1_graph_adj_list.html#a8e97b282f1fc28f1ecda90bf3fc38d76',1,'bridges::GraphAdjList::addVertex()'],['../classbridges_1_1_graph_adj_matrix.html#a7d0c2f70e4030d903b4ecea2ac3b564a',1,'bridges::GraphAdjMatrix::addVertex()']]],

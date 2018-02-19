@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['setactor',['setActor',['../classbridges_1_1_actor_movie_i_m_d_b.html#a97447a734487e56ab9c785d056363e68',1,'bridges::ActorMovieIMDB']]],
   ['setaffectedarea',['setAffectedArea',['../classbridges_1_1_cancer_incidence.html#a9872d7a2e82ff0f7a676efe46d383d71',1,'bridges::CancerIncidence']]],
   ['setageadjustedci_5flower',['setAgeAdjustedCI_Lower',['../classbridges_1_1_cancer_incidence.html#abc134f9f2c6d2be070ac8af502cfc10d',1,'bridges::CancerIncidence']]],
   ['setageadjustedci_5fupper',['setAgeAdjustedCI_Upper',['../classbridges_1_1_cancer_incidence.html#abd120d1ca536223aa41f25de79eef31d',1,'bridges::CancerIncidence']]],
@@ -26,6 +27,7 @@ var searchData=
   ['setgamegenre',['setGameGenre',['../classbridges_1_1_game.html#a973e89486663131ab9095c93d4d62e81',1,'bridges::Game']]],
   ['setgender',['setGender',['../classbridges_1_1_cancer_incidence.html#a994fbc9eb92c2d49b1b93a2eb904f2d8',1,'bridges::CancerIncidence']]],
   ['setgenre',['setGenre',['../classbridges_1_1_gutenberg_book.html#a2b81b6cf785ea9dfef0a1b1e15331b38',1,'bridges::GutenbergBook']]],
+  ['setgenres',['setGenres',['../classbridges_1_1_actor_movie_i_m_d_b.html#a04858487370565e12e112a6355654ce5',1,'bridges::ActorMovieIMDB']]],
   ['setgreen',['setGreen',['../classbridges_1_1_color.html#ad7522440e9772446b66d699cda307704',1,'bridges::Color']]],
   ['setheight',['setHeight',['../classbridges_1_1_a_v_l_tree_element.html#acbf2a222b954e5d9221b109634822f96',1,'bridges::AVLTreeElement']]],
   ['setkey',['setKey',['../classbridges_1_1_b_s_t_element.html#ae9edfa178c3b2d8bbaa7bd248bc469ce',1,'bridges::BSTElement']]],
@@ -38,6 +40,8 @@ var searchData=
   ['setlocationy',['setLocationY',['../classbridges_1_1_cancer_incidence.html#a8ca0a21c2c5153b11adf6712e6648579',1,'bridges::CancerIncidence']]],
   ['setlongit',['setLongit',['../classbridges_1_1_earthquake_u_s_g_s.html#a745dc27f3c68a3ae996ceb7771d89ec5',1,'bridges::EarthquakeUSGS']]],
   ['setmagnitude',['setMagnitude',['../classbridges_1_1_earthquake_u_s_g_s.html#aae8be6112f5c27c168c452261d9b29a2',1,'bridges::EarthquakeUSGS']]],
+  ['setmovie',['setMovie',['../classbridges_1_1_actor_movie_i_m_d_b.html#a08b64b8728a59a08bb565c8556b01509',1,'bridges::ActorMovieIMDB']]],
+  ['setmovierating',['setMovieRating',['../classbridges_1_1_actor_movie_i_m_d_b.html#aea16db5315526ff31a1685c08390cdc7',1,'bridges::ActorMovieIMDB']]],
   ['setnext',['setNext',['../classbridges_1_1_circ_d_lelement.html#a0bdf28de82173f2099673d18f6f62810',1,'bridges::CircDLelement::setNext()'],['../classbridges_1_1_circ_s_lelement.html#a7b2512dd1cc559f0a89d9ab4aafed172',1,'bridges::CircSLelement::setNext()'],['../classbridges_1_1_d_lelement.html#aba19c60b1d10c145b1b737f9134f4497',1,'bridges::DLelement::setNext()'],['../classbridges_1_1_m_lelement.html#aec9747cee60fcafbe474709a9dad21dc',1,'bridges::MLelement::setNext()'],['../classbridges_1_1_s_lelement.html#a347f8809406f930ce83bf44764a4f1b5',1,'bridges::SLelement::setNext()']]],
   ['setnumchars',['setNumChars',['../classbridges_1_1_gutenberg_book.html#a65cb7af6360e56a684e0606593846780',1,'bridges::GutenbergBook']]],
   ['setnumdifficultwords',['setNumDifficultWords',['../classbridges_1_1_gutenberg_book.html#a4397cd3b9fd6113a1e72eb7671dd9d87',1,'bridges::GutenbergBook']]],
@@ -64,7 +68,7 @@ var searchData=
   ['settime',['setTime',['../classbridges_1_1_earthquake_u_s_g_s.html#a70d79cd5c3666b8a32b1d45d7364054b',1,'bridges::EarthquakeUSGS']]],
   ['settitle',['setTitle',['../classbridges_1_1_earthquake_u_s_g_s.html#a78fe86dcb1bae8470d5ac58fdda2fe51',1,'bridges::EarthquakeUSGS::setTitle()'],['../classbridges_1_1_game.html#a6cfbd26183eb1202ea29b9f005dfb76b',1,'bridges::Game::setTitle()'],['../classbridges_1_1_gutenberg_book.html#a5038252948e5f173dad4926c0970c5d3',1,'bridges::GutenbergBook::setTitle()'],['../classbridges_1_1_shakespeare.html#a533ff5a5dd8681ab1156c7345f85ad82',1,'bridges::Shakespeare::setTitle()'],['../namespacebridges_1_1_bridges.html#af36e132d582dabf5ae5ee8b8f26976db',1,'bridges::Bridges::setTitle()']]],
   ['settype',['setType',['../classbridges_1_1_shakespeare.html#a2bc1ebcfa8b28a590a1f6f83e26ce051',1,'bridges::Shakespeare']]],
-  ['seturl',['setUrl',['../classbridges_1_1_earthquake_u_s_g_s.html#ac07298c50e03955d167a2ca38c5150be',1,'bridges::EarthquakeUSGS::setUrl()'],['../classbridges_1_1_gutenberg_book.html#a4a5fa52c405170b57535cd0fcde5e3cf',1,'bridges::GutenbergBook::setURL()']]],
+  ['seturl',['setURL',['../classbridges_1_1_gutenberg_book.html#a4a5fa52c405170b57535cd0fcde5e3cf',1,'bridges::GutenbergBook::setURL()'],['../classbridges_1_1_earthquake_u_s_g_s.html#ac07298c50e03955d167a2ca38c5150be',1,'bridges::EarthquakeUSGS::setUrl()']]],
   ['setusername',['setUserName',['../namespacebridges_1_1_bridges.html#a383c5c1d3c85541f466e0cb60dde1c29',1,'bridges::Bridges']]],
   ['setvalue',['setValue',['../classbridges_1_1_array.html#a7686d816d6118cf05da7f047c8d7f065',1,'bridges::Array::setValue(int indx, Element&lt; E &gt; el)'],['../classbridges_1_1_array.html#a3a6ef57159e7b50d4e3eb1899fd1090f',1,'bridges::Array::setValue(int x_indx, int y_indx, Element&lt; E &gt; el)'],['../classbridges_1_1_array.html#a50ac708525644bbd81ea21221a1fefc5',1,'bridges::Array::setValue(int x_indx, int y_indx, int z_indx, Element&lt; E &gt; el)'],['../classbridges_1_1_color.html#a1bbb6b478ac6a013d04951f564bab70d',1,'bridges::Color::setValue(const int &amp;r, const int &amp;g, const int &amp;b, const int &amp;a=255)'],['../classbridges_1_1_color.html#aa6e1db9aa47275ef829ac0fa96d72190',1,'bridges::Color::setValue(string name)'],['../classbridges_1_1_element.html#a737cb19281b6aa45a5a1dc9d592dad93',1,'bridges::Element::setValue()'],['../classbridges_1_1_element_array.html#a202def849cd345d8b56ebcb31f332d25',1,'bridges::ElementArray::setValue()']]],
   ['setvertex',['setVertex',['../classbridges_1_1_edge.html#ad34446f673287f3291a0c68efd3613e7',1,'bridges::Edge']]],
