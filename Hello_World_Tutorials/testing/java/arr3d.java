@@ -6,7 +6,8 @@ public class arr3d {
 	public static void main(String[] args) throws Exception{
 
 							//create the Bridges object
-		Bridges bridges = new Bridges(3, "YOUR_API_KEY", "YOUR_USER_ID");
+//		Bridges bridges = new Bridges(2, "486749122386", "kalpathi60");
+		Bridges bridges = new Bridges(2, "997924677918", "bridges_public");
 
 						// specify array dimensions and create 3D array
 		int[] dims = {4, 4, 4};

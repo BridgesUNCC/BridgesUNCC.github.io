@@ -6,7 +6,8 @@ public class arr1d {
 public static void main(String[] args) throws Exception{
 
     			//create the Bridges object
-	Bridges bridges = new Bridges(1, "486749122386", "kalpathi60");
+//	Bridges bridges = new Bridges(0, "486749122386", "kalpathi60");
+	Bridges bridges = new Bridges(0, "997924677918", "bridges_public");
 
 				//  for 1D array
     int arraySize = 10;

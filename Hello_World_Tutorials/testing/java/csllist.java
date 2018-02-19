@@ -5,7 +5,8 @@ public class csllist {
 
   public static void main(String[] args) throws Exception {
 
-      Bridges bridges = new Bridges(6, "YOUR_API_KEY", "YOUR_USER_ID");
+//      Bridges bridges = new Bridges(5, "486749122386", "kalpathi60");
+	  Bridges bridges = new Bridges(5, "997924677918", "bridges_public");	  
 
       StudentInfo[] students = {
                       new StudentInfo(

@@ -6,7 +6,8 @@ public class bintree {
 	public static void main(String[] args) throws Exception{
     	
    					//create the Bridges object
-		Bridges bridges = new Bridges(8, "486749122386", "kalpathi60");
+//		Bridges bridges = new Bridges(9, "486749122386", "kalpathi60");
+		Bridges bridges = new Bridges(9, "997924677918", "bridges_public");
 
 		bridges.setTitle("A Huffman Coding Tree Example");
 		bridges.setDescription("[Binary Tree Application]: Huffman tree coding the symbols C, D, E, K, L, M, U, Z with frequencies 32, 42, 120, 7, 42, 24, 37, 2");

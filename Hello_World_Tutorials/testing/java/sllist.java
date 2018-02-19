@@ -10,7 +10,8 @@ public class sllist {
     public static void main(String[] args) throws Exception {
 
 						// note: you must fill in with your Bridges credentials
-		Bridges bridges = new Bridges(4, "486749122386", "kalpathi60");
+//		Bridges bridges = new Bridges(3, "486749122386", "kalpathi60");
+		Bridges bridges = new Bridges(3, "997924677918", "bridges_public");
          					// create the linked list elements with 
 							// student data 
 		SLelement<StudentInfo> el0 = new SLelement<StudentInfo>( "",
