@@ -9,7 +9,7 @@
 
 <script src="//rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true&skin=desert&lang=java" defer></script>
 
-  
+
   <link rel="stylesheet" type="text/css" href="./tutorial.css" />
   <link rel="shortcut icon" href="http://bridgesuncc.github.io/favicon.png"/>
   <script src="http://www.w3schools.com/lib/w3data.js"></script>
@@ -28,32 +28,32 @@ inherited from TreeElement&lt;K,E&gt;
 <br><br><img width="175em" src="./images/bst_el.png"><br><br>
 <h2>How does the BSTElement&lt;K,E&gt; work?</h2>
 <p>
-BSTElement&lt;K,E&gt; is a type of container that has two links that point 
-to two child BSTElements. It uses the same conventions as the 
-TreeElement&ltE&gt;.  
+BSTElement&lt;K,E&gt; is a type of container that has two links that point
+to two child BSTElements. It uses the same conventions as the
+TreeElement&ltE&gt;.
 <br><br>
-At this point, you may be wondering how a BSTElement&lt;K,E&gt; differs from a 
-regular Binary Tree Element. The fundamental difference between the two classes 
-is that the BSTElement&lt;K,E&gt; is used to build <i>search trees</i>, 
-and holds an additional piece of data, the generic parameter K, 
-called the "key".  The key is used to enforce an ordering on the tree 
-structure independent of the element that is being held. 
+At this point, you may be wondering how a BSTElement&lt;K,E&gt; differs from a
+regular Binary Tree Element. The fundamental difference between the two classes
+is that the BSTElement&lt;K,E&gt; is used to build <i>search trees</i>,
+and holds an additional piece of data, the generic parameter K,
+called the "key".  The key is used to enforce an ordering on the tree
+structure independent of the element that is being held.
 <br><br>
-A typical example would be a binary search tree where all of the keys of 
+A typical example would be a binary search tree where all of the keys of
 the left child are smaller than the keys of the right child.
 <br/><br/><img width="600em" src="./BSTElement.png"/><br/><br/>
-Notice that the key for BST1 is smaller than the key for the root so it's to 
-the left of the root. Also notice that the key for BST3 is smaller than 
-the key for BST2, but larger than the key for the root. So BST3 sits on 
+Notice that the key for BST1 is smaller than the key for the root so it's to
+the left of the root. Also notice that the key for BST3 is smaller than
+the key for BST2, but larger than the key for the root. So BST3 sits on
 the left subtree of BST2, but in the right subtree of the Root.
 <p>
 
 <hr>
 
 <h2>BSTElement - Example</h2>
-We will illustrate a binary search tree example that uses the BRIDGES API to retrieve 10 
-earthquake records (actually comes as Tweets) from USGS.gov. These will be inserted into 
-a binary search tree, using the BSTElement<Double, EarthquakeUSGS> elements. The quake 
+We will illustrate a binary search tree example that uses the BRIDGES API to retrieve 10
+earthquake records (actually comes as Tweets) from USGS.gov. These will be inserted into
+a binary search tree, using the BSTElement<Double, EarthquakeUSGS> elements. The quake
 magnitude will be used as the search key.
 <div class="tabs">
     <div onclick="displayCode('Java',this)">Java</div>
@@ -63,7 +63,7 @@ magnitude will be used as the search key.
     <div id="Java" w3-include-html="./Java_BST.html"></div>
     <div id="C++"  w3-include-html="./Cpp_BST.html"></div>
 </div>
-  
+
 <h3>Bridges Visualization</h3>
 <ul>
     <li>Once all your code is in order, run your program.</li>
@@ -72,13 +72,13 @@ magnitude will be used as the search key.
     <li>It should look something like this:</li>
 </ul>
 <div class="iframe-wrapper">
-    <iframe src="http://bridges-cs.herokuapp.com/assignments/9/bridges_public" scrolling="no">
-      <p>Sorry, your browser doesn't seem to support iframes - 
-        <a href="http://bridges-cs.herokuapp.com/assignments/9/bridges_public">Frame Link</a>
+    <iframe src="http://bridges-cs.herokuapp.com/assignments/10/bridges_public" scrolling="no">
+      <p>Sorry, your browser doesn't seem to support iframes -
+        <a href="http://bridges-cs.herokuapp.com/assignments/10/bridges_public">Frame Link</a>
       </p>
     </iframe>
 </div>
-<p>Well done! You’ve just created your fourth Bridges project!</p>
+<p>Well done! You’ve just created your Bridges Binary Search Tree project!</p>
 </main>
 
 <footer w3-include-html="./Tutorial_Footer.html"></footer>
