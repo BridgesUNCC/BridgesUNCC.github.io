@@ -1,49 +1,96 @@
-#include <iostream>
-#include <string>
-
-using namespace std;
 
 #include "Bridges.h"
 #include "DLelement.h"
-
+#include "StudentInfo.h"
 
 using namespace bridges;
-
+					// helper function
+DLelement<StudentInfo> *insertFront(DLelement<StudentInfo> *front,
+				DLelement<StudentInfo> *new_el);
 int main() {
 
-
 	Bridges::initialize(4, "kalpathi60", "486749122386");
-//	Bridges::initialize(4, "bridges_public", "997924677918");
 
-	DLelement<string> *dl0 = new DLelement<string>("0", "5");
-	DLelement<string> *dl1 = new DLelement<string>("1", "0");
-	DLelement<string> *dl2 = new DLelement<string>("2", "1");
-	DLelement<string> *dl3 = new DLelement<string>("3", "2");
-        
-	dl0->setNext(dl1);
-	dl1->setNext(dl2);
-	dl2->setNext(dl3);
-	dl3->setPrev(dl2);
-	dl2->setPrev(dl1);
-	dl1->setPrev(dl0);
+						// load student info
+	int num_students = 5;
+	StudentInfo students[] = {
+				StudentInfo(
+                      "00000000000",
+                      "Gretel Chaney",
+                      "CS",
+                      "g.chaney@generated.com",
+                      "magenta",
+                      "blue",
+                      9.0 
+				),
+				StudentInfo(
+                      "00000000001",
+                      "Karol Soderman",
+                      "SIS",
+                      "k.soderman@generated.com",
+                      "magenta",
+                      "red",
+                      11.0
+				),
+				StudentInfo(
+                      "00000000002",
+                      "Lamont Kyler",
+                      "BIO",
+                      "l.kyler@generated.com",
+                      "purple",
+                      "green",
+                      12.0
+				),
+				StudentInfo(
+                      "00000000003",
+                      "Gladys Serino",
+                      "CS","g.serino@generated.com",
+                      "blue",
+                      "black",
+                      9.0
+				),
+				StudentInfo("00000000004",
+                      "Starr Mcginn",
+                      "CS",
+                      "s.mcginn@generated.com",
+                      "red",
+                      "cyan",
+                      15.0)
+			};
 
+							// insert the students in front of the list
+		DLelement<StudentInfo> *head = nullptr;
+		for(int i = 0; i < num_students; i++){
+			head = insertFront(head, new DLelement<StudentInfo>(students[i], ""));
+		}
+							// add visual attributes 
+		DLelement<StudentInfo> *curr = head, *next;
+		while(curr != nullptr){
+			curr->setLabel(curr->getValue().getStudentLabel());
+			curr->getVisualizer()->setColor(curr->getValue().getFavoriteColor());
 
-	dl0->getVisualizer()->setColor(Color("red"));
-	dl1->getVisualizer()->setColor(Color("green"));
-	dl2->getVisualizer()->setColor(Color("blue"));
-	dl3->getVisualizer()->setColor(Color("yellow"));
+			DLelement<StudentInfo> n1, n2;
+			if (curr->getNext() != nullptr) {
+				next = curr->getNext();
+				curr->getLinkVisualizer(next)->setColor(curr->getValue().getDislikeColor());
+				next->getLinkVisualizer(curr)->setColor(curr->getValue().getDislikeColor());
+			}
+			curr = curr->getNext();
+		}
 
-	dl0->getLinkVisualizer(dl1)->setColor(Color("red"));
-	dl1->getLinkVisualizer(dl2)->setColor(Color("green"));
-	dl2->getLinkVisualizer(dl3)->setColor(Color("blue"));
-	dl3->getLinkVisualizer(dl2)->setColor(Color("cyan"));
-	dl2->getLinkVisualizer(dl1)->setColor(Color("magenta"));
-	dl1->getLinkVisualizer(dl0)->setColor(Color("yellow"));
+		Bridges::setDataStructure(head);
+		Bridges::visualize();
 
-	Bridges::setTitle("Doubly Linked List Example");
-	Bridges::setDataStructure(dl0);
+		return 0;
+}
 
-	Bridges::visualize();
+DLelement<StudentInfo> *insertFront(DLelement<StudentInfo> *front,
+				DLelement<StudentInfo> *new_el){
+	if (front == nullptr)
+		return new_el;
 
-	return 0;
+	new_el->setNext(front);
+	front->setPrev(new_el);
+	
+	return new_el;
 }

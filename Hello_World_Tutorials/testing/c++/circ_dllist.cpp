@@ -9,8 +9,8 @@ using namespace bridges;
 
 
 int main() {
-	Bridges::initialize(4, "kalpathi60", "486749122386");
-//	Bridges::initialize(4, "bridges_public", "997924677918");
+	Bridges::initialize(6, "kalpathi60", "486749122386");
+//	Bridges::initialize(6, "bridges_public", "997924677918");
 
 	Bridges::setTitle("An Example Circular Doubly Linked List");
 						// create list nodes

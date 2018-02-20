@@ -12,29 +12,57 @@ int main() {
 
 
 	Bridges::initialize(9, "kalpathi60", "486749122386"); 
-//	Bridges::initialize(9, "bridges_public", "997924677918");
+//	Bridges::initialize(9, "bridges_public", "997924677918"); 
 
-	BinTreeElement<string> *tle0 = new BinTreeElement<string>("10", "10");
-	BinTreeElement<string> *tle1 = new BinTreeElement<string>("5", "5");
-	BinTreeElement<string> *tle2 = new BinTreeElement<string>("3", "3");
-	BinTreeElement<string> *tle3=  new BinTreeElement<string>("20","20");
+	Bridges::setTitle("A Huffman Coding Tree Example");
+	Bridges::setDescription("[Binary Tree Application]: Huffman tree coding the symbols C, D, E, K, L, M, U, Z with frequencies 32, 42, 120, 7, 42, 24, 37, 2");
 
-	tle0->setLeft(tle1);
-	tle0->setRight(tle3);
-	tle1->setLeft(tle2);
-	tle0->getVisualizer()->setColor(Color("red"));
-	tle1->getVisualizer()->setColor(Color("green"));
-	tle2->getVisualizer()->setColor(Color("blue"));
-	tle3->getVisualizer()->setColor(Color("yellow"));
 
-	tle0->getLinkVisualizer(tle1)->setColor(Color("red"));
-	tle1->getLinkVisualizer(tle2)->setColor(Color("green"));
-	tle0->getLinkVisualizer(tle3)->setColor(Color("blue"));
+	BinTreeElement<int> *t0 = new BinTreeElement<int>(0, "306");
+	BinTreeElement<int> *t1 = new BinTreeElement<int>(1, "120\\nE");
+	BinTreeElement<int> *t2 = new BinTreeElement<int>(2, "186");
+	BinTreeElement<int> *t3 = new BinTreeElement<int>(3, "79");
+	BinTreeElement<int> *t4 = new BinTreeElement<int>(4, "37\\nU");
+	BinTreeElement<int> *t5 = new BinTreeElement<int>(5, "42\\nD");
+	BinTreeElement<int> *t6 = new BinTreeElement<int>(6, "42\\nL");
+	BinTreeElement<int> *t7 = new BinTreeElement<int>(7, "107");
+	BinTreeElement<int> *t8 = new BinTreeElement<int>(8, "65");
+	BinTreeElement<int> *t9 = new BinTreeElement<int>(9, "32\\nC");
+	BinTreeElement<int> *t10 = new BinTreeElement<int>(10, "33");
+	BinTreeElement<int> *t11 = new BinTreeElement<int>(11, "9");
+	BinTreeElement<int> *t12 = new BinTreeElement<int>(12, "2\\nZ");
+	BinTreeElement<int> *t13 = new BinTreeElement<int>(13, "7\\nK");
+	BinTreeElement<int> *t14 = new BinTreeElement<int>(14, "24\\nM");
 
-	Bridges::setTitle("Binary Tree Example");
+	t0->setLeft(t1);
+	t0->setRight(t2);
+	t2->setLeft(t3);
+	t2->setRight(t7);
+	t3->setLeft(t4);
+	t3->setRight(t5);
+	t7->setLeft(t6);
+	t7->setRight(t8);
+	t8->setLeft(t9);
+	t8->setRight(t10);
+	t10->setLeft(t11);
+	t10->setRight(t14);
+	t11->setLeft(t12);
+	t11->setRight(t13);
+
+
+	t0->getVisualizer()->setColor(Color("red"));
+				// color the leaf nodes that represent the code letters
+	t1->getVisualizer()->setColor(Color("orange"));
+	t4->getVisualizer()->setColor(Color("orange"));
+	t5->getVisualizer()->setColor(Color("orange"));
+	t6->getVisualizer()->setColor(Color("orange"));
+	t9->getVisualizer()->setColor(Color("orange"));
+	t12->getVisualizer()->setColor(Color("orange"));
+	t13->getVisualizer()->setColor(Color("orange"));
+	t14->getVisualizer()->setColor(Color("orange"));
+
 					// provide BRIDGES the  handle to the tree structure
-	Bridges::setDataStructure(tle0);
-
+	Bridges::setDataStructure(t0);
 
 	Bridges::visualize();
 

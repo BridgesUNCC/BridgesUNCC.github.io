@@ -13,10 +13,12 @@ int main() {
 //  Bridges::initialize(0, "bridges_public", "997924677918");
 
 	int dims[3] = {10, 1, 1};
-	Array<string> *arr = new Array<string>(1, dims);
+	Array<int> *arr = new Array<int>(1, dims);
 
-	for (int j = 0; j < dims[0]; j++)
-		arr->getValue(j).setLabel("El " + to_string(j));
+	for (int j = 0; j < dims[0]; j++) {
+		arr->getValue(j).setValue(j*j);
+		arr->getValue(j).setLabel(to_string(arr->getValue(j).getValue()));
+	}
 
 	arr->getValue(0).getVisualizer()->setColor(Color("red"));
 	arr->getValue(1).getVisualizer()->setColor(Color("green"));
