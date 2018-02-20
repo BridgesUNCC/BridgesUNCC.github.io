@@ -1,13 +1,10 @@
-#include <iostream>
 #include <string>
-
-using namespace std;
-
 #include "Bridges.h"
 #include "DataSource.h"
 #include "data_src/ActorMovieIMDB.h"
 #include "GraphAdjList.h"
 
+using namespace std;
 using namespace bridges;
 
 int main() {

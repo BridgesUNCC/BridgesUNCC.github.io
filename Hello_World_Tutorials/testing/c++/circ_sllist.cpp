@@ -2,6 +2,7 @@
  * Created by Kalpathi Subramanian, 1/30/18
  * krs@uncc.edu
  */
+
 #include "Bridges.h"
 #include "CircSLelement.h"
 #include "StudentInfo.h"
@@ -11,8 +12,9 @@ using namespace bridges;
 int main () {
 
 						// note: you must fill in with your Bridges credentials
-	Bridges::initialize(5, "kalpathi60", "486749122386");
-//	Bridges::initialize(5, "bridges_public", "997924677918");
+	Bridges::initialize(6, "kalpathi60", "486749122386");
+//	Bridges::initialize(6, "bridges_public", "997924677918");
+
          					// create the linked list elements with 
 							// student data 
 	CircSLelement<StudentInfo> *students[] = {

@@ -4,7 +4,9 @@
 #include "StudentInfo.h"
 
 using namespace bridges;
-					// helper function
+
+									// helper function
+
 DLelement<StudentInfo> *insertFront(DLelement<StudentInfo> *front,
 				DLelement<StudentInfo> *new_el);
 int main() {

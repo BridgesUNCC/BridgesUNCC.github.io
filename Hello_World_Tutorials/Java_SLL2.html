@@ -1,0 +1,65 @@
+<h2>Elements of a BRIDGES Program</h2>
+<ul>
+  <li> <b> Imports:</b>  This will usually include the BRIDGES data structure
+		specific header files, classes related to the example, and other
+		utility classes.
+  <li> <b> BRIDGES Initialization, Credentials:</b>  This is typically done
+		<b>once</b> at the beginning of the application. Credentials include
+		your user id and application authentication id (available via your 
+		BRIDGES login).
+	<li> <b> Populating the Data Structure:</b> This involves building
+		the data structure, as well as including application specific information
+		(handled by generic variables that is part of each BRIDGES data 
+		structure).
+	<li> <b> Adding Visual Attributes. </b> This is done through the 
+		<it>ElementVisualizer</it> (for nodes) and <it>LinkVisualizer</it> 
+		(for links) classes and supports attributes such size, shape, 
+		thickness, color and opacity.
+	<li> <b> Specifying data structure to BRIDGES, visualization.</b> 
+		The calls bridges.setDataStructure() and bridges.visualize() specifies 
+		the data structure handle to BRIDGES for visualization. Multiple calls
+		to visualize() will result in multiple visualizations (stacked one below
+		the other). Multiple calls to setDataStructure() make sense when the 
+		the data structure is changing during an application and the user wants
+		to visualize its state (for instance sorting application to see the 
+		state of the list after each insertion or exchange, stack pops/pushes, 
+		etc).
+</ul>
+<h2> Example Details</h2>
+</ul>
+<li> In this example, we will build and visualize a singly linked list with 
+student information data, specified through the StudentInfo class, which will
+be part of the SLelement object through its generic variable (SLelement&lt;StudentInfo&gt;. 
+<li>The elements are linked, visual attributes assigned through application data
+and visualized.
+</ul>
+We need to include these Bridges files to give access to all the classes/methods needed to interact with Bridges</li>
+  <li>In your .java file, enter the following code snippets:</li>
+	<pre class="prettyprint">
+      import bridges.connect.Bridges;
+      import bridges.base.SLelement;
+	</pre>
+</ul>
+<h2>Here's the final code:</h2>
+
+<div class="panel-heading">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#java_tab1" data-toggle="tab">sllist.java</a></li>
+            <li><a href="#java_tab2" data-toggle="tab">StudentInfo.java</a></li> </a> </li>
+        </ul>
+</div>
+<div class="panel-body">
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="java_tab1">
+          <pre w3-include-html="./tutorial-source-code/Java_SLL/sllist2.java" class="prettyprint"></pre>
+        </div>
+
+        <div class="tab-pane fade" id="java_tab2">
+              <pre w3-include-html="./tutorial-source-code/Java_SLL/StudentInfo2.java" class="prettyprint"></pre>
+        </div>
+    </div>
+</div>
+
+<script>
+  w3IncludeHTML();
+</script>

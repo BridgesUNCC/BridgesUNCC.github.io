@@ -1,10 +1,5 @@
 
 #include <string>
-#include <iostream>
-#include <fstream>
-
-using namespace std;
-
 #include "Bridges.h"
 #include "DataSource.h"
 #include "data_src/EarthquakeUSGS.h"
@@ -12,6 +7,7 @@ using namespace std;
 #include "BST.h"
 
 
+using namespace std;
 using namespace bridges;
 
 int max_quakes = 25;
@@ -35,7 +31,6 @@ int main() {
 	}
 
 					// visualize the binary search tree
-//	bst->setProperties(bst->getRoot());
 	Bridges::setDataStructure(bst->getRoot());
 	Bridges::visualize();
 

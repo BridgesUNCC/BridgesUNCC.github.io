@@ -1,18 +1,16 @@
-#include <iostream>
-#include <string>
-
-#include "Bridges.h"
-#include "CircDLelement.h"
-#include "StudentInfo.h"
-
 /**
  * Created by Kalpathi Subramanian, 2/20/18
  * krs@uncc.edu
  */
 
-using namespace std;
+#include "Bridges.h"
+#include "CircDLelement.h"
+#include "StudentInfo.h"
+
+
 using namespace bridges;
 
+							// helper function
 CircDLelement<StudentInfo> *insertFront(
 			CircDLelement<StudentInfo> *tailElement,
 			CircDLelement<StudentInfo> *newElement);

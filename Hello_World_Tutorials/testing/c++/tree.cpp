@@ -1,15 +1,11 @@
-#include <iostream>
 #include <string>
-
-using namespace std;
-
 #include "Bridges.h"
 #include "TreeElement.h"
 
+using namespace std;
 using namespace bridges;
 
 int main() {
-
 
 	Bridges::initialize(8, "kalpathi60", "486749122386"); 
 //	Bridges::initialize(8, "bridges_public", "997924677918");
@@ -41,8 +37,6 @@ int main() {
 	Bridges::setTitle("A General Tree Example");
 					// provide BRIDGES the  handle to the tree structure
 	Bridges::setDataStructure(tle0);
-
-//	Bridges::setVisualizeJSON(true);
 
 	Bridges::visualize();
 

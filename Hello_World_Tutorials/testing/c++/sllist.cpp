@@ -2,6 +2,7 @@
  * Created by Kalpathi Subramanian, 1/30/18
  * krs@uncc.edu
  */
+
 #include "Bridges.h"
 #include "SLelement.h"
 #include "StudentInfo.h"
@@ -85,7 +86,7 @@ int main () {
 						// color the link
                 currentElement->getLinkVisualizer(currentElement->getNext())->setColor(si.getDislikeColor());
 						// adjust link thickness
-                currentElement->getLinkVisualizer(currentElement->getNext())->setThickness(si.getStudentCreditHours() * 0.75);//75 percent thinner
+                currentElement->getLinkVisualizer(currentElement->getNext())->setThickness(5.0);//75 percent thinner
             }
 
 						// set the label to the student info (label created in 

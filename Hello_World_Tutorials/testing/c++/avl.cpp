@@ -1,13 +1,9 @@
-#include <iostream>
 #include <string>
-
-using namespace std;
-
 #include "Bridges.h"
 #include "AVLTreeElement.h"
 
-#define LOCAL_SERVER 0
 
+using namespace std;
 using namespace bridges;
 
 int main() {

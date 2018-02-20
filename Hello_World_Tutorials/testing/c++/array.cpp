@@ -1,12 +1,8 @@
-#include <iostream>
-#include <string>
+#include "Bridges.h"
 #include "Array.h"
 
-using namespace std;
-#include "Bridges.h"
-#include "Element.h"
-
 using namespace bridges;
+
 int main() {
 
 	Bridges::initialize(0, "kalpathi60", "486749122386");

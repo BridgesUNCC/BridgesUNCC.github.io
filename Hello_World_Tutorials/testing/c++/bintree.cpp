@@ -1,15 +1,9 @@
-#include <iostream>
-#include <string>
-
-using namespace std;
-
 #include "Bridges.h"
 #include "BinTreeElement.h"
 
 using namespace bridges;
 
 int main() {
-
 
 	Bridges::initialize(9, "kalpathi60", "486749122386"); 
 //	Bridges::initialize(9, "bridges_public", "997924677918"); 
