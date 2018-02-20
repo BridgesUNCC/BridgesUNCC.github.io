@@ -5,10 +5,9 @@ public class dllist {
 
   public static void main(String[] args) throws Exception {
 
-      final String YOUR_API_KEY = "";
-      final String YOUR_USER_ID = "";
-      Bridges bridge = new Bridges(5, "486749122386", "kalpathi60");
-
+//	Bridges bridges = new Bridges(4, "486749122386", "kalpathi60");
+	Bridges bridges = new Bridges(4, "997924677918", "bridges_public");
+	  
 						// load student info
       StudentInfo[] students = {
               new StudentInfo(
@@ -76,8 +75,8 @@ public class dllist {
            curr = curr.getNext();
        }
 
-      bridge.setDataStructure(head);
-      bridge.visualize();
+      bridges.setDataStructure(head);
+      bridges.visualize();
 
 
   }

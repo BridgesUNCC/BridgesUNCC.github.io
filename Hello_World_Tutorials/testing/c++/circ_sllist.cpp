@@ -1,94 +1,45 @@
+#include <iostream>
+#include <string>
+
 #include "Bridges.h"
 #include "CircSLelement.h"
-#include "StudentInfo.h"
 
+using namespace std;
 using namespace bridges;
-					// helper function
+
+
 int main() {
+	Bridges::initialize(5, "kalpathi60", "486749122386");
+//	Bridges::initialize(5, "bridges_public", "997924677918");
 
-	Bridges::initialize(600, "kalpathi60", "486749122386");
+	Bridges::setTitle("An Example Circular Linked List");
+						// create list nodes
+	CircSLelement<int> *el0 = new CircSLelement<int>(0, "0");
+	CircSLelement<int> *el1 = new CircSLelement<int>(1, "1");
+	CircSLelement<int> *el2 = new CircSLelement<int>(2, "2");
+	CircSLelement<int> *el3 = new CircSLelement<int>(3, "3");
+       					// link nodes 
+	el0->setNext(el1);
+	el1->setNext(el2);
+	el2->setNext(el3);
+	el3->setNext(el0);
 
-						// load student info
-	int num_students = 5;
-
-	CircSLelement<StudentInfo> *el[5];
-         					// create the list elements with student data 
-	el[0] = new CircSLelement<StudentInfo>(
-			StudentInfo(
-				"00000000000",
-				"Gretel Chaney",
-				"CS",
-				"g.chaney@generated.com",
-				"magenta",
-				"blue",
-				 9.0
-			), "");
-	el[1] = new CircSLelement<StudentInfo>(
-			StudentInfo(
-				"00000000001",
-				"Karol Soderman",
-				"SIS",
-				"k.soderman@generated.com",
-				"magenta",
-				"red",
-				 11.0
-			), "");
-	el[2] = new CircSLelement<StudentInfo>(
-			StudentInfo(
-				"00000000002",
-				"Lamont Kyler",
-				"BIO",
-				"l.kyler@generated.com",
-				"yellow",
-				"green",
-				 12.0
-			), "");
-	el[3] = new CircSLelement<StudentInfo>(
-			StudentInfo(
-				"00000000003",
-				"Gladys Serino",
-				"CS",
-				"g.serino@generated.com",
-				"green",
-				"magenta",
-				 9.0
-			), "");
-	el[4] = new CircSLelement<StudentInfo>(
-			StudentInfo(
-				"00000000004",
-				"Starr Mcginn",
-				"CS",
-				"s.mcginn@generated.com",
-				"red",
-				"cyan",
-				 15.0
-			), "");
-
-	int numStudents = 5;
-	CircSLelement<StudentInfo> *head = el[0], *current;
-	StudentInfo si = el[3]->getValue();
-	cout << "Label[0]:" << si.getFullName() << endl;
-
-	for(int i = 0; i < numStudents-1; i++) 
-		el[i]->setNext(el[i+1]);
-							// connect the last element to the first
-	el[4]->setNext(head);
-	
-                            // add visual attributes
-	current = head;
-	cout << head->getValue().getStudentLabel() << endl;
-	do {
-		cout << current->getValue().getStudentLabel() << endl;
-
-		current->getVisualizer()->setColor(current->getValue().getFavoriteColor());
-		
-		current->getLinkVisualizer(current->getNext())->setColor(current->getValue().getDislikeColor());
-		current->getLinkVisualizer(current->getNext())->setThickness(current->getValue().getStudentCreditHours()*0.75);
-		
-		current = current->getNext();
-	} while(current != head);
-
-	Bridges::setDataStructure(head);
+						// set color of nodes
+/*
+	el0->getVisualizer()->setColor("red");
+	el1->getVisualizer()->setColor("green");
+	el2->getVisualizer()->setColor("blue");
+	el3->getVisualizer()->setColor("yellow");
+						// set link colors
+	el0->getLinkVisualizer(el1)->setColor("cyan");
+	el1->getLinkVisualizer(el2)->setColor("magenta");
+	el2->getLinkVisualizer(el3)->setColor("green");
+						// set link thickness
+	el0->getLinkVisualizer(el1)->setThickness(3);
+*/
+						// provide Bridges handle to data structure
+	Bridges::setDataStructure(el0);
+						// visualize the data structure
 	Bridges::visualize();
 
 	return 0;

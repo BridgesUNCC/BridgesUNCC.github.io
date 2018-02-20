@@ -11,7 +11,7 @@ using namespace bridges;
 int main () {
 
 						// note: you must fill in with your Bridges credentials
-	Bridges::initialize(4, "kalpathi60", "486749122386");
+	Bridges::initialize(3, "kalpathi60", "486749122386");
          					// create the linked list elements with 
 							// student data 
 		SLelement<StudentInfo> *el0 = new SLelement<StudentInfo>(
@@ -70,8 +70,6 @@ int main () {
         el1->setNext(el2);
         el2->setNext(el3);
         el3->setNext(el4);
-
-cout << "Label: " << el0->getValue().getFullName() << endl;
 
 						// iterate through the list and add visual attributes
 						// to the elements; set the element color to the favorite
