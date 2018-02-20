@@ -12,7 +12,7 @@ using namespace bridges;
 int main () {
 
 						// note: you must fill in with your Bridges credentials
-	Bridges::initialize(3, "kalpathi60", "486749122386");
+	Bridges::initialize(3, "YOUR_USER_ID", "YOUR_API_KEY");
          					// create the linked list elements with 
 							// student data 
 		SLelement<StudentInfo> *el0 = new SLelement<StudentInfo>(
