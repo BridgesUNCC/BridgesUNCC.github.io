@@ -1,24 +1,20 @@
-
 import bridges.connect.Bridges;
 import bridges.base.TreeElement;
-
 
 public class tree{
 	public static void main(String[] args) throws Exception{
     	
    					//create the Bridges object
-		Bridges bridges = new Bridges<Integer, String>(11, "YOUR_API_KEY", "YOUR_USER_ID");
-
-		bridges.setTitle("A Generalized Tree Example");
+		Bridges bridges = new Bridges(8, "YOUR_API_KEY", "YOUR_USER_ID");
 
    					//create   tree nodes
-		TreeElement<String> t0 = new TreeElement<String>("Hello");
-		TreeElement<String> t2 = new TreeElement<String>("This");
-		TreeElement<String> t3 = new TreeElement<String>("is");
-		TreeElement<String> t4 = new TreeElement<String>("a");
-		TreeElement<String> t5 = new TreeElement<String>("generic");
-		TreeElement<String> t6 = new TreeElement<String>("Tree");
-		TreeElement<String> t7 = new TreeElement<String>("Representation");
+		TreeElement&lt;String&gt; t0 = new TreeElement&lt;String&gt;(Hello");
+		TreeElement&lt;String&gt; t2 = new TreeElement&lt;String&gt;(This");
+		TreeElement&lt;String&gt; t3 = new TreeElement&lt;String&gt;(is");
+		TreeElement&lt;String&gt; t4 = new TreeElement&lt;String&gt;(a");
+		TreeElement&lt;String&gt; t5 = new TreeElement&lt;String&gt;(generic");
+		TreeElement&lt;String&gt; t6 = new TreeElement&lt;String&gt;(Tree");
+		TreeElement&lt;String&gt; t7 = new TreeElement&lt;String&gt;(Representation");
 
 					// put in labels for each node; we simply use integers 
 
@@ -50,3 +46,6 @@ public class tree{
 		bridges.visualize();
     }
 }
+
+
+
