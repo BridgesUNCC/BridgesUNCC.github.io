@@ -17,7 +17,7 @@ public class arr3d {
 		for (int k = 0; k < dims[0]; k++) {
 			for (int j = 0; j < dims[1]; j++) {
 				for (int i = 0; i < dims[2]; i++) {
-					my_array.setValue(i, j, k, new Element&lt;Integer&gt;String.valueOf(n), n));
+					my_array.setValue(i, j, k, new Element&lt;Integer&gt;(String.valueOf(n), n));
 					n++;
 				}
 			}
