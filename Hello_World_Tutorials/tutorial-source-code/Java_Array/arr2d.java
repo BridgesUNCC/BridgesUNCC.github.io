@@ -6,22 +6,25 @@ public class arr2d {
 	public static void main(String[] args) throws Exception{
 
 						//create the Bridges object
-		Bridges bridges = new Bridges(2, "YOUR_API_KEY", "YOUR_USER_ID");
+		Bridges bridges = new Bridges(1, "YOUR_API_KEY", "YOUR_USER_ID");
 
 						//  for 2D array 5x5
 		int columns = 5;
 		int rows = 5;
+						// set dimensions, create array
 		int[] dims = {columns, rows, 1};
-		Array<Integer> my_array = new Array<Integer> (2, dims);
+		Array&lt;Integer&gt; my_array = new Array&lt;Integer&gt; (2, dims);
 
+						// populate the array
 		int k = 0;
 		for (int row = 0; row < rows; row++){
 			for (int col = 0; col < columns; col++){
-				my_array.setValue(row, col,  new Element<Integer>(String.valueOf(k), k*k));
+				my_array.setValue(row, col,  new Element&lt;Integer&gt;String.valueOf(k), k*k));
 				k++;
 			}
 		}
 
+						// color some of the elements
 		my_array.getValue(0,0).getVisualizer().setColor("green");
 		my_array.getValue(0,4).getVisualizer().setColor("blue");
 		my_array.getValue(2,2).getVisualizer().setColor("cyan");

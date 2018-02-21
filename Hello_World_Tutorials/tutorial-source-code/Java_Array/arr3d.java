@@ -6,18 +6,18 @@ public class arr3d {
 	public static void main(String[] args) throws Exception{
 
 							//create the Bridges object
-		Bridges bridges = new Bridges(3, "YOUR_API_KEY", "YOUR_USER_ID");
+		Bridges bridges = new Bridges(2, "YOUR_API_KEY", "YOUR_USER_ID");
 
 						// specify array dimensions and create 3D array
 		int[] dims = {4, 4, 4};
-		Array<Integer> my_array = new Array<Integer> (3, dims);
+		Array&lt;Integer&gt; my_array = new Array&lt;Integer&gt; (3, dims);
 
 						// populate the elements with their array position
 		int n  = 0;
 		for (int k = 0; k < dims[0]; k++) {
 			for (int j = 0; j < dims[1]; j++) {
 				for (int i = 0; i < dims[2]; i++) {
-					my_array.setValue(i, j, k, new Element<Integer>(String.valueOf(n), n));
+					my_array.setValue(i, j, k, new Element&lt;Integer&gt;String.valueOf(n), n));
 					n++;
 				}
 			}

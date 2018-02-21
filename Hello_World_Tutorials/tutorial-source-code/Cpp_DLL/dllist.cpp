@@ -7,8 +7,8 @@ using namespace bridges;
 
 									// helper function
 
-DLelement<StudentInfo> *insertFront(DLelement<StudentInfo> *front,
-				DLelement<StudentInfo> *new_el);
+DLelement&lt;StudentInfo&gt; *insertFront(DLelement&lt;StudentInfo&gt; *front,
+				DLelement&lt;StudentInfo&gt; *new_el);
 int main() {
 
 	Bridges::initialize(4, "YOUR_USER_ID", "YOUR_API_KEY");
@@ -61,17 +61,17 @@ int main() {
 			};
 
 							// insert the students in front of the list
-		DLelement<StudentInfo> *head = nullptr;
+		DLelement&lt;StudentInfo&gt; *head = nullptr;
 		for(int i = 0; i < num_students; i++){
-			head = insertFront(head, new DLelement<StudentInfo>(students[i], ""));
+			head = insertFront(head, new DLelement&lt;StudentInfo&gt;students[i], ""));
 		}
 							// add visual attributes 
-		DLelement<StudentInfo> *curr = head, *next;
+		DLelement&lt;StudentInfo&gt; *curr = head, *next;
 		while(curr != nullptr){
 			curr->setLabel(curr->getValue().getStudentLabel());
 			curr->getVisualizer()->setColor(curr->getValue().getFavoriteColor());
 
-			DLelement<StudentInfo> n1, n2;
+			DLelement&lt;StudentInfo&gt; n1, n2;
 			if (curr->getNext() != nullptr) {
 				next = curr->getNext();
 				curr->getLinkVisualizer(next)->setColor(curr->getValue().getDislikeColor());
@@ -86,8 +86,8 @@ int main() {
 		return 0;
 }
 
-DLelement<StudentInfo> *insertFront(DLelement<StudentInfo> *front,
-				DLelement<StudentInfo> *new_el){
+DLelement&lt;StudentInfo&gt; *insertFront(DLelement&lt;StudentInfo&gt; *front,
+				DLelement&lt;StudentInfo&gt; *new_el){
 	if (front == nullptr)
 		return new_el;
 
