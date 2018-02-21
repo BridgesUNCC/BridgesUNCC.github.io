@@ -1,69 +1,23 @@
-<h3>Create a new .cpp file</h3>
 
-<h3>Includes</h3>
+<div w3-include-html="bridges_program_elements.html"></div> 
+<h2> Example Details</h2>
 <ul>
-  <li>We need to include these Bridges headers to give access to all the classes/methods needed to interact with Bridges</li>
-  <li>In your .cpp file, enter the following code snippets:</li>
-    <pre class="prettyprint">
-        #include "BSTElement.h"
-        #include "Bridges.h"
-    </pre>
+<li> This example illustrates construction of an AVL tree,  whose elements
+derived from BST elements. 
+<li>  AVL tree elements have balance factors in order to maintain a balanced
+tree.
+<li> In this example, a simple AVL tree is built and visualized. Hit the `l' button to see the labels, which display balance factors at each node.
+and visualized.
 </ul>
 
-<h3>Namespace</h3>
-<ul>
-  <li>By using this namespace we can forgo messy scope specifiers in our code for our Bridges calls</li>
-  <li>In your .cpp file, enter the following code snippet:</li>
-    <pre class="prettyprint">using namespace bridges;</pre>
-</ul>
+<h2>Here is the final code:</h2>
+<pre class = "prettyprint">
 
-<h3>Inside our Main</h3>
-<ul>
-  <li>First we need to initialize our Bridges Credentials</li>
-    <pre class="prettyprint">Bridges::initialize(4, "YOUR_API_KEY","YOUR_USER_ID",4);</pre>
-Note that the above 2 parameters  need to be replaced by your BRIDGES 
-credentials.
-  <li>Then we can create our BSTElements</li>
-    <pre class="prettyprint">
-      BSTElement&lt;int,string&gt; e0(0,"","");
-      BSTElement&lt;int,string&gt; e1(-1,"","Hello");
-      BSTElement&lt;int,string&gt; e2(1,"","World");
-    </pre>
-  <li>Now link the TreeElements together</li>
-    <pre class="prettyprint">
-      e0.setLeft(&e1);
-      e0.setRight(&e2);
-    </pre>
-  <li>Now we pass the first element of our datastruture to Bridges</li>
-    <pre class="prettyprint">Bridges::setDataStructure(&e0);</pre>
-  <li>Finnaly we call the visualize function</li>
-    <pre class="prettyprint">Bridges::visualize();</pre>
-</ul>
-<h4><strong>Code Summary:</strong> Your .cpp file should look like this</h4>
-  <pre class="prettyprint">
-    #include "BSTElement.h"
-    #include "Bridges.h"
-    
-    using namespace bridges;
-    
-    int main()
-    {
-        //create the Bridges object
-        Bridges::initialize("YOUR_API_KEY","YOUR_USER_ID",4);
-        
-        //create elements
-        BSTElement&lt;int,string&gt; e0(0,"","");
-        BSTElement&lt;int,string&gt; e1(-1,"","Hello");
-        BSTElement&lt;int,string&gt; e2(1,"","World");
-        
-        //link elements
-        e0.setLeft(&e1);
-        e0.setRight(&e2);
-        
-        //pass first element of data structure
-        Bridges::setDataStructure(&e0);
-        
-        //visualize data structure
-        Bridges::visualize();
-    }
-  </pre>
+<div 
+<pre w3-include-html="./tutorial-source-code/AVLtree/avl.cpp" class="prettyprint"></pre>
+</div>
+
+</pre>
+<script>
+  w3IncludeHTML();
+</script>
