@@ -9,6 +9,8 @@ public class arr2d {
 //		Bridges bridges = new Bridges(1, "486749122386", "kalpathi60");
 		Bridges bridges = new Bridges(1, "997924677918", "bridges_public");
 
+		bridges.setDescription("Array : 2D Example");
+
 						//  for 2D array 5x5
 		int columns = 5;
 		int rows = 5;
