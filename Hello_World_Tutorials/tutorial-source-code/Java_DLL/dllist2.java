@@ -5,10 +5,10 @@ public class dllist {
 
 	public static void main(String[] args) throws Exception {
 
-	Bridges bridges = new Bridges(4, "YOUR_API_KEY", "YOUR_USER_ID");
+		Bridges bridges = new Bridges(4, "YOUR_API_KEY", "YOUR_USER_ID");
 	  
 						// load student info
-      StudentInfo[] students = {
+		StudentInfo[] students = {
               new StudentInfo(
                       "00000000000",
                       "Gretel Chaney",
@@ -51,43 +51,40 @@ public class dllist {
                       "red",
                       "cyan",
                       15.0)
-      };
+		};
 
 							// insert the students in front of the list
-       DLelement&lt;StudentInfo&gt; head = null;
-       for(int i = 0; i < students.length; i++){
-	      head = insertFront(head, new DLelement&lt;StudentInfo&gt; students[i]));
-       }
+		DLelement&lt;StudentInfo&gt; head = null;
+		for(int i = 0; i < students.length; i++){
+			head = insertFront(head, new DLelement&lt;StudentInfo&gt; (students[i], null, null));
+		}
 							// add visual attributes 
-       DLelement&lt;StudentInfo&gt; curr = head, next;
-       while(curr != null){
-           curr.setLabel(curr.getValue().getStudentLabel());
-           curr.getVisualizer().setColor(curr.getValue().getFavoriteColor());
-
-		   DLelement&lt;StudentInfo&gt; n1, n2;
-           if (curr.getNext() != null) {
+		DLelement&lt;StudentInfo&gt; curr = head, next;
+		while(curr != null){
+			curr.setLabel(curr.getValue().getStudentLabel());
+			curr.getVisualizer().setColor(curr.getValue().getFavoriteColor());
+	
+			DLelement&lt;StudentInfo&gt; n1, n2;
+			if (curr.getNext() != null) {
 				next = curr.getNext();
 				curr.getLinkVisualizer(next).setColor(curr.getValue().getDislikeColor());
 				next.getLinkVisualizer(curr).setColor(curr.getValue().getDislikeColor());
 			}
+			curr = curr.getNext();
+		}
 
-           curr = curr.getNext();
-       }
+		bridges.setDataStructure(head);
+		bridges.visualize();
+	}
 
-      bridges.setDataStructure(head);
-      bridges.visualize();
-
-
-  }
-
-  public static DLelement&lt;StudentInfo&gt; insertFront(DLelement&lt;StudentInfo&gt; front,
+	public static DLelement&lt;StudentInfo&gt; insertFront(DLelement&lt;StudentInfo&gt; front,
                                       DLelement&lt;StudentInfo&gt; new_el){
-	if (front == null)
-		return new_el;
+		if (front == null)
+			return new_el;
 
-	new_el.setNext(front);
-	front.setPrev(new_el);
+		new_el.setNext(front);
+		front.setPrev(new_el);
 	
-	return new_el;
-  }
+		return new_el;
+	}
 }
