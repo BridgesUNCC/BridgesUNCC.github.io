@@ -15,7 +15,7 @@ public class arr1d {
 
 						// populate the array, with squares of indices
 		for (int k = 0; k < my_array.getSize(); k++) {
-			my_array.setValue(k, new Element&lt;Integer&gt;String.valueOf(k), k*k));
+			my_array.setValue(k, new Element&lt;Integer&gt;(String.valueOf(k), k*k));
 			my_array.getValue(k).getVisualizer().setColor("red");
 		}
 

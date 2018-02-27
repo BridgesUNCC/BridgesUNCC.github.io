@@ -8,32 +8,32 @@ public class tree{
 		Bridges bridges = new Bridges(8, "YOUR_API_KEY", "YOUR_USER_ID");
 
    					//create   tree nodes
-		TreeElement&lt;String&gt; t0 = new TreeElement&lt;String&gt;(Hello");
-		TreeElement&lt;String&gt; t2 = new TreeElement&lt;String&gt;(This");
-		TreeElement&lt;String&gt; t3 = new TreeElement&lt;String&gt;(is");
-		TreeElement&lt;String&gt; t4 = new TreeElement&lt;String&gt;(a");
-		TreeElement&lt;String&gt; t5 = new TreeElement&lt;String&gt;(generic");
-		TreeElement&lt;String&gt; t6 = new TreeElement&lt;String&gt;(Tree");
-		TreeElement&lt;String&gt; t7 = new TreeElement&lt;String&gt;(Representation");
+		TreeElement&lt;String&gt; t0 = new TreeElement&lt;String&gt;("Hello");
+		TreeElement&lt;String&gt; t2 = new TreeElement&lt;String&gt;("This");
+		TreeElement&lt;String&gt; t3 = new TreeElement&lt;String&gt;("is");
+		TreeElement&lt;String&gt; t4 = new TreeElement&lt;String&gt;("a");
+		TreeElement&lt;String&gt; t5 = new TreeElement&lt;String&gt;("generic");
+		TreeElement&lt;String&gt; t6 = new TreeElement&lt;String&gt;("Tree");
+		TreeElement&lt;String&gt; t7 = new TreeElement&lt;String&gt;("Representation");
 
 					// put in labels for each node; we simply use integers 
 
-		t0.setLabel("10");
-		t2.setLabel("20");
-		t3.setLabel("30");
-		t4.setLabel("40");
-		t5.setLabel("50");
-		t6.setLabel("60");
-		t7.setLabel("100");
+		t0.setLabel(t0.getValue());
+		t2.setLabel(t2.getValue());
+		t3.setLabel(t3.getValue());
+		t4.setLabel(t4.getValue());
+		t5.setLabel(t5.getValue());
+		t6.setLabel(t6.getValue());
+		t7.setLabel(t7.getValue());
 
 					// add links to children
 
 		t0.addChild(t2);
 		t0.addChild(t3);
-		t0.addChild(t7);
-		t2.addChild(t4);
+		t0.addChild(t4);
 		t2.addChild(t5);
-		t3.addChild(t6);
+		t2.addChild(t6);
+		t3.addChild(t7);
 
 									// set some visual attributes
 		t0.getVisualizer().setColor("red");

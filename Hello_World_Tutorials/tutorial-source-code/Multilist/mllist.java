@@ -11,11 +11,11 @@ public class mllist {
 
    							//create  nodes for the main list
 
-		MLelement&lt;String&gt; el0 = new MLelement&lt;String&gt;(0", "0");
-		MLelement&lt;String&gt; el1 = new MLelement&lt;String&gt;(1", "1");
-		MLelement&lt;String&gt; el2 = new MLelement&lt;String&gt;(2", "2");
-		MLelement&lt;String&gt; el3 = new MLelement&lt;String&gt;(3", "3");
-		MLelement&lt;String&gt; el4 = new MLelement&lt;String&gt;(4", "4");
+		MLelement&lt;String&gt; el0 = new MLelement&lt;String&gt;("0", "0");
+		MLelement&lt;String&gt; el1 = new MLelement&lt;String&gt;("1", "1");
+		MLelement&lt;String&gt; el2 = new MLelement&lt;String&gt;("2", "2");
+		MLelement&lt;String&gt; el3 = new MLelement&lt;String&gt;("3", "3");
+		MLelement&lt;String&gt; el4 = new MLelement&lt;String&gt;("4", "4");
 
 							// link them
 		el0.setNext(el1);
@@ -23,9 +23,9 @@ public class mllist {
 		el2.setNext(el3);
 		el3.setNext(el4);
 							// create a sublist from node 2
-		MLelement&lt;String&gt; el5 = new MLelement&lt;String&gt;(5", "5");
-		MLelement&lt;String&gt; el6 = new MLelement&lt;String&gt;(6", "6");
-		MLelement&lt;String&gt; el7 = new MLelement&lt;String&gt;(7", "7");
+		MLelement&lt;String&gt; el5 = new MLelement&lt;String&gt;("5", "5");
+		MLelement&lt;String&gt; el6 = new MLelement&lt;String&gt;("6", "6");
+		MLelement&lt;String&gt; el7 = new MLelement&lt;String&gt;("7", "7");
 
 							// link the sublist
 		el5.setNext(el6);
@@ -33,16 +33,16 @@ public class mllist {
 		el2.setSubList(el5);
 
 							// create a second sublist from 3
-		MLelement&lt;String&gt; el8 = new MLelement&lt;String&gt;(8", "8");
-		MLelement&lt;String&gt; el9 = new MLelement&lt;String&gt;(9", "9");
+		MLelement&lt;String&gt; el8 = new MLelement&lt;String&gt;("8", "8");
+		MLelement&lt;String&gt; el9 = new MLelement&lt;String&gt;("9", "9");
 
 							// link the sublist
 		el8.setNext(el9);
 		el3.setSubList(el8);
 
 							// create a (sub)sublist from 5
-		MLelement&lt;String&gt; el10 = new MLelement&lt;String&gt;(10", "10");
-		MLelement&lt;String&gt; el11 = new MLelement&lt;String&gt;(11", "11");
+		MLelement&lt;String&gt; el10 = new MLelement&lt;String&gt;("10", "10");
+		MLelement&lt;String&gt; el11 = new MLelement&lt;String&gt;("11", "11");
 
 							// link the sublist
 		el10.setNext(el11);

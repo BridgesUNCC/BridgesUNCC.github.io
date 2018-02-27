@@ -13,7 +13,7 @@ public class sllist {
 		Bridges bridges = new Bridges(3, "YOUR API KEY", "YOUR_USER_ID");
          					// create the linked list elements with 
 							// student data 
-		SLelement&lt;StudentInfo&gt; el0 = new SLelement&lt;StudentInfo&gt; "",
+		SLelement&lt;StudentInfo&gt; el0 = new SLelement&lt;StudentInfo&gt; ("",
 			new StudentInfo(
 				"00000000000",
 				"Gretel Chaney",
@@ -23,7 +23,7 @@ public class sllist {
 				"blue",
 				 9.0
 			));
-		SLelement&lt;StudentInfo&gt; el1 = new SLelement&lt;StudentInfo&gt; "",
+		SLelement&lt;StudentInfo&gt; el1 = new SLelement&lt;StudentInfo&gt; ("",
 			new StudentInfo(
 				"00000000001",
 				"Karol Soderman",
@@ -33,7 +33,7 @@ public class sllist {
 				"red",
 				 11.0
 			));
-		SLelement&lt;StudentInfo&gt; el2 = new SLelement&lt;StudentInfo&gt; "",
+		SLelement&lt;StudentInfo&gt; el2 = new SLelement&lt;StudentInfo&gt; ("",
 			new StudentInfo(
 				"00000000002",
 				"Lamont Kyler",
@@ -43,7 +43,7 @@ public class sllist {
 				"green",
 				 12.0
 			));
-		SLelement&lt;StudentInfo&gt; el3 = new SLelement&lt;StudentInfo&gt; "",
+		SLelement&lt;StudentInfo&gt; el3 = new SLelement&lt;StudentInfo&gt; ("",
 			new StudentInfo(
 				"00000000003",
 				"Gladys Serino",
@@ -53,7 +53,7 @@ public class sllist {
 				"magenta",
 				 9.0
 			));
-		SLelement&lt;StudentInfo&gt; el4 = new SLelement&lt;StudentInfo&gt; "",
+		SLelement&lt;StudentInfo&gt; el4 = new SLelement&lt;StudentInfo&gt; ("",
 			new StudentInfo(
 				"00000000004",
 				"Starr Mcginn",

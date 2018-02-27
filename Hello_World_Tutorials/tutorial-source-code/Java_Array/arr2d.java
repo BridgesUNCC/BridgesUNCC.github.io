@@ -19,7 +19,7 @@ public class arr2d {
 		int k = 0;
 		for (int row = 0; row < rows; row++){
 			for (int col = 0; col < columns; col++){
-				my_array.setValue(row, col,  new Element&lt;Integer&gt;String.valueOf(k), k*k));
+				my_array.setValue(row, col,  new Element&lt;Integer&gt;(String.valueOf(k), k*k));
 				k++;
 			}
 		}

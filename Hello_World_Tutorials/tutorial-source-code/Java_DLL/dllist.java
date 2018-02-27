@@ -3,14 +3,12 @@ import bridges.connect.Bridges;
 
 public class dllist {
 
-  public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws Exception {
 
-      final String YOUR_API_KEY = "";
-      final String YOUR_USER_ID = "";
-      Bridges bridges = new Bridges(5, "YOUR_API_KEY", "YOUR_USER_ID");
-
+		Bridges bridges = new Bridges(4, "YOUR_API_KEY", "YOUR_USER_ID");
+	  
 						// load student info
-      StudentInfo[] students = {
+		StudentInfo[] students = {
               new StudentInfo(
                       "00000000000",
                       "Gretel Chaney",
@@ -53,43 +51,40 @@ public class dllist {
                       "red",
                       "cyan",
                       15.0)
-      };
+		};
 
 							// insert the students in front of the list
-       DLelement&lt;StudentInfo&gt; head = null;
-       for(int i = 0; i < students.length; i++){
-	      head = insertFront(head, new DLelement&lt;StudentInfo&gt;(students[i]));
-       }
+		DLelement<StudentInfo> head = null;
+		for(int i = 0; i < students.length; i++){
+			head = insertFront(head, new DLelement (students[i], null, null));
+		}
 							// add visual attributes 
-       DLelement&lt;StudentInfo&gt; curr = head, next;
-       while(curr != null){
-           curr.setLabel(curr.getValue().getStudentLabel());
-           curr.getVisualizer().setColor(curr.getValue().getFavoriteColor());
-
-		   DLelement&lt;StudentInfo&gt; n1, n2;
-           if (curr.getNext() != null) {
+		DLelement<StudentInfo> curr = head, next;
+		while(curr != null){
+			curr.setLabel(curr.getValue().getStudentLabel());
+			curr.getVisualizer().setColor(curr.getValue().getFavoriteColor());
+	
+			DLelement<StudentInfo> n1, n2;
+			if (curr.getNext() != null) {
 				next = curr.getNext();
 				curr.getLinkVisualizer(next).setColor(curr.getValue().getDislikeColor());
 				next.getLinkVisualizer(curr).setColor(curr.getValue().getDislikeColor());
 			}
+			curr = curr.getNext();
+		}
 
-           curr = curr.getNext();
-       }
+		bridges.setDataStructure(head);
+		bridges.visualize();
+	}
 
-      bridges.setDataStructure(head);
-      bridges.visualize();
+	public static DLelement<StudentInfo> insertFront(DLelement<StudentInfo> front,
+                                      DLelement<StudentInfo> new_el){
+		if (front == null)
+			return new_el;
 
-
-  }
-
-  public static DLelement&lt;StudentInfo&gt; insertFront(DLelement&lt;StudentInfo&gt; front,
-                                      DLelement&lt;StudentInfo&gt; new_el){
-	if (front == null)
-		return new_el;
-
-	new_el.setNext(front);
-	front.setPrev(new_el);
+		new_el.setNext(front);
+		front.setPrev(new_el);
 	
-	return new_el;
-  }
+		return new_el;
+	}
 }
