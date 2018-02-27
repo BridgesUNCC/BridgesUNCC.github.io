@@ -63,7 +63,7 @@ int main() {
 							// insert the students in front of the list
 		DLelement&lt;StudentInfo&gt; *head = nullptr;
 		for(int i = 0; i < num_students; i++){
-			head = insertFront(head, new DLelement&lt;StudentInfo&gt;students[i], ""));
+			head = insertFront(head, new DLelement&lt;StudentInfo&gt;(students[i], ""));
 		}
 							// add visual attributes 
 		DLelement&lt;StudentInfo&gt; *curr = head, *next;

@@ -14,7 +14,7 @@ int main () {
 	Bridges::initialize(4, "kalpathi60", "486749122386");
          					// create the linked list elements with 
 							// student data 
-		SLelement<StudentInfo> *el0 = new SLelement<StudentInfo>(
+		SLelement&lt;StudentInfo&gt; *el0 = new SLelement&lt;StudentInfo&gt;(
 			StudentInfo(
 				"00000000000",
 				"Gretel Chaney",
@@ -24,7 +24,7 @@ int main () {
 				"blue",
 				 9.0
 			), "");
-		SLelement<StudentInfo> *el1 = new SLelement<StudentInfo>(
+		SLelement&lt;StudentInfo&gt; *el1 = new SLelement&lt;StudentInfo&gt;(
 			StudentInfo(
 				"00000000001",
 				"Karol Soderman",
@@ -34,7 +34,7 @@ int main () {
 				"red",
 				 11.0
 			), "");
-		SLelement<StudentInfo> *el2 = new SLelement<StudentInfo>(
+		SLelement&lt;StudentInfo&gt; *el2 = new SLelement&lt;StudentInfo&gt;(
 			StudentInfo(
 				"00000000002",
 				"Lamont Kyler",
@@ -44,7 +44,7 @@ int main () {
 				"green",
 				 12.0
 			), "");
-		SLelement<StudentInfo> *el3 = new SLelement<StudentInfo>(
+		SLelement&lt;StudentInfo&gt; *el3 = new SLelement&lt;StudentInfo&gt;(
 			StudentInfo(
 				"00000000003",
 				"Gladys Serino",
@@ -54,7 +54,7 @@ int main () {
 				"magenta",
 				 9.0
 			), "");
-		SLelement<StudentInfo> *el4 = new SLelement<StudentInfo>(
+		SLelement&lt;StudentInfo&gt; *el4 = new SLelement&lt;StudentInfo&gt;(
 			StudentInfo(
 				"00000000004",
 				"Starr Mcginn",
@@ -74,7 +74,7 @@ int main () {
 						// iterate through the list and add visual attributes
 						// to the elements; set the element color to the favorite
 						// color and the link to the disliked color
-        SLelement<StudentInfo> *currentElement = el0;
+        SLelement&lt;StudentInfo&gt; *currentElement = el0;
         while(currentElement != nullptr) {
 						// color the node
             StudentInfo si = currentElement->getValue();
