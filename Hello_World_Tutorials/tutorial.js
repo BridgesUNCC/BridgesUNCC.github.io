@@ -54,3 +54,9 @@ function displayCode(param,caller)
 //     }
 //   }
 // }
+
+setTimeout(loadFrame, 1000);
+
+function loadFrame() {
+	$('iframe').attr('src', $('iframe').attr('data-src'));
+}
