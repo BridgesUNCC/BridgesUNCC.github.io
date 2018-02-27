@@ -1,5 +1,4 @@
-#include <iostream>
-#include <string>
+#include &lt;string&gt;
 #include "Array.h"
 #include "Bridges.h"
 
