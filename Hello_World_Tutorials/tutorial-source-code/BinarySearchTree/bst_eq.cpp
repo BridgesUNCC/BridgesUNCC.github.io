@@ -1,5 +1,5 @@
 
-#include <string>
+#include &lt;string&gt;
 #include "Bridges.h"
 #include "DataSource.h"
 #include "data_src/EarthquakeUSGS.h"
@@ -15,11 +15,7 @@ BSTElement&lt;float, EarthquakeUSGS&gt; *insert (BSTElement&lt;float, Earthquake
 int max_quakes = 25;
 
 int main() {
-	string hilite_color = "orange", 
-			def_color = "green",
-			end_color = "red";
-		
-	Bridges::initialize(14, "kalpathi60", "486749122386");
+	Bridges::initialize(14, "YOUR_USER_ID", "YOUR_API_KEY");
 								// read the earth quake  data and build the BST
 	Bridges::setTitle("Recent Earthquakes (USGIS Data)");
 
@@ -37,6 +33,8 @@ int main() {
 		root = insert (root, bst_node);
 	}
 
+					// set the root to be red
+	root->getVisualizer()->setColor(Color("red");
 					// visualize the binary search tree
 	Bridges::setDataStructure(root);
 	Bridges::visualize();

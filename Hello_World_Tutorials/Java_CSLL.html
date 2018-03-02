@@ -1,127 +1,17 @@
-<h3>Create a new .java file</h3>
-
-<h3>Imports</h3>
+<div w3-include-html="bridges_program_elements.html"></div>
+<h2> Example Details</h2>
 <ul>
-  <li>We need to include these Bridges files to give access to all the classes/methods needed to interact with Bridges</li>
-  <li>In your .java file, enter the following code snippets:</li>
-	<pre class="prettyprint">
-    import bridges.connect.Bridges;
-    import bridges.base.CircSLelement;
-	</pre>
+<li> In this example, we will build and visualize a circular singly linked 
+list with student information data, specified through the StudentInfo class, 
+which will be part of the CircSLelement object, through its 
+generic variable (CircSLelement&lt;StudentInfo&gt;).
+<li> The elements are linked, colored  and the list is  visualized. 
+<li> The main difference from the normal singly linked list is that the 
+last element is linked to the first element; iterating through a circular
+linked list will need to compare the link (that is iterated upon) to 
+the beginning link of the list, in order to prevent an infinite loop.
 </ul>
-
-<h3>Main Exception</h3>
-<ul>
-  <li>By adding a throw exception we can forgo messy try/catch blocks in our code for our Bridges calls</li>
-  <li>In your .java file, add a throw exception to the main function so it looks like this:</li>
-    <pre class="prettyprint">   public static void main(String[] args) throws Exception</pre>
-</ul>
-
-<h3>Inside our Main</h3>
-<ul>
-  <li>First we need to create our BRIDGES object and initialize our BRIDGES Credentials; here we use for our example a StudentInfo object class, which will
-be a generic parameter.</li>
-<pre class="prettyprint">   Bridges bridges = new Bridges(3, "YOUR_API_KEY", "YOUR_USER_ID");</pre>
-	In the above call, the parameter 1 is the assignment id (can be any
-	positive integer), and the remaining two parameters are your BRIDGES
-	credentials.  <b>You will need to replace the two fields in this call
-	with your own BRIDGES credentials. </b><p>
-
-    <li>Now create an array to hold StudentInfo objects.</li>
-    <pre class="prettyprint">
-	StudentInfo[] students = {
-		new StudentInfo(
-				"00000000000",
-				"Gretel Chaney",
-				"CS",
-				"g.chaney@generated.com",
-				"magenta",
-				"blue",
-				9.0
-		),
-		new StudentInfo(
-				"00000000001",
-				"Karol Soderman",
-				"SIS",
-				"k.soderman@generated.com",
-				"magenta",
-				"red",
-				11.0
-		),
-		new StudentInfo(
-				"00000000002",
-				"Lamont Kyler",
-				"BIO",
-				"l.kyler@generated.com",
-				"yellow",
-				"green",
-				12.0
-		),
-		new StudentInfo(
-				"00000000003",
-				"Gladys Serino",
-				"CS","g.serino@generated.com",
-				"blue",
-				"magenta",
-				9.0
-		),
-		new StudentInfo("00000000004",
-				"Starr Mcginn",
-				"CS",
-				"s.mcginn@generated.com",
-				"red",
-				"yellow",
-				15.0)
-		};
-    </pre>
-
-  <li>Then we can create our CircSLelements with the StudentInfo objects and link the DLements together.</li>
-	<pre class="prettyprint">
-	CircSLelement&lt;StudentInfo&gt; head = new CircSLelement&lt;StudentInfo&gt;("",students[0]);
-	CircSLelement&lt;StudentInfo&gt; current = head;
-
-	for(int i = 1; i < students.length; i++){
-		current.setNext(new CircSLelement&lt;StudentInfo&gt;(students[i]));
-
-                                    //handle the last element
-		if (i == students.length-1){
-                                    //getting the last element
-			current = current.getNext();
-
-                        //  point the last element to the first element,
-                        //  so the list becomes circular.
-			current.getNext().setNext(head);
-		}
-
-            //set the current element to be the next element
-            current = current.getNext();
-        }
-	</pre>
-
-<li> Next add some visualization attributes to the elements</li>
-<pre class="prettyprint">
-                            // add visual attributes
-	do {
-		current.setLabel(current.getValue().getStudentLabel());
-		current.getVisualizer().setColor(current.getValue().getFavoriteColor());
-		
-		current.getLinkVisualizer(current.getNext()).setColor(current.getValue().getDislikeColor());
-		current.getLinkVisualizer(current.getNext()).setThickness(current.getValue().getStudentCreditHours()*0.75);
-		
-		current = current.getNext();
-	}	while(current.getIdentifier() != head.getIdentifier());
-</pre>
-<li>Now we pass the first element(head) of our data structure to BRIDGES</li>
-<pre class="prettyprint">   
-	bridges.setDataStructure(head);
-</pre>
-<li>Finaly we call the visualize function</li>
-<pre class="prettyprint">   
-	bridges.visualize();</pre>
-</ul>
-
-
-    <h3>Here's the final code:</h3>
+<h3>Here's the final code:</h3>
 
 
 <div class="panel-heading">
@@ -141,3 +31,6 @@ be a generic parameter.</li>
         </div>
     </div>
 </div>
+<script>
+  w3IncludeHTML();
+</script>
