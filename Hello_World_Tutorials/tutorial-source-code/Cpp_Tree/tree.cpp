@@ -9,12 +9,12 @@ int main() {
 
 	Bridges::initialize(8, "YOUR_USER_ID", "YOUR_API_KEY"); 
 
-	TreeElement&lt;string&gt; *tle0 = new TreeElement&lt;string&gt;(10", "10");
-	TreeElement&lt;string&gt; *tle1 = new TreeElement&lt;string&gt;(5", "5");
-	TreeElement&lt;string&gt; *tle2 = new TreeElement&lt;string&gt;(3", "3");
-	TreeElement&lt;string&gt; *tle3=  new TreeElement&lt;string&gt;(20","20");
-	TreeElement&lt;string&gt; *tle4=  new TreeElement&lt;string&gt;(50","50");
-	TreeElement&lt;string&gt; *tle5=  new TreeElement&lt;string&gt;(100","100");
+	TreeElement&lt;string&gt; *tle0 = new TreeElement&lt;string&gt;("10", "10");
+	TreeElement&lt;string&gt; *tle1 = new TreeElement&lt;string&gt;("5", "5");
+	TreeElement&lt;string&gt; *tle2 = new TreeElement&lt;string&gt;("3", "3");
+	TreeElement&lt;string&gt; *tle3=  new TreeElement&lt;string&gt;("20","20");
+	TreeElement&lt;string&gt; *tle4=  new TreeElement&lt;string&gt;("50","50");
+	TreeElement&lt;string&gt; *tle5=  new TreeElement&lt;string&gt;("100","100");
 
 	tle0->addChild(tle1);
 	tle0->addChild(tle2);

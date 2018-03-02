@@ -3,13 +3,13 @@
  * Created by Kalpathi Subramanian, 2/19/18
  *
  */
-#include <string>
+#include &lt;string&gt;
 
 using namespace std;
 
 class StudentInfo {
 	private:
-    	string studentID, fullName, program, email, 
+		string studentID, fullName, program, email, 
 			dislikeColor, favoriteColor;
 		double studentCreditHours;
 
@@ -22,7 +22,7 @@ class StudentInfo {
      	 */
 		StudentInfo() {
 			studentID =  fullName = program = email =
-            dislikeColor = favoriteColor = "";
+				dislikeColor = favoriteColor = "";
 			studentCreditHours = 0.0f;
 		}
 		StudentInfo(string studentID, string fullName, string program, 
