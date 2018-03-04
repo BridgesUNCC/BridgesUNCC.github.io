@@ -17,7 +17,6 @@ CircDLelement<StudentInfo> *insertFront(
 
 int main() {
 	Bridges::initialize(6, "kalpathi60", "486749122386");
-//	Bridges::initialize(6, "bridges_public", "997924677918");
 
 	Bridges::setTitle("An Example Circular Doubly Linked List");
 
@@ -60,7 +59,7 @@ int main() {
 				"Gladys Serino",
 				"CS",
 				"g.serino@generated.com",
-				"green",
+				"blue",
 				"magenta",
 				 9.0
 			), ""),
@@ -71,7 +70,7 @@ int main() {
 				"CS",
 				"s.mcginn@generated.com",
 				"red",
-				"cyan",
+				"yellow",
 				 15.0
 			), "") 
 		};
@@ -125,3 +124,4 @@ CircDLelement<StudentInfo> *insertFront(
 
 	return tailElement;
 }
+

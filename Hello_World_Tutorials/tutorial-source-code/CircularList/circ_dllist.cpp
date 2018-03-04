@@ -59,7 +59,7 @@ int main() {
 				"Gladys Serino",
 				"CS",
 				"g.serino@generated.com",
-				"green",
+				"blue",
 				"magenta",
 				 9.0
 			), ""),
@@ -70,7 +70,7 @@ int main() {
 				"CS",
 				"s.mcginn@generated.com",
 				"red",
-				"cyan",
+				"yellow",
 				 15.0
 			), "") 
 		};

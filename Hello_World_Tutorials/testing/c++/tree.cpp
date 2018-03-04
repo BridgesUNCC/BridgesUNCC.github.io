@@ -8,35 +8,43 @@ using namespace bridges;
 int main() {
 
 	Bridges::initialize(8, "kalpathi60", "486749122386"); 
-//	Bridges::initialize(8, "bridges_public", "997924677918");
 
-	TreeElement<string> *tle0 = new TreeElement<string>("10", "10");
-	TreeElement<string> *tle1 = new TreeElement<string>("5", "5");
-	TreeElement<string> *tle2 = new TreeElement<string>("3", "3");
-	TreeElement<string> *tle3=  new TreeElement<string>("20","20");
-	TreeElement<string> *tle4=  new TreeElement<string>("50","50");
-	TreeElement<string> *tle5=  new TreeElement<string>("100","100");
+	TreeElement<string> *t0 = new TreeElement<string>("Hello", "Hello");
+	TreeElement<string> *t2 = new TreeElement<string>("This", "This");
+	TreeElement<string> *t3 = new TreeElement<string>("is", "is");
+	TreeElement<string> *t4=  new TreeElement<string>("a","a");
+	TreeElement<string> *t5=  new TreeElement<string>("generic","generic");
+	TreeElement<string> *t6=  new TreeElement<string>("Tree","Tree");
+	TreeElement<string> *t7=  new TreeElement<string>("Representation","Representation");
 
-	tle0->addChild(tle1);
-	tle0->addChild(tle2);
-	tle0->addChild(tle3);
-	tle1->addChild(tle4);
-	tle1->addChild(tle5);
+                    // put in labels for each node; we simply use integers
 
-	tle0->getVisualizer()->setColor(Color("red"));
-	tle1->getVisualizer()->setColor(Color("green"));
-	tle2->getVisualizer()->setColor(Color("blue"));
-	tle3->getVisualizer()->setColor(Color("yellow"));
+	
+	t0->setLabel(t0->getValue());
+	t2->setLabel(t2->getValue());
+	t3->setLabel(t3->getValue());
+	t4->setLabel(t4->getValue());
+	t5->setLabel(t5->getValue());
+	t6->setLabel(t6->getValue());
+	t7->setLabel(t7->getValue());
 
-	tle0->getLinkVisualizer(tle1)->setColor(Color("red"));
-	tle0->getLinkVisualizer(tle2)->setColor(Color("green"));
-	tle0->getLinkVisualizer(tle3)->setColor(Color("blue"));
-	tle1->getLinkVisualizer(tle4)->setColor(Color("cyan"));
-	tle1->getLinkVisualizer(tle5)->setColor(Color("magenta"));
+	                    // add links to children
+
+	t0->addChild(t2);
+	t0->addChild(t3);
+	t0->addChild(t4);
+	t2->addChild(t5);
+	t2->addChild(t6);
+	t3->addChild(t7);
+
+						// set some visual attributes
+
+	t0->getVisualizer()->setColor(Color("red"));
+	t0->getVisualizer()->setOpacity(0.3f);
 
 	Bridges::setTitle("A General Tree Example");
 					// provide BRIDGES the  handle to the tree structure
-	Bridges::setDataStructure(tle0);
+	Bridges::setDataStructure(t0);
 
 	Bridges::visualize();
 

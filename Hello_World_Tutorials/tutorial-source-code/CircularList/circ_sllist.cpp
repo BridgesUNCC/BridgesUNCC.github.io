@@ -73,7 +73,7 @@ int main () {
 	CircSLelement&lt;StudentInfo&gt; *current =  head;
 
 	int num_students = 5;
-	for(int i = 1; i < num_students-1; i++) {
+	for(int i = 1; i < num_students; i++) {
 		current->setNext(students[i]);
 		current = current->getNext();
 	}
@@ -87,7 +87,7 @@ int main () {
 		current->getVisualizer()->setColor(current->getValue().getFavoriteColor());
 		
 		current->getLinkVisualizer(current->getNext())->setColor(current->getValue().getDislikeColor());
-		current->getLinkVisualizer(current->getNext())->setThickness(current->getValue().getStudentCreditHours()*0.75);
+		current->getLinkVisualizer(current->getNext())->setThickness(current->getValue().getStudentCreditHours()*0.5);
 		
 		current = current->getNext();
 	}   while(current!= head);
