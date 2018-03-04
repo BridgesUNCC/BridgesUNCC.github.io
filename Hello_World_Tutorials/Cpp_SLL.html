@@ -1,125 +1,13 @@
-<h3>Create a new .java file</h3>
-
-<h3>Imports</h3>
-<ul>
-  <li>We need to include these Bridges files to give access to all the classes/methods needed to interact with Bridges and specify the Bridges namespace</li>
-  <li>In your .java file, enter the following code snippets:</li>
-	<pre class="prettyprint">
-      	#include "Bridges.h"
-		#include "SLelement.h"
-		#include "StudentInfo.h"
-		using namespace bridges;
-	</pre>
+<div w3-include-html="bridges_program_elements.html"></div> 
+<h2> Example Details</h2>
 </ul>
-
-<h3>Inside our Main</h3>
-<ul>
-  <li>First we need to create our BRIDGES object and initialize our BRIDGES Credentials; here we use for our example a StudentInfo object class, which will
-be a generic parameter.</li>
-<pre class="prettyprint">Bridges&lt;&gt;
-	Bridges::initialize(4, "YOUR USER ID", "YOUR_API_KEY");
-</pre>
-	In the above call, the parameter 1 is the assignment id (can be any
-	positive integer), and the remaining two parameters are your BRIDGES
-	credentials.  <b> You will need to replace the two fields in this call
-	with your own BRIDGES credentials</b>. <p>
-  <li>Then we can create our SLelements with the StudentInfo objects</li>
-	<pre class="prettyprint">
-        SLelement&lt;StudentInfo&gt; *el0 = new SLelement&lt;StudentInfo&gt;(
-            StudentInfo(
-                "00000000000",
-                "Gretel Chaney",
-                "CS",
-                "g.chaney@generated.com",
-                "magenta",
-                "blue",
-                 9.0
-            ), "");
-        SLelement&lt;StudentInfo&gt; *el1 = new SLelement&lt;StudentInfo&gt;(
-            StudentInfo(
-                "00000000001",
-                "Karol Soderman",
-                "SIS",
-                "k.soderman@generated.com",
-                "magenta",
-                "red",
-                 11.0
-            ), "");
-        SLelement&lt;StudentInfo&gt; *el2 = new SLelement&lt;StudentInfo&gt;(
-            StudentInfo(
-                "00000000002",
-                "Lamont Kyler",
-                "BIO",
-                "l.kyler@generated.com",
-                "yellow",
-                "green",
-                 12.0
-            ), "");
-        SLelement&lt;StudentInfo&gt; *el3 = new SLelement&lt;StudentInfo&gt;(
-            StudentInfo(
-                "00000000003",
-                "Gladys Serino",
-                "CS",
-                "g.serino@generated.com",
-                "green",
-                "magenta",
-                 9.0
-            ), "");
-        SLelement&lt;StudentInfo&gt; *el4 = new SLelement&lt;StudentInfo&gt;(
-            StudentInfo(
-                "00000000004",
-                "Starr Mcginn",
-                "CS",
-                "s.mcginn@generated.com",
-                "red",
-                "cyan",
-                 15.0
-            ), "");
-	</pre>
-<li>Now link the SLelements together</li>
-<pre class="prettyprint">
-el0->setNext(el1);
-el1->setNext(el2);
-el2->setNext(el3);
-el3->setNext(el4);
-</pre>
-<li> Next add some visualization attributes to the elements, and iterating
-through the student records </li>
-<pre class="prettyprint">
-                        // iterate through the list and add visual attributes
-                        // to the elements; set the element color to the favorite
-                        // color and the link to the disliked color
-SLelement<StudentInfo> *currentElement = el0;
-while(currentElement != nullptr) {
-                        // color the node
-	StudentInfo si = currentElement->getValue();
-	currentElement->getVisualizer()->setColor(si.getFavoriteColor());
-
-	if(currentElement->getNext() != nullptr){
-
-                        // color the link
-		currentElement->getLinkVisualizer(currentElement->getNext())->setColor(si.getDislikeColor());
-                        // adjust link thickness
-		currentElement->getLinkVisualizer(currentElement->getNext())->setThickness(si.getStudentCreditHours() * 0.75);//75 percent thinner
-	}
-
-                        // set the label to the student info (label created in
-                        // StudentInfo class
-	currentElement->setLabel(si.getStudentLabel());
-	currentElement = currentElement->getNext();
-}
-</pre>
-<li>Now we pass the first element(head) of our data structure to BRIDGES</li>
-<pre class="prettyprint">
-	Bridges::setDataStructure(el0);
-</pre>
-<li>Finaly we call the visualize function</li>
-<pre class="prettyprint">
-	Bridges::visualize();
-</pre>
+<li> In this example, we will build and visualize a singly linked list with
+student information data, specified through the StudentInfo class, which will
+be part of the SLelement object through its generic variable (SLelement&lt;StudentInfo&gt;).
+<li>The elements are linked, visual attributes assigned through application data
+and visualized.
 </ul>
-<h3>Here's the final code:</h3>
-
+<h2>Here's the final code:</h2>
 <div class="panel-heading">
         <ul class="nav nav-tabs">
             <li class="active"><a href="#cpp_tab1" data-toggle="tab">sllist.cpp</a></li>
@@ -129,11 +17,11 @@ while(currentElement != nullptr) {
 <div class="panel-body">
     <div class="tab-content">
         <div class="tab-pane fade in active" id="cpp_tab1">
-          <pre w3-include-html="./tutorial-source-code/Cpp_SLL/sllist.cpp" class="prettyprint"></pre>
+          <pre w3-include-html="./tutorial-source-code/List/sllist.cpp" class="prettyprint"></pre>
         </div>
 
         <div class="tab-pane fade" id="cpp_tab2">
-              <pre w3-include-html="./tutorial-source-code/Cpp_SLL/StudentInfo.h" class="prettyprint"></pre>
+              <pre w3-include-html="./tutorial-source-code/List/StudentInfo.h" class="prettyprint"></pre>
         </div>
     </div>
 </div>

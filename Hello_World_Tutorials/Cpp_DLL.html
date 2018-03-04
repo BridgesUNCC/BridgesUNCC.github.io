@@ -1,74 +1,30 @@
-<h3>Create a new .cpp file</h3>
-
-<h3>Includes</h3>
+<div w3-include-html="bridges_program_elements.html"></div> 
+<h2> Example Details </h2>
 <ul>
-  <li>We need to include these Bridges headers to give access to all the classes/methods needed to interact with Bridges</li>
-  <li>In your .cpp file, enter the following code snippets:</li>
-    <pre class="prettyprint">
-      #include "DLelement.h"
-      #include "Bridges.h"
-    </pre>
+<li> In this example, a doubly linked list is constructed using student information
+	data, using the  StudentInfo class, held in the generic variable of 
+    DLelement class (DLelement&lt;StudentInfo&gt;)
+<li> A helper function is used to update the links while inserting into the list,.
+<li> The elements are colored, then visualized.
 </ul>
+<h3>Here's the final code:</h3>
 
-<h3>Namespace</h3>
-<ul>
-  <li>By using this namespace we can forgo messy scope specifiers in our code for our Bridges calls</li>
-  <li>In your .cpp file, enter the following code snippet:</li>
-    <pre class="prettyprint">using namespace bridges;</pre>
-</ul>
+<div class="panel-heading">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#cpp_tab1" data-toggle="tab">dllist.cpp</a></li>
+            <li><a href="#cpp_tab2" data-toggle="tab">StudentInfo.h</a></li>
+                </a>
+            </li>
+        </ul>
+</div>
+<div class="panel-body">
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="cpp_tab1">
+          <pre w3-include-html="tutorial-source-code/List/dllist.cpp" class="prettyprint"></pre>
+        </div>
 
-<h3>Inside our Main</h3>
-<ul>
-  <li>First we need to initialize our Bridges Credentials</li>
-    <pre class="prettyprint">Bridges::initialize(2, "YOUR_API_KEY","YOUR_USER_ID");</pre>
-<p>
-Note that you must  replace the two strings above with your BRIDGES credentials.
-<p>
-  <li>Then we can create our DLelements</li>
-    <pre class="prettyprint">
-      DLelement&lt;int&gt; e0(0,"Hello");
-      DLelement&lt;int&gt; e1(0,"World");
-      DLelement&lt;int&gt; e2(0, "!");
-    </pre>
-  <li>Now link the DLelements together</li>
-    <pre class="prettyprint">
-      e0.setNext(&e1);
-      e1.setNext(&e2);
-      e2.setPrev(&e1);
-      e1.setPrev(&e0);
-    </pre>
-  <li>Now we pass the first element of the doubly linked list to Bridges</li>
-    <pre class="prettyprint">Bridges::setDataStructure(&e0);</pre>
-  <li>Finnaly we call the visualize function</li>
-    <pre class="prettyprint">Bridges::visualize();</pre>
-</ul>
-<h4><strong>Code Summary:</strong> Your .cpp file should look like this</h4>
-  <pre class="prettyprint">
-    #include "DLelement.h"
-    #include "Bridges.h"
-  
-    using namespace bridges;
-  
-    int main()
-    {
-        //create the Bridges object
-        Bridges::initialize("YOUR_API_KEY","YOUR_USER_ID",2);
-        
-        //create elements
-        DLelement&lt;int&gt; e0(0,"Hello");
-        DLelement&lt;int&gt; e1(0,"World");
-        DLelement&lt;int&gt; e2(0, "!");
-        
-        //link elements
-        e0.setNext(&e1);
-        e1.setNext(&e2);
-        e2.setPrev(&e1);
-        e1.setPrev(&e0);
-        
-        //pass first element of data structure
-        Bridges::setDataStructure(&e0);
-        
-        //visualize data structure
-        Bridges::visualize();
-    }
-  </pre>
+        <div class="tab-pane fade" id="cpp_tab2">
+              <pre w3-include-html="tutorial-source-code/List/StudentInfo.h" class="prettyprint"></pre>
+        </div>
+    </div>
+</div>
