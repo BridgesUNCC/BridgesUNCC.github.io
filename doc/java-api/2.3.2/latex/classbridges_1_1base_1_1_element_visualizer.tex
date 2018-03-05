@@ -2,7 +2,7 @@
 \label{classbridges_1_1base_1_1_element_visualizer}\index{bridges.\+base.\+Element\+Visualizer@{bridges.\+base.\+Element\+Visualizer}}
 
 
-This class maintains the visual attributes of each B\+R\+I\+D\+G\+ES element.  
+This class is used to store the visual attributes of B\+R\+I\+D\+G\+E\+S elements.  
 
 
 \subsection*{Public Member Functions}
@@ -24,7 +24,7 @@ void \hyperlink{classbridges_1_1base_1_1_element_visualizer_aba410184f7df495594f
 \item 
 double \hyperlink{classbridges_1_1base_1_1_element_visualizer_a0b7673bf724e3df1f94df50ad95ca5b1}{get\+Size} ()
 \item 
-void \hyperlink{classbridges_1_1base_1_1_element_visualizer_ad7ff2a772741301c08943a58ffccca38}{set\+Color} (String col\+\_\+name)  throws Invalid\+Value\+Exception
+void \hyperlink{classbridges_1_1base_1_1_element_visualizer_ae24d6c51ba22481c3dbfc0dd512c0a32}{set\+Color} (String a\+Color)  throws Invalid\+Value\+Exception
 \item 
 void \hyperlink{classbridges_1_1base_1_1_element_visualizer_a84fad1c8abe43b20c68c1800d7630918}{set\+Color} (Integer r, Integer g, Integer b, float a)
 \item 
@@ -45,54 +45,25 @@ void \hyperlink{classbridges_1_1base_1_1_element_visualizer_a04f3416447f2042de7c
 
 
 \subsection{Detailed Description}
-This class maintains the visual attributes of each B\+R\+I\+D\+G\+ES element. 
+This class is used to store the visual attributes of B\+R\+I\+D\+G\+E\+S elements. 
 
-Visual properties include color, shape, opacity, size and location. Objects of this class are stored as part of the \hyperlink{classbridges_1_1base_1_1_element}{Element} class. Generally, a user will manipulate the \hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Visualizer} returned from the \hyperlink{classbridges_1_1base_1_1_element}{Element}\textquotesingle{}s get\+Visualizer() method, and then set attributes using its methods. Supported attributed values are as follows\+:~\newline
-
-
-{\bfseries Supported Colors (by name)}\+: 
-
-\char`\"{}red\char`\"{}, \char`\"{}green\char`\"{}, \char`\"{}blue\char`\"{},\char`\"{}yellow\char`\"{},\char`\"{}cyan\char`\"{},\char`\"{}magenta\char`\"{}, \char`\"{}white\char`\"{},, \char`\"{}black\char`\"{}, \char`\"{}orange\char`\"{}, \char`\"{}turquoise\char`\"{}, \char`\"{}maroon\char`\"{}, ~\newline
- \char`\"{}aquamarine\char`\"{}, \char`\"{}azure\char`\"{}, \char`\"{}beige\char`\"{}, \char`\"{}brown\char`\"{}, \char`\"{}tan\char`\"{}, \char`\"{}olive\char`\"{}, \char`\"{}chartreuse\char`\"{}, \char`\"{}khaki\char`\"{}, \char`\"{}bisque\char`\"{}, \char`\"{}coral\char`\"{}, ~\newline
- \char`\"{}pink\char`\"{}, \char`\"{}lavender\char`\"{}, \char`\"{}purple\char`\"{}, \char`\"{}gold\char`\"{} 
-
-{\bfseries  \hyperlink{classbridges_1_1base_1_1_color}{Color} by R\+G\+BA Specification \+:} Range\+: 0-\/255 for each component 
-
-{\bfseries Supported Shapes\+: }
-
-\char`\"{}square\char`\"{}, \char`\"{}circle\char`\"{}, \char`\"{}square\char`\"{},\char`\"{}diamond\char`\"{},\char`\"{}cross\char`\"{}, \char`\"{}triangle-\/down\char`\"{}, triangle-\/up" 
-
-{\bfseries  Shape Size} \+: Range (0-\/50) 
-
-{\bfseries  Opacity\+: } Range (0.\+0-\/1.\+0) 
-
-\begin{DoxyAuthor}{Author}
-Mihai Mehedint, Kalpathi Subramanian
-\end{DoxyAuthor}
-\begin{DoxyDate}{Date}
-6/22/16, 1/7/17, 5/17/17
-\end{DoxyDate}
-\begin{DoxySeeAlso}{See also}
-Example Tutorial at ~\newline
- \href{http://bridgesuncc.github.io/Hello_World_Tutorials/SLL.html}{\tt http\+://bridgesuncc.\+github.\+io/\+Hello\+\_\+\+World\+\_\+\+Tutorials/\+S\+L\+L.\+html} 
-\end{DoxySeeAlso}
-
+Visual properties include color, shape, opacity, and size. Objects of this class are stored as part of the \hyperlink{classbridges_1_1base_1_1_element}{Element} class. Generally, a user will manipulate the \hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Visualizer} returned from the \hyperlink{classbridges_1_1base_1_1_element}{Element}\textquotesingle{}s get\+Visualizer() method, and then set attributes using its methods. 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{classbridges_1_1base_1_1_element_visualizer_acbca874876ec1e8dbbde6484a4fc056e}{}\label{classbridges_1_1base_1_1_element_visualizer_acbca874876ec1e8dbbde6484a4fc056e} 
-\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!Element\+Visualizer@{Element\+Visualizer}}
+\hypertarget{classbridges_1_1base_1_1_element_visualizer_acbca874876ec1e8dbbde6484a4fc056e}{}\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!Element\+Visualizer@{Element\+Visualizer}}
 \index{Element\+Visualizer@{Element\+Visualizer}!bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}}
-\subsubsection{\texorpdfstring{Element\+Visualizer()}{ElementVisualizer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
-{\footnotesize\ttfamily bridges.\+base.\+Element\+Visualizer.\+Element\+Visualizer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Construct an \hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Visualizer} with the default visualization settings.
-
-The default settings are color = green, opacity = 1.\+0, size = 10.\+0, shape = circle. \hypertarget{classbridges_1_1base_1_1_element_visualizer_a5c0d9fe8051ebc816372b9836689fdfa}{}\label{classbridges_1_1base_1_1_element_visualizer_a5c0d9fe8051ebc816372b9836689fdfa} 
-\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!Element\+Visualizer@{Element\+Visualizer}}
+\subsubsection[{Element\+Visualizer()}]{\setlength{\rightskip}{0pt plus 5cm}bridges.\+base.\+Element\+Visualizer.\+Element\+Visualizer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classbridges_1_1base_1_1_element_visualizer_acbca874876ec1e8dbbde6484a4fc056e}
+Construct an \hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Visualizer} with the default visualization settings. The default settings are color = green, opacity = 1.\+0, size = 10.\+0, shape = circle. \hypertarget{classbridges_1_1base_1_1_element_visualizer_a5c0d9fe8051ebc816372b9836689fdfa}{}\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!Element\+Visualizer@{Element\+Visualizer}}
 \index{Element\+Visualizer@{Element\+Visualizer}!bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}}
-\subsubsection{\texorpdfstring{Element\+Visualizer()}{ElementVisualizer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
-{\footnotesize\ttfamily bridges.\+base.\+Element\+Visualizer.\+Element\+Visualizer (\begin{DoxyParamCaption}\item[{String}]{a\+Color }\end{DoxyParamCaption})}
-
+\subsubsection[{Element\+Visualizer(\+String a\+Color)}]{\setlength{\rightskip}{0pt plus 5cm}bridges.\+base.\+Element\+Visualizer.\+Element\+Visualizer (
+\begin{DoxyParamCaption}
+\item[{String}]{a\+Color}
+\end{DoxyParamCaption}
+)}\label{classbridges_1_1base_1_1_element_visualizer_a5c0d9fe8051ebc816372b9836689fdfa}
 Construct an \hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Visualizer} with its color set to \char`\"{}a\+Color\char`\"{}.
 
 
@@ -100,12 +71,14 @@ Construct an \hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Vi
 {\em a\+Color} & the string that represents one of the Bridges colors. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classbridges_1_1base_1_1_element_visualizer_ab62b1b06907fbeddfcee2b4b297e1021}{}\label{classbridges_1_1base_1_1_element_visualizer_ab62b1b06907fbeddfcee2b4b297e1021} 
-\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!Element\+Visualizer@{Element\+Visualizer}}
+\hypertarget{classbridges_1_1base_1_1_element_visualizer_ab62b1b06907fbeddfcee2b4b297e1021}{}\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!Element\+Visualizer@{Element\+Visualizer}}
 \index{Element\+Visualizer@{Element\+Visualizer}!bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}}
-\subsubsection{\texorpdfstring{Element\+Visualizer()}{ElementVisualizer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
-{\footnotesize\ttfamily bridges.\+base.\+Element\+Visualizer.\+Element\+Visualizer (\begin{DoxyParamCaption}\item[{String}]{a\+Color,  }\item[{String}]{a\+Shape }\end{DoxyParamCaption})}
-
+\subsubsection[{Element\+Visualizer(\+String a\+Color, String a\+Shape)}]{\setlength{\rightskip}{0pt plus 5cm}bridges.\+base.\+Element\+Visualizer.\+Element\+Visualizer (
+\begin{DoxyParamCaption}
+\item[{String}]{a\+Color, }
+\item[{String}]{a\+Shape}
+\end{DoxyParamCaption}
+)}\label{classbridges_1_1base_1_1_element_visualizer_ab62b1b06907fbeddfcee2b4b297e1021}
 Construct an \hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Visualizer} with its color set to \char`\"{}a\+Color\char`\"{} and shape set to \char`\"{}a\+Shape\char`\"{}.
 
 
@@ -115,25 +88,30 @@ Construct an \hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Vi
 {\em a\+Shape} & the string that represents one of the Bridges shapes \\
 \hline
 \end{DoxyParams}
-\hypertarget{classbridges_1_1base_1_1_element_visualizer_ab32f66b72ccf0a26c03ba44006da9ac6}{}\label{classbridges_1_1base_1_1_element_visualizer_ab32f66b72ccf0a26c03ba44006da9ac6} 
-\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!Element\+Visualizer@{Element\+Visualizer}}
+\hypertarget{classbridges_1_1base_1_1_element_visualizer_ab32f66b72ccf0a26c03ba44006da9ac6}{}\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!Element\+Visualizer@{Element\+Visualizer}}
 \index{Element\+Visualizer@{Element\+Visualizer}!bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}}
-\subsubsection{\texorpdfstring{Element\+Visualizer()}{ElementVisualizer()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
-{\footnotesize\ttfamily bridges.\+base.\+Element\+Visualizer.\+Element\+Visualizer (\begin{DoxyParamCaption}\item[{double}]{size }\end{DoxyParamCaption})}
-
+\subsubsection[{Element\+Visualizer(double size)}]{\setlength{\rightskip}{0pt plus 5cm}bridges.\+base.\+Element\+Visualizer.\+Element\+Visualizer (
+\begin{DoxyParamCaption}
+\item[{double}]{size}
+\end{DoxyParamCaption}
+)}\label{classbridges_1_1base_1_1_element_visualizer_ab32f66b72ccf0a26c03ba44006da9ac6}
 Construct an \hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Visualizer} with its size set to \char`\"{}size\char`\"{}.
 
 
 \begin{DoxyParams}{Parameters}
-{\em size} & the value that represents the size in pixels of the Bridges \hyperlink{classbridges_1_1base_1_1_element}{Element} \\
+{\em size} & the double that represents the size in pixels of the \hyperlink{classbridges_1_1base_1_1_element}{Element} on the Bridges Visualization \\
 \hline
 \end{DoxyParams}
-\hypertarget{classbridges_1_1base_1_1_element_visualizer_a9bf06ca1b6c215e079ab33ccd99633e8}{}\label{classbridges_1_1base_1_1_element_visualizer_a9bf06ca1b6c215e079ab33ccd99633e8} 
-\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!Element\+Visualizer@{Element\+Visualizer}}
+\hypertarget{classbridges_1_1base_1_1_element_visualizer_a9bf06ca1b6c215e079ab33ccd99633e8}{}\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!Element\+Visualizer@{Element\+Visualizer}}
 \index{Element\+Visualizer@{Element\+Visualizer}!bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}}
-\subsubsection{\texorpdfstring{Element\+Visualizer()}{ElementVisualizer()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
-{\footnotesize\ttfamily bridges.\+base.\+Element\+Visualizer.\+Element\+Visualizer (\begin{DoxyParamCaption}\item[{String}]{a\+Color,  }\item[{String}]{a\+Shape,  }\item[{float}]{opacity,  }\item[{double}]{size }\end{DoxyParamCaption})}
-
+\subsubsection[{Element\+Visualizer(\+String a\+Color, String a\+Shape, float opacity, double size)}]{\setlength{\rightskip}{0pt plus 5cm}bridges.\+base.\+Element\+Visualizer.\+Element\+Visualizer (
+\begin{DoxyParamCaption}
+\item[{String}]{a\+Color, }
+\item[{String}]{a\+Shape, }
+\item[{float}]{opacity, }
+\item[{double}]{size}
+\end{DoxyParamCaption}
+)}\label{classbridges_1_1base_1_1_element_visualizer_a9bf06ca1b6c215e079ab33ccd99633e8}
 Construct an \hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Visualizer} with its color set to \char`\"{}a\+Color\char`\"{}, its shape set to \char`\"{}a\+Shape\char`\"{}, its opacity set to \char`\"{}opacity\char`\"{} and size set to \char`\"{}size\char`\"{}.
 
 
@@ -142,17 +120,18 @@ Construct an \hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Vi
 \hline
 {\em a\+Shape} & the string that represents one of the Bridges shapes \\
 \hline
-{\em opacity} & a double between 0 and 1 representing how transparent the node should be on the Bridges Visualization. 0 for invisible, 1 for fully visible, 0-\/1 for varying transparency. \\
+{\em opacity} & a double between 0 and 1 representing how transparent the node should be on the Bridges Visualization. 0 for invisible, 1 for fully visible, a decimal between 0 and 1 for varying transparency. \\
 \hline
 {\em size} & the double that represents the size of the \hyperlink{classbridges_1_1base_1_1_element}{Element} on the Bridges Visualization \\
 \hline
 \end{DoxyParams}
-\hypertarget{classbridges_1_1base_1_1_element_visualizer_a5b48cbda94a4e84e40de41fe156e2497}{}\label{classbridges_1_1base_1_1_element_visualizer_a5b48cbda94a4e84e40de41fe156e2497} 
-\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!Element\+Visualizer@{Element\+Visualizer}}
+\hypertarget{classbridges_1_1base_1_1_element_visualizer_a5b48cbda94a4e84e40de41fe156e2497}{}\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!Element\+Visualizer@{Element\+Visualizer}}
 \index{Element\+Visualizer@{Element\+Visualizer}!bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}}
-\subsubsection{\texorpdfstring{Element\+Visualizer()}{ElementVisualizer()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
-{\footnotesize\ttfamily bridges.\+base.\+Element\+Visualizer.\+Element\+Visualizer (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Visualizer}}]{v }\end{DoxyParamCaption})}
-
+\subsubsection[{Element\+Visualizer(\+Element\+Visualizer v)}]{\setlength{\rightskip}{0pt plus 5cm}bridges.\+base.\+Element\+Visualizer.\+Element\+Visualizer (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+Visualizer}}]{v}
+\end{DoxyParamCaption}
+)}\label{classbridges_1_1base_1_1_element_visualizer_a5b48cbda94a4e84e40de41fe156e2497}
 Construct a new \hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Visualizer} with the same color, shape, opacity, and size as \char`\"{}v\char`\"{}
 
 
@@ -163,106 +142,115 @@ Construct a new \hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\
 
 
 \subsection{Member Function Documentation}
-\hypertarget{classbridges_1_1base_1_1_element_visualizer_a3bf821b9bfa02746882bac934ce4fb8e}{}\label{classbridges_1_1base_1_1_element_visualizer_a3bf821b9bfa02746882bac934ce4fb8e} 
-\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!get\+Color@{get\+Color}}
+\hypertarget{classbridges_1_1base_1_1_element_visualizer_a3bf821b9bfa02746882bac934ce4fb8e}{}\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!get\+Color@{get\+Color}}
 \index{get\+Color@{get\+Color}!bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}}
-\subsubsection{\texorpdfstring{get\+Color()}{getColor()}}
-{\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_color}{Color} bridges.\+base.\+Element\+Visualizer.\+get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
+\subsubsection[{get\+Color()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Color} bridges.\+base.\+Element\+Visualizer.\+get\+Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classbridges_1_1base_1_1_element_visualizer_a3bf821b9bfa02746882bac934ce4fb8e}
 Get the color of the \hyperlink{classbridges_1_1base_1_1_element}{Element} in the Bridges Visualization
 
 \begin{DoxyReturn}{Returns}
-\hyperlink{classbridges_1_1base_1_1_color}{Color} object representing the color of the \hyperlink{classbridges_1_1base_1_1_element}{Element} as R,G,B,A components, each in the range 0-\/255 
+\hyperlink{classbridges_1_1base_1_1_color}{Color} string representing the color of the \hyperlink{classbridges_1_1base_1_1_element}{Element} as an \mbox{[}R G B A\mbox{]} in the range 0-\/255 
 \end{DoxyReturn}
-\hypertarget{classbridges_1_1base_1_1_element_visualizer_ab86ff39f17f8d1766670b18be88b5492}{}\label{classbridges_1_1base_1_1_element_visualizer_ab86ff39f17f8d1766670b18be88b5492} 
-\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!get\+Opacity@{get\+Opacity}}
+\hypertarget{classbridges_1_1base_1_1_element_visualizer_ab86ff39f17f8d1766670b18be88b5492}{}\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!get\+Opacity@{get\+Opacity}}
 \index{get\+Opacity@{get\+Opacity}!bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}}
-\subsubsection{\texorpdfstring{get\+Opacity()}{getOpacity()}}
-{\footnotesize\ttfamily float bridges.\+base.\+Element\+Visualizer.\+get\+Opacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
+\subsubsection[{get\+Opacity()}]{\setlength{\rightskip}{0pt plus 5cm}float bridges.\+base.\+Element\+Visualizer.\+get\+Opacity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classbridges_1_1base_1_1_element_visualizer_ab86ff39f17f8d1766670b18be88b5492}
 Get the opacity of the \hyperlink{classbridges_1_1base_1_1_element}{Element} in the Bridges Visualization \begin{DoxyReturn}{Returns}
 the opacity value 
 \end{DoxyReturn}
-\hypertarget{classbridges_1_1base_1_1_element_visualizer_a8ef0825745e49f32b57e4bf6c891b57e}{}\label{classbridges_1_1base_1_1_element_visualizer_a8ef0825745e49f32b57e4bf6c891b57e} 
-\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!get\+Shape@{get\+Shape}}
+\hypertarget{classbridges_1_1base_1_1_element_visualizer_a8ef0825745e49f32b57e4bf6c891b57e}{}\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!get\+Shape@{get\+Shape}}
 \index{get\+Shape@{get\+Shape}!bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}}
-\subsubsection{\texorpdfstring{get\+Shape()}{getShape()}}
-{\footnotesize\ttfamily String bridges.\+base.\+Element\+Visualizer.\+get\+Shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Get the shape of the \hyperlink{classbridges_1_1base_1_1_element}{Element} in the Bridges Visualization.
-
-\begin{DoxyReturn}{Returns}
+\subsubsection[{get\+Shape()}]{\setlength{\rightskip}{0pt plus 5cm}String bridges.\+base.\+Element\+Visualizer.\+get\+Shape (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classbridges_1_1base_1_1_element_visualizer_a8ef0825745e49f32b57e4bf6c891b57e}
+Get the shape of the \hyperlink{classbridges_1_1base_1_1_element}{Element} in the Bridges Visualization. \begin{DoxyReturn}{Returns}
 the string that represents the \hyperlink{classbridges_1_1base_1_1_element}{Element}\textquotesingle{}s shape in the Bridges Visualization. 
 \end{DoxyReturn}
-\hypertarget{classbridges_1_1base_1_1_element_visualizer_a0b7673bf724e3df1f94df50ad95ca5b1}{}\label{classbridges_1_1base_1_1_element_visualizer_a0b7673bf724e3df1f94df50ad95ca5b1} 
-\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!get\+Size@{get\+Size}}
+\hypertarget{classbridges_1_1base_1_1_element_visualizer_a0b7673bf724e3df1f94df50ad95ca5b1}{}\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!get\+Size@{get\+Size}}
 \index{get\+Size@{get\+Size}!bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}}
-\subsubsection{\texorpdfstring{get\+Size()}{getSize()}}
-{\footnotesize\ttfamily double bridges.\+base.\+Element\+Visualizer.\+get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
+\subsubsection[{get\+Size()}]{\setlength{\rightskip}{0pt plus 5cm}double bridges.\+base.\+Element\+Visualizer.\+get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classbridges_1_1base_1_1_element_visualizer_a0b7673bf724e3df1f94df50ad95ca5b1}
 Get the size of the \hyperlink{classbridges_1_1base_1_1_element}{Element} in the Bridges Visualiation
 
 \begin{DoxyReturn}{Returns}
 the size in pixels of the \hyperlink{classbridges_1_1base_1_1_element}{Element} in the Bridges Visualization 
 \end{DoxyReturn}
-\hypertarget{classbridges_1_1base_1_1_element_visualizer_ad7ff2a772741301c08943a58ffccca38}{}\label{classbridges_1_1base_1_1_element_visualizer_ad7ff2a772741301c08943a58ffccca38} 
-\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!set\+Color@{set\+Color}}
+\hypertarget{classbridges_1_1base_1_1_element_visualizer_ae24d6c51ba22481c3dbfc0dd512c0a32}{}\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!set\+Color@{set\+Color}}
 \index{set\+Color@{set\+Color}!bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}}
-\subsubsection{\texorpdfstring{set\+Color()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily void bridges.\+base.\+Element\+Visualizer.\+set\+Color (\begin{DoxyParamCaption}\item[{String}]{col\+\_\+name }\end{DoxyParamCaption}) throws \hyperlink{classbridges_1_1validation_1_1_invalid_value_exception}{Invalid\+Value\+Exception}}
-
-Set the color of the \hyperlink{classbridges_1_1base_1_1_element}{Element} in the Bridges Visualization to \char`\"{}a\+Color\char`\"{}.
-
-
+\subsubsection[{set\+Color(\+String a\+Color)}]{\setlength{\rightskip}{0pt plus 5cm}void bridges.\+base.\+Element\+Visualizer.\+set\+Color (
+\begin{DoxyParamCaption}
+\item[{String}]{a\+Color}
+\end{DoxyParamCaption}
+) throws {\bf Invalid\+Value\+Exception}}\label{classbridges_1_1base_1_1_element_visualizer_ae24d6c51ba22481c3dbfc0dd512c0a32}
+Set the color of the \hyperlink{classbridges_1_1base_1_1_element}{Element} in the Bridges Visualization to \char`\"{}a\+Color\char`\"{}. 
 \begin{DoxyParams}{Parameters}
-{\em col\+\_\+name} & the string reprsenting the color of the \hyperlink{classbridges_1_1base_1_1_element}{Element} in the Bridges Visualization; supported named colors are \char`\"{}red\char`\"{}, \char`\"{}green\char`\"{}, \char`\"{}blue\char`\"{}, \char`\"{}yellow\char`\"{}, \char`\"{}cyan\char`\"{}, \char`\"{}magenta\char`\"{}, \char`\"{}white\char`\"{}, \char`\"{}black\char`\"{}, \char`\"{}orange\char`\"{}, \char`\"{}turquoise\char`\"{}, \char`\"{}maroon\char`\"{}, \char`\"{}aquamarine\char`\"{}, \char`\"{}azure\char`\"{}, \char`\"{}beige\char`\"{}, \char`\"{}brown\char`\"{}, \char`\"{}tan\char`\"{}, \char`\"{}olive\char`\"{}, \char`\"{}chartreuse\char`\"{}, \char`\"{}khaki\char`\"{}, \char`\"{}bisque\char`\"{}, \char`\"{}coral\char`\"{}, \char`\"{}pink\char`\"{}, \char`\"{}lavender\char`\"{}, \char`\"{}purple\char`\"{}, \char`\"{}gold\char`\"{} \\
+{\em a\+Color} & the string reprsenting the color of the \hyperlink{classbridges_1_1base_1_1_element}{Element} in the Bridges Visualization \\
 \hline
 \end{DoxyParams}
-\hypertarget{classbridges_1_1base_1_1_element_visualizer_a84fad1c8abe43b20c68c1800d7630918}{}\label{classbridges_1_1base_1_1_element_visualizer_a84fad1c8abe43b20c68c1800d7630918} 
-\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!set\+Color@{set\+Color}}
+\hypertarget{classbridges_1_1base_1_1_element_visualizer_a84fad1c8abe43b20c68c1800d7630918}{}\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!set\+Color@{set\+Color}}
 \index{set\+Color@{set\+Color}!bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}}
-\subsubsection{\texorpdfstring{set\+Color()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily void bridges.\+base.\+Element\+Visualizer.\+set\+Color (\begin{DoxyParamCaption}\item[{Integer}]{r,  }\item[{Integer}]{g,  }\item[{Integer}]{b,  }\item[{float}]{a }\end{DoxyParamCaption})}
-
-Set the color of the \hyperlink{classbridges_1_1base_1_1_element}{Element} in the Bridges Visualization given R\+G\+BA components (0-\/255 range)
+\subsubsection[{set\+Color(\+Integer r, Integer g, Integer b, float a)}]{\setlength{\rightskip}{0pt plus 5cm}void bridges.\+base.\+Element\+Visualizer.\+set\+Color (
+\begin{DoxyParamCaption}
+\item[{Integer}]{r, }
+\item[{Integer}]{g, }
+\item[{Integer}]{b, }
+\item[{float}]{a}
+\end{DoxyParamCaption}
+)}\label{classbridges_1_1base_1_1_element_visualizer_a84fad1c8abe43b20c68c1800d7630918}
+Set the color of the \hyperlink{classbridges_1_1base_1_1_element}{Element} in the Bridges Visualization to \char`\"{}a\+Color\char`\"{}. give R\+G\+B\+A components
 
 
 \begin{DoxyParams}{Parameters}
 {\em r,g,b,a} & color components \\
 \hline
 \end{DoxyParams}
-\hypertarget{classbridges_1_1base_1_1_element_visualizer_a33172ab908f3b6f9740727b0bfe91565}{}\label{classbridges_1_1base_1_1_element_visualizer_a33172ab908f3b6f9740727b0bfe91565} 
-\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!set\+Color@{set\+Color}}
+\hypertarget{classbridges_1_1base_1_1_element_visualizer_a33172ab908f3b6f9740727b0bfe91565}{}\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!set\+Color@{set\+Color}}
 \index{set\+Color@{set\+Color}!bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}}
-\subsubsection{\texorpdfstring{set\+Color()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily void bridges.\+base.\+Element\+Visualizer.\+set\+Color (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_color}{Color}}]{c }\end{DoxyParamCaption})}
-
+\subsubsection[{set\+Color(\+Color c)}]{\setlength{\rightskip}{0pt plus 5cm}void bridges.\+base.\+Element\+Visualizer.\+set\+Color (
+\begin{DoxyParamCaption}
+\item[{{\bf Color}}]{c}
+\end{DoxyParamCaption}
+)}\label{classbridges_1_1base_1_1_element_visualizer_a33172ab908f3b6f9740727b0bfe91565}
 Set the color of the \hyperlink{classbridges_1_1base_1_1_element}{Element} in the Bridges Visualization to \char`\"{}a\+Color\char`\"{}. given a \hyperlink{classbridges_1_1base_1_1_color}{Color} object
 
 
 \begin{DoxyParams}{Parameters}
-{\em col} & \hyperlink{classbridges_1_1base_1_1_color}{Color} object \\
+{\em col} & object \\
 \hline
 \end{DoxyParams}
-\hypertarget{classbridges_1_1base_1_1_element_visualizer_a04f3416447f2042de7cd21ce5b6a0598}{}\label{classbridges_1_1base_1_1_element_visualizer_a04f3416447f2042de7cd21ce5b6a0598} 
-\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!set\+Location@{set\+Location}}
+\hypertarget{classbridges_1_1base_1_1_element_visualizer_a04f3416447f2042de7cd21ce5b6a0598}{}\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!set\+Location@{set\+Location}}
 \index{set\+Location@{set\+Location}!bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}}
-\subsubsection{\texorpdfstring{set\+Location()}{setLocation()}}
-{\footnotesize\ttfamily void bridges.\+base.\+Element\+Visualizer.\+set\+Location (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})}
-
-Set the location (x, y) of the element -\/ used for displaying elements in maps
+\subsubsection[{set\+Location(double x, double y)}]{\setlength{\rightskip}{0pt plus 5cm}void bridges.\+base.\+Element\+Visualizer.\+set\+Location (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y}
+\end{DoxyParamCaption}
+)}\label{classbridges_1_1base_1_1_element_visualizer_a04f3416447f2042de7cd21ce5b6a0598}
+Set the location(\+X,\+Y) of the element -\/ used for displaying elements in maps
 
 
 \begin{DoxyParams}{Parameters}
 {\em location} & the X,Y location(array of 2 doubles) to be set \\
 \hline
 \end{DoxyParams}
-\hypertarget{classbridges_1_1base_1_1_element_visualizer_a932f62eb1bd0c92da265a7f903dd0790}{}\label{classbridges_1_1base_1_1_element_visualizer_a932f62eb1bd0c92da265a7f903dd0790} 
-\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!set\+Opacity@{set\+Opacity}}
+\hypertarget{classbridges_1_1base_1_1_element_visualizer_a932f62eb1bd0c92da265a7f903dd0790}{}\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!set\+Opacity@{set\+Opacity}}
 \index{set\+Opacity@{set\+Opacity}!bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}}
-\subsubsection{\texorpdfstring{set\+Opacity()}{setOpacity()}}
-{\footnotesize\ttfamily void bridges.\+base.\+Element\+Visualizer.\+set\+Opacity (\begin{DoxyParamCaption}\item[{float}]{opacity }\end{DoxyParamCaption})}
-
+\subsubsection[{set\+Opacity(float opacity)}]{\setlength{\rightskip}{0pt plus 5cm}void bridges.\+base.\+Element\+Visualizer.\+set\+Opacity (
+\begin{DoxyParamCaption}
+\item[{float}]{opacity}
+\end{DoxyParamCaption}
+)}\label{classbridges_1_1base_1_1_element_visualizer_a932f62eb1bd0c92da265a7f903dd0790}
 Sets the opacity of the \hyperlink{classbridges_1_1base_1_1_element}{Element} in the Bridges Visualization
 
 
@@ -270,26 +258,28 @@ Sets the opacity of the \hyperlink{classbridges_1_1base_1_1_element}{Element} in
 {\em opacity} & a double between 0 and 1 representing how transparent the node should be on the Bridges Visualization. 0 for invisible, 1 for fully visible, a decimal between 0 and 1 for varying transparency. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classbridges_1_1base_1_1_element_visualizer_ac3bad991904c8ad23e5233b341381d93}{}\label{classbridges_1_1base_1_1_element_visualizer_ac3bad991904c8ad23e5233b341381d93} 
-\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!set\+Shape@{set\+Shape}}
+\hypertarget{classbridges_1_1base_1_1_element_visualizer_ac3bad991904c8ad23e5233b341381d93}{}\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!set\+Shape@{set\+Shape}}
 \index{set\+Shape@{set\+Shape}!bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}}
-\subsubsection{\texorpdfstring{set\+Shape()}{setShape()}}
-{\footnotesize\ttfamily void bridges.\+base.\+Element\+Visualizer.\+set\+Shape (\begin{DoxyParamCaption}\item[{String}]{a\+Shape }\end{DoxyParamCaption})}
-
-Sets the shape of the \hyperlink{classbridges_1_1base_1_1_element}{Element} in the Bridges Visualization. Supported shapes include \char`\"{}square\char`\"{}, \char`\"{}circle\char`\"{}, \char`\"{}square\char`\"{}, \char`\"{}diamond\char`\"{}, \char`\"{}cross\char`\"{}, \char`\"{}triangle-\/down\char`\"{}, \char`\"{}triangle-\/up\char`\"{}.
+\subsubsection[{set\+Shape(\+String a\+Shape)}]{\setlength{\rightskip}{0pt plus 5cm}void bridges.\+base.\+Element\+Visualizer.\+set\+Shape (
+\begin{DoxyParamCaption}
+\item[{String}]{a\+Shape}
+\end{DoxyParamCaption}
+)}\label{classbridges_1_1base_1_1_element_visualizer_ac3bad991904c8ad23e5233b341381d93}
+Sets the shape of the \hyperlink{classbridges_1_1base_1_1_element}{Element} in the Bridges Visualization
 
 
 \begin{DoxyParams}{Parameters}
 {\em a\+Shape} & the string representing the shape of the \hyperlink{classbridges_1_1base_1_1_element}{Element} in the Bridges Visualization \\
 \hline
 \end{DoxyParams}
-\hypertarget{classbridges_1_1base_1_1_element_visualizer_aba410184f7df495594fc1fa7948335a5}{}\label{classbridges_1_1base_1_1_element_visualizer_aba410184f7df495594fc1fa7948335a5} 
-\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!set\+Size@{set\+Size}}
+\hypertarget{classbridges_1_1base_1_1_element_visualizer_aba410184f7df495594fc1fa7948335a5}{}\index{bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}!set\+Size@{set\+Size}}
 \index{set\+Size@{set\+Size}!bridges\+::base\+::\+Element\+Visualizer@{bridges\+::base\+::\+Element\+Visualizer}}
-\subsubsection{\texorpdfstring{set\+Size()}{setSize()}}
-{\footnotesize\ttfamily void bridges.\+base.\+Element\+Visualizer.\+set\+Size (\begin{DoxyParamCaption}\item[{double}]{sz }\end{DoxyParamCaption})}
-
-Set the size of the \hyperlink{classbridges_1_1base_1_1_element}{Element} in the Bridge Visualization (in pixel units)
+\subsubsection[{set\+Size(double sz)}]{\setlength{\rightskip}{0pt plus 5cm}void bridges.\+base.\+Element\+Visualizer.\+set\+Size (
+\begin{DoxyParamCaption}
+\item[{double}]{sz}
+\end{DoxyParamCaption}
+)}\label{classbridges_1_1base_1_1_element_visualizer_aba410184f7df495594fc1fa7948335a5}
+Set the size of the \hyperlink{classbridges_1_1base_1_1_element}{Element} in the Bridge Visualization in pixels
 
 
 \begin{DoxyParams}{Parameters}
