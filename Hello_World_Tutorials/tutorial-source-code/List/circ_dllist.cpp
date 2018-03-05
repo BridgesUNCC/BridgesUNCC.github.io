@@ -16,7 +16,7 @@ CircDLelement&lt;StudentInfo&gt; *insertFront(
 			CircDLelement&lt;StudentInfo&gt; *newElement);
 
 int main() {
-	Bridges::initialize(6, "kalpathi60", "486749122386");
+	Bridges::initialize(6, "YOUR_USER_ID", "YOUR_API_KEY");
 
 	Bridges::setTitle("An Example Circular Doubly Linked List");
 

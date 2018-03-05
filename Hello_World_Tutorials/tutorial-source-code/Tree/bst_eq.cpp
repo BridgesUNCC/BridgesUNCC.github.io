@@ -34,7 +34,7 @@ int main() {
 	}
 
 					// set the root to be red
-	root->getVisualizer()->setColor(Color("red");
+	root->getVisualizer()->setColor(Color("red"));
 					// visualize the binary search tree
 	Bridges::setDataStructure(root);
 	Bridges::visualize();
