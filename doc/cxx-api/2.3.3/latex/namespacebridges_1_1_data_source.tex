@@ -1,0 +1,77 @@
+\hypertarget{namespacebridges_1_1_data_source}{}\section{bridges\+:\+:Data\+Source Namespace Reference}
+\label{namespacebridges_1_1_data_source}\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+
+
+This provides an A\+PI to various data sources used in B\+R\+I\+D\+G\+ES.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ Game $>$ \mbox{\hyperlink{namespacebridges_1_1_data_source_a96a28cc7f2a6013fe09b07cc53c7432f}{get\+Game\+Data}} ()
+\item 
+vector$<$ Actor\+Movie\+I\+M\+DB $>$ \mbox{\hyperlink{namespacebridges_1_1_data_source_ac43ccd8f2a325cf2f057a5ee7f0b73f1}{get\+Actor\+Movie\+I\+M\+D\+B\+Data}} (int number=0)
+\item 
+vector$<$ Actor\+Movie\+I\+M\+DB $>$ \mbox{\hyperlink{namespacebridges_1_1_data_source_a436c584d3672c9800a3271ad7641ad59}{get\+Actor\+Movie\+I\+M\+D\+B\+Data2}} (int number=0)
+\item 
+vector$<$ Earthquake\+U\+S\+GS $>$ \mbox{\hyperlink{namespacebridges_1_1_data_source_a2af96553650d859b102f179b3db55389}{get\+Earthquake\+Data}} (int number=0)
+\item 
+vector$<$ Shakespeare $>$ \mbox{\hyperlink{namespacebridges_1_1_data_source_abdf2e4d709e9b7f1a5370726676d86ec}{get\+Shakespeare\+Data}} (string endpoint=\char`\"{}\char`\"{}, bool simple=false)
+\item 
+vector$<$ Gutenberg\+Book $>$ \mbox{\hyperlink{namespacebridges_1_1_data_source_a8146b00565286727e8206e377d9ff5bd}{get\+Gutenberg\+Book\+Data}} (int num=0)
+\item 
+vector$<$ Cancer\+Incidence $>$ \mbox{\hyperlink{namespacebridges_1_1_data_source_a4f8990ea0e793a6464d95cb82f57c8f9}{get\+Cancer\+Incidence\+Data}} (int num=0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This provides an A\+PI to various data sources used in B\+R\+I\+D\+G\+ES. 
+
+B\+R\+I\+D\+G\+ES currently supports a few external datasets for use with B\+R\+I\+D\+G\+ES assignments\+: U\+S\+G\+IS Earthquake Tweeet streaming data feed, I\+M\+DB (file), Book metadata collection, I\+GN Game Data, Shakespear book/poem meta data.
+
+Functions are provided that access a user specified number of data records; objects of the appropriate type are returned as a list. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacebridges_1_1_data_source_ac43ccd8f2a325cf2f057a5ee7f0b73f1}\label{namespacebridges_1_1_data_source_ac43ccd8f2a325cf2f057a5ee7f0b73f1}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Actor\+Movie\+I\+M\+D\+B\+Data@{get\+Actor\+Movie\+I\+M\+D\+B\+Data}}
+\index{get\+Actor\+Movie\+I\+M\+D\+B\+Data@{get\+Actor\+Movie\+I\+M\+D\+B\+Data}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{get\+Actor\+Movie\+I\+M\+D\+B\+Data()}{getActorMovieIMDBData()}}
+{\footnotesize\ttfamily vector$<$ Actor\+Movie\+I\+M\+DB $>$ bridges\+::\+Data\+Source\+::get\+Actor\+Movie\+I\+M\+D\+B\+Data (\begin{DoxyParamCaption}\item[{int}]{number = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacebridges_1_1_data_source_a436c584d3672c9800a3271ad7641ad59}\label{namespacebridges_1_1_data_source_a436c584d3672c9800a3271ad7641ad59}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Actor\+Movie\+I\+M\+D\+B\+Data2@{get\+Actor\+Movie\+I\+M\+D\+B\+Data2}}
+\index{get\+Actor\+Movie\+I\+M\+D\+B\+Data2@{get\+Actor\+Movie\+I\+M\+D\+B\+Data2}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{get\+Actor\+Movie\+I\+M\+D\+B\+Data2()}{getActorMovieIMDBData2()}}
+{\footnotesize\ttfamily vector$<$ Actor\+Movie\+I\+M\+DB $>$ bridges\+::\+Data\+Source\+::get\+Actor\+Movie\+I\+M\+D\+B\+Data2 (\begin{DoxyParamCaption}\item[{int}]{number = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacebridges_1_1_data_source_a4f8990ea0e793a6464d95cb82f57c8f9}\label{namespacebridges_1_1_data_source_a4f8990ea0e793a6464d95cb82f57c8f9}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Cancer\+Incidence\+Data@{get\+Cancer\+Incidence\+Data}}
+\index{get\+Cancer\+Incidence\+Data@{get\+Cancer\+Incidence\+Data}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{get\+Cancer\+Incidence\+Data()}{getCancerIncidenceData()}}
+{\footnotesize\ttfamily vector$<$ Cancer\+Incidence $>$ bridges\+::\+Data\+Source\+::get\+Cancer\+Incidence\+Data (\begin{DoxyParamCaption}\item[{int}]{num = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacebridges_1_1_data_source_a2af96553650d859b102f179b3db55389}\label{namespacebridges_1_1_data_source_a2af96553650d859b102f179b3db55389}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Earthquake\+Data@{get\+Earthquake\+Data}}
+\index{get\+Earthquake\+Data@{get\+Earthquake\+Data}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{get\+Earthquake\+Data()}{getEarthquakeData()}}
+{\footnotesize\ttfamily vector$<$ Earthquake\+U\+S\+GS $>$ bridges\+::\+Data\+Source\+::get\+Earthquake\+Data (\begin{DoxyParamCaption}\item[{int}]{number = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacebridges_1_1_data_source_a96a28cc7f2a6013fe09b07cc53c7432f}\label{namespacebridges_1_1_data_source_a96a28cc7f2a6013fe09b07cc53c7432f}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Game\+Data@{get\+Game\+Data}}
+\index{get\+Game\+Data@{get\+Game\+Data}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{get\+Game\+Data()}{getGameData()}}
+{\footnotesize\ttfamily vector$<$ Game $>$ bridges\+::\+Data\+Source\+::get\+Game\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacebridges_1_1_data_source_a8146b00565286727e8206e377d9ff5bd}\label{namespacebridges_1_1_data_source_a8146b00565286727e8206e377d9ff5bd}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Gutenberg\+Book\+Data@{get\+Gutenberg\+Book\+Data}}
+\index{get\+Gutenberg\+Book\+Data@{get\+Gutenberg\+Book\+Data}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{get\+Gutenberg\+Book\+Data()}{getGutenbergBookData()}}
+{\footnotesize\ttfamily vector$<$ Gutenberg\+Book $>$ bridges\+::\+Data\+Source\+::get\+Gutenberg\+Book\+Data (\begin{DoxyParamCaption}\item[{int}]{num = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Valid endpoints\+: \textquotesingle{}poems\textquotesingle{},\textquotesingle{}plays\textquotesingle{}, $<$title$>$ Valid query\+Params\+: format\{simple\} \mbox{\Hypertarget{namespacebridges_1_1_data_source_abdf2e4d709e9b7f1a5370726676d86ec}\label{namespacebridges_1_1_data_source_abdf2e4d709e9b7f1a5370726676d86ec}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Shakespeare\+Data@{get\+Shakespeare\+Data}}
+\index{get\+Shakespeare\+Data@{get\+Shakespeare\+Data}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{get\+Shakespeare\+Data()}{getShakespeareData()}}
+{\footnotesize\ttfamily vector$<$ Shakespeare $>$ bridges\+::\+Data\+Source\+::get\+Shakespeare\+Data (\begin{DoxyParamCaption}\item[{string}]{endpoint = {\ttfamily \char`\"{}\char`\"{}},  }\item[{bool}]{simple = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Valid endpoints\+: \textquotesingle{}poems\textquotesingle{},\textquotesingle{}plays\textquotesingle{}, $<$title$>$ Valid query\+Params\+: format\{simple\} 
