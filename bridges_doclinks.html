@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>BRIDGES Documentation Links</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./bootstrap-3.3.6/dist/css/bootstrap.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="./bootstrap-3.3.6/dist/js/bootstrap.min.js"></script>
+	<script src="http://www.w3schools.com/lib/w3data.js"></script>
+	<link rel="stylesheet" type="text/css" href="./bootstrap/bridges.css">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="http://bridgesuncc.github.io">Home</a></li>
+				<li><a href="./bridges_team.html">BRIDGES Team</a></li>
+				<li><a href="mailto:tues-bridges-group@uncc.edu?Subject=Bridges%20Query">Contact Us</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="http://bridges-cs.herokuapp.com/login"><span class="glyphicon glyphicon-log-in"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+  
+<div class="container-fluid text-left">
+	<div class="row content">
+	<div class="col-md-2 sidenav">
+			<div w3-include-html="./left_sidebar.html"></div>
+			<script>
+				w3IncludeHTML(); 
+			</script>  
+	</div>
+	<p>
+	<div class="col-md-10 text-left"> 
+		<h3 class = "sep_heading">BRIDGES Documentation Links</h3>
+		<div>
+		<h4 class = "lang_heading">Java</h4>
+		<ul>
+		<li> <a href="http://bridgesuncc.github.io/doc/java-api/2.3.3/html/index.html">v2.3.3 [Current]</a></p>
+
+	<li> <a href="http://bridgesuncc.github.io/doc/java-api/2.3.2/html/index.html">v2.3.2</a></p>
+			<li> <a href="http://bridgesuncc.github.io/doc/java-api/2.3.1/html/index.html">v2.3.1</a></p>
+			<li> <a href="http://bridgesuncc.github.io/doc/java-api/2.3.0/html/index.html">v2.3.0</a></p>
+			<li> <a href="http://bridgesuncc.github.io/doc/java-api/2.2.0/html/index.html">v2.2.0</a></p>
+			<li> <a href="http://bridgesuncc.github.io/doc/java-api/2.2.0/html/index.html">v2.1.0</a></p>
+		</ul>
+		</div>
+		<div>
+		<h4 class = "lang_heading">C++</h4>
+		<ul>
+			<li> <a href="http://bridgesuncc.github.io/doc/cxx-api/2.3.3/html/index.html">v2.3.3 [Current] </a></p>
+			<li> <a href="http://bridgesuncc.github.io/doc/cxx-api/2.3.2/html/index.html">v2.3.2</a></p>
+			<li> <a href="http://bridgesuncc.github.io/doc/cxx-api/2.3.0/html/index.html">v2.3.0</a></p>
+			<li> <a href="http://bridgesuncc.github.io/doc/cxx-api/2.2.0/html/index.html">v2.2.0</a></p>
+		</ul>
+		</div>
+		<div>
+		<h4 class = "lang_heading">Python</h4>
+		<ul>
+			<li> <a href="http://bridgesuncc.github.io/doc/python-api/1.0/html/index.html">v1.0</a></p>
+		</ul>
+		</div>
+	<h3 class = "sep_heading">BRIDGES: Changes in Version 2.3.3</h3>
+	<ul>
+	<li> <b>GraphAdjList</b> and <b>GraphAdjMatrix</b> now
+       have <i>3 generic parameters, </i>
+        <b>K</b> for key type to access vertices and edges, <b>E1,</b>
+        that stores vertex specific information and <b>E2,</b> to
+        support edge specific information. Accessort methods to set/get
+        vertex and edge data are provided.<p>
+        In the C++ version, E1 defaults K and E2 defaults to E1, thus, simple
+        graphs (that dont care about vertex or edge attributes) can be declared
+        with a single parameter for the key. <p>
+        Since Java does not support defaults for generic parameters, two classes
+        <b>GraphAdjListSimple<K>, GraphAdjMatrixSimple<K></b> are provided
+        that provide the same functionality. These extend the  graph classes
+        with default values for the edge and vertex information  types(currently 
+        set to String).
+	<li> The graph classes provide convenience methods  to easily set visual
+        attributes for vertices and edges.  getVisualizer(K v) and
+        getLinkVisualizer(K v1, K v2) provide access to the visualizer
+        objects that are then used to set any of the supported visual attributes.
+	<li> Labels are now supported for graph edges. The label is defined as part
+        of the LinkVisualizer object (setLabel()/getLabel()).
+	<li> Faster rendering of large graphs (using Canvas)
+    </ul>
+	<h3 class = "sep_heading">BRIDGES: Changes in Version 2.3.2</h3>
+	<p>
+	<ul>
+		<li> Multilist element,  MLelement&lt;E&gt; now supported.
+	</ul>
+	</div>
+</body>
+</html>
