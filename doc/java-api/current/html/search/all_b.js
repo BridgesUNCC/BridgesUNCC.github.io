@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['mag',['mag',['../classbridges_1_1data__src__dependent_1_1_usgs_foo_1_1_properties.html#a114163b5773ae63dc7554d0fb365f540',1,'bridges::data_src_dependent::UsgsFoo::Properties']]],
-  ['main',['main',['../classbridges_1_1data__src__dependent_1_1_sample_data_generator.html#ae37dc24f262b58481822cf228bd97054',1,'bridges::data_src_dependent::SampleDataGenerator']]],
-  ['movie',['Movie',['../classbridges_1_1data__src__dependent_1_1_movie.html#a77ae2f134fac04a725fcb31bdbd44883',1,'bridges::data_src_dependent::Movie']]],
-  ['movie',['Movie',['../classbridges_1_1data__src__dependent_1_1_movie.html',1,'bridges::data_src_dependent']]],
-  ['movie_2ejava',['Movie.java',['../_movie_8java.html',1,'']]]
+  ['newoutputstream',['newOutputStream',['../classbridges_1_1validation_1_1_output_log.html#acf8b19de1738e70f12eba5854b9e01b4',1,'bridges::validation::OutputLog']]],
+  ['next',['next',['../classbridges_1_1base_1_1_s_lelement.html#abf61c96a74ad319d561c6952ea388e0e',1,'bridges::base::SLelement']]],
+  ['node_5fshapes',['NODE_SHAPES',['../classbridges_1_1validation_1_1_validation.html#a43f1f9efc20d0086b7fcfa9b40bd7146',1,'bridges::validation::Validation']]]
 ];

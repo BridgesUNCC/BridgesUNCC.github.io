@@ -1,5 +1,9 @@
 var searchData=
 [
+  ['base64',['base64',['../namespacebridges_1_1base64.html',1,'bridges']]],
+  ['base64_2eh',['base64.h',['../base64_8h.html',1,'']]],
+  ['base64_5fdecode',['base64_decode',['../namespacebridges_1_1base64.html#acc28338bcb3f1c6d50ccc439a927b207',1,'bridges::base64']]],
+  ['base64_5fencode',['base64_encode',['../namespacebridges_1_1base64.html#a8f31c0ba095bbe2f9c1bdd82e369c730',1,'bridges::base64']]],
   ['bintreeelement',['BinTreeElement',['../classbridges_1_1_bin_tree_element.html',1,'bridges::BinTreeElement&lt; E &gt;'],['../classbridges_1_1_bin_tree_element.html#a1c60db90bda9ecd3f5a61b5f33f49173',1,'bridges::BinTreeElement::BinTreeElement(BinTreeElement *l, BinTreeElement *r, const E &amp;e=E(), const string &amp;lab=string())'],['../classbridges_1_1_bin_tree_element.html#a37d12669e5bfe13ebf230dd8fd2a5816',1,'bridges::BinTreeElement::BinTreeElement(const E &amp;e=E(), const string &amp;lab=string())']]],
   ['bintreeelement_2eh',['BinTreeElement.h',['../_bin_tree_element_8h.html',1,'']]],
   ['bridges',['bridges',['../namespacebridges.html',1,'bridges'],['../namespacebridges_1_1_bridges.html',1,'bridges::Bridges']]],
@@ -9,6 +13,7 @@ var searchData=
   ['bstelement_2eh',['BSTElement.h',['../_b_s_t_element_8h.html',1,'']]],
   ['btelement',['BTElement',['../classbridges_1_1_b_t_element.html',1,'bridges::BTElement&lt; E &gt;'],['../classbridges_1_1_b_t_element.html#a8abf38e5d2d70c247de6a6fe6b90bf1b',1,'bridges::BTElement::BTElement(BTElement *l, BTElement *r, const E &amp;e=E(), const string &amp;lab=string())'],['../classbridges_1_1_b_t_element.html#afdc1d11d1d65b23007334d337c279c3a',1,'bridges::BTElement::BTElement(const E &amp;e=E(), const string &amp;lab=string())']]],
   ['btelement_2eh',['BTElement.h',['../_b_t_element_8h.html',1,'']]],
+  ['byte',['BYTE',['../namespacebridges.html#a59b77ee45243ba85c701fb8ab298ef00',1,'bridges']]],
   ['datasource',['DataSource',['../namespacebridges_1_1_data_source.html',1,'bridges']]],
   ['bridges',['BRIDGES',['../index.html',1,'']]],
   ['visualize',['visualize',['../classbridges_1_1_data_structure.html#a0a9e3be9faab475909293766dcda4779',1,'bridges::DataStructure::visualize()'],['../classbridges_1_1_server_comm.html#a0a9e3be9faab475909293766dcda4779',1,'bridges::ServerComm::visualize()']]]

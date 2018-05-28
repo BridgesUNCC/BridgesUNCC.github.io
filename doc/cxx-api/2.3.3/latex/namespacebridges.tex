@@ -8,6 +8,8 @@ This class can be used to create arrays of type Element$<$\+E$>$ where E is a ge
 \subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
+ \mbox{\hyperlink{namespacebridges_1_1base64}{base64}}
+\item 
  \mbox{\hyperlink{namespacebridges_1_1_bridges}{Bridges}}
 \begin{DoxyCompactList}\small\item\em This class contains methods to connect and transmit a user\textquotesingle{}s data structure representation to the \mbox{\hyperlink{namespacebridges_1_1_bridges}{Bridges}} server (up to 5000 elements) \end{DoxyCompactList}\item 
  \mbox{\hyperlink{namespacebridges_1_1_data_source}{Data\+Source}}
@@ -31,6 +33,8 @@ class \mbox{\hyperlink{classbridges_1_1_circ_s_lelement}{Circ\+S\+Lelement}}
 \begin{DoxyCompactList}\small\item\em This class can be used to instantiate Singly Linked Circular List Elements. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classbridges_1_1_color}{Color}}
 \begin{DoxyCompactList}\small\item\em This class represents \mbox{\hyperlink{classbridges_1_1_color}{Color}}, and supports rgba, hexadecimal and named color values. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classbridges_1_1_color_grid}{Color\+Grid}}
+\item 
 class \mbox{\hyperlink{classbridges_1_1_data_structure}{Data\+Structure}}
 \begin{DoxyCompactList}\small\item\em This is the superclass of all data structure types in B\+R\+I\+D\+G\+ES. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classbridges_1_1_d_lelement}{D\+Lelement}}
@@ -47,6 +51,8 @@ class \mbox{\hyperlink{classbridges_1_1_graph_adj_list}{Graph\+Adj\+List}}
 \begin{DoxyCompactList}\small\item\em This class provides methods to represent adjacency list based graphs. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classbridges_1_1_graph_adj_matrix}{Graph\+Adj\+Matrix}}
 \begin{DoxyCompactList}\small\item\em This class provides methods to represent adjacency matrix based graphs. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classbridges_1_1_grid}{Grid}}
+\begin{DoxyCompactList}\small\item\em This is a class in B\+R\+I\+D\+G\+ES for representing an (n x n) grid. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classbridges_1_1_link_visualizer}{Link\+Visualizer}}
 \begin{DoxyCompactList}\small\item\em This class maintains the visual properties of links within data structures. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classbridges_1_1_m_lelement}{M\+Lelement}}
@@ -57,6 +63,11 @@ class \mbox{\hyperlink{classbridges_1_1_s_lelement}{S\+Lelement}}
 \begin{DoxyCompactList}\small\item\em The singly linked list element, derived from \mbox{\hyperlink{classbridges_1_1_element}{Element}}. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classbridges_1_1_tree_element}{Tree\+Element}}
 \begin{DoxyCompactList}\small\item\em This class can be used to create tree elements, derived from \mbox{\hyperlink{classbridges_1_1_element}{Element}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char \mbox{\hyperlink{namespacebridges_a59b77ee45243ba85c701fb8ab298ef00}{B\+Y\+TE}}
+\end{DoxyCompactItemize}
 \subsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
@@ -98,6 +109,10 @@ constexpr int \mbox{\hyperlink{namespacebridges_adc32aeee3ab880d297758a6d6200188
 \subsection{Detailed Description}
 This class can be used to create arrays of type Element$<$\+E$>$ where E is a generic type representation application specific data. Arrays are internally represented as 1D arrays; currently 1D, 2D and 3D arrays are supported. 
 
+This is a class in B\+R\+I\+D\+G\+ES for representing an (n x n) grid.
+
+these methods convert byte arrays in to \mbox{\hyperlink{namespacebridges_1_1base64}{base64}} codes and are used in B\+R\+I\+D\+G\+ES to represent the color arrays as strings. The code is adapted from external sources detailed below.
+
 
 \begin{DoxyParams}{Parameters}
 {\em $<$\+E$>$} & \\
@@ -107,8 +122,44 @@ This class can be used to create arrays of type Element$<$\+E$>$ where E is a ge
 Kalpathi Subramanian 
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
-10/8/16 
+10/8/16
 \end{DoxyDate}
+base64.\+cpp and \mbox{\hyperlink{base64_8h}{base64.\+h}} Copyright (C) 2004-\/2008 René Nyffenegger
+
+This source code is provided \textquotesingle{}as-\/is\textquotesingle{}, without any express or implied warranty. In no event will the author be held liable for any damages arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions\+:
+
+
+\begin{DoxyEnumerate}
+\item The origin of this source code must not be misrepresented; you must not claim that you wrote the original source code. If you use this source code in a product, an acknowledgment in the product documentation would be appreciated but is not required.
+\begin{DoxyEnumerate}
+\item Altered source versions must be plainly marked as such, and must not be misrepresented as being the original source code.
+\item This notice may not be removed or altered from any source distribution.
+\end{DoxyEnumerate}
+
+René Nyffenegger \href{mailto:rene.nyffenegger@adp-gmbh.ch}{\tt rene.\+nyffenegger@adp-\/gmbh.\+ch}
+
+Modified Implementation \mbox{[}from LihO, Dec. 18, 12\mbox{]} \href{https://stackoverflow.com/questions/180947/base64-decode-snippet-in-c}{\tt https\+://stackoverflow.\+com/questions/180947/base64-\/decode-\/snippet-\/in-\/c}
+\end{DoxyEnumerate}
+
+\begin{DoxyAuthor}{Author}
+David Burlinson, C++ port\+: Kalpathi Subramanian 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacebridges_a59b77ee45243ba85c701fb8ab298ef00}\label{namespacebridges_a59b77ee45243ba85c701fb8ab298ef00}} 
+\index{bridges@{bridges}!B\+Y\+TE@{B\+Y\+TE}}
+\index{B\+Y\+TE@{B\+Y\+TE}!bridges@{bridges}}
+\subsubsection{\texorpdfstring{B\+Y\+TE}{BYTE}}
+{\footnotesize\ttfamily typedef unsigned char \mbox{\hyperlink{namespacebridges_a59b77ee45243ba85c701fb8ab298ef00}{bridges\+::\+B\+Y\+TE}}}
+
 
 
 \subsection{Enumeration Type Documentation}

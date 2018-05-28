@@ -45,7 +45,17 @@ static List$<$ \mbox{\hyperlink{classbridges_1_1data__src__dependent_1_1_gutenbe
 \item 
 static List$<$ \mbox{\hyperlink{classbridges_1_1data__src__dependent_1_1_game}{Game}} $>$ \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_a594808b9dada5c825ac00ae0c97c9e9b}{get\+Game\+Data}} ()  throws Exception 
 \item 
+static List$<$ \mbox{\hyperlink{classbridges_1_1data__src__dependent_1_1_song}{Song}} $>$ \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_a5bcfed7f065d3c9da31e3551bf31ec7c}{get\+Song\+Data}} ()  throws Exception 
+\item 
+static \mbox{\hyperlink{classbridges_1_1data__src__dependent_1_1_song}{Song}} \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_a7f65e6648f9e66a02343a39f2fc425cb}{get\+Song}} (String song\+Title)  throws Exception 
+\item 
+static \mbox{\hyperlink{classbridges_1_1data__src__dependent_1_1_song}{Song}} \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_ae7621c3cfd9978aa02fe243317cf0cca}{get\+Song}} (String song\+Title, String artist\+Name)  throws Exception 
+\item 
 static List$<$ \mbox{\hyperlink{classbridges_1_1data__src__dependent_1_1_shakespeare}{Shakespeare}} $>$ \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_adc8d19f28677afb03db53736455de2d0}{get\+Shakespeare\+Data}} ()  throws Exception 
+\item 
+static List$<$ \mbox{\hyperlink{classbridges_1_1data__src__dependent_1_1_shakespeare}{Shakespeare}} $>$ \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_a53ac587893826c57644f2e03b33ae455}{get\+Shakespeare\+Data}} (String works)  throws Exception 
+\item 
+static List$<$ \mbox{\hyperlink{classbridges_1_1data__src__dependent_1_1_shakespeare}{Shakespeare}} $>$ \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_aa81c312e631bc76fa49e0ccae66679dc}{get\+Shakespeare\+Data}} (String works, Boolean text\+Only)  throws Exception 
 \item 
 static Array\+List$<$ \mbox{\hyperlink{classbridges_1_1data__src__dependent_1_1_cancer_incidence}{Cancer\+Incidence}} $>$ \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_ad3d3afcf9df9e2b87d069bc050029628}{get\+Cancer\+Incidence\+Data}} ()  throws Exception 
 \item 
@@ -287,7 +297,7 @@ application key value (string)
 \mbox{\Hypertarget{classbridges_1_1connect_1_1_bridges_adc8d19f28677afb03db53736455de2d0}\label{classbridges_1_1connect_1_1_bridges_adc8d19f28677afb03db53736455de2d0}} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!get\+Shakespeare\+Data@{get\+Shakespeare\+Data}}
 \index{get\+Shakespeare\+Data@{get\+Shakespeare\+Data}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
-\subsubsection{\texorpdfstring{get\+Shakespeare\+Data()}{getShakespeareData()}}
+\subsubsection{\texorpdfstring{get\+Shakespeare\+Data()}{getShakespeareData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
 {\footnotesize\ttfamily static List$<$\mbox{\hyperlink{classbridges_1_1data__src__dependent_1_1_shakespeare}{Shakespeare}}$>$ bridges.\+connect.\+Bridges.\+get\+Shakespeare\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
 
 This helper function provides access to a collection of Shakespeare plays, poems and plays.
@@ -304,8 +314,73 @@ For more information and to look at the data, refer to
 {\em Exception} & if the request fails\\
 \hline
 \end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em \{\+String\}} & \mbox{[}works\mbox{]} Valid input\+: \char`\"{}\+Plays\char`\"{} or \char`\"{}\+Poems\char`\"{}. The works flag is optional.\\
+\hline
+{\em \{\+Boolean\}} & \mbox{[}text\+Only\mbox{]} True returns only words, no punctuation. The text\+Only flag is optional.\\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 a list of Shakespeare objects. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1connect_1_1_bridges_a53ac587893826c57644f2e03b33ae455}\label{classbridges_1_1connect_1_1_bridges_a53ac587893826c57644f2e03b33ae455}} 
+\index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!get\+Shakespeare\+Data@{get\+Shakespeare\+Data}}
+\index{get\+Shakespeare\+Data@{get\+Shakespeare\+Data}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
+\subsubsection{\texorpdfstring{get\+Shakespeare\+Data()}{getShakespeareData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily static List$<$\mbox{\hyperlink{classbridges_1_1data__src__dependent_1_1_shakespeare}{Shakespeare}}$>$ bridges.\+connect.\+Bridges.\+get\+Shakespeare\+Data (\begin{DoxyParamCaption}\item[{String}]{works }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbridges_1_1connect_1_1_bridges_aa81c312e631bc76fa49e0ccae66679dc}\label{classbridges_1_1connect_1_1_bridges_aa81c312e631bc76fa49e0ccae66679dc}} 
+\index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!get\+Shakespeare\+Data@{get\+Shakespeare\+Data}}
+\index{get\+Shakespeare\+Data@{get\+Shakespeare\+Data}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
+\subsubsection{\texorpdfstring{get\+Shakespeare\+Data()}{getShakespeareData()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily static List$<$\mbox{\hyperlink{classbridges_1_1data__src__dependent_1_1_shakespeare}{Shakespeare}}$>$ bridges.\+connect.\+Bridges.\+get\+Shakespeare\+Data (\begin{DoxyParamCaption}\item[{String}]{works,  }\item[{Boolean}]{text\+Only }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbridges_1_1connect_1_1_bridges_a7f65e6648f9e66a02343a39f2fc425cb}\label{classbridges_1_1connect_1_1_bridges_a7f65e6648f9e66a02343a39f2fc425cb}} 
+\index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!get\+Song@{get\+Song}}
+\index{get\+Song@{get\+Song}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
+\subsubsection{\texorpdfstring{get\+Song()}{getSong()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classbridges_1_1data__src__dependent_1_1_song}{Song}} bridges.\+connect.\+Bridges.\+get\+Song (\begin{DoxyParamCaption}\item[{String}]{song\+Title }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+These helper functions provides access to a particular song.
+
+The record has information such as song title, artist, album, year, lyrics, and genre. For more information and to look at the data, refer to 
+
+~~~~~\href{https://bridgesdata.herokuapp.com/api/datasets/songs}{\tt https\+://bridgesdata.\+herokuapp.\+com/api/datasets/songs} 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the request fails\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+a Song object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1connect_1_1_bridges_ae7621c3cfd9978aa02fe243317cf0cca}\label{classbridges_1_1connect_1_1_bridges_ae7621c3cfd9978aa02fe243317cf0cca}} 
+\index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!get\+Song@{get\+Song}}
+\index{get\+Song@{get\+Song}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
+\subsubsection{\texorpdfstring{get\+Song()}{getSong()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classbridges_1_1data__src__dependent_1_1_song}{Song}} bridges.\+connect.\+Bridges.\+get\+Song (\begin{DoxyParamCaption}\item[{String}]{song\+Title,  }\item[{String}]{artist\+Name }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbridges_1_1connect_1_1_bridges_a5bcfed7f065d3c9da31e3551bf31ec7c}\label{classbridges_1_1connect_1_1_bridges_a5bcfed7f065d3c9da31e3551bf31ec7c}} 
+\index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!get\+Song\+Data@{get\+Song\+Data}}
+\index{get\+Song\+Data@{get\+Song\+Data}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
+\subsubsection{\texorpdfstring{get\+Song\+Data()}{getSongData()}}
+{\footnotesize\ttfamily static List$<$\mbox{\hyperlink{classbridges_1_1data__src__dependent_1_1_song}{Song}}$>$ bridges.\+connect.\+Bridges.\+get\+Song\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+This helper function provides access to the meta-\/data of the lyrics collection.
+
+Each record in this collection has information on song title, artist, album, year, lyrics, and genre. For more information and to look at the data, refer to 
+
+~~~~~\href{https://bridgesdata.herokuapp.com/api/datasets/songs}{\tt https\+://bridgesdata.\+herokuapp.\+com/api/datasets/songs} 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the request fails\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+a list of Song objects. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1connect_1_1_bridges_a75f047cda3100e0cfa88378293c12961}\label{classbridges_1_1connect_1_1_bridges_a75f047cda3100e0cfa88378293c12961}} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!get\+User\+Name@{get\+User\+Name}}

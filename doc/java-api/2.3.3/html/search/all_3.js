@@ -7,7 +7,6 @@ var searchData=
   ['datasource_2ejava',['DataSource.java',['../_data_source_8java.html',1,'']]],
   ['datastruct',['DataStruct',['../classbridges_1_1base_1_1_data_struct.html',1,'bridges::base']]],
   ['datastruct_2ejava',['DataStruct.java',['../_data_struct_8java.html',1,'']]],
-  ['depth',['depth',['../classbridges_1_1data__src__dependent_1_1_usgs_foo_1_1_geometry_1_1_coordinates.html#aa566d321ac49828fffd447821bd4e72d',1,'bridges::data_src_dependent::UsgsFoo::Geometry::Coordinates']]],
   ['dlelement',['DLelement',['../classbridges_1_1base_1_1_d_lelement.html',1,'bridges.base.DLelement&lt; E &gt;'],['../classbridges_1_1base_1_1_d_lelement.html#a525b572340e161d9c430baff10b64ab2',1,'bridges.base.DLelement.DLelement()'],['../classbridges_1_1base_1_1_d_lelement.html#a6aa1d4a3dad4a196c2ed079d108562bc',1,'bridges.base.DLelement.DLelement(String label, E e)'],['../classbridges_1_1base_1_1_d_lelement.html#ab1e4eace66bb1b097463c4f04e964cd0',1,'bridges.base.DLelement.DLelement(DLelement&lt; E &gt; next, DLelement&lt; E &gt; prev)'],['../classbridges_1_1base_1_1_d_lelement.html#a3ffba30204a2ea6939b07b0ded123af5',1,'bridges.base.DLelement.DLelement(E e, DLelement&lt; E &gt; next, DLelement&lt; E &gt; prev)']]],
   ['dlelement_2ejava',['DLelement.java',['../_d_lelement_8java.html',1,'']]]
 ];

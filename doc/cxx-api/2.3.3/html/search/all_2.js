@@ -10,8 +10,10 @@ var searchData=
   ['close_5fcurly',['CLOSE_CURLY',['../namespacebridges.html#aa0d8f65415cfe7cdca23401137d40ca9',1,'bridges']]],
   ['close_5fparens',['CLOSE_PARENS',['../namespacebridges.html#aff509a0d23b28c17004b1efd5a0a5920',1,'bridges']]],
   ['colon',['COLON',['../namespacebridges.html#a039dca813ca3a9b4c8d8a866c6fa8445',1,'bridges']]],
-  ['color',['Color',['../classbridges_1_1_color.html',1,'bridges::Color'],['../classbridges_1_1_color.html#aa861c0dc7729008cc4f886f235198181',1,'bridges::Color::Color(const int &amp;r, const int &amp;g, const int &amp;b, const int &amp;a=255)'],['../classbridges_1_1_color.html#a813c6cb59aad0883bcc12305fa6049cc',1,'bridges::Color::Color(const string &amp;name)']]],
+  ['color',['Color',['../classbridges_1_1_color.html',1,'bridges::Color'],['../classbridges_1_1_color.html#ab89df8fea283d33585380ea91d78bbee',1,'bridges::Color::Color()'],['../classbridges_1_1_color.html#aa861c0dc7729008cc4f886f235198181',1,'bridges::Color::Color(const int &amp;r, const int &amp;g, const int &amp;b, const int &amp;a=255)'],['../classbridges_1_1_color.html#a813c6cb59aad0883bcc12305fa6049cc',1,'bridges::Color::Color(const string &amp;name)']]],
   ['color_2eh',['Color.h',['../_color_8h.html',1,'']]],
+  ['colorgrid',['ColorGrid',['../classbridges_1_1_color_grid.html',1,'bridges::ColorGrid'],['../classbridges_1_1_color_grid.html#a00f6ca6b903228b78538a9f0511ffe46',1,'bridges::ColorGrid::ColorGrid()'],['../classbridges_1_1_color_grid.html#ac5fb993701683939d96fd7ac6515efc3',1,'bridges::ColorGrid::ColorGrid(int rows, int cols)'],['../classbridges_1_1_color_grid.html#a4b731632c040f1fb05636127627603d5',1,'bridges::ColorGrid::ColorGrid(int rows, int cols, Color color)']]],
+  ['colorgrid_2eh',['ColorGrid.h',['../_color_grid_8h.html',1,'']]],
   ['comma',['COMMA',['../namespacebridges.html#a74087afbaa635d3c3d837cc3b44c0162',1,'bridges']]],
   ['cross',['CROSS',['../namespacebridges.html#a1b4050586bd708782ae0d4f3b06b9579abe7bf91f3fc0356925109d7afdd43135',1,'bridges']]]
 ];

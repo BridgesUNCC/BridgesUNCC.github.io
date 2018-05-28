@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quote',['QUOTE',['../classbridges_1_1base_1_1_data_struct.html#aac4a6ea28f44676274120ba1dddafc1f',1,'bridges::base::DataStruct']]]
+  ['sub_5flist',['sub_list',['../classbridges_1_1base_1_1_m_lelement.html#a7dee2985f9a8134d3076eb9478422403',1,'bridges::base::MLelement']]]
 ];

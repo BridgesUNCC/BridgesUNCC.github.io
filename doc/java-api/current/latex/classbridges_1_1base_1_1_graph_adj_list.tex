@@ -1,11 +1,11 @@
-\hypertarget{classbridges_1_1base_1_1_graph_adj_list}{}\section{bridges.\+base.\+Graph\+Adj\+List$<$ K, E $>$ Class Template Reference}
-\label{classbridges_1_1base_1_1_graph_adj_list}\index{bridges.\+base.\+Graph\+Adj\+List$<$ K, E $>$@{bridges.\+base.\+Graph\+Adj\+List$<$ K, E $>$}}
+\hypertarget{classbridges_1_1base_1_1_graph_adj_list}{}\section{bridges.\+base.\+Graph\+Adj\+List$<$ K, E1, E2 $>$ Class Template Reference}
+\label{classbridges_1_1base_1_1_graph_adj_list}\index{bridges.\+base.\+Graph\+Adj\+List$<$ K, E1, E2 $>$@{bridges.\+base.\+Graph\+Adj\+List$<$ K, E1, E2 $>$}}
 
 
-The \hyperlink{classbridges_1_1base_1_1_graph_adj_list}{Graph\+Adj\+List} class can be used to represent adjacency list based graphs in B\+R\+I\+D\+G\+E\+S with E represnting a data specific generic parameter. The class is simply a wrapper around the C++ S\+T\+L unordered\+\_\+map class and, thus, derives all its operations from it. B\+R\+I\+D\+G\+E\+S provides methods to visualize the graph and its contents.  
+The \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list}{Graph\+Adj\+List}} class can be used to represent adjacency list based graphs in B\+R\+I\+D\+G\+ES.  
 
 
-Inheritance diagram for bridges.\+base.\+Graph\+Adj\+List$<$ K, E $>$\+:\begin{figure}[H]
+Inheritance diagram for bridges.\+base.\+Graph\+Adj\+List$<$ K, E1, E2 $>$\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2.000000cm]{classbridges_1_1base_1_1_graph_adj_list}
@@ -14,59 +14,101 @@ Inheritance diagram for bridges.\+base.\+Graph\+Adj\+List$<$ K, E $>$\+:\begin{f
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classbridges_1_1base_1_1_graph_adj_list_a822f5f0981773a227c98c463850a0700}{Graph\+Adj\+List} ()
+\mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list_aba7e066f43d361418ae6bdf53a23b1de}{Graph\+Adj\+List}} ()
 \item 
-String \hyperlink{classbridges_1_1base_1_1_graph_adj_list_a6995a5dcee3b07e041e12e27241f9423}{get\+Data\+Struct\+Type} ()
+String \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list_a40c4a2faf20c9847e8ba0d8024236a4b}{get\+Data\+Struct\+Type}} ()
 \item 
-void \hyperlink{classbridges_1_1base_1_1_graph_adj_list_a2fdb7b6c143d1beb245a333db105372c}{add\+Vertex} (K k, E e)
+void \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list_aca59a3c40af4ae82716ebbfa1751f267}{add\+Vertex}} (K k, E1 e)
 \item 
-void \hyperlink{classbridges_1_1base_1_1_graph_adj_list_a955fd8c7211f482826b47ad800702c10}{add\+Edge} (K src, K dest, int weight)
+void \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list_a43041976184920e1db1dbe3ad696c6cd}{add\+Edge}} (K src, K dest)
 \item 
-Hash\+Map$<$ K, \hyperlink{classbridges_1_1base_1_1_element}{Element}$<$ E $>$ $>$ \hyperlink{classbridges_1_1base_1_1_graph_adj_list_a19abf0bd09f0420e61cc144aec141f0a}{get\+Vertices} ()
+void \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list_ab871e88553047930648c2c1ac1a9797e}{add\+Edge}} (K src, K dest, int weight)
 \item 
-Hash\+Map$<$ K, \hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}$<$ \hyperlink{classbridges_1_1base_1_1_edge}{Edge}$<$ K $>$ $>$ $>$ \hyperlink{classbridges_1_1base_1_1_graph_adj_list_a61ebebad4b053797240fef2b42b57630}{get\+Adjacency\+List} ()
+void \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list_aa80bfbbe9c4dd130632db1e1165d635e}{set\+Vertex\+Data}} (K src, E1 vertex\+\_\+data)
 \item 
-\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}$<$ \hyperlink{classbridges_1_1base_1_1_edge}{Edge}$<$ K $>$ $>$ \hyperlink{classbridges_1_1base_1_1_graph_adj_list_a331531e9ce428c35321fae6df143fbcf}{get\+Adjacency\+List} (K vertex)
+E1 \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list_a3d5f73795bcd5011c425eaca33383454}{get\+Vertex\+Data}} (K src)
+\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list_a48041b13b10d5fb677f48a0debfc268e}{set\+Edge\+Data}} (K src, K dest, E2 edge\+\_\+data)
+\item 
+E2 \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list_a13cdc7ed89fb211f47e2b04da0b65561}{get\+Edge\+Data}} (K src, K dest)
+\item 
+Hash\+Map$<$ K, \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}}$<$ E1 $>$ $>$ \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list_acd53b2393db0936ad5812997f67ee1ee}{get\+Vertices}} ()
+\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}}$<$ E1 $>$ \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list_aa19cd300a85b05352bdf58720310a112}{get\+Vertex}} (K key)
+\item 
+Hash\+Map$<$ K, \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}}$<$ \mbox{\hyperlink{classbridges_1_1base_1_1_edge}{Edge}}$<$ K, E2 $>$ $>$ $>$ \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list_a77771e356aa8bf44525be9ae01603989}{get\+Adjacency\+List}} ()
+\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}}$<$ \mbox{\hyperlink{classbridges_1_1base_1_1_edge}{Edge}}$<$ K, E2 $>$ $>$ \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list_aa8d25bc56b9a172999f0c62ee7e04b6f}{get\+Adjacency\+List}} (K vertex)
+\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_link_visualizer}{Link\+Visualizer}} \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list_af93888dbd2a768a2401619ad5dc95560}{get\+Link\+Visualizer}} (K src, K dest)  throws Exception 
+\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Visualizer}} \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list_aafb45833cd5c13b6ce9bdece3fefde6a}{get\+Visualizer}} (K vertex)  throws Exception 
+\item 
+String \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list_a9bba66056cdf24197c41fff455e19a6c}{get\+Data\+Structure\+Representation}} ()
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
-The \hyperlink{classbridges_1_1base_1_1_graph_adj_list}{Graph\+Adj\+List} class can be used to represent adjacency list based graphs in B\+R\+I\+D\+G\+E\+S with E represnting a data specific generic parameter. The class is simply a wrapper around the C++ S\+T\+L unordered\+\_\+map class and, thus, derives all its operations from it. B\+R\+I\+D\+G\+E\+S provides methods to visualize the graph and its contents. 
+The \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list}{Graph\+Adj\+List}} class can be used to represent adjacency list based graphs in B\+R\+I\+D\+G\+ES. 
+
+The \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list}{Graph\+Adj\+List}} class can be used to represent adjacency list based graphs in B\+R\+I\+D\+G\+ES; it takes 2 generic parameters\+: (1) K, which is an orderable key value used in accessing vertices (in constant time) using a hashmap. This permits data sets that need to be accessed by keys that are strings, and (2) E, an application defined type, and used in the \mbox{\hyperlink{classbridges_1_1base_1_1_edge}{Edge}} representation. The class is simply a wrapper around the Java Hashmap class and, thus, derives all its operations from it. B\+R\+I\+D\+G\+ES provides methods to visualize the graph and its contents.
+
+The vertices of the graph are held in a Java hashmap, for near constant time access; this lets us use strings or integral ids for vertices. The adjacency lists, also a Java hashmap are built for each vertex and contain the edge (terminating vertex id, weight) in the \mbox{\hyperlink{classbridges_1_1base_1_1_edge}{Edge}} structure, defined separately. Adjacency lists are singly linked lists using the B\+R\+I\+D\+G\+ES \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}}.
+
+Convenience methods are provided to add vertices and edges to the graph. Edges are retrieved by using the dual hashmap, given the vertex ids of the edge. Methods to access the element and link visualizer are now provided, indexed vertex ids, making it easier to set visual attributes to graph nodes and links.
 
 \begin{DoxyAuthor}{Author}
-Kalpathi Subramanian 
+Kalpathi Subramanian
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
-6/29/15
+6/29/15, 5/18/17, 4/24/18
 \end{DoxyDate}
 
 \begin{DoxyParams}{Parameters}
-{\em Element$<$\+E$>$} & \\
+{\em $<$\+K$>$} & orderable key (string, int, etc) that is used to index into vertex \\
+\hline
+{\em $<$\+E1$>$} & holds vertex specific information, defined by application \\
+\hline
+{\em $<$\+E2$>$} & holds edge specific information, defined by application\\
 \hline
 \end{DoxyParams}
-
+\begin{DoxySeeAlso}{See also}
+Example tutorial at 
+\end{DoxySeeAlso}
+\href{http://bridgesuncc.github.io/Hello_World_Tutorials/Graph.html}{\tt http\+://bridgesuncc.\+github.\+io/\+Hello\+\_\+\+World\+\_\+\+Tutorials/\+Graph.\+html} 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{classbridges_1_1base_1_1_graph_adj_list_a822f5f0981773a227c98c463850a0700}{}\index{bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}!Graph\+Adj\+List@{Graph\+Adj\+List}}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_graph_adj_list_aba7e066f43d361418ae6bdf53a23b1de}\label{classbridges_1_1base_1_1_graph_adj_list_aba7e066f43d361418ae6bdf53a23b1de}} 
+\index{bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}!Graph\+Adj\+List@{Graph\+Adj\+List}}
 \index{Graph\+Adj\+List@{Graph\+Adj\+List}!bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}}
-\subsubsection[{Graph\+Adj\+List()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bridges.\+base.\+Graph\+Adj\+List}$<$ K, E $>$.{\bf Graph\+Adj\+List} (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\label{classbridges_1_1base_1_1_graph_adj_list_a822f5f0981773a227c98c463850a0700}
+\subsubsection{\texorpdfstring{Graph\+Adj\+List()}{GraphAdjList()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list}{bridges.\+base.\+Graph\+Adj\+List}}$<$ K, E1, E2 $>$.\mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list}{Graph\+Adj\+List}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 Constructor 
 
 \subsection{Member Function Documentation}
-\hypertarget{classbridges_1_1base_1_1_graph_adj_list_a955fd8c7211f482826b47ad800702c10}{}\index{bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}!add\+Edge@{add\+Edge}}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_graph_adj_list_a43041976184920e1db1dbe3ad696c6cd}\label{classbridges_1_1base_1_1_graph_adj_list_a43041976184920e1db1dbe3ad696c6cd}} 
+\index{bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}!add\+Edge@{add\+Edge}}
 \index{add\+Edge@{add\+Edge}!bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}}
-\subsubsection[{add\+Edge(\+K src, K dest, int weight)}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf bridges.\+base.\+Graph\+Adj\+List}$<$ K, E $>$.add\+Edge (
-\begin{DoxyParamCaption}
-\item[{K}]{src, }
-\item[{K}]{dest, }
-\item[{int}]{weight}
-\end{DoxyParamCaption}
-)}\label{classbridges_1_1base_1_1_graph_adj_list_a955fd8c7211f482826b47ad800702c10}
+\subsubsection{\texorpdfstring{add\+Edge()}{addEdge()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list}{bridges.\+base.\+Graph\+Adj\+List}}$<$ K, E1, E2 $>$.add\+Edge (\begin{DoxyParamCaption}\item[{K}]{src,  }\item[{K}]{dest }\end{DoxyParamCaption})}
+
+Adds a new edge to the graph, adds it to that vertex\textquotesingle{}s adjacency list; user is responsible for checking if the vertex already exists. This version assumes a default edge weight of 1.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & -\/ source vertex of edge \\
+\hline
+{\em dest} & -\/ destination vertex of edge \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_graph_adj_list_ab871e88553047930648c2c1ac1a9797e}\label{classbridges_1_1base_1_1_graph_adj_list_ab871e88553047930648c2c1ac1a9797e}} 
+\index{bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}!add\+Edge@{add\+Edge}}
+\index{add\+Edge@{add\+Edge}!bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}}
+\subsubsection{\texorpdfstring{add\+Edge()}{addEdge()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list}{bridges.\+base.\+Graph\+Adj\+List}}$<$ K, E1, E2 $>$.add\+Edge (\begin{DoxyParamCaption}\item[{K}]{src,  }\item[{K}]{dest,  }\item[{int}]{weight }\end{DoxyParamCaption})}
+
 Adds a new edge to the graph, adds it to that vertex\textquotesingle{}s adjacency list; user is responsible for checking if the vertex already exists.
 
 
@@ -78,47 +120,42 @@ Adds a new edge to the graph, adds it to that vertex\textquotesingle{}s adjacenc
 {\em weight} & -\/ edge weight \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-none 
-\end{DoxyReturn}
-\hypertarget{classbridges_1_1base_1_1_graph_adj_list_a2fdb7b6c143d1beb245a333db105372c}{}\index{bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}!add\+Vertex@{add\+Vertex}}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_graph_adj_list_aca59a3c40af4ae82716ebbfa1751f267}\label{classbridges_1_1base_1_1_graph_adj_list_aca59a3c40af4ae82716ebbfa1751f267}} 
+\index{bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}!add\+Vertex@{add\+Vertex}}
 \index{add\+Vertex@{add\+Vertex}!bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}}
-\subsubsection[{add\+Vertex(\+K k, E e)}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf bridges.\+base.\+Graph\+Adj\+List}$<$ K, E $>$.add\+Vertex (
-\begin{DoxyParamCaption}
-\item[{K}]{k, }
-\item[{E}]{e}
-\end{DoxyParamCaption}
-)}\label{classbridges_1_1base_1_1_graph_adj_list_a2fdb7b6c143d1beb245a333db105372c}
+\subsubsection{\texorpdfstring{add\+Vertex()}{addVertex()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list}{bridges.\+base.\+Graph\+Adj\+List}}$<$ K, E1, E2 $>$.add\+Vertex (\begin{DoxyParamCaption}\item[{K}]{k,  }\item[{E1}]{e }\end{DoxyParamCaption})}
+
 Adds a new vertex to the graph, initializes the adjacency list; user is responsible for checking if the vertex already exists. This method will replace the value for this key
 
 
 \begin{DoxyParams}{Parameters}
-{\em K} & -\/ vertex key value \\
+{\em k} & -\/ vertex id \\
+\hline
+{\em E} & -\/ vertex info, currently used as a label by default\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 none 
 \end{DoxyReturn}
-\hypertarget{classbridges_1_1base_1_1_graph_adj_list_a61ebebad4b053797240fef2b42b57630}{}\index{bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}!get\+Adjacency\+List@{get\+Adjacency\+List}}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_graph_adj_list_a77771e356aa8bf44525be9ae01603989}\label{classbridges_1_1base_1_1_graph_adj_list_a77771e356aa8bf44525be9ae01603989}} 
+\index{bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}!get\+Adjacency\+List@{get\+Adjacency\+List}}
 \index{get\+Adjacency\+List@{get\+Adjacency\+List}!bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}}
-\subsubsection[{get\+Adjacency\+List()}]{\setlength{\rightskip}{0pt plus 5cm}Hash\+Map$<$K, {\bf S\+Lelement}$<${\bf Edge}$<$K$>$ $>$ $>$ {\bf bridges.\+base.\+Graph\+Adj\+List}$<$ K, E $>$.get\+Adjacency\+List (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\label{classbridges_1_1base_1_1_graph_adj_list_a61ebebad4b053797240fef2b42b57630}
+\subsubsection{\texorpdfstring{get\+Adjacency\+List()}{getAdjacencyList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Hash\+Map$<$K, \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}}$<$\mbox{\hyperlink{classbridges_1_1base_1_1_edge}{Edge}}$<$K, E2$>$ $>$ $>$ \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list}{bridges.\+base.\+Graph\+Adj\+List}}$<$ K, E1, E2 $>$.get\+Adjacency\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 Gets the adjacency list (of type S\+Lelement$<$\+Edge$>$ )
 
 \begin{DoxyReturn}{Returns}
 -\/ the graph\textquotesingle{}s adjacency lists 
 \end{DoxyReturn}
-\hypertarget{classbridges_1_1base_1_1_graph_adj_list_a331531e9ce428c35321fae6df143fbcf}{}\index{bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}!get\+Adjacency\+List@{get\+Adjacency\+List}}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_graph_adj_list_aa8d25bc56b9a172999f0c62ee7e04b6f}\label{classbridges_1_1base_1_1_graph_adj_list_aa8d25bc56b9a172999f0c62ee7e04b6f}} 
+\index{bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}!get\+Adjacency\+List@{get\+Adjacency\+List}}
 \index{get\+Adjacency\+List@{get\+Adjacency\+List}!bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}}
-\subsubsection[{get\+Adjacency\+List(\+K vertex)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+Lelement}$<${\bf Edge}$<$K$>$ $>$ {\bf bridges.\+base.\+Graph\+Adj\+List}$<$ K, E $>$.get\+Adjacency\+List (
-\begin{DoxyParamCaption}
-\item[{K}]{vertex}
-\end{DoxyParamCaption}
-)}\label{classbridges_1_1base_1_1_graph_adj_list_a331531e9ce428c35321fae6df143fbcf}
-Gets the adjacency list (of type S\+Lelement$<$\+Edge$>$ of a vertex)
+\subsubsection{\texorpdfstring{get\+Adjacency\+List()}{getAdjacencyList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}}$<$\mbox{\hyperlink{classbridges_1_1base_1_1_edge}{Edge}}$<$K, E2$>$ $>$ \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list}{bridges.\+base.\+Graph\+Adj\+List}}$<$ K, E1, E2 $>$.get\+Adjacency\+List (\begin{DoxyParamCaption}\item[{K}]{vertex }\end{DoxyParamCaption})}
+
+Gets the adjacency list (of type \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}}$<$\mbox{\hyperlink{classbridges_1_1base_1_1_edge}{Edge}} $<$\+K$>$ $>$ of a vertex)
 
 
 \begin{DoxyParams}{Parameters}
@@ -128,32 +165,117 @@ Gets the adjacency list (of type S\+Lelement$<$\+Edge$>$ of a vertex)
 \begin{DoxyReturn}{Returns}
 -\/ the graph\textquotesingle{}s adjacency list corresponding to this vertex 
 \end{DoxyReturn}
-\hypertarget{classbridges_1_1base_1_1_graph_adj_list_a6995a5dcee3b07e041e12e27241f9423}{}\index{bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}!get\+Data\+Struct\+Type@{get\+Data\+Struct\+Type}}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_graph_adj_list_a40c4a2faf20c9847e8ba0d8024236a4b}\label{classbridges_1_1base_1_1_graph_adj_list_a40c4a2faf20c9847e8ba0d8024236a4b}} 
+\index{bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}!get\+Data\+Struct\+Type@{get\+Data\+Struct\+Type}}
 \index{get\+Data\+Struct\+Type@{get\+Data\+Struct\+Type}!bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}}
-\subsubsection[{get\+Data\+Struct\+Type()}]{\setlength{\rightskip}{0pt plus 5cm}String {\bf bridges.\+base.\+Graph\+Adj\+List}$<$ K, E $>$.get\+Data\+Struct\+Type (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\label{classbridges_1_1base_1_1_graph_adj_list_a6995a5dcee3b07e041e12e27241f9423}
+\subsubsection{\texorpdfstring{get\+Data\+Struct\+Type()}{getDataStructType()}}
+{\footnotesize\ttfamily String \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list}{bridges.\+base.\+Graph\+Adj\+List}}$<$ K, E1, E2 $>$.get\+Data\+Struct\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 This method gets the data structure type
 
 \begin{DoxyReturn}{Returns}
 The date structure type as a string 
 \end{DoxyReturn}
-\hypertarget{classbridges_1_1base_1_1_graph_adj_list_a19abf0bd09f0420e61cc144aec141f0a}{}\index{bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}!get\+Vertices@{get\+Vertices}}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_graph_adj_list_a9bba66056cdf24197c41fff455e19a6c}\label{classbridges_1_1base_1_1_graph_adj_list_a9bba66056cdf24197c41fff455e19a6c}} 
+\index{bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}!get\+Data\+Structure\+Representation@{get\+Data\+Structure\+Representation}}
+\index{get\+Data\+Structure\+Representation@{get\+Data\+Structure\+Representation}!bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}}
+\subsubsection{\texorpdfstring{get\+Data\+Structure\+Representation()}{getDataStructureRepresentation()}}
+{\footnotesize\ttfamily String \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list}{bridges.\+base.\+Graph\+Adj\+List}}$<$ K, E1, E2 $>$.get\+Data\+Structure\+Representation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1base_1_1_graph_adj_list_a13cdc7ed89fb211f47e2b04da0b65561}\label{classbridges_1_1base_1_1_graph_adj_list_a13cdc7ed89fb211f47e2b04da0b65561}} 
+\index{bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}!get\+Edge\+Data@{get\+Edge\+Data}}
+\index{get\+Edge\+Data@{get\+Edge\+Data}!bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}}
+\subsubsection{\texorpdfstring{get\+Edge\+Data()}{getEdgeData()}}
+{\footnotesize\ttfamily E2 \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list}{bridges.\+base.\+Graph\+Adj\+List}}$<$ K, E1, E2 $>$.get\+Edge\+Data (\begin{DoxyParamCaption}\item[{K}]{src,  }\item[{K}]{dest }\end{DoxyParamCaption})}
+
+Gets data for an edge
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & -\/ source vertex of edge \\
+\hline
+{\em dest} & -\/ destination vertex of edge \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_graph_adj_list_af93888dbd2a768a2401619ad5dc95560}\label{classbridges_1_1base_1_1_graph_adj_list_af93888dbd2a768a2401619ad5dc95560}} 
+\index{bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}!get\+Link\+Visualizer@{get\+Link\+Visualizer}}
+\index{get\+Link\+Visualizer@{get\+Link\+Visualizer}!bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}}
+\subsubsection{\texorpdfstring{get\+Link\+Visualizer()}{getLinkVisualizer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1base_1_1_link_visualizer}{Link\+Visualizer}} \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list}{bridges.\+base.\+Graph\+Adj\+List}}$<$ K, E1, E2 $>$.get\+Link\+Visualizer (\begin{DoxyParamCaption}\item[{K}]{src,  }\item[{K}]{dest }\end{DoxyParamCaption}) throws Exception}
+
+This is a convenience method to simplify access to the link visualizer; the method assumes the vertex names point to existing vertices, else an exception is thrown \mbox{\Hypertarget{classbridges_1_1base_1_1_graph_adj_list_aa19cd300a85b05352bdf58720310a112}\label{classbridges_1_1base_1_1_graph_adj_list_aa19cd300a85b05352bdf58720310a112}} 
+\index{bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}!get\+Vertex@{get\+Vertex}}
+\index{get\+Vertex@{get\+Vertex}!bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}}
+\subsubsection{\texorpdfstring{get\+Vertex()}{getVertex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}}$<$E1$>$ \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list}{bridges.\+base.\+Graph\+Adj\+List}}$<$ K, E1, E2 $>$.get\+Vertex (\begin{DoxyParamCaption}\item[{K}]{key }\end{DoxyParamCaption})}
+
+This is a convenience method to retrieve a vertex given its key
+
+return -- graph vertex corresponding to its key \mbox{\Hypertarget{classbridges_1_1base_1_1_graph_adj_list_a3d5f73795bcd5011c425eaca33383454}\label{classbridges_1_1base_1_1_graph_adj_list_a3d5f73795bcd5011c425eaca33383454}} 
+\index{bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}!get\+Vertex\+Data@{get\+Vertex\+Data}}
+\index{get\+Vertex\+Data@{get\+Vertex\+Data}!bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}}
+\subsubsection{\texorpdfstring{get\+Vertex\+Data()}{getVertexData()}}
+{\footnotesize\ttfamily E1 \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list}{bridges.\+base.\+Graph\+Adj\+List}}$<$ K, E1, E2 $>$.get\+Vertex\+Data (\begin{DoxyParamCaption}\item[{K}]{src }\end{DoxyParamCaption})}
+
+Gets data for an edge
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & -\/ source vertex of edge \\
+\hline
+{\em dest} & -\/ destination vertex of edge \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_graph_adj_list_acd53b2393db0936ad5812997f67ee1ee}\label{classbridges_1_1base_1_1_graph_adj_list_acd53b2393db0936ad5812997f67ee1ee}} 
+\index{bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}!get\+Vertices@{get\+Vertices}}
 \index{get\+Vertices@{get\+Vertices}!bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}}
-\subsubsection[{get\+Vertices()}]{\setlength{\rightskip}{0pt plus 5cm}Hash\+Map$<$K, {\bf Element}$<$E$>$ $>$ {\bf bridges.\+base.\+Graph\+Adj\+List}$<$ K, E $>$.get\+Vertices (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\label{classbridges_1_1base_1_1_graph_adj_list_a19abf0bd09f0420e61cc144aec141f0a}
+\subsubsection{\texorpdfstring{get\+Vertices()}{getVertices()}}
+{\footnotesize\ttfamily Hash\+Map$<$K, \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}}$<$E1$>$ $>$ \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list}{bridges.\+base.\+Graph\+Adj\+List}}$<$ K, E1, E2 $>$.get\+Vertices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 This method returns the graph nodes
 
-\begin{DoxyReturn}{Returns}
--- vertices held in an unordered map 
-\end{DoxyReturn}
+return -- vertices held in in the hashmap \mbox{\Hypertarget{classbridges_1_1base_1_1_graph_adj_list_aafb45833cd5c13b6ce9bdece3fefde6a}\label{classbridges_1_1base_1_1_graph_adj_list_aafb45833cd5c13b6ce9bdece3fefde6a}} 
+\index{bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}!get\+Visualizer@{get\+Visualizer}}
+\index{get\+Visualizer@{get\+Visualizer}!bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}}
+\subsubsection{\texorpdfstring{get\+Visualizer()}{getVisualizer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Visualizer}} \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list}{bridges.\+base.\+Graph\+Adj\+List}}$<$ K, E1, E2 $>$.get\+Visualizer (\begin{DoxyParamCaption}\item[{K}]{vertex }\end{DoxyParamCaption}) throws Exception}
+
+This is a convenience method to simplify access to the element visualizer; the method assumes the vertex name points to an existing vertice, else an exception is thrown \mbox{\Hypertarget{classbridges_1_1base_1_1_graph_adj_list_a48041b13b10d5fb677f48a0debfc268e}\label{classbridges_1_1base_1_1_graph_adj_list_a48041b13b10d5fb677f48a0debfc268e}} 
+\index{bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}!set\+Edge\+Data@{set\+Edge\+Data}}
+\index{set\+Edge\+Data@{set\+Edge\+Data}!bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}}
+\subsubsection{\texorpdfstring{set\+Edge\+Data()}{setEdgeData()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list}{bridges.\+base.\+Graph\+Adj\+List}}$<$ K, E1, E2 $>$.set\+Edge\+Data (\begin{DoxyParamCaption}\item[{K}]{src,  }\item[{K}]{dest,  }\item[{E2}]{edge\+\_\+data }\end{DoxyParamCaption})}
+
+Sets data for an edge
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & -\/ source vertex of edge \\
+\hline
+{\em dest} & -\/ destination vertex of edge \\
+\hline
+{\em data} & -\/ edge data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_graph_adj_list_aa80bfbbe9c4dd130632db1e1165d635e}\label{classbridges_1_1base_1_1_graph_adj_list_aa80bfbbe9c4dd130632db1e1165d635e}} 
+\index{bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}!set\+Vertex\+Data@{set\+Vertex\+Data}}
+\index{set\+Vertex\+Data@{set\+Vertex\+Data}!bridges\+::base\+::\+Graph\+Adj\+List@{bridges\+::base\+::\+Graph\+Adj\+List}}
+\subsubsection{\texorpdfstring{set\+Vertex\+Data()}{setVertexData()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_graph_adj_list}{bridges.\+base.\+Graph\+Adj\+List}}$<$ K, E1, E2 $>$.set\+Vertex\+Data (\begin{DoxyParamCaption}\item[{K}]{src,  }\item[{E1}]{vertex\+\_\+data }\end{DoxyParamCaption})}
+
+Sets data for a graph vertex
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & -\/ source vertex of edge \\
+\hline
+{\em dest} & -\/ destination vertex of edge \\
+\hline
+{\em data} & -\/ vertex data \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-link/base/\hyperlink{_graph_adj_list_8java}{Graph\+Adj\+List.\+java}\end{DoxyCompactItemize}
+/\+Users/kalpathi/gr/bridges/client/java/bridges-\/17/src/main/java/edu/uncc/cs/bridges\+\_\+v21/base/\mbox{\hyperlink{_graph_adj_list_8java}{Graph\+Adj\+List.\+java}}\end{DoxyCompactItemize}

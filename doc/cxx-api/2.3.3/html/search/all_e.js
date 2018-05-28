@@ -2,6 +2,7 @@ var searchData=
 [
   ['servercomm',['ServerComm',['../classbridges_1_1_server_comm.html',1,'bridges']]],
   ['servercomm_2eh',['ServerComm.h',['../_server_comm_8h.html',1,'']]],
+  ['set',['set',['../classbridges_1_1_grid.html#acd750e5886349488257aba85f0b06f6f',1,'bridges::Grid']]],
   ['setalpha',['setAlpha',['../classbridges_1_1_color.html#af2ab47aa5ccafb74be9ef8e6042093a1',1,'bridges::Color']]],
   ['setapikey',['setApiKey',['../namespacebridges_1_1_bridges.html#a93ca9a56525386d15d22ac6b5bff5993',1,'bridges::Bridges']]],
   ['setassignment',['setAssignment',['../namespacebridges_1_1_bridges.html#aca7a68fb8cc0d1bec81656dfa77b1162',1,'bridges::Bridges']]],
@@ -11,7 +12,7 @@ var searchData=
   ['setcolor',['setColor',['../classbridges_1_1_element_visualizer.html#af14723066e52c159eebfb804d65dd825',1,'bridges::ElementVisualizer::setColor()'],['../classbridges_1_1_link_visualizer.html#adedc1f2b7d5d562b115ef9d8ae19fa73',1,'bridges::LinkVisualizer::setColor()']]],
   ['setdatastructure',['setDataStructure',['../namespacebridges_1_1_bridges.html#a7447e2d5808c492d26132690c1a639a7',1,'bridges::Bridges']]],
   ['setdescription',['setDescription',['../namespacebridges_1_1_bridges.html#ada1bced1a3d7af3b8b139bbdfba72fc8',1,'bridges::Bridges']]],
-  ['setdimensions',['setDimensions',['../classbridges_1_1_array.html#a4e179915ab7820bbafe9b3433656b182',1,'bridges::Array::setDimensions()'],['../namespacebridges_1_1_bridges.html#a0c04930dee803801d3a26c6ef70183f2',1,'bridges::Bridges::setDimensions()']]],
+  ['setdimensions',['setDimensions',['../classbridges_1_1_array.html#a4e179915ab7820bbafe9b3433656b182',1,'bridges::Array::setDimensions()'],['../classbridges_1_1_grid.html#a8e5e4d92097f9d1481a14219eb5cc5a8',1,'bridges::Grid::setDimensions()'],['../namespacebridges_1_1_bridges.html#a1eef7c2daeb3784169965f727bf4ad1b',1,'bridges::Bridges::setDimensions()']]],
   ['setedgedata',['setEdgeData',['../classbridges_1_1_edge.html#a0f4b37731a5510b46709b095fa6eefb5',1,'bridges::Edge::setEdgeData()'],['../classbridges_1_1_graph_adj_list.html#ac507940618b400d792c29b69fc9c7687',1,'bridges::GraphAdjList::setEdgeData()'],['../classbridges_1_1_graph_adj_matrix.html#ab078dbb442bbbb028568a4f724289a48',1,'bridges::GraphAdjMatrix::setEdgeData()']]],
   ['setgreen',['setGreen',['../classbridges_1_1_color.html#ad7522440e9772446b66d699cda307704',1,'bridges::Color']]],
   ['setheight',['setHeight',['../classbridges_1_1_a_v_l_tree_element.html#acbf2a222b954e5d9221b109634822f96',1,'bridges::AVLTreeElement']]],
