@@ -9,6 +9,7 @@ var searchData=
   ['validateval',['validateVal',['../classbridges_1_1base_1_1_element.html#af1a60f4e6a91d379179f7d56e6dc3829',1,'bridges::base::Element']]],
   ['validation',['Validation',['../classbridges_1_1validation_1_1_validation.html',1,'bridges::validation']]],
   ['validation_2ejava',['Validation.java',['../_validation_8java.html',1,'']]],
+  ['validnumberoftweets',['validNumberOfTweets',['../classbridges_1_1connect_1_1_data_formatter.html#ad17084ac8b0f28837ebb1d77905cefb8',1,'bridges::connect::DataFormatter']]],
   ['visualize',['visualize',['../classbridges_1_1connect_1_1_bridges.html#a1853d64ffb8675ba2ec227a2b819cd24',1,'bridges::connect::Bridges']]],
   ['visualizejson',['visualizeJSON',['../classbridges_1_1connect_1_1_bridges.html#afd3c63780396e92c94c923037385b31d',1,'bridges::connect::Bridges']]]
 ];

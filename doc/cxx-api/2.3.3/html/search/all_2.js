@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['cancerincidence',['CancerIncidence',['../classbridges_1_1_cancer_incidence.html',1,'bridges::CancerIncidence'],['../classbridges_1_1_cancer_incidence.html#a3f5bb34394a22169bb4465c07e50fba1',1,'bridges::CancerIncidence::CancerIncidence()']]],
+  ['cancerincidence_2eh',['CancerIncidence.h',['../_cancer_incidence_8h.html',1,'']]],
   ['circdlelement',['CircDLelement',['../classbridges_1_1_circ_d_lelement.html',1,'bridges::CircDLelement&lt; E &gt;'],['../classbridges_1_1_circ_d_lelement.html#a35279302f5fb5297eeb6efead475921e',1,'bridges::CircDLelement::CircDLelement()'],['../classbridges_1_1_circ_d_lelement.html#a7dc1ad0eca7c06678064789303c522ed',1,'bridges::CircDLelement::CircDLelement(E e, string label)'],['../classbridges_1_1_circ_d_lelement.html#a9d0cf8a5b60e3fedc1ba1ad792570934',1,'bridges::CircDLelement::CircDLelement(CircDLelement&lt; E &gt; next, CircDLelement&lt; E &gt; prev)'],['../classbridges_1_1_circ_d_lelement.html#a2e729cd481f11c51bb5b686b8072ec8c',1,'bridges::CircDLelement::CircDLelement(E e, CircDLelement&lt; E &gt; next, CircDLelement&lt; E &gt; prev)']]],
   ['circdlelement_2eh',['CircDLelement.h',['../_circ_d_lelement_8h.html',1,'']]],
   ['circle',['CIRCLE',['../namespacebridges.html#a1b4050586bd708782ae0d4f3b06b9579aa968bf0f7aeccbae1a40751345bf2e64',1,'bridges']]],

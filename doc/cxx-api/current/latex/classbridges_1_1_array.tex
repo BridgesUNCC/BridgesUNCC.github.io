@@ -24,23 +24,29 @@ Inheritance diagram for bridges\+:\+:Array$<$ E $>$\+:\begin{figure}[H]
 \item 
 \mbox{\hyperlink{classbridges_1_1_array_a25ff771f9ba7f365465f309ed2dd3688}{Array}} (int num\+\_\+dims, int $\ast$dims)
 \item 
+\mbox{\hyperlink{classbridges_1_1_array_a0a475058b73b938f0fd3f577365aca89}{Array}} (int xsize)
+\item 
+\mbox{\hyperlink{classbridges_1_1_array_a13b26fc4d2ccb19b277b2acc615efce2}{Array}} (int xsize, int ysize)
+\item 
+\mbox{\hyperlink{classbridges_1_1_array_a3504e71cacffd343edf8b9ea16f75eb4}{Array}} (int xsize, int ysize, int zsize)
+\item 
 void \mbox{\hyperlink{classbridges_1_1_array_a6b91612bb7b89a563571fd1ea417ef2a}{set\+Num\+Dimensions}} (int nd)
 \item 
 void \mbox{\hyperlink{classbridges_1_1_array_a4e179915ab7820bbafe9b3433656b182}{set\+Dimensions}} (int $\ast$dim)
 \item 
 void \mbox{\hyperlink{classbridges_1_1_array_ae195a6f06157e82c68483ff636e30f5e}{get\+Dimensions}} (int $\ast$d)
 \item 
-\mbox{\hyperlink{classbridges_1_1_element}{Element}}$<$ E $>$ \& \mbox{\hyperlink{classbridges_1_1_array_a307586edf2efc143878bdff0ac14df1f}{get\+Value}} (int indx)
+\mbox{\hyperlink{classbridges_1_1_element}{Element}}$<$ E $>$ \& \mbox{\hyperlink{classbridges_1_1_array_a8b4c6cc491829d814e0b6b0ce3654417}{get\+Element}} (int x)
 \item 
-void \mbox{\hyperlink{classbridges_1_1_array_a7686d816d6118cf05da7f047c8d7f065}{set\+Value}} (int indx, \mbox{\hyperlink{classbridges_1_1_element}{Element}}$<$ E $>$ el)
+\mbox{\hyperlink{classbridges_1_1_element}{Element}}$<$ E $>$ \& \mbox{\hyperlink{classbridges_1_1_array_acd5e730e0369b1fa699a5907e889f213}{get\+Element}} (int x, int y)
 \item 
-\mbox{\hyperlink{classbridges_1_1_element}{Element}}$<$ E $>$ \& \mbox{\hyperlink{classbridges_1_1_array_afb68e42d59a369922a95bfdd7efbaef5}{get\+Value}} (int x\+\_\+indx, int y\+\_\+indx)
+\mbox{\hyperlink{classbridges_1_1_element}{Element}}$<$ E $>$ \& \mbox{\hyperlink{classbridges_1_1_array_a7006eeac547c391cb7e8eb19c56ae9f6}{get\+Element}} (int x, int y, int z)
 \item 
-void \mbox{\hyperlink{classbridges_1_1_array_a3a6ef57159e7b50d4e3eb1899fd1090f}{set\+Value}} (int x\+\_\+indx, int y\+\_\+indx, \mbox{\hyperlink{classbridges_1_1_element}{Element}}$<$ E $>$ el)
+void \mbox{\hyperlink{classbridges_1_1_array_aae8ec0bd850e00593487022bc914afe0}{set\+Element}} (int indx, \mbox{\hyperlink{classbridges_1_1_element}{Element}}$<$ E $>$ el)
 \item 
-\mbox{\hyperlink{classbridges_1_1_element}{Element}}$<$ E $>$ \& \mbox{\hyperlink{classbridges_1_1_array_a1511664b75c650f7baad3920578f5153}{get\+Value}} (int x\+\_\+indx, int y\+\_\+indx, int z\+\_\+indx)
+void \mbox{\hyperlink{classbridges_1_1_array_a428cc76d22af71c5ae57dc293780b8ec}{set\+Element}} (int x\+\_\+indx, int y\+\_\+indx, \mbox{\hyperlink{classbridges_1_1_element}{Element}}$<$ E $>$ el)
 \item 
-void \mbox{\hyperlink{classbridges_1_1_array_a50ac708525644bbd81ea21221a1fefc5}{set\+Value}} (int x\+\_\+indx, int y\+\_\+indx, int z\+\_\+indx, \mbox{\hyperlink{classbridges_1_1_element}{Element}}$<$ E $>$ el)
+void \mbox{\hyperlink{classbridges_1_1_array_a526c3a190b48a338541e5b4667c5eedf}{set\+Element}} (int x\+\_\+indx, int y\+\_\+indx, int z\+\_\+indx, \mbox{\hyperlink{classbridges_1_1_element}{Element}}$<$ E $>$ el)
 \item 
 virtual const string \mbox{\hyperlink{classbridges_1_1_array_ab93f7379870a7c0bc63490c53d95ba09}{get\+D\+Stype}} () const override
 \item 
@@ -75,7 +81,7 @@ Kalpathi Subramanian
 \mbox{\Hypertarget{classbridges_1_1_array_a958421b86ff55303b5fc7d505109f9fe}\label{classbridges_1_1_array_a958421b86ff55303b5fc7d505109f9fe}} 
 \index{bridges\+::\+Array@{bridges\+::\+Array}!Array@{Array}}
 \index{Array@{Array}!bridges\+::\+Array@{bridges\+::\+Array}}
-\subsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\subsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
 {\footnotesize\ttfamily template$<$typename E $>$ \\
 \mbox{\hyperlink{classbridges_1_1_array}{bridges\+::\+Array}}$<$ E $>$\+::\mbox{\hyperlink{classbridges_1_1_array}{Array}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -89,9 +95,30 @@ Kalpathi Subramanian
 \mbox{\Hypertarget{classbridges_1_1_array_a25ff771f9ba7f365465f309ed2dd3688}\label{classbridges_1_1_array_a25ff771f9ba7f365465f309ed2dd3688}} 
 \index{bridges\+::\+Array@{bridges\+::\+Array}!Array@{Array}}
 \index{Array@{Array}!bridges\+::\+Array@{bridges\+::\+Array}}
-\subsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\subsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
 {\footnotesize\ttfamily template$<$typename E $>$ \\
 \mbox{\hyperlink{classbridges_1_1_array}{bridges\+::\+Array}}$<$ E $>$\+::\mbox{\hyperlink{classbridges_1_1_array}{Array}} (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+dims,  }\item[{int $\ast$}]{dims }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1_array_a0a475058b73b938f0fd3f577365aca89}\label{classbridges_1_1_array_a0a475058b73b938f0fd3f577365aca89}} 
+\index{bridges\+::\+Array@{bridges\+::\+Array}!Array@{Array}}
+\index{Array@{Array}!bridges\+::\+Array@{bridges\+::\+Array}}
+\subsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$typename E $>$ \\
+\mbox{\hyperlink{classbridges_1_1_array}{bridges\+::\+Array}}$<$ E $>$\+::\mbox{\hyperlink{classbridges_1_1_array}{Array}} (\begin{DoxyParamCaption}\item[{int}]{xsize }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1_array_a13b26fc4d2ccb19b277b2acc615efce2}\label{classbridges_1_1_array_a13b26fc4d2ccb19b277b2acc615efce2}} 
+\index{bridges\+::\+Array@{bridges\+::\+Array}!Array@{Array}}
+\index{Array@{Array}!bridges\+::\+Array@{bridges\+::\+Array}}
+\subsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$typename E $>$ \\
+\mbox{\hyperlink{classbridges_1_1_array}{bridges\+::\+Array}}$<$ E $>$\+::\mbox{\hyperlink{classbridges_1_1_array}{Array}} (\begin{DoxyParamCaption}\item[{int}]{xsize,  }\item[{int}]{ysize }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1_array_a3504e71cacffd343edf8b9ea16f75eb4}\label{classbridges_1_1_array_a3504e71cacffd343edf8b9ea16f75eb4}} 
+\index{bridges\+::\+Array@{bridges\+::\+Array}!Array@{Array}}
+\index{Array@{Array}!bridges\+::\+Array@{bridges\+::\+Array}}
+\subsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$typename E $>$ \\
+\mbox{\hyperlink{classbridges_1_1_array}{bridges\+::\+Array}}$<$ E $>$\+::\mbox{\hyperlink{classbridges_1_1_array}{Array}} (\begin{DoxyParamCaption}\item[{int}]{xsize,  }\item[{int}]{ysize,  }\item[{int}]{zsize }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -138,27 +165,61 @@ The string representation of this data structure type
 
 Implements \mbox{\hyperlink{classbridges_1_1_data_structure_a957a63b106e340bc753620c650632bdc}{bridges\+::\+Data\+Structure}}.
 
-\mbox{\Hypertarget{classbridges_1_1_array_a307586edf2efc143878bdff0ac14df1f}\label{classbridges_1_1_array_a307586edf2efc143878bdff0ac14df1f}} 
-\index{bridges\+::\+Array@{bridges\+::\+Array}!get\+Value@{get\+Value}}
-\index{get\+Value@{get\+Value}!bridges\+::\+Array@{bridges\+::\+Array}}
-\subsubsection{\texorpdfstring{get\+Value()}{getValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+\mbox{\Hypertarget{classbridges_1_1_array_a8b4c6cc491829d814e0b6b0ce3654417}\label{classbridges_1_1_array_a8b4c6cc491829d814e0b6b0ce3654417}} 
+\index{bridges\+::\+Array@{bridges\+::\+Array}!get\+Element@{get\+Element}}
+\index{get\+Element@{get\+Element}!bridges\+::\+Array@{bridges\+::\+Array}}
+\subsubsection{\texorpdfstring{get\+Element()}{getElement()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
 {\footnotesize\ttfamily template$<$typename E $>$ \\
-\mbox{\hyperlink{classbridges_1_1_element}{Element}}$<$E$>$\& \mbox{\hyperlink{classbridges_1_1_array}{bridges\+::\+Array}}$<$ E $>$\+::get\+Value (\begin{DoxyParamCaption}\item[{int}]{indx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{classbridges_1_1_element}{Element}}$<$E$>$\& \mbox{\hyperlink{classbridges_1_1_array}{bridges\+::\+Array}}$<$ E $>$\+::get\+Element (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{classbridges_1_1_array_afb68e42d59a369922a95bfdd7efbaef5}\label{classbridges_1_1_array_afb68e42d59a369922a95bfdd7efbaef5}} 
-\index{bridges\+::\+Array@{bridges\+::\+Array}!get\+Value@{get\+Value}}
-\index{get\+Value@{get\+Value}!bridges\+::\+Array@{bridges\+::\+Array}}
-\subsubsection{\texorpdfstring{get\+Value()}{getValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+Get the object at index x -\/ 1D array
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+\_\+indx} & -\/ index into the array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Element$<$\+E$>$ object at \textquotesingle{}indx\textquotesingle{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_array_acd5e730e0369b1fa699a5907e889f213}\label{classbridges_1_1_array_acd5e730e0369b1fa699a5907e889f213}} 
+\index{bridges\+::\+Array@{bridges\+::\+Array}!get\+Element@{get\+Element}}
+\index{get\+Element@{get\+Element}!bridges\+::\+Array@{bridges\+::\+Array}}
+\subsubsection{\texorpdfstring{get\+Element()}{getElement()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
 {\footnotesize\ttfamily template$<$typename E $>$ \\
-\mbox{\hyperlink{classbridges_1_1_element}{Element}}$<$E$>$\& \mbox{\hyperlink{classbridges_1_1_array}{bridges\+::\+Array}}$<$ E $>$\+::get\+Value (\begin{DoxyParamCaption}\item[{int}]{x\+\_\+indx,  }\item[{int}]{y\+\_\+indx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{classbridges_1_1_element}{Element}}$<$E$>$\& \mbox{\hyperlink{classbridges_1_1_array}{bridges\+::\+Array}}$<$ E $>$\+::get\+Element (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{classbridges_1_1_array_a1511664b75c650f7baad3920578f5153}\label{classbridges_1_1_array_a1511664b75c650f7baad3920578f5153}} 
-\index{bridges\+::\+Array@{bridges\+::\+Array}!get\+Value@{get\+Value}}
-\index{get\+Value@{get\+Value}!bridges\+::\+Array@{bridges\+::\+Array}}
-\subsubsection{\texorpdfstring{get\+Value()}{getValue()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+Get the object at x, y, z -- for 3D arrays
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ column index \\
+\hline
+{\em y} & -\/ row index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Element$<$\+E$>$ object at x, y 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_array_a7006eeac547c391cb7e8eb19c56ae9f6}\label{classbridges_1_1_array_a7006eeac547c391cb7e8eb19c56ae9f6}} 
+\index{bridges\+::\+Array@{bridges\+::\+Array}!get\+Element@{get\+Element}}
+\index{get\+Element@{get\+Element}!bridges\+::\+Array@{bridges\+::\+Array}}
+\subsubsection{\texorpdfstring{get\+Element()}{getElement()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
 {\footnotesize\ttfamily template$<$typename E $>$ \\
-\mbox{\hyperlink{classbridges_1_1_element}{Element}}$<$E$>$\& \mbox{\hyperlink{classbridges_1_1_array}{bridges\+::\+Array}}$<$ E $>$\+::get\+Value (\begin{DoxyParamCaption}\item[{int}]{x\+\_\+indx,  }\item[{int}]{y\+\_\+indx,  }\item[{int}]{z\+\_\+indx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{classbridges_1_1_element}{Element}}$<$E$>$\& \mbox{\hyperlink{classbridges_1_1_array}{bridges\+::\+Array}}$<$ E $>$\+::get\+Element (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+Get the object at x, y, z -- for 3D arrays
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ column index \\
+\hline
+{\em y} & -\/ row index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Element$<$\+E$>$ object at x, y, z 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1_array_a4e179915ab7820bbafe9b3433656b182}\label{classbridges_1_1_array_a4e179915ab7820bbafe9b3433656b182}} 
 \index{bridges\+::\+Array@{bridges\+::\+Array}!set\+Dimensions@{set\+Dimensions}}
 \index{set\+Dimensions@{set\+Dimensions}!bridges\+::\+Array@{bridges\+::\+Array}}
@@ -166,33 +227,69 @@ Implements \mbox{\hyperlink{classbridges_1_1_data_structure_a957a63b106e340bc753
 {\footnotesize\ttfamily template$<$typename E $>$ \\
 void \mbox{\hyperlink{classbridges_1_1_array}{bridges\+::\+Array}}$<$ E $>$\+::set\+Dimensions (\begin{DoxyParamCaption}\item[{int $\ast$}]{dim }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+\mbox{\Hypertarget{classbridges_1_1_array_aae8ec0bd850e00593487022bc914afe0}\label{classbridges_1_1_array_aae8ec0bd850e00593487022bc914afe0}} 
+\index{bridges\+::\+Array@{bridges\+::\+Array}!set\+Element@{set\+Element}}
+\index{set\+Element@{set\+Element}!bridges\+::\+Array@{bridges\+::\+Array}}
+\subsubsection{\texorpdfstring{set\+Element()}{setElement()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename E $>$ \\
+void \mbox{\hyperlink{classbridges_1_1_array}{bridges\+::\+Array}}$<$ E $>$\+::set\+Element (\begin{DoxyParamCaption}\item[{int}]{indx,  }\item[{\mbox{\hyperlink{classbridges_1_1_element}{Element}}$<$ E $>$}]{el }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the object at index x -\/ 1D array
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ index into the array  -\/ \mbox{\hyperlink{classbridges_1_1_element}{Element}} object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_array_a428cc76d22af71c5ae57dc293780b8ec}\label{classbridges_1_1_array_a428cc76d22af71c5ae57dc293780b8ec}} 
+\index{bridges\+::\+Array@{bridges\+::\+Array}!set\+Element@{set\+Element}}
+\index{set\+Element@{set\+Element}!bridges\+::\+Array@{bridges\+::\+Array}}
+\subsubsection{\texorpdfstring{set\+Element()}{setElement()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename E $>$ \\
+void \mbox{\hyperlink{classbridges_1_1_array}{bridges\+::\+Array}}$<$ E $>$\+::set\+Element (\begin{DoxyParamCaption}\item[{int}]{x\+\_\+indx,  }\item[{int}]{y\+\_\+indx,  }\item[{\mbox{\hyperlink{classbridges_1_1_element}{Element}}$<$ E $>$}]{el }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the object at index x, y -\/ 2D array
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ col index into the array \\
+\hline
+{\em y} & -\/ row index into the array  -\/ \mbox{\hyperlink{classbridges_1_1_element}{Element}} object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_array_a526c3a190b48a338541e5b4667c5eedf}\label{classbridges_1_1_array_a526c3a190b48a338541e5b4667c5eedf}} 
+\index{bridges\+::\+Array@{bridges\+::\+Array}!set\+Element@{set\+Element}}
+\index{set\+Element@{set\+Element}!bridges\+::\+Array@{bridges\+::\+Array}}
+\subsubsection{\texorpdfstring{set\+Element()}{setElement()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename E $>$ \\
+void \mbox{\hyperlink{classbridges_1_1_array}{bridges\+::\+Array}}$<$ E $>$\+::set\+Element (\begin{DoxyParamCaption}\item[{int}]{x\+\_\+indx,  }\item[{int}]{y\+\_\+indx,  }\item[{int}]{z\+\_\+indx,  }\item[{\mbox{\hyperlink{classbridges_1_1_element}{Element}}$<$ E $>$}]{el }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the object at index x, y, z -\/ 3D array
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ col index into the array \\
+\hline
+{\em y} & -\/ row index into the array \\
+\hline
+{\em z} & -\/ slice index into the array  -\/ \mbox{\hyperlink{classbridges_1_1_element}{Element}} object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1_array_a6b91612bb7b89a563571fd1ea417ef2a}\label{classbridges_1_1_array_a6b91612bb7b89a563571fd1ea417ef2a}} 
 \index{bridges\+::\+Array@{bridges\+::\+Array}!set\+Num\+Dimensions@{set\+Num\+Dimensions}}
 \index{set\+Num\+Dimensions@{set\+Num\+Dimensions}!bridges\+::\+Array@{bridges\+::\+Array}}
 \subsubsection{\texorpdfstring{set\+Num\+Dimensions()}{setNumDimensions()}}
 {\footnotesize\ttfamily template$<$typename E $>$ \\
 void \mbox{\hyperlink{classbridges_1_1_array}{bridges\+::\+Array}}$<$ E $>$\+::set\+Num\+Dimensions (\begin{DoxyParamCaption}\item[{int}]{nd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-\mbox{\Hypertarget{classbridges_1_1_array_a7686d816d6118cf05da7f047c8d7f065}\label{classbridges_1_1_array_a7686d816d6118cf05da7f047c8d7f065}} 
-\index{bridges\+::\+Array@{bridges\+::\+Array}!set\+Value@{set\+Value}}
-\index{set\+Value@{set\+Value}!bridges\+::\+Array@{bridges\+::\+Array}}
-\subsubsection{\texorpdfstring{set\+Value()}{setValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily template$<$typename E $>$ \\
-void \mbox{\hyperlink{classbridges_1_1_array}{bridges\+::\+Array}}$<$ E $>$\+::set\+Value (\begin{DoxyParamCaption}\item[{int}]{indx,  }\item[{\mbox{\hyperlink{classbridges_1_1_element}{Element}}$<$ E $>$}]{el }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-\mbox{\Hypertarget{classbridges_1_1_array_a3a6ef57159e7b50d4e3eb1899fd1090f}\label{classbridges_1_1_array_a3a6ef57159e7b50d4e3eb1899fd1090f}} 
-\index{bridges\+::\+Array@{bridges\+::\+Array}!set\+Value@{set\+Value}}
-\index{set\+Value@{set\+Value}!bridges\+::\+Array@{bridges\+::\+Array}}
-\subsubsection{\texorpdfstring{set\+Value()}{setValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily template$<$typename E $>$ \\
-void \mbox{\hyperlink{classbridges_1_1_array}{bridges\+::\+Array}}$<$ E $>$\+::set\+Value (\begin{DoxyParamCaption}\item[{int}]{x\+\_\+indx,  }\item[{int}]{y\+\_\+indx,  }\item[{\mbox{\hyperlink{classbridges_1_1_element}{Element}}$<$ E $>$}]{el }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-\mbox{\Hypertarget{classbridges_1_1_array_a50ac708525644bbd81ea21221a1fefc5}\label{classbridges_1_1_array_a50ac708525644bbd81ea21221a1fefc5}} 
-\index{bridges\+::\+Array@{bridges\+::\+Array}!set\+Value@{set\+Value}}
-\index{set\+Value@{set\+Value}!bridges\+::\+Array@{bridges\+::\+Array}}
-\subsubsection{\texorpdfstring{set\+Value()}{setValue()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily template$<$typename E $>$ \\
-void \mbox{\hyperlink{classbridges_1_1_array}{bridges\+::\+Array}}$<$ E $>$\+::set\+Value (\begin{DoxyParamCaption}\item[{int}]{x\+\_\+indx,  }\item[{int}]{y\+\_\+indx,  }\item[{int}]{z\+\_\+indx,  }\item[{\mbox{\hyperlink{classbridges_1_1_element}{Element}}$<$ E $>$}]{el }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 

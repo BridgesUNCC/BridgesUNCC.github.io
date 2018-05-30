@@ -20,6 +20,12 @@ Inheritance diagram for bridges\+:\+:Element$<$ E $>$\+:\begin{figure}[H]
 \item 
 \mbox{\hyperlink{classbridges_1_1_element_abc7131584142ea48faf3b7a8033d1fef}{Element}} (const E \&val=E(), const string \&lab=string())
 \item 
+\mbox{\hyperlink{classbridges_1_1_element_a6dc69b51f85f4e9914434b8c79126057}{Element}} (const \mbox{\hyperlink{classbridges_1_1_element}{Element}} \&e)
+\item 
+\mbox{\hyperlink{classbridges_1_1_element}{Element}} \& \mbox{\hyperlink{classbridges_1_1_element_a0f1b5a5688fe4db68f84969e93cea245}{operator=}} (const \mbox{\hyperlink{classbridges_1_1_element}{Element}} \&e)
+\item 
+virtual \mbox{\hyperlink{classbridges_1_1_element_a1dcdcd8948db683fc109687fe5d9c8e1}{$\sim$\+Element}} ()
+\item 
 \mbox{\hyperlink{classbridges_1_1_element_visualizer}{Element\+Visualizer}} $\ast$ \mbox{\hyperlink{classbridges_1_1_element_a358f350ae6e33d55c4ac9f9213d0c5bc}{get\+Visualizer}} ()
 \item 
 const \mbox{\hyperlink{classbridges_1_1_element_visualizer}{Element\+Visualizer}} $\ast$ \mbox{\hyperlink{classbridges_1_1_element_a27d023054130e17234ace34ba35e766e}{get\+Visualizer}} () const
@@ -94,7 +100,7 @@ Kalpathi Subramanian
 \mbox{\Hypertarget{classbridges_1_1_element_abc7131584142ea48faf3b7a8033d1fef}\label{classbridges_1_1_element_abc7131584142ea48faf3b7a8033d1fef}} 
 \index{bridges\+::\+Element@{bridges\+::\+Element}!Element@{Element}}
 \index{Element@{Element}!bridges\+::\+Element@{bridges\+::\+Element}}
-\subsubsection{\texorpdfstring{Element()}{Element()}}
+\subsubsection{\texorpdfstring{Element()}{Element()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename E$>$ \\
 \mbox{\hyperlink{classbridges_1_1_element}{bridges\+::\+Element}}$<$ E $>$\+::\mbox{\hyperlink{classbridges_1_1_element}{Element}} (\begin{DoxyParamCaption}\item[{const E \&}]{val = {\ttfamily E()},  }\item[{const string \&}]{lab = {\ttfamily string()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -107,6 +113,20 @@ Constructs an element with the provided value and label. The defaults will be us
 {\em lab} & The label to show \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1_element_a6dc69b51f85f4e9914434b8c79126057}\label{classbridges_1_1_element_a6dc69b51f85f4e9914434b8c79126057}} 
+\index{bridges\+::\+Element@{bridges\+::\+Element}!Element@{Element}}
+\index{Element@{Element}!bridges\+::\+Element@{bridges\+::\+Element}}
+\subsubsection{\texorpdfstring{Element()}{Element()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+\mbox{\hyperlink{classbridges_1_1_element}{bridges\+::\+Element}}$<$ E $>$\+::\mbox{\hyperlink{classbridges_1_1_element}{Element}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbridges_1_1_element}{Element}}$<$ E $>$ \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1_element_a1dcdcd8948db683fc109687fe5d9c8e1}\label{classbridges_1_1_element_a1dcdcd8948db683fc109687fe5d9c8e1}} 
+\index{bridges\+::\+Element@{bridges\+::\+Element}!````~Element@{$\sim$\+Element}}
+\index{````~Element@{$\sim$\+Element}!bridges\+::\+Element@{bridges\+::\+Element}}
+\subsubsection{\texorpdfstring{$\sim$\+Element()}{~Element()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+virtual \mbox{\hyperlink{classbridges_1_1_element}{bridges\+::\+Element}}$<$ E $>$\+::$\sim$\mbox{\hyperlink{classbridges_1_1_element}{Element}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
 
 
 \subsection{Member Function Documentation}
@@ -238,6 +258,13 @@ Constant version
 \begin{DoxyReturn}{Returns}
 The \mbox{\hyperlink{classbridges_1_1_element_visualizer}{Element\+Visualizer}} of this element 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_element_a0f1b5a5688fe4db68f84969e93cea245}\label{classbridges_1_1_element_a0f1b5a5688fe4db68f84969e93cea245}} 
+\index{bridges\+::\+Element@{bridges\+::\+Element}!operator=@{operator=}}
+\index{operator=@{operator=}!bridges\+::\+Element@{bridges\+::\+Element}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+\mbox{\hyperlink{classbridges_1_1_element}{Element}}\& \mbox{\hyperlink{classbridges_1_1_element}{bridges\+::\+Element}}$<$ E $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbridges_1_1_element}{Element}}$<$ E $>$ \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 \mbox{\Hypertarget{classbridges_1_1_element_ae6f773c7222ff3a37c402e5e1f413c66}\label{classbridges_1_1_element_ae6f773c7222ff3a37c402e5e1f413c66}} 
 \index{bridges\+::\+Element@{bridges\+::\+Element}!print\+Links@{print\+Links}}
 \index{print\+Links@{print\+Links}!bridges\+::\+Element@{bridges\+::\+Element}}

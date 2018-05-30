@@ -42,6 +42,12 @@ void \mbox{\hyperlink{namespacebridges_1_1_bridges_a10272250ed6f4bb8281dcaecc61f
 \item 
 void \mbox{\hyperlink{namespacebridges_1_1_bridges_a569953bfdb1c2a29dbd0f7d6dee73606}{set\+Server}} (string server\+\_\+type)
 \item 
+void \mbox{\hyperlink{namespacebridges_1_1_bridges_a221442c674b625a403486076cf8a7c03}{set\+Map\+Overlay}} (bool overlay\+\_\+flag)
+\item 
+void \mbox{\hyperlink{namespacebridges_1_1_bridges_ad00c07d3a028110424909081a94c4013}{set\+Coord\+System\+Type}} (string coord)
+\item 
+string \mbox{\hyperlink{namespacebridges_1_1_bridges_a31f5db39ab9ce7df3e635eaaad1feb12}{get\+Coord\+System\+Type}} ()
+\item 
 void \mbox{\hyperlink{namespacebridges_1_1_bridges_a2806e395134614cdd6327400b53d28ad}{visualize}} ()
 \item 
 bool \& \mbox{\hyperlink{namespacebridges_1_1_bridges_a692124feb006d58c277db36c2e9342c8}{visualize\+J\+S\+ON}} ()
@@ -109,6 +115,18 @@ Reference to member holding the api key credential for the server
 
 \begin{DoxyReturn}{Returns}
 Reference to member holding the assignment number for holding the visualization on the server 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacebridges_1_1_bridges_a31f5db39ab9ce7df3e635eaaad1feb12}\label{namespacebridges_1_1_bridges_a31f5db39ab9ce7df3e635eaaad1feb12}} 
+\index{bridges\+::\+Bridges@{bridges\+::\+Bridges}!get\+Coord\+System\+Type@{get\+Coord\+System\+Type}}
+\index{get\+Coord\+System\+Type@{get\+Coord\+System\+Type}!bridges\+::\+Bridges@{bridges\+::\+Bridges}}
+\subsubsection{\texorpdfstring{get\+Coord\+System\+Type()}{getCoordSystemType()}}
+{\footnotesize\ttfamily string bridges\+::\+Bridges\+::get\+Coord\+System\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the coordinate system type for location specific datasets
+
+\begin{DoxyReturn}{Returns}
+coord system type ; will be one of ~\newline
+\mbox{[}\textquotesingle{}Cartesian\textquotesingle{}, \textquotesingle{}albers\+Usa\textquotesingle{}, \textquotesingle{}equirectangular\textquotesingle{}\mbox{]}. \textquotesingle{}Cartesian\textquotesingle{} 
 \end{DoxyReturn}
 \mbox{\Hypertarget{namespacebridges_1_1_bridges_a7cee9c57a0cd6a213722ba0a81a742f0}\label{namespacebridges_1_1_bridges_a7cee9c57a0cd6a213722ba0a81a742f0}} 
 \index{bridges\+::\+Bridges@{bridges\+::\+Bridges}!get\+Data\+Structure@{get\+Data\+Structure}}
@@ -188,6 +206,19 @@ Sets \mbox{\hyperlink{namespacebridges_1_1_bridges}{Bridges}} assignment to \cha
 {\em assn} & sets the assignment number \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{namespacebridges_1_1_bridges_ad00c07d3a028110424909081a94c4013}\label{namespacebridges_1_1_bridges_ad00c07d3a028110424909081a94c4013}} 
+\index{bridges\+::\+Bridges@{bridges\+::\+Bridges}!set\+Coord\+System\+Type@{set\+Coord\+System\+Type}}
+\index{set\+Coord\+System\+Type@{set\+Coord\+System\+Type}!bridges\+::\+Bridges@{bridges\+::\+Bridges}}
+\subsubsection{\texorpdfstring{set\+Coord\+System\+Type()}{setCoordSystemType()}}
+{\footnotesize\ttfamily void bridges\+::\+Bridges\+::set\+Coord\+System\+Type (\begin{DoxyParamCaption}\item[{string}]{coord }\end{DoxyParamCaption})}
+
+Sets the coordinate system type for location specific datasets; default is Cartesian
+
+
+\begin{DoxyParams}{Parameters}
+{\em coord} & this is the desired coordinate space argument Options are\+: \mbox{[}\textquotesingle{}Cartesian\textquotesingle{}, \textquotesingle{}albers\+Usa\textquotesingle{}, \textquotesingle{}equirectangular\textquotesingle{}\mbox{]}. \textquotesingle{}Cartesian\textquotesingle{} is the default \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{namespacebridges_1_1_bridges_a7447e2d5808c492d26132690c1a639a7}\label{namespacebridges_1_1_bridges_a7447e2d5808c492d26132690c1a639a7}} 
 \index{bridges\+::\+Bridges@{bridges\+::\+Bridges}!set\+Data\+Structure@{set\+Data\+Structure}}
 \index{set\+Data\+Structure@{set\+Data\+Structure}!bridges\+::\+Bridges@{bridges\+::\+Bridges}}
@@ -228,6 +259,19 @@ set dimensions of array
 
 \begin{DoxyParams}{Parameters}
 {\em dims} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacebridges_1_1_bridges_a221442c674b625a403486076cf8a7c03}\label{namespacebridges_1_1_bridges_a221442c674b625a403486076cf8a7c03}} 
+\index{bridges\+::\+Bridges@{bridges\+::\+Bridges}!set\+Map\+Overlay@{set\+Map\+Overlay}}
+\index{set\+Map\+Overlay@{set\+Map\+Overlay}!bridges\+::\+Bridges@{bridges\+::\+Bridges}}
+\subsubsection{\texorpdfstring{set\+Map\+Overlay()}{setMapOverlay()}}
+{\footnotesize\ttfamily void bridges\+::\+Bridges\+::set\+Map\+Overlay (\begin{DoxyParamCaption}\item[{bool}]{overlay\+\_\+flag }\end{DoxyParamCaption})}
+
+Turns on map overlay for subsequent visualizations -\/ used with location specific datasets
+
+
+\begin{DoxyParams}{Parameters}
+{\em flag} & this is the boolean flag for displaying a map overlay \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{namespacebridges_1_1_bridges_a569953bfdb1c2a29dbd0f7d6dee73606}\label{namespacebridges_1_1_bridges_a569953bfdb1c2a29dbd0f7d6dee73606}} 
