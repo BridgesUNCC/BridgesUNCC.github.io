@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>BRIDGES Main Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./bootstrap-3.3.6/dist/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="./bootstrap-3.3.6/dist/js/bootstrap.min.js"></script>
+	<script src="https://www.w3schools.com/lib/w3data.js"></script>
+	<link rel="stylesheet" type="text/css" href="./bootstrap/bridges.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="./index.html">Home</a></li>
+				<li><a href="./bridges_team.html">BRIDGES Team</a></li>
+				<li><a href="mailto:tues-bridges-group@uncc.edu?Subject=Bridges%20Query">Contact Us</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="http://bridges-cs.herokuapp.com/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div class="container-fluid text-left">
+	<div class="row content">
+		<div class="col-md-2 sidenav">
+			<div w3-include-html="./left_sidebar.html"></div>
+			<script>
+				w3IncludeHTML();
+			</script>
+		</div>
+		<div class="col-md-7 text-left">
+			<h3 class = "sep_heading"><u>About BRIDGES</u></h3>
+			<p>BRIDGES(Bridging Real-world Infrastructure Designed to Goal-align,
+			Engage, and Stimulate), an NSF TUES project, is focused on two primary goals,
+			(1)  providing <it>easy-to-use interfaces</it> to exciting,
+			engaging real-world data
+			(social networks, scientific data, etc), to make it possible for their use in
+			freshmen/sophomore  level CS courses, and (2) make it easier to <i> visualize
+			the data structures that students create as part of their assignments </i>
+			in algorithms and data structures courses. BRIDGES is carefully designed
+			to augment the student experience in routine introductory courses
+			in Computer Science. <p>
+
+			The BRIDGES toolkit provides a set of
+			classes(C++ and Java are supported) that serve as building blocks to the
+			common CS data structures, including lists (arrays, linked lists),
+			tree structures (general trees, binary trees, binary search trees,
+			AVL trees), graphs (adjacency list and adjacency matrix representations)
+			used in freshmen/sohpomore level computer science. BRIDGES handles the
+			complex data and web interfaces, thereby letting students focus on the core
+			course materials, while providing a more engaging means to view their
+			output on the web (that can be shared)
+			</p>
+			Examples of  BRIDGES projects can be seen on the right panel.<p>
+
+			<h3><u>BRIDGES Status</u></h3>
+			<p>Current version of BRIDGES is 2.3.2 (Released June 2,, 2017).<br>
+			<i>Version 2.3.2 includes additional datasets interfaced to BRIDGES, support
+			for multilists, visualization enhancements, easier API access to visualization
+			attributes, and bug fixes.</i>
+			<p>Previous  version of BRIDGES is 2.3.1 (Released Feb 15, 2017).<br>
+				Version 2.3.1 contains new API based interfaces to IMDB data,
+				Shakespeare and Gutenberg book collection (meta data)
+				and visualization enhancements.
+			<p> Previous  version of BRIDGES is 2.3.0 (Released Jan 14, 2017).<br>				<i>Version 2.3.0 includes circular single and doubly linked
+				lists, improvements in visualizations of linked lists,
+				new datasets(see the link under Project Data on the left) that are directly accessible from the BRIDGES
+				API and updated BRIDGES tutorials.</i><p>
+			Previous Versions: 2.2.0 (Released July 20, 2016)<p>
+			<i><b>We are currently looking for external users to adopt BRIDGES in
+			their data structures/algorithms courses and provide feedback. Limited
+			stipends available for instructors who would like to partner with our
+			team and collect student feedback as part of the BRIDGES evaluation.</b></i>
+			</p>
+
+			<h3><u>Acknowledgements</u></h3>
+			The BRIDGES project is funded by a TUES grant from the
+			<a href = "www.nsf.gov">National Science Foundation</a>.<p>
+			<div class = "my_footer text-center">
+  			<p>All rights reserved, Copyright @2016, The University of North Carolina
+				at Charlotte</p>
+			</div>
+
+		</div>
+		<div class="col-md-3 sidenav">
+			<h3> <u>BRIDGES Examples</u> </h3>
+			<div class="Example 1"><p>
+				<b>Example 1.</b> A singly linked list using a reduced version of the
+				IMDB actor/movie dataset(Click on the image to see the live
+				visualization).<p>
+				<a href="http://bridges-cs.herokuapp.com/assignments/16/bridges_public" target="_blank"><img src="./img/list.png" alt="" style="float:left; margin: 0px 0px 5px 5px;width:100%;"/></a> <p>
+			</div>
+			<div class="Example2"> <p>
+				<b>Example 2.</b> Bacon Number and Path Computation using the IMDB
+				actor/movie dataset. Example illustrates the path between Kevin Bacon
+				and Denzel Washington (Click on the image to see the live visualization).
+				<p>
+				<a href= "http://bridges-cs.herokuapp.com/assignments/17/bridges_public"><img src="./img/graph2.png" alt="" style="float:left; margin: 0px 0px 5px 5px;width:100%;"/></a> <p>
+			<div class = "Example3">
+			<p> <b> Example 3.</b> A binary search tree built using earthquake magnitudes;
+				data from the USGIS earthquake feed(periodically retrieved and stored on
+				server, so as to always access the most recent quakes).  (Click on the
+				image to see the live visualization).<p>
+				<a href="http://bridges-cs.herokuapp.com/assignments/15/bridges_public
+"><img src="./img/tree.png" alt="" style="float:left; margin: 0px 0px 5px 5px;width:100%;"/></a>
+			</div>
+			<div class = "Example4">
+			<p> <b> Example 4.</b> Graph of earthquake data, clustered by
+					magnitude and colorcoded by quake magnitude.
+				.  (Click on the
+				image to see the live visualization).<p>
+				<a href="http://bridges-cs.herokuapp.com/assignments/19/bridges_public
+"><img src="./img/graph-eq-magn.png" alt="" style="float:left; margin: 0px 0px 5px 5px;width:100%;"/></a>
+			</div>
+			<div class = "Example5">
+			<p> <b> Example 5.</b> Graph of IMDB actor/movie data, clustered by
+					genre and colorcoded by movie ratings.
+				.  (Click on the
+				image to see the live visualization).<p>
+				<a href="http://bridges-cs.herokuapp.com/assignments/20/bridges_public
+"><img src="./img/graph-imdb-genre.png" alt="" style="float:left; margin: 0px 0px 5px 5px;width:100%;"/></a>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<!--
+<div>
+<footer class="container-fluid text-center">
+  <p>All rights reserved, Copyright @2016, The University of North Carolina at Charlotte</p>
+</footer>
+</div>
+-->
+</body>
+</html>
