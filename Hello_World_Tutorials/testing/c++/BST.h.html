@@ -1,0 +1,259 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/graphics/bridges/bridgesUNCC/Hello_World_Tutorials/testing/c++/BST.h.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v6">
+<meta name="syntax" content="c">
+<meta name="settings" content="use_css,no_progress">
+<style type="text/css">
+<!--
+pre { font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+.Special { color: #c000c0; font-weight: bold; }
+.Type { color: #008000; text-decoration: underline; }
+.Statement { color: #008080; font-weight: bold; }
+.Constant { color: #0000c0; text-decoration: underline; }
+.PreProc { color: #c000c0; text-decoration: underline; }
+.Comment { color: #c00000; font-weight: bold; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<span class="Comment">// From the software distribution accompanying the textbook</span>
+<span class="Comment">// &quot;A Practical Introduction to Data Structures and Algorithm Analysis,</span>
+<span class="Comment">// Third Edition (C++)&quot; by Clifford A. Shaffer.</span>
+<span class="Comment">// Source code Copyright (C) 2007-2011 by Clifford A. Shaffer.</span>
+
+<span class="Comment">// This file includes all of the pieces of the BST implementation</span>
+
+<span class="Comment">// Include the node implementation</span>
+<span class="PreProc">#ifndef BST_H</span>
+
+<span class="PreProc">#define BST_H</span>
+
+<span class="PreProc">#include </span><span class="Constant">&quot;BSTElement.h&quot;</span>
+
+using namespace bridges;
+
+<span class="Comment">// Include the dictionary ADT</span>
+
+<span class="Comment">// Binary Search Tree implementation for the Dictionary ADT</span>
+template &lt;typename Key, typename E&gt;
+class BST {
+        <span class="Statement">private</span>:
+                BSTElement&lt;Key, E&gt;* root;  <span class="Comment">// Root of the BST</span>
+                <span class="Type">int</span> nodecount;         <span class="Comment">// Number of nodes in the BST</span>
+
+                <span class="Comment">// Private &quot;helper&quot; functions</span>
+                <span class="Type">void</span> clearhelp(BSTElement&lt;Key, E&gt;*);
+                BSTElement&lt;Key, E&gt;* inserthelp(BSTElement&lt;Key, E&gt;*, <span class="Type">const</span> Key&amp;, <span class="Type">const</span> E&amp;);
+                BSTElement&lt;Key, E&gt;* deletemin(BSTElement&lt;Key, E&gt;*);
+                BSTElement&lt;Key, E&gt;* getmin(BSTElement&lt;Key, E&gt;*);
+                BSTElement&lt;Key, E&gt;* removehelp(BSTElement&lt;Key, E&gt;*, <span class="Type">const</span> Key&amp;);
+                BSTElement&lt;Key, E&gt;* findhelp(BSTElement&lt;Key, E&gt;*, <span class="Type">const</span> Key&amp;) <span class="Type">const</span>;
+                <span class="Type">void</span> printhelp(BSTElement&lt;Key, E&gt;*, <span class="Type">int</span>) <span class="Type">const</span>;
+
+        <span class="Statement">public</span>:
+                BST() {
+                        root = <span class="Constant">NULL</span>;    <span class="Comment">// Constructor</span>
+                        nodecount = <span class="Constant">0</span>;
+                }
+                ~BST() {
+                        clearhelp(root);    <span class="Comment">// Destructor</span>
+                }
+
+                <span class="Type">void</span> clear() { <span class="Comment">// Reinitialize tree</span>
+                        clearhelp(root);
+                        root = <span class="Constant">NULL</span>;
+                        nodecount = <span class="Constant">0</span>;
+                }
+
+                BSTElement&lt;Key, E&gt; *getRoot() {
+                        <span class="Statement">return</span> root;
+                }
+
+                <span class="Comment">// Insert a record into the tree.</span>
+                <span class="Comment">// k Key value of the record.</span>
+                <span class="Comment">// e The record to insert.</span>
+                <span class="Type">void</span> insert(<span class="Type">const</span> Key&amp; k, <span class="Type">const</span> E&amp; e) {
+                        root = inserthelp(root, k, e);
+                        nodecount++;
+                }
+
+                <span class="Comment">// Remove a record from the tree.</span>
+                <span class="Comment">// k Key value of record to remove.</span>
+                <span class="Comment">// Return: The record removed, or NULL if there is none.</span>
+                BSTElement&lt;Key, E&gt;* remove(<span class="Type">const</span> Key&amp; k) {
+                        BSTElement&lt;Key, E&gt;* temp = findhelp(root, k);  <span class="Comment">// First find it</span>
+                        <span class="Statement">if</span> (temp != <span class="Constant">NULL</span>) {
+                                root = removehelp(root, k);
+                                nodecount--;
+                        }
+                        <span class="Statement">return</span> temp;
+                }
+                <span class="Comment">// Remove and return the root node from the dictionary.</span>
+                <span class="Comment">// Return: The record removed, null if tree is empty.</span>
+                E removeAny() {  <span class="Comment">// Delete min value</span>
+                        <span class="Statement">if</span> (root != <span class="Constant">NULL</span>) {
+                                E temp = root-&gt;getValue();
+                                root = removehelp(root, root-&gt;getKey());
+                                nodecount--;
+                                <span class="Statement">return</span> temp;
+                        }
+                        <span class="Statement">else</span>
+                                <span class="Statement">return</span> <span class="Constant">NULL</span>;
+                }
+
+                <span class="Comment">// Return Record with key value k, NULL if none exist.</span>
+                <span class="Comment">// k: The key value to find. */</span>
+                <span class="Comment">// Return some record matching &quot;k&quot;.</span>
+                <span class="Comment">// Return true if such exists, false otherwise. If</span>
+                <span class="Comment">// multiple records match &quot;k&quot;, return an arbitrary one.</span>
+                BSTElement&lt;Key, E&gt;* find(<span class="Type">const</span> Key&amp; k) <span class="Type">const</span> {
+                        <span class="Statement">return</span> findhelp(root, k);
+                }
+
+                <span class="Comment">// Return the number of records in the dictionary.</span>
+                <span class="Type">int</span> size() {
+                        <span class="Statement">return</span> nodecount;
+                }
+
+                <span class="Type">void</span> print() <span class="Type">const</span> { <span class="Comment">// Print the contents of the BST</span>
+                        <span class="Statement">if</span> (root == <span class="Constant">NULL</span>)
+                                cout &lt;&lt; <span class="Constant">&quot;The BST is empty.</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+                        <span class="Statement">else</span>
+                                printhelp(root, <span class="Constant">0</span>);
+                }
+
+                <span class="Type">void</span> setProperties(BSTElement&lt;Key, E&gt;* root) <span class="Type">const</span> {
+                        <span class="Statement">if</span> (root == <span class="Constant">NULL</span>)
+                                <span class="Statement">return</span>;           <span class="Comment">// Empty tree</span>
+                        root-&gt;setLabel(root-&gt;getValue().getTitle() + <span class="Constant">&quot;</span><span class="Special">\n\n</span><span class="Constant">&quot;</span> + root-&gt;getValue().getDateStr());
+                        <span class="Statement">if</span> (root-&gt;getLeft()) {<span class="Comment">// non empty left child</span>
+                                root-&gt;getLinkVisualizer(root-&gt;getLeft())-&gt;setThickness(<span class="Constant">5.0</span>);
+                                root-&gt;getLinkVisualizer(root-&gt;getLeft())-&gt;setColor(Color(<span class="Constant">&quot;red&quot;</span>));
+                        }
+                        <span class="Statement">if</span> (root-&gt;getRight()) {<span class="Comment">// non empty left child</span>
+                                root-&gt;getLinkVisualizer(root-&gt;getRight())-&gt;setThickness(<span class="Constant">5.0</span>);
+                                root-&gt;getLinkVisualizer(root-&gt;getRight())-&gt;setColor(Color(<span class="Constant">&quot;red&quot;</span>));
+                        }
+                        setProperties(root-&gt;getLeft());   <span class="Comment">// Do left subtree</span>
+                        setProperties(root-&gt;getRight());   <span class="Comment">// Do left subtree</span>
+                }
+
+};
+
+<span class="Comment">// Clean up BST by releasing space back free store</span>
+template &lt;typename Key, typename E&gt;
+<span class="Type">void</span> BST&lt;Key, E&gt;::
+clearhelp(BSTElement&lt;Key, E&gt;* root) {
+        <span class="Statement">if</span> (root == <span class="Constant">NULL</span>)
+                <span class="Statement">return</span>;
+        clearhelp(root-&gt;getLeft());
+        clearhelp(root-&gt;getRight());
+        delete root;
+}
+
+<span class="Comment">// Insert a node into the BST, returning the updated tree</span>
+template &lt;typename Key, typename E&gt;
+BSTElement&lt;Key, E&gt;* BST&lt;Key, E&gt;::inserthelp(BSTElement&lt;Key, E&gt;* root, <span class="Type">const</span> Key&amp; k, <span class="Type">const</span> E&amp; it) {
+        <span class="Statement">if</span> (root == <span class="Constant">NULL</span>) {  <span class="Comment">// Empty tree: create node</span>
+
+                BSTElement&lt;Key, E&gt; *el = new BSTElement&lt;Key, E&gt;(k, it);
+                el-&gt;setLabel(el-&gt;getValue().getTitle() + <span class="Constant">&quot; </span><span class="Special">\\</span><span class="Constant">n &quot;</span> + el-&gt;getValue().getDateStr());
+                <span class="Statement">return</span> el;
+        }
+        <span class="Statement">if</span> (k &lt; root-&gt;getKey())
+                root-&gt;setLeft(inserthelp(root-&gt;getLeft(), k, it));
+        <span class="Statement">else</span>
+                root-&gt;setRight(inserthelp(root-&gt;getRight(), k, it));
+
+        <span class="Statement">return</span> root;       <span class="Comment">// Return tree with node inserted</span>
+}
+
+<span class="Comment">// Delete the minimum value from the BST, returning the revised BST</span>
+template &lt;typename Key, typename E&gt;
+BSTElement&lt;Key, E&gt;* BST&lt;Key, E&gt;::
+getmin(BSTElement&lt;Key, E&gt;* rt) {
+        <span class="Statement">if</span> (rt-&gt;getLeft() == <span class="Constant">NULL</span>)
+                <span class="Statement">return</span> rt;
+        <span class="Statement">else</span>
+                <span class="Statement">return</span> getmin(rt-&gt;getLeft());
+}
+template &lt;typename Key, typename E&gt;
+BSTElement&lt;Key, E&gt;* BST&lt;Key, E&gt;::
+deletemin(BSTElement&lt;Key, E&gt;* rt) {
+        <span class="Statement">if</span> (rt-&gt;getLeft() == <span class="Constant">NULL</span>) <span class="Comment">// Found min</span>
+                <span class="Statement">return</span> rt-&gt;getRight();
+        <span class="Statement">else</span> {                      <span class="Comment">// Continue left</span>
+                rt-&gt;setLeft(deletemin(rt-&gt;getLeft()));
+                <span class="Statement">return</span> rt;
+        }
+}
+
+<span class="Comment">// Remove a node with key value k</span>
+<span class="Comment">// Return: The tree with the node removed</span>
+template &lt;typename Key, typename E&gt;
+BSTElement&lt;Key, E&gt;* BST&lt;Key, E&gt;::
+removehelp(BSTElement&lt;Key, E&gt;* rt, <span class="Type">const</span> Key&amp; k) {
+        <span class="Statement">if</span> (rt == <span class="Constant">NULL</span>)
+                <span class="Statement">return</span> <span class="Constant">NULL</span>;    <span class="Comment">// k is not in tree</span>
+        <span class="Statement">else</span> <span class="Statement">if</span> (k &lt; rt-&gt;getKey())
+                rt-&gt;setLeft(removehelp(rt-&gt;getLeft(), k));
+        <span class="Statement">else</span> <span class="Statement">if</span> (k &gt; rt-&gt;getKey())
+                rt-&gt;setRight(removehelp(rt-&gt;getRight(), k));
+        <span class="Statement">else</span> {                            <span class="Comment">// Found: remove it</span>
+                BSTElement&lt;Key, E&gt;* temp = rt;
+                <span class="Statement">if</span> (rt-&gt;getLeft() == <span class="Constant">NULL</span>) {     <span class="Comment">// Only a right child</span>
+                        rt = rt-&gt;getRight();         <span class="Comment">//  so point to right</span>
+                        delete temp;
+                }
+                <span class="Statement">else</span> <span class="Statement">if</span> (rt-&gt;getRight() == <span class="Constant">NULL</span>) { <span class="Comment">// Only a left child</span>
+                        rt = rt-&gt;getLeft();          <span class="Comment">//  so point to left</span>
+                        delete temp;
+                }
+                <span class="Statement">else</span> {                    <span class="Comment">// Both children are non-empty</span>
+                        BSTElement&lt;Key, E&gt;* temp = getmin(rt-&gt;getRight());
+                        rt-&gt;setElement(temp-&gt;getValue());
+                        rt-&gt;setKey(temp-&gt;getKey());
+                        rt-&gt;setRight(deletemin(rt-&gt;getRight()));
+                        delete temp;
+                }
+        }
+        <span class="Statement">return</span> rt;
+}
+
+<span class="Comment">// Find a node with the given key value</span>
+template &lt;typename Key, typename E&gt;
+BSTElement&lt;Key, E&gt; *BST&lt;Key, E&gt;::findhelp(BSTElement&lt;Key, E&gt;* root,
+        <span class="Type">const</span> Key&amp; k) <span class="Type">const</span> {
+        <span class="Statement">if</span> (root == <span class="Constant">NULL</span>)
+                <span class="Statement">return</span> <span class="Constant">NULL</span>;          <span class="Comment">// Empty tree</span>
+        <span class="Statement">if</span> (k &lt; root-&gt;getKey())
+                <span class="Statement">return</span> findhelp(root-&gt;getLeft(), k);   <span class="Comment">// Check left</span>
+        <span class="Statement">else</span> <span class="Statement">if</span> (k &gt; root-&gt;getKey())
+                <span class="Statement">return</span> findhelp(root-&gt;getRight(), k);  <span class="Comment">// Check right</span>
+        <span class="Statement">else</span>
+                <span class="Statement">return</span> root;  <span class="Comment">// Found it</span>
+}
+
+<span class="Comment">// Print out a BST</span>
+template &lt;typename Key, typename E&gt;
+<span class="Type">void</span> BST&lt;Key, E&gt;::
+printhelp(BSTElement&lt;Key, E&gt;* root, <span class="Type">int</span> level) <span class="Type">const</span> {
+        <span class="Statement">if</span> (root == <span class="Constant">NULL</span>)
+                <span class="Statement">return</span>;           <span class="Comment">// Empty tree</span>
+        printhelp(root-&gt;getLeft(), level + <span class="Constant">1</span>); <span class="Comment">// Do left subtree</span>
+        <span class="Statement">for</span> (<span class="Type">int</span> i = <span class="Constant">0</span>; i &lt; level; i++)     <span class="Comment">// Indent to level</span>
+                cout &lt;&lt; <span class="Constant">&quot;  &quot;</span>;
+        cout &lt;&lt; root-&gt;getKey() &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;        <span class="Comment">// Print node value</span>
+        printhelp(root-&gt;getRight(), level + <span class="Constant">1</span>); <span class="Comment">// Do right subtree</span>
+}
+
+<span class="PreProc">#endif</span>
+</pre>
+</body>
+</html>

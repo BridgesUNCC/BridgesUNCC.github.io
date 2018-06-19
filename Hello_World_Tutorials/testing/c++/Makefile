@@ -1,5 +1,17 @@
 
+#
+#Platform specific variables
+#
 CC = clang++
+HOME = /Users/krs
+BRIDGES_INCL = $(HOME)/gr/bridges/bridges17/cxx/src
+CURL_INCL = /usr/local/curl760/include
+CURL_LIB_PATH = /usr/local/curl760/lib
+CURL_LIB = curl
+RAPID_JSON_INCL = /usr/local/rapidjson/include
+
+#
+#
 
 ASTYLE = astyle
 ASTYLE_PARAMS = -A2 -T4 -xn -xc -xV -C -S -N -xU  -Y -p -xg -H -y -xb
@@ -35,20 +47,17 @@ STYLE_INCLUDES = BST.h StudentInfo.h
 
 # Incude and Library paths
 
-BRIDGES_INCL = /Users/kalpathi/gr/bridges/client/cxx/bridges17/src
-CURL_LIB_PATH = /usr/local/curl758/lib
 
 
 # Include and library flags
 
-IFLAGS = -I$(BRIDGES_INCL)  -I/usr/local/curl758/include  \
-					-I/usr/local/rapidjson/include
+IFLAGS = -I$(BRIDGES_INCL)  -I$(CURL_INCL)  -I$(RAPID_JSON_INCL)
 LDFLAGS =  -L$(CURL_LIB_PATH)
 CPPFLAGS = -c -g $(IFLAGS) -std=c++11 -stdlib=libc++
 
 # Libraries
 
-LIBS =  -lcurl
+LIBS = -l$(CURL_LIB)
 
 .SUFFIXES: .cpp
 
@@ -130,7 +139,6 @@ circ_dllist: circ_dllist.o
 
 graph_amatrix: graph_amatrix.o
 	$(CC) -g -o graph_amatrix graph_amatrix.o $(LDFLAGS) $(LIBS)
-
 
 clean:
 	rm $(OBJS)  $(EXECUTABLES)

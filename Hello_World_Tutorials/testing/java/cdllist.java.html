@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/graphics/bridges/bridgesUNCC/Hello_World_Tutorials/testing/java/cdllist.java.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v6">
+<meta name="syntax" content="c">
+<meta name="settings" content="use_css,no_progress">
+<style type="text/css">
+<!--
+pre { font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+.Statement { color: #008080; font-weight: bold; }
+.Comment { color: #c00000; font-weight: bold; }
+.Constant { color: #0000c0; text-decoration: underline; }
+.Type { color: #008000; text-decoration: underline; }
+-->
+</style>
+</head>
+<body>
+<pre>
+import bridges.base.CircDLelement;
+import bridges.connect.Bridges;
+
+public class cdllist {
+
+        public <span class="Type">static</span> <span class="Type">void</span> main(String[] args) throws Exception {
+
+                Bridges bridges = new Bridges(<span class="Constant">6</span>, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+                StudentInfo[] students = {
+                        new StudentInfo(
+                                <span class="Constant">&quot;00000000000&quot;</span>,
+                                <span class="Constant">&quot;Gretel Chaney&quot;</span>,
+                                <span class="Constant">&quot;CS&quot;</span>,
+                                <span class="Constant">&quot;g.chaney@generated.com&quot;</span>,
+                                <span class="Constant">&quot;magenta&quot;</span>,
+                                <span class="Constant">&quot;blue&quot;</span>,
+                                <span class="Constant">9.0</span>
+                        ),
+                        new StudentInfo(
+                                <span class="Constant">&quot;00000000001&quot;</span>,
+                                <span class="Constant">&quot;Karol Soderman&quot;</span>,
+                                <span class="Constant">&quot;SIS&quot;</span>,
+                                <span class="Constant">&quot;k.soderman@generated.com&quot;</span>,
+                                <span class="Constant">&quot;magenta&quot;</span>,
+                                <span class="Constant">&quot;red&quot;</span>,
+                                <span class="Constant">11.0</span>
+                        ),
+                        new StudentInfo(
+                                <span class="Constant">&quot;00000000002&quot;</span>,
+                                <span class="Constant">&quot;Lamont Kyler&quot;</span>,
+                                <span class="Constant">&quot;BIO&quot;</span>,
+                                <span class="Constant">&quot;l.kyler@generated.com&quot;</span>,
+                                <span class="Constant">&quot;yellow&quot;</span>,
+                                <span class="Constant">&quot;green&quot;</span>,
+                                <span class="Constant">12.0</span>
+                        ),
+                        new StudentInfo(
+                                <span class="Constant">&quot;00000000003&quot;</span>,
+                                <span class="Constant">&quot;Gladys Serino&quot;</span>,
+                                <span class="Constant">&quot;CS&quot;</span>, <span class="Constant">&quot;g.serino@generated.com&quot;</span>,
+                                <span class="Constant">&quot;blue&quot;</span>,
+                                <span class="Constant">&quot;magenta&quot;</span>,
+                                <span class="Constant">9.0</span>
+                        ),
+                        new StudentInfo(<span class="Constant">&quot;00000000004&quot;</span>,
+                                <span class="Constant">&quot;Starr Mcginn&quot;</span>,
+                                <span class="Constant">&quot;CS&quot;</span>,
+                                <span class="Constant">&quot;s.mcginn@generated.com&quot;</span>,
+                                <span class="Constant">&quot;red&quot;</span>,
+                                <span class="Constant">&quot;yellow&quot;</span>,
+                                <span class="Constant">15.0</span>)
+                };
+
+                <span class="Comment">//initializing all student elements</span>
+                CircDLelement&lt;StudentInfo&gt; head = null;
+
+                <span class="Statement">for</span> (<span class="Type">int</span> i = <span class="Constant">0</span>; i &lt; students.length; i++) {
+                        <span class="Statement">if</span> (i &gt; <span class="Constant">0</span>)
+                                head = insertFront(head, new CircDLelement&lt;StudentInfo&gt;(<span class="Constant">&quot;&quot;</span>, students[i]));
+                        <span class="Statement">else</span>
+                                head = new CircDLelement&lt;StudentInfo&gt;(<span class="Constant">&quot;&quot;</span>, students[i]);
+                }
+
+                CircDLelement&lt;StudentInfo&gt; current = head;
+                <span class="Comment">// add visual attributes</span>
+                <span class="Statement">do</span> {
+                        current.setLabel(current.getValue().getStudentLabel());
+                        current.getVisualizer().setColor(current.getValue().getFavoriteColor());
+
+                        current.getLinkVisualizer(current.getNext()).setColor(current.getValue().getDislikeColor());
+                        current.getLinkVisualizer(current.getNext()).setThickness(current.getValue().getStudentCreditHours() * <span class="Constant">.2</span>);
+
+                        current.getLinkVisualizer(current.getPrev()).setColor(current.getValue().getDislikeColor());
+                        current.getLinkVisualizer(current.getPrev()).setThickness(current.getValue().getStudentCreditHours() * <span class="Constant">.2</span>);
+
+                        current = current.getNext();
+                }       <span class="Statement">while</span> (current != head);
+
+                bridges.setDataStructure(head);
+
+                bridges.visualize();
+        }
+
+        public <span class="Type">static</span> CircDLelement&lt;StudentInfo&gt; insertFront(
+                CircDLelement&lt;StudentInfo&gt; tailElement,
+                CircDLelement&lt;StudentInfo&gt; newElement) {
+                CircDLelement&lt;StudentInfo&gt; tailNextElement = tailElement.getNext();
+
+                newElement.setNext(tailNextElement);
+                newElement.setPrev(tailElement);
+
+                tailNextElement.setPrev(newElement);
+                tailElement.setNext(newElement);
+
+                <span class="Statement">return</span> tailElement;
+        }
+}
+</pre>
+</body>
+</html>

@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.lang.String;
 import bridges.base.Element;
 import bridges.base.SLelement;
-import bridges.base.GraphAdjList;
+import bridges.base.GraphAdjListSimple;
 import bridges.base.Edge;
 import bridges.connect.Bridges;
 import bridges.data_src_dependent.ActorMovieIMDB;
@@ -11,8 +11,7 @@ public class graph_al {
 	public static void main(String[] args) throws Exception {
 
 					// initialize Bridges
-//		Bridges bridges = new Bridges(11, "486749122386", "kalpathi60");
-		Bridges bridges = new Bridges(11, "997924677918", "bridges_public");
+		Bridges bridges = new Bridges(11, "YOUR_USER_ID", "YOUR_API_KEY");
 
 					// set a title for the visualization
 		bridges.setTitle("A Simple Graph Example using IMDB Actor/Movie Data");
@@ -21,7 +20,7 @@ public class graph_al {
 				(ArrayList<ActorMovieIMDB>) bridges.getActorMovieIMDBData("IMDB", 1800);
 
 					// create an adjacency list based graph
-		GraphAdjList<String, String> g = new GraphAdjList<String, String>();
+		GraphAdjListSimple<String> g = new GraphAdjListSimple<String>();
 
 					// first create vertices for two actors and add them to the graph
 		String a1 = "Kevin_Bacon_(I)", a2 = "Denzel_Washington";
@@ -74,9 +73,9 @@ public class graph_al {
 				// movie nodes adjacent to the Kevin Bacon node.
 	
 				// first get the adjacency list for Kevin Bacon
-		SLelement<Edge<String>>  head = g.getAdjacencyList().get("Kevin_Bacon_(I)");
+		SLelement<Edge<String, String>>  head = g.getAdjacencyList().get("Kevin_Bacon_(I)");
 				// traverse the adjacency list
-		for (SLelement<Edge<String>> sle = head; sle != null; sle = sle.getNext() ) {
+		for (SLelement<Edge<String, String>> sle = head; sle != null; sle = sle.getNext() ) {
 					// get the terminating vertex
 			String term_vertex = sle.getValue().getVertex();
 					// find the corresponding element

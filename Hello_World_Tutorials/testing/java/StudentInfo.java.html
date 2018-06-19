@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/graphics/bridges/bridgesUNCC/Hello_World_Tutorials/testing/java/StudentInfo.java.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v6">
+<meta name="syntax" content="c">
+<meta name="settings" content="use_css,no_progress">
+<style type="text/css">
+<!--
+pre { font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+.Special { color: #c000c0; font-weight: bold; }
+.Constant { color: #0000c0; text-decoration: underline; }
+.Comment { color: #c00000; font-weight: bold; }
+.Type { color: #008000; text-decoration: underline; }
+.Statement { color: #008080; font-weight: bold; }
+-->
+</style>
+</head>
+<body>
+<pre>
+public class StudentInfo {
+        private String studentID,
+                        fullName,
+                        program,
+                        email,
+                        dislikeColor,
+                        favoriteColor;
+
+        private boolean visited;
+
+        public boolean isVisited() {
+                <span class="Statement">return</span> visited;
+        }
+
+        public <span class="Type">void</span> setVisited(boolean visited) {
+                this.visited = visited;
+        }
+
+        private <span class="Type">double</span> studentCreditHours;
+
+        <span class="Comment">/*</span><span class="Comment">*</span>
+<span class="Comment">         * @param studentID</span>
+<span class="Comment">         * @param fullName</span>
+<span class="Comment">         * @param program</span>
+<span class="Comment">         * @param email</span>
+<span class="Comment">         </span><span class="Comment">*/</span>
+        public StudentInfo(String studentID,
+                                   String fullName,
+                                   String program,
+                                   String email,
+                                   String dislikeColor,
+                                   String favoriteColor,
+                                   <span class="Type">double</span> studentCreditHours) {
+                this.studentID = studentID;
+                this.fullName = fullName;
+                this.program = program;
+                this.email = email;
+                this.dislikeColor = dislikeColor;
+                this.favoriteColor = favoriteColor;
+                this.studentCreditHours = studentCreditHours;
+        }
+
+        <span class="Comment">/*</span><span class="Comment">*</span>
+<span class="Comment">         * @return studentID</span>
+<span class="Comment">         </span><span class="Comment">*/</span>
+        public String getStudentID() {
+                <span class="Statement">return</span> studentID;
+        }
+
+        <span class="Comment">/*</span><span class="Comment">*</span>
+<span class="Comment">         * @param studentID</span>
+<span class="Comment">         </span><span class="Comment">*/</span>
+        public <span class="Type">void</span> setStudentID(String studentID) {
+                this.studentID = studentID;
+        }
+
+        <span class="Comment">/*</span><span class="Comment">*</span>
+<span class="Comment">         * @return fullName</span>
+<span class="Comment">         </span><span class="Comment">*/</span>
+        public String getFullName() {
+                <span class="Statement">return</span> fullName;
+        }
+
+        <span class="Comment">/*</span><span class="Comment">*</span>
+<span class="Comment">         * @param fullName</span>
+<span class="Comment">         </span><span class="Comment">*/</span>
+        public <span class="Type">void</span> setFullName(String fullName) {
+                this.fullName = fullName;
+        }
+
+        <span class="Comment">/*</span><span class="Comment">*</span>
+<span class="Comment">         * @return program</span>
+<span class="Comment">         </span><span class="Comment">*/</span>
+        public String getProgram() {
+                <span class="Statement">return</span> program;
+        }
+
+        <span class="Comment">/*</span><span class="Comment">*</span>
+<span class="Comment">         * @param program</span>
+<span class="Comment">         </span><span class="Comment">*/</span>
+        public <span class="Type">void</span> setProgram(String program) {
+                this.program = program;
+        }
+
+        <span class="Comment">/*</span><span class="Comment">*</span>
+<span class="Comment">         * @return email</span>
+<span class="Comment">         </span><span class="Comment">*/</span>
+        public String getEmail() {
+                <span class="Statement">return</span> email;
+        }
+
+        <span class="Comment">/*</span><span class="Comment">*</span>
+<span class="Comment">         * @param email</span>
+<span class="Comment">         </span><span class="Comment">*/</span>
+        public <span class="Type">void</span> setEmail(String email) {
+                this.email = email;
+        }
+
+
+        <span class="Comment">/*</span><span class="Comment">*</span>
+<span class="Comment">         * @return favoriteColor</span>
+<span class="Comment">         </span><span class="Comment">*/</span>
+        public String getFavoriteColor() {
+                <span class="Statement">return</span> favoriteColor;
+        }
+
+        <span class="Comment">/*</span><span class="Comment">*</span>
+<span class="Comment">         * @param favoriteColor</span>
+<span class="Comment">         </span><span class="Comment">*/</span>
+        public <span class="Type">void</span> setFavoriteColor(String favoriteColor) {
+                this.favoriteColor = favoriteColor;
+        }
+
+
+        public String getDislikeColor() {
+                <span class="Statement">return</span> dislikeColor;
+        }
+
+        public <span class="Type">void</span> setDislikeColor(String dislikeColor) {
+                this.dislikeColor = dislikeColor;
+        }
+
+        public <span class="Type">double</span> getStudentCreditHours() {
+                <span class="Statement">return</span> studentCreditHours;
+        }
+
+        public <span class="Type">void</span> setStudentCreditHours(<span class="Type">double</span> studentCreditHours) {
+                this.studentCreditHours = studentCreditHours;
+        }
+
+        public String getStudentLabel() {
+                String label =
+                                               fullName      +  <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>   +
+                <span class="Constant">&quot;Email: &quot;</span> +                    email         +  <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>   +
+                <span class="Constant">&quot;Program: &quot;</span> +                    program       +  <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>   +
+                <span class="Constant">&quot;Student ID: &quot;</span> +                 studentID     +  <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>   +
+                <span class="Constant">&quot;Favorite Color: &quot;</span> + favoriteColor +  <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+
+                <span class="Statement">return</span> label;
+        }
+}
+</pre>
+</body>
+</html>

@@ -3,37 +3,38 @@ import bridges.base.Array;
 import bridges.base.Element;
 
 public class arr3d {
-	public static void main(String[] args) throws Exception{
+	public static void main(String[] args) throws Exception {
 
-							//create the Bridges object
+		//create the Bridges object
 
-		Bridges bridges = new Bridges (0, "486749122386", "kalpathi60");
-						// specify array dimensions and create 3D array
-		int[] dims = {4, 4, 4};
-		Array<Integer> my_array = new Array<Integer> (3, dims);
+		Bridges bridges = new Bridges (2, "YOUR_USER_ID", "YOUR_API_KEY");
 
-						// populate the elements with their array position
+		// specify array dimensions and create 3D array
+		int num_slices = 4, num_rows = 4, num_cols = 4;
+		Array<Integer> my_array = new Array<Integer> (num_slices, num_rows, num_cols);
+
+		// populate the elements with their array position
 		int n  = 0;
-		for (int k = 0; k < dims[0]; k++) {
-			for (int j = 0; j < dims[1]; j++) {
-				for (int i = 0; i < dims[2]; i++) {
-					my_array.getValue(i, j, k).setLabel("El "+String.valueOf(n));
+		for (int k = 0; k < num_slices; k++) {
+			for (int j = 0; j < num_rows; j++) {
+				for (int i = 0; i < num_cols; i++) {
+					my_array.getElement(i, j, k).setLabel("El " + String.valueOf(n));
 					n++;
 				}
 			}
 		}
-					 	// color some of the elements
-		my_array.getValue(0, 0, 0).getVisualizer().setColor("red");
-		my_array.getValue(0, 3, 0).getVisualizer().setColor("green");
-		my_array.getValue(3, 0, 0).getVisualizer().setColor("blue");
-		my_array.getValue(3, 3, 0).getVisualizer().setColor("magenta");
-		my_array.getValue(1, 1, 0).getVisualizer().setColor("cyan");
-		my_array.getValue(2, 2, 0).getVisualizer().setColor("yellow");
+		// color some of the elements
+		my_array.getElement(0, 0, 0).getVisualizer().setColor("red");
+		my_array.getElement(0, 3, 0).getVisualizer().setColor("green");
+		my_array.getElement(3, 0, 0).getVisualizer().setColor("blue");
+		my_array.getElement(3, 3, 0).getVisualizer().setColor("magenta");
+		my_array.getElement(1, 1, 0).getVisualizer().setColor("cyan");
+		my_array.getElement(2, 2, 0).getVisualizer().setColor("yellow");
 
-						//set visualizer type
+		//set visualizer type
 		bridges.setDataStructure(my_array);
 
-						// visualize the list
+		// visualize the list
 		bridges.visualize();
 	}
 }

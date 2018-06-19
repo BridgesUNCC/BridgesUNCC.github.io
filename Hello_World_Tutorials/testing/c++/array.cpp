@@ -5,12 +5,11 @@ using namespace bridges;
 
 int main() {
 
-	Bridges::initialize(0, "kalpathi60", "486749122386");
+	Bridges::initialize(0, "YOUR_USER_ID", "YOUR_API_KEY");
 
-	int dims[3] = {10, 1, 1};
-	Array<int> *arr = new Array<int>(1, dims);
+	Array<int> *arr = new Array<int>(10);
 
-	for (int j = 0; j < dims[0]; j++) {
+	for (int j = 0; j < 10; j++) {
 		arr->getElement(j).setValue(j * j);
 		arr->getElement(j).setLabel(to_string(arr->getElement(j).getValue()));
 	}

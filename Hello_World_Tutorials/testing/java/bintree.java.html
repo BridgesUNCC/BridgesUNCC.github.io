@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/graphics/bridges/bridgesUNCC/Hello_World_Tutorials/testing/java/bintree.java.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v6">
+<meta name="syntax" content="c">
+<meta name="settings" content="use_css,no_progress">
+<style type="text/css">
+<!--
+pre { font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+.Special { color: #c000c0; font-weight: bold; }
+.Constant { color: #0000c0; text-decoration: underline; }
+.Comment { color: #c00000; font-weight: bold; }
+.Type { color: #008000; text-decoration: underline; }
+-->
+</style>
+</head>
+<body>
+<pre>
+import bridges.connect.Bridges;
+import bridges.base.BinTreeElement;
+
+
+public class bintree {
+        public <span class="Type">static</span> <span class="Type">void</span> main(String[] args) throws Exception {
+
+                <span class="Comment">//create the Bridges object</span>
+                Bridges bridges = new Bridges(<span class="Constant">9</span>, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+                bridges.setTitle(<span class="Constant">&quot;A Huffman Coding Tree Example&quot;</span>);
+                bridges.setDescription(<span class="Constant">&quot;[Binary Tree Application]: Huffman tree coding the symbols C, D, E, K, L, M, U, Z with frequencies 32, 42, 120, 7, 42, 24, 37, 2&quot;</span>);
+                <span class="Comment">//create  an   tree</span>
+                BinTreeElement&lt;Integer&gt; t0 = new BinTreeElement&lt;Integer&gt;(<span class="Constant">&quot;306&quot;</span>, <span class="Constant">0</span>);
+                BinTreeElement&lt;Integer&gt; t1 = new BinTreeElement&lt;Integer&gt;(<span class="Constant">&quot;120</span><span class="Special">\\</span><span class="Constant">nE&quot;</span>, <span class="Constant">1</span>);
+                BinTreeElement&lt;Integer&gt; t2 = new BinTreeElement&lt;Integer&gt;(<span class="Constant">&quot;186&quot;</span>, <span class="Constant">2</span>);
+                BinTreeElement&lt;Integer&gt; t3 = new BinTreeElement&lt;Integer&gt;(<span class="Constant">&quot;79&quot;</span>, <span class="Constant">3</span>);
+                BinTreeElement&lt;Integer&gt; t4 = new BinTreeElement&lt;Integer&gt;(<span class="Constant">&quot;37</span><span class="Special">\\</span><span class="Constant">nU&quot;</span>, <span class="Constant">4</span>);
+                BinTreeElement&lt;Integer&gt; t5 = new BinTreeElement&lt;Integer&gt;(<span class="Constant">&quot;42</span><span class="Special">\\</span><span class="Constant">nD&quot;</span>, <span class="Constant">5</span>);
+                BinTreeElement&lt;Integer&gt; t6 = new BinTreeElement&lt;Integer&gt;(<span class="Constant">&quot;42</span><span class="Special">\\</span><span class="Constant">nL&quot;</span>, <span class="Constant">6</span>);
+                BinTreeElement&lt;Integer&gt; t7 = new BinTreeElement&lt;Integer&gt;(<span class="Constant">&quot;107&quot;</span>, <span class="Constant">7</span>);
+                BinTreeElement&lt;Integer&gt; t8 = new BinTreeElement&lt;Integer&gt;(<span class="Constant">&quot;65&quot;</span>, <span class="Constant">8</span>);
+                BinTreeElement&lt;Integer&gt; t9 = new BinTreeElement&lt;Integer&gt;(<span class="Constant">&quot;32</span><span class="Special">\\</span><span class="Constant">nC&quot;</span>, <span class="Constant">9</span>);
+                BinTreeElement&lt;Integer&gt; t10 = new BinTreeElement&lt;Integer&gt;(<span class="Constant">&quot;33&quot;</span>, <span class="Constant">10</span>);
+                BinTreeElement&lt;Integer&gt; t11 = new BinTreeElement&lt;Integer&gt;(<span class="Constant">&quot;9&quot;</span>, <span class="Constant">11</span>);
+                BinTreeElement&lt;Integer&gt; t12 = new BinTreeElement&lt;Integer&gt;(<span class="Constant">&quot;2</span><span class="Special">\\</span><span class="Constant">nZ&quot;</span>, <span class="Constant">12</span>);
+                BinTreeElement&lt;Integer&gt; t13 = new BinTreeElement&lt;Integer&gt;(<span class="Constant">&quot;7</span><span class="Special">\\</span><span class="Constant">nK&quot;</span>, <span class="Constant">13</span>);
+                BinTreeElement&lt;Integer&gt; t14 = new BinTreeElement&lt;Integer&gt;(<span class="Constant">&quot;24</span><span class="Special">\\</span><span class="Constant">nM&quot;</span>, <span class="Constant">14</span>);
+
+                t0.setLeft(t1);
+                t0.setRight(t2);
+                t2.setLeft(t3);
+                t2.setRight(t7);
+                t3.setLeft(t4);
+                t3.setRight(t5);
+                t7.setLeft(t6);
+                t7.setRight(t8);
+                t8.setLeft(t9);
+                t8.setRight(t10);
+                t10.setLeft(t11);
+                t10.setRight(t14);
+                t11.setLeft(t12);
+                t11.setRight(t13);
+
+                t0.getVisualizer().setColor(<span class="Constant">&quot;red&quot;</span>);
+                <span class="Comment">// color the leaf nodes that represent the code letters</span>
+                t1.getVisualizer().setColor(<span class="Constant">&quot;orange&quot;</span>);
+                t4.getVisualizer().setColor(<span class="Constant">&quot;orange&quot;</span>);
+                t5.getVisualizer().setColor(<span class="Constant">&quot;orange&quot;</span>);
+                t6.getVisualizer().setColor(<span class="Constant">&quot;orange&quot;</span>);
+                t9.getVisualizer().setColor(<span class="Constant">&quot;orange&quot;</span>);
+                t12.getVisualizer().setColor(<span class="Constant">&quot;orange&quot;</span>);
+                t13.getVisualizer().setColor(<span class="Constant">&quot;orange&quot;</span>);
+                t14.getVisualizer().setColor(<span class="Constant">&quot;orange&quot;</span>);
+
+                <span class="Comment">//set visualizer type</span>
+                bridges.setDataStructure(t0);
+                <span class="Comment">// visualize the tree</span>
+                bridges.visualize();
+        }
+}
+</pre>
+</body>
+</html>
