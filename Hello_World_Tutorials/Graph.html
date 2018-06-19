@@ -75,12 +75,16 @@ will display the subgraph making up the movies of two chosen actors, Kevin Bacon
 Washington. The example will illustrate how to build the graph from the dataset and illustrate
 traversing the adjacency lists.
 <div class="tabs">
-    <div onclick="displayCode('Java',this)">Java</div>
-    <div onclick="displayCode('C++',this)" >C++</div>
+   <div onclick="displayCode('Java-AdjList',this)">Java Adjacency List</div>
+   <div onclick="displayCode('C++-AdjList',this)">C++ Adjacency List</div>
+   <div onclick="displayCode('Java-AdjMatrix',this)">Java Adjacency Matrix</div>
+   <div onclick="displayCode('C++-AdjMatrix',this)">C++ Adjacency Matrix</div>
 </div>
 <div class="tabContents">
-    <div id="Java" w3-include-html="./Java_Graph_AL.html"></div>
-    <div id="C++"  w3-include-html="./Cpp_Graph_AL.html"></div>
+    <div id="Java-AdjList" w3-include-html="./Java_Graph_AL.html"></div>
+    <div id="C++-AdjList"  w3-include-html="./Cpp_Graph_AL.html"></div>
+	<div id="Java-AdjMatrix" w3-include-html="./Java_Graph_AM.html"></div>
+	<div id="C++-AdjMatrix"  w3-include-html="./Cpp_Graph_AM.html"></div>
 </div>
 
 <h3>Bridges Visualization</h3>
@@ -100,9 +104,15 @@ traversing the adjacency lists.
 <p>Well done! You’ve just created your Bridges Graph project!</p>
 
 <p>
-<b> Note that this example illustrates a Graph using Adjacency Lists; an
+<b> These examples show the use of graphs - both adjacency list and adjacency 
+matrix based representations. There are slight differences between the C++ and 
+Java Graph classes due to the initialization related issues. In C++, 
+templates can be intitialized with paramaters, while in Java this is not 
+permitted. Thus we derive simpler versions of the Graph classes 
+(GraphAdjListSimple and GraphAdjMatrixSimple); other than that the 
+calling sequences across both languages are almost identical.
 example using Adjacency Matrix (using Bridges::GraphAdjacencyMatrix) is
-nearly identical, by replacing the class name.</b>
+nearly identical.</b>
 </main>
 
 <footer w3-include-html="./Tutorial_Footer.html"></footer>

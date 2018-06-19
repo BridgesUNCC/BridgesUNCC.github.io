@@ -16,10 +16,8 @@ TARGET =  all
 
 SRCS = arr1d.java arr2d.java arr3d.java sllist.java dllist.java csllist.java \
 		cdllist.java  mllist.java tree.java bintree.java bst.java avl.java \
-		graph_alist.java graph_amatrix.java 
+		graph_al.java graph_am.java 
 
-
-OBJS = $(SRCS:.cpp=.o)
 
 EXECUTABLES = $(SRCS:.cpp=)
 
@@ -39,8 +37,8 @@ run:
 	java bintree;
 	java bst;
 	java avl;
-	java graph_alist;
-	java graph_amatrix;
+	java graph_al;
+	java graph_am;
 
 style:  
 	$(ASTYLE) $(ASTYLE_PARAMS)  $(SRCS) 
