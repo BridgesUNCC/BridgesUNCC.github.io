@@ -5,8 +5,7 @@ using namespace bridges;
 
 int main() {
 
-	Bridges::initialize(9, "kalpathi60", "486749122386"); 
-//	Bridges::initialize(9, "bridges_public", "997924677918"); 
+	Bridges::initialize(9, "kalpathi60", "486749122386");
 
 	Bridges::setTitle("A Huffman Coding Tree Example");
 	Bridges::setDescription("[Binary Tree Application]: Huffman tree coding the symbols C, D, E, K, L, M, U, Z with frequencies 32, 42, 120, 7, 42, 24, 37, 2");
@@ -45,7 +44,7 @@ int main() {
 
 
 	t0->getVisualizer()->setColor(Color("red"));
-				// color the leaf nodes that represent the code letters
+	// color the leaf nodes that represent the code letters
 	t1->getVisualizer()->setColor(Color("orange"));
 	t4->getVisualizer()->setColor(Color("orange"));
 	t5->getVisualizer()->setColor(Color("orange"));
@@ -55,7 +54,7 @@ int main() {
 	t13->getVisualizer()->setColor(Color("orange"));
 	t14->getVisualizer()->setColor(Color("orange"));
 
-					// provide BRIDGES the  handle to the tree structure
+	// provide BRIDGES the  handle to the tree structure
 	Bridges::setDataStructure(t0);
 
 	Bridges::visualize();

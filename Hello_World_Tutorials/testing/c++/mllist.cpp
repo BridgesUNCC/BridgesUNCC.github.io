@@ -5,27 +5,27 @@
 using namespace bridges;
 
 int main()  {
-    								//create the Bridges object
+	//create the Bridges object
 	Bridges::initialize(7, "kalpathi60", "486749122386");
 	Bridges::setTitle("A Trivial Multilist Example");
 
-    								//create  a linked list 
+	//create  a linked list
 
 	MLelement<int> *el0 = new MLelement<int>("0");
 	MLelement<int> *el1 = new MLelement<int>("1");
 	MLelement<int> *el2 = new MLelement<int>("2");
 	MLelement<int> *el3 = new MLelement<int>("3");
 	MLelement<int> *el4 = new MLelement<int>("4");
-		
+
 	el0->setNext(el1);
 	el1->setNext(el2);
 	el2->setNext(el3);
 	el3->setNext(el4);
-								// create a sublist from 2
+	// create a sublist from 2
 	MLelement<int> *el5 = new MLelement<int>("5");
 	MLelement<int> *el6 = new MLelement<int>("6");
 	MLelement<int> *el7 = new MLelement<int>("7");
-							
+
 	el5->setNext(el6);
 	el6->setNext(el7);
 
@@ -34,11 +34,11 @@ int main()  {
 	MLelement<int> *el8 = new MLelement<int>("8");
 	MLelement<int> *el9 = new MLelement<int>("9");
 
-							// create a second sublist from 3
+	// create a second sublist from 3
 	el8->setNext(el9);
 	el3->setSubList(el8);
 
-							// create a sublist from 5
+	// create a sublist from 5
 	MLelement<int> *el10 = new MLelement<int>("10");
 	MLelement<int> *el11 = new MLelement<int>("11");
 	el10->setNext(el11);
@@ -53,9 +53,9 @@ int main()  {
 	el2->getLinkVisualizer(el3)->setThickness(3);
 
 	el0->getVisualizer()->setColor(Color("red"));
-             						//set visualizer type
+	//set visualizer type
 	Bridges::setDataStructure(el0);
-        
-        							// visualize the list
+
+	// visualize the list
 	Bridges::visualize();
 }

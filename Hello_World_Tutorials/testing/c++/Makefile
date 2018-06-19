@@ -1,25 +1,53 @@
+
 CC = clang++
 
-TARGET =  graph_alist 
+ASTYLE = astyle
+ASTYLE_PARAMS = -A2 -T4 -xn -xc -xV -C -S -N -xU  -Y -p -xg -H -y -xb
+
+TARGET =  all
+
 
 SRCS = array.cpp array2d.cpp array3d.cpp sllist.cpp dllist.cpp circ_sllist.cpp \
-		circ_dllist.cpp  tree.cpp bintree.cpp bst.cpp avl.cpp \
+		circ_dllist.cpp  mllist.cpp tree.cpp bintree.cpp bst.cpp avl.cpp \
 		graph_alist.cpp graph_amatrix.cpp 
+
 
 OBJS = $(SRCS:.cpp=.o)
 
-EXE = $(SRCS:.cpp=)
+EXECUTABLES = $(SRCS:.cpp=)
 
-INCLUDES = Element.h SLelement.h DLelement.h BSTElement.h TreeElement.h\
-			ADTVisualizer.h ElementVisualizer.h	LinkVisualizer.h \
-			GraphList.h Edge.h	\
-			Bridges.h Connector.h Validation.h
+INCLUDES = 	DataStructure.h Array.h Element.h SLelement.h DLelement.h \
+			CircSLelement.h CircDLelement.h MLelement.h \
+			TreeElement.h BTElement.h BSTElement.h AVLTreeElement.h \
+			GraphAdjList.h GraphAdjMatrix.h \
+			ElementVisualizer.h	LinkVisualizer.h Color.h Edge.h base64.h\
+			Bridges.h Connector.h \
+			data_src/ActorMovieIMDB.h \
+			data_src/EarthquakeUSGS.h \
+			data_src/Book.h \
+			data_src/Game.h \
+			data_src/CancerIncidence.h \
+			data_src/GutenbergBook.h \
+			data_src/Shakespeare.h \
+			data_src/Song.h
 
-BRIDGES_INCL = /Users/kalpathi/gr/bridges/client/cxx/v23/src
-IFLAGS = -I$(BRIDGES_INCL)  -I/usr/local/curl750/include
+STYLE_INCLUDES = BST.h StudentInfo.h
+
+# Incude and Library paths
+
+BRIDGES_INCL = /Users/kalpathi/gr/bridges/client/cxx/bridges17/src
+CURL_LIB_PATH = /usr/local/curl758/lib
+
+
+# Include and library flags
+
+IFLAGS = -I$(BRIDGES_INCL)  -I/usr/local/curl758/include  \
+					-I/usr/local/rapidjson/include
+LDFLAGS =  -L$(CURL_LIB_PATH)
 CPPFLAGS = -c -g $(IFLAGS) -std=c++11 -stdlib=libc++
 
-LDFLAGS =  -L/usr/local/curl750/lib
+# Libraries
+
 LIBS =  -lcurl
 
 .SUFFIXES: .cpp
@@ -27,37 +55,36 @@ LIBS =  -lcurl
 .cpp.o:  
 	$(CC) $(CPPFLAGS)  $< -o $@
 
-TARGET : graph_alist
-
-all : tests
+all : $(EXECUTABLES)
 
 run:
-		array;
-		array2d;
-		array3d;
-		sllist;
-		dllist;
-		circ_sllist;
-		circ_dllist;
-		tree;
-		bintree;
-		bst;
-		avl;
-		graph_alist;
-		graph_amatrix;
+	array;
+	array2d;
+	array3d;
+	sllist;
+	dllist;
+	circ_sllist;
+	circ_dllist;
+	mllist;
+	tree;
+	bintree;
+	bst;
+	avl;
+	graph_alist;
+	graph_amatrix;
 
-tests : array array2d array3d sllist dllist circ_sllist circ_dllist tree  \
-			bintree bst avl graph_alist graph_amatrix \
-			imdbll bst_eq bn
+style:  
+	$(ASTYLE) $(ASTYLE_PARAMS)  $(SRCS) $(STYLE_INCLUDES)
 
-imdbll: 
-	cd ../CourseProjects/LinkedList_IMDB; make;
 
-bst_eq : 
-	cd ../with_data_src/bst_eq; make;
+to_html:
+	/bin/sh ./to_html_creds.sh
 
-bn : ../CourseProjects/Graph_Bacon_Number/bn.o
-	cd ../CourseProjects/Graph_Bacon_Number; make;
+to_srcs:
+	/bin/sh ./to_srcs.sh
+	
+	
+	
 
 array: array.o
 	$(CC) -g -o array array.o $(LDFLAGS) $(LIBS)
@@ -106,7 +133,7 @@ graph_amatrix: graph_amatrix.o
 
 
 clean:
-	rm $(OBJS)  $(EXE)
+	rm $(OBJS)  $(EXECUTABLES)
 
 depend: $(SRCS)
 	gcc -MD  $(IFLAGS) $(SRCS)
@@ -117,4 +144,3 @@ backup:
 
 
 # DO NOT DELETE
-

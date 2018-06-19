@@ -11,11 +11,11 @@ using namespace bridges;
 
 int main () {
 
-						// note: you must fill in with your Bridges credentials
-	Bridges::initialize(6, "kalpathi60", "486749122386");
+	// note: you must fill in with your Bridges credentials
+	Bridges::initialize(5, "kalpathi60", "486749122386");
 
-         					// create the linked list elements with 
-							// student data 
+	// create the linked list elements with
+	// student data
 	CircSLelement<StudentInfo> *students[] = {
 		new CircSLelement<StudentInfo>(
 			StudentInfo(
@@ -25,7 +25,7 @@ int main () {
 				"g.chaney@generated.com",
 				"magenta",
 				"blue",
-				 9.0
+				9.0
 			), ""),
 		new CircSLelement<StudentInfo>(
 			StudentInfo(
@@ -35,7 +35,7 @@ int main () {
 				"k.soderman@generated.com",
 				"magenta",
 				"red",
-				 11.0
+				11.0
 			), ""),
 		new CircSLelement<StudentInfo>(
 			StudentInfo(
@@ -45,7 +45,7 @@ int main () {
 				"l.kyler@generated.com",
 				"yellow",
 				"green",
-				 12.0
+				12.0
 			), ""),
 		new CircSLelement<StudentInfo>(
 			StudentInfo(
@@ -55,7 +55,7 @@ int main () {
 				"g.serino@generated.com",
 				"green",
 				"magenta",
-				 9.0
+				9.0
 			), ""),
 		new CircSLelement<StudentInfo>(
 			StudentInfo(
@@ -65,36 +65,36 @@ int main () {
 				"s.mcginn@generated.com",
 				"red",
 				"cyan",
-				 15.0
-			), "") 
-		};
+				15.0
+			), "")
+	};
 
 	CircSLelement<StudentInfo> *head =  students[0];
 	CircSLelement<StudentInfo> *current =  head;
 
 	int num_students = 5;
-	for(int i = 1; i < num_students; i++) {
+	for (int i = 1; i < num_students; i++) {
 		current->setNext(students[i]);
 		current = current->getNext();
 	}
-						//  point the last element to the first element,
+	//  point the last element to the first element,
 	current->setNext(head);
 
-       					//  add visual attributes
+	//  add visual attributes
 	current = head;
 	do {
 		current->setLabel(current->getValue().getStudentLabel());
 		current->getVisualizer()->setColor(current->getValue().getFavoriteColor());
-		
+
 		current->getLinkVisualizer(current->getNext())->setColor(current->getValue().getDislikeColor());
-		current->getLinkVisualizer(current->getNext())->setThickness(current->getValue().getStudentCreditHours()*0.5);
-		
+		current->getLinkVisualizer(current->getNext())->setThickness(current->getValue().getStudentCreditHours() * 0.5);
+
 		current = current->getNext();
-	}   while(current!= head);
+	}   while (current != head);
 
 
-						// set data structure to point to head
+	// set data structure to point to head
 	Bridges::setDataStructure(head);
-						// visualize the circular list
+	// visualize the circular list
 	Bridges::visualize();
 }

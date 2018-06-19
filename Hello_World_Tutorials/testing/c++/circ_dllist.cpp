@@ -10,18 +10,18 @@
 
 using namespace bridges;
 
-							// helper function
+// helper function
 CircDLelement<StudentInfo> *insertFront(
-			CircDLelement<StudentInfo> *tailElement,
-			CircDLelement<StudentInfo> *newElement);
+	CircDLelement<StudentInfo> *tailElement,
+	CircDLelement<StudentInfo> *newElement);
 
 int main() {
 	Bridges::initialize(6, "kalpathi60", "486749122386");
 
 	Bridges::setTitle("An Example Circular Doubly Linked List");
 
-         					// create the linked list elements with 
-							// student data 
+	// create the linked list elements with
+	// student data
 	CircDLelement<StudentInfo> *students[] = {
 		new CircDLelement<StudentInfo>(
 			StudentInfo(
@@ -31,7 +31,7 @@ int main() {
 				"g.chaney@generated.com",
 				"magenta",
 				"blue",
-				 9.0
+				9.0
 			), ""),
 		new CircDLelement<StudentInfo>(
 			StudentInfo(
@@ -41,7 +41,7 @@ int main() {
 				"k.soderman@generated.com",
 				"magenta",
 				"red",
-				 11.0
+				11.0
 			), ""),
 		new CircDLelement<StudentInfo>(
 			StudentInfo(
@@ -51,7 +51,7 @@ int main() {
 				"l.kyler@generated.com",
 				"yellow",
 				"green",
-				 12.0
+				12.0
 			), ""),
 		new CircDLelement<StudentInfo>(
 			StudentInfo(
@@ -61,7 +61,7 @@ int main() {
 				"g.serino@generated.com",
 				"blue",
 				"magenta",
-				 9.0
+				9.0
 			), ""),
 		new CircDLelement<StudentInfo>(
 			StudentInfo(
@@ -71,21 +71,21 @@ int main() {
 				"s.mcginn@generated.com",
 				"red",
 				"yellow",
-				 15.0
-			), "") 
-		};
+				15.0
+			), "")
+	};
 
 	CircDLelement<StudentInfo> *head =  nullptr;
 
 	int num_students = 5;
-	for(int i = 0; i < num_students; i++) {
+	for (int i = 0; i < num_students; i++) {
 		if (i)
 			head = insertFront(head, students[i]);
-		else 
+		else
 			head = students[i];
 	}
 
-       					//  add visual attributes
+	//  add visual attributes
 	CircDLelement<StudentInfo> *current = head;
 	StudentInfo si;
 	do {
@@ -102,17 +102,17 @@ int main() {
 		current = current->getNext();
 	}  while (current != head);
 
-						// set data structure to point to head
+	// set data structure to point to head
 	Bridges::setDataStructure(head);
-						// visualize the circular list
+	// visualize the circular list
 	Bridges::visualize();
 
 	return 0;
 }
 
 CircDLelement<StudentInfo> *insertFront(
-			CircDLelement<StudentInfo> *tailElement,
-			CircDLelement<StudentInfo> *newElement) {
+	CircDLelement<StudentInfo> *tailElement,
+	CircDLelement<StudentInfo> *newElement) {
 
 	CircDLelement<StudentInfo> *tailNextElement = tailElement->getNext();
 

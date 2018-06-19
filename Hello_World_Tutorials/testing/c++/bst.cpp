@@ -1,46 +1,60 @@
-#include <iostream>
+
 #include <string>
-
-using namespace std;
-
 #include "Bridges.h"
+#include "DataSource.h"
+#include "data_src/EarthquakeUSGS.h"
 #include "BSTElement.h"
 
 
+using namespace std;
 using namespace bridges;
 
+BSTElement<float, EarthquakeUSGS> *insert (BSTElement<float, EarthquakeUSGS> *rt,
+	BSTElement<float, EarthquakeUSGS> *new_el);
+
+int max_quakes = 25;
+
 int main() {
+	string hilite_color = "orange",
+		   def_color = "green",
+		   end_color = "red";
 
+	Bridges::initialize(10, "kalpathi60", "486749122386");
+	// read the earth quake  data and build the BST
+	Bridges::setTitle("Recent Earthquakes (USGIS Data)");
 
-	Bridges::initialize(10, "kalpathi60", "486749122386"); 
-//	Bridges::initialize(10, "bridges_public", "997924677918");
+	vector<EarthquakeUSGS> eq_list = DataSource::getEarthquakeUSGSData(max_quakes);
 
-	BSTElement<int, string> *tle0 = new BSTElement<int, string>(10, "10", "10");
-	BSTElement<int, string> *tle1 = new BSTElement<int, string>(5, "5", "5");
-	BSTElement<int, string> *tle2 = new BSTElement<int, string>(3, "3", "3");
-	BSTElement<int, string> *tle3=  new BSTElement<int, string>(20, "20","20");
-	BSTElement<int, string> *tle4=  new BSTElement<int, string>(1, "1","1");
+	BSTElement<float, EarthquakeUSGS> *root = nullptr;
 
-	tle0->setLeft(tle1);
-	tle0->setRight(tle3);
-	tle1->setLeft(tle2);
-	tle2->setLeft(tle4);
+	for (int k = 0; k < max_quakes; k++) {
+		EarthquakeUSGS eq = eq_list[k];
+		BSTElement<float, EarthquakeUSGS>
+		*bst_node = new BSTElement<float, EarthquakeUSGS>(eq.getMagnitude(), eq);
+		bst_node->setLabel(eq.getTitle() + "\\nLat/Long: ( " +
+			to_string(eq.getLatit()) + "," + to_string(eq.getLongit()) + " )\\n" +
+			eq.getDateStr());
+		root = insert (root, bst_node);
+		root->getVisualizer()->setColor(Color("red"));
+	}
 
-	tle0->getVisualizer()->setColor(Color("red"));
-	tle1->getVisualizer()->setColor(Color("green"));
-	tle2->getVisualizer()->setColor(Color("blue"));
-	tle3->getVisualizer()->setColor(Color("yellow"));
-
-	tle0->getLinkVisualizer(tle1)->setColor(Color("red"));
-	tle1->getLinkVisualizer(tle2)->setColor(Color("green"));
-	tle0->getLinkVisualizer(tle3)->setColor(Color("blue"));
-
-	Bridges::setTitle("Binary Search Tree Example");
-					// provide BRIDGES the  handle to the tree structure
-	Bridges::setDataStructure(tle0);
-
-
+	// visualize the binary search tree
+	Bridges::setDataStructure(root);
 	Bridges::visualize();
 
 	return 0;
 }
+
+BSTElement<float, EarthquakeUSGS> *insert (BSTElement<float, EarthquakeUSGS> *rt,
+	BSTElement<float, EarthquakeUSGS> *new_el) {
+	if (rt == nullptr)
+		return new_el;
+	else if (new_el->getKey() < rt->getKey())
+		rt->setLeft(insert(rt->getLeft(), new_el));
+	else
+		rt->setRight(insert(rt->getRight(), new_el));
+
+	return rt;
+}
+
+
