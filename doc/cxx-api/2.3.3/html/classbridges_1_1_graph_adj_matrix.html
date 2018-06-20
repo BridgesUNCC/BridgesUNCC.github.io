@@ -100,6 +100,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a785f15a8ca7857a72c34e51ae0c24834"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef5c14842d7b8b83037dc63bfd447259"><td class="memItemLeft" align="right" valign="top">const unordered_map&lt; K, unordered_map&lt; K, int &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1_graph_adj_matrix.html#aef5c14842d7b8b83037dc63bfd447259">getMatrix</a> () const</td></tr>
 <tr class="separator:aef5c14842d7b8b83037dc63bfd447259"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46658c5299cfa6b764fafec321ed2fb3"><td class="memItemLeft" align="right" valign="top">const unordered_map&lt; K, int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1_graph_adj_matrix.html#a46658c5299cfa6b764fafec321ed2fb3">getMatrix</a> (K key) const</td></tr>
+<tr class="separator:a46658c5299cfa6b764fafec321ed2fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83f79301ef6807c2a40f288c808f758b"><td class="memItemLeft" align="right" valign="top">unordered_map&lt; K, <a class="el" href="classbridges_1_1_element.html">Element</a>&lt; E1 &gt; * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1_graph_adj_matrix.html#a83f79301ef6807c2a40f288c808f758b">getVertices</a> ()</td></tr>
 <tr class="separator:a83f79301ef6807c2a40f288c808f758b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c4a30800ec98eab89a23aabf0549869"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classbridges_1_1_element.html">Element</a>&lt; E1 &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1_graph_adj_matrix.html#a2c4a30800ec98eab89a23aabf0549869">getVertex</a> (const K &amp;key) const</td></tr>
@@ -365,7 +367,7 @@ template&lt;typename K , typename E1  = K, typename E2  = E1&gt; </div>
 </div>
 </div>
 <a id="aef5c14842d7b8b83037dc63bfd447259"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef5c14842d7b8b83037dc63bfd447259">&#9670;&nbsp;</a></span>getMatrix()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aef5c14842d7b8b83037dc63bfd447259">&#9670;&nbsp;</a></span>getMatrix() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -389,6 +391,41 @@ template&lt;typename K , typename E1  = K, typename E2  = E1&gt; </div>
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>The matrix of this graphs edges </dd></dl>
+
+</div>
+</div>
+<a id="a46658c5299cfa6b764fafec321ed2fb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46658c5299cfa6b764fafec321ed2fb3">&#9670;&nbsp;</a></span>getMatrix() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename E1  = K, typename E2  = E1&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unordered_map&lt;K, int&gt;&amp; <a class="el" href="classbridges_1_1_graph_adj_matrix.html">bridges::GraphAdjMatrix</a>&lt; K, E1, E2 &gt;::getMatrix </td>
+          <td>(</td>
+          <td class="paramtype">K&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The input key value that identifies the row being retrieved</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The row of this adjacency matrix corresponding to the key </dd></dl>
 
 </div>
 </div>
@@ -655,7 +692,7 @@ template&lt;typename K , typename E1  = K, typename E2  = E1&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 30 2018 17:09:26 for Bridges-C++-2.3 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 19 2018 20:01:32 for Bridges-C++-2.3 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

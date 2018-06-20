@@ -37,7 +37,9 @@ void \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_a1853d64ffb8675ba2ec22
 \item 
 static List$<$ \mbox{\hyperlink{classbridges_1_1data__src__dependent_1_1_earthquake_u_s_g_s}{Earthquake\+U\+S\+GS}} $>$ \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_a58bef23cd12872c6ae5d7358b7485a2b}{get\+Earthquake\+U\+S\+G\+S\+Data}} (int max\+Elements)  throws Exception 
 \item 
-static List$<$ \mbox{\hyperlink{classbridges_1_1data__src__dependent_1_1_actor_movie_i_m_d_b}{Actor\+Movie\+I\+M\+DB}} $>$ \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_a242eb7b513790bf285f7996bd7493663}{get\+Actor\+Movie\+I\+M\+D\+B\+Data}} (String name, int max\+Elements)  throws Exception 
+static List$<$ \mbox{\hyperlink{classbridges_1_1data__src__dependent_1_1_actor_movie_i_m_d_b}{Actor\+Movie\+I\+M\+DB}} $>$ \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_af35f7a4548f1aec8f208a56e1c74b5aa}{get\+Actor\+Movie\+I\+M\+D\+B\+Data}} ()  throws Exception 
+\item 
+static List$<$ \mbox{\hyperlink{classbridges_1_1data__src__dependent_1_1_actor_movie_i_m_d_b}{Actor\+Movie\+I\+M\+DB}} $>$ \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_a76280ef69f0205e3711b18617e5c7646}{get\+Actor\+Movie\+I\+M\+D\+B\+Data}} (int max\+Elements)  throws Exception 
 \item 
 static List$<$ \mbox{\hyperlink{classbridges_1_1data__src__dependent_1_1_actor_movie_i_m_d_b}{Actor\+Movie\+I\+M\+DB}} $>$ \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_a7a5f5efc6712ead5babe4cd21a4de3cc}{get\+Actor\+Movie\+I\+M\+D\+B\+Data2}} ()  throws Exception 
 \item 
@@ -124,11 +126,11 @@ Initialize \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges}} (Cons
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classbridges_1_1connect_1_1_bridges_a242eb7b513790bf285f7996bd7493663}\label{classbridges_1_1connect_1_1_bridges_a242eb7b513790bf285f7996bd7493663}} 
+\mbox{\Hypertarget{classbridges_1_1connect_1_1_bridges_af35f7a4548f1aec8f208a56e1c74b5aa}\label{classbridges_1_1connect_1_1_bridges_af35f7a4548f1aec8f208a56e1c74b5aa}} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!get\+Actor\+Movie\+I\+M\+D\+B\+Data@{get\+Actor\+Movie\+I\+M\+D\+B\+Data}}
 \index{get\+Actor\+Movie\+I\+M\+D\+B\+Data@{get\+Actor\+Movie\+I\+M\+D\+B\+Data}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
-\subsubsection{\texorpdfstring{get\+Actor\+Movie\+I\+M\+D\+B\+Data()}{getActorMovieIMDBData()}}
-{\footnotesize\ttfamily static List$<$\mbox{\hyperlink{classbridges_1_1data__src__dependent_1_1_actor_movie_i_m_d_b}{Actor\+Movie\+I\+M\+DB}}$>$ bridges.\+connect.\+Bridges.\+get\+Actor\+Movie\+I\+M\+D\+B\+Data (\begin{DoxyParamCaption}\item[{String}]{name,  }\item[{int}]{max\+Elements }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+\subsubsection{\texorpdfstring{get\+Actor\+Movie\+I\+M\+D\+B\+Data()}{getActorMovieIMDBData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static List$<$\mbox{\hyperlink{classbridges_1_1data__src__dependent_1_1_actor_movie_i_m_d_b}{Actor\+Movie\+I\+M\+DB}}$>$ bridges.\+connect.\+Bridges.\+get\+Actor\+Movie\+I\+M\+D\+B\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
 
 This helper function provides access to a small curated I\+M\+DB dataset. The data is retrieved, formatted into a list of Actor\+Movie\+I\+M\+DB objects (about 1800 pairs).
 
@@ -140,8 +142,6 @@ for more information and to look at the dataset.
 
 
 \begin{DoxyParams}{Parameters}
-{\em name} & should be \char`\"{}\+I\+M\+D\+B\char`\"{} \\
-\hline
 {\em max\+Elements} & the number of actor/movie pairs(but currently unused), returns all records. \\
 \hline
 \end{DoxyParams}
@@ -153,6 +153,12 @@ for more information and to look at the dataset.
 \begin{DoxyReturn}{Returns}
 a list of Actor\+Movie\+I\+M\+DB objects, but only actor, movie, movie genre and movie rating are returned. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1connect_1_1_bridges_a76280ef69f0205e3711b18617e5c7646}\label{classbridges_1_1connect_1_1_bridges_a76280ef69f0205e3711b18617e5c7646}} 
+\index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!get\+Actor\+Movie\+I\+M\+D\+B\+Data@{get\+Actor\+Movie\+I\+M\+D\+B\+Data}}
+\index{get\+Actor\+Movie\+I\+M\+D\+B\+Data@{get\+Actor\+Movie\+I\+M\+D\+B\+Data}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
+\subsubsection{\texorpdfstring{get\+Actor\+Movie\+I\+M\+D\+B\+Data()}{getActorMovieIMDBData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static List$<$\mbox{\hyperlink{classbridges_1_1data__src__dependent_1_1_actor_movie_i_m_d_b}{Actor\+Movie\+I\+M\+DB}}$>$ bridges.\+connect.\+Bridges.\+get\+Actor\+Movie\+I\+M\+D\+B\+Data (\begin{DoxyParamCaption}\item[{int}]{max\+Elements }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
 \mbox{\Hypertarget{classbridges_1_1connect_1_1_bridges_a7a5f5efc6712ead5babe4cd21a4de3cc}\label{classbridges_1_1connect_1_1_bridges_a7a5f5efc6712ead5babe4cd21a4de3cc}} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!get\+Actor\+Movie\+I\+M\+D\+B\+Data2@{get\+Actor\+Movie\+I\+M\+D\+B\+Data2}}
 \index{get\+Actor\+Movie\+I\+M\+D\+B\+Data2@{get\+Actor\+Movie\+I\+M\+D\+B\+Data2}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
@@ -564,4 +570,4 @@ This method generates the representation of the current data structure (J\+S\+ON
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/\+Users/kalpathi/gr/bridges/client/java/bridges-\/17/src/main/java/edu/uncc/cs/bridges\+\_\+v21/connect/\mbox{\hyperlink{_bridges_8java}{Bridges.\+java}}\end{DoxyCompactItemize}
+/\+Users/kalpathi/gr/bridges/client/java/bridges-\/17/src/main/java/bridges/connect/\mbox{\hyperlink{_bridges_8java}{Bridges.\+java}}\end{DoxyCompactItemize}

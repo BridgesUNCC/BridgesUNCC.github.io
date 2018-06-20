@@ -6,8 +6,6 @@ var searchData=
   ['base64_5fencode',['base64_encode',['../namespacebridges_1_1base64.html#a8f31c0ba095bbe2f9c1bdd82e369c730',1,'bridges::base64']]],
   ['bintreeelement',['BinTreeElement',['../classbridges_1_1_bin_tree_element.html',1,'bridges::BinTreeElement&lt; E &gt;'],['../classbridges_1_1_bin_tree_element.html#a1c60db90bda9ecd3f5a61b5f33f49173',1,'bridges::BinTreeElement::BinTreeElement(BinTreeElement *l, BinTreeElement *r, const E &amp;e=E(), const string &amp;lab=string())'],['../classbridges_1_1_bin_tree_element.html#a37d12669e5bfe13ebf230dd8fd2a5816',1,'bridges::BinTreeElement::BinTreeElement(const E &amp;e=E(), const string &amp;lab=string())']]],
   ['bintreeelement_2eh',['BinTreeElement.h',['../_bin_tree_element_8h.html',1,'']]],
-  ['book',['Book',['../classbridges_1_1_book.html',1,'bridges::Book'],['../classbridges_1_1_book.html#abb2903c640bd263a2e077d52e12a773e',1,'bridges::Book::Book()'],['../classbridges_1_1_book.html#ac3060f3eaf757c82ea21f6501eb97b80',1,'bridges::Book::Book(string authorName, int authorBirth, int authorDeath, string title, vector&lt; string &gt; lang, vector&lt; string &gt; genre, vector&lt; string &gt; subject, int numChars, int numWords, int numSentences, int numDifficultWords, string url, int downloads)']]],
-  ['book_2eh',['Book.h',['../_book_8h.html',1,'']]],
   ['bridges',['bridges',['../namespacebridges.html',1,'bridges'],['../namespacebridges_1_1_bridges.html',1,'bridges::Bridges']]],
   ['bridges_2eh',['Bridges.h',['../_bridges_8h.html',1,'']]],
   ['bridges2_2eh',['Bridges2.h',['../_bridges2_8h.html',1,'']]],

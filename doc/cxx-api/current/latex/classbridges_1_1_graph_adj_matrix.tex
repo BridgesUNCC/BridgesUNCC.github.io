@@ -26,6 +26,8 @@ void \mbox{\hyperlink{classbridges_1_1_graph_adj_matrix_a785f15a8ca7857a72c34e51
 \item 
 const unordered\+\_\+map$<$ K, unordered\+\_\+map$<$ K, int $>$ $>$ \& \mbox{\hyperlink{classbridges_1_1_graph_adj_matrix_aef5c14842d7b8b83037dc63bfd447259}{get\+Matrix}} () const
 \item 
+const unordered\+\_\+map$<$ K, int $>$ \& \mbox{\hyperlink{classbridges_1_1_graph_adj_matrix_a46658c5299cfa6b764fafec321ed2fb3}{get\+Matrix}} (K key) const
+\item 
 unordered\+\_\+map$<$ K, \mbox{\hyperlink{classbridges_1_1_element}{Element}}$<$ E1 $>$ $\ast$ $>$ $\ast$ \mbox{\hyperlink{classbridges_1_1_graph_adj_matrix_a83f79301ef6807c2a40f288c808f758b}{get\+Vertices}} ()
 \item 
 const \mbox{\hyperlink{classbridges_1_1_element}{Element}}$<$ E1 $>$ $\ast$ \mbox{\hyperlink{classbridges_1_1_graph_adj_matrix_a2c4a30800ec98eab89a23aabf0549869}{get\+Vertex}} (const K \&key) const
@@ -161,12 +163,27 @@ the visualizer that controls the attributes of this link
 \mbox{\Hypertarget{classbridges_1_1_graph_adj_matrix_aef5c14842d7b8b83037dc63bfd447259}\label{classbridges_1_1_graph_adj_matrix_aef5c14842d7b8b83037dc63bfd447259}} 
 \index{bridges\+::\+Graph\+Adj\+Matrix@{bridges\+::\+Graph\+Adj\+Matrix}!get\+Matrix@{get\+Matrix}}
 \index{get\+Matrix@{get\+Matrix}!bridges\+::\+Graph\+Adj\+Matrix@{bridges\+::\+Graph\+Adj\+Matrix}}
-\subsubsection{\texorpdfstring{get\+Matrix()}{getMatrix()}}
+\subsubsection{\texorpdfstring{get\+Matrix()}{getMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename K , typename E1  = K, typename E2  = E1$>$ \\
 const unordered\+\_\+map$<$K, unordered\+\_\+map$<$K, int$>$ $>$\& \mbox{\hyperlink{classbridges_1_1_graph_adj_matrix}{bridges\+::\+Graph\+Adj\+Matrix}}$<$ K, E1, E2 $>$\+::get\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 \begin{DoxyReturn}{Returns}
 The matrix of this graphs edges 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_graph_adj_matrix_a46658c5299cfa6b764fafec321ed2fb3}\label{classbridges_1_1_graph_adj_matrix_a46658c5299cfa6b764fafec321ed2fb3}} 
+\index{bridges\+::\+Graph\+Adj\+Matrix@{bridges\+::\+Graph\+Adj\+Matrix}!get\+Matrix@{get\+Matrix}}
+\index{get\+Matrix@{get\+Matrix}!bridges\+::\+Graph\+Adj\+Matrix@{bridges\+::\+Graph\+Adj\+Matrix}}
+\subsubsection{\texorpdfstring{get\+Matrix()}{getMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename K , typename E1  = K, typename E2  = E1$>$ \\
+const unordered\+\_\+map$<$K, int$>$\& \mbox{\hyperlink{classbridges_1_1_graph_adj_matrix}{bridges\+::\+Graph\+Adj\+Matrix}}$<$ K, E1, E2 $>$\+::get\+Matrix (\begin{DoxyParamCaption}\item[{K}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The input key value that identifies the row being retrieved\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The row of this adjacency matrix corresponding to the key 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1_graph_adj_matrix_a2c4a30800ec98eab89a23aabf0549869}\label{classbridges_1_1_graph_adj_matrix_a2c4a30800ec98eab89a23aabf0549869}} 
 \index{bridges\+::\+Graph\+Adj\+Matrix@{bridges\+::\+Graph\+Adj\+Matrix}!get\+Vertex@{get\+Vertex}}
