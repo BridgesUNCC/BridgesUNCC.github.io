@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['addchild',['addChild',['../class_tree_element_1_1_tree_element.html#ae5e92bcded51f4931c2f5c47d44ff26c',1,'TreeElement::TreeElement']]],
-  ['addedge',['addEdge',['../class_graph_adj_list_1_1_graph_adj_list.html#a52d80ff8e432cabad99cc77feb82a295',1,'GraphAdjList.GraphAdjList.addEdge()'],['../class_graph_adj_matrix_1_1_graph_adj_matrix.html#ade007b6875b17bc0e56b08b27ab97de5',1,'GraphAdjMatrix.GraphAdjMatrix.addEdge()']]],
-  ['addedge_5f0',['addEdge_0',['../class_graph_adj_list_1_1_graph_adj_list.html#a33234517232ecd8a4fab8ded3dcdd85d',1,'GraphAdjList.GraphAdjList.addEdge_0()'],['../class_graph_adj_matrix_1_1_graph_adj_matrix.html#aa1f4f5bcc4390fa3b28c5ff7d385c649',1,'GraphAdjMatrix.GraphAdjMatrix.addEdge_0()']]],
-  ['addvertex',['addVertex',['../class_graph_adj_list_1_1_graph_adj_list.html#ab2f7025978821c01436cc773957bb9c5',1,'GraphAdjList.GraphAdjList.addVertex()'],['../class_graph_adj_matrix_1_1_graph_adj_matrix.html#a1439f978f7a9a362db75f1a0838783ad',1,'GraphAdjMatrix.GraphAdjMatrix.addVertex()']]],
-  ['arrangelabel',['arrangeLabel',['../class_element_1_1_element.html#ab68f114977f0cc57c9499444d2bc8799',1,'Element::Element']]]
+  ['add_5fchild',['add_child',['../class_tree_element_1_1_tree_element.html#a472f1d0d906f4a8a8c48a54d83d42fd5',1,'TreeElement::TreeElement']]],
+  ['add_5fedge',['add_edge',['../class_graph_adj_list_1_1_graph_adj_list.html#ad59c07529316dd547e1fe86ccfd54bb2',1,'GraphAdjList.GraphAdjList.add_edge()'],['../class_graph_adj_matrix_1_1_graph_adj_matrix.html#a6192c6ff3069be79234a0a393190859d',1,'GraphAdjMatrix.GraphAdjMatrix.add_edge()']]],
+  ['add_5fvertex',['add_vertex',['../class_graph_adj_list_1_1_graph_adj_list.html#a5a294f7b3f521afe18da536d6a444eb9',1,'GraphAdjList.GraphAdjList.add_vertex()'],['../class_graph_adj_matrix_1_1_graph_adj_matrix.html#a5497b58e61b015b89dac6f709e615e47',1,'GraphAdjMatrix.GraphAdjMatrix.add_vertex()']]],
+  ['arrange_5flabel',['arrange_label',['../class_element_1_1_element.html#a9fd60525ebf3cf5e3767f4b631a1cba5',1,'Element::Element']]]
 ];

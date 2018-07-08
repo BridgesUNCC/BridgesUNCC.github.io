@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['label',['label',['../class_element_1_1_element.html#a1eaadb79747dd83097612cac742976fa',1,'Element::Element']]],
-  ['left',['left',['../class_bin_tree_element_1_1_bin_tree_element.html#a73a75929ad5c317a59915283866ddb7a',1,'BinTreeElement::BinTreeElement']]],
-  ['linkvisualizer',['LinkVisualizer',['../class_link_visualizer_1_1_link_visualizer.html',1,'LinkVisualizer']]],
-  ['linkvisualizer',['LinkVisualizer',['../namespace_link_visualizer.html',1,'']]],
-  ['linkvisualizer_2epy',['LinkVisualizer.py',['../_link_visualizer_8py.html',1,'']]],
-  ['lvisualizer',['lvisualizer',['../class_element_1_1_element.html#a130630f8ecfe9255c9e0a514949be201',1,'Element::Element']]]
+  ['identifier',['identifier',['../class_element_1_1_element.html#a86d8c1025236dad25fb5f935a3961482',1,'Element.Element.identifier()'],['../class_element_1_1_element.html#a2202a62a079908d52afc0b7796be2981',1,'Element.Element.identifier()']]],
+  ['ids',['ids',['../class_element_1_1_element.html#a219a21d962bfef58ad39c9762876588f',1,'Element.Element.ids()'],['../class_element_1_1_element.html#aaba03a76f52e1bb4ba6ac1b0184be90f',1,'Element.Element.ids()']]],
+  ['insert_5fstring',['INSERT_STRING',['../class_element_1_1_element.html#a346648cd57ba439d8b4913a645ab81ba',1,'Element::Element']]]
 ];

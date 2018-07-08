@@ -2,53 +2,74 @@
 \label{class_graph_adj_matrix_1_1_graph_adj_matrix}\index{Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix}}
 
 
-The \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix}{Graph\+Adj\+Matrix} class can be used to represent adjacency matrix based graphs in B\+R\+I\+D\+G\+ES.  
+package\+: bridges.\+base  
 
 
-Inheritance diagram for Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix\+:\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=2.000000cm]{class_graph_adj_matrix_1_1_graph_adj_matrix}
-\end{center}
-\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-def \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_a18085a97b3716427398dfe0eb2e3db9f}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, size)
+def \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_a1e262f9cbc75d2671b97ebc5d4815385}{\+\_\+\+\_\+init\+\_\+\+\_\+}
 \begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
-def \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_aa8d0e8805442fa980d2fa4ec07b29397}{get\+Data\+Struct\+Type} (self)
+def \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_a74dbe9e3b81109e04f93ff48bdeaed3b}{get\+\_\+data\+\_\+structure\+\_\+type} (self)
 \begin{DoxyCompactList}\small\item\em This method gets the data structure type. \end{DoxyCompactList}\item 
-def \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_a1439f978f7a9a362db75f1a0838783ad}{add\+Vertex} (self, k, e)
+def \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_a5497b58e61b015b89dac6f709e615e47}{add\+\_\+vertex} (self, k, e)
 \begin{DoxyCompactList}\small\item\em Adds a new vertex to the graph, initializes the adjacency list; user is responsible for checking if the vertex already exists. \end{DoxyCompactList}\item 
-def \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_ade007b6875b17bc0e56b08b27ab97de5}{add\+Edge} (self, src, dest)
+def \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_a6192c6ff3069be79234a0a393190859d}{add\+\_\+edge}
 \begin{DoxyCompactList}\small\item\em Adds a new edge to the graph, adds it to the index corresponding to the source, destination vertex ids; this version of the method assumes an edge weight of 1 (unweighted graph); user is responsible for checking if the vertices already exist, else an exception is thrown. \end{DoxyCompactList}\item 
-def \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_aa1f4f5bcc4390fa3b28c5ff7d385c649}{add\+Edge\+\_\+0} (self, src, dest, weight)
-\begin{DoxyCompactList}\small\item\em Adds a new edge of weight \textquotesingle{}weight\textquotesingle{} to the graph, adds it to the index corresponding to the source, destination vertex ids; user is responsible for checking if the vertices already exist, else an exception is thrown. \end{DoxyCompactList}\item 
-def \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_aa3fbe3365150b94bdd232788defe7739}{get\+Vertices} (self)
+def \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_a1221c2ab4bd7594911567f4497287525}{get\+\_\+vertices} (self)
 \begin{DoxyCompactList}\small\item\em This method returns the graph nodes. \end{DoxyCompactList}\item 
-def \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_ae5dc33de984eb621e610f1b79be6d65a}{get\+Adjacency\+Matrix} (self)
+def \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_a6da95c569042f0ae0f9c980a18d10dd4}{get\+\_\+adjacency\+\_\+matrix}
 \begin{DoxyCompactList}\small\item\em Gets the adjacency matrix. \end{DoxyCompactList}\item 
-def \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_a24dbf5218e61389b10fc969dcff5d7b0}{get\+Link\+Visualizer} (self, src, dest)
+def \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_a260927686c8d3e10e70d8d56ff350a8f}{get\+\_\+link\+\_\+visualizer} (self, src, dest)
 \begin{DoxyCompactList}\small\item\em This is a convenience method to simplify access to the link visualizer; the method assumes the vertex names point to existing vertices, else an exception is thrown. \end{DoxyCompactList}\item 
-def \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_a17a86c39cd089c4a7379a47ffcff3390}{get\+Visualizer} (self, vertex)
+def \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_a840c9b3b8962e090148457ca268324da}{get\+\_\+visualizer} (self, vertex)
 \begin{DoxyCompactList}\small\item\em This is a convenience method to simplify access to the element visualizer; the method assumes the vertex name points to an existing vertice, else an exception is thrown. \end{DoxyCompactList}\item 
-def \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_a1e44a6961936900a35b6e812940fbfa8}{get\+Data\+Structure\+Representation} (self)
-\begin{DoxyCompactList}\small\item\em Get the J\+S\+ON representation of the the data structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+def \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_a7ae807af31cab18bb62ce87b3e960dbb}{get\+\_\+data\+\_\+structure\+\_\+representation} (self)
+\begin{DoxyCompactList}\small\item\em Get the J\+S\+O\+N representation of the the data structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_a85c454d09e82706b00563af339c0147f}{vertices}
+\item 
+\hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_aba658e4996d8a25b8c7260bb0f936ea7}{matrix}
+\item 
+\hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_a22779fb67205f376ba507b01727801e4}{edge\+\_\+data}
+\end{DoxyCompactItemize}
 \subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_a45edf0723e51301b7789e92514d128f4}{max\+Size} = int()
+tuple \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_ab02c8991e3ec38d4f1d277b350fbce4f}{vertices} = dict()
 \item 
-\hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_a85c454d09e82706b00563af339c0147f}{vertices} = Hash\+Map()
+tuple \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_a91aa7f16814c76e4c2b9f80dd069012c}{matrix} = dict()
 \item 
-\hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_aba658e4996d8a25b8c7260bb0f936ea7}{matrix} = Hash\+Map()
+tuple \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_a35da735f2c96de37164a8d1fc5685169}{edge\+\_\+data} = dict()
+\item 
+string \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_acd4760c3ebf6789b9f8b1ec13d5394ee}{Q\+U\+O\+T\+E} = \char`\"{}\textbackslash{}\char`\"{}\char`\"{}
+\item 
+string \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_af89add5b46ddd03667112f09864c254e}{C\+O\+M\+M\+A} = \char`\"{},\char`\"{}
+\item 
+string \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_a2609bedf192ae86ea8e23b485e7b47ae}{C\+O\+L\+O\+N} = \char`\"{}\+:\char`\"{}
+\item 
+string \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_a38221ef750dc8928ce640edc82345ecb}{O\+P\+E\+N\+\_\+\+C\+U\+R\+L\+Y} = \char`\"{}\{\char`\"{}
+\item 
+string \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_a89e0ee6c90313064d0640bf4224bf176}{C\+L\+O\+S\+E\+\_\+\+C\+U\+R\+L\+Y} = \char`\"{}\}\char`\"{}
+\item 
+string \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_a0eb8509351b0db9469c5fffe5eddb898}{O\+P\+E\+N\+\_\+\+P\+A\+R\+E\+N} = \char`\"{}(\char`\"{}
+\item 
+string \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_a5a4c67a2a5a834bdf1a3dea9c9d9af7a}{C\+L\+O\+S\+E\+\_\+\+P\+A\+R\+E\+N} = \char`\"{})\char`\"{}
+\item 
+string \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_aa5c52ba4ecf6ae108cc91a4cf864d8d9}{O\+P\+E\+N\+\_\+\+B\+O\+X} = \char`\"{}\mbox{[}\char`\"{}
+\item 
+string \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix_a5a719d18af560718e529b30182936512}{C\+L\+O\+S\+E\+\_\+\+B\+O\+X} = \char`\"{}\mbox{]}\char`\"{}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-The \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix}{Graph\+Adj\+Matrix} class can be used to represent adjacency matrix based graphs in B\+R\+I\+D\+G\+ES. 
+package\+: bridges.\+base 
 
-The \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix}{Graph\+Adj\+Matrix} class can be used to represent adjacency matrix based graphs in B\+R\+I\+D\+G\+ES; it takes 2 generic parameters\+: (1) K, which is an orderable key value used in accessing vertices (in constant time) using a hashmap. This permits data sets that need to be accessed by keys that are strings, and (2) E, an application defined type, and used in the \hyperlink{namespace_edge}{Edge} representation. The class is simply a wrapper around the Java Hashmap class and, thus, derives all its operations from it. B\+R\+I\+D\+G\+ES provides methods to visualize the graph and its contents.
+The \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix}{Graph\+Adj\+Matrix} class can be used to represent adjacency matrix based graphs in B\+R\+I\+D\+G\+E\+S
+
+The \hyperlink{class_graph_adj_matrix_1_1_graph_adj_matrix}{Graph\+Adj\+Matrix} class can be used to represent adjacency matrix based graphs in B\+R\+I\+D\+G\+E\+S; it takes 2 generic parameters\+: (1) K, which is an orderable key value used in accessing vertices (in constant time) using a hashmap. This permits data sets that need to be accessed by keys that are strings, and (2) E, an application defined type, and used in the \hyperlink{namespace_edge}{Edge} representation. The class is simply a wrapper around the Java Hashmap class and, thus, derives all its operations from it. B\+R\+I\+D\+G\+E\+S provides methods to visualize the graph and its contents.
 
 The vertices of the graph are held in a Java hashmap, for near constant time access; this lets us use strings or integral ids for vertices. The edges are accessed by a second hashmap from each vertex, again assuring near constant access time. Each edge contains the terminating vertex id and weight, as defined by the \hyperlink{namespace_edge}{Edge} class structure.
 
@@ -70,30 +91,34 @@ Kalpathi Subramanian, Mihai Mehedint
 \begin{DoxySeeAlso}{See also}
 Example tutorial at 
 \end{DoxySeeAlso}
-?? TO DO\begin{DoxyVerb}generated source for class GraphAdjMatrix \end{DoxyVerb}
- 
+?? T\+O D\+O 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_a18085a97b3716427398dfe0eb2e3db9f}{}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_a18085a97b3716427398dfe0eb2e3db9f} 
-\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_a1e262f9cbc75d2671b97ebc5d4815385}{}\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
 \index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
-\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
-{\footnotesize\ttfamily def Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{size }\end{DoxyParamCaption})}
-
+\subsubsection[{\+\_\+\+\_\+init\+\_\+\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}def Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{size = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_a1e262f9cbc75d2671b97ebc5d4815385}
 
 
 Constructor. 
 
-\begin{DoxyVerb}generated source for method __init__ \end{DoxyVerb}
- 
+
 
 \subsection{Member Function Documentation}
-\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_ade007b6875b17bc0e56b08b27ab97de5}{}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_ade007b6875b17bc0e56b08b27ab97de5} 
-\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!add\+Edge@{add\+Edge}}
-\index{add\+Edge@{add\+Edge}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
-\subsubsection{\texorpdfstring{add\+Edge()}{addEdge()}}
-{\footnotesize\ttfamily def Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+add\+Edge (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{src,  }\item[{}]{dest }\end{DoxyParamCaption})}
-
+\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_a6192c6ff3069be79234a0a393190859d}{}\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!add\+\_\+edge@{add\+\_\+edge}}
+\index{add\+\_\+edge@{add\+\_\+edge}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection[{add\+\_\+edge}]{\setlength{\rightskip}{0pt plus 5cm}def Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+add\+\_\+edge (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{src, }
+\item[{}]{dest, }
+\item[{}]{weight = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_a6192c6ff3069be79234a0a393190859d}
 
 
 Adds a new edge to the graph, adds it to the index corresponding to the source, destination vertex ids; this version of the method assumes an edge weight of 1 (unweighted graph); user is responsible for checking if the vertices already exist, else an exception is thrown. 
@@ -102,36 +127,18 @@ Adds a new edge to the graph, adds it to the index corresponding to the source, 
 \begin{DoxyParams}{Parameters}
 {\em src} & -\/ source vertex of edge \\
 \hline
-{\em dest} & -\/ destination vertex of edge\begin{DoxyVerb}generated source for method addEdge \end{DoxyVerb}
- \\
-\hline
-\end{DoxyParams}
-\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_aa1f4f5bcc4390fa3b28c5ff7d385c649}{}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_aa1f4f5bcc4390fa3b28c5ff7d385c649} 
-\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!add\+Edge\+\_\+0@{add\+Edge\+\_\+0}}
-\index{add\+Edge\+\_\+0@{add\+Edge\+\_\+0}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
-\subsubsection{\texorpdfstring{add\+Edge\+\_\+0()}{addEdge\_0()}}
-{\footnotesize\ttfamily def Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+add\+Edge\+\_\+0 (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{src,  }\item[{}]{dest,  }\item[{}]{weight }\end{DoxyParamCaption})}
-
-
-
-Adds a new edge of weight \textquotesingle{}weight\textquotesingle{} to the graph, adds it to the index corresponding to the source, destination vertex ids; user is responsible for checking if the vertices already exist, else an exception is thrown. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em src} & -\/ source vertex of edge \\
-\hline
 {\em dest} & -\/ destination vertex of edge \\
 \hline
-{\em weight} & -\/ edge weight\begin{DoxyVerb}generated source for method addEdge_0 \end{DoxyVerb}
- \\
-\hline
 \end{DoxyParams}
-\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_a1439f978f7a9a362db75f1a0838783ad}{}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_a1439f978f7a9a362db75f1a0838783ad} 
-\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!add\+Vertex@{add\+Vertex}}
-\index{add\+Vertex@{add\+Vertex}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
-\subsubsection{\texorpdfstring{add\+Vertex()}{addVertex()}}
-{\footnotesize\ttfamily def Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+add\+Vertex (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{k,  }\item[{}]{e }\end{DoxyParamCaption})}
-
+\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_a5497b58e61b015b89dac6f709e615e47}{}\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!add\+\_\+vertex@{add\+\_\+vertex}}
+\index{add\+\_\+vertex@{add\+\_\+vertex}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection[{add\+\_\+vertex(self, k, e)}]{\setlength{\rightskip}{0pt plus 5cm}def Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+add\+\_\+vertex (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{k, }
+\item[{}]{e}
+\end{DoxyParamCaption}
+)}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_a5497b58e61b015b89dac6f709e615e47}
 
 
 Adds a new vertex to the graph, initializes the adjacency list; user is responsible for checking if the vertex already exists. 
@@ -142,105 +149,135 @@ This method will replace the value for this key
 \begin{DoxyParams}{Parameters}
 {\em k} & -\/ vertex key value \\
 \hline
-{\em 3} & -\/ user specified data, part of the vertex data\begin{DoxyVerb}generated source for method addVertex \end{DoxyVerb}
- \\
+{\em 3} & -\/ user specified data, part of the vertex data \\
 \hline
 \end{DoxyParams}
-\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_ae5dc33de984eb621e610f1b79be6d65a}{}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_ae5dc33de984eb621e610f1b79be6d65a} 
-\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!get\+Adjacency\+Matrix@{get\+Adjacency\+Matrix}}
-\index{get\+Adjacency\+Matrix@{get\+Adjacency\+Matrix}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
-\subsubsection{\texorpdfstring{get\+Adjacency\+Matrix()}{getAdjacencyMatrix()}}
-{\footnotesize\ttfamily def Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+get\+Adjacency\+Matrix (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
-
+\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_a6da95c569042f0ae0f9c980a18d10dd4}{}\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!get\+\_\+adjacency\+\_\+matrix@{get\+\_\+adjacency\+\_\+matrix}}
+\index{get\+\_\+adjacency\+\_\+matrix@{get\+\_\+adjacency\+\_\+matrix}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection[{get\+\_\+adjacency\+\_\+matrix}]{\setlength{\rightskip}{0pt plus 5cm}def Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+get\+\_\+adjacency\+\_\+matrix (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{key = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_a6da95c569042f0ae0f9c980a18d10dd4}
 
 
 Gets the adjacency matrix. 
 
 \begin{DoxyReturn}{Returns}
--\/ the graph\textquotesingle{}s adjacency matrix\begin{DoxyVerb}generated source for method getAdjacencyMatrix \end{DoxyVerb}
- 
+-\/ the graph\textquotesingle{}s adjacency matrix 
 \end{DoxyReturn}
-\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_aa8d0e8805442fa980d2fa4ec07b29397}{}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_aa8d0e8805442fa980d2fa4ec07b29397} 
-\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!get\+Data\+Struct\+Type@{get\+Data\+Struct\+Type}}
-\index{get\+Data\+Struct\+Type@{get\+Data\+Struct\+Type}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
-\subsubsection{\texorpdfstring{get\+Data\+Struct\+Type()}{getDataStructType()}}
-{\footnotesize\ttfamily def Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+get\+Data\+Struct\+Type (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_a7ae807af31cab18bb62ce87b3e960dbb}{}\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!get\+\_\+data\+\_\+structure\+\_\+representation@{get\+\_\+data\+\_\+structure\+\_\+representation}}
+\index{get\+\_\+data\+\_\+structure\+\_\+representation@{get\+\_\+data\+\_\+structure\+\_\+representation}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection[{get\+\_\+data\+\_\+structure\+\_\+representation(self)}]{\setlength{\rightskip}{0pt plus 5cm}def Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+get\+\_\+data\+\_\+structure\+\_\+representation (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_a7ae807af31cab18bb62ce87b3e960dbb}
 
+
+Get the J\+S\+O\+N representation of the the data structure. 
+
+\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_a74dbe9e3b81109e04f93ff48bdeaed3b}{}\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!get\+\_\+data\+\_\+structure\+\_\+type@{get\+\_\+data\+\_\+structure\+\_\+type}}
+\index{get\+\_\+data\+\_\+structure\+\_\+type@{get\+\_\+data\+\_\+structure\+\_\+type}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection[{get\+\_\+data\+\_\+structure\+\_\+type(self)}]{\setlength{\rightskip}{0pt plus 5cm}def Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+get\+\_\+data\+\_\+structure\+\_\+type (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_a74dbe9e3b81109e04f93ff48bdeaed3b}
 
 
 This method gets the data structure type. 
 
 \begin{DoxyReturn}{Returns}
-The date structure type as a string\begin{DoxyVerb}generated source for method getDataStructType \end{DoxyVerb}
- 
+The date structure type as a string 
 \end{DoxyReturn}
-\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_a1e44a6961936900a35b6e812940fbfa8}{}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_a1e44a6961936900a35b6e812940fbfa8} 
-\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!get\+Data\+Structure\+Representation@{get\+Data\+Structure\+Representation}}
-\index{get\+Data\+Structure\+Representation@{get\+Data\+Structure\+Representation}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
-\subsubsection{\texorpdfstring{get\+Data\+Structure\+Representation()}{getDataStructureRepresentation()}}
-{\footnotesize\ttfamily def Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+get\+Data\+Structure\+Representation (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
-
-
-
-Get the J\+S\+ON representation of the the data structure. 
-
-\begin{DoxyVerb}generated source for method getDataStructureRepresentation \end{DoxyVerb}
- \hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_a24dbf5218e61389b10fc969dcff5d7b0}{}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_a24dbf5218e61389b10fc969dcff5d7b0} 
-\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!get\+Link\+Visualizer@{get\+Link\+Visualizer}}
-\index{get\+Link\+Visualizer@{get\+Link\+Visualizer}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
-\subsubsection{\texorpdfstring{get\+Link\+Visualizer()}{getLinkVisualizer()}}
-{\footnotesize\ttfamily def Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+get\+Link\+Visualizer (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{src,  }\item[{}]{dest }\end{DoxyParamCaption})}
-
+\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_a260927686c8d3e10e70d8d56ff350a8f}{}\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!get\+\_\+link\+\_\+visualizer@{get\+\_\+link\+\_\+visualizer}}
+\index{get\+\_\+link\+\_\+visualizer@{get\+\_\+link\+\_\+visualizer}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection[{get\+\_\+link\+\_\+visualizer(self, src, dest)}]{\setlength{\rightskip}{0pt plus 5cm}def Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+get\+\_\+link\+\_\+visualizer (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{src, }
+\item[{}]{dest}
+\end{DoxyParamCaption}
+)}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_a260927686c8d3e10e70d8d56ff350a8f}
 
 
 This is a convenience method to simplify access to the link visualizer; the method assumes the vertex names point to existing vertices, else an exception is thrown. 
 
-\begin{DoxyVerb}generated source for method getLinkVisualizer \end{DoxyVerb}
- \hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_aa3fbe3365150b94bdd232788defe7739}{}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_aa3fbe3365150b94bdd232788defe7739} 
-\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!get\+Vertices@{get\+Vertices}}
-\index{get\+Vertices@{get\+Vertices}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
-\subsubsection{\texorpdfstring{get\+Vertices()}{getVertices()}}
-{\footnotesize\ttfamily def Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+get\+Vertices (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
-
+\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_a1221c2ab4bd7594911567f4497287525}{}\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!get\+\_\+vertices@{get\+\_\+vertices}}
+\index{get\+\_\+vertices@{get\+\_\+vertices}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection[{get\+\_\+vertices(self)}]{\setlength{\rightskip}{0pt plus 5cm}def Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+get\+\_\+vertices (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_a1221c2ab4bd7594911567f4497287525}
 
 
 This method returns the graph nodes. 
 
-return -- vertices held in an unordered map\begin{DoxyVerb}generated source for method getVertices \end{DoxyVerb}
- \hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_a17a86c39cd089c4a7379a47ffcff3390}{}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_a17a86c39cd089c4a7379a47ffcff3390} 
-\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!get\+Visualizer@{get\+Visualizer}}
-\index{get\+Visualizer@{get\+Visualizer}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
-\subsubsection{\texorpdfstring{get\+Visualizer()}{getVisualizer()}}
-{\footnotesize\ttfamily def Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+get\+Visualizer (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{vertex }\end{DoxyParamCaption})}
-
+return -- vertices held in an unordered map \hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_a840c9b3b8962e090148457ca268324da}{}\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!get\+\_\+visualizer@{get\+\_\+visualizer}}
+\index{get\+\_\+visualizer@{get\+\_\+visualizer}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection[{get\+\_\+visualizer(self, vertex)}]{\setlength{\rightskip}{0pt plus 5cm}def Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+get\+\_\+visualizer (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{vertex}
+\end{DoxyParamCaption}
+)}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_a840c9b3b8962e090148457ca268324da}
 
 
 This is a convenience method to simplify access to the element visualizer; the method assumes the vertex name points to an existing vertice, else an exception is thrown. 
 
-\begin{DoxyVerb}generated source for method getVisualizer \end{DoxyVerb}
- 
+
 
 \subsection{Member Data Documentation}
-\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_aba658e4996d8a25b8c7260bb0f936ea7}{}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_aba658e4996d8a25b8c7260bb0f936ea7} 
-\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!matrix@{matrix}}
+\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_a5a719d18af560718e529b30182936512}{}\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!C\+L\+O\+S\+E\+\_\+\+B\+O\+X@{C\+L\+O\+S\+E\+\_\+\+B\+O\+X}}
+\index{C\+L\+O\+S\+E\+\_\+\+B\+O\+X@{C\+L\+O\+S\+E\+\_\+\+B\+O\+X}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection[{C\+L\+O\+S\+E\+\_\+\+B\+O\+X}]{\setlength{\rightskip}{0pt plus 5cm}string Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+C\+L\+O\+S\+E\+\_\+\+B\+O\+X = \char`\"{}\mbox{]}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_a5a719d18af560718e529b30182936512}
+\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_a89e0ee6c90313064d0640bf4224bf176}{}\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!C\+L\+O\+S\+E\+\_\+\+C\+U\+R\+L\+Y@{C\+L\+O\+S\+E\+\_\+\+C\+U\+R\+L\+Y}}
+\index{C\+L\+O\+S\+E\+\_\+\+C\+U\+R\+L\+Y@{C\+L\+O\+S\+E\+\_\+\+C\+U\+R\+L\+Y}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection[{C\+L\+O\+S\+E\+\_\+\+C\+U\+R\+L\+Y}]{\setlength{\rightskip}{0pt plus 5cm}string Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+C\+L\+O\+S\+E\+\_\+\+C\+U\+R\+L\+Y = \char`\"{}\}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_a89e0ee6c90313064d0640bf4224bf176}
+\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_a5a4c67a2a5a834bdf1a3dea9c9d9af7a}{}\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!C\+L\+O\+S\+E\+\_\+\+P\+A\+R\+E\+N@{C\+L\+O\+S\+E\+\_\+\+P\+A\+R\+E\+N}}
+\index{C\+L\+O\+S\+E\+\_\+\+P\+A\+R\+E\+N@{C\+L\+O\+S\+E\+\_\+\+P\+A\+R\+E\+N}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection[{C\+L\+O\+S\+E\+\_\+\+P\+A\+R\+E\+N}]{\setlength{\rightskip}{0pt plus 5cm}string Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+C\+L\+O\+S\+E\+\_\+\+P\+A\+R\+E\+N = \char`\"{})\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_a5a4c67a2a5a834bdf1a3dea9c9d9af7a}
+\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_a2609bedf192ae86ea8e23b485e7b47ae}{}\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!C\+O\+L\+O\+N@{C\+O\+L\+O\+N}}
+\index{C\+O\+L\+O\+N@{C\+O\+L\+O\+N}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection[{C\+O\+L\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}string Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+C\+O\+L\+O\+N = \char`\"{}\+:\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_a2609bedf192ae86ea8e23b485e7b47ae}
+\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_af89add5b46ddd03667112f09864c254e}{}\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!C\+O\+M\+M\+A@{C\+O\+M\+M\+A}}
+\index{C\+O\+M\+M\+A@{C\+O\+M\+M\+A}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection[{C\+O\+M\+M\+A}]{\setlength{\rightskip}{0pt plus 5cm}string Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+C\+O\+M\+M\+A = \char`\"{},\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_af89add5b46ddd03667112f09864c254e}
+\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_a35da735f2c96de37164a8d1fc5685169}{}\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!edge\+\_\+data@{edge\+\_\+data}}
+\index{edge\+\_\+data@{edge\+\_\+data}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection[{edge\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}tuple Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+edge\+\_\+data = dict()\hspace{0.3cm}{\ttfamily [static]}}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_a35da735f2c96de37164a8d1fc5685169}
+\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_a22779fb67205f376ba507b01727801e4}{}\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!edge\+\_\+data@{edge\+\_\+data}}
+\index{edge\+\_\+data@{edge\+\_\+data}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection[{edge\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+edge\+\_\+data}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_a22779fb67205f376ba507b01727801e4}
+\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_a91aa7f16814c76e4c2b9f80dd069012c}{}\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!matrix@{matrix}}
 \index{matrix@{matrix}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
-\subsubsection{\texorpdfstring{matrix}{matrix}}
-{\footnotesize\ttfamily Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+matrix = Hash\+Map()\hspace{0.3cm}{\ttfamily [static]}}
-
-\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_a45edf0723e51301b7789e92514d128f4}{}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_a45edf0723e51301b7789e92514d128f4} 
-\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!max\+Size@{max\+Size}}
-\index{max\+Size@{max\+Size}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
-\subsubsection{\texorpdfstring{max\+Size}{maxSize}}
-{\footnotesize\ttfamily Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+max\+Size = int()\hspace{0.3cm}{\ttfamily [static]}}
-
-\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_a85c454d09e82706b00563af339c0147f}{}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_a85c454d09e82706b00563af339c0147f} 
-\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!vertices@{vertices}}
+\subsubsection[{matrix}]{\setlength{\rightskip}{0pt plus 5cm}tuple Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+matrix = dict()\hspace{0.3cm}{\ttfamily [static]}}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_a91aa7f16814c76e4c2b9f80dd069012c}
+\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_aba658e4996d8a25b8c7260bb0f936ea7}{}\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!matrix@{matrix}}
+\index{matrix@{matrix}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection[{matrix}]{\setlength{\rightskip}{0pt plus 5cm}Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+matrix}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_aba658e4996d8a25b8c7260bb0f936ea7}
+\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_aa5c52ba4ecf6ae108cc91a4cf864d8d9}{}\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!O\+P\+E\+N\+\_\+\+B\+O\+X@{O\+P\+E\+N\+\_\+\+B\+O\+X}}
+\index{O\+P\+E\+N\+\_\+\+B\+O\+X@{O\+P\+E\+N\+\_\+\+B\+O\+X}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection[{O\+P\+E\+N\+\_\+\+B\+O\+X}]{\setlength{\rightskip}{0pt plus 5cm}string Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+O\+P\+E\+N\+\_\+\+B\+O\+X = \char`\"{}\mbox{[}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_aa5c52ba4ecf6ae108cc91a4cf864d8d9}
+\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_a38221ef750dc8928ce640edc82345ecb}{}\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!O\+P\+E\+N\+\_\+\+C\+U\+R\+L\+Y@{O\+P\+E\+N\+\_\+\+C\+U\+R\+L\+Y}}
+\index{O\+P\+E\+N\+\_\+\+C\+U\+R\+L\+Y@{O\+P\+E\+N\+\_\+\+C\+U\+R\+L\+Y}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection[{O\+P\+E\+N\+\_\+\+C\+U\+R\+L\+Y}]{\setlength{\rightskip}{0pt plus 5cm}string Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+O\+P\+E\+N\+\_\+\+C\+U\+R\+L\+Y = \char`\"{}\{\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_a38221ef750dc8928ce640edc82345ecb}
+\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_a0eb8509351b0db9469c5fffe5eddb898}{}\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!O\+P\+E\+N\+\_\+\+P\+A\+R\+E\+N@{O\+P\+E\+N\+\_\+\+P\+A\+R\+E\+N}}
+\index{O\+P\+E\+N\+\_\+\+P\+A\+R\+E\+N@{O\+P\+E\+N\+\_\+\+P\+A\+R\+E\+N}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection[{O\+P\+E\+N\+\_\+\+P\+A\+R\+E\+N}]{\setlength{\rightskip}{0pt plus 5cm}string Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+O\+P\+E\+N\+\_\+\+P\+A\+R\+E\+N = \char`\"{}(\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_a0eb8509351b0db9469c5fffe5eddb898}
+\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_acd4760c3ebf6789b9f8b1ec13d5394ee}{}\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!Q\+U\+O\+T\+E@{Q\+U\+O\+T\+E}}
+\index{Q\+U\+O\+T\+E@{Q\+U\+O\+T\+E}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection[{Q\+U\+O\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}string Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+Q\+U\+O\+T\+E = \char`\"{}\textbackslash{}\char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_acd4760c3ebf6789b9f8b1ec13d5394ee}
+\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_ab02c8991e3ec38d4f1d277b350fbce4f}{}\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!vertices@{vertices}}
 \index{vertices@{vertices}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
-\subsubsection{\texorpdfstring{vertices}{vertices}}
-{\footnotesize\ttfamily Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+vertices = Hash\+Map()\hspace{0.3cm}{\ttfamily [static]}}
-
+\subsubsection[{vertices}]{\setlength{\rightskip}{0pt plus 5cm}tuple Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+vertices = dict()\hspace{0.3cm}{\ttfamily [static]}}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_ab02c8991e3ec38d4f1d277b350fbce4f}
+\hypertarget{class_graph_adj_matrix_1_1_graph_adj_matrix_a85c454d09e82706b00563af339c0147f}{}\index{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}!vertices@{vertices}}
+\index{vertices@{vertices}!Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection[{vertices}]{\setlength{\rightskip}{0pt plus 5cm}Graph\+Adj\+Matrix.\+Graph\+Adj\+Matrix.\+vertices}\label{class_graph_adj_matrix_1_1_graph_adj_matrix_a85c454d09e82706b00563af339c0147f}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/\+Users/kalpathi/gr/bridges/client/python/src/\hyperlink{_graph_adj_matrix_8py}{Graph\+Adj\+Matrix.\+py}\end{DoxyCompactItemize}
+/\+Users/krs/gr/bridges/bridges17/python/src/\hyperlink{_graph_adj_matrix_8py}{Graph\+Adj\+Matrix.\+py}\end{DoxyCompactItemize}

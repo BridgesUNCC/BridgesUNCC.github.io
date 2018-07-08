@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['identifier',['identifier',['../class_element_1_1_element.html#a2202a62a079908d52afc0b7796be2981',1,'Element::Element']]],
-  ['ids',['ids',['../class_element_1_1_element.html#a219a21d962bfef58ad39c9762876588f',1,'Element::Element']]],
-  ['index',['index',['../class_array_element_1_1_array_element.html#a52ac2ef65a0cfac9079a4ea0ad7b1ee0',1,'ArrayElement::ArrayElement']]],
-  ['insert_5fstring',['INSERT_STRING',['../class_element_1_1_element.html#a346648cd57ba439d8b4913a645ab81ba',1,'Element::Element']]]
+  ['height',['height',['../class_a_v_l_tree_element_1_1_a_v_l_tree_element.html#a6af5676b71ccb44e0f7e1b5a26cd9afc',1,'AVLTreeElement.AVLTreeElement.height()'],['../class_a_v_l_tree_element_1_1_a_v_l_tree_element.html#acf75c045d479489e7a3add1b547d2624',1,'AVLTreeElement.AVLTreeElement.height()']]],
+  ['hour',['hour',['../class_earthquake_u_s_g_s_1_1_earthquake_u_s_g_s.html#ac3f8a5e9c7c811c433c15e3edff3000a',1,'EarthquakeUSGS::EarthquakeUSGS']]]
 ];
