@@ -1,9 +1,9 @@
 from Bridges import *
-from Student import *
+from StudentInfo import *
 from CircSLelement import *
 
 class CircSLtutorial:
-    bridges = Bridges(5, "kalpathi60", "486749122386")
+    bridges = Bridges(5, "YOUR_USER_ID", "YOUR_API_KEY")
 
     students = []
 

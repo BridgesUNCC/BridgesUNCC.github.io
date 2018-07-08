@@ -4,7 +4,7 @@ from BinTreeElement import *
 
 
 class BinTreetutorial:
-    bridges = Bridges(9, "kalpathi60", "486749122386")
+    bridges = Bridges(9, "YOUR_USER_ID", "YOUR_API_KEY")
 
     t0 = BinTreeElement(label = "306", e = 0)
     t1 = BinTreeElement(label = "120\\nE",e = 1)

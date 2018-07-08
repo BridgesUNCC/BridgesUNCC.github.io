@@ -4,7 +4,7 @@ from AVLTreeElement import *
 
 class AVLTreetutorial:
 
-    bridges = Bridges(11, "kalpathi60", "486749122386")
+    bridges = Bridges(11, "YOUR_USER_ID", "YOUR_API_KEY")
 
     avl_root = AVLTreeElement(50, "Hello")
 

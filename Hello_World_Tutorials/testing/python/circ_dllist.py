@@ -1,5 +1,5 @@
 from Bridges import *
-from Student import *
+from StudentInfo import *
 from CircDLelement import *
 
 
@@ -20,7 +20,7 @@ def insertFront(tailElement, newElement):
 
 
 class CircDLtutorial:
-    bridges = Bridges(6, "kalpathi60", "486749122386")
+    bridges = Bridges(6, "YOUR_USER_ID", "YOUR_API_KEY")
 
     students = []
 

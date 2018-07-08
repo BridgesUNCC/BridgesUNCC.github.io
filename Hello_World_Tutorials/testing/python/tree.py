@@ -5,7 +5,7 @@ from TreeElement import *
 
 class tutorial:
 
-    bridges = Bridges(8, "kalpathi60", "486749122386")
+    bridges = Bridges(8, "YOUR_USER_ID", "YOUR_API_KEY")
 
     t0 = TreeElement(e = "Hello")
     t1 = TreeElement(e= "this")

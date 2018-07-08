@@ -4,7 +4,7 @@ from GraphAdjMatrix import *
 
 class GraphAdjMatrixtutorial:
 
-    bridges = Bridges(13, "kalpathi60", "486749122386")
+    bridges = Bridges(13, "YOUR_USER_ID", "YOUR_API_KEY")
 
     actor_movie_data = DataSource.getActorMovieIMDBData(1813)
 

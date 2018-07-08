@@ -2,7 +2,7 @@ from Bridges import *
 from MLelement import *
 
 class MLtutorial:
-    bridges = Bridges(7, "kalpathi60", "486749122386")
+    bridges = Bridges(7, "YOUR_USER_ID", "YOUR_API_KEY")
 
     el0 = MLelement("0", "0")
     el1 = MLelement("1", "1")

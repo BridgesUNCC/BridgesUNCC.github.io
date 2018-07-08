@@ -1,10 +1,10 @@
-from Student import *
+from StudentInfo import *
 from Bridges import *
 from SLelement import *
 
 class SLListtutorial:
 
-    bridges = Bridges(3, "kalpathi60", "486749122386")
+    bridges = Bridges(3, "YOUR_USER_ID", "YOUR_API_KEY")
 
     e01 = SLelement(e = Student("00000000000",
 				"Gretel Chaney",

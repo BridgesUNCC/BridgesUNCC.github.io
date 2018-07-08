@@ -5,7 +5,7 @@ from Element import *
 
 class Array1d():
 
-    bridges = Bridges(0, "kalpathi60", "486749122386")
+    bridges = Bridges(0, "YOUR_USER_ID", "YOUR_API_KEY")
 
     arraySize = 10
 

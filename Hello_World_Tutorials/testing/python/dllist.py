@@ -1,6 +1,6 @@
 from DLelement import *
 from Bridges import Bridges
-from Student import *
+from StudentInfo import *
 
 
 def insertFront(front, new_el):
@@ -13,7 +13,7 @@ def insertFront(front, new_el):
     return new_el
 
 class DLListtutorial:
-    bridges = Bridges(4, "kalpathi60", "486749122386")
+    bridges = Bridges(4, "YOUR_USER_ID", "YOUR_API_KEY")
 
     students = []
 

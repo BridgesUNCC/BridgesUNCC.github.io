@@ -16,7 +16,7 @@ def insertR(rt, newel):
 
 class EarthquakeDriver():
 
-    bridges = Bridges.Bridges(10, "kalpathi60", "486749122386")
+    bridges = Bridges.Bridges(10, "YOUR_USER_ID", "YOUR_API_KEY")
 
     ami = DataSource.getEarthquakeUSGSData(1000)
 
