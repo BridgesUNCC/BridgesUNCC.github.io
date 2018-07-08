@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>/Users/kalpathi/graphics/bridges/site/bridgesSite/Hello_World_Tutorials/testing/python/avl.py.html</title>
+<meta name="Generator" content="Vim/8.0">
+<meta name="plugin-version" content="vim7.4_v2">
+<meta name="syntax" content="c">
+<meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="none">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Constant { color: #0000c0; text-decoration: underline; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+from Bridges import *
+from AVLTreeElement import *
+
+
+class AVLTreetutorial:
+
+    bridges = Bridges(<span class="Constant">11</span>, <span class="Constant">&quot;kalpathi60&quot;</span>, <span class="Constant">&quot;486749122386&quot;</span>)
+
+    avl_root = AVLTreeElement(<span class="Constant">50</span>, <span class="Constant">&quot;Hello&quot;</span>)
+
+    avl_2 = AVLTreeElement(<span class="Constant">30</span>, <span class="Constant">&quot;This&quot;</span>)
+    avl_3 = AVLTreeElement(<span class="Constant">70</span>, <span class="Constant">&quot;is&quot;</span>)
+    avl_4 = AVLTreeElement(<span class="Constant">20</span>, <span class="Constant">&quot;an&quot;</span>)
+    avl_5 = AVLTreeElement(<span class="Constant">40</span>, <span class="Constant">&quot;AVL&quot;</span>)
+    avl_6 = AVLTreeElement(<span class="Constant">90</span>, <span class="Constant">&quot;Tree&quot;</span>)
+
+
+    avl_root.set_label(<span class="Constant">&quot;0&quot;</span>)
+    avl_2.set_label(<span class="Constant">&quot;0&quot;</span>)
+    avl_3.set_label(<span class="Constant">&quot;-1&quot;</span>)
+    avl_4.set_label(<span class="Constant">&quot;0&quot;</span>)
+    avl_5.set_label(<span class="Constant">&quot;0&quot;</span>)
+    avl_6.set_label(<span class="Constant">&quot;0&quot;</span>)
+
+    avl_root.set_left(avl_2)
+    avl_root.set_right(avl_3)
+    avl_2.set_left(avl_4)
+    avl_2.set_right(avl_5)
+    avl_3.set_right(avl_6)
+
+    avl_root.get_visualizer().set_color(<span class="Constant">&quot;magenta&quot;</span>)
+    avl_root.get_visualizer().set_opacity(<span class="Constant">0.8</span>)
+
+    bridges.set_data_structure(avl_root)
+    bridges.visualize()
+
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

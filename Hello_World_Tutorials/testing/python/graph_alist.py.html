@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>/Users/kalpathi/graphics/bridges/site/bridgesSite/Hello_World_Tutorials/testing/python/graph_alist.py.html</title>
+<meta name="Generator" content="Vim/8.0">
+<meta name="plugin-version" content="vim7.4_v2">
+<meta name="syntax" content="c">
+<meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="none">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Constant { color: #0000c0; text-decoration: underline; }
+.Statement { color: #008080; font-weight: bold; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+from Bridges import *
+from GraphAdjList import *
+from data_src_dependent import DataSource
+
+class GraphAdjListtutorial:
+
+    bridges = Bridges(<span class="Constant">12</span>, <span class="Constant">&quot;kalpathi60&quot;</span>, <span class="Constant">&quot;486749122386&quot;</span>)
+
+    actor_movie_data = DataSource.getActorMovieIMDBData(<span class="Constant">1813</span>)
+
+    g = GraphAdjList()
+
+    a1 = <span class="Constant">&quot;Kevin_Bacon_(I)&quot;</span>
+    a2 = <span class="Constant">&quot;Denzel_Washington&quot;</span>
+
+    g.add_vertex(a1, <span class="Constant">&quot;&quot;</span>)
+    g.add_vertex(a2, <span class="Constant">&quot;&quot;</span>)
+
+    g.add_edge(a1, a2, <span class="Constant">1</span>)
+
+    g.get_vertices().get(<span class="Constant">&quot;Kevin_Bacon_(I)&quot;</span>).get_visualizer().set_color(<span class="Constant">&quot;red&quot;</span>)
+    g.get_vertices().get(<span class="Constant">&quot;Denzel_Washington&quot;</span>).get_visualizer().set_color(<span class="Constant">&quot;red&quot;</span>)
+
+    g.get_vertices().get(<span class="Constant">&quot;Kevin_Bacon_(I)&quot;</span>).get_visualizer().set_size(<span class="Constant">20</span>)
+    g.get_vertices().get(<span class="Constant">&quot;Denzel_Washington&quot;</span>).get_visualizer().set_size(<span class="Constant">20</span>)
+
+
+    v1 = g.get_vertices().get(a1)
+    v2 = g.get_vertices().get(a2)
+
+    cnt1 = <span class="Constant">0</span>
+    cnt2 = <span class="Constant">0</span>
+
+    <span class="Statement">for</span> k in range(len(actor_movie_data)):
+        a = actor_movie_data[k].get_Actor()
+        m = actor_movie_data[k].get_Movie()
+
+        <span class="Statement">if</span> (a == <span class="Constant">&quot;Kevin_Bacon_(I)&quot;</span> and cnt1 &lt; <span class="Constant">15</span>):
+            g.add_vertex(m, <span class="Constant">&quot;&quot;</span>)
+            g.add_edge(a1, m, <span class="Constant">1</span>)
+            g.add_edge(m, a1, <span class="Constant">1</span>)
+
+            g.get_vertices().get(m).get_visualizer().set_opacity(<span class="Constant">0.5</span>)
+            cnt1 += <span class="Constant">1</span>
+
+        elif (a == <span class="Constant">&quot;Denzel_Washington&quot;</span> and cnt2 &lt; <span class="Constant">15</span>):
+            g.add_vertex(m, <span class="Constant">&quot;&quot;</span>)
+            g.add_edge(a2, m, <span class="Constant">1</span>)
+            g.add_edge(m, a2, <span class="Constant">1</span>)
+
+            g.get_vertices().get(m).get_visualizer().set_opacity(<span class="Constant">0.5</span>)
+            cnt2 += <span class="Constant">1</span>
+
+
+    head = g.get_adjacency_list().get(<span class="Constant">&quot;Kevin_Bacon_(I)&quot;</span>)
+
+    sle = head
+
+    <span class="Statement">while</span>(sle is not None):
+        term_vertex = sle.get_value().get_vertex()
+        el = g.get_vertices().get(term_vertex)
+        <span class="Statement">if</span>(term_vertex != <span class="Constant">&quot;Denzel Washington&quot;</span>):
+            el.get_visualizer().set_color(<span class="Constant">&quot;green&quot;</span>)
+        sle = sle.get_next()
+
+    bridges.set_data_structure(g)
+    bridges.visualize()
+
+
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

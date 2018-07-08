@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>/Users/kalpathi/graphics/bridges/site/bridgesSite/Hello_World_Tutorials/testing/python/bst.py.html</title>
+<meta name="Generator" content="Vim/8.0">
+<meta name="plugin-version" content="vim7.4_v2">
+<meta name="syntax" content="c">
+<meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="none">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Constant { color: #0000c0; text-decoration: underline; }
+.Statement { color: #008080; font-weight: bold; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+import Bridges
+from SLelement import *
+from BSTElement import *
+from data_src_dependent import DataSource
+
+
+def insertR(rt, newel):
+    <span class="Statement">if</span> (rt is None):
+        <span class="Statement">return</span> newel
+    elif newel.get_key() &lt; rt.get_key():
+        rt.set_left(insertR(rt.get_left(), newel))
+    <span class="Statement">else</span>:
+        rt.set_right(insertR(rt.get_right(), newel))
+    <span class="Statement">return</span> rt
+
+
+class EarthquakeDriver():
+
+    bridges = Bridges.Bridges(<span class="Constant">10</span>, <span class="Constant">&quot;kalpathi60&quot;</span>, <span class="Constant">&quot;486749122386&quot;</span>)
+
+    ami = DataSource.getEarthquakeUSGSData(<span class="Constant">1000</span>)
+
+    root = None
+
+    <span class="Statement">for</span> i in range(len(ami)):
+        bst_node = BSTElement(ami[i].getMagnitude(), ami[i])
+        bst_node.set_label(ami[i].getTitle())
+        # print(bst_node.get_key())
+        root = insertR(root, bst_node)
+
+    bridges.set_data_structure(root)
+    bridges.visualize()
+
+
+
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

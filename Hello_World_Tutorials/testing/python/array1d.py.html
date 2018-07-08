@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>/Users/kalpathi/graphics/bridges/site/bridgesSite/Hello_World_Tutorials/testing/python/array1d.py.html</title>
+<meta name="Generator" content="Vim/8.0">
+<meta name="plugin-version" content="vim7.4_v2">
+<meta name="syntax" content="c">
+<meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="none">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Constant { color: #0000c0; text-decoration: underline; }
+.Statement { color: #008080; font-weight: bold; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+from Bridges import *
+from Array import *
+from Element import *
+
+
+class Array1d():
+
+    bridges = Bridges(<span class="Constant">0</span>, <span class="Constant">&quot;kalpathi60&quot;</span>, <span class="Constant">&quot;486749122386&quot;</span>)
+
+    arraySize = <span class="Constant">10</span>
+
+    arr = Array(num_elements = arraySize)
+
+    <span class="Statement">for</span> i in range(arr.get_size()):
+        arr.get_element(i).set_label(i*i)
+
+    arr.get_element(<span class="Constant">0</span>).get_visualizer().set_color(<span class="Constant">&quot;red&quot;</span>)
+    arr.get_element(<span class="Constant">8</span>).get_visualizer().set_color(<span class="Constant">&quot;green&quot;</span>)
+
+    bridges.set_data_structure(arr)
+    bridges.visualize()
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

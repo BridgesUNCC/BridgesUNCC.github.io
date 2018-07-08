@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>/Users/kalpathi/graphics/bridges/site/bridgesSite/Hello_World_Tutorials/testing/python/tree.py.html</title>
+<meta name="Generator" content="Vim/8.0">
+<meta name="plugin-version" content="vim7.4_v2">
+<meta name="syntax" content="c">
+<meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="none">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Constant { color: #0000c0; text-decoration: underline; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+from Bridges import *
+from TreeElement import *
+
+
+
+class tutorial:
+
+    bridges = Bridges(<span class="Constant">8</span>, <span class="Constant">&quot;kalpathi60&quot;</span>, <span class="Constant">&quot;486749122386&quot;</span>)
+
+    t0 = TreeElement(e = <span class="Constant">&quot;Hello&quot;</span>)
+    t1 = TreeElement(e= <span class="Constant">&quot;this&quot;</span>)
+    t2 = TreeElement(e=<span class="Constant">&quot;is&quot;</span>)
+    t3 = TreeElement(e=<span class="Constant">&quot;a&quot;</span>)
+    t4 = TreeElement(e=<span class="Constant">&quot;generic&quot;</span>)
+    t5 = TreeElement(e=<span class="Constant">&quot;tree&quot;</span>)
+    t6 = TreeElement(e=<span class="Constant">&quot;representation&quot;</span>)
+
+    t0.set_label(<span class="Constant">&quot;10&quot;</span>)
+    t1.set_label(<span class="Constant">&quot;20&quot;</span>)
+    t2.set_label(<span class="Constant">&quot;30&quot;</span>)
+    t3.set_label(<span class="Constant">&quot;40&quot;</span>)
+    t4.set_label(<span class="Constant">&quot;50&quot;</span>)
+    t5.set_label(<span class="Constant">&quot;60&quot;</span>)
+    t6.set_label(<span class="Constant">&quot;70&quot;</span>)
+
+    t0.add_child(t1)
+    t0.add_child(t2)
+    t0.add_child(t5)
+    t2.add_child(t4)
+    t2.add_child(t5)
+    t3.add_child(t6)
+
+    t0.get_visualizer().set_color(<span class="Constant">&quot;red&quot;</span>)
+    t0.get_visualizer().set_opacity(<span class="Constant">0.3</span>)
+
+    bridges.set_data_structure(t0)
+    bridges.visualize()
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->
