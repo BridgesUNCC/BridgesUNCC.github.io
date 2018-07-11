@@ -9,7 +9,7 @@ using namespace bridges;
 int main() {
 
 
-	Bridges::initialize(11, "YOUR_USER_ID", "YOUR_API_KEY");
+	Bridges::initialize(11, "kalpathi60", "486749122386");
 
 	AVLTreeElement<int, string> *tle0 =
 		new AVLTreeElement<int, string>(10, "10", "10");

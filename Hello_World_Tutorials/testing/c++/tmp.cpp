@@ -7,7 +7,7 @@ using namespace bridges;
 
 int main() {
 
-	Bridges::initialize(8, "YOUR_USER_ID", "YOUR_API_KEY");
+	Bridges::initialize(8, "kalpathi60", "486749122386");
 
 	TreeElement<string> *t0 = new TreeElement<string>("Hello", "Hello");
 	TreeElement<string> *t2 = new TreeElement<string>("This", "This");
