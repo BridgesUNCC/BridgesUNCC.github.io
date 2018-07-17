@@ -6,7 +6,7 @@ using namespace bridges;
 
 int main()  {
 	//create the Bridges object
-	Bridges::initialize(7, "kalpathi60", "486749122386");
+	Bridges::initialize(7, "YOUR_USER_ID", "YOUR_API_KEY");
 	Bridges::setTitle("A Trivial Multilist Example");
 
 	//create  a linked list
