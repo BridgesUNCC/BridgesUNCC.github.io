@@ -2,32 +2,24 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>~/graphics/bridges/site/bridgesSite/Hello_World_Tutorials/testing/java/graph_am.java.html</title>
-<meta name="Generator" content="Vim/8.0">
-<meta name="plugin-version" content="vim7.4_v2">
+<title>~/graphics/bridges/bridgesUNCC/Hello_World_Tutorials/testing/java/graph_am.java.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v6">
 <meta name="syntax" content="c">
-<meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
-<meta name="colorscheme" content="none">
+<meta name="settings" content="use_css,no_progress">
 <style type="text/css">
 <!--
-pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+pre { font-family: monospace; color: #000000; background-color: #ffffff; }
 body { font-family: monospace; color: #000000; background-color: #ffffff; }
-* { font-size: 1em; }
-.Constant { color: #0000c0; text-decoration: underline; }
 .Statement { color: #008080; font-weight: bold; }
+.Constant { color: #0000c0; text-decoration: underline; }
 .Comment { color: #c00000; font-weight: bold; }
 .Type { color: #008000; text-decoration: underline; }
 -->
 </style>
-
-<script type='text/javascript'>
-<!--
-
--->
-</script>
 </head>
 <body>
-<pre id='vimCodeElement'>
+<pre>
 import java.util.ArrayList;
 import java.lang.String;
 import java.util.Map;
@@ -40,86 +32,85 @@ import bridges.connect.Bridges;
 import bridges.data_src_dependent.ActorMovieIMDB;
 
 public class graph_am {
-	public <span class="Type">static</span> <span class="Type">void</span> main(String[] args) throws Exception {
+        public <span class="Type">static</span> <span class="Type">void</span> main(String[] args) throws Exception {
 
-		<span class="Comment">// initialize Bridges</span>
-		Bridges bridges = new Bridges(<span class="Constant">13</span>, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+                <span class="Comment">// initialize Bridges</span>
+                Bridges bridges = new Bridges(<span class="Constant">13</span>, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 
-		<span class="Comment">// set a title for the visualization</span>
-		bridges.setTitle(<span class="Constant">&quot;A Simple Graph (Adjacency Matrix)  Example using IMDB Actor/Movie Data&quot;</span>);
+                <span class="Comment">// set a title for the visualization</span>
+                bridges.setTitle(<span class="Constant">&quot;A Simple Graph (Adjacency Matrix)  Example using IMDB Actor/Movie Data&quot;</span>);
 
-		ArrayList&lt;ActorMovieIMDB&gt;  actor_movie_data =
-			(ArrayList&lt;ActorMovieIMDB&gt;) bridges.getActorMovieIMDBData(<span class="Constant">1813</span>);
+                ArrayList&lt;ActorMovieIMDB&gt;  actor_movie_data =
+                        (ArrayList&lt;ActorMovieIMDB&gt;) bridges.getActorMovieIMDBData(<span class="Constant">1813</span>);
 
-		<span class="Comment">// create an adjacency list based graph</span>
-		GraphAdjMatrixSimple&lt;String&gt; graph = new GraphAdjMatrixSimple&lt;String&gt;();
+                <span class="Comment">// create an adjacency list based graph</span>
+                GraphAdjMatrixSimple&lt;String&gt; graph = new GraphAdjMatrixSimple&lt;String&gt;();
 
-		<span class="Comment">// first create vertices for two actors and add them to the graph</span>
-		String a1 = <span class="Constant">&quot;Kevin_Bacon_(I)&quot;</span>, a2 = <span class="Constant">&quot;Denzel_Washington&quot;</span>;
-		graph.addVertex(a1, <span class="Constant">&quot;&quot;</span>);
-		graph.addVertex(a2, <span class="Constant">&quot;&quot;</span>);
+                <span class="Comment">// first create vertices for two actors and add them to the graph</span>
+                String a1 = <span class="Constant">&quot;Kevin_Bacon_(I)&quot;</span>, a2 = <span class="Constant">&quot;Denzel_Washington&quot;</span>;
+                graph.addVertex(a1, <span class="Constant">&quot;&quot;</span>);
+                graph.addVertex(a2, <span class="Constant">&quot;&quot;</span>);
 
-		<span class="Comment">// add an edge between the two actors a1 and a2,</span>
-		<span class="Comment">// the third parameter is the edge weight</span>
-		graph.addEdge(a1, a2, <span class="Constant">1</span>);
+                <span class="Comment">// add an edge between the two actors a1 and a2,</span>
+                <span class="Comment">// the third parameter is the edge weight</span>
+                graph.addEdge(a1, a2, <span class="Constant">1</span>);
 
-		<span class="Comment">// color the two actor nodes</span>
-		graph.getVertices().get(<span class="Constant">&quot;Kevin_Bacon_(I)&quot;</span>).getVisualizer().setColor(<span class="Constant">&quot;red&quot;</span>);
-		graph.getVertices().get(<span class="Constant">&quot;Denzel_Washington&quot;</span>).getVisualizer().setColor(<span class="Constant">&quot;red&quot;</span>);
+                <span class="Comment">// color the two actor nodes</span>
+                graph.getVertices().get(<span class="Constant">&quot;Kevin_Bacon_(I)&quot;</span>).getVisualizer().setColor(<span class="Constant">&quot;red&quot;</span>);
+                graph.getVertices().get(<span class="Constant">&quot;Denzel_Washington&quot;</span>).getVisualizer().setColor(<span class="Constant">&quot;red&quot;</span>);
 
-		<span class="Comment">// make them a bit bigger</span>
-		graph.getVisualizer(<span class="Constant">&quot;Kevin_Bacon_(I)&quot;</span>).setSize(<span class="Constant">20</span>);
-		graph.getVisualizer(<span class="Constant">&quot;Denzel_Washington&quot;</span>).setSize(<span class="Constant">20</span>);
+                <span class="Comment">// make them a bit bigger</span>
+                graph.getVisualizer(<span class="Constant">&quot;Kevin_Bacon_(I)&quot;</span>).setSize(<span class="Constant">20</span>);
+                graph.getVisualizer(<span class="Constant">&quot;Denzel_Washington&quot;</span>).setSize(<span class="Constant">20</span>);
 
-		<span class="Comment">// we will find the first 15 immediate neighbors of of the two actors</span>
-		<span class="Comment">// and color those links and nodes by followng their adjacency lists</span>
-		<span class="Type">int</span> cnt1 = <span class="Constant">0</span>, cnt2 = <span class="Constant">0</span>;
-		<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; actor_movie_data.size(); k++) {
-			<span class="Comment">// from the actor movie data, get an actor-movie pair</span>
-			String a = actor_movie_data.get(k).getActor();
-			String m = actor_movie_data.get(k).getMovie();
+                <span class="Comment">// we will find the first 15 immediate neighbors of of the two actors</span>
+                <span class="Comment">// and color those links and nodes by followng their adjacency lists</span>
+                <span class="Type">int</span> cnt1 = <span class="Constant">0</span>, cnt2 = <span class="Constant">0</span>;
+                <span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; actor_movie_data.size(); k++) {
+                        <span class="Comment">// from the actor movie data, get an actor-movie pair</span>
+                        String a = actor_movie_data.get(k).getActor();
+                        String m = actor_movie_data.get(k).getMovie();
 
-			<span class="Statement">if</span> (a.equals(<span class="Constant">&quot;Kevin_Bacon_(I)&quot;</span>) &amp;&amp; cnt1 &lt; <span class="Constant">15</span>) {
+                        <span class="Statement">if</span> (a.equals(<span class="Constant">&quot;Kevin_Bacon_(I)&quot;</span>) &amp;&amp; cnt1 &lt; <span class="Constant">15</span>) {
 
-				<span class="Comment">// add vertices for this movie  and an edge for the link</span>
-				graph.addVertex(m, <span class="Constant">&quot;&quot;</span>);
-				graph.addEdge(a1, m, <span class="Constant">1</span>);
-				graph.addEdge(m, a1, <span class="Constant">1</span>);
+                                <span class="Comment">// add vertices for this movie  and an edge for the link</span>
+                                graph.addVertex(m, <span class="Constant">&quot;&quot;</span>);
+                                graph.addEdge(a1, m, <span class="Constant">1</span>);
+                                graph.addEdge(m, a1, <span class="Constant">1</span>);
 
-				<span class="Comment">// make the movie node a bit transparent</span>
-				graph.getVisualizer(m).setOpacity(<span class="Constant">0.5f</span>);
-				cnt1++;
-			}
-			<span class="Statement">else</span> <span class="Statement">if</span> (a.equals(<span class="Constant">&quot;Denzel_Washington&quot;</span>) &amp;&amp; cnt2 &lt; <span class="Constant">15</span>) {
-				<span class="Comment">// add vertices for this movie  and an edge for the link</span>
-				graph.addVertex(m, <span class="Constant">&quot;&quot;</span>);
-				graph.addEdge(a2, m, <span class="Constant">1</span>);
-				graph.addEdge(m, a2, <span class="Constant">1</span>);
-				<span class="Comment">// make the movie node a bit transparent</span>
-				graph.getVisualizer(m).setOpacity(<span class="Constant">0.5f</span>);
-				cnt2++;
-			}
-		}
+                                <span class="Comment">// make the movie node a bit transparent</span>
+                                graph.getVisualizer(m).setOpacity(<span class="Constant">0.5f</span>);
+                                cnt1++;
+                        }
+                        <span class="Statement">else</span> <span class="Statement">if</span> (a.equals(<span class="Constant">&quot;Denzel_Washington&quot;</span>) &amp;&amp; cnt2 &lt; <span class="Constant">15</span>) {
+                                <span class="Comment">// add vertices for this movie  and an edge for the link</span>
+                                graph.addVertex(m, <span class="Constant">&quot;&quot;</span>);
+                                graph.addEdge(a2, m, <span class="Constant">1</span>);
+                                graph.addEdge(m, a2, <span class="Constant">1</span>);
+                                <span class="Comment">// make the movie node a bit transparent</span>
+                                graph.getVisualizer(m).setOpacity(<span class="Constant">0.5f</span>);
+                                cnt2++;
+                        }
+                }
 
-		<span class="Comment">// Next, we illustrate traversing the adacency list and color the</span>
-		<span class="Comment">// movie nodes adjacent to the Kevin Bacon node.</span>
+                <span class="Comment">// Next, we illustrate traversing the adacency list and color the</span>
+                <span class="Comment">// movie nodes adjacent to the Kevin Bacon node.</span>
 
-		<span class="Comment">// first get the adjacency list for Kevin Bacon</span>
-		HashMap&lt;String, Integer&gt; bacon_row =
-			graph.getAdjacencyMatrix(<span class="Constant">&quot;Kevin_Bacon_(I)&quot;</span>);
-		<span class="Statement">for</span> (Map.Entry&lt;String, Integer&gt; entry : bacon_row.entrySet()) {
-			<span class="Statement">if</span> (!entry.getKey().equals(<span class="Constant">&quot;Denzel_Washington&quot;</span>) &amp;&amp;
-				entry.getValue() != <span class="Constant">0</span>)
-				graph.getVisualizer(entry.getKey()).setColor (<span class="Constant">&quot;green&quot;</span>);
-		}
-		<span class="Comment">// Pass the graph object to BRIDGES</span>
-		bridges.setDataStructure(graph);
+                <span class="Comment">// first get the adjacency list for Kevin Bacon</span>
+                HashMap&lt;String, Integer&gt; bacon_row =
+                        graph.getAdjacencyMatrix(<span class="Constant">&quot;Kevin_Bacon_(I)&quot;</span>);
+                <span class="Statement">for</span> (Map.Entry&lt;String, Integer&gt; entry : bacon_row.entrySet()) {
+                        <span class="Statement">if</span> (!entry.getKey().equals(<span class="Constant">&quot;Denzel_Washington&quot;</span>) &amp;&amp;
+                                entry.getValue() != <span class="Constant">0</span>)
+                                graph.getVisualizer(entry.getKey()).setColor (<span class="Constant">&quot;green&quot;</span>);
+                }
+                <span class="Comment">// Pass the graph object to BRIDGES</span>
+                bridges.setDataStructure(graph);
 
-		<span class="Comment">// Finaly we call the visualize function</span>
-		bridges.visualize();
-	}
+                <span class="Comment">// Finaly we call the visualize function</span>
+                bridges.visualize();
+        }
 }
 </pre>
 </body>
 </html>
-<!-- vim: set foldmethod=manual : -->
