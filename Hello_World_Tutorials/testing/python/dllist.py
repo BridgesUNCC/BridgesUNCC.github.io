@@ -1,5 +1,5 @@
-from DLelement import *
-from Bridges import Bridges
+from Bridges.DLelement import *
+from Bridges.Bridges import *
 from StudentInfo import *
 
 
@@ -13,10 +13,12 @@ def insertFront(front, new_el):
     return new_el
 
 class DLListtutorial:
+    #create a bridges object with your credentials
     bridges = Bridges(4, "YOUR_USER_ID", "YOUR_API_KEY")
 
     students = []
 
+    # load student info
     students.append(Student("00000000000",
                               "Gretel Chaney",
                               "CS",
@@ -57,10 +59,12 @@ class DLListtutorial:
                               "cyan",
                               15.0))
 
+    # insert the students in front of the list
     head = None
     for i in range(len(students)):
         head = insertFront(head, DLelement(label = "", e = students[i]))
 
+    # add visual attributes
     curr = head
     while curr is not None:
         curr.set_label(curr.get_value().getName())
@@ -73,5 +77,8 @@ class DLListtutorial:
 
         curr = curr.get_next()
 
+
+    # set dat structure to be visualized
     bridges.set_data_structure(head)
+    # visualize the data structure
     bridges.visualize()

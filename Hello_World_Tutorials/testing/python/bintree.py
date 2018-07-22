@@ -1,11 +1,14 @@
-from Bridges import *
-from BinTreeElement import *
+from Bridges.Bridges import *
+from Bridges.BinTreeElement import *
 
 
 
 class BinTreetutorial:
+    # create bridges object
     bridges = Bridges(9, "YOUR_USER_ID", "YOUR_API_KEY")
+    bridges.setTitle("A Huffman Coding Tree Example")
 
+    #build the tree
     t0 = BinTreeElement(label = "306", e = 0)
     t1 = BinTreeElement(label = "120\\nE",e = 1)
     t2 = BinTreeElement(label = "186",e = 2)
@@ -22,6 +25,7 @@ class BinTreetutorial:
     t13 = BinTreeElement(label = "7\\nK",e = 13)
     t14 = BinTreeElement(label = "24\\nM",e = 14)
 
+
     t0.set_left(t1)
     t0.set_right(t2)
     t2.set_left(t3)
@@ -37,7 +41,7 @@ class BinTreetutorial:
     t11.set_left(t12)
     t11.set_right(t13)
 
-
+    # color the leaf nodes to represent the code letters
     t0.get_visualizer().set_color("red")
     t1.get_visualizer().set_color("orange")
     t4.get_visualizer().set_color("orange")
@@ -48,7 +52,9 @@ class BinTreetutorial:
     t13.get_visualizer().set_color("orange")
     t14.get_visualizer().set_color("orange")
 
+    # set visualizer type
     bridges.set_data_structure(t0)
+    #visualize the tree
     bridges.visualize()
 
 
