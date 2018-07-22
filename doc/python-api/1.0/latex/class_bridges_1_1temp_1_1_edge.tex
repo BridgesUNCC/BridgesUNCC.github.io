@@ -1,0 +1,205 @@
+\hypertarget{class_bridges_1_1temp_1_1_edge}{}\section{Bridges.\+temp.\+Edge Class Reference}
+\label{class_bridges_1_1temp_1_1_edge}\index{Bridges.\+temp.\+Edge@{Bridges.\+temp.\+Edge}}
+
+
+This class is used to represent the edges in a graph and will appear as links in the B\+R\+I\+D\+G\+ES graph visualization.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_bridges_1_1temp_1_1_edge_a04dbca99e0561c248750fc3e7bf4121a}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, wt=None, v=None)
+\begin{DoxyCompactList}\small\item\em Constructors. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_bridges_1_1temp_1_1_edge_aef8afe938081b6033a794d70eb760491}{set\+\_\+weight}} (self, wt)
+\begin{DoxyCompactList}\small\item\em Set edge weight to \char`\"{}wt\char`\"{}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_bridges_1_1temp_1_1_edge_a53a82067c49396e22289f923c3d3b713}{get\+\_\+weight}} (self)
+\begin{DoxyCompactList}\small\item\em Get edge weight. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_bridges_1_1temp_1_1_edge_aab4c8151036ff96a35183787761707be}{set\+\_\+vertex}} (self, v)
+\begin{DoxyCompactList}\small\item\em Set terminating \mbox{\hyperlink{namespace_bridges_1_1_element}{Element}} of the edge. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_bridges_1_1temp_1_1_edge_a109b488c745b70c48f45b9a78d311c7a}{get\+\_\+vertex}} (self)
+\begin{DoxyCompactList}\small\item\em Get identifer of the terminating \mbox{\hyperlink{namespace_bridges_1_1_element}{Element}} of edge. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_bridges_1_1temp_1_1_edge_ac9eabd571940d72f50d3e253ab89bf64}{set\+\_\+edge}} (self, wt, v)
+\begin{DoxyCompactList}\small\item\em Set edge to weight of \char`\"{}wt\char`\"{} and terminating Elememt of \char`\"{}v\char`\"{}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_bridges_1_1temp_1_1_edge_a560413418c786163b6222b6268d18a4a}{set\+\_\+edge\+\_\+data}} (self, data)
+\begin{DoxyCompactList}\small\item\em Set \mbox{\hyperlink{class_bridges_1_1temp_1_1_edge}{Edge}} data (represented as a string for now) \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_bridges_1_1temp_1_1_edge_a3ac5fc36fd6372ceb17f841d8cfa4c22}{get\+\_\+edge\+\_\+data}} (self)
+\begin{DoxyCompactList}\small\item\em Get edge data. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_bridges_1_1temp_1_1_edge_a1d0153f17363a50aad3d9e28c9d23ad9}{get\+\_\+edge}} (self)
+\begin{DoxyCompactList}\small\item\em Returns this edge. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bridges_1_1temp_1_1_edge_ad4176272c9d969f23adbeeb901e73615}{weight}} = int()
+\item 
+\mbox{\hyperlink{class_bridges_1_1temp_1_1_edge_a34c83e7b1c4cde4ee443df0e2c1451a1}{vertex}} = \mbox{\hyperlink{class_bridges_1_1_element_1_1_element}{Element}}()
+\item 
+\mbox{\hyperlink{class_bridges_1_1temp_1_1_edge_a34c9d5c0ba1f62155b267e921c50d42d}{edge\+\_\+data}} = str()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is used to represent the edges in a graph and will appear as links in the B\+R\+I\+D\+G\+ES graph visualization. 
+
+This object is used in graphs and graph algorithms such as D\+FS, B\+FS and shortest path algorithms that need to visit graph edges. The adjacency list representation uses them as the generic paramter, as S\+Lelement$<$\+Edge$>$ \mbox{\hyperlink{namespace_bridges_1_1_bridges}{Bridges}} represents Edges as links between pairs of elements
+
+\begin{DoxyAuthor}{Author}
+K.\+R. Subramanian
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em generic} & parameter $<$\+K$>$ usually an Element$<$\+E$>$ type used to hold the terminating vertex \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_bridges_1_1temp_1_1_edge_a04dbca99e0561c248750fc3e7bf4121a}\label{class_bridges_1_1temp_1_1_edge_a04dbca99e0561c248750fc3e7bf4121a}} 
+\index{Bridges\+::temp\+::\+Edge@{Bridges\+::temp\+::\+Edge}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Bridges\+::temp\+::\+Edge@{Bridges\+::temp\+::\+Edge}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Bridges.\+temp.\+Edge.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{wt = {\ttfamily None},  }\item[{}]{v = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Constructors. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_bridges_1_1temp_1_1_edge_a1d0153f17363a50aad3d9e28c9d23ad9}\label{class_bridges_1_1temp_1_1_edge_a1d0153f17363a50aad3d9e28c9d23ad9}} 
+\index{Bridges\+::temp\+::\+Edge@{Bridges\+::temp\+::\+Edge}!get\+\_\+edge@{get\+\_\+edge}}
+\index{get\+\_\+edge@{get\+\_\+edge}!Bridges\+::temp\+::\+Edge@{Bridges\+::temp\+::\+Edge}}
+\subsubsection{\texorpdfstring{get\+\_\+edge()}{get\_edge()}}
+{\footnotesize\ttfamily def Bridges.\+temp.\+Edge.\+get\+\_\+edge (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Returns this edge. 
+
+\mbox{\Hypertarget{class_bridges_1_1temp_1_1_edge_a3ac5fc36fd6372ceb17f841d8cfa4c22}\label{class_bridges_1_1temp_1_1_edge_a3ac5fc36fd6372ceb17f841d8cfa4c22}} 
+\index{Bridges\+::temp\+::\+Edge@{Bridges\+::temp\+::\+Edge}!get\+\_\+edge\+\_\+data@{get\+\_\+edge\+\_\+data}}
+\index{get\+\_\+edge\+\_\+data@{get\+\_\+edge\+\_\+data}!Bridges\+::temp\+::\+Edge@{Bridges\+::temp\+::\+Edge}}
+\subsubsection{\texorpdfstring{get\+\_\+edge\+\_\+data()}{get\_edge\_data()}}
+{\footnotesize\ttfamily def Bridges.\+temp.\+Edge.\+get\+\_\+edge\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get edge data. 
+
+\begin{DoxyReturn}{Returns}
+the edge data 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bridges_1_1temp_1_1_edge_a109b488c745b70c48f45b9a78d311c7a}\label{class_bridges_1_1temp_1_1_edge_a109b488c745b70c48f45b9a78d311c7a}} 
+\index{Bridges\+::temp\+::\+Edge@{Bridges\+::temp\+::\+Edge}!get\+\_\+vertex@{get\+\_\+vertex}}
+\index{get\+\_\+vertex@{get\+\_\+vertex}!Bridges\+::temp\+::\+Edge@{Bridges\+::temp\+::\+Edge}}
+\subsubsection{\texorpdfstring{get\+\_\+vertex()}{get\_vertex()}}
+{\footnotesize\ttfamily def Bridges.\+temp.\+Edge.\+get\+\_\+vertex (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get identifer of the terminating \mbox{\hyperlink{namespace_bridges_1_1_element}{Element}} of edge. 
+
+\begin{DoxyReturn}{Returns}
+the string identifier of the terminating \mbox{\hyperlink{namespace_bridges_1_1_element}{Element}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bridges_1_1temp_1_1_edge_a53a82067c49396e22289f923c3d3b713}\label{class_bridges_1_1temp_1_1_edge_a53a82067c49396e22289f923c3d3b713}} 
+\index{Bridges\+::temp\+::\+Edge@{Bridges\+::temp\+::\+Edge}!get\+\_\+weight@{get\+\_\+weight}}
+\index{get\+\_\+weight@{get\+\_\+weight}!Bridges\+::temp\+::\+Edge@{Bridges\+::temp\+::\+Edge}}
+\subsubsection{\texorpdfstring{get\+\_\+weight()}{get\_weight()}}
+{\footnotesize\ttfamily def Bridges.\+temp.\+Edge.\+get\+\_\+weight (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get edge weight. 
+
+\begin{DoxyReturn}{Returns}
+the weight of edge 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bridges_1_1temp_1_1_edge_ac9eabd571940d72f50d3e253ab89bf64}\label{class_bridges_1_1temp_1_1_edge_ac9eabd571940d72f50d3e253ab89bf64}} 
+\index{Bridges\+::temp\+::\+Edge@{Bridges\+::temp\+::\+Edge}!set\+\_\+edge@{set\+\_\+edge}}
+\index{set\+\_\+edge@{set\+\_\+edge}!Bridges\+::temp\+::\+Edge@{Bridges\+::temp\+::\+Edge}}
+\subsubsection{\texorpdfstring{set\+\_\+edge()}{set\_edge()}}
+{\footnotesize\ttfamily def Bridges.\+temp.\+Edge.\+set\+\_\+edge (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{wt,  }\item[{}]{v }\end{DoxyParamCaption})}
+
+
+
+Set edge to weight of \char`\"{}wt\char`\"{} and terminating Elememt of \char`\"{}v\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wt} & edge weight \\
+\hline
+{\em v} & the identifier of the terminating \mbox{\hyperlink{namespace_bridges_1_1_element}{Element}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_bridges_1_1temp_1_1_edge_a560413418c786163b6222b6268d18a4a}\label{class_bridges_1_1temp_1_1_edge_a560413418c786163b6222b6268d18a4a}} 
+\index{Bridges\+::temp\+::\+Edge@{Bridges\+::temp\+::\+Edge}!set\+\_\+edge\+\_\+data@{set\+\_\+edge\+\_\+data}}
+\index{set\+\_\+edge\+\_\+data@{set\+\_\+edge\+\_\+data}!Bridges\+::temp\+::\+Edge@{Bridges\+::temp\+::\+Edge}}
+\subsubsection{\texorpdfstring{set\+\_\+edge\+\_\+data()}{set\_edge\_data()}}
+{\footnotesize\ttfamily def Bridges.\+temp.\+Edge.\+set\+\_\+edge\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+
+
+Set \mbox{\hyperlink{class_bridges_1_1temp_1_1_edge}{Edge}} data (represented as a string for now) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & application data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_bridges_1_1temp_1_1_edge_aab4c8151036ff96a35183787761707be}\label{class_bridges_1_1temp_1_1_edge_aab4c8151036ff96a35183787761707be}} 
+\index{Bridges\+::temp\+::\+Edge@{Bridges\+::temp\+::\+Edge}!set\+\_\+vertex@{set\+\_\+vertex}}
+\index{set\+\_\+vertex@{set\+\_\+vertex}!Bridges\+::temp\+::\+Edge@{Bridges\+::temp\+::\+Edge}}
+\subsubsection{\texorpdfstring{set\+\_\+vertex()}{set\_vertex()}}
+{\footnotesize\ttfamily def Bridges.\+temp.\+Edge.\+set\+\_\+vertex (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{v }\end{DoxyParamCaption})}
+
+
+
+Set terminating \mbox{\hyperlink{namespace_bridges_1_1_element}{Element}} of the edge. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & the identifier of the terminating \mbox{\hyperlink{namespace_bridges_1_1_element}{Element}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_bridges_1_1temp_1_1_edge_aef8afe938081b6033a794d70eb760491}\label{class_bridges_1_1temp_1_1_edge_aef8afe938081b6033a794d70eb760491}} 
+\index{Bridges\+::temp\+::\+Edge@{Bridges\+::temp\+::\+Edge}!set\+\_\+weight@{set\+\_\+weight}}
+\index{set\+\_\+weight@{set\+\_\+weight}!Bridges\+::temp\+::\+Edge@{Bridges\+::temp\+::\+Edge}}
+\subsubsection{\texorpdfstring{set\+\_\+weight()}{set\_weight()}}
+{\footnotesize\ttfamily def Bridges.\+temp.\+Edge.\+set\+\_\+weight (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{wt }\end{DoxyParamCaption})}
+
+
+
+Set edge weight to \char`\"{}wt\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wt} & -\/ graph edge weight \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_bridges_1_1temp_1_1_edge_a34c9d5c0ba1f62155b267e921c50d42d}\label{class_bridges_1_1temp_1_1_edge_a34c9d5c0ba1f62155b267e921c50d42d}} 
+\index{Bridges\+::temp\+::\+Edge@{Bridges\+::temp\+::\+Edge}!edge\+\_\+data@{edge\+\_\+data}}
+\index{edge\+\_\+data@{edge\+\_\+data}!Bridges\+::temp\+::\+Edge@{Bridges\+::temp\+::\+Edge}}
+\subsubsection{\texorpdfstring{edge\+\_\+data}{edge\_data}}
+{\footnotesize\ttfamily Bridges.\+temp.\+Edge.\+edge\+\_\+data = str()\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_bridges_1_1temp_1_1_edge_a34c83e7b1c4cde4ee443df0e2c1451a1}\label{class_bridges_1_1temp_1_1_edge_a34c83e7b1c4cde4ee443df0e2c1451a1}} 
+\index{Bridges\+::temp\+::\+Edge@{Bridges\+::temp\+::\+Edge}!vertex@{vertex}}
+\index{vertex@{vertex}!Bridges\+::temp\+::\+Edge@{Bridges\+::temp\+::\+Edge}}
+\subsubsection{\texorpdfstring{vertex}{vertex}}
+{\footnotesize\ttfamily Bridges.\+temp.\+Edge.\+vertex = \mbox{\hyperlink{class_bridges_1_1_element_1_1_element}{Element}}()\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_bridges_1_1temp_1_1_edge_ad4176272c9d969f23adbeeb901e73615}\label{class_bridges_1_1temp_1_1_edge_ad4176272c9d969f23adbeeb901e73615}} 
+\index{Bridges\+::temp\+::\+Edge@{Bridges\+::temp\+::\+Edge}!weight@{weight}}
+\index{weight@{weight}!Bridges\+::temp\+::\+Edge@{Bridges\+::temp\+::\+Edge}}
+\subsubsection{\texorpdfstring{weight}{weight}}
+{\footnotesize\ttfamily Bridges.\+temp.\+Edge.\+weight = int()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/python/bridges18/\+Bridges/\mbox{\hyperlink{temp_8py}{temp.\+py}}\end{DoxyCompactItemize}

@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['cancerincidence_2epy',['CancerIncidence.py',['../_cancer_incidence_8py.html',1,'']]],
-  ['circdlelement_2epy',['CircDLelement.py',['../_circ_d_lelement_8py.html',1,'']]],
-  ['circslelement_2epy',['CircSLelement.py',['../_circ_s_lelement_8py.html',1,'']]],
-  ['color_2epy',['Color.py',['../_color_8py.html',1,'']]],
-  ['connector_2epy',['Connector.py',['../_connector_8py.html',1,'']]]
+  ['bintreeelement_2epy',['BinTreeElement.py',['../_bin_tree_element_8py.html',1,'']]],
+  ['bridges_2epy',['Bridges.py',['../_bridges_8py.html',1,'']]],
+  ['bstelement_2epy',['BSTElement.py',['../_b_s_t_element_8py.html',1,'']]]
 ];
