@@ -1,0 +1,104 @@
+\hypertarget{classbridges_1_1_data_structure}{}\section{bridges\+:\+:Data\+Structure Class Reference}
+\label{classbridges_1_1_data_structure}\index{bridges\+::\+Data\+Structure@{bridges\+::\+Data\+Structure}}
+
+
+This is the superclass of all data structure types in B\+R\+I\+D\+G\+E\+S.  
+
+
+
+
+{\ttfamily \#include $<$Data\+Structure.\+h$>$}
+
+Inheritance diagram for bridges\+:\+:Data\+Structure\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=9.893993cm]{classbridges_1_1_data_structure}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classbridges_1_1_data_structure_afd70a1ae5c2578d80a441714f95f9401}{$\sim$\+Data\+Structure} ()=default
+\item 
+virtual const string \hyperlink{classbridges_1_1_data_structure_ab6973cdb2a22b7e664b895f1f9c8ad54}{get\+D\+Stype} () const  =0
+\item 
+virtual void \hyperlink{classbridges_1_1_data_structure_ac3ad75810fd77f0ad35b9b5123d2c8f8}{cleanup} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classbridges_1_1_data_structure_a0a9e3be9faab475909293766dcda4779}{Bridges\+::visualize} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the superclass of all data structure types in B\+R\+I\+D\+G\+E\+S. 
+
+This is the superclass of all data structure types in B\+R\+I\+D\+G\+E\+S.
+
+All types of B\+R\+I\+D\+G\+E\+S Elements, \hyperlink{classbridges_1_1_array}{Array} and Graphs inherit from this class.
+
+\begin{DoxyDate}{Date}
+6/11/15 7/10/16 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Dakota Carmer, Kalpathi Subramanian 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbridges_1_1_data_structure_afd70a1ae5c2578d80a441714f95f9401}{}\index{bridges\+::\+Data\+Structure@{bridges\+::\+Data\+Structure}!````~Data\+Structure@{$\sim$\+Data\+Structure}}
+\index{````~Data\+Structure@{$\sim$\+Data\+Structure}!bridges\+::\+Data\+Structure@{bridges\+::\+Data\+Structure}}
+\subsubsection[{$\sim$\+Data\+Structure()=default}]{\setlength{\rightskip}{0pt plus 5cm}virtual bridges\+::\+Data\+Structure\+::$\sim$\+Data\+Structure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}\label{classbridges_1_1_data_structure_afd70a1ae5c2578d80a441714f95f9401}
+Virtual Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classbridges_1_1_data_structure_ac3ad75810fd77f0ad35b9b5123d2c8f8}{}\index{bridges\+::\+Data\+Structure@{bridges\+::\+Data\+Structure}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!bridges\+::\+Data\+Structure@{bridges\+::\+Data\+Structure}}
+\subsubsection[{cleanup()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void bridges\+::\+Data\+Structure\+::cleanup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classbridges_1_1_data_structure_ac3ad75810fd77f0ad35b9b5123d2c8f8}
+Ease of use function for the deletion of an entire datastructure. Overrides should call delete on itself and each linked data structure
+
+\begin{DoxyWarning}{Warning}
+Only call if all these data structures were all dynamicaly allocated(aka\+: using new) 
+\end{DoxyWarning}
+
+
+Reimplemented in \hyperlink{classbridges_1_1_tree_element_aad832c9f8dfd7e92c7b06a825f406e1d}{bridges\+::\+Tree\+Element$<$ E $>$}, \hyperlink{classbridges_1_1_s_lelement_ac747648849874407e9d907bb4557dd52}{bridges\+::\+S\+Lelement$<$ E $>$}, and \hyperlink{classbridges_1_1_s_lelement_ac747648849874407e9d907bb4557dd52}{bridges\+::\+S\+Lelement$<$ bridges\+::\+Edge$<$ K, E2 $>$ $>$}.
+
+\hypertarget{classbridges_1_1_data_structure_ab6973cdb2a22b7e664b895f1f9c8ad54}{}\index{bridges\+::\+Data\+Structure@{bridges\+::\+Data\+Structure}!get\+D\+Stype@{get\+D\+Stype}}
+\index{get\+D\+Stype@{get\+D\+Stype}!bridges\+::\+Data\+Structure@{bridges\+::\+Data\+Structure}}
+\subsubsection[{get\+D\+Stype() const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual const string bridges\+::\+Data\+Structure\+::get\+D\+Stype (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classbridges_1_1_data_structure_ab6973cdb2a22b7e664b895f1f9c8ad54}
+\begin{DoxyReturn}{Returns}
+The string representation of this data structure type 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classbridges_1_1_array_afe4174bc21eaafa316584894cf4732b1}{bridges\+::\+Array$<$ E $>$}, \hyperlink{classbridges_1_1_m_lelement_a3d136c3a12f58a7191ce27bbf08cadfb}{bridges\+::\+M\+Lelement$<$ E $>$}, \hyperlink{classbridges_1_1_circ_d_lelement_aa634a40db1541b340c487c6fc9f42b0a}{bridges\+::\+Circ\+D\+Lelement$<$ E $>$}, \hyperlink{classbridges_1_1_circ_s_lelement_a4afcf2593c00f2e1161d85ea31d7ae00}{bridges\+::\+Circ\+S\+Lelement$<$ E $>$}, \hyperlink{classbridges_1_1_kd_tree_element_a18326f2def8a9050e382949d70728cf0}{bridges\+::\+Kd\+Tree\+Element$<$ K, E $>$}, \hyperlink{classbridges_1_1_d_lelement_a5deee8b106a2f3f7d221152bf244016d}{bridges\+::\+D\+Lelement$<$ E $>$}, \hyperlink{classbridges_1_1_b_s_t_element_a56fdac281f5270446cf7ad98ff6c7a80}{bridges\+::\+B\+S\+T\+Element$<$ K, E $>$}, \hyperlink{classbridges_1_1_bin_tree_element_ae0bf807e8fd653574d161b4847c92e4e}{bridges\+::\+Bin\+Tree\+Element$<$ E $>$}, \hyperlink{classbridges_1_1_b_t_element_ad5b614c00d40a703be0e5a89f92df7c7}{bridges\+::\+B\+T\+Element$<$ E $>$}, \hyperlink{classbridges_1_1_s_lelement_a74aece34b334c1d4318694312d70ce89}{bridges\+::\+S\+Lelement$<$ E $>$}, \hyperlink{classbridges_1_1_s_lelement_a74aece34b334c1d4318694312d70ce89}{bridges\+::\+S\+Lelement$<$ bridges\+::\+Edge$<$ K, E2 $>$ $>$}, \hyperlink{classbridges_1_1_graph_adj_list_a4ff076ac9d2a8c5c8f6444160f1f62ff}{bridges\+::\+Graph\+Adj\+List$<$ K, E1, E2 $>$}, \hyperlink{classbridges_1_1_graph_adj_matrix_aeb9fc6a229cd233b899873cb07b2ff65}{bridges\+::\+Graph\+Adj\+Matrix$<$ K, E1, E2 $>$}, \hyperlink{classbridges_1_1_grid_a02561695978011f50894938b78969913}{bridges\+::\+Grid$<$ E $>$}, \hyperlink{classbridges_1_1_grid_a02561695978011f50894938b78969913}{bridges\+::\+Grid$<$ Color $>$}, \hyperlink{classbridges_1_1_a_v_l_tree_element_a408f7c79eb3414b54a8c9bdc6b31d972}{bridges\+::\+A\+V\+L\+Tree\+Element$<$ K, E $>$}, \hyperlink{classbridges_1_1_color_grid_abe93355089cbae218355529632e3d1fb}{bridges\+::\+Color\+Grid}, \hyperlink{classbridges_1_1_tree_element_a2990457495ddecc77fa1dda4f47f3010}{bridges\+::\+Tree\+Element$<$ E $>$}, and \hyperlink{classbridges_1_1_element_array_a19e80a81e4d27f13e4a2091f371a7e18}{bridges\+::\+Element\+Array$<$ E, X, Y, Z $>$}.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classbridges_1_1_data_structure_a0a9e3be9faab475909293766dcda4779}{}\index{bridges\+::\+Data\+Structure@{bridges\+::\+Data\+Structure}!Bridges\+::visualize@{Bridges\+::visualize}}
+\index{Bridges\+::visualize@{Bridges\+::visualize}!bridges\+::\+Data\+Structure@{bridges\+::\+Data\+Structure}}
+\subsubsection[{Bridges\+::visualize}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Bridges\+::visualize} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classbridges_1_1_data_structure_a0a9e3be9faab475909293766dcda4779}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/krs/gr/bridges/bridges17/cxx/src/\hyperlink{_data_structure_8h}{Data\+Structure.\+h}\end{DoxyCompactItemize}

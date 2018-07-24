@@ -1,0 +1,165 @@
+\hypertarget{classbridges_1_1_circ_s_lelement}{}\section{bridges\+:\+:Circ\+S\+Lelement$<$ E $>$ Class Template Reference}
+\label{classbridges_1_1_circ_s_lelement}\index{bridges\+::\+Circ\+S\+Lelement$<$ E $>$@{bridges\+::\+Circ\+S\+Lelement$<$ E $>$}}
+
+
+This class can be used to instantiate Singly Linked Circular List Elements.  
+
+
+
+
+{\ttfamily \#include $<$Circ\+S\+Lelement.\+h$>$}
+
+Inheritance diagram for bridges\+:\+:Circ\+S\+Lelement$<$ E $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classbridges_1_1_circ_s_lelement}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbridges_1_1_circ_s_lelement_a86183d3487b906550d8f32bda3a68f98}{Circ\+S\+Lelement} ()
+\item 
+\hyperlink{classbridges_1_1_circ_s_lelement_a765032df6cfaa7cf7589c9e0df29bae4}{Circ\+S\+Lelement} (E val=E(), string label=string())
+\item 
+\hyperlink{classbridges_1_1_circ_s_lelement_a0dd7605959b4b52de041e9bcbe5abce7}{Circ\+S\+Lelement} (E e=E(), \hyperlink{classbridges_1_1_circ_s_lelement}{Circ\+S\+Lelement} $\ast$\hyperlink{classbridges_1_1_s_lelement_ad7449d10a09ebc52653a7baed812aa43}{next}=nullptr)
+\item 
+\hyperlink{classbridges_1_1_circ_s_lelement_a1fda146fc0da1d8c7d6440cbbbb2ce42}{Circ\+S\+Lelement} (\hyperlink{classbridges_1_1_circ_s_lelement}{Circ\+S\+Lelement} $\ast$\hyperlink{classbridges_1_1_s_lelement_ad7449d10a09ebc52653a7baed812aa43}{next})
+\item 
+virtual const string \hyperlink{classbridges_1_1_circ_s_lelement_a4afcf2593c00f2e1161d85ea31d7ae00}{get\+D\+Stype} () const  override
+\item 
+virtual \hyperlink{classbridges_1_1_circ_s_lelement}{Circ\+S\+Lelement}$<$ E $>$ $\ast$ \hyperlink{classbridges_1_1_circ_s_lelement_aab863627c125c6f1075af7e7b7f340cf}{get\+Next} () override
+\item 
+void \hyperlink{classbridges_1_1_circ_s_lelement_a7b2512dd1cc559f0a89d9ab4aafed172}{set\+Next} (\hyperlink{classbridges_1_1_circ_s_lelement}{Circ\+S\+Lelement}$<$ E $>$ $\ast$\hyperlink{classbridges_1_1_s_lelement_ad7449d10a09ebc52653a7baed812aa43}{next})
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename E$>$class bridges\+::\+Circ\+S\+Lelement$<$ E $>$}
+
+This class can be used to instantiate Singly Linked Circular List Elements. 
+
+This class can be used to instantiate Circular (Singly) Linked List Elements, derived from Singly Linked \hyperlink{classbridges_1_1_element}{Element}. The main difference from the \hyperlink{classbridges_1_1_s_lelement}{S\+Lelement} is that they create circularly linked elements and their traversals are slightly different.
+
+Elements have labels (string) that are displayed on the visualization Elements take an generic object as a user defined parameter, any native type or object.
+
+\hyperlink{classbridges_1_1_element}{Element} contains a visualizer object for setting visual attributes (color, shape, opacity, size), necessary for displaying them in a web browser
+
+\begin{DoxyAuthor}{Author}
+Kalpathi Subramanian 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/5/2016
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em $<$\+E$>$} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbridges_1_1_circ_s_lelement_a86183d3487b906550d8f32bda3a68f98}{}\index{bridges\+::\+Circ\+S\+Lelement@{bridges\+::\+Circ\+S\+Lelement}!Circ\+S\+Lelement@{Circ\+S\+Lelement}}
+\index{Circ\+S\+Lelement@{Circ\+S\+Lelement}!bridges\+::\+Circ\+S\+Lelement@{bridges\+::\+Circ\+S\+Lelement}}
+\subsubsection[{Circ\+S\+Lelement()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E$>$ {\bf bridges\+::\+Circ\+S\+Lelement}$<$ E $>$\+::{\bf Circ\+S\+Lelement} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_circ_s_lelement_a86183d3487b906550d8f32bda3a68f98}
+This constructor creates an \hyperlink{classbridges_1_1_circ_s_lelement}{Circ\+S\+Lelement} object and sets its next pointer to itself \hypertarget{classbridges_1_1_circ_s_lelement_a765032df6cfaa7cf7589c9e0df29bae4}{}\index{bridges\+::\+Circ\+S\+Lelement@{bridges\+::\+Circ\+S\+Lelement}!Circ\+S\+Lelement@{Circ\+S\+Lelement}}
+\index{Circ\+S\+Lelement@{Circ\+S\+Lelement}!bridges\+::\+Circ\+S\+Lelement@{bridges\+::\+Circ\+S\+Lelement}}
+\subsubsection[{Circ\+S\+Lelement(\+E val=\+E(), string label=string())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E$>$ {\bf bridges\+::\+Circ\+S\+Lelement}$<$ E $>$\+::{\bf Circ\+S\+Lelement} (
+\begin{DoxyParamCaption}
+\item[{E}]{val = {\ttfamily E()}, }
+\item[{string}]{label = {\ttfamily string()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_circ_s_lelement_a765032df6cfaa7cf7589c9e0df29bae4}
+This constructor creates an \hyperlink{classbridges_1_1_circ_s_lelement}{Circ\+S\+Lelement} object of value \char`\"{}e\char`\"{} and label \char`\"{}label\char`\"{} and sets the next pointer to null
+
+
+\begin{DoxyParams}{Parameters}
+{\em label} & the label of \hyperlink{classbridges_1_1_circ_s_lelement}{Circ\+S\+Lelement} that shows up on the \hyperlink{namespacebridges_1_1_bridges}{Bridges} visualization \\
+\hline
+{\em e} & the generic object that this \hyperlink{classbridges_1_1_circ_s_lelement}{Circ\+S\+Lelement} will hold \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbridges_1_1_circ_s_lelement_a0dd7605959b4b52de041e9bcbe5abce7}{}\index{bridges\+::\+Circ\+S\+Lelement@{bridges\+::\+Circ\+S\+Lelement}!Circ\+S\+Lelement@{Circ\+S\+Lelement}}
+\index{Circ\+S\+Lelement@{Circ\+S\+Lelement}!bridges\+::\+Circ\+S\+Lelement@{bridges\+::\+Circ\+S\+Lelement}}
+\subsubsection[{Circ\+S\+Lelement(\+E e=\+E(), Circ\+S\+Lelement $\ast$next=nullptr)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E$>$ {\bf bridges\+::\+Circ\+S\+Lelement}$<$ E $>$\+::{\bf Circ\+S\+Lelement} (
+\begin{DoxyParamCaption}
+\item[{E}]{e = {\ttfamily E()}, }
+\item[{{\bf Circ\+S\+Lelement}$<$ E $>$ $\ast$}]{next = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_circ_s_lelement_a0dd7605959b4b52de041e9bcbe5abce7}
+Creates a new element with value \char`\"{}e\char`\"{} and sets the next pointer to the \hyperlink{classbridges_1_1_circ_s_lelement}{Circ\+S\+Lelement} referenced by the \char`\"{}next\char`\"{} argument
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & the generic object that this \hyperlink{classbridges_1_1_circ_s_lelement}{Circ\+S\+Lelement} will hold \\
+\hline
+{\em next} & the \hyperlink{classbridges_1_1_circ_s_lelement}{Circ\+S\+Lelement} that should be assigned to the next pointer \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbridges_1_1_circ_s_lelement_a1fda146fc0da1d8c7d6440cbbbb2ce42}{}\index{bridges\+::\+Circ\+S\+Lelement@{bridges\+::\+Circ\+S\+Lelement}!Circ\+S\+Lelement@{Circ\+S\+Lelement}}
+\index{Circ\+S\+Lelement@{Circ\+S\+Lelement}!bridges\+::\+Circ\+S\+Lelement@{bridges\+::\+Circ\+S\+Lelement}}
+\subsubsection[{Circ\+S\+Lelement(\+Circ\+S\+Lelement $\ast$next)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E$>$ {\bf bridges\+::\+Circ\+S\+Lelement}$<$ E $>$\+::{\bf Circ\+S\+Lelement} (
+\begin{DoxyParamCaption}
+\item[{{\bf Circ\+S\+Lelement}$<$ E $>$ $\ast$}]{next}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_circ_s_lelement_a1fda146fc0da1d8c7d6440cbbbb2ce42}
+Creates a new element and sets the next pointer to the \hyperlink{classbridges_1_1_circ_s_lelement}{Circ\+S\+Lelement} \char`\"{}next\char`\"{} 
+\begin{DoxyParams}{Parameters}
+{\em next} & the \hyperlink{classbridges_1_1_circ_s_lelement}{Circ\+S\+Lelement} that should be assigned to the next pointer \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbridges_1_1_circ_s_lelement_a4afcf2593c00f2e1161d85ea31d7ae00}{}\index{bridges\+::\+Circ\+S\+Lelement@{bridges\+::\+Circ\+S\+Lelement}!get\+D\+Stype@{get\+D\+Stype}}
+\index{get\+D\+Stype@{get\+D\+Stype}!bridges\+::\+Circ\+S\+Lelement@{bridges\+::\+Circ\+S\+Lelement}}
+\subsubsection[{get\+D\+Stype() const  override}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E$>$ virtual const string {\bf bridges\+::\+Circ\+S\+Lelement}$<$ E $>$\+::get\+D\+Stype (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\label{classbridges_1_1_circ_s_lelement_a4afcf2593c00f2e1161d85ea31d7ae00}
+This method gets the data structure type
+
+\begin{DoxyReturn}{Returns}
+The date structure type as a string 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classbridges_1_1_s_lelement_a74aece34b334c1d4318694312d70ce89}{bridges\+::\+S\+Lelement$<$ E $>$}.
+
+\hypertarget{classbridges_1_1_circ_s_lelement_aab863627c125c6f1075af7e7b7f340cf}{}\index{bridges\+::\+Circ\+S\+Lelement@{bridges\+::\+Circ\+S\+Lelement}!get\+Next@{get\+Next}}
+\index{get\+Next@{get\+Next}!bridges\+::\+Circ\+S\+Lelement@{bridges\+::\+Circ\+S\+Lelement}}
+\subsubsection[{get\+Next() override}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E$>$ virtual {\bf Circ\+S\+Lelement}$<$E$>$$\ast$ {\bf bridges\+::\+Circ\+S\+Lelement}$<$ E $>$\+::get\+Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\label{classbridges_1_1_circ_s_lelement_aab863627c125c6f1075af7e7b7f340cf}
+Retrieves the next \hyperlink{classbridges_1_1_circ_s_lelement}{Circ\+S\+Lelement} \begin{DoxyReturn}{Returns}
+Circ\+S\+Lelement$<$\+E$>$ assigned to next 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classbridges_1_1_s_lelement_a5bd74108a9aa49339378bf62cdbb19ca}{bridges\+::\+S\+Lelement$<$ E $>$}.
+
+\hypertarget{classbridges_1_1_circ_s_lelement_a7b2512dd1cc559f0a89d9ab4aafed172}{}\index{bridges\+::\+Circ\+S\+Lelement@{bridges\+::\+Circ\+S\+Lelement}!set\+Next@{set\+Next}}
+\index{set\+Next@{set\+Next}!bridges\+::\+Circ\+S\+Lelement@{bridges\+::\+Circ\+S\+Lelement}}
+\subsubsection[{set\+Next(\+Circ\+S\+Lelement$<$ E $>$ $\ast$next)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E$>$ void {\bf bridges\+::\+Circ\+S\+Lelement}$<$ E $>$\+::set\+Next (
+\begin{DoxyParamCaption}
+\item[{{\bf Circ\+S\+Lelement}$<$ E $>$ $\ast$}]{next}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_circ_s_lelement_a7b2512dd1cc559f0a89d9ab4aafed172}
+Sets the pointer to the next \hyperlink{classbridges_1_1_circ_s_lelement}{Circ\+S\+Lelement} 
+\begin{DoxyParams}{Parameters}
+{\em next} & Circ\+S\+Lelement$<$\+E$>$ that should be assigned to the next pointer \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/krs/gr/bridges/bridges17/cxx/src/\hyperlink{_circ_s_lelement_8h}{Circ\+S\+Lelement.\+h}\end{DoxyCompactItemize}

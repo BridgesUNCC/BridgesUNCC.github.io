@@ -1,0 +1,210 @@
+\hypertarget{namespacebridges_1_1_data_source}{}\section{bridges\+:\+:Data\+Source Namespace Reference}
+\label{namespacebridges_1_1_data_source}\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+
+
+This provides an A\+P\+I to various data sources used in B\+R\+I\+D\+G\+E\+S.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \hyperlink{classbridges_1_1_game}{Game} $>$ \hyperlink{namespacebridges_1_1_data_source_a96a28cc7f2a6013fe09b07cc53c7432f}{get\+Game\+Data} ()
+\item 
+vector$<$ \hyperlink{classbridges_1_1_actor_movie_i_m_d_b}{Actor\+Movie\+I\+M\+D\+B} $>$ \hyperlink{namespacebridges_1_1_data_source_ac43ccd8f2a325cf2f057a5ee7f0b73f1}{get\+Actor\+Movie\+I\+M\+D\+B\+Data} (int number=0)
+\item 
+vector$<$ \hyperlink{classbridges_1_1_actor_movie_i_m_d_b}{Actor\+Movie\+I\+M\+D\+B} $>$ \hyperlink{namespacebridges_1_1_data_source_a022113cbb28042171d088250e85098d0}{get\+Actor\+Movie\+I\+M\+D\+B\+Data2} ()
+\item 
+vector$<$ \hyperlink{classbridges_1_1_earthquake_u_s_g_s}{Earthquake\+U\+S\+G\+S} $>$ \hyperlink{namespacebridges_1_1_data_source_ae9f6a40dae8b8a15ebe43aca34931b43}{get\+Earthquake\+U\+S\+G\+S\+Data} (int number=0)
+\item 
+vector$<$ \hyperlink{classbridges_1_1_shakespeare}{Shakespeare} $>$ \hyperlink{namespacebridges_1_1_data_source_a2aa0d50a0b7bf8cc47c4f92dd1986dc6}{get\+Shakespeare\+Data} (string endpoint=\char`\"{}\char`\"{}, bool textonly=false)
+\item 
+\hyperlink{classbridges_1_1_song}{Song} \hyperlink{namespacebridges_1_1_data_source_a284c9d572415b67df6989ab8ab97d0e2}{get\+Song} (string song\+Title, string artist\+Name)
+\item 
+vector$<$ \hyperlink{classbridges_1_1_song}{Song} $>$ \hyperlink{namespacebridges_1_1_data_source_a325b6f25041e833bc2fd561bd2c2ee6e}{get\+Song\+Data} ()
+\item 
+vector$<$ \hyperlink{classbridges_1_1_gutenberg_book}{Gutenberg\+Book} $>$ \hyperlink{namespacebridges_1_1_data_source_a8146b00565286727e8206e377d9ff5bd}{get\+Gutenberg\+Book\+Data} (int num=0)
+\item 
+vector$<$ \hyperlink{classbridges_1_1_cancer_incidence}{Cancer\+Incidence} $>$ \hyperlink{namespacebridges_1_1_data_source_a4f8990ea0e793a6464d95cb82f57c8f9}{get\+Cancer\+Incidence\+Data} (int num=0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This provides an A\+P\+I to various data sources used in B\+R\+I\+D\+G\+E\+S. 
+
+B\+R\+I\+D\+G\+E\+S currently supports a few external datasets for use with B\+R\+I\+D\+G\+E\+S assignments\+: U\+S\+G\+I\+S Earthquake Tweeet streaming data feed, I\+M\+D\+B (file), \hyperlink{classbridges_1_1_book}{Book} metadata collection, I\+G\+N \hyperlink{classbridges_1_1_game}{Game} Data, Shakespear book/poem meta data.
+
+Functions are provided that access a user specified number of data records; objects of the appropriate type are returned as a list. 
+
+\subsection{Function Documentation}
+\hypertarget{namespacebridges_1_1_data_source_ac43ccd8f2a325cf2f057a5ee7f0b73f1}{}\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Actor\+Movie\+I\+M\+D\+B\+Data@{get\+Actor\+Movie\+I\+M\+D\+B\+Data}}
+\index{get\+Actor\+Movie\+I\+M\+D\+B\+Data@{get\+Actor\+Movie\+I\+M\+D\+B\+Data}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection[{get\+Actor\+Movie\+I\+M\+D\+B\+Data(int number=0)}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf Actor\+Movie\+I\+M\+D\+B} $>$ bridges\+::\+Data\+Source\+::get\+Actor\+Movie\+I\+M\+D\+B\+Data (
+\begin{DoxyParamCaption}
+\item[{int}]{number = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{namespacebridges_1_1_data_source_ac43ccd8f2a325cf2f057a5ee7f0b73f1}
+Get Actor\+Movie I\+M\+D\+B Data retrieved, formatted into a list of \hyperlink{classbridges_1_1_actor_movie_i_m_d_b}{Actor\+Movie\+I\+M\+D\+B} objects
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & the number of actor/movie pairs, but currently unused, returns all records. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the request fails\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+a list of \hyperlink{classbridges_1_1_actor_movie_i_m_d_b}{Actor\+Movie\+I\+M\+D\+B} objects, but only actor and movie fields in this version 
+\end{DoxyReturn}
+\hypertarget{namespacebridges_1_1_data_source_a022113cbb28042171d088250e85098d0}{}\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Actor\+Movie\+I\+M\+D\+B\+Data2@{get\+Actor\+Movie\+I\+M\+D\+B\+Data2}}
+\index{get\+Actor\+Movie\+I\+M\+D\+B\+Data2@{get\+Actor\+Movie\+I\+M\+D\+B\+Data2}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection[{get\+Actor\+Movie\+I\+M\+D\+B\+Data2()}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf Actor\+Movie\+I\+M\+D\+B} $>$ bridges\+::\+Data\+Source\+::get\+Actor\+Movie\+I\+M\+D\+B\+Data2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{namespacebridges_1_1_data_source_a022113cbb28042171d088250e85098d0}
+Get Actor\+Movie I\+M\+D\+B Data retrieved, formatted into a list of \hyperlink{classbridges_1_1_actor_movie_i_m_d_b}{Actor\+Movie\+I\+M\+D\+B} objects
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the request fails\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+a list of \hyperlink{classbridges_1_1_actor_movie_i_m_d_b}{Actor\+Movie\+I\+M\+D\+B} objects, consisting of actor name, movie name, movie genre and movie rating is returned. 
+\end{DoxyReturn}
+\hypertarget{namespacebridges_1_1_data_source_a4f8990ea0e793a6464d95cb82f57c8f9}{}\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Cancer\+Incidence\+Data@{get\+Cancer\+Incidence\+Data}}
+\index{get\+Cancer\+Incidence\+Data@{get\+Cancer\+Incidence\+Data}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection[{get\+Cancer\+Incidence\+Data(int num=0)}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf Cancer\+Incidence} $>$ bridges\+::\+Data\+Source\+::get\+Cancer\+Incidence\+Data (
+\begin{DoxyParamCaption}
+\item[{int}]{num = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{namespacebridges_1_1_data_source_a4f8990ea0e793a6464d95cb82f57c8f9}
+\hypertarget{namespacebridges_1_1_data_source_ae9f6a40dae8b8a15ebe43aca34931b43}{}\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Earthquake\+U\+S\+G\+S\+Data@{get\+Earthquake\+U\+S\+G\+S\+Data}}
+\index{get\+Earthquake\+U\+S\+G\+S\+Data@{get\+Earthquake\+U\+S\+G\+S\+Data}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection[{get\+Earthquake\+U\+S\+G\+S\+Data(int number=0)}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf Earthquake\+U\+S\+G\+S} $>$ bridges\+::\+Data\+Source\+::get\+Earthquake\+U\+S\+G\+S\+Data (
+\begin{DoxyParamCaption}
+\item[{int}]{number = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{namespacebridges_1_1_data_source_ae9f6a40dae8b8a15ebe43aca34931b43}
+Get U\+S\+G\+S earthquake data U\+S\+G\+S Tweet data (\href{https://earthquake.usgs.gov/earthquakes/map/}{\tt https\+://earthquake.\+usgs.\+gov/earthquakes/map/}) retrieved, formatted into a list of \hyperlink{classbridges_1_1_earthquake_u_s_g_s}{Earthquake\+U\+S\+G\+S} objects
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & the number of earthquake records retrieved, limited to 5000 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the request fails\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+a list of earthquake records 
+\end{DoxyReturn}
+\hypertarget{namespacebridges_1_1_data_source_a96a28cc7f2a6013fe09b07cc53c7432f}{}\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Game\+Data@{get\+Game\+Data}}
+\index{get\+Game\+Data@{get\+Game\+Data}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection[{get\+Game\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf Game} $>$ bridges\+::\+Data\+Source\+::get\+Game\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{namespacebridges_1_1_data_source_a96a28cc7f2a6013fe09b07cc53c7432f}
+Get meta data of the I\+G\+N games collection.
+
+This function retrieves and formats the data into a list of \hyperlink{classbridges_1_1_game}{Game} objects
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the request fails\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+a list of \hyperlink{classbridges_1_1_game}{Game} objects, 
+\end{DoxyReturn}
+\hypertarget{namespacebridges_1_1_data_source_a8146b00565286727e8206e377d9ff5bd}{}\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Gutenberg\+Book\+Data@{get\+Gutenberg\+Book\+Data}}
+\index{get\+Gutenberg\+Book\+Data@{get\+Gutenberg\+Book\+Data}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection[{get\+Gutenberg\+Book\+Data(int num=0)}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf Gutenberg\+Book} $>$ bridges\+::\+Data\+Source\+::get\+Gutenberg\+Book\+Data (
+\begin{DoxyParamCaption}
+\item[{int}]{num = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{namespacebridges_1_1_data_source_a8146b00565286727e8206e377d9ff5bd}
+Get meta data of the Gutenberg book collection (1000 books) This function retrieves, and formats the data into a list of \hyperlink{classbridges_1_1_gutenberg_book}{Gutenberg\+Book} objects
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the request fails\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+a list of \hyperlink{classbridges_1_1_gutenberg_book}{Gutenberg\+Book} objects, 
+\end{DoxyReturn}
+\hypertarget{namespacebridges_1_1_data_source_a2aa0d50a0b7bf8cc47c4f92dd1986dc6}{}\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Shakespeare\+Data@{get\+Shakespeare\+Data}}
+\index{get\+Shakespeare\+Data@{get\+Shakespeare\+Data}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection[{get\+Shakespeare\+Data(string endpoint="""", bool textonly=false)}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf Shakespeare} $>$ bridges\+::\+Data\+Source\+::get\+Shakespeare\+Data (
+\begin{DoxyParamCaption}
+\item[{string}]{endpoint = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{bool}]{textonly = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{namespacebridges_1_1_data_source_a2aa0d50a0b7bf8cc47c4f92dd1986dc6}
+Get data of \hyperlink{classbridges_1_1_shakespeare}{Shakespeare} works (plays, poems)
+
+This function retrieves and formats the data into a a list of \hyperlink{classbridges_1_1_shakespeare}{Shakespeare} objects.
+
+Valid endpoints\+: \textquotesingle{}poems\textquotesingle{},\textquotesingle{}plays\textquotesingle{}, $<$title$>$ Valid query\+Params\+: format\{simple\}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the request fails\\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em endpoint} & can be either \char`\"{}plays\char`\"{} or \char`\"{}poems\char`\"{}. If this is specified, then only these types of works are retrieved. \\
+\hline
+{\em text\+Only} & if this is set, then only the text is retrieved.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an array of \hyperlink{classbridges_1_1_shakespeare}{Shakespeare} objects 
+\end{DoxyReturn}
+\hypertarget{namespacebridges_1_1_data_source_a284c9d572415b67df6989ab8ab97d0e2}{}\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Song@{get\+Song}}
+\index{get\+Song@{get\+Song}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection[{get\+Song(string song\+Title, string artist\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Song} bridges\+::\+Data\+Source\+::get\+Song (
+\begin{DoxyParamCaption}
+\item[{string}]{song\+Title, }
+\item[{string}]{artist\+Name}
+\end{DoxyParamCaption}
+)}\label{namespacebridges_1_1_data_source_a284c9d572415b67df6989ab8ab97d0e2}
+Get data of a particular songs (including lyrics) using the Genius A\+P\+I (\href{https://docs.genius.com/}{\tt https\+://docs.\+genius.\+com/}), given the song title and artist name. Valid endpoints\+: \href{http://bridgesdata.herokuapp.com/api/songs/find/}{\tt http\+://bridgesdata.\+herokuapp.\+com/api/songs/find/} Valid query\+Params\+: song title, artist name
+
+This function retrieves and formats the data into a \hyperlink{classbridges_1_1_song}{Song} object. The song if not cached in the local D\+B is queried and added to the D\+B
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the request fails\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+a \hyperlink{classbridges_1_1_song}{Song} object, 
+\end{DoxyReturn}
+\hypertarget{namespacebridges_1_1_data_source_a325b6f25041e833bc2fd561bd2c2ee6e}{}\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Song\+Data@{get\+Song\+Data}}
+\index{get\+Song\+Data@{get\+Song\+Data}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection[{get\+Song\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf Song} $>$ bridges\+::\+Data\+Source\+::get\+Song\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{namespacebridges_1_1_data_source_a325b6f25041e833bc2fd561bd2c2ee6e}
+Get data of the songs (including lyrics) using the Genius A\+P\+I \href{https://docs.genius.com/}{\tt https\+://docs.\+genius.\+com/} Valid endpoints\+: \href{https://bridgesdata.herokuapp.com/api/songs/}{\tt https\+://bridgesdata.\+herokuapp.\+com/api/songs/}
+
+This function retrieves and formats the data into a list of \hyperlink{classbridges_1_1_song}{Song} objects. This version of the A\+P\+I retrieves all the cached songs in the local D\+B.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the request fails\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+a list of \hyperlink{classbridges_1_1_song}{Song} objects, 
+\end{DoxyReturn}
