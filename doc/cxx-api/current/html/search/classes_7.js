@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mlelement',['MLelement',['../classbridges_1_1_m_lelement.html',1,'bridges']]]
+  ['linkvisualizer',['LinkVisualizer',['../classbridges_1_1_link_visualizer.html',1,'bridges']]]
 ];

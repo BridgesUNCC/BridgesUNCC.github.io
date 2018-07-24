@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['linkvisualizer',['LinkVisualizer',['../classbridges_1_1_link_visualizer.html',1,'bridges']]]
+  ['kdtreeelement',['KdTreeElement',['../classbridges_1_1_kd_tree_element.html',1,'bridges']]]
 ];

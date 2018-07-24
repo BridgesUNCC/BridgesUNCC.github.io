@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['username',['userName',['../namespacebridges_1_1_bridges.html#a98c0c6658b8eb9e8f20a7f3119cbd984',1,'bridges::Bridges']]]
+  ['treeelement',['TreeElement',['../classbridges_1_1_tree_element.html#a4e96ffab9a6c711ead687dd8a42e80a0',1,'bridges::TreeElement']]]
 ];

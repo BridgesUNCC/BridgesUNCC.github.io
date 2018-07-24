@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['removetrailingzeros',['removeTrailingZeros',['../classbridges_1_1_element.html#a0b905a076a71771a20ee4fb0ec858cfa',1,'bridges::Element']]]
+  ['printlinks',['printLinks',['../classbridges_1_1_element.html#ae6f773c7222ff3a37c402e5e1f413c66',1,'bridges::Element']]]
 ];

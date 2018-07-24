@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['operator_21_3d',['operator!=',['../classbridges_1_1_color.html#abe4ff1e5d4c6a33b2e9715be57ae0dce',1,'bridges::Color']]],
-  ['operator_3d',['operator=',['../classbridges_1_1_element.html#a0f1b5a5688fe4db68f84969e93cea245',1,'bridges::Element']]],
-  ['operator_3d_3d',['operator==',['../classbridges_1_1_color.html#a9b33b4ee063496691f8816504cc8b007',1,'bridges::Color']]]
+  ['mlelement',['MLelement',['../classbridges_1_1_m_lelement.html#a5d0e64b99abf4d1ad1d2cc89ca28343c',1,'bridges::MLelement::MLelement(const E &amp;val=E(), const string &amp;lab=string())'],['../classbridges_1_1_m_lelement.html#ade42b08d96030f1ed5b92c5613d5cedd',1,'bridges::MLelement::MLelement(string label)'],['../classbridges_1_1_m_lelement.html#aaab4924754f94138bb110efd4c047411',1,'bridges::MLelement::MLelement(E e, MLelement&lt; E &gt; *next)']]]
 ];

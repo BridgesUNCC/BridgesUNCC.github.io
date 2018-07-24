@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['actormovieimdb',['ActorMovieIMDB',['../classbridges_1_1_actor_movie_i_m_d_b.html#acd1db3914821a79a7d8fb506151d36a4',1,'bridges::ActorMovieIMDB::ActorMovieIMDB()'],['../classbridges_1_1_actor_movie_i_m_d_b.html#a25dc6c2c2fd93d6add4e11500f81e981',1,'bridges::ActorMovieIMDB::ActorMovieIMDB(const string &amp;a, const string &amp;m)'],['../classbridges_1_1_actor_movie_i_m_d_b.html#a9c8f4acb9530b1a6adebb5ba1d163b4c',1,'bridges::ActorMovieIMDB::ActorMovieIMDB(const string &amp;a, const string &amp;m, float r, const vector&lt; string &gt; &amp;genr)']]],
   ['addchild',['addChild',['../classbridges_1_1_tree_element.html#a5e252fa16df0e673526ba4b08c8d3203',1,'bridges::TreeElement']]],
   ['addedge',['addEdge',['../classbridges_1_1_graph_adj_list.html#acd9a3bf8e544a6b78e75acd6bf1d57ee',1,'bridges::GraphAdjList::addEdge()'],['../classbridges_1_1_graph_adj_matrix.html#a785f15a8ca7857a72c34e51ae0c24834',1,'bridges::GraphAdjMatrix::addEdge()']]],
   ['addvertex',['addVertex',['../classbridges_1_1_graph_adj_list.html#a55565a4aff573c6a7751d7845cdfd5f2',1,'bridges::GraphAdjList::addVertex()'],['../classbridges_1_1_graph_adj_matrix.html#a613fc91a0e056254192e45810405ac6e',1,'bridges::GraphAdjMatrix::addVertex()']]],
