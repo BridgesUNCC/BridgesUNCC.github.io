@@ -1,0 +1,401 @@
+\hypertarget{class_bridges_1_1_element_1_1_element}{}\section{Bridges.\+Element.\+Element Class Reference}
+\label{class_bridges_1_1_element_1_1_element}\index{Bridges.\+Element.\+Element@{Bridges.\+Element.\+Element}}
+
+
+This is the main superclass in B\+R\+I\+D\+G\+ES for deriving a number of objects used in building arrays, lists, trees and graph data structures.  
+
+
+Inheritance diagram for Bridges.\+Element.\+Element\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.218391cm]{class_bridges_1_1_element_1_1_element}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a3e2a72a74d5cab317aede86b226a4a49}{get\+\_\+data\+\_\+struct\+\_\+type}} (self)
+\item 
+def \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a3cf9af1f49a0e03f8e596c637836a7fe}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a301fe5be8cf72b2c62f6a218feeb9166}{label}}=None, val=None, original=None)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_bridges_1_1_element_1_1_element}{Element}} constructor creates an \mbox{\hyperlink{namespace_bridges_1_1_element_visualizer}{Element\+Visualizer}} object sets a unique identifier for the current \mbox{\hyperlink{class_bridges_1_1_element_1_1_element}{Element}} normally used from subclasses. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a84c0f69b4c630b9c25c12ec019e5caaa}{get\+\_\+identifier}} (self)
+\begin{DoxyCompactList}\small\item\em this method returns the element\textquotesingle{}s unique identifier \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a02945b22b48bf5517088a0db8b70fa94}{get\+\_\+visualizer}} (self)
+\begin{DoxyCompactList}\small\item\em Returns the \mbox{\hyperlink{class_bridges_1_1_element_1_1_element}{Element}}\textquotesingle{}s visualizer object. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a43898806f4cc199664375bc690fea41e}{set\+\_\+visualizer}} (self, \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a754c5ca67518e3c9ff6b6e7882ed05c6}{visualizer}})
+\begin{DoxyCompactList}\small\item\em This method sets the visualizer object for the current element object. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_ac1627e47169e665776a0df1a886432f8}{get\+\_\+link\+\_\+visualizer}} (self, el)
+\begin{DoxyCompactList}\small\item\em Returns the \mbox{\hyperlink{class_bridges_1_1_element_1_1_element}{Element}}\textquotesingle{}s link visualizer object. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a3dff4354421ee704ee7fbfd6fef37207}{set\+\_\+link\+\_\+visualizer}} (self, el)
+\begin{DoxyCompactList}\small\item\em Sets the link from this element to a new incoming element. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_ae617a08f086c0b9b62a82b84751c9d1e}{remove\+\_\+link\+\_\+visualizer}} (self, el)
+\item 
+def \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a8ac6ce7fef24e2f2dae3b7f56f079e4e}{get\+\_\+class\+\_\+name}} (self)
+\begin{DoxyCompactList}\small\item\em Validates the \mbox{\hyperlink{class_bridges_1_1_element_1_1_element}{Element}}\textquotesingle{}s value when the \mbox{\hyperlink{class_bridges_1_1_element_1_1_element}{Element}} is created A non null value is expected this will be unnecessary after we modify the server. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_ad636092154a89fab2488e9e4dcb139fd}{get\+\_\+element\+\_\+representation}} (self)
+\item 
+def \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_af5801bce7a6a85723b96a64ea2502c3b}{get\+\_\+link\+\_\+representation}} (self, lv, src, dest)
+\item 
+def \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_ae3daee3d51daa454b15d83d57d1c3b5c}{get\+\_\+label}} (self)
+\item 
+def \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a868e30c0f0fcfec4111d8a22e1e946e9}{set\+\_\+label}} (self, \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a301fe5be8cf72b2c62f6a218feeb9166}{label}})
+\item 
+def \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a081734e11984d316f229254557a6795e}{arrange\+\_\+label}} (self, \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a301fe5be8cf72b2c62f6a218feeb9166}{label}}, \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a857960f476b18de30baa18ae54877672}{word\+\_\+number}})
+\item 
+def \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a283e6a2d0715eea745ed4cdcc8fc2ea6}{get\+\_\+value}} (self)
+\item 
+def \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a25bd0c22aed9063505cca514ecd0943d}{set\+\_\+value}} (self, \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_adfe068cd72057bd5a45f71fdee2a6a91}{value}})
+\item 
+def \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a674e4f757d4874b462ce1536328ddf38}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a754c5ca67518e3c9ff6b6e7882ed05c6}{visualizer}}
+\item 
+\mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a791eaed2d080d5f97e5bf95fd6c4d56a}{lvisualizer}}
+\item 
+\mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a09bac6cdc3b9a08f42fde8dbe9ab7b98}{ids}}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a3dfebb62d79cbae06898b227ceaaf025}{Q\+U\+O\+TE}} = \char`\"{}\textbackslash{}\char`\"{}\char`\"{}
+\item 
+string \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_aadfafe4a869532fd3241d2d89be0e451}{C\+O\+M\+MA}} = \char`\"{},\char`\"{}
+\item 
+string \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a78058cdb474c187ef0dc9c8ca28897d0}{C\+O\+L\+ON}} = \char`\"{}\+:\char`\"{}
+\item 
+string \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a41b718fd3b20752256ef26f1078b2e32}{O\+P\+E\+N\+\_\+\+C\+U\+R\+LY}} = \char`\"{}\{\char`\"{}
+\item 
+string \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a8210360592f9bfda03580c8ca78cdbd0}{C\+L\+O\+S\+E\+\_\+\+C\+U\+R\+LY}} = \char`\"{}\}\char`\"{}
+\item 
+string \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a1485c09c49957564967e3595149ca6e9}{O\+P\+E\+N\+\_\+\+P\+A\+R\+EN}} = \char`\"{}(\char`\"{}
+\item 
+string \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a81825911f2bf2a58fce881d8c9c2d23e}{C\+L\+O\+S\+E\+\_\+\+P\+A\+R\+EN}} = \char`\"{})\char`\"{}
+\item 
+string \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_aab3532c7b2e3521e4a94ab57e334c8b5}{O\+P\+E\+N\+\_\+\+B\+OX}} = \char`\"{}\mbox{[}\char`\"{}
+\item 
+string \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a1e8b1911682fefbd043877a52c529b87}{C\+L\+O\+S\+E\+\_\+\+B\+OX}} = \char`\"{}\mbox{]}\char`\"{}
+\item 
+int \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_ad844782afa90410ab263d41b499a510b}{ids}} = 0
+\item 
+\mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a301fe5be8cf72b2c62f6a218feeb9166}{label}} = str()
+\item 
+\mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a4b8f927e3404228fb3f1ddd23c25544d}{identifier}} = str()
+\item 
+\mbox{\hyperlink{class_bridges_1_1_element_1_1_element_adfe068cd72057bd5a45f71fdee2a6a91}{value}} = object()
+\item 
+int \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a857960f476b18de30baa18ae54877672}{word\+\_\+number}} = 0
+\item 
+string \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_ab39bc7d8e0dc982c771602c6488f691e}{I\+N\+S\+E\+R\+T\+\_\+\+S\+T\+R\+I\+NG}} = \char`\"{}\textbackslash{}\textbackslash{}n\char`\"{}
+\item 
+string \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a73062c7f01d5cbac8f1ea19095904cda}{D\+I\+V\+I\+D\+E\+\_\+\+K\+EY}} = \char`\"{}(\textbackslash{}r?\textbackslash{}n)$\vert$(\textbackslash{}n)$\vert$(\textbackslash{}f)$\vert$(\textbackslash{}r)$\vert$(\%n)\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the main superclass in B\+R\+I\+D\+G\+ES for deriving a number of objects used in building arrays, lists, trees and graph data structures. 
+
+\mbox{\hyperlink{namespace_bridges_1_1_s_lelement}{S\+Lelement}}, \mbox{\hyperlink{namespace_bridges_1_1_d_lelement}{D\+Lelement}}, \mbox{\hyperlink{namespace_bridges_1_1_circ_s_lelement}{Circ\+S\+Lelement}}, \mbox{\hyperlink{namespace_bridges_1_1_circ_d_lelement}{Circ\+D\+Lelement}}, \mbox{\hyperlink{namespace_bridges_1_1_tree_element}{Tree\+Element}}, \mbox{\hyperlink{namespace_bridges_1_1_bin_tree_element}{Bin\+Tree\+Element}}, \mbox{\hyperlink{namespace_bridges_1_1_b_s_t_element}{B\+S\+T\+Element}}, \mbox{\hyperlink{namespace_bridges_1_1_circ_s_lelement}{Circ\+S\+Lelement}}, \mbox{\hyperlink{namespace_bridges_1_1_circ_d_lelement}{Circ\+D\+Lelement}}, \mbox{\hyperlink{namespace_bridges_1_1_a_v_l_tree_element}{A\+V\+L\+Tree\+Element}} are all subclasses (see class hierarchy above). \mbox{\hyperlink{class_bridges_1_1_element_1_1_element}{Element}} contains two visualizer objects (\mbox{\hyperlink{namespace_bridges_1_1_element_visualizer}{Element\+Visualizer}}, \mbox{\hyperlink{namespace_bridges_1_1_link_visualizer}{Link\+Visualizer}}) for specifying visual attributes for nodes and links respectively. It also contains a label that that can be displayed in B\+R\+I\+D\+G\+ES visualizations.
+
+All the tutorials under
+
+\href{http://bridgesuncc.github.io/Hello_World_Tutorials/Overview.html}{\tt http\+://bridgesuncc.\+github.\+io/\+Hello\+\_\+\+World\+\_\+\+Tutorials/\+Overview.\+html}
+
+illustrate examples of using different types of \mbox{\hyperlink{class_bridges_1_1_element_1_1_element}{Element}} objects and how to manipulate their visual attributes.
+
+\begin{DoxyAuthor}{Author}
+Mihai Mehedint, Kalpathi Subramanian
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em generic} & $<$\+E$>$ Elements are defined with an application specific generic parameter, that is defined by the user. These can be any legal Java type and manipulated using set\+Value()/get\+Value() methods. For more information on Java generics, see for example, \href{https://docs.oracle.com/javase/tutorial/java/generics/types.html}{\tt https\+://docs.\+oracle.\+com/javase/tutorial/java/generics/types.\+html} \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_a3cf9af1f49a0e03f8e596c637836a7fe}\label{class_bridges_1_1_element_1_1_element_a3cf9af1f49a0e03f8e596c637836a7fe}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Bridges.\+Element.\+Element.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{label = {\ttfamily None},  }\item[{}]{val = {\ttfamily None},  }\item[{}]{original = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_bridges_1_1_element_1_1_element}{Element}} constructor creates an \mbox{\hyperlink{namespace_bridges_1_1_element_visualizer}{Element\+Visualizer}} object sets a unique identifier for the current \mbox{\hyperlink{class_bridges_1_1_element_1_1_element}{Element}} normally used from subclasses. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_a674e4f757d4874b462ce1536328ddf38}\label{class_bridges_1_1_element_1_1_element_a674e4f757d4874b462ce1536328ddf38}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+str\+\_\+\+\_\+()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def Bridges.\+Element.\+Element.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_a081734e11984d316f229254557a6795e}\label{class_bridges_1_1_element_1_1_element_a081734e11984d316f229254557a6795e}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!arrange\+\_\+label@{arrange\+\_\+label}}
+\index{arrange\+\_\+label@{arrange\+\_\+label}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{arrange\+\_\+label()}{arrange\_label()}}
+{\footnotesize\ttfamily def Bridges.\+Element.\+Element.\+arrange\+\_\+label (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{label,  }\item[{}]{word\+\_\+number }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_a8ac6ce7fef24e2f2dae3b7f56f079e4e}\label{class_bridges_1_1_element_1_1_element_a8ac6ce7fef24e2f2dae3b7f56f079e4e}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!get\+\_\+class\+\_\+name@{get\+\_\+class\+\_\+name}}
+\index{get\+\_\+class\+\_\+name@{get\+\_\+class\+\_\+name}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+\_\+class\+\_\+name()}{get\_class\_name()}}
+{\footnotesize\ttfamily def Bridges.\+Element.\+Element.\+get\+\_\+class\+\_\+name (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Validates the \mbox{\hyperlink{class_bridges_1_1_element_1_1_element}{Element}}\textquotesingle{}s value when the \mbox{\hyperlink{class_bridges_1_1_element_1_1_element}{Element}} is created A non null value is expected this will be unnecessary after we modify the server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_bridges_1_1_element_1_1_element}{Element}}} & value\\
+\hline
+\end{DoxyParams}
+def validate\+\_\+val(self, value)\+: try\+: if value == None\+: raise Null\+Pointer\+Exception(\char`\"{}\textbackslash{}n\+Invalid value set to Element$<$\+E$>$ \textquotesingle{}\char`\"{} + value + \char`\"{}\textquotesingle{}. Expected\char`\"{} + \char`\"{} non null E value.\textbackslash{}n\char`\"{}) elif value.\+\_\+\+\_\+class\+\_\+\+\_\+.\+get\+Canonical\+Name().is\+Empty()\+: raise Illegal\+Argument\+Exception(\char`\"{}\textbackslash{}n\+The argument is not a legal Element object!\textbackslash{}n\char`\"{} + value.\+\_\+\+\_\+class\+\_\+\+\_\+.\+get\+Canonical\+Name()) else\+: except Exception as e\+: e.\+print\+\_\+stack\+\_\+trace() \mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_a3e2a72a74d5cab317aede86b226a4a49}\label{class_bridges_1_1_element_1_1_element_a3e2a72a74d5cab317aede86b226a4a49}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!get\+\_\+data\+\_\+struct\+\_\+type@{get\+\_\+data\+\_\+struct\+\_\+type}}
+\index{get\+\_\+data\+\_\+struct\+\_\+type@{get\+\_\+data\+\_\+struct\+\_\+type}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+\_\+data\+\_\+struct\+\_\+type()}{get\_data\_struct\_type()}}
+{\footnotesize\ttfamily def Bridges.\+Element.\+Element.\+get\+\_\+data\+\_\+struct\+\_\+type (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_ad636092154a89fab2488e9e4dcb139fd}\label{class_bridges_1_1_element_1_1_element_ad636092154a89fab2488e9e4dcb139fd}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!get\+\_\+element\+\_\+representation@{get\+\_\+element\+\_\+representation}}
+\index{get\+\_\+element\+\_\+representation@{get\+\_\+element\+\_\+representation}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+\_\+element\+\_\+representation()}{get\_element\_representation()}}
+{\footnotesize\ttfamily def Bridges.\+Element.\+Element.\+get\+\_\+element\+\_\+representation (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_a84c0f69b4c630b9c25c12ec019e5caaa}\label{class_bridges_1_1_element_1_1_element_a84c0f69b4c630b9c25c12ec019e5caaa}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!get\+\_\+identifier@{get\+\_\+identifier}}
+\index{get\+\_\+identifier@{get\+\_\+identifier}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+\_\+identifier()}{get\_identifier()}}
+{\footnotesize\ttfamily def Bridges.\+Element.\+Element.\+get\+\_\+identifier (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+this method returns the element\textquotesingle{}s unique identifier 
+
+\begin{DoxyReturn}{Returns}
+the string identifier 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_ae3daee3d51daa454b15d83d57d1c3b5c}\label{class_bridges_1_1_element_1_1_element_ae3daee3d51daa454b15d83d57d1c3b5c}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!get\+\_\+label@{get\+\_\+label}}
+\index{get\+\_\+label@{get\+\_\+label}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+\_\+label()}{get\_label()}}
+{\footnotesize\ttfamily def Bridges.\+Element.\+Element.\+get\+\_\+label (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_af5801bce7a6a85723b96a64ea2502c3b}\label{class_bridges_1_1_element_1_1_element_af5801bce7a6a85723b96a64ea2502c3b}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!get\+\_\+link\+\_\+representation@{get\+\_\+link\+\_\+representation}}
+\index{get\+\_\+link\+\_\+representation@{get\+\_\+link\+\_\+representation}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+\_\+link\+\_\+representation()}{get\_link\_representation()}}
+{\footnotesize\ttfamily def Bridges.\+Element.\+Element.\+get\+\_\+link\+\_\+representation (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lv,  }\item[{}]{src,  }\item[{}]{dest }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_ac1627e47169e665776a0df1a886432f8}\label{class_bridges_1_1_element_1_1_element_ac1627e47169e665776a0df1a886432f8}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!get\+\_\+link\+\_\+visualizer@{get\+\_\+link\+\_\+visualizer}}
+\index{get\+\_\+link\+\_\+visualizer@{get\+\_\+link\+\_\+visualizer}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+\_\+link\+\_\+visualizer()}{get\_link\_visualizer()}}
+{\footnotesize\ttfamily def Bridges.\+Element.\+Element.\+get\+\_\+link\+\_\+visualizer (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{el }\end{DoxyParamCaption})}
+
+
+
+Returns the \mbox{\hyperlink{class_bridges_1_1_element_1_1_element}{Element}}\textquotesingle{}s link visualizer object. 
+
+The link visualizer object links this element to another element, which is specified by the argument to this method. This method is typically used to set the visual attributes of the links, such as in graphs or binary tree structures.
+
+\mbox{\hyperlink{class_bridges_1_1_element_1_1_element}{Element}} el -- the element terminating the link
+
+\begin{DoxyReturn}{Returns}
+the link visualizer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_a283e6a2d0715eea745ed4cdcc8fc2ea6}\label{class_bridges_1_1_element_1_1_element_a283e6a2d0715eea745ed4cdcc8fc2ea6}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!get\+\_\+value@{get\+\_\+value}}
+\index{get\+\_\+value@{get\+\_\+value}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+\_\+value()}{get\_value()}}
+{\footnotesize\ttfamily def Bridges.\+Element.\+Element.\+get\+\_\+value (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_a02945b22b48bf5517088a0db8b70fa94}\label{class_bridges_1_1_element_1_1_element_a02945b22b48bf5517088a0db8b70fa94}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!get\+\_\+visualizer@{get\+\_\+visualizer}}
+\index{get\+\_\+visualizer@{get\+\_\+visualizer}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+\_\+visualizer()}{get\_visualizer()}}
+{\footnotesize\ttfamily def Bridges.\+Element.\+Element.\+get\+\_\+visualizer (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Returns the \mbox{\hyperlink{class_bridges_1_1_element_1_1_element}{Element}}\textquotesingle{}s visualizer object. 
+
+\begin{DoxyReturn}{Returns}
+the visualizer object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_ae617a08f086c0b9b62a82b84751c9d1e}\label{class_bridges_1_1_element_1_1_element_ae617a08f086c0b9b62a82b84751c9d1e}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!remove\+\_\+link\+\_\+visualizer@{remove\+\_\+link\+\_\+visualizer}}
+\index{remove\+\_\+link\+\_\+visualizer@{remove\+\_\+link\+\_\+visualizer}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{remove\+\_\+link\+\_\+visualizer()}{remove\_link\_visualizer()}}
+{\footnotesize\ttfamily def Bridges.\+Element.\+Element.\+remove\+\_\+link\+\_\+visualizer (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{el }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_a868e30c0f0fcfec4111d8a22e1e946e9}\label{class_bridges_1_1_element_1_1_element_a868e30c0f0fcfec4111d8a22e1e946e9}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!set\+\_\+label@{set\+\_\+label}}
+\index{set\+\_\+label@{set\+\_\+label}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{set\+\_\+label()}{set\_label()}}
+{\footnotesize\ttfamily def Bridges.\+Element.\+Element.\+set\+\_\+label (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{label }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_a3dff4354421ee704ee7fbfd6fef37207}\label{class_bridges_1_1_element_1_1_element_a3dff4354421ee704ee7fbfd6fef37207}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!set\+\_\+link\+\_\+visualizer@{set\+\_\+link\+\_\+visualizer}}
+\index{set\+\_\+link\+\_\+visualizer@{set\+\_\+link\+\_\+visualizer}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{set\+\_\+link\+\_\+visualizer()}{set\_link\_visualizer()}}
+{\footnotesize\ttfamily def Bridges.\+Element.\+Element.\+set\+\_\+link\+\_\+visualizer (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{el }\end{DoxyParamCaption})}
+
+
+
+Sets the link from this element to a new incoming element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em el} & the element to be linked to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_a25bd0c22aed9063505cca514ecd0943d}\label{class_bridges_1_1_element_1_1_element_a25bd0c22aed9063505cca514ecd0943d}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!set\+\_\+value@{set\+\_\+value}}
+\index{set\+\_\+value@{set\+\_\+value}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{set\+\_\+value()}{set\_value()}}
+{\footnotesize\ttfamily def Bridges.\+Element.\+Element.\+set\+\_\+value (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_a43898806f4cc199664375bc690fea41e}\label{class_bridges_1_1_element_1_1_element_a43898806f4cc199664375bc690fea41e}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!set\+\_\+visualizer@{set\+\_\+visualizer}}
+\index{set\+\_\+visualizer@{set\+\_\+visualizer}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{set\+\_\+visualizer()}{set\_visualizer()}}
+{\footnotesize\ttfamily def Bridges.\+Element.\+Element.\+set\+\_\+visualizer (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{visualizer }\end{DoxyParamCaption})}
+
+
+
+This method sets the visualizer object for the current element object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em visualizer} & the visualizer to set \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_a1e8b1911682fefbd043877a52c529b87}\label{class_bridges_1_1_element_1_1_element_a1e8b1911682fefbd043877a52c529b87}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!C\+L\+O\+S\+E\+\_\+\+B\+OX@{C\+L\+O\+S\+E\+\_\+\+B\+OX}}
+\index{C\+L\+O\+S\+E\+\_\+\+B\+OX@{C\+L\+O\+S\+E\+\_\+\+B\+OX}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{C\+L\+O\+S\+E\+\_\+\+B\+OX}{CLOSE\_BOX}}
+{\footnotesize\ttfamily string Bridges.\+Element.\+Element.\+C\+L\+O\+S\+E\+\_\+\+B\+OX = \char`\"{}\mbox{]}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_a8210360592f9bfda03580c8ca78cdbd0}\label{class_bridges_1_1_element_1_1_element_a8210360592f9bfda03580c8ca78cdbd0}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!C\+L\+O\+S\+E\+\_\+\+C\+U\+R\+LY@{C\+L\+O\+S\+E\+\_\+\+C\+U\+R\+LY}}
+\index{C\+L\+O\+S\+E\+\_\+\+C\+U\+R\+LY@{C\+L\+O\+S\+E\+\_\+\+C\+U\+R\+LY}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{C\+L\+O\+S\+E\+\_\+\+C\+U\+R\+LY}{CLOSE\_CURLY}}
+{\footnotesize\ttfamily string Bridges.\+Element.\+Element.\+C\+L\+O\+S\+E\+\_\+\+C\+U\+R\+LY = \char`\"{}\}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_a81825911f2bf2a58fce881d8c9c2d23e}\label{class_bridges_1_1_element_1_1_element_a81825911f2bf2a58fce881d8c9c2d23e}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!C\+L\+O\+S\+E\+\_\+\+P\+A\+R\+EN@{C\+L\+O\+S\+E\+\_\+\+P\+A\+R\+EN}}
+\index{C\+L\+O\+S\+E\+\_\+\+P\+A\+R\+EN@{C\+L\+O\+S\+E\+\_\+\+P\+A\+R\+EN}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{C\+L\+O\+S\+E\+\_\+\+P\+A\+R\+EN}{CLOSE\_PAREN}}
+{\footnotesize\ttfamily string Bridges.\+Element.\+Element.\+C\+L\+O\+S\+E\+\_\+\+P\+A\+R\+EN = \char`\"{})\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_a78058cdb474c187ef0dc9c8ca28897d0}\label{class_bridges_1_1_element_1_1_element_a78058cdb474c187ef0dc9c8ca28897d0}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!C\+O\+L\+ON@{C\+O\+L\+ON}}
+\index{C\+O\+L\+ON@{C\+O\+L\+ON}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{C\+O\+L\+ON}{COLON}}
+{\footnotesize\ttfamily string Bridges.\+Element.\+Element.\+C\+O\+L\+ON = \char`\"{}\+:\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_aadfafe4a869532fd3241d2d89be0e451}\label{class_bridges_1_1_element_1_1_element_aadfafe4a869532fd3241d2d89be0e451}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!C\+O\+M\+MA@{C\+O\+M\+MA}}
+\index{C\+O\+M\+MA@{C\+O\+M\+MA}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{C\+O\+M\+MA}{COMMA}}
+{\footnotesize\ttfamily string Bridges.\+Element.\+Element.\+C\+O\+M\+MA = \char`\"{},\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_a73062c7f01d5cbac8f1ea19095904cda}\label{class_bridges_1_1_element_1_1_element_a73062c7f01d5cbac8f1ea19095904cda}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!D\+I\+V\+I\+D\+E\+\_\+\+K\+EY@{D\+I\+V\+I\+D\+E\+\_\+\+K\+EY}}
+\index{D\+I\+V\+I\+D\+E\+\_\+\+K\+EY@{D\+I\+V\+I\+D\+E\+\_\+\+K\+EY}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{D\+I\+V\+I\+D\+E\+\_\+\+K\+EY}{DIVIDE\_KEY}}
+{\footnotesize\ttfamily string Bridges.\+Element.\+Element.\+D\+I\+V\+I\+D\+E\+\_\+\+K\+EY = \char`\"{}(\textbackslash{}r?\textbackslash{}n)$\vert$(\textbackslash{}n)$\vert$(\textbackslash{}f)$\vert$(\textbackslash{}r)$\vert$(\%n)\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_a4b8f927e3404228fb3f1ddd23c25544d}\label{class_bridges_1_1_element_1_1_element_a4b8f927e3404228fb3f1ddd23c25544d}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!identifier@{identifier}}
+\index{identifier@{identifier}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{identifier}{identifier}}
+{\footnotesize\ttfamily Bridges.\+Element.\+Element.\+identifier = str()\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_ad844782afa90410ab263d41b499a510b}\label{class_bridges_1_1_element_1_1_element_ad844782afa90410ab263d41b499a510b}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!ids@{ids}}
+\index{ids@{ids}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{ids}{ids}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Bridges.\+Element.\+Element.\+ids = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_a09bac6cdc3b9a08f42fde8dbe9ab7b98}\label{class_bridges_1_1_element_1_1_element_a09bac6cdc3b9a08f42fde8dbe9ab7b98}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!ids@{ids}}
+\index{ids@{ids}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{ids}{ids}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Bridges.\+Element.\+Element.\+ids}
+
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_ab39bc7d8e0dc982c771602c6488f691e}\label{class_bridges_1_1_element_1_1_element_ab39bc7d8e0dc982c771602c6488f691e}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!I\+N\+S\+E\+R\+T\+\_\+\+S\+T\+R\+I\+NG@{I\+N\+S\+E\+R\+T\+\_\+\+S\+T\+R\+I\+NG}}
+\index{I\+N\+S\+E\+R\+T\+\_\+\+S\+T\+R\+I\+NG@{I\+N\+S\+E\+R\+T\+\_\+\+S\+T\+R\+I\+NG}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{I\+N\+S\+E\+R\+T\+\_\+\+S\+T\+R\+I\+NG}{INSERT\_STRING}}
+{\footnotesize\ttfamily string Bridges.\+Element.\+Element.\+I\+N\+S\+E\+R\+T\+\_\+\+S\+T\+R\+I\+NG = \char`\"{}\textbackslash{}\textbackslash{}n\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_a301fe5be8cf72b2c62f6a218feeb9166}\label{class_bridges_1_1_element_1_1_element_a301fe5be8cf72b2c62f6a218feeb9166}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!label@{label}}
+\index{label@{label}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{label}{label}}
+{\footnotesize\ttfamily Bridges.\+Element.\+Element.\+label = str()\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_a791eaed2d080d5f97e5bf95fd6c4d56a}\label{class_bridges_1_1_element_1_1_element_a791eaed2d080d5f97e5bf95fd6c4d56a}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!lvisualizer@{lvisualizer}}
+\index{lvisualizer@{lvisualizer}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{lvisualizer}{lvisualizer}}
+{\footnotesize\ttfamily Bridges.\+Element.\+Element.\+lvisualizer}
+
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_aab3532c7b2e3521e4a94ab57e334c8b5}\label{class_bridges_1_1_element_1_1_element_aab3532c7b2e3521e4a94ab57e334c8b5}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!O\+P\+E\+N\+\_\+\+B\+OX@{O\+P\+E\+N\+\_\+\+B\+OX}}
+\index{O\+P\+E\+N\+\_\+\+B\+OX@{O\+P\+E\+N\+\_\+\+B\+OX}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{O\+P\+E\+N\+\_\+\+B\+OX}{OPEN\_BOX}}
+{\footnotesize\ttfamily string Bridges.\+Element.\+Element.\+O\+P\+E\+N\+\_\+\+B\+OX = \char`\"{}\mbox{[}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_a41b718fd3b20752256ef26f1078b2e32}\label{class_bridges_1_1_element_1_1_element_a41b718fd3b20752256ef26f1078b2e32}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!O\+P\+E\+N\+\_\+\+C\+U\+R\+LY@{O\+P\+E\+N\+\_\+\+C\+U\+R\+LY}}
+\index{O\+P\+E\+N\+\_\+\+C\+U\+R\+LY@{O\+P\+E\+N\+\_\+\+C\+U\+R\+LY}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{O\+P\+E\+N\+\_\+\+C\+U\+R\+LY}{OPEN\_CURLY}}
+{\footnotesize\ttfamily string Bridges.\+Element.\+Element.\+O\+P\+E\+N\+\_\+\+C\+U\+R\+LY = \char`\"{}\{\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_a1485c09c49957564967e3595149ca6e9}\label{class_bridges_1_1_element_1_1_element_a1485c09c49957564967e3595149ca6e9}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!O\+P\+E\+N\+\_\+\+P\+A\+R\+EN@{O\+P\+E\+N\+\_\+\+P\+A\+R\+EN}}
+\index{O\+P\+E\+N\+\_\+\+P\+A\+R\+EN@{O\+P\+E\+N\+\_\+\+P\+A\+R\+EN}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{O\+P\+E\+N\+\_\+\+P\+A\+R\+EN}{OPEN\_PAREN}}
+{\footnotesize\ttfamily string Bridges.\+Element.\+Element.\+O\+P\+E\+N\+\_\+\+P\+A\+R\+EN = \char`\"{}(\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_a3dfebb62d79cbae06898b227ceaaf025}\label{class_bridges_1_1_element_1_1_element_a3dfebb62d79cbae06898b227ceaaf025}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!Q\+U\+O\+TE@{Q\+U\+O\+TE}}
+\index{Q\+U\+O\+TE@{Q\+U\+O\+TE}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{Q\+U\+O\+TE}{QUOTE}}
+{\footnotesize\ttfamily string Bridges.\+Element.\+Element.\+Q\+U\+O\+TE = \char`\"{}\textbackslash{}\char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_adfe068cd72057bd5a45f71fdee2a6a91}\label{class_bridges_1_1_element_1_1_element_adfe068cd72057bd5a45f71fdee2a6a91}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!value@{value}}
+\index{value@{value}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily Bridges.\+Element.\+Element.\+value = object()\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_a754c5ca67518e3c9ff6b6e7882ed05c6}\label{class_bridges_1_1_element_1_1_element_a754c5ca67518e3c9ff6b6e7882ed05c6}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!visualizer@{visualizer}}
+\index{visualizer@{visualizer}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{visualizer}{visualizer}}
+{\footnotesize\ttfamily Bridges.\+Element.\+Element.\+visualizer}
+
+\mbox{\Hypertarget{class_bridges_1_1_element_1_1_element_a857960f476b18de30baa18ae54877672}\label{class_bridges_1_1_element_1_1_element_a857960f476b18de30baa18ae54877672}} 
+\index{Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}!word\+\_\+number@{word\+\_\+number}}
+\index{word\+\_\+number@{word\+\_\+number}!Bridges\+::\+Element\+::\+Element@{Bridges\+::\+Element\+::\+Element}}
+\subsubsection{\texorpdfstring{word\+\_\+number}{word\_number}}
+{\footnotesize\ttfamily int Bridges.\+Element.\+Element.\+word\+\_\+number = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/python/bridges18/\+Bridges/\mbox{\hyperlink{_element_8py}{Element.\+py}}\end{DoxyCompactItemize}

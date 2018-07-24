@@ -1,9 +1,9 @@
-from Bridges import *
+from Bridges.Bridges import *
+from Bridges.CircDLelement import *
 from StudentInfo import *
-from CircDLelement import *
 
 
-
+#helper funtction
 def insertFront(tailElement, newElement):
     tailNextElement = tailElement.get_next()
 
@@ -20,10 +20,12 @@ def insertFront(tailElement, newElement):
 
 
 class CircDLtutorial:
+    # create the bridges object
     bridges = Bridges(6, "YOUR_USER_ID", "YOUR_API_KEY")
 
     students = []
 
+    # create a list of student data
     students.append(Student("00000000000",
                             "Gretel Chaney",
                             "CS",
@@ -66,6 +68,7 @@ class CircDLtutorial:
 
     head = None
 
+    # init all student elements
     for i in range(len(students)):
         if i > 0:
             head = insertFront(head, CircDLelement(label = "", e = students[i]))
@@ -74,6 +77,7 @@ class CircDLtutorial:
 
     current = head
 
+    # add visual attributes
     for i in range(len(students)):
         current.set_label(current.get_value().getName())
         current.get_visualizer().set_color(current.get_value().getLikeColor())
@@ -86,5 +90,7 @@ class CircDLtutorial:
 
         current = current.get_next()
 
+    # set data structure to point to head
     bridges.set_data_structure(head)
+    # visualize the circular list
     bridges.visualize()

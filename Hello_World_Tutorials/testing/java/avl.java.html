@@ -2,78 +2,69 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>~/graphics/bridges/site/bridgesSite/Hello_World_Tutorials/testing/java/avl.java.html</title>
-<meta name="Generator" content="Vim/8.0">
-<meta name="plugin-version" content="vim7.4_v2">
+<title>~/graphics/bridges/bridgesUNCC/Hello_World_Tutorials/testing/java/avl.java.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v6">
 <meta name="syntax" content="c">
-<meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
-<meta name="colorscheme" content="none">
+<meta name="settings" content="use_css,no_progress">
 <style type="text/css">
 <!--
-pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+pre { font-family: monospace; color: #000000; background-color: #ffffff; }
 body { font-family: monospace; color: #000000; background-color: #ffffff; }
-* { font-size: 1em; }
 .Constant { color: #0000c0; text-decoration: underline; }
 .Comment { color: #c00000; font-weight: bold; }
 .Type { color: #008000; text-decoration: underline; }
 -->
 </style>
-
-<script type='text/javascript'>
-<!--
-
--->
-</script>
 </head>
 <body>
-<pre id='vimCodeElement'>
+<pre>
 import bridges.connect.Bridges;
 import bridges.data_src_dependent.Tweet;
 import bridges.base.AVLTreeElement;
 
 public class avl {
-	public <span class="Type">static</span> <span class="Type">void</span> main(String[] args) throws Exception {
+        public <span class="Type">static</span> <span class="Type">void</span> main(String[] args) throws Exception {
 
-		<span class="Comment">//create the Bridges object</span>
-		Bridges bridges = new Bridges(<span class="Constant">11</span>, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+                <span class="Comment">//create the Bridges object</span>
+                Bridges bridges = new Bridges(<span class="Constant">11</span>, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 
-		<span class="Comment">//create  an  AVL tree elements</span>
-		AVLTreeElement&lt;Integer, String&gt; avl_root = new AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">50</span>,
-			<span class="Constant">&quot;Hello&quot;</span>);
-		AVLTreeElement&lt;Integer, String&gt; avl_2 = new AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">30</span>, <span class="Constant">&quot;This&quot;</span>);
-		AVLTreeElement&lt;Integer, String&gt; avl_3 = new AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">70</span>, <span class="Constant">&quot;is&quot;</span>);
-		AVLTreeElement&lt;Integer, String&gt; avl_4 = new AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">20</span>, <span class="Constant">&quot;an&quot;</span>);
-		AVLTreeElement&lt;Integer, String&gt; avl_5 = new AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">40</span>, <span class="Constant">&quot;AVL&quot;</span>);
-		AVLTreeElement&lt;Integer, String&gt; avl_6 = new AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">90</span>, <span class="Constant">&quot;Tree&quot;</span>);
-		<span class="Comment">// put in the balance factors - done manually  here</span>
-		<span class="Comment">// for illustration, but in a real project, the user will</span>
-		<span class="Comment">// implement this as part of the insert/delete</span>
-		<span class="Comment">// operations on the tree to maintain a balanced tree</span>
-		avl_root.setLabel(<span class="Constant">&quot;0&quot;</span>);
-		avl_2.setLabel(<span class="Constant">&quot;0&quot;</span>);
-		avl_3.setLabel(<span class="Constant">&quot;-1&quot;</span>);
-		avl_4.setLabel(<span class="Constant">&quot;0&quot;</span>);
-		avl_5.setLabel(<span class="Constant">&quot;0&quot;</span>);
-		avl_6.setLabel(<span class="Constant">&quot;0&quot;</span>);
+                <span class="Comment">//create  an  AVL tree elements</span>
+                AVLTreeElement&lt;Integer, String&gt; avl_root = new AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">50</span>,
+                        <span class="Constant">&quot;Hello&quot;</span>);
+                AVLTreeElement&lt;Integer, String&gt; avl_2 = new AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">30</span>, <span class="Constant">&quot;This&quot;</span>);
+                AVLTreeElement&lt;Integer, String&gt; avl_3 = new AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">70</span>, <span class="Constant">&quot;is&quot;</span>);
+                AVLTreeElement&lt;Integer, String&gt; avl_4 = new AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">20</span>, <span class="Constant">&quot;an&quot;</span>);
+                AVLTreeElement&lt;Integer, String&gt; avl_5 = new AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">40</span>, <span class="Constant">&quot;AVL&quot;</span>);
+                AVLTreeElement&lt;Integer, String&gt; avl_6 = new AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">90</span>, <span class="Constant">&quot;Tree&quot;</span>);
+                <span class="Comment">// put in the balance factors - done manually  here</span>
+                <span class="Comment">// for illustration, but in a real project, the user will</span>
+                <span class="Comment">// implement this as part of the insert/delete</span>
+                <span class="Comment">// operations on the tree to maintain a balanced tree</span>
+                avl_root.setLabel(<span class="Constant">&quot;0&quot;</span>);
+                avl_2.setLabel(<span class="Constant">&quot;0&quot;</span>);
+                avl_3.setLabel(<span class="Constant">&quot;-1&quot;</span>);
+                avl_4.setLabel(<span class="Constant">&quot;0&quot;</span>);
+                avl_5.setLabel(<span class="Constant">&quot;0&quot;</span>);
+                avl_6.setLabel(<span class="Constant">&quot;0&quot;</span>);
 
-		<span class="Comment">// add the links between nodes</span>
-		avl_root.setLeft(avl_2);
-		avl_root.setRight(avl_3);
-		avl_2.setLeft(avl_4);
-		avl_2.setRight(avl_5);
-		avl_3.setRight(avl_6);
-		<span class="Comment">// set some attributes</span>
-		avl_root.getVisualizer().setColor(<span class="Constant">&quot;magenta&quot;</span>);
-		avl_root.getVisualizer().setOpacity(<span class="Constant">0.8f</span>);
+                <span class="Comment">// add the links between nodes</span>
+                avl_root.setLeft(avl_2);
+                avl_root.setRight(avl_3);
+                avl_2.setLeft(avl_4);
+                avl_2.setRight(avl_5);
+                avl_3.setRight(avl_6);
+                <span class="Comment">// set some attributes</span>
+                avl_root.getVisualizer().setColor(<span class="Constant">&quot;magenta&quot;</span>);
+                avl_root.getVisualizer().setOpacity(<span class="Constant">0.8f</span>);
 
-		<span class="Comment">//set visualizer type</span>
-		bridges.setDataStructure(avl_root);
+                <span class="Comment">//set visualizer type</span>
+                bridges.setDataStructure(avl_root);
 
-		<span class="Comment">// visualize the list</span>
-		bridges.visualize();
-	}
+                <span class="Comment">// visualize the list</span>
+                bridges.visualize();
+        }
 }
 </pre>
 </body>
 </html>
-<!-- vim: set foldmethod=manual : -->

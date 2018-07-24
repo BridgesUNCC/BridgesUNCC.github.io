@@ -7,7 +7,7 @@ using namespace bridges;
 
 int main() {
 
-	Bridges::initialize(1, "kalpathi60", "486749122386");
+	Bridges::initialize(1, "YOUR_USER_ID", "YOUR_API_KEY");
 
 	int dims[3] = {4, 4, 1};
 	Array<string> *arr = new Array<string>(4, 4);

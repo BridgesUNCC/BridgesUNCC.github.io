@@ -1,8 +1,10 @@
-from Bridges import *
+from Bridges.Bridges import *
 from StudentInfo import *
-from CircSLelement import *
+from Bridges.CircSLelement import *
 
 class CircSLtutorial:
+
+    # create a bridges object with your credentials
     bridges = Bridges(5, "YOUR_USER_ID", "YOUR_API_KEY")
 
     students = []
@@ -54,15 +56,20 @@ class CircSLtutorial:
     for i in range(1, len(students)):
         current.set_next(CircSLelement(label = "", e = students[i]))
 
+        #handle the last element
         if i is len(students)-1:
+            #getting the last element
             current = current.get_next()
 
+            # point the last element to the first element
+            # so the list becomes circular
             current.set_next(head)
-
+        # set the current element to be the next element
         current = current.get_next()
 
     current = head
 
+    # add visual attributes
     for i in range(len(students)):
 
         current.set_label(current.get_value().getName())

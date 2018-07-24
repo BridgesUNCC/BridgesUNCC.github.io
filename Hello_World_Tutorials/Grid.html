@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="author" content="Bridges"/>
+  <meta name="description" content="Bridges Tutorials"/>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="./tutorial.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="./tutorial.css" />
+  <link rel="shortcut icon" href="http://bridgesuncc.github.io/favicon.png"/>
+  <script src="http://www.w3schools.com/lib/w3data.js"></script>
+
+  <title>Bridges - Hello World Visualization Tutorial</title>
+
+  <script src="./prettyprint.js" defer></script>
+</head>
+
+<body>
+<div>
+
+<header w3-include-html="./Tutorial_Header.html"></header>
+
+<main>
+<br>
+Grid&lt;E&gt; implements a <i> 2D grid structure </i> in BRIDGES, and it can be used to
+represent 2D image like structures (more efficient than the 2D array representation
+for large arrays), as well as implementation of simple 2D games that operate on moderate
+sized grids.  The setDimensions() method is used to set the grid dimensions. The ColorGrid
+subclass specializes this class to use Color for each grid element and is the subject of 
+the illustrated example here. As before, &lt;E&gt; represents the generic class parameter.
+The Grid type uses a base64 representation for its contents.
+<hr/>
+
+<h2>Grid - Example BRIDGES Program - A checkerboard implementation using the ColorGrid)</h2>
+<div class="tabs">
+    <div onclick="displayCode('Java',this)">Java</div>
+    <div onclick="displayCode('C++',this)" >C++</div>
+    <div onclick="displayCode('Python',this)" >Python</div>
+  </div>
+  <div class="tabContents">
+    <div id="Java" w3-include-html="./Java_Grid.html"></div>
+    <div id="C++"  w3-include-html="./Cpp_Grid.html"></div>
+    <div id="Python"  w3-include-html="./Python_Grid.html"></div>
+  </div>
+
+
+<h2>Bridges Visualization</h2>
+<ul>
+<li>Once all your code is in order, run your file.</li>
+<li>Assuming all your code is correct and it compiles correctly, a
+link to the Bridges website will be generated on the console.</li>
+<li>Copy/paste this link into your favorite browser to view a visualization
+of the data structure you just created.</li>
+<li>It should look something like this:</li>
+</ul>
+  <div class="iframe-wrapper">
+    <iframe src="http://bridges-cs.herokuapp.com/assignments/14/bridges_public" scrolling="no">
+      <p>Sorry, your browser doesn't seem to support iframes -
+        <a href="http://bridges-cs.herokuapp.com/assignments/14/bridges_public" scrolling="no">Frame0 Link</a>
+      </p>
+	</iframe>
+   </div>
+  <p>Well done! You’ve just created your Bridges Singly Linked List project!</p>
+</main>
+
+<footer w3-include-html="./Tutorial_Footer.html"></footer>
+
+</div>
+<script>
+  w3IncludeHTML();
+  document.querySelector("*.tabs > *").click();
+</script>
+</body>
+</html>

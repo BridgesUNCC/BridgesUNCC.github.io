@@ -2,27 +2,37 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>~/graphics/bridges/bridgesUNCC/Hello_World_Tutorials/testing/python/circ_sllist.py.html</title>
-<meta name="Generator" content="Vim/7.3">
-<meta name="plugin-version" content="vim7.3_v6">
+<title>~/graphics/bridges/site/bridgesSite/Hello_World_Tutorials/testing/python/circ_sllist.py.html</title>
+<meta name="Generator" content="Vim/8.0">
+<meta name="plugin-version" content="vim7.4_v2">
 <meta name="syntax" content="c">
-<meta name="settings" content="use_css,no_progress">
+<meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="none">
 <style type="text/css">
 <!--
-pre { font-family: monospace; color: #000000; background-color: #ffffff; }
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
 body { font-family: monospace; color: #000000; background-color: #ffffff; }
-.Statement { color: #008080; font-weight: bold; }
+* { font-size: 1em; }
 .Constant { color: #0000c0; text-decoration: underline; }
+.Statement { color: #008080; font-weight: bold; }
 -->
 </style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
 </head>
 <body>
-<pre>
-from Bridges import *
+<pre id='vimCodeElement'>
+from Bridges.Bridges import *
 from StudentInfo import *
-from CircSLelement import *
+from Bridges.CircSLelement import *
 
 class CircSLtutorial:
+
+    # create a bridges object with your credentials
     bridges = Bridges(<span class="Constant">5</span>, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>)
 
     students = []
@@ -74,15 +84,20 @@ class CircSLtutorial:
     <span class="Statement">for</span> i in range(<span class="Constant">1</span>, len(students)):
         current.set_next(CircSLelement(label = <span class="Constant">&quot;&quot;</span>, e = students[i]))
 
+        #handle the last element
         <span class="Statement">if</span> i is len(students)-<span class="Constant">1</span>:
+            #getting the last element
             current = current.get_next()
 
+            # point the last element to the first element
+            # so the list becomes circular
             current.set_next(head)
-
+        # set the current element to be the next element
         current = current.get_next()
 
     current = head
 
+    # add visual attributes
     <span class="Statement">for</span> i in range(len(students)):
 
         current.set_label(current.get_value().getName())
@@ -99,3 +114,4 @@ class CircSLtutorial:
 </pre>
 </body>
 </html>
+<!-- vim: set foldmethod=manual : -->

@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['race',['race',['../class_cancer_incidence_1_1_cancer_incidence.html#aabf2d41cf0000d41fb135b2801b35334',1,'CancerIncidence::CancerIncidence']]],
-  ['rating',['rating',['../class_actor_movie_i_m_d_b_1_1_actor_movie_i_m_d_b.html#a46719008afa7ca424dd1f190d92f98d6',1,'ActorMovieIMDB.ActorMovieIMDB.rating()'],['../class_game_1_1_game.html#a274df8eb8d5dd182acd07582fe0f1e7e',1,'Game.Game.rating()']]],
-  ['red',['red',['../class_color_1_1_color.html#aa562dd16015338e561218c44ca7b9db7',1,'Color.Color.red()'],['../class_color_1_1_color.html#ad6b9578f975c4f066a1e34dff6ac557a',1,'Color.Color.red()'],['../class_element_visualizer_1_1_element_visualizer.html#a06e5ddbc77f8d3b1b36d1cd21dd7e970',1,'ElementVisualizer.ElementVisualizer.red()'],['../class_link_visualizer_1_1_link_visualizer.html#a2f23008a3cfa731f1c2ae70e0d84c86b',1,'LinkVisualizer.LinkVisualizer.red()']]],
-  ['release_5fdate',['release_date',['../class_song_1_1_song.html#ae8e1db27b18ac777478522a33fb2a611',1,'Song::Song']]],
-  ['right',['right',['../class_bin_tree_element_1_1_bin_tree_element.html#a96aa549e65f62466b8637ad16f1c2292',1,'BinTreeElement::BinTreeElement']]]
+  ['red',['red',['../class_bridges_1_1_color_1_1_color.html#aa2f8facc108ecf452c834b76e5462c34',1,'Bridges.Color.Color.red()'],['../class_bridges_1_1_color_1_1_color.html#a51436cc5661d40acb09332e7bc9a13b7',1,'Bridges.Color.Color.red()'],['../class_bridges_1_1_element_visualizer_1_1_element_visualizer.html#a44266d81c1904956ae315cefa1cee31a',1,'Bridges.ElementVisualizer.ElementVisualizer.red()'],['../class_bridges_1_1_link_visualizer_1_1_link_visualizer.html#a35b9ab7e92a3af0908966ca3b9fa2772',1,'Bridges.LinkVisualizer.LinkVisualizer.red()']]],
+  ['right',['right',['../class_bridges_1_1_bin_tree_element_1_1_bin_tree_element.html#a5130987f56eff4edcc8c8ef323f8cd3d',1,'Bridges::BinTreeElement::BinTreeElement']]]
 ];
