@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quote',['QUOTE',['../namespacebridges.html#acd8357e88562cbb7e60bea3fac422ac3',1,'bridges']]]
+  ['printlinks',['printLinks',['../classbridges_1_1_element.html#ae6f773c7222ff3a37c402e5e1f413c66',1,'bridges::Element']]]
 ];

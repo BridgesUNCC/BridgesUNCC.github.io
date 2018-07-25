@@ -179,6 +179,7 @@ boxfont setfont
 (bridges::Element< E >) cw
 (bridges::DataStructure) cw
 (bridges::AVLTreeElement< K, E >) cw
+(bridges::KdTreeElement< K, E >) cw
 /boxwidth boxwidth marginwidth 2 mul add def
 /xspacing boxwidth distx add def
 /yspacing boxheight disty add def
@@ -195,7 +196,8 @@ boundx scalefactor div boundy scalefactor div scale
  (bridges::TreeElement< E >) 0.500000 3.000000 box
  (bridges::Element< E >) 0.000000 4.000000 box
  (bridges::DataStructure) 1.000000 4.000000 box
- (bridges::AVLTreeElement< K, E >) 0.500000 0.000000 box
+ (bridges::AVLTreeElement< K, E >) 0.000000 0.000000 box
+ (bridges::KdTreeElement< K, E >) 1.000000 0.000000 box
 
 % ----- relations -----
 
@@ -218,4 +220,8 @@ solid
 solid
 1 0.500000 0.250000 out
 solid
-0 0.500000 0.750000 in
+0.000000 1.000000 1.000000 conn
+solid
+0 0.000000 0.750000 in
+solid
+0 1.000000 0.750000 in
