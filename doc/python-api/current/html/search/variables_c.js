@@ -1,5 +1,9 @@
 var searchData=
 [
   ['next',['next',['../class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement.html#af101cccf9d2c5c2027b7d812034bc262',1,'Bridges.CircDLelement.CircDLelement.next()'],['../class_bridges_1_1_s_lelement_1_1_s_lelement.html#a650935f5a68b49de4c222cc4c8b0c778',1,'Bridges.SLelement.SLelement.next()']]],
-  ['num_5fdims',['num_dims',['../class_bridges_1_1_array_1_1_array.html#a61af14f906e3657866062bef69621445',1,'Bridges::Array::Array']]]
+  ['num_5fdims',['num_dims',['../class_bridges_1_1_array_1_1_array.html#a61af14f906e3657866062bef69621445',1,'Bridges::Array::Array']]],
+  ['numchars',['numChars',['../class_bridges_1_1data__src__dependent_1_1_book_1_1_book.html#aca265f2a5dd95bca41455b6502364a8d',1,'Bridges.data_src_dependent.Book.Book.numChars()'],['../class_bridges_1_1data__src__dependent_1_1_gutenberg_book_1_1_gutenberg_book.html#ab8cd6d3bec785f191469b30377f69795',1,'Bridges.data_src_dependent.GutenbergBook.GutenbergBook.numChars()']]],
+  ['numdifficultwords',['numDifficultWords',['../class_bridges_1_1data__src__dependent_1_1_book_1_1_book.html#a1b9c36a1c840d703e24e033e8ad2ea4c',1,'Bridges.data_src_dependent.Book.Book.numDifficultWords()'],['../class_bridges_1_1data__src__dependent_1_1_gutenberg_book_1_1_gutenberg_book.html#a4b442ee1b36e78bc428961fc886636a4',1,'Bridges.data_src_dependent.GutenbergBook.GutenbergBook.numDifficultWords()']]],
+  ['numsentences',['numSentences',['../class_bridges_1_1data__src__dependent_1_1_book_1_1_book.html#a4369c7a7fa2abdaff7905bac8dea1c78',1,'Bridges.data_src_dependent.Book.Book.numSentences()'],['../class_bridges_1_1data__src__dependent_1_1_gutenberg_book_1_1_gutenberg_book.html#ae9c14955eb7ac64467c776ebcb75e3b5',1,'Bridges.data_src_dependent.GutenbergBook.GutenbergBook.numSentences()']]],
+  ['numwords',['numWords',['../class_bridges_1_1data__src__dependent_1_1_book_1_1_book.html#a0db2ddd13ff6460d0a746f14dd0b09c0',1,'Bridges.data_src_dependent.Book.Book.numWords()'],['../class_bridges_1_1data__src__dependent_1_1_gutenberg_book_1_1_gutenberg_book.html#a855206c4dfd1f49a76b16273dd2f5594',1,'Bridges.data_src_dependent.GutenbergBook.GutenbergBook.numWords()']]]
 ];

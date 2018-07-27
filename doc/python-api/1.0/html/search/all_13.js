@@ -1,9 +1,11 @@
 var searchData=
 [
-  ['tag',['tag',['../class_bridges_1_1_m_lelement_1_1_m_lelement.html#ab10db82c80844494948664c11d5ba810',1,'Bridges.MLelement.MLelement.tag()'],['../class_bridges_1_1_m_lelement_1_1_m_lelement.html#adb11c5e159bc78f59daf34b2ae3c5a58',1,'Bridges.MLelement.MLelement.tag()']]],
-  ['temp_2epy',['temp.py',['../temp_8py.html',1,'']]],
-  ['thickness',['thickness',['../class_bridges_1_1_link_visualizer_1_1_link_visualizer.html#a3ac27693b0b6f7d23eaa0619d4998c64',1,'Bridges::LinkVisualizer::LinkVisualizer']]],
-  ['title',['title',['../class_bridges_1_1_bridges_1_1_bridges.html#a977ab3147c2a675bfd78dd199a9644ec',1,'Bridges::Bridges::Bridges']]],
+  ['tag',['tag',['../class_bridges_1_1_m_lelement_1_1_m_lelement.html#adb11c5e159bc78f59daf34b2ae3c5a58',1,'Bridges::MLelement::MLelement']]],
+  ['text',['text',['../class_bridges_1_1data__src__dependent_1_1_shakespeare_1_1_shakespeare.html#aca881efeb7708645e304bedd8bfdfbb1',1,'Bridges::data_src_dependent::Shakespeare::Shakespeare']]],
+  ['thickness',['thickness',['../class_bridges_1_1_link_visualizer_1_1_link_visualizer.html#a9755ab11c1bd849350871fe031cb6c8e',1,'Bridges.LinkVisualizer.LinkVisualizer.thickness()'],['../class_bridges_1_1_link_visualizer_1_1_link_visualizer.html#a3ac27693b0b6f7d23eaa0619d4998c64',1,'Bridges.LinkVisualizer.LinkVisualizer.thickness()']]],
+  ['time',['time',['../class_bridges_1_1data__src__dependent_1_1_earthquake_u_s_g_s_1_1_earthquake_u_s_g_s.html#a3d4d30f0777e6ac59ca1ebd80ae15a26',1,'Bridges::data_src_dependent::EarthquakeUSGS::EarthquakeUSGS']]],
+  ['title',['title',['../class_bridges_1_1_bridges_1_1_bridges.html#ad02d0b0bcd679a3d7dd2dd2736b8aa58',1,'Bridges.Bridges.Bridges.title()'],['../class_bridges_1_1_bridges_1_1_bridges.html#a977ab3147c2a675bfd78dd199a9644ec',1,'Bridges.Bridges.Bridges.title()'],['../class_bridges_1_1data__src__dependent_1_1_book_1_1_book.html#a83b8679cabf2db52dbcd57c1f0264f32',1,'Bridges.data_src_dependent.Book.Book.title()'],['../class_bridges_1_1data__src__dependent_1_1_earthquake_u_s_g_s_1_1_earthquake_u_s_g_s.html#aa444dc5e2e1aeef714758a74a0ddf944',1,'Bridges.data_src_dependent.EarthquakeUSGS.EarthquakeUSGS.title()'],['../class_bridges_1_1data__src__dependent_1_1_game_1_1_game.html#acdee6e5e3cfde65afd0cf5a781af369c',1,'Bridges.data_src_dependent.Game.Game.title()'],['../class_bridges_1_1data__src__dependent_1_1_gutenberg_book_1_1_gutenberg_book.html#afa38d09f6201d7795b9b2e06a5ce8779',1,'Bridges.data_src_dependent.GutenbergBook.GutenbergBook.title()'],['../class_bridges_1_1data__src__dependent_1_1_shakespeare_1_1_shakespeare.html#ac3970c59e0d01f6d8a7037cd129a4c7d',1,'Bridges.data_src_dependent.Shakespeare.Shakespeare.title()']]],
   ['treeelement',['TreeElement',['../class_bridges_1_1_tree_element_1_1_tree_element.html',1,'Bridges::TreeElement']]],
-  ['treeelement_2epy',['TreeElement.py',['../_tree_element_8py.html',1,'']]]
+  ['treeelement_2epy',['TreeElement.py',['../_tree_element_8py.html',1,'']]],
+  ['type',['type',['../class_bridges_1_1data__src__dependent_1_1_shakespeare_1_1_shakespeare.html#ab841234a24c7982c99bb69ebe29cd17a',1,'Bridges::data_src_dependent::Shakespeare::Shakespeare']]]
 ];

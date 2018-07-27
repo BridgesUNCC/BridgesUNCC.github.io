@@ -14,20 +14,20 @@ Inheritance diagram for Bridges.\+Circ\+D\+Lelement.\+Circ\+D\+Lelement\+:\begin
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-def \mbox{\hyperlink{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_aaea74e300393b3589bf2f566f8916580}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, e=None, \mbox{\hyperlink{class_bridges_1_1_element_1_1_element_a301fe5be8cf72b2c62f6a218feeb9166}{label}}=None, \mbox{\hyperlink{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_af101cccf9d2c5c2027b7d812034bc262}{next}}=None, \mbox{\hyperlink{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_a4aee631669271013ced8cd8d677ca812}{prev}}=None)
-\begin{DoxyCompactList}\small\item\em Constructs an empty \mbox{\hyperlink{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement}{Circ\+D\+Lelement}} with next and prev pointers set to itself. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_a00595fd201fbbe870c524efd02c53b83}{get\+\_\+data\+\_\+structure\+\_\+type}} (self)
+def \hyperlink{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_a48a58c226d5d85a3bcce77e974bb78d3}{\+\_\+\+\_\+init\+\_\+\+\_\+}
+\begin{DoxyCompactList}\small\item\em Constructs an empty \hyperlink{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement}{Circ\+D\+Lelement} with next and prev pointers set to itself. \end{DoxyCompactList}\item 
+def \hyperlink{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_a00595fd201fbbe870c524efd02c53b83}{get\+\_\+data\+\_\+structure\+\_\+type} (self)
 \begin{DoxyCompactList}\small\item\em This method gets the data structure type. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_aa5ee07b40eed6b8528d4dcae0bbd7dd1}{get\+\_\+next}} (self)
-\begin{DoxyCompactList}\small\item\em This method returns the pointer to the next \mbox{\hyperlink{namespace_bridges_1_1_d_lelement}{D\+Lelement}}. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_ada3069ef0cf2cf2960b5b87036ba66dd}{get\+\_\+prev}} (self)
-\begin{DoxyCompactList}\small\item\em This method returns the pointer to the previous \mbox{\hyperlink{namespace_bridges_1_1_d_lelement}{D\+Lelement}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+def \hyperlink{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_aa5ee07b40eed6b8528d4dcae0bbd7dd1}{get\+\_\+next} (self)
+\begin{DoxyCompactList}\small\item\em This method returns the pointer to the next \hyperlink{namespace_bridges_1_1_d_lelement}{D\+Lelement}. \end{DoxyCompactList}\item 
+def \hyperlink{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_ada3069ef0cf2cf2960b5b87036ba66dd}{get\+\_\+prev} (self)
+\begin{DoxyCompactList}\small\item\em This method returns the pointer to the previous \hyperlink{namespace_bridges_1_1_d_lelement}{D\+Lelement}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_af101cccf9d2c5c2027b7d812034bc262}{next}}
+\hyperlink{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_af101cccf9d2c5c2027b7d812034bc262}{next}
 \item 
-\mbox{\hyperlink{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_a4aee631669271013ced8cd8d677ca812}{prev}}
+\hyperlink{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_a4aee631669271013ced8cd8d677ca812}{prev}
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
@@ -41,47 +41,55 @@ User\textquotesingle{}s implementation of the circularly linked list needs to en
 
 Elements have labels (string) that are displayed on the visualization. Elements take an generic object E as a user defined parameter, which can be any native type or object.
 
-Elements contain a visualizer (\mbox{\hyperlink{namespace_bridges_1_1_element_visualizer}{Element\+Visualizer}}) object for setting visual attributes (color, shape, opacity, size), necessary for displaying them in a web browser.
+Elements contain a visualizer (\hyperlink{namespace_bridges_1_1_element_visualizer}{Element\+Visualizer}) object for setting visual attributes (color, shape, opacity, size), necessary for displaying them in a web browser.
 
-Elements also have a \mbox{\hyperlink{namespace_bridges_1_1_link_visualizer}{Link\+Visualizer}} object that is used when they are linked to another element, appropriate for setting link attributes, between the element and its previous or next nodes.
+Elements also have a \hyperlink{namespace_bridges_1_1_link_visualizer}{Link\+Visualizer} object that is used when they are linked to another element, appropriate for setting link attributes, between the element and its previous or next nodes.
 
 \begin{DoxyAuthor}{Author}
 Kalpathi Subramanian
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
-7/17/16, 1/16/17
+7/17/16, 1/16/17 
 \end{DoxyDate}
-
-\begin{DoxyParams}{Parameters}
-{\em $<$\+E$>$} & the generic parameter object that contains application specific data, defined by the user when instantiating this object.\\
-\hline
-\end{DoxyParams}
-\begin{DoxySeeAlso}{See also}
-Example Tutorial at ~\newline
- \href{http://bridgesuncc.github.io/Hello_World_Tutorials/CDLL.html}{\tt http\+://bridgesuncc.\+github.\+io/\+Hello\+\_\+\+World\+\_\+\+Tutorials/\+C\+D\+L\+L.\+html} 
-\end{DoxySeeAlso}
 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_aaea74e300393b3589bf2f566f8916580}\label{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_aaea74e300393b3589bf2f566f8916580}} 
-\index{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\hypertarget{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_a48a58c226d5d85a3bcce77e974bb78d3}{}\index{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
 \index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}}
-\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
-{\footnotesize\ttfamily def Bridges.\+Circ\+D\+Lelement.\+Circ\+D\+Lelement.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{e = {\ttfamily None},  }\item[{}]{label = {\ttfamily None},  }\item[{}]{next = {\ttfamily None},  }\item[{}]{prev = {\ttfamily None} }\end{DoxyParamCaption})}
+\subsubsection[{\+\_\+\+\_\+init\+\_\+\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}def Bridges.\+Circ\+D\+Lelement.\+Circ\+D\+Lelement.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{e = {\ttfamily None}, }
+\item[{}]{label = {\ttfamily None}, }
+\item[{}]{next = {\ttfamily None}, }
+\item[{}]{prev = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}\label{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_a48a58c226d5d85a3bcce77e974bb78d3}
 
 
+Constructs an empty \hyperlink{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement}{Circ\+D\+Lelement} with next and prev pointers set to itself. 
 
-Constructs an empty \mbox{\hyperlink{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement}{Circ\+D\+Lelement}} with next and prev pointers set to itself. 
 
+\begin{DoxyParams}{Parameters}
+{\em label} & the label for this \hyperlink{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement}{Circ\+D\+Lelement} \\
+\hline
+{\em e} & the genereic object that this \hyperlink{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement}{Circ\+D\+Lelement} is holding \\
+\hline
+{\em next} & the \hyperlink{namespace_bridges_1_1_d_lelement}{D\+Lelement} that should be assigned to the next pointer \\
+\hline
+{\em prev} & the \hyperlink{namespace_bridges_1_1_d_lelement}{D\+Lelement} that should be assigned to the prev pointer \\
+\hline
+\end{DoxyParams}
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_a00595fd201fbbe870c524efd02c53b83}\label{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_a00595fd201fbbe870c524efd02c53b83}} 
-\index{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}!get\+\_\+data\+\_\+structure\+\_\+type@{get\+\_\+data\+\_\+structure\+\_\+type}}
+\hypertarget{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_a00595fd201fbbe870c524efd02c53b83}{}\index{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}!get\+\_\+data\+\_\+structure\+\_\+type@{get\+\_\+data\+\_\+structure\+\_\+type}}
 \index{get\+\_\+data\+\_\+structure\+\_\+type@{get\+\_\+data\+\_\+structure\+\_\+type}!Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}}
-\subsubsection{\texorpdfstring{get\+\_\+data\+\_\+structure\+\_\+type()}{get\_data\_structure\_type()}}
-{\footnotesize\ttfamily def Bridges.\+Circ\+D\+Lelement.\+Circ\+D\+Lelement.\+get\+\_\+data\+\_\+structure\+\_\+type (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
-
+\subsubsection[{get\+\_\+data\+\_\+structure\+\_\+type(self)}]{\setlength{\rightskip}{0pt plus 5cm}def Bridges.\+Circ\+D\+Lelement.\+Circ\+D\+Lelement.\+get\+\_\+data\+\_\+structure\+\_\+type (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_a00595fd201fbbe870c524efd02c53b83}
 
 
 This method gets the data structure type. 
@@ -89,49 +97,45 @@ This method gets the data structure type.
 \begin{DoxyReturn}{Returns}
 The date structure type as a string 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_aa5ee07b40eed6b8528d4dcae0bbd7dd1}\label{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_aa5ee07b40eed6b8528d4dcae0bbd7dd1}} 
-\index{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}!get\+\_\+next@{get\+\_\+next}}
+\hypertarget{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_aa5ee07b40eed6b8528d4dcae0bbd7dd1}{}\index{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}!get\+\_\+next@{get\+\_\+next}}
 \index{get\+\_\+next@{get\+\_\+next}!Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}}
-\subsubsection{\texorpdfstring{get\+\_\+next()}{get\_next()}}
-{\footnotesize\ttfamily def Bridges.\+Circ\+D\+Lelement.\+Circ\+D\+Lelement.\+get\+\_\+next (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+\subsubsection[{get\+\_\+next(self)}]{\setlength{\rightskip}{0pt plus 5cm}def Bridges.\+Circ\+D\+Lelement.\+Circ\+D\+Lelement.\+get\+\_\+next (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_aa5ee07b40eed6b8528d4dcae0bbd7dd1}
 
 
-
-This method returns the pointer to the next \mbox{\hyperlink{namespace_bridges_1_1_d_lelement}{D\+Lelement}}. 
+This method returns the pointer to the next \hyperlink{namespace_bridges_1_1_d_lelement}{D\+Lelement}. 
 
 \begin{DoxyReturn}{Returns}
-the \mbox{\hyperlink{namespace_bridges_1_1_d_lelement}{D\+Lelement}} assigned to the next pointer 
+the \hyperlink{namespace_bridges_1_1_d_lelement}{D\+Lelement} assigned to the next pointer 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_ada3069ef0cf2cf2960b5b87036ba66dd}\label{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_ada3069ef0cf2cf2960b5b87036ba66dd}} 
-\index{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}!get\+\_\+prev@{get\+\_\+prev}}
+\hypertarget{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_ada3069ef0cf2cf2960b5b87036ba66dd}{}\index{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}!get\+\_\+prev@{get\+\_\+prev}}
 \index{get\+\_\+prev@{get\+\_\+prev}!Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}}
-\subsubsection{\texorpdfstring{get\+\_\+prev()}{get\_prev()}}
-{\footnotesize\ttfamily def Bridges.\+Circ\+D\+Lelement.\+Circ\+D\+Lelement.\+get\+\_\+prev (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+\subsubsection[{get\+\_\+prev(self)}]{\setlength{\rightskip}{0pt plus 5cm}def Bridges.\+Circ\+D\+Lelement.\+Circ\+D\+Lelement.\+get\+\_\+prev (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_ada3069ef0cf2cf2960b5b87036ba66dd}
 
 
-
-This method returns the pointer to the previous \mbox{\hyperlink{namespace_bridges_1_1_d_lelement}{D\+Lelement}}. 
+This method returns the pointer to the previous \hyperlink{namespace_bridges_1_1_d_lelement}{D\+Lelement}. 
 
 \begin{DoxyReturn}{Returns}
-the \mbox{\hyperlink{namespace_bridges_1_1_d_lelement}{D\+Lelement}} assigned to the prev pointer 
+the \hyperlink{namespace_bridges_1_1_d_lelement}{D\+Lelement} assigned to the prev pointer 
 \end{DoxyReturn}
 
 
 \subsection{Member Data Documentation}
-\mbox{\Hypertarget{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_af101cccf9d2c5c2027b7d812034bc262}\label{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_af101cccf9d2c5c2027b7d812034bc262}} 
-\index{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}!next@{next}}
+\hypertarget{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_af101cccf9d2c5c2027b7d812034bc262}{}\index{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}!next@{next}}
 \index{next@{next}!Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}}
-\subsubsection{\texorpdfstring{next}{next}}
-{\footnotesize\ttfamily Bridges.\+Circ\+D\+Lelement.\+Circ\+D\+Lelement.\+next}
-
-\mbox{\Hypertarget{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_a4aee631669271013ced8cd8d677ca812}\label{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_a4aee631669271013ced8cd8d677ca812}} 
-\index{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}!prev@{prev}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}Bridges.\+Circ\+D\+Lelement.\+Circ\+D\+Lelement.\+next}\label{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_af101cccf9d2c5c2027b7d812034bc262}
+\hypertarget{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_a4aee631669271013ced8cd8d677ca812}{}\index{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}!prev@{prev}}
 \index{prev@{prev}!Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement@{Bridges\+::\+Circ\+D\+Lelement\+::\+Circ\+D\+Lelement}}
-\subsubsection{\texorpdfstring{prev}{prev}}
-{\footnotesize\ttfamily Bridges.\+Circ\+D\+Lelement.\+Circ\+D\+Lelement.\+prev}
-
+\subsubsection[{prev}]{\setlength{\rightskip}{0pt plus 5cm}Bridges.\+Circ\+D\+Lelement.\+Circ\+D\+Lelement.\+prev}\label{class_bridges_1_1_circ_d_lelement_1_1_circ_d_lelement_a4aee631669271013ced8cd8d677ca812}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/\+Users/kalpathi/gr/bridges/client/python/bridges18/\+Bridges/\mbox{\hyperlink{_circ_d_lelement_8py}{Circ\+D\+Lelement.\+py}}\end{DoxyCompactItemize}
+/\+Users/krs/pysrc/\+Bridges/\hyperlink{_circ_d_lelement_8py}{Circ\+D\+Lelement.\+py}\end{DoxyCompactItemize}
