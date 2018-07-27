@@ -37,6 +37,7 @@ var searchData=
   ['graphadjmatrix',['GraphAdjMatrix',['../namespace_bridges_1_1_graph_adj_matrix.html',1,'Bridges']]],
   ['grid',['Grid',['../namespace_bridges_1_1_grid.html',1,'Bridges']]],
   ['gutenbergbook',['GutenbergBook',['../namespace_bridges_1_1data__src__dependent_1_1_gutenberg_book.html',1,'Bridges::data_src_dependent']]],
+  ['bridges',['BRIDGES',['../index.html',1,'']]],
   ['linkvisualizer',['LinkVisualizer',['../namespace_bridges_1_1_link_visualizer.html',1,'Bridges']]],
   ['mlelement',['MLelement',['../namespace_bridges_1_1_m_lelement.html',1,'Bridges']]],
   ['shakespeare',['Shakespeare',['../namespace_bridges_1_1data__src__dependent_1_1_shakespeare.html',1,'Bridges::data_src_dependent']]],
