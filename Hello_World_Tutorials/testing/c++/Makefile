@@ -21,7 +21,7 @@ TARGET =  all
 
 SRCS = array.cpp array2d.cpp array3d.cpp sllist.cpp dllist.cpp circ_sllist.cpp \
 		circ_dllist.cpp  mllist.cpp tree.cpp bintree.cpp bst.cpp avl.cpp \
-		graph_alist.cpp graph_amatrix.cpp 
+		graph_alist.cpp graph_amatrix.cpp color_grid.cpp
 
 
 OBJS = $(SRCS:.cpp=.o)
@@ -81,6 +81,7 @@ run:
 	avl;
 	graph_alist;
 	graph_amatrix;
+	color_grid;
 
 style:  
 	$(ASTYLE) $(ASTYLE_PARAMS)  $(SRCS) $(STYLE_INCLUDES)
@@ -139,6 +140,9 @@ circ_dllist: circ_dllist.o
 
 graph_amatrix: graph_amatrix.o
 	$(CC) -g -o graph_amatrix graph_amatrix.o $(LDFLAGS) $(LIBS)
+
+color_grid: color_grid.o
+	$(CC) -g -o color_grid color_grid.o $(LDFLAGS) $(LIBS)
 
 clean:
 	rm $(OBJS)  $(EXECUTABLES)
