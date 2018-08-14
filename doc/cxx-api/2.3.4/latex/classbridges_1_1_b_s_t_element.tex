@@ -1,0 +1,296 @@
+\hypertarget{classbridges_1_1_b_s_t_element}{}\section{bridges\+:\+:B\+S\+T\+Element$<$ K, E $>$ Class Template Reference}
+\label{classbridges_1_1_b_s_t_element}\index{bridges\+::\+B\+S\+T\+Element$<$ K, E $>$@{bridges\+::\+B\+S\+T\+Element$<$ K, E $>$}}
+
+
+This class can be used to create binary search tree elements, derived from \mbox{\hyperlink{classbridges_1_1_bin_tree_element}{Bin\+Tree\+Element}}.  
+
+
+
+
+{\ttfamily \#include $<$B\+S\+T\+Element.\+h$>$}
+
+Inheritance diagram for bridges\+:\+:B\+S\+T\+Element$<$ K, E $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classbridges_1_1_b_s_t_element}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbridges_1_1_b_s_t_element_aff7dbbb4011e85ea492d9a0c921895c5}{B\+S\+T\+Element}} (const K \&k, \mbox{\hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element}} $\ast$l, \mbox{\hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element}} $\ast$r, const E \&val=E(), const string \&lab=string())
+\item 
+\mbox{\hyperlink{classbridges_1_1_b_s_t_element_a13d32741606a8e3375b39f6dde99da5b}{B\+S\+T\+Element}} (const K \&k, const E \&val=E(), const string \&lab=string())
+\item 
+virtual const string \mbox{\hyperlink{classbridges_1_1_b_s_t_element_af3843873c508c24f90b6e73a6f490bf8}{get\+D\+Stype}} () const override
+\item 
+K \mbox{\hyperlink{classbridges_1_1_b_s_t_element_ae758ef6696535dadf44eb302b923dbfd}{get\+Key}} () const
+\item 
+void \mbox{\hyperlink{classbridges_1_1_b_s_t_element_ae9edfa178c3b2d8bbaa7bd248bc469ce}{set\+Key}} (const K \&k)
+\item 
+virtual \mbox{\hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element}} $\ast$ \mbox{\hyperlink{classbridges_1_1_b_s_t_element_a4d8987373c75b51fca94e3c0b78b87a6}{get\+Left}} () override
+\item 
+virtual const \mbox{\hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element}} $\ast$ \mbox{\hyperlink{classbridges_1_1_b_s_t_element_a2abcfb991f6cc377da2bd9217319fc9c}{get\+Left}} () const override
+\item 
+void \mbox{\hyperlink{classbridges_1_1_b_s_t_element_a9bb5412bffab516268163ed772eb2c41}{set\+Left}} (\mbox{\hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element}} $\ast$l)
+\item 
+virtual \mbox{\hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element}} $\ast$ \mbox{\hyperlink{classbridges_1_1_b_s_t_element_a35e93bce32de933522dccde5f2b5ffd9}{get\+Right}} () override
+\item 
+virtual const \mbox{\hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element}} $\ast$ \mbox{\hyperlink{classbridges_1_1_b_s_t_element_ae4e7b750eada97074a42e7f54b320a29}{get\+Right}} () const override
+\item 
+void \mbox{\hyperlink{classbridges_1_1_b_s_t_element_a7267de974d13907f953afc78ea4fcd19}{set\+Right}} (\mbox{\hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element}} $\ast$r)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual const string \mbox{\hyperlink{classbridges_1_1_b_s_t_element_a623d1495a0d27090dc3fc515d148f381}{get\+Element\+Representation}} () const override
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+K \mbox{\hyperlink{classbridges_1_1_b_s_t_element_aebe8a0958484a0e28e777b423079bae2}{key}} = K()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename K, typename E$>$\newline
+class bridges\+::\+B\+S\+T\+Element$<$ K, E $>$}
+
+This class can be used to create binary search tree elements, derived from \mbox{\hyperlink{classbridges_1_1_bin_tree_element}{Bin\+Tree\+Element}}. 
+
+This class extends the \mbox{\hyperlink{classbridges_1_1_bin_tree_element}{Bin\+Tree\+Element}} class by adding a key property to allow for use in a binary search tree implementation.
+
+Generic Parameters\+: K that is the search key type, E the application data type
+
+\begin{DoxyAuthor}{Author}
+Kalpathi Subramanian 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+6/18/15, 7/17/16 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1_b_s_t_element_aff7dbbb4011e85ea492d9a0c921895c5}\label{classbridges_1_1_b_s_t_element_aff7dbbb4011e85ea492d9a0c921895c5}} 
+\index{bridges\+::\+B\+S\+T\+Element@{bridges\+::\+B\+S\+T\+Element}!B\+S\+T\+Element@{B\+S\+T\+Element}}
+\index{B\+S\+T\+Element@{B\+S\+T\+Element}!bridges\+::\+B\+S\+T\+Element@{bridges\+::\+B\+S\+T\+Element}}
+\subsubsection{\texorpdfstring{B\+S\+T\+Element()}{BSTElement()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename K , typename E $>$ \\
+\mbox{\hyperlink{classbridges_1_1_b_s_t_element}{bridges\+::\+B\+S\+T\+Element}}$<$ K, E $>$\+::\mbox{\hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element}} (\begin{DoxyParamCaption}\item[{const K \&}]{k,  }\item[{\mbox{\hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element}}$<$ K, E $>$ $\ast$}]{l,  }\item[{\mbox{\hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element}}$<$ K, E $>$ $\ast$}]{r,  }\item[{const E \&}]{val = {\ttfamily E()},  }\item[{const string \&}]{lab = {\ttfamily string()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs a \mbox{\hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element}} with the provided value, label, key, left and right B\+S\+T\+Elements. The defaults will be used if not provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The key for ordering \\
+\hline
+{\em val} & The data to hold \\
+\hline
+{\em lab} & The label to show \\
+\hline
+{\em l} & The left \mbox{\hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element}} \\
+\hline
+{\em r} & The right \mbox{\hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1_b_s_t_element_a13d32741606a8e3375b39f6dde99da5b}\label{classbridges_1_1_b_s_t_element_a13d32741606a8e3375b39f6dde99da5b}} 
+\index{bridges\+::\+B\+S\+T\+Element@{bridges\+::\+B\+S\+T\+Element}!B\+S\+T\+Element@{B\+S\+T\+Element}}
+\index{B\+S\+T\+Element@{B\+S\+T\+Element}!bridges\+::\+B\+S\+T\+Element@{bridges\+::\+B\+S\+T\+Element}}
+\subsubsection{\texorpdfstring{B\+S\+T\+Element()}{BSTElement()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename K , typename E $>$ \\
+\mbox{\hyperlink{classbridges_1_1_b_s_t_element}{bridges\+::\+B\+S\+T\+Element}}$<$ K, E $>$\+::\mbox{\hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element}} (\begin{DoxyParamCaption}\item[{const K \&}]{k,  }\item[{const E \&}]{val = {\ttfamily E()},  }\item[{const string \&}]{lab = {\ttfamily string()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs a \mbox{\hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element}} with the provided value, label, key, setting the left and right B\+S\+T\+Elements to N\+U\+LL. The defaults will be used if not provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The data to hold \\
+\hline
+{\em lab} & The label to show \\
+\hline
+{\em k} & The key for ordering \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1_b_s_t_element_af3843873c508c24f90b6e73a6f490bf8}\label{classbridges_1_1_b_s_t_element_af3843873c508c24f90b6e73a6f490bf8}} 
+\index{bridges\+::\+B\+S\+T\+Element@{bridges\+::\+B\+S\+T\+Element}!get\+D\+Stype@{get\+D\+Stype}}
+\index{get\+D\+Stype@{get\+D\+Stype}!bridges\+::\+B\+S\+T\+Element@{bridges\+::\+B\+S\+T\+Element}}
+\subsubsection{\texorpdfstring{get\+D\+Stype()}{getDStype()}}
+{\footnotesize\ttfamily template$<$typename K , typename E $>$ \\
+virtual const string \mbox{\hyperlink{classbridges_1_1_b_s_t_element}{bridges\+::\+B\+S\+T\+Element}}$<$ K, E $>$\+::get\+D\+Stype (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the data structure type 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbridges_1_1_bin_tree_element_a0a154f68ef0a58715e598a6ef92b9e59}{bridges\+::\+Bin\+Tree\+Element$<$ E $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classbridges_1_1_kd_tree_element_acdd8f989986b7dd42cfacec73cf52dcb}{bridges\+::\+Kd\+Tree\+Element$<$ K, E $>$}}, and \mbox{\hyperlink{classbridges_1_1_a_v_l_tree_element_a24c005f8e07a7a2682225cead3b7e364}{bridges\+::\+A\+V\+L\+Tree\+Element$<$ K, E $>$}}.
+
+\mbox{\Hypertarget{classbridges_1_1_b_s_t_element_a623d1495a0d27090dc3fc515d148f381}\label{classbridges_1_1_b_s_t_element_a623d1495a0d27090dc3fc515d148f381}} 
+\index{bridges\+::\+B\+S\+T\+Element@{bridges\+::\+B\+S\+T\+Element}!get\+Element\+Representation@{get\+Element\+Representation}}
+\index{get\+Element\+Representation@{get\+Element\+Representation}!bridges\+::\+B\+S\+T\+Element@{bridges\+::\+B\+S\+T\+Element}}
+\subsubsection{\texorpdfstring{get\+Element\+Representation()}{getElementRepresentation()}}
+{\footnotesize\ttfamily template$<$typename K , typename E $>$ \\
+virtual const string \mbox{\hyperlink{classbridges_1_1_b_s_t_element}{bridges\+::\+B\+S\+T\+Element}}$<$ K, E $>$\+::get\+Element\+Representation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The J\+S\+ON string of this element\textquotesingle{}s properties 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbridges_1_1_element_abfea1b7226b774be648e15f6b2c9daba}{bridges\+::\+Element$<$ E $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classbridges_1_1_kd_tree_element_ad8aa2d89689f33691063fee9c601e2cb}{bridges\+::\+Kd\+Tree\+Element$<$ K, E $>$}}.
+
+\mbox{\Hypertarget{classbridges_1_1_b_s_t_element_ae758ef6696535dadf44eb302b923dbfd}\label{classbridges_1_1_b_s_t_element_ae758ef6696535dadf44eb302b923dbfd}} 
+\index{bridges\+::\+B\+S\+T\+Element@{bridges\+::\+B\+S\+T\+Element}!get\+Key@{get\+Key}}
+\index{get\+Key@{get\+Key}!bridges\+::\+B\+S\+T\+Element@{bridges\+::\+B\+S\+T\+Element}}
+\subsubsection{\texorpdfstring{get\+Key()}{getKey()}}
+{\footnotesize\ttfamily template$<$typename K , typename E $>$ \\
+K \mbox{\hyperlink{classbridges_1_1_b_s_t_element}{bridges\+::\+B\+S\+T\+Element}}$<$ K, E $>$\+::get\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The key of this \mbox{\hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_b_s_t_element_a4d8987373c75b51fca94e3c0b78b87a6}\label{classbridges_1_1_b_s_t_element_a4d8987373c75b51fca94e3c0b78b87a6}} 
+\index{bridges\+::\+B\+S\+T\+Element@{bridges\+::\+B\+S\+T\+Element}!get\+Left@{get\+Left}}
+\index{get\+Left@{get\+Left}!bridges\+::\+B\+S\+T\+Element@{bridges\+::\+B\+S\+T\+Element}}
+\subsubsection{\texorpdfstring{get\+Left()}{getLeft()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename K , typename E $>$ \\
+virtual \mbox{\hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element}}$\ast$ \mbox{\hyperlink{classbridges_1_1_b_s_t_element}{bridges\+::\+B\+S\+T\+Element}}$<$ K, E $>$\+::get\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The left child 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbridges_1_1_bin_tree_element_a8367ce9c4eea814637edc2c56efbde25}{bridges\+::\+Bin\+Tree\+Element$<$ E $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classbridges_1_1_kd_tree_element_ad7db63a4f82f5252c7e0809ac6486cb4}{bridges\+::\+Kd\+Tree\+Element$<$ K, E $>$}}, and \mbox{\hyperlink{classbridges_1_1_a_v_l_tree_element_a7b5d05660da127f5f6164120d9846d90}{bridges\+::\+A\+V\+L\+Tree\+Element$<$ K, E $>$}}.
+
+\mbox{\Hypertarget{classbridges_1_1_b_s_t_element_a2abcfb991f6cc377da2bd9217319fc9c}\label{classbridges_1_1_b_s_t_element_a2abcfb991f6cc377da2bd9217319fc9c}} 
+\index{bridges\+::\+B\+S\+T\+Element@{bridges\+::\+B\+S\+T\+Element}!get\+Left@{get\+Left}}
+\index{get\+Left@{get\+Left}!bridges\+::\+B\+S\+T\+Element@{bridges\+::\+B\+S\+T\+Element}}
+\subsubsection{\texorpdfstring{get\+Left()}{getLeft()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename K , typename E $>$ \\
+virtual const \mbox{\hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element}}$\ast$ \mbox{\hyperlink{classbridges_1_1_b_s_t_element}{bridges\+::\+B\+S\+T\+Element}}$<$ K, E $>$\+::get\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Constant version
+
+\begin{DoxyReturn}{Returns}
+The left child 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbridges_1_1_bin_tree_element_a0841701bd7d4b444dafbbdfefed067a5}{bridges\+::\+Bin\+Tree\+Element$<$ E $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classbridges_1_1_kd_tree_element_ab58af4ca67cb3869c279bfc11952c070}{bridges\+::\+Kd\+Tree\+Element$<$ K, E $>$}}, and \mbox{\hyperlink{classbridges_1_1_a_v_l_tree_element_a61e075db5414b7bd6f52d657401acda3}{bridges\+::\+A\+V\+L\+Tree\+Element$<$ K, E $>$}}.
+
+\mbox{\Hypertarget{classbridges_1_1_b_s_t_element_a35e93bce32de933522dccde5f2b5ffd9}\label{classbridges_1_1_b_s_t_element_a35e93bce32de933522dccde5f2b5ffd9}} 
+\index{bridges\+::\+B\+S\+T\+Element@{bridges\+::\+B\+S\+T\+Element}!get\+Right@{get\+Right}}
+\index{get\+Right@{get\+Right}!bridges\+::\+B\+S\+T\+Element@{bridges\+::\+B\+S\+T\+Element}}
+\subsubsection{\texorpdfstring{get\+Right()}{getRight()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename K , typename E $>$ \\
+virtual \mbox{\hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element}}$\ast$ \mbox{\hyperlink{classbridges_1_1_b_s_t_element}{bridges\+::\+B\+S\+T\+Element}}$<$ K, E $>$\+::get\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The right child 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbridges_1_1_bin_tree_element_a5751f2fe38e2364f68dc37939fce060f}{bridges\+::\+Bin\+Tree\+Element$<$ E $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classbridges_1_1_kd_tree_element_a8e1090891a720231c2009d1d222471e9}{bridges\+::\+Kd\+Tree\+Element$<$ K, E $>$}}, and \mbox{\hyperlink{classbridges_1_1_a_v_l_tree_element_a909b46ebf3e8c6a3434762a1f01499e2}{bridges\+::\+A\+V\+L\+Tree\+Element$<$ K, E $>$}}.
+
+\mbox{\Hypertarget{classbridges_1_1_b_s_t_element_ae4e7b750eada97074a42e7f54b320a29}\label{classbridges_1_1_b_s_t_element_ae4e7b750eada97074a42e7f54b320a29}} 
+\index{bridges\+::\+B\+S\+T\+Element@{bridges\+::\+B\+S\+T\+Element}!get\+Right@{get\+Right}}
+\index{get\+Right@{get\+Right}!bridges\+::\+B\+S\+T\+Element@{bridges\+::\+B\+S\+T\+Element}}
+\subsubsection{\texorpdfstring{get\+Right()}{getRight()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename K , typename E $>$ \\
+virtual const \mbox{\hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element}}$\ast$ \mbox{\hyperlink{classbridges_1_1_b_s_t_element}{bridges\+::\+B\+S\+T\+Element}}$<$ K, E $>$\+::get\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Constant version
+
+\begin{DoxyReturn}{Returns}
+The right child 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbridges_1_1_bin_tree_element_aa01980f4be18f6c205580ea0376a0d07}{bridges\+::\+Bin\+Tree\+Element$<$ E $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classbridges_1_1_kd_tree_element_a48e6a81eccf6d156e50865ef8066be82}{bridges\+::\+Kd\+Tree\+Element$<$ K, E $>$}}, and \mbox{\hyperlink{classbridges_1_1_a_v_l_tree_element_a2f6fd127f3a04fcc5be60299b7d98f12}{bridges\+::\+A\+V\+L\+Tree\+Element$<$ K, E $>$}}.
+
+\mbox{\Hypertarget{classbridges_1_1_b_s_t_element_ae9edfa178c3b2d8bbaa7bd248bc469ce}\label{classbridges_1_1_b_s_t_element_ae9edfa178c3b2d8bbaa7bd248bc469ce}} 
+\index{bridges\+::\+B\+S\+T\+Element@{bridges\+::\+B\+S\+T\+Element}!set\+Key@{set\+Key}}
+\index{set\+Key@{set\+Key}!bridges\+::\+B\+S\+T\+Element@{bridges\+::\+B\+S\+T\+Element}}
+\subsubsection{\texorpdfstring{set\+Key()}{setKey()}}
+{\footnotesize\ttfamily template$<$typename K , typename E $>$ \\
+void \mbox{\hyperlink{classbridges_1_1_b_s_t_element}{bridges\+::\+B\+S\+T\+Element}}$<$ K, E $>$\+::set\+Key (\begin{DoxyParamCaption}\item[{const K \&}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set key to \char`\"{}k\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The key of this \mbox{\hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1_b_s_t_element_a9bb5412bffab516268163ed772eb2c41}\label{classbridges_1_1_b_s_t_element_a9bb5412bffab516268163ed772eb2c41}} 
+\index{bridges\+::\+B\+S\+T\+Element@{bridges\+::\+B\+S\+T\+Element}!set\+Left@{set\+Left}}
+\index{set\+Left@{set\+Left}!bridges\+::\+B\+S\+T\+Element@{bridges\+::\+B\+S\+T\+Element}}
+\subsubsection{\texorpdfstring{set\+Left()}{setLeft()}}
+{\footnotesize\ttfamily template$<$typename K , typename E $>$ \\
+void \mbox{\hyperlink{classbridges_1_1_b_s_t_element}{bridges\+::\+B\+S\+T\+Element}}$<$ K, E $>$\+::set\+Left (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element}}$<$ K, E $>$ $\ast$}]{l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets left to \char`\"{}l\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & The left child \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1_b_s_t_element_a7267de974d13907f953afc78ea4fcd19}\label{classbridges_1_1_b_s_t_element_a7267de974d13907f953afc78ea4fcd19}} 
+\index{bridges\+::\+B\+S\+T\+Element@{bridges\+::\+B\+S\+T\+Element}!set\+Right@{set\+Right}}
+\index{set\+Right@{set\+Right}!bridges\+::\+B\+S\+T\+Element@{bridges\+::\+B\+S\+T\+Element}}
+\subsubsection{\texorpdfstring{set\+Right()}{setRight()}}
+{\footnotesize\ttfamily template$<$typename K , typename E $>$ \\
+void \mbox{\hyperlink{classbridges_1_1_b_s_t_element}{bridges\+::\+B\+S\+T\+Element}}$<$ K, E $>$\+::set\+Right (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element}}$<$ K, E $>$ $\ast$}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets right to \char`\"{}r\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The right \mbox{\hyperlink{classbridges_1_1_b_s_t_element}{B\+S\+T\+Element}} \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classbridges_1_1_b_s_t_element_aebe8a0958484a0e28e777b423079bae2}\label{classbridges_1_1_b_s_t_element_aebe8a0958484a0e28e777b423079bae2}} 
+\index{bridges\+::\+B\+S\+T\+Element@{bridges\+::\+B\+S\+T\+Element}!key@{key}}
+\index{key@{key}!bridges\+::\+B\+S\+T\+Element@{bridges\+::\+B\+S\+T\+Element}}
+\subsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily template$<$typename K , typename E $>$ \\
+K \mbox{\hyperlink{classbridges_1_1_b_s_t_element}{bridges\+::\+B\+S\+T\+Element}}$<$ K, E $>$\+::key = K()\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/cxx/bridges17/src/\mbox{\hyperlink{_b_s_t_element_8h}{B\+S\+T\+Element.\+h}}\end{DoxyCompactItemize}
