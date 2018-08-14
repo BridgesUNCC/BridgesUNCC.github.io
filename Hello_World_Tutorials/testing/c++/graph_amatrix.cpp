@@ -9,7 +9,7 @@ using namespace std;
 using namespace bridges;
 
 int main() {
-	Bridges::initialize(13, "YOUR_USER_ID", "YOUR_API_KEY");
+	Bridges::initialize(13, "kalpathi60", "486749122386");
 
 	Bridges::setTitle("Graph Adj Matrix Example: IMDB Data");
 	vector<ActorMovieIMDB> actor_list = DataSource::getActorMovieIMDBData(1813);

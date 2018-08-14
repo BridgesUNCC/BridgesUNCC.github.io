@@ -13,7 +13,7 @@ using namespace bridges;
 
 int main() {
 	// initialize BRIDGES
-	Bridges::initialize(14, "YOUR_USER_ID", "YOUR_API_KEY");
+	Bridges::initialize(14, "kalpathi60", "486749122386");
 
 	// set title for visualization
 	Bridges::setTitle("A Color Grid Example");
