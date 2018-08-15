@@ -19,7 +19,7 @@ int main() {
 			def_color = "green",
 			end_color = "red";
 		
-	Bridges::initialize(10, "kalpathi60", "486749122386");
+	Bridges::initialize(10, "YOUR_USER_ID", "YOUR_API_KEY");
 								// read the earth quake  data and build the BST
 
 	Bridges::setTitle("BST Example: IMDB Data");
