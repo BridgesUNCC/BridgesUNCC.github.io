@@ -14,15 +14,15 @@ Class that hold earthquake data, for use with U\+S\+G\+I\+S retrieved quake data
 \item 
 \hyperlink{classbridges_1_1_earthquake_u_s_g_s_a540ae74c248da179fbbd182b843a14e0}{Earthquake\+U\+S\+G\+S} ()
 \item 
-\hyperlink{classbridges_1_1_earthquake_u_s_g_s_a9c7f7aec2ddc173660a7015b90c7b7b0}{Earthquake\+U\+S\+G\+S} (double magnitude, double longit, double latit, string location, string title, string url, string time)
+\hyperlink{classbridges_1_1_earthquake_u_s_g_s_aaa8b6776e6767cf327cebbd371b2c2d0}{Earthquake\+U\+S\+G\+S} (double magnitude, double longit, double latit, const string \&location, const string \&title, const string \&url, const string \&time)
 \item 
-\hyperlink{classbridges_1_1_earthquake_u_s_g_s_aa52d05b3119c6a4e45867dc4aaeba59e}{Earthquake\+U\+S\+G\+S} (\hyperlink{classbridges_1_1_earthquake_u_s_g_s}{Earthquake\+U\+S\+G\+S} $\ast$eq)
+\hyperlink{classbridges_1_1_earthquake_u_s_g_s_a450f9683a698be7448ec44c06e456de0}{Earthquake\+U\+S\+G\+S} (const \hyperlink{classbridges_1_1_earthquake_u_s_g_s}{Earthquake\+U\+S\+G\+S} $\ast$eq)
 \item 
 string \hyperlink{classbridges_1_1_earthquake_u_s_g_s_af8230252cb495e2c87bdd0ed1fbd609f}{get\+Time} () const 
 \item 
 string \hyperlink{classbridges_1_1_earthquake_u_s_g_s_a74d02315dd50f0d41d0340655c700aff}{get\+Date\+Str} () const 
 \item 
-void \hyperlink{classbridges_1_1_earthquake_u_s_g_s_a70d79cd5c3666b8a32b1d45d7364054b}{set\+Time} (string tm)
+void \hyperlink{classbridges_1_1_earthquake_u_s_g_s_ad41157360c377050a74c0aeb76098855}{set\+Time} (const string \&tm)
 \item 
 int \hyperlink{classbridges_1_1_earthquake_u_s_g_s_af82196433d7fc04e309e37d902706c8d}{get\+Year} () const 
 \item 
@@ -50,11 +50,11 @@ void \hyperlink{classbridges_1_1_earthquake_u_s_g_s_a5dc533759cc900440d70bdfc68f
 \item 
 string \hyperlink{classbridges_1_1_earthquake_u_s_g_s_ab0ecd24e7a2679919b53d3fa27d7429c}{get\+Title} () const 
 \item 
-void \hyperlink{classbridges_1_1_earthquake_u_s_g_s_a78fe86dcb1bae8470d5ac58fdda2fe51}{set\+Title} (string title)
+void \hyperlink{classbridges_1_1_earthquake_u_s_g_s_a2de7081d9124c85971b189c08f980469}{set\+Title} (const string \&title)
 \item 
 string \hyperlink{classbridges_1_1_earthquake_u_s_g_s_a0a82972d7f72a10fd5899dcc26715a9d}{get\+Url} () const 
 \item 
-void \hyperlink{classbridges_1_1_earthquake_u_s_g_s_ac07298c50e03955d167a2ca38c5150be}{set\+Url} (string url)
+void \hyperlink{classbridges_1_1_earthquake_u_s_g_s_a4ee05f6d980ba3101f598c6cfd04fdf2}{set\+Url} (const string \&url)
 \item 
 double \hyperlink{classbridges_1_1_earthquake_u_s_g_s_a4e28322b7c9585c7bf56876c52693565}{get\+Magnitude} () const 
 \item 
@@ -77,26 +77,26 @@ Kalpathi Subramanian, 2/18/18
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_earthquake_u_s_g_s_a540ae74c248da179fbbd182b843a14e0}
-\hypertarget{classbridges_1_1_earthquake_u_s_g_s_a9c7f7aec2ddc173660a7015b90c7b7b0}{}\index{bridges\+::\+Earthquake\+U\+S\+G\+S@{bridges\+::\+Earthquake\+U\+S\+G\+S}!Earthquake\+U\+S\+G\+S@{Earthquake\+U\+S\+G\+S}}
+\hypertarget{classbridges_1_1_earthquake_u_s_g_s_aaa8b6776e6767cf327cebbd371b2c2d0}{}\index{bridges\+::\+Earthquake\+U\+S\+G\+S@{bridges\+::\+Earthquake\+U\+S\+G\+S}!Earthquake\+U\+S\+G\+S@{Earthquake\+U\+S\+G\+S}}
 \index{Earthquake\+U\+S\+G\+S@{Earthquake\+U\+S\+G\+S}!bridges\+::\+Earthquake\+U\+S\+G\+S@{bridges\+::\+Earthquake\+U\+S\+G\+S}}
-\subsubsection[{Earthquake\+U\+S\+G\+S(double magnitude, double longit, double latit, string location, string title, string url, string time)}]{\setlength{\rightskip}{0pt plus 5cm}bridges\+::\+Earthquake\+U\+S\+G\+S\+::\+Earthquake\+U\+S\+G\+S (
+\subsubsection[{Earthquake\+U\+S\+G\+S(double magnitude, double longit, double latit, const string \&location, const string \&title, const string \&url, const string \&time)}]{\setlength{\rightskip}{0pt plus 5cm}bridges\+::\+Earthquake\+U\+S\+G\+S\+::\+Earthquake\+U\+S\+G\+S (
 \begin{DoxyParamCaption}
 \item[{double}]{magnitude, }
 \item[{double}]{longit, }
 \item[{double}]{latit, }
-\item[{string}]{location, }
-\item[{string}]{title, }
-\item[{string}]{url, }
-\item[{string}]{time}
+\item[{const string \&}]{location, }
+\item[{const string \&}]{title, }
+\item[{const string \&}]{url, }
+\item[{const string \&}]{time}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_earthquake_u_s_g_s_a9c7f7aec2ddc173660a7015b90c7b7b0}
-\hypertarget{classbridges_1_1_earthquake_u_s_g_s_aa52d05b3119c6a4e45867dc4aaeba59e}{}\index{bridges\+::\+Earthquake\+U\+S\+G\+S@{bridges\+::\+Earthquake\+U\+S\+G\+S}!Earthquake\+U\+S\+G\+S@{Earthquake\+U\+S\+G\+S}}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_earthquake_u_s_g_s_aaa8b6776e6767cf327cebbd371b2c2d0}
+\hypertarget{classbridges_1_1_earthquake_u_s_g_s_a450f9683a698be7448ec44c06e456de0}{}\index{bridges\+::\+Earthquake\+U\+S\+G\+S@{bridges\+::\+Earthquake\+U\+S\+G\+S}!Earthquake\+U\+S\+G\+S@{Earthquake\+U\+S\+G\+S}}
 \index{Earthquake\+U\+S\+G\+S@{Earthquake\+U\+S\+G\+S}!bridges\+::\+Earthquake\+U\+S\+G\+S@{bridges\+::\+Earthquake\+U\+S\+G\+S}}
-\subsubsection[{Earthquake\+U\+S\+G\+S(\+Earthquake\+U\+S\+G\+S $\ast$eq)}]{\setlength{\rightskip}{0pt plus 5cm}bridges\+::\+Earthquake\+U\+S\+G\+S\+::\+Earthquake\+U\+S\+G\+S (
+\subsubsection[{Earthquake\+U\+S\+G\+S(const Earthquake\+U\+S\+G\+S $\ast$eq)}]{\setlength{\rightskip}{0pt plus 5cm}bridges\+::\+Earthquake\+U\+S\+G\+S\+::\+Earthquake\+U\+S\+G\+S (
 \begin{DoxyParamCaption}
-\item[{{\bf Earthquake\+U\+S\+G\+S} $\ast$}]{eq}
+\item[{const {\bf Earthquake\+U\+S\+G\+S} $\ast$}]{eq}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_earthquake_u_s_g_s_aa52d05b3119c6a4e45867dc4aaeba59e}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_earthquake_u_s_g_s_a450f9683a698be7448ec44c06e456de0}
 
 
 \subsection{Member Function Documentation}
@@ -324,13 +324,13 @@ set quake magnitude (double)
 {\em (string)} & \\
 \hline
 \end{DoxyParams}
-\hypertarget{classbridges_1_1_earthquake_u_s_g_s_a70d79cd5c3666b8a32b1d45d7364054b}{}\index{bridges\+::\+Earthquake\+U\+S\+G\+S@{bridges\+::\+Earthquake\+U\+S\+G\+S}!set\+Time@{set\+Time}}
+\hypertarget{classbridges_1_1_earthquake_u_s_g_s_ad41157360c377050a74c0aeb76098855}{}\index{bridges\+::\+Earthquake\+U\+S\+G\+S@{bridges\+::\+Earthquake\+U\+S\+G\+S}!set\+Time@{set\+Time}}
 \index{set\+Time@{set\+Time}!bridges\+::\+Earthquake\+U\+S\+G\+S@{bridges\+::\+Earthquake\+U\+S\+G\+S}}
-\subsubsection[{set\+Time(string tm)}]{\setlength{\rightskip}{0pt plus 5cm}void bridges\+::\+Earthquake\+U\+S\+G\+S\+::set\+Time (
+\subsubsection[{set\+Time(const string \&tm)}]{\setlength{\rightskip}{0pt plus 5cm}void bridges\+::\+Earthquake\+U\+S\+G\+S\+::set\+Time (
 \begin{DoxyParamCaption}
-\item[{string}]{tm}
+\item[{const string \&}]{tm}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_earthquake_u_s_g_s_a70d79cd5c3666b8a32b1d45d7364054b}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_earthquake_u_s_g_s_ad41157360c377050a74c0aeb76098855}
 set epoch time
 
 
@@ -338,13 +338,13 @@ set epoch time
 {\em tm} & (string) \\
 \hline
 \end{DoxyParams}
-\hypertarget{classbridges_1_1_earthquake_u_s_g_s_a78fe86dcb1bae8470d5ac58fdda2fe51}{}\index{bridges\+::\+Earthquake\+U\+S\+G\+S@{bridges\+::\+Earthquake\+U\+S\+G\+S}!set\+Title@{set\+Title}}
+\hypertarget{classbridges_1_1_earthquake_u_s_g_s_a2de7081d9124c85971b189c08f980469}{}\index{bridges\+::\+Earthquake\+U\+S\+G\+S@{bridges\+::\+Earthquake\+U\+S\+G\+S}!set\+Title@{set\+Title}}
 \index{set\+Title@{set\+Title}!bridges\+::\+Earthquake\+U\+S\+G\+S@{bridges\+::\+Earthquake\+U\+S\+G\+S}}
-\subsubsection[{set\+Title(string title)}]{\setlength{\rightskip}{0pt plus 5cm}void bridges\+::\+Earthquake\+U\+S\+G\+S\+::set\+Title (
+\subsubsection[{set\+Title(const string \&title)}]{\setlength{\rightskip}{0pt plus 5cm}void bridges\+::\+Earthquake\+U\+S\+G\+S\+::set\+Title (
 \begin{DoxyParamCaption}
-\item[{string}]{title}
+\item[{const string \&}]{title}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_earthquake_u_s_g_s_a78fe86dcb1bae8470d5ac58fdda2fe51}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_earthquake_u_s_g_s_a2de7081d9124c85971b189c08f980469}
 set quake title (string)
 
 
@@ -352,13 +352,13 @@ set quake title (string)
 {\em (string)} & \\
 \hline
 \end{DoxyParams}
-\hypertarget{classbridges_1_1_earthquake_u_s_g_s_ac07298c50e03955d167a2ca38c5150be}{}\index{bridges\+::\+Earthquake\+U\+S\+G\+S@{bridges\+::\+Earthquake\+U\+S\+G\+S}!set\+Url@{set\+Url}}
+\hypertarget{classbridges_1_1_earthquake_u_s_g_s_a4ee05f6d980ba3101f598c6cfd04fdf2}{}\index{bridges\+::\+Earthquake\+U\+S\+G\+S@{bridges\+::\+Earthquake\+U\+S\+G\+S}!set\+Url@{set\+Url}}
 \index{set\+Url@{set\+Url}!bridges\+::\+Earthquake\+U\+S\+G\+S@{bridges\+::\+Earthquake\+U\+S\+G\+S}}
-\subsubsection[{set\+Url(string url)}]{\setlength{\rightskip}{0pt plus 5cm}void bridges\+::\+Earthquake\+U\+S\+G\+S\+::set\+Url (
+\subsubsection[{set\+Url(const string \&url)}]{\setlength{\rightskip}{0pt plus 5cm}void bridges\+::\+Earthquake\+U\+S\+G\+S\+::set\+Url (
 \begin{DoxyParamCaption}
-\item[{string}]{url}
+\item[{const string \&}]{url}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_earthquake_u_s_g_s_ac07298c50e03955d167a2ca38c5150be}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_earthquake_u_s_g_s_a4ee05f6d980ba3101f598c6cfd04fdf2}
 set quake url (string)
 
 
@@ -370,4 +370,4 @@ set quake url (string)
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/\+Users/krs/gr/bridges/bridges17/cxx/src/data\+\_\+src/\hyperlink{_earthquake_u_s_g_s_8h}{Earthquake\+U\+S\+G\+S.\+h}\end{DoxyCompactItemize}
+/\+Users/kalpathi/gr/bridges/bridges17/cxx/src/data\+\_\+src/\hyperlink{_earthquake_u_s_g_s_8h}{Earthquake\+U\+S\+G\+S.\+h}\end{DoxyCompactItemize}

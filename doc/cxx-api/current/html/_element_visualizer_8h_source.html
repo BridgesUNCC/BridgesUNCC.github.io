@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Bridges-C++-2.3: /Users/krs/gr/bridges/bridges17/cxx/src/ElementVisualizer.h Source File</title>
+<title>Bridges-C++-2.3: /Users/kalpathi/gr/bridges/bridges17/cxx/src/ElementVisualizer.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Bridges-C++-2.3
-   &#160;<span id="projectnumber">2.3.3</span>
+   &#160;<span id="projectnumber">2.3.4</span>
    </div>
    <div id="projectbrief">Bridges(C++API)</div>
   </td>
@@ -82,7 +82,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_0f88b13254f5d32c09137ed1e4735e11.html">gr</a></li><li class="navelem"><a class="el" href="dir_ec6b7a099699bab914420e1cd3290ffd.html">bridges</a></li><li class="navelem"><a class="el" href="dir_00b9fdd1753fc407d0f3571752f912be.html">bridges17</a></li><li class="navelem"><a class="el" href="dir_6216a1c32d764ab3482b2d2f063ba9c1.html">cxx</a></li><li class="navelem"><a class="el" href="dir_2ec32c9665f5c5dee1b411ddd826ee4d.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_b42fb75b1f87d76f4d4256c1aac6dc30.html">kalpathi</a></li><li class="navelem"><a class="el" href="dir_6a559d950816c3f913e60a02ee4a8cce.html">gr</a></li><li class="navelem"><a class="el" href="dir_91a353a1b034a7d2c3b1f03731a4725c.html">bridges</a></li><li class="navelem"><a class="el" href="dir_9bfd627679bcc1ebcf0d575378227e54.html">bridges17</a></li><li class="navelem"><a class="el" href="dir_9a976ef22d9147cb09268720718db753.html">cxx</a></li><li class="navelem"><a class="el" href="dir_32aceba54777697b70bff5f56eda9058.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -131,7 +131,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
 <div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classbridges_1_1_element_visualizer.html#a8f77db4a2774021aec4ab8ea18e50fc9">   85</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classbridges_1_1_element_visualizer.html#a8f77db4a2774021aec4ab8ea18e50fc9">setOpacity</a>(<span class="keywordtype">double</span> opacity) {</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                <span class="keywordflow">if</span> (opacity &gt;= 0.0 &amp;&amp; opacity &lt;= 1.0)</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    color.<a class="code" href="classbridges_1_1_color.html#af2ab47aa5ccafb74be9ef8e6042093a1">setAlpha</a>(opacity * 255.);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    color.<a class="code" href="classbridges_1_1_color.html#ab139e842be237a8963d46c6a3edb488d">setAlpha</a>( (<span class="keywordtype">int</span>) (opacity * 255.));</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            }</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
 <div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classbridges_1_1_element_visualizer.html#ae806977ebc8ff1c5bce81c90b31902b5">   95</a></span>&#160;            <span class="keywordtype">double</span> <a class="code" href="classbridges_1_1_element_visualizer.html#ae806977ebc8ff1c5bce81c90b31902b5">getOpacity</a>() {</div>
@@ -163,15 +163,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classbridges_1_1_element_visualizer_html_af81cc20423f2fedffa81fb7c473a1179"><div class="ttname"><a href="classbridges_1_1_element_visualizer.html#af81cc20423f2fedffa81fb7c473a1179">bridges::ElementVisualizer::setShape</a></div><div class="ttdeci">void setShape(const Shape &amp;shp)</div><div class="ttdef"><b>Definition:</b> ElementVisualizer.h:103</div></div>
 <div class="ttc" id="namespacebridges_html_a1b4050586bd708782ae0d4f3b06b9579af88d2180d4c2ee55a1d963959c345047"><div class="ttname"><a href="namespacebridges.html#a1b4050586bd708782ae0d4f3b06b9579af88d2180d4c2ee55a1d963959c345047">bridges::WYE</a></div><div class="ttdef"><b>Definition:</b> ElementVisualizer.h:9</div></div>
+<div class="ttc" id="classbridges_1_1_color_html_ab139e842be237a8963d46c6a3edb488d"><div class="ttname"><a href="classbridges_1_1_color.html#ab139e842be237a8963d46c6a3edb488d">bridges::Color::setAlpha</a></div><div class="ttdeci">void setAlpha(int a)</div><div class="ttdef"><b>Definition:</b> Color.h:148</div></div>
 <div class="ttc" id="classbridges_1_1_element_visualizer_html_a660dfe007963b4e9314a5da07f776e78"><div class="ttname"><a href="classbridges_1_1_element_visualizer.html#a660dfe007963b4e9314a5da07f776e78">bridges::ElementVisualizer::getLocationX</a></div><div class="ttdeci">double getLocationX() const </div><div class="ttdef"><b>Definition:</b> ElementVisualizer.h:127</div></div>
 <div class="ttc" id="classbridges_1_1_element_visualizer_html"><div class="ttname"><a href="classbridges_1_1_element_visualizer.html">bridges::ElementVisualizer</a></div><div class="ttdoc">This class maintains the visual properties of the a Bridges element. </div><div class="ttdef"><b>Definition:</b> ElementVisualizer.h:26</div></div>
 <div class="ttc" id="namespacebridges_html_a1b4050586bd708782ae0d4f3b06b9579aa968bf0f7aeccbae1a40751345bf2e64"><div class="ttname"><a href="namespacebridges.html#a1b4050586bd708782ae0d4f3b06b9579aa968bf0f7aeccbae1a40751345bf2e64">bridges::CIRCLE</a></div><div class="ttdef"><b>Definition:</b> ElementVisualizer.h:9</div></div>
 <div class="ttc" id="classbridges_1_1_element_visualizer_html_acbd58b69a2b8e44735e4c87783710439"><div class="ttname"><a href="classbridges_1_1_element_visualizer.html#acbd58b69a2b8e44735e4c87783710439">bridges::ElementVisualizer::getLocationY</a></div><div class="ttdeci">double getLocationY() const </div><div class="ttdef"><b>Definition:</b> ElementVisualizer.h:133</div></div>
-<div class="ttc" id="classbridges_1_1_color_html_a144062e54bb7f39eca05f0bc2cc66ba3"><div class="ttname"><a href="classbridges_1_1_color.html#a144062e54bb7f39eca05f0bc2cc66ba3">bridges::Color::getAlpha</a></div><div class="ttdeci">int getAlpha() const </div><div class="ttdef"><b>Definition:</b> Color.h:114</div></div>
+<div class="ttc" id="classbridges_1_1_color_html_a144062e54bb7f39eca05f0bc2cc66ba3"><div class="ttname"><a href="classbridges_1_1_color.html#a144062e54bb7f39eca05f0bc2cc66ba3">bridges::Color::getAlpha</a></div><div class="ttdeci">int getAlpha() const </div><div class="ttdef"><b>Definition:</b> Color.h:120</div></div>
 <div class="ttc" id="namespacebridges_html_a1b4050586bd708782ae0d4f3b06b9579a17166ae3c0c2333bf74313d74e539e3e"><div class="ttname"><a href="namespacebridges.html#a1b4050586bd708782ae0d4f3b06b9579a17166ae3c0c2333bf74313d74e539e3e">bridges::STAR</a></div><div class="ttdef"><b>Definition:</b> ElementVisualizer.h:9</div></div>
 <div class="ttc" id="classbridges_1_1_element_visualizer_html_a3e1bb5ba7ae2e5a23fbb75c7b09d350c"><div class="ttname"><a href="classbridges_1_1_element_visualizer.html#a3e1bb5ba7ae2e5a23fbb75c7b09d350c">bridges::ElementVisualizer::getShape</a></div><div class="ttdeci">Shape getShape() const </div><div class="ttdef"><b>Definition:</b> ElementVisualizer.h:110</div></div>
 <div class="ttc" id="classbridges_1_1_element_visualizer_html_aae6ce4807e470d0bda96cf6753e81669"><div class="ttname"><a href="classbridges_1_1_element_visualizer.html#aae6ce4807e470d0bda96cf6753e81669">bridges::ElementVisualizer::getSize</a></div><div class="ttdeci">double getSize() const </div><div class="ttdef"><b>Definition:</b> ElementVisualizer.h:63</div></div>
-<div class="ttc" id="classbridges_1_1_color_html"><div class="ttname"><a href="classbridges_1_1_color.html">bridges::Color</a></div><div class="ttdoc">This class represents Color, and supports rgba, hexadecimal and named color values. </div><div class="ttdef"><b>Definition:</b> Color.h:40</div></div>
+<div class="ttc" id="classbridges_1_1_color_html"><div class="ttname"><a href="classbridges_1_1_color.html">bridges::Color</a></div><div class="ttdoc">This class represents Color, and supports rgba, hexadecimal and named color values. </div><div class="ttdef"><b>Definition:</b> Color.h:43</div></div>
 <div class="ttc" id="classbridges_1_1_element_visualizer_html_af792c8b0aaa76d07f5806df83f27ccb6"><div class="ttname"><a href="classbridges_1_1_element_visualizer.html#af792c8b0aaa76d07f5806df83f27ccb6">bridges::ElementVisualizer::ElementVisualizer</a></div><div class="ttdeci">ElementVisualizer(const Color &amp;hue=DEFAULT_COLOR, const double &amp;sz=DEFAULT_SIZE, const Shape &amp;shp=DEFAULT_SHAPE)</div><div class="ttdef"><b>Definition:</b> ElementVisualizer.h:45</div></div>
 <div class="ttc" id="classbridges_1_1_element_visualizer_html_a6fc924e754008992b310a89d8d88fce9"><div class="ttname"><a href="classbridges_1_1_element_visualizer.html#a6fc924e754008992b310a89d8d88fce9">bridges::ElementVisualizer::setSize</a></div><div class="ttdeci">void setSize(const double &amp;sz)</div><div class="ttdef"><b>Definition:</b> ElementVisualizer.h:56</div></div>
 <div class="ttc" id="classbridges_1_1_element_visualizer_html_ade224640b18e3f6eed42098ea0ad5b3a"><div class="ttname"><a href="classbridges_1_1_element_visualizer.html#ade224640b18e3f6eed42098ea0ad5b3a">bridges::ElementVisualizer::DEFAULT_COLOR</a></div><div class="ttdeci">static const Color DEFAULT_COLOR</div><div class="ttdef"><b>Definition:</b> ElementVisualizer.h:28</div></div>
@@ -186,14 +187,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="_color_8h_html"><div class="ttname"><a href="_color_8h.html">Color.h</a></div></div>
 <div class="ttc" id="namespacebridges_html_a1b4050586bd708782ae0d4f3b06b9579abe7bf91f3fc0356925109d7afdd43135"><div class="ttname"><a href="namespacebridges.html#a1b4050586bd708782ae0d4f3b06b9579abe7bf91f3fc0356925109d7afdd43135">bridges::CROSS</a></div><div class="ttdef"><b>Definition:</b> ElementVisualizer.h:9</div></div>
 <div class="ttc" id="classbridges_1_1_element_visualizer_html_a2800a212357180e4941a818b958aabd9"><div class="ttname"><a href="classbridges_1_1_element_visualizer.html#a2800a212357180e4941a818b958aabd9">bridges::ElementVisualizer::DEFAULT_SHAPE</a></div><div class="ttdeci">static constexpr Shape DEFAULT_SHAPE</div><div class="ttdef"><b>Definition:</b> ElementVisualizer.h:29</div></div>
-<div class="ttc" id="classbridges_1_1_color_html_af2ab47aa5ccafb74be9ef8e6042093a1"><div class="ttname"><a href="classbridges_1_1_color.html#af2ab47aa5ccafb74be9ef8e6042093a1">bridges::Color::setAlpha</a></div><div class="ttdeci">void setAlpha(const int &amp;a)</div><div class="ttdef"><b>Definition:</b> Color.h:141</div></div>
 <div class="ttc" id="classbridges_1_1_element_visualizer_html_ae806977ebc8ff1c5bce81c90b31902b5"><div class="ttname"><a href="classbridges_1_1_element_visualizer.html#ae806977ebc8ff1c5bce81c90b31902b5">bridges::ElementVisualizer::getOpacity</a></div><div class="ttdeci">double getOpacity()</div><div class="ttdef"><b>Definition:</b> ElementVisualizer.h:95</div></div>
 <div class="ttc" id="classbridges_1_1_element_visualizer_html_ad06f2fd509f6b3474feeb4fa1fef38d5"><div class="ttname"><a href="classbridges_1_1_element_visualizer.html#ad06f2fd509f6b3474feeb4fa1fef38d5">bridges::ElementVisualizer::setLocation</a></div><div class="ttdeci">void setLocation(const double &amp;locX, const double &amp;locY)</div><div class="ttdef"><b>Definition:</b> ElementVisualizer.h:119</div></div>
 <div class="ttc" id="classbridges_1_1_element_visualizer_html_a8f77db4a2774021aec4ab8ea18e50fc9"><div class="ttname"><a href="classbridges_1_1_element_visualizer.html#a8f77db4a2774021aec4ab8ea18e50fc9">bridges::ElementVisualizer::setOpacity</a></div><div class="ttdeci">void setOpacity(double opacity)</div><div class="ttdef"><b>Definition:</b> ElementVisualizer.h:85</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 24 2018 15:02:40 for Bridges-C++-2.3 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Sep 4 2018 07:30:36 for Bridges-C++-2.3 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

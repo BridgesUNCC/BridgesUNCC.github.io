@@ -20,7 +20,7 @@ Inheritance diagram for bridges\+:\+:Array$<$ E $>$\+:\begin{figure}[H]
 \item 
 \hyperlink{classbridges_1_1_array_a958421b86ff55303b5fc7d505109f9fe}{Array} ()
 \item 
-\hyperlink{classbridges_1_1_array_abfca49c36c2b6c63c88010df50f5f49c}{$\sim$\+Array} ()
+virtual \hyperlink{classbridges_1_1_array_aa80b2d2ebc4c27e74a8eaaeb6907b474}{$\sim$\+Array} ()
 \item 
 \hyperlink{classbridges_1_1_array_a25ff771f9ba7f365465f309ed2dd3688}{Array} (int num\+\_\+dims, int $\ast$dims)
 \item 
@@ -31,6 +31,8 @@ Inheritance diagram for bridges\+:\+:Array$<$ E $>$\+:\begin{figure}[H]
 \hyperlink{classbridges_1_1_array_a3504e71cacffd343edf8b9ea16f75eb4}{Array} (int xsize, int ysize, int zsize)
 \item 
 void \hyperlink{classbridges_1_1_array_a6b91612bb7b89a563571fd1ea417ef2a}{set\+Num\+Dimensions} (int nd)
+\item 
+int \hyperlink{classbridges_1_1_array_a14dbc2f6478b9b75dfa7c91f67afb90e}{get\+Num\+Dimensions} () const 
 \item 
 void \hyperlink{classbridges_1_1_array_a4e179915ab7820bbafe9b3433656b182}{set\+Dimensions} (int $\ast$dim)
 \item 
@@ -51,6 +53,10 @@ void \hyperlink{classbridges_1_1_array_a526c3a190b48a338541e5b4667c5eedf}{set\+E
 virtual const string \hyperlink{classbridges_1_1_array_afe4174bc21eaafa316584894cf4732b1}{get\+D\+Stype} () const  override
 \item 
 virtual const pair$<$ string, string $>$ \hyperlink{classbridges_1_1_array_adc13651f1b228d222772e2f5df16229b}{get\+Data\+Structure\+Representation} () const  override final
+\item 
+\hyperlink{classbridges_1_1_array_a3229045173ac984ca452e613b1ce1fa3}{Array} (const \hyperlink{classbridges_1_1_array}{Array} \&)=delete
+\item 
+\hyperlink{classbridges_1_1_array}{Array} \& \hyperlink{classbridges_1_1_array_af8a8b4fc43f57020db39207c80403e6f}{operator=} (const \hyperlink{classbridges_1_1_array}{Array} \&)=delete
 \end{DoxyCompactItemize}
 \subsection*{Friends}
 \begin{DoxyCompactItemize}
@@ -84,13 +90,13 @@ Kalpathi Subramanian
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_array_a958421b86ff55303b5fc7d505109f9fe}
-\hypertarget{classbridges_1_1_array_abfca49c36c2b6c63c88010df50f5f49c}{}\index{bridges\+::\+Array@{bridges\+::\+Array}!````~Array@{$\sim$\+Array}}
+\hypertarget{classbridges_1_1_array_aa80b2d2ebc4c27e74a8eaaeb6907b474}{}\index{bridges\+::\+Array@{bridges\+::\+Array}!````~Array@{$\sim$\+Array}}
 \index{````~Array@{$\sim$\+Array}!bridges\+::\+Array@{bridges\+::\+Array}}
-\subsubsection[{$\sim$\+Array()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E $>$ {\bf bridges\+::\+Array}$<$ E $>$\+::$\sim${\bf Array} (
+\subsubsection[{$\sim$\+Array()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E $>$ virtual {\bf bridges\+::\+Array}$<$ E $>$\+::$\sim${\bf Array} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_array_abfca49c36c2b6c63c88010df50f5f49c}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classbridges_1_1_array_aa80b2d2ebc4c27e74a8eaaeb6907b474}
 \hypertarget{classbridges_1_1_array_a25ff771f9ba7f365465f309ed2dd3688}{}\index{bridges\+::\+Array@{bridges\+::\+Array}!Array@{Array}}
 \index{Array@{Array}!bridges\+::\+Array@{bridges\+::\+Array}}
 \subsubsection[{Array(int num\+\_\+dims, int $\ast$dims)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E $>$ {\bf bridges\+::\+Array}$<$ E $>$\+::{\bf Array} (
@@ -106,6 +112,11 @@ Kalpathi Subramanian
 \item[{int}]{xsize}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_array_a0a475058b73b938f0fd3f577365aca89}
+builds a 1\+D array. 
+\begin{DoxyParams}{Parameters}
+{\em xsize} & size of the array\textquotesingle{}s only dimension \\
+\hline
+\end{DoxyParams}
 \hypertarget{classbridges_1_1_array_a13b26fc4d2ccb19b277b2acc615efce2}{}\index{bridges\+::\+Array@{bridges\+::\+Array}!Array@{Array}}
 \index{Array@{Array}!bridges\+::\+Array@{bridges\+::\+Array}}
 \subsubsection[{Array(int xsize, int ysize)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E $>$ {\bf bridges\+::\+Array}$<$ E $>$\+::{\bf Array} (
@@ -114,6 +125,13 @@ Kalpathi Subramanian
 \item[{int}]{ysize}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_array_a13b26fc4d2ccb19b277b2acc615efce2}
+builds a 2\+D array. 
+\begin{DoxyParams}{Parameters}
+{\em xsize} & size of the array\textquotesingle{}s first dimension \\
+\hline
+{\em ysize} & size of the array\textquotesingle{}s second dimension \\
+\hline
+\end{DoxyParams}
 \hypertarget{classbridges_1_1_array_a3504e71cacffd343edf8b9ea16f75eb4}{}\index{bridges\+::\+Array@{bridges\+::\+Array}!Array@{Array}}
 \index{Array@{Array}!bridges\+::\+Array@{bridges\+::\+Array}}
 \subsubsection[{Array(int xsize, int ysize, int zsize)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E $>$ {\bf bridges\+::\+Array}$<$ E $>$\+::{\bf Array} (
@@ -123,6 +141,22 @@ Kalpathi Subramanian
 \item[{int}]{zsize}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_array_a3504e71cacffd343edf8b9ea16f75eb4}
+builds a 3\+D array. 
+\begin{DoxyParams}{Parameters}
+{\em xsize} & size of the array\textquotesingle{}s first dimension \\
+\hline
+{\em ysize} & size of the array\textquotesingle{}s second dimension \\
+\hline
+{\em zsize} & size of the array\textquotesingle{}s third dimension \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbridges_1_1_array_a3229045173ac984ca452e613b1ce1fa3}{}\index{bridges\+::\+Array@{bridges\+::\+Array}!Array@{Array}}
+\index{Array@{Array}!bridges\+::\+Array@{bridges\+::\+Array}}
+\subsubsection[{Array(const Array \&)=delete}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E $>$ {\bf bridges\+::\+Array}$<$ E $>$\+::{\bf Array} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Array}$<$ E $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\label{classbridges_1_1_array_a3229045173ac984ca452e613b1ce1fa3}
 
 
 \subsection{Member Function Documentation}
@@ -154,6 +188,11 @@ Implements \hyperlink{classbridges_1_1_data_structure}{bridges\+::\+Data\+Struct
 \item[{int $\ast$}]{d}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_array_ae195a6f06157e82c68483ff636e30f5e}
+returns the size of the dimensions 
+\begin{DoxyParams}{Parameters}
+{\em dim} & will contain the size of the dimension. dim should be of size at least \hyperlink{classbridges_1_1_array_a14dbc2f6478b9b75dfa7c91f67afb90e}{get\+Num\+Dimensions()} or undefined behavior could happen. \\
+\hline
+\end{DoxyParams}
 \hypertarget{classbridges_1_1_array_afe4174bc21eaafa316584894cf4732b1}{}\index{bridges\+::\+Array@{bridges\+::\+Array}!get\+D\+Stype@{get\+D\+Stype}}
 \index{get\+D\+Stype@{get\+D\+Stype}!bridges\+::\+Array@{bridges\+::\+Array}}
 \subsubsection[{get\+D\+Stype() const  override}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E $>$ virtual const string {\bf bridges\+::\+Array}$<$ E $>$\+::get\+D\+Stype (
@@ -226,6 +265,20 @@ Get the object at x, y, z -- for 3\+D arrays
 \begin{DoxyReturn}{Returns}
 Element$<$\+E$>$ object at x, y, z 
 \end{DoxyReturn}
+\hypertarget{classbridges_1_1_array_a14dbc2f6478b9b75dfa7c91f67afb90e}{}\index{bridges\+::\+Array@{bridges\+::\+Array}!get\+Num\+Dimensions@{get\+Num\+Dimensions}}
+\index{get\+Num\+Dimensions@{get\+Num\+Dimensions}!bridges\+::\+Array@{bridges\+::\+Array}}
+\subsubsection[{get\+Num\+Dimensions() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E $>$ int {\bf bridges\+::\+Array}$<$ E $>$\+::get\+Num\+Dimensions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_array_a14dbc2f6478b9b75dfa7c91f67afb90e}
+\hypertarget{classbridges_1_1_array_af8a8b4fc43f57020db39207c80403e6f}{}\index{bridges\+::\+Array@{bridges\+::\+Array}!operator=@{operator=}}
+\index{operator=@{operator=}!bridges\+::\+Array@{bridges\+::\+Array}}
+\subsubsection[{operator=(const Array \&)=delete}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E $>$ {\bf Array}\& {\bf bridges\+::\+Array}$<$ E $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Array}$<$ E $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\label{classbridges_1_1_array_af8a8b4fc43f57020db39207c80403e6f}
 \hypertarget{classbridges_1_1_array_a4e179915ab7820bbafe9b3433656b182}{}\index{bridges\+::\+Array@{bridges\+::\+Array}!set\+Dimensions@{set\+Dimensions}}
 \index{set\+Dimensions@{set\+Dimensions}!bridges\+::\+Array@{bridges\+::\+Array}}
 \subsubsection[{set\+Dimensions(int $\ast$dim)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E $>$ void {\bf bridges\+::\+Array}$<$ E $>$\+::set\+Dimensions (
@@ -233,6 +286,11 @@ Element$<$\+E$>$ object at x, y, z
 \item[{int $\ast$}]{dim}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_array_a4e179915ab7820bbafe9b3433656b182}
+change the size of the array dimensions 
+\begin{DoxyParams}{Parameters}
+{\em dim} & give the size of the dimension. dim should be of size at least \hyperlink{classbridges_1_1_array_a14dbc2f6478b9b75dfa7c91f67afb90e}{get\+Num\+Dimensions()} or undefined behavior could happen. \\
+\hline
+\end{DoxyParams}
 \hypertarget{classbridges_1_1_array_aae8ec0bd850e00593487022bc914afe0}{}\index{bridges\+::\+Array@{bridges\+::\+Array}!set\+Element@{set\+Element}}
 \index{set\+Element@{set\+Element}!bridges\+::\+Array@{bridges\+::\+Array}}
 \subsubsection[{set\+Element(int indx, Element$<$ E $>$ el)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename E $>$ void {\bf bridges\+::\+Array}$<$ E $>$\+::set\+Element (
@@ -313,4 +371,4 @@ none
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/\+Users/krs/gr/bridges/bridges17/cxx/src/\hyperlink{_array_8h}{Array.\+h}\end{DoxyCompactItemize}
+/\+Users/kalpathi/gr/bridges/bridges17/cxx/src/\hyperlink{_array_8h}{Array.\+h}\end{DoxyCompactItemize}

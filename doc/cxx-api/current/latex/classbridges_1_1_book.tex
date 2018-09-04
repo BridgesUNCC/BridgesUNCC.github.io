@@ -14,11 +14,11 @@ A \hyperlink{classbridges_1_1_book}{Book} object, used along with the books data
 \item 
 \hyperlink{classbridges_1_1_book_abb2903c640bd263a2e077d52e12a773e}{Book} ()
 \item 
-\hyperlink{classbridges_1_1_book_ac3060f3eaf757c82ea21f6501eb97b80}{Book} (string author\+Name, int author\+Birth, int author\+Death, string title, vector$<$ string $>$ lang, vector$<$ string $>$ genre, vector$<$ string $>$ subject, int num\+Chars, int num\+Words, int num\+Sentences, int num\+Difficult\+Words, string url, int downloads)
+\hyperlink{classbridges_1_1_book_a4256eb5015b42e511d950c45103cef63}{Book} (const string \&author\+Name, int author\+Birth, int author\+Death, const string \&title, const vector$<$ string $>$ \&lang, const vector$<$ string $>$ \&genre, const vector$<$ string $>$ \&subject, int num\+Chars, int num\+Words, int num\+Sentences, int num\+Difficult\+Words, const string \&url, int downloads)
 \item 
 string \hyperlink{classbridges_1_1_book_ac6f0f8249f91502fe9dff0cbdb7d823a}{get\+Author\+Name} () const 
 \item 
-void \hyperlink{classbridges_1_1_book_affc38232dda1e6b04d7e38a02cdd9c39}{set\+Author\+Name} (string author\+Name)
+void \hyperlink{classbridges_1_1_book_a4ca756815b519a0a4d1ae5d3b21aa2d2}{set\+Author\+Name} (const string \&author\+Name)
 \item 
 int \hyperlink{classbridges_1_1_book_a027e0894b79bb778282ed44efccb78cc}{get\+Author\+Birth} () const 
 \item 
@@ -30,23 +30,23 @@ void \hyperlink{classbridges_1_1_book_a044ad1b1b6418d7545c6f957b2757bcd}{set\+Au
 \item 
 string \hyperlink{classbridges_1_1_book_a06296dbad347d4c81feed3faa8fc1114}{get\+Title} () const 
 \item 
-void \hyperlink{classbridges_1_1_book_a277540665913ac1a4a943af99dad46bb}{set\+Title} (string title)
+void \hyperlink{classbridges_1_1_book_a68e4e04db8915b6baff809c46e6d1df9}{set\+Title} (const string \&title)
 \item 
 vector$<$ string $>$ \hyperlink{classbridges_1_1_book_abb74d8c97070e1c3ead2d1223bfa420c}{get\+Lang} () const 
 \item 
-void \hyperlink{classbridges_1_1_book_acec57a03086884a8ebae4c608c19e5cf}{set\+Lang} (vector$<$ string $>$ lang)
+void \hyperlink{classbridges_1_1_book_a7c96cf79f310f78eb16035c6874afa05}{set\+Lang} (const vector$<$ string $>$ \&lang)
 \item 
 vector$<$ string $>$ \hyperlink{classbridges_1_1_book_a0a7091fa2f7501bac398bbe8fb88a2bd}{get\+Genre} () const 
 \item 
-void \hyperlink{classbridges_1_1_book_a599852c24b9093e04fb124f21cb31419}{set\+Genre} (vector$<$ string $>$ genre)
+void \hyperlink{classbridges_1_1_book_a3743b908548b944543af533b030a1eca}{set\+Genre} (const vector$<$ string $>$ \&genre)
 \item 
 vector$<$ string $>$ \hyperlink{classbridges_1_1_book_a16bde0ed60d0c3c3b2e3affd6de2f95a}{get\+Subject} () const 
 \item 
-void \hyperlink{classbridges_1_1_book_a9ee227f750be7ab000fb30cf361a8f5c}{set\+Subject} (vector$<$ string $>$ subject)
+void \hyperlink{classbridges_1_1_book_aff19a506929a6df5503e2cd3e293381e}{set\+Subject} (const vector$<$ string $>$ \&subject)
 \item 
 string \hyperlink{classbridges_1_1_book_a7cfb6efd92ca5e02b5874dc3c2bb070b}{get\+U\+R\+L} () const 
 \item 
-void \hyperlink{classbridges_1_1_book_a4a96a6bd3956056b450c9df13e976a5a}{set\+U\+R\+L} (string url)
+void \hyperlink{classbridges_1_1_book_a48d590f296837b8eb9ac10451c83d23b}{set\+U\+R\+L} (const string \&url)
 \item 
 int \hyperlink{classbridges_1_1_book_aa53d57e2eb2e53262bccb9273b5178fb}{get\+Num\+Chars} () const 
 \item 
@@ -63,6 +63,10 @@ void \hyperlink{classbridges_1_1_book_af16061c14c40b1672c7801a4c3a2d33b}{set\+Nu
 int \hyperlink{classbridges_1_1_book_a8d769f0d1ddf5cf6809c72f9640fd6d8}{get\+Num\+Difficult\+Words} () const 
 \item 
 void \hyperlink{classbridges_1_1_book_adc7a54f2a494aeac02cadb3eb4caedbc}{set\+Num\+Difficult\+Words} (int num\+Difficult\+Words)
+\item 
+int \hyperlink{classbridges_1_1_book_a49369c8d0e5a1d5b0dcffaf39f4c1343}{get\+Downloads} () const 
+\item 
+void \hyperlink{classbridges_1_1_book_aa3e894e59ae043e7271861772b03632c}{set\+Downloads} (int downloads)
 \end{DoxyCompactItemize}
 
 
@@ -89,25 +93,25 @@ Kalpathi Subramanian
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_book_abb2903c640bd263a2e077d52e12a773e}
-\hypertarget{classbridges_1_1_book_ac3060f3eaf757c82ea21f6501eb97b80}{}\index{bridges\+::\+Book@{bridges\+::\+Book}!Book@{Book}}
+\hypertarget{classbridges_1_1_book_a4256eb5015b42e511d950c45103cef63}{}\index{bridges\+::\+Book@{bridges\+::\+Book}!Book@{Book}}
 \index{Book@{Book}!bridges\+::\+Book@{bridges\+::\+Book}}
-\subsubsection[{Book(string author\+Name, int author\+Birth, int author\+Death, string title, vector$<$ string $>$ lang, vector$<$ string $>$ genre, vector$<$ string $>$ subject, int num\+Chars, int num\+Words, int num\+Sentences, int num\+Difficult\+Words, string url, int downloads)}]{\setlength{\rightskip}{0pt plus 5cm}bridges\+::\+Book\+::\+Book (
+\subsubsection[{Book(const string \&author\+Name, int author\+Birth, int author\+Death, const string \&title, const vector$<$ string $>$ \&lang, const vector$<$ string $>$ \&genre, const vector$<$ string $>$ \&subject, int num\+Chars, int num\+Words, int num\+Sentences, int num\+Difficult\+Words, const string \&url, int downloads)}]{\setlength{\rightskip}{0pt plus 5cm}bridges\+::\+Book\+::\+Book (
 \begin{DoxyParamCaption}
-\item[{string}]{author\+Name, }
+\item[{const string \&}]{author\+Name, }
 \item[{int}]{author\+Birth, }
 \item[{int}]{author\+Death, }
-\item[{string}]{title, }
-\item[{vector$<$ string $>$}]{lang, }
-\item[{vector$<$ string $>$}]{genre, }
-\item[{vector$<$ string $>$}]{subject, }
+\item[{const string \&}]{title, }
+\item[{const vector$<$ string $>$ \&}]{lang, }
+\item[{const vector$<$ string $>$ \&}]{genre, }
+\item[{const vector$<$ string $>$ \&}]{subject, }
 \item[{int}]{num\+Chars, }
 \item[{int}]{num\+Words, }
 \item[{int}]{num\+Sentences, }
 \item[{int}]{num\+Difficult\+Words, }
-\item[{string}]{url, }
+\item[{const string \&}]{url, }
 \item[{int}]{downloads}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_book_ac3060f3eaf757c82ea21f6501eb97b80}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_book_a4256eb5015b42e511d950c45103cef63}
 
 
 \subsection{Member Function Documentation}
@@ -132,6 +136,13 @@ Kalpathi Subramanian
 {}
 \end{DoxyParamCaption}
 ) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_book_ac6f0f8249f91502fe9dff0cbdb7d823a}
+\hypertarget{classbridges_1_1_book_a49369c8d0e5a1d5b0dcffaf39f4c1343}{}\index{bridges\+::\+Book@{bridges\+::\+Book}!get\+Downloads@{get\+Downloads}}
+\index{get\+Downloads@{get\+Downloads}!bridges\+::\+Book@{bridges\+::\+Book}}
+\subsubsection[{get\+Downloads() const }]{\setlength{\rightskip}{0pt plus 5cm}int bridges\+::\+Book\+::get\+Downloads (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_book_a49369c8d0e5a1d5b0dcffaf39f4c1343}
 \hypertarget{classbridges_1_1_book_a0a7091fa2f7501bac398bbe8fb88a2bd}{}\index{bridges\+::\+Book@{bridges\+::\+Book}!get\+Genre@{get\+Genre}}
 \index{get\+Genre@{get\+Genre}!bridges\+::\+Book@{bridges\+::\+Book}}
 \subsubsection[{get\+Genre() const }]{\setlength{\rightskip}{0pt plus 5cm}vector$<$string$>$ bridges\+::\+Book\+::get\+Genre (
@@ -209,27 +220,34 @@ Kalpathi Subramanian
 \item[{int}]{author\+Death}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_book_a044ad1b1b6418d7545c6f957b2757bcd}
-\hypertarget{classbridges_1_1_book_affc38232dda1e6b04d7e38a02cdd9c39}{}\index{bridges\+::\+Book@{bridges\+::\+Book}!set\+Author\+Name@{set\+Author\+Name}}
+\hypertarget{classbridges_1_1_book_a4ca756815b519a0a4d1ae5d3b21aa2d2}{}\index{bridges\+::\+Book@{bridges\+::\+Book}!set\+Author\+Name@{set\+Author\+Name}}
 \index{set\+Author\+Name@{set\+Author\+Name}!bridges\+::\+Book@{bridges\+::\+Book}}
-\subsubsection[{set\+Author\+Name(string author\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void bridges\+::\+Book\+::set\+Author\+Name (
+\subsubsection[{set\+Author\+Name(const string \&author\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void bridges\+::\+Book\+::set\+Author\+Name (
 \begin{DoxyParamCaption}
-\item[{string}]{author\+Name}
+\item[{const string \&}]{author\+Name}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_book_affc38232dda1e6b04d7e38a02cdd9c39}
-\hypertarget{classbridges_1_1_book_a599852c24b9093e04fb124f21cb31419}{}\index{bridges\+::\+Book@{bridges\+::\+Book}!set\+Genre@{set\+Genre}}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_book_a4ca756815b519a0a4d1ae5d3b21aa2d2}
+\hypertarget{classbridges_1_1_book_aa3e894e59ae043e7271861772b03632c}{}\index{bridges\+::\+Book@{bridges\+::\+Book}!set\+Downloads@{set\+Downloads}}
+\index{set\+Downloads@{set\+Downloads}!bridges\+::\+Book@{bridges\+::\+Book}}
+\subsubsection[{set\+Downloads(int downloads)}]{\setlength{\rightskip}{0pt plus 5cm}void bridges\+::\+Book\+::set\+Downloads (
+\begin{DoxyParamCaption}
+\item[{int}]{downloads}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_book_aa3e894e59ae043e7271861772b03632c}
+\hypertarget{classbridges_1_1_book_a3743b908548b944543af533b030a1eca}{}\index{bridges\+::\+Book@{bridges\+::\+Book}!set\+Genre@{set\+Genre}}
 \index{set\+Genre@{set\+Genre}!bridges\+::\+Book@{bridges\+::\+Book}}
-\subsubsection[{set\+Genre(vector$<$ string $>$ genre)}]{\setlength{\rightskip}{0pt plus 5cm}void bridges\+::\+Book\+::set\+Genre (
+\subsubsection[{set\+Genre(const vector$<$ string $>$ \&genre)}]{\setlength{\rightskip}{0pt plus 5cm}void bridges\+::\+Book\+::set\+Genre (
 \begin{DoxyParamCaption}
-\item[{vector$<$ string $>$}]{genre}
+\item[{const vector$<$ string $>$ \&}]{genre}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_book_a599852c24b9093e04fb124f21cb31419}
-\hypertarget{classbridges_1_1_book_acec57a03086884a8ebae4c608c19e5cf}{}\index{bridges\+::\+Book@{bridges\+::\+Book}!set\+Lang@{set\+Lang}}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_book_a3743b908548b944543af533b030a1eca}
+\hypertarget{classbridges_1_1_book_a7c96cf79f310f78eb16035c6874afa05}{}\index{bridges\+::\+Book@{bridges\+::\+Book}!set\+Lang@{set\+Lang}}
 \index{set\+Lang@{set\+Lang}!bridges\+::\+Book@{bridges\+::\+Book}}
-\subsubsection[{set\+Lang(vector$<$ string $>$ lang)}]{\setlength{\rightskip}{0pt plus 5cm}void bridges\+::\+Book\+::set\+Lang (
+\subsubsection[{set\+Lang(const vector$<$ string $>$ \&lang)}]{\setlength{\rightskip}{0pt plus 5cm}void bridges\+::\+Book\+::set\+Lang (
 \begin{DoxyParamCaption}
-\item[{vector$<$ string $>$}]{lang}
+\item[{const vector$<$ string $>$ \&}]{lang}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_book_acec57a03086884a8ebae4c608c19e5cf}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_book_a7c96cf79f310f78eb16035c6874afa05}
 \hypertarget{classbridges_1_1_book_a31f85f174ab86e6f9eb2131c3dbe1cdf}{}\index{bridges\+::\+Book@{bridges\+::\+Book}!set\+Num\+Chars@{set\+Num\+Chars}}
 \index{set\+Num\+Chars@{set\+Num\+Chars}!bridges\+::\+Book@{bridges\+::\+Book}}
 \subsubsection[{set\+Num\+Chars(int num\+Chars)}]{\setlength{\rightskip}{0pt plus 5cm}void bridges\+::\+Book\+::set\+Num\+Chars (
@@ -258,29 +276,29 @@ Kalpathi Subramanian
 \item[{int}]{num\+Words}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_book_acbed3f0ff253868d8747826a27ef30ac}
-\hypertarget{classbridges_1_1_book_a9ee227f750be7ab000fb30cf361a8f5c}{}\index{bridges\+::\+Book@{bridges\+::\+Book}!set\+Subject@{set\+Subject}}
+\hypertarget{classbridges_1_1_book_aff19a506929a6df5503e2cd3e293381e}{}\index{bridges\+::\+Book@{bridges\+::\+Book}!set\+Subject@{set\+Subject}}
 \index{set\+Subject@{set\+Subject}!bridges\+::\+Book@{bridges\+::\+Book}}
-\subsubsection[{set\+Subject(vector$<$ string $>$ subject)}]{\setlength{\rightskip}{0pt plus 5cm}void bridges\+::\+Book\+::set\+Subject (
+\subsubsection[{set\+Subject(const vector$<$ string $>$ \&subject)}]{\setlength{\rightskip}{0pt plus 5cm}void bridges\+::\+Book\+::set\+Subject (
 \begin{DoxyParamCaption}
-\item[{vector$<$ string $>$}]{subject}
+\item[{const vector$<$ string $>$ \&}]{subject}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_book_a9ee227f750be7ab000fb30cf361a8f5c}
-\hypertarget{classbridges_1_1_book_a277540665913ac1a4a943af99dad46bb}{}\index{bridges\+::\+Book@{bridges\+::\+Book}!set\+Title@{set\+Title}}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_book_aff19a506929a6df5503e2cd3e293381e}
+\hypertarget{classbridges_1_1_book_a68e4e04db8915b6baff809c46e6d1df9}{}\index{bridges\+::\+Book@{bridges\+::\+Book}!set\+Title@{set\+Title}}
 \index{set\+Title@{set\+Title}!bridges\+::\+Book@{bridges\+::\+Book}}
-\subsubsection[{set\+Title(string title)}]{\setlength{\rightskip}{0pt plus 5cm}void bridges\+::\+Book\+::set\+Title (
+\subsubsection[{set\+Title(const string \&title)}]{\setlength{\rightskip}{0pt plus 5cm}void bridges\+::\+Book\+::set\+Title (
 \begin{DoxyParamCaption}
-\item[{string}]{title}
+\item[{const string \&}]{title}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_book_a277540665913ac1a4a943af99dad46bb}
-\hypertarget{classbridges_1_1_book_a4a96a6bd3956056b450c9df13e976a5a}{}\index{bridges\+::\+Book@{bridges\+::\+Book}!set\+U\+R\+L@{set\+U\+R\+L}}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_book_a68e4e04db8915b6baff809c46e6d1df9}
+\hypertarget{classbridges_1_1_book_a48d590f296837b8eb9ac10451c83d23b}{}\index{bridges\+::\+Book@{bridges\+::\+Book}!set\+U\+R\+L@{set\+U\+R\+L}}
 \index{set\+U\+R\+L@{set\+U\+R\+L}!bridges\+::\+Book@{bridges\+::\+Book}}
-\subsubsection[{set\+U\+R\+L(string url)}]{\setlength{\rightskip}{0pt plus 5cm}void bridges\+::\+Book\+::set\+U\+R\+L (
+\subsubsection[{set\+U\+R\+L(const string \&url)}]{\setlength{\rightskip}{0pt plus 5cm}void bridges\+::\+Book\+::set\+U\+R\+L (
 \begin{DoxyParamCaption}
-\item[{string}]{url}
+\item[{const string \&}]{url}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_book_a4a96a6bd3956056b450c9df13e976a5a}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbridges_1_1_book_a48d590f296837b8eb9ac10451c83d23b}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/\+Users/krs/gr/bridges/bridges17/cxx/src/data\+\_\+src/\hyperlink{_book_8h}{Book.\+h}\end{DoxyCompactItemize}
+/\+Users/kalpathi/gr/bridges/bridges17/cxx/src/data\+\_\+src/\hyperlink{_book_8h}{Book.\+h}\end{DoxyCompactItemize}

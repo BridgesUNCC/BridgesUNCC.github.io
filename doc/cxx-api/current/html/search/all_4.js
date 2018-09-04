@@ -1,7 +1,7 @@
 var searchData=
 [
   ['earthquakeusgs',['EarthquakeUSGS',['../classbridges_1_1_earthquake_u_s_g_s.html',1,'bridges']]],
-  ['earthquakeusgs',['EarthquakeUSGS',['../classbridges_1_1_earthquake_u_s_g_s.html#a540ae74c248da179fbbd182b843a14e0',1,'bridges::EarthquakeUSGS::EarthquakeUSGS()'],['../classbridges_1_1_earthquake_u_s_g_s.html#a9c7f7aec2ddc173660a7015b90c7b7b0',1,'bridges::EarthquakeUSGS::EarthquakeUSGS(double magnitude, double longit, double latit, string location, string title, string url, string time)'],['../classbridges_1_1_earthquake_u_s_g_s.html#aa52d05b3119c6a4e45867dc4aaeba59e',1,'bridges::EarthquakeUSGS::EarthquakeUSGS(EarthquakeUSGS *eq)']]],
+  ['earthquakeusgs',['EarthquakeUSGS',['../classbridges_1_1_earthquake_u_s_g_s.html#a540ae74c248da179fbbd182b843a14e0',1,'bridges::EarthquakeUSGS::EarthquakeUSGS()'],['../classbridges_1_1_earthquake_u_s_g_s.html#aaa8b6776e6767cf327cebbd371b2c2d0',1,'bridges::EarthquakeUSGS::EarthquakeUSGS(double magnitude, double longit, double latit, const string &amp;location, const string &amp;title, const string &amp;url, const string &amp;time)'],['../classbridges_1_1_earthquake_u_s_g_s.html#a450f9683a698be7448ec44c06e456de0',1,'bridges::EarthquakeUSGS::EarthquakeUSGS(const EarthquakeUSGS *eq)']]],
   ['earthquakeusgs_2eh',['EarthquakeUSGS.h',['../_earthquake_u_s_g_s_8h.html',1,'']]],
   ['edge',['Edge',['../classbridges_1_1_edge.html',1,'bridges']]],
   ['edge',['Edge',['../classbridges_1_1_edge.html#a8a3fc4ec8164fcff2a7fc057d29db8c7',1,'bridges::Edge']]],

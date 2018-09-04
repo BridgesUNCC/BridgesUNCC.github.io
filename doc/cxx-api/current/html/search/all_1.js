@@ -8,7 +8,7 @@ var searchData=
   ['bintreeelement',['BinTreeElement',['../classbridges_1_1_bin_tree_element.html',1,'bridges']]],
   ['bintreeelement_2eh',['BinTreeElement.h',['../_bin_tree_element_8h.html',1,'']]],
   ['book',['Book',['../classbridges_1_1_book.html',1,'bridges']]],
-  ['book',['Book',['../classbridges_1_1_book.html#abb2903c640bd263a2e077d52e12a773e',1,'bridges::Book::Book()'],['../classbridges_1_1_book.html#ac3060f3eaf757c82ea21f6501eb97b80',1,'bridges::Book::Book(string authorName, int authorBirth, int authorDeath, string title, vector&lt; string &gt; lang, vector&lt; string &gt; genre, vector&lt; string &gt; subject, int numChars, int numWords, int numSentences, int numDifficultWords, string url, int downloads)']]],
+  ['book',['Book',['../classbridges_1_1_book.html#abb2903c640bd263a2e077d52e12a773e',1,'bridges::Book::Book()'],['../classbridges_1_1_book.html#a4256eb5015b42e511d950c45103cef63',1,'bridges::Book::Book(const string &amp;authorName, int authorBirth, int authorDeath, const string &amp;title, const vector&lt; string &gt; &amp;lang, const vector&lt; string &gt; &amp;genre, const vector&lt; string &gt; &amp;subject, int numChars, int numWords, int numSentences, int numDifficultWords, const string &amp;url, int downloads)']]],
   ['book_2eh',['Book.h',['../_book_8h.html',1,'']]],
   ['bridges',['bridges',['../namespacebridges.html',1,'']]],
   ['bridges',['Bridges',['../namespacebridges_1_1_bridges.html',1,'bridges']]],
