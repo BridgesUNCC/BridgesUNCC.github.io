@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Bridges-C++-2.3: /Users/krs/gr/bridges/bridges17/cxx/src/Element.h Source File</title>
+<title>Bridges-C++-2.3: /Users/kalpathi/gr/bridges/bridges17/cxx/src/Element.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Bridges-C++-2.3
-   &#160;<span id="projectnumber">2.3.3</span>
+   &#160;<span id="projectnumber">2.3.4</span>
    </div>
    <div id="projectbrief">Bridges(C++API)</div>
   </td>
@@ -82,7 +82,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_0f88b13254f5d32c09137ed1e4735e11.html">gr</a></li><li class="navelem"><a class="el" href="dir_ec6b7a099699bab914420e1cd3290ffd.html">bridges</a></li><li class="navelem"><a class="el" href="dir_00b9fdd1753fc407d0f3571752f912be.html">bridges17</a></li><li class="navelem"><a class="el" href="dir_6216a1c32d764ab3482b2d2f063ba9c1.html">cxx</a></li><li class="navelem"><a class="el" href="dir_2ec32c9665f5c5dee1b411ddd826ee4d.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_b42fb75b1f87d76f4d4256c1aac6dc30.html">kalpathi</a></li><li class="navelem"><a class="el" href="dir_6a559d950816c3f913e60a02ee4a8cce.html">gr</a></li><li class="navelem"><a class="el" href="dir_91a353a1b034a7d2c3b1f03731a4725c.html">bridges</a></li><li class="navelem"><a class="el" href="dir_9bfd627679bcc1ebcf0d575378227e54.html">bridges17</a></li><li class="navelem"><a class="el" href="dir_9a976ef22d9147cb09268720718db753.html">cxx</a></li><li class="navelem"><a class="el" href="dir_32aceba54777697b70bff5f56eda9058.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -94,18 +94,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define ELEMENT_H</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;unordered_set&gt;</span> </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;unordered_set&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_data_structure_8h.html">DataStructure.h</a>&quot;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_element_visualizer_8h.html">ElementVisualizer.h</a>&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_link_visualizer_8h.html">LinkVisualizer.h</a>&quot;</span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_link_visualizer_8h.html">LinkVisualizer.h</a>&quot;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacebridges.html">bridges</a> {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                                <span class="comment">// forward Declarations</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">// forward Declarations</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classbridges_1_1_graph_adj_list.html">   17</a></span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> E1, <span class="keyword">typename</span> E2&gt; <span class="keyword">class </span><a class="code" href="classbridges_1_1_graph_adj_list.html">GraphAdjList</a>;</div>
 <div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classbridges_1_1_graph_adj_matrix.html">   18</a></span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> K, <span class="keyword">typename</span> E1, <span class="keyword">typename</span> E2&gt; <span class="keyword">class </span><a class="code" href="classbridges_1_1_graph_adj_matrix.html">GraphAdjMatrix</a>;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
@@ -136,22 +136,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                elvis = <span class="keyword">new</span> <a class="code" href="classbridges_1_1_element_visualizer.html">ElementVisualizer</a>;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            }</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classbridges_1_1_element.html#a6dc69b51f85f4e9914434b8c79126057">   76</a></span>&#160;                    <a class="code" href="classbridges_1_1_element.html#a6dc69b51f85f4e9914434b8c79126057">Element</a>(<span class="keyword">const</span> <a class="code" href="classbridges_1_1_element.html">Element</a>&amp; e)</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;              :label(e.label), value(e.value), elvis(new <a class="code" href="classbridges_1_1_element_visualizer.html">ElementVisualizer</a>(*(e.elvis))), links(e.links) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classbridges_1_1_element.html#a6dc69b51f85f4e9914434b8c79126057">   76</a></span>&#160;            <a class="code" href="classbridges_1_1_element.html#a6dc69b51f85f4e9914434b8c79126057">Element</a>(<span class="keyword">const</span> <a class="code" href="classbridges_1_1_element.html">Element</a>&amp; e)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                : label(e.label), value(e.value), elvis(new <a class="code" href="classbridges_1_1_element_visualizer.html">ElementVisualizer</a>(*(e.elvis))), links(e.links) {</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            }</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
 <div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classbridges_1_1_element.html#a0f1b5a5688fe4db68f84969e93cea245">   80</a></span>&#160;            <a class="code" href="classbridges_1_1_element.html">Element</a>&amp; operator= (<span class="keyword">const</span> <a class="code" href="classbridges_1_1_element.html">Element</a>&amp; e) {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;              this-&gt;label = e.label;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;              this-&gt;value = e.value;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;              *(this-&gt;elvis) = *(e.elvis);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;              this-&gt;links = e.<a class="code" href="classbridges_1_1_element.html#a6fb53728edc378f26238543b26238496">links</a>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;              <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                this-&gt;label = e.label;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                this-&gt;value = e.value;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                *(this-&gt;elvis) = *(e.elvis);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                this-&gt;links = e.<a class="code" href="classbridges_1_1_element.html#a6fb53728edc378f26238543b26238496">links</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
 <div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classbridges_1_1_element.html#a1dcdcd8948db683fc109687fe5d9c8e1">   88</a></span>&#160;            <span class="keyword">virtual</span> <a class="code" href="classbridges_1_1_element.html#a1dcdcd8948db683fc109687fe5d9c8e1">~Element</a>() {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;              <span class="keyword">delete</span> elvis;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                <span class="keyword">delete</span> elvis;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
 <div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classbridges_1_1_element.html#a358f350ae6e33d55c4ac9f9213d0c5bc">   95</a></span>&#160;            <a class="code" href="classbridges_1_1_element_visualizer.html">ElementVisualizer</a>* <a class="code" href="classbridges_1_1_element.html#a358f350ae6e33d55c4ac9f9213d0c5bc">getVisualizer</a>() {</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                <span class="keywordflow">return</span> elvis;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            }</div>
@@ -162,7 +162,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                <span class="keywordflow">if</span> (links.find(const_cast&lt;Element*&gt;(el)) != links.end()) {</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                    <span class="keywordflow">return</span> &amp;(links.at(const_cast&lt;Element*&gt;(el)));</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                }</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                cerr &lt;&lt; <span class="stringliteral">&quot;Element &quot;</span> &lt;&lt; label &lt;&lt; <span class="stringliteral">&quot; not linked to Element &quot;</span>  </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                cerr &lt;&lt; <span class="stringliteral">&quot;Element &quot;</span> &lt;&lt; label &lt;&lt; <span class="stringliteral">&quot; not linked to Element &quot;</span></div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                    &lt;&lt; el-&gt;<a class="code" href="classbridges_1_1_element.html#aa5e02165249d5d55066132d3128cb6a8">getLabel</a>() &lt;&lt; <span class="stringliteral">&quot;, returning NULL&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            }</div>
@@ -228,8 +228,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="namespacebridges.html#a9bef552535e3f5bbfc2ca586cb5044c6">OPEN_CURLY</a> +</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                    <a class="code" href="namespacebridges.html#acd8357e88562cbb7e60bea3fac422ac3">QUOTE</a> + <span class="stringliteral">&quot;color&quot;</span>     + <a class="code" href="namespacebridges.html#acd8357e88562cbb7e60bea3fac422ac3">QUOTE</a> + <a class="code" href="namespacebridges.html#a039dca813ca3a9b4c8d8a866c6fa8445">COLON</a> + getCSSRepresentation(lv.<a class="code" href="classbridges_1_1_link_visualizer.html#a4b244bde324fc61c262954e590db20a6">getColor</a>())</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                    + <a class="code" href="namespacebridges.html#a74087afbaa635d3c3d837cc3b44c0162">COMMA</a> +</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                    (!lv.<a class="code" href="classbridges_1_1_link_visualizer.html#a6fa07a948f842530c0bb8a13f6e0e84a">getLabel</a>().empty() ? </div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                        (<a class="code" href="namespacebridges.html#acd8357e88562cbb7e60bea3fac422ac3">QUOTE</a> + <span class="stringliteral">&quot;label&quot;</span> + <a class="code" href="namespacebridges.html#acd8357e88562cbb7e60bea3fac422ac3">QUOTE</a> + <a class="code" href="namespacebridges.html#a039dca813ca3a9b4c8d8a866c6fa8445">COLON</a> + </div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                    (!lv.<a class="code" href="classbridges_1_1_link_visualizer.html#a6fa07a948f842530c0bb8a13f6e0e84a">getLabel</a>().empty() ?</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                        (<a class="code" href="namespacebridges.html#acd8357e88562cbb7e60bea3fac422ac3">QUOTE</a> + <span class="stringliteral">&quot;label&quot;</span> + <a class="code" href="namespacebridges.html#acd8357e88562cbb7e60bea3fac422ac3">QUOTE</a> + <a class="code" href="namespacebridges.html#a039dca813ca3a9b4c8d8a866c6fa8445">COLON</a> +</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                            <a class="code" href="namespacebridges.html#acd8357e88562cbb7e60bea3fac422ac3">QUOTE</a> + lv.<a class="code" href="classbridges_1_1_link_visualizer.html#a6fa07a948f842530c0bb8a13f6e0e84a">getLabel</a>() + <a class="code" href="namespacebridges.html#acd8357e88562cbb7e60bea3fac422ac3">QUOTE</a> + <a class="code" href="namespacebridges.html#a74087afbaa635d3c3d837cc3b44c0162">COMMA</a>) : <span class="stringliteral">&quot;&quot;</span>) +</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                    <a class="code" href="namespacebridges.html#acd8357e88562cbb7e60bea3fac422ac3">QUOTE</a> + <span class="stringliteral">&quot;thickness&quot;</span> + <a class="code" href="namespacebridges.html#acd8357e88562cbb7e60bea3fac422ac3">QUOTE</a> + <a class="code" href="namespacebridges.html#a039dca813ca3a9b4c8d8a866c6fa8445">COLON</a> +</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                    removeTrailingZeros(lv.<a class="code" href="classbridges_1_1_link_visualizer.html#a22513552576c20a13d6fd81348abb815">getThickness</a>()) + <a class="code" href="namespacebridges.html#a74087afbaa635d3c3d837cc3b44c0162">COMMA</a> +</div>
@@ -248,21 +248,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                    to_string(col.<a class="code" href="classbridges_1_1_color.html#a50d72a73bf683426437b6c4dbb7e080b">getRed</a>()) + <span class="stringliteral">&quot;,&quot;</span> +</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                    to_string(col.<a class="code" href="classbridges_1_1_color.html#a7ee04a0a4a4788d0a8671fb5d46cb4f8">getGreen</a>()) + <span class="stringliteral">&quot;,&quot;</span> +</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                    to_string(col.<a class="code" href="classbridges_1_1_color.html#ad623a08fcd93b60831bdc80acbc30cb6">getBlue</a>()) + <span class="stringliteral">&quot;,&quot;</span> +</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                    to_string(col.<a class="code" href="classbridges_1_1_color.html#a144062e54bb7f39eca05f0bc2cc66ba3">getAlpha</a>() / 255.0f);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                    to_string( ((<span class="keywordtype">float</span>) (col.<a class="code" href="classbridges_1_1_color.html#a144062e54bb7f39eca05f0bc2cc66ba3">getAlpha</a>()) / 255.0f));</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="namespacebridges.html#a6b481335016325fe202a4e2fedd0af14">OPEN_BOX</a> + strCSS + <a class="code" href="namespacebridges.html#a9cbd20a3f223f32670280b954061f274">CLOSE_BOX</a>;</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            }</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00252"></a><span class="lineno"><a class="line" href="classbridges_1_1_element.html#ae6f773c7222ff3a37c402e5e1f413c66">  252</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classbridges_1_1_element.html#ae6f773c7222ff3a37c402e5e1f413c66">printLinks</a>() {</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;[printLinks]Source vert: &quot;</span>&lt;&lt; label &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; <span class="keyword">this</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            </div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; it: links){</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                cout &lt;&lt; <span class="stringliteral">&quot;\t Dest Elements : &quot;</span> &lt;&lt; (it.first)-&gt;getLabel() &lt;&lt; <span class="stringliteral">&quot;,&quot;</span></div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                    &lt;&lt; it.first &lt;&lt; endl;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            }</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        }</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00252"></a><span class="lineno"><a class="line" href="classbridges_1_1_element.html#ae6f773c7222ff3a37c402e5e1f413c66">  252</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classbridges_1_1_element.html#ae6f773c7222ff3a37c402e5e1f413c66">printLinks</a>() {</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                cout &lt;&lt; <span class="stringliteral">&quot;[printLinks]Source vert: &quot;</span> &lt;&lt; label &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; <span class="keyword">this</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; it : links) {</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                    cout &lt;&lt; <span class="stringliteral">&quot;\t Dest Elements : &quot;</span> &lt;&lt; (it.first)-&gt;getLabel() &lt;&lt; <span class="stringliteral">&quot;,&quot;</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                        &lt;&lt; it.first &lt;&lt; endl;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                }</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            }</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="comment">// temp</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            <span class="comment">// temp</span></div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    };  <span class="comment">//end of Element class</span></div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> E&gt; <span class="keyword">const</span> unordered_map&lt;const Shape, const string, hash&lt;int&gt;&gt;</div>
@@ -283,108 +283,108 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            <span class="comment">/*</span></div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="comment">                        static const pair&lt;string, string&gt; generateJSON(</span></div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="comment">                            const unordered_set&lt;const Element*&gt;&amp; nodes) {</span></div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="comment">                            // cant exceed max number of elements</span></div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="comment">                            if (MAX_ELEMENTS_ALLOWED &lt;= nodes.size()) {</span></div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="comment">                                throw &quot;Max allowed elements(for visualization) exceeded..&quot;</span></div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="comment">                                + to_string(nodes.size()) +</span></div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="comment">                                &quot; Must be less than &quot; + to_string(MAX_ELEMENTS_ALLOWED);</span></div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="comment">                            }</span></div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="comment">                            // map the nodes to a sequence of ids, 0...N-1</span></div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="comment">                            // then get the JSON string for nodes placeholder</span></div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="comment">                            // nullptr prevents insertion of other nullptrs</span></div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="comment">                            unordered_map&lt;const Element*, int&gt; map{{nullptr, -1}};</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="comment">            static const pair&lt;string, string&gt; generateJSON(</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="comment">                const unordered_set&lt;const Element*&gt;&amp; nodes) {</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="comment">                // cant exceed max number of elements</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="comment">                if (MAX_ELEMENTS_ALLOWED &lt;= nodes.size()) {</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="comment">                    throw &quot;Max allowed elements(for visualization) exceeded..&quot;</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="comment">                    + to_string(nodes.size()) +</span></div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="comment">                    &quot; Must be less than &quot; + to_string(MAX_ELEMENTS_ALLOWED);</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="comment">                }</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="comment">                // map the nodes to a sequence of ids, 0...N-1</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="comment">                // then get the JSON string for nodes placeholder</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="comment">                // nullptr prevents insertion of other nullptrs</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="comment">                unordered_map&lt;const Element*, int&gt; map{{nullptr, -1}};</span></div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="comment">                            string nodes_JSON, links_JSON;</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="comment">                string nodes_JSON, links_JSON;</span></div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="comment">                            int i = 0; // get the JSON string for nodes</span></div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="comment">                            for (const auto* e : nodes) {</span></div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<span class="comment">                                // short circut only incriments i and</span></div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="comment">                                //gets rep upon successful emplacement</span></div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="comment">                                if (map.emplace(e, i).second &amp;&amp; ++i) {</span></div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="comment">                                    nodes_JSON += e-&gt;getElementRepresentation() + COMMA;</span></div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="comment">                                }</span></div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="comment">                            }</span></div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="comment">                            map.erase(nullptr); //Remove trailing comma and nullptr entry</span></div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="comment">                            if (nodes_JSON.size()) {</span></div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="comment">                                nodes_JSON = nodes_JSON.erase(nodes_JSON.size() - 1);</span></div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="comment">                            }</span></div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;<span class="comment">                            for (const auto&amp; ele_int : map) { //each pair&lt;Element*,int&gt; in map</span></div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<span class="comment">                                for (const auto&amp; ele_lv : ele_int.first-&gt;links) {</span></div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="comment">                                    //each pair&lt;Element*,LinkVisualizer&gt;</span></div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="comment">                                    // in Element*-&gt;links</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="comment">                int i = 0; // get the JSON string for nodes</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="comment">                for (const auto* e : nodes) {</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<span class="comment">                    // short circut only incriments i and</span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="comment">                    //gets rep upon successful emplacement</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="comment">                    if (map.emplace(e, i).second &amp;&amp; ++i) {</span></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="comment">                        nodes_JSON += e-&gt;getElementRepresentation() + COMMA;</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="comment">                    }</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="comment">                }</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="comment">                map.erase(nullptr); //Remove trailing comma and nullptr entry</span></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="comment">                if (nodes_JSON.size()) {</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="comment">                    nodes_JSON = nodes_JSON.erase(nodes_JSON.size() - 1);</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="comment">                }</span></div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;<span class="comment">                for (const auto&amp; ele_int : map) { //each pair&lt;Element*,int&gt; in map</span></div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<span class="comment">                    for (const auto&amp; ele_lv : ele_int.first-&gt;links) {</span></div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="comment">                        //each pair&lt;Element*,LinkVisualizer&gt;</span></div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="comment">                        // in Element*-&gt;links</span></div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="comment">                                    //mapping of destination node</span></div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="comment">                                    auto it = map.find(ele_lv.first);</span></div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="comment">                                    //only add link if dest node exists</span></div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="comment">                                    if (it != map.end()) {</span></div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<span class="comment">                                        links_JSON += getLinkRepresentation(ele_lv.second,</span></div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="comment">                                                to_string(ele_int.second), to_string(it-&gt;second))</span></div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;<span class="comment">                                            + COMMA;</span></div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;<span class="comment">                                    }</span></div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="comment">                                }</span></div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="comment">                            }</span></div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;<span class="comment">                            if (links_JSON.size()) {</span></div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="comment">                                //Remove trailing comma</span></div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;<span class="comment">                                links_JSON = links_JSON.erase(links_JSON.size() - 1);</span></div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="comment">                            }</span></div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;<span class="comment">                            return pair&lt;string, string&gt;(nodes_JSON, links_JSON);</span></div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="comment">                        }</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="comment">                        //mapping of destination node</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="comment">                        auto it = map.find(ele_lv.first);</span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="comment">                        //only add link if dest node exists</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="comment">                        if (it != map.end()) {</span></div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<span class="comment">                            links_JSON += getLinkRepresentation(ele_lv.second,</span></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="comment">                                    to_string(ele_int.second), to_string(it-&gt;second))</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;<span class="comment">                                + COMMA;</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;<span class="comment">                        }</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="comment">                    }</span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="comment">                }</span></div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;<span class="comment">                if (links_JSON.size()) {</span></div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="comment">                    //Remove trailing comma</span></div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;<span class="comment">                    links_JSON = links_JSON.erase(links_JSON.size() - 1);</span></div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="comment">                }</span></div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;<span class="comment">                return pair&lt;string, string&gt;(nodes_JSON, links_JSON);</span></div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="comment">            }</span></div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;<span class="comment">                        static const pair&lt;string, string&gt;   generateOrderedJSON(</span></div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="comment">                            const vector&lt;const Element*&gt;&amp; nodes) {</span></div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;<span class="comment">            static const pair&lt;string, string&gt;   generateOrderedJSON(</span></div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="comment">                const vector&lt;const Element*&gt;&amp; nodes) {</span></div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="comment">                            if (MAX_ELEMENTS_ALLOWED &lt;= nodes.size()) {</span></div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;<span class="comment">                                // cant exceed max number of elements</span></div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="comment">                                throw &quot;Max allowed elements(for visualization) exceeded.. &quot; +</span></div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="comment">                                to_string(nodes.size()) + &quot; Must be less than &quot; +</span></div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="comment">                                to_string(MAX_ELEMENTS_ALLOWED);</span></div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="comment">                            }</span></div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="comment">                            // map the nodes to a sequence of ids, 0...N-1</span></div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="comment">                            // then get the JSON string for nodes placeholder</span></div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="comment">                            // nullptr prevents insertion of other nullptrs</span></div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="comment">                            unordered_map&lt;const Element*, int&gt; node_map { {nullptr, -1} };</span></div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="comment">                if (MAX_ELEMENTS_ALLOWED &lt;= nodes.size()) {</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;<span class="comment">                    // cant exceed max number of elements</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="comment">                    throw &quot;Max allowed elements(for visualization) exceeded.. &quot; +</span></div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="comment">                    to_string(nodes.size()) + &quot; Must be less than &quot; +</span></div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="comment">                    to_string(MAX_ELEMENTS_ALLOWED);</span></div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="comment">                }</span></div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="comment">                // map the nodes to a sequence of ids, 0...N-1</span></div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="comment">                // then get the JSON string for nodes placeholder</span></div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="comment">                // nullptr prevents insertion of other nullptrs</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="comment">                unordered_map&lt;const Element*, int&gt; node_map { {nullptr, -1} };</span></div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="comment">                            string nodes_JSON, links_JSON;</span></div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="comment">                string nodes_JSON, links_JSON;</span></div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="comment">                            int i = 0;      // get the JSON string for nodes</span></div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="comment">                            for (const auto* e : nodes) {</span></div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="comment">                                if (node_map.emplace(e, i).second)  {</span></div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;<span class="comment">                                    // successful emplacement</span></div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;<span class="comment">                                    i++;</span></div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;<span class="comment">                                    nodes_JSON += e-&gt;getElementRepresentation() + COMMA;</span></div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="comment">                                }</span></div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="comment">                            }</span></div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="comment">                            //Remove trailing comma and nullptr entry</span></div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;<span class="comment">                            node_map.erase(nullptr);</span></div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="comment">                            if (nodes_JSON.size()) {</span></div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="comment">                                nodes_JSON = nodes_JSON.erase(nodes_JSON.size() - 1);</span></div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="comment">                            }</span></div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="comment">                            // for each pair&lt;Element*,int&gt; in map</span></div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="comment">                            for (const auto&amp; ele_int : node_map) {</span></div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="comment">                                // for each pair&lt;Element*,LinkVisualizer&gt;</span></div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="comment">                                // in Element*-&gt;links</span></div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;<span class="comment">                                for (const auto&amp; ele_lv : ele_int.first-&gt;links) {</span></div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<span class="comment">                                    // mapping of destination node</span></div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<span class="comment">                                    auto it = node_map.find(ele_lv.first);</span></div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;<span class="comment">                                    if (it != node_map.end() ) {    //only add link if dest node exists</span></div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="comment">                                        links_JSON += getLinkRepresentation(ele_lv.second,</span></div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="comment">                                                to_string(ele_int.second),</span></div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="comment">                                                to_string(it-&gt;second)) + COMMA;</span></div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;<span class="comment">                                    }</span></div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="comment">                                }</span></div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="comment">                            }</span></div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="comment">                            //Remove trailing comma</span></div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="comment">                            if (links_JSON.size()) {</span></div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="comment">                                links_JSON = links_JSON.erase(links_JSON.size() - 1);</span></div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="comment">                            }</span></div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="comment">                int i = 0;      // get the JSON string for nodes</span></div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="comment">                for (const auto* e : nodes) {</span></div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="comment">                    if (node_map.emplace(e, i).second)  {</span></div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;<span class="comment">                        // successful emplacement</span></div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;<span class="comment">                        i++;</span></div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;<span class="comment">                        nodes_JSON += e-&gt;getElementRepresentation() + COMMA;</span></div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="comment">                    }</span></div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="comment">                }</span></div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="comment">                //Remove trailing comma and nullptr entry</span></div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;<span class="comment">                node_map.erase(nullptr);</span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="comment">                if (nodes_JSON.size()) {</span></div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="comment">                    nodes_JSON = nodes_JSON.erase(nodes_JSON.size() - 1);</span></div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="comment">                }</span></div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="comment">                // for each pair&lt;Element*,int&gt; in map</span></div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="comment">                for (const auto&amp; ele_int : node_map) {</span></div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="comment">                    // for each pair&lt;Element*,LinkVisualizer&gt;</span></div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="comment">                    // in Element*-&gt;links</span></div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;<span class="comment">                    for (const auto&amp; ele_lv : ele_int.first-&gt;links) {</span></div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<span class="comment">                        // mapping of destination node</span></div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<span class="comment">                        auto it = node_map.find(ele_lv.first);</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;<span class="comment">                        if (it != node_map.end() ) {    //only add link if dest node exists</span></div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="comment">                            links_JSON += getLinkRepresentation(ele_lv.second,</span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="comment">                                    to_string(ele_int.second),</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="comment">                                    to_string(it-&gt;second)) + COMMA;</span></div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;<span class="comment">                        }</span></div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="comment">                    }</span></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="comment">                }</span></div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="comment">                //Remove trailing comma</span></div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="comment">                if (links_JSON.size()) {</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="comment">                    links_JSON = links_JSON.erase(links_JSON.size() - 1);</span></div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="comment">                }</span></div>
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;<span class="comment">                            return pair&lt;string, string&gt;(nodes_JSON, links_JSON);</span></div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;<span class="comment">                        }</span></div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;<span class="comment">            */</span></div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="comment">// temp</span></div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;<span class="comment">                return pair&lt;string, string&gt;(nodes_JSON, links_JSON);</span></div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;<span class="comment">            }</span></div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="comment">// temp</span></div>
 <div class="ttc" id="classbridges_1_1_element_html_a7672ce8623ab561d457b4a91e19c4e53"><div class="ttname"><a href="classbridges_1_1_element.html#a7672ce8623ab561d457b4a91e19c4e53">bridges::Element::getVisualizer</a></div><div class="ttdeci">const ElementVisualizer * getVisualizer() const </div><div class="ttdef"><b>Definition:</b> Element.h:103</div></div>
 <div class="ttc" id="namespacebridges_html_a1b4050586bd708782ae0d4f3b06b9579af88d2180d4c2ee55a1d963959c345047"><div class="ttname"><a href="namespacebridges.html#a1b4050586bd708782ae0d4f3b06b9579af88d2180d4c2ee55a1d963959c345047">bridges::WYE</a></div><div class="ttdef"><b>Definition:</b> ElementVisualizer.h:9</div></div>
 <div class="ttc" id="classbridges_1_1_element_html_a6fb53728edc378f26238543b26238496"><div class="ttname"><a href="classbridges_1_1_element.html#a6fb53728edc378f26238543b26238496">bridges::Element::links</a></div><div class="ttdeci">unordered_map&lt; Element *, LinkVisualizer &gt; links</div><div class="ttdef"><b>Definition:</b> Element.h:61</div></div>
@@ -393,7 +393,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classbridges_1_1_element_visualizer_html_a660dfe007963b4e9314a5da07f776e78"><div class="ttname"><a href="classbridges_1_1_element_visualizer.html#a660dfe007963b4e9314a5da07f776e78">bridges::ElementVisualizer::getLocationX</a></div><div class="ttdeci">double getLocationX() const </div><div class="ttdef"><b>Definition:</b> ElementVisualizer.h:127</div></div>
 <div class="ttc" id="classbridges_1_1_element_html_aa5e02165249d5d55066132d3128cb6a8"><div class="ttname"><a href="classbridges_1_1_element.html#aa5e02165249d5d55066132d3128cb6a8">bridges::Element::getLabel</a></div><div class="ttdeci">string getLabel() const </div><div class="ttdef"><b>Definition:</b> Element.h:135</div></div>
 <div class="ttc" id="classbridges_1_1_element_html_aac13ea6244099496172c8549e48a9f73"><div class="ttname"><a href="classbridges_1_1_element.html#aac13ea6244099496172c8549e48a9f73">bridges::Element::getElementRepresentation</a></div><div class="ttdeci">virtual const string getElementRepresentation() const </div><div class="ttdef"><b>Definition:</b> Element.h:181</div></div>
-<div class="ttc" id="classbridges_1_1_color_html_a50d72a73bf683426437b6c4dbb7e080b"><div class="ttname"><a href="classbridges_1_1_color.html#a50d72a73bf683426437b6c4dbb7e080b">bridges::Color::getRed</a></div><div class="ttdeci">int getRed() const </div><div class="ttdef"><b>Definition:</b> Color.h:102</div></div>
+<div class="ttc" id="classbridges_1_1_color_html_a50d72a73bf683426437b6c4dbb7e080b"><div class="ttname"><a href="classbridges_1_1_color.html#a50d72a73bf683426437b6c4dbb7e080b">bridges::Color::getRed</a></div><div class="ttdeci">int getRed() const </div><div class="ttdef"><b>Definition:</b> Color.h:108</div></div>
 <div class="ttc" id="classbridges_1_1_element_html_ae6f773c7222ff3a37c402e5e1f413c66"><div class="ttname"><a href="classbridges_1_1_element.html#ae6f773c7222ff3a37c402e5e1f413c66">bridges::Element::printLinks</a></div><div class="ttdeci">void printLinks()</div><div class="ttdef"><b>Definition:</b> Element.h:252</div></div>
 <div class="ttc" id="namespacebridges_html_a039dca813ca3a9b4c8d8a866c6fa8445"><div class="ttname"><a href="namespacebridges.html#a039dca813ca3a9b4c8d8a866c6fa8445">bridges::COLON</a></div><div class="ttdeci">const string COLON</div><div class="ttdef"><b>Definition:</b> DataStructure.h:50</div></div>
 <div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdoc">STL namespace. </div></div>
@@ -402,7 +402,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="namespacebridges_html_a1b4050586bd708782ae0d4f3b06b9579aa968bf0f7aeccbae1a40751345bf2e64"><div class="ttname"><a href="namespacebridges.html#a1b4050586bd708782ae0d4f3b06b9579aa968bf0f7aeccbae1a40751345bf2e64">bridges::CIRCLE</a></div><div class="ttdef"><b>Definition:</b> ElementVisualizer.h:9</div></div>
 <div class="ttc" id="classbridges_1_1_element_visualizer_html_acbd58b69a2b8e44735e4c87783710439"><div class="ttname"><a href="classbridges_1_1_element_visualizer.html#acbd58b69a2b8e44735e4c87783710439">bridges::ElementVisualizer::getLocationY</a></div><div class="ttdeci">double getLocationY() const </div><div class="ttdef"><b>Definition:</b> ElementVisualizer.h:133</div></div>
 <div class="ttc" id="classbridges_1_1_element_html_a22313b74452175d07650168a701daa99"><div class="ttname"><a href="classbridges_1_1_element.html#a22313b74452175d07650168a701daa99">bridges::Element::setLabel</a></div><div class="ttdeci">void setLabel(const string &amp;lab)</div><div class="ttdef"><b>Definition:</b> Element.h:144</div></div>
-<div class="ttc" id="classbridges_1_1_color_html_a144062e54bb7f39eca05f0bc2cc66ba3"><div class="ttname"><a href="classbridges_1_1_color.html#a144062e54bb7f39eca05f0bc2cc66ba3">bridges::Color::getAlpha</a></div><div class="ttdeci">int getAlpha() const </div><div class="ttdef"><b>Definition:</b> Color.h:114</div></div>
+<div class="ttc" id="classbridges_1_1_color_html_a144062e54bb7f39eca05f0bc2cc66ba3"><div class="ttname"><a href="classbridges_1_1_color.html#a144062e54bb7f39eca05f0bc2cc66ba3">bridges::Color::getAlpha</a></div><div class="ttdeci">int getAlpha() const </div><div class="ttdef"><b>Definition:</b> Color.h:120</div></div>
 <div class="ttc" id="classbridges_1_1_link_visualizer_html_a22513552576c20a13d6fd81348abb815"><div class="ttname"><a href="classbridges_1_1_link_visualizer.html#a22513552576c20a13d6fd81348abb815">bridges::LinkVisualizer::getThickness</a></div><div class="ttdeci">double getThickness() const </div><div class="ttdef"><b>Definition:</b> LinkVisualizer.h:85</div></div>
 <div class="ttc" id="namespacebridges_html_a6b481335016325fe202a4e2fedd0af14"><div class="ttname"><a href="namespacebridges.html#a6b481335016325fe202a4e2fedd0af14">bridges::OPEN_BOX</a></div><div class="ttdeci">const string OPEN_BOX</div><div class="ttdef"><b>Definition:</b> DataStructure.h:53</div></div>
 <div class="ttc" id="namespacebridges_html_a1b4050586bd708782ae0d4f3b06b9579a17166ae3c0c2333bf74313d74e539e3e"><div class="ttname"><a href="namespacebridges.html#a1b4050586bd708782ae0d4f3b06b9579a17166ae3c0c2333bf74313d74e539e3e">bridges::STAR</a></div><div class="ttdef"><b>Definition:</b> ElementVisualizer.h:9</div></div>
@@ -410,8 +410,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classbridges_1_1_element_visualizer_html_aae6ce4807e470d0bda96cf6753e81669"><div class="ttname"><a href="classbridges_1_1_element_visualizer.html#aae6ce4807e470d0bda96cf6753e81669">bridges::ElementVisualizer::getSize</a></div><div class="ttdeci">double getSize() const </div><div class="ttdef"><b>Definition:</b> ElementVisualizer.h:63</div></div>
 <div class="ttc" id="namespacebridges_html_aa0d8f65415cfe7cdca23401137d40ca9"><div class="ttname"><a href="namespacebridges.html#aa0d8f65415cfe7cdca23401137d40ca9">bridges::CLOSE_CURLY</a></div><div class="ttdeci">const string CLOSE_CURLY</div><div class="ttdef"><b>Definition:</b> DataStructure.h:52</div></div>
 <div class="ttc" id="classbridges_1_1_link_visualizer_html_a6fa07a948f842530c0bb8a13f6e0e84a"><div class="ttname"><a href="classbridges_1_1_link_visualizer.html#a6fa07a948f842530c0bb8a13f6e0e84a">bridges::LinkVisualizer::getLabel</a></div><div class="ttdeci">string getLabel() const </div><div class="ttdef"><b>Definition:</b> LinkVisualizer.h:55</div></div>
-<div class="ttc" id="classbridges_1_1_color_html_a7575f11baf808823ea5c8e68b5b71a45"><div class="ttname"><a href="classbridges_1_1_color.html#a7575f11baf808823ea5c8e68b5b71a45">bridges::Color::isTransparent</a></div><div class="ttdeci">bool isTransparent() const </div><div class="ttdef"><b>Definition:</b> Color.h:97</div></div>
-<div class="ttc" id="classbridges_1_1_color_html"><div class="ttname"><a href="classbridges_1_1_color.html">bridges::Color</a></div><div class="ttdoc">This class represents Color, and supports rgba, hexadecimal and named color values. </div><div class="ttdef"><b>Definition:</b> Color.h:40</div></div>
+<div class="ttc" id="classbridges_1_1_color_html_a7575f11baf808823ea5c8e68b5b71a45"><div class="ttname"><a href="classbridges_1_1_color.html#a7575f11baf808823ea5c8e68b5b71a45">bridges::Color::isTransparent</a></div><div class="ttdeci">bool isTransparent() const </div><div class="ttdef"><b>Definition:</b> Color.h:103</div></div>
+<div class="ttc" id="classbridges_1_1_color_html"><div class="ttname"><a href="classbridges_1_1_color.html">bridges::Color</a></div><div class="ttdoc">This class represents Color, and supports rgba, hexadecimal and named color values. </div><div class="ttdef"><b>Definition:</b> Color.h:43</div></div>
 <div class="ttc" id="classbridges_1_1_link_visualizer_html_a4b244bde324fc61c262954e590db20a6"><div class="ttname"><a href="classbridges_1_1_link_visualizer.html#a4b244bde324fc61c262954e590db20a6">bridges::LinkVisualizer::getColor</a></div><div class="ttdeci">Color getColor() const </div><div class="ttdef"><b>Definition:</b> LinkVisualizer.h:118</div></div>
 <div class="ttc" id="classbridges_1_1_graph_adj_matrix_html"><div class="ttname"><a href="classbridges_1_1_graph_adj_matrix.html">bridges::GraphAdjMatrix</a></div><div class="ttdoc">This class provides methods to represent adjacency matrix based graphs. </div><div class="ttdef"><b>Definition:</b> Element.h:18</div></div>
 <div class="ttc" id="classbridges_1_1_element_html_a1dcdcd8948db683fc109687fe5d9c8e1"><div class="ttname"><a href="classbridges_1_1_element.html#a1dcdcd8948db683fc109687fe5d9c8e1">bridges::Element::~Element</a></div><div class="ttdeci">virtual ~Element()</div><div class="ttdef"><b>Definition:</b> Element.h:88</div></div>
@@ -420,7 +420,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="namespacebridges_html"><div class="ttname"><a href="namespacebridges.html">bridges</a></div><div class="ttdoc">This class can be used to create arrays of type Element<E> where E is a generic type representation a...</div><div class="ttdef"><b>Definition:</b> Array.h:24</div></div>
 <div class="ttc" id="classbridges_1_1_graph_adj_list_html"><div class="ttname"><a href="classbridges_1_1_graph_adj_list.html">bridges::GraphAdjList</a></div><div class="ttdoc">This class provides methods to represent adjacency list based graphs. </div><div class="ttdef"><b>Definition:</b> Element.h:17</div></div>
 <div class="ttc" id="namespacebridges_html_a9bef552535e3f5bbfc2ca586cb5044c6"><div class="ttname"><a href="namespacebridges.html#a9bef552535e3f5bbfc2ca586cb5044c6">bridges::OPEN_CURLY</a></div><div class="ttdeci">const string OPEN_CURLY</div><div class="ttdef"><b>Definition:</b> DataStructure.h:51</div></div>
-<div class="ttc" id="classbridges_1_1_color_html_ad623a08fcd93b60831bdc80acbc30cb6"><div class="ttname"><a href="classbridges_1_1_color.html#ad623a08fcd93b60831bdc80acbc30cb6">bridges::Color::getBlue</a></div><div class="ttdeci">int getBlue() const </div><div class="ttdef"><b>Definition:</b> Color.h:110</div></div>
+<div class="ttc" id="classbridges_1_1_color_html_ad623a08fcd93b60831bdc80acbc30cb6"><div class="ttname"><a href="classbridges_1_1_color.html#ad623a08fcd93b60831bdc80acbc30cb6">bridges::Color::getBlue</a></div><div class="ttdeci">int getBlue() const </div><div class="ttdef"><b>Definition:</b> Color.h:116</div></div>
 <div class="ttc" id="classbridges_1_1_array_html"><div class="ttname"><a href="classbridges_1_1_array.html">bridges::Array</a></div><div class="ttdoc">A BRIDGES array type. </div><div class="ttdef"><b>Definition:</b> Array.h:38</div></div>
 <div class="ttc" id="namespacebridges_html_a9cbd20a3f223f32670280b954061f274"><div class="ttname"><a href="namespacebridges.html#a9cbd20a3f223f32670280b954061f274">bridges::CLOSE_BOX</a></div><div class="ttdeci">const string CLOSE_BOX</div><div class="ttdef"><b>Definition:</b> DataStructure.h:54</div></div>
 <div class="ttc" id="classbridges_1_1_element_html_ac6fa7b04e28a1e9b8d8f2d395dd6e2c1"><div class="ttname"><a href="classbridges_1_1_element.html#ac6fa7b04e28a1e9b8d8f2d395dd6e2c1">bridges::Element::getLinkRepresentation</a></div><div class="ttdeci">static const string getLinkRepresentation(const LinkVisualizer &amp;lv, const string &amp;src, const string &amp;dest)</div><div class="ttdef"><b>Definition:</b> Element.h:215</div></div>
@@ -429,7 +429,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="namespacebridges_html_a1b4050586bd708782ae0d4f3b06b9579aefd26c044477c7b165bc744110e0ee93"><div class="ttname"><a href="namespacebridges.html#a1b4050586bd708782ae0d4f3b06b9579aefd26c044477c7b165bc744110e0ee93">bridges::DIAMOND</a></div><div class="ttdef"><b>Definition:</b> ElementVisualizer.h:9</div></div>
 <div class="ttc" id="_link_visualizer_8h_html"><div class="ttname"><a href="_link_visualizer_8h.html">LinkVisualizer.h</a></div></div>
 <div class="ttc" id="classbridges_1_1_element_html_aa8dd91d04c22c697f7c500a18642282f"><div class="ttname"><a href="classbridges_1_1_element.html#aa8dd91d04c22c697f7c500a18642282f">bridges::Element::getLinkVisualizer</a></div><div class="ttdeci">LinkVisualizer * getLinkVisualizer(const Element *el)</div><div class="ttdef"><b>Definition:</b> Element.h:113</div></div>
-<div class="ttc" id="classbridges_1_1_color_html_a7ee04a0a4a4788d0a8671fb5d46cb4f8"><div class="ttname"><a href="classbridges_1_1_color.html#a7ee04a0a4a4788d0a8671fb5d46cb4f8">bridges::Color::getGreen</a></div><div class="ttdeci">int getGreen() const </div><div class="ttdef"><b>Definition:</b> Color.h:106</div></div>
+<div class="ttc" id="classbridges_1_1_color_html_a7ee04a0a4a4788d0a8671fb5d46cb4f8"><div class="ttname"><a href="classbridges_1_1_color.html#a7ee04a0a4a4788d0a8671fb5d46cb4f8">bridges::Color::getGreen</a></div><div class="ttdeci">int getGreen() const </div><div class="ttdef"><b>Definition:</b> Color.h:112</div></div>
 <div class="ttc" id="namespacebridges_html_a1b4050586bd708782ae0d4f3b06b9579a4fc84095f1e7f3e664913b93050196e2"><div class="ttname"><a href="namespacebridges.html#a1b4050586bd708782ae0d4f3b06b9579a4fc84095f1e7f3e664913b93050196e2">bridges::SQUARE</a></div><div class="ttdef"><b>Definition:</b> ElementVisualizer.h:9</div></div>
 <div class="ttc" id="classbridges_1_1_element_visualizer_html_a93012c4fb2d8a67128b5c83cc8e5c190"><div class="ttname"><a href="classbridges_1_1_element_visualizer.html#a93012c4fb2d8a67128b5c83cc8e5c190">bridges::ElementVisualizer::getColor</a></div><div class="ttdeci">Color getColor() const </div><div class="ttdef"><b>Definition:</b> ElementVisualizer.h:76</div></div>
 <div class="ttc" id="classbridges_1_1_element_html_a737cb19281b6aa45a5a1dc9d592dad93"><div class="ttname"><a href="classbridges_1_1_element.html#a737cb19281b6aa45a5a1dc9d592dad93">bridges::Element::setValue</a></div><div class="ttdeci">void setValue(const E &amp;val)</div><div class="ttdef"><b>Definition:</b> Element.h:160</div></div>
@@ -445,7 +445,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 24 2018 15:02:40 for Bridges-C++-2.3 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Sep 4 2018 07:30:36 for Bridges-C++-2.3 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

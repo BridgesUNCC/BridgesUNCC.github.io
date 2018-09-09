@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Bridges-C++-2.3: /Users/krs/gr/bridges/bridges17/cxx/src/BTElement.h Source File</title>
+<title>Bridges-C++-2.3: /Users/kalpathi/gr/bridges/bridges17/cxx/src/BTElement.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Bridges-C++-2.3
-   &#160;<span id="projectnumber">2.3.3</span>
+   &#160;<span id="projectnumber">2.3.4</span>
    </div>
    <div id="projectbrief">Bridges(C++API)</div>
   </td>
@@ -82,7 +82,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_0f88b13254f5d32c09137ed1e4735e11.html">gr</a></li><li class="navelem"><a class="el" href="dir_ec6b7a099699bab914420e1cd3290ffd.html">bridges</a></li><li class="navelem"><a class="el" href="dir_00b9fdd1753fc407d0f3571752f912be.html">bridges17</a></li><li class="navelem"><a class="el" href="dir_6216a1c32d764ab3482b2d2f063ba9c1.html">cxx</a></li><li class="navelem"><a class="el" href="dir_2ec32c9665f5c5dee1b411ddd826ee4d.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_b42fb75b1f87d76f4d4256c1aac6dc30.html">kalpathi</a></li><li class="navelem"><a class="el" href="dir_6a559d950816c3f913e60a02ee4a8cce.html">gr</a></li><li class="navelem"><a class="el" href="dir_91a353a1b034a7d2c3b1f03731a4725c.html">bridges</a></li><li class="navelem"><a class="el" href="dir_9bfd627679bcc1ebcf0d575378227e54.html">bridges17</a></li><li class="navelem"><a class="el" href="dir_9a976ef22d9147cb09268720718db753.html">cxx</a></li><li class="navelem"><a class="el" href="dir_32aceba54777697b70bff5f56eda9058.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -95,46 +95,46 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_tree_element_8h.html">TreeElement.h</a>&quot;</span> <span class="comment">//string, using std</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacebridges.html">bridges</a>{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> E&gt;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classbridges_1_1_b_t_element.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classbridges_1_1_b_t_element.html">BTElement</a> : <span class="keyword">public</span> <a class="code" href="classbridges_1_1_tree_element.html">TreeElement</a>&lt;E&gt; {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">int</span> leftPos = 0, rightPos = 1;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classbridges_1_1_b_t_element.html#a8abf38e5d2d70c247de6a6fe6b90bf1b">   32</a></span>&#160;        <a class="code" href="classbridges_1_1_b_t_element.html#a8abf38e5d2d70c247de6a6fe6b90bf1b">BTElement</a>(<a class="code" href="classbridges_1_1_b_t_element.html">BTElement</a>* l,<a class="code" href="classbridges_1_1_b_t_element.html">BTElement</a>* r,<span class="keyword">const</span> E&amp; e = E(),</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; lab = <span class="keywordtype">string</span>()) : </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                    <a class="code" href="classbridges_1_1_tree_element.html">TreeElement</a>&lt;E&gt;(e, lab) {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                        this-&gt;<a class="code" href="classbridges_1_1_tree_element.html#a5e252fa16df0e673526ba4b08c8d3203">addChild</a>(l); </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                        this-&gt;<a class="code" href="classbridges_1_1_tree_element.html#a5e252fa16df0e673526ba4b08c8d3203">addChild</a>(r);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                    }</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classbridges_1_1_b_t_element.html#afdc1d11d1d65b23007334d337c279c3a">   46</a></span>&#160;        <a class="code" href="classbridges_1_1_b_t_element.html#afdc1d11d1d65b23007334d337c279c3a">BTElement</a>(<span class="keyword">const</span> E&amp; e = E(),<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; lab = <span class="keywordtype">string</span>()) </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                    : <a class="code" href="classbridges_1_1_b_t_element.html">BTElement</a>(nullptr,nullptr,e,lab) {}</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacebridges.html">bridges</a> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> E&gt;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classbridges_1_1_b_t_element.html">   18</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classbridges_1_1_b_t_element.html">BTElement</a> : <span class="keyword">public</span> <a class="code" href="classbridges_1_1_tree_element.html">TreeElement</a>&lt;E&gt; {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keywordtype">int</span> leftPos = 0, rightPos = 1;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classbridges_1_1_b_t_element.html#a8abf38e5d2d70c247de6a6fe6b90bf1b">   32</a></span>&#160;            <a class="code" href="classbridges_1_1_b_t_element.html#a8abf38e5d2d70c247de6a6fe6b90bf1b">BTElement</a>(<a class="code" href="classbridges_1_1_b_t_element.html">BTElement</a>* l, <a class="code" href="classbridges_1_1_b_t_element.html">BTElement</a>* r, <span class="keyword">const</span> E&amp; e = E(),</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; lab = <span class="keywordtype">string</span>()) :</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <a class="code" href="classbridges_1_1_tree_element.html">TreeElement</a>&lt;E&gt;(e, lab) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                this-&gt;<a class="code" href="classbridges_1_1_tree_element.html#a5e252fa16df0e673526ba4b08c8d3203">addChild</a>(l);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                this-&gt;<a class="code" href="classbridges_1_1_tree_element.html#a5e252fa16df0e673526ba4b08c8d3203">addChild</a>(r);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            }</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classbridges_1_1_b_t_element.html#afdc1d11d1d65b23007334d337c279c3a">   46</a></span>&#160;            <a class="code" href="classbridges_1_1_b_t_element.html#afdc1d11d1d65b23007334d337c279c3a">BTElement</a>(<span class="keyword">const</span> E&amp; e = E(), <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; lab = <span class="keywordtype">string</span>())</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                : <a class="code" href="classbridges_1_1_b_t_element.html">BTElement</a>(nullptr, nullptr, e, lab) {}</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classbridges_1_1_b_t_element.html#ad5b614c00d40a703be0e5a89f92df7c7">   53</a></span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">string</span> <a class="code" href="classbridges_1_1_b_t_element.html#ad5b614c00d40a703be0e5a89f92df7c7">getDStype</a>()<span class="keyword"> const override </span>{</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;BinaryTree&quot;</span>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classbridges_1_1_b_t_element.html#ad5b614c00d40a703be0e5a89f92df7c7">   53</a></span>&#160;            <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">string</span> <a class="code" href="classbridges_1_1_b_t_element.html#ad5b614c00d40a703be0e5a89f92df7c7">getDStype</a>()<span class="keyword"> const override </span>{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <span class="keywordflow">return</span> <span class="stringliteral">&quot;BinaryTree&quot;</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            }</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classbridges_1_1_b_t_element.html#ab5955c2611b6ae8c3c48508e3e983f87">   60</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classbridges_1_1_b_t_element.html">BTElement</a>* <a class="code" href="classbridges_1_1_b_t_element.html#ab5955c2611b6ae8c3c48508e3e983f87">getLeft</a>() {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="classbridges_1_1_b_t_element.html">BTElement</a>*<span class="keyword">&gt;</span>(this-&gt;<a class="code" href="classbridges_1_1_tree_element.html#a14ce2d5b3a4df29c93a0c37dbe73f7a5">getChild</a>(leftPos));</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classbridges_1_1_b_t_element.html#a8f4783c03397db330cce37b3592a31ce">   64</a></span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classbridges_1_1_b_t_element.html">BTElement</a>* <a class="code" href="classbridges_1_1_b_t_element.html#a8f4783c03397db330cce37b3592a31ce">getLeft</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="classbridges_1_1_b_t_element.html">BTElement</a>*<span class="keyword">&gt;</span>(this-&gt;<a class="code" href="classbridges_1_1_tree_element.html#a14ce2d5b3a4df29c93a0c37dbe73f7a5">getChild</a>(leftPos));</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classbridges_1_1_b_t_element.html#a86f58ed6311eeb7eddc76188c423781c">   68</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classbridges_1_1_b_t_element.html#a86f58ed6311eeb7eddc76188c423781c">setLeft</a>(<a class="code" href="classbridges_1_1_b_t_element.html">BTElement</a>* l){</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            this-&gt;<a class="code" href="classbridges_1_1_tree_element.html#aa12cb7cb4b4f559bdf0967872b0a6e7d">setChild</a>(leftPos,l);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classbridges_1_1_b_t_element.html#ab5955c2611b6ae8c3c48508e3e983f87">   60</a></span>&#160;            <span class="keyword">virtual</span> <a class="code" href="classbridges_1_1_b_t_element.html">BTElement</a>* <a class="code" href="classbridges_1_1_b_t_element.html#ab5955c2611b6ae8c3c48508e3e983f87">getLeft</a>() {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="classbridges_1_1_b_t_element.html">BTElement</a>*<span class="keyword">&gt;</span>(this-&gt;<a class="code" href="classbridges_1_1_tree_element.html#a14ce2d5b3a4df29c93a0c37dbe73f7a5">getChild</a>(leftPos));</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            }</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classbridges_1_1_b_t_element.html#a8f4783c03397db330cce37b3592a31ce">   64</a></span>&#160;            <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classbridges_1_1_b_t_element.html">BTElement</a>* <a class="code" href="classbridges_1_1_b_t_element.html#a8f4783c03397db330cce37b3592a31ce">getLeft</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="classbridges_1_1_b_t_element.html">BTElement</a>*<span class="keyword">&gt;</span>(this-&gt;<a class="code" href="classbridges_1_1_tree_element.html#a14ce2d5b3a4df29c93a0c37dbe73f7a5">getChild</a>(leftPos));</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            }</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classbridges_1_1_b_t_element.html#a86f58ed6311eeb7eddc76188c423781c">   68</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classbridges_1_1_b_t_element.html#a86f58ed6311eeb7eddc76188c423781c">setLeft</a>(<a class="code" href="classbridges_1_1_b_t_element.html">BTElement</a>* l) {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                this-&gt;<a class="code" href="classbridges_1_1_tree_element.html#aa12cb7cb4b4f559bdf0967872b0a6e7d">setChild</a>(leftPos, l);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            }</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classbridges_1_1_b_t_element.html#a931de8a71c04479a4aa0885ecee2a855">   73</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classbridges_1_1_b_t_element.html">BTElement</a>* <a class="code" href="classbridges_1_1_b_t_element.html#a931de8a71c04479a4aa0885ecee2a855">getRight</a>() {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="classbridges_1_1_b_t_element.html">BTElement</a>*<span class="keyword">&gt;</span>(this-&gt;<a class="code" href="classbridges_1_1_tree_element.html#a14ce2d5b3a4df29c93a0c37dbe73f7a5">getChild</a>(rightPos));</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classbridges_1_1_b_t_element.html#a931de8a71c04479a4aa0885ecee2a855">   73</a></span>&#160;            <span class="keyword">virtual</span> <a class="code" href="classbridges_1_1_b_t_element.html">BTElement</a>* <a class="code" href="classbridges_1_1_b_t_element.html#a931de8a71c04479a4aa0885ecee2a855">getRight</a>() {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="classbridges_1_1_b_t_element.html">BTElement</a>*<span class="keyword">&gt;</span>(this-&gt;<a class="code" href="classbridges_1_1_tree_element.html#a14ce2d5b3a4df29c93a0c37dbe73f7a5">getChild</a>(rightPos));</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            }</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classbridges_1_1_b_t_element.html#a08b04d11b921dde0db7c5e20961d0e2d">   78</a></span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classbridges_1_1_b_t_element.html">BTElement</a>* <a class="code" href="classbridges_1_1_b_t_element.html#a08b04d11b921dde0db7c5e20961d0e2d">getRight</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="classbridges_1_1_b_t_element.html">BTElement</a>*<span class="keyword">&gt;</span>(this-&gt;<a class="code" href="classbridges_1_1_tree_element.html#a14ce2d5b3a4df29c93a0c37dbe73f7a5">getChild</a>(rightPos));</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }</div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classbridges_1_1_b_t_element.html#a19cf1ad19b8dd33e0539d77ed7f5c7f6">   82</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classbridges_1_1_b_t_element.html#a19cf1ad19b8dd33e0539d77ed7f5c7f6">setRight</a>(<a class="code" href="classbridges_1_1_b_t_element.html">BTElement</a>* r){</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            this-&gt;<a class="code" href="classbridges_1_1_tree_element.html#aa12cb7cb4b4f559bdf0967872b0a6e7d">setChild</a>(rightPos, r);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}; <span class="comment">//end of BTElement class</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classbridges_1_1_b_t_element.html#a08b04d11b921dde0db7c5e20961d0e2d">   78</a></span>&#160;            <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classbridges_1_1_b_t_element.html">BTElement</a>* <a class="code" href="classbridges_1_1_b_t_element.html#a08b04d11b921dde0db7c5e20961d0e2d">getRight</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="classbridges_1_1_b_t_element.html">BTElement</a>*<span class="keyword">&gt;</span>(this-&gt;<a class="code" href="classbridges_1_1_tree_element.html#a14ce2d5b3a4df29c93a0c37dbe73f7a5">getChild</a>(rightPos));</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            }</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classbridges_1_1_b_t_element.html#a19cf1ad19b8dd33e0539d77ed7f5c7f6">   82</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classbridges_1_1_b_t_element.html#a19cf1ad19b8dd33e0539d77ed7f5c7f6">setRight</a>(<a class="code" href="classbridges_1_1_b_t_element.html">BTElement</a>* r) {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                this-&gt;<a class="code" href="classbridges_1_1_tree_element.html#aa12cb7cb4b4f559bdf0967872b0a6e7d">setChild</a>(rightPos, r);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }; <span class="comment">//end of BTElement class</span></div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}<span class="comment">//end of bridges namespace</span></div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#endif</span></div>
@@ -157,7 +157,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 24 2018 15:02:40 for Bridges-C++-2.3 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Sep 4 2018 07:30:36 for Bridges-C++-2.3 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

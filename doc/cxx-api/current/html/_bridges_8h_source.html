@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Bridges-C++-2.3: /Users/krs/gr/bridges/bridges17/cxx/src/Bridges.h Source File</title>
+<title>Bridges-C++-2.3: /Users/kalpathi/gr/bridges/bridges17/cxx/src/Bridges.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Bridges-C++-2.3
-   &#160;<span id="projectnumber">2.3.3</span>
+   &#160;<span id="projectnumber">2.3.4</span>
    </div>
    <div id="projectbrief">Bridges(C++API)</div>
   </td>
@@ -82,7 +82,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_0f88b13254f5d32c09137ed1e4735e11.html">gr</a></li><li class="navelem"><a class="el" href="dir_ec6b7a099699bab914420e1cd3290ffd.html">bridges</a></li><li class="navelem"><a class="el" href="dir_00b9fdd1753fc407d0f3571752f912be.html">bridges17</a></li><li class="navelem"><a class="el" href="dir_6216a1c32d764ab3482b2d2f063ba9c1.html">cxx</a></li><li class="navelem"><a class="el" href="dir_2ec32c9665f5c5dee1b411ddd826ee4d.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_b42fb75b1f87d76f4d4256c1aac6dc30.html">kalpathi</a></li><li class="navelem"><a class="el" href="dir_6a559d950816c3f913e60a02ee4a8cce.html">gr</a></li><li class="navelem"><a class="el" href="dir_91a353a1b034a7d2c3b1f03731a4725c.html">bridges</a></li><li class="navelem"><a class="el" href="dir_9bfd627679bcc1ebcf0d575378227e54.html">bridges17</a></li><li class="navelem"><a class="el" href="dir_9a976ef22d9147cb09268720718db753.html">cxx</a></li><li class="navelem"><a class="el" href="dir_32aceba54777697b70bff5f56eda9058.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -110,7 +110,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">int</span> *dims = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">static</span> <a class="code" href="classbridges_1_1_data_structure.html">DataStructure</a>* ds_handle = <span class="keyword">nullptr</span>;  <span class="comment">// data structure handle</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">string</span> server_url = <span class="stringliteral">&quot;http://bridges-cs.herokuapp.com&quot;</span>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                            <span class="comment">// map overlay options</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="comment">// map overlay options</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">string</span> map_overlay_options[] = {<span class="stringliteral">&quot;cartesian&quot;</span>, <span class="stringliteral">&quot;albersusa&quot;</span>, <span class="stringliteral">&quot;equirectangular&quot;</span>};</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> map_overlay = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">string</span> coord_system_type = <span class="stringliteral">&quot;cartesian&quot;</span>;</div>
@@ -182,7 +182,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                server_url = <span class="stringliteral">&quot;http://bridges-cs.herokuapp.com&quot;</span>;</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (server_type == <span class="stringliteral">&quot;clone&quot;</span>)</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                server_url = <span class="stringliteral">&quot;http://bridges-clone.herokuapp.com&quot;</span>;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (server_type == <span class="stringliteral">&quot;local&quot;</span>) </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (server_type == <span class="stringliteral">&quot;local&quot;</span>)</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                server_url = <span class="stringliteral">&quot;http://127.0.0.1:3000&quot;</span>;</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        }</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
@@ -192,12 +192,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
 <div class="line"><a name="l00189"></a><span class="lineno"><a class="line" href="namespacebridges_1_1_bridges.html#ad00c07d3a028110424909081a94c4013">  189</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="namespacebridges_1_1_bridges.html#ad00c07d3a028110424909081a94c4013">setCoordSystemType</a> (<span class="keywordtype">string</span> coord) {</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            std::transform(coord.begin(), coord.end(), coord.begin(), ::tolower);</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="keywordflow">if</span> (coord == <span class="stringliteral">&quot;cartesian&quot;</span> ||coord == <span class="stringliteral">&quot;albersusa&quot;</span> || coord == <span class="stringliteral">&quot;equirectangular&quot;</span>)</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="keywordflow">if</span> (coord == <span class="stringliteral">&quot;cartesian&quot;</span> || coord == <span class="stringliteral">&quot;albersusa&quot;</span> || coord == <span class="stringliteral">&quot;equirectangular&quot;</span>)</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                coord_system_type = coord;</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            <span class="keywordflow">else</span>  {</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                cout &lt;&lt; <span class="stringliteral">&quot;Unrecognized coordinate system \&#39;&quot;</span> + coord + <span class="stringliteral">&quot;\&#39;, defaulting to &quot;</span> </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                cout &lt;&lt; <span class="stringliteral">&quot;Unrecognized coordinate system \&#39;&quot;</span> + coord + <span class="stringliteral">&quot;\&#39;, defaulting to &quot;</span></div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                    &lt;&lt; <span class="stringliteral">&quot;cartesian. Options:&quot;</span>;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                <span class="keywordflow">for</span> (<span class="keyword">auto</span> proj : map_overlay_options) </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                <span class="keywordflow">for</span> (<span class="keyword">auto</span> proj : map_overlay_options)</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                    cout &lt;&lt;  + <span class="stringliteral">&quot;\t&quot;</span> ;</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                coord_system_type = <span class="stringliteral">&quot;cartesian&quot;</span>;</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            }</div>
@@ -246,10 +246,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                    <a class="code" href="namespacebridges.html#a9cbd20a3f223f32670280b954061f274">CLOSE_BOX</a> + <a class="code" href="namespacebridges.html#a74087afbaa635d3c3d837cc3b44c0162">COMMA</a>;</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            }</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ds_type == <span class="stringliteral">&quot;ColorGrid&quot;</span>) {</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                        <span class="comment">// get dimensions</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                <span class="comment">// get dimensions</span></div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                ds_json += <a class="code" href="namespacebridges.html#acd8357e88562cbb7e60bea3fac422ac3">QUOTE</a> + <span class="stringliteral">&quot;dimensions&quot;</span> + <a class="code" href="namespacebridges.html#acd8357e88562cbb7e60bea3fac422ac3">QUOTE</a> + <a class="code" href="namespacebridges.html#a039dca813ca3a9b4c8d8a866c6fa8445">COLON</a> +</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                    <a class="code" href="namespacebridges.html#a6b481335016325fe202a4e2fedd0af14">OPEN_BOX</a> +</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                        to_string(dims[0]) + COMMA + to_string(dims[1]) +</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                    to_string(dims[0]) + COMMA + to_string(dims[1]) +</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                    <a class="code" href="namespacebridges.html#a9cbd20a3f223f32670280b954061f274">CLOSE_BOX</a> + <a class="code" href="namespacebridges.html#a74087afbaa635d3c3d837cc3b44c0162">COMMA</a>;</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            }</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
@@ -270,16 +270,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                ds_json += json_nodes_links.first + <a class="code" href="namespacebridges.html#aa0d8f65415cfe7cdca23401137d40ca9">CLOSE_CURLY</a>;</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            }</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ds_type == <span class="stringliteral">&quot;ColorGrid&quot;</span>) {</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                ds_json += </div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                        <a class="code" href="namespacebridges.html#a6b481335016325fe202a4e2fedd0af14">OPEN_BOX</a> + <a class="code" href="namespacebridges.html#acd8357e88562cbb7e60bea3fac422ac3">QUOTE</a> + json_nodes_links.first + <a class="code" href="namespacebridges.html#acd8357e88562cbb7e60bea3fac422ac3">QUOTE</a> + <a class="code" href="namespacebridges.html#a9cbd20a3f223f32670280b954061f274">CLOSE_BOX</a> </div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                         + <a class="code" href="namespacebridges.html#aa0d8f65415cfe7cdca23401137d40ca9">CLOSE_CURLY</a>;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                ds_json +=</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                    <a class="code" href="namespacebridges.html#a6b481335016325fe202a4e2fedd0af14">OPEN_BOX</a> + <a class="code" href="namespacebridges.html#acd8357e88562cbb7e60bea3fac422ac3">QUOTE</a> + json_nodes_links.first + <a class="code" href="namespacebridges.html#acd8357e88562cbb7e60bea3fac422ac3">QUOTE</a> + <a class="code" href="namespacebridges.html#a9cbd20a3f223f32670280b954061f274">CLOSE_BOX</a></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                    + <a class="code" href="namespacebridges.html#aa0d8f65415cfe7cdca23401137d40ca9">CLOSE_CURLY</a>;</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            }</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                ds_json += </div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                        <a class="code" href="namespacebridges.html#a6b481335016325fe202a4e2fedd0af14">OPEN_BOX</a> + json_nodes_links.first + <a class="code" href="namespacebridges.html#a9cbd20a3f223f32670280b954061f274">CLOSE_BOX</a> + COMMA +</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                            <a class="code" href="namespacebridges.html#acd8357e88562cbb7e60bea3fac422ac3">QUOTE</a> + <span class="stringliteral">&quot;links&quot;</span> + <a class="code" href="namespacebridges.html#acd8357e88562cbb7e60bea3fac422ac3">QUOTE</a> + COLON + <a class="code" href="namespacebridges.html#a6b481335016325fe202a4e2fedd0af14">OPEN_BOX</a> + </div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                            json_nodes_links.second + <a class="code" href="namespacebridges.html#a9cbd20a3f223f32670280b954061f274">CLOSE_BOX</a> + </div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                        <a class="code" href="namespacebridges.html#aa0d8f65415cfe7cdca23401137d40ca9">CLOSE_CURLY</a>;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                ds_json +=</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                    <a class="code" href="namespacebridges.html#a6b481335016325fe202a4e2fedd0af14">OPEN_BOX</a> + json_nodes_links.first + <a class="code" href="namespacebridges.html#a9cbd20a3f223f32670280b954061f274">CLOSE_BOX</a> + COMMA +</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                    <a class="code" href="namespacebridges.html#acd8357e88562cbb7e60bea3fac422ac3">QUOTE</a> + <span class="stringliteral">&quot;links&quot;</span> + <a class="code" href="namespacebridges.html#acd8357e88562cbb7e60bea3fac422ac3">QUOTE</a> + COLON + <a class="code" href="namespacebridges.html#a6b481335016325fe202a4e2fedd0af14">OPEN_BOX</a> +</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                    json_nodes_links.second + <a class="code" href="namespacebridges.html#a9cbd20a3f223f32670280b954061f274">CLOSE_BOX</a> +</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                    <a class="code" href="namespacebridges.html#aa0d8f65415cfe7cdca23401137d40ca9">CLOSE_CURLY</a>;</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            }</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            <span class="comment">//</span></div>
@@ -292,7 +292,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            <span class="keywordflow">try</span> {</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                ServerComm::makeRequest(BASE_URL + to_string(assn_num) + <span class="stringliteral">&quot;.&quot;</span> +</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                    (part &gt; 9 ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot;0&quot;</span>) + to_string(part) + <span class="stringliteral">&quot;?apikey=&quot;</span> + api_key +</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                                            <span class="stringliteral">&quot;&amp;username=&quot;</span> + user_name,</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                    <span class="stringliteral">&quot;&amp;username=&quot;</span> + user_name,</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                {<span class="stringliteral">&quot;Content-Type: text/plain&quot;</span>}, ds_json);</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                cout &lt;&lt; <span class="stringliteral">&quot;Success: Assignment posted to the server. &quot;</span> &lt;&lt; endl &lt;&lt;</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                    <span class="stringliteral">&quot;Check out your visualization at:&quot;</span> &lt;&lt; endl &lt;&lt; endl</div>
@@ -300,12 +300,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                part++;</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            }</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            <span class="keywordflow">catch</span> (<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; error_str) {</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                cerr &lt;&lt; <span class="stringliteral">&quot;\nPosting assignment to the server failed!&quot;</span> &lt;&lt; endl </div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                cerr &lt;&lt; <span class="stringliteral">&quot;\nPosting assignment to the server failed!&quot;</span> &lt;&lt; endl</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                    &lt;&lt; error_str &lt;&lt; endl &lt;&lt; endl;</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                cerr &lt;&lt; <span class="stringliteral">&quot;Provided Bridges Credentials:&quot;</span> &lt;&lt; endl &lt;&lt;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                        <span class="stringliteral">&quot;\t User Name: &quot;</span> &lt;&lt; user_name &lt;&lt; endl &lt;&lt;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                        <span class="stringliteral">&quot;\t API Key: &quot;</span> &lt;&lt; api_key &lt;&lt; endl &lt;&lt;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                        <span class="stringliteral">&quot;\t Assignment Number: &quot;</span> &lt;&lt; assn_num &lt;&lt; endl;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                    <span class="stringliteral">&quot;\t User Name: &quot;</span> &lt;&lt; user_name &lt;&lt; endl &lt;&lt;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                    <span class="stringliteral">&quot;\t API Key: &quot;</span> &lt;&lt; api_key &lt;&lt; endl &lt;&lt;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                    <span class="stringliteral">&quot;\t Assignment Number: &quot;</span> &lt;&lt; assn_num &lt;&lt; endl;</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            }</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        }</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    }   <span class="comment">//end of Bridges namespace</span></div>
@@ -350,7 +350,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 24 2018 15:02:40 for Bridges-C++-2.3 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Sep 4 2018 07:30:36 for Bridges-C++-2.3 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>
