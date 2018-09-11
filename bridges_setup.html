@@ -76,6 +76,29 @@
 	<li> The C++ version works with the <a href = "https://curl.haxx.se">CURL</a> library,
 		for communicating with the web server and transmitting assignments for
 		visualization.
+	<li> <b>CURL Installation:</b> On Unix flavored platforms (OSX, Linux, Cloud 9), you
+		can install Curl as follows (on <b>Windows platforms</b>, follow the instructions
+		for MS Visual Studio below):
+		<ul> 
+		<li> Download Curl sources from <a href = https://curl.haxx.se/download.html></a>
+		<li> Explode the archive (using tar, unzip, bunzip2, etc.)
+		<li> Change to the folder containing the CURL sources and run the following 
+			commands from a terminal.
+		<ul>
+			<li>  ./configure  --prefix=path-to-install-curl
+			<li>  make
+			<li>  sudo make install
+		</ul> 
+		<li> 'path-to-install-curl' is replaced by the path where you want CURL to be 
+			installed.  For a full set of options, try <i>./configure --help </i> on your
+			terminal.
+		<li>By default (if install path is not provided with the configure command), 
+			CURL will be installed in  /usr/local
+		<li> The last command should be done using super user permission. If you do not
+			have that, then specify a path to a directory you have write access to.
+		<li> The library will be installed under a <b>lib</b> folder in the specified path 
+			and the include files will be under the <b>include</b> folder
+		</ul>
 	<li> For expert users, or users who prefer command line or makefiles, BRIDGES
 		programs can be compiled and linked with the curl library and executed, so long
 		as the include(both the Bridges and Curl headers) and library options
