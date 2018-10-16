@@ -180,7 +180,6 @@ boxfont setfont
 (bridges::DLelement< E >) cw
 (bridges::MLelement< E >) cw
 (bridges::BinTreeElement< E >) cw
-(bridges::BTElement< E >) cw
 (bridges::CircDLelement< E >) cw
 (bridges::BSTElement< K, E >) cw
 (bridges::AVLTreeElement< K, E >) cw
@@ -196,14 +195,13 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (bridges::Element< E >) 2.250000 4.000000 box
+ (bridges::Element< E >) 2.000000 4.000000 box
  (bridges::SLelement< E >) 1.000000 3.000000 box
- (bridges::TreeElement< E >) 3.500000 3.000000 box
+ (bridges::TreeElement< E >) 3.000000 3.000000 box
  (bridges::CircSLelement< E >) 0.000000 2.000000 box
  (bridges::DLelement< E >) 1.000000 2.000000 box
  (bridges::MLelement< E >) 2.000000 2.000000 box
  (bridges::BinTreeElement< E >) 3.000000 2.000000 box
- (bridges::BTElement< E >) 4.000000 2.000000 box
  (bridges::CircDLelement< E >) 1.000000 1.000000 box
  (bridges::BSTElement< K, E >) 3.000000 1.000000 box
  (bridges::AVLTreeElement< K, E >) 2.500000 0.000000 box
@@ -212,9 +210,9 @@ boundx scalefactor div boundy scalefactor div scale
 % ----- relations -----
 
 solid
-1 2.250000 3.250000 out
+1 2.000000 3.250000 out
 solid
-1.000000 3.500000 4.000000 conn
+1.000000 3.000000 4.000000 conn
 solid
 0 1.000000 3.750000 in
 solid
@@ -222,11 +220,9 @@ solid
 solid
 0.000000 2.000000 3.000000 conn
 solid
-0 3.500000 3.750000 in
+0 3.000000 3.750000 in
 solid
-1 3.500000 2.250000 out
-solid
-3.000000 4.000000 3.000000 conn
+1 3.000000 2.250000 out
 solid
 0 0.000000 2.750000 in
 solid
@@ -239,8 +235,6 @@ solid
 0 3.000000 2.750000 in
 solid
 1 3.000000 1.250000 out
-solid
-0 4.000000 2.750000 in
 solid
 0 1.000000 1.750000 in
 solid
