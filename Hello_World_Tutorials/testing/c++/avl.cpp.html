@@ -2,33 +2,25 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>~/graphics/bridges/site/bridges_web/Hello_World_Tutorials/testing/c++/avl.cpp.html</title>
-<meta name="Generator" content="Vim/8.0">
-<meta name="plugin-version" content="vim7.4_v2">
+<title>~/graphics/bridges/bridgesUNCC/Hello_World_Tutorials/testing/c++/avl.cpp.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v6">
 <meta name="syntax" content="c">
-<meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
-<meta name="colorscheme" content="none">
+<meta name="settings" content="use_css,no_progress">
 <style type="text/css">
 <!--
-pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+pre { font-family: monospace; color: #000000; background-color: #ffffff; }
 body { font-family: monospace; color: #000000; background-color: #ffffff; }
-* { font-size: 1em; }
-.Constant { color: #0000c0; text-decoration: underline; }
-.Statement { color: #008080; font-weight: bold; }
-.PreProc { color: #c000c0; text-decoration: underline; }
-.Type { color: #008000; text-decoration: underline; }
 .Comment { color: #c00000; font-weight: bold; }
+.Statement { color: #008080; font-weight: bold; }
+.Type { color: #008000; text-decoration: underline; }
+.Constant { color: #0000c0; text-decoration: underline; }
+.PreProc { color: #c000c0; text-decoration: underline; }
 -->
 </style>
-
-<script type='text/javascript'>
-<!--
-
--->
-</script>
 </head>
 <body>
-<pre id='vimCodeElement'>
+<pre>
 <span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
 <span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
 <span class="PreProc">#include </span><span class="Constant">&quot;AVLTreeElement.h&quot;</span>
@@ -37,57 +29,57 @@ body { font-family: monospace; color: #000000; background-color: #ffffff; }
 using namespace std;
 using namespace bridges;
 
-<span class="Type">int</span> main() {
+<span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
+        Bridges *bridges =  new Bridges(<span class="Constant">111</span>, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 
 
-	Bridges::initialize(<span class="Constant">11</span>, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+        <span class="Statement">if</span> (argc == <span class="Constant">4</span>)          <span class="Comment">// Server type provided</span>
+                bridges-&gt;setServer(argv[<span class="Constant">3</span>]);
 
-	AVLTreeElement&lt;<span class="Type">int</span>, string&gt; *tle0 =
-		new AVLTreeElement&lt;<span class="Type">int</span>, string&gt;(<span class="Constant">10</span>, <span class="Constant">&quot;10&quot;</span>, <span class="Constant">&quot;10&quot;</span>);
-	AVLTreeElement&lt;<span class="Type">int</span>, string&gt; *tle1 =
-		new AVLTreeElement&lt;<span class="Type">int</span>, string&gt;(<span class="Constant">5</span>, <span class="Constant">&quot;5&quot;</span>, <span class="Constant">&quot;5&quot;</span>);
-	AVLTreeElement&lt;<span class="Type">int</span>, string&gt; *tle2 =
-		new AVLTreeElement&lt;<span class="Type">int</span>, string&gt;(<span class="Constant">3</span>, <span class="Constant">&quot;3&quot;</span>, <span class="Constant">&quot;3&quot;</span>);
-	AVLTreeElement&lt;<span class="Type">int</span>, string&gt; *tle3 =
-		new AVLTreeElement&lt;<span class="Type">int</span>, string&gt;(<span class="Constant">20</span>, <span class="Constant">&quot;20&quot;</span>, <span class="Constant">&quot;20&quot;</span>);
+        AVLTreeElement&lt;<span class="Type">int</span>, string&gt; *tle0 =
+                new AVLTreeElement&lt;<span class="Type">int</span>, string&gt;(<span class="Constant">10</span>, <span class="Constant">&quot;10&quot;</span>, <span class="Constant">&quot;10&quot;</span>);
+        AVLTreeElement&lt;<span class="Type">int</span>, string&gt; *tle1 =
+                new AVLTreeElement&lt;<span class="Type">int</span>, string&gt;(<span class="Constant">5</span>, <span class="Constant">&quot;5&quot;</span>, <span class="Constant">&quot;5&quot;</span>);
+        AVLTreeElement&lt;<span class="Type">int</span>, string&gt; *tle2 =
+                new AVLTreeElement&lt;<span class="Type">int</span>, string&gt;(<span class="Constant">3</span>, <span class="Constant">&quot;3&quot;</span>, <span class="Constant">&quot;3&quot;</span>);
+        AVLTreeElement&lt;<span class="Type">int</span>, string&gt; *tle3 =
+                new AVLTreeElement&lt;<span class="Type">int</span>, string&gt;(<span class="Constant">20</span>, <span class="Constant">&quot;20&quot;</span>, <span class="Constant">&quot;20&quot;</span>);
 
-	<span class="Comment">//  link the nodes</span>
-	tle0-&gt;setLeft(tle1);
-	tle0-&gt;setRight(tle3);
-	tle1-&gt;setLeft(tle2);
+        <span class="Comment">//  link the nodes</span>
+        tle0-&gt;setLeft(tle1);
+        tle0-&gt;setRight(tle3);
+        tle1-&gt;setLeft(tle2);
 
-	<span class="Comment">// set attributes</span>
-	tle0-&gt;getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;red&quot;</span>));
-	tle1-&gt;getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;green&quot;</span>));
-	tle2-&gt;getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;blue&quot;</span>));
-	tle3-&gt;getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;yellow&quot;</span>));
+        <span class="Comment">// set attributes</span>
+        tle0-&gt;getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;red&quot;</span>));
+        tle1-&gt;getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;green&quot;</span>));
+        tle2-&gt;getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;blue&quot;</span>));
+        tle3-&gt;getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;yellow&quot;</span>));
 
-	tle0-&gt;getLinkVisualizer(tle1)-&gt;setColor(Color(<span class="Constant">&quot;red&quot;</span>));
-	tle1-&gt;getLinkVisualizer(tle2)-&gt;setColor(Color(<span class="Constant">&quot;green&quot;</span>));
-	tle0-&gt;getLinkVisualizer(tle3)-&gt;setColor(Color(<span class="Constant">&quot;blue&quot;</span>));
+        tle0-&gt;getLinkVisualizer(tle1)-&gt;setColor(Color(<span class="Constant">&quot;red&quot;</span>));
+        tle1-&gt;getLinkVisualizer(tle2)-&gt;setColor(Color(<span class="Constant">&quot;green&quot;</span>));
+        tle0-&gt;getLinkVisualizer(tle3)-&gt;setColor(Color(<span class="Constant">&quot;blue&quot;</span>));
 
-	<span class="Comment">// illustrate balance factors in the node labels</span>
-	tle0-&gt;setBalanceFactor(-<span class="Constant">1</span>);
-	tle1-&gt;setBalanceFactor(-<span class="Constant">1</span>);
-	tle2-&gt;setBalanceFactor(<span class="Constant">0</span>);
-	tle3-&gt;setBalanceFactor(<span class="Constant">0</span>);
+        <span class="Comment">// illustrate balance factors in the node labels</span>
+        tle0-&gt;setBalanceFactor(-<span class="Constant">1</span>);
+        tle1-&gt;setBalanceFactor(-<span class="Constant">1</span>);
+        tle2-&gt;setBalanceFactor(<span class="Constant">0</span>);
+        tle3-&gt;setBalanceFactor(<span class="Constant">0</span>);
 
-	<span class="Comment">// display the balance factors (on mouseover)</span>
-	tle0-&gt;setLabel(std::to_string(tle0-&gt;getBalanceFactor()));
-	tle1-&gt;setLabel(std::to_string(tle1-&gt;getBalanceFactor()));
-	tle2-&gt;setLabel(std::to_string(tle2-&gt;getBalanceFactor()));
-	tle3-&gt;setLabel(std::to_string(tle3-&gt;getBalanceFactor()));
+        <span class="Comment">// display the balance factors (on mouseover)</span>
+        tle0-&gt;setLabel(std::to_string(tle0-&gt;getBalanceFactor()));
+        tle1-&gt;setLabel(std::to_string(tle1-&gt;getBalanceFactor()));
+        tle2-&gt;setLabel(std::to_string(tle2-&gt;getBalanceFactor()));
+        tle3-&gt;setLabel(std::to_string(tle3-&gt;getBalanceFactor()));
 
-	Bridges::setTitle(<span class="Constant">&quot;AVL Tree Example&quot;</span>);
-	<span class="Comment">// provide BRIDGES the  handle to the tree structure</span>
-	Bridges::setDataStructure(tle0);
+        bridges-&gt;setTitle(<span class="Constant">&quot;AVL Tree Example&quot;</span>);
+        <span class="Comment">// provide BRIDGES the  handle to the tree structure</span>
+        bridges-&gt;setDataStructure(tle0);
 
+        bridges-&gt;visualize();
 
-	Bridges::visualize();
-
-	<span class="Statement">return</span> <span class="Constant">0</span>;
+        <span class="Statement">return</span> <span class="Constant">0</span>;
 }
 </pre>
 </body>
 </html>
-<!-- vim: set foldmethod=manual : -->

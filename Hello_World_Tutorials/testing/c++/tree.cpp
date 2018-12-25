@@ -5,9 +5,11 @@
 using namespace std;
 using namespace bridges;
 
-int main() {
+int main(int argc, char **argv) {
+	Bridges *bridges =  new Bridges(108, "YOUR_USER_ID", "YOUR_API_KEY");
 
-	Bridges::initialize(8, "YOUR_USER_ID", "YOUR_API_KEY");
+
+	bridges->setTitle("A General Tree Example");
 
 	TreeElement<string> *t0 = new TreeElement<string>("Hello", "Hello");
 	TreeElement<string> *t2 = new TreeElement<string>("This", "This");
@@ -42,11 +44,11 @@ int main() {
 	t0->getVisualizer()->setColor(Color("red"));
 	t0->getVisualizer()->setOpacity(0.3f);
 
-	Bridges::setTitle("A General Tree Example");
+	bridges->setTitle("A General Tree Example");
 	// provide BRIDGES the  handle to the tree structure
-	Bridges::setDataStructure(t0);
+	bridges->setDataStructure(t0);
 
-	Bridges::visualize();
+	bridges->visualize();
 
 	return 0;
 }

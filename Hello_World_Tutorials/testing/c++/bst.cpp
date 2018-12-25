@@ -14,16 +14,20 @@ BSTElement<float, EarthquakeUSGS> *insert (BSTElement<float, EarthquakeUSGS> *rt
 
 int max_quakes = 25;
 
-int main() {
+int main(int argc, char **argv) {
+	Bridges *bridges =  new Bridges(110, "YOUR_USER_ID", "YOUR_API_KEY");
+
+
 	string hilite_color = "orange",
 		   def_color = "green",
 		   end_color = "red";
 
-	Bridges::initialize(10, "YOUR_USER_ID", "YOUR_API_KEY");
 	// read the earth quake  data and build the BST
-	Bridges::setTitle("Recent Earthquakes (USGIS Data)");
+	bridges->setTitle("Recent Earthquakes (USGIS Data)");
 
-	vector<EarthquakeUSGS> eq_list = DataSource::getEarthquakeUSGSData(max_quakes);
+	DataSource *ds = new DataSource;
+
+	vector<EarthquakeUSGS> eq_list = ds->getEarthquakeUSGSData(max_quakes);
 
 	BSTElement<float, EarthquakeUSGS> *root = nullptr;
 
@@ -39,8 +43,8 @@ int main() {
 	}
 
 	// visualize the binary search tree
-	Bridges::setDataStructure(root);
-	Bridges::visualize();
+	bridges->setDataStructure(root);
+	bridges->visualize();
 
 	return 0;
 }

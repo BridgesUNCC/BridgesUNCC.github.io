@@ -15,10 +15,11 @@ CircDLelement<StudentInfo> *insertFront(
 	CircDLelement<StudentInfo> *tailElement,
 	CircDLelement<StudentInfo> *newElement);
 
-int main() {
-	Bridges::initialize(6, "YOUR_USER_ID", "YOUR_API_KEY");
+int main(int argc, char **argv) {
+	Bridges *bridges =  new Bridges(106, "YOUR_USER_ID", "YOUR_API_KEY");
 
-	Bridges::setTitle("An Example Circular Doubly Linked List");
+
+	bridges->setTitle("An Example Circular Doubly Linked List");
 
 	// create the linked list elements with
 	// student data
@@ -103,9 +104,9 @@ int main() {
 	}  while (current != head);
 
 	// set data structure to point to head
-	Bridges::setDataStructure(head);
+	bridges->setDataStructure(head);
 	// visualize the circular list
-	Bridges::visualize();
+	bridges->visualize();
 
 	return 0;
 }

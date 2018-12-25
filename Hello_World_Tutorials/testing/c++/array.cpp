@@ -3,9 +3,10 @@
 
 using namespace bridges;
 
-int main() {
+int main(int argc, char **argv) {
 
-	Bridges::initialize(0, "YOUR_USER_ID", "YOUR_API_KEY");
+
+	Bridges *bridges =  new Bridges(100, "YOUR_USER_ID", "YOUR_API_KEY");
 
 	Array<int> *arr = new Array<int>(10);
 
@@ -26,9 +27,9 @@ int main() {
 	arr->getElement(9).getVisualizer()->setColor(Color("black"));
 
 
-	Bridges::setTitle("Array Example");
-	Bridges::setDataStructure(arr);
-	Bridges::visualize();
+	bridges->setTitle("Array Example");
+	bridges->setDataStructure(arr);
+	bridges->visualize();
 
 	return 0;
 }

@@ -11,12 +11,12 @@ using namespace bridges;
 // This example illustrates using the Bridges color grid
 // We will build a checker grid using two different colors
 
-int main() {
-	// initialize BRIDGES
-	Bridges::initialize(14, "YOUR_USER_ID", "YOUR_API_KEY");
+int main(int argc, char **argv) {
+	Bridges *bridges =  new Bridges(114, "YOUR_USER_ID", "YOUR_API_KEY");
+
 
 	// set title for visualization
-	Bridges::setTitle("A Color Grid Example");
+	bridges->setTitle("A Color Grid Example");
 
 	int width = 200, height = 200;
 
@@ -52,9 +52,9 @@ int main() {
 					cg->set(x, y, Color(col));
 		}
 
-	Bridges::setDataStructure(cg);
+	bridges->setDataStructure(cg);
 
-	Bridges::visualize();
+	bridges->visualize();
 
 	return 0;
 }

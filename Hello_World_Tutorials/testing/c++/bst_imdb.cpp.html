@@ -2,34 +2,26 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>~/graphics/bridges/site/bridges_web/Hello_World_Tutorials/testing/c++/bst_imdb.cpp.html</title>
-<meta name="Generator" content="Vim/8.0">
-<meta name="plugin-version" content="vim7.4_v2">
+<title>~/graphics/bridges/bridgesUNCC/Hello_World_Tutorials/testing/c++/bst_imdb.cpp.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v6">
 <meta name="syntax" content="c">
-<meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
-<meta name="colorscheme" content="none">
+<meta name="settings" content="use_css,no_progress">
 <style type="text/css">
 <!--
-pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+pre { font-family: monospace; color: #000000; background-color: #ffffff; }
 body { font-family: monospace; color: #000000; background-color: #ffffff; }
-* { font-size: 1em; }
-.Constant { color: #0000c0; text-decoration: underline; }
 .Special { color: #c000c0; font-weight: bold; }
 .Statement { color: #008080; font-weight: bold; }
-.PreProc { color: #c000c0; text-decoration: underline; }
-.Type { color: #008000; text-decoration: underline; }
 .Comment { color: #c00000; font-weight: bold; }
+.Type { color: #008000; text-decoration: underline; }
+.Constant { color: #0000c0; text-decoration: underline; }
+.PreProc { color: #c000c0; text-decoration: underline; }
 -->
 </style>
-
-<script type='text/javascript'>
-<!--
-
--->
-</script>
 </head>
 <body>
-<pre id='vimCodeElement'>
+<pre>
 <span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
 <span class="PreProc">#include </span><span class="Constant">&lt;iostream&gt;</span>
 <span class="PreProc">#include </span><span class="Constant">&lt;unordered_map&gt;</span>
@@ -46,42 +38,42 @@ using namespace std;
 using namespace bridges;
 
 
-<span class="Type">int</span> main() {
-	string hilite_color = <span class="Constant">&quot;orange&quot;</span>,
-			def_color = <span class="Constant">&quot;green&quot;</span>,
-			end_color = <span class="Constant">&quot;red&quot;</span>;
+<span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
+    Bridges *bridges =  new Bridges(<span class="Constant">50</span>, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 
-	Bridges::initialize(<span class="Constant">10</span>, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
-								<span class="Comment">// read the earth quake  data and build the BST</span>
+        string hilite_color = <span class="Constant">&quot;orange&quot;</span>,
+                        def_color = <span class="Constant">&quot;green&quot;</span>,
+                        end_color = <span class="Constant">&quot;red&quot;</span>;
 
-	Bridges::setTitle(<span class="Constant">&quot;BST Example: IMDB Data&quot;</span>);
+                                                                <span class="Comment">// read the earth quake  data and build the BST</span>
+
+        bridges-&gt;setTitle(<span class="Constant">&quot;BST Example: IMDB Data&quot;</span>);
     vector&lt;ActorMovieIMDB&gt; actor_list = DataSource::getActorMovieIMDBData2(<span class="Constant">10</span>);
 
-	BST&lt;string, string&gt; *bst = new BST&lt;string, string&gt; ();
+        BST&lt;string, string&gt; *bst = new BST&lt;string, string&gt; ();
 
-	cout &lt;&lt; <span class="Constant">&quot;Size:&quot;</span> &lt;&lt; actor_list.size() &lt;&lt; endl;
+        cout &lt;&lt; <span class="Constant">&quot;Size:&quot;</span> &lt;&lt; actor_list.size() &lt;&lt; endl;
 
-					<span class="Comment">// store actors in a map and store all their movies </span>
-	unordered_map&lt;string, string&gt; act_map;
-	<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; actor_list.size(); k++) {
-		ActorMovieIMDB a = actor_list[k];
+                                        <span class="Comment">// store actors in a map and store all their movies </span>
+        unordered_map&lt;string, string&gt; act_map;
+        <span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; actor_list.size(); k++) {
+                ActorMovieIMDB a = actor_list[k];
 
-		string actor = a.getActor(), movie = a.getMovie();
-		<span class="Statement">if</span> (act_map.find(actor) != act_map.end())
-			act_map[actor] = act_map[actor] + <span class="Constant">&quot;</span><span class="Special">\\</span><span class="Constant">n&quot;</span> + movie + <span class="Constant">&quot;  [Rating :&quot;</span> + to_string(a.getMovieRating()) + <span class="Constant">&quot; ]&quot;</span>;
-		<span class="Statement">else</span>
-			act_map[actor] = movie + <span class="Constant">&quot;  [Rating :&quot;</span> + to_string(a.getMovieRating()) + <span class="Constant">&quot; ]&quot;</span>;
-	}
-	<span class="Statement">for</span> (<span class="Type">auto</span>&amp; k : act_map)
-		bst-&gt;insert(k.first, k.second);
+                string actor = a.getActor(), movie = a.getMovie();
+                <span class="Statement">if</span> (act_map.find(actor) != act_map.end())
+                        act_map[actor] = act_map[actor] + <span class="Constant">&quot;</span><span class="Special">\\</span><span class="Constant">n&quot;</span> + movie + <span class="Constant">&quot;  [Rating :&quot;</span> + to_string(a.getMovieRating()) + <span class="Constant">&quot; ]&quot;</span>;
+                <span class="Statement">else</span>
+                        act_map[actor] = movie + <span class="Constant">&quot;  [Rating :&quot;</span> + to_string(a.getMovieRating()) + <span class="Constant">&quot; ]&quot;</span>;
+        }
+        <span class="Statement">for</span> (<span class="Type">auto</span>&amp; k : act_map)
+                bst-&gt;insert(k.first, k.second);
 
-					<span class="Comment">// visualize the binary search tree</span>
-	Bridges::setDataStructure(bst-&gt;getRoot());
-	Bridges::visualize();
+                                        <span class="Comment">// visualize the binary search tree</span>
+        bridges-&gt;setDataStructure(bst-&gt;getRoot());
+        bridges-&gt;visualize();
 
-	<span class="Statement">return</span> <span class="Constant">0</span>;
+        <span class="Statement">return</span> <span class="Constant">0</span>;
 }
 </pre>
 </body>
 </html>
-<!-- vim: set foldmethod=manual : -->

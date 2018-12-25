@@ -7,11 +7,12 @@ using namespace bridges;
 
 // helper function
 
-DLelement<StudentInfo> *insertFront(DLelement<StudentInfo> *front,
-	DLelement<StudentInfo> *new_el);
-int main() {
+DLelement<StudentInfo> *insertFront(DLelement<StudentInfo> *front, DLelement<StudentInfo> *new_el);
 
-	Bridges::initialize(4, "YOUR_USER_ID", "YOUR_API_KEY");
+int main(int argc, char **argv) {
+	Bridges *bridges =  new Bridges(104, "YOUR_USER_ID", "YOUR_API_KEY");
+
+
 
 	// load student info
 	int num_students = 5;
@@ -80,8 +81,8 @@ int main() {
 		curr = curr->getNext();
 	}
 
-	Bridges::setDataStructure(head);
-	Bridges::visualize();
+	bridges->setDataStructure(head);
+	bridges->visualize();
 
 	return 0;
 }

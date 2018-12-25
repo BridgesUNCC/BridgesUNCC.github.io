@@ -4,10 +4,11 @@
 
 using namespace bridges;
 
-int main()  {
-	//create the Bridges object
-	Bridges::initialize(7, "YOUR_USER_ID", "YOUR_API_KEY");
-	Bridges::setTitle("A Trivial Multilist Example");
+int main(int argc, char **argv)  {
+	Bridges *bridges =  new Bridges(107, "YOUR_USER_ID", "YOUR_API_KEY");
+
+
+	bridges->setTitle("A Trivial Multilist Example");
 
 	//create  a linked list
 
@@ -54,8 +55,8 @@ int main()  {
 
 	el0->getVisualizer()->setColor(Color("red"));
 	//set visualizer type
-	Bridges::setDataStructure(el0);
+	bridges->setDataStructure(el0);
 
 	// visualize the list
-	Bridges::visualize();
+	bridges->visualize();
 }

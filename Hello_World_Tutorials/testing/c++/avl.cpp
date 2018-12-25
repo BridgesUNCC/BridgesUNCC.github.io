@@ -6,10 +6,12 @@
 using namespace std;
 using namespace bridges;
 
-int main() {
+int main(int argc, char **argv) {
+	Bridges *bridges =  new Bridges(111, "YOUR_USER_ID", "YOUR_API_KEY");
 
 
-	Bridges::initialize(11, "YOUR_USER_ID", "YOUR_API_KEY");
+	if (argc == 4)		// Server type provided
+		bridges->setServer(argv[3]);
 
 	AVLTreeElement<int, string> *tle0 =
 		new AVLTreeElement<int, string>(10, "10", "10");
@@ -47,12 +49,11 @@ int main() {
 	tle2->setLabel(std::to_string(tle2->getBalanceFactor()));
 	tle3->setLabel(std::to_string(tle3->getBalanceFactor()));
 
-	Bridges::setTitle("AVL Tree Example");
+	bridges->setTitle("AVL Tree Example");
 	// provide BRIDGES the  handle to the tree structure
-	Bridges::setDataStructure(tle0);
+	bridges->setDataStructure(tle0);
 
-
-	Bridges::visualize();
+	bridges->visualize();
 
 	return 0;
 }

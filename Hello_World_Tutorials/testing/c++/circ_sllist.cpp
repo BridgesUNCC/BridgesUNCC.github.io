@@ -9,10 +9,9 @@
 
 using namespace bridges;
 
-int main () {
+int main (int argc, char **argv) {
+	Bridges *bridges =  new Bridges(105, "YOUR_USER_ID", "YOUR_API_KEY");
 
-	// note: you must fill in with your Bridges credentials
-	Bridges::initialize(5, "YOUR_USER_ID", "YOUR_API_KEY");
 
 	// create the linked list elements with
 	// student data
@@ -94,7 +93,7 @@ int main () {
 
 
 	// set data structure to point to head
-	Bridges::setDataStructure(head);
+	bridges->setDataStructure(head);
 	// visualize the circular list
-	Bridges::visualize();
+	bridges->visualize();
 }

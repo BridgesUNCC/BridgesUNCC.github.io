@@ -14,15 +14,16 @@ using namespace std;
 using namespace bridges;
 
 
-int main() {
+int main(int argc, char **argv) {
+    Bridges *bridges =  new Bridges(50, "YOUR_USER_ID", "YOUR_API_KEY");
+
 	string hilite_color = "orange", 
 			def_color = "green",
 			end_color = "red";
-		
-	Bridges::initialize(10, "YOUR_USER_ID", "YOUR_API_KEY");
+
 								// read the earth quake  data and build the BST
 
-	Bridges::setTitle("BST Example: IMDB Data");
+	bridges->setTitle("BST Example: IMDB Data");
     vector<ActorMovieIMDB> actor_list = DataSource::getActorMovieIMDBData2(10);
 
 	BST<string, string> *bst = new BST<string, string> ();
@@ -44,8 +45,8 @@ int main() {
 		bst->insert(k.first, k.second);
 
 					// visualize the binary search tree
-	Bridges::setDataStructure(bst->getRoot());
-	Bridges::visualize();
+	bridges->setDataStructure(bst->getRoot());
+	bridges->visualize();
 
 	return 0;
 }

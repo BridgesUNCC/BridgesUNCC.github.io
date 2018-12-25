@@ -2,13 +2,9 @@
 #
 #Platform specific variables
 #
+include ./env_vars.mk
+
 CC = clang++
-HOME = /Users/kalpathi
-BRIDGES_INCL = $(HOME)/gr/bridges/client/cxx/bridges17/src
-CURL_INCL = /usr/local/curl760/include
-CURL_LIB_PATH = /usr/local/curl760/lib
-CURL_LIB = curl
-RAPID_JSON_INCL = /usr/local/rapidjson/include
 
 #
 #
@@ -21,7 +17,7 @@ TARGET =  all
 
 SRCS = array.cpp array2d.cpp array3d.cpp sllist.cpp dllist.cpp circ_sllist.cpp \
 		circ_dllist.cpp  mllist.cpp tree.cpp bintree.cpp bst.cpp avl.cpp \
-		graph_alist.cpp graph_amatrix.cpp 
+		graph_alist.cpp graph_amatrix.cpp  color_grid.cpp kdt.cpp shape_collection.cpp
 
 
 OBJS = $(SRCS:.cpp=.o)
@@ -67,20 +63,23 @@ LIBS = -l$(CURL_LIB)
 all : $(EXECUTABLES)
 
 run:
-	array;
-	array2d;
-	array3d;
-	sllist;
-	dllist;
-	circ_sllist;
-	circ_dllist;
-	mllist;
-	tree;
-	bintree;
-	bst;
-	avl;
-	graph_alist;
-	graph_amatrix;
+	array kalpathi60 486749122386 clone;
+	array2d kalpathi60 486749122386 clone;
+	array3d kalpathi60 486749122386 clone;
+	sllist kalpathi60 486749122386 clone;
+	dllist kalpathi60 486749122386 clone;
+	circ_sllist kalpathi60 486749122386 clone;
+	circ_dllist kalpathi60 486749122386 clone;
+	mllist kalpathi60 486749122386 clone;
+	tree kalpathi60 486749122386 clone;
+	bintree kalpathi60 486749122386 clone;
+	bst kalpathi60 486749122386 clone;
+	avl kalpathi60 486749122386 clone;
+	graph_alist kalpathi60 486749122386 clone;
+	graph_amatrix kalpathi60 486749122386 clone;
+	color_grid kalpathi60 486749122386 clone;
+	kdt kalpathi60 486749122386 clone;
+	shape_collection kalpathi60 486749122386 clone;
 
 style:  
 	$(ASTYLE) $(ASTYLE_PARAMS)  $(SRCS) $(STYLE_INCLUDES)
@@ -139,6 +138,15 @@ circ_dllist: circ_dllist.o
 
 graph_amatrix: graph_amatrix.o
 	$(CC) -g -o graph_amatrix graph_amatrix.o $(LDFLAGS) $(LIBS)
+
+color_grid: color_grid.o
+	$(CC) -g -o color_grid color_grid.o $(LDFLAGS) $(LIBS)
+
+kdt: kdt.o
+	$(CC) -g -o kdt kdt.o $(LDFLAGS) $(LIBS)
+
+shape_collection: shape_collection.o
+	$(CC) -g -o shape_collection shape_collection.o $(LDFLAGS) $(LIBS)
 
 clean:
 	rm $(OBJS)  $(EXECUTABLES)

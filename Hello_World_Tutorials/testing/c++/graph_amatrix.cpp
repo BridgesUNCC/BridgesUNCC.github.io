@@ -8,11 +8,13 @@
 using namespace std;
 using namespace bridges;
 
-int main() {
-	Bridges::initialize(13, "YOUR_USER_ID", "YOUR_API_KEY");
+int main(int argc, char **argv) {
+	Bridges *bridges =  new Bridges(113, "YOUR_USER_ID", "YOUR_API_KEY");
 
-	Bridges::setTitle("Graph Adj Matrix Example: IMDB Data");
-	vector<ActorMovieIMDB> actor_list = DataSource::getActorMovieIMDBData(1813);
+	bridges->setTitle("Graph Adj Matrix Example: IMDB Data");
+
+	DataSource *ds = new DataSource;
+	vector<ActorMovieIMDB> actor_list = ds->getActorMovieIMDBData(1813);
 
 	GraphAdjMatrix<string, string> graph;
 
@@ -76,9 +78,9 @@ int main() {
 	}
 
 	// provide BRIDGES the  handle to the tree structure
-	Bridges::setDataStructure(&graph);
+	bridges->setDataStructure(&graph);
 	// Visualize the graph
-	Bridges::visualize();
+	bridges->visualize();
 
 	return 0;
 }
