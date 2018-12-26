@@ -13,7 +13,7 @@ public class graph_am {
 	public static void main(String[] args) throws Exception {
 
 		// initialize Bridges
-		Bridges bridges = new Bridges(13, "YOUR_USER_ID", "YOUR_API_KEY");
+		Bridges bridges = new Bridges(213, "YOUR_USER_ID", "YOUR_API_KEY");
 
 		// set a title for the visualization
 		bridges.setTitle("A Simple Graph (Adjacency Matrix)  Example using IMDB Actor/Movie Data");

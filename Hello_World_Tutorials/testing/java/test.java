@@ -10,7 +10,8 @@ public class bst {
 
 
 		//create the Bridges object
-		Bridges bridges = new Bridges(210, "YOUR_USER_ID", "YOUR_API_KEY");
+        Bridges bridges = new Bridges(210, args[0], args[1]);
+        bridges.setServer(args[2]);
 
 		bridges.setTitle("A Binary Search Tree Example with Earthquake Data");
 

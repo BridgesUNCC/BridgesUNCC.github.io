@@ -5,7 +5,8 @@ public class dllist {
 
 	public static void main(String[] args) throws Exception {
 
-		Bridges bridges = new Bridges(4, "YOUR_USER_ID", "YOUR_API_KEY");
+		Bridges bridges = new Bridges(204, "YOUR_USER_ID", "YOUR_API_KEY");
+
 
 		// load student info
 		StudentInfo[] students = {

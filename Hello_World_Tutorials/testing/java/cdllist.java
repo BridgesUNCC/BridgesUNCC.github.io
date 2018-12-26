@@ -5,7 +5,9 @@ public class cdllist {
 
 	public static void main(String[] args) throws Exception {
 
-		Bridges bridges = new Bridges(6, "YOUR_USER_ID", "YOUR_API_KEY");
+		Bridges bridges = new Bridges(206, "YOUR_USER_ID", "YOUR_API_KEY");
+
+		bridges.setServer(args[2]);
 
 		StudentInfo[] students = {
 			new StudentInfo(

@@ -7,7 +7,7 @@ using namespace std;
 using namespace bridges;
 
 int main(int argc, char **argv) {
-	Bridges *bridges =  new Bridges(50, "YOUR_USER_ID", "YOUR_API_KEY");
+	Bridges *bridges =  new Bridges(102, "YOUR_USER_ID", "YOUR_API_KEY");
 
 
 	if (argc == 4)		// Server type provided

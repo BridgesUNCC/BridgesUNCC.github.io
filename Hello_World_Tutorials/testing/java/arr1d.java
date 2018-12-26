@@ -1,12 +1,12 @@
 import bridges.connect.Bridges;
 import bridges.base.Array;
-import bridges.base.Element;
 
 public class arr1d {
 	public static void main(String[] args) throws Exception {
 
 		//create the Bridges object, set credentials
-		Bridges bridges = new Bridges(0, "YOUR_USER_ID", "YOUR_API_KEY");
+
+		Bridges bridges = new Bridges(200, "YOUR_USER_ID", "YOUR_API_KEY");
 
 		//  set array dimensions, allocate array of elements
 		int arraySize = 10;

@@ -11,7 +11,7 @@ public class graph_al {
 	public static void main(String[] args) throws Exception {
 
 		// initialize Bridges
-		Bridges bridges = new Bridges(12, "YOUR_USER_ID", "YOUR_API_KEY");
+		Bridges bridges = new Bridges(212, "YOUR_USER_ID", "YOUR_API_KEY");
 
 		// set a title for the visualization
 		bridges.setTitle("A Simple Graph (Adjacency List) Example using IMDB Actor/Movie Data");

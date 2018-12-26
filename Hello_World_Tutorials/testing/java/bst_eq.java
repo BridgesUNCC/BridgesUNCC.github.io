@@ -8,15 +8,16 @@ import java.util.List;
 public class bst_eq {
 	public static void main(String[] args) throws Exception{
     	
-   					//create the Bridges object
-//		Bridges bridges = new Bridges(10, "YOUR_API_KEY", "YOUR_USER_ID");
-		Bridges bridges = new Bridges(10, "YOUR_API_KEY", "YOUR_USER_ID");
+		if (args.length < 2)
+			throw new IllegalArgumentException("Need to provide user ID and API key as command-line arguments!");   		
+
+		//create the Bridges object
+        Bridges bridges = new Bridges(290, "YOUR_USER_ID", "YOUR_API_KEY");
 
 		bridges.setTitle("A Binary Search Tree Example with Earthquake Data");
 
 					// Retrieve a list of 10 earthquake  records  from USGS using the BRIDGES API
-		USGSaccount name = new USGSaccount( "earthquake" );
-		List<EarthquakeUSGS> eqlist = Bridges.getEarthquakeUSGSData(name, 10);
+		List<EarthquakeUSGS> eqlist = Bridges.getEarthquakeUSGSData(10);
 
 					// create BST nodes and insert into a tree
 		BSTElement<Double, EarthquakeUSGS> root = null; 
