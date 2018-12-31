@@ -23,6 +23,7 @@ var searchData=
   ['graphadjlist',['GraphAdjList',['../namespace_bridges_1_1_graph_adj_list.html',1,'Bridges']]],
   ['graphadjmatrix',['GraphAdjMatrix',['../namespace_bridges_1_1_graph_adj_matrix.html',1,'Bridges']]],
   ['grid',['Grid',['../namespace_bridges_1_1_grid.html',1,'Bridges']]],
+  ['bridges',['BRIDGES',['../index.html',1,'']]],
   ['linkvisualizer',['LinkVisualizer',['../namespace_bridges_1_1_link_visualizer.html',1,'Bridges']]],
   ['mlelement',['MLelement',['../namespace_bridges_1_1_m_lelement.html',1,'Bridges']]],
   ['slelement',['SLelement',['../namespace_bridges_1_1_s_lelement.html',1,'Bridges']]],
