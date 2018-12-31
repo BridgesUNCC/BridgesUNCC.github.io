@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['year',['year',['../class_bridges_1_1data__src__dependent_1_1_cancer_incidence_1_1_cancer_incidence.html#aa7db0d595c9525a03949323b54f18348',1,'Bridges.data_src_dependent.CancerIncidence.CancerIncidence.year()'],['../class_bridges_1_1data__src__dependent_1_1_earthquake_u_s_g_s_1_1_earthquake_u_s_g_s.html#af11c1d01b1b8ce2a4f7c72190db9b853',1,'Bridges.data_src_dependent.EarthquakeUSGS.EarthquakeUSGS.year()']]]
+  ['weight',['weight',['../class_bridges_1_1_edge_1_1_edge.html#a7219034dae365e8898fbf4bd901285b4',1,'Bridges.Edge.Edge.weight()'],['../class_bridges_1_1_link_visualizer_1_1_link_visualizer.html#ad2d0f7c83100350d7d38e5eb46527f34',1,'Bridges.LinkVisualizer.LinkVisualizer.weight()']]],
+  ['word_5fnumber',['word_number',['../class_bridges_1_1_element_1_1_element.html#a857960f476b18de30baa18ae54877672',1,'Bridges::Element::Element']]]
 ];
