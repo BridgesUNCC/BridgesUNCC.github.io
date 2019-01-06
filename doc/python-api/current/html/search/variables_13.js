@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['tag',['tag',['../class_bridges_1_1_m_lelement_1_1_m_lelement.html#ab10db82c80844494948664c11d5ba810',1,'Bridges.MLelement.MLelement.tag()'],['../class_bridges_1_1_m_lelement_1_1_m_lelement.html#adb11c5e159bc78f59daf34b2ae3c5a58',1,'Bridges.MLelement.MLelement.tag()']]],
-  ['thickness',['thickness',['../class_bridges_1_1_link_visualizer_1_1_link_visualizer.html#a3ac27693b0b6f7d23eaa0619d4998c64',1,'Bridges::LinkVisualizer::LinkVisualizer']]],
-  ['title',['title',['../class_bridges_1_1_bridges_1_1_bridges.html#a977ab3147c2a675bfd78dd199a9644ec',1,'Bridges::Bridges::Bridges']]]
+  ['username',['username',['../classbridges_1_1bridges_1_1_bridges.html#a492041cbcac828d5a26fcad8515fb221',1,'bridges.bridges.Bridges.username()'],['../classbridges_1_1bridges_1_1_bridges.html#ac68532895ac5044fa175b673fb567a5e',1,'bridges.bridges.Bridges.username()'],['../classbridges_1_1connector_1_1_connector.html#af2f4f996092cf63a5e7940ca93a2c6b7',1,'bridges.connector.Connector.username()'],['../classbridges_1_1connector_1_1_connector.html#adeb8d1b493eae70c24127fb175e1bfe7',1,'bridges.connector.Connector.username()']]]
 ];

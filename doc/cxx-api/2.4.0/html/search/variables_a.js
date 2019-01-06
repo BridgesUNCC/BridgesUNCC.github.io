@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sub_5flist',['sub_list',['../classbridges_1_1_m_lelement.html#aa664b4e694c08e5cc31cc9d317dda100',1,'bridges::MLelement']]]
+  ['quote',['QUOTE',['../namespacebridges.html#acd8357e88562cbb7e60bea3fac422ac3',1,'bridges']]]
 ];

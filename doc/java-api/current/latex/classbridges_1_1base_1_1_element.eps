@@ -175,6 +175,7 @@ boxfont setfont
 1 boundaspect scale
 (bridges.base.Element< E >) cw
 (bridges.base.DataStruct) cw
+(bridges.base.ArrayElement< E >) cw
 (bridges.base.SLelement< E >) cw
 (bridges.base.TreeElement< E >) cw
 (bridges.base.CircSLelement< E >) cw
@@ -196,8 +197,9 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (bridges.base.Element< E >) 2.000000 4.000000 box
- (bridges.base.DataStruct) 2.000000 5.000000 box
+ (bridges.base.Element< E >) 1.000000 4.000000 box
+ (bridges.base.DataStruct) 1.000000 5.000000 box
+ (bridges.base.ArrayElement< E >) 0.000000 3.000000 box
  (bridges.base.SLelement< E >) 1.000000 3.000000 box
  (bridges.base.TreeElement< E >) 3.000000 3.000000 box
  (bridges.base.CircSLelement< E >) 0.000000 2.000000 box
@@ -212,13 +214,15 @@ boundx scalefactor div boundy scalefactor div scale
 % ----- relations -----
 
 solid
-0 2.000000 4.000000 out
+0 1.000000 4.000000 out
 solid
-1 2.000000 5.000000 in
+1 1.000000 5.000000 in
 solid
-1 2.000000 3.250000 out
+1 1.000000 3.250000 out
 solid
-1.000000 3.000000 4.000000 conn
+0.000000 3.000000 4.000000 conn
+solid
+0 0.000000 3.750000 in
 solid
 0 1.000000 3.750000 in
 solid

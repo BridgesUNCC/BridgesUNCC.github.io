@@ -3,18 +3,35 @@
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-string \mbox{\hyperlink{namespacebridges_1_1_j_s_o_n_util_abf11dd735ae4a4ab8e6e2e89340a1b07}{J\+S\+O\+Nencode}} (const string \&str)
-\begin{DoxyCompactList}\small\item\em encodes a string object into a J\+S\+ON string. that is to say, the string is escaped properly and surrounded by quotes \end{DoxyCompactList}\end{DoxyCompactItemize}
+{\footnotesize template$<$typename T $>$ }\\string \hyperlink{namespacebridges_1_1_j_s_o_n_util_aaf500e70dc1b2a9fd1284e386af1be63}{J\+S\+O\+Nencode} (const T \&d)
+\item 
+{\footnotesize template$<$$>$ }\\string \hyperlink{namespacebridges_1_1_j_s_o_n_util_a2b258507ccdf822ecebbbbb0b66fb06d}{J\+S\+O\+Nencode$<$ std\+::string $>$} (const std\+::string \&str)
+\item 
+string \hyperlink{namespacebridges_1_1_j_s_o_n_util_a8167097b34730f71a1b395a76eecd550}{J\+S\+O\+Nencode} (const char $\ast$str)
+\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\mbox{\Hypertarget{namespacebridges_1_1_j_s_o_n_util_abf11dd735ae4a4ab8e6e2e89340a1b07}\label{namespacebridges_1_1_j_s_o_n_util_abf11dd735ae4a4ab8e6e2e89340a1b07}} 
-\index{bridges\+::\+J\+S\+O\+N\+Util@{bridges\+::\+J\+S\+O\+N\+Util}!J\+S\+O\+Nencode@{J\+S\+O\+Nencode}}
+\hypertarget{namespacebridges_1_1_j_s_o_n_util_aaf500e70dc1b2a9fd1284e386af1be63}{}\index{bridges\+::\+J\+S\+O\+N\+Util@{bridges\+::\+J\+S\+O\+N\+Util}!J\+S\+O\+Nencode@{J\+S\+O\+Nencode}}
 \index{J\+S\+O\+Nencode@{J\+S\+O\+Nencode}!bridges\+::\+J\+S\+O\+N\+Util@{bridges\+::\+J\+S\+O\+N\+Util}}
-\subsubsection{\texorpdfstring{J\+S\+O\+Nencode()}{JSONencode()}}
-{\footnotesize\ttfamily string bridges\+::\+J\+S\+O\+N\+Util\+::\+J\+S\+O\+Nencode (\begin{DoxyParamCaption}\item[{const string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\subsubsection[{J\+S\+O\+Nencode(const T \&d)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ string bridges\+::\+J\+S\+O\+N\+Util\+::\+J\+S\+O\+Nencode (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{namespacebridges_1_1_j_s_o_n_util_aaf500e70dc1b2a9fd1284e386af1be63}
+encodes whatever C++ primary type\+: int, float, double, bool, unsigned long int into its basic proper J\+S\+O\+N format.
 
-
-
-encodes a string object into a J\+S\+ON string. that is to say, the string is escaped properly and surrounded by quotes 
-
+This also works for std\+::string and char$\ast$\+: that is to say, for a string, it is escaped properly and surrounded by quotes \hypertarget{namespacebridges_1_1_j_s_o_n_util_a8167097b34730f71a1b395a76eecd550}{}\index{bridges\+::\+J\+S\+O\+N\+Util@{bridges\+::\+J\+S\+O\+N\+Util}!J\+S\+O\+Nencode@{J\+S\+O\+Nencode}}
+\index{J\+S\+O\+Nencode@{J\+S\+O\+Nencode}!bridges\+::\+J\+S\+O\+N\+Util@{bridges\+::\+J\+S\+O\+N\+Util}}
+\subsubsection[{J\+S\+O\+Nencode(const char $\ast$str)}]{\setlength{\rightskip}{0pt plus 5cm}string bridges\+::\+J\+S\+O\+N\+Util\+::\+J\+S\+O\+Nencode (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{namespacebridges_1_1_j_s_o_n_util_a8167097b34730f71a1b395a76eecd550}
+\hypertarget{namespacebridges_1_1_j_s_o_n_util_a2b258507ccdf822ecebbbbb0b66fb06d}{}\index{bridges\+::\+J\+S\+O\+N\+Util@{bridges\+::\+J\+S\+O\+N\+Util}!J\+S\+O\+Nencode$<$ std\+::string $>$@{J\+S\+O\+Nencode$<$ std\+::string $>$}}
+\index{J\+S\+O\+Nencode$<$ std\+::string $>$@{J\+S\+O\+Nencode$<$ std\+::string $>$}!bridges\+::\+J\+S\+O\+N\+Util@{bridges\+::\+J\+S\+O\+N\+Util}}
+\subsubsection[{J\+S\+O\+Nencode$<$ std\+::string $>$(const std\+::string \&str)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ string {\bf bridges\+::\+J\+S\+O\+N\+Util\+::\+J\+S\+O\+Nencode}$<$ std\+::string $>$ (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{namespacebridges_1_1_j_s_o_n_util_a2b258507ccdf822ecebbbbb0b66fb06d}

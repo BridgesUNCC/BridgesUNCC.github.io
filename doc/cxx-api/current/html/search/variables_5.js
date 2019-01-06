@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['links',['links',['../classbridges_1_1_element.html#a6fb53728edc378f26238543b26238496',1,'bridges::Element']]]
+  ['key',['key',['../classbridges_1_1_b_s_t_element.html#aebe8a0958484a0e28e777b423079bae2',1,'bridges::BSTElement']]]
 ];
