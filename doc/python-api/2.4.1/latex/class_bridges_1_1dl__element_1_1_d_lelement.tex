@@ -1,0 +1,173 @@
+\hypertarget{class_bridges_1_1dl__element_1_1_d_lelement}{}\section{Bridges.\+dl\+\_\+element.\+D\+Lelement Class Reference}
+\label{class_bridges_1_1dl__element_1_1_d_lelement}\index{Bridges.\+dl\+\_\+element.\+D\+Lelement@{Bridges.\+dl\+\_\+element.\+D\+Lelement}}
+
+
+This class is used to create doubly linked element objects.  
+
+
+Inheritance diagram for Bridges.\+dl\+\_\+element.\+D\+Lelement\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_bridges_1_1dl__element_1_1_d_lelement}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_bridges_1_1dl__element_1_1_d_lelement_a53233b54dce75c96438912fba591217a}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, e=None, label=None, next=None, \mbox{\hyperlink{class_bridges_1_1dl__element_1_1_d_lelement_a5098c0244f6c4512db45f494266baf8a}{prev}}=None)
+\begin{DoxyCompactList}\small\item\em Constructs an empty \mbox{\hyperlink{class_bridges_1_1dl__element_1_1_d_lelement}{D\+Lelement}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_bridges_1_1dl__element_1_1_d_lelement_a8e58440740696b00b0fbf466311a2e82}{get\+\_\+data\+\_\+structure\+\_\+type}} (self)
+\begin{DoxyCompactList}\small\item\em This method gets the data structure type. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_bridges_1_1dl__element_1_1_d_lelement_a494dbc772c5be2fedc1543c33ff18773}{get\+\_\+next}} (self)
+\begin{DoxyCompactList}\small\item\em This method returns the pointer to the next \mbox{\hyperlink{class_bridges_1_1dl__element_1_1_d_lelement}{D\+Lelement}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_bridges_1_1dl__element_1_1_d_lelement_ab3a51eae57870b6b45b09b8810d9b22b}{get\+\_\+prev}} (self)
+\begin{DoxyCompactList}\small\item\em This method sets the pointer to the next \mbox{\hyperlink{class_bridges_1_1dl__element_1_1_d_lelement}{D\+Lelement}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_bridges_1_1dl__element_1_1_d_lelement_a5a1281ba8e5d39551f6b0628b28cdda2}{set\+\_\+prev}} (self, prv)
+\begin{DoxyCompactList}\small\item\em This method sets the pointer to the previous \mbox{\hyperlink{class_bridges_1_1dl__element_1_1_d_lelement}{D\+Lelement}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_bridges_1_1dl__element_1_1_d_lelement_ab2019529a20633a852a06221b11776c9}{get\+\_\+data\+\_\+structure\+\_\+representation}} (self)
+\begin{DoxyCompactList}\small\item\em Get the J\+S\+ON representation of the the data structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bridges_1_1dl__element_1_1_d_lelement_a5098c0244f6c4512db45f494266baf8a}{prev}} = object()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is used to create doubly linked element objects. 
+
+\begin{DoxyAuthor}{Author}
+Mihai Mehedint, Kalpathi Subramanian
+\end{DoxyAuthor}
+\begin{DoxyVerb}This class extends Element and takes a generic parameter <E> representing
+application specific data. This element forms the basic building block for
+doubly linked lists. Doubly linked elements have two links,
+"next" and "previous", that point to the previous and succeeding nodes along the list.
+
+Elements contain a visualizer (ElementVisualizer) object for setting visual
+attributes (color, shape, opacity, size), necessary for displaying them in a web
+browser.
+
+Elements also have a LinkVisualizer object that is used when they are linked to
+another element, appropriate for setting link attributes, such as in linked lists,
+between the current element and its next or previous nodes.\end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_bridges_1_1dl__element_1_1_d_lelement_a53233b54dce75c96438912fba591217a}\label{class_bridges_1_1dl__element_1_1_d_lelement_a53233b54dce75c96438912fba591217a}} 
+\index{Bridges\+::dl\+\_\+element\+::\+D\+Lelement@{Bridges\+::dl\+\_\+element\+::\+D\+Lelement}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Bridges\+::dl\+\_\+element\+::\+D\+Lelement@{Bridges\+::dl\+\_\+element\+::\+D\+Lelement}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Bridges.\+dl\+\_\+element.\+D\+Lelement.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{e = {\ttfamily None},  }\item[{}]{label = {\ttfamily None},  }\item[{}]{next = {\ttfamily None},  }\item[{}]{prev = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Constructs an empty \mbox{\hyperlink{class_bridges_1_1dl__element_1_1_d_lelement}{D\+Lelement}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & the genereic object that this \mbox{\hyperlink{class_bridges_1_1dl__element_1_1_d_lelement}{D\+Lelement}} is holding \\
+\hline
+{\em next} & the \mbox{\hyperlink{class_bridges_1_1dl__element_1_1_d_lelement}{D\+Lelement}} that should be assigned to the next pointer \\
+\hline
+{\em prev} & the \mbox{\hyperlink{class_bridges_1_1dl__element_1_1_d_lelement}{D\+Lelement}} that should be assigned to the prev pointer \\
+\hline
+{\em label} & the label for this \mbox{\hyperlink{class_bridges_1_1dl__element_1_1_d_lelement}{D\+Lelement}} \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_bridges_1_1dl__element_1_1_d_lelement_ab2019529a20633a852a06221b11776c9}\label{class_bridges_1_1dl__element_1_1_d_lelement_ab2019529a20633a852a06221b11776c9}} 
+\index{Bridges\+::dl\+\_\+element\+::\+D\+Lelement@{Bridges\+::dl\+\_\+element\+::\+D\+Lelement}!get\+\_\+data\+\_\+structure\+\_\+representation@{get\+\_\+data\+\_\+structure\+\_\+representation}}
+\index{get\+\_\+data\+\_\+structure\+\_\+representation@{get\+\_\+data\+\_\+structure\+\_\+representation}!Bridges\+::dl\+\_\+element\+::\+D\+Lelement@{Bridges\+::dl\+\_\+element\+::\+D\+Lelement}}
+\subsubsection{\texorpdfstring{get\+\_\+data\+\_\+structure\+\_\+representation()}{get\_data\_structure\_representation()}}
+{\footnotesize\ttfamily def Bridges.\+dl\+\_\+element.\+D\+Lelement.\+get\+\_\+data\+\_\+structure\+\_\+representation (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the J\+S\+ON representation of the the data structure. 
+
+\mbox{\Hypertarget{class_bridges_1_1dl__element_1_1_d_lelement_a8e58440740696b00b0fbf466311a2e82}\label{class_bridges_1_1dl__element_1_1_d_lelement_a8e58440740696b00b0fbf466311a2e82}} 
+\index{Bridges\+::dl\+\_\+element\+::\+D\+Lelement@{Bridges\+::dl\+\_\+element\+::\+D\+Lelement}!get\+\_\+data\+\_\+structure\+\_\+type@{get\+\_\+data\+\_\+structure\+\_\+type}}
+\index{get\+\_\+data\+\_\+structure\+\_\+type@{get\+\_\+data\+\_\+structure\+\_\+type}!Bridges\+::dl\+\_\+element\+::\+D\+Lelement@{Bridges\+::dl\+\_\+element\+::\+D\+Lelement}}
+\subsubsection{\texorpdfstring{get\+\_\+data\+\_\+structure\+\_\+type()}{get\_data\_structure\_type()}}
+{\footnotesize\ttfamily def Bridges.\+dl\+\_\+element.\+D\+Lelement.\+get\+\_\+data\+\_\+structure\+\_\+type (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This method gets the data structure type. 
+
+\begin{DoxyReturn}{Returns}
+The date structure type as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bridges_1_1dl__element_1_1_d_lelement_a494dbc772c5be2fedc1543c33ff18773}\label{class_bridges_1_1dl__element_1_1_d_lelement_a494dbc772c5be2fedc1543c33ff18773}} 
+\index{Bridges\+::dl\+\_\+element\+::\+D\+Lelement@{Bridges\+::dl\+\_\+element\+::\+D\+Lelement}!get\+\_\+next@{get\+\_\+next}}
+\index{get\+\_\+next@{get\+\_\+next}!Bridges\+::dl\+\_\+element\+::\+D\+Lelement@{Bridges\+::dl\+\_\+element\+::\+D\+Lelement}}
+\subsubsection{\texorpdfstring{get\+\_\+next()}{get\_next()}}
+{\footnotesize\ttfamily def Bridges.\+dl\+\_\+element.\+D\+Lelement.\+get\+\_\+next (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This method returns the pointer to the next \mbox{\hyperlink{class_bridges_1_1dl__element_1_1_d_lelement}{D\+Lelement}}. 
+
+\begin{DoxyReturn}{Returns}
+the \mbox{\hyperlink{class_bridges_1_1dl__element_1_1_d_lelement}{D\+Lelement}} assigned to the next pointer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bridges_1_1dl__element_1_1_d_lelement_ab3a51eae57870b6b45b09b8810d9b22b}\label{class_bridges_1_1dl__element_1_1_d_lelement_ab3a51eae57870b6b45b09b8810d9b22b}} 
+\index{Bridges\+::dl\+\_\+element\+::\+D\+Lelement@{Bridges\+::dl\+\_\+element\+::\+D\+Lelement}!get\+\_\+prev@{get\+\_\+prev}}
+\index{get\+\_\+prev@{get\+\_\+prev}!Bridges\+::dl\+\_\+element\+::\+D\+Lelement@{Bridges\+::dl\+\_\+element\+::\+D\+Lelement}}
+\subsubsection{\texorpdfstring{get\+\_\+prev()}{get\_prev()}}
+{\footnotesize\ttfamily def Bridges.\+dl\+\_\+element.\+D\+Lelement.\+get\+\_\+prev (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This method sets the pointer to the next \mbox{\hyperlink{class_bridges_1_1dl__element_1_1_d_lelement}{D\+Lelement}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em next} & the \mbox{\hyperlink{class_bridges_1_1dl__element_1_1_d_lelement}{D\+Lelement}} that should be assigned to the next pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyVerb}    public void setNext(DLelement<E> nxt) {
+        this.next = nxt;
+        if (nxt != null)
+            this.setLinkVisualizer(nxt);
+    }
+\end{DoxyVerb}
+
+
+This method returns the pointer to the previous \mbox{\hyperlink{class_bridges_1_1dl__element_1_1_d_lelement}{D\+Lelement}}
+
+\begin{DoxyReturn}{Returns}
+the \mbox{\hyperlink{class_bridges_1_1dl__element_1_1_d_lelement}{D\+Lelement}} assigned to the prev pointer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bridges_1_1dl__element_1_1_d_lelement_a5a1281ba8e5d39551f6b0628b28cdda2}\label{class_bridges_1_1dl__element_1_1_d_lelement_a5a1281ba8e5d39551f6b0628b28cdda2}} 
+\index{Bridges\+::dl\+\_\+element\+::\+D\+Lelement@{Bridges\+::dl\+\_\+element\+::\+D\+Lelement}!set\+\_\+prev@{set\+\_\+prev}}
+\index{set\+\_\+prev@{set\+\_\+prev}!Bridges\+::dl\+\_\+element\+::\+D\+Lelement@{Bridges\+::dl\+\_\+element\+::\+D\+Lelement}}
+\subsubsection{\texorpdfstring{set\+\_\+prev()}{set\_prev()}}
+{\footnotesize\ttfamily def Bridges.\+dl\+\_\+element.\+D\+Lelement.\+set\+\_\+prev (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{prv }\end{DoxyParamCaption})}
+
+
+
+This method sets the pointer to the previous \mbox{\hyperlink{class_bridges_1_1dl__element_1_1_d_lelement}{D\+Lelement}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prev} & the \mbox{\hyperlink{class_bridges_1_1dl__element_1_1_d_lelement}{D\+Lelement}} that should be assigned to the prev pointer \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_bridges_1_1dl__element_1_1_d_lelement_a5098c0244f6c4512db45f494266baf8a}\label{class_bridges_1_1dl__element_1_1_d_lelement_a5098c0244f6c4512db45f494266baf8a}} 
+\index{Bridges\+::dl\+\_\+element\+::\+D\+Lelement@{Bridges\+::dl\+\_\+element\+::\+D\+Lelement}!prev@{prev}}
+\index{prev@{prev}!Bridges\+::dl\+\_\+element\+::\+D\+Lelement@{Bridges\+::dl\+\_\+element\+::\+D\+Lelement}}
+\subsubsection{\texorpdfstring{prev}{prev}}
+{\footnotesize\ttfamily Bridges.\+dl\+\_\+element.\+D\+Lelement.\+prev = object()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/python/bridges18/\+Bridges/\mbox{\hyperlink{dl__element_8py}{dl\+\_\+element.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,158 @@
+\hypertarget{class_bridges_1_1bst__element_1_1_b_s_t_element}{}\section{Bridges.\+bst\+\_\+element.\+B\+S\+T\+Element Class Reference}
+\label{class_bridges_1_1bst__element_1_1_b_s_t_element}\index{Bridges.\+bst\+\_\+element.\+B\+S\+T\+Element@{Bridges.\+bst\+\_\+element.\+B\+S\+T\+Element}}
+
+
+The \mbox{\hyperlink{class_bridges_1_1bst__element_1_1_b_s_t_element}{B\+S\+T\+Element}} class is the building block for creating binary search trees.  
+
+
+Inheritance diagram for Bridges.\+bst\+\_\+element.\+B\+S\+T\+Element\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_bridges_1_1bst__element_1_1_b_s_t_element}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_bridges_1_1bst__element_1_1_b_s_t_element_a2d8abd4eca8f2643df2159aa12a920bf}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{class_bridges_1_1bst__element_1_1_b_s_t_element_a1b04a3676ac84d889491f8a496aedb91}{key}}=None, e=None, left=None, right=None, label=None)
+\begin{DoxyCompactList}\small\item\em Construct an empty \mbox{\hyperlink{class_bridges_1_1bst__element_1_1_b_s_t_element}{B\+S\+T\+Element}} with no key assigned and left and right pointers set to null. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_bridges_1_1bst__element_1_1_b_s_t_element_a2ae53418d5efb075d9e63c675f4cdcdb}{get\+\_\+data\+\_\+structure\+\_\+type}} (self)
+\begin{DoxyCompactList}\small\item\em This method gets the data structure type. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_bridges_1_1bst__element_1_1_b_s_t_element_ac0ec75f813b838cf0f817ca6e4814766}{get\+\_\+key}} (self)
+\begin{DoxyCompactList}\small\item\em Return the key of the \mbox{\hyperlink{class_bridges_1_1bst__element_1_1_b_s_t_element}{B\+S\+T\+Element}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_bridges_1_1bst__element_1_1_b_s_t_element_ad72900f1e40534cbfe8b88d37e391750}{set\+\_\+key}} (self, \mbox{\hyperlink{class_bridges_1_1bst__element_1_1_b_s_t_element_a1b04a3676ac84d889491f8a496aedb91}{key}})
+\begin{DoxyCompactList}\small\item\em Set the key of the \mbox{\hyperlink{class_bridges_1_1bst__element_1_1_b_s_t_element}{B\+S\+T\+Element}} to key. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_bridges_1_1bst__element_1_1_b_s_t_element_a7f12207f3859f60be107468000cc2375}{get\+\_\+left}} (self)
+\begin{DoxyCompactList}\small\item\em Return the left child of the \mbox{\hyperlink{class_bridges_1_1bst__element_1_1_b_s_t_element}{B\+S\+T\+Element}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_bridges_1_1bst__element_1_1_b_s_t_element_a96c3a91946f244720054c2d480a05955}{get\+\_\+right}} (self)
+\begin{DoxyCompactList}\small\item\em Return the right child of the \mbox{\hyperlink{class_bridges_1_1bst__element_1_1_b_s_t_element}{B\+S\+T\+Element}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bridges_1_1bst__element_1_1_b_s_t_element_a1b04a3676ac84d889491f8a496aedb91}{key}} = object()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_bridges_1_1bst__element_1_1_b_s_t_element}{B\+S\+T\+Element}} class is the building block for creating binary search trees. 
+
+The \mbox{\hyperlink{class_bridges_1_1bst__element_1_1_b_s_t_element}{B\+S\+T\+Element}} class is the building block for creating binary search tree structures. It contains two children (viz., left, right), and a search key, to be used in search operations .
+
+\mbox{\hyperlink{class_bridges_1_1bst__element_1_1_b_s_t_element}{B\+S\+T\+Element}} contains a visualizer (Element\+Visualizer) object for setting visual attributes (color, shape, opacity, size), necessary for displaying them in a web browser.
+
+B\+ST Elements also have a Link\+Visualizer object, that is used when they are linked to another element, appropriate for setting link attributes, for instance, between the current element and its left or right child
+
+\begin{DoxyAuthor}{Author}
+Kalpathi Subramanian, Mihai Mehedint
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+6/22/16, 1/7/17, 5/17/17
+\end{DoxyDate}
+This class extends the Bin\+Tree\+Element class by adding a \textquotesingle{}key\textquotesingle{} value for use in a binary search tree implementations. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_bridges_1_1bst__element_1_1_b_s_t_element_a2d8abd4eca8f2643df2159aa12a920bf}\label{class_bridges_1_1bst__element_1_1_b_s_t_element_a2d8abd4eca8f2643df2159aa12a920bf}} 
+\index{Bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{Bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{Bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Bridges.\+bst\+\_\+element.\+B\+S\+T\+Element.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{key = {\ttfamily None},  }\item[{}]{e = {\ttfamily None},  }\item[{}]{left = {\ttfamily None},  }\item[{}]{right = {\ttfamily None},  }\item[{}]{label = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Construct an empty \mbox{\hyperlink{class_bridges_1_1bst__element_1_1_b_s_t_element}{B\+S\+T\+Element}} with no key assigned and left and right pointers set to null. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & the key to be used in a binary search tree implementation \\
+\hline
+{\em e} & the object this \mbox{\hyperlink{class_bridges_1_1bst__element_1_1_b_s_t_element}{B\+S\+T\+Element}} is holding \\
+\hline
+{\em left} & the \mbox{\hyperlink{class_bridges_1_1bst__element_1_1_b_s_t_element}{B\+S\+T\+Element}} that should be assigned to the left pointer \\
+\hline
+{\em right} & the \mbox{\hyperlink{class_bridges_1_1bst__element_1_1_b_s_t_element}{B\+S\+T\+Element}} that should be assigned to the right pointer \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_bridges_1_1bst__element_1_1_b_s_t_element_a2ae53418d5efb075d9e63c675f4cdcdb}\label{class_bridges_1_1bst__element_1_1_b_s_t_element_a2ae53418d5efb075d9e63c675f4cdcdb}} 
+\index{Bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{Bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}!get\+\_\+data\+\_\+structure\+\_\+type@{get\+\_\+data\+\_\+structure\+\_\+type}}
+\index{get\+\_\+data\+\_\+structure\+\_\+type@{get\+\_\+data\+\_\+structure\+\_\+type}!Bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{Bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}}
+\subsubsection{\texorpdfstring{get\+\_\+data\+\_\+structure\+\_\+type()}{get\_data\_structure\_type()}}
+{\footnotesize\ttfamily def Bridges.\+bst\+\_\+element.\+B\+S\+T\+Element.\+get\+\_\+data\+\_\+structure\+\_\+type (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This method gets the data structure type. 
+
+\begin{DoxyReturn}{Returns}
+The date structure type as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bridges_1_1bst__element_1_1_b_s_t_element_ac0ec75f813b838cf0f817ca6e4814766}\label{class_bridges_1_1bst__element_1_1_b_s_t_element_ac0ec75f813b838cf0f817ca6e4814766}} 
+\index{Bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{Bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}!get\+\_\+key@{get\+\_\+key}}
+\index{get\+\_\+key@{get\+\_\+key}!Bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{Bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}}
+\subsubsection{\texorpdfstring{get\+\_\+key()}{get\_key()}}
+{\footnotesize\ttfamily def Bridges.\+bst\+\_\+element.\+B\+S\+T\+Element.\+get\+\_\+key (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Return the key of the \mbox{\hyperlink{class_bridges_1_1bst__element_1_1_b_s_t_element}{B\+S\+T\+Element}}. 
+
+\begin{DoxyReturn}{Returns}
+the key of this \mbox{\hyperlink{class_bridges_1_1bst__element_1_1_b_s_t_element}{B\+S\+T\+Element}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bridges_1_1bst__element_1_1_b_s_t_element_a7f12207f3859f60be107468000cc2375}\label{class_bridges_1_1bst__element_1_1_b_s_t_element_a7f12207f3859f60be107468000cc2375}} 
+\index{Bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{Bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}!get\+\_\+left@{get\+\_\+left}}
+\index{get\+\_\+left@{get\+\_\+left}!Bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{Bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}}
+\subsubsection{\texorpdfstring{get\+\_\+left()}{get\_left()}}
+{\footnotesize\ttfamily def Bridges.\+bst\+\_\+element.\+B\+S\+T\+Element.\+get\+\_\+left (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Return the left child of the \mbox{\hyperlink{class_bridges_1_1bst__element_1_1_b_s_t_element}{B\+S\+T\+Element}}. 
+
+\begin{DoxyReturn}{Returns}
+the left child of this \mbox{\hyperlink{class_bridges_1_1bst__element_1_1_b_s_t_element}{B\+S\+T\+Element}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bridges_1_1bst__element_1_1_b_s_t_element_a96c3a91946f244720054c2d480a05955}\label{class_bridges_1_1bst__element_1_1_b_s_t_element_a96c3a91946f244720054c2d480a05955}} 
+\index{Bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{Bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}!get\+\_\+right@{get\+\_\+right}}
+\index{get\+\_\+right@{get\+\_\+right}!Bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{Bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}}
+\subsubsection{\texorpdfstring{get\+\_\+right()}{get\_right()}}
+{\footnotesize\ttfamily def Bridges.\+bst\+\_\+element.\+B\+S\+T\+Element.\+get\+\_\+right (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Return the right child of the \mbox{\hyperlink{class_bridges_1_1bst__element_1_1_b_s_t_element}{B\+S\+T\+Element}}. 
+
+\begin{DoxyReturn}{Returns}
+the right child of this \mbox{\hyperlink{class_bridges_1_1bst__element_1_1_b_s_t_element}{B\+S\+T\+Element}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bridges_1_1bst__element_1_1_b_s_t_element_ad72900f1e40534cbfe8b88d37e391750}\label{class_bridges_1_1bst__element_1_1_b_s_t_element_ad72900f1e40534cbfe8b88d37e391750}} 
+\index{Bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{Bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}!set\+\_\+key@{set\+\_\+key}}
+\index{set\+\_\+key@{set\+\_\+key}!Bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{Bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}}
+\subsubsection{\texorpdfstring{set\+\_\+key()}{set\_key()}}
+{\footnotesize\ttfamily def Bridges.\+bst\+\_\+element.\+B\+S\+T\+Element.\+set\+\_\+key (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{key }\end{DoxyParamCaption})}
+
+
+
+Set the key of the \mbox{\hyperlink{class_bridges_1_1bst__element_1_1_b_s_t_element}{B\+S\+T\+Element}} to key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & the key to set \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_bridges_1_1bst__element_1_1_b_s_t_element_a1b04a3676ac84d889491f8a496aedb91}\label{class_bridges_1_1bst__element_1_1_b_s_t_element_a1b04a3676ac84d889491f8a496aedb91}} 
+\index{Bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{Bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}!key@{key}}
+\index{key@{key}!Bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{Bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}}
+\subsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily Bridges.\+bst\+\_\+element.\+B\+S\+T\+Element.\+key = object()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/python/bridges18/\+Bridges/\mbox{\hyperlink{bst__element_8py}{bst\+\_\+element.\+py}}\end{DoxyCompactItemize}
