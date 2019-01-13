@@ -1,11 +1,14 @@
-from Bridges.Bridges import *
-from Bridges.BinTreeElement import *
+from bridges.bridges import *
+from bridges.bin_tree_element import *
+import sys
 
 
+def main():
+    args = sys.argv[1:]
 
-class BinTreetutorial:
-    # create bridges object
-    bridges = Bridges(9, "YOUR_USER_ID", "YOUR_API_KEY")
+    # create the Bridges object, set credentials
+    bridges = Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
+
     bridges.setTitle("A Huffman Coding Tree Example")
 
     #build the tree
@@ -57,4 +60,6 @@ class BinTreetutorial:
     #visualize the tree
     bridges.visualize()
 
+if __name__ == "__main__":
+    main()
 

@@ -6,7 +6,8 @@ public class arr1d {
 
 		//create the Bridges object, set credentials
 
-		Bridges bridges = new Bridges(200, "YOUR_USER_ID", "YOUR_API_KEY");
+		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", 
+										"YOUR_API_KEY");
 
 		//  set array dimensions, allocate array of elements
 		int arraySize = 10;

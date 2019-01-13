@@ -1,10 +1,12 @@
-from Bridges.Bridges import *
-from Bridges.Array import *
+from bridges.bridges import *
+from bridges.array import *
+import sys
 
-class array2d:
+def main():
+    args = sys.argv[1:]
 
-    #create the Bridges object
-    bridges = Bridges(1, "YOUR_USER_ID", "YOUR_API_KEY")
+    # create the Bridges object, set credentials
+    bridges = Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
 
     # for 2D array 4x4
     num_rows = 4
@@ -29,3 +31,7 @@ class array2d:
 
     #visualize tha array
     bridges.visualize()
+
+if __name__ == "__main__":
+    main()
+

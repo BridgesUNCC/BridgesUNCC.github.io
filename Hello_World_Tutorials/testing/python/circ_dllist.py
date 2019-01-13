@@ -1,7 +1,7 @@
-from Bridges.Bridges import *
-from Bridges.CircDLelement import *
-from StudentInfo import *
-
+from bridges.bridges import *
+from bridges.circ_dl_element import *
+from python.web_tutorial.StudentInfo import *
+import sys
 
 #helper funtction
 def insertFront(tailElement, newElement):
@@ -16,12 +16,11 @@ def insertFront(tailElement, newElement):
     return tailElement
 
 
+def main():
+    args = sys.argv[1:]
 
-
-
-class CircDLtutorial:
-    # create the bridges object
-    bridges = Bridges(6, "YOUR_USER_ID", "YOUR_API_KEY")
+    # create the Bridges object, set credentials
+    bridges = Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
 
     students = []
 
@@ -94,3 +93,7 @@ class CircDLtutorial:
     bridges.set_data_structure(head)
     # visualize the circular list
     bridges.visualize()
+
+if __name__ == "__main__":
+    main()
+

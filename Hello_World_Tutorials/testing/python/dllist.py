@@ -1,6 +1,7 @@
-from Bridges.DLelement import *
-from Bridges.Bridges import *
+from bridges.dl_element import *
+from bridges.bridges import *
 from StudentInfo import *
+import sys
 
 
 def insertFront(front, new_el):
@@ -12,9 +13,12 @@ def insertFront(front, new_el):
 
     return new_el
 
-class DLListtutorial:
-    #create a bridges object with your credentials
-    bridges = Bridges(4, "YOUR_USER_ID", "YOUR_API_KEY")
+def main():
+
+    args = sys.argv[1:]
+
+    # create the Bridges object, set credentials
+    bridges = Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
 
     students = []
 
@@ -82,3 +86,7 @@ class DLListtutorial:
     bridges.set_data_structure(head)
     # visualize the data structure
     bridges.visualize()
+
+if __name__ == "__main__":
+    main()
+

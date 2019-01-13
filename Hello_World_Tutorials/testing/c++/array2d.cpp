@@ -7,17 +7,15 @@ using namespace bridges;
 
 int main(int argc, char **argv) {
 
-	Bridges *bridges =  new Bridges(101, "YOUR_USER_ID", "YOUR_API_KEY");
-
-	if (argc == 4)	// Server type provided
-		bridges->setServer(argv[3]);
+    Bridges *bridges =  new Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", 
+                                "YOUR_API_KEY");
 
 	int dims[3] = {4, 4, 1};
 	Array<string> *arr = new Array<string>(4, 4);
 
-	for (int i = 0; i < dims[1]; i++)
-		for (int j = 0; j < dims[0]; j++)
-			arr->getElement(i, j).setLabel("El " + to_string(i * dims[0] + j));
+	for (int i = 0; i < dims[0]; i++)
+		for (int j = 0; j < dims[1]; j++)
+			arr->getElement(i, j).setLabel("El " + to_string(i * dims[1] + j));
 
 	arr->getElement(0, 0).getVisualizer()->setColor(Color("red"));
 	arr->getElement(0, 3).getVisualizer()->setColor(Color("green"));

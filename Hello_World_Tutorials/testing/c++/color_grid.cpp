@@ -12,8 +12,8 @@ using namespace bridges;
 // We will build a checker grid using two different colors
 
 int main(int argc, char **argv) {
-	Bridges *bridges =  new Bridges(114, "YOUR_USER_ID", "YOUR_API_KEY");
-
+    Bridges *bridges =  new Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", 
+                                "YOUR_API_KEY");
 
 	// set title for visualization
 	bridges->setTitle("A Color Grid Example");

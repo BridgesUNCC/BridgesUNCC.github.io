@@ -1,10 +1,15 @@
-from Bridges import *
-from Bridges.data_src_dependent import DataSource
-from Bridges.GraphAdjMatrix import *
+from bridges import *
+from bridges.data_src_dependent import data_source
+from bridges.graph_adj_matrix import *
+import sys
 
-class GraphAdjMatrixtutorial:
-    # create a bridges object
-    bridges = Bridges(13, "YOUR_USER_ID", "YOUR_API_KEY")
+def main():
+
+    args = sys.argv[1:]
+
+    # create the Bridges object, set credentials
+    bridges = Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
+
     # set a title for the visualization
     bridges.setTitle("A Simple Graph (Adjacency Matrix) Example using IMDB Actor/Movie Data")
 
@@ -70,3 +75,7 @@ class GraphAdjMatrixtutorial:
     bridges.set_data_structure(g)
     # visualize the graph
     bridges.visualize()
+
+if __name__ == "__main__":
+    main()
+

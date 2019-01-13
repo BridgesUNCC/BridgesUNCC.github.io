@@ -7,12 +7,12 @@ using namespace std;
 using namespace bridges;
 
 int main(int argc, char **argv) {
-	Bridges *bridges =  new Bridges(102, "YOUR_USER_ID", "YOUR_API_KEY");
-
+    Bridges *bridges =  new Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", 
+                                "YOUR_API_KEY");
 
 	if (argc == 4)		// Server type provided
 		bridges->setServer(argv[3]);
-
+		
 	Array<string> *arr = new Array<string>(4, 4, 4);
 
 	arr->getElement(0, 0, 0).getVisualizer()->setColor(Color("red"));

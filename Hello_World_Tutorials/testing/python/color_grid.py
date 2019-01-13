@@ -1,17 +1,19 @@
-from Bridges.ColorGrid import *
-from Bridges.Bridges import *
-from Bridges.Color import *
+from bridges.color_grid import *
+from bridges.bridges import *
+from bridges.color import *
+import sys
 
-class color_grid:
-
+def main():
     # This example illustrates using the Bridges color grid
     # We will build a checker grid using two different colors
 
-    # Initialize BRIDGES
-    bridges = Bridges(14, "YOUR_USER_ID", "YOUR_API_KEY")
+    args = sys.argv[1:]
+
+    # create the Bridges object, set credentials
+    bridges = Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
 
     # set title fo visualization
-    bridges.setTitle("A Checkerboard Example Using Grid Type")
+    bridges.set_title("A Checkerboard Example Using Grid Type")
 
     width = 200
     height = 200
@@ -61,3 +63,8 @@ class color_grid:
     bridges.set_data_structure(cg)
 
     bridges.visualize()
+
+
+if __name__ == "__main__":
+    main()
+

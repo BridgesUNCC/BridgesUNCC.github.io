@@ -2,25 +2,33 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>~/graphics/bridges/bridgesUNCC/Hello_World_Tutorials/testing/c++/tree.cpp.html</title>
-<meta name="Generator" content="Vim/7.3">
-<meta name="plugin-version" content="vim7.3_v6">
+<title>~/graphics/bridges/website/Hello_World_Tutorials/testing/c++/tree.cpp.html</title>
+<meta name="Generator" content="Vim/8.0">
+<meta name="plugin-version" content="vim7.4_v2">
 <meta name="syntax" content="c">
-<meta name="settings" content="use_css,no_progress">
+<meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="none">
 <style type="text/css">
 <!--
-pre { font-family: monospace; color: #000000; background-color: #ffffff; }
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
 body { font-family: monospace; color: #000000; background-color: #ffffff; }
-.Statement { color: #008080; font-weight: bold; }
-.Comment { color: #c00000; font-weight: bold; }
-.Type { color: #008000; text-decoration: underline; }
+* { font-size: 1em; }
 .Constant { color: #0000c0; text-decoration: underline; }
+.Statement { color: #008080; font-weight: bold; }
 .PreProc { color: #c000c0; text-decoration: underline; }
+.Type { color: #008000; text-decoration: underline; }
+.Comment { color: #c00000; font-weight: bold; }
 -->
 </style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
 </head>
 <body>
-<pre>
+<pre id='vimCodeElement'>
 <span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
 <span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
 <span class="PreProc">#include </span><span class="Constant">&quot;TreeElement.h&quot;</span>
@@ -29,52 +37,55 @@ using namespace std;
 using namespace bridges;
 
 <span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
-        Bridges *bridges =  new Bridges(<span class="Constant">108</span>, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+    Bridges *bridges =  new Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+                                <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 
 
-        bridges-&gt;setTitle(<span class="Constant">&quot;A General Tree Example&quot;</span>);
+	bridges-&gt;setTitle(<span class="Constant">&quot;A General Tree Example&quot;</span>);
 
-        TreeElement&lt;string&gt; *t0 = new TreeElement&lt;string&gt;(<span class="Constant">&quot;Hello&quot;</span>, <span class="Constant">&quot;Hello&quot;</span>);
-        TreeElement&lt;string&gt; *t2 = new TreeElement&lt;string&gt;(<span class="Constant">&quot;This&quot;</span>, <span class="Constant">&quot;This&quot;</span>);
-        TreeElement&lt;string&gt; *t3 = new TreeElement&lt;string&gt;(<span class="Constant">&quot;is&quot;</span>, <span class="Constant">&quot;is&quot;</span>);
-        TreeElement&lt;string&gt; *t4 =  new TreeElement&lt;string&gt;(<span class="Constant">&quot;a&quot;</span>, <span class="Constant">&quot;a&quot;</span>);
-        TreeElement&lt;string&gt; *t5 =  new TreeElement&lt;string&gt;(<span class="Constant">&quot;generic&quot;</span>, <span class="Constant">&quot;generic&quot;</span>);
-        TreeElement&lt;string&gt; *t6 =  new TreeElement&lt;string&gt;(<span class="Constant">&quot;Tree&quot;</span>, <span class="Constant">&quot;Tree&quot;</span>);
-        TreeElement&lt;string&gt; *t7 =  new TreeElement&lt;string&gt;(<span class="Constant">&quot;Representation&quot;</span>, <span class="Constant">&quot;Representation&quot;</span>);
+	TreeElement&lt;string&gt; *t0 = new TreeElement&lt;string&gt;(<span class="Constant">&quot;Hello&quot;</span>, <span class="Constant">&quot;Hello&quot;</span>);
+	TreeElement&lt;string&gt; *t2 = new TreeElement&lt;string&gt;(<span class="Constant">&quot;This&quot;</span>, <span class="Constant">&quot;This&quot;</span>);
+	TreeElement&lt;string&gt; *t3 = new TreeElement&lt;string&gt;(<span class="Constant">&quot;is&quot;</span>, <span class="Constant">&quot;is&quot;</span>);
+	TreeElement&lt;string&gt; *t4 =  new TreeElement&lt;string&gt;(<span class="Constant">&quot;a&quot;</span>, <span class="Constant">&quot;a&quot;</span>);
+	TreeElement&lt;string&gt; *t5 =  new TreeElement&lt;string&gt;(<span class="Constant">&quot;generic&quot;</span>, <span class="Constant">&quot;generic&quot;</span>);
+	TreeElement&lt;string&gt; *t6 =  new TreeElement&lt;string&gt;(<span class="Constant">&quot;Tree&quot;</span>, <span class="Constant">&quot;Tree&quot;</span>);
+	TreeElement&lt;string&gt; *t7 =  new TreeElement&lt;string&gt;(<span class="Constant">&quot;Representation&quot;</span>, <span class="Constant">&quot;Representation&quot;</span>);
 
-        <span class="Comment">// put in labels for each node; we simply use integers</span>
+	<span class="Comment">// put in labels for each node; we simply use integers</span>
 
 
-        t0-&gt;setLabel(t0-&gt;getValue());
-        t2-&gt;setLabel(t2-&gt;getValue());
-        t3-&gt;setLabel(t3-&gt;getValue());
-        t4-&gt;setLabel(t4-&gt;getValue());
-        t5-&gt;setLabel(t5-&gt;getValue());
-        t6-&gt;setLabel(t6-&gt;getValue());
-        t7-&gt;setLabel(t7-&gt;getValue());
+	t0-&gt;setLabel(t0-&gt;getValue());
+	t2-&gt;setLabel(t2-&gt;getValue());
+	t3-&gt;setLabel(t3-&gt;getValue());
+	t4-&gt;setLabel(t4-&gt;getValue());
+	t5-&gt;setLabel(t5-&gt;getValue());
+	t6-&gt;setLabel(t6-&gt;getValue());
+	t7-&gt;setLabel(t7-&gt;getValue());
 
-        <span class="Comment">// add links to children</span>
+	<span class="Comment">// add links to children</span>
 
-        t0-&gt;addChild(t2);
-        t0-&gt;addChild(t3);
-        t0-&gt;addChild(t4);
-        t2-&gt;addChild(t5);
-        t2-&gt;addChild(t6);
-        t3-&gt;addChild(t7);
+	t0-&gt;addChild(t2);
+	t0-&gt;addChild(t3);
+	t0-&gt;addChild(t4);
+	t2-&gt;addChild(t5);
+	t2-&gt;addChild(t6);
+	t3-&gt;addChild(t7);
 
-        <span class="Comment">// set some visual attributes</span>
+	<span class="Comment">// set some visual attributes</span>
 
-        t0-&gt;getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;red&quot;</span>));
-        t0-&gt;getVisualizer()-&gt;setOpacity(<span class="Constant">0.3f</span>);
+	t0-&gt;getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;red&quot;</span>));
+	t0-&gt;getVisualizer()-&gt;setOpacity(<span class="Constant">0.3f</span>);
 
-        bridges-&gt;setTitle(<span class="Constant">&quot;A General Tree Example&quot;</span>);
-        <span class="Comment">// provide BRIDGES the  handle to the tree structure</span>
-        bridges-&gt;setDataStructure(t0);
+	bridges-&gt;setTitle(<span class="Constant">&quot;A General Tree Example&quot;</span>);
+	<span class="Comment">// provide BRIDGES the  handle to the tree structure</span>
+	bridges-&gt;setDataStructure(t0);
 
-        bridges-&gt;visualize();
+	bridges-&gt;visualize();
 
-        <span class="Statement">return</span> <span class="Constant">0</span>;
+	<span class="Statement">return</span> <span class="Constant">0</span>;
 }
 </pre>
 </body>
 </html>
+<!-- vim: set foldmethod=manual : -->

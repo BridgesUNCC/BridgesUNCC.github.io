@@ -2,26 +2,34 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>~/graphics/bridges/bridgesUNCC/Hello_World_Tutorials/testing/c++/StudentInfo.h.html</title>
-<meta name="Generator" content="Vim/7.3">
-<meta name="plugin-version" content="vim7.3_v6">
+<title>~/graphics/bridges/website/Hello_World_Tutorials/testing/c++/StudentInfo.h.html</title>
+<meta name="Generator" content="Vim/8.0">
+<meta name="plugin-version" content="vim7.4_v2">
 <meta name="syntax" content="c">
-<meta name="settings" content="use_css,no_progress">
+<meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="none">
 <style type="text/css">
 <!--
-pre { font-family: monospace; color: #000000; background-color: #ffffff; }
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
 body { font-family: monospace; color: #000000; background-color: #ffffff; }
-.Special { color: #c000c0; font-weight: bold; }
-.Type { color: #008000; text-decoration: underline; }
-.Statement { color: #008080; font-weight: bold; }
+* { font-size: 1em; }
 .Constant { color: #0000c0; text-decoration: underline; }
-.PreProc { color: #c000c0; text-decoration: underline; }
+.Special { color: #c000c0; font-weight: bold; }
+.Statement { color: #008080; font-weight: bold; }
 .Comment { color: #c00000; font-weight: bold; }
+.Type { color: #008000; text-decoration: underline; }
+.PreProc { color: #c000c0; text-decoration: underline; }
 -->
 </style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
 </head>
 <body>
-<pre>
+<pre id='vimCodeElement'>
 <span class="Comment">/*</span><span class="Comment">*</span>
 <span class="Comment"> *</span>
 <span class="Comment"> * Created by Kalpathi Subramanian, 2/19/18</span>
@@ -32,135 +40,136 @@ body { font-family: monospace; color: #000000; background-color: #ffffff; }
 using namespace std;
 
 class StudentInfo {
-        <span class="Statement">private</span>:
-                string studentID, fullName, program, email,
-                           dislikeColor, favoriteColor;
-                <span class="Type">double</span> studentCreditHours;
+	<span class="Statement">private</span>:
+		string studentID, fullName, program, email,
+			   dislikeColor, favoriteColor;
+		<span class="Type">double</span> studentCreditHours;
 
-        <span class="Statement">public</span>:
-                <span class="Comment">/*</span><span class="Comment">*</span>
-<span class="Comment">                 * @param studentID</span>
-<span class="Comment">                 * @param fullName</span>
-<span class="Comment">                 * @param program</span>
-<span class="Comment">                 * @param email</span>
-<span class="Comment">                 </span><span class="Comment">*/</span>
-                StudentInfo() {
-                        studentID =  fullName = program = email =
-                                                        dislikeColor = favoriteColor = <span class="Constant">&quot;&quot;</span>;
-                        studentCreditHours = <span class="Constant">0.0f</span>;
-                }
-                StudentInfo(string studentID, string fullName, string program,
-                        string email, string dislikeColor, string favoriteColor,
-                        <span class="Type">double</span> studentCreditHours) {
-                        this-&gt;studentID = studentID;
-                        this-&gt;fullName = fullName;
-                        this-&gt;program = program;
-                        this-&gt;email = email;
-                        this-&gt;dislikeColor = dislikeColor;
-                        this-&gt;favoriteColor = favoriteColor;
-                        this-&gt;studentCreditHours = studentCreditHours;
-                }
+	<span class="Statement">public</span>:
+		<span class="Comment">/*</span><span class="Comment">*</span>
+<span class="Comment">		 * @param studentID</span>
+<span class="Comment">		 * @param fullName</span>
+<span class="Comment">		 * @param program</span>
+<span class="Comment">		 * @param email</span>
+<span class="Comment">		 </span><span class="Comment">*/</span>
+		StudentInfo() {
+			studentID =  fullName = program = email =
+							dislikeColor = favoriteColor = <span class="Constant">&quot;&quot;</span>;
+			studentCreditHours = <span class="Constant">0.0f</span>;
+		}
+		StudentInfo(string studentID, string fullName, string program,
+			string email, string dislikeColor, string favoriteColor,
+			<span class="Type">double</span> studentCreditHours) {
+			this-&gt;studentID = studentID;
+			this-&gt;fullName = fullName;
+			this-&gt;program = program;
+			this-&gt;email = email;
+			this-&gt;dislikeColor = dislikeColor;
+			this-&gt;favoriteColor = favoriteColor;
+			this-&gt;studentCreditHours = studentCreditHours;
+		}
 
-                <span class="Comment">/*</span><span class="Comment">*</span>
-<span class="Comment">                 * @return studentID</span>
-<span class="Comment">                 </span><span class="Comment">*/</span>
-                string getStudentID() {
-                        <span class="Statement">return</span> studentID;
-                }
+		<span class="Comment">/*</span><span class="Comment">*</span>
+<span class="Comment">		 * @return studentID</span>
+<span class="Comment">		 </span><span class="Comment">*/</span>
+		string getStudentID() {
+			<span class="Statement">return</span> studentID;
+		}
 
-                <span class="Comment">/*</span><span class="Comment">*</span>
-<span class="Comment">                 * @param studentID</span>
-<span class="Comment">                 </span><span class="Comment">*/</span>
-                <span class="Type">void</span> setStudentID(string studentID) {
-                        this-&gt;studentID = studentID;
-                }
+		<span class="Comment">/*</span><span class="Comment">*</span>
+<span class="Comment">		 * @param studentID</span>
+<span class="Comment">		 </span><span class="Comment">*/</span>
+		<span class="Type">void</span> setStudentID(string studentID) {
+			this-&gt;studentID = studentID;
+		}
 
-                <span class="Comment">/*</span><span class="Comment">*</span>
-<span class="Comment">                 * @return fullName</span>
-<span class="Comment">                 </span><span class="Comment">*/</span>
-                string getFullName() {
-                        <span class="Statement">return</span> fullName;
-                }
+		<span class="Comment">/*</span><span class="Comment">*</span>
+<span class="Comment">		 * @return fullName</span>
+<span class="Comment">		 </span><span class="Comment">*/</span>
+		string getFullName() {
+			<span class="Statement">return</span> fullName;
+		}
 
-                <span class="Comment">/*</span><span class="Comment">*</span>
-<span class="Comment">                 * @param fullName</span>
-<span class="Comment">                 </span><span class="Comment">*/</span>
-                <span class="Type">void</span> setFullName(string fullName) {
-                        this-&gt;fullName = fullName;
-                }
+		<span class="Comment">/*</span><span class="Comment">*</span>
+<span class="Comment">		 * @param fullName</span>
+<span class="Comment">		 </span><span class="Comment">*/</span>
+		<span class="Type">void</span> setFullName(string fullName) {
+			this-&gt;fullName = fullName;
+		}
 
-                <span class="Comment">/*</span><span class="Comment">*</span>
-<span class="Comment">                 * @return program</span>
-<span class="Comment">                 </span><span class="Comment">*/</span>
-                string getProgram() {
-                        <span class="Statement">return</span> program;
-                }
+		<span class="Comment">/*</span><span class="Comment">*</span>
+<span class="Comment">		 * @return program</span>
+<span class="Comment">		 </span><span class="Comment">*/</span>
+		string getProgram() {
+			<span class="Statement">return</span> program;
+		}
 
-                <span class="Comment">/*</span><span class="Comment">*</span>
-<span class="Comment">                 * @param program</span>
-<span class="Comment">                 </span><span class="Comment">*/</span>
-                <span class="Type">void</span> setProgram(string program) {
-                        this-&gt;program = program;
-                }
+		<span class="Comment">/*</span><span class="Comment">*</span>
+<span class="Comment">		 * @param program</span>
+<span class="Comment">		 </span><span class="Comment">*/</span>
+		<span class="Type">void</span> setProgram(string program) {
+			this-&gt;program = program;
+		}
 
-                <span class="Comment">/*</span><span class="Comment">*</span>
-<span class="Comment">                 * @return email</span>
-<span class="Comment">                 </span><span class="Comment">*/</span>
-                string getEmail() {
-                        <span class="Statement">return</span> email;
-                }
+		<span class="Comment">/*</span><span class="Comment">*</span>
+<span class="Comment">		 * @return email</span>
+<span class="Comment">		 </span><span class="Comment">*/</span>
+		string getEmail() {
+			<span class="Statement">return</span> email;
+		}
 
-                <span class="Comment">/*</span><span class="Comment">*</span>
-<span class="Comment">                 * @param email</span>
-<span class="Comment">                 </span><span class="Comment">*/</span>
-                <span class="Type">void</span> setEmail(string email) {
-                        this-&gt;email = email;
-                }
-
-
-                <span class="Comment">/*</span><span class="Comment">*</span>
-<span class="Comment">                 * @return favoriteColor</span>
-<span class="Comment">                 </span><span class="Comment">*/</span>
-                string getFavoriteColor() {
-                        <span class="Statement">return</span> favoriteColor;
-                }
-
-                <span class="Comment">/*</span><span class="Comment">*</span>
-<span class="Comment">                 * @param favoriteColor</span>
-<span class="Comment">                 </span><span class="Comment">*/</span>
-                <span class="Type">void</span> setFavoriteColor(string favoriteColor) {
-                        this-&gt;favoriteColor = favoriteColor;
-                }
+		<span class="Comment">/*</span><span class="Comment">*</span>
+<span class="Comment">		 * @param email</span>
+<span class="Comment">		 </span><span class="Comment">*/</span>
+		<span class="Type">void</span> setEmail(string email) {
+			this-&gt;email = email;
+		}
 
 
-                string getDislikeColor() {
-                        <span class="Statement">return</span> dislikeColor;
-                }
+		<span class="Comment">/*</span><span class="Comment">*</span>
+<span class="Comment">		 * @return favoriteColor</span>
+<span class="Comment">		 </span><span class="Comment">*/</span>
+		string getFavoriteColor() {
+			<span class="Statement">return</span> favoriteColor;
+		}
 
-                <span class="Type">void</span> setDislikeColor(string dislikeColor) {
-                        this-&gt;dislikeColor = dislikeColor;
-                }
+		<span class="Comment">/*</span><span class="Comment">*</span>
+<span class="Comment">		 * @param favoriteColor</span>
+<span class="Comment">		 </span><span class="Comment">*/</span>
+		<span class="Type">void</span> setFavoriteColor(string favoriteColor) {
+			this-&gt;favoriteColor = favoriteColor;
+		}
 
-                <span class="Type">double</span> getStudentCreditHours() {
-                        <span class="Statement">return</span> studentCreditHours;
-                }
 
-                <span class="Type">void</span> setStudentCreditHours(<span class="Type">double</span> studentCreditHours) {
-                        this-&gt;studentCreditHours = studentCreditHours;
-                }
-                string getStudentLabel() {
-                        string label = fullName      +  <span class="Constant">&quot;</span><span class="Special">\\</span><span class="Constant">n&quot;</span>   +
-                                <span class="Constant">&quot;Email: &quot;</span> +            email         +  <span class="Constant">&quot;</span><span class="Special">\\</span><span class="Constant">n&quot;</span>   +
-                                <span class="Constant">&quot;Program: &quot;</span> +            program       +  <span class="Constant">&quot;</span><span class="Special">\\</span><span class="Constant">n&quot;</span>   +
-                                <span class="Constant">&quot;Student ID: &quot;</span> +         studentID     +  <span class="Constant">&quot;</span><span class="Special">\\</span><span class="Constant">n&quot;</span>   +
-                                <span class="Constant">&quot;Favorite Color: &quot;</span> + favoriteColor +  <span class="Constant">&quot;</span><span class="Special">\\</span><span class="Constant">n&quot;</span>;
-                        <span class="Constant">&quot;Dislike Color: &quot;</span>
-                        + dislikeColor;
+		string getDislikeColor() {
+			<span class="Statement">return</span> dislikeColor;
+		}
 
-                        <span class="Statement">return</span> label;
-                }
+		<span class="Type">void</span> setDislikeColor(string dislikeColor) {
+			this-&gt;dislikeColor = dislikeColor;
+		}
+
+		<span class="Type">double</span> getStudentCreditHours() {
+			<span class="Statement">return</span> studentCreditHours;
+		}
+
+		<span class="Type">void</span> setStudentCreditHours(<span class="Type">double</span> studentCreditHours) {
+			this-&gt;studentCreditHours = studentCreditHours;
+		}
+		string getStudentLabel() {
+			string label = fullName      +  <span class="Constant">&quot;</span><span class="Special">\\</span><span class="Constant">n&quot;</span>   +
+				<span class="Constant">&quot;Email: &quot;</span> +            email         +  <span class="Constant">&quot;</span><span class="Special">\\</span><span class="Constant">n&quot;</span>   +
+				<span class="Constant">&quot;Program: &quot;</span> +            program       +  <span class="Constant">&quot;</span><span class="Special">\\</span><span class="Constant">n&quot;</span>   +
+				<span class="Constant">&quot;Student ID: &quot;</span> +         studentID     +  <span class="Constant">&quot;</span><span class="Special">\\</span><span class="Constant">n&quot;</span>   +
+				<span class="Constant">&quot;Favorite Color: &quot;</span> + favoriteColor +  <span class="Constant">&quot;</span><span class="Special">\\</span><span class="Constant">n&quot;</span>;
+			<span class="Constant">&quot;Dislike Color: &quot;</span>
+			+ dislikeColor;
+
+			<span class="Statement">return</span> label;
+		}
 };
 
 </pre>
 </body>
 </html>
+<!-- vim: set foldmethod=manual : -->

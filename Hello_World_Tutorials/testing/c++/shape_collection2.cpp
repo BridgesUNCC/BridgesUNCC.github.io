@@ -28,10 +28,8 @@ int main(int argc, char **argv) {
 
 	s3->addPoint(-100, 0);
 	s3->addPoint(100, 0);
-	s3->addPoint(0, 0);
-	s3->addPoint(0, -100);
-	s3->addPoint(0, 100);
-	s3->addPoint(0, 0);
+	s3->addPoint(100, 100);
+	s3->addPoint(100, -100);
 	s3->setStrokeColor(Color("magenta"));
 	sc->addSymbol(s3);
 

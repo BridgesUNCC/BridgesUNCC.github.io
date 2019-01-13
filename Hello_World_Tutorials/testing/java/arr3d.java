@@ -7,8 +7,8 @@ public class arr3d {
 
 		//create the Bridges object
 
-		Bridges bridges = new Bridges(202, "YOUR_USER_ID", "YOUR_API_KEY");
-
+		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", 
+										"YOUR_API_KEY");
 		// specify array dimensions and create 3D array
 		int num_slices = 4, num_rows = 4, num_cols = 4;
 		Array<Integer> my_array = new Array<Integer> (num_slices, num_rows, num_cols);
