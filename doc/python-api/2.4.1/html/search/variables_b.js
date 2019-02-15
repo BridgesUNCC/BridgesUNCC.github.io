@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['label',['label',['../class_bridges_1_1element_1_1_element.html#a0aedaa53836e4af0c2d81a0a5b16115a',1,'Bridges.element.Element.label()'],['../class_bridges_1_1symbol_1_1_symbol.html#a271c2a9ba1b41c143af4192bfaf02ff4',1,'Bridges.symbol.Symbol.label()']]],
-  ['left',['left',['../class_bridges_1_1bin__tree__element_1_1_bin_tree_element.html#a1e8797babdfccd26560b34c3971f95d7',1,'Bridges::bin_tree_element::BinTreeElement']]],
-  ['location_5fx',['location_x',['../class_bridges_1_1symbol_1_1_symbol.html#a9e39005d7c368fd598f19bd42e51d6dd',1,'Bridges::symbol::Symbol']]],
-  ['location_5fy',['location_y',['../class_bridges_1_1symbol_1_1_symbol.html#a4cd3a5d0c4029805ebf7cd9c98bec227',1,'Bridges::symbol::Symbol']]],
-  ['locationx',['locationX',['../class_bridges_1_1element__visualizer_1_1_element_visualizer.html#a51873c21c714a0a309254417ced7feee',1,'Bridges::element_visualizer::ElementVisualizer']]],
-  ['locationy',['locationY',['../class_bridges_1_1element__visualizer_1_1_element_visualizer.html#a59ea4d6ddad480cc3d014914cf64c35e',1,'Bridges::element_visualizer::ElementVisualizer']]],
-  ['lvisualizer',['lvisualizer',['../class_bridges_1_1element_1_1_element.html#a41950f899961e5eebd871ede8244792e',1,'Bridges::element::Element']]]
+  ['magnitude',['magnitude',['../class_bridges_1_1data__src__dependent_1_1earthquake__usgs_1_1_earthquake_u_s_g_s.html#af08d99990b36a4858a8b901072fece25',1,'Bridges::data_src_dependent::earthquake_usgs::EarthquakeUSGS']]],
+  ['map_5foverlay',['map_overlay',['../class_bridges_1_1bridges_1_1_bridges.html#a925840aac84da0d17db238e5628d5f1a',1,'Bridges::bridges::Bridges']]],
+  ['matrix',['matrix',['../class_bridges_1_1graph__adj__matrix_1_1_graph_adj_matrix.html#a42520b36df9558abba3d9fce2858047d',1,'Bridges::graph_adj_matrix::GraphAdjMatrix']]],
+  ['maxgridsize',['maxGridSize',['../class_bridges_1_1grid_1_1_grid.html#a8e09ef4c3c53334dbb211dd2386e09c9',1,'Bridges::grid::Grid']]],
+  ['min',['min',['../class_bridges_1_1data__src__dependent_1_1earthquake__usgs_1_1_earthquake_u_s_g_s.html#a81517a266eea7fbde1b6d98721145867',1,'Bridges::data_src_dependent::earthquake_usgs::EarthquakeUSGS']]],
+  ['month',['month',['../class_bridges_1_1data__src__dependent_1_1earthquake__usgs_1_1_earthquake_u_s_g_s.html#a1429faa86866995d1504feec53c01601',1,'Bridges::data_src_dependent::earthquake_usgs::EarthquakeUSGS']]],
+  ['movie',['movie',['../class_bridges_1_1data__src__dependent_1_1actor__movie__imdb_1_1_actor_movie_i_m_d_b.html#a5661f3355662942db75f5290215006b1',1,'Bridges::data_src_dependent::actor_movie_imdb::ActorMovieIMDB']]]
 ];

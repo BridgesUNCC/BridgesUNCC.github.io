@@ -1,8 +1,20 @@
 var searchData=
 [
+  ['actor',['actor',['../class_bridges_1_1data__src__dependent_1_1actor__movie__imdb_1_1_actor_movie_i_m_d_b.html#a6eef2ee3d18703f260a800f9612008dc',1,'Bridges::data_src_dependent::actor_movie_imdb::ActorMovieIMDB']]],
   ['adj_5flist',['adj_list',['../class_bridges_1_1graph__adj__list_1_1_graph_adj_list.html#a422e14fd0d7ef4fe9c42a790cf635c0f',1,'Bridges::graph_adj_list::GraphAdjList']]],
+  ['affected_5farea',['affected_area',['../class_bridges_1_1data__src__dependent_1_1cancer__incidence_1_1_cancer_incidence.html#a0ff5e53157eb6350c79eec272a40141c',1,'Bridges::data_src_dependent::cancer_incidence::CancerIncidence']]],
+  ['ageadjustedrate',['ageAdjustedRate',['../class_bridges_1_1data__src__dependent_1_1cancer__incidence_1_1_cancer_incidence.html#ac1d56383a93d351086f5a1191de4bdfe',1,'Bridges::data_src_dependent::cancer_incidence::CancerIncidence']]],
+  ['ageadjustedrateci',['ageAdjustedRateci',['../class_bridges_1_1data__src__dependent_1_1cancer__incidence_1_1_cancer_incidence.html#ab819a47161f5be1fcfd2338aa7e4299b',1,'Bridges::data_src_dependent::cancer_incidence::CancerIncidence']]],
+  ['album',['album',['../class_bridges_1_1data__src__dependent_1_1song_1_1_song.html#a6381d4ba7d271c97fe63dc1b0bde14ec',1,'Bridges::data_src_dependent::song::Song']]],
   ['alpha',['alpha',['../class_bridges_1_1color_1_1_color.html#a4074ee82f60039f1964c9c92049d12f2',1,'Bridges::color::Color']]],
   ['array_5fdata',['array_data',['../class_bridges_1_1array_1_1_array.html#a2feba9dfd52b01c5b08a477743d33145',1,'Bridges::array::Array']]],
-  ['assignment',['assignment',['../class_bridges_1_1bridges_1_1_bridges.html#a66e278ddefd9a2c94c01eb0fc9bbc568',1,'Bridges.bridges.Bridges.assignment()'],['../class_bridges_1_1connector_1_1_connector.html#a1f6453ca6554da7ea99be8e55b51b4bf',1,'Bridges.connector.Connector.assignment()']]],
-  ['assignment_5fpart',['assignment_part',['../class_bridges_1_1bridges_1_1_bridges.html#aab0a68541bf63b6c234c50514f1cbe80',1,'Bridges::bridges::Bridges']]]
+  ['artist',['artist',['../class_bridges_1_1data__src__dependent_1_1song_1_1_song.html#ad409bafaa5e361ef6297ff50674695d6',1,'Bridges::data_src_dependent::song::Song']]],
+  ['assignment',['assignment',['../class_bridges_1_1bridges_1_1_bridges.html#a2532355e121918d9c30c4fb19161e92e',1,'Bridges.bridges.Bridges.assignment()'],['../class_bridges_1_1bridges_1_1_bridges.html#a66e278ddefd9a2c94c01eb0fc9bbc568',1,'Bridges.bridges.Bridges.assignment()'],['../class_bridges_1_1connector_1_1_connector.html#a1f6453ca6554da7ea99be8e55b51b4bf',1,'Bridges.connector.Connector.assignment()']]],
+  ['assignment_5fpart',['assignment_part',['../class_bridges_1_1bridges_1_1_bridges.html#a16beecb895f3b4814ac213e81394a155',1,'Bridges.bridges.Bridges.assignment_part()'],['../class_bridges_1_1bridges_1_1_bridges.html#aab0a68541bf63b6c234c50514f1cbe80',1,'Bridges.bridges.Bridges.assignment_part()']]],
+  ['author_5fbirth',['author_birth',['../class_bridges_1_1data__src__dependent_1_1gutenberg__book_1_1_gutenberg_book.html#ae3291f767c4e16bd5151686d318ece5a',1,'Bridges::data_src_dependent::gutenberg_book::GutenbergBook']]],
+  ['author_5fdeath',['author_death',['../class_bridges_1_1data__src__dependent_1_1gutenberg__book_1_1_gutenberg_book.html#a73a52fb7898e2dd9958a8b66ac5ceb86',1,'Bridges::data_src_dependent::gutenberg_book::GutenbergBook']]],
+  ['author_5fname',['author_name',['../class_bridges_1_1data__src__dependent_1_1gutenberg__book_1_1_gutenberg_book.html#a270314cd5b6e4bc09c2a54205e3de421',1,'Bridges::data_src_dependent::gutenberg_book::GutenbergBook']]],
+  ['authorbirth',['authorBirth',['../class_bridges_1_1data__src__dependent_1_1book_1_1_book.html#a4812efdfa5254d56c51ca4b66b1245ef',1,'Bridges::data_src_dependent::book::Book']]],
+  ['authordeath',['authorDeath',['../class_bridges_1_1data__src__dependent_1_1book_1_1_book.html#a0a5e0855570a88bd0044238da6cdb002',1,'Bridges.data_src_dependent.book.Book.authorDeath()'],['../class_bridges_1_1data__src__dependent_1_1gutenberg__book_1_1_gutenberg_book.html#ad562f8a186c9f21d9539920f2ca92db4',1,'Bridges.data_src_dependent.gutenberg_book.GutenbergBook.authorDeath()']]],
+  ['authorname',['authorName',['../class_bridges_1_1data__src__dependent_1_1book_1_1_book.html#a310bc46cc12d008e68821aa0975e4f8b',1,'Bridges::data_src_dependent::book::Book']]]
 ];

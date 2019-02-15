@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['tag',['tag',['../class_bridges_1_1ml__element_1_1_m_lelement.html#a8d60a763a1a76b899f7b954a604f778f',1,'Bridges.ml_element.MLelement.tag()'],['../class_bridges_1_1ml__element_1_1_m_lelement.html#aa9891ba8d6172b9ed65981f26036c213',1,'Bridges.ml_element.MLelement.tag()']]],
-  ['thickness',['thickness',['../class_bridges_1_1kd__tree__element_1_1_k_d_tree_element.html#a530b78c2dcb601a9345b195c1b882d30',1,'Bridges.kd_tree_element.KDTreeElement.thickness()'],['../class_bridges_1_1link__visualizer_1_1_link_visualizer.html#acbc2abcd8584b20c14f3aa695cb5a668',1,'Bridges.link_visualizer.LinkVisualizer.thickness()']]],
-  ['title',['title',['../class_bridges_1_1bridges_1_1_bridges.html#a5427643899fb1ddfc7d4d834779409bd',1,'Bridges::bridges::Bridges']]],
-  ['tree_5felement_2epy',['tree_element.py',['../tree__element_8py.html',1,'']]],
-  ['treeelement',['TreeElement',['../class_bridges_1_1tree__element_1_1_tree_element.html',1,'Bridges::tree_element']]]
+  ['url',['url',['../class_bridges_1_1data__src__dependent_1_1book_1_1_book.html#a243366fff7196a0f06e9dc5f4bc17b0e',1,'Bridges.data_src_dependent.book.Book.url()'],['../class_bridges_1_1data__src__dependent_1_1earthquake__usgs_1_1_earthquake_u_s_g_s.html#a1a7fcadbb52ac42ff2bc2de24906140f',1,'Bridges.data_src_dependent.earthquake_usgs.EarthquakeUSGS.url()'],['../class_bridges_1_1data__src__dependent_1_1gutenberg__book_1_1_gutenberg_book.html#a77bf5cb37ad09e8c5fa06eee5e8a582b',1,'Bridges.data_src_dependent.gutenberg_book.GutenbergBook.url()']]],
+  ['username',['username',['../class_bridges_1_1bridges_1_1_bridges.html#a09593511340ae03bed2abbf9dd12f48f',1,'Bridges.bridges.Bridges.username()'],['../class_bridges_1_1bridges_1_1_bridges.html#afe26b5521aae689055377e6f2e6a7212',1,'Bridges.bridges.Bridges.username()'],['../class_bridges_1_1connector_1_1_connector.html#aeab093f0dd4b59e46ab280bf7af5ffb8',1,'Bridges.connector.Connector.username()'],['../class_bridges_1_1connector_1_1_connector.html#ab87dbc1ca549f3c2b4ac5a19abcc20e0',1,'Bridges.connector.Connector.username()']]]
 ];

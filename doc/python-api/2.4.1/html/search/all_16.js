@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['value',['value',['../class_bridges_1_1element_1_1_element.html#a54928aa5d8a914e9394ba2fb0e7ef270',1,'Bridges::element::Element']]],
-  ['vertex',['vertex',['../class_bridges_1_1edge_1_1_edge.html#a785d6e63ec4a7ec1b49c9e4a81a802dc',1,'Bridges::edge::Edge']]],
-  ['vertices',['vertices',['../class_bridges_1_1graph__adj__list_1_1_graph_adj_list.html#a3efee49a2137c200d4e21ab28498d209',1,'Bridges.graph_adj_list.GraphAdjList.vertices()'],['../class_bridges_1_1graph__adj__matrix_1_1_graph_adj_matrix.html#a6b739164cfcebbb2c953f01b75574486',1,'Bridges.graph_adj_matrix.GraphAdjMatrix.vertices()']]],
-  ['vis_5ftype',['vis_type',['../class_bridges_1_1bridges_1_1_bridges.html#aec289f4a18867c2fef080a4faa092e8e',1,'Bridges.bridges.Bridges.vis_type()'],['../class_bridges_1_1bridges_1_1_bridges.html#a0c3729b756ec663959e99210d986638e',1,'Bridges.bridges.Bridges.vis_type()']]],
-  ['visualize',['visualize',['../class_bridges_1_1bridges_1_1_bridges.html#ad25ec4119ef21f031c6240a9d6d996c6',1,'Bridges::bridges::Bridges']]],
-  ['visualizer',['visualizer',['../class_bridges_1_1element_1_1_element.html#a929f63e3aaaeff971a1def438168559a',1,'Bridges::element::Element']]]
+  ['weight',['weight',['../class_bridges_1_1edge_1_1_edge.html#a4fb568704945fe2cc8fbb1f5c5e807cd',1,'Bridges.edge.Edge.weight()'],['../class_bridges_1_1edge_1_1_edge.html#a36787799fbbb1cd17fe1944d92513524',1,'Bridges.edge.Edge.weight()'],['../class_bridges_1_1link__visualizer_1_1_link_visualizer.html#a95a85a4c31c0af26ece7229bc679032d',1,'Bridges.link_visualizer.LinkVisualizer.weight()'],['../class_bridges_1_1link__visualizer_1_1_link_visualizer.html#a3cf821801816ca20db68e8122b159e96',1,'Bridges.link_visualizer.LinkVisualizer.weight()']]],
+  ['word_5fnumber',['word_number',['../class_bridges_1_1element_1_1_element.html#a63a7f47da997db2df55a22715e519dff',1,'Bridges::element::Element']]]
 ];

@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['value',['value',['../classbridges_1_1element_1_1_element.html#a4ea3c6d8ba6395dc681e337074f098aa',1,'bridges.element.Element.value()'],['../classbridges_1_1element_1_1_element.html#ab0f332022d1ded0b9cd2989bc7a22765',1,'bridges.element.Element.value()']]],
-  ['vertex',['vertex',['../classbridges_1_1edge_1_1_edge.html#a74edcc1b64f904141578fae68593be03',1,'bridges.edge.Edge.vertex()'],['../classbridges_1_1edge_1_1_edge.html#af894a206ef35d03cdb75faea83a0fc5a',1,'bridges.edge.Edge.vertex()']]],
-  ['vertices',['vertices',['../classbridges_1_1graph__adj__list_1_1_graph_adj_list.html#a6d1115214ceb8c77fe886e78de19f691',1,'bridges.graph_adj_list.GraphAdjList.vertices()'],['../classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix.html#abc6ac2ef7b1328a9d88027f2763cecfc',1,'bridges.graph_adj_matrix.GraphAdjMatrix.vertices()']]],
-  ['vis_5ftype',['vis_type',['../classbridges_1_1bridges_1_1_bridges.html#a7eceb4799ff2849276f226d3f229db62',1,'bridges.bridges.Bridges.vis_type()'],['../classbridges_1_1bridges_1_1_bridges.html#a5ca152bf3830e2be1f72247463916f82',1,'bridges.bridges.Bridges.vis_type()']]],
-  ['visualizer',['visualizer',['../classbridges_1_1element_1_1_element.html#a86b560e1c213852ad2e99131f0f1e914',1,'bridges::element::Element']]]
+  ['value',['value',['../class_bridges_1_1element_1_1_element.html#af18dea5cfca666c8e4ae29f1a464e7ea',1,'Bridges.element.Element.value()'],['../class_bridges_1_1element_1_1_element.html#a54928aa5d8a914e9394ba2fb0e7ef270',1,'Bridges.element.Element.value()']]],
+  ['vertex',['vertex',['../class_bridges_1_1edge_1_1_edge.html#a1cded0b08960b1a7fa0d8c1505315651',1,'Bridges.edge.Edge.vertex()'],['../class_bridges_1_1edge_1_1_edge.html#a785d6e63ec4a7ec1b49c9e4a81a802dc',1,'Bridges.edge.Edge.vertex()']]],
+  ['vertices',['vertices',['../class_bridges_1_1graph__adj__list_1_1_graph_adj_list.html#a3efee49a2137c200d4e21ab28498d209',1,'Bridges.graph_adj_list.GraphAdjList.vertices()'],['../class_bridges_1_1graph__adj__matrix_1_1_graph_adj_matrix.html#a6b739164cfcebbb2c953f01b75574486',1,'Bridges.graph_adj_matrix.GraphAdjMatrix.vertices()']]],
+  ['vis_5ftype',['vis_type',['../class_bridges_1_1bridges_1_1_bridges.html#aec289f4a18867c2fef080a4faa092e8e',1,'Bridges.bridges.Bridges.vis_type()'],['../class_bridges_1_1bridges_1_1_bridges.html#a0c3729b756ec663959e99210d986638e',1,'Bridges.bridges.Bridges.vis_type()']]],
+  ['visualizer',['visualizer',['../class_bridges_1_1element_1_1_element.html#a929f63e3aaaeff971a1def438168559a',1,'Bridges::element::Element']]]
 ];

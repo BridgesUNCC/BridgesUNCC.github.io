@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['blue',['blue',['../classbridges_1_1color_1_1_color.html#a14f94eb29dcabf578a1932c5477e12f3',1,'bridges.color.Color.blue(self)'],['../classbridges_1_1color_1_1_color.html#a0673063270c8a522b086a916f09dd1f5',1,'bridges.color.Color.blue'],['../classbridges_1_1color_1_1_color.html#a14f94eb29dcabf578a1932c5477e12f3',1,'bridges.color.Color.blue(self)']]]
+  ['blue',['blue',['../class_bridges_1_1color_1_1_color.html#a0c7174e0cc79f94bba0378e80afd416b',1,'Bridges.color.Color.blue(self)'],['../class_bridges_1_1color_1_1_color.html#ae13a368cd4278e676227526afe69c1ad',1,'Bridges.color.Color.blue'],['../class_bridges_1_1color_1_1_color.html#a0c7174e0cc79f94bba0378e80afd416b',1,'Bridges.color.Color.blue(self)']]]
 ];
