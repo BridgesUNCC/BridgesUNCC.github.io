@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['bal_5ffactor',['bal_factor',['../classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element.html#a3ef9e56931a3b3296138e51027d96ce1',1,'bridges.avl_tree_element.AVLTreeElement.bal_factor()'],['../classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element.html#a9bc19a93645da2c30d029315dcce1d09',1,'bridges.avl_tree_element.AVLTreeElement.bal_factor()']]],
-  ['basecolor',['baseColor',['../classbridges_1_1color__grid_1_1_color_grid.html#a0e4072c513a5a641f9713b49c72db36c',1,'bridges.color_grid.ColorGrid.baseColor()'],['../classbridges_1_1color__grid_1_1_color_grid.html#ad2db62703be80114e46b490ff02f8bd9',1,'bridges.color_grid.ColorGrid.baseColor()']]],
-  ['blue',['blue',['../classbridges_1_1color_1_1_color.html#a2c5081c47a43419bb1c5dbbd9c72a21e',1,'bridges::color::Color']]]
+  ['bal_5ffactor',['bal_factor',['../class_bridges_1_1avl__tree__element_1_1_a_v_l_tree_element.html#aecb3dfe8fcc83d6c5f46adddbed168e4',1,'Bridges.avl_tree_element.AVLTreeElement.bal_factor()'],['../class_bridges_1_1avl__tree__element_1_1_a_v_l_tree_element.html#a9187ba8eeedf0e359f020b443275c356',1,'Bridges.avl_tree_element.AVLTreeElement.bal_factor()']]],
+  ['basecolor',['baseColor',['../class_bridges_1_1color__grid_1_1_color_grid.html#a0bfaf5f4bdcf43899b67badca669e806',1,'Bridges.color_grid.ColorGrid.baseColor()'],['../class_bridges_1_1color__grid_1_1_color_grid.html#a97e66f3c97bbf57c2aa2f5fb78c4114f',1,'Bridges.color_grid.ColorGrid.baseColor()']]],
+  ['blue',['blue',['../class_bridges_1_1color_1_1_color.html#ab3eb91c32b56dcb17fc9315706439137',1,'Bridges::color::Color']]]
 ];

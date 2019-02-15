@@ -1,11 +1,15 @@
 var searchData=
 [
-  ['debug',['debug',['../classbridges_1_1connector_1_1_connector.html#a8210dc126cfe66057cd6c01dcac32a06',1,'bridges::connector::Connector']]],
-  ['description',['description',['../classbridges_1_1bridges_1_1_bridges.html#aa969453a479b7fee4a8b82345e3985ba',1,'bridges.bridges.Bridges.description()'],['../classbridges_1_1bridges_1_1_bridges.html#ae7a9987daf7c1fbdb19d87954bb64aa0',1,'bridges.bridges.Bridges.description()']]],
-  ['dimension',['dimension',['../classbridges_1_1kd__tree__element_1_1_k_d_tree_element.html#a893137cbfc8bccee32c9d75a513ed16c',1,'bridges::kd_tree_element::KDTreeElement']]],
-  ['dims',['dims',['../classbridges_1_1array_1_1_array.html#a69f2c673a6077e203b3e916dd73cd243',1,'bridges::array::Array']]],
-  ['divide_5fkey',['DIVIDE_KEY',['../classbridges_1_1element_1_1_element.html#a48cd67c58c2b685732f4e751f539eed0',1,'bridges::element::Element']]],
+  ['data_5fsource_2epy',['data_source.py',['../data__source_8py.html',1,'']]],
+  ['datasource',['DataSource',['../class_bridges_1_1data__src__dependent_1_1data__source_1_1_data_source.html',1,'Bridges::data_src_dependent::data_source']]],
+  ['day',['day',['../class_bridges_1_1data__src__dependent_1_1earthquake__usgs_1_1_earthquake_u_s_g_s.html#aac702628f8f2189ea9ae7eb20db7745b',1,'Bridges::data_src_dependent::earthquake_usgs::EarthquakeUSGS']]],
+  ['debug',['debug',['../class_bridges_1_1connector_1_1_connector.html#a7636c120b9922e01529f4d36ded3d904',1,'Bridges::connector::Connector']]],
+  ['description',['description',['../class_bridges_1_1bridges_1_1_bridges.html#abbc20a6c63c12ce54ef567380139d2c4',1,'Bridges.bridges.Bridges.description()'],['../class_bridges_1_1bridges_1_1_bridges.html#adf7716495f589eef1236200869f22679',1,'Bridges.bridges.Bridges.description()']]],
+  ['dimension',['dimension',['../class_bridges_1_1kd__tree__element_1_1_k_d_tree_element.html#ab5457d652eacbce763c8760b512ac7d7',1,'Bridges::kd_tree_element::KDTreeElement']]],
+  ['dims',['dims',['../class_bridges_1_1array_1_1_array.html#ac037f96fff9569134da9d66e33bc1f0f',1,'Bridges::array::Array']]],
+  ['divide_5fkey',['DIVIDE_KEY',['../class_bridges_1_1element_1_1_element.html#aa4250285f429249f87175e5792981a26',1,'Bridges::element::Element']]],
   ['dl_5felement_2epy',['dl_element.py',['../dl__element_8py.html',1,'']]],
-  ['dlelement',['DLelement',['../classbridges_1_1dl__element_1_1_d_lelement.html',1,'bridges::dl_element']]],
-  ['ds_5fhandle',['ds_handle',['../classbridges_1_1bridges_1_1_bridges.html#a7a6f25612be64d4f3e203d7d37cb4da4',1,'bridges::bridges::Bridges']]]
+  ['dlelement',['DLelement',['../class_bridges_1_1dl__element_1_1_d_lelement.html',1,'Bridges::dl_element']]],
+  ['downloads',['downloads',['../class_bridges_1_1data__src__dependent_1_1gutenberg__book_1_1_gutenberg_book.html#a2d7c3a16f0b03b6ec3946e0f1ee3b429',1,'Bridges::data_src_dependent::gutenberg_book::GutenbergBook']]],
+  ['ds_5fhandle',['ds_handle',['../class_bridges_1_1bridges_1_1_bridges.html#abfb616560e034d466cd624132d3a96a3',1,'Bridges::bridges::Bridges']]]
 ];

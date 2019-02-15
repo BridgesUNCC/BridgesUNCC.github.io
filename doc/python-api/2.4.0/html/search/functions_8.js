@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['visualize',['visualize',['../classbridges_1_1bridges_1_1_bridges.html#a3c1321f8be7b249639a47eba10b67c70',1,'bridges::bridges::Bridges']]]
+  ['visualize',['visualize',['../class_bridges_1_1bridges_1_1_bridges.html#ad25ec4119ef21f031c6240a9d6d996c6',1,'Bridges::bridges::Bridges']]]
 ];
