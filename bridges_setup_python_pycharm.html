@@ -164,7 +164,7 @@
 			<tr>
         <td class = "col-md-2"> <b>Step 6: Create a new Project</b>
           <ul>
-            <li> Click <i>Create New Project</i> and name it as your BRIDGES user ID.
+            <li> Click <i>Create New Project</i> and name it as HelloWorld.
 						<li> Then select <i>Existing Interpreter</i> and select the Environment we created.
           </ul>
         </td>
@@ -178,8 +178,7 @@
             <li> To verify that you have successfully imported the zip
               file, look under the External Libraries section of
               your project and expand the python interpreter.
-            <li> If you have a Project in PyCharm with your
-              username as the project name, and the
+            <li> If you have a Project in PyCharm named 'HelloWorld', and the
               expanded python interpreter in the External Library
               section shows the bridges zip file,
               you have completed the setup and are ready to build
@@ -228,8 +227,8 @@
 				</td>
 				<td class = "col-md-8">
 					<ul>
-						<i>from bridges.Bridges import *</i> <br>
-						<i>from bridges.SLelement import *</i>
+						<i>from bridges.bridges import *</i> <br>
+						<i>from bridges.sl_element import *</i>
 					</ul>
 				</td>
 				</tr>
@@ -237,8 +236,6 @@
 				<td class = "col-md-2">
 					<ul>
 						<li> Create the bridges object with your API Key and User ID.
-							Since we want our project to print out ``Hello World"
-							use String as the type.
 					</ul>
 				</td>
 				<td class = "col-md-8">
@@ -324,8 +321,8 @@
 				</td>
 				<td class = "col-md-8">
 <b><i>
-from Bridges.Bridges import * <br>
-from Bridges.SLelement import * <p> <p>
+from bridges.bridges import * <br>
+from bridges.sl_element import * <p> <p>
 
 class HelloWorld: <p>
 
@@ -357,11 +354,11 @@ class HelloWorld: <p>
 					<ul>
 						<li> Once your code is in, run your project
 						<li> <i> Run-->Run </i>
-						<li> <i> Run --> StudentName</i>
+						<li> <i> Run --> HelloWorld</i>
 					</ul>
 				</td>
 				<td class = "col-md-8">
-					<img src = "./img/Tutorialv2/python/run.png" width="800"></img>
+					<img src = "./img/Tutorialv2/python/runHelloWorld.png" width="800"></img>
                 </td>
 				</tr>
 				</tr>

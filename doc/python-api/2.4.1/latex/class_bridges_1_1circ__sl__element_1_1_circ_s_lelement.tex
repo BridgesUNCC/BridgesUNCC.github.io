@@ -1,0 +1,112 @@
+\hypertarget{class_bridges_1_1circ__sl__element_1_1_circ_s_lelement}{}\section{Bridges.\+circ\+\_\+sl\+\_\+element.\+Circ\+S\+Lelement Class Reference}
+\label{class_bridges_1_1circ__sl__element_1_1_circ_s_lelement}\index{Bridges.\+circ\+\_\+sl\+\_\+element.\+Circ\+S\+Lelement@{Bridges.\+circ\+\_\+sl\+\_\+element.\+Circ\+S\+Lelement}}
+
+
+This class can be used to instantiate Singly Linked Circular List Elements.  
+
+
+Inheritance diagram for Bridges.\+circ\+\_\+sl\+\_\+element.\+Circ\+S\+Lelement\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_bridges_1_1circ__sl__element_1_1_circ_s_lelement}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{class_bridges_1_1circ__sl__element_1_1_circ_s_lelement_a6f1b38f5f3350a4c8d280e938cec3662}{\+\_\+\+\_\+init\+\_\+\+\_\+}
+\begin{DoxyCompactList}\small\item\em This constructor creates an \hyperlink{class_bridges_1_1circ__sl__element_1_1_circ_s_lelement}{Circ\+S\+Lelement} object and sets its next pointer to itself. \end{DoxyCompactList}\item 
+def \hyperlink{class_bridges_1_1circ__sl__element_1_1_circ_s_lelement_a53774e23afd83780f1a8a64a68892494}{get\+\_\+data\+\_\+structure\+\_\+type} (self)
+\begin{DoxyCompactList}\small\item\em This method gets the data structure type. \end{DoxyCompactList}\item 
+def \hyperlink{class_bridges_1_1circ__sl__element_1_1_circ_s_lelement_a709b68b1e016734f15c64bde94077d58}{get\+\_\+next} (self)
+\begin{DoxyCompactList}\small\item\em Retrieves the next \hyperlink{class_bridges_1_1circ__sl__element_1_1_circ_s_lelement}{Circ\+S\+Lelement}. \end{DoxyCompactList}\item 
+def \hyperlink{class_bridges_1_1circ__sl__element_1_1_circ_s_lelement_ab19b10a71d5f93996eb15c19cfaf2688}{\+\_\+\+\_\+str\+\_\+\+\_\+} (self)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class can be used to instantiate Singly Linked Circular List Elements. 
+
+Structurally they are the same as singly linked elements except that each node constructed with the next point pointing to itself; User\textquotesingle{}s implementation of the circularly linked list needs to ensure that the last node points to first node of the list, as the visualization generation is dependent on this.
+
+Elements have labels (string) that are displayed on the visualization. Elements take an generic object as a user defined parameter, E, which can be any native type or object.
+
+Elements contains a visualizer (Element\+Visualizer) object for setting visual attributes (color, shape, opacity, size), necessary for displaying them in a web browser.
+
+Elements also have a Link\+Visualizer object that is used when they are linked to another element, appropriate for setting link attributes, between an element and its next element.
+
+\begin{DoxyAuthor}{Author}
+Kalpathi Subramanian
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+6/22/16, 1/7/17, 5/17/17 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_bridges_1_1circ__sl__element_1_1_circ_s_lelement_a6f1b38f5f3350a4c8d280e938cec3662}{}\index{Bridges\+::circ\+\_\+sl\+\_\+element\+::\+Circ\+S\+Lelement@{Bridges\+::circ\+\_\+sl\+\_\+element\+::\+Circ\+S\+Lelement}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Bridges\+::circ\+\_\+sl\+\_\+element\+::\+Circ\+S\+Lelement@{Bridges\+::circ\+\_\+sl\+\_\+element\+::\+Circ\+S\+Lelement}}
+\subsubsection[{\+\_\+\+\_\+init\+\_\+\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}def Bridges.\+circ\+\_\+sl\+\_\+element.\+Circ\+S\+Lelement.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{e = {\ttfamily None}, }
+\item[{}]{label = {\ttfamily None}, }
+\item[{}]{next = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}\label{class_bridges_1_1circ__sl__element_1_1_circ_s_lelement_a6f1b38f5f3350a4c8d280e938cec3662}
+
+
+This constructor creates an \hyperlink{class_bridges_1_1circ__sl__element_1_1_circ_s_lelement}{Circ\+S\+Lelement} object and sets its next pointer to itself. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em label} & the label of \hyperlink{class_bridges_1_1circ__sl__element_1_1_circ_s_lelement}{Circ\+S\+Lelement} \\
+\hline
+{\em e} & the generic object that this \hyperlink{class_bridges_1_1circ__sl__element_1_1_circ_s_lelement}{Circ\+S\+Lelement} will hold \\
+\hline
+{\em next} & the \hyperlink{class_bridges_1_1circ__sl__element_1_1_circ_s_lelement}{Circ\+S\+Lelement} that should be assigned to the next pointer \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_bridges_1_1circ__sl__element_1_1_circ_s_lelement_ab19b10a71d5f93996eb15c19cfaf2688}{}\index{Bridges\+::circ\+\_\+sl\+\_\+element\+::\+Circ\+S\+Lelement@{Bridges\+::circ\+\_\+sl\+\_\+element\+::\+Circ\+S\+Lelement}!\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}!Bridges\+::circ\+\_\+sl\+\_\+element\+::\+Circ\+S\+Lelement@{Bridges\+::circ\+\_\+sl\+\_\+element\+::\+Circ\+S\+Lelement}}
+\subsubsection[{\+\_\+\+\_\+str\+\_\+\+\_\+(self)}]{\setlength{\rightskip}{0pt plus 5cm}def Bridges.\+circ\+\_\+sl\+\_\+element.\+Circ\+S\+Lelement.\+\_\+\+\_\+str\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{class_bridges_1_1circ__sl__element_1_1_circ_s_lelement_ab19b10a71d5f93996eb15c19cfaf2688}
+\hypertarget{class_bridges_1_1circ__sl__element_1_1_circ_s_lelement_a53774e23afd83780f1a8a64a68892494}{}\index{Bridges\+::circ\+\_\+sl\+\_\+element\+::\+Circ\+S\+Lelement@{Bridges\+::circ\+\_\+sl\+\_\+element\+::\+Circ\+S\+Lelement}!get\+\_\+data\+\_\+structure\+\_\+type@{get\+\_\+data\+\_\+structure\+\_\+type}}
+\index{get\+\_\+data\+\_\+structure\+\_\+type@{get\+\_\+data\+\_\+structure\+\_\+type}!Bridges\+::circ\+\_\+sl\+\_\+element\+::\+Circ\+S\+Lelement@{Bridges\+::circ\+\_\+sl\+\_\+element\+::\+Circ\+S\+Lelement}}
+\subsubsection[{get\+\_\+data\+\_\+structure\+\_\+type(self)}]{\setlength{\rightskip}{0pt plus 5cm}def Bridges.\+circ\+\_\+sl\+\_\+element.\+Circ\+S\+Lelement.\+get\+\_\+data\+\_\+structure\+\_\+type (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{class_bridges_1_1circ__sl__element_1_1_circ_s_lelement_a53774e23afd83780f1a8a64a68892494}
+
+
+This method gets the data structure type. 
+
+\begin{DoxyReturn}{Returns}
+The date structure type as a string 
+\end{DoxyReturn}
+\hypertarget{class_bridges_1_1circ__sl__element_1_1_circ_s_lelement_a709b68b1e016734f15c64bde94077d58}{}\index{Bridges\+::circ\+\_\+sl\+\_\+element\+::\+Circ\+S\+Lelement@{Bridges\+::circ\+\_\+sl\+\_\+element\+::\+Circ\+S\+Lelement}!get\+\_\+next@{get\+\_\+next}}
+\index{get\+\_\+next@{get\+\_\+next}!Bridges\+::circ\+\_\+sl\+\_\+element\+::\+Circ\+S\+Lelement@{Bridges\+::circ\+\_\+sl\+\_\+element\+::\+Circ\+S\+Lelement}}
+\subsubsection[{get\+\_\+next(self)}]{\setlength{\rightskip}{0pt plus 5cm}def Bridges.\+circ\+\_\+sl\+\_\+element.\+Circ\+S\+Lelement.\+get\+\_\+next (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{class_bridges_1_1circ__sl__element_1_1_circ_s_lelement_a709b68b1e016734f15c64bde94077d58}
+
+
+Retrieves the next \hyperlink{class_bridges_1_1circ__sl__element_1_1_circ_s_lelement}{Circ\+S\+Lelement}. 
+
+\begin{DoxyReturn}{Returns}
+Circ\+S\+Lelement$<$\+E$>$ assigned to next 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/python/\+Bridges/\hyperlink{circ__sl__element_8py}{circ\+\_\+sl\+\_\+element.\+py}\end{DoxyCompactItemize}

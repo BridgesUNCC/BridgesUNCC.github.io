@@ -1,10 +1,13 @@
-from Bridges.Bridges import *
-from Bridges.Array import *
+from bridges.bridges import *
+from bridges.array import *
+import sys
 
-class Array1d():
+def main():
+    args = sys.argv[1:]
 
-    #create the Bridges object, set credentials
-    bridges = Bridges(0, "YOUR_USER_ID", "YOUR_API_KEY")
+    # create the Bridges object, set credentials
+
+    bridges = Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
 
     #set array dimensions, allocate array fo elements
     arraySize = 10
@@ -32,3 +35,7 @@ class Array1d():
 
     # visualize the list
     bridges.visualize()
+
+if __name__ == "__main__":
+    main()
+

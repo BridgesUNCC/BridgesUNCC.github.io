@@ -7,11 +7,8 @@ using namespace std;
 using namespace bridges;
 
 int main(int argc, char **argv) {
-	Bridges *bridges =  new Bridges(111, "YOUR_USER_ID", "YOUR_API_KEY");
-
-
-	if (argc == 4)		// Server type provided
-		bridges->setServer(argv[3]);
+    Bridges *bridges =  new Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", 
+                                "YOUR_API_KEY");
 
 	AVLTreeElement<int, string> *tle0 =
 		new AVLTreeElement<int, string>(10, "10", "10");

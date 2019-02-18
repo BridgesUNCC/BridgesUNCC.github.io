@@ -1,11 +1,13 @@
-from Bridges.Bridges import *
+from bridges.bridges import *
 from StudentInfo import *
-from Bridges.CircSLelement import *
+from bridges.circ_sl_element import *
+import sys
 
-class CircSLtutorial:
+def main():
+    args = sys.argv[1:]
 
-    # create a bridges object with your credentials
-    bridges = Bridges(5, "YOUR_USER_ID", "YOUR_API_KEY")
+    # create the Bridges object, set credentials
+    bridges = Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
 
     students = []
 
@@ -83,3 +85,7 @@ class CircSLtutorial:
 
     bridges.set_data_structure(head)
     bridges.visualize()
+
+if __name__ == "__main__":
+    main()
+

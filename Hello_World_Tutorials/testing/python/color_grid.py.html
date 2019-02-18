@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>~/graphics/bridges/site/bridgesSite/Hello_World_Tutorials/testing/python/color_grid.py.html</title>
+<title>~/graphics/bridges/website/Hello_World_Tutorials/testing/python/color_grid.py.html</title>
 <meta name="Generator" content="Vim/8.0">
 <meta name="plugin-version" content="vim7.4_v2">
 <meta name="syntax" content="c">
@@ -27,20 +27,22 @@ body { font-family: monospace; color: #000000; background-color: #ffffff; }
 </head>
 <body>
 <pre id='vimCodeElement'>
-from Bridges.ColorGrid import *
-from Bridges.Bridges import *
-from Bridges.Color import *
+from bridges.color_grid import *
+from bridges.bridges import *
+from bridges.color import *
+import sys
 
-class color_grid:
-
+def main():
     # This example illustrates using the Bridges color grid
     # We will build a checker grid using two different colors
 
-    # Initialize BRIDGES
-    bridges = Bridges(<span class="Constant">14</span>, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>)
+    args = sys.argv[<span class="Constant">1</span>:]
+
+    # create the Bridges object, set credentials
+    bridges = Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 
     # set title fo visualization
-    bridges.setTitle(<span class="Constant">&quot;A Checkerboard Example Using Grid Type&quot;</span>)
+    bridges.set_title(<span class="Constant">&quot;A Checkerboard Example Using Grid Type&quot;</span>)
 
     width = <span class="Constant">200</span>
     height = <span class="Constant">200</span>
@@ -90,6 +92,11 @@ class color_grid:
     bridges.set_data_structure(cg)
 
     bridges.visualize()
+
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;__main__&quot;</span>:
+    main()
+
 </pre>
 </body>
 </html>

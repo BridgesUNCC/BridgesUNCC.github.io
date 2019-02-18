@@ -10,9 +10,8 @@ using namespace bridges;
 DLelement<StudentInfo> *insertFront(DLelement<StudentInfo> *front, DLelement<StudentInfo> *new_el);
 
 int main(int argc, char **argv) {
-	Bridges *bridges =  new Bridges(104, "YOUR_USER_ID", "YOUR_API_KEY");
-
-
+    Bridges *bridges =  new Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", 
+                                "YOUR_API_KEY");
 
 	// load student info
 	int num_students = 5;

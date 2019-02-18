@@ -15,13 +15,13 @@ BSTElement<float, EarthquakeUSGS> *insert (BSTElement<float, EarthquakeUSGS> *rt
 int max_quakes = 25;
 
 int main(int argc, char **argv) {
-	Bridges *bridges =  new Bridges(110, "YOUR_USER_ID", "YOUR_API_KEY");
-
+    Bridges *bridges =  new Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", 
+                                "YOUR_API_KEY");
 
 	string hilite_color = "orange",
 		   def_color = "green",
 		   end_color = "red";
-
+		
 	// read the earth quake  data and build the BST
 	bridges->setTitle("Recent Earthquakes (USGIS Data)");
 

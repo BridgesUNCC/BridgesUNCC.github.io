@@ -1,17 +1,42 @@
-\hypertarget{_j_s_o_nutil_8h}{}\section{/\+Users/kalpathi/gr/bridges/client/cxx/bridges18/src/\+J\+S\+O\+Nutil.h File Reference}
-\label{_j_s_o_nutil_8h}\index{/\+Users/kalpathi/gr/bridges/client/cxx/bridges18/src/\+J\+S\+O\+Nutil.\+h@{/\+Users/kalpathi/gr/bridges/client/cxx/bridges18/src/\+J\+S\+O\+Nutil.\+h}}
-{\ttfamily \#include $<$rapidjson/document.\+h$>$}\newline
-{\ttfamily \#include $<$rapidjson/stringbuffer.\+h$>$}\newline
-{\ttfamily \#include $<$rapidjson/writer.\+h$>$}\newline
+\hypertarget{_j_s_o_nutil_8h}{}\section{/\+Users/krs/gr/bridges/client/cxx/src/\+J\+S\+O\+Nutil.h File Reference}
+\label{_j_s_o_nutil_8h}\index{/\+Users/krs/gr/bridges/client/cxx/src/\+J\+S\+O\+Nutil.\+h@{/\+Users/krs/gr/bridges/client/cxx/src/\+J\+S\+O\+Nutil.\+h}}
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$rapidjson/document.\+h$>$}\\*
+{\ttfamily \#include $<$rapidjson/stringbuffer.\+h$>$}\\*
+{\ttfamily \#include $<$rapidjson/writer.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structrapidjson__exception}{rapidjson\+\_\+exception}
+\end{DoxyCompactItemize}
 \subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
- \mbox{\hyperlink{namespacebridges}{bridges}}
-\begin{DoxyCompactList}\small\item\em This class can be used to create arrays of type Element$<$\+E$>$ where E is a generic type representation application specific data. Arrays are internally represented as 1D arrays; currently 1D, 2D and 3D arrays are supported. \end{DoxyCompactList}\item 
- \mbox{\hyperlink{namespacebridges_1_1_j_s_o_n_util}{bridges\+::\+J\+S\+O\+N\+Util}}
+ \hyperlink{namespacebridges}{bridges}
+\begin{DoxyCompactList}\small\item\em This class can be used to create arrays of type Element$<$\+E$>$ where E is a generic type representation application specific data. Arrays are internally represented as 1\+D arrays; currently 1\+D, 2\+D and 3\+D arrays are supported. \end{DoxyCompactList}\item 
+ \hyperlink{namespacebridges_1_1_j_s_o_n_util}{bridges\+::\+J\+S\+O\+N\+Util}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_j_s_o_nutil_8h_abeba18d612187bad2ac62aed9276d47c}{R\+A\+P\+I\+D\+J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+R\+T}(x)~if (!( x )) \{ throw \hyperlink{structrapidjson__exception}{rapidjson\+\_\+exception}( \#x, \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+ ) ;\}
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-string \mbox{\hyperlink{namespacebridges_1_1_j_s_o_n_util_abf11dd735ae4a4ab8e6e2e89340a1b07}{bridges\+::\+J\+S\+O\+N\+Util\+::\+J\+S\+O\+Nencode}} (const string \&str)
-\begin{DoxyCompactList}\small\item\em encodes a string object into a J\+S\+ON string. that is to say, the string is escaped properly and surrounded by quotes \end{DoxyCompactList}\end{DoxyCompactItemize}
+{\footnotesize template$<$typename T $>$ }\\string \hyperlink{namespacebridges_1_1_j_s_o_n_util_aaf500e70dc1b2a9fd1284e386af1be63}{bridges\+::\+J\+S\+O\+N\+Util\+::\+J\+S\+O\+Nencode} (const T \&d)
+\item 
+{\footnotesize template$<$$>$ }\\string \hyperlink{namespacebridges_1_1_j_s_o_n_util_a2b258507ccdf822ecebbbbb0b66fb06d}{bridges\+::\+J\+S\+O\+N\+Util\+::\+J\+S\+O\+Nencode$<$ std\+::string $>$} (const std\+::string \&str)
+\item 
+string \hyperlink{namespacebridges_1_1_j_s_o_n_util_a8167097b34730f71a1b395a76eecd550}{bridges\+::\+J\+S\+O\+N\+Util\+::\+J\+S\+O\+Nencode} (const char $\ast$str)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_j_s_o_nutil_8h_abeba18d612187bad2ac62aed9276d47c}{}\index{J\+S\+O\+Nutil.\+h@{J\+S\+O\+Nutil.\+h}!R\+A\+P\+I\+D\+J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+R\+T@{R\+A\+P\+I\+D\+J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+R\+T}}
+\index{R\+A\+P\+I\+D\+J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+R\+T@{R\+A\+P\+I\+D\+J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+R\+T}!J\+S\+O\+Nutil.\+h@{J\+S\+O\+Nutil.\+h}}
+\subsubsection[{R\+A\+P\+I\+D\+J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+R\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+A\+P\+I\+D\+J\+S\+O\+N\+\_\+\+A\+S\+S\+E\+R\+T(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~if (!( x )) \{ throw {\bf rapidjson\+\_\+exception}( \#x, \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+ ) ;\}}\label{_j_s_o_nutil_8h_abeba18d612187bad2ac62aed9276d47c}

@@ -2,73 +2,83 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>~/graphics/bridges/bridgesUNCC/Hello_World_Tutorials/testing/c++/kdt.cpp.html</title>
-<meta name="Generator" content="Vim/7.3">
-<meta name="plugin-version" content="vim7.3_v6">
+<title>~/graphics/bridges/website/Hello_World_Tutorials/testing/c++/kdt.cpp.html</title>
+<meta name="Generator" content="Vim/8.0">
+<meta name="plugin-version" content="vim7.4_v2">
 <meta name="syntax" content="c">
-<meta name="settings" content="use_css,no_progress">
+<meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="none">
 <style type="text/css">
 <!--
-pre { font-family: monospace; color: #000000; background-color: #ffffff; }
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
 body { font-family: monospace; color: #000000; background-color: #ffffff; }
-.Statement { color: #008080; font-weight: bold; }
-.Comment { color: #c00000; font-weight: bold; }
-.Type { color: #008000; text-decoration: underline; }
+* { font-size: 1em; }
 .Constant { color: #0000c0; text-decoration: underline; }
+.Statement { color: #008080; font-weight: bold; }
 .PreProc { color: #c000c0; text-decoration: underline; }
+.Type { color: #008000; text-decoration: underline; }
+.Comment { color: #c00000; font-weight: bold; }
 -->
 </style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
 </head>
 <body>
-<pre>
+<pre id='vimCodeElement'>
 <span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
 <span class="PreProc">#include </span><span class="Constant">&quot;KdTreeElement.h&quot;</span>
 
 using namespace bridges;
 
 <span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
-        Bridges *bridges =  new Bridges(<span class="Constant">115</span>, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+    Bridges *bridges =  new Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+                                <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 
-        bridges-&gt;setTitle(<span class="Constant">&quot;A Kd Tree Example&quot;</span>);
+	bridges-&gt;setTitle(<span class="Constant">&quot;A Kd Tree Example&quot;</span>);
 
-        KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; *t0 = new KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;(<span class="Constant">50</span>, <span class="Constant">0</span>);
-        KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; *t1 = new KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;(<span class="Constant">25</span>, <span class="Constant">1</span>);
-        KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; *t2 = new KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;(<span class="Constant">75</span>, <span class="Constant">1</span>);
-        KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; *t3 = new KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;(<span class="Constant">20</span>, <span class="Constant">0</span>);
-        KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; *t4 = new KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;(<span class="Constant">30</span>, <span class="Constant">0</span>);
-        KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; *t5 = new KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;(<span class="Constant">60</span>, <span class="Constant">0</span>);
-        KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; *t6 = new KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;(<span class="Constant">80</span>, <span class="Constant">0</span>);
+	KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; *t0 = new KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;(<span class="Constant">50</span>, <span class="Constant">0</span>);
+	KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; *t1 = new KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;(<span class="Constant">25</span>, <span class="Constant">1</span>);
+	KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; *t2 = new KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;(<span class="Constant">75</span>, <span class="Constant">1</span>);
+	KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; *t3 = new KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;(<span class="Constant">20</span>, <span class="Constant">0</span>);
+	KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; *t4 = new KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;(<span class="Constant">30</span>, <span class="Constant">0</span>);
+	KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; *t5 = new KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;(<span class="Constant">60</span>, <span class="Constant">0</span>);
+	KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; *t6 = new KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;(<span class="Constant">80</span>, <span class="Constant">0</span>);
 
-        t0-&gt;setLeft(t1);
-        t0-&gt;setRight(t2);
-        t1-&gt;setLeft(t3);
-        t1-&gt;setLabel(<span class="Constant">&quot;X&quot;</span>);
-        t1-&gt;setRight(t4);
-        t2-&gt;setLeft(t5);
-        t2-&gt;setRight(t6);
+	t0-&gt;setLeft(t1);
+	t0-&gt;setRight(t2);
+	t1-&gt;setLeft(t3);
+	t1-&gt;setLabel(<span class="Constant">&quot;X&quot;</span>);
+	t1-&gt;setRight(t4);
+	t2-&gt;setLeft(t5);
+	t2-&gt;setRight(t6);
 
-        t0-&gt;setLabel(<span class="Constant">&quot;X&quot;</span>);
-        t1-&gt;setLabel(<span class="Constant">&quot;Y&quot;</span>);
-        t2-&gt;setLabel(<span class="Constant">&quot;Y&quot;</span>);
-        t3-&gt;setLabel(<span class="Constant">&quot;X&quot;</span>);
-        t4-&gt;setLabel(<span class="Constant">&quot;X&quot;</span>);
-        t5-&gt;setLabel(<span class="Constant">&quot;X&quot;</span>);
-        t6-&gt;setLabel(<span class="Constant">&quot;X&quot;</span>);
+	t0-&gt;setLabel(<span class="Constant">&quot;X&quot;</span>);
+	t1-&gt;setLabel(<span class="Constant">&quot;Y&quot;</span>);
+	t2-&gt;setLabel(<span class="Constant">&quot;Y&quot;</span>);
+	t3-&gt;setLabel(<span class="Constant">&quot;X&quot;</span>);
+	t4-&gt;setLabel(<span class="Constant">&quot;X&quot;</span>);
+	t5-&gt;setLabel(<span class="Constant">&quot;X&quot;</span>);
+	t6-&gt;setLabel(<span class="Constant">&quot;X&quot;</span>);
 
-        t0-&gt;getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;red&quot;</span>));
-        <span class="Comment">// color the leaf nodes that represent the code letters</span>
-        t1-&gt;getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;orange&quot;</span>));
-        t4-&gt;getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;orange&quot;</span>));
-        t5-&gt;getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;orange&quot;</span>));
-        t6-&gt;getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;orange&quot;</span>));
+	t0-&gt;getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;red&quot;</span>));
+	<span class="Comment">// color the leaf nodes that represent the code letters</span>
+	t1-&gt;getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;orange&quot;</span>));
+	t4-&gt;getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;orange&quot;</span>));
+	t5-&gt;getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;orange&quot;</span>));
+	t6-&gt;getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;orange&quot;</span>));
 
-        <span class="Comment">// provide BRIDGES the  handle to the tree structure</span>
-        bridges-&gt;setDataStructure(t0);
+	<span class="Comment">// provide BRIDGES the  handle to the tree structure</span>
+	bridges-&gt;setDataStructure(t0);
 
-        bridges-&gt;visualize();
+	bridges-&gt;visualize();
 
-        <span class="Statement">return</span> <span class="Constant">0</span>;
+	<span class="Statement">return</span> <span class="Constant">0</span>;
 }
 </pre>
 </body>
 </html>
+<!-- vim: set foldmethod=manual : -->

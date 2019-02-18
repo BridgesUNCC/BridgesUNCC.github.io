@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['value',['value',['../class_bridges_1_1_element_1_1_element.html#adfe068cd72057bd5a45f71fdee2a6a91',1,'Bridges::Element::Element']]],
-  ['vertex',['vertex',['../class_bridges_1_1_edge_1_1_edge.html#aa503f86b141009ca9125093b4e903e38',1,'Bridges::Edge::Edge']]],
-  ['vertices',['vertices',['../class_bridges_1_1_graph_adj_list_1_1_graph_adj_list.html#aa881a72ec9ca14ee0a3fa712143109e0',1,'Bridges.GraphAdjList.GraphAdjList.vertices()'],['../class_bridges_1_1_graph_adj_matrix_1_1_graph_adj_matrix.html#a05162a3310d30fe9ee83c8d708ebff53',1,'Bridges.GraphAdjMatrix.GraphAdjMatrix.vertices()']]],
-  ['vis_5ftype',['vis_type',['../class_bridges_1_1_bridges_1_1_bridges.html#a27bc30c5de41aa3495c25ad7ee9a07f7',1,'Bridges.Bridges.Bridges.vis_type()'],['../class_bridges_1_1_bridges_1_1_bridges.html#aea9edc834f1fc1dcfb1ca53d82eba33a',1,'Bridges.Bridges.Bridges.vis_type()']]],
-  ['visualizer',['visualizer',['../class_bridges_1_1_element_1_1_element.html#a754c5ca67518e3c9ff6b6e7882ed05c6',1,'Bridges::Element::Element']]]
+  ['weight',['weight',['../class_bridges_1_1edge_1_1_edge.html#a4fb568704945fe2cc8fbb1f5c5e807cd',1,'Bridges.edge.Edge.weight()'],['../class_bridges_1_1edge_1_1_edge.html#a36787799fbbb1cd17fe1944d92513524',1,'Bridges.edge.Edge.weight()'],['../class_bridges_1_1link__visualizer_1_1_link_visualizer.html#a95a85a4c31c0af26ece7229bc679032d',1,'Bridges.link_visualizer.LinkVisualizer.weight()'],['../class_bridges_1_1link__visualizer_1_1_link_visualizer.html#a3cf821801816ca20db68e8122b159e96',1,'Bridges.link_visualizer.LinkVisualizer.weight()']]],
+  ['word_5fnumber',['word_number',['../class_bridges_1_1element_1_1_element.html#a63a7f47da997db2df55a22715e519dff',1,'Bridges::element::Element']]]
 ];

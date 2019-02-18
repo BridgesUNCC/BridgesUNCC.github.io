@@ -1,12 +1,15 @@
-from Bridges.data_src_dependent import *
-from Bridges.GraphAdjList import *
-from Bridges.Bridges import *
+from bridges.data_src_dependent import *
+from bridges.graph_adj_list import *
+from bridges.bridges import *
+import sys
 
 
-class GraphAdjListtutorial:
+def main():
 
-    # create a bridges object
-    bridges = Bridges(12, "YOUR_USER_ID", "YOUR_API_KEY")
+    args = sys.argv[1:]
+
+    # create the Bridges object, set credentials
+    bridges = Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
 
     # set a title for the visualization
     bridges.setTitle("A Simple Graph (Adjacency List) Example Using IMDB Actor/Movie Data")
@@ -88,4 +91,7 @@ class GraphAdjListtutorial:
     # visualize the graph
     bridges.visualize()
 
+
+if __name__ == "__main__":
+    main()
 

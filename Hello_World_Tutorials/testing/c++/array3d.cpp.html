@@ -2,25 +2,33 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>~/graphics/bridges/bridgesUNCC/Hello_World_Tutorials/testing/c++/array3d.cpp.html</title>
-<meta name="Generator" content="Vim/7.3">
-<meta name="plugin-version" content="vim7.3_v6">
+<title>~/graphics/bridges/website/Hello_World_Tutorials/testing/c++/array3d.cpp.html</title>
+<meta name="Generator" content="Vim/8.0">
+<meta name="plugin-version" content="vim7.4_v2">
 <meta name="syntax" content="c">
-<meta name="settings" content="use_css,no_progress">
+<meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="none">
 <style type="text/css">
 <!--
-pre { font-family: monospace; color: #000000; background-color: #ffffff; }
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
 body { font-family: monospace; color: #000000; background-color: #ffffff; }
-.Comment { color: #c00000; font-weight: bold; }
-.Statement { color: #008080; font-weight: bold; }
-.Type { color: #008000; text-decoration: underline; }
+* { font-size: 1em; }
 .Constant { color: #0000c0; text-decoration: underline; }
+.Statement { color: #008080; font-weight: bold; }
 .PreProc { color: #c000c0; text-decoration: underline; }
+.Type { color: #008000; text-decoration: underline; }
+.Comment { color: #c00000; font-weight: bold; }
 -->
 </style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
 </head>
 <body>
-<pre>
+<pre id='vimCodeElement'>
 <span class="PreProc">#include </span><span class="Constant">&lt;iostream&gt;</span>
 <span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
 <span class="PreProc">#include </span><span class="Constant">&quot;Array.h&quot;</span>
@@ -30,27 +38,28 @@ using namespace std;
 using namespace bridges;
 
 <span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
-        Bridges *bridges =  new Bridges(<span class="Constant">102</span>, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+    Bridges *bridges =  new Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+                                <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 
+	<span class="Statement">if</span> (argc == <span class="Constant">4</span>)		<span class="Comment">// Server type provided</span>
+		bridges-&gt;setServer(argv[<span class="Constant">3</span>]);
 
-        <span class="Statement">if</span> (argc == <span class="Constant">4</span>)          <span class="Comment">// Server type provided</span>
-                bridges-&gt;setServer(argv[<span class="Constant">3</span>]);
+	Array&lt;string&gt; *arr = new Array&lt;string&gt;(<span class="Constant">4</span>, <span class="Constant">4</span>, <span class="Constant">4</span>);
 
-        Array&lt;string&gt; *arr = new Array&lt;string&gt;(<span class="Constant">4</span>, <span class="Constant">4</span>, <span class="Constant">4</span>);
+	arr-&gt;getElement(<span class="Constant">0</span>, <span class="Constant">0</span>, <span class="Constant">0</span>).getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;red&quot;</span>));
+	arr-&gt;getElement(<span class="Constant">0</span>, <span class="Constant">3</span>, <span class="Constant">0</span>).getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;green&quot;</span>));
+	arr-&gt;getElement(<span class="Constant">3</span>, <span class="Constant">0</span>, <span class="Constant">0</span>).getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;blue&quot;</span>));
+	arr-&gt;getElement(<span class="Constant">3</span>, <span class="Constant">3</span>, <span class="Constant">0</span>).getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;magenta&quot;</span>));
+	arr-&gt;getElement(<span class="Constant">1</span>, <span class="Constant">1</span>, <span class="Constant">0</span>).getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;cyan&quot;</span>));
+	arr-&gt;getElement(<span class="Constant">2</span>, <span class="Constant">2</span>, <span class="Constant">0</span>).getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;yellow&quot;</span>));
 
-        arr-&gt;getElement(<span class="Constant">0</span>, <span class="Constant">0</span>, <span class="Constant">0</span>).getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;red&quot;</span>));
-        arr-&gt;getElement(<span class="Constant">0</span>, <span class="Constant">3</span>, <span class="Constant">0</span>).getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;green&quot;</span>));
-        arr-&gt;getElement(<span class="Constant">3</span>, <span class="Constant">0</span>, <span class="Constant">0</span>).getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;blue&quot;</span>));
-        arr-&gt;getElement(<span class="Constant">3</span>, <span class="Constant">3</span>, <span class="Constant">0</span>).getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;magenta&quot;</span>));
-        arr-&gt;getElement(<span class="Constant">1</span>, <span class="Constant">1</span>, <span class="Constant">0</span>).getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;cyan&quot;</span>));
-        arr-&gt;getElement(<span class="Constant">2</span>, <span class="Constant">2</span>, <span class="Constant">0</span>).getVisualizer()-&gt;setColor(Color(<span class="Constant">&quot;yellow&quot;</span>));
+	bridges-&gt;setTitle(<span class="Constant">&quot;3D Array Example&quot;</span>);
+	bridges-&gt;setDataStructure(arr);
+	bridges-&gt;visualize();
 
-        bridges-&gt;setTitle(<span class="Constant">&quot;3D Array Example&quot;</span>);
-        bridges-&gt;setDataStructure(arr);
-        bridges-&gt;visualize();
-
-        <span class="Statement">return</span> <span class="Constant">0</span>;
+	<span class="Statement">return</span> <span class="Constant">0</span>;
 }
 </pre>
 </body>
 </html>
+<!-- vim: set foldmethod=manual : -->

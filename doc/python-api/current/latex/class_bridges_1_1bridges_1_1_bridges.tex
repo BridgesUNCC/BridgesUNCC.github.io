@@ -1,0 +1,356 @@
+\hypertarget{class_bridges_1_1bridges_1_1_bridges}{}\section{Bridges.\+bridges.\+Bridges Class Reference}
+\label{class_bridges_1_1bridges_1_1_bridges}\index{Bridges.\+bridges.\+Bridges@{Bridges.\+bridges.\+Bridges}}
+
+
+The bridges class is the main class that provides interfaces to datasets, maintains user and assignment information, and connects to the bridges server.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{class_bridges_1_1bridges_1_1_bridges_ad3a26dd5ee8dea00adbc5345e4f313d6}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{class_bridges_1_1bridges_1_1_bridges_a2532355e121918d9c30c4fb19161e92e}{assignment}, \hyperlink{class_bridges_1_1bridges_1_1_bridges_a09593511340ae03bed2abbf9dd12f48f}{username}, appl\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Initialize bridges (Constructor) \end{DoxyCompactList}\item 
+def \hyperlink{class_bridges_1_1bridges_1_1_bridges_adab1ccb3816211bc81054f8fb537833f}{set\+\_\+data\+\_\+structure} (self, ds)
+\begin{DoxyCompactList}\small\item\em This method sets the handle to the current data structure; this can be an array, the head of a linked list, root of a tree structure, a graph Arrays of upto 3 dimensions are suppported. \end{DoxyCompactList}\item 
+def \hyperlink{class_bridges_1_1bridges_1_1_bridges_a945f547bc7feb7e129811f8874a3af6b}{set\+\_\+visualize\+\_\+\+J\+S\+O\+N} (self, flag)
+\item 
+def \hyperlink{class_bridges_1_1bridges_1_1_bridges_ad25ec4119ef21f031c6240a9d6d996c6}{visualize} (self)
+\begin{DoxyCompactList}\small\item\em This method generates the representation of the current data structure (J\+S\+O\+N) and sends that to the bridges server for generating a visualization. \end{DoxyCompactList}\item 
+def \hyperlink{class_bridges_1_1bridges_1_1_bridges_a7a8e13b7b0908c9d0bce26c5ad41c32e}{set\+\_\+assignment} (self, \hyperlink{class_bridges_1_1bridges_1_1_bridges_a2532355e121918d9c30c4fb19161e92e}{assignment})
+\begin{DoxyCompactList}\small\item\em set the assignment id \end{DoxyCompactList}\item 
+def \hyperlink{class_bridges_1_1bridges_1_1_bridges_ac65a74c86b8b2e456f43cf731daae085}{get\+\_\+assignment} (self)
+\begin{DoxyCompactList}\small\item\em Get the assignment id. \end{DoxyCompactList}\item 
+def \hyperlink{class_bridges_1_1bridges_1_1_bridges_a1732ccf3904c3de48f697feff32b95a5}{set\+\_\+title} (self, \hyperlink{class_bridges_1_1bridges_1_1_bridges_adfe0d9b713e54711c8a682054ba763c3}{title})
+\item 
+def \hyperlink{class_bridges_1_1bridges_1_1_bridges_aa9af47e59998f5d9659c4d49295c6ece}{set\+\_\+description} (self, \hyperlink{class_bridges_1_1bridges_1_1_bridges_abbc20a6c63c12ce54ef567380139d2c4}{description})
+\item 
+def \hyperlink{class_bridges_1_1bridges_1_1_bridges_ae051d3b37125d0806f15a0990df5885c}{set\+\_\+map\+\_\+overlay} (self, flag)
+\item 
+def \hyperlink{class_bridges_1_1bridges_1_1_bridges_a6e70886184cb4735961507d9e84eb8fe}{set\+\_\+coord\+\_\+system\+\_\+type} (self, coord)
+\item 
+def \hyperlink{class_bridges_1_1bridges_1_1_bridges_a88c1a0909a08065f31c5d0868e9d1900}{get\+\_\+color\+\_\+grid\+\_\+from\+\_\+assignment}
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_bridges_1_1bridges_1_1_bridges_aab0a68541bf63b6c234c50514f1cbe80}{assignment\+\_\+part}
+\item 
+\hyperlink{class_bridges_1_1bridges_1_1_bridges_a5427643899fb1ddfc7d4d834779409bd}{title}
+\item 
+\hyperlink{class_bridges_1_1bridges_1_1_bridges_adf7716495f589eef1236200869f22679}{description}
+\item 
+\hyperlink{class_bridges_1_1bridges_1_1_bridges_a0ec63234eea5146e87f0572972a7f41d}{key}
+\item 
+\hyperlink{class_bridges_1_1bridges_1_1_bridges_a178b38dd8e06bcd4e57527301454ba12}{connector}
+\item 
+\hyperlink{class_bridges_1_1bridges_1_1_bridges_afe26b5521aae689055377e6f2e6a7212}{username}
+\item 
+\hyperlink{class_bridges_1_1bridges_1_1_bridges_ae5c5349721fdc457fcae13ed370ba1d8}{coord\+\_\+system\+\_\+type}
+\item 
+\hyperlink{class_bridges_1_1bridges_1_1_bridges_a0c3729b756ec663959e99210d986638e}{vis\+\_\+type}
+\item 
+\hyperlink{class_bridges_1_1bridges_1_1_bridges_a66e278ddefd9a2c94c01eb0fc9bbc568}{assignment}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_bridges_1_1bridges_1_1_bridges_aec289f4a18867c2fef080a4faa092e8e}{vis\+\_\+type} = \char`\"{}\char`\"{}
+\item 
+\hyperlink{class_bridges_1_1bridges_1_1_bridges_abfb616560e034d466cd624132d3a96a3}{ds\+\_\+handle} = None
+\item 
+tuple \hyperlink{class_bridges_1_1bridges_1_1_bridges_adfe0d9b713e54711c8a682054ba763c3}{title} = str()
+\item 
+tuple \hyperlink{class_bridges_1_1bridges_1_1_bridges_abbc20a6c63c12ce54ef567380139d2c4}{description} = str()
+\item 
+string \hyperlink{class_bridges_1_1bridges_1_1_bridges_a82068879504b788bb70470fd04bc3c55}{coord\+\_\+system\+\_\+type} = \char`\"{}cartesian\char`\"{}
+\item 
+\hyperlink{class_bridges_1_1bridges_1_1_bridges_a925840aac84da0d17db238e5628d5f1a}{map\+\_\+overlay} = False
+\item 
+string \hyperlink{class_bridges_1_1bridges_1_1_bridges_a09593511340ae03bed2abbf9dd12f48f}{username} = \char`\"{}\char`\"{}
+\item 
+tuple \hyperlink{class_bridges_1_1bridges_1_1_bridges_a2532355e121918d9c30c4fb19161e92e}{assignment} = int()
+\item 
+tuple \hyperlink{class_bridges_1_1bridges_1_1_bridges_a16beecb895f3b4814ac213e81394a155}{assignment\+\_\+part} = int()
+\item 
+\hyperlink{class_bridges_1_1bridges_1_1_bridges_a93088231d5f240848046e8065330aa4f}{json\+\_\+flag} = False
+\item 
+dictionary \hyperlink{class_bridges_1_1bridges_1_1_bridges_a0e1ec4382d41e2f268dbf37ac583c803}{projection\+\_\+options} = \{\char`\"{}cartesian\char`\"{}, \char`\"{}albersusa\char`\"{}, \char`\"{}equirectangular\char`\"{}\}
+\item 
+string \hyperlink{class_bridges_1_1bridges_1_1_bridges_afb82742483cfcad189739b6f772b8a12}{Q\+U\+O\+T\+E} = \char`\"{}\textbackslash{}\char`\"{}\char`\"{}
+\item 
+string \hyperlink{class_bridges_1_1bridges_1_1_bridges_a009b6e8d4a7c23a014ed8e5089eb7357}{C\+O\+M\+M\+A} = \char`\"{},\char`\"{}
+\item 
+string \hyperlink{class_bridges_1_1bridges_1_1_bridges_abfa62a66fca4dae2fe727a590a284f6b}{C\+O\+L\+O\+N} = \char`\"{}\+:\char`\"{}
+\item 
+string \hyperlink{class_bridges_1_1bridges_1_1_bridges_a2553c7dc637582bfd38998ee5c2a7f2b}{O\+P\+E\+N\+\_\+\+C\+U\+R\+L\+Y} = \char`\"{}\{\char`\"{}
+\item 
+string \hyperlink{class_bridges_1_1bridges_1_1_bridges_ac4c7b26ef4e060229b1449ab73500cfb}{C\+L\+O\+S\+E\+\_\+\+C\+U\+R\+L\+Y} = \char`\"{}\}\char`\"{}
+\item 
+string \hyperlink{class_bridges_1_1bridges_1_1_bridges_a1cd80e923a43de668fe44b606264b290}{O\+P\+E\+N\+\_\+\+P\+A\+R\+E\+N} = \char`\"{}(\char`\"{}
+\item 
+string \hyperlink{class_bridges_1_1bridges_1_1_bridges_a0b250d3bfad480552ff46884310ac6d1}{C\+L\+O\+S\+E\+\_\+\+P\+A\+R\+E\+N} = \char`\"{})\char`\"{}
+\item 
+string \hyperlink{class_bridges_1_1bridges_1_1_bridges_ae766e7f43cc4c93ff14abff689aa6612}{O\+P\+E\+N\+\_\+\+B\+O\+X} = \char`\"{}\mbox{[}\char`\"{}
+\item 
+string \hyperlink{class_bridges_1_1bridges_1_1_bridges_ae389d89d8512b2c481da3c165cac4c33}{C\+L\+O\+S\+E\+\_\+\+B\+O\+X} = \char`\"{}\mbox{]}\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The bridges class is the main class that provides interfaces to datasets, maintains user and assignment information, and connects to the bridges server. 
+
+The bridges class is responsible for initializing the bridges system, specifying parameters (user id, assignment id, title, description, data structure type, etc) for the student assignment, generating the data structure representation and transmission to the bridges server. In addition, it provides interfaces to a number of real-\/world datasets, that makes it easy to access the data for use algorithms/data structure assignments. ~\newline
+
+
+{\bfseries Datasets.} The datasets that are currently supported through the B\+R\+I\+D\+G\+E\+S A\+P\+I include U\+S\+G\+S Earthquake Data, I\+M\+D\+B Actor/\+Movie Data (2 versions), Gutenberg Book Collection Meta Data, a Video Game Dataset and Shakespeare Dataset. More information is found in the respective methods (below) and at 
+
+\href{http://bridgesuncc.github.io/datasets.html}{\tt http\+://bridgesuncc.\+github.\+io/datasets.\+html} 
+
+A typical bridges program includes creating the bridges object, followed by creation of the data structure by the user, assigning visual attributes to elements of the data structure, followed by specification of teh data structure type and the call to visualize the data structure (bridges\+::set\+Data\+Structure() and \hyperlink{class_bridges_1_1bridges_1_1_bridges_ad25ec4119ef21f031c6240a9d6d996c6}{visualize()} methods).
+
+\begin{DoxyAuthor}{Author}
+Sean Gallagher, Kalpathi Subramanaian, Mihai Mehedint, David Burlinson. 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_ad3a26dd5ee8dea00adbc5345e4f313d6}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{\+\_\+\+\_\+init\+\_\+\+\_\+(self, assignment, username, appl\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}def Bridges.\+bridges.\+Bridges.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{assignment, }
+\item[{}]{username, }
+\item[{}]{appl\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_bridges_1_1bridges_1_1_bridges_ad3a26dd5ee8dea00adbc5345e4f313d6}
+
+
+Initialize bridges (Constructor) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em assignment} & this is the assignmen id (integer) \\
+\hline
+{\em appl\+\_\+id} & this is the appl authentication key(from the bridges account) \\
+\hline
+{\em username} & this is the username (from the bridges account) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_ac65a74c86b8b2e456f43cf731daae085}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!get\+\_\+assignment@{get\+\_\+assignment}}
+\index{get\+\_\+assignment@{get\+\_\+assignment}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{get\+\_\+assignment(self)}]{\setlength{\rightskip}{0pt plus 5cm}def Bridges.\+bridges.\+Bridges.\+get\+\_\+assignment (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{class_bridges_1_1bridges_1_1_bridges_ac65a74c86b8b2e456f43cf731daae085}
+
+
+Get the assignment id. 
+
+\begin{DoxyReturn}{Returns}
+assignment as a string 
+\end{DoxyReturn}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_a88c1a0909a08065f31c5d0868e9d1900}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!get\+\_\+color\+\_\+grid\+\_\+from\+\_\+assignment@{get\+\_\+color\+\_\+grid\+\_\+from\+\_\+assignment}}
+\index{get\+\_\+color\+\_\+grid\+\_\+from\+\_\+assignment@{get\+\_\+color\+\_\+grid\+\_\+from\+\_\+assignment}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{get\+\_\+color\+\_\+grid\+\_\+from\+\_\+assignment}]{\setlength{\rightskip}{0pt plus 5cm}def Bridges.\+bridges.\+Bridges.\+get\+\_\+color\+\_\+grid\+\_\+from\+\_\+assignment (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{user}
+\end{DoxyParamCaption}
+)}\label{class_bridges_1_1bridges_1_1_bridges_a88c1a0909a08065f31c5d0868e9d1900}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_a7a8e13b7b0908c9d0bce26c5ad41c32e}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!set\+\_\+assignment@{set\+\_\+assignment}}
+\index{set\+\_\+assignment@{set\+\_\+assignment}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{set\+\_\+assignment(self, assignment)}]{\setlength{\rightskip}{0pt plus 5cm}def Bridges.\+bridges.\+Bridges.\+set\+\_\+assignment (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{assignment}
+\end{DoxyParamCaption}
+)}\label{class_bridges_1_1bridges_1_1_bridges_a7a8e13b7b0908c9d0bce26c5ad41c32e}
+
+
+set the assignment id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em assignment} & number \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_a6e70886184cb4735961507d9e84eb8fe}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!set\+\_\+coord\+\_\+system\+\_\+type@{set\+\_\+coord\+\_\+system\+\_\+type}}
+\index{set\+\_\+coord\+\_\+system\+\_\+type@{set\+\_\+coord\+\_\+system\+\_\+type}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{set\+\_\+coord\+\_\+system\+\_\+type(self, coord)}]{\setlength{\rightskip}{0pt plus 5cm}def Bridges.\+bridges.\+Bridges.\+set\+\_\+coord\+\_\+system\+\_\+type (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{coord}
+\end{DoxyParamCaption}
+)}\label{class_bridges_1_1bridges_1_1_bridges_a6e70886184cb4735961507d9e84eb8fe}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_adab1ccb3816211bc81054f8fb537833f}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!set\+\_\+data\+\_\+structure@{set\+\_\+data\+\_\+structure}}
+\index{set\+\_\+data\+\_\+structure@{set\+\_\+data\+\_\+structure}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{set\+\_\+data\+\_\+structure(self, ds)}]{\setlength{\rightskip}{0pt plus 5cm}def Bridges.\+bridges.\+Bridges.\+set\+\_\+data\+\_\+structure (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{ds}
+\end{DoxyParamCaption}
+)}\label{class_bridges_1_1bridges_1_1_bridges_adab1ccb3816211bc81054f8fb537833f}
+
+
+This method sets the handle to the current data structure; this can be an array, the head of a linked list, root of a tree structure, a graph Arrays of upto 3 dimensions are suppported. 
+
+It can be any of the data structures supported by B\+R\+I\+D\+G\+E\+S. Polymorphism and type casting is used to determine the actual data structure and extract its representtion.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ds} & The data structure to set (any of the subclasses of Data\+Struct) \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_aa9af47e59998f5d9659c4d49295c6ece}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!set\+\_\+description@{set\+\_\+description}}
+\index{set\+\_\+description@{set\+\_\+description}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{set\+\_\+description(self, description)}]{\setlength{\rightskip}{0pt plus 5cm}def Bridges.\+bridges.\+Bridges.\+set\+\_\+description (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{description}
+\end{DoxyParamCaption}
+)}\label{class_bridges_1_1bridges_1_1_bridges_aa9af47e59998f5d9659c4d49295c6ece}
+
+\begin{DoxyParams}{Parameters}
+{\em description} & description to annotate the visualization; \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_ae051d3b37125d0806f15a0990df5885c}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!set\+\_\+map\+\_\+overlay@{set\+\_\+map\+\_\+overlay}}
+\index{set\+\_\+map\+\_\+overlay@{set\+\_\+map\+\_\+overlay}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{set\+\_\+map\+\_\+overlay(self, flag)}]{\setlength{\rightskip}{0pt plus 5cm}def Bridges.\+bridges.\+Bridges.\+set\+\_\+map\+\_\+overlay (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{flag}
+\end{DoxyParamCaption}
+)}\label{class_bridges_1_1bridges_1_1_bridges_ae051d3b37125d0806f15a0990df5885c}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_a1732ccf3904c3de48f697feff32b95a5}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!set\+\_\+title@{set\+\_\+title}}
+\index{set\+\_\+title@{set\+\_\+title}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{set\+\_\+title(self, title)}]{\setlength{\rightskip}{0pt plus 5cm}def Bridges.\+bridges.\+Bridges.\+set\+\_\+title (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{title}
+\end{DoxyParamCaption}
+)}\label{class_bridges_1_1bridges_1_1_bridges_a1732ccf3904c3de48f697feff32b95a5}
+
+\begin{DoxyParams}{Parameters}
+{\em title} & title used in the visualization; \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_a945f547bc7feb7e129811f8874a3af6b}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!set\+\_\+visualize\+\_\+\+J\+S\+O\+N@{set\+\_\+visualize\+\_\+\+J\+S\+O\+N}}
+\index{set\+\_\+visualize\+\_\+\+J\+S\+O\+N@{set\+\_\+visualize\+\_\+\+J\+S\+O\+N}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{set\+\_\+visualize\+\_\+\+J\+S\+O\+N(self, flag)}]{\setlength{\rightskip}{0pt plus 5cm}def Bridges.\+bridges.\+Bridges.\+set\+\_\+visualize\+\_\+\+J\+S\+O\+N (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{flag}
+\end{DoxyParamCaption}
+)}\label{class_bridges_1_1bridges_1_1_bridges_a945f547bc7feb7e129811f8874a3af6b}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_ad25ec4119ef21f031c6240a9d6d996c6}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!visualize@{visualize}}
+\index{visualize@{visualize}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{visualize(self)}]{\setlength{\rightskip}{0pt plus 5cm}def Bridges.\+bridges.\+Bridges.\+visualize (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\label{class_bridges_1_1bridges_1_1_bridges_ad25ec4119ef21f031c6240a9d6d996c6}
+
+
+This method generates the representation of the current data structure (J\+S\+O\+N) and sends that to the bridges server for generating a visualization. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_a2532355e121918d9c30c4fb19161e92e}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!assignment@{assignment}}
+\index{assignment@{assignment}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{assignment}]{\setlength{\rightskip}{0pt plus 5cm}tuple Bridges.\+bridges.\+Bridges.\+assignment = int()\hspace{0.3cm}{\ttfamily [static]}}\label{class_bridges_1_1bridges_1_1_bridges_a2532355e121918d9c30c4fb19161e92e}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_a66e278ddefd9a2c94c01eb0fc9bbc568}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!assignment@{assignment}}
+\index{assignment@{assignment}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{assignment}]{\setlength{\rightskip}{0pt plus 5cm}Bridges.\+bridges.\+Bridges.\+assignment}\label{class_bridges_1_1bridges_1_1_bridges_a66e278ddefd9a2c94c01eb0fc9bbc568}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_a16beecb895f3b4814ac213e81394a155}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!assignment\+\_\+part@{assignment\+\_\+part}}
+\index{assignment\+\_\+part@{assignment\+\_\+part}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{assignment\+\_\+part}]{\setlength{\rightskip}{0pt plus 5cm}tuple Bridges.\+bridges.\+Bridges.\+assignment\+\_\+part = int()\hspace{0.3cm}{\ttfamily [static]}}\label{class_bridges_1_1bridges_1_1_bridges_a16beecb895f3b4814ac213e81394a155}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_aab0a68541bf63b6c234c50514f1cbe80}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!assignment\+\_\+part@{assignment\+\_\+part}}
+\index{assignment\+\_\+part@{assignment\+\_\+part}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{assignment\+\_\+part}]{\setlength{\rightskip}{0pt plus 5cm}Bridges.\+bridges.\+Bridges.\+assignment\+\_\+part}\label{class_bridges_1_1bridges_1_1_bridges_aab0a68541bf63b6c234c50514f1cbe80}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_ae389d89d8512b2c481da3c165cac4c33}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!C\+L\+O\+S\+E\+\_\+\+B\+O\+X@{C\+L\+O\+S\+E\+\_\+\+B\+O\+X}}
+\index{C\+L\+O\+S\+E\+\_\+\+B\+O\+X@{C\+L\+O\+S\+E\+\_\+\+B\+O\+X}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{C\+L\+O\+S\+E\+\_\+\+B\+O\+X}]{\setlength{\rightskip}{0pt plus 5cm}string Bridges.\+bridges.\+Bridges.\+C\+L\+O\+S\+E\+\_\+\+B\+O\+X = \char`\"{}\mbox{]}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{class_bridges_1_1bridges_1_1_bridges_ae389d89d8512b2c481da3c165cac4c33}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_ac4c7b26ef4e060229b1449ab73500cfb}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!C\+L\+O\+S\+E\+\_\+\+C\+U\+R\+L\+Y@{C\+L\+O\+S\+E\+\_\+\+C\+U\+R\+L\+Y}}
+\index{C\+L\+O\+S\+E\+\_\+\+C\+U\+R\+L\+Y@{C\+L\+O\+S\+E\+\_\+\+C\+U\+R\+L\+Y}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{C\+L\+O\+S\+E\+\_\+\+C\+U\+R\+L\+Y}]{\setlength{\rightskip}{0pt plus 5cm}string Bridges.\+bridges.\+Bridges.\+C\+L\+O\+S\+E\+\_\+\+C\+U\+R\+L\+Y = \char`\"{}\}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{class_bridges_1_1bridges_1_1_bridges_ac4c7b26ef4e060229b1449ab73500cfb}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_a0b250d3bfad480552ff46884310ac6d1}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!C\+L\+O\+S\+E\+\_\+\+P\+A\+R\+E\+N@{C\+L\+O\+S\+E\+\_\+\+P\+A\+R\+E\+N}}
+\index{C\+L\+O\+S\+E\+\_\+\+P\+A\+R\+E\+N@{C\+L\+O\+S\+E\+\_\+\+P\+A\+R\+E\+N}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{C\+L\+O\+S\+E\+\_\+\+P\+A\+R\+E\+N}]{\setlength{\rightskip}{0pt plus 5cm}string Bridges.\+bridges.\+Bridges.\+C\+L\+O\+S\+E\+\_\+\+P\+A\+R\+E\+N = \char`\"{})\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{class_bridges_1_1bridges_1_1_bridges_a0b250d3bfad480552ff46884310ac6d1}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_abfa62a66fca4dae2fe727a590a284f6b}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!C\+O\+L\+O\+N@{C\+O\+L\+O\+N}}
+\index{C\+O\+L\+O\+N@{C\+O\+L\+O\+N}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{C\+O\+L\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}string Bridges.\+bridges.\+Bridges.\+C\+O\+L\+O\+N = \char`\"{}\+:\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{class_bridges_1_1bridges_1_1_bridges_abfa62a66fca4dae2fe727a590a284f6b}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_a009b6e8d4a7c23a014ed8e5089eb7357}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!C\+O\+M\+M\+A@{C\+O\+M\+M\+A}}
+\index{C\+O\+M\+M\+A@{C\+O\+M\+M\+A}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{C\+O\+M\+M\+A}]{\setlength{\rightskip}{0pt plus 5cm}string Bridges.\+bridges.\+Bridges.\+C\+O\+M\+M\+A = \char`\"{},\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{class_bridges_1_1bridges_1_1_bridges_a009b6e8d4a7c23a014ed8e5089eb7357}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_a178b38dd8e06bcd4e57527301454ba12}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!connector@{connector}}
+\index{connector@{connector}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{connector}]{\setlength{\rightskip}{0pt plus 5cm}Bridges.\+bridges.\+Bridges.\+connector}\label{class_bridges_1_1bridges_1_1_bridges_a178b38dd8e06bcd4e57527301454ba12}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_a82068879504b788bb70470fd04bc3c55}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!coord\+\_\+system\+\_\+type@{coord\+\_\+system\+\_\+type}}
+\index{coord\+\_\+system\+\_\+type@{coord\+\_\+system\+\_\+type}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{coord\+\_\+system\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}string Bridges.\+bridges.\+Bridges.\+coord\+\_\+system\+\_\+type = \char`\"{}cartesian\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{class_bridges_1_1bridges_1_1_bridges_a82068879504b788bb70470fd04bc3c55}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_ae5c5349721fdc457fcae13ed370ba1d8}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!coord\+\_\+system\+\_\+type@{coord\+\_\+system\+\_\+type}}
+\index{coord\+\_\+system\+\_\+type@{coord\+\_\+system\+\_\+type}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{coord\+\_\+system\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}Bridges.\+bridges.\+Bridges.\+coord\+\_\+system\+\_\+type}\label{class_bridges_1_1bridges_1_1_bridges_ae5c5349721fdc457fcae13ed370ba1d8}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_abbc20a6c63c12ce54ef567380139d2c4}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!description@{description}}
+\index{description@{description}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{description}]{\setlength{\rightskip}{0pt plus 5cm}tuple Bridges.\+bridges.\+Bridges.\+description = str()\hspace{0.3cm}{\ttfamily [static]}}\label{class_bridges_1_1bridges_1_1_bridges_abbc20a6c63c12ce54ef567380139d2c4}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_adf7716495f589eef1236200869f22679}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!description@{description}}
+\index{description@{description}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{description}]{\setlength{\rightskip}{0pt plus 5cm}Bridges.\+bridges.\+Bridges.\+description}\label{class_bridges_1_1bridges_1_1_bridges_adf7716495f589eef1236200869f22679}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_abfb616560e034d466cd624132d3a96a3}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!ds\+\_\+handle@{ds\+\_\+handle}}
+\index{ds\+\_\+handle@{ds\+\_\+handle}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{ds\+\_\+handle}]{\setlength{\rightskip}{0pt plus 5cm}Bridges.\+bridges.\+Bridges.\+ds\+\_\+handle = None\hspace{0.3cm}{\ttfamily [static]}}\label{class_bridges_1_1bridges_1_1_bridges_abfb616560e034d466cd624132d3a96a3}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_a93088231d5f240848046e8065330aa4f}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!json\+\_\+flag@{json\+\_\+flag}}
+\index{json\+\_\+flag@{json\+\_\+flag}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{json\+\_\+flag}]{\setlength{\rightskip}{0pt plus 5cm}Bridges.\+bridges.\+Bridges.\+json\+\_\+flag = False\hspace{0.3cm}{\ttfamily [static]}}\label{class_bridges_1_1bridges_1_1_bridges_a93088231d5f240848046e8065330aa4f}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_a0ec63234eea5146e87f0572972a7f41d}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!key@{key}}
+\index{key@{key}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{key}]{\setlength{\rightskip}{0pt plus 5cm}Bridges.\+bridges.\+Bridges.\+key}\label{class_bridges_1_1bridges_1_1_bridges_a0ec63234eea5146e87f0572972a7f41d}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_a925840aac84da0d17db238e5628d5f1a}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!map\+\_\+overlay@{map\+\_\+overlay}}
+\index{map\+\_\+overlay@{map\+\_\+overlay}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{map\+\_\+overlay}]{\setlength{\rightskip}{0pt plus 5cm}Bridges.\+bridges.\+Bridges.\+map\+\_\+overlay = False\hspace{0.3cm}{\ttfamily [static]}}\label{class_bridges_1_1bridges_1_1_bridges_a925840aac84da0d17db238e5628d5f1a}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_ae766e7f43cc4c93ff14abff689aa6612}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!O\+P\+E\+N\+\_\+\+B\+O\+X@{O\+P\+E\+N\+\_\+\+B\+O\+X}}
+\index{O\+P\+E\+N\+\_\+\+B\+O\+X@{O\+P\+E\+N\+\_\+\+B\+O\+X}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{O\+P\+E\+N\+\_\+\+B\+O\+X}]{\setlength{\rightskip}{0pt plus 5cm}string Bridges.\+bridges.\+Bridges.\+O\+P\+E\+N\+\_\+\+B\+O\+X = \char`\"{}\mbox{[}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{class_bridges_1_1bridges_1_1_bridges_ae766e7f43cc4c93ff14abff689aa6612}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_a2553c7dc637582bfd38998ee5c2a7f2b}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!O\+P\+E\+N\+\_\+\+C\+U\+R\+L\+Y@{O\+P\+E\+N\+\_\+\+C\+U\+R\+L\+Y}}
+\index{O\+P\+E\+N\+\_\+\+C\+U\+R\+L\+Y@{O\+P\+E\+N\+\_\+\+C\+U\+R\+L\+Y}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{O\+P\+E\+N\+\_\+\+C\+U\+R\+L\+Y}]{\setlength{\rightskip}{0pt plus 5cm}string Bridges.\+bridges.\+Bridges.\+O\+P\+E\+N\+\_\+\+C\+U\+R\+L\+Y = \char`\"{}\{\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{class_bridges_1_1bridges_1_1_bridges_a2553c7dc637582bfd38998ee5c2a7f2b}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_a1cd80e923a43de668fe44b606264b290}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!O\+P\+E\+N\+\_\+\+P\+A\+R\+E\+N@{O\+P\+E\+N\+\_\+\+P\+A\+R\+E\+N}}
+\index{O\+P\+E\+N\+\_\+\+P\+A\+R\+E\+N@{O\+P\+E\+N\+\_\+\+P\+A\+R\+E\+N}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{O\+P\+E\+N\+\_\+\+P\+A\+R\+E\+N}]{\setlength{\rightskip}{0pt plus 5cm}string Bridges.\+bridges.\+Bridges.\+O\+P\+E\+N\+\_\+\+P\+A\+R\+E\+N = \char`\"{}(\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{class_bridges_1_1bridges_1_1_bridges_a1cd80e923a43de668fe44b606264b290}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_a0e1ec4382d41e2f268dbf37ac583c803}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!projection\+\_\+options@{projection\+\_\+options}}
+\index{projection\+\_\+options@{projection\+\_\+options}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{projection\+\_\+options}]{\setlength{\rightskip}{0pt plus 5cm}dictionary Bridges.\+bridges.\+Bridges.\+projection\+\_\+options = \{\char`\"{}cartesian\char`\"{}, \char`\"{}albersusa\char`\"{}, \char`\"{}equirectangular\char`\"{}\}\hspace{0.3cm}{\ttfamily [static]}}\label{class_bridges_1_1bridges_1_1_bridges_a0e1ec4382d41e2f268dbf37ac583c803}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_afb82742483cfcad189739b6f772b8a12}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!Q\+U\+O\+T\+E@{Q\+U\+O\+T\+E}}
+\index{Q\+U\+O\+T\+E@{Q\+U\+O\+T\+E}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{Q\+U\+O\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}string Bridges.\+bridges.\+Bridges.\+Q\+U\+O\+T\+E = \char`\"{}\textbackslash{}\char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{class_bridges_1_1bridges_1_1_bridges_afb82742483cfcad189739b6f772b8a12}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_adfe0d9b713e54711c8a682054ba763c3}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!title@{title}}
+\index{title@{title}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{title}]{\setlength{\rightskip}{0pt plus 5cm}tuple Bridges.\+bridges.\+Bridges.\+title = str()\hspace{0.3cm}{\ttfamily [static]}}\label{class_bridges_1_1bridges_1_1_bridges_adfe0d9b713e54711c8a682054ba763c3}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_a5427643899fb1ddfc7d4d834779409bd}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!title@{title}}
+\index{title@{title}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{title}]{\setlength{\rightskip}{0pt plus 5cm}Bridges.\+bridges.\+Bridges.\+title}\label{class_bridges_1_1bridges_1_1_bridges_a5427643899fb1ddfc7d4d834779409bd}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_a09593511340ae03bed2abbf9dd12f48f}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!username@{username}}
+\index{username@{username}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{username}]{\setlength{\rightskip}{0pt plus 5cm}string Bridges.\+bridges.\+Bridges.\+username = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{class_bridges_1_1bridges_1_1_bridges_a09593511340ae03bed2abbf9dd12f48f}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_afe26b5521aae689055377e6f2e6a7212}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!username@{username}}
+\index{username@{username}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{username}]{\setlength{\rightskip}{0pt plus 5cm}Bridges.\+bridges.\+Bridges.\+username}\label{class_bridges_1_1bridges_1_1_bridges_afe26b5521aae689055377e6f2e6a7212}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_aec289f4a18867c2fef080a4faa092e8e}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!vis\+\_\+type@{vis\+\_\+type}}
+\index{vis\+\_\+type@{vis\+\_\+type}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{vis\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}string Bridges.\+bridges.\+Bridges.\+vis\+\_\+type = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{class_bridges_1_1bridges_1_1_bridges_aec289f4a18867c2fef080a4faa092e8e}
+\hypertarget{class_bridges_1_1bridges_1_1_bridges_a0c3729b756ec663959e99210d986638e}{}\index{Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}!vis\+\_\+type@{vis\+\_\+type}}
+\index{vis\+\_\+type@{vis\+\_\+type}!Bridges\+::bridges\+::\+Bridges@{Bridges\+::bridges\+::\+Bridges}}
+\subsubsection[{vis\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}Bridges.\+bridges.\+Bridges.\+vis\+\_\+type}\label{class_bridges_1_1bridges_1_1_bridges_a0c3729b756ec663959e99210d986638e}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/python/\+Bridges/\hyperlink{bridges_8py}{bridges.\+py}\end{DoxyCompactItemize}

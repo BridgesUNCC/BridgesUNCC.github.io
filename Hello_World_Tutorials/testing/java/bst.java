@@ -10,8 +10,8 @@ public class bst {
 
 
 		//create the Bridges object
-		Bridges bridges = new Bridges(210, "YOUR_USER_ID", "YOUR_API_KEY");
-
+		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", 
+										"YOUR_API_KEY");
 		bridges.setTitle("A Binary Search Tree Example with Earthquake Data");
 
 		// Retrieve a list of 10 earthquake  records  from USGS using the BRIDGES API

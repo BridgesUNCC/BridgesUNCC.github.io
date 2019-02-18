@@ -1,12 +1,13 @@
-from Bridges.Bridges import *
-from Bridges.TreeElement import *
+from bridges.bridges import *
+from bridges.tree_element import *
+import sys
 
+def main():
 
+    args = sys.argv[1:]
 
-class tutorial:
-
-    # create bridges object
-    bridges = Bridges(8, "YOUR_USER_ID", "YOUR_API_KEY")
+    # create the Bridges object, set credentials
+    bridges = Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
 
     # create tree nodes
     t0 = TreeElement(e = "Hello")
@@ -43,3 +44,7 @@ class tutorial:
 
     # visualize the tree
     bridges.visualize()
+
+if __name__ == "__main__":
+    main()
+

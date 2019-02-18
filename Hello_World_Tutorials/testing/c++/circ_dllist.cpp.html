@@ -2,25 +2,33 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>~/graphics/bridges/bridgesUNCC/Hello_World_Tutorials/testing/c++/circ_dllist.cpp.html</title>
-<meta name="Generator" content="Vim/7.3">
-<meta name="plugin-version" content="vim7.3_v6">
+<title>~/graphics/bridges/website/Hello_World_Tutorials/testing/c++/circ_dllist.cpp.html</title>
+<meta name="Generator" content="Vim/8.0">
+<meta name="plugin-version" content="vim7.4_v2">
 <meta name="syntax" content="c">
-<meta name="settings" content="use_css,no_progress">
+<meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="none">
 <style type="text/css">
 <!--
-pre { font-family: monospace; color: #000000; background-color: #ffffff; }
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
 body { font-family: monospace; color: #000000; background-color: #ffffff; }
-.Statement { color: #008080; font-weight: bold; }
-.Type { color: #008000; text-decoration: underline; }
+* { font-size: 1em; }
 .Constant { color: #0000c0; text-decoration: underline; }
-.PreProc { color: #c000c0; text-decoration: underline; }
+.Statement { color: #008080; font-weight: bold; }
 .Comment { color: #c00000; font-weight: bold; }
+.Type { color: #008000; text-decoration: underline; }
+.PreProc { color: #c000c0; text-decoration: underline; }
 -->
 </style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
 </head>
 <body>
-<pre>
+<pre id='vimCodeElement'>
 <span class="Comment">/*</span><span class="Comment">*</span>
 <span class="Comment"> * Created by Kalpathi Subramanian, 2/20/18</span>
 <span class="Comment"> * krs@uncc.edu</span>
@@ -35,120 +43,123 @@ using namespace bridges;
 
 <span class="Comment">// helper function</span>
 CircDLelement&lt;StudentInfo&gt; *insertFront(
-        CircDLelement&lt;StudentInfo&gt; *tailElement,
-        CircDLelement&lt;StudentInfo&gt; *newElement);
+	CircDLelement&lt;StudentInfo&gt; *tailElement,
+	CircDLelement&lt;StudentInfo&gt; *newElement);
 
 <span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
-        Bridges *bridges =  new Bridges(<span class="Constant">106</span>, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+    Bridges *bridges =  new Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+                                <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 
 
-        bridges-&gt;setTitle(<span class="Constant">&quot;An Example Circular Doubly Linked List&quot;</span>);
 
-        <span class="Comment">// create the linked list elements with</span>
-        <span class="Comment">// student data</span>
-        CircDLelement&lt;StudentInfo&gt; *students[] = {
-                new CircDLelement&lt;StudentInfo&gt;(
-                        StudentInfo(
-                                <span class="Constant">&quot;00000000000&quot;</span>,
-                                <span class="Constant">&quot;Gretel Chaney&quot;</span>,
-                                <span class="Constant">&quot;CS&quot;</span>,
-                                <span class="Constant">&quot;g.chaney@generated.com&quot;</span>,
-                                <span class="Constant">&quot;magenta&quot;</span>,
-                                <span class="Constant">&quot;blue&quot;</span>,
-                                <span class="Constant">9.0</span>
-                        ), <span class="Constant">&quot;&quot;</span>),
-                new CircDLelement&lt;StudentInfo&gt;(
-                        StudentInfo(
-                                <span class="Constant">&quot;00000000001&quot;</span>,
-                                <span class="Constant">&quot;Karol Soderman&quot;</span>,
-                                <span class="Constant">&quot;SIS&quot;</span>,
-                                <span class="Constant">&quot;k.soderman@generated.com&quot;</span>,
-                                <span class="Constant">&quot;magenta&quot;</span>,
-                                <span class="Constant">&quot;red&quot;</span>,
-                                <span class="Constant">11.0</span>
-                        ), <span class="Constant">&quot;&quot;</span>),
-                new CircDLelement&lt;StudentInfo&gt;(
-                        StudentInfo(
-                                <span class="Constant">&quot;00000000002&quot;</span>,
-                                <span class="Constant">&quot;Lamont Kyler&quot;</span>,
-                                <span class="Constant">&quot;BIO&quot;</span>,
-                                <span class="Constant">&quot;l.kyler@generated.com&quot;</span>,
-                                <span class="Constant">&quot;yellow&quot;</span>,
-                                <span class="Constant">&quot;green&quot;</span>,
-                                <span class="Constant">12.0</span>
-                        ), <span class="Constant">&quot;&quot;</span>),
-                new CircDLelement&lt;StudentInfo&gt;(
-                        StudentInfo(
-                                <span class="Constant">&quot;00000000003&quot;</span>,
-                                <span class="Constant">&quot;Gladys Serino&quot;</span>,
-                                <span class="Constant">&quot;CS&quot;</span>,
-                                <span class="Constant">&quot;g.serino@generated.com&quot;</span>,
-                                <span class="Constant">&quot;blue&quot;</span>,
-                                <span class="Constant">&quot;magenta&quot;</span>,
-                                <span class="Constant">9.0</span>
-                        ), <span class="Constant">&quot;&quot;</span>),
-                new CircDLelement&lt;StudentInfo&gt;(
-                        StudentInfo(
-                                <span class="Constant">&quot;00000000004&quot;</span>,
-                                <span class="Constant">&quot;Starr Mcginn&quot;</span>,
-                                <span class="Constant">&quot;CS&quot;</span>,
-                                <span class="Constant">&quot;s.mcginn@generated.com&quot;</span>,
-                                <span class="Constant">&quot;red&quot;</span>,
-                                <span class="Constant">&quot;yellow&quot;</span>,
-                                <span class="Constant">15.0</span>
-                        ), <span class="Constant">&quot;&quot;</span>)
-        };
+	bridges-&gt;setTitle(<span class="Constant">&quot;An Example Circular Doubly Linked List&quot;</span>);
 
-        CircDLelement&lt;StudentInfo&gt; *head =  nullptr;
+	<span class="Comment">// create the linked list elements with</span>
+	<span class="Comment">// student data</span>
+	CircDLelement&lt;StudentInfo&gt; *students[] = {
+		new CircDLelement&lt;StudentInfo&gt;(
+			StudentInfo(
+				<span class="Constant">&quot;00000000000&quot;</span>,
+				<span class="Constant">&quot;Gretel Chaney&quot;</span>,
+				<span class="Constant">&quot;CS&quot;</span>,
+				<span class="Constant">&quot;g.chaney@generated.com&quot;</span>,
+				<span class="Constant">&quot;magenta&quot;</span>,
+				<span class="Constant">&quot;blue&quot;</span>,
+				<span class="Constant">9.0</span>
+			), <span class="Constant">&quot;&quot;</span>),
+		new CircDLelement&lt;StudentInfo&gt;(
+			StudentInfo(
+				<span class="Constant">&quot;00000000001&quot;</span>,
+				<span class="Constant">&quot;Karol Soderman&quot;</span>,
+				<span class="Constant">&quot;SIS&quot;</span>,
+				<span class="Constant">&quot;k.soderman@generated.com&quot;</span>,
+				<span class="Constant">&quot;magenta&quot;</span>,
+				<span class="Constant">&quot;red&quot;</span>,
+				<span class="Constant">11.0</span>
+			), <span class="Constant">&quot;&quot;</span>),
+		new CircDLelement&lt;StudentInfo&gt;(
+			StudentInfo(
+				<span class="Constant">&quot;00000000002&quot;</span>,
+				<span class="Constant">&quot;Lamont Kyler&quot;</span>,
+				<span class="Constant">&quot;BIO&quot;</span>,
+				<span class="Constant">&quot;l.kyler@generated.com&quot;</span>,
+				<span class="Constant">&quot;yellow&quot;</span>,
+				<span class="Constant">&quot;green&quot;</span>,
+				<span class="Constant">12.0</span>
+			), <span class="Constant">&quot;&quot;</span>),
+		new CircDLelement&lt;StudentInfo&gt;(
+			StudentInfo(
+				<span class="Constant">&quot;00000000003&quot;</span>,
+				<span class="Constant">&quot;Gladys Serino&quot;</span>,
+				<span class="Constant">&quot;CS&quot;</span>,
+				<span class="Constant">&quot;g.serino@generated.com&quot;</span>,
+				<span class="Constant">&quot;blue&quot;</span>,
+				<span class="Constant">&quot;magenta&quot;</span>,
+				<span class="Constant">9.0</span>
+			), <span class="Constant">&quot;&quot;</span>),
+		new CircDLelement&lt;StudentInfo&gt;(
+			StudentInfo(
+				<span class="Constant">&quot;00000000004&quot;</span>,
+				<span class="Constant">&quot;Starr Mcginn&quot;</span>,
+				<span class="Constant">&quot;CS&quot;</span>,
+				<span class="Constant">&quot;s.mcginn@generated.com&quot;</span>,
+				<span class="Constant">&quot;red&quot;</span>,
+				<span class="Constant">&quot;yellow&quot;</span>,
+				<span class="Constant">15.0</span>
+			), <span class="Constant">&quot;&quot;</span>)
+	};
 
-        <span class="Type">int</span> num_students = <span class="Constant">5</span>;
-        <span class="Statement">for</span> (<span class="Type">int</span> i = <span class="Constant">0</span>; i &lt; num_students; i++) {
-                <span class="Statement">if</span> (i)
-                        head = insertFront(head, students[i]);
-                <span class="Statement">else</span>
-                        head = students[i];
-        }
+	CircDLelement&lt;StudentInfo&gt; *head =  nullptr;
 
-        <span class="Comment">//  add visual attributes</span>
-        CircDLelement&lt;StudentInfo&gt; *current = head;
-        StudentInfo si;
-        <span class="Statement">do</span> {
-                si = current-&gt;getValue();
-                current-&gt;setLabel(si.getStudentLabel());
-                current-&gt;getVisualizer()-&gt;setColor(si.getFavoriteColor());
+	<span class="Type">int</span> num_students = <span class="Constant">5</span>;
+	<span class="Statement">for</span> (<span class="Type">int</span> i = <span class="Constant">0</span>; i &lt; num_students; i++) {
+		<span class="Statement">if</span> (i)
+			head = insertFront(head, students[i]);
+		<span class="Statement">else</span>
+			head = students[i];
+	}
 
-                current-&gt;getLinkVisualizer(current-&gt;getNext())-&gt;setColor(si.getDislikeColor());
-                current-&gt;getLinkVisualizer(current-&gt;getNext())-&gt;setThickness(si.getStudentCreditHours()*<span class="Constant">.5</span>);
+	<span class="Comment">//  add visual attributes</span>
+	CircDLelement&lt;StudentInfo&gt; *current = head;
+	StudentInfo si;
+	<span class="Statement">do</span> {
+		si = current-&gt;getValue();
+		current-&gt;setLabel(si.getStudentLabel());
+		current-&gt;getVisualizer()-&gt;setColor(si.getFavoriteColor());
 
-                current-&gt;getLinkVisualizer(current-&gt;getPrev())-&gt;setColor(si.getDislikeColor());
-                current-&gt;getLinkVisualizer(current-&gt;getPrev())-&gt;setThickness(si.getStudentCreditHours()*<span class="Constant">.5</span>);
+		current-&gt;getLinkVisualizer(current-&gt;getNext())-&gt;setColor(si.getDislikeColor());
+		current-&gt;getLinkVisualizer(current-&gt;getNext())-&gt;setThickness(si.getStudentCreditHours()*<span class="Constant">.5</span>);
 
-                current = current-&gt;getNext();
-        }  <span class="Statement">while</span> (current != head);
+		current-&gt;getLinkVisualizer(current-&gt;getPrev())-&gt;setColor(si.getDislikeColor());
+		current-&gt;getLinkVisualizer(current-&gt;getPrev())-&gt;setThickness(si.getStudentCreditHours()*<span class="Constant">.5</span>);
 
-        <span class="Comment">// set data structure to point to head</span>
-        bridges-&gt;setDataStructure(head);
-        <span class="Comment">// visualize the circular list</span>
-        bridges-&gt;visualize();
+		current = current-&gt;getNext();
+	}  <span class="Statement">while</span> (current != head);
 
-        <span class="Statement">return</span> <span class="Constant">0</span>;
+	<span class="Comment">// set data structure to point to head</span>
+	bridges-&gt;setDataStructure(head);
+	<span class="Comment">// visualize the circular list</span>
+	bridges-&gt;visualize();
+
+	<span class="Statement">return</span> <span class="Constant">0</span>;
 }
 
 CircDLelement&lt;StudentInfo&gt; *insertFront(
-        CircDLelement&lt;StudentInfo&gt; *tailElement,
-        CircDLelement&lt;StudentInfo&gt; *newElement) {
+	CircDLelement&lt;StudentInfo&gt; *tailElement,
+	CircDLelement&lt;StudentInfo&gt; *newElement) {
 
-        CircDLelement&lt;StudentInfo&gt; *tailNextElement = tailElement-&gt;getNext();
+	CircDLelement&lt;StudentInfo&gt; *tailNextElement = tailElement-&gt;getNext();
 
-        newElement-&gt;setNext(tailNextElement);
-        newElement-&gt;setPrev(tailElement);
+	newElement-&gt;setNext(tailNextElement);
+	newElement-&gt;setPrev(tailElement);
 
-        tailNextElement-&gt;setPrev(newElement);
-        tailElement-&gt;setNext(newElement);
+	tailNextElement-&gt;setPrev(newElement);
+	tailElement-&gt;setNext(newElement);
 
-        <span class="Statement">return</span> tailElement;
+	<span class="Statement">return</span> tailElement;
 }
 
 </pre>
 </body>
 </html>
+<!-- vim: set foldmethod=manual : -->

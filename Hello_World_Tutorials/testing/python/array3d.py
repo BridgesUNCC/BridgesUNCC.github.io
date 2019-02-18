@@ -1,11 +1,12 @@
-from Bridges.Bridges import *
-from Bridges.Array import *
+from bridges.bridges import *
+from bridges.array import *
+import sys
 
+def main():
+    args = sys.argv[1:]
 
-class array3d:
-
-    #create the bridges object
-    bridges = Bridges(2, "YOUR_USER_ID", "YOUR_API_KEY")
+    # create the Bridges object, set credentials
+    bridges = Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
 
     #speify array dimensions and create 3D array
     num_slices = 4
@@ -35,4 +36,8 @@ class array3d:
 
     #visualize the list
     bridges.visualize()
+
+
+if __name__ == "__main__":
+    main()
 

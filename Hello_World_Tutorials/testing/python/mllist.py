@@ -1,10 +1,13 @@
-from Bridges.Bridges import *
-from Bridges.MLelement import *
+from bridges.bridges import *
+from bridges.ml_element import *
+import sys
 
-class MLtutorial:
+def main():
 
-    # create the bridges object
-    bridges = Bridges(7, "YOUR_USER_ID", "YOUR_API_KEY")
+    args = sys.argv[1:]
+
+    # create the Bridges object, set credentials
+    bridges = Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
 
     # create multi linked list
     el0 = MLelement("0", "0")
@@ -54,3 +57,7 @@ class MLtutorial:
     bridges.set_data_structure(el0)
     #visualize the multi linked list
     bridges.visualize()
+
+if __name__ == "__main__":
+    main()
+

@@ -10,8 +10,8 @@
 using namespace bridges;
 
 int main (int argc, char **argv) {
-	Bridges *bridges =  new Bridges(105, "YOUR_USER_ID", "YOUR_API_KEY");
-
+    Bridges *bridges =  new Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", 
+                                "YOUR_API_KEY");
 
 	// create the linked list elements with
 	// student data

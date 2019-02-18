@@ -1,11 +1,12 @@
-from Bridges.Bridges import *
-from Bridges.AVLTreeElement import *
+from bridges.bridges import *
+from bridges.avl_tree_element import *
+import sys
 
+def main():
+    args = sys.argv[1:]
 
-class AVLTreetutorial:
-
-    # create a bridges object
-    bridges = Bridges(11, "YOUR_USER_ID", "YOUR_API_KEY")
+    # create the Bridges object, set credentials
+    bridges = Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
 
     # create an AVL tree elements
     avl_root = AVLTreeElement(50, "Hello")
@@ -44,4 +45,8 @@ class AVLTreetutorial:
 
     # visualize the tree
     bridges.visualize()
+
+if __name__ == "__main__":
+    main()
+
 
