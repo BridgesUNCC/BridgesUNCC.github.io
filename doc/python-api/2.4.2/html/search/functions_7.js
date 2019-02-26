@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['latitude',['latitude',['../classbridges_1_1data__src__dependent_1_1osm_1_1_osm_vertex.html#a31eefda235d8c4dd065ee5200897b473',1,'bridges.data_src_dependent.osm.OsmVertex.latitude(self)'],['../classbridges_1_1data__src__dependent_1_1osm_1_1_osm_vertex.html#add07a32c4c5e0f4af70d790cffa9a6d9',1,'bridges.data_src_dependent.osm.OsmVertex.latitude'],['../classbridges_1_1data__src__dependent_1_1osm_1_1_osm_vertex.html#a31eefda235d8c4dd065ee5200897b473',1,'bridges.data_src_dependent.osm.OsmVertex.latitude(self)']]],
+  ['longitude',['longitude',['../classbridges_1_1data__src__dependent_1_1osm_1_1_osm_vertex.html#aca0aff0932e5436a0f72e53a93fe8f42',1,'bridges.data_src_dependent.osm.OsmVertex.longitude(self)'],['../classbridges_1_1data__src__dependent_1_1osm_1_1_osm_vertex.html#acf84d4c73cbffae355ec49c03b3f48c7',1,'bridges.data_src_dependent.osm.OsmVertex.longitude'],['../classbridges_1_1data__src__dependent_1_1osm_1_1_osm_vertex.html#aca0aff0932e5436a0f72e53a93fe8f42',1,'bridges.data_src_dependent.osm.OsmVertex.longitude(self)']]]
+];

@@ -1,0 +1,227 @@
+\hypertarget{classbridges_1_1ml__element_1_1_m_lelement}{}\section{bridges.\+ml\+\_\+element.\+M\+Lelement Class Reference}
+\label{classbridges_1_1ml__element_1_1_m_lelement}\index{bridges.\+ml\+\_\+element.\+M\+Lelement@{bridges.\+ml\+\_\+element.\+M\+Lelement}}
+
+
+This class can be used to instantiate Multi-\/list Elements.  
+
+
+Inheritance diagram for bridges.\+ml\+\_\+element.\+M\+Lelement\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classbridges_1_1ml__element_1_1_m_lelement}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classbridges_1_1ml__element_1_1_m_lelement_a079043b0d070583b38881b663fb2e595}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classbridges_1_1element_1_1_element_a97551dbb005cd5d1f13b65461290c6e3}{label}}=None, e=None, \mbox{\hyperlink{classbridges_1_1sl__element_1_1_s_lelement_a4fa8e9321dd2ce726da047ddc64adabf}{next}}=None, sublist=None)
+\begin{DoxyCompactList}\small\item\em This constructor creates an S\+Lelement object and sets the next pointer to null. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1ml__element_1_1_m_lelement_a578cd6c05bb6f38939bd41d0e1c93613}{set\+\_\+sub\+\_\+list}} (self, sl)
+\begin{DoxyCompactList}\small\item\em Sets the start of a new sublist. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1ml__element_1_1_m_lelement_a9a11300019a637de7b3f4a756998ac32}{get\+\_\+sub\+\_\+list}} (self)
+\begin{DoxyCompactList}\small\item\em Gets the sublist at this node, if it exists. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1ml__element_1_1_m_lelement_a97693d616263a8ee59b066829e8ce7e8}{get\+\_\+data\+\_\+structure\+\_\+type}} (self)
+\begin{DoxyCompactList}\small\item\em This method gets the data structure type. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1ml__element_1_1_m_lelement_aca0cc01e2041a3d283a3e1ceca3050da}{get\+\_\+next}} (self)
+\begin{DoxyCompactList}\small\item\em Retrieves the element following this element. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1ml__element_1_1_m_lelement_af556c1716954cfa671e1a79dff78f66a}{set\+\_\+tag}} (self, t)
+\begin{DoxyCompactList}\small\item\em Sets the tag of the element. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1ml__element_1_1_m_lelement_afd872697e67a92dc4f4ef2f7bd7d249d}{get\+\_\+tag}} (self)
+\begin{DoxyCompactList}\small\item\em Gets the tag of the element. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1ml__element_1_1_m_lelement_a7d176b966746a889f9234d4a76b99c0c}{get\+\_\+data\+\_\+structure\+\_\+representation}} (self)
+\item 
+def \mbox{\hyperlink{classbridges_1_1ml__element_1_1_m_lelement_a3996cd2cec7c3978437392eba2ef66eb}{get\+\_\+list\+\_\+elements}} (self, nodes)
+\begin{DoxyCompactList}\small\item\em Get the elements of the list. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1ml__element_1_1_m_lelement_a951795a932cf17381d1d90515e3fc985}{get\+\_\+list\+\_\+elements\+\_\+R}} (self, list, nodes)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbridges_1_1ml__element_1_1_m_lelement_aebde8498e7a70f6d94bb639cfac1f9c6}{tag}}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbridges_1_1ml__element_1_1_m_lelement_ad8c56ba876dc2331e63bb1cff279375a}{sub\+\_\+list}} = None
+\item 
+bool \mbox{\hyperlink{classbridges_1_1ml__element_1_1_m_lelement_a231d777baea7d5bb26f1cd2e7d9af668}{tag}} = False
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class can be used to instantiate Multi-\/list Elements. 
+
+This class extends S\+Lelement (singly linked list element) to build multi-\/lists; Multilist elements contain a tag that indicates if the element is a sublist or not; If the element points to a sublist, then the sublist field is the beginning of this sublist. If not, the data field contains the user specified data item and list continues (get\+Next()/set\+Next()). As in singly linked elements, the next pointer points to the following list element of the list or sublist.
+
+Multi-\/list elements contain a visualizer (Element\+Visualizer) object for setting visual attributes (color, shape, opacity, size), necessary for displaying them in a web browser.
+
+Elements also have a Link\+Visualizer object, that is used when they are linked to another element, appropriate for setting link attributes, for instance, between the current element and its next element. In this case, the link in question is that which connects the element to the following elements; a similar logic follows for sublists.
+
+\begin{DoxyAuthor}{Author}
+, Kalpathi Subramanian
+\end{DoxyAuthor}
+\begin{DoxyVerb}\sa Example Tutorial at <br> ??\end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1ml__element_1_1_m_lelement_a079043b0d070583b38881b663fb2e595}\label{classbridges_1_1ml__element_1_1_m_lelement_a079043b0d070583b38881b663fb2e595}} 
+\index{bridges\+::ml\+\_\+element\+::\+M\+Lelement@{bridges\+::ml\+\_\+element\+::\+M\+Lelement}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!bridges\+::ml\+\_\+element\+::\+M\+Lelement@{bridges\+::ml\+\_\+element\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def bridges.\+ml\+\_\+element.\+M\+Lelement.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{label = {\ttfamily None},  }\item[{}]{e = {\ttfamily None},  }\item[{}]{next = {\ttfamily None},  }\item[{}]{sublist = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+This constructor creates an S\+Lelement object and sets the next pointer to null. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em label} & the label of S\+Lelement that shows up on the bridges visualization \\
+\hline
+{\em e} & the generic object that this S\+Lelement will hold \\
+\hline
+{\em next} & the element that should be assigned to the next pointer \\
+\hline
+{\em sublist} & the \mbox{\hyperlink{classbridges_1_1ml__element_1_1_m_lelement}{M\+Lelement}} that is the beginning of a sublist \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1ml__element_1_1_m_lelement_a7d176b966746a889f9234d4a76b99c0c}\label{classbridges_1_1ml__element_1_1_m_lelement_a7d176b966746a889f9234d4a76b99c0c}} 
+\index{bridges\+::ml\+\_\+element\+::\+M\+Lelement@{bridges\+::ml\+\_\+element\+::\+M\+Lelement}!get\+\_\+data\+\_\+structure\+\_\+representation@{get\+\_\+data\+\_\+structure\+\_\+representation}}
+\index{get\+\_\+data\+\_\+structure\+\_\+representation@{get\+\_\+data\+\_\+structure\+\_\+representation}!bridges\+::ml\+\_\+element\+::\+M\+Lelement@{bridges\+::ml\+\_\+element\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{get\+\_\+data\+\_\+structure\+\_\+representation()}{get\_data\_structure\_representation()}}
+{\footnotesize\ttfamily def bridges.\+ml\+\_\+element.\+M\+Lelement.\+get\+\_\+data\+\_\+structure\+\_\+representation (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1ml__element_1_1_m_lelement_a97693d616263a8ee59b066829e8ce7e8}\label{classbridges_1_1ml__element_1_1_m_lelement_a97693d616263a8ee59b066829e8ce7e8}} 
+\index{bridges\+::ml\+\_\+element\+::\+M\+Lelement@{bridges\+::ml\+\_\+element\+::\+M\+Lelement}!get\+\_\+data\+\_\+structure\+\_\+type@{get\+\_\+data\+\_\+structure\+\_\+type}}
+\index{get\+\_\+data\+\_\+structure\+\_\+type@{get\+\_\+data\+\_\+structure\+\_\+type}!bridges\+::ml\+\_\+element\+::\+M\+Lelement@{bridges\+::ml\+\_\+element\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{get\+\_\+data\+\_\+structure\+\_\+type()}{get\_data\_structure\_type()}}
+{\footnotesize\ttfamily def bridges.\+ml\+\_\+element.\+M\+Lelement.\+get\+\_\+data\+\_\+structure\+\_\+type (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This method gets the data structure type. 
+
+\begin{DoxyReturn}{Returns}
+The date structure type as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1ml__element_1_1_m_lelement_a3996cd2cec7c3978437392eba2ef66eb}\label{classbridges_1_1ml__element_1_1_m_lelement_a3996cd2cec7c3978437392eba2ef66eb}} 
+\index{bridges\+::ml\+\_\+element\+::\+M\+Lelement@{bridges\+::ml\+\_\+element\+::\+M\+Lelement}!get\+\_\+list\+\_\+elements@{get\+\_\+list\+\_\+elements}}
+\index{get\+\_\+list\+\_\+elements@{get\+\_\+list\+\_\+elements}!bridges\+::ml\+\_\+element\+::\+M\+Lelement@{bridges\+::ml\+\_\+element\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{get\+\_\+list\+\_\+elements()}{get\_list\_elements()}}
+{\footnotesize\ttfamily def bridges.\+ml\+\_\+element.\+M\+Lelement.\+get\+\_\+list\+\_\+elements (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{nodes }\end{DoxyParamCaption})}
+
+
+
+Get the elements of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nodes} & a vector of the ndoes in the list \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1ml__element_1_1_m_lelement_a951795a932cf17381d1d90515e3fc985}\label{classbridges_1_1ml__element_1_1_m_lelement_a951795a932cf17381d1d90515e3fc985}} 
+\index{bridges\+::ml\+\_\+element\+::\+M\+Lelement@{bridges\+::ml\+\_\+element\+::\+M\+Lelement}!get\+\_\+list\+\_\+elements\+\_\+R@{get\+\_\+list\+\_\+elements\+\_\+R}}
+\index{get\+\_\+list\+\_\+elements\+\_\+R@{get\+\_\+list\+\_\+elements\+\_\+R}!bridges\+::ml\+\_\+element\+::\+M\+Lelement@{bridges\+::ml\+\_\+element\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{get\+\_\+list\+\_\+elements\+\_\+\+R()}{get\_list\_elements\_R()}}
+{\footnotesize\ttfamily def bridges.\+ml\+\_\+element.\+M\+Lelement.\+get\+\_\+list\+\_\+elements\+\_\+R (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{list,  }\item[{}]{nodes }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1ml__element_1_1_m_lelement_aca0cc01e2041a3d283a3e1ceca3050da}\label{classbridges_1_1ml__element_1_1_m_lelement_aca0cc01e2041a3d283a3e1ceca3050da}} 
+\index{bridges\+::ml\+\_\+element\+::\+M\+Lelement@{bridges\+::ml\+\_\+element\+::\+M\+Lelement}!get\+\_\+next@{get\+\_\+next}}
+\index{get\+\_\+next@{get\+\_\+next}!bridges\+::ml\+\_\+element\+::\+M\+Lelement@{bridges\+::ml\+\_\+element\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{get\+\_\+next()}{get\_next()}}
+{\footnotesize\ttfamily def bridges.\+ml\+\_\+element.\+M\+Lelement.\+get\+\_\+next (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Retrieves the element following this element. 
+
+\begin{DoxyReturn}{Returns}
+M\+Lelement$<$\+E$>$ assigned to next 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1ml__element_1_1_m_lelement_a9a11300019a637de7b3f4a756998ac32}\label{classbridges_1_1ml__element_1_1_m_lelement_a9a11300019a637de7b3f4a756998ac32}} 
+\index{bridges\+::ml\+\_\+element\+::\+M\+Lelement@{bridges\+::ml\+\_\+element\+::\+M\+Lelement}!get\+\_\+sub\+\_\+list@{get\+\_\+sub\+\_\+list}}
+\index{get\+\_\+sub\+\_\+list@{get\+\_\+sub\+\_\+list}!bridges\+::ml\+\_\+element\+::\+M\+Lelement@{bridges\+::ml\+\_\+element\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{get\+\_\+sub\+\_\+list()}{get\_sub\_list()}}
+{\footnotesize\ttfamily def bridges.\+ml\+\_\+element.\+M\+Lelement.\+get\+\_\+sub\+\_\+list (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Gets the sublist at this node, if it exists. 
+
+\begin{DoxyReturn}{Returns}
+the sublist head element, if it exists 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1ml__element_1_1_m_lelement_afd872697e67a92dc4f4ef2f7bd7d249d}\label{classbridges_1_1ml__element_1_1_m_lelement_afd872697e67a92dc4f4ef2f7bd7d249d}} 
+\index{bridges\+::ml\+\_\+element\+::\+M\+Lelement@{bridges\+::ml\+\_\+element\+::\+M\+Lelement}!get\+\_\+tag@{get\+\_\+tag}}
+\index{get\+\_\+tag@{get\+\_\+tag}!bridges\+::ml\+\_\+element\+::\+M\+Lelement@{bridges\+::ml\+\_\+element\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{get\+\_\+tag()}{get\_tag()}}
+{\footnotesize\ttfamily def bridges.\+ml\+\_\+element.\+M\+Lelement.\+get\+\_\+tag (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Gets the tag of the element. 
+
+\begin{DoxyReturn}{Returns}
+tag of the element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1ml__element_1_1_m_lelement_a578cd6c05bb6f38939bd41d0e1c93613}\label{classbridges_1_1ml__element_1_1_m_lelement_a578cd6c05bb6f38939bd41d0e1c93613}} 
+\index{bridges\+::ml\+\_\+element\+::\+M\+Lelement@{bridges\+::ml\+\_\+element\+::\+M\+Lelement}!set\+\_\+sub\+\_\+list@{set\+\_\+sub\+\_\+list}}
+\index{set\+\_\+sub\+\_\+list@{set\+\_\+sub\+\_\+list}!bridges\+::ml\+\_\+element\+::\+M\+Lelement@{bridges\+::ml\+\_\+element\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{set\+\_\+sub\+\_\+list()}{set\_sub\_list()}}
+{\footnotesize\ttfamily def bridges.\+ml\+\_\+element.\+M\+Lelement.\+set\+\_\+sub\+\_\+list (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sl }\end{DoxyParamCaption})}
+
+
+
+Sets the start of a new sublist. 
+
+to the S\+Lelement \char`\"{}next\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em sl} & the \mbox{\hyperlink{classbridges_1_1ml__element_1_1_m_lelement}{M\+Lelement}} that is the beginning of a sublist \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1ml__element_1_1_m_lelement_af556c1716954cfa671e1a79dff78f66a}\label{classbridges_1_1ml__element_1_1_m_lelement_af556c1716954cfa671e1a79dff78f66a}} 
+\index{bridges\+::ml\+\_\+element\+::\+M\+Lelement@{bridges\+::ml\+\_\+element\+::\+M\+Lelement}!set\+\_\+tag@{set\+\_\+tag}}
+\index{set\+\_\+tag@{set\+\_\+tag}!bridges\+::ml\+\_\+element\+::\+M\+Lelement@{bridges\+::ml\+\_\+element\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{set\+\_\+tag()}{set\_tag()}}
+{\footnotesize\ttfamily def bridges.\+ml\+\_\+element.\+M\+Lelement.\+set\+\_\+tag (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{t }\end{DoxyParamCaption})}
+
+
+
+Sets the tag of the element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em boolean} & t \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classbridges_1_1ml__element_1_1_m_lelement_ad8c56ba876dc2331e63bb1cff279375a}\label{classbridges_1_1ml__element_1_1_m_lelement_ad8c56ba876dc2331e63bb1cff279375a}} 
+\index{bridges\+::ml\+\_\+element\+::\+M\+Lelement@{bridges\+::ml\+\_\+element\+::\+M\+Lelement}!sub\+\_\+list@{sub\+\_\+list}}
+\index{sub\+\_\+list@{sub\+\_\+list}!bridges\+::ml\+\_\+element\+::\+M\+Lelement@{bridges\+::ml\+\_\+element\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{sub\+\_\+list}{sub\_list}}
+{\footnotesize\ttfamily bridges.\+ml\+\_\+element.\+M\+Lelement.\+sub\+\_\+list = None\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbridges_1_1ml__element_1_1_m_lelement_a231d777baea7d5bb26f1cd2e7d9af668}\label{classbridges_1_1ml__element_1_1_m_lelement_a231d777baea7d5bb26f1cd2e7d9af668}} 
+\index{bridges\+::ml\+\_\+element\+::\+M\+Lelement@{bridges\+::ml\+\_\+element\+::\+M\+Lelement}!tag@{tag}}
+\index{tag@{tag}!bridges\+::ml\+\_\+element\+::\+M\+Lelement@{bridges\+::ml\+\_\+element\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{tag}{tag}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool bridges.\+ml\+\_\+element.\+M\+Lelement.\+tag = False\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbridges_1_1ml__element_1_1_m_lelement_aebde8498e7a70f6d94bb639cfac1f9c6}\label{classbridges_1_1ml__element_1_1_m_lelement_aebde8498e7a70f6d94bb639cfac1f9c6}} 
+\index{bridges\+::ml\+\_\+element\+::\+M\+Lelement@{bridges\+::ml\+\_\+element\+::\+M\+Lelement}!tag@{tag}}
+\index{tag@{tag}!bridges\+::ml\+\_\+element\+::\+M\+Lelement@{bridges\+::ml\+\_\+element\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{tag}{tag}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bridges.\+ml\+\_\+element.\+M\+Lelement.\+tag}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/python/bridges18/bridges/\mbox{\hyperlink{ml__element_8py}{ml\+\_\+element.\+py}}\end{DoxyCompactItemize}

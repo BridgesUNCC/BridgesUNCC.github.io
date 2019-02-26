@@ -1,0 +1,248 @@
+\hypertarget{classbridges_1_1_symbol}{}\section{bridges\+:\+:Symbol Class Reference}
+\label{classbridges_1_1_symbol}\index{bridges\+::\+Symbol@{bridges\+::\+Symbol}}
+
+
+This is an abstract class for deriving a number of \mbox{\hyperlink{classbridges_1_1_symbol}{Symbol}} shape objects, for use in a \mbox{\hyperlink{classbridges_1_1_symbol_collection}{Symbol\+Collection}}. Symbols correspond to a simplified subset of S\+VG paths and shapes for custom visual representations in B\+R\+I\+D\+G\+ES.  
+
+
+
+
+{\ttfamily \#include $<$Symbol.\+h$>$}
+
+Inheritance diagram for bridges\+:\+:Symbol\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.806452cm]{classbridges_1_1_symbol}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbridges_1_1_symbol_a4e1ce195ffc6c99e7f597ef63ed40aa6}{Symbol}} ()
+\item 
+virtual const string \mbox{\hyperlink{classbridges_1_1_symbol_ab4dd31fbc736b2e58e8b8bb8446eac73}{get\+Symbol\+Representation}} () const =0
+\item 
+virtual vector$<$ float $>$ \mbox{\hyperlink{classbridges_1_1_symbol_a6eb190dc71b31b344b7610a07c6dc1d5}{get\+Dimensions}} ()=0
+\item 
+\mbox{\hyperlink{classbridges_1_1_symbol_a047f3b1508fb62efdca8b688f462a866}{Symbol}} (string symb)
+\item 
+int \mbox{\hyperlink{classbridges_1_1_symbol_a6006dfc7fcaeff3dbead8bcf647ccff6}{get\+Identifier}} ()
+\item 
+void \mbox{\hyperlink{classbridges_1_1_symbol_afd181fe1e860542548efc4244e06f609}{set\+Label}} (string lbl)
+\item 
+string \mbox{\hyperlink{classbridges_1_1_symbol_a6d19ee38cdb8a07a19cf53840e93cbbb}{get\+Label}} () const
+\item 
+void \mbox{\hyperlink{classbridges_1_1_symbol_a20315217d30c3c747b5b6da60c08c2c9}{set\+Fill\+Color}} (\mbox{\hyperlink{classbridges_1_1_color}{Color}} c)
+\item 
+\mbox{\hyperlink{classbridges_1_1_color}{Color}} \mbox{\hyperlink{classbridges_1_1_symbol_affd9e9f49524a920d53a490782fab9c9}{get\+Fill\+Color}} ()
+\item 
+void \mbox{\hyperlink{classbridges_1_1_symbol_a813783a031eb5fcc841a549be384f876}{set\+Stroke\+Color}} (\mbox{\hyperlink{classbridges_1_1_color}{Color}} c)
+\item 
+\mbox{\hyperlink{classbridges_1_1_color}{Color}} \mbox{\hyperlink{classbridges_1_1_symbol_ad783260351a4e85612807d039565880d}{get\+Stroke\+Color}} ()
+\item 
+void \mbox{\hyperlink{classbridges_1_1_symbol_a29e8e8b80ea1aba0a99abdacd7c8ec17}{set\+Stroke\+Width}} (float strk\+\_\+width)
+\item 
+float \mbox{\hyperlink{classbridges_1_1_symbol_a59ee674a1eaf79c7611ef8377cba2d0b}{get\+Stroke\+Width}} ()
+\item 
+void \mbox{\hyperlink{classbridges_1_1_symbol_a586939c47e544093cbd8f443bed8dfee}{set\+Opacity}} (float op)
+\item 
+float \mbox{\hyperlink{classbridges_1_1_symbol_abeda0c1f43346b91f028d2df80e270dc}{get\+Opacity}} ()
+\item 
+void \mbox{\hyperlink{classbridges_1_1_symbol_ab74d4afc6805db5be7613a82c7295c61}{set\+Stroke\+Dash}} (int dash)
+\item 
+int \mbox{\hyperlink{classbridges_1_1_symbol_aebd8935bc4f963a04412aa544beee27b}{get\+Stroke\+Dash}} ()
+\item 
+void \mbox{\hyperlink{classbridges_1_1_symbol_a9a1bdebb8dcec2871243a269e618a351}{set\+Location}} (int x, int y)
+\item 
+void \mbox{\hyperlink{classbridges_1_1_symbol_a5f774c3cbd407bc74d43e8d27bb6933f}{set\+Location}} (float x, float y)
+\item 
+float $\ast$ \mbox{\hyperlink{classbridges_1_1_symbol_a97f8b30d76dd0d8dd49167628bb3f810}{get\+Location}} ()
+\item 
+string \mbox{\hyperlink{classbridges_1_1_symbol_a798c3871fe791a841ab0e558807e5c6b}{get\+Name}} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const string \mbox{\hyperlink{classbridges_1_1_symbol_a7818993a154ee736fe3d3ed65ce7d76e}{get\+Symbol\+Attribute\+Representation}} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is an abstract class for deriving a number of \mbox{\hyperlink{classbridges_1_1_symbol}{Symbol}} shape objects, for use in a \mbox{\hyperlink{classbridges_1_1_symbol_collection}{Symbol\+Collection}}. Symbols correspond to a simplified subset of S\+VG paths and shapes for custom visual representations in B\+R\+I\+D\+G\+ES. 
+
+Currently shapes supported are rectangle, circle, polygon, label; each shape has a name, location (x, y) and appropriate geometric and non-\/geometric attributes
+
+\begin{DoxyAuthor}{Author}
+David Burlinson, Kalpathi Subramanian 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+12/24/18 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1_symbol_a4e1ce195ffc6c99e7f597ef63ed40aa6}\label{classbridges_1_1_symbol_a4e1ce195ffc6c99e7f597ef63ed40aa6}} 
+\index{bridges\+::\+Symbol@{bridges\+::\+Symbol}!Symbol@{Symbol}}
+\index{Symbol@{Symbol}!bridges\+::\+Symbol@{bridges\+::\+Symbol}}
+\subsubsection{\texorpdfstring{Symbol()}{Symbol()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bridges\+::\+Symbol\+::\+Symbol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1_symbol_a047f3b1508fb62efdca8b688f462a866}\label{classbridges_1_1_symbol_a047f3b1508fb62efdca8b688f462a866}} 
+\index{bridges\+::\+Symbol@{bridges\+::\+Symbol}!Symbol@{Symbol}}
+\index{Symbol@{Symbol}!bridges\+::\+Symbol@{bridges\+::\+Symbol}}
+\subsubsection{\texorpdfstring{Symbol()}{Symbol()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bridges\+::\+Symbol\+::\+Symbol (\begin{DoxyParamCaption}\item[{string}]{symb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1_symbol_a6eb190dc71b31b344b7610a07c6dc1d5}\label{classbridges_1_1_symbol_a6eb190dc71b31b344b7610a07c6dc1d5}} 
+\index{bridges\+::\+Symbol@{bridges\+::\+Symbol}!get\+Dimensions@{get\+Dimensions}}
+\index{get\+Dimensions@{get\+Dimensions}!bridges\+::\+Symbol@{bridges\+::\+Symbol}}
+\subsubsection{\texorpdfstring{get\+Dimensions()}{getDimensions()}}
+{\footnotesize\ttfamily virtual vector$<$float$>$ bridges\+::\+Symbol\+::get\+Dimensions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classbridges_1_1_label_a97d5638f629edbd6733b8f8572ca42ba}{bridges\+::\+Label}}, \mbox{\hyperlink{classbridges_1_1_circle_a06e97818128abf9b9caa72aa4d05a704}{bridges\+::\+Circle}}, \mbox{\hyperlink{classbridges_1_1_rectangle_a459587616a9674f6f0f02bac08589e23}{bridges\+::\+Rectangle}}, \mbox{\hyperlink{classbridges_1_1_polyline_aa0ce633fa1bb6460f507fe98026de443}{bridges\+::\+Polyline}}, and \mbox{\hyperlink{classbridges_1_1_polygon_a6ad07473cb57633eca62a3f6832ea08c}{bridges\+::\+Polygon}}.
+
+\mbox{\Hypertarget{classbridges_1_1_symbol_affd9e9f49524a920d53a490782fab9c9}\label{classbridges_1_1_symbol_affd9e9f49524a920d53a490782fab9c9}} 
+\index{bridges\+::\+Symbol@{bridges\+::\+Symbol}!get\+Fill\+Color@{get\+Fill\+Color}}
+\index{get\+Fill\+Color@{get\+Fill\+Color}!bridges\+::\+Symbol@{bridges\+::\+Symbol}}
+\subsubsection{\texorpdfstring{get\+Fill\+Color()}{getFillColor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1_color}{Color}} bridges\+::\+Symbol\+::get\+Fill\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1_symbol_a6006dfc7fcaeff3dbead8bcf647ccff6}\label{classbridges_1_1_symbol_a6006dfc7fcaeff3dbead8bcf647ccff6}} 
+\index{bridges\+::\+Symbol@{bridges\+::\+Symbol}!get\+Identifier@{get\+Identifier}}
+\index{get\+Identifier@{get\+Identifier}!bridges\+::\+Symbol@{bridges\+::\+Symbol}}
+\subsubsection{\texorpdfstring{get\+Identifier()}{getIdentifier()}}
+{\footnotesize\ttfamily int bridges\+::\+Symbol\+::get\+Identifier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Maintains unique identifiers of symbols and returns the \mbox{\hyperlink{classbridges_1_1_symbol}{Symbol}}\textquotesingle{}s unique identifier
+
+\begin{DoxyReturn}{Returns}
+the identifier 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_symbol_a6d19ee38cdb8a07a19cf53840e93cbbb}\label{classbridges_1_1_symbol_a6d19ee38cdb8a07a19cf53840e93cbbb}} 
+\index{bridges\+::\+Symbol@{bridges\+::\+Symbol}!get\+Label@{get\+Label}}
+\index{get\+Label@{get\+Label}!bridges\+::\+Symbol@{bridges\+::\+Symbol}}
+\subsubsection{\texorpdfstring{get\+Label()}{getLabel()}}
+{\footnotesize\ttfamily string bridges\+::\+Symbol\+::get\+Label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1_symbol_a97f8b30d76dd0d8dd49167628bb3f810}\label{classbridges_1_1_symbol_a97f8b30d76dd0d8dd49167628bb3f810}} 
+\index{bridges\+::\+Symbol@{bridges\+::\+Symbol}!get\+Location@{get\+Location}}
+\index{get\+Location@{get\+Location}!bridges\+::\+Symbol@{bridges\+::\+Symbol}}
+\subsubsection{\texorpdfstring{get\+Location()}{getLocation()}}
+{\footnotesize\ttfamily float$\ast$ bridges\+::\+Symbol\+::get\+Location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1_symbol_a798c3871fe791a841ab0e558807e5c6b}\label{classbridges_1_1_symbol_a798c3871fe791a841ab0e558807e5c6b}} 
+\index{bridges\+::\+Symbol@{bridges\+::\+Symbol}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!bridges\+::\+Symbol@{bridges\+::\+Symbol}}
+\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
+{\footnotesize\ttfamily string bridges\+::\+Symbol\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+This method gets the name of the symbol
+
+\begin{DoxyReturn}{Returns}
+name shape name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_symbol_abeda0c1f43346b91f028d2df80e270dc}\label{classbridges_1_1_symbol_abeda0c1f43346b91f028d2df80e270dc}} 
+\index{bridges\+::\+Symbol@{bridges\+::\+Symbol}!get\+Opacity@{get\+Opacity}}
+\index{get\+Opacity@{get\+Opacity}!bridges\+::\+Symbol@{bridges\+::\+Symbol}}
+\subsubsection{\texorpdfstring{get\+Opacity()}{getOpacity()}}
+{\footnotesize\ttfamily float bridges\+::\+Symbol\+::get\+Opacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1_symbol_ad783260351a4e85612807d039565880d}\label{classbridges_1_1_symbol_ad783260351a4e85612807d039565880d}} 
+\index{bridges\+::\+Symbol@{bridges\+::\+Symbol}!get\+Stroke\+Color@{get\+Stroke\+Color}}
+\index{get\+Stroke\+Color@{get\+Stroke\+Color}!bridges\+::\+Symbol@{bridges\+::\+Symbol}}
+\subsubsection{\texorpdfstring{get\+Stroke\+Color()}{getStrokeColor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1_color}{Color}} bridges\+::\+Symbol\+::get\+Stroke\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1_symbol_aebd8935bc4f963a04412aa544beee27b}\label{classbridges_1_1_symbol_aebd8935bc4f963a04412aa544beee27b}} 
+\index{bridges\+::\+Symbol@{bridges\+::\+Symbol}!get\+Stroke\+Dash@{get\+Stroke\+Dash}}
+\index{get\+Stroke\+Dash@{get\+Stroke\+Dash}!bridges\+::\+Symbol@{bridges\+::\+Symbol}}
+\subsubsection{\texorpdfstring{get\+Stroke\+Dash()}{getStrokeDash()}}
+{\footnotesize\ttfamily int bridges\+::\+Symbol\+::get\+Stroke\+Dash (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1_symbol_a59ee674a1eaf79c7611ef8377cba2d0b}\label{classbridges_1_1_symbol_a59ee674a1eaf79c7611ef8377cba2d0b}} 
+\index{bridges\+::\+Symbol@{bridges\+::\+Symbol}!get\+Stroke\+Width@{get\+Stroke\+Width}}
+\index{get\+Stroke\+Width@{get\+Stroke\+Width}!bridges\+::\+Symbol@{bridges\+::\+Symbol}}
+\subsubsection{\texorpdfstring{get\+Stroke\+Width()}{getStrokeWidth()}}
+{\footnotesize\ttfamily float bridges\+::\+Symbol\+::get\+Stroke\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1_symbol_a7818993a154ee736fe3d3ed65ce7d76e}\label{classbridges_1_1_symbol_a7818993a154ee736fe3d3ed65ce7d76e}} 
+\index{bridges\+::\+Symbol@{bridges\+::\+Symbol}!get\+Symbol\+Attribute\+Representation@{get\+Symbol\+Attribute\+Representation}}
+\index{get\+Symbol\+Attribute\+Representation@{get\+Symbol\+Attribute\+Representation}!bridges\+::\+Symbol@{bridges\+::\+Symbol}}
+\subsubsection{\texorpdfstring{get\+Symbol\+Attribute\+Representation()}{getSymbolAttributeRepresentation()}}
+{\footnotesize\ttfamily const string bridges\+::\+Symbol\+::get\+Symbol\+Attribute\+Representation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classbridges_1_1_symbol_ab4dd31fbc736b2e58e8b8bb8446eac73}\label{classbridges_1_1_symbol_ab4dd31fbc736b2e58e8b8bb8446eac73}} 
+\index{bridges\+::\+Symbol@{bridges\+::\+Symbol}!get\+Symbol\+Representation@{get\+Symbol\+Representation}}
+\index{get\+Symbol\+Representation@{get\+Symbol\+Representation}!bridges\+::\+Symbol@{bridges\+::\+Symbol}}
+\subsubsection{\texorpdfstring{get\+Symbol\+Representation()}{getSymbolRepresentation()}}
+{\footnotesize\ttfamily virtual const string bridges\+::\+Symbol\+::get\+Symbol\+Representation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classbridges_1_1_label_af4bdf9e492cf2a2bf3a8be42bd282b44}{bridges\+::\+Label}}, \mbox{\hyperlink{classbridges_1_1_rectangle_a509c9489c6f145b684447851736acac5}{bridges\+::\+Rectangle}}, \mbox{\hyperlink{classbridges_1_1_polyline_a850d2f619466b159c7874317f9eaf0a3}{bridges\+::\+Polyline}}, \mbox{\hyperlink{classbridges_1_1_polygon_a5c3e3bbeda23db712088278a3c82a0a6}{bridges\+::\+Polygon}}, and \mbox{\hyperlink{classbridges_1_1_circle_aaee59a0d8ad00c75f7547bac2cfabd38}{bridges\+::\+Circle}}.
+
+\mbox{\Hypertarget{classbridges_1_1_symbol_a20315217d30c3c747b5b6da60c08c2c9}\label{classbridges_1_1_symbol_a20315217d30c3c747b5b6da60c08c2c9}} 
+\index{bridges\+::\+Symbol@{bridges\+::\+Symbol}!set\+Fill\+Color@{set\+Fill\+Color}}
+\index{set\+Fill\+Color@{set\+Fill\+Color}!bridges\+::\+Symbol@{bridges\+::\+Symbol}}
+\subsubsection{\texorpdfstring{set\+Fill\+Color()}{setFillColor()}}
+{\footnotesize\ttfamily void bridges\+::\+Symbol\+::set\+Fill\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1_color}{Color}}}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1_symbol_afd181fe1e860542548efc4244e06f609}\label{classbridges_1_1_symbol_afd181fe1e860542548efc4244e06f609}} 
+\index{bridges\+::\+Symbol@{bridges\+::\+Symbol}!set\+Label@{set\+Label}}
+\index{set\+Label@{set\+Label}!bridges\+::\+Symbol@{bridges\+::\+Symbol}}
+\subsubsection{\texorpdfstring{set\+Label()}{setLabel()}}
+{\footnotesize\ttfamily void bridges\+::\+Symbol\+::set\+Label (\begin{DoxyParamCaption}\item[{string}]{lbl }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This method sets the symbol label
+
+
+\begin{DoxyParams}{Parameters}
+{\em lbl} & the label to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1_symbol_a9a1bdebb8dcec2871243a269e618a351}\label{classbridges_1_1_symbol_a9a1bdebb8dcec2871243a269e618a351}} 
+\index{bridges\+::\+Symbol@{bridges\+::\+Symbol}!set\+Location@{set\+Location}}
+\index{set\+Location@{set\+Location}!bridges\+::\+Symbol@{bridges\+::\+Symbol}}
+\subsubsection{\texorpdfstring{set\+Location()}{setLocation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void bridges\+::\+Symbol\+::set\+Location (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1_symbol_a5f774c3cbd407bc74d43e8d27bb6933f}\label{classbridges_1_1_symbol_a5f774c3cbd407bc74d43e8d27bb6933f}} 
+\index{bridges\+::\+Symbol@{bridges\+::\+Symbol}!set\+Location@{set\+Location}}
+\index{set\+Location@{set\+Location}!bridges\+::\+Symbol@{bridges\+::\+Symbol}}
+\subsubsection{\texorpdfstring{set\+Location()}{setLocation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void bridges\+::\+Symbol\+::set\+Location (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1_symbol_a586939c47e544093cbd8f443bed8dfee}\label{classbridges_1_1_symbol_a586939c47e544093cbd8f443bed8dfee}} 
+\index{bridges\+::\+Symbol@{bridges\+::\+Symbol}!set\+Opacity@{set\+Opacity}}
+\index{set\+Opacity@{set\+Opacity}!bridges\+::\+Symbol@{bridges\+::\+Symbol}}
+\subsubsection{\texorpdfstring{set\+Opacity()}{setOpacity()}}
+{\footnotesize\ttfamily void bridges\+::\+Symbol\+::set\+Opacity (\begin{DoxyParamCaption}\item[{float}]{op }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1_symbol_a813783a031eb5fcc841a549be384f876}\label{classbridges_1_1_symbol_a813783a031eb5fcc841a549be384f876}} 
+\index{bridges\+::\+Symbol@{bridges\+::\+Symbol}!set\+Stroke\+Color@{set\+Stroke\+Color}}
+\index{set\+Stroke\+Color@{set\+Stroke\+Color}!bridges\+::\+Symbol@{bridges\+::\+Symbol}}
+\subsubsection{\texorpdfstring{set\+Stroke\+Color()}{setStrokeColor()}}
+{\footnotesize\ttfamily void bridges\+::\+Symbol\+::set\+Stroke\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1_color}{Color}}}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1_symbol_ab74d4afc6805db5be7613a82c7295c61}\label{classbridges_1_1_symbol_ab74d4afc6805db5be7613a82c7295c61}} 
+\index{bridges\+::\+Symbol@{bridges\+::\+Symbol}!set\+Stroke\+Dash@{set\+Stroke\+Dash}}
+\index{set\+Stroke\+Dash@{set\+Stroke\+Dash}!bridges\+::\+Symbol@{bridges\+::\+Symbol}}
+\subsubsection{\texorpdfstring{set\+Stroke\+Dash()}{setStrokeDash()}}
+{\footnotesize\ttfamily void bridges\+::\+Symbol\+::set\+Stroke\+Dash (\begin{DoxyParamCaption}\item[{int}]{dash }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1_symbol_a29e8e8b80ea1aba0a99abdacd7c8ec17}\label{classbridges_1_1_symbol_a29e8e8b80ea1aba0a99abdacd7c8ec17}} 
+\index{bridges\+::\+Symbol@{bridges\+::\+Symbol}!set\+Stroke\+Width@{set\+Stroke\+Width}}
+\index{set\+Stroke\+Width@{set\+Stroke\+Width}!bridges\+::\+Symbol@{bridges\+::\+Symbol}}
+\subsubsection{\texorpdfstring{set\+Stroke\+Width()}{setStrokeWidth()}}
+{\footnotesize\ttfamily void bridges\+::\+Symbol\+::set\+Stroke\+Width (\begin{DoxyParamCaption}\item[{float}]{strk\+\_\+width }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/cxx/bridges18/src/\mbox{\hyperlink{_symbol_8h}{Symbol.\+h}}\end{DoxyCompactItemize}
