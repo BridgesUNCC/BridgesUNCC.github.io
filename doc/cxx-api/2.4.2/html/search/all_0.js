@@ -4,7 +4,7 @@ var searchData=
   ['actormovieimdb_2eh',['ActorMovieIMDB.h',['../_actor_movie_i_m_d_b_8h.html',1,'']]],
   ['addchild',['addChild',['../classbridges_1_1_tree_element.html#a5e252fa16df0e673526ba4b08c8d3203',1,'bridges::TreeElement']]],
   ['addedge',['addEdge',['../classbridges_1_1_graph_adj_list.html#acd9a3bf8e544a6b78e75acd6bf1d57ee',1,'bridges::GraphAdjList::addEdge()'],['../classbridges_1_1_graph_adj_matrix.html#a785f15a8ca7857a72c34e51ae0c24834',1,'bridges::GraphAdjMatrix::addEdge()']]],
-  ['addpoint',['addPoint',['../classbridges_1_1_polygon.html#ad38f9d5431e4a2dc9f5ed633e118c95c',1,'bridges::Polygon::addPoint()'],['../classbridges_1_1_polyline.html#a1f1d38171e5603ab6a17d714cb46add3',1,'bridges::Polyline::addPoint()']]],
+  ['addpoint',['addPoint',['../classbridges_1_1_polygon.html#ad38f9d5431e4a2dc9f5ed633e118c95c',1,'bridges::Polygon']]],
   ['addsymbol',['addSymbol',['../classbridges_1_1_symbol_collection.html#acdc101f6651becc430e281ed967ddedf',1,'bridges::SymbolCollection']]],
   ['addvertex',['addVertex',['../classbridges_1_1_graph_adj_list.html#a55565a4aff573c6a7751d7845cdfd5f2',1,'bridges::GraphAdjList::addVertex()'],['../classbridges_1_1_graph_adj_matrix.html#a613fc91a0e056254192e45810405ac6e',1,'bridges::GraphAdjMatrix::addVertex()']]],
   ['alltypes_2eh',['alltypes.h',['../alltypes_8h.html',1,'']]],

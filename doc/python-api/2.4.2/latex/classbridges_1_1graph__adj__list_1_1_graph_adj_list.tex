@@ -1,15 +1,10 @@
-\hypertarget{classbridges_1_1graph__adj__list_1_1_graph_adj_list}{}\section{bridges.\+graph\+\_\+adj\+\_\+list.\+Graph\+Adj\+List Class Reference}
-\label{classbridges_1_1graph__adj__list_1_1_graph_adj_list}\index{bridges.\+graph\+\_\+adj\+\_\+list.\+Graph\+Adj\+List@{bridges.\+graph\+\_\+adj\+\_\+list.\+Graph\+Adj\+List}}
-
-
-The \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list}{Graph\+Adj\+List}} class can be used to represent adjacency list based graphs in B\+R\+I\+D\+G\+ES.  
-
-
-\subsection*{Public Member Functions}
+\hypertarget{classbridges_1_1graph__adj__list_1_1_graph_adj_list}{}\doxysection{bridges.\+graph\+\_\+adj\+\_\+list.\+Graph\+Adj\+List Class Reference}
+\label{classbridges_1_1graph__adj__list_1_1_graph_adj_list}\index{bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}}
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 def \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a8258a38ef234f4140b971e9fb7be7784}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
-\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\item 
 def \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_afe3d470247e6b64f38c0d5d51dece920}{get\+\_\+data\+\_\+structure\+\_\+type}} (self)
 \begin{DoxyCompactList}\small\item\em This method gets the data structure type. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a5e8ecd31b5ebdee85e4b35e89335e129}{add\+\_\+vertex}} (self, k, e)
@@ -23,19 +18,19 @@ def \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_af484d8
 def \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a523adce952c66505abc5ad14a83ae4c4}{get\+\_\+adjacency\+\_\+list}} (self, vertex=None)
 \begin{DoxyCompactList}\small\item\em Gets the adjacency list (of type S\+Lelement$<$\+Edge$>$ ) \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_abaa3015ae78e0f5ebc6fd2d2d2772927}{get\+\_\+link\+\_\+visualizer}} (self, src, dest)
-\begin{DoxyCompactList}\small\item\em This is a convenience method to simplify access to the link visualizer; the method assumes the vertex names point to existing vertices, else an exception is thrown. \end{DoxyCompactList}\item 
+\item 
 def \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_ad63fce416ec0fdfd99d05e6236807fd8}{get\+\_\+visualizer}} (self, vertex)
-\begin{DoxyCompactList}\small\item\em This is a convenience method to simplify access to the element visualizer; the method assumes the vertex name points to an existing vertice, else an exception is thrown. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a20ea8a6a1aa03a82223a59474037b3e3}{get\+\_\+data\+\_\+structure\+\_\+representation}} (self)
+\item 
+str \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a382c7258e94b579a7adffe56b777880b}{get\+\_\+data\+\_\+structure\+\_\+representation}} (self)
 \begin{DoxyCompactList}\small\item\em Get the J\+S\+ON representation of the the data structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Public Attributes}
+\doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a6d1115214ceb8c77fe886e78de19f691}{vertices}}
 \item 
 \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_ad39dbb3db39a3ffc145c372e6996443c}{adj\+\_\+list}}
 \end{DoxyCompactItemize}
-\subsection*{Static Public Attributes}
+\doxysubsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 string \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a57d3be43c5cd9a2895e2d2ef716b40c8}{Q\+U\+O\+TE}} = \char`\"{}\textbackslash{}\char`\"{}\char`\"{}
@@ -60,40 +55,46 @@ int \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a093a64
 \end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
-The \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list}{Graph\+Adj\+List}} class can be used to represent adjacency list based graphs in B\+R\+I\+D\+G\+ES. 
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@brief The GraphAdjList class can be used to represent adjacency list based
+    graphs in BRIDGES
 
-The \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list}{Graph\+Adj\+List}} class can be used to represent adjacency list based graphs in B\+R\+I\+D\+G\+ES; it takes 2 generic parameters\+: (1) K, which is an orderable key value used in accessing vertices (in constant time) using a hashmap. This permits data sets that need to be accessed by keys that are strings, and (2) E, an application defined type, and used in the Edge representation. The class is simply a wrapper around the Java Hashmap class and, thus, derives all its operations from it. B\+R\+I\+D\+G\+ES provides methods to visualize the graph and its contents.
+The GraphAdjList class can be used to represent adjacency list based  graphs
+in BRIDGES; it takes 2 generic parameters: (1) K, which is an orderable
+key value used in accessing vertices (in constant time) using a hashmap. This
+permits data sets that need to be accessed by keys that are strings, and
+(2) E, an application defined type, and used in the Edge representation.
+The class is simply a wrapper  around the Java Hashmap class
+and, thus, derives all its operations from it.
+BRIDGES provides methods to visualize the graph  and its contents.
 
-The vertices of the graph are held in a Java hashmap, for near constant time access; this lets us use strings or integral ids for vertices. The adjacency lists, also a Java hashmap are built for each vertex and contain the edge (terminating vertex id, weight) in the Edge structure, defined separately. Adjacency lists are singly linked lists using the B\+R\+I\+D\+G\+ES S\+Lelement.
+The vertices of the graph are held in a Java hashmap, for near constant time access;
+this lets us use strings or integral ids for vertices. The adjacency lists,
+also a Java hashmap  are built for each vertex and contain the edge (terminating
+vertex id, weight) in the Edge structure, defined separately. Adjacency lists
+are singly linked lists using the BRIDGES SLelement.
 
-Convenience methods are provided to add vertices and edges to the graph as well as retrieve the adjacency list of a vertex, given its id.
-
-\begin{DoxyAuthor}{Author}
-Kalpathi Subramanian
-\end{DoxyAuthor}
-\begin{DoxyVerb}\sa Example tutorial at <p>
-    http://bridgesuncc.github.io/Hello_World_Tutorials/Graph.html\end{DoxyVerb}
+Convenience methods are provided to add vertices and edges to the graph as well as
+retrieve the adjacency list of a vertex, given its id.
+\end{DoxyVerb}
  
 
-\subsection{Constructor \& Destructor Documentation}
+\doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a8258a38ef234f4140b971e9fb7be7784}\label{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a8258a38ef234f4140b971e9fb7be7784}} 
-\index{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
-\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}}
-\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+\index{bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
 {\footnotesize\ttfamily def bridges.\+graph\+\_\+adj\+\_\+list.\+Graph\+Adj\+List.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
+\begin{DoxyVerb}Constructor
+\end{DoxyVerb}
+ 
 
-
-Constructor. 
-
-
-
-\subsection{Member Function Documentation}
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classbridges_1_1graph__adj__list_1_1_graph_adj_list_ad26ebc06132389d57f66395024a4a27a}\label{classbridges_1_1graph__adj__list_1_1_graph_adj_list_ad26ebc06132389d57f66395024a4a27a}} 
-\index{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}!add\+\_\+edge@{add\+\_\+edge}}
-\index{add\+\_\+edge@{add\+\_\+edge}!bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}}
-\subsubsection{\texorpdfstring{add\+\_\+edge()}{add\_edge()}}
+\index{bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}!add\_edge@{add\_edge}}
+\index{add\_edge@{add\_edge}!bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}}
+\doxysubsubsection{\texorpdfstring{add\_edge()}{add\_edge()}}
 {\footnotesize\ttfamily def bridges.\+graph\+\_\+adj\+\_\+list.\+Graph\+Adj\+List.\+add\+\_\+edge (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{src,  }\item[{}]{dest,  }\item[{}]{weight = {\ttfamily None} }\end{DoxyParamCaption})}
 
 
@@ -110,9 +111,9 @@ This version assumes a default edge weight of 1.
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a5e8ecd31b5ebdee85e4b35e89335e129}\label{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a5e8ecd31b5ebdee85e4b35e89335e129}} 
-\index{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}!add\+\_\+vertex@{add\+\_\+vertex}}
-\index{add\+\_\+vertex@{add\+\_\+vertex}!bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}}
-\subsubsection{\texorpdfstring{add\+\_\+vertex()}{add\_vertex()}}
+\index{bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}!add\_vertex@{add\_vertex}}
+\index{add\_vertex@{add\_vertex}!bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}}
+\doxysubsubsection{\texorpdfstring{add\_vertex()}{add\_vertex()}}
 {\footnotesize\ttfamily def bridges.\+graph\+\_\+adj\+\_\+list.\+Graph\+Adj\+List.\+add\+\_\+vertex (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{k,  }\item[{}]{e }\end{DoxyParamCaption})}
 
 
@@ -125,37 +126,41 @@ This method will replace the value for this key
 \begin{DoxyParams}{Parameters}
 {\em k} & -\/ vertex id \\
 \hline
-{\em E} & -\/ vertex info, currently used as a label by default \begin{DoxyVerb}@return none\end{DoxyVerb}
- \\
+{\em E} & -\/ vertex info, currently used as a label by default \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a523adce952c66505abc5ad14a83ae4c4}\label{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a523adce952c66505abc5ad14a83ae4c4}} 
-\index{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}!get\+\_\+adjacency\+\_\+list@{get\+\_\+adjacency\+\_\+list}}
-\index{get\+\_\+adjacency\+\_\+list@{get\+\_\+adjacency\+\_\+list}!bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}}
-\subsubsection{\texorpdfstring{get\+\_\+adjacency\+\_\+list()}{get\_adjacency\_list()}}
+\index{bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}!get\_adjacency\_list@{get\_adjacency\_list}}
+\index{get\_adjacency\_list@{get\_adjacency\_list}!bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}}
+\doxysubsubsection{\texorpdfstring{get\_adjacency\_list()}{get\_adjacency\_list()}}
 {\footnotesize\ttfamily def bridges.\+graph\+\_\+adj\+\_\+list.\+Graph\+Adj\+List.\+get\+\_\+adjacency\+\_\+list (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{vertex = {\ttfamily None} }\end{DoxyParamCaption})}
 
 
 
 Gets the adjacency list (of type S\+Lelement$<$\+Edge$>$ ) 
 
+
+\begin{DoxyParams}{Parameters}
+{\em vertex} & -\/ The vertex in adj\+\_\+list \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 -\/ the graph\textquotesingle{}s adjacency lists 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a20ea8a6a1aa03a82223a59474037b3e3}\label{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a20ea8a6a1aa03a82223a59474037b3e3}} 
-\index{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}!get\+\_\+data\+\_\+structure\+\_\+representation@{get\+\_\+data\+\_\+structure\+\_\+representation}}
-\index{get\+\_\+data\+\_\+structure\+\_\+representation@{get\+\_\+data\+\_\+structure\+\_\+representation}!bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}}
-\subsubsection{\texorpdfstring{get\+\_\+data\+\_\+structure\+\_\+representation()}{get\_data\_structure\_representation()}}
-{\footnotesize\ttfamily def bridges.\+graph\+\_\+adj\+\_\+list.\+Graph\+Adj\+List.\+get\+\_\+data\+\_\+structure\+\_\+representation (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{str }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a382c7258e94b579a7adffe56b777880b}\label{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a382c7258e94b579a7adffe56b777880b}} 
+\index{bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}!get\_data\_structure\_representation@{get\_data\_structure\_representation}}
+\index{get\_data\_structure\_representation@{get\_data\_structure\_representation}!bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}}
+\doxysubsubsection{\texorpdfstring{get\_data\_structure\_representation()}{get\_data\_structure\_representation()}}
+{\footnotesize\ttfamily  str bridges.\+graph\+\_\+adj\+\_\+list.\+Graph\+Adj\+List.\+get\+\_\+data\+\_\+structure\+\_\+representation (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
 
 
 Get the J\+S\+ON representation of the the data structure. 
 
 \mbox{\Hypertarget{classbridges_1_1graph__adj__list_1_1_graph_adj_list_afe3d470247e6b64f38c0d5d51dece920}\label{classbridges_1_1graph__adj__list_1_1_graph_adj_list_afe3d470247e6b64f38c0d5d51dece920}} 
-\index{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}!get\+\_\+data\+\_\+structure\+\_\+type@{get\+\_\+data\+\_\+structure\+\_\+type}}
-\index{get\+\_\+data\+\_\+structure\+\_\+type@{get\+\_\+data\+\_\+structure\+\_\+type}!bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}}
-\subsubsection{\texorpdfstring{get\+\_\+data\+\_\+structure\+\_\+type()}{get\_data\_structure\_type()}}
+\index{bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}!get\_data\_structure\_type@{get\_data\_structure\_type}}
+\index{get\_data\_structure\_type@{get\_data\_structure\_type}!bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}}
+\doxysubsubsection{\texorpdfstring{get\_data\_structure\_type()}{get\_data\_structure\_type()}}
 {\footnotesize\ttfamily def bridges.\+graph\+\_\+adj\+\_\+list.\+Graph\+Adj\+List.\+get\+\_\+data\+\_\+structure\+\_\+type (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
 
@@ -166,122 +171,146 @@ This method gets the data structure type.
 The date structure type as a string 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1graph__adj__list_1_1_graph_adj_list_abaa3015ae78e0f5ebc6fd2d2d2772927}\label{classbridges_1_1graph__adj__list_1_1_graph_adj_list_abaa3015ae78e0f5ebc6fd2d2d2772927}} 
-\index{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}!get\+\_\+link\+\_\+visualizer@{get\+\_\+link\+\_\+visualizer}}
-\index{get\+\_\+link\+\_\+visualizer@{get\+\_\+link\+\_\+visualizer}!bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}}
-\subsubsection{\texorpdfstring{get\+\_\+link\+\_\+visualizer()}{get\_link\_visualizer()}}
+\index{bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}!get\_link\_visualizer@{get\_link\_visualizer}}
+\index{get\_link\_visualizer@{get\_link\_visualizer}!bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}}
+\doxysubsubsection{\texorpdfstring{get\_link\_visualizer()}{get\_link\_visualizer()}}
 {\footnotesize\ttfamily def bridges.\+graph\+\_\+adj\+\_\+list.\+Graph\+Adj\+List.\+get\+\_\+link\+\_\+visualizer (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{src,  }\item[{}]{dest }\end{DoxyParamCaption})}
 
+\begin{DoxyVerb} This is a convenience method to simplify access to the link visualizer;
+ the method assumes the vertex names point to existing vertices, else an exception
+ is thrown
+\end{DoxyVerb}
 
 
-This is a convenience method to simplify access to the link visualizer; the method assumes the vertex names point to existing vertices, else an exception is thrown. 
 
+\begin{DoxyParams}{Parameters}
+{\em src} & -\/ source vertex of edge \\
+\hline
+{\em dest} & -\/ destination vertex of edge \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classbridges_1_1graph__adj__list_1_1_graph_adj_list_af484d881d91177e723faf8b8a5c427e2}\label{classbridges_1_1graph__adj__list_1_1_graph_adj_list_af484d881d91177e723faf8b8a5c427e2}} 
-\index{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}!get\+\_\+vertex@{get\+\_\+vertex}}
-\index{get\+\_\+vertex@{get\+\_\+vertex}!bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}}
-\subsubsection{\texorpdfstring{get\+\_\+vertex()}{get\_vertex()}}
+\index{bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}!get\_vertex@{get\_vertex}}
+\index{get\_vertex@{get\_vertex}!bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}}
+\doxysubsubsection{\texorpdfstring{get\_vertex()}{get\_vertex()}}
 {\footnotesize\ttfamily def bridges.\+graph\+\_\+adj\+\_\+list.\+Graph\+Adj\+List.\+get\+\_\+vertex (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{key }\end{DoxyParamCaption})}
 
 
 
 This is a convenience method to retrieve a vertex given its key. 
 
-return -- graph vertex corresponding to its key \mbox{\Hypertarget{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a566ceaa984e24e2e1810d3b566732274}\label{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a566ceaa984e24e2e1810d3b566732274}} 
-\index{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}!get\+\_\+vertices@{get\+\_\+vertices}}
-\index{get\+\_\+vertices@{get\+\_\+vertices}!bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}}
-\subsubsection{\texorpdfstring{get\+\_\+vertices()}{get\_vertices()}}
+
+\begin{DoxyParams}{Parameters}
+{\em key} & -\/ The key for the value in vertices dict \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ graph vertex corresponding to its key 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a566ceaa984e24e2e1810d3b566732274}\label{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a566ceaa984e24e2e1810d3b566732274}} 
+\index{bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}!get\_vertices@{get\_vertices}}
+\index{get\_vertices@{get\_vertices}!bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}}
+\doxysubsubsection{\texorpdfstring{get\_vertices()}{get\_vertices()}}
 {\footnotesize\ttfamily def bridges.\+graph\+\_\+adj\+\_\+list.\+Graph\+Adj\+List.\+get\+\_\+vertices (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
 
 
 This method returns the graph nodes. 
 
-return -- vertices held in in the hashmap \mbox{\Hypertarget{classbridges_1_1graph__adj__list_1_1_graph_adj_list_ad63fce416ec0fdfd99d05e6236807fd8}\label{classbridges_1_1graph__adj__list_1_1_graph_adj_list_ad63fce416ec0fdfd99d05e6236807fd8}} 
-\index{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}!get\+\_\+visualizer@{get\+\_\+visualizer}}
-\index{get\+\_\+visualizer@{get\+\_\+visualizer}!bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}}
-\subsubsection{\texorpdfstring{get\+\_\+visualizer()}{get\_visualizer()}}
+return -\/ vertices held in in the hashmap \mbox{\Hypertarget{classbridges_1_1graph__adj__list_1_1_graph_adj_list_ad63fce416ec0fdfd99d05e6236807fd8}\label{classbridges_1_1graph__adj__list_1_1_graph_adj_list_ad63fce416ec0fdfd99d05e6236807fd8}} 
+\index{bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}!get\_visualizer@{get\_visualizer}}
+\index{get\_visualizer@{get\_visualizer}!bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}}
+\doxysubsubsection{\texorpdfstring{get\_visualizer()}{get\_visualizer()}}
 {\footnotesize\ttfamily def bridges.\+graph\+\_\+adj\+\_\+list.\+Graph\+Adj\+List.\+get\+\_\+visualizer (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{vertex }\end{DoxyParamCaption})}
 
+\begin{DoxyVerb}This is a convenience method to simplify access to the element visualizer;
+the method assumes the vertex name points to an existing vertice, else an
+exception is thrown
+\end{DoxyVerb}
 
 
-This is a convenience method to simplify access to the element visualizer; the method assumes the vertex name points to an existing vertice, else an exception is thrown. 
+
+\begin{DoxyParams}{Parameters}
+{\em vertex} & -\/ The vertex for which visualizer is wanted \\
+\hline
+\end{DoxyParams}
 
 
-
-\subsection{Member Data Documentation}
+\doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{classbridges_1_1graph__adj__list_1_1_graph_adj_list_ad39dbb3db39a3ffc145c372e6996443c}\label{classbridges_1_1graph__adj__list_1_1_graph_adj_list_ad39dbb3db39a3ffc145c372e6996443c}} 
-\index{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}!adj\+\_\+list@{adj\+\_\+list}}
-\index{adj\+\_\+list@{adj\+\_\+list}!bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}}
-\subsubsection{\texorpdfstring{adj\+\_\+list}{adj\_list}}
+\index{bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}!adj\_list@{adj\_list}}
+\index{adj\_list@{adj\_list}!bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}}
+\doxysubsubsection{\texorpdfstring{adj\_list}{adj\_list}}
 {\footnotesize\ttfamily bridges.\+graph\+\_\+adj\+\_\+list.\+Graph\+Adj\+List.\+adj\+\_\+list}
 
 \mbox{\Hypertarget{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a67e1cbb2c7167cd5c87e23882ce364e7}\label{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a67e1cbb2c7167cd5c87e23882ce364e7}} 
-\index{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}!C\+L\+O\+S\+E\+\_\+\+B\+OX@{C\+L\+O\+S\+E\+\_\+\+B\+OX}}
-\index{C\+L\+O\+S\+E\+\_\+\+B\+OX@{C\+L\+O\+S\+E\+\_\+\+B\+OX}!bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}}
-\subsubsection{\texorpdfstring{C\+L\+O\+S\+E\+\_\+\+B\+OX}{CLOSE\_BOX}}
+\index{bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}!CLOSE\_BOX@{CLOSE\_BOX}}
+\index{CLOSE\_BOX@{CLOSE\_BOX}!bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}}
+\doxysubsubsection{\texorpdfstring{CLOSE\_BOX}{CLOSE\_BOX}}
 {\footnotesize\ttfamily string bridges.\+graph\+\_\+adj\+\_\+list.\+Graph\+Adj\+List.\+C\+L\+O\+S\+E\+\_\+\+B\+OX = \char`\"{}\mbox{]}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
 
 \mbox{\Hypertarget{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a18a58cd61145751d9a9f546e16cf5e07}\label{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a18a58cd61145751d9a9f546e16cf5e07}} 
-\index{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}!C\+L\+O\+S\+E\+\_\+\+C\+U\+R\+LY@{C\+L\+O\+S\+E\+\_\+\+C\+U\+R\+LY}}
-\index{C\+L\+O\+S\+E\+\_\+\+C\+U\+R\+LY@{C\+L\+O\+S\+E\+\_\+\+C\+U\+R\+LY}!bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}}
-\subsubsection{\texorpdfstring{C\+L\+O\+S\+E\+\_\+\+C\+U\+R\+LY}{CLOSE\_CURLY}}
+\index{bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}!CLOSE\_CURLY@{CLOSE\_CURLY}}
+\index{CLOSE\_CURLY@{CLOSE\_CURLY}!bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}}
+\doxysubsubsection{\texorpdfstring{CLOSE\_CURLY}{CLOSE\_CURLY}}
 {\footnotesize\ttfamily string bridges.\+graph\+\_\+adj\+\_\+list.\+Graph\+Adj\+List.\+C\+L\+O\+S\+E\+\_\+\+C\+U\+R\+LY = \char`\"{}\}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
 
 \mbox{\Hypertarget{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a01e7f18cb606a87dd909447f994667fb}\label{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a01e7f18cb606a87dd909447f994667fb}} 
-\index{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}!C\+L\+O\+S\+E\+\_\+\+P\+A\+R\+EN@{C\+L\+O\+S\+E\+\_\+\+P\+A\+R\+EN}}
-\index{C\+L\+O\+S\+E\+\_\+\+P\+A\+R\+EN@{C\+L\+O\+S\+E\+\_\+\+P\+A\+R\+EN}!bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}}
-\subsubsection{\texorpdfstring{C\+L\+O\+S\+E\+\_\+\+P\+A\+R\+EN}{CLOSE\_PAREN}}
+\index{bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}!CLOSE\_PAREN@{CLOSE\_PAREN}}
+\index{CLOSE\_PAREN@{CLOSE\_PAREN}!bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}}
+\doxysubsubsection{\texorpdfstring{CLOSE\_PAREN}{CLOSE\_PAREN}}
 {\footnotesize\ttfamily string bridges.\+graph\+\_\+adj\+\_\+list.\+Graph\+Adj\+List.\+C\+L\+O\+S\+E\+\_\+\+P\+A\+R\+EN = \char`\"{})\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
 
 \mbox{\Hypertarget{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a58164deb88de4720214191dfd5b820ca}\label{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a58164deb88de4720214191dfd5b820ca}} 
-\index{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}!C\+O\+L\+ON@{C\+O\+L\+ON}}
-\index{C\+O\+L\+ON@{C\+O\+L\+ON}!bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}}
-\subsubsection{\texorpdfstring{C\+O\+L\+ON}{COLON}}
+\index{bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}!COLON@{COLON}}
+\index{COLON@{COLON}!bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}}
+\doxysubsubsection{\texorpdfstring{COLON}{COLON}}
 {\footnotesize\ttfamily string bridges.\+graph\+\_\+adj\+\_\+list.\+Graph\+Adj\+List.\+C\+O\+L\+ON = \char`\"{}\+:\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
 
 \mbox{\Hypertarget{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a5919579cbd6ab68e90382b94eb187f41}\label{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a5919579cbd6ab68e90382b94eb187f41}} 
-\index{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}!C\+O\+M\+MA@{C\+O\+M\+MA}}
-\index{C\+O\+M\+MA@{C\+O\+M\+MA}!bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}}
-\subsubsection{\texorpdfstring{C\+O\+M\+MA}{COMMA}}
+\index{bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}!COMMA@{COMMA}}
+\index{COMMA@{COMMA}!bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}}
+\doxysubsubsection{\texorpdfstring{COMMA}{COMMA}}
 {\footnotesize\ttfamily string bridges.\+graph\+\_\+adj\+\_\+list.\+Graph\+Adj\+List.\+C\+O\+M\+MA = \char`\"{},\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
 
 \mbox{\Hypertarget{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a093a64ead793e0bd3b1ce4e3456665c9}\label{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a093a64ead793e0bd3b1ce4e3456665c9}} 
-\index{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}!Large\+Graph\+Vert\+Size@{Large\+Graph\+Vert\+Size}}
-\index{Large\+Graph\+Vert\+Size@{Large\+Graph\+Vert\+Size}!bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}}
-\subsubsection{\texorpdfstring{Large\+Graph\+Vert\+Size}{LargeGraphVertSize}}
+\index{bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}!LargeGraphVertSize@{LargeGraphVertSize}}
+\index{LargeGraphVertSize@{LargeGraphVertSize}!bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}}
+\doxysubsubsection{\texorpdfstring{LargeGraphVertSize}{LargeGraphVertSize}}
 {\footnotesize\ttfamily int bridges.\+graph\+\_\+adj\+\_\+list.\+Graph\+Adj\+List.\+Large\+Graph\+Vert\+Size = 1000;\hspace{0.3cm}{\ttfamily [static]}}
 
 \mbox{\Hypertarget{classbridges_1_1graph__adj__list_1_1_graph_adj_list_ad87a298f9ff9d800a47bdc64d5dd0034}\label{classbridges_1_1graph__adj__list_1_1_graph_adj_list_ad87a298f9ff9d800a47bdc64d5dd0034}} 
-\index{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}!O\+P\+E\+N\+\_\+\+B\+OX@{O\+P\+E\+N\+\_\+\+B\+OX}}
-\index{O\+P\+E\+N\+\_\+\+B\+OX@{O\+P\+E\+N\+\_\+\+B\+OX}!bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}}
-\subsubsection{\texorpdfstring{O\+P\+E\+N\+\_\+\+B\+OX}{OPEN\_BOX}}
+\index{bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}!OPEN\_BOX@{OPEN\_BOX}}
+\index{OPEN\_BOX@{OPEN\_BOX}!bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}}
+\doxysubsubsection{\texorpdfstring{OPEN\_BOX}{OPEN\_BOX}}
 {\footnotesize\ttfamily string bridges.\+graph\+\_\+adj\+\_\+list.\+Graph\+Adj\+List.\+O\+P\+E\+N\+\_\+\+B\+OX = \char`\"{}\mbox{[}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
 
 \mbox{\Hypertarget{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a67b27b322df909d7d5dccfb5d7a5372c}\label{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a67b27b322df909d7d5dccfb5d7a5372c}} 
-\index{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}!O\+P\+E\+N\+\_\+\+C\+U\+R\+LY@{O\+P\+E\+N\+\_\+\+C\+U\+R\+LY}}
-\index{O\+P\+E\+N\+\_\+\+C\+U\+R\+LY@{O\+P\+E\+N\+\_\+\+C\+U\+R\+LY}!bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}}
-\subsubsection{\texorpdfstring{O\+P\+E\+N\+\_\+\+C\+U\+R\+LY}{OPEN\_CURLY}}
+\index{bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}!OPEN\_CURLY@{OPEN\_CURLY}}
+\index{OPEN\_CURLY@{OPEN\_CURLY}!bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}}
+\doxysubsubsection{\texorpdfstring{OPEN\_CURLY}{OPEN\_CURLY}}
 {\footnotesize\ttfamily string bridges.\+graph\+\_\+adj\+\_\+list.\+Graph\+Adj\+List.\+O\+P\+E\+N\+\_\+\+C\+U\+R\+LY = \char`\"{}\{\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
 
 \mbox{\Hypertarget{classbridges_1_1graph__adj__list_1_1_graph_adj_list_af3ebf5a87fb8c6a84d18b6865b7cbcc2}\label{classbridges_1_1graph__adj__list_1_1_graph_adj_list_af3ebf5a87fb8c6a84d18b6865b7cbcc2}} 
-\index{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}!O\+P\+E\+N\+\_\+\+P\+A\+R\+EN@{O\+P\+E\+N\+\_\+\+P\+A\+R\+EN}}
-\index{O\+P\+E\+N\+\_\+\+P\+A\+R\+EN@{O\+P\+E\+N\+\_\+\+P\+A\+R\+EN}!bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}}
-\subsubsection{\texorpdfstring{O\+P\+E\+N\+\_\+\+P\+A\+R\+EN}{OPEN\_PAREN}}
+\index{bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}!OPEN\_PAREN@{OPEN\_PAREN}}
+\index{OPEN\_PAREN@{OPEN\_PAREN}!bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}}
+\doxysubsubsection{\texorpdfstring{OPEN\_PAREN}{OPEN\_PAREN}}
 {\footnotesize\ttfamily string bridges.\+graph\+\_\+adj\+\_\+list.\+Graph\+Adj\+List.\+O\+P\+E\+N\+\_\+\+P\+A\+R\+EN = \char`\"{}(\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
 
 \mbox{\Hypertarget{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a57d3be43c5cd9a2895e2d2ef716b40c8}\label{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a57d3be43c5cd9a2895e2d2ef716b40c8}} 
-\index{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}!Q\+U\+O\+TE@{Q\+U\+O\+TE}}
-\index{Q\+U\+O\+TE@{Q\+U\+O\+TE}!bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}}
-\subsubsection{\texorpdfstring{Q\+U\+O\+TE}{QUOTE}}
+\index{bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}!QUOTE@{QUOTE}}
+\index{QUOTE@{QUOTE}!bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}}
+\doxysubsubsection{\texorpdfstring{QUOTE}{QUOTE}}
 {\footnotesize\ttfamily string bridges.\+graph\+\_\+adj\+\_\+list.\+Graph\+Adj\+List.\+Q\+U\+O\+TE = \char`\"{}\textbackslash{}\char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
 
 \mbox{\Hypertarget{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a6d1115214ceb8c77fe886e78de19f691}\label{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a6d1115214ceb8c77fe886e78de19f691}} 
-\index{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}!vertices@{vertices}}
-\index{vertices@{vertices}!bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List@{bridges\+::graph\+\_\+adj\+\_\+list\+::\+Graph\+Adj\+List}}
-\subsubsection{\texorpdfstring{vertices}{vertices}}
+\index{bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}!vertices@{vertices}}
+\index{vertices@{vertices}!bridges.graph\_adj\_list.GraphAdjList@{bridges.graph\_adj\_list.GraphAdjList}}
+\doxysubsubsection{\texorpdfstring{vertices}{vertices}}
 {\footnotesize\ttfamily bridges.\+graph\+\_\+adj\+\_\+list.\+Graph\+Adj\+List.\+vertices}
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/\+Users/kalpathi/gr/bridges/client/python/bridges18/bridges/\mbox{\hyperlink{graph__adj__list_8py}{graph\+\_\+adj\+\_\+list.\+py}}\end{DoxyCompactItemize}
+/\+Users/kalpathi/gr/bridges/client/python/bridges/\mbox{\hyperlink{graph__adj__list_8py}{graph\+\_\+adj\+\_\+list.\+py}}\end{DoxyCompactItemize}

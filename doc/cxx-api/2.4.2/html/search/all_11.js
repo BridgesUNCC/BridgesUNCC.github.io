@@ -74,7 +74,6 @@ var searchData=
   ['setopacity',['setOpacity',['../classbridges_1_1_element_visualizer.html#a8f77db4a2774021aec4ab8ea18e50fc9',1,'bridges::ElementVisualizer::setOpacity()'],['../classbridges_1_1_symbol.html#a586939c47e544093cbd8f443bed8dfee',1,'bridges::Symbol::setOpacity()']]],
   ['setplatformtype',['setPlatformType',['../classbridges_1_1_game.html#aa31882c5e10583faee89379c0e8b9056',1,'bridges::Game']]],
   ['setpolygon',['setPolygon',['../classbridges_1_1_polygon.html#a43ffa2f8767318c9c831dad9ed030679',1,'bridges::Polygon']]],
-  ['setpolyline',['setPolyline',['../classbridges_1_1_polyline.html#adaae3e064c497291beb1ba3cacb4b9a0',1,'bridges::Polyline']]],
   ['setpopulation',['setPopulation',['../classbridges_1_1_cancer_incidence.html#aaade0295abaeeabb23b9e03d5ffd364a',1,'bridges::CancerIncidence']]],
   ['setprev',['setPrev',['../classbridges_1_1_circ_d_lelement.html#a5b2a0dad47208829bb2c17d8bc0ee74d',1,'bridges::CircDLelement::setPrev()'],['../classbridges_1_1_d_lelement.html#af146e0e10faba6395272d5fc1560f266',1,'bridges::DLelement::setPrev()']]],
   ['setrace',['setRace',['../classbridges_1_1_cancer_incidence.html#ae7cfd7532ab68ad521cc41d5172fd006',1,'bridges::CancerIncidence']]],
