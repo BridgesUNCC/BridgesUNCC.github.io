@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+    <a class="navbar-brand" href="/"><img style="height:36px" src="/img/logo.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav mr-auto">
+            <a class="nav-item nav-link {% if '/' == page.url %}active{% endif %}" href="/">Home{% if '/' == page.url %}
+                <span class="sr-only">(current)</span>{% endif %}</a>
+            {% assign sorted = (site.toplevel | sort: 'index') %}
+            {% for item in sorted %}
+            <a class="nav-item nav-link {% if item.url == page.url %}active{% endif %}"
+                href="{{ item.url }}">{{ item.title }}{% if item.url == page.url %} <span
+                    class="sr-only">(current)</span>{% endif %}</a>
+            {%endfor%}
+        </div>
+
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="http://bridges-cs.herokuapp.com/login">Login</a>
+        </div>
+    </div>
+</nav>
