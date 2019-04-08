@@ -3,7 +3,12 @@ url: http://example.com
 lsi: false
 exclude: [LICENSE, CNAME, README.md, .gitignore, vendor]
 highlighter: rouge
+
+plugins:
+  - jekyll-sitemap
+
 permalink: /:categories/:title/
+
 collections:
   toplevel:
     output: true
@@ -13,6 +18,7 @@ collections:
   documentation:
     output: true
     permalink: '/doc/:path/'
+
 markdown: kramdown
 
 kramdown:
@@ -20,7 +26,7 @@ kramdown:
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
-  enable_coderay: false
+  enable_coderay: true
 
   syntax_highlighter_opts:
     line_numbers: 
