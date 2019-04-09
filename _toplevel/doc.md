@@ -1,10 +1,15 @@
 ---
 layout: post
 title: Documentation
-index: 2
+redirect-from:
+    - /bridges_setup.html
+    - /bridges_doclinks.html
 ---
 
-[Frequently asked questions](/doc/faq)
+<div class="row">
+<div class="col-md-6" markdown="1">
+
+## [Frequently asked questions](/doc/faq)
 
 ## Getting started
 
@@ -52,17 +57,42 @@ On Unix flavored platforms (OSX, Linux, Cloud 9), you can install curl as follow
 *   The last command should be done using super user permission. If you do not have that, then specify a path to a directory you have write access to.
 *   The library will be installed under a `lib` folder in the specified path and the include files will be under the `include` folder
 
+</div>
+<div class="col-md-6" markdown="1">
+
 ## Api documentation
 
 ### Java
 
  - [Latest](/doc/java-api/current/html/index.html)
+ - [v2.4.0](/doc/java-api/2.4.0/html/index.html)
+ - [v2.3.3](/doc/java-api/2.3.3/html/index.html)
+ - [v2.3.2](/doc/java-api/2.3.2/html/index.html)
+ - [v2.3.1](/doc/java-api/2.3.1/html/index.html)
+ - [v2.3.0](/doc/java-api/2.3.0/html/index.html)
+ - [v2.2.0](/doc/java-api/2.2.0/html/index.html)
+ - [v2.1.0](/doc/java-api/2.2.0/html/index.html)
 
 ### Python
 
  - [Latest](/doc/python-api/current/html/index.html)
+ - [v2.4.0](/doc/python-api/2.4.0/html/index.html)
+ - [v1.0](/doc/python-api/1.0/html/index.html)
 
 ### C++
 
  - [Latest](/doc/cxx-api/current/html/index.html)
- 
+ - [v2.4.0](/doc/cxx-api/2.4.0/html/index.html)
+ - [v2.3.4](/doc/cxx-api/2.3.4/html/index.html)
+ - [v2.3.3](/doc/cxx-api/2.3.3/html/index.html)
+ - [v2.3.2](/doc/cxx-api/2.3.2/html/index.html)
+ - [v2.3.0](/doc/cxx-api/2.3.0/html/index.html)
+ - [v2.2.0](/doc/cxx-api/2.2.0/html/index.html)
+
+## Developer docs
+
+- [Design overview](/doc/design-overview/)
+- [Dataset list](/doc/datasets/)
+
+</div>
+</div>

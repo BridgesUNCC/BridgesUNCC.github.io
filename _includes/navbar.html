@@ -6,14 +6,40 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav mr-auto">
-            <a class="nav-item nav-link {% if '/' == page.url %}active{% endif %}" href="/">Home{% if '/' == page.url %}
-                <span class="sr-only">(current)</span>{% endif %}</a>
-            {% assign sorted = (site.toplevel | sort: 'index') %}
-            {% for item in sorted %}
-            <a class="nav-item nav-link {% if item.url == page.url %}active{% endif %}"
-                href="{{ item.url }}">{{ item.title }}{% if item.url == page.url %} <span
-                    class="sr-only">(current)</span>{% endif %}</a>
-            {%endfor%}
+            <a class="nav-item nav-link {% if '/' == page.url %}active{% endif %}" href="/">
+                Home
+                {% if '/' == page.url %}<span class="sr-only">(current)</span>{% endif %}
+            </a>
+            <a class="nav-item nav-link {% if '/download/' == page.url %}active{% endif %}" href="/download/">
+                Download
+                {% if '/download/' == page.url %}<span class="sr-only">(current)</span>{% endif %}
+            </a>
+            <a class="nav-item nav-link {% if page.url contains '/doc/' %}active{% endif %}" href="{{ '/doc/' }}">
+                Documentation
+                {% if page.url contains '/doc/' %}<span class="sr-only">(current)</span>{% endif %}
+            </a>
+
+            <li class="nav-item dropdown
+            {% if '/workshops/' == page.url %}active{% endif %}
+            {% if '/assignments/' == page.url %}active{% endif %}
+            {% if '/evaluations/' == page.url %}active{% endif %}">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Professors
+                    {% if '/workshops/' == page.url %}<span class="sr-only">(current)</span>{% endif %}
+                    {% if '/assignments/' == page.url %}<span class="sr-only">(current)</span>{% endif %}
+                    {% if '/evaluations/' == page.url %}<span class="sr-only">(current)</span>{% endif %}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/workshops/">Workshops</a>
+                    <a class="dropdown-item" href="/assignments/">Assignments</a>
+                    <a class="dropdown-item" href="/evaluations/">Evaluations</a>
+                </div>
+            </li>
+            <a class="nav-item nav-link {% if '/about/' == page.url %}active{% endif %}" href="{{ '/about/' }}">
+                About
+                {% if '/about/' == page.url %}<span class="sr-only">(current)</span>{% endif %}
+            </a>
         </div>
 
         <div class="navbar-nav">
