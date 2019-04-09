@@ -1,6 +1,7 @@
 ---
 title: 'Getting started: Java & IntelliJ IDEA'
 layout: post
+redirect-from: /bridges_setup_java_intellij.html
 ---
 
 ## Step 1: Install IntelliJ IDE

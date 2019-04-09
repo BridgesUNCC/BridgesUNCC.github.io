@@ -1,6 +1,7 @@
 ---
 title: 'Getting started: Java & BlueJ'
 layout: post
+redirect-from: /bridges_setup_java_bluej.html
 ---
 
 ## Step 1: Install BlueJ

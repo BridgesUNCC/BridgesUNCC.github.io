@@ -1,6 +1,7 @@
 ---
 title: 'Getting started: C++ & XCode'
 layout: post
+redirect-from: /bridges_setup_cxx_xcode.html
 ---
 
 ## Step 1: Install XCode

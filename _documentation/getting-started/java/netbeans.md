@@ -1,6 +1,7 @@
 ---
 title: 'Getting started: Java & NetBeans'
 layout: post
+redirect-from: /bridges_setup_java_netbeans.html
 ---
 
 ## Step 1: Install NetBeans

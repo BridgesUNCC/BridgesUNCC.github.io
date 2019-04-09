@@ -1,6 +1,7 @@
 ---
 title: 'Getting started: C++ & Eclipse'
 layout: post
+redirect-from: /bridges_setup_cxx_eclipse.html
 ---
 
 ## Step 1: Install Eclipse/CDT

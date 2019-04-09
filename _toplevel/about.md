@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About
-index: 99
+redirect-from: /bridges_team.html
 ---
 
 ## Faculty Investigators

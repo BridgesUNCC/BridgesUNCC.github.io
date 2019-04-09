@@ -1,6 +1,7 @@
 ---
 title: 'Getting started: Java & Eclipse'
 layout: post
+redirect-from: /bridges_setup_java_eclipse.html
 ---
 
 ## Step 1: Install Eclipse

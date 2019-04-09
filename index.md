@@ -1,4 +1,5 @@
 ---
+title: BRIDGES
 examples:
     - text: "A singly linked list using a reduced version of the IMDB actor/movie dataset."
       image: /img/list.png
@@ -40,7 +41,7 @@ Current version of BRIDGES is 2.3.3 (Released June 1, 2018).
 
 Version 2.3.3 includes additional datasets interfaced to BRIDGES (a dataset and BRIDGES API for Songs), a 2D Grid type that can be used for image related applications, numerous bug fixes and improvements to the base classes.
 
-See [docs](http://bridgesuncc.github.io/bridges_doclinks.html) on latest changes to BRIDGES and its history of earlier changes. for more information.
+See [docs](/doc/) on latest changes to BRIDGES and its history of earlier changes. for more information.
 
 ## Looking for New BRIDGES Users
 

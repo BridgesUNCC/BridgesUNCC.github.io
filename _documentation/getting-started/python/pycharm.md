@@ -1,6 +1,7 @@
 ---
 title: 'Getting started: Python & PyCharm'
 layout: post
+redirect-from: /bridges_setup_python_pycharm.html
 ---
 
 ## Step 1: Install PyCharm

@@ -1,6 +1,7 @@
 ---
 title: 'Getting started: Java & jGRASP'
 layout: post
+redirect-from: /bridges_setup_java_jgrasp.html
 ---
 
 ## Step 1: Install jGRASP
