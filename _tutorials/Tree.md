@@ -24,7 +24,7 @@ In the example above, root node has 3 children, while its children has 2, 1 and 
 -   Copy/paste this link into your favorite browser to view a visualization of the data structure you’ve just created.
 -   It should look something like this:
 
-<p>Sorry, your browser doesn't seem to support iframes - <a href="/assignments/108/bridges_public">Frame Link</a> </p>
+<iframe src="https://bridges-cs.herokuapp.com/assignments/108/bridges_public">
 
 Well done! You’ve just created your Bridges Tree project!
 

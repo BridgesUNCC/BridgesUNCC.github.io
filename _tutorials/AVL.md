@@ -29,7 +29,7 @@ AVLTreeElement<K,E> implements an _AVL Tree element_ in BRIDGES and is inherited
     -   Copy/paste this link into your favorite browser to view a visualization of the data structure you’ve just created.
     -   It should look something like this; mouse over the nodes or hit 'l' to turn on the labels. You will see the balance factors for each node.
 
-    <p>Sorry, your browser doesn't seem to support iframes - <a href="/assignments/111/bridges_public" >Frame Link</a> </p>
+    <p>Sorry, your browser doesn't seem to support iframes - <a href="https://bridges-cs.herokuapp.com/assignments/111/bridges_public" >Frame Link</a> </p>
 
     Well done! You’ve just created an AVL Tree!
 

@@ -29,6 +29,6 @@ We illustrate a simple example of building a Kd Tree of 3 levels with the partit
 -   Copy/paste this link into your favorite browser to view a visualization of the data structure you’ve just created.
 -   It should look something like this:
 
-<p>Sorry, your browser doesn't seem to support iframes - <a href="http://bridges-clone.herokuapp.com/assignments/112/bridges_public">Frame Link</a> </p>
+<iframe src="http://bridges-clone.herokuapp.comhttps://bridges-cs.herokuapp.com/assignments/112/bridges_public">
 
 Well done! You’ve just created your Bridges Kd-Tree project!

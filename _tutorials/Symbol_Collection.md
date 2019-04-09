@@ -13,7 +13,7 @@ The SymbolCollection class is a container for holding a variety of shapes that c
 -   Copy/paste this link into your favorite browser to view a visualization of the data structure you just created.
 -   It should look something like this:
 
-<p>Sorry, your browser doesn't seem to support iframes - <a href="http://bridges-clone.herokuapp.com/assignments/115/bridges_public" scrolling="no">Frame0 Link</a> </p>
+<iframe src="http://bridges-clone.herokuapp.comhttps://bridges-cs.herokuapp.com/assignments/115/bridges_public">
 
 Well done! You’ve just completed your Bridges Shape Collection project!
 

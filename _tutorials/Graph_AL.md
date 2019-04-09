@@ -14,11 +14,11 @@ Typically, the reason to use one version over the other revolves around space /t
 
 - - -
 
-## Graph - BRIDGES Example Using IMDB Actor/Movie Data
+## Graph Adjacency List - BRIDGES Example Using IMDB Actor/Movie Data
 
 ## Example Details
 
-Here we will illustrate an adjacency list based graph with the IMDB Actor/Movie dataset. We will display the subgraph making up the movies of two chosen actors, Kevin Bacon and Denzel Washington. The example will illustrate how to build the graph from the dataset and illustrate traversing the adjacency lists.[](./Java_Graph_AL.html)[](./Cpp_Graph_AL.html)[](./Python_Graph_AL.html)[](./Java_Graph_AM.html)[](./Cpp_Graph_AM.html)[](./Python_Graph_AM.html)
+Here we will illustrate an adjacency list based graph with the IMDB Actor/Movie dataset. We will display the subgraph making up the movies of two chosen actors, Kevin Bacon and Denzel Washington. The example will illustrate how to build the graph from the dataset and illustrate traversing the adjacency lists.[](./Java_Graph_AL.html)[](./Cpp_Graph_AL.html)[](./Python_Graph_AL.html)
 
 ### Bridges Visualization
 
@@ -27,7 +27,7 @@ Here we will illustrate an adjacency list based graph with the IMDB Actor/Movie 
 -   Copy/paste this link into your favorite browser to view a visualization of the data structure you’ve just created.
 -   It should look something like this:
 
-<p>Sorry, your browser doesn't seem to support iframes - <a href="/assignments/112/bridges_public">Frame Link</a> </p>
+<iframe src="https://bridges-cs.herokuapp.com/assignments/113/bridges_public">
 
 Well done! You’ve just created your Bridges Graph project!
 

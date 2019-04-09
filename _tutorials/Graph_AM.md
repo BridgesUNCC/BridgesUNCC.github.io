@@ -27,7 +27,7 @@ Here we will illustrate an adjacency list based graph with the IMDB Actor/Movie 
 -   Copy/paste this link into your favorite browser to view a visualization of the data structure you’ve just created.
 -   It should look something like this:
 
-<p>Sorry, your browser doesn't seem to support iframes - <a href="/assignments/114/bridges_public">Frame Link</a> </p>
+<iframe src="https://bridges-cs.herokuapp.com/assignments/114/bridges_public">
 
 Well done! You’ve just created your Bridges Graph project!
 

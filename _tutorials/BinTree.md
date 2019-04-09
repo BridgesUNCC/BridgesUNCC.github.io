@@ -25,6 +25,8 @@ BinTreeElement<E> implements a _binary tree element_ in BRIDGES and is inherited
 
   C++
 
+  Python
+
   ### Bridges Visualization
 
   -   Once all your code is in order, run your program.
@@ -32,6 +34,6 @@ BinTreeElement<E> implements a _binary tree element_ in BRIDGES and is inherited
   -   Copy/paste this link into your favorite browser to view a visualization of the data structure you’ve just created.
   -   It should look something like this:
 
-  <p>Sorry, your browser doesn't seem to support iframes - <a href="/assignments/9/bridges_public">Frame Link</a> </p>
+  <iframe src="https://bridges-cs.herokuapp.com/assignments/109/bridges_public">
 
   Well done! You’ve just created your Bridges Binary Tree project!

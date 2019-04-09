@@ -26,7 +26,7 @@ SLelement<E> is the basic element used to implement a _singly linked list_ in BR
     -   Copy/paste this link into your favorite browser to view a visualization of the data structure you just created.
     -   It should look something like this:
 
-    <p>Sorry, your browser doesn't seem to support iframes - <a href="/assignments/103/bridges_public" scrolling="no">Frame Link</a> </p>
+    <iframe src="https://bridges-cs.herokuapp.com/assignments/103/bridges_public">
 
     Well done! You’ve just created your Bridges Singly Linked List project!
 

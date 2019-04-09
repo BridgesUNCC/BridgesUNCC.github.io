@@ -30,6 +30,6 @@ DLelement<E> is the basic building block used to implement _doubly linked lists_
   -   Copy/paste this link into your favorite browser to view a visualization of the data structure you’ve just created.
   -   It should look something like this:
 
-  <p>Sorry, your browser doesn't seem to support iframes - <a href="/assignments/104/bridges_public">Frame Link</a> </p>
+  <iframe src="https://bridges-cs.herokuapp.com/assignments/104/bridges_public">
 
   Well done! You’ve just created your doubly linked list!

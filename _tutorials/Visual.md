@@ -19,6 +19,6 @@ Note that because Element is the superclass of all other element types, that the
 -   Here is a comparison of the element with default properties to your changed element
 -   It should look something like this:
 
-<p>Sorry, your browser doesn't seem to support iframes - <a href="/assignments/6/bridges_public">Frame Link</a> </p>
+<iframe src="https://bridges-cs.herokuapp.com/assignments/6/bridges_public">
 
 Well done! You’ve just changed an Element's visual properties!

@@ -13,6 +13,6 @@ Grid<E> implements a _2D grid structure_ in BRIDGES, and it can be used to repre
     -   Copy/paste this link into your favorite browser to view a visualization of the data structure you just created.
     -   It should look something like this:
 
-    <p>Sorry, your browser doesn't seem to support iframes - <a href="http://bridges-clone.herokuapp.com/assignments/114/bridges_public" scrolling="no">Frame0 Link</a> </p>
+    <iframe src="http://bridges-clone.herokuapp.comhttps://bridges-cs.herokuapp.com/assignments/114/bridges_public">
 
     Well done! You’ve just created your Bridges Singly Color Grid based Checker Board project!
