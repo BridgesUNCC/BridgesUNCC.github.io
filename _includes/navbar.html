@@ -14,9 +14,12 @@
                 Download
                 {% if '/download/' == page.url %}<span class="sr-only">(current)</span>{% endif %}
             </a>
-            <a class="nav-item nav-link {% if page.url contains '/doc/' %}active{% endif %}" href="{{ '/doc/' }}">
+            <a class="nav-item nav-link
+            {% if page.url contains '/doc/' %}active{% endif %}
+            {% if page.url contains '/tutorials/' %}active{% endif %}" href="{{ '/doc/' }}">
                 Documentation
                 {% if page.url contains '/doc/' %}<span class="sr-only">(current)</span>{% endif %}
+                {% if page.url contains '/tutorials/' %}<span class="sr-only">(current)</span>{% endif %}
             </a>
 
             <li class="nav-item dropdown

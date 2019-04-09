@@ -60,6 +60,13 @@ On Unix flavored platforms (OSX, Linux, Cloud 9), you can install curl as follow
 </div>
 <div class="col-md-6" markdown="1">
 
+## Tutorials
+
+- [Arrays](/tutorials/Array/)
+  - [1D arrays](/tutorials/ARRAY1D/)
+  - [2D arrays](/tutorials/ARRAY2D/)
+  - [3D arrays](/tutorials/ARRAY3D/)
+
 ## Api documentation
 
 ### Java
