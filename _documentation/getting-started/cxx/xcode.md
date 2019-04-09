@@ -24,7 +24,7 @@ Visit the Bridges [main page](http://bridgesuncc.github.io) and create yourself 
 
 ## Step 3: Download the Bridges C++ template files, Install CURL library
 
-*   Download the Bridges C++ class files from this [link](./sw/bridges-cxx-2.3.4.zip). Save this in a convenient folder. You will need this later.
+*   Download the Bridges C++ class files from this [link](/sw/bridges-cxx-2.3.4.zip). Save this in a convenient folder. You will need this later.
 *   BRIDGES uses the [CURL](https://curl.haxx.se) library for communicating with the web server, and posting assignments. Download CURL from this [link](https://curl.haxx.se/download.html) and install the library in a convenient location
 
 ## Step 4: Create a C++ Project
