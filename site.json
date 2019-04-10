@@ -1,11 +1,20 @@
----
----
 [
 {% for item in site.posts %}
 {"date": {{ item.date | jsonify }},
 "categories": {{ item.categories | jsonify }},
 "tags": {{ item.tags | jsonify}},
 "title": {{ item.title | jsonify}},
-"url": {{ item.url | jsonify}}},
+"url": {{ item.url | prepend: site.baseurl | jsonify }}
+},
+{% endfor %}
+{% for col in site.collections %}
+{% for item in col.docs %}
+{"date": {{ item.date | jsonify }},
+"collection": {{ col.label | jsonify }},
+"tags": {{ item.tags | jsonify}},
+"title": {{ item.title | jsonify}},
+"url": {{ item.url | prepend: site.baseurl | jsonify }}
+},
+{% endfor %}
 {% endfor %}
 false]

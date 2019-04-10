@@ -1,0 +1,33 @@
+<nav>
+<div class="nav nav-tabs" id="nav-tab" role="tablist">
+{% if java and java != '' %}
+<a class="nav-item nav-link active" id="nav-java-tab" data-toggle="tab" href="#nav-java" role="tab"
+aria-controls="nav-java" aria-selected="true">Java</a>
+{% endif %}
+{% if python and python != '' %}
+<a class="nav-item nav-link" id="nav-python-tab" data-toggle="tab" href="#nav-python" role="tab"
+aria-controls="nav-python" aria-selected="false">Python</a>
+{% endif %}
+{% if cxx and cxx != '' %}
+<a class="nav-item nav-link" id="nav-cxx-tab" data-toggle="tab" href="#nav-cxx" role="tab"
+aria-controls="nav-cxx" aria-selected="false">C++</a>
+{% endif %}
+</div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+{% if java and java != '' %}
+<div class="tab-pane show active" id="nav-java" role="tabpanel" aria-labelledby="nav-java-tab" markdown="1">
+{{ java }}
+</div>
+{% endif %}
+{% if python and python != '' %}
+<div class="tab-pane" id="nav-python" role="tabpanel" aria-labelledby="nav-python-tab" markdown="1">
+{{ python }}
+</div>
+{% endif %}
+{% if cxx and cxx != '' %}
+<div class="tab-pane" id="nav-cxx" role="tabpanel" aria-labelledby="nav-cxx-tab" markdown="1">
+{{ cxx }}
+</div>
+{% endif %}
+</div>
