@@ -2,7 +2,7 @@
 
 
 #bail if git is not clean
-if false && ! git diff --quiet ;
+if ! git diff --quiet ;
 then
     echo git repository is dirty. Commit changes and run script again
     exit 1
@@ -11,6 +11,8 @@ fi
 
 ASSIGNDIR=data/
 BRIDGESASSIGNMENT=$1
+HTMLOUTPUT=assignments.html
+
 
 #if ${BRIDGESASSIGNMENT} does not point to bridges assignment repo, bail.
 if ! [ -e ${BRIDGESASSIGNMENT}/isbridgesassignment ];
@@ -26,7 +28,6 @@ then
     rm -rf ${ASSIGNDIR}
 fi
 
-HTMLOUTPUT=out.html
 
 #remove ${HTMLOUTPUT} if it exists
 if [ -e ${HTMLOUTPUT} ]
@@ -123,13 +124,28 @@ addassignment() {
 	fi
 	( cd ${targetdir}; markdown README.md > README.html ) #compile markdown
     fi
+
+    prettyname=$name
+    if [ -e ${srcdir}/prettyname ]
+    then
+	prettyname=$(cat ${srcdir}/prettyname)
+    fi
+
+    shortdescription=""
+    if [ -e ${srcdir}/shortdescription ]
+    then
+	shortdescription=$(cat ${srcdir}/shortdescription)
+    fi
+    
     
     #output HTML
     echo '<div class="assignment">'  >> ${HTMLOUTPUT}
-    echo ${name}. >> ${HTMLOUTPUT} #name
+    echo '<p>' >> ${HTMLOUTPUT}
+    echo '<div class="assignmentname">' ${prettyname}. '</div>' >> ${HTMLOUTPUT} #name
+    echo '<div class="assignmentshortdesc">' ${shortdescription} '</div>' >> ${HTMLOUTPUT} #shortdesck
     if [ -e ${targetdir}/README.html ] ; #description
     then
-	echo "<a href=\"${targetdir}/README.html\">[description]</a> "  >> ${HTMLOUTPUT}
+	echo "<a href=\"${targetdir}/README.html\">[Description]</a> "  >> ${HTMLOUTPUT}
     fi
     if [ -e ${targetdir}/slides.pdf ] ; #description
     then
@@ -148,7 +164,7 @@ addassignment() {
     then
 	echo "<a href=\"${targetdir}/python.zip\">[Python scaffold]</a> "  >> ${HTMLOUTPUT}
     fi
-
+    echo '</p>' >> ${HTMLOUTPUT}
     echo '</div>' >> ${HTMLOUTPUT}
     
 }
@@ -158,12 +174,18 @@ writeheader
 addgroup "CS1"
 addsubgroup "Loops"
 addassignment "6-GridSquareFill"
+addassignment "7-GridLyrics"
 
 addgroup "Data Structure"
-addsubgroup "graphs"
+addsubgroup "LinkedList"
+addassignment "1-ListIMDB"
+addassignment "2-ListEQ"
+addsubgroup "Graphs"
+addassignment "3-GraphBaconNumber"
 addassignment "9-ShortestPathOSM"
 
 writefooter
 
-#git add ${ASSIGNDIR}
-#git commit -am "updating assignments"
+git add ${HTMLOUTPUT}
+git add ${ASSIGNDIR}
+git commit -am "updating assignments"
