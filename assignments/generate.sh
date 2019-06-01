@@ -11,7 +11,7 @@ fi
 
 ASSIGNDIR=data/
 BRIDGESASSIGNMENT=$1
-HTMLOUTPUT=assignments.html
+HTMLOUTPUT=../newassignments.html
 
 
 #if ${BRIDGESASSIGNMENT} does not point to bridges assignment repo, bail.
@@ -145,24 +145,24 @@ addassignment() {
     echo '<div class="assignmentshortdesc">' ${shortdescription} '</div>' >> ${HTMLOUTPUT} #shortdesck
     if [ -e ${targetdir}/README.html ] ; #description
     then
-	echo "<a href=\"${targetdir}/README.html\">[Description]</a> "  >> ${HTMLOUTPUT}
+	echo "<a href=\"assignments/${targetdir}/README.html\">[Description]</a> "  >> ${HTMLOUTPUT}
     fi
     if [ -e ${targetdir}/slides.pdf ] ; #description
     then
-	echo "<a href=\"${targetdir}/slides.pdf\">[presentation slides]</a> "  >> ${HTMLOUTPUT}
+	echo "<a href=\"assignments/${targetdir}/slides.pdf\">[presentation slides]</a> "  >> ${HTMLOUTPUT}
     fi
     #scaffold links
     if [ -e ${targetdir}/c++.zip ] ; 
     then
-	echo "<a href=\"${targetdir}/c++.zip\">[C++ scaffold]</a> "  >> ${HTMLOUTPUT}
+	echo "<a href=\"assignments/${targetdir}/c++.zip\">[C++ scaffold]</a> "  >> ${HTMLOUTPUT}
     fi
     if [ -e ${targetdir}/java.zip ] ; 
     then
-	echo "<a href=\"${targetdir}/java.zip\">[Java scaffold]</a> "  >> ${HTMLOUTPUT}
+	echo "<a href=\"assignments/${targetdir}/java.zip\">[Java scaffold]</a> "  >> ${HTMLOUTPUT}
     fi
     if [ -e ${targetdir}/python.zip ] ; 
     then
-	echo "<a href=\"${targetdir}/python.zip\">[Python scaffold]</a> "  >> ${HTMLOUTPUT}
+	echo "<a href=\"assignments/${targetdir}/python.zip\">[Python scaffold]</a> "  >> ${HTMLOUTPUT}
     fi
     echo '</p>' >> ${HTMLOUTPUT}
     echo '</div>' >> ${HTMLOUTPUT}
