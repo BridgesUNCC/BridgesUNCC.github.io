@@ -2,7 +2,7 @@
 
 
 #bail if git is not clean
-if ! git diff --quiet ;
+if false && ! git diff --quiet ;
 then
     echo git repository is dirty. Commit changes and run script again
     exit 1
@@ -119,7 +119,7 @@ addassignment() {
 	cp ${srcdir}/README.md ${targetdir} #typicially a markdown file
 	if [ -d ${srcdir}/figures ] #description may refer to figures
 	then
-	    cp ${srcdir}/figures ${targetdir}
+	    cp -r ${srcdir}/figures ${targetdir}
 	fi
 	( cd ${targetdir}; markdown README.md > README.html ) #compile markdown
     fi
