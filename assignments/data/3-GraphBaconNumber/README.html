@@ -1,0 +1,96 @@
+<h1>Assignment 3 - Graph Bacon Number</h1>
+
+<h2>Goals</h2>
+
+<p>The purpose of this assignment is to learn to</p>
+
+<ol>
+<li>Use the IMDB Actor Movie graph.</li>
+<li>Compute BFS on that graph.</li>
+<li>Highlight a shortest path in the graph.</li>
+</ol>
+
+<p>You will generate a visualization that looks like <a href="http://bridges-cs.herokuapp.com/assignments/3/bridges_workshop">that</a>!</p>
+
+<h2>Programming part</h2>
+
+<h3>Task</h3>
+
+<p>Highlight the shortest path between two actors in a Movie Actor graph.</p>
+
+<h3>Getting Started</h3>
+
+<ol>
+<li>Open your scaffolded code.</li>
+<li>Plug in your credentials.</li>
+<li>Change the style of nodes Cate<em>Blanchett and Kevin</em>Bacon_(I), directly attached nodes, and directly attached edges.</li>
+<li>Compile, run, and visualize.</li>
+</ol>
+
+<h3>Perform BFS</h3>
+
+<ol>
+<li>Write a BFS traversal in <code>getBaconNumber</code> that keeps track of parent information. Here is the algorithm:</li>
+</ol>
+
+<p><code>algorithm
+BFS(G=(V,E), root)
+  forall v in V
+    mark[v] = false;
+  mark[root] = true;
+  queue.push(root);
+  while (! queue.empty() )
+    v = queue.pop();
+    for (u in neighboor(v))
+      if (mark[u] == false)
+        mark[u] = true;
+    parent[u] = v;
+</code></p>
+
+<ol>
+<li>We recommend using a built-in associative array for storing parents, such as Java's <code>HashMap</code> or C++'s <code>std::unordered_map</code>.</li>
+<li>We recommend using a built-in queue, such as Java's <code>ArrayDeque</code> or C++'s <code>std::queue</code>.</li>
+</ol>
+
+<h3>Style the BFS path</h3>
+
+<ol>
+<li>Start from the Cate_Blanchett node.</li>
+<li>Color the current node red and make it bigger.</li>
+<li>Style the edge from the current node to its parent. Make it red and bigger.</li>
+<li>Go to the parent node and go back to 2 until Kevin<em>Bacon</em>(I) has been reached.</li>
+</ol>
+
+<h3>Help</h3>
+
+<h4>for Java</h4>
+
+<p><a href="https://docs.oracle.com/javase/7/docs/api/java/util/ArrayDeque.html">ArrayDeque documentation</a></p>
+
+<p><a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html">HashMap documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_element.html">Element documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_graph_adj_list_simple.html">GraphAdjListSimple documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_element_visualizer.html">ElementVisualizer documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_link_visualizer.html">LinkVisualizer documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1data__src__dependent_1_1_actor_movie_i_m_d_b.html">ActorMovieIMDB documentation</a></p>
+
+<h4>for C++</h4>
+
+<p><a href="http://en.cppreference.com/w/cpp/container/queue">std::queue documentation</a></p>
+
+<p><a href="http://en.cppreference.com/w/cpp/container/unordered_map">std::unordered_map documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_element.html">Element documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_graph_adj_list.html">GraphAdjList documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_element_visualizer.html">ElementVisualizer documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_link_visualizer.html">LinkVisualizer documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_actor_movie_i_m_d_b.html">ActorMovieIMDB documentation</a></p>
