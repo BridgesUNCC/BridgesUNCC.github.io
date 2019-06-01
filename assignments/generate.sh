@@ -38,10 +38,11 @@ mkdir ${ASSIGNDIR}
 
 
 writeheader() {
-    
+    cat header >> ${HTMLOUTPUT}
 }
 
 writefooter() {
+    cat footer >> ${HTMLOUTPUT}
 }
 
 
