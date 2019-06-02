@@ -176,12 +176,19 @@ addsubgroup "Loops"
 addassignment "6-GridSquareFill"
 addassignment "7-GridLyrics"
 
+
 addgroup "Data Structure"
 addsubgroup "LinkedList"
 addassignment "1-ListIMDB"
 addassignment "2-ListEQ"
+
+addsubgroup "Trees"
+addassignment "5-BstEq"
+addassignment "8-PQBook"
+
 addsubgroup "Graphs"
 addassignment "3-GraphBaconNumber"
+addassignment "4-GraphEQ"
 addassignment "9-ShortestPathOSM"
 
 writefooter
