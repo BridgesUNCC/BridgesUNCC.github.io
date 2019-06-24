@@ -172,9 +172,16 @@ addassignment() {
 writeheader
 
 addgroup "CS1"
+addsubgroup "Maps"
+addassignment "10-HurricaneTracker"
 addsubgroup "Loops"
 addassignment "6-GridSquareFill"
 addassignment "7-GridLyrics"
+
+addgroup "Games"
+addassignment "11-2048Game"
+addassignment "12-AStarMaze"
+addassignment "13-InfiniteRunner"
 
 
 addgroup "Data Structure"
