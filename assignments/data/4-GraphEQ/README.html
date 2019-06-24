@@ -1,0 +1,83 @@
+<h1>Assignment 4 - Graph Earthquake</h1>
+
+<h2>Goals</h2>
+
+<p>The purpose of this assignment is to learn to
+1. Access and manipulate remote data through BRIDGES.
+2. Manipulate a <code>GraphAdjList</code> object.
+3. Display a location on a map.</p>
+
+<p>You will be building a visualization that looks like <a href="http://bridges-cs.herokuapp.com/assignments/4/bridges_workshop">that</a>!</p>
+
+<h2>Programming part</h2>
+
+<h3>Task</h3>
+
+<p>Grab recent earthquake data and build a graph representing the
+locations of the 100 strongest earthquakes.</p>
+
+<h3>Basic</h3>
+
+<ol>
+<li>Open your scaffolded code.</li>
+<li>Plug in your credentials.</li>
+<li>Get the most recent 10,000 earthquakes.</li>
+<li>Only retain the 100 highest magnitude earthquakes.</li>
+</ol>
+
+<h3>Place Earthquakes on the map</h3>
+
+<ol>
+<li>Create a graph where each earthquake is a vertex.</li>
+<li>Add no edges for now.</li>
+<li>Pin earthquakes at their longitude and latitude.</li>
+<li>Tweak the appearance of vertices if you want (e.g., use a different symbols for earthquake in Hawaii or Alaska).</li>
+<li>Compile, run, and visualize.</li>
+</ol>
+
+<h3>Build a graph based on distances</h3>
+
+<ol>
+<li>For each pair of earthquakes:
+<ol>
+<li>Compute the distance using <code>calcDistance</code>.</li>
+<li>If the earthquakes are closer than 500km, add an edge between them.</li>
+</ol></li>
+<li>Compile, run, and visualize.</li>
+</ol>
+
+<h3>Show just the graph</h3>
+
+<ol>
+<li>Deactivate the map overlay (already done in the scaffolding).</li>
+<li>Unpin the vertices by setting their location to infinity.</li>
+<li>Compile, run, and visualize.</li>
+</ol>
+
+<h3>Help</h3>
+
+<h4>for Java</h4>
+
+<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_element.html">Element documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_graph_adj_list_simple.html">GraphAdjListSimple documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_graph_adj_list.html">GraphAdjList documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_element_visualizer.html">ElementVisualizer documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1data__src__dependent_1_1_earthquake_u_s_g_s.html">EarthquakeUSGS documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/namespacebridges_1_1base.html">Bridges class documentation</a></p>
+
+<h4>for C++</h4>
+
+<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_element.html">Element documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_graph_adj_list.html">GraphAdjList documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_element_visualizer.html">ElementVisualizer documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_earthquake_u_s_g_s.html">EarthquakeUSGS documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/namespacebridges_1_1_data_source.html">DataSource documentation</a></p>
