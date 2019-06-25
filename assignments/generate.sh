@@ -184,7 +184,7 @@ addsubgroup "Loops"
 addassignment "6-GridSquareFill"
 addassignment "7-GridLyrics"
 
-addgroup "Games"
+addsubgroup "Games"
 addassignment "11-2048Game"
 addassignment "12-AStarMaze"
 addassignment "13-InfiniteRunner"
