@@ -183,6 +183,8 @@ addassignment "10-HurricaneTracker"
 addsubgroup "Loops"
 addassignment "6-GridSquareFill"
 addassignment "7-GridLyrics"
+addassignment "14-SpreadingFire"
+addassignment "15-FallingSand"
 
 addsubgroup "Games"
 addassignment "11-2048Game"
