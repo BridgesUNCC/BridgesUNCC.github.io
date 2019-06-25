@@ -8,6 +8,12 @@ then
     exit 1
 fi
 
+#bail if markdown is not installed
+if [ ! -e "$(which markdown)" ] ;
+then
+    echo markdown is not installed. 
+fi
+
 
 ASSIGNDIR=data/
 BRIDGESASSIGNMENT=$1
