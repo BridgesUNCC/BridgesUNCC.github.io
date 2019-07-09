@@ -57,9 +57,9 @@ writefooter() {
 addgroup() {
     name=$1
 
-    echo -n '<div class="assignmentgroup"> <p>' >> ${HTMLOUTPUT}
-    echo -n ${name}  >> ${HTMLOUTPUT}
-    echo -n '</p> </div>' >> ${HTMLOUTPUT}
+    printf "%s"'<div class="assignmentgroup"> <p>' >> ${HTMLOUTPUT}
+    printf "%s" ${name}  >> ${HTMLOUTPUT}
+    printf "%s" '</p> </div>' >> ${HTMLOUTPUT}
     echo >> ${HTMLOUTPUT}
 }
 
