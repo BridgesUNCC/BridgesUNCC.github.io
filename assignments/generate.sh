@@ -12,6 +12,7 @@ fi
 if [ ! -e "$(which markdown)" ] ;
 then
     echo markdown is not installed. 
+	exit 1
 fi
 
 
