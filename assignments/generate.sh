@@ -8,6 +8,13 @@ then
     exit 1
 fi
 
+#bail if markdown is not installed
+if [ ! -e "$(which markdown)" ] ;
+then
+    echo markdown is not installed. 
+	exit 1
+fi
+
 
 ASSIGNDIR=data/
 BRIDGESASSIGNMENT=$1
@@ -50,18 +57,18 @@ writefooter() {
 addgroup() {
     name=$1
 
-    echo -n '<div class="assignmentgroup"> <p>' >> ${HTMLOUTPUT}
-    echo -n ${name}  >> ${HTMLOUTPUT}
-    echo -n '</p> </div>' >> ${HTMLOUTPUT}
+    printf "%s"'<div class="assignmentgroup"> <p>' >> ${HTMLOUTPUT}
+    printf "%s" ${name}  >> ${HTMLOUTPUT}
+    printf "%s" '</p> </div>' >> ${HTMLOUTPUT}
     echo >> ${HTMLOUTPUT}
 }
 
 addsubgroup() {
     name=$1
 
-    echo -n '<div class="assignmentsubgroup"> <p>' >> ${HTMLOUTPUT}
-    echo -n ${name} >> ${HTMLOUTPUT}
-    echo -n '</p> </div>' >> ${HTMLOUTPUT}
+    printf "%s" '<div class="assignmentsubgroup"> <p>' >> ${HTMLOUTPUT}
+    printf "%s" ${name} >> ${HTMLOUTPUT}
+    printf "%s" '</p> </div>' >> ${HTMLOUTPUT}
     echo >> ${HTMLOUTPUT}
 }
 
@@ -172,9 +179,18 @@ addassignment() {
 writeheader
 
 addgroup "CS1"
+addsubgroup "Maps"
+addassignment "10-HurricaneTracker"
 addsubgroup "Loops"
 addassignment "6-GridSquareFill"
 addassignment "7-GridLyrics"
+addassignment "14-SpreadingFire"
+addassignment "15-FallingSand"
+
+addsubgroup "Games"
+addassignment "11-2048Game"
+addassignment "12-AStarMaze"
+addassignment "13-InfiniteRunner"
 
 
 addgroup "Data Structure"
