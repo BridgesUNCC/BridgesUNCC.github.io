@@ -4,7 +4,7 @@ Source
 ------
 
 This is a nifty assignment from 2018 proposed by Phil Ventura.
-(http://nifty.stanford.edu/2018/ventura-hurricane-tracker/nifty-hurricanes.html)
+[http://nifty.stanford.edu/2018/ventura-hurricane-tracker/nifty-hurricanes.html]
 
 Goals
 -----
