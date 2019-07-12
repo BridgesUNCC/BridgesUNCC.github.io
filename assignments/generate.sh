@@ -58,7 +58,7 @@ addgroup() {
     name=$1
 
     printf "%s"'<div class="assignmentgroup"> <p>' >> ${HTMLOUTPUT}
-    printf "%s" ${name}  >> ${HTMLOUTPUT}
+    printf "%s" "${name}"  >> ${HTMLOUTPUT}
     printf "%s" '</p> </div>' >> ${HTMLOUTPUT}
     echo >> ${HTMLOUTPUT}
 }
@@ -67,7 +67,7 @@ addsubgroup() {
     name=$1
 
     printf "%s" '<div class="assignmentsubgroup"> <p>' >> ${HTMLOUTPUT}
-    printf "%s" ${name} >> ${HTMLOUTPUT}
+    printf "%s" "${name}" >> ${HTMLOUTPUT}
     printf "%s" '</p> </div>' >> ${HTMLOUTPUT}
     echo >> ${HTMLOUTPUT}
 }
