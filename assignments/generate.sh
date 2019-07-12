@@ -217,6 +217,8 @@ addassignment "2-ListEQ"
 
 addsubgroup "Stacks and Queues"
 addassignment "12-AStarMaze"
+addassignment "26-TowersOfHanoi"
+addassignment "22-Snake"
 
 addsubgroup "Trees"
 addassignment "5-BstEq"

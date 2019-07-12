@@ -12,9 +12,6 @@ This is a nifty assignment from 2016 proposed by Baker Franke.
 Description
 -----------
 
-is an exercise navigating a 2D array, drawing images, and an example of a greedy algorithm.
-
-
 You are given elevation data of a mountainous region in the form of a 2D array of integers (see example image below of one of the datasets). Your goal is to find a path that takes you through the points with the lowest elevation changes, in an effort to minimize the overall effort in walking through the path. For this you will use a ‘greedy’ approach and make local decisions in determining the successive points in the path.
 
 See the  image  below. The image shows a mountainous region (lighter regions are higher elevation) and the red line shows the path to be taken by a walker.
