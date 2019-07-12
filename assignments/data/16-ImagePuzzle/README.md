@@ -1,12 +1,19 @@
-
 Assignment 16 - Image Puzzle
 ===========================
- Goals
- -----
- The purpose of this assignment is to learn to
- 1. Read and display image data from a ppm file
- 2. Analyze and manipulate image data
- 3. Compare data from multiple data structures
+
+Source
+------
+
+This is a nifty assignment from 2011 proposed by Nick Parlante.
+[Source](http://nifty.stanford.edu/2011/parlante-image-puzzle/)
+
+
+Goals
+-----
+The purpose of this assignment is to learn to
+1. Read and display image data from a ppm file
+2. Analyze and manipulate image data
+3. Compare data from multiple data structures
 
 Programming
 -----------
