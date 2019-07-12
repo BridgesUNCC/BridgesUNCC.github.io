@@ -1,5 +1,13 @@
-Assignment 15 – Falling Sand
+Assignment 15 : Falling Sand
 ============================
+
+Source
+------
+
+This is a nifty assignment from 2017 proposed by Dave Feinberg.
+[Source](http://nifty.stanford.edu/2017/feinberg-falling-sand/)
+
+
 Goals
 -----
 The purpose of this assignment is to learn to 
