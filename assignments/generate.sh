@@ -189,6 +189,7 @@ addassignment "19-Bugstomp"
 
 addsubgroup "Loops"
 addassignment "25-Patterns"
+addassignment "23-MountainPaths"
 
 addsubgroup "Input/Output"
 addassignment "10-HurricaneTracker"
@@ -217,6 +218,7 @@ addassignment "2-ListEQ"
 addsubgroup "Trees"
 addassignment "5-BstEq"
 addassignment "8-PQBook"
+addassignment "24-ImageCompressionKdTree"
 
 addsubgroup "Graphs"
 addassignment "3-GraphBaconNumber"
@@ -225,6 +227,9 @@ addassignment "9-ShortestPathOSM"
 
 addgroup "Algorithms"
 addsubgroup "Complexity"
+
+addsubgroup "Greedy Algorithms"
+addassignment "23-MountainPaths"
 
 writefooter
 
