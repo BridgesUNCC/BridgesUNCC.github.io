@@ -180,6 +180,7 @@ writeheader
 
 addgroup "CS1"
 addsubgroup "Basic API Calls"
+addassignment "27-GameGridBasic"
 
 
 addsubgroup "Tests and Conditions"
@@ -202,7 +203,6 @@ addassignment "16-ImagePuzzle"
 
 addsubgroup "Games"
 addassignment "11-2048Game"
-addassignment "12-AStarMaze"
 addassignment "13-InfiniteRunner"
 addassignment "14-SpreadingFire"
 addassignment "15-FallingSand"
@@ -215,12 +215,16 @@ addsubgroup "LinkedList"
 addassignment "1-ListIMDB"
 addassignment "2-ListEQ"
 
+addsubgroup "Stacks and Queues"
+addassignment "12-AStarMaze"
+
 addsubgroup "Trees"
 addassignment "5-BstEq"
 addassignment "8-PQBook"
 addassignment "24-ImageCompressionKdTree"
 
 addsubgroup "Graphs"
+addassignment "12-AStarMaze"
 addassignment "3-GraphBaconNumber"
 addassignment "4-GraphEQ"
 addassignment "9-ShortestPathOSM"
