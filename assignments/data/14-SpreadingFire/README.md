@@ -1,5 +1,12 @@
-Assignment 14 – Spreading Fire
+Assignment 14 - Spreading Fire
 ==============================
+
+Source
+------
+
+This is a nifty assignment from 2007 proposed by Angela B. Shiflet.
+[Source](http://nifty.stanford.edu/2007/shiflet-fire/)
+
 Goals
 -----
 The purpose of this assignment is to learn to 
