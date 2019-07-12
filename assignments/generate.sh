@@ -183,8 +183,12 @@ addsubgroup "Basic API Calls"
 
 
 addsubgroup "Tests and Conditions"
+addassignment "17-ControlsTutorial"
+addassignment "18-ControlsTutorialTwo"
+addassignment "19-Bugstomp"
 
 addsubgroup "Loops"
+addassignment "25-Patterns"
 
 addsubgroup "Input/Output"
 addassignment "10-HurricaneTracker"
@@ -201,7 +205,9 @@ addassignment "12-AStarMaze"
 addassignment "13-InfiniteRunner"
 addassignment "14-SpreadingFire"
 addassignment "15-FallingSand"
-
+addassignment "20-Minesweeper"
+addassignment "21-RaceCar"
+addassignment "22-Snake"
 
 addgroup "Data Structure"
 addsubgroup "LinkedList"
