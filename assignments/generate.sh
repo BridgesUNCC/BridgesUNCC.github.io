@@ -179,18 +179,28 @@ addassignment() {
 writeheader
 
 addgroup "CS1"
-addsubgroup "Maps"
-addassignment "10-HurricaneTracker"
+addsubgroup "Basic API Calls"
+
+
+addsubgroup "Tests and Conditions"
+
 addsubgroup "Loops"
+
+addsubgroup "Input/Output"
+addassignment "10-HurricaneTracker"
+
+addsubgroup "2D Arrays"
 addassignment "6-GridSquareFill"
 addassignment "7-GridLyrics"
-addassignment "14-SpreadingFire"
-addassignment "15-FallingSand"
+addassignment "16-ImagePuzzle"
+
 
 addsubgroup "Games"
 addassignment "11-2048Game"
 addassignment "12-AStarMaze"
 addassignment "13-InfiniteRunner"
+addassignment "14-SpreadingFire"
+addassignment "15-FallingSand"
 
 
 addgroup "Data Structure"
@@ -206,6 +216,9 @@ addsubgroup "Graphs"
 addassignment "3-GraphBaconNumber"
 addassignment "4-GraphEQ"
 addassignment "9-ShortestPathOSM"
+
+addgroup "Algorithms"
+addsubgroup "Complexity"
 
 writefooter
 
