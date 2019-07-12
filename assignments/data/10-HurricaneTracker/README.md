@@ -1,11 +1,17 @@
 Assignment 10 - Hurricane Tracker
 ===========================
- Goals
- -----
- The purpose of this assignment is to learn to
- 1. Read and parse data from a csv file
- 2. Manipulate a GraphAdjList object
- 3. Display several points on a map
+Source
+------
+
+This is a nifty assignment from 2018 proposed by Phil Ventura.
+(http://nifty.stanford.edu/2018/ventura-hurricane-tracker/nifty-hurricanes.html)
+
+Goals
+-----
+The purpose of this assignment is to learn to
+1. Read and parse data from a csv file
+2. Manipulate a GraphAdjList object
+3. Display several points on a map
 
 Programming
 -----------
