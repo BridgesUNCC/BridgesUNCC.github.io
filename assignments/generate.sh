@@ -232,9 +232,16 @@ addassignment "4-GraphEQ"
 addassignment "9-ShortestPathOSM"
 
 addgroup "Algorithms"
-addsubgroup "Complexity"
+addsubgroup "Big Oh"
+addassignment "28-BigOhMatters"
 
 addsubgroup "Greedy Algorithms"
+addassignment "23-MountainPaths"
+
+addsubgroup "Dynamic Programing"
+addassignment "23-MountainPaths"
+
+addsubgroup "Multi objective optimization"
 addassignment "23-MountainPaths"
 
 writefooter
