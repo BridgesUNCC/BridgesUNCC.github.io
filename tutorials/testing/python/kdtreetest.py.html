@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/work/bridges/BridgesUNCC.github.io/tutorials/testing/python/kdtreetest.py.html</title>
+<meta name="Generator" content="Vim/8.1">
+<meta name="plugin-version" content="vim8.1_v1">
+<meta name="syntax" content="c">
+<meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="none">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Constant { color: #0000c0; text-decoration: underline; }
+.Statement { color: #008080; font-weight: bold; }
+.Type { color: #008000; text-decoration: underline; }
+-->
+</style>
+</head>
+<body>
+<pre id='vimCodeElement'>
+from bridges.bridges import *
+from bridges.kd_tree_element import *
+import sys
+
+args = sys.argv[<span class="Constant">1</span>:]
+
+# create the Bridges object, set credentials
+
+bridges = Bridges(<span class="Type">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
+
+<span class="Statement">if</span> len(args) &gt; <span class="Constant">3</span>:
+    bridges.connector.set_server(args[<span class="Constant">3</span>])
+
+#Title and Description
+bridges.set_title(<span class="Constant">&quot;A Kd Tree Example&quot;</span>)
+bridges.set_description(<span class="Constant">&quot;A three-level tree with partitioners cycling between X and Y.&quot;</span>
+                + <span class="Constant">&quot; The root node color is set to red while the leaf nodes that represent code letters are set to orange.&quot;</span>)
+
+t0 = KDTreeElement(key = <span class="Constant">50</span>, dim = <span class="Constant">0</span>)
+t1 = KDTreeElement(key = <span class="Constant">25</span>, dim = <span class="Constant">1</span>)
+t2 = KDTreeElement(key = <span class="Constant">75</span>, dim = <span class="Constant">1</span>)
+t3 = KDTreeElement(key = <span class="Constant">20</span>, dim = <span class="Constant">0</span>)
+t4 = KDTreeElement(key = <span class="Constant">30</span>, dim = <span class="Constant">0</span>)
+t5 = KDTreeElement(key = <span class="Constant">60</span>, dim = <span class="Constant">0</span>)
+t6 = KDTreeElement(key = <span class="Constant">80</span>, dim = <span class="Constant">0</span>)
+
+t0.set_left(t1)
+t0.set_right(t2)
+t1.set_left(t3)
+t1.set_label(<span class="Constant">&quot;X&quot;</span>)
+t1.set_right(t4)
+t2.set_left(t5)
+t2.set_left(t6)
+
+t0.set_label(<span class="Constant">&quot;X&quot;</span>)
+t1.set_label(<span class="Constant">&quot;Y&quot;</span>)
+t2.set_label(<span class="Constant">&quot;Y&quot;</span>)
+t3.set_label(<span class="Constant">&quot;X&quot;</span>)
+t4.set_label(<span class="Constant">&quot;X&quot;</span>)
+t5.set_label(<span class="Constant">&quot;X&quot;</span>)
+t6.set_label(<span class="Constant">&quot;X&quot;</span>)
+
+t0.get_visualizer().set_color(<span class="Constant">&quot;red&quot;</span>)
+
+t1.get_visualizer().set_color(<span class="Constant">&quot;orange&quot;</span>)
+t4.get_visualizer().set_color(<span class="Constant">&quot;orange&quot;</span>)
+t5.get_visualizer().set_color(<span class="Constant">&quot;orange&quot;</span>)
+t6.get_visualizer().set_color(<span class="Constant">&quot;orange&quot;</span>)
+
+bridges.set_data_structure(t0)
+bridges.visualize()
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

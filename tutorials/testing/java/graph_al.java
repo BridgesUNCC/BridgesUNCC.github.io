@@ -5,6 +5,7 @@ import bridges.base.SLelement;
 import bridges.base.GraphAdjListSimple;
 import bridges.base.Edge;
 import bridges.connect.Bridges;
+import bridges.connect.DataSource;
 import bridges.data_src_dependent.ActorMovieIMDB;
 
 public class graph_al {
@@ -14,34 +15,39 @@ public class graph_al {
         Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", 
                                         "YOUR_API_KEY");
 
-		// set a title for the visualization
+		// title, description
 		bridges.setTitle("A Simple Graph (Adjacency List) Example using IMDB Actor/Movie Data");
-
+		bridges.setDescription("Two lists each having an actor as the root node with 15 movies they played in as leaf nodes. "
+				+	"Root nodes are both red, Kevin Bacon's leaf nodes are green and Denzel Washington's leaf nodes are neutral.");
+				
+		DataSource ds = bridges.getDataSource();
 		ArrayList<ActorMovieIMDB>  actor_movie_data =
-			(ArrayList<ActorMovieIMDB>) bridges.getActorMovieIMDBData(1813);
+				(ArrayList<ActorMovieIMDB>) ds.getActorMovieIMDBData(1813);
+
 
 		// create an adjacency list based graph
 		GraphAdjListSimple<String> g = new GraphAdjListSimple<String>();
 
 		// first create vertices for two actors and add them to the graph
-		String a1 = "Kevin_Bacon_(I)", a2 = "Denzel_Washington";
-		g.addVertex(a1, "");
-		g.addVertex(a2, "");
-
-		// add an edge between the two actors a1 and a2,
-		// the third parameter is the edge weight
-		g.addEdge(a1, a2, 1);
+		String kevin_bacon = "Kevin_Bacon_(I)", denzel_washington = "Denzel_Washington";
+		g.addVertex(kevin_bacon, "");
+		g.addVertex(denzel_washington, "");
 
 		// color the two actor nodes
-		g.getVertices().get("Kevin_Bacon_(I)").getVisualizer().setColor("red");
-		g.getVertices().get("Denzel_Washington").getVisualizer().setColor("red");
-		// make them a bit bigger
-		g.getVertices().get("Kevin_Bacon_(I)").getVisualizer().setSize(20);
-		g.getVertices().get("Denzel_Washington").getVisualizer().setSize(20);
+		g.getVertex(kevin_bacon).setColor("red");
+		g.getVertex(kevin_bacon).setSize(30);
+		g.getVertex(denzel_washington).setColor("red");
+		g.getVertex(denzel_washington).setSize(30);
+
+		// add an edge between the two actors kevin_bacon and denzel_washington,
+		// the third parameter is the edge weight
+		g.addEdge(kevin_bacon, denzel_washington);
+		g.getLinkVisualizer(kevin_bacon, denzel_washington).setColor("magenta");
+		g.getLinkVisualizer(kevin_bacon, denzel_washington).setThickness(4.0f);
 
 		// get their nodes
-		Element v1 = g.getVertices().get(a1);
-		Element v2 = g.getVertices().get(a2);
+		Element v1 = g.getVertex(kevin_bacon);
+		Element v2 = g.getVertex(denzel_washington);
 
 		// we will find the first 15 immediate neighbors of of the two actors
 		// and color those links and nodes by followng their adjacency lists
@@ -51,24 +57,24 @@ public class graph_al {
 			String a = actor_movie_data.get(k).getActor();
 			String m = actor_movie_data.get(k).getMovie();
 
-			if (a.equals("Kevin_Bacon_(I)") && cnt1 < 15) {
+			if (a.equals(kevin_bacon) && cnt1 < 15) {
 
 				// add vertices for this movie  and an edge for the link
 				g.addVertex(m, "");
-				g.addEdge(a1, m, 1);
-				g.addEdge(m, a1, 1);
+				g.addEdge(kevin_bacon, m);
+				g.addEdge(m, kevin_bacon);
 
 				// make the movie node a bit transparent
-				g.getVertices().get(m).getVisualizer().setOpacity(0.5f);
+				g.getVertex(m).setOpacity(0.7f);
 				cnt1++;
 			}
-			else if (a.equals("Denzel_Washington") && cnt2 < 15) {
+			else if (a.equals(denzel_washington) && cnt2 < 15) {
 				// add vertices for this movie  and an edge for the link
 				g.addVertex(m, "");
-				g.addEdge(a2, m, 1);
-				g.addEdge(m, a2, 1);
+				g.addEdge(denzel_washington, m);
+				g.addEdge(m, denzel_washington);
 				// make the movie node a bit transparent
-				g.getVertices().get(m).getVisualizer().setOpacity(0.5f);
+				g.getVertex(m).setOpacity(0.7f);
 				cnt2++;
 			}
 		}
@@ -77,16 +83,16 @@ public class graph_al {
 		// movie nodes adjacent to the Kevin Bacon node.
 
 		// first get the adjacency list for Kevin Bacon
-		SLelement<Edge<String, String>>  head = g.getAdjacencyList().get("Kevin_Bacon_(I)");
 		// traverse the adjacency list
-		for (SLelement<Edge<String, String>> sle = head; sle != null; sle = sle.getNext() ) {
-			// get the terminating vertex
-			String term_vertex = sle.getValue().getVertex();
-			// find the corresponding element
-			Element<String> el = g.getVertices().get(term_vertex);
-			// set the  color of the node except the Denzel W. node
-			if (!term_vertex.equals("Denzel_Washington"))
-				el.getVisualizer().setColor("green");
+		for (Edge<String, String> edge : g.outgoingEdgeSetOf(kevin_bacon)) {
+			String from = edge.getFrom(), to = edge.getTo();
+			if (!to.equals(denzel_washington))
+				edge.setColor("turquoise");
+		}
+		for (Edge<String, String> edge : g.outgoingEdgeSetOf(denzel_washington)) {
+			String from = edge.getFrom(), to = edge.getTo();
+			if (!to.equals(kevin_bacon))
+				edge.setColor("orange");
 		}
 
 		// Pass the graph object to BRIDGES

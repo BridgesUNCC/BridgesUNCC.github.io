@@ -2,9 +2,9 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>~/graphics/bridges/website/Hello_World_Tutorials/testing/java/sllist.java.html</title>
-<meta name="Generator" content="Vim/8.0">
-<meta name="plugin-version" content="vim7.4_v2">
+<title>~/work/bridges/BridgesUNCC.github.io/tutorials/testing/java/sllist.java.html</title>
+<meta name="Generator" content="Vim/8.1">
+<meta name="plugin-version" content="vim8.1_v1">
 <meta name="syntax" content="c">
 <meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
 <meta name="colorscheme" content="none">
@@ -14,17 +14,10 @@ pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-
 body { font-family: monospace; color: #000000; background-color: #ffffff; }
 * { font-size: 1em; }
 .Constant { color: #0000c0; text-decoration: underline; }
-.Statement { color: #008080; font-weight: bold; }
 .Comment { color: #c00000; font-weight: bold; }
 .Type { color: #008000; text-decoration: underline; }
 -->
 </style>
-
-<script type='text/javascript'>
-<!--
-
--->
-</script>
 </head>
 <body>
 <pre id='vimCodeElement'>
@@ -42,58 +35,18 @@ public class sllist {
 		<span class="Comment">// note: you must fill in with your Bridges credentials</span>
         Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
                                         <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
-		<span class="Comment">// create the linked list elements with</span>
-		<span class="Comment">// student data</span>
-		SLelement&lt;StudentInfo&gt; el0 = new SLelement&lt;StudentInfo&gt;( <span class="Constant">&quot;&quot;</span>,
-			new StudentInfo(
-				<span class="Constant">&quot;00000000000&quot;</span>,
-				<span class="Constant">&quot;Gretel Chaney&quot;</span>,
-				<span class="Constant">&quot;CS&quot;</span>,
-				<span class="Constant">&quot;g.chaney@generated.com&quot;</span>,
-				<span class="Constant">&quot;magenta&quot;</span>,
-				<span class="Constant">&quot;blue&quot;</span>,
-				<span class="Constant">9.0</span>
-			));
-		SLelement&lt;StudentInfo&gt; el1 = new SLelement&lt;StudentInfo&gt;( <span class="Constant">&quot;&quot;</span>,
-			new StudentInfo(
-				<span class="Constant">&quot;00000000001&quot;</span>,
-				<span class="Constant">&quot;Karol Soderman&quot;</span>,
-				<span class="Constant">&quot;SIS&quot;</span>,
-				<span class="Constant">&quot;k.soderman@generated.com&quot;</span>,
-				<span class="Constant">&quot;magenta&quot;</span>,
-				<span class="Constant">&quot;red&quot;</span>,
-				<span class="Constant">11.0</span>
-			));
-		SLelement&lt;StudentInfo&gt; el2 = new SLelement&lt;StudentInfo&gt;( <span class="Constant">&quot;&quot;</span>,
-			new StudentInfo(
-				<span class="Constant">&quot;00000000002&quot;</span>,
-				<span class="Constant">&quot;Lamont Kyler&quot;</span>,
-				<span class="Constant">&quot;BIO&quot;</span>,
-				<span class="Constant">&quot;l.kyler@generated.com&quot;</span>,
-				<span class="Constant">&quot;yellow&quot;</span>,
-				<span class="Constant">&quot;green&quot;</span>,
-				<span class="Constant">12.0</span>
-			));
-		SLelement&lt;StudentInfo&gt; el3 = new SLelement&lt;StudentInfo&gt;( <span class="Constant">&quot;&quot;</span>,
-			new StudentInfo(
-				<span class="Constant">&quot;00000000003&quot;</span>,
-				<span class="Constant">&quot;Gladys Serino&quot;</span>,
-				<span class="Constant">&quot;CS&quot;</span>,
-				<span class="Constant">&quot;g.serino@generated.com&quot;</span>,
-				<span class="Constant">&quot;green&quot;</span>,
-				<span class="Constant">&quot;magenta&quot;</span>,
-				<span class="Constant">9.0</span>
-			));
-		SLelement&lt;StudentInfo&gt; el4 = new SLelement&lt;StudentInfo&gt;( <span class="Constant">&quot;&quot;</span>,
-			new StudentInfo(
-				<span class="Constant">&quot;00000000004&quot;</span>,
-				<span class="Constant">&quot;Starr Mcginn&quot;</span>,
-				<span class="Constant">&quot;CS&quot;</span>,
-				<span class="Constant">&quot;s.mcginn@generated.com&quot;</span>,
-				<span class="Constant">&quot;red&quot;</span>,
-				<span class="Constant">&quot;cyan&quot;</span>,
-				<span class="Constant">15.0</span>
-			));
+	<span class="Comment">// set title</span>
+	bridges.setTitle(<span class="Constant">&quot;A Single Linked List Example&quot;</span>);
+
+	<span class="Comment">// set  description</span>
+	bridges.setDescription(<span class="Constant">&quot;A singly linked list of node with student names, where each node is linked only to the next node in the list. Illustrates Node and link coloring, node size, link thickness and opacity&quot;</span>);
+
+		<span class="Comment">// create the linked list elements with student names</span>
+		SLelement&lt;String&gt;  el0 = new SLelement&lt;String&gt; (<span class="Constant">&quot;Gretel Chaney&quot;</span>, <span class="Constant">&quot;Gretel Chaney&quot;</span>);
+		SLelement&lt;String&gt;  el1 = new SLelement&lt;String&gt; (<span class="Constant">&quot;Lamont Kyler&quot;</span>, <span class="Constant">&quot;Lamont Kyler&quot;</span>);
+		SLelement&lt;String&gt;  el2 = new SLelement&lt;String&gt; (<span class="Constant">&quot;Gladys Serino&quot;</span>, <span class="Constant">&quot;Gladys Serino&quot;</span>);
+		SLelement&lt;String&gt;  el3 = new SLelement&lt;String&gt; (<span class="Constant">&quot;Karol Soderman&quot;</span>, <span class="Constant">&quot;Karol Soderman&quot;</span>);
+		SLelement&lt;String&gt;  el4 = new SLelement&lt;String&gt; (<span class="Constant">&quot;Starr McGinn&quot;</span>, <span class="Constant">&quot;Starr McGinn&quot;</span>);
 
 		<span class="Comment">//  link the elements</span>
 		el0.setNext(el1);
@@ -101,38 +54,28 @@ public class sllist {
 		el2.setNext(el3);
 		el3.setNext(el4);
 
-		<span class="Comment">// iterate through the list and add visual attributes</span>
-		<span class="Comment">// to the elements; set the element color to the favorite</span>
-		<span class="Comment">// color and the link to the disliked color</span>
-		SLelement&lt;StudentInfo&gt; currentElement = el0;
-		<span class="Statement">while</span> (currentElement != null) {
-			<span class="Comment">// color the node</span>
-			StudentInfo si = currentElement.getValue();
-			currentElement.getVisualizer().setColor(si.getFavoriteColor());
+		<span class="Comment">// set colors for list elements - see the Color class for supported colors</span>
+		el0.setColor(<span class="Constant">&quot;red&quot;</span>);
+		el2.setColor(<span class="Constant">&quot;aliceblue&quot;</span>);
 
-			<span class="Statement">if</span> (currentElement.getNext() != null) {
+		<span class="Comment">// color the links - must specify a valid terminating element</span>
+		el0.getLinkVisualizer(el1).setColor(<span class="Constant">&quot;green&quot;</span>);
+		el3.getLinkVisualizer(el4).setColor(<span class="Constant">&quot;magenta&quot;</span>);
 
-				<span class="Comment">// color the link</span>
-				currentElement
-				.getLinkVisualizer(currentElement.getNext())
-				.setColor(si.getDislikeColor());
-				<span class="Comment">// adjust link thickness</span>
-				currentElement
-				.getLinkVisualizer(currentElement.getNext())
-				.setThickness(si.getStudentCreditHours() * <span class="Constant">0.75</span>);<span class="Comment">//75 percent thinner</span>
-			}
+		<span class="Comment">// adjust link thickness</span>
+		el0.getLinkVisualizer(el1).setThickness(<span class="Constant">2.0f</span>);
 
-			<span class="Comment">// set the label to the student info (label created in</span>
-			<span class="Comment">// StudentInfo class</span>
-			currentElement.setLabel(si.getStudentLabel());
+		<span class="Comment">// set node transparency</span>
+		el4.setOpacity (<span class="Constant">0.5f</span>);
 
-			currentElement = currentElement.getNext();
-		}
+		<span class="Comment">// set node size</span>
+		el0.setSize (<span class="Constant">20</span>);
+
+		<span class="Comment">// set link label</span>
+		el2.getLinkVisualizer(el3).setLabel(<span class="Constant">&quot;Gladys_to_Karol&quot;</span>);
 
 		bridges.setDataStructure(el0);
 		bridges.visualize();
-
-
 	}
 }
 </pre>

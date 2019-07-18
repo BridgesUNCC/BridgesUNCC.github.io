@@ -10,10 +10,15 @@ def main():
     args = sys.argv[1:]
 
     # create the Bridges object, set credentials
-    bridges = Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
+    bridges = Bridges(int(args[0]), args[1], args[2])
 
-    # set title fo visualization
-    bridges.set_title("A Checkerboard Example Using Grid Type")
+    if len(args) > 3:
+        bridges.connector.set_server(args[3])
+
+    #Title and Description
+    bridges.set_title("A CheckerBoard Example Using Grid Type")
+    bridges.set_description("This is an example of the color grid with height and width 10. "
+        +   "This example alternates between blue and red starting with red at the top left corner of the grid.")
 
     width = 200
     height = 200

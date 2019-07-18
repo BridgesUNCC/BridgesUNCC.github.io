@@ -7,6 +7,7 @@ import bridges.base.SLelement;
 import bridges.base.GraphAdjMatrixSimple;
 import bridges.base.Edge;
 import bridges.connect.Bridges;
+import bridges.connect.DataSource;
 import bridges.data_src_dependent.ActorMovieIMDB;
 
 public class graph_am {
@@ -16,13 +17,16 @@ public class graph_am {
         Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", 
                                         "YOUR_API_KEY");
 
-		// set a title for the visualization
+		//  title, description
 		bridges.setTitle("A Simple Graph (Adjacency Matrix)  Example using IMDB Actor/Movie Data");
-
+		bridges.setDescription("Two lists each having an actor as the root node with 15 movies they played in as leaf nodes. "
+				+	"Root nodes are both red, Kevin Bacon's leaf nodes are green and Denzel Washington's leaf nodes are neutral.");
+				
+    	DataSource ds = bridges.getDataSource();
 		ArrayList<ActorMovieIMDB>  actor_movie_data =
-			(ArrayList<ActorMovieIMDB>) bridges.getActorMovieIMDBData(1813);
+			(ArrayList<ActorMovieIMDB>) ds.getActorMovieIMDBData(1813);
 
-		// create an adjacency list based graph
+		// create an adjacency matrix based graph
 		GraphAdjMatrixSimple<String> graph = new GraphAdjMatrixSimple<String>();
 
 		// first create vertices for two actors and add them to the graph
@@ -35,8 +39,8 @@ public class graph_am {
 		graph.addEdge(a1, a2, 1);
 
 		// color the two actor nodes
-		graph.getVertices().get("Kevin_Bacon_(I)").getVisualizer().setColor("red");
-		graph.getVertices().get("Denzel_Washington").getVisualizer().setColor("red");
+		graph.getVertices().get("Kevin_Bacon_(I)").setColor("red");
+		graph.getVertices().get("Denzel_Washington").setColor("red");
 
 		// make them a bit bigger
 		graph.getVisualizer("Kevin_Bacon_(I)").setSize(20);

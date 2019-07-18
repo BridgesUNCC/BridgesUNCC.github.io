@@ -2,9 +2,9 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>~/graphics/bridges/website/Hello_World_Tutorials/testing/python/graph_amatrix.py.html</title>
-<meta name="Generator" content="Vim/8.0">
-<meta name="plugin-version" content="vim7.4_v2">
+<title>~/work/bridges/BridgesUNCC.github.io/tutorials/testing/python/graph_amatrix.py.html</title>
+<meta name="Generator" content="Vim/8.1">
+<meta name="plugin-version" content="vim8.1_v1">
 <meta name="syntax" content="c">
 <meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
 <meta name="colorscheme" content="none">
@@ -15,14 +15,9 @@ body { font-family: monospace; color: #000000; background-color: #ffffff; }
 * { font-size: 1em; }
 .Constant { color: #0000c0; text-decoration: underline; }
 .Statement { color: #008080; font-weight: bold; }
+.Type { color: #008000; text-decoration: underline; }
 -->
 </style>
-
-<script type='text/javascript'>
-<!--
-
--->
-</script>
 </head>
 <body>
 <pre id='vimCodeElement'>
@@ -36,12 +31,17 @@ def main():
     args = sys.argv[<span class="Constant">1</span>:]
 
     # create the Bridges object, set credentials
-    bridges = Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+    bridges = Bridges(<span class="Type">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
 
-    # set a title <span class="Statement">for</span> the visualization
-    bridges.setTitle(<span class="Constant">&quot;A Simple Graph (Adjacency Matrix) Example using IMDB Actor/Movie Data&quot;</span>)
+    <span class="Statement">if</span> len(args) &gt; <span class="Constant">3</span>:
+        bridges.connector.set_server(args[<span class="Constant">3</span>])
 
-    actor_movie_data = getActorMovieIMDBData(<span class="Constant">1813</span>)
+    #Title and Description
+    bridges.set_title(<span class="Constant">&quot;A Simple Graph (Adjacency Matrix)  Example using IMDB Actor/Movie Data&quot;</span>)
+    bridges.set_description(<span class="Constant">&quot;Two lists each having an actor as the root node with 15 movies they played in as leaf nodes. &quot;</span>
+            +	<span class="Constant">&quot;Root nodes are both red, Kevin Bacon's leaf nodes are green and Denzel Washington's leaf nodes are neutral.&quot;</span>)
+
+    actor_movie_data = get_actor_movie_imdb_data(<span class="Constant">1813</span>)
     # create an adjacency Matrix based graph
     g = GraphAdjMatrix()
 
@@ -56,8 +56,8 @@ def main():
     g.add_edge(a1, a2, <span class="Constant">1</span>)
 
     # color the two actor nodes
-    g.get_vertices().get(<span class="Constant">&quot;Kevin_Bacon_(I)&quot;</span>).get_visualizer().set_color(<span class="Constant">&quot;red&quot;</span>)
-    g.get_vertices().get(<span class="Constant">&quot;Denzel_Washington&quot;</span>).get_visualizer().set_color(<span class="Constant">&quot;red&quot;</span>)
+    g.get_vertices().get(<span class="Constant">&quot;Kevin_Bacon_(I)&quot;</span>).get_visualizer().set_color(col_name=<span class="Constant">&quot;red&quot;</span>)
+    g.get_vertices().get(<span class="Constant">&quot;Denzel_Washington&quot;</span>).get_visualizer().set_color(col_name=<span class="Constant">&quot;red&quot;</span>)
     # make them a bit bigger
     g.get_vertices().get(<span class="Constant">&quot;Kevin_Bacon_(I)&quot;</span>).get_visualizer().set_size(<span class="Constant">20</span>)
     g.get_vertices().get(<span class="Constant">&quot;Denzel_Washington&quot;</span>).get_visualizer().set_size(<span class="Constant">20</span>)
@@ -69,8 +69,8 @@ def main():
     # and color those links and nodes by following their adjacency Matrix
     <span class="Statement">for</span> k in range(len(actor_movie_data)):
         # from the actor movie data, get and actor-movie pair
-        a = actor_movie_data[k].get_Actor()
-        m = actor_movie_data[k].get_Movie()
+        a = actor_movie_data[k].get_actor()
+        m = actor_movie_data[k].get_movie()
 
         <span class="Statement">if</span> (a == <span class="Constant">&quot;Kevin_Bacon_(I)&quot;</span> and cnt1 &lt; <span class="Constant">15</span>):
             # add vertices <span class="Statement">for</span> this movie and an edge <span class="Statement">for</span> the link
@@ -97,7 +97,7 @@ def main():
     bacon_row = g.get_adjacency_matrix(<span class="Constant">&quot;Kevin_Bacon_(I)&quot;</span>)
     <span class="Statement">for</span> entry, key in bacon_row.items():
         <span class="Statement">if</span>(entry != <span class="Constant">&quot;Denzel Washington&quot;</span> and key != <span class="Constant">0</span>):
-            g.get_visualizer(entry).set_color(<span class="Constant">&quot;green&quot;</span>)
+            g.get_visualizer(entry).set_color(col_name=<span class="Constant">&quot;green&quot;</span>)
 
     # pass the grpah object to BRIDGES
     bridges.set_data_structure(g)

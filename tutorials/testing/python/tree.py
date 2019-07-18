@@ -7,7 +7,15 @@ def main():
     args = sys.argv[1:]
 
     # create the Bridges object, set credentials
-    bridges = Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
+    bridges = Bridges(int(args[0]), args[1], args[2])
+
+    if len(args) > 3:
+        bridges.connector.set_server(args[3])
+
+    #Title and Description
+    bridges.set_title("A General Tree Example")
+    bridges.set_description("A basic tree with seven nodes. Three on one side and three on the other. The root node is set to red with 0.3 opacity. "
+            +	"The other six nodes are neutral color.")
 
     # create tree nodes
     t0 = TreeElement(e = "Hello")

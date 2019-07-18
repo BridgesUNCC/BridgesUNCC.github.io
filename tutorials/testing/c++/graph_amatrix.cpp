@@ -9,11 +9,10 @@ using namespace std;
 using namespace bridges;
 
 int main(int argc, char **argv) {
-    Bridges *bridges =  new Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", 
+	// create Bridges object
+    Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID",
                                 "YOUR_API_KEY");
 
-	bridges->setTitle("Graph Adj Matrix Example: IMDB Data");
-	
 	DataSource *ds = new DataSource;
 	vector<ActorMovieIMDB> actor_list = ds->getActorMovieIMDBData(1813);
 
@@ -28,8 +27,8 @@ int main(int argc, char **argv) {
 	graph.addVertex(washington, "");
 
 	// color the nodes
-	graph.getVertex(bacon)->getVisualizer()->setColor(Color("red"));
-	graph.getVertex(washington)->getVisualizer()->setColor(Color("red"));
+	graph.getVertex(bacon)->setColor("red");
+	graph.getVertex(washington)->setColor("red");
 
 	graph.addEdge(bacon, washington, 1);
 
@@ -49,7 +48,7 @@ int main(int argc, char **argv) {
 			graph.addEdge(m, bacon, 1);
 
 			// make the movie node a bit transparent
-			graph.getVertex(m)->getVisualizer()->setOpacity(0.5f);
+			graph.getVertex(m)->setOpacity(0.5f);
 			cnt1++;
 		}
 		else if ((a == "Denzel_Washington") && (cnt2 < 15)) {
@@ -58,7 +57,7 @@ int main(int argc, char **argv) {
 			graph.addEdge(washington, m, 1);
 			graph.addEdge(m, washington, 1);
 			// make the movie node a bit transparent
-			graph.getVertex(m)->getVisualizer()->setOpacity(0.5f);
+			graph.getVertex(m)->setOpacity(0.5f);
 			cnt2++;
 		}
 	}
@@ -75,13 +74,13 @@ int main(int argc, char **argv) {
 	for (auto& term_vertex : bacon_row) {
 		// color only the neighbors; make sure weight is non-zero
 		if (term_vertex.first != "Denzel_Washington" && term_vertex.second)
-			graph.getVertex(term_vertex.first)->getVisualizer()->setColor(Color("green"));
+			graph.getVertex(term_vertex.first)->setColor("green");
 	}
 
 	// provide BRIDGES the  handle to the tree structure
-	bridges->setDataStructure(&graph);
+	bridges.setDataStructure(&graph);
 	// Visualize the graph
-	bridges->visualize();
+	bridges.visualize();
 
 	return 0;
 }

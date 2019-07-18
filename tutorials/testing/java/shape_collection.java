@@ -1,9 +1,9 @@
-
 import bridges.connect.Bridges;
 import bridges.base.SymbolCollection;
 import bridges.base.Rectangle;
 import bridges.base.Circle;
 import bridges.base.Label;
+import bridges.base.Polyline;
 import bridges.base.Polygon;
 import bridges.base.Color;
 
@@ -12,15 +12,16 @@ public class shape_collection {
 
 	public static void main(String[] args) throws Exception {
 
-		if (args.length < 2)
-			throw new IllegalArgumentException("Need to provide user ID and API key as command-line arguments!");
-		// note: you must fill in with your Bridges credentials
+		//create Bridges object
         Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", 
                                         "YOUR_API_KEY");
-
+		// title, description
 		bridges.setTitle("Symbol Collection");
-		bridges.setDescription("Some Shapes and Symbols");
+		bridges.setDescription("Red square, green circle, magenta horizontal and vertical lines, "
+				+	"and a test label with a purple outline.");
+				
 
+		// create some symbols and add to symbol collection
 		SymbolCollection sc = new SymbolCollection();
 		Rectangle s1 = new Rectangle(-25.0f, 0.0f, 50, 50);
 		s1.setFillColor(new Color("red"));
@@ -32,9 +33,6 @@ public class shape_collection {
 
 
 		Polygon s3 = new Polygon();
-		//	vector<float> pts = {-100.0, 0.0, 100.0, 0.0, 0.0, 0.0, 0.0, -100.0, 0.0, 100.0, 0.0, 0.0};
-		//	s3->setPolygon (pts);
-
 		s3.addPoint(-100, 0);
 		s3.addPoint(100, 0);
 		s3.addPoint(0, 0);
@@ -44,6 +42,14 @@ public class shape_collection {
 		s3.setStrokeColor(new Color("magenta"));
 		sc.addSymbol(s3);
 
+		Polyline s4 = new Polyline();
+			s4.addPoint(-25, -10);
+			s4.addPoint(25, -10);
+			s4.addPoint(0, 50);
+			s4.setStrokeColor(new Color("darkorchid"));
+			s4.setStrokeWidth(2.0f);
+		sc.addSymbol(s4);
+
 		Label l = new Label();
 		l.setLocation(0, 25);
 		l.setFontSize(12);
@@ -52,10 +58,9 @@ public class shape_collection {
 		l.setStrokeColor(new Color("purple"));
 		sc.addSymbol(l);
 
-
 		// set visualizer type
-
 		bridges.setDataStructure(sc);
+
 		// visualize the JSON and Collection
 		bridges.visualize();
 	}

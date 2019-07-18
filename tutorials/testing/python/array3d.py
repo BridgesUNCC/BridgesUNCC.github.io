@@ -6,7 +6,18 @@ def main():
     args = sys.argv[1:]
 
     # create the Bridges object, set credentials
-    bridges = Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
+    bridges = Bridges(int(args[0]), args[1], args[2])
+
+    if len(args) > 3:
+        bridges.connector.set_server(args[3])
+
+    #Title and Description
+    bridges.set_title("Three-Dimensional Array Example")
+    bridges.set_description("A 3D array displaying four rows, four columns, and four slices. "
+                        + "This example uses a for loop in which the header specifies slice count as the iteration variable. "
+                        + "A nested loop then builds a 2D array within that slice. (See Two-Dimensional Array Test) "
+                        + "After initialization, colors of specific elements are changed manually using the "
+                        + " setColor() function.")
 
     #speify array dimensions and create 3D array
     num_slices = 4

@@ -50,8 +50,8 @@ public class graph_maps {
 		}
 
 		// fix a node over Charlotte, NC
-		g.getVertex("node6").getVisualizer().setLocation(-80.8431, 35.2271);
-		g.getVertex("node6").getVisualizer().setColor("red");
+		g.getVertex("node6").setLocation(-80.8431, 35.2271);
+		g.getVertex("node6").setColor("red");
 
 		// visualize Canvas AlbersUSA map
 		bridges.setCoordSystemType("albersusa");
@@ -60,8 +60,8 @@ public class graph_maps {
 		bridges.visualize();
 
 		// fix a node over London
-		g.getVertex("node10").getVisualizer().setLocation(-0.1278, 51.5074);
-		g.getVertex("node10").getVisualizer().setColor("red");
+		g.getVertex("node10").setLocation(-0.1278, 51.5074);
+		g.getVertex("node10").setColor("red");
 
 		// visualize Canvas World map
 		bridges.setCoordSystemType("equirectangular");

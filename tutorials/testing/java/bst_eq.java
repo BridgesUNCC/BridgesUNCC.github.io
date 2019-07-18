@@ -1,4 +1,5 @@
 import bridges.connect.Bridges;
+import bridges.connect.DataSource;
 import bridges.base.BSTElement;
 import bridges.data_src_dependent.EarthquakeUSGS;
 import bridges.data_src_dependent.Tweet;
@@ -14,10 +15,10 @@ public class bst_eq {
 		//create the Bridges object
 		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", 
 										"YOUR_API_KEY");
-		bridges.setTitle("A Binary Search Tree Example with Earthquake Data");
 
 					// Retrieve a list of 10 earthquake  records  from USGS using the BRIDGES API
-		List<EarthquakeUSGS> eqlist = Bridges.getEarthquakeUSGSData(10);
+    DataSource ds = bridges.getDataSource();
+		List<EarthquakeUSGS> eqlist = ds.getEarthquakeUSGSData(10);
 
 					// create BST nodes and insert into a tree
 		BSTElement<Double, EarthquakeUSGS> root = null; 
@@ -33,7 +34,7 @@ public class bst_eq {
 
 
 								// set some visual attributes
-		root.getVisualizer().setColor("red");
+		root.setColor("red");
 
              					//set visualizer type
 		bridges.setDataStructure(root);

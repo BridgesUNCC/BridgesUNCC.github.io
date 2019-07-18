@@ -2,16 +2,13 @@
 #include "Bridges.h"
 #include "TreeElement.h"
 
-using namespace std;
 using namespace bridges;
+using std::string;
 
 int main(int argc, char **argv) {
-
-    Bridges *bridges =  new Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", 
+	// create Bridges object
+    Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID",
                                 "YOUR_API_KEY");
-
-
-	bridges->setTitle("A General Tree Example");
 
 	TreeElement<string> *t0 = new TreeElement<string>("Hello", "Hello");
 	TreeElement<string> *t2 = new TreeElement<string>("This", "This");
@@ -20,17 +17,6 @@ int main(int argc, char **argv) {
 	TreeElement<string> *t5 =  new TreeElement<string>("generic", "generic");
 	TreeElement<string> *t6 =  new TreeElement<string>("Tree", "Tree");
 	TreeElement<string> *t7 =  new TreeElement<string>("Representation", "Representation");
-
-	// put in labels for each node; we simply use integers
-
-
-	t0->setLabel(t0->getValue());
-	t2->setLabel(t2->getValue());
-	t3->setLabel(t3->getValue());
-	t4->setLabel(t4->getValue());
-	t5->setLabel(t5->getValue());
-	t6->setLabel(t6->getValue());
-	t7->setLabel(t7->getValue());
 
 	// add links to children
 
@@ -43,14 +29,21 @@ int main(int argc, char **argv) {
 
 	// set some visual attributes
 
-	t0->getVisualizer()->setColor(Color("red"));
-	t0->getVisualizer()->setOpacity(0.3f);
+	t0->setColor("red");
+	t0->setOpacity(0.3f);
 
-	bridges->setTitle("A General Tree Example");
+	// link colors
+	t0->getLinkVisualizer(t2)->setColor("green");
+	t0->getLinkVisualizer(t2)->setThickness(2.0f);
+	t0->getLinkVisualizer(t3)->setColor("blue");
+	t0->getLinkVisualizer(t3)->setThickness(2.0f);
+	t0->getLinkVisualizer(t4)->setColor("orange");
+	t0->getLinkVisualizer(t4)->setThickness(2.0f);
+
 	// provide BRIDGES the  handle to the tree structure
-	bridges->setDataStructure(t0);
+	bridges.setDataStructure(t0);
 
-	bridges->visualize();
+	bridges.visualize();
 
 	return 0;
 }

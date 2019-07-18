@@ -7,7 +7,17 @@ def main():
     args = sys.argv[1:]
 
     # create the Bridges object, set credentials
-    bridges = Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
+    bridges = Bridges(int(args[0]), args[1], args[2])
+
+    if len(args) > 3:
+        bridges.connector.set_server(args[3])
+
+    #Title and Description
+    bridges.set_title("A Circle Singly Linked List Example")
+    bridges.set_description("This example shows five nodes. Each node is linked only to its child node. "
+            +	"Colors are: A green node with a yellow link size 12, a blue node with a magenta link size 9, "
+            +	"a magenta node with a blue link size 9, a red node with a magenta link size 11, and a yellow node with "
+            +	"a red link size 15.")
 
     students = []
 
@@ -75,9 +85,9 @@ def main():
     for i in range(len(students)):
 
         current.set_label(current.get_value().getName())
-        current.get_visualizer().set_color(current.get_value().getLikeColor())
+        current.get_visualizer().set_color(col_name=current.get_value().getLikeColor())
 
-        current.get_link_visualizer(current.get_next()).set_color(current.get_value().getDislikeColor())
+        current.get_link_visualizer(current.get_next()).set_color(col_name=current.get_value().getDislikeColor())
 
         current.get_link_visualizer(current.get_next()).set_thickness(current.get_value().getCreditHours() *.03)
 

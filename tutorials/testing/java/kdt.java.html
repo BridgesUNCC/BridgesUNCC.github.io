@@ -2,9 +2,9 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>~/graphics/bridges/website/Hello_World_Tutorials/testing/java/kdt.java.html</title>
-<meta name="Generator" content="Vim/8.0">
-<meta name="plugin-version" content="vim7.4_v2">
+<title>~/work/bridges/BridgesUNCC.github.io/tutorials/testing/java/kdt.java.html</title>
+<meta name="Generator" content="Vim/8.1">
+<meta name="plugin-version" content="vim8.1_v1">
 <meta name="syntax" content="c">
 <meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
 <meta name="colorscheme" content="none">
@@ -18,12 +18,6 @@ body { font-family: monospace; color: #000000; background-color: #ffffff; }
 .Type { color: #008000; text-decoration: underline; }
 -->
 </style>
-
-<script type='text/javascript'>
-<!--
-
--->
-</script>
 </head>
 <body>
 <pre id='vimCodeElement'>
@@ -40,6 +34,8 @@ public class kdt {
                                         <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 
 		bridges.setTitle(<span class="Constant">&quot;A Kd Tree Example&quot;</span>);
+		bridges.setDescription(<span class="Constant">&quot;A three-level tree with partitioners cycling between X and Y.&quot;</span>
+                        + <span class="Constant">&quot; The root node color is set to red while the leaf nodes that represent code letters are set to orange.&quot;</span>);
 
 		<span class="Comment">// create Kd Tree nodes</span>
 		KdTreeElement&lt;Integer, String&gt; t0 = new KdTreeElement&lt;Integer, String&gt;(<span class="Constant">50</span>, <span class="Constant">0</span>);
@@ -59,6 +55,7 @@ public class kdt {
 		t2.setLeft(t5);
 		t2.setRight(t6);
 
+		<span class="Comment">// set partitioning dimensions</span>
 		t0.setLabel(<span class="Constant">&quot;X&quot;</span>);
 		t1.setLabel(<span class="Constant">&quot;Y&quot;</span>);
 		t2.setLabel(<span class="Constant">&quot;Y&quot;</span>);
@@ -67,12 +64,13 @@ public class kdt {
 		t5.setLabel(<span class="Constant">&quot;X&quot;</span>);
 		t6.setLabel(<span class="Constant">&quot;X&quot;</span>);
 
-		t0.getVisualizer().setColor(<span class="Constant">&quot;red&quot;</span>);
+		t0.setColor(<span class="Constant">&quot;red&quot;</span>);
+
 		<span class="Comment">// color the leaf nodes that represent the code letters</span>
-		t1.getVisualizer().setColor(<span class="Constant">&quot;orange&quot;</span>);
-		t4.getVisualizer().setColor(<span class="Constant">&quot;orange&quot;</span>);
-		t5.getVisualizer().setColor(<span class="Constant">&quot;orange&quot;</span>);
-		t6.getVisualizer().setColor(<span class="Constant">&quot;orange&quot;</span>);
+		t1.setColor(<span class="Constant">&quot;orange&quot;</span>);
+		t4.setColor(<span class="Constant">&quot;orange&quot;</span>);
+		t5.setColor(<span class="Constant">&quot;orange&quot;</span>);
+		t6.setColor(<span class="Constant">&quot;orange&quot;</span>);
 
 		<span class="Comment">// provide BRIDGES the  handle to the tree structure</span>
 		bridges.setDataStructure(t0);

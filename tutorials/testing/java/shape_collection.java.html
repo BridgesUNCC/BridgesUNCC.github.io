@@ -2,9 +2,9 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>~/graphics/bridges/website/Hello_World_Tutorials/testing/java/shape_collection.java.html</title>
-<meta name="Generator" content="Vim/8.0">
-<meta name="plugin-version" content="vim7.4_v2">
+<title>~/work/bridges/BridgesUNCC.github.io/tutorials/testing/java/shape_collection.java.html</title>
+<meta name="Generator" content="Vim/8.1">
+<meta name="plugin-version" content="vim8.1_v1">
 <meta name="syntax" content="c">
 <meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
 <meta name="colorscheme" content="none">
@@ -14,26 +14,19 @@ pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-
 body { font-family: monospace; color: #000000; background-color: #ffffff; }
 * { font-size: 1em; }
 .Constant { color: #0000c0; text-decoration: underline; }
-.Statement { color: #008080; font-weight: bold; }
 .Comment { color: #c00000; font-weight: bold; }
 .Type { color: #008000; text-decoration: underline; }
 -->
 </style>
-
-<script type='text/javascript'>
-<!--
-
--->
-</script>
 </head>
 <body>
 <pre id='vimCodeElement'>
-
 import bridges.connect.Bridges;
 import bridges.base.SymbolCollection;
 import bridges.base.Rectangle;
 import bridges.base.Circle;
 import bridges.base.Label;
+import bridges.base.Polyline;
 import bridges.base.Polygon;
 import bridges.base.Color;
 
@@ -42,15 +35,16 @@ public class shape_collection {
 
 	public <span class="Type">static</span> <span class="Type">void</span> main(String[] args) throws Exception {
 
-		<span class="Statement">if</span> (args.length &lt; <span class="Constant">2</span>)
-			throw new IllegalArgumentException(<span class="Constant">&quot;Need to provide user ID and API key as command-line arguments!&quot;</span>);
-		<span class="Comment">// note: you must fill in with your Bridges credentials</span>
+		<span class="Comment">//create Bridges object</span>
         Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
                                         <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
-
+		<span class="Comment">// title, description</span>
 		bridges.setTitle(<span class="Constant">&quot;Symbol Collection&quot;</span>);
-		bridges.setDescription(<span class="Constant">&quot;Some Shapes and Symbols&quot;</span>);
+		bridges.setDescription(<span class="Constant">&quot;Red square, green circle, magenta horizontal and vertical lines, &quot;</span>
+				+	<span class="Constant">&quot;and a test label with a purple outline.&quot;</span>);
 
+
+		<span class="Comment">// create some symbols and add to symbol collection</span>
 		SymbolCollection sc = new SymbolCollection();
 		Rectangle s1 = new Rectangle(-<span class="Constant">25.0f</span>, <span class="Constant">0.0f</span>, <span class="Constant">50</span>, <span class="Constant">50</span>);
 		s1.setFillColor(new Color(<span class="Constant">&quot;red&quot;</span>));
@@ -62,9 +56,6 @@ public class shape_collection {
 
 
 		Polygon s3 = new Polygon();
-		<span class="Comment">//	vector&lt;float&gt; pts = {-100.0, 0.0, 100.0, 0.0, 0.0, 0.0, 0.0, -100.0, 0.0, 100.0, 0.0, 0.0};</span>
-		<span class="Comment">//	s3-&gt;setPolygon (pts);</span>
-
 		s3.addPoint(-<span class="Constant">100</span>, <span class="Constant">0</span>);
 		s3.addPoint(<span class="Constant">100</span>, <span class="Constant">0</span>);
 		s3.addPoint(<span class="Constant">0</span>, <span class="Constant">0</span>);
@@ -74,6 +65,14 @@ public class shape_collection {
 		s3.setStrokeColor(new Color(<span class="Constant">&quot;magenta&quot;</span>));
 		sc.addSymbol(s3);
 
+		Polyline s4 = new Polyline();
+			s4.addPoint(-<span class="Constant">25</span>, -<span class="Constant">10</span>);
+			s4.addPoint(<span class="Constant">25</span>, -<span class="Constant">10</span>);
+			s4.addPoint(<span class="Constant">0</span>, <span class="Constant">50</span>);
+			s4.setStrokeColor(new Color(<span class="Constant">&quot;darkorchid&quot;</span>));
+			s4.setStrokeWidth(<span class="Constant">2.0f</span>);
+		sc.addSymbol(s4);
+
 		Label l = new Label();
 		l.setLocation(<span class="Constant">0</span>, <span class="Constant">25</span>);
 		l.setFontSize(<span class="Constant">12</span>);
@@ -82,10 +81,9 @@ public class shape_collection {
 		l.setStrokeColor(new Color(<span class="Constant">&quot;purple&quot;</span>));
 		sc.addSymbol(l);
 
-
 		<span class="Comment">// set visualizer type</span>
-
 		bridges.setDataStructure(sc);
+
 		<span class="Comment">// visualize the JSON and Collection</span>
 		bridges.visualize();
 	}

@@ -2,9 +2,9 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>~/graphics/bridges/website/Hello_World_Tutorials/testing/python/circ_dllist.py.html</title>
-<meta name="Generator" content="Vim/8.0">
-<meta name="plugin-version" content="vim7.4_v2">
+<title>~/work/bridges/BridgesUNCC.github.io/tutorials/testing/python/circ_dllist.py.html</title>
+<meta name="Generator" content="Vim/8.1">
+<meta name="plugin-version" content="vim8.1_v1">
 <meta name="syntax" content="c">
 <meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
 <meta name="colorscheme" content="none">
@@ -15,20 +15,15 @@ body { font-family: monospace; color: #000000; background-color: #ffffff; }
 * { font-size: 1em; }
 .Constant { color: #0000c0; text-decoration: underline; }
 .Statement { color: #008080; font-weight: bold; }
+.Type { color: #008000; text-decoration: underline; }
 -->
 </style>
-
-<script type='text/javascript'>
-<!--
-
--->
-</script>
 </head>
 <body>
 <pre id='vimCodeElement'>
 from bridges.bridges import *
 from bridges.circ_dl_element import *
-from python.web_tutorial.StudentInfo import *
+from StudentInfo import *
 import sys
 
 #helper funtction
@@ -48,7 +43,16 @@ def main():
     args = sys.argv[<span class="Constant">1</span>:]
 
     # create the Bridges object, set credentials
-    bridges = Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+    bridges = Bridges(<span class="Type">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
+
+    <span class="Statement">if</span> len(args) &gt; <span class="Constant">3</span>:
+        bridges.connector.set_server(args[<span class="Constant">3</span>])
+
+    #Title and Description
+    bridges.set_title(<span class="Constant">&quot;A Circular Doubly Linked List Example&quot;</span>)
+    bridges.set_description(<span class="Constant">&quot;This example shows five nodes each linked to their parent and child node. &quot;</span>
+            +	<span class="Constant">&quot;Colors are: Magenta node with blue links size 9, Red node with magenta links size 11, blue node with magenta links size 9, &quot;</span>
+            +	<span class="Constant">&quot;yellow node with red links size 15, and green node with yellow links size 12.&quot;</span>)
 
     students = []
 
@@ -107,12 +111,12 @@ def main():
     # add visual attributes
     <span class="Statement">for</span> i in range(len(students)):
         current.set_label(current.get_value().getName())
-        current.get_visualizer().set_color(current.get_value().getLikeColor())
+        current.get_visualizer().set_color(col_name=current.get_value().getLikeColor())
 
-        current.get_link_visualizer(current.get_next()).set_color(current.get_value().getDislikeColor())
+        current.get_link_visualizer(current.get_next()).set_color(col_name=current.get_value().getDislikeColor())
         current.get_link_visualizer(current.get_next()).set_thickness(current.get_value().getCreditHours()*<span class="Constant">.2</span>)
 
-        current.get_link_visualizer(current.get_prev()).set_color(current.get_value().getDislikeColor())
+        current.get_link_visualizer(current.get_prev()).set_color(col_name=current.get_value().getDislikeColor())
         current.get_link_visualizer(current.get_prev()).set_thickness(current.get_value().getCreditHours()*<span class="Constant">.2</span>)
 
         current = current.get_next()

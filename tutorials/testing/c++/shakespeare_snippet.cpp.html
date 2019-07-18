@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/work/bridges/BridgesUNCC.github.io/tutorials/testing/c++/shakespeare_snippet.cpp.html</title>
+<meta name="Generator" content="Vim/8.1">
+<meta name="plugin-version" content="vim8.1_v1">
+<meta name="syntax" content="c">
+<meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="none">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Constant { color: #0000c0; text-decoration: underline; }
+.Statement { color: #008080; font-weight: bold; }
+.PreProc { color: #c000c0; text-decoration: underline; }
+.Type { color: #008000; text-decoration: underline; }
+.Comment { color: #c00000; font-weight: bold; }
+-->
+</style>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
+
+using namespace std;
+
+<span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;DataSource.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;data_src/Shakespeare.h&quot;</span>
+
+using namespace bridges;
+
+
+<span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
+
+	<span class="Comment">// create Bridges object</span>
+    Bridges bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+                                <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+								<span class="Comment">// read the earth quake  data and build the BST</span>
+
+	bridges.setTitle(<span class="Constant">&quot;Accessing Shakespeare Plays, Poems, Sonnets Dataset&quot;</span>);
+
+						<span class="Comment">// create a data source object</span>
+	DataSource ds (&amp;bridges);
+
+						<span class="Comment">// get the data</span>
+    vector&lt;Shakespeare&gt; shakespeare_data = ds.getShakespeareData();
+
+						<span class="Comment">// print the first record</span>
+	cout &lt;&lt; endl &lt;&lt; <span class="Constant">&quot;Shakespeare Data:&quot;</span> &lt;&lt;  endl &lt;&lt;
+		<span class="Constant">&quot;Title: &quot;</span> &lt;&lt; shakespeare_data[<span class="Constant">0</span>].getTitle()  &lt;&lt;  endl &lt;&lt;
+		<span class="Constant">&quot;Type: &quot;</span> &lt;&lt; shakespeare_data[<span class="Constant">0</span>].getType() &lt;&lt;  endl &lt;&lt;
+		<span class="Constant">&quot;Text: &quot;</span> &lt;&lt; shakespeare_data[<span class="Constant">0</span>].getText() &lt;&lt; endl;
+
+
+	<span class="Statement">return</span> <span class="Constant">0</span>;
+}
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

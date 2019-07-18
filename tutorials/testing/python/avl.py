@@ -6,7 +6,17 @@ def main():
     args = sys.argv[1:]
 
     # create the Bridges object, set credentials
-    bridges = Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
+    bridges = Bridges(int(args[0]), args[1], args[2])
+
+    if len(args) > 3:
+        bridges.connector.set_server(args[3])
+
+    #Title and Description
+    bridges.set_title("AVL Tree Example")
+    bridges.set_description("This AVL tree has six elements. "
+                    + "The root is magenta color and has three nodes on its left "
+                    + "and two nodes on its right. The values from lower left to the root, 20, 40, 30, 50. "
+                    + "And from lower right to root, 90, 70, 50.")      
 
     # create an AVL tree elements
     avl_root = AVLTreeElement(50, "Hello")
