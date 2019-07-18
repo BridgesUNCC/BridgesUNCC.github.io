@@ -8,9 +8,38 @@
 }
 
 .assignment {
+    display: grid;
+    
+    margin-top: 1em;
     margin-left: 3em;
+    margin-bottom: em;
+
+    background-color: lightgray;
+    justify-content: start;
+
+    border-radius: 1em;
+    border: 2px solid blue;
+}
+
+.assignmentmain {
+    grid-column: 2;
+    place-self: top stretch;
+    margin-left: 2em;
 }
 
 .assignmentname {
     font-weight: bold;
+
 }
+
+.assignmenticon img {
+    width: 128px;
+}
+
+.assignmenticon {
+    grid-column: 1;
+    margin-top: .5em;
+    margin-left: .5em;
+    margin-bottom: .5em;
+}
+

@@ -147,6 +147,13 @@ addassignment() {
     
     #output HTML
     echo '<div class="assignment">'  >> ${HTMLOUTPUT}
+
+    #if there is an icon, use it
+    if [ -f ${targetdir}/figures/icon.png ] ; then
+	echo "<div class=\"assignmenticon\"><img src=\"assignments/${targetdir}/figures/icon.png\" /></div>" >> ${HTMLOUTPUT}
+    fi
+
+    echo '<div class="assignmentmain">' >> ${HTMLOUTPUT}
     echo '<p>' >> ${HTMLOUTPUT}
     echo '<div class="assignmentname">' ${prettyname}. '</div>' >> ${HTMLOUTPUT} #name
     echo '<div class="assignmentshortdesc">' ${shortdescription} '</div>' >> ${HTMLOUTPUT} #shortdesck
@@ -172,6 +179,7 @@ addassignment() {
 	echo "<a href=\"assignments/${targetdir}/python.zip\">[Python scaffold]</a> "  >> ${HTMLOUTPUT}
     fi
     echo '</p>' >> ${HTMLOUTPUT}
+    echo '</div>' >> ${HTMLOUTPUT}
     echo '</div>' >> ${HTMLOUTPUT}
     
 }
