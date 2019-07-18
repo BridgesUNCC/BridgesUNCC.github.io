@@ -12,12 +12,14 @@ using namespace bridges;
 // We will build a checker grid using two different colors
 
 int main(int argc, char **argv) {
-    Bridges *bridges =  new Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", 
+	// create Bridges object
+    Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID",
                                 "YOUR_API_KEY");
 
-	// set title for visualization
-	bridges->setTitle("A Color Grid Example");
-
+	// set title, description 
+	bridges.setTitle("A CheckerBoard Example Using Grid Type");
+	bridges.setDescription("This is an example of the color grid with height and width 10. "
+		   "This example alternates between blue and red starting with red at the top left corner of the grid.");
 	int width = 200, height = 200;
 
 	ColorGrid *cg  = new ColorGrid(width, height, Color("red"));
@@ -52,9 +54,9 @@ int main(int argc, char **argv) {
 					cg->set(x, y, Color(col));
 		}
 
-	bridges->setDataStructure(cg);
+	bridges.setDataStructure(cg);
 
-	bridges->visualize();
+	bridges.visualize();
 
 	return 0;
 }

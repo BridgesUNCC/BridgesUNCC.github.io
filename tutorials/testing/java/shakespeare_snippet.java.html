@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/work/bridges/BridgesUNCC.github.io/tutorials/testing/java/shakespeare_snippet.java.html</title>
+<meta name="Generator" content="Vim/8.1">
+<meta name="plugin-version" content="vim8.1_v1">
+<meta name="syntax" content="c">
+<meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="none">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Constant { color: #0000c0; text-decoration: underline; }
+.Comment { color: #c00000; font-weight: bold; }
+.Type { color: #008000; text-decoration: underline; }
+-->
+</style>
+</head>
+<body>
+<pre id='vimCodeElement'>
+import java.util.List;
+import java.util.Random;
+import bridges.connect.Bridges;
+import bridges.connect.DataSource;
+import bridges.data_src_dependent.Shakespeare;
+
+public class shakespeare_snippet {
+	public <span class="Type">static</span> <span class="Type">void</span> main(String[] args) throws Exception {
+
+		<span class="Comment">//create the Bridges object</span>
+		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+		<span class="Comment">/*</span><span class="Comment"> Get a List of Shakespeare objects from Bridges </span><span class="Comment">*/</span>
+    	DataSource ds = bridges.getDataSource();
+		List&lt;Shakespeare&gt; mylist = ds.getShakespeareData();
+
+		<span class="Comment">/*</span><span class="Comment"> Inspect a random Shakespeare object </span><span class="Comment">*/</span>
+		Shakespeare work1 = mylist.get((new Random()).nextInt(mylist.size()));
+		System.out.println(work1.getTitle());
+		System.out.println(work1.getType());
+		System.out.println(work1.getText().substring(<span class="Constant">0</span>, Math.min(<span class="Constant">100</span>, work1.getText().length())) + <span class="Constant">&quot;...&quot;</span>);
+	}
+}
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

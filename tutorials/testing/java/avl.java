@@ -8,14 +8,21 @@ public class avl {
 		//create the Bridges object
 		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", 
 										"YOUR_API_KEY");
+		// title, description
+		bridges.setTitle("AVL Tree Example");
+        bridges.setDescription("This AVL tree has six elements. "
+                        + "The root is magenta color and has three nodes on its left "
+                        + "and two nodes on its right. The values from lower left to the root, 20, 40, 30, 50. "
+						+ "And from lower right to root, 90, 70, 50.");
+		
 		//create  an  AVL tree elements
-		AVLTreeElement<Integer, String> avl_root = new AVLTreeElement<Integer, String>(50,
-			"Hello");
+		AVLTreeElement<Integer, String> avl_root = new AVLTreeElement<Integer, String>(50, "Hello");
 		AVLTreeElement<Integer, String> avl_2 = new AVLTreeElement<Integer, String>(30, "This");
 		AVLTreeElement<Integer, String> avl_3 = new AVLTreeElement<Integer, String>(70, "is");
 		AVLTreeElement<Integer, String> avl_4 = new AVLTreeElement<Integer, String>(20, "an");
 		AVLTreeElement<Integer, String> avl_5 = new AVLTreeElement<Integer, String>(40, "AVL");
 		AVLTreeElement<Integer, String> avl_6 = new AVLTreeElement<Integer, String>(90, "Tree");
+
 		// put in the balance factors - done manually  here
 		// for illustration, but in a real project, the user will
 		// implement this as part of the insert/delete
@@ -33,9 +40,10 @@ public class avl {
 		avl_2.setLeft(avl_4);
 		avl_2.setRight(avl_5);
 		avl_3.setRight(avl_6);
+
 		// set some attributes
-		avl_root.getVisualizer().setColor("magenta");
-		avl_root.getVisualizer().setOpacity(0.8f);
+		avl_root.setColor("magenta");
+		avl_root.setOpacity(0.8f);
 
 		//set visualizer type
 		bridges.setDataStructure(avl_root);

@@ -5,126 +5,59 @@
 
 #include "Bridges.h"
 #include "CircDLelement.h"
-#include "StudentInfo.h"
+#include <string>
 
 
 using namespace bridges;
+using std::string;
 
-// helper function
-CircDLelement<StudentInfo> *insertFront(
-	CircDLelement<StudentInfo> *tailElement,
-	CircDLelement<StudentInfo> *newElement);
 
 int main(int argc, char **argv) {
-    Bridges *bridges =  new Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", 
+	// create Bridges object
+    Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID",
                                 "YOUR_API_KEY");
 
+	CircDLelement<string>  *el0 = new CircDLelement<string> ("Gretel Chaney", "Gretel Chaney");
+    CircDLelement<string>  *el1 = new CircDLelement<string> ("Lamont Kyler", "Lamont Kyler");
+    CircDLelement<string>  *el2 = new CircDLelement<string> ("Gladys Serino", "Gladys Serino");
+    CircDLelement<string>  *el3 = new CircDLelement<string> ("Karol Soderman", "Karol Soderman");
+    CircDLelement<string>  *el4 = new CircDLelement<string> ("Starr McGinn", "Starr McGinn");
+	
+	// create the list
+	el0->setNext(el1); el1->setPrev(el0);
+	el1->setNext(el2); el2->setPrev(el1);
+	el2->setNext(el3); el3->setPrev(el2);
+	el3->setNext(el4); el4->setPrev(el3);
 
+	// add the links to join the last and first nodes
+	// must set the next and prev links
+	el4->setNext(el0); el0->setPrev(el4);
 
-	bridges->setTitle("An Example Circular Doubly Linked List");
+	// add  element colors
+	// set colors for list elements - see the Color class for supported colors
+    el0->setColor("red");
+    el2->setColor("aliceblue");
 
-	// create the linked list elements with
-	// student data
-	CircDLelement<StudentInfo> *students[] = {
-		new CircDLelement<StudentInfo>(
-			StudentInfo(
-				"00000000000",
-				"Gretel Chaney",
-				"CS",
-				"g.chaney@generated.com",
-				"magenta",
-				"blue",
-				9.0
-			), ""),
-		new CircDLelement<StudentInfo>(
-			StudentInfo(
-				"00000000001",
-				"Karol Soderman",
-				"SIS",
-				"k.soderman@generated.com",
-				"magenta",
-				"red",
-				11.0
-			), ""),
-		new CircDLelement<StudentInfo>(
-			StudentInfo(
-				"00000000002",
-				"Lamont Kyler",
-				"BIO",
-				"l.kyler@generated.com",
-				"yellow",
-				"green",
-				12.0
-			), ""),
-		new CircDLelement<StudentInfo>(
-			StudentInfo(
-				"00000000003",
-				"Gladys Serino",
-				"CS",
-				"g.serino@generated.com",
-				"blue",
-				"magenta",
-				9.0
-			), ""),
-		new CircDLelement<StudentInfo>(
-			StudentInfo(
-				"00000000004",
-				"Starr Mcginn",
-				"CS",
-				"s.mcginn@generated.com",
-				"red",
-				"yellow",
-				15.0
-			), "")
-	};
+    // color the links - must specify a valid terminating element
+    el0->getLinkVisualizer(el1)->setColor("green");
+	// color the reverse link
+    el1->getLinkVisualizer(el0)->setColor("magenta");
 
-	CircDLelement<StudentInfo> *head =  nullptr;
+    // adjust link thickness
+    el3->getLinkVisualizer(el4)->setThickness(3.0f);
+    el4->getLinkVisualizer(el3)->setThickness(6.0f);
 
-	int num_students = 5;
-	for (int i = 0; i < num_students; i++) {
-		if (i)
-			head = insertFront(head, students[i]);
-		else
-			head = students[i];
-	}
+	// set link label
+	el2->getLinkVisualizer(el3)->setLabel("Link Label");
 
-	//  add visual attributes
-	CircDLelement<StudentInfo> *current = head;
-	StudentInfo si;
-	do {
-		si = current->getValue();
-		current->setLabel(si.getStudentLabel());
-		current->getVisualizer()->setColor(si.getFavoriteColor());
+    // set node transparency
+    el4->setOpacity (0.5f);
 
-		current->getLinkVisualizer(current->getNext())->setColor(si.getDislikeColor());
-		current->getLinkVisualizer(current->getNext())->setThickness(si.getStudentCreditHours()*.5);
+    // set node size
+    el0->setSize (20);
 
-		current->getLinkVisualizer(current->getPrev())->setColor(si.getDislikeColor());
-		current->getLinkVisualizer(current->getPrev())->setThickness(si.getStudentCreditHours()*.5);
-
-		current = current->getNext();
-	}  while (current != head);
-
-	// set data structure to point to head
-	bridges->setDataStructure(head);
-	// visualize the circular list
-	bridges->visualize();
+	bridges.setDataStructure(el0);
+	bridges.visualize();
 
 	return 0;
 }
-
-CircDLelement<StudentInfo> *insertFront(
-	CircDLelement<StudentInfo> *tailElement,
-	CircDLelement<StudentInfo> *newElement) {
-
-	CircDLelement<StudentInfo> *tailNextElement = tailElement->getNext();
-
-	newElement->setNext(tailNextElement);
-	newElement->setPrev(tailElement);
-
-	tailNextElement->setPrev(newElement);
-	tailElement->setNext(newElement);
-
-	return tailElement;
-}
-

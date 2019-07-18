@@ -32,9 +32,9 @@ public class mixed_assignments {
 		t0.addChild(t3);
 
 		// set some visual attributes
-		t0.getVisualizer().setColor("red");
-		t0.getVisualizer().setShape("diamond");
-		t0.getVisualizer().setOpacity(0.5f);
+		t0.setColor("red");
+		t0.setShape("diamond");
+		t0.setOpacity(0.5f);
 
 		// set data structure and visualize
 		bridges.setTitle("A multiple subassignment example");
@@ -77,7 +77,7 @@ public class mixed_assignments {
 		}
 
 		// set a color
-		my_array.getElement(0, 0).getVisualizer().setColor("purple");
+		my_array.getElement(0, 0).setColor("purple");
 
 		// set data structure and visualize
 		bridges.setTitle("A 2D Array");

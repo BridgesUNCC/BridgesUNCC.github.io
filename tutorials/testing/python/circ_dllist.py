@@ -1,6 +1,6 @@
 from bridges.bridges import *
 from bridges.circ_dl_element import *
-from python.web_tutorial.StudentInfo import *
+from StudentInfo import *
 import sys
 
 #helper funtction
@@ -20,7 +20,16 @@ def main():
     args = sys.argv[1:]
 
     # create the Bridges object, set credentials
-    bridges = Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
+    bridges = Bridges(int(args[0]), args[1], args[2])
+
+    if len(args) > 3:
+        bridges.connector.set_server(args[3])
+
+    #Title and Description
+    bridges.set_title("A Circular Doubly Linked List Example")
+    bridges.set_description("This example shows five nodes each linked to their parent and child node. "
+            +	"Colors are: Magenta node with blue links size 9, Red node with magenta links size 11, blue node with magenta links size 9, "
+            +	"yellow node with red links size 15, and green node with yellow links size 12.")
 
     students = []
 
@@ -79,12 +88,12 @@ def main():
     # add visual attributes
     for i in range(len(students)):
         current.set_label(current.get_value().getName())
-        current.get_visualizer().set_color(current.get_value().getLikeColor())
+        current.get_visualizer().set_color(col_name=current.get_value().getLikeColor())
 
-        current.get_link_visualizer(current.get_next()).set_color(current.get_value().getDislikeColor())
+        current.get_link_visualizer(current.get_next()).set_color(col_name=current.get_value().getDislikeColor())
         current.get_link_visualizer(current.get_next()).set_thickness(current.get_value().getCreditHours()*.2)
 
-        current.get_link_visualizer(current.get_prev()).set_color(current.get_value().getDislikeColor())
+        current.get_link_visualizer(current.get_prev()).set_color(col_name=current.get_value().getDislikeColor())
         current.get_link_visualizer(current.get_prev()).set_thickness(current.get_value().getCreditHours()*.2)
 
         current = current.get_next()

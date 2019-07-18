@@ -5,96 +5,50 @@ public class cdllist {
 
 	public static void main(String[] args) throws Exception {
 
-
+		// create Bridges object
 		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", 
 										"YOUR_API_KEY");
+		bridges.setTitle("A Circular Doubly Linked List Example");
 
-		StudentInfo[] students = {
-			new StudentInfo(
-				"00000000000",
-				"Gretel Chaney",
-				"CS",
-				"g.chaney@generated.com",
-				"magenta",
-				"blue",
-				9.0
-			),
-			new StudentInfo(
-				"00000000001",
-				"Karol Soderman",
-				"SIS",
-				"k.soderman@generated.com",
-				"magenta",
-				"red",
-				11.0
-			),
-			new StudentInfo(
-				"00000000002",
-				"Lamont Kyler",
-				"BIO",
-				"l.kyler@generated.com",
-				"yellow",
-				"green",
-				12.0
-			),
-			new StudentInfo(
-				"00000000003",
-				"Gladys Serino",
-				"CS", "g.serino@generated.com",
-				"blue",
-				"magenta",
-				9.0
-			),
-			new StudentInfo("00000000004",
-				"Starr Mcginn",
-				"CS",
-				"s.mcginn@generated.com",
-				"red",
-				"yellow",
-				15.0)
-		};
 
-		//initializing all student elements
-		CircDLelement<StudentInfo> head = null;
+		// create the linked list elements with student names
+		CircDLelement<String>  el0 = new CircDLelement<String> ("Gretel Chaney", "Gretel Chaney");
+		CircDLelement<String>  el1 = new CircDLelement<String> ("Lamont Kyler", "Lamont Kyler");
+		CircDLelement<String>  el2 = new CircDLelement<String> ("Gladys Serino", "Gladys Serino");
+		CircDLelement<String>  el3 = new CircDLelement<String> ("Karol Soderman", "Karol Soderman");
+		CircDLelement<String>  el4 = new CircDLelement<String> ("Starr McGinn", "Starr McGinn");
+	 
+		//  link the elements
+		el0.setNext(el1); el1.setPrev(el0);
+		el1.setNext(el2); el2.setPrev(el1);
+		el2.setNext(el3); el3.setPrev(el2);
+		el3.setNext(el4); el4.setPrev(el3);
 
-		for (int i = 0; i < students.length; i++) {
-			if (i > 0)
-				head = insertFront(head, new CircDLelement<StudentInfo>("", students[i]));
-			else
-				head = new CircDLelement<StudentInfo>("", students[i]);
-		}
+		// link the last element to the first
+		el4.setNext (el0);
+		el0.setPrev (el4);
 
-		CircDLelement<StudentInfo> current = head;
-		// add visual attributes
-		do {
-			current.setLabel(current.getValue().getStudentLabel());
-			current.getVisualizer().setColor(current.getValue().getFavoriteColor());
+		// set colors for list elements - see the Color class for supported colors
+		el0.setColor("red");
+		el2.setColor("aliceblue");
 
-			current.getLinkVisualizer(current.getNext()).setColor(current.getValue().getDislikeColor());
-			current.getLinkVisualizer(current.getNext()).setThickness(current.getValue().getStudentCreditHours() * .2);
+		// color the links - must specify a valid terminating element
+		el0.getLinkVisualizer(el1).setColor("green");
+		el3.getLinkVisualizer(el4).setColor("magenta");
 
-			current.getLinkVisualizer(current.getPrev()).setColor(current.getValue().getDislikeColor());
-			current.getLinkVisualizer(current.getPrev()).setThickness(current.getValue().getStudentCreditHours() * .2);
+		// adjust link thickness
+		el0.getLinkVisualizer(el1).setThickness(2.0f);
 
-			current = current.getNext();
-		}	while (current != head);
+		// set node transparency
+		el4.setOpacity (0.5f);
 
-		bridges.setDataStructure(head);
+		// set node size
+		el0.setSize (20);
 
+		// set link label
+		el2.getLinkVisualizer(el3).setLabel("Gladys_to_Karol");
+
+		bridges.setDataStructure(el0);
 		bridges.visualize();
-	}
-
-	public static CircDLelement<StudentInfo> insertFront(
-		CircDLelement<StudentInfo> tailElement,
-		CircDLelement<StudentInfo> newElement) {
-		CircDLelement<StudentInfo> tailNextElement = tailElement.getNext();
-
-		newElement.setNext(tailNextElement);
-		newElement.setPrev(tailElement);
-
-		tailNextElement.setPrev(newElement);
-		tailElement.setNext(newElement);
-
-		return tailElement;
 	}
 }

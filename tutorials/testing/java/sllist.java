@@ -12,96 +12,46 @@ public class sllist {
 		// note: you must fill in with your Bridges credentials
         Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", 
                                         "YOUR_API_KEY");
-		// create the linked list elements with
-		// student data
-		SLelement<StudentInfo> el0 = new SLelement<StudentInfo>( "",
-			new StudentInfo(
-				"00000000000",
-				"Gretel Chaney",
-				"CS",
-				"g.chaney@generated.com",
-				"magenta",
-				"blue",
-				9.0
-			));
-		SLelement<StudentInfo> el1 = new SLelement<StudentInfo>( "",
-			new StudentInfo(
-				"00000000001",
-				"Karol Soderman",
-				"SIS",
-				"k.soderman@generated.com",
-				"magenta",
-				"red",
-				11.0
-			));
-		SLelement<StudentInfo> el2 = new SLelement<StudentInfo>( "",
-			new StudentInfo(
-				"00000000002",
-				"Lamont Kyler",
-				"BIO",
-				"l.kyler@generated.com",
-				"yellow",
-				"green",
-				12.0
-			));
-		SLelement<StudentInfo> el3 = new SLelement<StudentInfo>( "",
-			new StudentInfo(
-				"00000000003",
-				"Gladys Serino",
-				"CS",
-				"g.serino@generated.com",
-				"green",
-				"magenta",
-				9.0
-			));
-		SLelement<StudentInfo> el4 = new SLelement<StudentInfo>( "",
-			new StudentInfo(
-				"00000000004",
-				"Starr Mcginn",
-				"CS",
-				"s.mcginn@generated.com",
-				"red",
-				"cyan",
-				15.0
-			));
+	// set title
+	bridges.setTitle("A Single Linked List Example");
 
+	// set  description
+	bridges.setDescription("A singly linked list of node with student names, where each node is linked only to the next node in the list. Illustrates Node and link coloring, node size, link thickness and opacity");
+
+		// create the linked list elements with student names
+		SLelement<String>  el0 = new SLelement<String> ("Gretel Chaney", "Gretel Chaney");
+		SLelement<String>  el1 = new SLelement<String> ("Lamont Kyler", "Lamont Kyler");
+		SLelement<String>  el2 = new SLelement<String> ("Gladys Serino", "Gladys Serino");
+		SLelement<String>  el3 = new SLelement<String> ("Karol Soderman", "Karol Soderman");
+		SLelement<String>  el4 = new SLelement<String> ("Starr McGinn", "Starr McGinn");
+	 
 		//  link the elements
 		el0.setNext(el1);
 		el1.setNext(el2);
 		el2.setNext(el3);
 		el3.setNext(el4);
 
-		// iterate through the list and add visual attributes
-		// to the elements; set the element color to the favorite
-		// color and the link to the disliked color
-		SLelement<StudentInfo> currentElement = el0;
-		while (currentElement != null) {
-			// color the node
-			StudentInfo si = currentElement.getValue();
-			currentElement.getVisualizer().setColor(si.getFavoriteColor());
+		// set colors for list elements - see the Color class for supported colors
+		el0.setColor("red");
+		el2.setColor("aliceblue");
 
-			if (currentElement.getNext() != null) {
+		// color the links - must specify a valid terminating element
+		el0.getLinkVisualizer(el1).setColor("green");
+		el3.getLinkVisualizer(el4).setColor("magenta");
 
-				// color the link
-				currentElement
-				.getLinkVisualizer(currentElement.getNext())
-				.setColor(si.getDislikeColor());
-				// adjust link thickness
-				currentElement
-				.getLinkVisualizer(currentElement.getNext())
-				.setThickness(si.getStudentCreditHours() * 0.75);//75 percent thinner
-			}
+		// adjust link thickness
+		el0.getLinkVisualizer(el1).setThickness(2.0f);
 
-			// set the label to the student info (label created in
-			// StudentInfo class
-			currentElement.setLabel(si.getStudentLabel());
+		// set node transparency
+		el4.setOpacity (0.5f);
 
-			currentElement = currentElement.getNext();
-		}
+		// set node size
+		el0.setSize (20);
+
+		// set link label
+		el2.getLinkVisualizer(el3).setLabel("Gladys_to_Karol");
 
 		bridges.setDataStructure(el0);
 		bridges.visualize();
-
-
 	}
 }

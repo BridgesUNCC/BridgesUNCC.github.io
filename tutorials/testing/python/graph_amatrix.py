@@ -8,12 +8,17 @@ def main():
     args = sys.argv[1:]
 
     # create the Bridges object, set credentials
-    bridges = Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
+    bridges = Bridges(int(args[0]), args[1], args[2])
 
-    # set a title for the visualization
-    bridges.setTitle("A Simple Graph (Adjacency Matrix) Example using IMDB Actor/Movie Data")
+    if len(args) > 3:
+        bridges.connector.set_server(args[3])
 
-    actor_movie_data = getActorMovieIMDBData(1813)
+    #Title and Description
+    bridges.set_title("A Simple Graph (Adjacency Matrix)  Example using IMDB Actor/Movie Data")
+    bridges.set_description("Two lists each having an actor as the root node with 15 movies they played in as leaf nodes. "
+            +	"Root nodes are both red, Kevin Bacon's leaf nodes are green and Denzel Washington's leaf nodes are neutral.")  
+
+    actor_movie_data = get_actor_movie_imdb_data(1813)
     # create an adjacency Matrix based graph
     g = GraphAdjMatrix()
 
@@ -28,8 +33,8 @@ def main():
     g.add_edge(a1, a2, 1)
 
     # color the two actor nodes
-    g.get_vertices().get("Kevin_Bacon_(I)").get_visualizer().set_color("red")
-    g.get_vertices().get("Denzel_Washington").get_visualizer().set_color("red")
+    g.get_vertices().get("Kevin_Bacon_(I)").get_visualizer().set_color(col_name="red")
+    g.get_vertices().get("Denzel_Washington").get_visualizer().set_color(col_name="red")
     # make them a bit bigger
     g.get_vertices().get("Kevin_Bacon_(I)").get_visualizer().set_size(20)
     g.get_vertices().get("Denzel_Washington").get_visualizer().set_size(20)
@@ -41,8 +46,8 @@ def main():
     # and color those links and nodes by following their adjacency Matrix
     for k in range(len(actor_movie_data)):
         # from the actor movie data, get and actor-movie pair
-        a = actor_movie_data[k].get_Actor()
-        m = actor_movie_data[k].get_Movie()
+        a = actor_movie_data[k].get_actor()
+        m = actor_movie_data[k].get_movie()
 
         if (a == "Kevin_Bacon_(I)" and cnt1 < 15):
             # add vertices for this movie and an edge for the link
@@ -69,7 +74,7 @@ def main():
     bacon_row = g.get_adjacency_matrix("Kevin_Bacon_(I)")
     for entry, key in bacon_row.items():
         if(entry != "Denzel Washington" and key != 0):
-            g.get_visualizer(entry).set_color("green")
+            g.get_visualizer(entry).set_color(col_name="green")
 
     # pass the grpah object to BRIDGES
     bridges.set_data_structure(g)

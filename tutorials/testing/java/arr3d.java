@@ -6,9 +6,16 @@ public class arr3d {
 	public static void main(String[] args) throws Exception {
 
 		//create the Bridges object
-
 		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", 
 										"YOUR_API_KEY");
+		// title, description
+		bridges.setTitle("Three-Dimensional Array Example");
+        bridges.setDescription("A 3D array displaying four rows, four columns, and four slices. " 
+                            + "This example uses a for loop in which the header specifies slice count as the iteration variable. "
+                            + "A nested loop then builds a 2D array within that slice. (See Two-Dimensional Array Test) "
+                            + "After initialization, colors of specific elements are changed manually using the "
+                            + " setColor() function.");
+
 		// specify array dimensions and create 3D array
 		int num_slices = 4, num_rows = 4, num_cols = 4;
 		Array<Integer> my_array = new Array<Integer> (num_slices, num_rows, num_cols);
@@ -23,13 +30,14 @@ public class arr3d {
 				}
 			}
 		}
+
 		// color some of the elements
-		my_array.getElement(0, 0, 0).getVisualizer().setColor("red");
-		my_array.getElement(0, 3, 0).getVisualizer().setColor("green");
-		my_array.getElement(3, 0, 0).getVisualizer().setColor("blue");
-		my_array.getElement(3, 3, 0).getVisualizer().setColor("magenta");
-		my_array.getElement(1, 1, 0).getVisualizer().setColor("cyan");
-		my_array.getElement(2, 2, 0).getVisualizer().setColor("yellow");
+		my_array.getElement(0, 0, 0).setColor("red");
+		my_array.getElement(0, 3, 0).setColor("green");
+		my_array.getElement(3, 0, 0).setColor("blue");
+		my_array.getElement(3, 3, 0).setColor("magenta");
+		my_array.getElement(1, 1, 0).setColor("cyan");
+		my_array.getElement(2, 2, 0).setColor("yellow");
 
 		//set visualizer type
 		bridges.setDataStructure(my_array);

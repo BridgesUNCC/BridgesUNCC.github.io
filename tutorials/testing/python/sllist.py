@@ -9,7 +9,16 @@ def main():
     args = sys.argv[1:]
 
     # create the Bridges object, set credentials
-    bridges = Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
+    bridges = Bridges(int(args[0]), args[1], args[2])
+
+    if len(args) > 3:
+        bridges.connector.set_server(args[3])
+
+    #Title and Description
+    bridges.set_title("A Single Linked List Example")
+    bridges.set_description("A list of student data where each node is linked only to the next "
+            +	"node in the list. Node and link colors from top of list to bottom: Blue with magenta link, "
+            +	"red with magenta link, green with yellow link, magenta with green link, cyan.")      
 
     # create the linked list elements with student data
 
@@ -66,11 +75,11 @@ def main():
     while currentElement is not None:
         # color the node
         si = currentElement.get_value()
-        currentElement.get_visualizer().set_color(si.getLikeColor())
+        currentElement.get_visualizer().set_color(col_name=si.getLikeColor())
 
         if currentElement.get_next() is not None:
             # color the link
-            currentElement.get_link_visualizer(currentElement.get_next()).set_color(si.getDislikeColor())
+            currentElement.get_link_visualizer(currentElement.get_next()).set_color(col_name=si.getDislikeColor())
             # adjust link thickness
             currentElement.get_link_visualizer(currentElement.get_next()).set_thickness(si.getCreditHours() * 0.75)
 

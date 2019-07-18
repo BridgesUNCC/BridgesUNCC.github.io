@@ -2,9 +2,9 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>~/graphics/bridges/website/Hello_World_Tutorials/testing/c++/circ_sllist.cpp.html</title>
-<meta name="Generator" content="Vim/8.0">
-<meta name="plugin-version" content="vim7.4_v2">
+<title>~/work/bridges/BridgesUNCC.github.io/tutorials/testing/c++/circ_sllist.cpp.html</title>
+<meta name="Generator" content="Vim/8.1">
+<meta name="plugin-version" content="vim8.1_v1">
 <meta name="syntax" content="c">
 <meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
 <meta name="colorscheme" content="none">
@@ -14,18 +14,11 @@ pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-
 body { font-family: monospace; color: #000000; background-color: #ffffff; }
 * { font-size: 1em; }
 .Constant { color: #0000c0; text-decoration: underline; }
-.Statement { color: #008080; font-weight: bold; }
 .Comment { color: #c00000; font-weight: bold; }
 .Type { color: #008000; text-decoration: underline; }
 .PreProc { color: #c000c0; text-decoration: underline; }
 -->
 </style>
-
-<script type='text/javascript'>
-<!--
-
--->
-</script>
 </head>
 <body>
 <pre id='vimCodeElement'>
@@ -36,97 +29,54 @@ body { font-family: monospace; color: #000000; background-color: #ffffff; }
 
 <span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
 <span class="PreProc">#include </span><span class="Constant">&quot;CircSLelement.h&quot;</span>
-<span class="PreProc">#include </span><span class="Constant">&quot;StudentInfo.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
 
 using namespace bridges;
+using namespace std;
 
 <span class="Type">int</span> main (<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
-    Bridges *bridges =  new Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+	<span class="Comment">// create Bridges object</span>
+    Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
                                 <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 
-	<span class="Comment">// create the linked list elements with</span>
-	<span class="Comment">// student data</span>
-	CircSLelement&lt;StudentInfo&gt; *students[] = {
-		new CircSLelement&lt;StudentInfo&gt;(
-			StudentInfo(
-				<span class="Constant">&quot;00000000000&quot;</span>,
-				<span class="Constant">&quot;Gretel Chaney&quot;</span>,
-				<span class="Constant">&quot;CS&quot;</span>,
-				<span class="Constant">&quot;g.chaney@generated.com&quot;</span>,
-				<span class="Constant">&quot;magenta&quot;</span>,
-				<span class="Constant">&quot;blue&quot;</span>,
-				<span class="Constant">9.0</span>
-			), <span class="Constant">&quot;&quot;</span>),
-		new CircSLelement&lt;StudentInfo&gt;(
-			StudentInfo(
-				<span class="Constant">&quot;00000000001&quot;</span>,
-				<span class="Constant">&quot;Karol Soderman&quot;</span>,
-				<span class="Constant">&quot;SIS&quot;</span>,
-				<span class="Constant">&quot;k.soderman@generated.com&quot;</span>,
-				<span class="Constant">&quot;magenta&quot;</span>,
-				<span class="Constant">&quot;red&quot;</span>,
-				<span class="Constant">11.0</span>
-			), <span class="Constant">&quot;&quot;</span>),
-		new CircSLelement&lt;StudentInfo&gt;(
-			StudentInfo(
-				<span class="Constant">&quot;00000000002&quot;</span>,
-				<span class="Constant">&quot;Lamont Kyler&quot;</span>,
-				<span class="Constant">&quot;BIO&quot;</span>,
-				<span class="Constant">&quot;l.kyler@generated.com&quot;</span>,
-				<span class="Constant">&quot;yellow&quot;</span>,
-				<span class="Constant">&quot;green&quot;</span>,
-				<span class="Constant">12.0</span>
-			), <span class="Constant">&quot;&quot;</span>),
-		new CircSLelement&lt;StudentInfo&gt;(
-			StudentInfo(
-				<span class="Constant">&quot;00000000003&quot;</span>,
-				<span class="Constant">&quot;Gladys Serino&quot;</span>,
-				<span class="Constant">&quot;CS&quot;</span>,
-				<span class="Constant">&quot;g.serino@generated.com&quot;</span>,
-				<span class="Constant">&quot;green&quot;</span>,
-				<span class="Constant">&quot;magenta&quot;</span>,
-				<span class="Constant">9.0</span>
-			), <span class="Constant">&quot;&quot;</span>),
-		new CircSLelement&lt;StudentInfo&gt;(
-			StudentInfo(
-				<span class="Constant">&quot;00000000004&quot;</span>,
-				<span class="Constant">&quot;Starr Mcginn&quot;</span>,
-				<span class="Constant">&quot;CS&quot;</span>,
-				<span class="Constant">&quot;s.mcginn@generated.com&quot;</span>,
-				<span class="Constant">&quot;red&quot;</span>,
-				<span class="Constant">&quot;cyan&quot;</span>,
-				<span class="Constant">15.0</span>
-			), <span class="Constant">&quot;&quot;</span>)
-	};
+	<span class="Comment">// create the linked list elements with student names</span>
+	CircSLelement&lt;string&gt;  *el0 = new CircSLelement&lt;string&gt; (<span class="Constant">&quot;Gretel Chaney&quot;</span>, <span class="Constant">&quot;Gretel Chaney&quot;</span>);
+	CircSLelement&lt;string&gt;  *el1 = new CircSLelement&lt;string&gt; (<span class="Constant">&quot;Lamont Kyler&quot;</span>, <span class="Constant">&quot;Lamont Kyler&quot;</span>);
+	CircSLelement&lt;string&gt;  *el2 = new CircSLelement&lt;string&gt; (<span class="Constant">&quot;Gladys Serino&quot;</span>, <span class="Constant">&quot;Gladys Serino&quot;</span>);
+	CircSLelement&lt;string&gt;  *el3 = new CircSLelement&lt;string&gt; (<span class="Constant">&quot;Karol Soderman&quot;</span>, <span class="Constant">&quot;Karol Soderman&quot;</span>);
+	CircSLelement&lt;string&gt;  *el4 = new CircSLelement&lt;string&gt; (<span class="Constant">&quot;Starr McGinn&quot;</span>, <span class="Constant">&quot;Starr McGinn&quot;</span>);
 
-	CircSLelement&lt;StudentInfo&gt; *head =  students[<span class="Constant">0</span>];
-	CircSLelement&lt;StudentInfo&gt; *current =  head;
+	<span class="Comment">//  link the elements</span>
+	el0-&gt;setNext(el1);
+	el1-&gt;setNext(el2);
+	el2-&gt;setNext(el3);
+	el3-&gt;setNext(el4);
 
-	<span class="Type">int</span> num_students = <span class="Constant">5</span>;
-	<span class="Statement">for</span> (<span class="Type">int</span> i = <span class="Constant">1</span>; i &lt; num_students; i++) {
-		current-&gt;setNext(students[i]);
-		current = current-&gt;getNext();
-	}
-	<span class="Comment">//  point the last element to the first element,</span>
-	current-&gt;setNext(head);
+	<span class="Comment">// connect the last element to the first element to form the circular list</span>
+	el4-&gt;setNext(el0);
 
-	<span class="Comment">//  add visual attributes</span>
-	current = head;
-	<span class="Statement">do</span> {
-		current-&gt;setLabel(current-&gt;getValue().getStudentLabel());
-		current-&gt;getVisualizer()-&gt;setColor(current-&gt;getValue().getFavoriteColor());
+	<span class="Comment">// set colors for list elements - see the Color class for supported colors</span>
+	el0-&gt;setColor(<span class="Constant">&quot;red&quot;</span>);
+	el2-&gt;setColor(<span class="Constant">&quot;aliceblue&quot;</span>);
 
-		current-&gt;getLinkVisualizer(current-&gt;getNext())-&gt;setColor(current-&gt;getValue().getDislikeColor());
-		current-&gt;getLinkVisualizer(current-&gt;getNext())-&gt;setThickness(current-&gt;getValue().getStudentCreditHours() * <span class="Constant">0.5</span>);
+	<span class="Comment">// color the links - must specify a valid terminating element</span>
+	el0-&gt;getLinkVisualizer(el1)-&gt;setColor(<span class="Constant">&quot;green&quot;</span>);
+	el3-&gt;getLinkVisualizer(el4)-&gt;setColor(<span class="Constant">&quot;magenta&quot;</span>);
 
-		current = current-&gt;getNext();
-	}   <span class="Statement">while</span> (current != head);
+	<span class="Comment">// adjust link thickness</span>
+	el0-&gt;getLinkVisualizer(el1)-&gt;setThickness(<span class="Constant">2.0f</span>);
 
+	<span class="Comment">// set node transparency</span>
+	el4-&gt;setOpacity (<span class="Constant">0.5f</span>);
 
-	<span class="Comment">// set data structure to point to head</span>
-	bridges-&gt;setDataStructure(head);
-	<span class="Comment">// visualize the circular list</span>
-	bridges-&gt;visualize();
+	<span class="Comment">// set node size</span>
+	el0-&gt;setSize (<span class="Constant">20</span>);
+
+	<span class="Comment">// set link label</span>
+	el2-&gt;getLinkVisualizer(el3)-&gt;setLabel(<span class="Constant">&quot;Gladys_to_Karol&quot;</span>);
+
+	bridges.setDataStructure(el0);
+	bridges.visualize();
 }
 </pre>
 </body>

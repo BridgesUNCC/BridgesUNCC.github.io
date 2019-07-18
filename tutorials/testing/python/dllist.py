@@ -18,7 +18,16 @@ def main():
     args = sys.argv[1:]
 
     # create the Bridges object, set credentials
-    bridges = Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
+    bridges = Bridges(int(args[0]), args[1], args[2])
+
+    if len(args) > 3:
+        bridges.connector.set_server(args[3])
+
+    #Title and Description
+    bridges.set_title("A doubly Linked List Example")
+    bridges.set_description("This list has five nodes all linked to the nodes before and after them. "
+            +	" Node colors are as follows: Blue and red connected by magenta links, red and green connected by "
+            +	"purple links, green and black connected by blue links, and black and cyan connected by red links.")
 
     students = []
 
@@ -72,12 +81,12 @@ def main():
     curr = head
     while curr is not None:
         curr.set_label(curr.get_value().getName())
-        curr.get_visualizer().set_color(curr.get_value().getDislikeColor())
+        curr.get_visualizer().set_color(col_name=curr.get_value().getDislikeColor())
 
         if curr.get_next()is not None:
             next = curr.get_next()
-            curr.get_link_visualizer(next).set_color(curr.get_value().getDislikeColor())
-            next.get_link_visualizer(curr).set_color(curr.get_value().getDislikeColor())
+            curr.get_link_visualizer(next).set_color(col_name=curr.get_value().getDislikeColor())
+            next.get_link_visualizer(curr).set_color(col_name=curr.get_value().getDislikeColor())
 
         curr = curr.get_next()
 

@@ -2,54 +2,67 @@
 #include "SymbolCollection.h"
 #include "Rectangle.h"
 #include "Polygon.h"
+#include "Polyline.h"
 #include "Circle.h"
 #include "Label.h"
 
 using namespace bridges;
 
 int main(int argc, char **argv) {
-    Bridges *bridges =  new Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", 
+	// create Bridges object
+    Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID",
                                 "YOUR_API_KEY");
 
-	bridges->setTitle("Symbol Collection");
-	bridges->setDescription("Some Shapes and Symbols");
+	// title, description
+	bridges.setTitle("Symbol Collection");
+	bridges.setDescription("Red square, green circle, magenta horizontal and vertical lines, "
+				"and a test label with a purple outline.");
+			
 
-	SymbolCollection *sc = new SymbolCollection(); 
-	Rectangle *s1 = new Rectangle(-25, 0, 50, 50);
-	s1->setFillColor(Color("red"));
-	sc->addSymbol(s1);
+	// create some symbols and add to symbol collection
+	SymbolCollection sc; 
 
-	Circle *s2 = new Circle(25, 0, 25);
-	s2->setFillColor(Color("green"));
-	sc->addSymbol(s2);
-	
+	Rectangle s1(-25, 0, 50, 50);
+	s1.setFillColor(Color("red"));
+	sc.addSymbol(&s1);
 
-	Polygon *s3 = new Polygon();
+	Circle s2(25, 0, 25);
+	s2.setFillColor(Color("green"));
+	sc.addSymbol(&s2);
 
-	s3->addPoint(-100, 0);
-	s3->addPoint(100, 0);
-	s3->addPoint(0, 0);
-	s3->addPoint(0, -100);
-	s3->addPoint(0, 100);
-	s3->addPoint(0, 0);
-	s3->setStrokeColor(Color("magenta"));
-	sc->addSymbol(s3);
+	Polyline s4;
+	s4.addPoint(-25, -10);
+	s4.addPoint(25, -10);
+	s4.addPoint(0, 50);
+	s4.setStrokeColor("darkorchid");
+	s4.setStrokeWidth(2.0f);
+	sc.addSymbol(&s4);
 
-	Label *l = new Label();
-	l->setLocation(0,25);
-	l->setFontSize(12);
-	l->setStrokeWidth(1.0f);
-	l->setLabel("test label");
-	l->setStrokeColor(Color("purple"));
-	sc->addSymbol(l);
+	Polygon s3;
+	s3.addPoint(-100, 0);
+	s3.addPoint(100, 0);
+	s3.addPoint(0, 0);
+	s3.addPoint(0, -100);
+	s3.addPoint(0, 100);
+	s3.addPoint(0, 0);
+	s3.setStrokeColor("magenta");
+	sc.addSymbol(&s3);
 
+
+
+	Label l;
+	l.setLocation(0,25);
+	l.setFontSize(12);
+	l.setStrokeWidth(1.0f);
+	l.setLabel("test label");
+	l.setStrokeColor("purple");
+	sc.addSymbol(&l);
 
 	// set visualizer type
+	bridges.setDataStructure(sc);
 
-	bridges->setDataStructure(sc);
-				// visualize the JSON and Collection
-	bridges->visualize();
+	// visualize the JSON and Collection
+	bridges.visualize();
 			
 	return 0;
 }
-

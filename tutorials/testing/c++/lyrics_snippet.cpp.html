@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/work/bridges/BridgesUNCC.github.io/tutorials/testing/c++/lyrics_snippet.cpp.html</title>
+<meta name="Generator" content="Vim/8.1">
+<meta name="plugin-version" content="vim8.1_v1">
+<meta name="syntax" content="c">
+<meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="none">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Constant { color: #0000c0; text-decoration: underline; }
+.Statement { color: #008080; font-weight: bold; }
+.PreProc { color: #c000c0; text-decoration: underline; }
+.Type { color: #008000; text-decoration: underline; }
+.Comment { color: #c00000; font-weight: bold; }
+-->
+</style>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;DataSource.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Array.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;SLelement.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;ColorGrid.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&lt;sstream&gt;</span>
+<span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
+
+using namespace bridges;
+
+<span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span>* argv[]) {
+
+	<span class="Comment">//create the Bridges object, set credentials</span>
+	Bridges bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+		<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+	bridges.setTitle(<span class="Constant">&quot;Accessing Song Data&quot;</span>);
+
+	<span class="Comment">// create data source object</span>
+	DataSource ds (&amp;bridges);
+
+	<span class="Comment">//Get Song data </span>
+	Song s = ds.getSong(<span class="Constant">&quot;Harder Faster Better Stronger&quot;</span>, <span class="Constant">&quot;Daft Punk&quot;</span>);
+
+	<span class="Comment">//print lyrics</span>
+	std::cout&lt;&lt;s.getLyrics()&lt;&lt;std::endl;
+
+
+	<span class="Comment">//print lyrics one word at a time</span>
+	<span class="Comment">//	for (auto w : words) {</span>
+	<span class="Comment">//	  std::cout&lt;&lt;w&lt;&lt;std::endl;</span>
+	<span class="Comment">//	}</span>
+
+
+	<span class="Statement">return</span> <span class="Constant">0</span>;
+}
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

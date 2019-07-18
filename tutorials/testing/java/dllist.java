@@ -8,87 +8,51 @@ public class dllist {
 
 		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", 
 										"YOUR_API_KEY");
-		// load student info
-		StudentInfo[] students = {
-			new StudentInfo(
-				"00000000000",
-				"Gretel Chaney",
-				"CS",
-				"g.chaney@generated.com",
-				"magenta",
-				"blue",
-				9.0
-			),
-			new StudentInfo(
-				"00000000001",
-				"Karol Soderman",
-				"SIS",
-				"k.soderman@generated.com",
-				"magenta",
-				"red",
-				11.0
-			),
-			new StudentInfo(
-				"00000000002",
-				"Lamont Kyler",
-				"BIO",
-				"l.kyler@generated.com",
-				"purple",
-				"green",
-				12.0
-			),
-			new StudentInfo(
-				"00000000003",
-				"Gladys Serino",
-				"CS", "g.serino@generated.com",
-				"blue",
-				"black",
-				9.0
-			),
-			new StudentInfo("00000000004",
-				"Starr Mcginn",
-				"CS",
-				"s.mcginn@generated.com",
-				"red",
-				"cyan",
-				15.0)
-		};
 
-		// insert the students in front of the list
-		DLelement<StudentInfo> head = null;
-		for (int i = 0; i < students.length; i++) {
-			head = insertFront(head, new DLelement<StudentInfo>("", students[i]));
-		}
-		// add visual attributes
-		DLelement<StudentInfo> curr = head, next;
-		while (curr != null) {
-			curr.setLabel(curr.getValue().getStudentLabel());
-			curr.getVisualizer().setColor(curr.getValue().getFavoriteColor());
+		// set title
+		bridges.setTitle("A doubly Linked List Example");
 
-			DLelement<StudentInfo> n1, n2;
-			if (curr.getNext() != null) {
-				next = curr.getNext();
-				curr.getLinkVisualizer(next).setColor(curr.getValue().getDislikeColor());
-				next.getLinkVisualizer(curr).setColor(curr.getValue().getDislikeColor());
-			}
+		// set description
+		bridges.setDescription("This list has five nodes all linked to the nodes before and after them and illustrates visual attributes. ");
 
-			curr = curr.getNext();
-		}
 
-		bridges.setDataStructure(head);
+		// create some elements
+		DLelement<String>  el0 = new DLelement<String> ("Gretel Chaney", "Gretel Chaney");
+		DLelement<String>  el1 = new DLelement<String> ("Lamont Kyler", "Lamont Kyler");
+		DLelement<String>  el2 = new DLelement<String> ("Gladys Serino", "Gladys Serino");
+		DLelement<String>  el3 = new DLelement<String> ("Karol Soderman", "Karol Soderman");
+		DLelement<String>  el4 = new DLelement<String> ("Starr McGinn", "Starr McGinn");
+		
+		// create the list
+		el0.setNext(el1); el1.setPrev(el0);
+		el1.setNext(el2); el2.setPrev(el1);
+		el2.setNext(el3); el3.setPrev(el2);
+		el3.setNext(el4); el4.setPrev(el3);
+
+		// add  element colors
+		// set colors for list elements - see the Color class for supported colors
+		el0.setColor("red");
+		el2.setColor("aliceblue");
+
+		// color the links - must specify a valid terminating element
+		el0.getLinkVisualizer(el1).setColor("green");
+		// color the reverse link
+		el1.getLinkVisualizer(el0).setColor("magenta");
+
+		// adjust link thickness
+		el3.getLinkVisualizer(el4).setThickness(3.0f);
+		el4.getLinkVisualizer(el3).setThickness(6.0f);
+
+		// set link label
+		el2.getLinkVisualizer(el3).setLabel("Link Label");
+
+		// set node transparency
+		el4.setOpacity (0.5f);
+
+		// set node size
+		el0.setSize (20);
+
+		bridges.setDataStructure(el0);
 		bridges.visualize();
-
-
-	}
-
-	public static DLelement<StudentInfo> insertFront(DLelement<StudentInfo> front,
-		DLelement<StudentInfo> new_el) {
-		if (front == null)
-			return new_el;
-
-		new_el.setNext(front);
-		front.setPrev(new_el);
-
-		return new_el;
 	}
 }

@@ -9,27 +9,21 @@ public class tree {
         Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", 
                                         "YOUR_API_KEY");
 
-		//create   tree nodes
-		TreeElement<String> t0 = new TreeElement<String>("Hello");
-		TreeElement<String> t2 = new TreeElement<String>("This");
-		TreeElement<String> t3 = new TreeElement<String>("is");
-		TreeElement<String> t4 = new TreeElement<String>("a");
-		TreeElement<String> t5 = new TreeElement<String>("generic");
-		TreeElement<String> t6 = new TreeElement<String>("Tree");
-		TreeElement<String> t7 = new TreeElement<String>("Representation");
+		// title, description
+		bridges.setTitle("A General Tree Example");
+		bridges.setDescription("A basic tree with seven nodes. Three on one side and three on the other. The root node is set to red with 0.3 opacity. "
+				+	"The other six nodes are neutral color.");
 
-		// put in labels for each node; we simply use integers
-
-		t0.setLabel("10");
-		t2.setLabel("20");
-		t3.setLabel("30");
-		t4.setLabel("40");
-		t5.setLabel("50");
-		t6.setLabel("60");
-		t7.setLabel("100");
+		//create  tree nodes
+		TreeElement<String> t0 = new TreeElement<String>("Hello", "Hello");
+		TreeElement<String> t2 = new TreeElement<String>("This", "This");
+		TreeElement<String> t3 = new TreeElement<String>("is", "is");
+		TreeElement<String> t4 = new TreeElement<String>("a", "a");
+		TreeElement<String> t5 = new TreeElement<String>("generic", "generic");
+		TreeElement<String> t6 = new TreeElement<String>("Tree", "Tree");
+		TreeElement<String> t7 = new TreeElement<String>("Representation", "Representation");
 
 		// add links to children
-
 		t0.addChild(t2);
 		t0.addChild(t3);
 		t0.addChild(t7);
@@ -38,16 +32,13 @@ public class tree {
 		t3.addChild(t6);
 
 		// set some visual attributes
-		t0.getVisualizer().setColor("red");
-		t0.getVisualizer().setOpacity(0.3f);
+		t0.setColor("red");
+		t0.setOpacity(0.3f);
 
 		bridges.setTitle("A General Tree Example");
-		//set visualizer type
-		bridges.setDataStructure(t0);
+
 		// visualize the tree
+		bridges.setDataStructure(t0);
 		bridges.visualize();
 	}
 }
-
-
-
