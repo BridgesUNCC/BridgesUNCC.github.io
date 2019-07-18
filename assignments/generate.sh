@@ -236,6 +236,7 @@ addassignment "24-ImageCompressionKdTree"
 addsubgroup "Graphs"
 addassignment "12-AStarMaze"
 addassignment "3-GraphBaconNumber"
+addassignment "30-TemporalBaconNumber"
 addassignment "4-GraphEQ"
 addassignment "9-ShortestPathOSM"
 
