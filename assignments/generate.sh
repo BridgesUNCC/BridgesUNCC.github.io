@@ -235,6 +235,9 @@ addgroup "Algorithms"
 addsubgroup "Big Oh"
 addassignment "28-BigOhMatters"
 
+addsubgroup "Sorting"
+addassignment "29-SortingBenchmark"
+
 addsubgroup "Greedy Algorithms"
 addassignment "23-MountainPaths"
 
@@ -243,6 +246,7 @@ addassignment "23-MountainPaths"
 
 addsubgroup "Multi objective optimization"
 addassignment "23-MountainPaths"
+
 
 writefooter
 

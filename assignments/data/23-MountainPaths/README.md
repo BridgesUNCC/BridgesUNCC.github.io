@@ -61,3 +61,25 @@ Run your greedy algorithm on the image.  Choose a pixel in the left most column,
 
         Display the image (your solution should look something like the figure at the top of the page.
 
+
+
+Variants
+--------
+
+One can make variants of this assignments. Indeed, the greedy
+algorithm presented above is a heuristic; it does not return the path
+that sees the lowest change of elevation across the entire
+mountain. It only makes a local choice.
+
+One can find the path that always goes right and that minimizes the
+total change of elevation using Dynamic Programming. Propose a Dynamic
+Programming algorithm, and implement it to highlight the right-going
+path of minimal total change of elevation.
+
+If one does not always go right, then the problem is akin to a
+Shortest Path problem. Adapt Dijkstra's algorithm and implement it to
+highlight the path of least change of elevation.
+
+Graduate students can consider the problem of optimizing
+simultaneously the distance traversed and the total change of
+elevation as a bi objective optimization problem.
