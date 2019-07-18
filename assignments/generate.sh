@@ -239,6 +239,7 @@ addassignment "3-GraphBaconNumber"
 addassignment "30-TemporalBaconNumber"
 addassignment "4-GraphEQ"
 addassignment "9-ShortestPathOSM"
+addassignment "31-TemporalPageRank"
 
 addgroup "Algorithms"
 addsubgroup "Big Oh"
@@ -246,6 +247,11 @@ addassignment "28-BigOhMatters"
 
 addsubgroup "Sorting"
 addassignment "29-SortingBenchmark"
+
+addsubgroup "Complexity of Graph Problems"
+addassignment "9-ShortestPathOSM"
+addassignment "30-TemporalBaconNumber"
+addassignment "31-TemporalPageRank"
 
 addsubgroup "Greedy Algorithms"
 addassignment "23-MountainPaths"
