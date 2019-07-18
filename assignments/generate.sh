@@ -1,5 +1,6 @@
 #!/bin/sh
 
+REPORT=""
 
 #bail if git is not clean
 if ! git diff --quiet ;
@@ -79,7 +80,9 @@ addassignment() {
     #bail if assignment name is empty
     if [ ! -n "${name}" ]
     then
-	echo assignment name is empty \"${name}\"
+	MSG="assignment name is empty \"${name}\""
+	echo ${MSG}
+	REPORT="${REPORT}\n${MSG}"
 	exit 1
     fi
 
@@ -87,7 +90,9 @@ addassignment() {
     srcdir=${BRIDGESASSIGNMENT}/assignmentdb/${name}
     if [ ! -d ${srcdir} ]
     then
-	echo unknown assignment \"${name}\". \(i.e., not found in "${srcdir}" \)
+	MSG="unknown assignment \"${name}\". \(i.e., not found in "${srcdir}" \)"
+	echo ${MSG}
+	REPORT="${REPORT}\n${MSG}"
 	exit 1
     fi
 
@@ -102,19 +107,25 @@ addassignment() {
 	then
 	    zip -j -r ${targetdir}/c++.zip ${srcdir}/c++
 	else
-	    echo no C++ scaffold for ${name}
+	    MSG="no C++ scaffold for ${name}"
+	    echo ${MSG}
+	    REPORT="${REPORT}\n${MSG}"
 	fi
 	if [ -d ${srcdir}/java ];
 	then
 	    zip -j -r ${targetdir}/java.zip ${srcdir}/java
 	else
-	    echo no JAVA scaffold for ${name}
+	    MSG="no JAVA scaffold for ${name}"
+	    echo ${MSG}
+	    REPORT="${REPORT}\n${MSG}"
 	fi
 	if [ -d ${srcdir}/python ];
 	then
 	    zip -j -r ${targetdir}/python.zip ${srcdir}/python
 	else
-	    echo no Python scaffold for ${name}
+	    MSG="no Python scaffold for ${name}"
+	    echo ${MSG}
+	    REPORT="${REPORT}\n${MSG}"
 	fi
 	
 	#copy slides if exist
@@ -136,12 +147,20 @@ addassignment() {
     if [ -e ${srcdir}/prettyname ]
     then
 	prettyname=$(cat ${srcdir}/prettyname)
+    else
+	MSG="no prettyname for ${name}"
+	echo ${MSG}
+	REPORT="${REPORT}\n${MSG}"
     fi
 
     shortdescription=""
     if [ -e ${srcdir}/shortdescription ]
     then
 	shortdescription=$(cat ${srcdir}/shortdescription)
+    else
+	MSG="no shortdescription for ${name}"
+	echo ${MSG}
+	REPORT="${REPORT}\n${MSG}"
     fi
     
     
@@ -151,6 +170,10 @@ addassignment() {
     #if there is an icon, use it
     if [ -f ${targetdir}/figures/icon.png ] ; then
 	echo "<div class=\"assignmenticon\"><img src=\"assignments/${targetdir}/figures/icon.png\" /></div>" >> ${HTMLOUTPUT}
+    else
+	MSG="no icon for ${name}"
+	echo ${MSG}
+	REPORT="${REPORT}\n${MSG}"
     fi
 
     echo '<div class="assignmentmain">' >> ${HTMLOUTPUT}
@@ -160,6 +183,10 @@ addassignment() {
     if [ -e ${targetdir}/README.html ] ; #description
     then
 	echo "<a href=\"assignments/${targetdir}/README.html\">[Description]</a> "  >> ${HTMLOUTPUT}
+    else
+	MSG="no description for ${name}"
+	echo ${MSG}
+	REPORT="${REPORT}\n${MSG}"
     fi
     if [ -e ${targetdir}/slides.pdf ] ; #description
     then
@@ -268,3 +295,10 @@ writefooter
 git add ${HTMLOUTPUT}
 git add ${ASSIGNDIR}
 git commit -am "updating assignments"
+
+
+echo ================================
+echo              REPORT
+echo ================================
+
+echo ${REPORT}
