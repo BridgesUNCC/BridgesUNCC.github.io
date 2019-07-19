@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/work/bridges/BridgesUNCC.github.io/tutorials/testing/python/bst.py.html</title>
+<meta name="Generator" content="Vim/8.1">
+<meta name="plugin-version" content="vim8.1_v1">
+<meta name="syntax" content="c">
+<meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="none">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Constant { color: #0000c0; text-decoration: underline; }
+.Statement { color: #008080; font-weight: bold; }
+.Type { color: #008000; text-decoration: underline; }
+-->
+</style>
+</head>
+<body>
+<pre id='vimCodeElement'>
+from bridges.bridges import *
+from bridges.bst_element import *
+from bridges.data_src_dependent.data_source import *
+import sys
+
+# recursive insert method to insert nodes into a binary search tree
+def insertR(rt, newel):
+    <span class="Statement">if</span> (rt is None):
+        <span class="Statement">return</span> newel
+    elif newel.get_key() &lt; rt.get_key():
+        rt.set_left(insertR(rt.get_left(), newel))
+    <span class="Statement">else</span>:
+        rt.set_right(insertR(rt.get_right(), newel))
+    <span class="Statement">return</span> rt
+
+
+def main():
+    args = sys.argv[<span class="Constant">1</span>:]
+
+    # create the Bridges object, set credentials
+    bridges = Bridges(<span class="Type">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
+
+    <span class="Statement">if</span> len(args) &gt; <span class="Constant">3</span>:
+        bridges.connector.set_server(args[<span class="Constant">3</span>])
+
+    #Title and Description
+    bridges.set_title(<span class="Constant">&quot;A Binary Search Tree Example with Earthquake Data&quot;</span>)
+    bridges.set_description(<span class="Constant">&quot;10 sets of earthquake are gathered and sorted with nodes whos magnitude is greater than &quot;</span>
+        + <span class="Constant">&quot;the parent is set to the right and nodes with a magnitude less than the parent set to the left. &quot;</span>
+        + <span class="Constant">&quot;The root is set to red the leaf nodes are neutral.&quot;</span>)
+
+    # Retrieve a list of <span class="Constant">10</span> earthquake records from USGS using the BRIDGES API
+    ami = get_earthquake_usgs_data(<span class="Constant">10</span>)
+
+    root = None
+    # create BST nodes and insert into a tree
+    <span class="Statement">for</span> i in range(len(ami)):
+        bst_node = BSTElement(ami[i].get_magnitude(), ami[i])
+        # set label of the node
+        bst_node.set_label(ami[i].get_title() + ami[i].get_time())
+
+        root = insertR(root, bst_node)
+
+    # set some visual attributes
+    root.get_visualizer().set_color(<span class="Constant">&quot;red&quot;</span>)
+
+    #set visualizer type
+    bridges.set_data_structure(root)
+    #visualize the tree
+    bridges.visualize()
+
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;__main__&quot;</span>:
+    main()
+
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

@@ -1,0 +1,73 @@
+<h1>Is Kevin Bacon the center of Hollywood?</h1>
+
+<h2>Goals</h2>
+
+<p>The <a href="https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon">Bacon
+Number</a> of
+an actor is the number of step it takes to go from an actor to Kevin
+Bacon by only going from an actor to an other one that played together
+in a movie. Computing the Bacon number of an actor boils down to
+computing BFS in an Actor-Movie graph.</p>
+
+<p>However, the Bacon number of an actor decreases as time passes, since
+more movies are made. The purpose of this assignment is to track the
+Bacon number of some actors over time. This means that at some point
+Kevin Bacon was not the center of Hollywood. Then who was it?</p>
+
+<p>We will use a centrality measure, namely
+<a href="https://en.wikipedia.org/wiki/PageRank">PageRank</a>, to compute who the
+most prominent actor of Hollywood are at different point of time.</p>
+
+<p>We will also study the time it takes to answer the question when the
+graph gets bigger as more movies are made.</p>
+
+<h2>PageRank</h2>
+
+<p>PageRank is a very popular graph centrality measure to establish which
+vertex is the most important. It is typically computed by using an
+iterator process is initialized with.</p>
+
+<p>PR[v] = 1/|V| for all vertices v in the graph</p>
+
+<p>Then, compute</p>
+
+<p>newPR[v] = (1-lambda)/|V| + lambda * sum (PR[x]/degree(x)) for all x a neighboor of v</p>
+
+<p>lambda is a parameter of the algorithm between 0 and 1, and typically set to 0.85.</p>
+
+<p>degree(x) is the number of neighboor of vertex x.</p>
+
+<h2>Tasks</h2>
+
+<ol>
+<li><p>Get the Movie Actor data for year interval from wikidata using the
+Bridges API: DataSource.getWikidataActorMovie()</p></li>
+<li><p>Construct a graph where vertices are Movie and Actors, and there is
+an edge between a movie and an actor if the actor played in the movie.</p></li>
+<li><p>Compute the PageRank of the vertices in that graph.</p></li>
+<li><p>For a 20-years large moving windows from 1910 to 2019, compute the
+PageRank of all vertices and report who the most prominent actors
+are. You can use a LineChart to show the page rank of the 10 most
+prominent actors for a 20-year window.</p></li>
+<li><p>Measure the time each of the BFS calculation takes. Use LineChart
+to show the time it takes to compute BFS as a function of the time
+range, the number of vertices in the graph, and the number of edges in
+the graph. You can use LineChart to plot some data. You can build
+larger and large graphs by increasing the size of the graphs, the
+dataset as data from 1910 to 2019.</p></li>
+</ol>
+
+<h2>Variants</h2>
+
+<p>We used a graph where the vertices are Movies and Actors, but one
+could directly build a graph of actors with an edge between them if
+they played in the same Movie. Would that be faster? Implement the
+problem using a graph of Actors (not including Movies) and confirm (or
+infirm) your intuition.</p>
+
+<p>One can answer the same question by using different centrality
+measures. <a href="https://en.wikipedia.org/wiki/Closeness_centrality">Closeness
+Centrality</a> is a
+popular measure since it represents the average distance to the rest
+of the graph, and therefore is a proxy for being a good "Kevin
+Bacon".</p>

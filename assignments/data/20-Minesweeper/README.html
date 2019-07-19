@@ -1,0 +1,74 @@
+<h1>Minesweeper Game</h1>
+
+<p>Goals</p>
+
+<hr />
+
+<p>The purpose of this assignment is to learn to
+ 1. How to maintain states of multiple 2D arrays.
+ 2. Test conditions between multiple arrays.
+ 3. Improve efficiency in using loops and switch statements.</p>
+
+<h2>Programming</h2>
+
+<h3>Tasks</h3>
+
+<ul>
+<li>Initialize a 2D array the size of your game grid.</li>
+<li>Initialize the NamedColors of your mines, the layer covering the mines, the players carrot.</li>
+<li>Create an input handling function that read keypress events so that the players carrot moves around the screen.</li>
+<li>Add additional input to allow the player to select or flag a tile.</li>
+<li>Add conditions for a tile selection that contains a bomb or does not.</li>
+<li>If there is no bomb the game of minesweeper generally reveals some of the spaces around the empty space that was selected.</li>
+<li>Add a replay and a quit button.</li>
+</ul>
+
+<h2>More Details to Get You Started</h2>
+
+<h3>Key Press Events - NonBlocking Games</h3>
+
+<ul>
+<li>keyUp()</li>
+<li>keyDown()</li>
+<li>keyLeft()</li>
+<li>keyRight()</li>
+<li>keyQ()</li>
+<li>keySpace()</li>
+<li>keyW()</li>
+<li>keyS()</li>
+<li>keyA()</li>
+<li>keyD()</li>
+</ul>
+
+<h3>Key Press Events - Blocking Games</h3>
+
+<ul>
+<li>getKeyPress(); Returns a string.</li>
+<li>"ArrowLeft"</li>
+<li>"ArrowRight"</li>
+<li>"ArrowUp"</li>
+<li>"ArrowDown"</li>
+<li>"w"</li>
+<li>"s"</li>
+<li>"a"</li>
+<li>"d"</li>
+<li>etc...</li>
+</ul>
+
+<h3>Variables, Colors, and Sprite Symbols</h3>
+
+<ul>
+<li>NamedSymbol.symbolname;</li>
+<li>NamedColor.colorname;</li>
+<li>drawObject(column, row, NamedSymbol, NamedColor);</li>
+<li>setBGColor(column, row, NamedColor);</li>
+</ul>
+
+<h3>Important Functions</h3>
+
+<ul>
+<li>The gameLoop() function loops until the game is over.</li>
+<li>quit() stops the game.</li>
+<li>start() starts the game and calls the initialize() function once before it starts the gameLoop() function.</li>
+<li>render() sends your updated game grid to the server once. This is a blocking game function.</li>
+</ul>

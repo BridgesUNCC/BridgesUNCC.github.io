@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/work/bridges/BridgesUNCC.github.io/tutorials/testing/python/array1d.py.html</title>
+<meta name="Generator" content="Vim/8.1">
+<meta name="plugin-version" content="vim8.1_v1">
+<meta name="syntax" content="c">
+<meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="none">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Constant { color: #0000c0; text-decoration: underline; }
+.Statement { color: #008080; font-weight: bold; }
+.Type { color: #008000; text-decoration: underline; }
+-->
+</style>
+</head>
+<body>
+<pre id='vimCodeElement'>
+import sys
+print(sys.path)
+
+from bridges.bridges import *
+from bridges.array import *
+
+def main():
+    args = sys.argv[<span class="Constant">1</span>:]
+
+    # create the Bridges object, set credentials
+
+    bridges = Bridges(<span class="Type">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
+
+    <span class="Statement">if</span> len(args) &gt; <span class="Constant">3</span>:
+        bridges.connector.set_server(args[<span class="Constant">3</span>])
+
+    #Title and Description
+    bridges.set_title(<span class="Constant">&quot;One-Dimensional Array Example&quot;</span>)
+    bridges.set_description(<span class="Constant">&quot;OneD array with colors in order left to right: &quot;</span>
+            +	<span class="Constant">&quot;red, green, blue, cyan, magenta, yellow, red, green, blue, black.&quot;</span>)
+
+    #set array dimensions, allocate array fo elements
+    arraySize = <span class="Constant">10</span>
+
+    arr = Array(num_elements = arraySize)
+
+    #populate the array with squares of indicies
+    <span class="Statement">for</span> i in range(arr.size):
+        arr[i].label = i*i
+
+    #color the array elements
+    arr[<span class="Constant">0</span>].set_color(<span class="Constant">&quot;red&quot;</span>)
+    arr[<span class="Constant">1</span>].set_color(<span class="Constant">&quot;green&quot;</span>)
+    arr[<span class="Constant">2</span>].set_color(<span class="Constant">&quot;blue&quot;</span>)
+    arr[<span class="Constant">3</span>].set_color(<span class="Constant">&quot;cyan&quot;</span>)
+    arr[<span class="Constant">4</span>].set_color(<span class="Constant">&quot;magenta&quot;</span>)
+    arr[<span class="Constant">5</span>].set_color(<span class="Constant">&quot;yellow&quot;</span>)
+    arr[<span class="Constant">6</span>].set_color(<span class="Constant">&quot;red&quot;</span>)
+    arr[<span class="Constant">7</span>].set_color(<span class="Constant">&quot;green&quot;</span>)
+    arr[<span class="Constant">8</span>].set_color(<span class="Constant">&quot;blue&quot;</span>)
+    arr[<span class="Constant">9</span>].set_color(<span class="Constant">&quot;black&quot;</span>)
+
+    # tell Bridges what data structure to visualize
+    bridges.set_data_structure(arr)
+
+    # visualize the list
+    bridges.visualize()
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;__main__&quot;</span>:
+    main()
+
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

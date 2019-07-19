@@ -1,5 +1,6 @@
 #!/bin/sh
 
+REPORT=""
 
 #bail if git is not clean
 if ! git diff --quiet ;
@@ -12,6 +13,7 @@ fi
 if [ ! -e "$(which markdown)" ] ;
 then
     echo markdown is not installed. 
+	exit 1
 fi
 
 
@@ -56,18 +58,18 @@ writefooter() {
 addgroup() {
     name=$1
 
-    echo -n '<div class="assignmentgroup"> <p>' >> ${HTMLOUTPUT}
-    echo -n ${name}  >> ${HTMLOUTPUT}
-    echo -n '</p> </div>' >> ${HTMLOUTPUT}
+    printf "%s"'<div class="assignmentgroup"> <p>' >> ${HTMLOUTPUT}
+    printf "%s" "${name}"  >> ${HTMLOUTPUT}
+    printf "%s" '</p> </div>' >> ${HTMLOUTPUT}
     echo >> ${HTMLOUTPUT}
 }
 
 addsubgroup() {
     name=$1
 
-    echo -n '<div class="assignmentsubgroup"> <p>' >> ${HTMLOUTPUT}
-    echo -n ${name} >> ${HTMLOUTPUT}
-    echo -n '</p> </div>' >> ${HTMLOUTPUT}
+    printf "%s" '<div class="assignmentsubgroup"> <p>' >> ${HTMLOUTPUT}
+    printf "%s" "${name}" >> ${HTMLOUTPUT}
+    printf "%s" '</p> </div>' >> ${HTMLOUTPUT}
     echo >> ${HTMLOUTPUT}
 }
 
@@ -78,7 +80,9 @@ addassignment() {
     #bail if assignment name is empty
     if [ ! -n "${name}" ]
     then
-	echo assignment name is empty \"${name}\"
+	MSG="assignment name is empty \"${name}\""
+	echo ${MSG}
+	REPORT="${REPORT}\n${MSG}"
 	exit 1
     fi
 
@@ -86,7 +90,9 @@ addassignment() {
     srcdir=${BRIDGESASSIGNMENT}/assignmentdb/${name}
     if [ ! -d ${srcdir} ]
     then
-	echo unknown assignment \"${name}\". \(i.e., not found in "${srcdir}" \)
+	MSG="unknown assignment \"${name}\". \(i.e., not found in "${srcdir}" \)"
+	echo ${MSG}
+	REPORT="${REPORT}\n${MSG}"
 	exit 1
     fi
 
@@ -101,19 +107,25 @@ addassignment() {
 	then
 	    zip -j -r ${targetdir}/c++.zip ${srcdir}/c++
 	else
-	    echo no C++ scaffold for ${name}
+	    MSG="no C++ scaffold for ${name}"
+	    echo ${MSG}
+	    REPORT="${REPORT}\n${MSG}"
 	fi
 	if [ -d ${srcdir}/java ];
 	then
 	    zip -j -r ${targetdir}/java.zip ${srcdir}/java
 	else
-	    echo no JAVA scaffold for ${name}
+	    MSG="no JAVA scaffold for ${name}"
+	    echo ${MSG}
+	    REPORT="${REPORT}\n${MSG}"
 	fi
 	if [ -d ${srcdir}/python ];
 	then
 	    zip -j -r ${targetdir}/python.zip ${srcdir}/python
 	else
-	    echo no Python scaffold for ${name}
+	    MSG="no Python scaffold for ${name}"
+	    echo ${MSG}
+	    REPORT="${REPORT}\n${MSG}"
 	fi
 	
 	#copy slides if exist
@@ -135,23 +147,46 @@ addassignment() {
     if [ -e ${srcdir}/prettyname ]
     then
 	prettyname=$(cat ${srcdir}/prettyname)
+    else
+	MSG="no prettyname for ${name}"
+	echo ${MSG}
+	REPORT="${REPORT}\n${MSG}"
     fi
 
     shortdescription=""
     if [ -e ${srcdir}/shortdescription ]
     then
 	shortdescription=$(cat ${srcdir}/shortdescription)
+    else
+	MSG="no shortdescription for ${name}"
+	echo ${MSG}
+	REPORT="${REPORT}\n${MSG}"
     fi
     
     
     #output HTML
     echo '<div class="assignment">'  >> ${HTMLOUTPUT}
+
+    #if there is an icon, use it
+    if [ -f ${targetdir}/figures/icon.png ] ; then
+	echo "<div class=\"assignmenticon\"><img src=\"assignments/${targetdir}/figures/icon.png\" /></div>" >> ${HTMLOUTPUT}
+    else
+	MSG="no icon for ${name}"
+	echo ${MSG}
+	REPORT="${REPORT}\n${MSG}"
+    fi
+
+    echo '<div class="assignmentmain">' >> ${HTMLOUTPUT}
     echo '<p>' >> ${HTMLOUTPUT}
     echo '<div class="assignmentname">' ${prettyname}. '</div>' >> ${HTMLOUTPUT} #name
     echo '<div class="assignmentshortdesc">' ${shortdescription} '</div>' >> ${HTMLOUTPUT} #shortdesck
     if [ -e ${targetdir}/README.html ] ; #description
     then
 	echo "<a href=\"assignments/${targetdir}/README.html\">[Description]</a> "  >> ${HTMLOUTPUT}
+    else
+	MSG="no description for ${name}"
+	echo ${MSG}
+	REPORT="${REPORT}\n${MSG}"
     fi
     if [ -e ${targetdir}/slides.pdf ] ; #description
     then
@@ -172,42 +207,98 @@ addassignment() {
     fi
     echo '</p>' >> ${HTMLOUTPUT}
     echo '</div>' >> ${HTMLOUTPUT}
+    echo '</div>' >> ${HTMLOUTPUT}
     
 }
 
 writeheader
 
 addgroup "CS1"
-addsubgroup "Maps"
-addassignment "10-HurricaneTracker"
+addsubgroup "Basic API Calls"
+addassignment "27-GameGridBasic"
+
+
+addsubgroup "Tests and Conditions"
+addassignment "17-ControlsTutorial"
+addassignment "18-ControlsTutorialTwo"
+addassignment "19-Bugstomp"
+
 addsubgroup "Loops"
+addassignment "25-Patterns"
+addassignment "23-MountainPaths"
+
+addsubgroup "Input/Output"
+addassignment "10-HurricaneTracker"
+
+addsubgroup "2D Arrays"
 addassignment "6-GridSquareFill"
 addassignment "7-GridLyrics"
-addassignment "14-SpreadingFire"
-addassignment "15-FallingSand"
+addassignment "16-ImagePuzzle"
+
 
 addsubgroup "Games"
 addassignment "11-2048Game"
-addassignment "12-AStarMaze"
 addassignment "13-InfiniteRunner"
-
+addassignment "14-SpreadingFire"
+addassignment "15-FallingSand"
+addassignment "20-Minesweeper"
+addassignment "21-RaceCar"
+addassignment "22-Snake"
 
 addgroup "Data Structure"
 addsubgroup "LinkedList"
 addassignment "1-ListIMDB"
 addassignment "2-ListEQ"
 
+addsubgroup "Stacks and Queues"
+addassignment "12-AStarMaze"
+addassignment "26-TowersOfHanoi"
+addassignment "22-Snake"
+
 addsubgroup "Trees"
 addassignment "5-BstEq"
 addassignment "8-PQBook"
+addassignment "24-ImageCompressionKdTree"
 
 addsubgroup "Graphs"
+addassignment "12-AStarMaze"
 addassignment "3-GraphBaconNumber"
+addassignment "30-TemporalBaconNumber"
 addassignment "4-GraphEQ"
 addassignment "9-ShortestPathOSM"
+addassignment "31-TemporalPageRank"
+
+addgroup "Algorithms"
+addsubgroup "Big Oh"
+addassignment "28-BigOhMatters"
+
+addsubgroup "Sorting"
+addassignment "29-SortingBenchmark"
+
+addsubgroup "Complexity of Graph Problems"
+addassignment "9-ShortestPathOSM"
+addassignment "30-TemporalBaconNumber"
+addassignment "31-TemporalPageRank"
+
+addsubgroup "Greedy Algorithms"
+addassignment "23-MountainPaths"
+
+addsubgroup "Dynamic Programing"
+addassignment "23-MountainPaths"
+
+addsubgroup "Multi objective optimization"
+addassignment "23-MountainPaths"
+
 
 writefooter
 
 git add ${HTMLOUTPUT}
 git add ${ASSIGNDIR}
 git commit -am "updating assignments"
+
+
+echo ================================
+echo              REPORT
+echo ================================
+
+echo ${REPORT}

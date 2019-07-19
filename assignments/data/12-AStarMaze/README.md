@@ -1,7 +1,13 @@
-
 Assignment 12 - AStar Maze
 ===========================
- Goals
+
+Source
+------
+
+This is a nifty assignment from 2008 proposed by Don Blaheta.
+[Source](http://nifty.stanford.edu/2008/blaheta-maze/)
+
+Goals
  -----
  The purpose of this assignment is to learn to
  1. Generate a random maze on a 2D Grid

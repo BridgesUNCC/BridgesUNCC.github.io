@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/work/bridges/BridgesUNCC.github.io/tutorials/testing/python/mllist.py.html</title>
+<meta name="Generator" content="Vim/8.1">
+<meta name="plugin-version" content="vim8.1_v1">
+<meta name="syntax" content="c">
+<meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="none">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Constant { color: #0000c0; text-decoration: underline; }
+.Statement { color: #008080; font-weight: bold; }
+.Type { color: #008000; text-decoration: underline; }
+-->
+</style>
+</head>
+<body>
+<pre id='vimCodeElement'>
+from bridges.bridges import *
+from bridges.ml_element import *
+import sys
+
+def main():
+
+    args = sys.argv[<span class="Constant">1</span>:]
+
+    # create the Bridges object, set credentials
+    bridges = Bridges(<span class="Type">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
+
+    <span class="Statement">if</span> len(args) &gt; <span class="Constant">3</span>:
+        bridges.connector.set_server(args[<span class="Constant">3</span>])
+
+    #Title and Description
+    bridges.set_title(<span class="Constant">&quot;A Multilist Example&quot;</span>)
+    bridges.set_description(<span class="Constant">&quot;The multilist example should have one large red node, three small square red nodes, &quot;</span>
+            +	<span class="Constant">&quot;and eight neutral nodes. The larger red node is connected via a red link to a neutral node. The next &quot;</span>
+            +	<span class="Constant">&quot;link from the neutral node is blue followed by a cyan link between two of the small square red nodes.&quot;</span>)
+
+    # create multi linked list
+    el0 = MLelement(<span class="Constant">&quot;0&quot;</span>, <span class="Constant">&quot;0&quot;</span>)
+    el1 = MLelement(<span class="Constant">&quot;1&quot;</span>, <span class="Constant">&quot;1&quot;</span>)
+    el2 = MLelement(<span class="Constant">&quot;2&quot;</span>, <span class="Constant">&quot;2&quot;</span>)
+    el3 = MLelement(<span class="Constant">&quot;3&quot;</span>, <span class="Constant">&quot;3&quot;</span>)
+    el4 = MLelement(<span class="Constant">&quot;4&quot;</span>, <span class="Constant">&quot;4&quot;</span>)
+
+    #create the links
+    el0.set_next(el1)
+    el1.set_next(el2)
+    el2.set_next(el3)
+    el3.set_next(el4)
+
+    # create the sublist from <span class="Constant">2</span>
+    el5 = MLelement(<span class="Constant">&quot;5&quot;</span>, <span class="Constant">&quot;5&quot;</span>)
+    el6 = MLelement(<span class="Constant">&quot;6&quot;</span>, <span class="Constant">&quot;6&quot;</span>)
+    el7 = MLelement(<span class="Constant">&quot;7&quot;</span>, <span class="Constant">&quot;7&quot;</span>)
+
+    el5.set_next(el6)
+    el6.set_next(el7)
+    el2.set_sub_list(el5)
+
+    el8 = MLelement(<span class="Constant">&quot;8&quot;</span>, <span class="Constant">&quot;8&quot;</span>)
+    el9 = MLelement(<span class="Constant">&quot;9&quot;</span>, <span class="Constant">&quot;9&quot;</span>)
+
+    #create second sublist
+    el8.set_next(el9)
+    el3.set_sub_list(el8)
+
+    el10 = MLelement(<span class="Constant">&quot;10&quot;</span>, <span class="Constant">&quot;10&quot;</span>)
+    el11 = MLelement(<span class="Constant">&quot;11&quot;</span>, <span class="Constant">&quot;11&quot;</span>)
+
+    #create 3rd sublist
+    el10.set_next(el11)
+    el6.set_sub_list(el10)
+
+    el0.get_visualizer().set_size(<span class="Constant">40</span>)
+    el0.get_link_visualizer(el1).set_color(col_name=<span class="Constant">&quot;red&quot;</span>)
+    el0.get_link_visualizer(el1).set_thickness(<span class="Constant">3</span>)
+    el1.get_link_visualizer(el2).set_color(col_name=<span class="Constant">&quot;blue&quot;</span>)
+    el1.get_link_visualizer(el2).set_thickness(<span class="Constant">3</span>)
+    el2.get_link_visualizer(el3).set_color(col_name=<span class="Constant">&quot;cyan&quot;</span>)
+    el2.get_link_visualizer(el3).set_thickness(<span class="Constant">3</span>)
+
+    # set visualizer type
+    bridges.set_data_structure(el0)
+    #visualize the multi linked list
+    bridges.visualize()
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;__main__&quot;</span>:
+    main()
+
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

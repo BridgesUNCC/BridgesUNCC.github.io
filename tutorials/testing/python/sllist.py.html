@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/work/bridges/BridgesUNCC.github.io/tutorials/testing/python/sllist.py.html</title>
+<meta name="Generator" content="Vim/8.1">
+<meta name="plugin-version" content="vim8.1_v1">
+<meta name="syntax" content="c">
+<meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="none">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Constant { color: #0000c0; text-decoration: underline; }
+.Statement { color: #008080; font-weight: bold; }
+.Type { color: #008000; text-decoration: underline; }
+-->
+</style>
+</head>
+<body>
+<pre id='vimCodeElement'>
+from StudentInfo import *
+from bridges.bridges import *
+from bridges.sl_element import *
+import sys
+
+
+def main():
+
+    args = sys.argv[<span class="Constant">1</span>:]
+
+    # create the Bridges object, set credentials
+    bridges = Bridges(<span class="Type">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
+
+    <span class="Statement">if</span> len(args) &gt; <span class="Constant">3</span>:
+        bridges.connector.set_server(args[<span class="Constant">3</span>])
+
+    #Title and Description
+    bridges.set_title(<span class="Constant">&quot;A Single Linked List Example&quot;</span>)
+    bridges.set_description(<span class="Constant">&quot;A list of student data where each node is linked only to the next &quot;</span>
+            +	<span class="Constant">&quot;node in the list. Node and link colors from top of list to bottom: Blue with magenta link, &quot;</span>
+            +	<span class="Constant">&quot;red with magenta link, green with yellow link, magenta with green link, cyan.&quot;</span>)
+
+    # create the linked list elements with student data
+
+    e01 = SLelement(e=Student(<span class="Constant">&quot;00000000000&quot;</span>,
+                          <span class="Constant">&quot;Gretel Chaney&quot;</span>,
+                          <span class="Constant">&quot;CS&quot;</span>,
+                          <span class="Constant">&quot;g.chaney@generated.com&quot;</span>,
+                          <span class="Constant">&quot;magenta&quot;</span>,
+                          <span class="Constant">&quot;blue&quot;</span>,
+                          <span class="Constant">9.0</span>), label=<span class="Constant">&quot;&quot;</span>)
+
+    e02 = SLelement(e=Student(<span class="Constant">&quot;00000000001&quot;</span>,
+                          <span class="Constant">&quot;Karol Soderman&quot;</span>,
+                          <span class="Constant">&quot;SIS&quot;</span>,
+                          <span class="Constant">&quot;k.soderman@generated.com&quot;</span>,
+                          <span class="Constant">&quot;magenta&quot;</span>,
+                          <span class="Constant">&quot;red&quot;</span>,
+                          <span class="Constant">11.0</span>), label=<span class="Constant">&quot;&quot;</span>)
+
+    e03 = SLelement(e=Student(<span class="Constant">&quot;00000000002&quot;</span>,
+                          <span class="Constant">&quot;Lamont Kyler&quot;</span>,
+                          <span class="Constant">&quot;BIO&quot;</span>,
+                          <span class="Constant">&quot;l.kyler@generated.com&quot;</span>,
+                          <span class="Constant">&quot;yellow&quot;</span>,
+                          <span class="Constant">&quot;green&quot;</span>,
+                          <span class="Constant">50.0</span>), label=<span class="Constant">&quot;&quot;</span>)
+
+    e04 = SLelement(e=Student(<span class="Constant">&quot;00000000003&quot;</span>,
+                          <span class="Constant">&quot;Gladys Serino&quot;</span>,
+                          <span class="Constant">&quot;CS&quot;</span>,
+                          <span class="Constant">&quot;g.serino@generated.com&quot;</span>,
+                          <span class="Constant">&quot;green&quot;</span>,
+                          <span class="Constant">&quot;magenta&quot;</span>,
+                          <span class="Constant">9.0</span>), label=<span class="Constant">&quot;&quot;</span>)
+
+    e05 = SLelement(e=Student(<span class="Constant">&quot;00000000004&quot;</span>,
+                          <span class="Constant">&quot;Starr Mcginn&quot;</span>,
+                          <span class="Constant">&quot;CS&quot;</span>,
+                          <span class="Constant">&quot;s.mcginn@generated.com&quot;</span>,
+                          <span class="Constant">&quot;red&quot;</span>,
+                          <span class="Constant">&quot;cyan&quot;</span>,
+                          <span class="Constant">15.0</span>), label=<span class="Constant">&quot;&quot;</span>)
+
+    # link the elements
+    e01.set_next(e02)
+    e02.set_next(e03)
+    e03.set_next(e04)
+    e04.set_next(e05)
+
+    # iterate through the list and add visual attributes
+    # to the elements; set the element color to the favorite
+    # color and the link to the disliked color
+    currentElement = e01
+    <span class="Statement">while</span> currentElement is not None:
+        # color the node
+        si = currentElement.get_value()
+        currentElement.get_visualizer().set_color(col_name=si.getLikeColor())
+
+        <span class="Statement">if</span> currentElement.get_next() is not None:
+            # color the link
+            currentElement.get_link_visualizer(currentElement.get_next()).set_color(col_name=si.getDislikeColor())
+            # adjust link thickness
+            currentElement.get_link_visualizer(currentElement.get_next()).set_thickness(si.getCreditHours() * <span class="Constant">0.75</span>)
+
+        # set the label to the student info (label created in
+        # StudentInfo class
+        currentElement.set_label(si.getName())
+
+        currentElement = currentElement.get_next()
+
+    # set the data structure to be visualized
+    bridges.set_data_structure(e01)
+    # visualize the data structure
+    bridges.visualize()
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;__main__&quot;</span>:
+    main()
+
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

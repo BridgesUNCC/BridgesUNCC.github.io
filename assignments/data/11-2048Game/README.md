@@ -1,12 +1,20 @@
-
 Assignment 11 - 2048
 ===========================
- Goals
- -----
- The purpose of this assignment is to learn to
- 1. Update and draw unique objects on a grid
- 2. Update object locations and handle interactions 
- 3. Set up a simple state machine
+
+Source
+------
+
+This is a nifty assignment from 2017 proposed by Kunal Mishra.
+[Source](http://nifty.stanford.edu/2017/mishra-2048/)
+
+
+
+Goals
+-----
+The purpose of this assignment is to learn to
+1. Update and draw unique objects on a grid
+2. Update object locations and handle interactions 
+3. Set up a simple state machine
 
 Programming
 -----------

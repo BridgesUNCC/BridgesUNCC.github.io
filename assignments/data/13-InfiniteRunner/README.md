@@ -1,11 +1,11 @@
-
 Assignment 13 - Infinite Runner
 ===========================
- Goals
- -----
- The purpose of this assignment is to learn to
- - Handle collision of objects on a 2D grid
- - Implement core functionality in a base class and use inheritance
+
+Goals
+-----
+The purpose of this assignment is to learn to
+- Handle collision of objects on a 2D grid
+- Implement core functionality in a base class and use inheritance
 
 Programming
 -----------
