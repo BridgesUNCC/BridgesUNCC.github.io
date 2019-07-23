@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="author" content="Bridges"/>
+  <meta name="description" content="Bridges Tutorials"/>
+
+  <link rel="stylesheet" type="text/css" href="./tutorial.css" />
+  <link rel="shortcut icon" href="http://bridgesuncc.github.io/favicon.png"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="http://www.w3schools.com/lib/w3data.js"></script>
+  <script src="./tutorial.js"></script>
+
+  <title>Bridges - Tutorials</title>
+
+  <script src="./prettyprint.js" defer></script>
+</head>
+
+<body>
+<div>
+
+<header w3-include-html="./Tutorial_Header.html"></header>
+
+<main>
+
+  <h2>Why Using NonBlockingGame</h2>
+
+  
+  <p>
+    NonBlockingGames is a Bridges abstraction that allows you to program simple games.
+  </p>
+
+  <p>
+    At the core, a game is concerned with four things:
+    <ol>
+      <li>Reading Inputs (which buttons are pressed).</li>
+      <li>Updating the game state (where is the protagonist).</li>
+      <li>Rendering to the Screen (what the scren should look like).</li>
+      <li>Doing it at 30 frame per seconds (getting a smooth experience).</li>
+    </ol>
+
+    NonBlockingGame in Bridges makes 1., 3., and 4. particularly easy
+    by making some assumptions about the kinds of game one can
+    do. Namely, the NonBlockingGame only enables games to be on a
+    small grid (up to 1024 cells), to use only a few sprites (up to
+    256 predefined sprites), and to use only a few keys (up to 10
+    keys).
+  </p>
+
+  <p>The benefits is that within these constraints, writing a game is
+  very easy. We will look at how it works in three steps: 1. getting
+  something running; 2. displaying something on the screen;
+  3. capturing user input.</p>
+ 
+  <h2>1. Getting Started</h2>
+  
+  <p>A game in Bridges is creating by creating a new class for your
+    game that derive from NonBlockingGame. Your class has to construct
+    the underlying NonBlockingGame object by passing the usual Bridges
+    credentials, the assignment number, and the size of the game
+    board. We will use a 10x10 board as an example. Then the game
+    object need to be instanciated and the game started.
+  </p>
+  <p> Minimally, you create a game by writing two functions:
+    <ol>
+      <li>initialize() is called once when the game originally
+	start. It is typically used to set up all the game logic in its
+	initial state. Think for instance about setting up a chess board
+	at the beginning of the game.</li>
+      <li>gameLoop() is called once per frame of the game. This is the
+	function that you will write to update the game at each frame
+	based on the player's input.</li>
+    </ol>
+    Here is a minimal game pre-written for you.
+  </p>
+  
+  <div class="tabs">
+    <div onclick="displayCode('Java1',this)">Java</div>
+    <div onclick="displayCode('C++1',this)" >C++</div>
+    <div onclick="displayCode('Python1',this)" >Python</div>
+  </div>
+  <div class="tabContents">
+    <div id="Java1" w3-include-html="./Java_NonBlockingGame-GettingStarted.html"></div>
+    <div id="C++1"  w3-include-html="./Cpp_NonBlockingGame-GettingStarted.html"></div>
+    <div id="Python1"  w3-include-html="./Python_NonBlockingGame-GettingStarted.html"></div>
+  </div>
+
+  <p>Make sure that you can run the minimal game.</p>
+  
+  <p>If you follow the URL given to you when the application runs, it
+  will get to to the Bridges webpage that show your game. To see it,
+  you need to be logged in your account and click on the "Connect to
+  Game" button.</p>
+
+  <p>If you want to convince yourself that the game is actually
+  running, you can print to the console a simple message when the
+  GameLoop() function is called. You will see that the message will
+  appear about 30 times per second.</p>
+  
+  <h2>2. What can be Displayed using NonBlockingGame?</h2>
+
+  <div class="tabs">
+    <div onclick="displayCode('Java2',this)">Java</div>
+    <div onclick="displayCode('C++2',this)" >C++</div>
+    <div onclick="displayCode('Python2',this)" >Python</div>
+  </div>
+  <div class="tabContents">
+    <div id="Java2" w3-include-html="./Java_NonBlockingGame-Display.html"></div>
+    <div id="C++2"  w3-include-html="./Cpp_NonBlockingGame-Display.html"></div>
+    <div id="Python2"  w3-include-html="./Python_NonBlockingGame-Display.html"></div>
+  </div>
+  
+  <h2>3. Capturing User Input.</h2>
+
+  <div class="tabs">
+    <div onclick="displayCode('Java3',this)">Java</div>
+    <div onclick="displayCode('C++3',this)" >C++</div>
+    <div onclick="displayCode('Python3',this)" >Python</div>
+  </div>
+  <div class="tabContents">
+    <div id="Java3" w3-include-html="./Java_NonBlockingGame-Input.html"></div>
+    <div id="C++3"  w3-include-html="./Cpp_NonBlockingGame-Input.html"></div>
+    <div id="Python3"  w3-include-html="./Python_NonBlockingGame-Input.html"></div>
+  </div>
+  
+  <h2>Going Further</h2>
+
+  <p>Put a link to assignments and suggest a few.</p>
+
+</main>
+
+<footer w3-include-html="./Tutorial_Footer.html"></footer>
+
+</div>
+<script>
+	w3IncludeHTML();
+	document.querySelector("*.tabs > *").click();
+</script>
+</body>
+</html>
