@@ -13,11 +13,11 @@ int main (int argc, char **argv) {
 	bridges.setTitle("Sorting Benchmark");
 	bridges.setDescription("Sorting Benchmark test");
 
-	LineChart plot = new LineChart();
+	LineChart plot;
 	plot.setTitle("linechart plot");
 
 	vector<double> x1 = {1, 3, 5, 20};
-	vector<double> x1 = {2, 3, 5, 20};
+	vector<double> y1 = {2, 3, 5, 20};
 	plot.setDataSeries("1", x1, y1);
 	bridges.setDataStructure(plot);
 	bridges.visualize();
@@ -35,10 +35,7 @@ int main (int argc, char **argv) {
 	plot.toggleMouseTrack(true);
 	plot.toggleLogarithmicY(true);
 
-	bridges.setVisualizeJSON(true);
+	bridges.setVisualizeJSONFlag(true);
 	
 	bridges.visualize();
-
-}
-
 }

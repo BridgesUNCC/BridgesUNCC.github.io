@@ -11,15 +11,10 @@ int main(int argc, char **argv) {
 	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
 	// title, description
 	bridges.setTitle("Two-Dimensional Array Example");
-	bridges.setDescription("A TwoD array with four rows and four columns. "
-						 "Row one left to right: red, neutral, neutral, blue. "
-						 "Row two left to right: neutral, cyan, neutral, neutral. "
-						 "Row three left to right: neutral, neutral, yellow, neutral. "
-						 "Row four left to right: green, neutral, neutral, magenta.");
 
 	// create, populate 2D array
-	int rows = 5;
-	int cols = 3;
+	int rows = 6;
+	int cols = 6;
 	Array2D<int> arr(rows, cols);
 
 	for (int i = 0; i < rows; i++)

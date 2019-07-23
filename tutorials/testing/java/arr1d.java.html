@@ -23,7 +23,7 @@ body { font-family: monospace; color: #000000; background-color: #ffffff; }
 <body>
 <pre id='vimCodeElement'>
 import bridges.connect.Bridges;
-import bridges.base.Array;
+import bridges.base.Array1D;
 
 public class arr1d {
 	public <span class="Type">static</span> <span class="Type">void</span> main(String[] args) throws Exception {
@@ -40,7 +40,7 @@ public class arr1d {
 		<span class="Comment">//  set array dimensions, allocate array of elements</span>
 		<span class="Type">int</span> arraySize = <span class="Constant">10</span>;
 
-		Array&lt;Integer&gt; arr = new Array&lt;Integer&gt; (arraySize);
+		Array1D&lt;Integer&gt; arr = new Array1D&lt;Integer&gt; (arraySize);
 
 		<span class="Comment">// populate the array, with squares of indices</span>
 		<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; arr.getSize(); k++) {

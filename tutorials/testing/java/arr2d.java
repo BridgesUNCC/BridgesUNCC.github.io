@@ -1,5 +1,5 @@
 import bridges.connect.Bridges;
-import bridges.base.Array;
+import bridges.base.Array2D;
 import bridges.base.Element;
 
 public class arr2d {
@@ -18,7 +18,7 @@ public class arr2d {
 
 		//  for 2D array 5x5
 		int num_rows = 4, num_cols = 4;
-		Array<Integer> my_array = new Array<Integer> (num_rows, num_cols);
+		Array2D<Integer> my_array = new Array2D<Integer> (num_rows, num_cols);
 
 		// populate the array
 		for (int row = 0; row < num_rows; row++) {

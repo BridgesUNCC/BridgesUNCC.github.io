@@ -37,11 +37,11 @@ using namespace std;
 	bridges.setTitle(<span class="Constant">&quot;Sorting Benchmark&quot;</span>);
 	bridges.setDescription(<span class="Constant">&quot;Sorting Benchmark test&quot;</span>);
 
-	LineChart plot = new LineChart();
+	LineChart plot;
 	plot.setTitle(<span class="Constant">&quot;linechart plot&quot;</span>);
 
 	vector&lt;<span class="Type">double</span>&gt; x1 = {<span class="Constant">1</span>, <span class="Constant">3</span>, <span class="Constant">5</span>, <span class="Constant">20</span>};
-	vector&lt;<span class="Type">double</span>&gt; x1 = {<span class="Constant">2</span>, <span class="Constant">3</span>, <span class="Constant">5</span>, <span class="Constant">20</span>};
+	vector&lt;<span class="Type">double</span>&gt; y1 = {<span class="Constant">2</span>, <span class="Constant">3</span>, <span class="Constant">5</span>, <span class="Constant">20</span>};
 	plot.setDataSeries(<span class="Constant">&quot;1&quot;</span>, x1, y1);
 	bridges.setDataStructure(plot);
 	bridges.visualize();
@@ -59,12 +59,9 @@ using namespace std;
 	plot.toggleMouseTrack(<span class="Constant">true</span>);
 	plot.toggleLogarithmicY(<span class="Constant">true</span>);
 
-	bridges.setVisualizeJSON(<span class="Constant">true</span>);
+	bridges.setVisualizeJSONFlag(<span class="Constant">true</span>);
 
 	bridges.visualize();
-
-}
-
 }
 </pre>
 </body>

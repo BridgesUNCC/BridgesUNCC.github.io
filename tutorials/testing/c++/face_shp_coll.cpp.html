@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/work/bridges/BridgesUNCC.github.io/tutorials/testing/c++/face_shp_coll.cpp.html</title>
+<meta name="Generator" content="Vim/8.1">
+<meta name="plugin-version" content="vim8.1_v1">
+<meta name="syntax" content="c">
+<meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="none">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Constant { color: #0000c0; text-decoration: underline; }
+.Statement { color: #008080; font-weight: bold; }
+.PreProc { color: #c000c0; text-decoration: underline; }
+.Type { color: #008000; text-decoration: underline; }
+.Comment { color: #c00000; font-weight: bold; }
+-->
+</style>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;SymbolCollection.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Rectangle.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Polygon.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Polyline.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Circle.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Label.h&quot;</span>
+
+using namespace bridges;
+
+<span class="Type">int</span> main (<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
+    <span class="Comment">// create Bridges object</span>
+    Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+                                <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+	<span class="Comment">// title, description</span>
+	bridges.setTitle(<span class="Constant">&quot;Symbol Collection - A Face Example&quot;</span>);
+	bridges.setDescription(<span class="Constant">&quot;Example of building a simple shape with transformations(translate, scale and rotation&quot;</span>);
+
+	SymbolCollection sc;
+
+	<span class="Comment">// Creae a simple face with circles and rectangles</span>
+	<span class="Comment">// face itself is a circle</span>
+	Circle s1(<span class="Constant">50</span>);
+	s1.setStrokeColor(<span class="Constant">&quot;red&quot;</span>);
+	s1.setStrokeWidth(<span class="Constant">2.0</span>);
+	sc.addSymbol(&amp;s1);
+
+	<span class="Comment">// left eye, use translation and scale to locate and shape it</span>
+	Circle s2(<span class="Constant">25</span>);
+	s2.setStrokeColor(<span class="Constant">&quot;green&quot;</span>);
+	s2.setStrokeWidth(<span class="Constant">1.2</span>);
+	<span class="Type">float</span> tf[] = {-<span class="Constant">25.</span>, <span class="Constant">20.</span>};
+	<span class="Type">float</span> sf[] = {<span class="Constant">0.5</span>, <span class="Constant">0.5</span>};
+	s2.translate(tf[<span class="Constant">0</span>], tf[<span class="Constant">1</span>]);
+	s2.scale(<span class="Constant">0.3</span>);
+	sc.addSymbol(&amp;s2);
+
+	<span class="Comment">// right eye, similarly</span>
+	Circle s3(<span class="Constant">25</span>);
+	s3.setStrokeColor(<span class="Constant">&quot;green&quot;</span>);
+	s3.setStrokeWidth(<span class="Constant">1.3</span>);
+	tf[<span class="Constant">0</span>] = <span class="Constant">25.</span>; tf[<span class="Constant">1</span>] = <span class="Constant">20.</span>;
+	s3.translate(tf[<span class="Constant">0</span>], tf[<span class="Constant">1</span>]);
+	s3.scale(<span class="Constant">0.3</span>);
+	sc.addSymbol(&amp;s3);
+
+
+	<span class="Comment">// nose is a rectangle, use scale and translation</span>
+	Rectangle s4(<span class="Constant">0</span>, <span class="Constant">0</span>, <span class="Constant">10</span>, <span class="Constant">10</span>);
+	s4.setFillColor(Color(<span class="Constant">&quot;blue&quot;</span>));
+	s4.setStrokeWidth(<span class="Constant">1.3</span>);
+	sf[<span class="Constant">0</span>] = <span class="Constant">0.5</span>; sf[<span class="Constant">1</span>] = <span class="Constant">3.0</span>;
+	tf[<span class="Constant">0</span>] = <span class="Constant">0.0</span>; tf[<span class="Constant">1</span>] = -<span class="Constant">10.0</span>;
+	s4.scale(sf[<span class="Constant">0</span>], sf[<span class="Constant">1</span>]);
+	s4.translate(tf[<span class="Constant">0</span>], tf[<span class="Constant">1</span>]);
+	sc.addSymbol(&amp;s4);
+
+	<span class="Comment">// mouth is a rectangle, use scale and translation</span>
+	Rectangle s5(<span class="Constant">0</span>, <span class="Constant">0</span>, <span class="Constant">10</span>, <span class="Constant">10</span>);
+	s5.setFillColor(Color(<span class="Constant">&quot;blue&quot;</span>));
+	s5.setStrokeWidth(<span class="Constant">1.3</span>);
+	sf[<span class="Constant">0</span>] = <span class="Constant">3.</span>; sf[<span class="Constant">1</span>] = <span class="Constant">0.5</span>;
+	tf[<span class="Constant">0</span>] = <span class="Constant">0.</span>; tf[<span class="Constant">1</span>] = -<span class="Constant">45.0</span>;
+	s5.scale(sf[<span class="Constant">0</span>], sf[<span class="Constant">1</span>]);
+	s5.translate(tf[<span class="Constant">0</span>], tf[<span class="Constant">1</span>]);
+	sc.addSymbol(&amp;s5);
+
+	Label l;
+	l.setLocation(<span class="Constant">0</span>,<span class="Constant">100</span>);
+	l.setFontSize(<span class="Constant">16</span>);
+	l.setStrokeWidth(<span class="Constant">1.0f</span>);
+	l.setLabel(<span class="Constant">&quot;Its a Dorky Looking Face!&quot;</span>);
+	l.setStrokeColor(<span class="Constant">&quot;purple&quot;</span>);
+	sc.addSymbol(&amp;l);
+
+	<span class="Comment">// set visualizer type</span>
+	bridges.setDataStructure(sc);
+
+	bridges.visualize();
+
+	<span class="Statement">return</span> <span class="Constant">0</span>;
+}
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

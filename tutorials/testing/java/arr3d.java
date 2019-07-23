@@ -1,5 +1,5 @@
 import bridges.connect.Bridges;
-import bridges.base.Array;
+import bridges.base.Array3D;
 import bridges.base.Element;
 
 public class arr3d {
@@ -18,7 +18,7 @@ public class arr3d {
 
 		// specify array dimensions and create 3D array
 		int num_slices = 4, num_rows = 4, num_cols = 4;
-		Array<Integer> my_array = new Array<Integer> (num_slices, num_rows, num_cols);
+		Array3D<Integer> my_array = new Array3D<Integer> (num_slices, num_rows, num_cols);
 
 		// populate the elements with their array position
 		int n  = 0;

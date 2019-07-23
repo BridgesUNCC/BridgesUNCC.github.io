@@ -1,5 +1,5 @@
 import bridges.connect.Bridges;
-import bridges.base.Array;
+import bridges.base.Array1D;
 
 public class arr1d {
 	public static void main(String[] args) throws Exception {
@@ -16,7 +16,7 @@ public class arr1d {
 		//  set array dimensions, allocate array of elements
 		int arraySize = 10;
 
-		Array<Integer> arr = new Array<Integer> (arraySize);
+		Array1D<Integer> arr = new Array1D<Integer> (arraySize);
 
 		// populate the array, with squares of indices
 		for (int k = 0; k < arr.getSize(); k++) {

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/work/bridges/BridgesUNCC.github.io/tutorials/testing/java/MinimalGame.java.html</title>
+<meta name="Generator" content="Vim/8.1">
+<meta name="plugin-version" content="vim8.1_v1">
+<meta name="syntax" content="c">
+<meta name="settings" content="no_progress,use_css,pre_wrap,no_foldcolumn,prevent_copy=">
+<meta name="colorscheme" content="none">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Constant { color: #0000c0; text-decoration: underline; }
+.Comment { color: #c00000; font-weight: bold; }
+.Type { color: #008000; text-decoration: underline; }
+-->
+</style>
+</head>
+<body>
+<pre id='vimCodeElement'>
+import bridges.games.*;
+import bridges.base.*;
+
+class MinimalGame extends NonBlockingGame {
+    public MinimalGame() {
+	<span class="Comment">//substitute your username and api key</span>
+	super (<span class="Constant">1</span>, <span class="Constant">&quot;myuserid&quot;</span>,  <span class="Constant">&quot;myapikey&quot;</span>, <span class="Constant">10</span>, <span class="Constant">10</span>);
+	<span class="Comment">//this created a game board of 10x10 into assignment 1</span>
+    }
+
+    public <span class="Type">void</span> initialize() {
+	<span class="Comment">//This function is executed once at the beginning of the game</span>
+    }
+
+    public <span class="Type">void</span> gameLoop() {
+	<span class="Comment">//This function is executed each frame of the game</span>
+    }
+
+    public <span class="Type">static</span> <span class="Type">void</span>  main (String args[]) {
+	MinimalGame g = new MinimalGame();
+	g.start();
+    }
+}
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

@@ -22,10 +22,12 @@ int main(int argc, char **argv) {
 	bridges.setServer("clone");
 
 	DataSource  *ds = new DataSource;
+/*
+	OSMData osm_data = ds->getOSMData("uncc_campus");
+*/
 	OSMData osm_data;
 	try {
-	  //osm_data = ds->getOSMData(35.28, -80.75, 35.32, -80.71);
-	  osm_data = ds->getOSMData("Charlotte");
+	  osm_data = ds->getOSMDataOld("uncc_campus");
 	}
 	catch (std::string s) {
 	  std::cerr<<"Exception: "<<s<<"\n";
