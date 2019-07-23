@@ -40,6 +40,18 @@ for file in ../c++/* ../java/* ../python/*;
 do
     vim -E -s -c "let g:html_no_progress=1" -c "syntax on" -c \
 	"set ft=c" -c "runtime syntax/2html.vim" -cwqa "$file"
+
+    #KR if you see some weird output comment the lines below.
+    
+    LINENB_END=$(grep -n \</pre\> ${file}.html | cut -d : -f 1)
+    LINENB_BEG=$(grep -n \<pre\ id= ${file}.html | cut -d : -f 1)
+    
+    head -n `echo $LINENB_END | bc` ${file}.html > temp.html
+    
+    NBLINE=`wc -l temp.html | cut -d \  -f 1`
+    
+    tail -n `echo $NBLINE - $LINENB_BEG + 1 | bc` temp.html > ${file}.html
+   
 done
 
 
