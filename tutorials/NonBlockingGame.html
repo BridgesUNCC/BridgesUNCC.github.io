@@ -150,6 +150,59 @@
   <p>Note that the code has been written in the initialize()
   function. Indeed the gameLoop() function is not going to change the
   state of the board, so a one time set up is sufficient.</p>
+
+  <h3>Some case study</h3>
+  
+  <p>Take a minute to consider the following displays that can be created for games Bugstomp, Snake, 2048, and FallingSand</p>
+
+  <div class="example">
+    <img class="exampleimage" src="images/game-bugstomp.png"/>
+    
+    <p class="exampledescription"><strong>Bugstomp</strong> is a very simple game on a 30x30 grid, where the
+      background is all black and all symbols are white. The character
+      controlled by the player is shown using the 'man' symbol and the
+      bug to stomp is shown using the 'bug3' symbol. The letter and
+      number symbols are used to display the score.</p>
+  </div>
+
+  <div class="example">
+  
+    <img class="exampleimage" src="images/game-snake.png" />
+  
+    <p class="exampledescription">In Snake, a 30x30 grid is used. The cells' background are first
+      colored with two alternating colors to help the player figure out
+      locations easily. The actual snake is displayed also using the
+      background color in grey to show the body and in white to show the
+      head of the snake. The apple to pick are shown with an actual red
+      apple object.</p>
+  </div>
+
+  
+  <div class="example">
+  
+    <img class="exampleimage" src="images/game-2048.png" />  
+  
+    <p class="exampledescription">The 2048 game is based on tiles arranged in 4 rows and 4
+      columns. Each tile need to display its value which can not be done
+      on a single cell of the NonBlockingGame, So each tile of the game
+      logic is rendered using 6x6 cells of the NonBlockingGame, and the
+      entire game uses a 24x24 board (4x4 tiles each of 6x6 cells). This
+      enables the game to show more complex information such as the
+      value of each tile, using a combination background color to show
+      the value of the time, but also symbols to print an actual
+      number. Also the decomposition of tile in 6x6 cells allows the
+      animation of the game by sliding the tiles one cell at a time when
+      moves happen.</p>
+  </div>
+  
+  <div class="example">
+    <img class="exampleimage" src="images/game-fallingsand.png" />
+  
+    <p class="exampledescription">Finally, <strong>Falling Sand</strong> operates on a 30x30 grid and show a
+      simulation of metal, sand and water. The metal is shown with 'gray'
+      'squares', sand is shown with 'sandybrown' 'waves', water is shown
+      with 'blue' 'droplet', and the cursor is shown with a 'star'.</p>
+  </div>
   
   <h2>3. Capturing User Input.</h2>
 
