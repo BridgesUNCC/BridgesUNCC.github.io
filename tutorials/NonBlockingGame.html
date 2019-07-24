@@ -25,7 +25,7 @@
 
 <main>
 
-  <h2>Why Using NonBlockingGame</h2>
+  <h2>Why Using NonBlockingGame?</h2>
 
   
   <p>
@@ -101,6 +101,38 @@
   
   <h2>2. What can be Displayed using NonBlockingGame?</h2>
 
+  <p>The display of a NonBlockGame is based on a grid. The size of the
+    grid can be as small as a single cell, and as big as 1024 cells in
+    total. The biggest square game board is 32x32. However, the board
+    does not need to square, it could be rectangular: for instance a
+    16x64 board, or a 128x8 boards are possible. The size of the board
+    can be controlled by the last two parameter to the constructor of
+    NonBlockingGame.</p>
+
+  <p>Each cell has a background color and can display an object
+    painted with a particular color. These colors and symbols enable
+    to compose a wide variety of displays.</p>
+
+  <p>Only 256 colors can be used for either background color or
+    symbols color. The list of colors is available as part of
+    the <a href="http://bridgesuncc.github.io/doc/java-api/current/html/enumbridges_1_1base_1_1_named_color.html">NamedColor</a>
+    are
+    the <a href="https://upload.wikimedia.org/wikipedia/commons/2/2b/SVG_Recognized_color_keyword_names.svg">SVG
+    Version of X11 color</a>. One can set the background color of a
+    cell using the setBGColor() function. The setBGColor() function
+    takes the row and column of the cell, and the color to paint that
+    cell.</p>
+
+  <p>The usable symbols
+    are <a href="http://bridgesuncc.github.io/doc/java-api/current/html/enumbridges_1_1base_1_1_named_symbol.html">NamedSymbols</a>
+    and are graphically
+    depicted <a href="http://bridges-games.herokuapp.com/img/symbols.png">here</a>. One
+    can display an object on a cell and select a color for it using
+    the drawObject() function.</p>
+
+  <p>The following code paints the screen's background and writes
+    "HELLO" with symbols.</p>
+
   <div class="tabs">
     <div onclick="displayCode('Java2',this)">Java</div>
     <div onclick="displayCode('C++2',this)" >C++</div>
@@ -111,9 +143,24 @@
     <div id="C++2"  w3-include-html="./Cpp_NonBlockingGame-Display.html"></div>
     <div id="Python2"  w3-include-html="./Python_NonBlockingGame-Display.html"></div>
   </div>
+
+  <p>Note that the code has been written in the initialize()
+  function. Indeed the gameLoop() function is not going to change the
+  state of the board, so a one time set up is sufficient.</p>
   
   <h2>3. Capturing User Input.</h2>
 
+  <p>At each frame of the game, the gameLoop() function is
+    executed. The programmer can query the user input with functions
+    which return booleans that indicate whether that particular key is
+    pressed. The programmer can query the arrows with keyUp(),
+    keyDown(), keyLeft(), keyRight(); four buttons with keyW(),
+    keyA(), keyS(), keyD(); and two special button keySpace(), and
+    keyQ().</p>
+
+  <p>The following code demonsrates how the keys can be used to display
+    the "HELLO" message only if the Up Arrow is pressed.</p>
+  
   <div class="tabs">
     <div onclick="displayCode('Java3',this)">Java</div>
     <div onclick="displayCode('C++3',this)" >C++</div>
@@ -124,10 +171,45 @@
     <div id="C++3"  w3-include-html="./Cpp_NonBlockingGame-Input.html"></div>
     <div id="Python3"  w3-include-html="./Python_NonBlockingGame-Input.html"></div>
   </div>
+
+  <p>Note that the code depending on the input has been written in the
+    gameLoop() function while the code changing the background color
+    has been written in initialize(). Indeed, the game board is not
+    reset at each frame, the board start at the beginning of a frame
+    in the same state it was at the previous frame. Since the
+    background color does not need changing, the ccode that sets the
+    background can be in initialize().</p>
+
+  <p>However, the code that prints "HELLO" uses symbols to print the
+    message. So the symbols are on the board at the beginning of the
+    gameLoop() function is the up arrow was pressed at the frame
+    before. Therefore, if the up arrow is no longer pressed, it is
+    necessary to remove the symbols by setting them to 'none'.</p>
   
   <h2>Going Further</h2>
 
-  <p>Put a link to assignments and suggest a few.</p>
+  <p>Despite the NonBLockingGame API is very simple, it is sufficient
+    to make a wide variety of games. Really most games from the early
+    games followed a similar
+    pattern. <a href="https://en.wikipedia.org/wiki/Adventure_(Atari_2600)">Adventure</a>,
+    <a href="https://en.wikipedia.org/wiki/Rogue_(video_game)">Rogue</a>,
+    <a href="https://en.wikipedia.org/wiki/Snake_(video_game_genre)">Snake</a>,
+    <a href="https://en.wikipedia.org/wiki/Tron_(video_game)">Tron's Light Cycles</a>,
+    <a href="https://en.wikipedia.org/wiki/2048_(video_game)">2048</a>,
+    <a href="https://en.wikipedia.org/wiki/Minesweeper_(video_game)">Minesweeper</a>,
+    <a href="https://en.wikipedia.org/wiki/Ultima_I:_The_First_Age_of_Darkness">Ultima</a>,
+    <a href="https://en.wikipedia.org/wiki/Crossfire_(1981_video_game)">Crossfire</a>,
+    <a href="https://en.wikipedia.org/wiki/Tetris">Tetris</a>,
+    <a href="https://en.wikipedia.org/wiki/Advance_Wars">Advance Wars</a>,
+    <a href="https://en.wikipedia.org/wiki/Sokoban">Sokoban</a>,
+    Chess all follow a similar pattern.</p>
+  
+  <p>Check Bridges assignment pages for games to make. The simpler
+    ones to start are probably Bugstomp, 2048, and Snake.</p>
+
+  <p>NonBlocking games can also be used not for games, but for
+    cellular automata simulations. See for instance assignments
+    Spreading Fire, and Falling Sand.</p>
 
 </main>
 
