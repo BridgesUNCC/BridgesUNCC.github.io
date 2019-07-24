@@ -9,20 +9,22 @@ using namespace std;
 using namespace bridges;
 
 
+// this program illustrates how to access the Gutenberg book meta data
 int main(int argc, char **argv) {
 		
 	// create bridges object
     Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", 
                                 "YOUR_API_KEY");
 
-								// read the earth quake  data and build the BST
 
+	// set title
 	bridges.setTitle("Accessing Gutenberg Book Collection Meta Data");
 
+	// read the Gutenberg book data
 	DataSource ds (&bridges);
-
     vector<GutenbergBook> book_list = ds.getGutenbergBookData();
 
+	// print the first book record
 	cout << "Guttenberg Book Data:" 
 		<< "\tAuthor: "  << book_list[0].getAuthorName() << endl
 		<< "\tAuthor Birth: "  << book_list[0].getAuthorBirth() << endl

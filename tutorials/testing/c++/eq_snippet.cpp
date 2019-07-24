@@ -12,17 +12,20 @@ using namespace bridges;
 
 int max_quakes = 100;
 
+// This program fragment illustrates how to access the USGIS earthquake data
 int main(int argc, char **argv) {
 
 	// create Bridges object
 	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID",
 		"YOUR_API_KEY");
-	// read the earth quake  data and build the BST
+	// set title
 	bridges.setTitle("Accessing USGIS Earthquake Data (USGIS Data)");
 
+	// read the earth quake  data 
 	DataSource ds (&bridges);
 	vector<EarthquakeUSGS> eq_list = ds.getEarthquakeUSGSData(max_quakes);
 
+	// print the first quake record
 	cout << "Earthquake 0:" << endl;
 	cout << "\tMagnitude:" << eq_list[0].getMagnitude() << endl
 		 << "\tDate:" << eq_list[0].getDateStr() << endl 

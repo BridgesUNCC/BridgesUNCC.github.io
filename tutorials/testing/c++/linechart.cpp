@@ -35,7 +35,5 @@ int main (int argc, char **argv) {
 	plot.toggleMouseTrack(true);
 	plot.toggleLogarithmicY(true);
 
-	bridges.setVisualizeJSONFlag(true);
-	
 	bridges.visualize();
 }

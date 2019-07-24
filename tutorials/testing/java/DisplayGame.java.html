@@ -14,11 +14,11 @@ class DisplayGame extends NonBlockingGame {
 	    <span class="Statement">for</span> (<span class="Type">int</span> j=<span class="Constant">0</span>; j&lt;getBoardWidth(); ++j)
 		setBGColor(i, j, NamedColor.ivory);
 
-	drawObject(<span class="Constant">1</span>, <span class="Constant">1</span>, NamedSymbol.H, NamedColor.blue);
-	drawObject(<span class="Constant">1</span>, <span class="Constant">2</span>, NamedSymbol.E, NamedColor.yellow);
-	drawObject(<span class="Constant">1</span>, <span class="Constant">3</span>, NamedSymbol.L, NamedColor.black);
-	drawObject(<span class="Constant">1</span>, <span class="Constant">4</span>, NamedSymbol.L, NamedColor.green);
-	drawObject(<span class="Constant">1</span>, <span class="Constant">5</span>, NamedSymbol.O, NamedColor.red);
+	drawSymbol(<span class="Constant">1</span>, <span class="Constant">1</span>, NamedSymbol.H, NamedColor.blue);
+	drawSymbol(<span class="Constant">1</span>, <span class="Constant">2</span>, NamedSymbol.E, NamedColor.yellow);
+	drawSymbol(<span class="Constant">1</span>, <span class="Constant">3</span>, NamedSymbol.L, NamedColor.black);
+	drawSymbol(<span class="Constant">1</span>, <span class="Constant">4</span>, NamedSymbol.L, NamedColor.green);
+	drawSymbol(<span class="Constant">1</span>, <span class="Constant">5</span>, NamedSymbol.O, NamedColor.red);
     }
 
     public <span class="Type">void</span> gameLoop() {

@@ -13,17 +13,20 @@ using namespace bridges;
 
 <span class="Type">int</span> max_quakes = <span class="Constant">100</span>;
 
+<span class="Comment">// This program fragment illustrates how to access the USGIS earthquake data</span>
 <span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
 
 	<span class="Comment">// create Bridges object</span>
 	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
 		<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
-	<span class="Comment">// read the earth quake  data and build the BST</span>
+	<span class="Comment">// set title</span>
 	bridges.setTitle(<span class="Constant">&quot;Accessing USGIS Earthquake Data (USGIS Data)&quot;</span>);
 
+	<span class="Comment">// read the earth quake  data </span>
 	DataSource ds (&amp;bridges);
 	vector&lt;EarthquakeUSGS&gt; eq_list = ds.getEarthquakeUSGSData(max_quakes);
 
+	<span class="Comment">// print the first quake record</span>
 	cout &lt;&lt; <span class="Constant">&quot;Earthquake 0:&quot;</span> &lt;&lt; endl;
 	cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Magnitude:&quot;</span> &lt;&lt; eq_list[<span class="Constant">0</span>].getMagnitude() &lt;&lt; endl
 		 &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Date:&quot;</span> &lt;&lt; eq_list[<span class="Constant">0</span>].getDateStr() &lt;&lt; endl

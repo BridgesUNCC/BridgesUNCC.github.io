@@ -12,15 +12,15 @@ using namespace std;
 
 using namespace bridges;
 
+<span class="Comment">// This program fragment illustrates how to access and read the IMDB actor/movie data</span>
 <span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
 
-	<span class="Comment">// Initialize BRIDGES with your credentials</span>
+	<span class="Comment">// create Bridges object</span>
     Bridges bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
                                 <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 
-    <span class="Comment">// set title for visualization</span>
+    <span class="Comment">// set title</span>
 	bridges.setTitle(<span class="Constant">&quot;Accessing IMDB Data&quot;</span>);
-
 
 	<span class="Comment">// create data source object</span>
 	DataSource ds (&amp;bridges);
@@ -29,7 +29,6 @@ using namespace bridges;
 	vector&lt;ActorMovieIMDB&gt; actor_list = ds.getActorMovieIMDBData(<span class="Constant">1814</span>);
 
 	<span class="Comment">// print out the first record of the dataset</span>
-
 	cout &lt;&lt; <span class="Constant">&quot;Actor-Movie Data:&quot;</span> &lt;&lt; endl
 		&lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Actor: &quot;</span> &lt;&lt; actor_list[<span class="Constant">0</span>].getActor() &lt;&lt; endl
 		&lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Movie: &quot;</span> &lt;&lt; actor_list[<span class="Constant">0</span>].getMovie() &lt;&lt; endl;

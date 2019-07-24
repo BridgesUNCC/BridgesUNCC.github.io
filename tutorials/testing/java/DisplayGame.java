@@ -13,11 +13,11 @@ class DisplayGame extends NonBlockingGame {
 	    for (int j=0; j<getBoardWidth(); ++j)
 		setBGColor(i, j, NamedColor.ivory);
 	
-	drawObject(1, 1, NamedSymbol.H, NamedColor.blue);
-	drawObject(1, 2, NamedSymbol.E, NamedColor.yellow);
-	drawObject(1, 3, NamedSymbol.L, NamedColor.black);
-	drawObject(1, 4, NamedSymbol.L, NamedColor.green);
-	drawObject(1, 5, NamedSymbol.O, NamedColor.red);
+	drawSymbol(1, 1, NamedSymbol.H, NamedColor.blue);
+	drawSymbol(1, 2, NamedSymbol.E, NamedColor.yellow);
+	drawSymbol(1, 3, NamedSymbol.L, NamedColor.black);
+	drawSymbol(1, 4, NamedSymbol.L, NamedColor.green);
+	drawSymbol(1, 5, NamedSymbol.O, NamedColor.red);
     }
 
     public void gameLoop() {
