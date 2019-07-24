@@ -35,41 +35,44 @@
   <p>
     At the core, a game is concerned with four things:
     <ol>
-      <li>Reading Inputs (which buttons are pressed).</li>
-      <li>Updating the game state (where is the protagonist).</li>
-      <li>Rendering to the Screen (what the scren should look like).</li>
-      <li>Doing it at 30 frame per seconds (getting a smooth experience).</li>
+      <li>Reading <strong>Inputs</strong> (which buttons are pressed).</li>
+      <li>Updating the <strong>game state</strong> using custom game mechanics (where is the protagonist).</li>
+      <li><strong>Rendering</strong> to the Screen (what the screen should look like).</li>
+      <li>Maintaining a <strong>Framerate</strong> of 30 frame per seconds (getting a smooth experience).</li>
     </ol>
 
-    NonBlockingGame in Bridges makes 1., 3., and 4. particularly easy
-    by making some assumptions about the kinds of game one can
-    do. Namely, the NonBlockingGame only enables games to be on a
-    small grid (up to 1024 cells), to use only a few sprites (up to
-    256 predefined sprites), and to use only a few keys (up to 10
-    keys).
+    NonBlockingGame in Bridges deals
+    with <strong>Inputs</strong>, <strong>Rendering</strong>,
+    and <strong>Framerate</strong> by making some assumptions about
+    the kinds of game one can do. More precisely, the NonBlockingGame
+    only enables games to be on a small grid (up to 1024 cells), to
+    use only a few sprites (up to 256 predefined sprites), and to use
+    only a few keys (up to 10 keys). These constraint still enable to
+    build many games and application and the programmer only focuses
+    on implementing updates to the game state.
   </p>
 
   <p>The benefits is that within these constraints, writing a game is
-  very easy. We will look at how it works in three steps: 1. getting
-  something running; 2. displaying something on the screen;
-  3. capturing user input.</p>
+  very easy. We will look at how to work with NonBlockingGame in three
+  steps: 1) Getting something running; 2) Displaying something on the
+  screen; 3) Capturing user input.</p>
  
   <h2>1. Getting Started</h2>
   
-  <p>A game in Bridges is creating by creating a new class for your
+  <p>A game in Bridges is made by creating a new class for your
     game that derive from NonBlockingGame. Your class has to construct
     the underlying NonBlockingGame object by passing the usual Bridges
     credentials, the assignment number, and the size of the game
     board. We will use a 10x10 board as an example. Then the game
-    object need to be instanciated and the game started.
+    object needs to be instanciated and the game started.
   </p>
   <p> Minimally, you create a game by writing two functions:
     <ol>
       <li>initialize() is called once when the game originally
-	start. It is typically used to set up all the game logic in its
-	initial state. Think for instance about setting up a chess board
+	starts. It is typically used to set up all the game logic in its
+	initial state. Think, for instance, about setting up a chess board
 	at the beginning of the game.</li>
-      <li>gameLoop() is called once per frame of the game. This is the
+      <li>gameLoop() is called once for each frame of the game. This is the
 	function that you will write to update the game at each frame
 	based on the player's input.</li>
     </ol>
@@ -91,7 +94,7 @@
   
   <p>If you follow the URL given to you when the application runs, it
   will get to to the Bridges webpage that show your game. To see it,
-  you need to be logged in your account and click on the "Connect to
+  you need to 1) be logged in your account, and, 2) click on the "Connect to
   Game" button.</p>
 
   <p>If you want to convince yourself that the game is actually
@@ -124,7 +127,7 @@
     cell.</p>
 
   <p>The usable symbols
-    are <a href="http://bridgesuncc.github.io/doc/java-api/current/html/enumbridges_1_1base_1_1_named_symbol.html">NamedSymbols</a>
+    are <a href="http://bridgesuncc.github.io/doc/java-api/current/html/enumbridges_1_1base_1_1_named_symbol.html">NamedSymbol</a>
     and are graphically
     depicted <a href="http://bridges-games.herokuapp.com/img/symbols.png">here</a>. One
     can display an object on a cell and select a color for it using
@@ -172,17 +175,19 @@
     <div id="Python3"  w3-include-html="./Python_NonBlockingGame-Input.html"></div>
   </div>
 
-  <p>Note that the code depending on the input has been written in the
+  <p>Note that the code checking for the input has been written in the
     gameLoop() function while the code changing the background color
-    has been written in initialize(). Indeed, the game board is not
-    reset at each frame, the board start at the beginning of a frame
-    in the same state it was at the previous frame. Since the
-    background color does not need changing, the ccode that sets the
-    background can be in initialize().</p>
+    has been written in initialize(). The code inside initialize()
+    would not be able to capture user input since it is only executed
+    once, so it has to be inside of gameLoop(). Because the game board
+    is not reset at each frame, the board starts at the beginning of a
+    frame in the same state it was at the end of the previous
+    frame. Since the background color does not need changing, the code
+    that sets the background can be left in initialize().</p>
 
   <p>However, the code that prints "HELLO" uses symbols to print the
     message. So the symbols are on the board at the beginning of the
-    gameLoop() function is the up arrow was pressed at the frame
+    gameLoop() function if the up arrow was pressed at the frame
     before. Therefore, if the up arrow is no longer pressed, it is
     necessary to remove the symbols by setting them to 'none'.</p>
   
