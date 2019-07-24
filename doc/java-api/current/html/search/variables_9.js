@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['opacity',['opacity',['../classbridges_1_1base_1_1_symbol.html#a7a01e5219d556a24e923885fe1646abb',1,'bridges::base::Symbol']]]
+  ['j',['j',['../enumbridges_1_1base_1_1_named_symbol.html#aff342ccbb45c80a368b911e7e34328f8',1,'bridges.base.NamedSymbol.j()'],['../enumbridges_1_1base_1_1_named_symbol.html#a792e82cd42e2fab536586b608c730906',1,'bridges.base.NamedSymbol.J()']]]
 ];
