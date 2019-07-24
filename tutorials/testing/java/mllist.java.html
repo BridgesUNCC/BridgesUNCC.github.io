@@ -6,8 +6,8 @@ public class mllist {
 	public <span class="Type">static</span> <span class="Type">void</span> main(String[] args) throws Exception {
 
 		<span class="Comment">//create the Bridges object</span>
-        Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
-                                        <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+			<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 
 		bridges.setTitle(<span class="Constant">&quot;A Multilist Example&quot;</span>);
 		bridges.setDescription(<span class="Constant">&quot;The large red node is the  beginning of list. Smaller red nodes spawn sublists, {2,5,{6, 10, 11},7}, {6, 10, 11} and {3,4}. Sublist origins are large green squares&quot;</span>);
@@ -25,7 +25,7 @@ public class mllist {
 		MLelement&lt;Integer&gt; el9 = new MLelement&lt;Integer&gt;(<span class="Constant">&quot;9&quot;</span>, <span class="Constant">9</span>);
 		MLelement&lt;Integer&gt; el10 = new MLelement&lt;Integer&gt;(<span class="Constant">&quot;10&quot;</span>, <span class="Constant">10</span>);
 		MLelement&lt;Integer&gt; el11 = new MLelement&lt;Integer&gt;(<span class="Constant">&quot;11&quot;</span>, <span class="Constant">11</span>);
-		<span class="Comment">// create the main list: 1, 2, 3, 4	</span>
+		<span class="Comment">// create the main list: 1, 2, 3, 4</span>
 		el0.setNext(el1);
 		el1.setNext(el2);
 		el2.setNext(el3);
@@ -33,16 +33,16 @@ public class mllist {
 
 		<span class="Comment">// create a sublist from 2 to 5, 6, 7</span>
 		el2.setSubList(el5);
-			el5.setNext(el6);
-			el6.setNext(el7);
+		el5.setNext(el6);
+		el6.setNext(el7);
 
 		<span class="Comment">// create a second sublist from 6 to 10, 11</span>
 		el6.setSubList(el10);
-			el10.setNext(el11);
+		el10.setNext(el11);
 
 		<span class="Comment">//create a third sublist from 3 to 8, 9</span>
 		el3.setSubList(el8);
-			el8.setNext(el9);
+		el8.setNext(el9);
 
 		<span class="Comment">// some visual attributes</span>
 		el0.setSize (<span class="Constant">40</span>);

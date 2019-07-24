@@ -6,15 +6,15 @@ public class arr3d {
 	public static void main(String[] args) throws Exception {
 
 		//create the Bridges object
-		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", 
-										"YOUR_API_KEY");
+		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID",
+			"YOUR_API_KEY");
 		// title, description
 		bridges.setTitle("Three-Dimensional Array Example");
-        bridges.setDescription("A 3D array displaying four rows, four columns, and four slices. " 
-                            + "This example uses a for loop in which the header specifies slice count as the iteration variable. "
-                            + "A nested loop then builds a 2D array within that slice. (See Two-Dimensional Array Test) "
-                            + "After initialization, colors of specific elements are changed manually using the "
-                            + " setColor() function.");
+		bridges.setDescription("A 3D array displaying four rows, four columns, and four slices. "
+			+ "This example uses a for loop in which the header specifies slice count as the iteration variable. "
+			+ "A nested loop then builds a 2D array within that slice. (See Two-Dimensional Array Test) "
+			+ "After initialization, colors of specific elements are changed manually using the "
+			+ " setColor() function.");
 
 		// specify array dimensions and create 3D array
 		int num_slices = 4, num_rows = 4, num_cols = 4;

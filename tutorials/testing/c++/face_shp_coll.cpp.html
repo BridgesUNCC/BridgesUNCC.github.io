@@ -61,13 +61,23 @@ using namespace bridges;
 	s5.setFillColor(Color(<span class="Constant">&quot;blue&quot;</span>));
 	s5.setStrokeWidth(<span class="Constant">1.3</span>);
 	sf[<span class="Constant">0</span>] = <span class="Constant">3.</span>; sf[<span class="Constant">1</span>] = <span class="Constant">0.5</span>;
-	tf[<span class="Constant">0</span>] = <span class="Constant">0.</span>; tf[<span class="Constant">1</span>] = -<span class="Constant">45.0</span>;
+	tf[<span class="Constant">0</span>] = <span class="Constant">0.</span>; tf[<span class="Constant">1</span>] = -<span class="Constant">40.0</span>;
 	s5.scale(sf[<span class="Constant">0</span>], sf[<span class="Constant">1</span>]);
 	s5.translate(tf[<span class="Constant">0</span>], tf[<span class="Constant">1</span>]);
 	sc.addSymbol(&amp;s5);
 
+	<span class="Comment">// put a hat on the head</span>
+	Polyline s6;
+	s6.addPoint(-<span class="Constant">50.0f</span>, <span class="Constant">22.0f</span>);
+	s6.addPoint(<span class="Constant">0.0f</span>, <span class="Constant">120.0f</span>);
+	s6.addPoint(<span class="Constant">50.0f</span>, <span class="Constant">22.0f</span>);
+	s6.setStrokeColor(<span class="Constant">&quot;darkorchid&quot;</span>);
+	s6.setStrokeWidth(<span class="Constant">3.0f</span>);
+	sc.addSymbol(&amp;s6);
+
+	<span class="Comment">// add a title to the figure</span>
 	Label l;
-	l.setLocation(<span class="Constant">0</span>,<span class="Constant">100</span>);
+	l.setLocation(-<span class="Constant">50</span>,<span class="Constant">100</span>);
 	l.setFontSize(<span class="Constant">16</span>);
 	l.setStrokeWidth(<span class="Constant">1.0f</span>);
 	l.setLabel(<span class="Constant">&quot;Its a Dorky Looking Face!&quot;</span>);

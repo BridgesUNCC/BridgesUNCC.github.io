@@ -10,13 +10,13 @@ public class sllist {
 	public static void main(String[] args) throws Exception {
 
 		// note: you must fill in with your Bridges credentials
-        Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", 
-                                        "YOUR_API_KEY");
-	// set title
-	bridges.setTitle("A Single Linked List Example");
+		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID",
+			"YOUR_API_KEY");
+		// set title
+		bridges.setTitle("A Single Linked List Example");
 
-	// set  description
-	bridges.setDescription("A singly linked list of node with student names, where each node is linked only to the next node in the list. Illustrates Node and link coloring, node size, link thickness and opacity");
+		// set  description
+		bridges.setDescription("A singly linked list of node with student names, where each node is linked only to the next node in the list. Illustrates Node and link coloring, node size, link thickness and opacity");
 
 		// create the linked list elements with student names
 		SLelement<String>  el0 = new SLelement<String> ("Gretel Chaney", "Gretel Chaney");
@@ -24,7 +24,7 @@ public class sllist {
 		SLelement<String>  el2 = new SLelement<String> ("Gladys Serino", "Gladys Serino");
 		SLelement<String>  el3 = new SLelement<String> ("Karol Soderman", "Karol Soderman");
 		SLelement<String>  el4 = new SLelement<String> ("Starr McGinn", "Starr McGinn");
-	 
+
 		//  link the elements
 		el0.setNext(el1);
 		el1.setNext(el2);

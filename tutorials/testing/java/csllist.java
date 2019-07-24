@@ -6,8 +6,8 @@ public class csllist {
 	public static void main(String[] args) throws Exception {
 
 		// create Bridges object
-		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", 
-										"YOUR_API_KEY");
+		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID",
+			"YOUR_API_KEY");
 		// title, description
 		bridges.setTitle("A Circle Singly Linked List Example");
 
@@ -20,7 +20,7 @@ public class csllist {
 		CircSLelement<String>  el2 = new CircSLelement<String> ("Gladys Serino", "Gladys Serino");
 		CircSLelement<String>  el3 = new CircSLelement<String> ("Karol Soderman", "Karol Soderman");
 		CircSLelement<String>  el4 = new CircSLelement<String> ("Starr McGinn", "Starr McGinn");
-	 
+
 		//  link the elements
 		el0.setNext(el1);
 		el1.setNext(el2);

@@ -24,9 +24,9 @@ public class color_grid {
 		// We will build a checker grid using two different colors
 
 		// initialize BRIDGES
-		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", 
-										"YOUR_API_KEY");
-		
+		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID",
+			"YOUR_API_KEY");
+
 		int width = 200, height = 200;
 
 		Color blue = new Color("blue");
@@ -62,9 +62,9 @@ public class color_grid {
 				int origin_y = j * sq_height;
 
 				// color the square
-				for (int y = origin_y; y < origin_y + sq_height; y++)
-					for (int x = origin_x; x < origin_x + sq_width; x++)
-						cg.set(x, y, col);
+				for (int row = origin_y; row < origin_y + sq_height; row++)
+					for (int column = origin_x; column < origin_x + sq_width; column++)
+						cg.set(row, column, col);
 			}
 
 		bridges.setDataStructure(cg);

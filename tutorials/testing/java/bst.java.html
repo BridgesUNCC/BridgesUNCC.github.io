@@ -13,7 +13,7 @@ public class bst {
 
 		<span class="Comment">//create the Bridges object</span>
 		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
-										<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+			<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 		<span class="Comment">// title, description</span>
 		bridges.setTitle(<span class="Constant">&quot;A Binary Search Tree Example with Earthquake Data&quot;</span>);
 		bridges.setDescription(<span class="Constant">&quot;10 sets of earthquake are gathered and sorted with nodes whos magnitude is greater than &quot;</span>
@@ -22,7 +22,7 @@ public class bst {
 
 
 		<span class="Comment">// Retrieve a list of 10 earthquake  records  from USGS using the BRIDGES API</span>
-    	DataSource ds = bridges.getDataSource();
+		DataSource ds = bridges.getDataSource();
 		List&lt;EarthquakeUSGS&gt; eqlist = ds.getEarthquakeUSGSData(<span class="Constant">10</span>);
 
 		<span class="Comment">// create BST nodes and insert into a tree</span>

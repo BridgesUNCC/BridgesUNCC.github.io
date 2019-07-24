@@ -7,7 +7,7 @@ import bridges.data_src_dependent.GutenbergBook;
 /*! A test class that fetches a random book from Gutenberg Book then sends the
 	title, authors name, and genre to the console as output.
 	There is no visual output to the users BRIDGES gallery after running this code.*/
-	
+
 public class book_snippet {
 	public static void main(String[] args) throws Exception {
 

@@ -14,15 +14,15 @@ public class graph_am {
 	public static void main(String[] args) throws Exception {
 
 		// initialize Bridges
-        Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", 
-                                        "YOUR_API_KEY");
+		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID",
+			"YOUR_API_KEY");
 
 		//  title, description
 		bridges.setTitle("A Simple Graph (Adjacency Matrix)  Example using IMDB Actor/Movie Data");
 		bridges.setDescription("Two lists each having an actor as the root node with 15 movies they played in as leaf nodes. "
-				+	"Root nodes are both red, Kevin Bacon's leaf nodes are green and Denzel Washington's leaf nodes are neutral.");
-				
-    	DataSource ds = bridges.getDataSource();
+			+	"Root nodes are both red, Kevin Bacon's leaf nodes are green and Denzel Washington's leaf nodes are neutral.");
+
+		DataSource ds = bridges.getDataSource();
 		ArrayList<ActorMovieIMDB>  actor_movie_data =
 			(ArrayList<ActorMovieIMDB>) ds.getActorMovieIMDBData(1813);
 

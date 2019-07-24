@@ -8,7 +8,7 @@ public class dllist {
 
 
 		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
-										<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+			<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 
 		<span class="Comment">// set title</span>
 		bridges.setTitle(<span class="Constant">&quot;A doubly Linked List Example&quot;</span>);
@@ -25,10 +25,14 @@ public class dllist {
 		DLelement&lt;String&gt;  el4 = new DLelement&lt;String&gt; (<span class="Constant">&quot;Starr McGinn&quot;</span>, <span class="Constant">&quot;Starr McGinn&quot;</span>);
 
 		<span class="Comment">// create the list</span>
-		el0.setNext(el1); el1.setPrev(el0);
-		el1.setNext(el2); el2.setPrev(el1);
-		el2.setNext(el3); el3.setPrev(el2);
-		el3.setNext(el4); el4.setPrev(el3);
+		el0.setNext(el1);
+		el1.setPrev(el0);
+		el1.setNext(el2);
+		el2.setPrev(el1);
+		el2.setNext(el3);
+		el3.setPrev(el2);
+		el3.setNext(el4);
+		el4.setPrev(el3);
 
 		<span class="Comment">// add  element colors</span>
 		<span class="Comment">// set colors for list elements - see the Color class for supported colors</span>

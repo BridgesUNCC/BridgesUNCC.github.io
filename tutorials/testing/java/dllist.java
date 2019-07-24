@@ -6,8 +6,8 @@ public class dllist {
 	public static void main(String[] args) throws Exception {
 
 
-		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", 
-										"YOUR_API_KEY");
+		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID",
+			"YOUR_API_KEY");
 
 		// set title
 		bridges.setTitle("A doubly Linked List Example");
@@ -22,12 +22,16 @@ public class dllist {
 		DLelement<String>  el2 = new DLelement<String> ("Gladys Serino", "Gladys Serino");
 		DLelement<String>  el3 = new DLelement<String> ("Karol Soderman", "Karol Soderman");
 		DLelement<String>  el4 = new DLelement<String> ("Starr McGinn", "Starr McGinn");
-		
+
 		// create the list
-		el0.setNext(el1); el1.setPrev(el0);
-		el1.setNext(el2); el2.setPrev(el1);
-		el2.setNext(el3); el3.setPrev(el2);
-		el3.setNext(el4); el4.setPrev(el3);
+		el0.setNext(el1);
+		el1.setPrev(el0);
+		el1.setNext(el2);
+		el2.setPrev(el1);
+		el2.setNext(el3);
+		el3.setPrev(el2);
+		el3.setNext(el4);
+		el4.setPrev(el3);
 
 		// add  element colors
 		// set colors for list elements - see the Color class for supported colors

@@ -25,12 +25,12 @@ public class StudentInfo {
 	 * @param email
 	 */
 	public StudentInfo(String studentID,
-				   String fullName,
-				   String program,
-				   String email,
-				   String dislikeColor,
-				   String favoriteColor,
-				   double studentCreditHours) {
+		String fullName,
+		String program,
+		String email,
+		String dislikeColor,
+		String favoriteColor,
+		double studentCreditHours) {
 		this.studentID = studentID;
 		this.fullName = fullName;
 		this.program = program;
@@ -130,11 +130,11 @@ public class StudentInfo {
 
 	public String getStudentLabel() {
 		String label =
-					       fullName      +  "\n"   +
-		"Email: " +		       email         +  "\n"   +
-		"Program: " + 			 program       +  "\n"   +
-		"Student ID: " + 		 studentID     +  "\n"   +
-		"Favorite Color: " + favoriteColor +  "\n";
+			fullName      +  "\n"   +
+			"Email: " +		       email         +  "\n"   +
+			"Program: " + 			 program       +  "\n"   +
+			"Student ID: " + 		 studentID     +  "\n"   +
+			"Favorite Color: " + favoriteColor +  "\n";
 
 		return label;
 	}

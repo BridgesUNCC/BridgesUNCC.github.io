@@ -2,8 +2,8 @@
 <span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
 <span class="PreProc">#include </span><span class="Constant">&quot;SymbolCollection.h&quot;</span>
 <span class="PreProc">#include </span><span class="Constant">&quot;Rectangle.h&quot;</span>
-<span class="PreProc">#include </span><span class="Constant">&quot;Polyline.h&quot;</span>
 <span class="PreProc">#include </span><span class="Constant">&quot;Polygon.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Polyline.h&quot;</span>
 <span class="PreProc">#include </span><span class="Constant">&quot;Circle.h&quot;</span>
 <span class="PreProc">#include </span><span class="Constant">&quot;Label.h&quot;</span>
 
@@ -23,47 +23,47 @@ using namespace bridges;
 	<span class="Comment">// create some symbols and add to symbol collection</span>
 	SymbolCollection sc;
 
-	<span class="Comment">// draw a rectangle </span>
+<span class="Comment">//	Rectangle s1(-25, 0, 50, 50);</span>
 	Rectangle s1(-<span class="Constant">25</span>, <span class="Constant">0</span>, <span class="Constant">50</span>, <span class="Constant">50</span>);
 	s1.setFillColor(Color(<span class="Constant">&quot;red&quot;</span>));
-	sc.addSymbol(&amp;s1);
+	<span class="Type">float</span> sf[] = {<span class="Constant">0.5</span>, <span class="Constant">1.</span>};
+	s1.scale(sf);
+<span class="Comment">//	sc.addSymbol(&amp;s1);</span>
 
-	<span class="Comment">// and a circle next to it</span>
 	Circle s2(<span class="Constant">25</span>, <span class="Constant">0</span>, <span class="Constant">25</span>);
 	s2.setFillColor(Color(<span class="Constant">&quot;green&quot;</span>));
-	sc.addSymbol(&amp;s2);
-
-	<span class="Comment">// draw a triangle above</span>
-	Polygon s3;
-	s3.addPoint(-<span class="Constant">25</span>, -<span class="Constant">10</span>);
-	s3.addPoint(<span class="Constant">25</span>, -<span class="Constant">10</span>);
-	s3.addPoint(<span class="Constant">0</span>, <span class="Constant">50</span>);
-	s3.setStrokeColor(<span class="Constant">&quot;darkorchid&quot;</span>);
-	s3.setStrokeWidth(<span class="Constant">2.0f</span>);
-	sc.addSymbol(&amp;s3);
+<span class="Comment">//	s2.scale(0.5);</span>
+<span class="Comment">//	sc.addSymbol(&amp;s2);</span>
 
 	<span class="Comment">// draw axes</span>
+	Polyline s5;
+	s5.addPoint(-<span class="Constant">100</span>, <span class="Constant">0</span>);
+	s5.addPoint(<span class="Constant">100</span>, <span class="Constant">0</span>);
+	Polyline s6;
+	s6.addPoint(<span class="Constant">0</span>, -<span class="Constant">100</span>);
+	s6.addPoint(<span class="Constant">0</span>, <span class="Constant">100</span>);
+	sc.addSymbol(&amp;s5); sc.addSymbol(&amp;s6);
+
 	Polyline s4;
-	s4.addPoint(-<span class="Constant">100</span>, <span class="Constant">0</span>);
-	s4.addPoint(<span class="Constant">100</span>, <span class="Constant">0</span>);
-	s4.setStrokeColor(<span class="Constant">&quot;magenta&quot;</span>);
+	s4.addPoint(-<span class="Constant">25</span>, <span class="Constant">0</span>);
+	s4.addPoint(<span class="Constant">0</span>, -<span class="Constant">25</span>);
+	s4.addPoint(<span class="Constant">25</span>, <span class="Constant">0</span>);
+	s4.addPoint(<span class="Constant">0</span>, <span class="Constant">25</span>);
+	s4.addPoint(-<span class="Constant">25</span>, <span class="Constant">0</span>);
+	s4.scale(sf);
+	s4.setStrokeColor(<span class="Constant">&quot;darkorchid&quot;</span>);
 	s4.setStrokeWidth(<span class="Constant">2.0f</span>);
 	sc.addSymbol(&amp;s4);
 
-	Polyline s5;
-	s5.addPoint(<span class="Constant">0</span>, -<span class="Constant">100</span>);
-	s5.addPoint(<span class="Constant">0</span>, <span class="Constant">100</span>);
-	s5.setStrokeWidth(<span class="Constant">2.0f</span>);
-	sc.addSymbol(&amp;s5);
-
-	Polygon s6;
-	s6.addPoint (-<span class="Constant">30.0f</span>, <span class="Constant">40.0f</span>);
-	s6.addPoint (<span class="Constant">30.0f</span>, <span class="Constant">40.0f</span>);
-	s6.addPoint (<span class="Constant">0.0f</span>, <span class="Constant">80.0f</span>);
-	s6.setStrokeColor(<span class="Constant">&quot;cyan&quot;</span>);
-	s6.setFillColor(<span class="Constant">&quot;yellow&quot;</span>);
-	s6.setStrokeWidth(<span class="Constant">3.0f</span>);
-	sc.addSymbol(&amp;s6);
+	Polygon s3;
+	s3.addPoint(-<span class="Constant">100</span>, <span class="Constant">0</span>);
+	s3.addPoint(<span class="Constant">100</span>, <span class="Constant">0</span>);
+	s3.addPoint(<span class="Constant">0</span>, <span class="Constant">0</span>);
+	s3.addPoint(<span class="Constant">0</span>, -<span class="Constant">100</span>);
+	s3.addPoint(<span class="Constant">0</span>, <span class="Constant">100</span>);
+	s3.addPoint(<span class="Constant">0</span>, <span class="Constant">0</span>);
+	s3.setStrokeColor(<span class="Constant">&quot;magenta&quot;</span>);
+<span class="Comment">//	sc.addSymbol(&amp;s3);</span>
 
 
 
@@ -73,13 +73,11 @@ using namespace bridges;
 	l.setStrokeWidth(<span class="Constant">1.0f</span>);
 	l.setLabel(<span class="Constant">&quot;test label&quot;</span>);
 	l.setStrokeColor(<span class="Constant">&quot;purple&quot;</span>);
-	sc.addSymbol(&amp;l);
+<span class="Comment">//	sc.addSymbol(&amp;l);</span>
 
 	<span class="Comment">// set visualizer type</span>
 	bridges.setDataStructure(sc);
 
-	<span class="Comment">// visualize the JSON and Collection</span>
-	bridges.setVisualizeJSONFlag(<span class="Constant">true</span>);
 	bridges.visualize();
 
 	<span class="Statement">return</span> <span class="Constant">0</span>;

@@ -129,8 +129,8 @@ public class mixed_assignments {
 		cg.set(12, 12, black);
 		cg.set(12, 18, black);
 
-		for(int i = 0; i < 10; i++) {
-			cg.set(18, 10+i, black);
+		for (int i = 0; i < 10; i++) {
+			cg.set(18, 10 + i, black);
 		}
 
 		// set data structure and visualize

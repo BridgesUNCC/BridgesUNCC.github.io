@@ -60,13 +60,23 @@ int main (int argc, char **argv) {
 	s5.setFillColor(Color("blue"));
 	s5.setStrokeWidth(1.3);
 	sf[0] = 3.; sf[1] = 0.5;
-	tf[0] = 0.; tf[1] = -45.0;
+	tf[0] = 0.; tf[1] = -40.0;
 	s5.scale(sf[0], sf[1]);
 	s5.translate(tf[0], tf[1]);
 	sc.addSymbol(&s5);
 
+	// put a hat on the head
+	Polyline s6;
+	s6.addPoint(-50.0f, 22.0f);
+	s6.addPoint(0.0f, 120.0f);
+	s6.addPoint(50.0f, 22.0f);
+	s6.setStrokeColor("darkorchid");
+	s6.setStrokeWidth(3.0f);
+	sc.addSymbol(&s6);
+
+	// add a title to the figure
 	Label l;
-	l.setLocation(0,100);
+	l.setLocation(-50,100);
 	l.setFontSize(16);
 	l.setStrokeWidth(1.0f);
 	l.setLabel("Its a Dorky Looking Face!");

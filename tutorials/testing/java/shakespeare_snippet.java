@@ -11,7 +11,7 @@ public class shakespeare_snippet {
 		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
 
 		/* Get a List of Shakespeare objects from Bridges */
-    	DataSource ds = bridges.getDataSource();
+		DataSource ds = bridges.getDataSource();
 		List<Shakespeare> mylist = ds.getShakespeareData();
 
 		/* Inspect a random Shakespeare object */

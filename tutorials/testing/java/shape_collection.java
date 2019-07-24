@@ -13,55 +13,73 @@ public class shape_collection {
 	public static void main(String[] args) throws Exception {
 
 		//create Bridges object
-        Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", 
-                                        "YOUR_API_KEY");
+		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID",
+			"YOUR_API_KEY");
 		// title, description
 		bridges.setTitle("Symbol Collection");
 		bridges.setDescription("Red square, green circle, magenta horizontal and vertical lines, "
-				+	"and a test label with a purple outline.");
-				
+			+	"and a test label with a purple outline.");
 
 		// create some symbols and add to symbol collection
 		SymbolCollection sc = new SymbolCollection();
-		Rectangle s1 = new Rectangle(-25.0f, 0.0f, 50, 50);
-		s1.setFillColor(new Color("red"));
+
+		// draw a rectangle
+		Rectangle s1 = new Rectangle(-25.0f, 0.0f, 50.0f, 50.0f);
+		s1.setFillColor("red");
 		sc.addSymbol(s1);
 
-		Circle s2 = new Circle(25.0f, 0.0f, 25);
-		s2.setFillColor(new Color("green"));
+		// and a circle next to it
+		Circle s2 = new Circle(25.0f, 0.0f, 25.0f);
+		s2.setFillColor("green");
 		sc.addSymbol(s2);
 
-
+		// draw a triangle above
 		Polygon s3 = new Polygon();
-		s3.addPoint(-100, 0);
-		s3.addPoint(100, 0);
-		s3.addPoint(0, 0);
-		s3.addPoint(0, -100);
-		s3.addPoint(0, 100);
-		s3.addPoint(0, 0);
-		s3.setStrokeColor(new Color("magenta"));
+		s3.addPoint(-25.0f, -10.0f);
+		s3.addPoint(25.0f, -10.0f);
+		s3.addPoint(0.0f, 50.0f);
+		s3.setStrokeColor("darkorchid");
+		s3.setStrokeWidth(2.0f);
 		sc.addSymbol(s3);
 
+		// draw axes
 		Polyline s4 = new Polyline();
-			s4.addPoint(-25, -10);
-			s4.addPoint(25, -10);
-			s4.addPoint(0, 50);
-			s4.setStrokeColor(new Color("darkorchid"));
-			s4.setStrokeWidth(2.0f);
+		s4.addPoint(-100.0f, 0.0f);
+		s4.addPoint(100.0f, 0.0f);
+		s4.setStrokeColor("magenta");
+		s4.setStrokeWidth(2.0f);
 		sc.addSymbol(s4);
 
+		Polyline s5 = new Polyline();
+		s5.addPoint(0.0f, -100.0f);
+		s5.addPoint(0.0f, 100.0f);
+		s5.setStrokeWidth(2.0f);
+		sc.addSymbol(s5);
+
+		Polygon s6 = new Polygon();
+		s6.addPoint (-30.0f, 40.0f);
+		s6.addPoint (30.0f, 40.0f);
+		s6.addPoint (0.0f, 80.0f);
+		s6.setStrokeColor("cyan");
+		s6.setFillColor("yellow");
+		s6.setStrokeWidth(3.0f);
+		sc.addSymbol(s6);
+
+
+
 		Label l = new Label();
-		l.setLocation(0, 25);
+		l.setLocation(0.0f, 25.0f);
 		l.setFontSize(12);
 		l.setStrokeWidth(1.0f);
 		l.setLabel("test label");
-		l.setStrokeColor(new Color("purple"));
+		l.setStrokeColor("purple");
 		sc.addSymbol(l);
 
 		// set visualizer type
 		bridges.setDataStructure(sc);
 
 		// visualize the JSON and Collection
+		//	bridges.setVisualizeJSONFlag(true);
 		bridges.visualize();
 	}
 }

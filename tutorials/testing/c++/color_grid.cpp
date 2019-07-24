@@ -49,9 +49,9 @@ int main(int argc, char **argv) {
 			int origin_y = j * sq_height;
 
 			// color the square
-			for (int y = origin_y; y < origin_y + sq_height; y++)
-				for (int x = origin_x; x < origin_x + sq_width; x++)
-					cg->set(x, y, Color(col));
+			for (int row = origin_y; row < origin_y + sq_height; row++)
+				for (int column = origin_x; column < origin_x + sq_width; column++)
+					cg->set(row, column, Color(col));
 		}
 
 	bridges.setDataStructure(cg);

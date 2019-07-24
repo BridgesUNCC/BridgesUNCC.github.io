@@ -11,7 +11,7 @@ public class graph_maps {
 	public static void main(String[] args) throws Exception {
 
 		// initialize Bridges
-				Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
+		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
 
 		// set a title for the visualization
 		bridges.setTitle("Graphs with Map Overlays");
@@ -19,10 +19,10 @@ public class graph_maps {
 		// create an adjacency list based graph
 		GraphAdjListSimple<String> g = new GraphAdjListSimple<String>();
 
-		for(int i = 0; i < 10; i++) {
-			g.addVertex("node"+i, "node"+i);
-			if(i > 0) {
-				g.addEdge("node"+i, "node"+(i-1));
+		for (int i = 0; i < 10; i++) {
+			g.addVertex("node" + i, "node" + i);
+			if (i > 0) {
+				g.addEdge("node" + i, "node" + (i - 1));
 			}
 		}
 
@@ -42,10 +42,10 @@ public class graph_maps {
 
 
 		// CANVAS VERSIONS (add >100 nodes)
-		for(int i = 10; i < 110; i++) {
-			g.addVertex("node"+i, "node"+i);
-			if(i > 0) {
-				g.addEdge("node"+i, "node"+(i-1));
+		for (int i = 10; i < 110; i++) {
+			g.addVertex("node" + i, "node" + i);
+			if (i > 0) {
+				g.addEdge("node" + i, "node" + (i - 1));
 			}
 		}
 

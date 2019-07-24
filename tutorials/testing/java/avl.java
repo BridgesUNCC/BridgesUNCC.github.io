@@ -6,15 +6,15 @@ public class avl {
 	public static void main(String[] args) throws Exception {
 
 		//create the Bridges object
-		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", 
-										"YOUR_API_KEY");
+		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID",
+			"YOUR_API_KEY");
 		// title, description
 		bridges.setTitle("AVL Tree Example");
-        bridges.setDescription("This AVL tree has six elements. "
-                        + "The root is magenta color and has three nodes on its left "
-                        + "and two nodes on its right. The values from lower left to the root, 20, 40, 30, 50. "
-						+ "And from lower right to root, 90, 70, 50.");
-		
+		bridges.setDescription("This AVL tree has six elements. "
+			+ "The root is magenta color and has three nodes on its left "
+			+ "and two nodes on its right. The values from lower left to the root, 20, 40, 30, 50. "
+			+ "And from lower right to root, 90, 70, 50.");
+
 		//create  an  AVL tree elements
 		AVLTreeElement<Integer, String> avl_root = new AVLTreeElement<Integer, String>(50, "Hello");
 		AVLTreeElement<Integer, String> avl_2 = new AVLTreeElement<Integer, String>(30, "This");

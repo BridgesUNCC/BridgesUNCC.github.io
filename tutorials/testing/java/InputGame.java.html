@@ -1,0 +1,42 @@
+<pre id='vimCodeElement'>
+import bridges.games.*;
+import bridges.base.*;
+
+class InputGame extends NonBlockingGame {
+    public InputGame() {
+	<span class="Comment">//substitute your username and api key</span>
+	super (<span class="Constant">1</span>, <span class="Constant">&quot;myuserid&quot;</span>,  <span class="Constant">&quot;myapikey&quot;</span>, <span class="Constant">10</span>, <span class="Constant">10</span>);
+	<span class="Comment">//this created a game board of 10x10 into assignment 1</span>
+    }
+
+    public <span class="Type">void</span> initialize() {
+	<span class="Statement">for</span> (<span class="Type">int</span> i=<span class="Constant">0</span>; i&lt;getBoardHeight(); ++i)
+	    <span class="Statement">for</span> (<span class="Type">int</span> j=<span class="Constant">0</span>; j&lt;getBoardWidth(); ++j)
+		setBGColor(i, j, NamedColor.ivory);
+    }
+
+    public <span class="Type">void</span> gameLoop() {
+	<span class="Comment">//This function is executed each frame of the game</span>
+
+	<span class="Statement">if</span> (keyUp()) {
+	    drawObject(<span class="Constant">1</span>, <span class="Constant">1</span>, NamedSymbol.H, NamedColor.blue);
+	    drawObject(<span class="Constant">1</span>, <span class="Constant">2</span>, NamedSymbol.E, NamedColor.yellow);
+	    drawObject(<span class="Constant">1</span>, <span class="Constant">3</span>, NamedSymbol.L, NamedColor.black);
+	    drawObject(<span class="Constant">1</span>, <span class="Constant">4</span>, NamedSymbol.L, NamedColor.green);
+	    drawObject(<span class="Constant">1</span>, <span class="Constant">5</span>, NamedSymbol.O, NamedColor.red);
+	}
+	<span class="Statement">else</span> {
+	    drawObject(<span class="Constant">1</span>, <span class="Constant">1</span>, NamedSymbol.none, NamedColor.blue);
+	    drawObject(<span class="Constant">1</span>, <span class="Constant">2</span>, NamedSymbol.none, NamedColor.yellow);
+	    drawObject(<span class="Constant">1</span>, <span class="Constant">3</span>, NamedSymbol.none, NamedColor.black);
+	    drawObject(<span class="Constant">1</span>, <span class="Constant">4</span>, NamedSymbol.none, NamedColor.green);
+	    drawObject(<span class="Constant">1</span>, <span class="Constant">5</span>, NamedSymbol.none, NamedColor.red);
+	}
+    }
+
+    public <span class="Type">static</span> <span class="Type">void</span>  main (String args[]) {
+	InputGame g = new InputGame();
+	g.start();
+    }
+}
+</pre>

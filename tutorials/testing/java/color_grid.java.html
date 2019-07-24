@@ -26,7 +26,7 @@ public class color_grid {
 
 		<span class="Comment">// initialize BRIDGES</span>
 		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
-										<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+			<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 
 		<span class="Type">int</span> width = <span class="Constant">200</span>, height = <span class="Constant">200</span>;
 
@@ -63,9 +63,9 @@ public class color_grid {
 				<span class="Type">int</span> origin_y = j * sq_height;
 
 				<span class="Comment">// color the square</span>
-				<span class="Statement">for</span> (<span class="Type">int</span> y = origin_y; y &lt; origin_y + sq_height; y++)
-					<span class="Statement">for</span> (<span class="Type">int</span> x = origin_x; x &lt; origin_x + sq_width; x++)
-						cg.set(x, y, col);
+				<span class="Statement">for</span> (<span class="Type">int</span> row = origin_y; row &lt; origin_y + sq_height; row++)
+					<span class="Statement">for</span> (<span class="Type">int</span> column = origin_x; column &lt; origin_x + sq_width; column++)
+						cg.set(row, column, col);
 			}
 
 		bridges.setDataStructure(cg);

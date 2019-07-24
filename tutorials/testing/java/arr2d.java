@@ -6,15 +6,15 @@ public class arr2d {
 	public static void main(String[] args) throws Exception {
 
 		//create the Bridges object
-		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", 
-										"YOUR_API_KEY");
+		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID",
+			"YOUR_API_KEY");
 		// title, description
 		bridges.setTitle("Two-Dimensional Array Example");
-        bridges.setDescription("A TwoD array with four rows and four columns. " 
-                            + "Row one left to right: red, neutral, neutral, blue. "
-							+ "Row two left to right: neutral, cyan, neutral, neutral. "
-							+ "Row three left to right: neutral, neutral, yellow, neutral. "
-							+ "Row four left to right: green, neutral, neutral, magenta.");
+		bridges.setDescription("A TwoD array with four rows and four columns. "
+			+ "Row one left to right: red, neutral, neutral, blue. "
+			+ "Row two left to right: neutral, cyan, neutral, neutral. "
+			+ "Row three left to right: neutral, neutral, yellow, neutral. "
+			+ "Row four left to right: green, neutral, neutral, magenta.");
 
 		//  for 2D array 5x5
 		int num_rows = 4, num_cols = 4;
