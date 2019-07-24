@@ -26,6 +26,12 @@ shortest path algorithm such as Dijkstra's algorithm.
 5. Color the map based on their distance from the source vertex.
 
 
+Sample Output
+-------------
+
+![Sample Output](figures/Minneapolis.png)
+
+
 Variants
 --------
 
@@ -43,3 +49,4 @@ Bridges.
 
 Identifying the vertex the closest to a coordinate is a good
 application for using quad-trees.
+
