@@ -1,135 +1,135 @@
 <pre id='vimCodeElement'>
-public class StudentInfo {
-	private String studentID,
+<span class="Type">public</span> <span class="Type">class</span> StudentInfo {
+	<span class="Type">private</span> String studentID,
 			fullName,
 			program,
 			email,
 			dislikeColor,
 			favoriteColor;
 
-	private boolean visited;
+	<span class="Type">private</span> <span class="Type">boolean</span> visited;
 
-	public boolean isVisited() {
+	<span class="Type">public</span> <span class="Type">boolean</span> isVisited() {
 		<span class="Statement">return</span> visited;
 	}
 
-	public <span class="Type">void</span> setVisited(boolean visited) {
-		this.visited = visited;
+	<span class="Type">public</span> <span class="Type">void</span> setVisited(<span class="Type">boolean</span> visited) {
+		<span class="Type">this</span>.visited = visited;
 	}
 
-	private <span class="Type">double</span> studentCreditHours;
+	<span class="Type">private</span> <span class="Type">double</span> studentCreditHours;
 
-	<span class="Comment">/*</span><span class="Comment">*</span>
-<span class="Comment">	 * @param studentID</span>
-<span class="Comment">	 * @param fullName</span>
-<span class="Comment">	 * @param program</span>
-<span class="Comment">	 * @param email</span>
-<span class="Comment">	 </span><span class="Comment">*/</span>
-	public StudentInfo(String studentID,
+	<span class="Comment">/**</span>
+<span class="Comment">	 </span><span class="Comment">* </span><span class="Special">@param</span><span class="Identifier"> studentID</span>
+<span class="Comment">	 * </span><span class="Special">@param</span><span class="Identifier"> fullName</span>
+<span class="Comment">	 * </span><span class="Special">@param</span><span class="Identifier"> program</span>
+<span class="Comment">	 * </span><span class="Special">@param</span><span class="Identifier"> email</span>
+<span class="Comment">	 */</span>
+	<span class="Type">public</span> StudentInfo(String studentID,
 		String fullName,
 		String program,
 		String email,
 		String dislikeColor,
 		String favoriteColor,
 		<span class="Type">double</span> studentCreditHours) {
-		this.studentID = studentID;
-		this.fullName = fullName;
-		this.program = program;
-		this.email = email;
-		this.dislikeColor = dislikeColor;
-		this.favoriteColor = favoriteColor;
-		this.studentCreditHours = studentCreditHours;
+		<span class="Type">this</span>.studentID = studentID;
+		<span class="Type">this</span>.fullName = fullName;
+		<span class="Type">this</span>.program = program;
+		<span class="Type">this</span>.email = email;
+		<span class="Type">this</span>.dislikeColor = dislikeColor;
+		<span class="Type">this</span>.favoriteColor = favoriteColor;
+		<span class="Type">this</span>.studentCreditHours = studentCreditHours;
 	}
 
-	<span class="Comment">/*</span><span class="Comment">*</span>
-<span class="Comment">	 * @return studentID</span>
-<span class="Comment">	 </span><span class="Comment">*/</span>
-	public String getStudentID() {
+	<span class="Comment">/**</span>
+<span class="Comment">	 </span><span class="Comment">* </span><span class="Special">@return</span><span class="Comment"> studentID</span>
+<span class="Comment">	 */</span>
+	<span class="Type">public</span> String getStudentID() {
 		<span class="Statement">return</span> studentID;
 	}
 
-	<span class="Comment">/*</span><span class="Comment">*</span>
-<span class="Comment">	 * @param studentID</span>
-<span class="Comment">	 </span><span class="Comment">*/</span>
-	public <span class="Type">void</span> setStudentID(String studentID) {
-		this.studentID = studentID;
+	<span class="Comment">/**</span>
+<span class="Comment">	 </span><span class="Comment">* </span><span class="Special">@param</span><span class="Identifier"> studentID</span>
+<span class="Comment">	 */</span>
+	<span class="Type">public</span> <span class="Type">void</span> setStudentID(String studentID) {
+		<span class="Type">this</span>.studentID = studentID;
 	}
 
-	<span class="Comment">/*</span><span class="Comment">*</span>
-<span class="Comment">	 * @return fullName</span>
-<span class="Comment">	 </span><span class="Comment">*/</span>
-	public String getFullName() {
+	<span class="Comment">/**</span>
+<span class="Comment">	 </span><span class="Comment">* </span><span class="Special">@return</span><span class="Comment"> fullName</span>
+<span class="Comment">	 */</span>
+	<span class="Type">public</span> String getFullName() {
 		<span class="Statement">return</span> fullName;
 	}
 
-	<span class="Comment">/*</span><span class="Comment">*</span>
-<span class="Comment">	 * @param fullName</span>
-<span class="Comment">	 </span><span class="Comment">*/</span>
-	public <span class="Type">void</span> setFullName(String fullName) {
-		this.fullName = fullName;
+	<span class="Comment">/**</span>
+<span class="Comment">	 </span><span class="Comment">* </span><span class="Special">@param</span><span class="Identifier"> fullName</span>
+<span class="Comment">	 */</span>
+	<span class="Type">public</span> <span class="Type">void</span> setFullName(String fullName) {
+		<span class="Type">this</span>.fullName = fullName;
 	}
 
-	<span class="Comment">/*</span><span class="Comment">*</span>
-<span class="Comment">	 * @return program</span>
-<span class="Comment">	 </span><span class="Comment">*/</span>
-	public String getProgram() {
+	<span class="Comment">/**</span>
+<span class="Comment">	 </span><span class="Comment">* </span><span class="Special">@return</span><span class="Comment"> program</span>
+<span class="Comment">	 */</span>
+	<span class="Type">public</span> String getProgram() {
 		<span class="Statement">return</span> program;
 	}
 
-	<span class="Comment">/*</span><span class="Comment">*</span>
-<span class="Comment">	 * @param program</span>
-<span class="Comment">	 </span><span class="Comment">*/</span>
-	public <span class="Type">void</span> setProgram(String program) {
-		this.program = program;
+	<span class="Comment">/**</span>
+<span class="Comment">	 </span><span class="Comment">* </span><span class="Special">@param</span><span class="Identifier"> program</span>
+<span class="Comment">	 */</span>
+	<span class="Type">public</span> <span class="Type">void</span> setProgram(String program) {
+		<span class="Type">this</span>.program = program;
 	}
 
-	<span class="Comment">/*</span><span class="Comment">*</span>
-<span class="Comment">	 * @return email</span>
-<span class="Comment">	 </span><span class="Comment">*/</span>
-	public String getEmail() {
+	<span class="Comment">/**</span>
+<span class="Comment">	 </span><span class="Comment">* </span><span class="Special">@return</span><span class="Comment"> email</span>
+<span class="Comment">	 */</span>
+	<span class="Type">public</span> String getEmail() {
 		<span class="Statement">return</span> email;
 	}
 
-	<span class="Comment">/*</span><span class="Comment">*</span>
-<span class="Comment">	 * @param email</span>
-<span class="Comment">	 </span><span class="Comment">*/</span>
-	public <span class="Type">void</span> setEmail(String email) {
-		this.email = email;
+	<span class="Comment">/**</span>
+<span class="Comment">	 </span><span class="Comment">* </span><span class="Special">@param</span><span class="Identifier"> email</span>
+<span class="Comment">	 */</span>
+	<span class="Type">public</span> <span class="Type">void</span> setEmail(String email) {
+		<span class="Type">this</span>.email = email;
 	}
 
 
-	<span class="Comment">/*</span><span class="Comment">*</span>
-<span class="Comment">	 * @return favoriteColor</span>
-<span class="Comment">	 </span><span class="Comment">*/</span>
-	public String getFavoriteColor() {
+	<span class="Comment">/**</span>
+<span class="Comment">	 </span><span class="Comment">* </span><span class="Special">@return</span><span class="Comment"> favoriteColor</span>
+<span class="Comment">	 */</span>
+	<span class="Type">public</span> String getFavoriteColor() {
 		<span class="Statement">return</span> favoriteColor;
 	}
 
-	<span class="Comment">/*</span><span class="Comment">*</span>
-<span class="Comment">	 * @param favoriteColor</span>
-<span class="Comment">	 </span><span class="Comment">*/</span>
-	public <span class="Type">void</span> setFavoriteColor(String favoriteColor) {
-		this.favoriteColor = favoriteColor;
+	<span class="Comment">/**</span>
+<span class="Comment">	 </span><span class="Comment">* </span><span class="Special">@param</span><span class="Identifier"> favoriteColor</span>
+<span class="Comment">	 */</span>
+	<span class="Type">public</span> <span class="Type">void</span> setFavoriteColor(String favoriteColor) {
+		<span class="Type">this</span>.favoriteColor = favoriteColor;
 	}
 
 
-	public String getDislikeColor() {
+	<span class="Type">public</span> String getDislikeColor() {
 		<span class="Statement">return</span> dislikeColor;
 	}
 
-	public <span class="Type">void</span> setDislikeColor(String dislikeColor) {
-		this.dislikeColor = dislikeColor;
+	<span class="Type">public</span> <span class="Type">void</span> setDislikeColor(String dislikeColor) {
+		<span class="Type">this</span>.dislikeColor = dislikeColor;
 	}
 
-	public <span class="Type">double</span> getStudentCreditHours() {
+	<span class="Type">public</span> <span class="Type">double</span> getStudentCreditHours() {
 		<span class="Statement">return</span> studentCreditHours;
 	}
 
-	public <span class="Type">void</span> setStudentCreditHours(<span class="Type">double</span> studentCreditHours) {
-		this.studentCreditHours = studentCreditHours;
+	<span class="Type">public</span> <span class="Type">void</span> setStudentCreditHours(<span class="Type">double</span> studentCreditHours) {
+		<span class="Type">this</span>.studentCreditHours = studentCreditHours;
 	}
 
-	public String getStudentLabel() {
+	<span class="Type">public</span> String getStudentLabel() {
 		String label =
 			fullName      +  <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>   +
 			<span class="Constant">&quot;Email: &quot;</span> +		       email         +  <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>   +

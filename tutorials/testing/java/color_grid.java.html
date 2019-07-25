@@ -1,39 +1,39 @@
 <pre id='vimCodeElement'>
-<span class="Comment">/*</span><span class="Comment">*</span>
-<span class="Comment"> * Created by Kalpathi Subramanian</span>
-<span class="Comment"> * Date : 7/17/2018.</span>
+<span class="Comment">/**</span>
+<span class="Comment"> *</span><span class="Special"> Created by Kalpathi Subramanian</span>
+<span class="Comment"> *</span><span class="Special"> Date : 7/17/2018.</span>
 <span class="Comment"> *</span>
 <span class="Comment"> * krs@uncc.edu</span>
-<span class="Comment"> </span><span class="Comment">*/</span>
-import java.lang.String;
-import bridges.connect.Bridges;
-import bridges.base.SLelement;
-import bridges.base.Color;
-import bridges.base.ColorGrid;
+<span class="Comment"> */</span>
+<span class="PreProc">import</span> java.lang.String;
+<span class="PreProc">import</span> bridges.connect.Bridges;
+<span class="PreProc">import</span> bridges.base.SLelement;
+<span class="PreProc">import</span> bridges.base.Color;
+<span class="PreProc">import</span> bridges.base.ColorGrid;
 
-<span class="Comment">/*</span><span class="Comment">*</span>
-<span class="Comment"> *  This example illustrates the use of the Grid type and its subclass, a ColorGrid.</span>
+<span class="Comment">/**</span>
+<span class="Comment"> *</span><span class="Special">  This example illustrates the use of the Grid type and its subclass, a ColorGrid.</span>
 <span class="Comment"> *  The example builds  a checkerboard with two different colors</span>
 <span class="Comment"> *</span>
-<span class="Comment"> </span><span class="Comment">*/</span>
+<span class="Comment"> */</span>
 
-public class color_grid {
+<span class="Type">public</span> <span class="Type">class</span> color_grid {
 
-	public <span class="Type">static</span> <span class="Type">void</span> main(String[] args) throws Exception {
+	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) <span class="Type">throws</span> Exception {
 
 		<span class="Comment">// This example illustrates using the Bridges color grid</span>
 		<span class="Comment">// We will build a checker grid using two different colors</span>
 
 		<span class="Comment">// initialize BRIDGES</span>
-		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+		Bridges bridges = <span class="Statement">new</span> Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
 			<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 
 		<span class="Type">int</span> width = <span class="Constant">200</span>, height = <span class="Constant">200</span>;
 
-		Color blue = new Color(<span class="Constant">&quot;blue&quot;</span>);
-		Color red = new Color(<span class="Constant">&quot;red&quot;</span>);
+		Color blue = <span class="Statement">new</span> Color(<span class="Constant">&quot;blue&quot;</span>);
+		Color red = <span class="Statement">new</span> Color(<span class="Constant">&quot;red&quot;</span>);
 
-		ColorGrid cg  = new ColorGrid(width, height, red);
+		ColorGrid cg  = <span class="Statement">new</span> ColorGrid(width, height, red);
 
 		<span class="Comment">// create a checkerboard pattern</span>
 		<span class="Comment">// 10 x 10 grid</span>

@@ -1,29 +1,29 @@
 <pre id='vimCodeElement'>
-from bridges.bridges import *
-from bridges.data_src_dependent.data_source import *
-import sys
-import random
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.data_src_dependent.data_source <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
+<span class="PreProc">import</span> random
 
-def main():
+<span class="Statement">def</span> <span class="Identifier">main</span>():
     args = sys.argv[<span class="Constant">1</span>:]
 
-    # create the Bridges object, set credentials
-    bridges = Bridges(<span class="Type">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(<span class="Identifier">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
 
-    <span class="Statement">if</span> len(args) &gt; <span class="Constant">3</span>:
+    <span class="Statement">if</span> <span class="Identifier">len</span>(args) &gt; <span class="Constant">3</span>:
         bridges.connector.set_server(args[<span class="Constant">3</span>])
 
     my_list = get_earthquake_usgs_data(<span class="Constant">1000</span>)
 
-    quake1 = my_list[random.randrange(len(my_list))]
+    quake1 = my_list[random.randrange(<span class="Identifier">len</span>(my_list))]
 
-    print(quake1.get_latit())
-    print(quake1.get_longit())
-    print(quake1.get_location())
-    print(quake1.get_title())
-    print(quake1.get_magnitude())
+    <span class="Identifier">print</span>(quake1.get_latit())
+    <span class="Identifier">print</span>(quake1.get_longit())
+    <span class="Identifier">print</span>(quake1.get_location())
+    <span class="Identifier">print</span>(quake1.get_title())
+    <span class="Identifier">print</span>(quake1.get_magnitude())
 
 
-<span class="Statement">if</span> __name__ == '__main__':
+<span class="Statement">if</span> __name__ == <span class="Constant">'</span><span class="Constant">__main__</span><span class="Constant">'</span>:
     main()
 </pre>

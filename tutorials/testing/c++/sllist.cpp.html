@@ -8,8 +8,8 @@
 <span class="PreProc">#include </span><span class="Constant">&quot;SLelement.h&quot;</span>
 <span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
 
-using namespace bridges;
-using namespace std;
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
+<span class="Statement">using</span> <span class="Type">namespace</span> std;
 
 
 <span class="Type">int</span> main (<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
@@ -23,11 +23,11 @@ using namespace std;
 	bridges.setDescription(<span class="Constant">&quot;A singly linked list of node with student names, where each node is linked only to the next node in the list. Illustrates Node and link coloring, node size, link thickness and opacity&quot;</span>);
 
 	<span class="Comment">// create the linked list elements with student names</span>
-	SLelement&lt;string&gt;  *el0 = new SLelement&lt;string&gt; (<span class="Constant">&quot;Gretel Chaney&quot;</span>, <span class="Constant">&quot;Gretel Chaney&quot;</span>);
-	SLelement&lt;string&gt;  *el1 = new SLelement&lt;string&gt; (<span class="Constant">&quot;Lamont Kyler&quot;</span>, <span class="Constant">&quot;Lamont Kyler&quot;</span>);
-	SLelement&lt;string&gt;  *el2 = new SLelement&lt;string&gt; (<span class="Constant">&quot;Gladys Serino&quot;</span>, <span class="Constant">&quot;Gladys Serino&quot;</span>);
-	SLelement&lt;string&gt;  *el3 = new SLelement&lt;string&gt; (<span class="Constant">&quot;Karol Soderman&quot;</span>, <span class="Constant">&quot;Karol Soderman&quot;</span>);
-	SLelement&lt;string&gt;  *el4 = new SLelement&lt;string&gt; (<span class="Constant">&quot;Starr McGinn&quot;</span>, <span class="Constant">&quot;Starr McGinn&quot;</span>);
+	SLelement&lt;string&gt;  *el0 = <span class="Statement">new</span> SLelement&lt;string&gt; (<span class="Constant">&quot;Gretel Chaney&quot;</span>, <span class="Constant">&quot;Gretel Chaney&quot;</span>);
+	SLelement&lt;string&gt;  *el1 = <span class="Statement">new</span> SLelement&lt;string&gt; (<span class="Constant">&quot;Lamont Kyler&quot;</span>, <span class="Constant">&quot;Lamont Kyler&quot;</span>);
+	SLelement&lt;string&gt;  *el2 = <span class="Statement">new</span> SLelement&lt;string&gt; (<span class="Constant">&quot;Gladys Serino&quot;</span>, <span class="Constant">&quot;Gladys Serino&quot;</span>);
+	SLelement&lt;string&gt;  *el3 = <span class="Statement">new</span> SLelement&lt;string&gt; (<span class="Constant">&quot;Karol Soderman&quot;</span>, <span class="Constant">&quot;Karol Soderman&quot;</span>);
+	SLelement&lt;string&gt;  *el4 = <span class="Statement">new</span> SLelement&lt;string&gt; (<span class="Constant">&quot;Starr McGinn&quot;</span>, <span class="Constant">&quot;Starr McGinn&quot;</span>);
 
 	<span class="Comment">//  link the elements</span>
 	el0-&gt;setNext(el1);

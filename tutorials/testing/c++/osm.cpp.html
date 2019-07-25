@@ -10,8 +10,8 @@
 <span class="PreProc">#include </span><span class="Constant">&quot;data_src/OSMVertex.h&quot;</span>
 <span class="PreProc">#include </span><span class="Constant">&quot;data_src/OSMEdge.h&quot;</span>
 
-using namespace std;
-using namespace bridges;
+<span class="Statement">using</span> <span class="Type">namespace</span> std;
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
 
 <span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
 
@@ -22,19 +22,19 @@ using namespace bridges;
 
 	bridges.setServer(<span class="Constant">&quot;clone&quot;</span>);
 
-	DataSource  *ds = new DataSource;
+	DataSource  *ds = <span class="Statement">new</span> DataSource;
 	OSMData osm_data;
-	try {
+	<span class="Statement">try</span> {
 	  <span class="Comment">//osm_data = ds-&gt;getOSMData(35.28, -80.75, 35.32, -80.71);</span>
 	  osm_data = ds-&gt;getOSMData(<span class="Constant">&quot;Charlotte&quot;</span>);
 	}
-	catch (std::string s) {
+	<span class="Statement">catch</span> (std::string s) {
 	  std::cerr&lt;&lt;<span class="Constant">&quot;Exception: &quot;</span>&lt;&lt;s&lt;&lt;<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
 	}
 	vector&lt;OSMVertex&gt; vertices = osm_data.getVertices();
 	vector&lt;OSMEdge&gt; edges = osm_data.getEdges();
 
-	GraphAdjList&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;  *gr = new GraphAdjList&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;;
+	GraphAdjList&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;  *gr = <span class="Statement">new</span> GraphAdjList&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;;
 	<span class="Type">double</span> coords[<span class="Constant">2</span>];
 
 	<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; vertices.size(); k++) {

@@ -1,15 +1,15 @@
 <pre id='vimCodeElement'>
-import bridges.games.*;
-import bridges.base.*;
+<span class="PreProc">import</span> bridges.games.*;
+<span class="PreProc">import</span> bridges.base.*;
 
-class DisplayGame extends NonBlockingGame {
-    public DisplayGame() {
+<span class="Type">class</span> DisplayGame <span class="Type">extends</span> NonBlockingGame {
+    <span class="Type">public</span> DisplayGame() {
 	<span class="Comment">//substitute your username and api key</span>
-	super (<span class="Constant">1</span>, <span class="Constant">&quot;myuserid&quot;</span>,  <span class="Constant">&quot;myapikey&quot;</span>, <span class="Constant">10</span>, <span class="Constant">10</span>);
+	<span class="Type">super</span> (<span class="Constant">1</span>, <span class="Constant">&quot;myuserid&quot;</span>,  <span class="Constant">&quot;myapikey&quot;</span>, <span class="Constant">10</span>, <span class="Constant">10</span>);
 	<span class="Comment">//this created a game board of 10x10 into assignment 1</span>
     }
 
-    public <span class="Type">void</span> initialize() {
+    <span class="Type">public</span> <span class="Type">void</span> initialize() {
 	<span class="Statement">for</span> (<span class="Type">int</span> i=<span class="Constant">0</span>; i&lt;getBoardHeight(); ++i)
 	    <span class="Statement">for</span> (<span class="Type">int</span> j=<span class="Constant">0</span>; j&lt;getBoardWidth(); ++j)
 		setBGColor(i, j, NamedColor.ivory);
@@ -21,12 +21,12 @@ class DisplayGame extends NonBlockingGame {
 	drawSymbol(<span class="Constant">1</span>, <span class="Constant">5</span>, NamedSymbol.O, NamedColor.red);
     }
 
-    public <span class="Type">void</span> gameLoop() {
+    <span class="Type">public</span> <span class="Type">void</span> gameLoop() {
 	<span class="Comment">//This function is executed each frame of the game</span>
     }
 
-    public <span class="Type">static</span> <span class="Type">void</span>  main (String args[]) {
-	DisplayGame g = new DisplayGame();
+    <span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span>  main (String args[]) {
+	DisplayGame g = <span class="Statement">new</span> DisplayGame();
 	g.start();
     }
 }

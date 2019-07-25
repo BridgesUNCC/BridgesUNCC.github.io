@@ -1,24 +1,24 @@
 <pre id='vimCodeElement'>
-import bridges.games.*;
-import bridges.base.*;
+<span class="PreProc">import</span> bridges.games.*;
+<span class="PreProc">import</span> bridges.base.*;
 
-class MinimalGame extends NonBlockingGame {
-    public MinimalGame() {
+<span class="Type">class</span> MinimalGame <span class="Type">extends</span> NonBlockingGame {
+    <span class="Type">public</span> MinimalGame() {
 	<span class="Comment">//substitute your username and api key</span>
-	super (<span class="Constant">1</span>, <span class="Constant">&quot;myuserid&quot;</span>,  <span class="Constant">&quot;myapikey&quot;</span>, <span class="Constant">10</span>, <span class="Constant">10</span>);
+	<span class="Type">super</span> (<span class="Constant">1</span>, <span class="Constant">&quot;myuserid&quot;</span>,  <span class="Constant">&quot;myapikey&quot;</span>, <span class="Constant">10</span>, <span class="Constant">10</span>);
 	<span class="Comment">//this created a game board of 10x10 into assignment 1</span>
     }
 
-    public <span class="Type">void</span> initialize() {
+    <span class="Type">public</span> <span class="Type">void</span> initialize() {
 	<span class="Comment">//This function is executed once at the beginning of the game</span>
     }
 
-    public <span class="Type">void</span> gameLoop() {
+    <span class="Type">public</span> <span class="Type">void</span> gameLoop() {
 	<span class="Comment">//This function is executed each frame of the game</span>
     }
 
-    public <span class="Type">static</span> <span class="Type">void</span>  main (String args[]) {
-	MinimalGame g = new MinimalGame();
+    <span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span>  main (String args[]) {
+	MinimalGame g = <span class="Statement">new</span> MinimalGame();
 	g.start();
     }
 }

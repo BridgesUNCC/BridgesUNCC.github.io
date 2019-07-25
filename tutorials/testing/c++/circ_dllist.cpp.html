@@ -9,8 +9,8 @@
 <span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
 
 
-using namespace bridges;
-using std::string;
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
+<span class="Statement">using</span> std::string;
 
 
 <span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
@@ -18,11 +18,11 @@ using std::string;
     Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
                                 <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 
-	CircDLelement&lt;string&gt;  *el0 = new CircDLelement&lt;string&gt; (<span class="Constant">&quot;Gretel Chaney&quot;</span>, <span class="Constant">&quot;Gretel Chaney&quot;</span>);
-    CircDLelement&lt;string&gt;  *el1 = new CircDLelement&lt;string&gt; (<span class="Constant">&quot;Lamont Kyler&quot;</span>, <span class="Constant">&quot;Lamont Kyler&quot;</span>);
-    CircDLelement&lt;string&gt;  *el2 = new CircDLelement&lt;string&gt; (<span class="Constant">&quot;Gladys Serino&quot;</span>, <span class="Constant">&quot;Gladys Serino&quot;</span>);
-    CircDLelement&lt;string&gt;  *el3 = new CircDLelement&lt;string&gt; (<span class="Constant">&quot;Karol Soderman&quot;</span>, <span class="Constant">&quot;Karol Soderman&quot;</span>);
-    CircDLelement&lt;string&gt;  *el4 = new CircDLelement&lt;string&gt; (<span class="Constant">&quot;Starr McGinn&quot;</span>, <span class="Constant">&quot;Starr McGinn&quot;</span>);
+	CircDLelement&lt;string&gt;  *el0 = <span class="Statement">new</span> CircDLelement&lt;string&gt; (<span class="Constant">&quot;Gretel Chaney&quot;</span>, <span class="Constant">&quot;Gretel Chaney&quot;</span>);
+    CircDLelement&lt;string&gt;  *el1 = <span class="Statement">new</span> CircDLelement&lt;string&gt; (<span class="Constant">&quot;Lamont Kyler&quot;</span>, <span class="Constant">&quot;Lamont Kyler&quot;</span>);
+    CircDLelement&lt;string&gt;  *el2 = <span class="Statement">new</span> CircDLelement&lt;string&gt; (<span class="Constant">&quot;Gladys Serino&quot;</span>, <span class="Constant">&quot;Gladys Serino&quot;</span>);
+    CircDLelement&lt;string&gt;  *el3 = <span class="Statement">new</span> CircDLelement&lt;string&gt; (<span class="Constant">&quot;Karol Soderman&quot;</span>, <span class="Constant">&quot;Karol Soderman&quot;</span>);
+    CircDLelement&lt;string&gt;  *el4 = <span class="Statement">new</span> CircDLelement&lt;string&gt; (<span class="Constant">&quot;Starr McGinn&quot;</span>, <span class="Constant">&quot;Starr McGinn&quot;</span>);
 
 	<span class="Comment">// create the list</span>
 	el0-&gt;setNext(el1); el1-&gt;setPrev(el0);

@@ -1,14 +1,14 @@
 <pre id='vimCodeElement'>
-import bridges.base.LineChart;
-import bridges.base.SortingBenchmark;
-import bridges.connect.Bridges;
-import bridges.validation.RateLimitException;
+<span class="PreProc">import</span> bridges.base.LineChart;
+<span class="PreProc">import</span> bridges.base.SortingBenchmark;
+<span class="PreProc">import</span> bridges.connect.Bridges;
+<span class="PreProc">import</span> bridges.validation.RateLimitException;
 
-import java.io.IOException;
-import java.util.*;
-import java.util.function.Consumer;
+<span class="PreProc">import</span> java.io.IOException;
+<span class="PreProc">import</span> java.util.*;
+<span class="PreProc">import</span> java.util.function.Consumer;
 
-public class sortingbenchmark {
+<span class="Type">public</span> <span class="Type">class</span> sortingbenchmark {
 
 	<span class="Type">static</span> Consumer &lt;<span class="Type">int</span>[]&gt; sort = arr -&gt; {
 		<span class="Type">int</span> n = arr.length;
@@ -46,14 +46,14 @@ public class sortingbenchmark {
 				}
 	};
 
-	public <span class="Type">static</span> <span class="Type">void</span> main(String[] args) throws IOException, RateLimitException, InterruptedException {
-		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) <span class="Type">throws</span> IOException, RateLimitException, InterruptedException {
+		Bridges bridges = <span class="Statement">new</span> Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
 			<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 		<span class="Comment">//bridges.setVisualizeJSON(true);</span>
 
-		LineChart plot = new LineChart();
+		LineChart plot = <span class="Statement">new</span> LineChart();
 		plot.setTitle(<span class="Constant">&quot;Sort Runtime&quot;</span>);
-		SortingBenchmark bench = new SortingBenchmark(plot);
+		SortingBenchmark bench = <span class="Statement">new</span> SortingBenchmark(plot);
 		bench.linearRange(<span class="Constant">100</span>, <span class="Constant">10000</span>, <span class="Constant">20</span>);
 		bench.setTimeCap(<span class="Constant">1000</span> * <span class="Constant">1</span>); <span class="Comment">//1 seconds</span>
 		bench.run(<span class="Constant">&quot;InsertSort&quot;</span>, sort);
@@ -63,9 +63,9 @@ public class sortingbenchmark {
 		bridges.setDataStructure(plot);
 		bridges.visualize();
 
-		LineChart plot2 = new LineChart();
+		LineChart plot2 = <span class="Statement">new</span> LineChart();
 		plot2.setTitle(<span class="Constant">&quot;Sort Runtime&quot;</span>);
-		SortingBenchmark bench2 = new SortingBenchmark(plot2);
+		SortingBenchmark bench2 = <span class="Statement">new</span> SortingBenchmark(plot2);
 		bench2.geometricRange(<span class="Constant">100</span>, <span class="Constant">1000000</span>, <span class="Constant">1.5</span>);
 		bench2.setTimeCap(<span class="Constant">1000</span> * <span class="Constant">1</span>); <span class="Comment">//1 seconds</span>
 		bench2.run(<span class="Constant">&quot;InsertSort&quot;</span>, sort);

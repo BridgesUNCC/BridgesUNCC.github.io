@@ -1,104 +1,104 @@
 <pre id='vimCodeElement'>
-from bridges.data_src_dependent import *
-from bridges.graph_adj_list import *
-from bridges.bridges import *
-import sys
+<span class="PreProc">from</span> bridges.data_src_dependent <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.graph_adj_list <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
 
 
-def main():
+<span class="Statement">def</span> <span class="Identifier">main</span>():
 
     args = sys.argv[<span class="Constant">1</span>:]
 
-    # create the Bridges object, set credentials
-    bridges = Bridges(<span class="Type">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(<span class="Identifier">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
 
-    <span class="Statement">if</span> len(args) &gt; <span class="Constant">3</span>:
+    <span class="Statement">if</span> <span class="Identifier">len</span>(args) &gt; <span class="Constant">3</span>:
         bridges.connector.set_server(args[<span class="Constant">3</span>])
 
-    #Title and Description
-    bridges.set_title(<span class="Constant">&quot;A Simple Graph (Adjacency List) Example using IMDB Actor/Movie Data&quot;</span>)
-    bridges.set_description(<span class="Constant">&quot;Two lists each having an actor as the root node with 15 movies they played in as leaf nodes. &quot;</span>
-            +	<span class="Constant">&quot;Root nodes are both red, Kevin Bacon's leaf nodes are green and Denzel Washington's leaf nodes are neutral.&quot;</span>)
+    <span class="Comment">#Title and Description</span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">A Simple Graph (Adjacency List) Example using IMDB Actor/Movie Data</span><span class="Constant">&quot;</span>)
+    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">Two lists each having an actor as the root node with 15 movies they played in as leaf nodes. </span><span class="Constant">&quot;</span>
+            +	<span class="Constant">&quot;</span><span class="Constant">Root nodes are both red, Kevin Bacon's leaf nodes are green and Denzel Washington's leaf nodes are neutral.</span><span class="Constant">&quot;</span>)
 
     actor_movie_data = get_actor_movie_imdb_data(<span class="Constant">1813</span>)
 
-    # create an adjacency list based graph
+    <span class="Comment"># create an adjacency list based graph</span>
     g = GraphAdjList()
 
-    # first create vertices <span class="Statement">for</span> two actors and add the to the graph
-    a1 = <span class="Constant">&quot;Kevin_Bacon_(I)&quot;</span>
-    a2 = <span class="Constant">&quot;Denzel_Washington&quot;</span>
+    <span class="Comment"># first create vertices for two actors and add the to the graph</span>
+    a1 = <span class="Constant">&quot;</span><span class="Constant">Kevin_Bacon_(I)</span><span class="Constant">&quot;</span>
+    a2 = <span class="Constant">&quot;</span><span class="Constant">Denzel_Washington</span><span class="Constant">&quot;</span>
 
     g.add_vertex(a1, <span class="Constant">&quot;&quot;</span>)
     g.add_vertex(a2, <span class="Constant">&quot;&quot;</span>)
 
-    # add and edge between the two actors
+    <span class="Comment"># add and edge between the two actors</span>
     g.add_edge(a1, a2, <span class="Constant">1</span>)
 
-    # color the two actor nodes
-    g.get_vertices().get(<span class="Constant">&quot;Kevin_Bacon_(I)&quot;</span>).get_visualizer().set_color(col_name=<span class="Constant">&quot;red&quot;</span>)
-    g.get_vertices().get(<span class="Constant">&quot;Denzel_Washington&quot;</span>).get_visualizer().set_color(col_name=<span class="Constant">&quot;red&quot;</span>)
-    # make them a bit bigger
-    g.get_vertices().get(<span class="Constant">&quot;Kevin_Bacon_(I)&quot;</span>).get_visualizer().set_size(<span class="Constant">20</span>)
-    g.get_vertices().get(<span class="Constant">&quot;Denzel_Washington&quot;</span>).get_visualizer().set_size(<span class="Constant">20</span>)
+    <span class="Comment"># color the two actor nodes</span>
+    g.get_vertices().get(<span class="Constant">&quot;</span><span class="Constant">Kevin_Bacon_(I)</span><span class="Constant">&quot;</span>).get_visualizer().set_color(col_name=<span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>)
+    g.get_vertices().get(<span class="Constant">&quot;</span><span class="Constant">Denzel_Washington</span><span class="Constant">&quot;</span>).get_visualizer().set_color(col_name=<span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>)
+    <span class="Comment"># make them a bit bigger</span>
+    g.get_vertices().get(<span class="Constant">&quot;</span><span class="Constant">Kevin_Bacon_(I)</span><span class="Constant">&quot;</span>).get_visualizer().set_size(<span class="Constant">20</span>)
+    g.get_vertices().get(<span class="Constant">&quot;</span><span class="Constant">Denzel_Washington</span><span class="Constant">&quot;</span>).get_visualizer().set_size(<span class="Constant">20</span>)
 
-    # get their nodes
+    <span class="Comment"># get their nodes</span>
     v1 = g.get_vertices().get(a1)
     v2 = g.get_vertices().get(a2)
 
     cnt1 = <span class="Constant">0</span>
     cnt2 = <span class="Constant">0</span>
 
-    # we will find the first <span class="Constant">15</span> immediate neighbors of the two actors
-    # and color those links and nodes by following their adjacency lists
-    <span class="Statement">for</span> k in range(len(actor_movie_data)):
-        # from the actor movie data, get and actor-movie pair
+    <span class="Comment"># we will find the first 15 immediate neighbors of the two actors</span>
+    <span class="Comment"># and color those links and nodes by following their adjacency lists</span>
+    <span class="Statement">for</span> k <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Identifier">len</span>(actor_movie_data)):
+        <span class="Comment"># from the actor movie data, get and actor-movie pair</span>
         a = actor_movie_data[k].get_actor()
         m = actor_movie_data[k].get_movie()
 
-        <span class="Statement">if</span> (a == <span class="Constant">&quot;Kevin_Bacon_(I)&quot;</span> and cnt1 &lt; <span class="Constant">15</span>):
-            # add vertices <span class="Statement">for</span> this movie and an edge <span class="Statement">for</span> the link
+        <span class="Statement">if</span> (a == <span class="Constant">&quot;</span><span class="Constant">Kevin_Bacon_(I)</span><span class="Constant">&quot;</span> <span class="Statement">and</span> cnt1 &lt; <span class="Constant">15</span>):
+            <span class="Comment"># add vertices for this movie and an edge for the link</span>
             g.add_vertex(m, <span class="Constant">&quot;&quot;</span>)
             g.add_edge(a1, m, <span class="Constant">1</span>)
             g.add_edge(m, a1, <span class="Constant">1</span>)
-            # make the movie node a bit transparent
+            <span class="Comment"># make the movie node a bit transparent</span>
             g.get_vertices().get(m).get_visualizer().set_opacity(<span class="Constant">0.5</span>)
             cnt1 += <span class="Constant">1</span>
 
-        elif (a == <span class="Constant">&quot;Denzel_Washington&quot;</span> and cnt2 &lt; <span class="Constant">15</span>):
-            # add vertices <span class="Statement">for</span> this movie and an edge <span class="Statement">for</span> the link
+        <span class="Statement">elif</span> (a == <span class="Constant">&quot;</span><span class="Constant">Denzel_Washington</span><span class="Constant">&quot;</span> <span class="Statement">and</span> cnt2 &lt; <span class="Constant">15</span>):
+            <span class="Comment"># add vertices for this movie and an edge for the link</span>
             g.add_vertex(m, <span class="Constant">&quot;&quot;</span>)
             g.add_edge(a2, m, <span class="Constant">1</span>)
             g.add_edge(m, a2, <span class="Constant">1</span>)
-            # make the movie node a bit transparent
+            <span class="Comment"># make the movie node a bit transparent</span>
             g.get_vertices().get(m).get_visualizer().set_opacity(<span class="Constant">0.5</span>)
             cnt2 += <span class="Constant">1</span>
 
-    # Next, we illustrate traversing the adjacency list and color the movie
-    # nodes adjacent to the Kevin Bacon node
+    <span class="Comment"># Next, we illustrate traversing the adjacency list and color the movie</span>
+    <span class="Comment"># nodes adjacent to the Kevin Bacon node</span>
 
-    # first get the adjacency list <span class="Statement">for</span> Kevin Bacon
-    head = g.get_adjacency_list().get(<span class="Constant">&quot;Kevin_Bacon_(I)&quot;</span>)
+    <span class="Comment"># first get the adjacency list for Kevin Bacon</span>
+    head = g.get_adjacency_list().get(<span class="Constant">&quot;</span><span class="Constant">Kevin_Bacon_(I)</span><span class="Constant">&quot;</span>)
 
     sle = head
-    # traverse the adjacency list
-    <span class="Statement">while</span>(sle is not None):
-        # get the terminating vertex
+    <span class="Comment"># traverse the adjacency list</span>
+    <span class="Statement">while</span>(sle <span class="Statement">is</span> <span class="Statement">not</span> <span class="Identifier">None</span>):
+        <span class="Comment"># get the terminating vertex</span>
         term_vertex = sle.get_value().get_vertex()
-        # find the corresponding element
+        <span class="Comment"># find the corresponding element</span>
         el = g.get_vertices().get(term_vertex)
-        # set the color of the node except the Denzel W. node
-        <span class="Statement">if</span>(term_vertex != <span class="Constant">&quot;Denzel Washington&quot;</span>):
-            el.get_visualizer().set_color(col_name=<span class="Constant">&quot;green&quot;</span>)
+        <span class="Comment"># set the color of the node except the Denzel W. node</span>
+        <span class="Statement">if</span>(term_vertex != <span class="Constant">&quot;</span><span class="Constant">Denzel Washington</span><span class="Constant">&quot;</span>):
+            el.get_visualizer().set_color(col_name=<span class="Constant">&quot;</span><span class="Constant">green</span><span class="Constant">&quot;</span>)
         sle = sle.get_next()
 
-    # Pass the graph object to BRIDGES
+    <span class="Comment"># Pass the graph object to BRIDGES</span>
     bridges.set_data_structure(g)
-    # visualize the graph
+    <span class="Comment"># visualize the graph</span>
     bridges.visualize()
 
 
-<span class="Statement">if</span> __name__ == <span class="Constant">&quot;__main__&quot;</span>:
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
     main()
 
 </pre>

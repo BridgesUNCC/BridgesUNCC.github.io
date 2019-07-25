@@ -1,35 +1,35 @@
 <pre id='vimCodeElement'>
-from bridges.symbol_collection import *
-from bridges.bridges import *
-from bridges.circle import *
-from bridges.polygon import *
-from bridges.rectangle import *
-from bridges.label import *
-from bridges.color import *
-import sys
+<span class="PreProc">from</span> bridges.symbol_collection <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.circle <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.polygon <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.rectangle <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.label <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.color <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
 
-def main():
+<span class="Statement">def</span> <span class="Identifier">main</span>():
     args = sys.argv[<span class="Constant">1</span>:]
 
-    # create the Bridges object, set credentials
+    <span class="Comment"># create the Bridges object, set credentials</span>
 
-    bridges = Bridges(<span class="Type">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
+    bridges = Bridges(<span class="Identifier">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
 
-    <span class="Statement">if</span> len(args) &gt; <span class="Constant">3</span>:
+    <span class="Statement">if</span> <span class="Identifier">len</span>(args) &gt; <span class="Constant">3</span>:
         bridges.connector.set_server(args[<span class="Constant">3</span>])
 
-    #Title and Description
-    bridges.set_title(<span class="Constant">&quot;Symbol Collection&quot;</span>)
-    bridges.set_description(<span class="Constant">&quot;Red square, green circle, magenta horizontal and vertical lines, &quot;</span>
-            +	<span class="Constant">&quot;and a test label with a purple outline.&quot;</span>)
+    <span class="Comment">#Title and Description</span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">Symbol Collection</span><span class="Constant">&quot;</span>)
+    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">Red square, green circle, magenta horizontal and vertical lines, </span><span class="Constant">&quot;</span>
+            +	<span class="Constant">&quot;</span><span class="Constant">and a test label with a purple outline.</span><span class="Constant">&quot;</span>)
 
     sc = SymbolCollection()
     s1 = Rectangle(<span class="Constant">50</span>, <span class="Constant">50</span>, -<span class="Constant">25.0</span>, <span class="Constant">0.0</span>)
-    s1.set_fill_color(Color(<span class="Constant">&quot;green&quot;</span>))
+    s1.set_fill_color(Color(<span class="Constant">&quot;</span><span class="Constant">green</span><span class="Constant">&quot;</span>))
     sc.add_symbol(s1)
 
     s2 = Circle(<span class="Constant">25.0</span>, <span class="Constant">0.0</span>, <span class="Constant">25</span>)
-    s2.set_fill_color(Color(<span class="Constant">&quot;green&quot;</span>))
+    s2.set_fill_color(Color(<span class="Constant">&quot;</span><span class="Constant">green</span><span class="Constant">&quot;</span>))
     sc.add_symbol(s2)
 
     s3 = Polygon()
@@ -39,20 +39,20 @@ def main():
     s3.add_point(<span class="Constant">0</span>, -<span class="Constant">100</span>)
     s3.add_point(<span class="Constant">0</span>, <span class="Constant">100</span>)
     s3.add_point(<span class="Constant">0</span>, <span class="Constant">0</span>)
-    s3.set_stroke_color(Color(<span class="Constant">&quot;magenta&quot;</span>))
+    s3.set_stroke_color(Color(<span class="Constant">&quot;</span><span class="Constant">magenta</span><span class="Constant">&quot;</span>))
     sc.add_symbol(s3)
 
     l = Label()
     l.set_location(<span class="Constant">0</span>, <span class="Constant">25</span>)
     l.set_font_size(<span class="Constant">12</span>)
     l.set_stroke_width(<span class="Constant">1.0</span>)
-    l.set_label(<span class="Constant">&quot;test label&quot;</span>)
-    l.set_stroke_color(Color(<span class="Constant">&quot;purple&quot;</span>))
+    l.set_label(<span class="Constant">&quot;</span><span class="Constant">test label</span><span class="Constant">&quot;</span>)
+    l.set_stroke_color(Color(<span class="Constant">&quot;</span><span class="Constant">purple</span><span class="Constant">&quot;</span>))
     sc.add_symbol(l)
 
     bridges.set_data_structure(sc)
     bridges.visualize()
 
-<span class="Statement">if</span> __name__ == '__main__':
+<span class="Statement">if</span> __name__ == <span class="Constant">'</span><span class="Constant">__main__</span><span class="Constant">'</span>:
     main()
 </pre>

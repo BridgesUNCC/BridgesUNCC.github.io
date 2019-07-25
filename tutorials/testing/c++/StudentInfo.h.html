@@ -6,9 +6,9 @@
 <span class="Comment"> </span><span class="Comment">*/</span>
 <span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
 
-using namespace std;
+<span class="Statement">using</span> <span class="Type">namespace</span> std;
 
-class StudentInfo {
+<span class="Type">class</span> StudentInfo {
 	<span class="Statement">private</span>:
 		string studentID, fullName, program, email,
 			   dislikeColor, favoriteColor;
@@ -29,13 +29,13 @@ class StudentInfo {
 		StudentInfo(string studentID, string fullName, string program,
 			string email, string dislikeColor, string favoriteColor,
 			<span class="Type">double</span> studentCreditHours) {
-			this-&gt;studentID = studentID;
-			this-&gt;fullName = fullName;
-			this-&gt;program = program;
-			this-&gt;email = email;
-			this-&gt;dislikeColor = dislikeColor;
-			this-&gt;favoriteColor = favoriteColor;
-			this-&gt;studentCreditHours = studentCreditHours;
+			<span class="Statement">this</span>-&gt;studentID = studentID;
+			<span class="Statement">this</span>-&gt;fullName = fullName;
+			<span class="Statement">this</span>-&gt;program = program;
+			<span class="Statement">this</span>-&gt;email = email;
+			<span class="Statement">this</span>-&gt;dislikeColor = dislikeColor;
+			<span class="Statement">this</span>-&gt;favoriteColor = favoriteColor;
+			<span class="Statement">this</span>-&gt;studentCreditHours = studentCreditHours;
 		}
 
 		<span class="Comment">/*</span><span class="Comment">*</span>
@@ -49,7 +49,7 @@ class StudentInfo {
 <span class="Comment">		 * @param studentID</span>
 <span class="Comment">		 </span><span class="Comment">*/</span>
 		<span class="Type">void</span> setStudentID(string studentID) {
-			this-&gt;studentID = studentID;
+			<span class="Statement">this</span>-&gt;studentID = studentID;
 		}
 
 		<span class="Comment">/*</span><span class="Comment">*</span>
@@ -63,7 +63,7 @@ class StudentInfo {
 <span class="Comment">		 * @param fullName</span>
 <span class="Comment">		 </span><span class="Comment">*/</span>
 		<span class="Type">void</span> setFullName(string fullName) {
-			this-&gt;fullName = fullName;
+			<span class="Statement">this</span>-&gt;fullName = fullName;
 		}
 
 		<span class="Comment">/*</span><span class="Comment">*</span>
@@ -77,7 +77,7 @@ class StudentInfo {
 <span class="Comment">		 * @param program</span>
 <span class="Comment">		 </span><span class="Comment">*/</span>
 		<span class="Type">void</span> setProgram(string program) {
-			this-&gt;program = program;
+			<span class="Statement">this</span>-&gt;program = program;
 		}
 
 		<span class="Comment">/*</span><span class="Comment">*</span>
@@ -91,7 +91,7 @@ class StudentInfo {
 <span class="Comment">		 * @param email</span>
 <span class="Comment">		 </span><span class="Comment">*/</span>
 		<span class="Type">void</span> setEmail(string email) {
-			this-&gt;email = email;
+			<span class="Statement">this</span>-&gt;email = email;
 		}
 
 
@@ -106,7 +106,7 @@ class StudentInfo {
 <span class="Comment">		 * @param favoriteColor</span>
 <span class="Comment">		 </span><span class="Comment">*/</span>
 		<span class="Type">void</span> setFavoriteColor(string favoriteColor) {
-			this-&gt;favoriteColor = favoriteColor;
+			<span class="Statement">this</span>-&gt;favoriteColor = favoriteColor;
 		}
 
 
@@ -115,7 +115,7 @@ class StudentInfo {
 		}
 
 		<span class="Type">void</span> setDislikeColor(string dislikeColor) {
-			this-&gt;dislikeColor = dislikeColor;
+			<span class="Statement">this</span>-&gt;dislikeColor = dislikeColor;
 		}
 
 		<span class="Type">double</span> getStudentCreditHours() {
@@ -123,7 +123,7 @@ class StudentInfo {
 		}
 
 		<span class="Type">void</span> setStudentCreditHours(<span class="Type">double</span> studentCreditHours) {
-			this-&gt;studentCreditHours = studentCreditHours;
+			<span class="Statement">this</span>-&gt;studentCreditHours = studentCreditHours;
 		}
 		string getStudentLabel() {
 			string label = fullName      +  <span class="Constant">&quot;</span><span class="Special">\\</span><span class="Constant">n&quot;</span>   +

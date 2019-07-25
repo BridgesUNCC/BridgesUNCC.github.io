@@ -1,63 +1,63 @@
 <pre id='vimCodeElement'>
-from bridges.bridges import *
-from bridges.avl_tree_element import *
-import sys
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.avl_tree_element <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
 
-def main():
+<span class="Statement">def</span> <span class="Identifier">main</span>():
     args = sys.argv[<span class="Constant">1</span>:]
 
-    # create the Bridges object, set credentials
-    bridges = Bridges(<span class="Type">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(<span class="Identifier">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
 
-    <span class="Statement">if</span> len(args) &gt; <span class="Constant">3</span>:
+    <span class="Statement">if</span> <span class="Identifier">len</span>(args) &gt; <span class="Constant">3</span>:
         bridges.connector.set_server(args[<span class="Constant">3</span>])
 
-    #Title and Description
-    bridges.set_title(<span class="Constant">&quot;AVL Tree Example&quot;</span>)
-    bridges.set_description(<span class="Constant">&quot;This AVL tree has six elements. &quot;</span>
-                    + <span class="Constant">&quot;The root is magenta color and has three nodes on its left &quot;</span>
-                    + <span class="Constant">&quot;and two nodes on its right. The values from lower left to the root, 20, 40, 30, 50. &quot;</span>
-                    + <span class="Constant">&quot;And from lower right to root, 90, 70, 50.&quot;</span>)
+    <span class="Comment">#Title and Description</span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">AVL Tree Example</span><span class="Constant">&quot;</span>)
+    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">This AVL tree has six elements. </span><span class="Constant">&quot;</span>
+                    + <span class="Constant">&quot;</span><span class="Constant">The root is magenta color and has three nodes on its left </span><span class="Constant">&quot;</span>
+                    + <span class="Constant">&quot;</span><span class="Constant">and two nodes on its right. The values from lower left to the root, 20, 40, 30, 50. </span><span class="Constant">&quot;</span>
+                    + <span class="Constant">&quot;</span><span class="Constant">And from lower right to root, 90, 70, 50.</span><span class="Constant">&quot;</span>)
 
-    # create an AVL tree elements
-    avl_root = AVLTreeElement(<span class="Constant">50</span>, <span class="Constant">&quot;Hello&quot;</span>)
+    <span class="Comment"># create an AVL tree elements</span>
+    avl_root = AVLTreeElement(<span class="Constant">50</span>, <span class="Constant">&quot;</span><span class="Constant">Hello</span><span class="Constant">&quot;</span>)
 
-    avl_2 = AVLTreeElement(<span class="Constant">30</span>, <span class="Constant">&quot;This&quot;</span>)
-    avl_3 = AVLTreeElement(<span class="Constant">70</span>, <span class="Constant">&quot;is&quot;</span>)
-    avl_4 = AVLTreeElement(<span class="Constant">20</span>, <span class="Constant">&quot;an&quot;</span>)
-    avl_5 = AVLTreeElement(<span class="Constant">40</span>, <span class="Constant">&quot;AVL&quot;</span>)
-    avl_6 = AVLTreeElement(<span class="Constant">90</span>, <span class="Constant">&quot;Tree&quot;</span>)
+    avl_2 = AVLTreeElement(<span class="Constant">30</span>, <span class="Constant">&quot;</span><span class="Constant">This</span><span class="Constant">&quot;</span>)
+    avl_3 = AVLTreeElement(<span class="Constant">70</span>, <span class="Constant">&quot;</span><span class="Constant">is</span><span class="Constant">&quot;</span>)
+    avl_4 = AVLTreeElement(<span class="Constant">20</span>, <span class="Constant">&quot;</span><span class="Constant">an</span><span class="Constant">&quot;</span>)
+    avl_5 = AVLTreeElement(<span class="Constant">40</span>, <span class="Constant">&quot;</span><span class="Constant">AVL</span><span class="Constant">&quot;</span>)
+    avl_6 = AVLTreeElement(<span class="Constant">90</span>, <span class="Constant">&quot;</span><span class="Constant">Tree</span><span class="Constant">&quot;</span>)
 
 
-    # put in the balance factors - done manually here
-    # <span class="Statement">for</span> illustration, but in a real project, the user will
-    # implement this as part of the insert/delete
-    # operations on the tree to maintain a balanced tree
-    avl_root.set_label(<span class="Constant">&quot;0&quot;</span>)
-    avl_2.set_label(<span class="Constant">&quot;0&quot;</span>)
-    avl_3.set_label(<span class="Constant">&quot;-1&quot;</span>)
-    avl_4.set_label(<span class="Constant">&quot;0&quot;</span>)
-    avl_5.set_label(<span class="Constant">&quot;0&quot;</span>)
-    avl_6.set_label(<span class="Constant">&quot;0&quot;</span>)
+    <span class="Comment"># put in the balance factors - done manually here</span>
+    <span class="Comment"># for illustration, but in a real project, the user will</span>
+    <span class="Comment"># implement this as part of the insert/delete</span>
+    <span class="Comment"># operations on the tree to maintain a balanced tree</span>
+    avl_root.set_label(<span class="Constant">&quot;</span><span class="Constant">0</span><span class="Constant">&quot;</span>)
+    avl_2.set_label(<span class="Constant">&quot;</span><span class="Constant">0</span><span class="Constant">&quot;</span>)
+    avl_3.set_label(<span class="Constant">&quot;</span><span class="Constant">-1</span><span class="Constant">&quot;</span>)
+    avl_4.set_label(<span class="Constant">&quot;</span><span class="Constant">0</span><span class="Constant">&quot;</span>)
+    avl_5.set_label(<span class="Constant">&quot;</span><span class="Constant">0</span><span class="Constant">&quot;</span>)
+    avl_6.set_label(<span class="Constant">&quot;</span><span class="Constant">0</span><span class="Constant">&quot;</span>)
 
-    # add links between nodes
+    <span class="Comment"># add links between nodes</span>
     avl_root.set_left(avl_2)
     avl_root.set_right(avl_3)
     avl_2.set_left(avl_4)
     avl_2.set_right(avl_5)
     avl_3.set_right(avl_6)
 
-    # add some visual attributes
-    avl_root.get_visualizer().set_color(<span class="Constant">&quot;magenta&quot;</span>)
+    <span class="Comment"># add some visual attributes</span>
+    avl_root.get_visualizer().set_color(<span class="Constant">&quot;</span><span class="Constant">magenta</span><span class="Constant">&quot;</span>)
     avl_root.get_visualizer().set_opacity(<span class="Constant">0.8</span>)
 
-    # set visualizer type
+    <span class="Comment"># set visualizer type</span>
     bridges.set_data_structure(avl_root)
 
-    # visualize the tree
+    <span class="Comment"># visualize the tree</span>
     bridges.visualize()
 
-<span class="Statement">if</span> __name__ == <span class="Constant">&quot;__main__&quot;</span>:
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
     main()
 
 

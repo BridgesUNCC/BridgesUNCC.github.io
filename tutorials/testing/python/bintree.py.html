@@ -1,39 +1,39 @@
 <pre id='vimCodeElement'>
-from bridges.bridges import *
-from bridges.bin_tree_element import *
-import sys
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.bin_tree_element <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
 
 
-def main():
+<span class="Statement">def</span> <span class="Identifier">main</span>():
     args = sys.argv[<span class="Constant">1</span>:]
 
-    # create the Bridges object, set credentials
-    bridges = Bridges(<span class="Type">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(<span class="Identifier">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
 
-    <span class="Statement">if</span> len(args) &gt; <span class="Constant">3</span>:
+    <span class="Statement">if</span> <span class="Identifier">len</span>(args) &gt; <span class="Constant">3</span>:
         bridges.connector.set_server(args[<span class="Constant">3</span>])
 
-    #Title and Description
-    bridges.set_title(<span class="Constant">&quot;A Huffman Coding Tree Example&quot;</span>)
-    bridges.set_description(<span class="Constant">&quot;[Binary Tree Application]: Huffman tree coding the symbols C, D, E, K, L, M, U, Z with frequencies 32, 42, 120, 7, 42, 24, 37, 2 &quot;</span>
-            + <span class="Constant">&quot;Root is set to red and leaf nodes are set to orange.&quot;</span>)
+    <span class="Comment">#Title and Description</span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">A Huffman Coding Tree Example</span><span class="Constant">&quot;</span>)
+    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">[Binary Tree Application]: Huffman tree coding the symbols C, D, E, K, L, M, U, Z with frequencies 32, 42, 120, 7, 42, 24, 37, 2 </span><span class="Constant">&quot;</span>
+            + <span class="Constant">&quot;</span><span class="Constant">Root is set to red and leaf nodes are set to orange.</span><span class="Constant">&quot;</span>)
 
-    #build the tree
-    t0 = BinTreeElement(label = <span class="Constant">&quot;306&quot;</span>, e = <span class="Constant">0</span>)
-    t1 = BinTreeElement(label = <span class="Constant">&quot;120</span><span class="Special">\\</span><span class="Constant">nE&quot;</span>,e = <span class="Constant">1</span>)
-    t2 = BinTreeElement(label = <span class="Constant">&quot;186&quot;</span>,e = <span class="Constant">2</span>)
-    t3 = BinTreeElement(label = <span class="Constant">&quot;79&quot;</span>,e = <span class="Constant">3</span>)
-    t4 = BinTreeElement(label = <span class="Constant">&quot;37</span><span class="Special">\\</span><span class="Constant">nU&quot;</span>,e = <span class="Constant">4</span>)
-    t5 = BinTreeElement(label = <span class="Constant">&quot;42</span><span class="Special">\\</span><span class="Constant">nD&quot;</span>,e = <span class="Constant">5</span>)
-    t6 = BinTreeElement(label = <span class="Constant">&quot;42</span><span class="Special">\\</span><span class="Constant">nL&quot;</span>,e = <span class="Constant">6</span>)
-    t7 = BinTreeElement(label = <span class="Constant">&quot;107&quot;</span>,e = <span class="Constant">7</span>)
-    t8 = BinTreeElement(label = <span class="Constant">&quot;65&quot;</span>,e = <span class="Constant">8</span>)
-    t9 = BinTreeElement(label = <span class="Constant">&quot;32</span><span class="Special">\\</span><span class="Constant">nC&quot;</span>,e = <span class="Constant">9</span>)
-    t10 = BinTreeElement(label = <span class="Constant">&quot;33&quot;</span>,e = <span class="Constant">10</span>)
-    t11 = BinTreeElement(label = <span class="Constant">&quot;9&quot;</span>,e = <span class="Constant">11</span>)
-    t12 = BinTreeElement(label = <span class="Constant">&quot;2</span><span class="Special">\\</span><span class="Constant">nZ&quot;</span>,e = <span class="Constant">12</span>)
-    t13 = BinTreeElement(label = <span class="Constant">&quot;7</span><span class="Special">\\</span><span class="Constant">nK&quot;</span>,e = <span class="Constant">13</span>)
-    t14 = BinTreeElement(label = <span class="Constant">&quot;24</span><span class="Special">\\</span><span class="Constant">nM&quot;</span>,e = <span class="Constant">14</span>)
+    <span class="Comment">#build the tree</span>
+    t0 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">306</span><span class="Constant">&quot;</span>, e = <span class="Constant">0</span>)
+    t1 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">120</span><span class="Special">\\</span><span class="Constant">nE</span><span class="Constant">&quot;</span>,e = <span class="Constant">1</span>)
+    t2 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">186</span><span class="Constant">&quot;</span>,e = <span class="Constant">2</span>)
+    t3 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">79</span><span class="Constant">&quot;</span>,e = <span class="Constant">3</span>)
+    t4 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">37</span><span class="Special">\\</span><span class="Constant">nU</span><span class="Constant">&quot;</span>,e = <span class="Constant">4</span>)
+    t5 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">42</span><span class="Special">\\</span><span class="Constant">nD</span><span class="Constant">&quot;</span>,e = <span class="Constant">5</span>)
+    t6 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">42</span><span class="Special">\\</span><span class="Constant">nL</span><span class="Constant">&quot;</span>,e = <span class="Constant">6</span>)
+    t7 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">107</span><span class="Constant">&quot;</span>,e = <span class="Constant">7</span>)
+    t8 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">65</span><span class="Constant">&quot;</span>,e = <span class="Constant">8</span>)
+    t9 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">32</span><span class="Special">\\</span><span class="Constant">nC</span><span class="Constant">&quot;</span>,e = <span class="Constant">9</span>)
+    t10 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">33</span><span class="Constant">&quot;</span>,e = <span class="Constant">10</span>)
+    t11 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">9</span><span class="Constant">&quot;</span>,e = <span class="Constant">11</span>)
+    t12 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">2</span><span class="Special">\\</span><span class="Constant">nZ</span><span class="Constant">&quot;</span>,e = <span class="Constant">12</span>)
+    t13 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">7</span><span class="Special">\\</span><span class="Constant">nK</span><span class="Constant">&quot;</span>,e = <span class="Constant">13</span>)
+    t14 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">24</span><span class="Special">\\</span><span class="Constant">nM</span><span class="Constant">&quot;</span>,e = <span class="Constant">14</span>)
 
 
     t0.set_left(t1)
@@ -51,23 +51,23 @@ def main():
     t11.set_left(t12)
     t11.set_right(t13)
 
-    # color the leaf nodes to represent the code letters
-    t0.get_visualizer().set_color(<span class="Constant">&quot;red&quot;</span>)
-    t1.get_visualizer().set_color(<span class="Constant">&quot;orange&quot;</span>)
-    t4.get_visualizer().set_color(<span class="Constant">&quot;orange&quot;</span>)
-    t5.get_visualizer().set_color(<span class="Constant">&quot;orange&quot;</span>)
-    t6.get_visualizer().set_color(<span class="Constant">&quot;orange&quot;</span>)
-    t9.get_visualizer().set_color(<span class="Constant">&quot;orange&quot;</span>)
-    t12.get_visualizer().set_color(<span class="Constant">&quot;orange&quot;</span>)
-    t13.get_visualizer().set_color(<span class="Constant">&quot;orange&quot;</span>)
-    t14.get_visualizer().set_color(<span class="Constant">&quot;orange&quot;</span>)
+    <span class="Comment"># color the leaf nodes to represent the code letters</span>
+    t0.get_visualizer().set_color(<span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>)
+    t1.get_visualizer().set_color(<span class="Constant">&quot;</span><span class="Constant">orange</span><span class="Constant">&quot;</span>)
+    t4.get_visualizer().set_color(<span class="Constant">&quot;</span><span class="Constant">orange</span><span class="Constant">&quot;</span>)
+    t5.get_visualizer().set_color(<span class="Constant">&quot;</span><span class="Constant">orange</span><span class="Constant">&quot;</span>)
+    t6.get_visualizer().set_color(<span class="Constant">&quot;</span><span class="Constant">orange</span><span class="Constant">&quot;</span>)
+    t9.get_visualizer().set_color(<span class="Constant">&quot;</span><span class="Constant">orange</span><span class="Constant">&quot;</span>)
+    t12.get_visualizer().set_color(<span class="Constant">&quot;</span><span class="Constant">orange</span><span class="Constant">&quot;</span>)
+    t13.get_visualizer().set_color(<span class="Constant">&quot;</span><span class="Constant">orange</span><span class="Constant">&quot;</span>)
+    t14.get_visualizer().set_color(<span class="Constant">&quot;</span><span class="Constant">orange</span><span class="Constant">&quot;</span>)
 
-    # set visualizer type
+    <span class="Comment"># set visualizer type</span>
     bridges.set_data_structure(t0)
-    #visualize the tree
+    <span class="Comment">#visualize the tree</span>
     bridges.visualize()
 
-<span class="Statement">if</span> __name__ == <span class="Constant">&quot;__main__&quot;</span>:
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
     main()
 
 </pre>

@@ -1,29 +1,29 @@
 <pre id='vimCodeElement'>
-import bridges.base.LineChart;
-import bridges.connect.Bridges;
-import bridges.validation.RateLimitException;
+<span class="PreProc">import</span> bridges.base.LineChart;
+<span class="PreProc">import</span> bridges.connect.Bridges;
+<span class="PreProc">import</span> bridges.validation.RateLimitException;
 
-import java.io.IOException;
-import java.util.*;
-import java.util.function.Consumer;
+<span class="PreProc">import</span> java.io.IOException;
+<span class="PreProc">import</span> java.util.*;
+<span class="PreProc">import</span> java.util.function.Consumer;
 
-public class linechart {
+<span class="Type">public</span> <span class="Type">class</span> linechart {
 
-	public <span class="Type">static</span> <span class="Type">void</span> main(String[] args) throws IOException, RateLimitException, InterruptedException {
-		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) <span class="Type">throws</span> IOException, RateLimitException, InterruptedException {
+		Bridges bridges = <span class="Statement">new</span> Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
 			<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 
-		LineChart plot = new LineChart();
+		LineChart plot = <span class="Statement">new</span> LineChart();
 		plot.setTitle(<span class="Constant">&quot;linechart plot&quot;</span>);
 
-		<span class="Type">double</span> x1[] = new <span class="Type">double</span>[] {<span class="Constant">1</span>, <span class="Constant">3</span>, <span class="Constant">5</span>, <span class="Constant">20</span>};
-		<span class="Type">double</span> y1[] = new <span class="Type">double</span>[] {<span class="Constant">2</span>, <span class="Constant">3</span>, <span class="Constant">5</span>, <span class="Constant">20</span>};
+		<span class="Type">double</span> x1[] = <span class="Statement">new</span> <span class="Type">double</span>[] {<span class="Constant">1</span>, <span class="Constant">3</span>, <span class="Constant">5</span>, <span class="Constant">20</span>};
+		<span class="Type">double</span> y1[] = <span class="Statement">new</span> <span class="Type">double</span>[] {<span class="Constant">2</span>, <span class="Constant">3</span>, <span class="Constant">5</span>, <span class="Constant">20</span>};
 		plot.setDataSeries(<span class="Constant">&quot;1&quot;</span>, x1, y1);
 		bridges.setDataStructure(plot);
 		bridges.visualize();
 
-		<span class="Type">double</span> x2[] = new <span class="Type">double</span>[] {<span class="Constant">2</span>, <span class="Constant">15.2</span>,  <span class="Constant">40</span>};
-		<span class="Type">double</span> y2[] = new <span class="Type">double</span>[] {<span class="Constant">4</span>, <span class="Constant">30.5</span>, <span class="Constant">400.99</span>};
+		<span class="Type">double</span> x2[] = <span class="Statement">new</span> <span class="Type">double</span>[] {<span class="Constant">2</span>, <span class="Constant">15.2</span>,  <span class="Constant">40</span>};
+		<span class="Type">double</span> y2[] = <span class="Statement">new</span> <span class="Type">double</span>[] {<span class="Constant">4</span>, <span class="Constant">30.5</span>, <span class="Constant">400.99</span>};
 		plot.setDataSeries(<span class="Constant">&quot;2&quot;</span>, x2, y2);
 		bridges.visualize();
 

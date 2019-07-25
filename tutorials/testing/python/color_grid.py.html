@@ -1,67 +1,67 @@
 <pre id='vimCodeElement'>
-from bridges.color_grid import *
-from bridges.bridges import *
-from bridges.color import *
-import sys
+<span class="PreProc">from</span> bridges.color_grid <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.color <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
 
-def main():
-    # This example illustrates using the Bridges color grid
-    # We will build a checker grid using two different colors
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+    <span class="Comment"># This example illustrates using the Bridges color grid</span>
+    <span class="Comment"># We will build a checker grid using two different colors</span>
 
     args = sys.argv[<span class="Constant">1</span>:]
 
-    # create the Bridges object, set credentials
-    bridges = Bridges(<span class="Type">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(<span class="Identifier">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
 
-    <span class="Statement">if</span> len(args) &gt; <span class="Constant">3</span>:
+    <span class="Statement">if</span> <span class="Identifier">len</span>(args) &gt; <span class="Constant">3</span>:
         bridges.connector.set_server(args[<span class="Constant">3</span>])
 
-    #Title and Description
-    bridges.set_title(<span class="Constant">&quot;A CheckerBoard Example Using Grid Type&quot;</span>)
-    bridges.set_description(<span class="Constant">&quot;This is an example of the color grid with height and width 10. &quot;</span>
-        +   <span class="Constant">&quot;This example alternates between blue and red starting with red at the top left corner of the grid.&quot;</span>)
+    <span class="Comment">#Title and Description</span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">A CheckerBoard Example Using Grid Type</span><span class="Constant">&quot;</span>)
+    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">This is an example of the color grid with height and width 10. </span><span class="Constant">&quot;</span>
+        +   <span class="Constant">&quot;</span><span class="Constant">This example alternates between blue and red starting with red at the top left corner of the grid.</span><span class="Constant">&quot;</span>)
 
     width = <span class="Constant">200</span>
     height = <span class="Constant">200</span>
 
-    blue = Color(col_name= <span class="Constant">&quot;blue&quot;</span>)
-    red = Color(col_name= <span class="Constant">&quot;red&quot;</span>)
+    blue = Color(col_name= <span class="Constant">&quot;</span><span class="Constant">blue</span><span class="Constant">&quot;</span>)
+    red = Color(col_name= <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>)
 
     cg = ColorGrid(width, height, red)
 
-    # create a checkerboard pattern
-    # 10x10 grid
+    <span class="Comment"># create a checkerboard pattern</span>
+    <span class="Comment"># 10x10 grid</span>
     num_squares_x = <span class="Constant">10</span>
     num_squares_y = <span class="Constant">10</span>
 
     sq_width = width/num_squares_x
     sq_height = width/num_squares_y
 
-    <span class="Statement">for</span> j in range(num_squares_y):
-        <span class="Statement">for</span> k in range(num_squares_x):
+    <span class="Statement">for</span> j <span class="Statement">in</span> <span class="Identifier">range</span>(num_squares_y):
+        <span class="Statement">for</span> k <span class="Statement">in</span> <span class="Identifier">range</span>(num_squares_x):
 
-            # use even/odd value of pixel to figure out the color of the squares
+            <span class="Comment"># use even/odd value of pixel to figure out the color of the squares</span>
             x_even = k%<span class="Constant">2</span> == <span class="Constant">0</span>
             y_even = j%<span class="Constant">2</span> == <span class="Constant">0</span>
 
-            <span class="Statement">if</span>(y_even == True):
-                <span class="Statement">if</span>(x_even == True):
+            <span class="Statement">if</span>(y_even == <span class="Identifier">True</span>):
+                <span class="Statement">if</span>(x_even == <span class="Identifier">True</span>):
                     col = red
                 <span class="Statement">else</span>:
                     col = blue
             <span class="Statement">else</span>:
-                <span class="Statement">if</span>(x_even == True):
+                <span class="Statement">if</span>(x_even == <span class="Identifier">True</span>):
                     col = blue
                 <span class="Statement">else</span>:
                     col = red
 
-            # find the address of the square
+            <span class="Comment"># find the address of the square</span>
             origin_x = k*sq_width
             origin_y = j*sq_height
 
-            #color the square
-            <span class="Statement">for</span> y in range(<span class="Type">int</span>(origin_y), <span class="Type">int</span>(origin_y+sq_height)):
-                <span class="Statement">for</span> x in range(<span class="Type">int</span>(origin_x), <span class="Type">int</span>(origin_x+sq_width)):
+            <span class="Comment">#color the square</span>
+            <span class="Statement">for</span> y <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Identifier">int</span>(origin_y), <span class="Identifier">int</span>(origin_y+sq_height)):
+                <span class="Statement">for</span> x <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Identifier">int</span>(origin_x), <span class="Identifier">int</span>(origin_x+sq_width)):
                     cg.set(x, y, col)
                     x = x + <span class="Constant">1</span>
                 y = y + <span class="Constant">1</span>
@@ -71,7 +71,7 @@ def main():
     bridges.visualize()
 
 
-<span class="Statement">if</span> __name__ == <span class="Constant">&quot;__main__&quot;</span>:
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
     main()
 
 </pre>
