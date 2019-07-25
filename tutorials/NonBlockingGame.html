@@ -44,27 +44,27 @@
     NonBlockingGame in Bridges deals
     with <strong>Inputs</strong>, <strong>Rendering</strong>,
     and <strong>Framerate</strong> by making some assumptions about
-    the kinds of game one can do. More precisely, the NonBlockingGame
+    the kinds of game one can play. More precisely, the NonBlockingGame
     only enables games to be on a small grid (up to 1024 cells), to
     use only a few sprites (up to 256 predefined sprites), and to use
-    only a few keys (up to 10 keys). These constraint still enable to
-    build many games and application and the programmer only focuses
+    only a few keys (up to 10 keys). These constraints still enable 
+    building many games and applications, and the programmer only focuses
     on implementing updates to the game state.
   </p>
 
   <p>The benefits is that within these constraints, writing a game is
-  very easy. We will look at how to work with NonBlockingGame in three
-  steps: 1) Getting something running; 2) Displaying something on the
+  very easy. We will look at how to work with a  NonBlockingGame in three
+  steps, 1) Getting something running; 2) Displaying something on the
   screen; 3) Capturing user input.</p>
  
   <h2>1. Getting Started</h2>
   
   <p>A game in Bridges is made by creating a new class for your
-    game that derive from NonBlockingGame. Your class has to construct
+    game that is derived from NonBlockingGame. Your class has to construct
     the underlying NonBlockingGame object by passing the usual Bridges
     credentials, the assignment number, and the size of the game
     board. We will use a 10x10 board as an example. Then the game
-    object needs to be instanciated and the game started.
+    object needs to be instantiated and the game started.
   </p>
   <p> Minimally, you create a game by writing two functions:
     <ol>
