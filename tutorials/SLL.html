@@ -52,15 +52,35 @@ element came before it. So, you CANNOT go backwards.
   <hr/>
 
   <h2>SLelement - An Example BRIDGES program</h2>
+
+  <div w3-include-html="bridges_program_elements.html"></div> 
+<h2> Example Details</h2>
+<ul>
+<li> In this example, we will build and visualize a singly linked list with 
+student information data, specified through the StudentInfo class, which will
+be part of the SLelement object through its generic variable (SLelement&lt;StudentInfo&gt;). 
+<li>The elements are linked, visual attributes assigned through application data
+and visualized.
+</ul>
+<h2>Here's the final code:</h2>
+
+  
   <div class="tabs">
     <div onclick="displayCode('Java',this)">Java</div>
     <div onclick="displayCode('C++',this)" >C++</div>
     <div onclick="displayCode('Python',this)" >Python</div>
   </div>
   <div class="tabContents">
-    <div id="Java" w3-include-html="./Java_SLL.html"></div>
-    <div id="C++"  w3-include-html="./Cpp_SLL.html"></div>
-    <div id="Python"  w3-include-html="./Python_SLL.html"></div>
+    <div id="Java">
+      <pre w3-include-html="./testing/java/sllist.java.html" class="prettyprint"></pre>
+
+    </div>
+    <div id="C++">
+      <pre w3-include-html="./testing/c++/sllist.cpp.html" class="prettyprint"></pre>
+    </div>
+    <div id="Python">
+      <pre w3-include-html="./testing/python/sllist.py.html" class="prettyprint"></pre>
+    </div>
   </div>
 
   <h3>Bridges Visualization</h3>
