@@ -55,16 +55,36 @@ the left subtree of BST2, but in the right subtree of the Root.
 We will illustrate a binary search tree example that uses the BRIDGES API to retrieve 50
 earthquake records (actually comes as Tweets) from USGS.gov. These will be inserted into
 a binary search tree, using the BSTElement<Double, EarthquakeUSGS> elements. The quake
-magnitude will be used as the search key.
+  magnitude will be used as the search key.
+
+  <div w3-include-html="bridges_program_elements.html"></div>
+<h2> Example Details</h2>
+<ul>
+<li> We will illustrate a binary search tree example that uses the BRIDGES API 
+        to retri eve 50 earthquake records (actually comes as Tweets) from USGS.gov. 
+<li> These will be inserted d into a binary search tree, using the 
+        BSTElement<float, EarthquakeUSGS> elements. The quake magnitude will be 
+        used as the search key. 
+<li>The elements are labeled with information about the quake and visualized.
+and visualized.
+</ul>
+<h2>Here's the final code:</h2>
+
 <div class="tabs">
     <div onclick="displayCode('Java',this)">Java</div>
     <div onclick="displayCode('C++',this)" >C++</div>
     <div onclick="displayCode('Python',this)" >Python</div>
 </div>
 <div class="tabContents">
-    <div id="Java" w3-include-html="./Java_BST.html"></div>
-    <div id="C++"  w3-include-html="./Cpp_BST.html"></div>
-    <div id="Python"  w3-include-html="./Python_BST.html"></div>
+  <div id="Java">
+    <pre w3-include-html="./testing/java/bst.java.html" class="prettyprint" />
+  </div>
+  <div id="C++">
+    <pre w3-include-html="./testing/c++/bst.cpp.html" class="prettyprint"></pre>
+  </div>
+  <div id="Python">
+    <pre w3-include-html="./testing/python/bst.py.html" class="prettyprint"></pre>
+  </div>
 </div>
 
 <h3>Bridges Visualization</h3>
