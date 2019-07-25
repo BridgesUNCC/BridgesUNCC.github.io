@@ -4,8 +4,8 @@
 <span class="PreProc">#include </span><span class="Constant">&quot;DLelement.h&quot;</span>
 <span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
 
-using namespace bridges;
-using std::string;
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
+<span class="Statement">using</span> std::string;
 
 <span class="Comment">// helper function</span>
 
@@ -25,11 +25,11 @@ DLelement&lt;string&gt; *insertFront(DLelement&lt;string&gt; *front,
 
 
 	<span class="Comment">// create some elements</span>
-	DLelement&lt;string&gt;  *el0 = new DLelement&lt;string&gt; (<span class="Constant">&quot;Gretel Chaney&quot;</span>, <span class="Constant">&quot;Gretel Chaney&quot;</span>);
-    DLelement&lt;string&gt;  *el1 = new DLelement&lt;string&gt; (<span class="Constant">&quot;Lamont Kyler&quot;</span>, <span class="Constant">&quot;Lamont Kyler&quot;</span>);
-    DLelement&lt;string&gt;  *el2 = new DLelement&lt;string&gt; (<span class="Constant">&quot;Gladys Serino&quot;</span>, <span class="Constant">&quot;Gladys Serino&quot;</span>);
-    DLelement&lt;string&gt;  *el3 = new DLelement&lt;string&gt; (<span class="Constant">&quot;Karol Soderman&quot;</span>, <span class="Constant">&quot;Karol Soderman&quot;</span>);
-    DLelement&lt;string&gt;  *el4 = new DLelement&lt;string&gt; (<span class="Constant">&quot;Starr McGinn&quot;</span>, <span class="Constant">&quot;Starr McGinn&quot;</span>);
+	DLelement&lt;string&gt;  *el0 = <span class="Statement">new</span> DLelement&lt;string&gt; (<span class="Constant">&quot;Gretel Chaney&quot;</span>, <span class="Constant">&quot;Gretel Chaney&quot;</span>);
+    DLelement&lt;string&gt;  *el1 = <span class="Statement">new</span> DLelement&lt;string&gt; (<span class="Constant">&quot;Lamont Kyler&quot;</span>, <span class="Constant">&quot;Lamont Kyler&quot;</span>);
+    DLelement&lt;string&gt;  *el2 = <span class="Statement">new</span> DLelement&lt;string&gt; (<span class="Constant">&quot;Gladys Serino&quot;</span>, <span class="Constant">&quot;Gladys Serino&quot;</span>);
+    DLelement&lt;string&gt;  *el3 = <span class="Statement">new</span> DLelement&lt;string&gt; (<span class="Constant">&quot;Karol Soderman&quot;</span>, <span class="Constant">&quot;Karol Soderman&quot;</span>);
+    DLelement&lt;string&gt;  *el4 = <span class="Statement">new</span> DLelement&lt;string&gt; (<span class="Constant">&quot;Starr McGinn&quot;</span>, <span class="Constant">&quot;Starr McGinn&quot;</span>);
 
 	<span class="Comment">// create the list</span>
 	el0-&gt;setNext(el1); el1-&gt;setPrev(el0);
@@ -67,7 +67,7 @@ DLelement&lt;string&gt; *insertFront(DLelement&lt;string&gt; *front,
 }
 
 DLelement&lt;string&gt; *insertFront(DLelement&lt;string&gt; *front, DLelement&lt;string&gt; *new_el) {
-	<span class="Statement">if</span> (front == nullptr)
+	<span class="Statement">if</span> (front == <span class="Constant">nullptr</span>)
 		<span class="Statement">return</span> new_el;
 
 	new_el-&gt;setNext(front);

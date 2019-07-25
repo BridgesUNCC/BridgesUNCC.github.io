@@ -2,7 +2,7 @@
 <span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
 <span class="PreProc">#include </span><span class="Constant">&quot;KdTreeElement.h&quot;</span>
 
-using namespace bridges;
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
 
 <span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
 	<span class="Comment">// create bridges object</span>
@@ -12,13 +12,13 @@ using namespace bridges;
 	bridges.setDescription(<span class="Constant">&quot;A three-level tree with partitioners cycling between X and Y. The root node color is set to red while the leaf nodes that represent code letters are set to orange.&quot;</span>);
 
 	<span class="Comment">// create nodes</span>
-	KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; *t0 = new KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;(<span class="Constant">50</span>, <span class="Constant">0</span>);
-	KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; *t1 = new KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;(<span class="Constant">25</span>, <span class="Constant">1</span>);
-	KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; *t2 = new KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;(<span class="Constant">75</span>, <span class="Constant">1</span>);
-	KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; *t3 = new KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;(<span class="Constant">20</span>, <span class="Constant">0</span>);
-	KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; *t4 = new KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;(<span class="Constant">30</span>, <span class="Constant">0</span>);
-	KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; *t5 = new KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;(<span class="Constant">60</span>, <span class="Constant">0</span>);
-	KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; *t6 = new KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;(<span class="Constant">80</span>, <span class="Constant">0</span>);
+	KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; *t0 = <span class="Statement">new</span> KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;(<span class="Constant">50</span>, <span class="Constant">0</span>);
+	KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; *t1 = <span class="Statement">new</span> KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;(<span class="Constant">25</span>, <span class="Constant">1</span>);
+	KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; *t2 = <span class="Statement">new</span> KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;(<span class="Constant">75</span>, <span class="Constant">1</span>);
+	KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; *t3 = <span class="Statement">new</span> KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;(<span class="Constant">20</span>, <span class="Constant">0</span>);
+	KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; *t4 = <span class="Statement">new</span> KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;(<span class="Constant">30</span>, <span class="Constant">0</span>);
+	KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; *t5 = <span class="Statement">new</span> KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;(<span class="Constant">60</span>, <span class="Constant">0</span>);
+	KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; *t6 = <span class="Statement">new</span> KdTreeElement&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;(<span class="Constant">80</span>, <span class="Constant">0</span>);
 
 	<span class="Comment">// form the links</span>
 	t0-&gt;setLeft(t1);

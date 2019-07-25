@@ -13,6 +13,8 @@
   <script src="./tutorial.js"></script>
 
   <link rel="stylesheet" type="text/css" href="./tutorial.css" />
+  <link rel="stylesheet" type="text/css" href="./vim.css" />
+
   <link rel="shortcut icon" href="http://bridgesuncc.github.io/favicon.png"/>
   <script src="http://www.w3schools.com/lib/w3data.js"></script>
 
@@ -41,15 +43,30 @@ example below illustrates how to construct shapes and its corresponding visualiz
 <hr/>
 
 <h2>SymbolCollection - Example BRIDGES Program - Illustraing the various shapes supported by  BRIDGES</h2>
+<div w3-include-html="bridges_program_elements.html"></div> 
+<h2> Example Details</h2>
+<ul>
+<li> In this example, we illustrate the various symbols supporte by BRIDGES. You will see a red
+rectangle and gree circle and two crossed lines, built by a set of points on a polygon.
+</ul>
+<h2>Here's the final code:</h2>
+
+
 <div class="tabs">
     <div onclick="displayCode('Java',this)">Java</div>
     <div onclick="displayCode('C++',this)" >C++</div>
     <div onclick="displayCode('Python',this)" >Python</div>
   </div>
   <div class="tabContents">
-    <div id="Java" w3-include-html="./Java_SC.html"></div>
-    <div id="C++"  w3-include-html="./Cpp_SC.html"></div>
-    <div id="Python"  w3-include-html="./Python_SC.html"></div>
+    <div id="Java">
+      <pre w3-include-html="./testing/java/shape_collection.java.html" class="prettyprint" />
+    </div>
+    <div id="C++">
+      <pre w3-include-html="./testing/c++/shape_collection.cpp.html" class="prettyprint" />
+    </div>
+    <div id="Python">
+      <pre w3-include-html="./testing/python/shape_collection.py.html" class="prettyprint" />
+    </div>
   </div>
 
 

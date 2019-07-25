@@ -1,13 +1,13 @@
 <pre id='vimCodeElement'>
-import bridges.connect.Bridges;
-import bridges.data_src_dependent.Tweet;
-import bridges.base.AVLTreeElement;
+<span class="PreProc">import</span> bridges.connect.Bridges;
+<span class="PreProc">import</span> bridges.data_src_dependent.Tweet;
+<span class="PreProc">import</span> bridges.base.AVLTreeElement;
 
-public class avl {
-	public <span class="Type">static</span> <span class="Type">void</span> main(String[] args) throws Exception {
+<span class="Type">public</span> <span class="Type">class</span> avl {
+	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) <span class="Type">throws</span> Exception {
 
 		<span class="Comment">//create the Bridges object</span>
-		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+		Bridges bridges = <span class="Statement">new</span> Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
 			<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 		<span class="Comment">// title, description</span>
 		bridges.setTitle(<span class="Constant">&quot;AVL Tree Example&quot;</span>);
@@ -17,12 +17,12 @@ public class avl {
 			+ <span class="Constant">&quot;And from lower right to root, 90, 70, 50.&quot;</span>);
 
 		<span class="Comment">//create  an  AVL tree elements</span>
-		AVLTreeElement&lt;Integer, String&gt; avl_root = new AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">50</span>, <span class="Constant">&quot;Hello&quot;</span>);
-		AVLTreeElement&lt;Integer, String&gt; avl_2 = new AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">30</span>, <span class="Constant">&quot;This&quot;</span>);
-		AVLTreeElement&lt;Integer, String&gt; avl_3 = new AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">70</span>, <span class="Constant">&quot;is&quot;</span>);
-		AVLTreeElement&lt;Integer, String&gt; avl_4 = new AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">20</span>, <span class="Constant">&quot;an&quot;</span>);
-		AVLTreeElement&lt;Integer, String&gt; avl_5 = new AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">40</span>, <span class="Constant">&quot;AVL&quot;</span>);
-		AVLTreeElement&lt;Integer, String&gt; avl_6 = new AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">90</span>, <span class="Constant">&quot;Tree&quot;</span>);
+		AVLTreeElement&lt;Integer, String&gt; avl_root = <span class="Statement">new</span> AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">50</span>, <span class="Constant">&quot;Hello&quot;</span>);
+		AVLTreeElement&lt;Integer, String&gt; avl_2 = <span class="Statement">new</span> AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">30</span>, <span class="Constant">&quot;This&quot;</span>);
+		AVLTreeElement&lt;Integer, String&gt; avl_3 = <span class="Statement">new</span> AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">70</span>, <span class="Constant">&quot;is&quot;</span>);
+		AVLTreeElement&lt;Integer, String&gt; avl_4 = <span class="Statement">new</span> AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">20</span>, <span class="Constant">&quot;an&quot;</span>);
+		AVLTreeElement&lt;Integer, String&gt; avl_5 = <span class="Statement">new</span> AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">40</span>, <span class="Constant">&quot;AVL&quot;</span>);
+		AVLTreeElement&lt;Integer, String&gt; avl_6 = <span class="Statement">new</span> AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">90</span>, <span class="Constant">&quot;Tree&quot;</span>);
 
 		<span class="Comment">// put in the balance factors - done manually  here</span>
 		<span class="Comment">// for illustration, but in a real project, the user will</span>

@@ -2,7 +2,7 @@
 <span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
 <span class="PreProc">#include </span><span class="Constant">&quot;BinTreeElement.h&quot;</span>
 
-using namespace bridges;
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
 
 <span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
 	<span class="Comment">// create Bridges object</span>
@@ -16,21 +16,21 @@ using namespace bridges;
 
 
 	<span class="Comment">// create the nodes - manually created huffman coding tree</span>
-	BinTreeElement&lt;<span class="Type">int</span>&gt; *t0 = new BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">0</span>, <span class="Constant">&quot;306&quot;</span>);
-	BinTreeElement&lt;<span class="Type">int</span>&gt; *t1 = new BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">1</span>, <span class="Constant">&quot;120</span><span class="Special">\n</span><span class="Constant">E&quot;</span>);
-	BinTreeElement&lt;<span class="Type">int</span>&gt; *t2 = new BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">2</span>, <span class="Constant">&quot;186&quot;</span>);
-	BinTreeElement&lt;<span class="Type">int</span>&gt; *t3 = new BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">3</span>, <span class="Constant">&quot;79&quot;</span>);
-	BinTreeElement&lt;<span class="Type">int</span>&gt; *t4 = new BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">4</span>, <span class="Constant">&quot;37</span><span class="Special">\n</span><span class="Constant">U&quot;</span>);
-	BinTreeElement&lt;<span class="Type">int</span>&gt; *t5 = new BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">5</span>, <span class="Constant">&quot;42</span><span class="Special">\n</span><span class="Constant">D&quot;</span>);
-	BinTreeElement&lt;<span class="Type">int</span>&gt; *t6 = new BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">6</span>, <span class="Constant">&quot;42</span><span class="Special">\n</span><span class="Constant">L&quot;</span>);
-	BinTreeElement&lt;<span class="Type">int</span>&gt; *t7 = new BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">7</span>, <span class="Constant">&quot;107&quot;</span>);
-	BinTreeElement&lt;<span class="Type">int</span>&gt; *t8 = new BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">8</span>, <span class="Constant">&quot;65&quot;</span>);
-	BinTreeElement&lt;<span class="Type">int</span>&gt; *t9 = new BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">9</span>, <span class="Constant">&quot;32</span><span class="Special">\n</span><span class="Constant">C&quot;</span>);
-	BinTreeElement&lt;<span class="Type">int</span>&gt; *t10 = new BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">10</span>, <span class="Constant">&quot;33&quot;</span>);
-	BinTreeElement&lt;<span class="Type">int</span>&gt; *t11 = new BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">11</span>, <span class="Constant">&quot;9&quot;</span>);
-	BinTreeElement&lt;<span class="Type">int</span>&gt; *t12 = new BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">12</span>, <span class="Constant">&quot;2</span><span class="Special">\n</span><span class="Constant">Z&quot;</span>);
-	BinTreeElement&lt;<span class="Type">int</span>&gt; *t13 = new BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">13</span>, <span class="Constant">&quot;7</span><span class="Special">\n</span><span class="Constant">K&quot;</span>);
-	BinTreeElement&lt;<span class="Type">int</span>&gt; *t14 = new BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">14</span>, <span class="Constant">&quot;24</span><span class="Special">\n</span><span class="Constant">M&quot;</span>);
+	BinTreeElement&lt;<span class="Type">int</span>&gt; *t0 = <span class="Statement">new</span> BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">0</span>, <span class="Constant">&quot;306&quot;</span>);
+	BinTreeElement&lt;<span class="Type">int</span>&gt; *t1 = <span class="Statement">new</span> BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">1</span>, <span class="Constant">&quot;120</span><span class="Special">\n</span><span class="Constant">E&quot;</span>);
+	BinTreeElement&lt;<span class="Type">int</span>&gt; *t2 = <span class="Statement">new</span> BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">2</span>, <span class="Constant">&quot;186&quot;</span>);
+	BinTreeElement&lt;<span class="Type">int</span>&gt; *t3 = <span class="Statement">new</span> BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">3</span>, <span class="Constant">&quot;79&quot;</span>);
+	BinTreeElement&lt;<span class="Type">int</span>&gt; *t4 = <span class="Statement">new</span> BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">4</span>, <span class="Constant">&quot;37</span><span class="Special">\n</span><span class="Constant">U&quot;</span>);
+	BinTreeElement&lt;<span class="Type">int</span>&gt; *t5 = <span class="Statement">new</span> BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">5</span>, <span class="Constant">&quot;42</span><span class="Special">\n</span><span class="Constant">D&quot;</span>);
+	BinTreeElement&lt;<span class="Type">int</span>&gt; *t6 = <span class="Statement">new</span> BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">6</span>, <span class="Constant">&quot;42</span><span class="Special">\n</span><span class="Constant">L&quot;</span>);
+	BinTreeElement&lt;<span class="Type">int</span>&gt; *t7 = <span class="Statement">new</span> BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">7</span>, <span class="Constant">&quot;107&quot;</span>);
+	BinTreeElement&lt;<span class="Type">int</span>&gt; *t8 = <span class="Statement">new</span> BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">8</span>, <span class="Constant">&quot;65&quot;</span>);
+	BinTreeElement&lt;<span class="Type">int</span>&gt; *t9 = <span class="Statement">new</span> BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">9</span>, <span class="Constant">&quot;32</span><span class="Special">\n</span><span class="Constant">C&quot;</span>);
+	BinTreeElement&lt;<span class="Type">int</span>&gt; *t10 = <span class="Statement">new</span> BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">10</span>, <span class="Constant">&quot;33&quot;</span>);
+	BinTreeElement&lt;<span class="Type">int</span>&gt; *t11 = <span class="Statement">new</span> BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">11</span>, <span class="Constant">&quot;9&quot;</span>);
+	BinTreeElement&lt;<span class="Type">int</span>&gt; *t12 = <span class="Statement">new</span> BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">12</span>, <span class="Constant">&quot;2</span><span class="Special">\n</span><span class="Constant">Z&quot;</span>);
+	BinTreeElement&lt;<span class="Type">int</span>&gt; *t13 = <span class="Statement">new</span> BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">13</span>, <span class="Constant">&quot;7</span><span class="Special">\n</span><span class="Constant">K&quot;</span>);
+	BinTreeElement&lt;<span class="Type">int</span>&gt; *t14 = <span class="Statement">new</span> BinTreeElement&lt;<span class="Type">int</span>&gt;(<span class="Constant">14</span>, <span class="Constant">&quot;24</span><span class="Special">\n</span><span class="Constant">M&quot;</span>);
 
 	<span class="Comment">// form the links</span>
 	t0-&gt;setLeft(t1);

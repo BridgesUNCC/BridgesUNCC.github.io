@@ -12,6 +12,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="./tutorial.css" />
+  <link rel="stylesheet" type="text/css" href="./vim.css" />
+  
   <link rel="shortcut icon" href="http://bridgesuncc.github.io/favicon.png"/>
   <script src="http://www.w3schools.com/lib/w3data.js"></script>
   <script src="./tutorial.js"></script>
@@ -49,15 +51,36 @@
 
 
   <h2>CircDLelement - BRIDGES Example</h2>
+
+  <div w3-include-html="bridges_program_elements.html"></div>
+<h2> Example Details</h2>
+<ul>
+<li> In this example, we will build and visualize a circular doubly 
+linked list with student information data, specified through the StudentInfo 
+class, which will be part of the CircDLelement object through its generic 
+variable (CircDLLelement&lt;StudentInfo&gt;).
+<li>The elements are linked, visual attributes assigned through application 
+data and visualized.
+<li> Care must be taking in linking the doubly linked elements, including linking the last element to the first element of the list. See figure above for the final structure of the list.
+</ul>
+</pre>
+</ul>
+
     <div class="tabs">
         <div class="tutorial-active-language-tab" onclick="displayCode('Java',this)">Java</div>
         <div onclick="displayCode('C++',this)" >C++</div>
         <div onclick="displayCode('Python',this)" >Python</div>
     </div>
     <div class="tabContents">
-      <div id="Java" w3-include-html="./Java_CDLL.html"></div>
-      <div id="C++"  w3-include-html="./Cpp_CDLL.html"></div>
-      <div id="Python" w3-include-html="./Python_CDLL.html"></div>
+      <div id="Java">
+	<pre w3-include-html="./testing/java/cdllist.java.html" class="prettyprint"></pre>
+      </div>
+      <div id="C++">
+	<pre w3-include-html="./testing/c++/circ_dllist.cpp.html" class="prettyprint"></pre>
+      </div>
+      <div id="Python">
+	<pre w3-include-html="./testing/python/circ_dllist.py.html" class="prettyprint"></pre>
+      </div>
     </div>
 
 

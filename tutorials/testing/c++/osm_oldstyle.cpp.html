@@ -10,8 +10,8 @@
 <span class="PreProc">#include </span><span class="Constant">&quot;data_src/OSMVertex.h&quot;</span>
 <span class="PreProc">#include </span><span class="Constant">&quot;data_src/OSMEdge.h&quot;</span>
 
-using namespace std;
-using namespace bridges;
+<span class="Statement">using</span> <span class="Type">namespace</span> std;
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
 
 <span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
 
@@ -22,21 +22,21 @@ using namespace bridges;
 
 	bridges.setServer(<span class="Constant">&quot;clone&quot;</span>);
 
-	DataSource  *ds = new DataSource;
+	DataSource  *ds = <span class="Statement">new</span> DataSource;
 <span class="Comment">/*</span>
 <span class="Comment">	OSMData osm_data = ds-&gt;getOSMData(&quot;uncc_campus&quot;);</span>
 <span class="Comment">*/</span>
 	OSMData osm_data;
-	try {
+	<span class="Statement">try</span> {
 	  osm_data = ds-&gt;getOSMDataOld(<span class="Constant">&quot;uncc_campus&quot;</span>);
 	}
-	catch (std::string s) {
+	<span class="Statement">catch</span> (std::string s) {
 	  std::cerr&lt;&lt;<span class="Constant">&quot;Exception: &quot;</span>&lt;&lt;s&lt;&lt;<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
 	}
 	vector&lt;OSMVertex&gt; vertices = osm_data.getVertices();
 	vector&lt;OSMEdge&gt; edges = osm_data.getEdges();
 
-	GraphAdjList&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;  *gr = new GraphAdjList&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;;
+	GraphAdjList&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;  *gr = <span class="Statement">new</span> GraphAdjList&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;;
 	<span class="Type">double</span> coords[<span class="Constant">2</span>];
 
 	<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; vertices.size(); k++) {

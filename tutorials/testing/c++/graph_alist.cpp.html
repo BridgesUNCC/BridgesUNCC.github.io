@@ -5,8 +5,8 @@
 <span class="PreProc">#include </span><span class="Constant">&quot;data_src/ActorMovieIMDB.h&quot;</span>
 <span class="PreProc">#include </span><span class="Constant">&quot;GraphAdjList.h&quot;</span>
 
-using namespace std;
-using namespace bridges;
+<span class="Statement">using</span> <span class="Type">namespace</span> std;
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
 
 <span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
 	<span class="Comment">// create Bridges object</span>
@@ -14,7 +14,7 @@ using namespace bridges;
                                 <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 
 	<span class="Comment">// get the actor - movie data from IMDB dataset</span>
-	DataSource *ds = new DataSource;
+	DataSource *ds = <span class="Statement">new</span> DataSource;
 	vector&lt;ActorMovieIMDB&gt; actor_list = ds-&gt;getActorMovieIMDBData(<span class="Constant">1813</span>);
 
 	<span class="Comment">// create a graph</span>

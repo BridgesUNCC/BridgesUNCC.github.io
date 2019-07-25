@@ -8,6 +8,8 @@
   <meta name="description" content="Bridges Tutorials"/>
 
   <link rel="stylesheet" type="text/css" href="./tutorial.css" />
+  <link rel="stylesheet" type="text/css" href="./vim.css" />
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <link rel="shortcut icon" href="http://bridgesuncc.github.io/favicon.png"/>
   <script src="http://www.w3schools.com/lib/w3data.js"></script>
@@ -42,15 +44,35 @@ k, referring to its k'th child. <p>
 <hr/>
 
 <h2>TreeElement - BRIDGES Example</h2>
+
+<div w3-include-html="bridges_program_elements.html"></div>
+<h2> Example Details</h2>
+<ul>
+<li> This example illustrates construction of a tree structure with a variable
+number of children (currently set to a maximum of 10).
+<li> Children are added using the addChild() method, with ordering of children
+from left to right and accessed by an integer index (begining at 0).
+<li> In the example, a small tree is built, visual attributes assigned
+and visualized.
+</ul>
+
+<h2>Here is the final code:</h2>
+
   <div class="tabs">
     <div onclick="displayCode('Java',this)">Java</div>
     <div onclick="displayCode('C++',this)" >C++</div>
     <div onclick="displayCode('Python',this)" >Python</div>
   </div>
   <div class="tabContents">
-    <div id="Java" w3-include-html="./Java_Tree.html"></div>
-    <div id="C++"  w3-include-html="./Cpp_Tree.html"></div>
-    <div id="Python"  w3-include-html="./Python_Tree.html"></div>
+    <div id="Java">
+      <pre w3-include-html="./testing/java/tree.java.html" class="prettyprint" />
+    </div>
+    <div id="C++">
+      <pre w3-include-html="./testing/c++/tree.cpp.html" class="prettyprint" />
+    </div>
+    <div id="Python">
+      <pre w3-include-html="./testing/python/tree.py.html" class="prettyprint" />
+    </div>
   </div>
 
   <h3>Bridges Visualization</h3>

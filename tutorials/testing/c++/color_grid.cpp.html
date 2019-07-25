@@ -1,13 +1,13 @@
 <pre id='vimCodeElement'>
 <span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
 
-using namespace std;
+<span class="Statement">using</span> <span class="Type">namespace</span> std;
 
 <span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
 <span class="PreProc">#include </span><span class="Constant">&quot;Color.h&quot;</span>
 <span class="PreProc">#include </span><span class="Constant">&quot;ColorGrid.h&quot;</span>
 
-using namespace bridges;
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
 
 <span class="Comment">// This example illustrates using the Bridges color grid</span>
 <span class="Comment">// We will build a checker grid using two different colors</span>
@@ -23,7 +23,7 @@ using namespace bridges;
 		   <span class="Constant">&quot;This example alternates between blue and red starting with red at the top left corner of the grid.&quot;</span>);
 	<span class="Type">int</span> width = <span class="Constant">200</span>, height = <span class="Constant">200</span>;
 
-	ColorGrid *cg  = new ColorGrid(width, height, Color(<span class="Constant">&quot;red&quot;</span>));
+	ColorGrid *cg  = <span class="Statement">new</span> ColorGrid(width, height, Color(<span class="Constant">&quot;red&quot;</span>));
 
 	<span class="Comment">// create a checkerboard pattern</span>
 	<span class="Comment">// 10 x 10 grid</span>
