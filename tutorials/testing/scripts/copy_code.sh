@@ -38,8 +38,17 @@ cp -r ${BRIDGESTESTING}/python/web_tutorial_fortheweb/* ../python/
 
 for file in ../c++/* ../java/* ../python/*;
 do
-    vim -E -s -c "let g:html_no_progress=1" -c "syntax on" -c \
-	"set ft=c" -c "runtime syntax/2html.vim" -cwqa "$file"
+    case "$file" in
+	*.cpp) vim -E -s -c "let g:html_no_progress=1" -c "syntax on" -c \
+		   "set ft=cpp" -c "runtime syntax/2html.vim" -cwqa "$file" ;;
+	*.h) vim -E -s -c "let g:html_no_progress=1" -c "syntax on" -c \
+		 "set ft=cpp" -c "runtime syntax/2html.vim" -cwqa "$file" ;;
+	*.java) vim -E -s -c "let g:html_no_progress=1" -c "syntax on" -c \
+		    "set ft=java" -c "runtime syntax/2html.vim" -cwqa "$file" ;;
+	*.py) vim -E -s -c "let g:html_no_progress=1" -c "syntax on" -c \
+		  "set ft=python" -c "runtime syntax/2html.vim" -cwqa "$file" ;;
+    esac
+
 
     #KR if you see some weird output comment the lines below.
     
