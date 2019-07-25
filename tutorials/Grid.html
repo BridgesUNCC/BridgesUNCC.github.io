@@ -38,15 +38,30 @@ The Grid type uses a base64 representation for its contents.
 <hr/>
 
 <h2>Grid - Example BRIDGES Program - A checkerboard implementation using the ColorGrid)</h2>
+<ul>
+  <li> In this example, we will build and visualize a checkerboard in two colors using ColorGrid, which is subclassed from the Grid type (using the Color type as the generic parameter to the Grid type).</li>
+  <li> Once we have identified the square to which a pixel belongs, its colored in one of two colors.</li>
+</ul>
+
+<div w3-include-html="bridges_program_elements.html"></div> 
+
+<h2>Here's the final code:</h2>
+
 <div class="tabs">
     <div onclick="displayCode('Java',this)">Java</div>
     <div onclick="displayCode('C++',this)" >C++</div>
     <div onclick="displayCode('Python',this)" >Python</div>
   </div>
   <div class="tabContents">
-    <div id="Java" w3-include-html="./Java_Grid.html"></div>
-    <div id="C++"  w3-include-html="./Cpp_Grid.html"></div>
-    <div id="Python"  w3-include-html="./Python_Grid.html"></div>
+    <div id="Java">
+      <pre w3-include-html="./testing/java/color_grid.java.html" class="prettyprint"></pre>
+    </div>
+    <div id="C++">
+      <pre w3-include-html="./testing/c++/color_grid.cpp.html" class="prettyprint"></pre>
+    </div>
+    <div id="Python">
+      <pre w3-include-html="./testing/python/color_grid.py.html" class="prettyprint"></pre>
+    </div>
   </div>
 
 
