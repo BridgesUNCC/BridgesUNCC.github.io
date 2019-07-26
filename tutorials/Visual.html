@@ -1,92 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="author" content="Bridges"/>
-  <meta name="description" content="Bridges Tutorials"/>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="author" content="Bridges"/>
+    <meta name="description" content="Bridges Tutorials"/>
 
-  <link rel="stylesheet" type="text/css" href="./tutorial.css" />
-  <link rel="stylesheet" type="text/css" href="./vim.css" />
-  
-  <link rel="shortcut icon" href="http://bridgesuncc.github.io/favicon.png"/>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="http://www.w3schools.com/lib/w3data.js"></script>
-  <script src="./tutorial.js"></script>
+    <link rel="stylesheet" type="text/css" href="./tutorial.css" />
+    <link rel="stylesheet" type="text/css" href="./vim.css" />
+    
+    <link rel="shortcut icon" href="http://bridgesuncc.github.io/favicon.png"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <script src="./tutorial.js"></script>
 
-  <title>Bridges - Hello World Visualization Tutorial</title>
+    <title>Bridges - Hello World Visualization Tutorial</title>
 
-  <script src="./prettyprint.js" defer></script>
-</head>
+    <script src="./prettyprint.js" defer></script>
+  </head>
 
-<body>
-<div>
+  <body>
+    <div>
 
-<header w3-include-html="./Tutorial_Header.html"></header>
+      <header w3-include-html="./Tutorial_Header.html"></header>
 
-<main>
-BRIDGES associates <i>visual attributes</i> with all of its elements, so as make
-visualizations appealing, and highlight important aspects of the data
-structure. For instance, you might want to show the path traversed in
-a binary search tree, the shortest path in an implementation of Dijkstra's
-algorithm, the Minimum Spanning Tree of a graph. Alternately,
-an application specific dataset might dictate what needs to be
-highlighted, for instance, display all of you friends in a Twitter graph,
-earthquakes that happened in the last week or in a particular area of the
-world, etc.
+      <main>
+	BRIDGES associates <i>visual attributes</i> with all of its elements, so as make
+	visualizations appealing, and highlight important aspects of the data
+	structure. For instance, you might want to show the path traversed in
+	a binary search tree, the shortest path in an implementation of Dijkstra's
+	algorithm, the Minimum Spanning Tree of a graph. Alternately,
+	an application specific dataset might dictate what needs to be
+	highlighted, for instance, display all of you friends in a Twitter graph,
+	earthquakes that happened in the last week or in a particular area of the
+	world, etc.
 
-<h2>Changing Element visualization properties</h2>
-<p>
-Each Element contains properties that control how its visualization looks.
-You can change how an Element is visualized by interacting with these
-properties. You can use them to change the size, shape, color, and opacity
-of each Element.
-</p>
+	<h2>Changing Element visualization properties</h2>
+	<p>
+	  Each Element contains properties that control how its visualization looks.
+	  You can change how an Element is visualized by interacting with these
+	  properties. You can use them to change the size, shape, color, and opacity
+	  of each Element.
+	</p>
 
-<h2>Changing Edge visualization properties</h2>
-<p>
-	Each Element also contains a LinkVisualizer class that controls how
-	the edges between itself and the node it is connected to
-	appears. You can change how an edge is visualized by interacting with that
-	Element's LinkVisualizer. You can use the LinkVisualizer to change the
-	thickness,  color and opacity of each edge:
-<br/><br/>
-    Note that because Element is the superclass of all other element types,
-	that these same methods will also apply to them as well.
-</p>
+	<h2>Changing Edge visualization properties</h2>
+	<p>
+	  Each Element also contains a LinkVisualizer class that controls how
+	  the edges between itself and the node it is connected to
+	  appears. You can change how an edge is visualized by interacting with that
+	  Element's LinkVisualizer. You can use the LinkVisualizer to change the
+	  thickness,  color and opacity of each edge:
+	  <br/><br/>
+	  Note that because Element is the superclass of all other element types,
+	  that these same methods will also apply to them as well.
+	</p>
 
-<h2>Visualization Syntax</h2>
-  <div class="tabs">
-    <div onclick="displayCode('Java',this)">Java</div>
-    <div onclick="displayCode('C++',this)" >C++</div>
-</div>
-<div class="tabContents">
-    <div id="Java" w3-include-html="./Java_Visual.html"></div>
-    <div id="C++"  w3-include-html="./Cpp_Visual.html"></div>
-</div>
+	<h2>Visualization Syntax</h2>
+	<div class="tabs">
+	  <div onclick="displayCode('Java',this)">Java</div>
+	  <div onclick="displayCode('C++',this)" >C++</div>
+	</div>
+	<div class="tabContents">
+	  <div id="Java" w3-include-html="./Java_Visual.html"></div>
+	  <div id="C++"  w3-include-html="./Cpp_Visual.html"></div>
+	</div>
 
-<h3>Bridges Visualization</h3>
-<ul>
-    <li>Here is a comparison of the element with default properties to your changed element</li>
-    <li>It should look something like this:</li>
-</ul>
-<div class="iframe-wrapper">
-    <iframe src="" data-src="http://bridges-cs.herokuapp.com/assignments/6/bridges_public" scrolling="no">
-      <p>Sorry, your browser doesn't seem to support iframes -
-        <a href="http://bridges-cs.herokuapp.com/assignments/6/bridges_public">Frame Link</a>
-      </p>
-    </iframe>
-  </div>
-  <p>Well done! You’ve just changed an Element's visual properties!</p>
-</main>
+	<h3>Bridges Visualization</h3>
+	<ul>
+	  <li>Here is a comparison of the element with default properties to your changed element</li>
+	  <li>It should look something like this:</li>
+	</ul>
+	<div class="iframe-wrapper">
+	  <iframe src="" data-src="http://bridges-cs.herokuapp.com/assignments/6/bridges_public" scrolling="no">
+	    <p>Sorry, your browser doesn't seem to support iframes -
+              <a href="http://bridges-cs.herokuapp.com/assignments/6/bridges_public">Frame Link</a>
+	    </p>
+	  </iframe>
+	</div>
+	<p>Well done! You’ve just changed an Element's visual properties!</p>
+      </main>
 
-<footer w3-include-html="./Tutorial_Footer.html"></footer>
+      <footer w3-include-html="./Tutorial_Footer.html"></footer>
 
-</div>
-<script>
-  w3IncludeHTML();
-  document.querySelector("*.tabs > *").click();
-</script>
-</body>
+    </div>
+    <script>
+      w3IncludeHTML();
+      document.querySelector("*.tabs > *").click();
+    </script>
+  </body>
 </html>

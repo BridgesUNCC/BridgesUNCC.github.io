@@ -1,287 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="author" content="Bridges"/>
-  <meta name="description" content="Bridges Tutorials"/>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="author" content="Bridges"/>
+    <meta name="description" content="Bridges Tutorials"/>
 
-  <link rel="stylesheet" type="text/css" href="./tutorial.css" />
-  <link rel="stylesheet" type="text/css" href="./vim.css" />
-  
-  <link rel="shortcut icon" href="http://bridgesuncc.github.io/favicon.png"/>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="http://www.w3schools.com/lib/w3data.js"></script>
-  <script src="./tutorial.js"></script>
-
-  <title>Bridges - Tutorials</title>
-
-  <script src="./prettyprint.js" defer></script>
-</head>
-
-<body>
-<div>
-
-<header w3-include-html="./Tutorial_Header.html"></header>
-
-<main>
-
-  <h2>Why Using NonBlockingGame?</h2>
-
-  
-  <p>
-    NonBlockingGames is a Bridges abstraction that allows you to program simple games.
-  </p>
-
-  <p>
-    At the core, a game is concerned with four things:
-    <ol>
-      <li>Reading <strong>Inputs</strong> (which buttons are pressed).</li>
-      <li>Updating the <strong>game state</strong> using custom game mechanics (where is the protagonist).</li>
-      <li><strong>Rendering</strong> to the Screen (what the screen should look like).</li>
-      <li>Maintaining a <strong>Framerate</strong> of 30 frame per seconds (getting a smooth experience).</li>
-    </ol>
-
-    NonBlockingGame in Bridges deals
-    with <strong>Inputs</strong>, <strong>Rendering</strong>,
-    and <strong>Framerate</strong> by making some assumptions about
-    the kinds of game one can play. More precisely, the NonBlockingGame
-    only enables games to be on a small grid (up to 1024 cells), to
-    use only a few sprites (up to 256 predefined sprites), and to use
-    only a few keys (up to 10 keys). These constraints still enable 
-    building many games and applications, and the programmer only focuses
-    on implementing updates to the game state.
-  </p>
-
-  <p>The benefits is that within these constraints, writing a game is
-  very easy. We will look at how to work with a  NonBlockingGame in three
-  steps, 1) Getting something running; 2) Displaying something on the
-  screen; 3) Capturing user input.</p>
- 
-  <h2>1. Getting Started</h2>
-  
-  <p>A game in Bridges is made by creating a new class for your
-    game that is derived from NonBlockingGame. Your class has to construct
-    the underlying NonBlockingGame object by passing the usual Bridges
-    credentials, the assignment number, and the size of the game
-    board. We will use a 10x10 board as an example. Then the game
-    object needs to be instantiated and the game started.
-  </p>
-  <p> Minimally, you create a game by writing two functions:
-    <ol>
-      <li>initialize() is called once when the game originally
-	starts. It is typically used to set up all the game logic in its
-	initial state. Think, for instance, about setting up a chess board
-	at the beginning of the game.</li>
-      <li>gameLoop() is called once for each frame of the game. This is the
-	function that you will write to update the game at each frame
-	based on the player's input.</li>
-    </ol>
-    Here is a minimal game pre-written for you.
-  </p>
-  
-  <div class="tabs">
-    <div onclick="displayCode('Java1',this)">Java</div>
-    <div onclick="displayCode('C++1',this)" >C++</div>
-    <div onclick="displayCode('Python1',this)" >Python</div>
-  </div>
-  <div class="tabContents">
-    <div id="Java1" w3-include-html="./Java_NonBlockingGame-GettingStarted.html"></div>
-    <div id="C++1"  w3-include-html="./Cpp_NonBlockingGame-GettingStarted.html"></div>
-    <div id="Python1"  w3-include-html="./Python_NonBlockingGame-GettingStarted.html"></div>
-  </div>
-
-  <p>Make sure that you can run the minimal game.</p>
-  
-  <p>If you follow the URL given to you when the application runs, it
-  will get to to the Bridges webpage that show your game. To see it,
-  you need to 1) be logged in your account, and, 2) click on the "Connect to
-  Game" button.</p>
-
-  <p>If you want to convince yourself that the game is actually
-  running, you can print to the console a simple message when the
-  GameLoop() function is called. You will see that the message will
-  appear about 30 times per second.</p>
-  
-  <h2>2. What can be Displayed using NonBlockingGame?</h2>
-
-  <p>The display of a NonBlockingGame is based on a grid. The size of the
-    grid can be as small as a single cell, and as big as 1024 cells in
-    total. The biggest square game board is 32x32. However, the board
-    does not need to square, it could be rectangular: for instance a
-    16x64 board, or a 128x8 boards are possible. The size of the board
-    can be controlled by the last two parameter to the constructor of
-    NonBlockingGame.</p>
-
-  <p>Each cell has a background color and can display a symbol
-    painted with a particular color. These colors and symbols enable
-    to compose a wide variety of displays.</p>
-
-  <p>Only 256 colors can be used for either background color or
-    symbols color. The list of colors is available as part of
-    the <a href="http://bridgesuncc.github.io/doc/java-api/current/html/enumbridges_1_1base_1_1_named_color.html">NamedColor</a>
-    are
-    the <a href="https://upload.wikimedia.org/wikipedia/commons/2/2b/SVG_Recognized_color_keyword_names.svg">SVG
-    Version of X11 color</a>. One can set the background color of a
-    cell using the setBGColor() function. The setBGColor() function
-    takes the row and column of the cell, and the color to paint that
-    cell.</p>
-
-  <p>The usable symbols
-    are <a href="http://bridgesuncc.github.io/doc/java-api/current/html/enumbridges_1_1base_1_1_named_symbol.html">NamedSymbol</a>
-    and are graphically
-    depicted <a href="http://bridges-games.herokuapp.com/img/symbols.png">here</a>. One
-    can display an symbol on a cell and select a color for it using
-    the drawSymbol() function.</p>
-
-  <p>The following code paints the screen's background and writes
-    "HELLO" with symbols.</p>
-
-  <div class="tabs">
-    <div onclick="displayCode('Java2',this)">Java</div>
-    <div onclick="displayCode('C++2',this)" >C++</div>
-    <div onclick="displayCode('Python2',this)" >Python</div>
-  </div>
-  <div class="tabContents">
-    <div id="Java2" w3-include-html="./Java_NonBlockingGame-Display.html"></div>
-    <div id="C++2"  w3-include-html="./Cpp_NonBlockingGame-Display.html"></div>
-    <div id="Python2"  w3-include-html="./Python_NonBlockingGame-Display.html"></div>
-  </div>
-
-  <p>Note that the code has been written in the initialize()
-  function. Indeed the gameLoop() function is not going to change the
-  state of the board, so a one time set up is sufficient.</p>
-
-  <h3>Some case study</h3>
-  
-  <p>Take a minute to consider the following displays that can be created for games Bugstomp, Snake, 2048, and FallingSand</p>
-
-  <div class="example">
-    <img class="exampleimage" src="images/game-bugstomp.png"/>
+    <link rel="stylesheet" type="text/css" href="./tutorial.css" />
+    <link rel="stylesheet" type="text/css" href="./vim.css" />
     
-    <p class="exampledescription"><strong>Bugstomp</strong> is a very simple game on a 30x30 grid, where the
-      background is all black and all symbols are white. The character
-      controlled by the player is shown using the 'man' symbol and the
-      bug to stomp is shown using the 'bug3' symbol. The letter and
-      number symbols are used to display the score.</p>
-  </div>
+    <link rel="shortcut icon" href="http://bridgesuncc.github.io/favicon.png"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <script src="./tutorial.js"></script>
 
-  <div class="example">
-  
-    <img class="exampleimage" src="images/game-snake.png" />
-  
-    <p class="exampledescription">In Snake, a 30x30 grid is used. The cells' background are first
-      colored with two alternating colors to help the player figure out
-      locations easily. The actual snake is displayed also using the
-      background color in grey to show the body and in white to show the
-      head of the snake. The apple to pick are shown with an actual red
-      apple symbol.</p>
-  </div>
+    <title>Bridges - Tutorials</title>
 
-  
-  <div class="example">
-  
-    <img class="exampleimage" src="images/game-2048.png" />  
-  
-    <p class="exampledescription">The 2048 game is based on tiles arranged in 4 rows and 4
-      columns. Each tile need to display its value which can not be done
-      on a single cell of the NonBlockingGame, So each tile of the game
-      logic is rendered using 6x6 cells of the NonBlockingGame, and the
-      entire game uses a 24x24 board (4x4 tiles each of 6x6 cells). This
-      enables the game to show more complex information such as the
-      value of each tile, using a combination background color to show
-      the value of the time, but also symbols to print an actual
-      number. Also the decomposition of tile in 6x6 cells allows the
-      animation of the game by sliding the tiles one cell at a time when
-      moves happen.</p>
-  </div>
-  
-  <div class="example">
-    <img class="exampleimage" src="images/game-fallingsand.png" />
-  
-    <p class="exampledescription">Finally, <strong>Falling Sand</strong> operates on a 30x30 grid and show a
-      simulation of metal, sand and water. The metal is shown with 'gray'
-      'squares', sand is shown with 'sandybrown' 'waves', water is shown
-      with 'blue' 'droplet', and the cursor is shown with a 'star'.</p>
-  </div>
-  
-  <h2>3. Capturing User Input.</h2>
+    <script src="./prettyprint.js" defer></script>
+  </head>
 
-  <p>At each frame of the game, the gameLoop() function is
-    executed. The programmer can query the user input with functions
-    which return booleans that indicate whether that particular key is
-    pressed. The programmer can query the arrows with keyUp(),
-    keyDown(), keyLeft(), keyRight(); four buttons with keyW(),
-    keyA(), keyS(), keyD(); and two special button keySpace(), and
-    keyQ().</p>
+  <body>
+    <div>
 
-  <p> While there is no mouse or gamepad support, you can think about the key as mapping to a gamepad like that:</p>
-  <img width="30%" src="images/svg/gamepad.svg" />
-  
-  <p>The following code demonsrates how the keys can be used to display
-    the "HELLO" message only if the Up Arrow is pressed.</p>
-  
-  <div class="tabs">
-    <div onclick="displayCode('Java3',this)">Java</div>
-    <div onclick="displayCode('C++3',this)" >C++</div>
-    <div onclick="displayCode('Python3',this)" >Python</div>
-  </div>
-  <div class="tabContents">
-    <div id="Java3" w3-include-html="./Java_NonBlockingGame-Input.html"></div>
-    <div id="C++3"  w3-include-html="./Cpp_NonBlockingGame-Input.html"></div>
-    <div id="Python3"  w3-include-html="./Python_NonBlockingGame-Input.html"></div>
-  </div>
+      <header w3-include-html="./Tutorial_Header.html"></header>
 
-  <p>Note that the code checking for the input has been written in the
-    gameLoop() function while the code changing the background color
-    has been written in initialize(). The code inside initialize()
-    would not be able to capture user input since it is only executed
-    once, so it has to be inside of gameLoop(). Because the game board
-    is not reset at each frame, the board starts at the beginning of a
-    frame in the same state it was at the end of the previous
-    frame. Since the background color does not need changing, the code
-    that sets the background can be left in initialize().</p>
+      <main>
 
-  <p>However, the code that prints "HELLO" uses symbols to print the
-    message. So the symbols are on the board at the beginning of the
-    gameLoop() function if the up arrow was pressed at the frame
-    before. Therefore, if the up arrow is no longer pressed, it is
-    necessary to remove the symbols by setting them to 'none'.</p>
-  
-  <h2>Going Further</h2>
+	<h2>Why Using NonBlockingGame?</h2>
 
-  <p>Despite the NonBlockingGame API is very simple, it is sufficient
-    to make a wide variety of games. Really most games from the early
-    games followed a similar
-    pattern. <a href="https://en.wikipedia.org/wiki/Adventure_(Atari_2600)">Adventure</a>,
-    <a href="https://en.wikipedia.org/wiki/Rogue_(video_game)">Rogue</a>,
-    <a href="https://en.wikipedia.org/wiki/Snake_(video_game_genre)">Snake</a>,
-    <a href="https://en.wikipedia.org/wiki/Tron_(video_game)">Tron's Light Cycles</a>,
-    <a href="https://en.wikipedia.org/wiki/2048_(video_game)">2048</a>,
-    <a href="https://en.wikipedia.org/wiki/Minesweeper_(video_game)">Minesweeper</a>,
-    <a href="https://en.wikipedia.org/wiki/Ultima_I:_The_First_Age_of_Darkness">Ultima</a>,
-    <a href="https://en.wikipedia.org/wiki/Crossfire_(1981_video_game)">Crossfire</a>,
-    <a href="https://en.wikipedia.org/wiki/Tetris">Tetris</a>,
-    <a href="https://en.wikipedia.org/wiki/Advance_Wars">Advance Wars</a>,
-    <a href="https://en.wikipedia.org/wiki/Sokoban">Sokoban</a>,
-    Chess all follow a similar pattern.</p>
-  
-  <p>Check Bridges <a href="../newassignments.html">assignment</a> page for games to make. The simpler
-    ones to start with are probably Bugstomp, 2048, and Snake.</p>
+	
+	<p>
+	  NonBlockingGames is a Bridges abstraction that allows you to program simple games.
+	</p>
 
-  <p>NonBlocking games can also be used not for games, but for
-    cellular automata simulations. See for instance assignments
-    Spreading Fire, and Falling Sand.</p>
+	<p>
+	  At the core, a game is concerned with four things:
+	  <ol>
+	    <li>Reading <strong>Inputs</strong> (which buttons are pressed).</li>
+	    <li>Updating the <strong>game state</strong> using custom game mechanics (where is the protagonist).</li>
+	    <li><strong>Rendering</strong> to the Screen (what the screen should look like).</li>
+	    <li>Maintaining a <strong>Framerate</strong> of 30 frame per seconds (getting a smooth experience).</li>
+	  </ol>
 
-</main>
+	  NonBlockingGame in Bridges deals
+	  with <strong>Inputs</strong>, <strong>Rendering</strong>,
+	  and <strong>Framerate</strong> by making some assumptions about
+	  the kinds of game one can play. More precisely, the NonBlockingGame
+	  only enables games to be on a small grid (up to 1024 cells), to
+	  use only a few sprites (up to 256 predefined sprites), and to use
+	  only a few keys (up to 10 keys). These constraints still enable 
+	  building many games and applications, and the programmer only focuses
+	  on implementing updates to the game state.
+	</p>
 
-<footer w3-include-html="./Tutorial_Footer.html"></footer>
+	<p>The benefits is that within these constraints, writing a game is
+	  very easy. We will look at how to work with a  NonBlockingGame in three
+	  steps, 1) Getting something running; 2) Displaying something on the
+	  screen; 3) Capturing user input.</p>
+	
+	<h2>1. Getting Started</h2>
+	
+	<p>A game in Bridges is made by creating a new class for your
+	  game that is derived from NonBlockingGame. Your class has to construct
+	  the underlying NonBlockingGame object by passing the usual Bridges
+	  credentials, the assignment number, and the size of the game
+	  board. We will use a 10x10 board as an example. Then the game
+	  object needs to be instantiated and the game started.
+	</p>
+	<p> Minimally, you create a game by writing two functions:
+	  <ol>
+	    <li>initialize() is called once when the game originally
+	      starts. It is typically used to set up all the game logic in its
+	      initial state. Think, for instance, about setting up a chess board
+	      at the beginning of the game.</li>
+	    <li>gameLoop() is called once for each frame of the game. This is the
+	      function that you will write to update the game at each frame
+	      based on the player's input.</li>
+	  </ol>
+	  Here is a minimal game pre-written for you.
+	</p>
+	
+	<div class="tabs">
+	  <div onclick="displayCode('Java1',this)">Java</div>
+	  <div onclick="displayCode('C++1',this)" >C++</div>
+	  <div onclick="displayCode('Python1',this)" >Python</div>
+	</div>
+	<div class="tabContents">
+	  <div id="Java1" w3-include-html="./Java_NonBlockingGame-GettingStarted.html"></div>
+	  <div id="C++1"  w3-include-html="./Cpp_NonBlockingGame-GettingStarted.html"></div>
+	  <div id="Python1"  w3-include-html="./Python_NonBlockingGame-GettingStarted.html"></div>
+	</div>
 
-</div>
-<script>
-	w3IncludeHTML();
-	document.querySelector("*.tabs > *").click();
-</script>
-</body>
+	<p>Make sure that you can run the minimal game.</p>
+	
+	<p>If you follow the URL given to you when the application runs, it
+	  will get to to the Bridges webpage that show your game. To see it,
+	  you need to 1) be logged in your account, and, 2) click on the "Connect to
+	  Game" button.</p>
+
+	<p>If you want to convince yourself that the game is actually
+	  running, you can print to the console a simple message when the
+	  GameLoop() function is called. You will see that the message will
+	  appear about 30 times per second.</p>
+	
+	<h2>2. What can be Displayed using NonBlockingGame?</h2>
+
+	<p>The display of a NonBlockingGame is based on a grid. The size of the
+	  grid can be as small as a single cell, and as big as 1024 cells in
+	  total. The biggest square game board is 32x32. However, the board
+	  does not need to square, it could be rectangular: for instance a
+	  16x64 board, or a 128x8 boards are possible. The size of the board
+	  can be controlled by the last two parameter to the constructor of
+	  NonBlockingGame.</p>
+
+	<p>Each cell has a background color and can display a symbol
+	  painted with a particular color. These colors and symbols enable
+	  to compose a wide variety of displays.</p>
+
+	<p>Only 256 colors can be used for either background color or
+	  symbols color. The list of colors is available as part of
+	  the <a href="http://bridgesuncc.github.io/doc/java-api/current/html/enumbridges_1_1base_1_1_named_color.html">NamedColor</a>
+	  are
+	  the <a href="https://upload.wikimedia.org/wikipedia/commons/2/2b/SVG_Recognized_color_keyword_names.svg">SVG
+	    Version of X11 color</a>. One can set the background color of a
+	  cell using the setBGColor() function. The setBGColor() function
+	  takes the row and column of the cell, and the color to paint that
+	  cell.</p>
+
+	<p>The usable symbols
+	  are <a href="http://bridgesuncc.github.io/doc/java-api/current/html/enumbridges_1_1base_1_1_named_symbol.html">NamedSymbol</a>
+	  and are graphically
+	  depicted <a href="http://bridges-games.herokuapp.com/img/symbols.png">here</a>. One
+	  can display an symbol on a cell and select a color for it using
+	  the drawSymbol() function.</p>
+
+	<p>The following code paints the screen's background and writes
+	  "HELLO" with symbols.</p>
+
+	<div class="tabs">
+	  <div onclick="displayCode('Java2',this)">Java</div>
+	  <div onclick="displayCode('C++2',this)" >C++</div>
+	  <div onclick="displayCode('Python2',this)" >Python</div>
+	</div>
+	<div class="tabContents">
+	  <div id="Java2" w3-include-html="./Java_NonBlockingGame-Display.html"></div>
+	  <div id="C++2"  w3-include-html="./Cpp_NonBlockingGame-Display.html"></div>
+	  <div id="Python2"  w3-include-html="./Python_NonBlockingGame-Display.html"></div>
+	</div>
+
+	<p>Note that the code has been written in the initialize()
+	  function. Indeed the gameLoop() function is not going to change the
+	  state of the board, so a one time set up is sufficient.</p>
+
+	<h3>Some case study</h3>
+	
+	<p>Take a minute to consider the following displays that can be created for games Bugstomp, Snake, 2048, and FallingSand</p>
+
+	<div class="example">
+	  <img class="exampleimage" src="images/game-bugstomp.png"/>
+	  
+	  <p class="exampledescription"><strong>Bugstomp</strong> is a very simple game on a 30x30 grid, where the
+	    background is all black and all symbols are white. The character
+	    controlled by the player is shown using the 'man' symbol and the
+	    bug to stomp is shown using the 'bug3' symbol. The letter and
+	    number symbols are used to display the score.</p>
+	</div>
+
+	<div class="example">
+	  
+	  <img class="exampleimage" src="images/game-snake.png" />
+	  
+	  <p class="exampledescription">In Snake, a 30x30 grid is used. The cells' background are first
+	    colored with two alternating colors to help the player figure out
+	    locations easily. The actual snake is displayed also using the
+	    background color in grey to show the body and in white to show the
+	    head of the snake. The apple to pick are shown with an actual red
+	    apple symbol.</p>
+	</div>
+
+	
+	<div class="example">
+	  
+	  <img class="exampleimage" src="images/game-2048.png" />  
+	  
+	  <p class="exampledescription">The 2048 game is based on tiles arranged in 4 rows and 4
+	    columns. Each tile need to display its value which can not be done
+	    on a single cell of the NonBlockingGame, So each tile of the game
+	    logic is rendered using 6x6 cells of the NonBlockingGame, and the
+	    entire game uses a 24x24 board (4x4 tiles each of 6x6 cells). This
+	    enables the game to show more complex information such as the
+	    value of each tile, using a combination background color to show
+	    the value of the time, but also symbols to print an actual
+	    number. Also the decomposition of tile in 6x6 cells allows the
+	    animation of the game by sliding the tiles one cell at a time when
+	    moves happen.</p>
+	</div>
+	
+	<div class="example">
+	  <img class="exampleimage" src="images/game-fallingsand.png" />
+	  
+	  <p class="exampledescription">Finally, <strong>Falling Sand</strong> operates on a 30x30 grid and show a
+	    simulation of metal, sand and water. The metal is shown with 'gray'
+	    'squares', sand is shown with 'sandybrown' 'waves', water is shown
+	    with 'blue' 'droplet', and the cursor is shown with a 'star'.</p>
+	</div>
+	
+	<h2>3. Capturing User Input.</h2>
+
+	<p>At each frame of the game, the gameLoop() function is
+	  executed. The programmer can query the user input with functions
+	  which return booleans that indicate whether that particular key is
+	  pressed. The programmer can query the arrows with keyUp(),
+	  keyDown(), keyLeft(), keyRight(); four buttons with keyW(),
+	  keyA(), keyS(), keyD(); and two special button keySpace(), and
+	  keyQ().</p>
+
+	<p> While there is no mouse or gamepad support, you can think about the key as mapping to a gamepad like that:</p>
+	<img width="30%" src="images/svg/gamepad.svg" />
+	
+	<p>The following code demonsrates how the keys can be used to display
+	  the "HELLO" message only if the Up Arrow is pressed.</p>
+	
+	<div class="tabs">
+	  <div onclick="displayCode('Java3',this)">Java</div>
+	  <div onclick="displayCode('C++3',this)" >C++</div>
+	  <div onclick="displayCode('Python3',this)" >Python</div>
+	</div>
+	<div class="tabContents">
+	  <div id="Java3" w3-include-html="./Java_NonBlockingGame-Input.html"></div>
+	  <div id="C++3"  w3-include-html="./Cpp_NonBlockingGame-Input.html"></div>
+	  <div id="Python3"  w3-include-html="./Python_NonBlockingGame-Input.html"></div>
+	</div>
+
+	<p>Note that the code checking for the input has been written in the
+	  gameLoop() function while the code changing the background color
+	  has been written in initialize(). The code inside initialize()
+	  would not be able to capture user input since it is only executed
+	  once, so it has to be inside of gameLoop(). Because the game board
+	  is not reset at each frame, the board starts at the beginning of a
+	  frame in the same state it was at the end of the previous
+	  frame. Since the background color does not need changing, the code
+	  that sets the background can be left in initialize().</p>
+
+	<p>However, the code that prints "HELLO" uses symbols to print the
+	  message. So the symbols are on the board at the beginning of the
+	  gameLoop() function if the up arrow was pressed at the frame
+	  before. Therefore, if the up arrow is no longer pressed, it is
+	  necessary to remove the symbols by setting them to 'none'.</p>
+	
+	<h2>Going Further</h2>
+
+	<p>Despite the NonBlockingGame API is very simple, it is sufficient
+	  to make a wide variety of games. Really most games from the early
+	  games followed a similar
+	  pattern. <a href="https://en.wikipedia.org/wiki/Adventure_(Atari_2600)">Adventure</a>,
+	  <a href="https://en.wikipedia.org/wiki/Rogue_(video_game)">Rogue</a>,
+	  <a href="https://en.wikipedia.org/wiki/Snake_(video_game_genre)">Snake</a>,
+	  <a href="https://en.wikipedia.org/wiki/Tron_(video_game)">Tron's Light Cycles</a>,
+	  <a href="https://en.wikipedia.org/wiki/2048_(video_game)">2048</a>,
+	  <a href="https://en.wikipedia.org/wiki/Minesweeper_(video_game)">Minesweeper</a>,
+	  <a href="https://en.wikipedia.org/wiki/Ultima_I:_The_First_Age_of_Darkness">Ultima</a>,
+	  <a href="https://en.wikipedia.org/wiki/Crossfire_(1981_video_game)">Crossfire</a>,
+	  <a href="https://en.wikipedia.org/wiki/Tetris">Tetris</a>,
+	  <a href="https://en.wikipedia.org/wiki/Advance_Wars">Advance Wars</a>,
+	  <a href="https://en.wikipedia.org/wiki/Sokoban">Sokoban</a>,
+	  Chess all follow a similar pattern.</p>
+	
+	<p>Check Bridges <a href="../newassignments.html">assignment</a> page for games to make. The simpler
+	  ones to start with are probably Bugstomp, 2048, and Snake.</p>
+
+	<p>NonBlocking games can also be used not for games, but for
+	  cellular automata simulations. See for instance assignments
+	  Spreading Fire, and Falling Sand.</p>
+
+      </main>
+
+      <footer w3-include-html="./Tutorial_Footer.html"></footer>
+
+    </div>
+    <script>
+      w3IncludeHTML();
+      document.querySelector("*.tabs > *").click();
+    </script>
+  </body>
 </html>

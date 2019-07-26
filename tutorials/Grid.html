@@ -1,97 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="author" content="Bridges"/>
-  <meta name="description" content="Bridges Tutorials"/>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="author" content="Bridges"/>
+    <meta name="description" content="Bridges Tutorials"/>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="./tutorial.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./tutorial.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="./tutorial.css" />
-  <link rel="stylesheet" type="text/css" href="./vim.css" />
+    <link rel="stylesheet" type="text/css" href="./tutorial.css" />
+    <link rel="stylesheet" type="text/css" href="./vim.css" />
 
-  <link rel="shortcut icon" href="http://bridgesuncc.github.io/favicon.png"/>
-  <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <link rel="shortcut icon" href="http://bridgesuncc.github.io/favicon.png"/>
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
 
-  <title>Bridges - Hello World Visualization Tutorial</title>
+    <title>Bridges - Hello World Visualization Tutorial</title>
 
-  <script src="./prettyprint.js" defer></script>
-</head>
+    <script src="./prettyprint.js" defer></script>
+  </head>
 
-<body>
-<div>
+  <body>
+    <div>
 
-<header w3-include-html="./Tutorial_Header.html"></header>
+      <header w3-include-html="./Tutorial_Header.html"></header>
 
-<main>
-<br>
-Grid&lt;E&gt; implements a <i> 2D grid structure </i> in BRIDGES, and it can be used to
-represent 2D image like structures (more efficient than the 2D array representation
-for large arrays), as well as implementation of simple 2D games that operate on moderate
-sized grids.  The setDimensions() method is used to set the grid dimensions. The ColorGrid
-subclass specializes this class to use Color for each grid element and is the subject of 
-the illustrated example here. As before, &lt;E&gt; represents the generic class parameter.
-The Grid type uses a base64 representation for its contents.
-<hr/>
+      <main>
+	<br>
+	Grid&lt;E&gt; implements a <i> 2D grid structure </i> in BRIDGES, and it can be used to
+	represent 2D image like structures (more efficient than the 2D array representation
+	for large arrays), as well as implementation of simple 2D games that operate on moderate
+	sized grids.  The setDimensions() method is used to set the grid dimensions. The ColorGrid
+	subclass specializes this class to use Color for each grid element and is the subject of 
+	the illustrated example here. As before, &lt;E&gt; represents the generic class parameter.
+	The Grid type uses a base64 representation for its contents.
+	<hr/>
 
-<h2>Grid - Example BRIDGES Program - A checkerboard implementation using the ColorGrid)</h2>
-<ul>
-  <li> In this example, we will build and visualize a checkerboard in two colors using ColorGrid, which is subclassed from the Grid type (using the Color type as the generic parameter to the Grid type).</li>
-  <li> Once we have identified the square to which a pixel belongs, its colored in one of two colors.</li>
-</ul>
+	<h2>Grid - Example BRIDGES Program - A checkerboard implementation using the ColorGrid)</h2>
+	<ul>
+	  <li> In this example, we will build and visualize a checkerboard in two colors using ColorGrid, which is subclassed from the Grid type (using the Color type as the generic parameter to the Grid type).</li>
+	  <li> Once we have identified the square to which a pixel belongs, its colored in one of two colors.</li>
+	</ul>
 
-<div w3-include-html="bridges_program_elements.html"></div> 
+	<div w3-include-html="bridges_program_elements.html"></div> 
 
-<h2>Here's the final code:</h2>
+	<h2>Here's the final code:</h2>
 
-<div class="tabs">
-    <div onclick="displayCode('Java',this)">Java</div>
-    <div onclick="displayCode('C++',this)" >C++</div>
-    <div onclick="displayCode('Python',this)" >Python</div>
-  </div>
-  <div class="tabContents">
-    <div id="Java">
-      <pre w3-include-html="./testing/java/color_grid.java.html" class="prettyprint"></pre>
+	<div class="tabs">
+	  <div onclick="displayCode('Java',this)">Java</div>
+	  <div onclick="displayCode('C++',this)" >C++</div>
+	  <div onclick="displayCode('Python',this)" >Python</div>
+	</div>
+	<div class="tabContents">
+	  <div id="Java">
+	    <pre w3-include-html="./testing/java/color_grid.java.html" class="prettyprint"></pre>
+	  </div>
+	  <div id="C++">
+	    <pre w3-include-html="./testing/c++/color_grid.cpp.html" class="prettyprint"></pre>
+	  </div>
+	  <div id="Python">
+	    <pre w3-include-html="./testing/python/color_grid.py.html" class="prettyprint"></pre>
+	  </div>
+	</div>
+
+
+	<h2>Bridges Visualization</h2>
+	<ul>
+	  <li>Once all your code is in order, run your file.</li>
+	  <li>Assuming all your code is correct and it compiles correctly, a
+	    link to the Bridges website will be generated on the console.</li>
+	  <li>Copy/paste this link into your favorite browser to view a visualization
+	    of the data structure you just created.</li>
+	  <li>It should look something like this:</li>
+	</ul>
+	<div class="iframe-wrapper">
+	  <iframe src="http://bridges-clone.herokuapp.com/assignments/114/bridges_public" scrolling="no">
+	    <p>Sorry, your browser doesn't seem to support iframes -
+              <a href="http://bridges-clone.herokuapp.com/assignments/114/bridges_public" scrolling="no">Frame0 Link</a>
+	    </p>
+	  </iframe>
+	</div>
+	<p>Well done! You’ve just created your Bridges Singly Color Grid based Checker Board project!</p>
+      </main>
+
+      <footer w3-include-html="./Tutorial_Footer.html"></footer>
+
     </div>
-    <div id="C++">
-      <pre w3-include-html="./testing/c++/color_grid.cpp.html" class="prettyprint"></pre>
-    </div>
-    <div id="Python">
-      <pre w3-include-html="./testing/python/color_grid.py.html" class="prettyprint"></pre>
-    </div>
-  </div>
-
-
-<h2>Bridges Visualization</h2>
-<ul>
-<li>Once all your code is in order, run your file.</li>
-<li>Assuming all your code is correct and it compiles correctly, a
-link to the Bridges website will be generated on the console.</li>
-<li>Copy/paste this link into your favorite browser to view a visualization
-of the data structure you just created.</li>
-<li>It should look something like this:</li>
-</ul>
-  <div class="iframe-wrapper">
-    <iframe src="http://bridges-clone.herokuapp.com/assignments/114/bridges_public" scrolling="no">
-      <p>Sorry, your browser doesn't seem to support iframes -
-        <a href="http://bridges-clone.herokuapp.com/assignments/114/bridges_public" scrolling="no">Frame0 Link</a>
-      </p>
-	</iframe>
-   </div>
-  <p>Well done! You’ve just created your Bridges Singly Color Grid based Checker Board project!</p>
-</main>
-
-<footer w3-include-html="./Tutorial_Footer.html"></footer>
-
-</div>
-<script>
-  w3IncludeHTML();
-  document.querySelector("*.tabs > *").click();
-</script>
-</body>
+    <script>
+      w3IncludeHTML();
+      document.querySelector("*.tabs > *").click();
+    </script>
+  </body>
 </html>

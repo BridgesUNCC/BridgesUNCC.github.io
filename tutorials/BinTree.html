@@ -1,112 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="author" content="Bridges"/>
-  <meta name="description" content="Bridges Tutorials"/>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="author" content="Bridges"/>
+    <meta name="description" content="Bridges Tutorials"/>
 
-  <link rel="stylesheet" type="text/css" href="./tutorial.css" />
-  <link rel="stylesheet" type="text/css" href="./vim.css" />
+    <link rel="stylesheet" type="text/css" href="./tutorial.css" />
+    <link rel="stylesheet" type="text/css" href="./vim.css" />
 
-  <link rel="shortcut icon" href="http://bridgesuncc.github.io/favicon.png"/>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="http://www.w3schools.com/lib/w3data.js"></script>
-  <script src="./tutorial.js"></script>
+    <link rel="shortcut icon" href="http://bridgesuncc.github.io/favicon.png"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <script src="./tutorial.js"></script>
 
-  <title>Bridges - Hello World Visualization Tutorial</title>
+    <title>Bridges - Hello World Visualization Tutorial</title>
 
-  <script src="./prettyprint.js" defer></script>
-</head>
+    <script src="./prettyprint.js" defer></script>
+  </head>
 
-<body>
-<div>
+  <body>
+    <div>
 
-<header w3-include-html="./Tutorial_Header.html"></header>
+      <header w3-include-html="./Tutorial_Header.html"></header>
 
-<main>
-BinTreeElement&lt;E&gt; implements a <i>binary tree element</i> in BRIDGES
-and is inherited from Element&lt;E&gt;
-<br><br><img width="175em" src="./images/bintree_el.png"><br><br>
-<h2>How does the BinTreeElement&lt;E&gt; work?</h2>
-<p>
-BinTreeElement&lt;E&gt; is another type of container that has two links
-pointing to its two children, also binary tree elements. By convention,
-these two links are called "left" and "right and the top of the tree is
-referred to as the "root".
-<br/><br/><img width="600em" src="./TreeElement.png"/><br/><br/>
-In the example above, Root has two links, so calling Root.getLeft() will
-return the TreeElement T1 and calling Root.getRight() will return the
-TreeElement T2.
-<br/><br/>
-Note that there is no pointer from T1 or any other element back to its root.
-</p>
+      <main>
+	BinTreeElement&lt;E&gt; implements a <i>binary tree element</i> in BRIDGES
+	and is inherited from Element&lt;E&gt;
+	<br><br><img width="175em" src="./images/bintree_el.png"><br><br>
+	<h2>How does the BinTreeElement&lt;E&gt; work?</h2>
+	<p>
+	  BinTreeElement&lt;E&gt; is another type of container that has two links
+	  pointing to its two children, also binary tree elements. By convention,
+	  these two links are called "left" and "right and the top of the tree is
+	  referred to as the "root".
+	  <br/><br/><img width="600em" src="./TreeElement.png"/><br/><br/>
+	  In the example above, Root has two links, so calling Root.getLeft() will
+	  return the TreeElement T1 and calling Root.getRight() will return the
+	  TreeElement T2.
+	  <br/><br/>
+	  Note that there is no pointer from T1 or any other element back to its root.
+	</p>
 
-<h2>How does a BinTreeElement&lt;E&gt; differ from a DLelement&lt;E&gt;?</h2>
-<p>
-Structurally, DLelement&lt;E&gt;  and TreeElement&lt;E&gt; are similar with 2 emanating links, but they are used in very different data structures. In a doubly
-linked list, the links point to the immediately following and previous
-element, while in the binary tree they point to its two children(recursively,
-as can be seen in the above example).
+	<h2>How does a BinTreeElement&lt;E&gt; differ from a DLelement&lt;E&gt;?</h2>
+	<p>
+	  Structurally, DLelement&lt;E&gt;  and TreeElement&lt;E&gt; are similar with 2 emanating links, but they are used in very different data structures. In a doubly
+	  linked list, the links point to the immediately following and previous
+	  element, while in the binary tree they point to its two children(recursively,
+	  as can be seen in the above example).
 
-</p>
-<hr/>
+	</p>
+	<hr/>
 
-<h2>BinTreeElement - BRIDGES Example: A Huffman Coding Tree</h2>
+	<h2>BinTreeElement - BRIDGES Example: A Huffman Coding Tree</h2>
 
-<ul>
-  <li> This example illustrates construction of a Huffman coding tree, an 
-    application of a binary tree. The tree is manually created for a small
-    alphabet.
-  <li>  Hit the `l' key to turn on the labels to see the Huffman tree labels/values.
-    from left to right and accessed by an integer index (begining at 0).
-  <li> In the example, the Huffman tree is built, visual attributes assigned 
-    and visualized.
-</ul>
+	<ul>
+	  <li> This example illustrates construction of a Huffman coding tree, an 
+	    application of a binary tree. The tree is manually created for a small
+	    alphabet.
+	  <li>  Hit the `l' key to turn on the labels to see the Huffman tree labels/values.
+	    from left to right and accessed by an integer index (begining at 0).
+	  <li> In the example, the Huffman tree is built, visual attributes assigned 
+	    and visualized.
+	</ul>
 
-<div w3-include-html="bridges_program_elements.html"></div> 
+	<div w3-include-html="bridges_program_elements.html"></div> 
 
-<div class="tabs">
-  <div onclick="displayCode('Java',this)">Java</div>
-  <div onclick="displayCode('C++',this)" >C++</div>
-  <div onclick="displayCode('Python',this)" >Python</div>
-</div>
-<div class="tabContents">
-  <div id="Java">
-      <pre w3-include-html="./testing/java/bintree.java.html" class="prettyprint"></pre>
-  </div>
-  <div id="C++">
-    <pre w3-include-html="./testing/c++/bintree.cpp.html" class="prettyprint"></pre>
-  </div>
-  <div id="Python">
-    <pre w3-include-html="./testing/python/bintree.py.html" class="prettyprint"></pre>
-  </div>
-  </div>
+	<div class="tabs">
+	  <div onclick="displayCode('Java',this)">Java</div>
+	  <div onclick="displayCode('C++',this)" >C++</div>
+	  <div onclick="displayCode('Python',this)" >Python</div>
+	</div>
+	<div class="tabContents">
+	  <div id="Java">
+	    <pre w3-include-html="./testing/java/bintree.java.html" class="prettyprint"></pre>
+	  </div>
+	  <div id="C++">
+	    <pre w3-include-html="./testing/c++/bintree.cpp.html" class="prettyprint"></pre>
+	  </div>
+	  <div id="Python">
+	    <pre w3-include-html="./testing/python/bintree.py.html" class="prettyprint"></pre>
+	  </div>
+	</div>
 
-  <h3>Bridges Visualization</h3>
-  <ul>
-    <li>Once all your code is in order, run your program.</li>
-    <li>Assuming all your code is correct and it compiles correctly, a link to the Bridges website will be generated.</li>
-    <li>Copy/paste this link into your favorite browser to view a visualization of the data structure you’ve just created.</li>
-    <li>It should look something like this:</li>
-  </ul>
-  <div class="iframe-wrapper">
-    <iframe src="" data-src="http://bridges-cs.herokuapp.com/assignments/109/bridges_public" scrolling="no">
-      <p>Sorry, your browser doesn't seem to support iframes -
-        <a href="http://bridges-cs.herokuapp.com/assignments/109/bridges_public">Frame Link</a>
-      </p>
-    </iframe>
-  </div>
-  <p>Well done! You’ve just created your Bridges Binary Tree project!</p>
-</main>
+	<h3>Bridges Visualization</h3>
+	<ul>
+	  <li>Once all your code is in order, run your program.</li>
+	  <li>Assuming all your code is correct and it compiles correctly, a link to the Bridges website will be generated.</li>
+	  <li>Copy/paste this link into your favorite browser to view a visualization of the data structure you’ve just created.</li>
+	  <li>It should look something like this:</li>
+	</ul>
+	<div class="iframe-wrapper">
+	  <iframe src="" data-src="http://bridges-cs.herokuapp.com/assignments/109/bridges_public" scrolling="no">
+	    <p>Sorry, your browser doesn't seem to support iframes -
+              <a href="http://bridges-cs.herokuapp.com/assignments/109/bridges_public">Frame Link</a>
+	    </p>
+	  </iframe>
+	</div>
+	<p>Well done! You’ve just created your Bridges Binary Tree project!</p>
+      </main>
 
-<footer w3-include-html="./Tutorial_Footer.html"></footer>
+      <footer w3-include-html="./Tutorial_Footer.html"></footer>
 
-</div>
-<script>
-  w3IncludeHTML();
-  document.querySelector("*.tabs > *").click();
-</script>
-</body>
+    </div>
+    <script>
+      w3IncludeHTML();
+      document.querySelector("*.tabs > *").click();
+    </script>
+  </body>
 </html>

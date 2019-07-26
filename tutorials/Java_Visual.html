@@ -6,39 +6,39 @@
 </p>
 
 <h3>Setup our DataStructure</h3>
-  <ul>
-    <li>To showcase both element and edge visualization changes we will use DLelements</li>
-    <pre class="prettyprint">
-      //See DLelement Guide
-      DLelement&lt;String&gt; e0 = new DLelement&lt;&gt;("","Original");
-      DLelement&lt;String&gt; e1 = new DLelement&lt;&gt;("","Changed");
-      e0.setNext(e1);
-      e1.setPrev(e0);
-    </pre>
-    <li>
-      In this example we will keep e0 and e0's next edge default, 
-      while changing e1 and e1's prev edge.
-    </li>
-  </ul>
+<ul>
+  <li>To showcase both element and edge visualization changes we will use DLelements</li>
+  <pre class="prettyprint">
+    //See DLelement Guide
+    DLelement&lt;String&gt; e0 = new DLelement&lt;&gt;("","Original");
+    DLelement&lt;String&gt; e1 = new DLelement&lt;&gt;("","Changed");
+    e0.setNext(e1);
+    e1.setPrev(e0);
+  </pre>
+  <li>
+    In this example we will keep e0 and e0's next edge default, 
+    while changing e1 and e1's prev edge.
+  </li>
+</ul>
 
 <h3>Element Visualization changing</h3>
 <ul>
   <li>Color can be changed like this:</li>
-    <pre class="prettyprint">e1.getVisualizer().setColor("blue");</pre>
+  <pre class="prettyprint">e1.getVisualizer().setColor("blue");</pre>
   <li>Opacity can be changed like this:</li>
-    <pre class="prettyprint">e1.getVisualizer().setOpacity(.5);</pre>
+  <pre class="prettyprint">e1.getVisualizer().setOpacity(.5);</pre>
   <li>Size can be changed like this:</li>
-    <pre class="prettyprint">e1.getVisualizer().setSize(20);</pre>
+  <pre class="prettyprint">e1.getVisualizer().setSize(20);</pre>
   <li>Shape can be changed like this:</li>
-    <pre class="prettyprint">e1.getVisualizer().setShape("diamond");</pre>
+  <pre class="prettyprint">e1.getVisualizer().setShape("diamond");</pre>
 </ul>
 
 <h3>Edge Visualization changing</h3>
 <ul>
   <li>Color can be changed like this:</li>
-    <pre class="prettyprint">e1.getLinkVisualizer(e0).setColor("red");</pre>
+  <pre class="prettyprint">e1.getLinkVisualizer(e0).setColor("red");</pre>
   <li>Opacity can be changed like this:</li>
-    <pre class="prettyprint">e1.getLinkVisualizer(e0).setOpacity(.5);</pre>
+  <pre class="prettyprint">e1.getLinkVisualizer(e0).setOpacity(.5);</pre>
   <li>Thickness can be changed like this:</li>
-    <pre class="prettyprint">e1.getLinkVisualizer(e0).setThickness(5);</pre>
+  <pre class="prettyprint">e1.getLinkVisualizer(e0).setThickness(5);</pre>
 </ul>

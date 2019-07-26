@@ -1,100 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="author" content="Bridges"/>
-  <meta name="description" content="Bridges Tutorials"/>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="author" content="Bridges"/>
+    <meta name="description" content="Bridges Tutorials"/>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="./tutorial.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./tutorial.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="./tutorial.css" />
-  <link rel="stylesheet" type="text/css" href="./vim.css" />
+    <link rel="stylesheet" type="text/css" href="./tutorial.css" />
+    <link rel="stylesheet" type="text/css" href="./vim.css" />
 
-  <link rel="shortcut icon" href="http://bridgesuncc.github.io/favicon.png"/>
-  <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <link rel="shortcut icon" href="http://bridgesuncc.github.io/favicon.png"/>
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
 
-  <title>Bridges - Hello World Visualization Tutorial</title>
+    <title>Bridges - Hello World Visualization Tutorial</title>
 
-  <script src="./prettyprint.js" defer></script>
-</head>
+    <script src="./prettyprint.js" defer></script>
+  </head>
 
-<body>
-<div>
+  <body>
+    <div>
 
-<header w3-include-html="./Tutorial_Header.html"></header>
+      <header w3-include-html="./Tutorial_Header.html"></header>
 
-<main>
-<br>
-The SymbolCollection class is a container for holding a variety of shapes that can be used
-to generate visualizations that does not directly fit a specific data structure, but assists 
-illustrating its underlying concepts. For example, the Towers of Hanoi problem can be implemented 
-using a set of simple shapes : 3 circles for the disks and 3 long thin rectangles to represent
-the towers. SymbolCollection works currently in BRIDGES with 4 shapes: Rectangle, Circle, Polygon
-and a Label (facilitates textual information on the visualization). See the associated help pages
-for the API. Each symbol has a name, location (where it will be placed on the display) and
-other common stylistic attributes. The subclasses of Symbol have more specific geometric 
-properties (width, height for rectangle, radius for circle, list of points for Polygon, etc). The 
-example below illustrates how to construct shapes and its corresponding visualization.
-<hr/>
+      <main>
+	<br>
+	The SymbolCollection class is a container for holding a variety of shapes that can be used
+	to generate visualizations that does not directly fit a specific data structure, but assists 
+	illustrating its underlying concepts. For example, the Towers of Hanoi problem can be implemented 
+	using a set of simple shapes : 3 circles for the disks and 3 long thin rectangles to represent
+	the towers. SymbolCollection works currently in BRIDGES with 4 shapes: Rectangle, Circle, Polygon
+	and a Label (facilitates textual information on the visualization). See the associated help pages
+	for the API. Each symbol has a name, location (where it will be placed on the display) and
+	other common stylistic attributes. The subclasses of Symbol have more specific geometric 
+	properties (width, height for rectangle, radius for circle, list of points for Polygon, etc). The 
+	example below illustrates how to construct shapes and its corresponding visualization.
+	<hr/>
 
-<h2>SymbolCollection - Example BRIDGES Program - Illustraing the various shapes supported by  BRIDGES</h2>
-<div w3-include-html="bridges_program_elements.html"></div> 
-<h2> Example Details</h2>
-<ul>
-<li> In this example, we illustrate the various symbols supporte by BRIDGES. You will see a red
-rectangle and gree circle and two crossed lines, built by a set of points on a polygon.
-</ul>
-<h2>Here's the final code:</h2>
+	<h2>SymbolCollection - Example BRIDGES Program - Illustraing the various shapes supported by  BRIDGES</h2>
+	<div w3-include-html="bridges_program_elements.html"></div> 
+	<h2> Example Details</h2>
+	<ul>
+	  <li> In this example, we illustrate the various symbols supporte by BRIDGES. You will see a red
+	    rectangle and gree circle and two crossed lines, built by a set of points on a polygon.
+	</ul>
+	<h2>Here's the final code:</h2>
 
 
-<div class="tabs">
-    <div onclick="displayCode('Java',this)">Java</div>
-    <div onclick="displayCode('C++',this)" >C++</div>
-    <div onclick="displayCode('Python',this)" >Python</div>
-  </div>
-  <div class="tabContents">
-    <div id="Java">
-      <pre w3-include-html="./testing/java/shape_collection.java.html" class="prettyprint" />
+	<div class="tabs">
+	  <div onclick="displayCode('Java',this)">Java</div>
+	  <div onclick="displayCode('C++',this)" >C++</div>
+	  <div onclick="displayCode('Python',this)" >Python</div>
+	</div>
+	<div class="tabContents">
+	  <div id="Java">
+	    <pre w3-include-html="./testing/java/shape_collection.java.html" class="prettyprint" />
+	  </div>
+	  <div id="C++">
+	    <pre w3-include-html="./testing/c++/shape_collection.cpp.html" class="prettyprint" />
+	  </div>
+	  <div id="Python">
+	    <pre w3-include-html="./testing/python/shape_collection.py.html" class="prettyprint" />
+	  </div>
+	</div>
+
+
+	<h2>Bridges Visualization</h2>
+	<ul>
+	  <li>Once all your code is in order, run your file.</li>
+	  <li>Assuming all your code is correct and it compiles correctly, a
+	    link to the Bridges website will be generated on the console.</li>
+	  <li>Copy/paste this link into your favorite browser to view a visualization
+	    of the data structure you just created.</li>
+	  <li>It should look something like this:</li>
+	</ul>
+	<div class="iframe-wrapper">
+	  <iframe src="http://bridges-clone.herokuapp.com/assignments/115/bridges_public" scrolling="no">
+	    <p>Sorry, your browser doesn't seem to support iframes -
+              <a href="http://bridges-clone.herokuapp.com/assignments/115/bridges_public" scrolling="no">Frame0 Link</a>
+	    </p>
+	  </iframe>
+	</div>
+	<p>Well done! You’ve just completed your Bridges Shape Collection project!</p>
+      </main>
+
+      <footer w3-include-html="./Tutorial_Footer.html"></footer>
+
     </div>
-    <div id="C++">
-      <pre w3-include-html="./testing/c++/shape_collection.cpp.html" class="prettyprint" />
-    </div>
-    <div id="Python">
-      <pre w3-include-html="./testing/python/shape_collection.py.html" class="prettyprint" />
-    </div>
-  </div>
-
-
-<h2>Bridges Visualization</h2>
-<ul>
-<li>Once all your code is in order, run your file.</li>
-<li>Assuming all your code is correct and it compiles correctly, a
-link to the Bridges website will be generated on the console.</li>
-<li>Copy/paste this link into your favorite browser to view a visualization
-of the data structure you just created.</li>
-<li>It should look something like this:</li>
-</ul>
-  <div class="iframe-wrapper">
-    <iframe src="http://bridges-clone.herokuapp.com/assignments/115/bridges_public" scrolling="no">
-      <p>Sorry, your browser doesn't seem to support iframes -
-        <a href="http://bridges-clone.herokuapp.com/assignments/115/bridges_public" scrolling="no">Frame0 Link</a>
-      </p>
-	</iframe>
-   </div>
-  <p>Well done! You’ve just completed your Bridges Shape Collection project!</p>
-</main>
-
-<footer w3-include-html="./Tutorial_Footer.html"></footer>
-
-</div>
-<script>
-  w3IncludeHTML();
-  document.querySelector("*.tabs > *").click();
-</script>
-</body>
+    <script>
+      w3IncludeHTML();
+      document.querySelector("*.tabs > *").click();
+    </script>
+  </body>
 </html>
