@@ -12,7 +12,7 @@ using namespace bridges;
 
 int max_quakes = 100;
 
-// This program fragment illustrates how to access the USGIS earthquake data
+// This program fragment illustrates how to access the USGS earthquake data
 int main(int argc, char **argv) {
 
 	// create Bridges object
