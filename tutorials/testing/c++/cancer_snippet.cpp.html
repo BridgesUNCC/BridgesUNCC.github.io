@@ -1,0 +1,46 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> std;
+
+<span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;DataSource.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;data_src/CancerIncidence.h&quot;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
+
+<span class="Comment">// This program fragment illustrates how to access the IGN Game data</span>
+<span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
+<span class="Statement">try</span> {
+	<span class="Comment">// create Bridges object</span>
+    Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+                                <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+	<span class="Comment">// set title</span>
+	bridges.setTitle(<span class="Constant">&quot;How to access the IGN Game Data&quot;</span>);
+
+	<span class="Comment">// read the IGN game data </span>
+	DataSource ds (&amp;bridges);
+	vector&lt;CancerIncidence&gt; ca = ds.getCancerIncidenceData();
+
+	cout &lt;&lt; ca.size() &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+
+	<span class="Comment">// Print a single record of the data for illustration</span>
+	cout &lt;&lt; <span class="Constant">&quot;Incident 0:&quot;</span> &lt;&lt; endl;
+	CancerIncidence&amp; c =ca[<span class="Constant">0</span>];
+
+	cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Type: &quot;</span>&lt;&lt; c.getEventType() &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>
+	     &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Year: &quot;</span> &lt;&lt; c.getYear() &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>
+	     &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Population: &quot;</span> &lt;&lt; c.getPopulation() &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>
+	     &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Race: &quot;</span> &lt;&lt; c.getRace() &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>
+	     &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Gender: &quot;</span> &lt;&lt; c.getGender() &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>
+	     &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">CrudeRate: &quot;</span> &lt;&lt; c.getCrudeRate() &lt;&lt; <span class="Constant">&quot;(more rate information available) </span><span class="Special">\n</span><span class="Constant">&quot;</span>
+	     &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Location: &quot;</span> &lt;&lt; c.getLocationX() &lt;&lt; <span class="Constant">&quot;, &quot;</span>&lt;&lt;c.getLocationY() &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>
+	     &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Count: &quot;</span> &lt;&lt; c.getCount() &lt;&lt; endl;
+} <span class="Statement">catch</span> (string s) {
+	cout&lt;&lt; <span class="Constant">&quot;exception &quot;</span> &lt;&lt; s &lt;&lt; endl;
+}
+
+	<span class="Statement">return</span> <span class="Constant">0</span>;
+}
+</pre>
