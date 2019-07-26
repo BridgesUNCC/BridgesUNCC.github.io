@@ -1,3 +1,45 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.bin_tree_element <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
+
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+    args = sys.argv[<span class="Constant">1</span>:]
+
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(<span class="Identifier">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
+
+    <span class="Statement">if</span> <span class="Identifier">len</span>(args) &gt; <span class="Constant">3</span>:
+        bridges.connector.set_server(args[<span class="Constant">3</span>])
+
+    <span class="Comment">#Title and Description</span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">A Huffman Coding Tree Example</span><span class="Constant">&quot;</span>)
+    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">[Binary Tree Application]: Huffman tree coding the symbols C, D, E, K, L, M, U, Z with frequencies 32, 42, 120, 7, 42, 24, 37, 2 </span><span class="Constant">&quot;</span>
+            + <span class="Constant">&quot;</span><span class="Constant">Root is set to red and leaf nodes are set to orange.</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment">#build the tree</span>
+    t0 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">306</span><span class="Constant">&quot;</span>, e = <span class="Constant">0</span>)
+    t1 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">120</span><span class="Special">\\</span><span class="Constant">nE</span><span class="Constant">&quot;</span>,e = <span class="Constant">1</span>)
+    t2 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">186</span><span class="Constant">&quot;</span>,e = <span class="Constant">2</span>)
+    t3 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">79</span><span class="Constant">&quot;</span>,e = <span class="Constant">3</span>)
+    t4 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">37</span><span class="Special">\\</span><span class="Constant">nU</span><span class="Constant">&quot;</span>,e = <span class="Constant">4</span>)
+    t5 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">42</span><span class="Special">\\</span><span class="Constant">nD</span><span class="Constant">&quot;</span>,e = <span class="Constant">5</span>)
+    t6 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">42</span><span class="Special">\\</span><span class="Constant">nL</span><span class="Constant">&quot;</span>,e = <span class="Constant">6</span>)
+    t7 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">107</span><span class="Constant">&quot;</span>,e = <span class="Constant">7</span>)
+    t8 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">65</span><span class="Constant">&quot;</span>,e = <span class="Constant">8</span>)
+    t9 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">32</span><span class="Special">\\</span><span class="Constant">nC</span><span class="Constant">&quot;</span>,e = <span class="Constant">9</span>)
+    t10 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">33</span><span class="Constant">&quot;</span>,e = <span class="Constant">10</span>)
+    t11 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">9</span><span class="Constant">&quot;</span>,e = <span class="Constant">11</span>)
+    t12 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">2</span><span class="Special">\\</span><span class="Constant">nZ</span><span class="Constant">&quot;</span>,e = <span class="Constant">12</span>)
+    t13 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">7</span><span class="Special">\\</span><span class="Constant">nK</span><span class="Constant">&quot;</span>,e = <span class="Constant">13</span>)
+    t14 = BinTreeElement(label = <span class="Constant">&quot;</span><span class="Constant">24</span><span class="Special">\\</span><span class="Constant">nM</span><span class="Constant">&quot;</span>,e = <span class="Constant">14</span>)
+
+
+    t0.set_left(t1)
+    t0.set_right(t2)
+    t2.set_left(t3)
+    t2.set_right(t7)
     t3.set_left(t4)
     t3.set_right(t5)
     t7.set_left(t6)

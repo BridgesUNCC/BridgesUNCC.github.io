@@ -1,3 +1,33 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;AVLTreeElement.h&quot;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> std;
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
+
+<span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
+	<span class="Comment">// create Bridges object</span>
+    Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+                                <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+	<span class="Comment">// set title, description</span>
+	bridges.setTitle(<span class="Constant">&quot;AVL Tree Example&quot;</span>);
+	bridges.setDescription(<span class="Constant">&quot;This AVL tree has six elements.  The root is magenta color and has three nodes on its left and two nodes on its right. The values from lower left to the root, 20, 40, 30, 50. And from lower right to root, 90, 70, 50. The node labels also illustrate the balance factors&quot;</span>);
+
+	AVLTreeElement&lt;<span class="Type">int</span>, string&gt; *tle0 =
+		<span class="Statement">new</span> AVLTreeElement&lt;<span class="Type">int</span>, string&gt;(<span class="Constant">10</span>, <span class="Constant">&quot;10&quot;</span>, <span class="Constant">&quot;10&quot;</span>);
+	AVLTreeElement&lt;<span class="Type">int</span>, string&gt; *tle1 =
+		<span class="Statement">new</span> AVLTreeElement&lt;<span class="Type">int</span>, string&gt;(<span class="Constant">5</span>, <span class="Constant">&quot;5&quot;</span>, <span class="Constant">&quot;5&quot;</span>);
+	AVLTreeElement&lt;<span class="Type">int</span>, string&gt; *tle2 =
+		<span class="Statement">new</span> AVLTreeElement&lt;<span class="Type">int</span>, string&gt;(<span class="Constant">3</span>, <span class="Constant">&quot;3&quot;</span>, <span class="Constant">&quot;3&quot;</span>);
+	AVLTreeElement&lt;<span class="Type">int</span>, string&gt; *tle3 =
+		<span class="Statement">new</span> AVLTreeElement&lt;<span class="Type">int</span>, string&gt;(<span class="Constant">20</span>, <span class="Constant">&quot;20&quot;</span>, <span class="Constant">&quot;20&quot;</span>);
+
+	<span class="Comment">//  link the nodes</span>
+	tle0-&gt;setLeft(tle1);
+	tle0-&gt;setRight(tle3);
+	tle1-&gt;setLeft(tle2);
+
 	<span class="Comment">// set attributes</span>
 	tle0-&gt;setColor(<span class="Constant">&quot;red&quot;</span>);
 	tle1-&gt;setColor(<span class="Constant">&quot;green&quot;</span>);

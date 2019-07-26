@@ -1,3 +1,29 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.array <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+    args = sys.argv[<span class="Constant">1</span>:]
+
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(<span class="Identifier">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
+
+    <span class="Statement">if</span> <span class="Identifier">len</span>(args) &gt; <span class="Constant">3</span>:
+        bridges.connector.set_server(args[<span class="Constant">3</span>])
+
+    <span class="Comment">#Title and Description</span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">Three-Dimensional Array Example</span><span class="Constant">&quot;</span>)
+    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">A 3D array displaying four rows, four columns, and four slices. </span><span class="Constant">&quot;</span>
+                        + <span class="Constant">&quot;</span><span class="Constant">This example uses a for loop in which the header specifies slice count as the iteration variable. </span><span class="Constant">&quot;</span>
+                        + <span class="Constant">&quot;</span><span class="Constant">A nested loop then builds a 2D array within that slice. (See Two-Dimensional Array Test) </span><span class="Constant">&quot;</span>
+                        + <span class="Constant">&quot;</span><span class="Constant">After initialization, colors of specific elements are changed manually using the </span><span class="Constant">&quot;</span>
+                        + <span class="Constant">&quot;</span><span class="Constant"> setColor() function.</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment">#speify array dimensions and create 3D array</span>
+    num_slices = <span class="Constant">4</span>
+    num_rows = <span class="Constant">4</span>
+    num_cols = <span class="Constant">4</span>
 
     my_array = Array(x_dim=num_slices, y_dim = num_rows, z_dim= num_cols)
 

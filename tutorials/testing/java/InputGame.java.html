@@ -1,3 +1,15 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">import</span> bridges.games.*;
+<span class="PreProc">import</span> bridges.base.*;
+
+<span class="Type">class</span> InputGame <span class="Type">extends</span> NonBlockingGame {
+    <span class="Type">public</span> InputGame() {
+	<span class="Comment">//substitute your username and api key</span>
+	<span class="Type">super</span> (<span class="Constant">1</span>, <span class="Constant">&quot;myuserid&quot;</span>,  <span class="Constant">&quot;myapikey&quot;</span>, <span class="Constant">10</span>, <span class="Constant">10</span>);
+	<span class="Comment">//this created a game board of 10x10 into assignment 1</span>
+    }
+
+    <span class="Type">public</span> <span class="Type">void</span> initialize() {
 	<span class="Statement">for</span> (<span class="Type">int</span> i=<span class="Constant">0</span>; i&lt;getBoardHeight(); ++i)
 	    <span class="Statement">for</span> (<span class="Type">int</span> j=<span class="Constant">0</span>; j&lt;getBoardWidth(); ++j)
 		setBGColor(i, j, NamedColor.ivory);

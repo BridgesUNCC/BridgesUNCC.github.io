@@ -1,3 +1,47 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.ml_element <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+
+    args = sys.argv[<span class="Constant">1</span>:]
+
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(<span class="Identifier">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
+
+    <span class="Statement">if</span> <span class="Identifier">len</span>(args) &gt; <span class="Constant">3</span>:
+        bridges.connector.set_server(args[<span class="Constant">3</span>])
+
+    <span class="Comment">#Title and Description</span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">A Multilist Example</span><span class="Constant">&quot;</span>)
+    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">The multilist example should have one large red node, three small square red nodes, </span><span class="Constant">&quot;</span>
+            +	<span class="Constant">&quot;</span><span class="Constant">and eight neutral nodes. The larger red node is connected via a red link to a neutral node. The next </span><span class="Constant">&quot;</span>
+            +	<span class="Constant">&quot;</span><span class="Constant">link from the neutral node is blue followed by a cyan link between two of the small square red nodes.</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># create multi linked list</span>
+    el0 = MLelement(<span class="Constant">&quot;</span><span class="Constant">0</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">0</span><span class="Constant">&quot;</span>)
+    el1 = MLelement(<span class="Constant">&quot;</span><span class="Constant">1</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">1</span><span class="Constant">&quot;</span>)
+    el2 = MLelement(<span class="Constant">&quot;</span><span class="Constant">2</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">2</span><span class="Constant">&quot;</span>)
+    el3 = MLelement(<span class="Constant">&quot;</span><span class="Constant">3</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">3</span><span class="Constant">&quot;</span>)
+    el4 = MLelement(<span class="Constant">&quot;</span><span class="Constant">4</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">4</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment">#create the links</span>
+    el0.set_next(el1)
+    el1.set_next(el2)
+    el2.set_next(el3)
+    el3.set_next(el4)
+
+    <span class="Comment"># create the sublist from 2</span>
+    el5 = MLelement(<span class="Constant">&quot;</span><span class="Constant">5</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">5</span><span class="Constant">&quot;</span>)
+    el6 = MLelement(<span class="Constant">&quot;</span><span class="Constant">6</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">6</span><span class="Constant">&quot;</span>)
+    el7 = MLelement(<span class="Constant">&quot;</span><span class="Constant">7</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">7</span><span class="Constant">&quot;</span>)
+
+    el5.set_next(el6)
+    el6.set_next(el7)
+    el2.set_sub_list(el5)
+
+    el8 = MLelement(<span class="Constant">&quot;</span><span class="Constant">8</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">8</span><span class="Constant">&quot;</span>)
     el9 = MLelement(<span class="Constant">&quot;</span><span class="Constant">9</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">9</span><span class="Constant">&quot;</span>)
 
     <span class="Comment">#create second sublist</span>

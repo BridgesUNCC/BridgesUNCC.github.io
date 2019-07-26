@@ -4,7 +4,6 @@ import bridges.connect.Bridges;
 import bridges.connect.DataSource;
 import bridges.data_src_dependent.Game;
 
-// this program fragment illustrates how to access the IGN Games data
 public class game_snippet {
 	public static void main(String[] args) throws Exception {
 
@@ -15,7 +14,7 @@ public class game_snippet {
 		DataSource ds = bridges.getDataSource();
 		List<Game> mylist = ds.getGameData();
 
-		// Inspect a random Game object
+		/* Inspect a random Game object */
 		Game game1 = mylist.get((new Random()).nextInt(mylist.size()));
 		System.out.println(game1.getTitle());
 		System.out.println(game1.getPlatformType());
