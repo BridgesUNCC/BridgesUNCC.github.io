@@ -1,24 +1,3 @@
-<pre id='vimCodeElement'>
-<span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
-<span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
-<span class="PreProc">#include </span><span class="Constant">&quot;TreeElement.h&quot;</span>
-
-<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
-<span class="Statement">using</span> std::string;
-
-<span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
-	<span class="Comment">// create Bridges object</span>
-    Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
-                                <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
-
-	TreeElement&lt;string&gt; *t0 = <span class="Statement">new</span> TreeElement&lt;string&gt;(<span class="Constant">&quot;Hello&quot;</span>, <span class="Constant">&quot;Hello&quot;</span>);
-	TreeElement&lt;string&gt; *t2 = <span class="Statement">new</span> TreeElement&lt;string&gt;(<span class="Constant">&quot;This&quot;</span>, <span class="Constant">&quot;This&quot;</span>);
-	TreeElement&lt;string&gt; *t3 = <span class="Statement">new</span> TreeElement&lt;string&gt;(<span class="Constant">&quot;is&quot;</span>, <span class="Constant">&quot;is&quot;</span>);
-	TreeElement&lt;string&gt; *t4 =  <span class="Statement">new</span> TreeElement&lt;string&gt;(<span class="Constant">&quot;a&quot;</span>, <span class="Constant">&quot;a&quot;</span>);
-	TreeElement&lt;string&gt; *t5 =  <span class="Statement">new</span> TreeElement&lt;string&gt;(<span class="Constant">&quot;generic&quot;</span>, <span class="Constant">&quot;generic&quot;</span>);
-	TreeElement&lt;string&gt; *t6 =  <span class="Statement">new</span> TreeElement&lt;string&gt;(<span class="Constant">&quot;Tree&quot;</span>, <span class="Constant">&quot;Tree&quot;</span>);
-	TreeElement&lt;string&gt; *t7 =  <span class="Statement">new</span> TreeElement&lt;string&gt;(<span class="Constant">&quot;Representation&quot;</span>, <span class="Constant">&quot;Representation&quot;</span>);
-
 	<span class="Comment">// add links to children</span>
 
 	t0-&gt;addChild(t2);

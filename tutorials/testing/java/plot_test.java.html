@@ -1,0 +1,30 @@
+	};
+
+	<span class="Type">static</span> Consumer &lt;<span class="Type">int</span>[]&gt; bubbleSort = arr -&gt; {
+		<span class="Type">int</span> n = arr.length;
+        <span class="Statement">for</span> (<span class="Type">int</span> i = <span class="Constant">0</span>; i &lt; n-<span class="Constant">1</span>; i++)
+            <span class="Statement">for</span> (<span class="Type">int</span> j = <span class="Constant">0</span>; j &lt; n-i-<span class="Constant">1</span>; j++)
+                <span class="Statement">if</span> (arr[j] &gt; arr[j+<span class="Constant">1</span>])
+                {
+                    <span class="Type">int</span> temp = arr[j];
+                    arr[j] = arr[j+<span class="Constant">1</span>];
+                    arr[j+<span class="Constant">1</span>] = temp;
+                }
+	};
+
+	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) <span class="Type">throws</span> IOException, RateLimitException, InterruptedException {
+		Bridges bridges = <span class="Statement">new</span> Bridges(<span class="Constant">1001</span>, <span class="Constant">&quot;test&quot;</span>, <span class="Constant">&quot;1055982372149&quot;</span>);
+<span class="Comment">//		Bridges bridges = new Bridges(0, &quot;kalpathi60&quot;, &quot;486749122386&quot;);</span>
+		bridges.setServer(<span class="Constant">&quot;plotting&quot;</span>);
+		bridges.setVisualizeJSON(<span class="Constant">true</span>);
+
+		Plot plot = <span class="Statement">new</span> Plot(<span class="Constant">&quot;Sort Runtime&quot;</span>);
+		plot.runtime(<span class="Constant">&quot;InsertSort&quot;</span>, <span class="Constant">100</span>, <span class="Constant">10000</span>, sort);
+		plot.runtime(<span class="Constant">&quot;bubblesort&quot;</span>, <span class="Constant">100</span>, <span class="Constant">10000</span>, bubbleSort);
+
+		bridges.setDataStructure(plot);
+		bridges.visualize();
+	}
+
+}
+</pre>

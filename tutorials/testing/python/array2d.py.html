@@ -1,24 +1,3 @@
-<pre id='vimCodeElement'>
-<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
-<span class="PreProc">from</span> bridges.array <span class="PreProc">import</span> *
-<span class="PreProc">import</span> sys
-
-<span class="Statement">def</span> <span class="Identifier">main</span>():
-    args = sys.argv[<span class="Constant">1</span>:]
-
-    <span class="Comment"># create the Bridges object, set credentials</span>
-    bridges = Bridges(<span class="Identifier">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
-
-    <span class="Statement">if</span> <span class="Identifier">len</span>(args) &gt; <span class="Constant">3</span>:
-        bridges.connector.set_server(args[<span class="Constant">3</span>])
-
-    <span class="Comment">#Title and Description</span>
-    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">Two-Dimensional Array Example</span><span class="Constant">&quot;</span>)
-    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">A TwoD array with four rows and four columns. </span><span class="Constant">&quot;</span>
-                        + <span class="Constant">&quot;</span><span class="Constant">Row one left to right: red, neutral, neutral, blue. </span><span class="Constant">&quot;</span>
-                        + <span class="Constant">&quot;</span><span class="Constant">Row two left to right: neutral, cyan, neutral, neutral. </span><span class="Constant">&quot;</span>
-                        + <span class="Constant">&quot;</span><span class="Constant">Row three left to right: neutral, neutral, yellow, neutral. </span><span class="Constant">&quot;</span>
-                        + <span class="Constant">&quot;</span><span class="Constant">Row four left to right: green, neutral, neutral, magenta.</span><span class="Constant">&quot;</span>)
 
 
     <span class="Comment"># for 2D array 4x4</span>
