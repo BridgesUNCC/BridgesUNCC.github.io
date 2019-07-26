@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="author" content="Bridges"/>
+  <meta name="description" content="Bridges Tutorials"/>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="./tutorial.css" />
+  <link rel="stylesheet" type="text/css" href="./vim.css" />
+
+  
+  <link rel="shortcut icon" href="http://bridgesuncc.github.io/favicon.png"/>
+  <script src="http://www.w3schools.com/lib/w3data.js"></script>
+  <script src="./tutorial.js"></script>
+
+  <title>Bridges - Hello World Visualization Tutorial</title>
+
+  <script src="./prettyprint.js" defer></script>
+</head>
+
+<body>
+<div>
+
+<header w3-include-html="./Tutorial_Header.html"></header>
+
+<main>
+<h2>Song Lyrics Dataset</h2>
+<p>
+Lyrics of 134 Songs  have been curated; the songs may be extracted all at once or by song title or author.
+<p>
+The program snippet below illustrates how to access the song lyrics data.
+</p>
+<p>
+Data end point: <a href="https://bridgesdata.herokuapp.com/api/songs/">Song Lyrics Link</a>
+</p>
+
+<h2>Accessing Song Lyrics Data: An Example BRIDGES program</h2>
+<div w3-include-html="./bridges_data_access_elements.html"></div> 
+
+
+  <div class="tabs">
+    <div onclick="displayCode('Java',this)">Java</div>
+    <div onclick="displayCode('C++',this)" >C++</div>
+    <div onclick="displayCode('Python',this)" >Python</div>
+  </div>
+  <div class="tabContents">
+    <div id="Java">
+      <pre w3-include-html="./testing/java/song_lyrics_snippet.java.html" class="prettyprint"></pre>
+    </div>
+    <div id="C++">
+      <pre w3-include-html="./testing/c++/song_lyrics_snippet.cpp.html" class="prettyprint"></pre>
+    </div>
+    <div id="Python">
+      <pre w3-include-html="./testing/python/song_lyrics_snippet.py.html" class="prettyprint"></pre>
+    </div>
+  </div>
+<ul>
+<li>Copy/past the code into your environment and compile.
+<li>Assuming all your code is correct and it compiles correctly, the code
+will print a record of the data to the console.</li>
+</ul>
+</main>
+
+<footer w3-include-html="./Tutorial_Footer.html"></footer>
+
+</div>
+<script>
+  w3IncludeHTML();
+  document.querySelector("*.tabs > *").click();
+</script>
+</body>
+</html>
