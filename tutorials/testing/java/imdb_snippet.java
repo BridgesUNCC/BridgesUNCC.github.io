@@ -4,9 +4,9 @@ import bridges.connect.Bridges;
 import bridges.connect.DataSource;
 import bridges.data_src_dependent.ActorMovieIMDB;
 
-/*! A test class that fetches a random movie from IMDB then sends the
-	actors name and movie title + release date to the console as output.
-	There is no visual output to the users BRIDGES gallery after running this code.*/
+// A test class that fetches a random movie from IMDB then sends the
+//	actors name and movie title + release date to the console as output.
+//	There is no visual output to the users BRIDGES gallery after running this code.
 
 public class imdb_snippet {
 	public static void main(String[] args) throws Exception {

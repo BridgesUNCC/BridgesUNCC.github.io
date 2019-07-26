@@ -5,6 +5,7 @@
 <span class="PreProc">import</span> bridges.connect.DataSource;
 <span class="PreProc">import</span> bridges.data_src_dependent.Game;
 
+<span class="Comment">// this program fragment illustrates how to access the IGN Games data</span>
 <span class="Type">public</span> <span class="Type">class</span> game_snippet {
 	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) <span class="Type">throws</span> Exception {
 
@@ -15,7 +16,7 @@
 		DataSource ds = bridges.getDataSource();
 		List&lt;Game&gt; mylist = ds.getGameData();
 
-		<span class="Comment">/* Inspect a random Game object */</span>
+		<span class="Comment">// Inspect a random Game object</span>
 		Game game1 = mylist.get((<span class="Statement">new</span> Random()).nextInt(mylist.size()));
 		System.out.println(game1.getTitle());
 		System.out.println(game1.getPlatformType());
