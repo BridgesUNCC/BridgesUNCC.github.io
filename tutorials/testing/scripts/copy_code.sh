@@ -57,7 +57,8 @@ do
     
     head -n `echo $LINENB_END | bc` ${file}.html > temp.html
     
-    NBLINE=`wc -l temp.html | cut -d \  -f 1`
+    #NBLINE=`wc -l temp.html | cut -d \  -f 1`
+    NBLINE=`wc -l < temp.html` #using stdin rather than passing a filename makes wc print ONLY the number of lines (without file names)  
     
     tail -n `echo $NBLINE - $LINENB_BEG + 1 | bc` temp.html > ${file}.html
    
