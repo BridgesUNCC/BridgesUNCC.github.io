@@ -119,3 +119,36 @@ u {
 .vert_space {
 	margin-bottom: 1in;
   }
+
+.Example li {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    padding: .1em;
+    
+    list-style-position: inside;
+    border: 2px solid black;
+    border-radius: .7em;
+    background-color: #EEEEEE;
+    counter-increment: my_example +1;
+}
+
+.Example li::before {
+    content: "Example " counter(my_example) ": ";
+    font-weight: bold;
+}
+
+.Example ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.Example img {
+    margin: .3em;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
