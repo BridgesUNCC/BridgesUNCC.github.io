@@ -28,18 +28,16 @@
 	  </script>
 	</div>
     	<div class="col-md-6 text-left"> 
-	  <div>
-	    <h3 class = "sep_heading">BRIDGES Design</h3>
-	    <img src = "./img/bridges_design.jpg" style = "vertical-align:middle"></img>
-	  </div>
-	  <hr>
+	  <h3 class = "sep_heading">BRIDGES Design</h3>
+	  <img src = "./img/bridges_design.jpg" style = "vertical-align:middle"></img>
+
 	  <p>In our design the student use our client on their personal computer. This 
 	    client program is run via a gradle build script which allows it to be integrated 
 	    into any IDE. We chose to do this because we may have students who are using 
 	    Eclipse, JGrasp or Netbeans. This client can connect to the server via an API 
-	    key or log in credentials. <p>
-	    
-	    The server provides three main functions; a crawler which gets data from 
+	    key or log in credentials. </p>
+	  
+	  <p>The server provides three main functions; a crawler which gets data from 
 	    data-sources, an API which provides access to data from the client, and a website 
 	    where students can view their visualizations, change their log in credentials, or 
 	    validate their account with data-sources. Each time the client makes a request for 
@@ -53,9 +51,10 @@
 	    this data and then make a post request with this data to the server via the API. 
 	    These posts will store their submission in a database and generate a link to a 
 	    webpage, where the data in the database will be visualized using D3.
-	  <p>
+	  </p>
+	  <div w3-include-html="./footer.html"></div>
+	  
 	</div>
-	<div w3-include-html="./footer.html"></div>
       </div>
     </div>
   </body>
