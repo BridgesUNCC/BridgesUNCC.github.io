@@ -11,7 +11,6 @@
 
 <span class="Comment">// This program fragment illustrates how to access the IGN Game data</span>
 <span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
-<span class="Statement">try</span> {
 	<span class="Comment">// create Bridges object</span>
     Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
                                 <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
@@ -37,9 +36,6 @@
 	     &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">CrudeRate: &quot;</span> &lt;&lt; c.getCrudeRate() &lt;&lt; <span class="Constant">&quot;(more rate information available) </span><span class="Special">\n</span><span class="Constant">&quot;</span>
 	     &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Location: &quot;</span> &lt;&lt; c.getLocationX() &lt;&lt; <span class="Constant">&quot;, &quot;</span>&lt;&lt;c.getLocationY() &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>
 	     &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Count: &quot;</span> &lt;&lt; c.getCount() &lt;&lt; endl;
-} <span class="Statement">catch</span> (string s) {
-	cout&lt;&lt; <span class="Constant">&quot;exception &quot;</span> &lt;&lt; s &lt;&lt; endl;
-}
 
 	<span class="Statement">return</span> <span class="Constant">0</span>;
 }

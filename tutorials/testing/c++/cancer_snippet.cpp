@@ -10,7 +10,6 @@ using namespace bridges;
 
 // This program fragment illustrates how to access the IGN Game data
 int main(int argc, char **argv) {
-try {
 	// create Bridges object
     Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", 
                                 "YOUR_API_KEY");
@@ -36,9 +35,6 @@ try {
 	     << "\tCrudeRate: " << c.getCrudeRate() << "(more rate information available) \n"
 	     << "\tLocation: " << c.getLocationX() << ", "<<c.getLocationY() << "\n"
 	     << "\tCount: " << c.getCount() << endl;
-} catch (string s) {
-	cout<< "exception " << s << endl;
-}
 
 	return 0;
 }
