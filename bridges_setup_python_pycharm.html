@@ -1,368 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>BRIDGES Python Setup Page</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="./bootstrap-3.3.6/dist/css/bootstrap.min.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="./bootstrap-3.3.6/dist/js/bootstrap.min.js"></script>
-	<script src="http://www.w3schools.com/lib/w3data.js"></script>
-	<link rel="stylesheet" type="text/css" href="./bootstrap/bridges.css">
-</head>
-<body>
-<div w3-include-html="./navbar.html">
-  <script>
-    w3IncludeHTML();
-  </script>
-</div>
+  <head>
+    <title>BRIDGES Python Setup Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./bootstrap-3.3.6/dist/css/bootstrap.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="./bootstrap-3.3.6/dist/js/bootstrap.min.js"></script>
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <link rel="stylesheet" type="text/css" href="./bootstrap/bridges.css">
+  </head>
+  <body>
+    <div w3-include-html="./navbar.html">
+      <script>
+	w3IncludeHTML();
+      </script>
+    </div>
 
-<div class="container-fluid text-left">
-	<div class="row content">
+    <div class="container-fluid text-left">
+      <div class="row content">
 	<div class="col-md-2 sidenav">
-			<div w3-include-html="./left_sidebar.html"></div>
-			<script>
-				w3IncludeHTML();
-			</script>
+	  <div w3-include-html="./left_sidebar.html"></div>
+	  <script>
+	    w3IncludeHTML();
+	  </script>
 	</div>
 	<div class="col-md-10 text-left">
-		<h3 class = "sep_heading">BRIDGES(Python): Getting Started(Setup)</h3>
-		<table class = "setup_table-part1">
-			<thead>
-				<tr>
-					<b>Step 1: Install PyCharm </b>
-						<ul> <li> If you do not have Eclipse
-							installed, download it from the
-							<a href = "https://www.jetbrains.com/pycharm/"> Pycharm site</a>
-							and install it on your computer.
-						</ul>
-				</tr>
-				<tr>
-					<b>Step 2: Create Bridges Account</b>
-						<ul> <li> Visit the Bridges
-							<a href = "http://bridgesuncc.github.io">
-							main page</a> and create yourself an account
-							by clicking the login button
-							on the top navigation bar. <b>Please ensure that
-							your user id is devoid of spaces, as it will be
-							used as part of the web link for your projects.</b>
-							After creating your account, click on your profile
-							name in the upper right corner to view your
-							profile. Once in your profile, you will see your
-							API Key; you will need this API key in part 2
-							of the tutorial(as well as in every BRIDGES program
-							you write). <b>NOTE:</b> Make sure to remember
-							your password. There is no password recovery option,
-							and you can only have one account per email address.
-						</ul>
-				</tr>
-				<tr>
-					<b>Step 3: Python requests package</b>
-						<ul>
-							<li>Use Pip to install requests package
-							<li>For Mac, open your terminal and type <i> pip install requests</i>
-							<li>For windows, open your terminal and navigate to the directory python is downloaded. Then type <i>python -m pip install requests</i>
-						</ul>
-				</tr>
-				<tr>
-					<td class = "col-md-2"> <b>Step 4a: Python Environment Setup </b>
-						<ul>
-							<li> Click configure at the bottom right corner of the IDE and click <i>Settings</i>
-						</ul>
-					</td>
-					<td class = "col-md-8">
-						<img src = "./img/Tutorialv2/python/pycharmWindow.PNG" width = "800"></img>
-					</td>
-				</tr>
-				<tr>
-					<td class = "col-md-2"> <b>Step 4b: Python Environment Setup </b>
-						<ul>
-							<li> In <i>project interpreter</i> click the gear icon on the far right and click <i>Add</i>
-						</ul>
-					</td>
-					<td class = "col-md-8">
-						<img src = "./img/Tutorialv2/python/addInterp.png" width = "800"></img>
-					</td>
-				</tr>
-				<tr>
-					<td class = "col-md-2"> <b>Step 4c: Python Environment Setup, New Global Enviornment. </b>
-						<ul>
-							<li> Locate a convenient place to save this new Environment in the <i>Location</i> attribute.
-							<li> Locate the path of your python download for your <i>Base interpreter</i>
-							<li> Be sure <i>Make available to all projects</i> is checked.
-							<li><i> *Note, your location and base interpreter path will be different*</i>
-						</ul>
-					</td>
-					<td class = "col-md-8">
-						<img src = "./img/Tutorialv2/python/globalEnv.png" width = "800"></img>
-					</td>
-				</tr>
-				<tr> <td class = "col-md-2"> <b>Step 5a: Import Zip archive into project interpreter paths</b>
-					<ul>
-						<li> Download the Bridges.zip file from
-							<a href = "http://bridgesuncc.github.io/sw/bridges-python-1.0.zip">
-								here </a> and save it somewhere convenient on your drive.
-						<li> On Pycharm, go back to <i>project interpreter</i>, click the down arrow, and select <i>Show All</i>.
-					</ul>
-					<td class = "col-md-8">
-						<img src = "./img/Tutorialv2/python/showAll.png" width = "800"></img>
+	  <h3 class = "sep_heading">BRIDGES(Python): Getting Started(Setup)</h3>
+	  <table class = "setup_table-part1">
+	    <thead>
+	      <tr>
+		<b>Step 1: Install PyCharm </b>
+		<ul> <li> If you do not have Eclipse
+		    installed, download it from the
+		    <a href = "https://www.jetbrains.com/pycharm/"> Pycharm site</a>
+		    and install it on your computer.
+		</ul>
+	      </tr>
+	      <tr>
+		<b>Step 2: Create Bridges Account</b>
+		<ul> <li> Visit the Bridges
+		    <a href = "http://bridgesuncc.github.io">
+		      main page</a> and create yourself an account
+		    by clicking the login button
+		    on the top navigation bar. <b>Please ensure that
+		      your user id is devoid of spaces, as it will be
+		      used as part of the web link for your projects.</b>
+		    After creating your account, click on your profile
+		    name in the upper right corner to view your
+		    profile. Once in your profile, you will see your
+		    API Key; you will need this API key in part 2
+		    of the tutorial(as well as in every BRIDGES program
+		    you write). <b>NOTE:</b> Make sure to remember
+		    your password. There is no password recovery option,
+		    and you can only have one account per email address.
+		</ul>
+	      </tr>
+	      <tr>
+		<b>Step 3: Python requests package</b>
+		<ul>
+		  <li>Use Pip to install requests package
+		  <li>For Mac, open your terminal and type <i> pip install requests</i>
+		  <li>For windows, open your terminal and navigate to the directory python is downloaded. Then type <i>python -m pip install requests</i>
+		</ul>
+	      </tr>
+	      <tr>
+		<td class = "col-md-2"> <b>Step 4a: Python Environment Setup </b>
+		  <ul>
+		    <li> Click configure at the bottom right corner of the IDE and click <i>Settings</i>
+		  </ul>
+		</td>
+		<td class = "col-md-8">
+		  <img src = "./img/Tutorialv2/python/pycharmWindow.PNG" width = "800"></img>
+		</td>
+	      </tr>
+	      <tr>
+		<td class = "col-md-2"> <b>Step 4b: Python Environment Setup </b>
+		  <ul>
+		    <li> In <i>project interpreter</i> click the gear icon on the far right and click <i>Add</i>
+		  </ul>
+		</td>
+		<td class = "col-md-8">
+		  <img src = "./img/Tutorialv2/python/addInterp.png" width = "800"></img>
+		</td>
+	      </tr>
+	      <tr>
+		<td class = "col-md-2"> <b>Step 4c: Python Environment Setup, New Global Enviornment. </b>
+		  <ul>
+		    <li> Locate a convenient place to save this new Environment in the <i>Location</i> attribute.
+		    <li> Locate the path of your python download for your <i>Base interpreter</i>
+		    <li> Be sure <i>Make available to all projects</i> is checked.
+		    <li><i> *Note, your location and base interpreter path will be different*</i>
+		  </ul>
+		</td>
+		<td class = "col-md-8">
+		  <img src = "./img/Tutorialv2/python/globalEnv.png" width = "800"></img>
+		</td>
+	      </tr>
+	      <tr> <td class = "col-md-2"> <b>Step 5a: Import Zip archive into project interpreter paths</b>
+		  <ul>
+		    <li> Download the Bridges.zip file from
+		      <a href = "http://bridgesuncc.github.io/sw/bridges-python-1.0.zip">
+			here </a> and save it somewhere convenient on your drive.
+		    <li> On Pycharm, go back to <i>project interpreter</i>, click the down arrow, and select <i>Show All</i>.
+		  </ul>
+		<td class = "col-md-8">
+		  <img src = "./img/Tutorialv2/python/showAll.png" width = "800"></img>
         	</td>
-				</tr>
-				<tr>
-					<td class = "col-md-2"> <b>Step 5b: Import Bridges zip archive</b>
-						<ul>
-							<li> Select the Enviornment we just created.
-							<li> Then Click <i> Show paths for selected interpreter </i>
-						</ul>
-					</td>
-					<td class = "col-md-8">
-						<img src = "./img/Tutorialv2/python/ShowPaths.png" width = "800"></img>
-					</td>
-				</tr>
+	      </tr>
+	      <tr>
+		<td class = "col-md-2"> <b>Step 5b: Import Bridges zip archive</b>
+		  <ul>
+		    <li> Select the Enviornment we just created.
+		    <li> Then Click <i> Show paths for selected interpreter </i>
+		  </ul>
+		</td>
+		<td class = "col-md-8">
+		  <img src = "./img/Tutorialv2/python/ShowPaths.png" width = "800"></img>
+		</td>
+	      </tr>
+</tr>
+<tr>
+  <td class = "col-md-2"> <b>Step 5c: Import Bridges zip archive</b>
+    <ul>
+      <li> Click the <i> plus </i> button and navigate to where you saved the zip file.
+        Then press OK.
+    </ul>
+  </td>
+  <td class = "col-md-8">
+    <img src = "./img/Tutorialv2/python/add.png" width = "800"></img>
+  </td>
+</tr>
+<tr>
+  <td class = "col-md-2"> <b>Step 5d: Import Python Site-Packages</b>
+    <ul>
+      <li> Click the <i> plus </i> button and navigate to where your Python <i>site-packages</i> directory.
+      <li> For <i>mac</i> the path is <i>/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/</i>
+      <li> For <i>windows</i> it is in the same directory your python is downloaded <i>/python/python36/lib/site-packages/</i>.
+      <li> Select the directory then press OK.
+    </ul>
+  </td>
+  <td class = "col-md-8">
+    <img src = "./img/Tutorialv2/python/sitePackagesA.png" width = "800"></img>
+  </td>
+</tr>
+<tr>
+  <td class = "col-md-2"> <b>Step 6: Create a new Project</b>
+    <ul>
+      <li> Click <i>Create New Project</i> and name it as HelloWorld.
+      <li> Then select <i>Existing Interpreter</i> and select the Environment we created.
+    </ul>
+  </td>
+  <td class = "col-md-8">
+    <img src = "./img/Tutorialv2/python/newProject.PNG" width = "800"></img>
+  </td>
+</tr>
+<tr>
+  <td class = "col-md-2"> <b>Step 6: Verification</b>
+    <ul>
+      <li> To verify that you have successfully imported the zip
+        file, look under the External Libraries section of
+        your project and expand the python interpreter.
+      <li> If you have a Project in PyCharm named 'HelloWorld', and the
+        expanded python interpreter in the External Library
+        section shows the bridges zip file,
+        you have completed the setup and are ready to build
+        the Hello World class!
+    </ul>
+  </td>
+  <td class = "col-md-8">
+    <img src = "./img/Tutorialv2/python/verification.PNG" width = "800"></img>
+  </td>
+</tr>
+</thead>
+</table>
+<p>
+  <h3 class = "sep_heading">BRIDGES:Getting Started(Your First Bridges Program)</h3>
+
+  <table class = "table table-bordered">
+    <tbody>
+      <tr>
+	<td class = "col-md-2"> <b>Step 1a: Create a new class</b>
+	  <ul>
+	    <li> Create a new class within your project
+	    <li> <i> File-->New-->Python File </i>
+	  </ul>
+	</td>
+	<td class = "col-md-8">
+	  <img src = "./img/Tutorialv2/python/newPythonFile.png" width="800"></img>
+	</td>
       </tr>
       <tr>
-        <td class = "col-md-2"> <b>Step 5c: Import Bridges zip archive</b>
+	<td class = "col-md-2"> <b>Step 1b: Create a new class</b>
           <ul>
-            <li> Click the <i> plus </i> button and navigate to where you saved the zip file.
-              Then press OK.
+	    <li> Name the class HelloWorld
+            <li> <i> class HelloWorld: </i>
           </ul>
-        </td>
-        <td class = "col-md-8">
-          <img src = "./img/Tutorialv2/python/add.png" width = "800"></img>
-        </td>
-      </tr>
-			<tr>
-        <td class = "col-md-2"> <b>Step 5d: Import Python Site-Packages</b>
-          <ul>
-            <li> Click the <i> plus </i> button and navigate to where your Python <i>site-packages</i> directory.
-            <li> For <i>mac</i> the path is <i>/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/</i>
-						<li> For <i>windows</i> it is in the same directory your python is downloaded <i>/python/python36/lib/site-packages/</i>.
-						<li> Select the directory then press OK.
-          </ul>
-        </td>
-        <td class = "col-md-8">
-          <img src = "./img/Tutorialv2/python/sitePackagesA.png" width = "800"></img>
-        </td>
-      </tr>
-			<tr>
-        <td class = "col-md-2"> <b>Step 6: Create a new Project</b>
-          <ul>
-            <li> Click <i>Create New Project</i> and name it as HelloWorld.
-						<li> Then select <i>Existing Interpreter</i> and select the Environment we created.
-          </ul>
-        </td>
-        <td class = "col-md-8">
-          <img src = "./img/Tutorialv2/python/newProject.PNG" width = "800"></img>
+	</td>
+	<td class = "col-md-8">
+	  <img src = "./img/Tutorialv2/python/newClass.PNG" width="800"></img>
         </td>
       </tr>
       <tr>
-        <td class = "col-md-2"> <b>Step 6: Verification</b>
-          <ul>
-            <li> To verify that you have successfully imported the zip
-              file, look under the External Libraries section of
-              your project and expand the python interpreter.
-            <li> If you have a Project in PyCharm named 'HelloWorld', and the
-              expanded python interpreter in the External Library
-              section shows the bridges zip file,
-              you have completed the setup and are ready to build
-              the Hello World class!
-          </ul>
-        </td>
-        <td class = "col-md-8">
-          <img src = "./img/Tutorialv2/python/verification.PNG" width = "800"></img>
-        </td>
+	<td class = "col-md-2"> <b>Step 2: Now build the Bridges Program to
+	    illustrate a singly linked list</b>
+	  <ul>
+	    <li> First import the relevant Bridges classes
+	  </ul>
+	</td>
+	<td class = "col-md-8">
+	  <ul>
+	    <i>from bridges.bridges import *</i> <br>
+	    <i>from bridges.sl_element import *</i>
+	  </ul>
+	</td>
       </tr>
-			</thead>
-		</table>
-		<p>
-		<h3 class = "sep_heading">BRIDGES:Getting Started(Your First Bridges Program)</h3>
+      <tr>
+	<td class = "col-md-2">
+	  <ul>
+	    <li> Create the bridges object with your API Key and User ID.
+	  </ul>
+	</td>
+	<td class = "col-md-8">
+	  <ul>
+	    <i>  bridges = Bridges(0, "YOUR_USER_ID", "YOUR_API_KEY")</i>
+	  </ul>
+	</td>
+      </tr>
+      <tr>
+	<td class = "col-md-2">
+	  <ul>
+	    <li> Create two singly-linked elements. Singly-linked elements
+	      can be linked together to create a linked-list structure.
+	  </ul>
+	</td>
+	<td class = "col-md-8">
+	  <ul>
+	    <i> sle0 = SLelement("Hello", "")<br>
+	      sle1 = SLelement("World", "")</i>
+	  </ul>
+	</td>
+      </tr>
+      <tr>
+	<td class = "col-md-2">
+	  <ul>
+	    <li>  Link the elements
+	  </ul>
+	</td>
+	<td class = "col-md-8">
+	  <ul>
+	    <i>   sle0.set_next(sle1)</i>
+	  </ul>
+	</td>
+      </tr>
+</tr>
+<tr>
+  <td class = "col-md-2">
+    <ul>
+      <li> Set visual attributes of the elements
+    </ul>
+  </td>
+  <td class = "col-md-8">
+    <ul>
+      <i>	sle0.get_visualizer().set_color("black") <br>
+	sle0.get_visualizer().set_opacity(0.5) <br>
+	sle1.get_visualizer().set_color("green") </i>
+    </ul>
+  </td>
+</tr>
+<tr>
+<tr>
+  <td class = "col-md-2">
+    <ul>
+      <li> Pass the handle of your data structure (reference to the
+	first element) of your data structure
+    </ul>
+  </td>
+  <td class = "col-md-8">
+    <ul>
+      <i>  bridges.set_data_structure(sle0)  <br></i>
+    </ul>
+  </td>
+</tr>
+<tr>
+<tr>
+  <td class = "col-md-2">
+    <ul>
+      <li> Visualize the data structure
+    </ul>
+  </td>
+  <td class = "col-md-8">
+    <ul>
+      <i>  bridges.visualize()  <br></i>
+    </ul>
+  </td>
+</tr>
+<tr>
+<tr>
+  <td class = "col-md-2">
+    <ul>
+      <li> To summarize, your HelloWorld.py should look like this:
+    </ul>
+  </td>
+  <td class = "col-md-8">
+    <b><i>
+	from bridges.bridges import * <br>
+	from bridges.sl_element import * <p> <p>
 
-		<table class = "table table-bordered">
-			<tbody>
-				<tr>
-				<td class = "col-md-2"> <b>Step 1a: Create a new class</b>
-					<ul>
-						<li> Create a new class within your project
-						<li> <i> File-->New-->Python File </i>
-					</ul>
-				</td>
-				<td class = "col-md-8">
-					<img src = "./img/Tutorialv2/python/newPythonFile.png" width="800"></img>
-				</td>
-				</tr>
-				<tr>
-				<td class = "col-md-2"> <b>Step 1b: Create a new class</b>
-          <ul>
-					    <li> Name the class HelloWorld
-              <li> <i> class HelloWorld: </i>
-          </ul>
-				</td>
-				<td class = "col-md-8">
-					<img src = "./img/Tutorialv2/python/newClass.PNG" width="800"></img>
-                </td>
-				</tr>
-				<tr>
-				<td class = "col-md-2"> <b>Step 2: Now build the Bridges Program to
-					illustrate a singly linked list</b>
-					<ul>
-						<li> First import the relevant Bridges classes
-					</ul>
-				</td>
-				<td class = "col-md-8">
-					<ul>
-						<i>from bridges.bridges import *</i> <br>
-						<i>from bridges.sl_element import *</i>
-					</ul>
-				</td>
-				</tr>
-				<tr>
-				<td class = "col-md-2">
-					<ul>
-						<li> Create the bridges object with your API Key and User ID.
-					</ul>
-				</td>
-				<td class = "col-md-8">
-					<ul>
-						<i>  bridges = Bridges(0, "YOUR_USER_ID", "YOUR_API_KEY")</i>
-					</ul>
-				</td>
-				</tr>
-				<tr>
-				<td class = "col-md-2">
-					<ul>
-						<li> Create two singly-linked elements. Singly-linked elements
-							can be linked together to create a linked-list structure.
-					</ul>
-				</td>
-				<td class = "col-md-8">
-					<ul>
-						<i> sle0 = SLelement("Hello", "")<br>
-							sle1 = SLelement("World", "")</i>
-					</ul>
-				</td>
-				</tr>
-				<tr>
-				<td class = "col-md-2">
-					<ul>
-						<li>  Link the elements
-					</ul>
-				</td>
-				<td class = "col-md-8">
-					<ul>
-						<i>   sle0.set_next(sle1)</i>
-					</ul>
-				</td>
-				</tr>
-				</tr>
-				<tr>
-				<td class = "col-md-2">
-					<ul>
-						<li> Set visual attributes of the elements
-					</ul>
-				</td>
-				<td class = "col-md-8">
-					<ul>
-						<i>	sle0.get_visualizer().set_color("black") <br>
-							sle0.get_visualizer().set_opacity(0.5) <br>
-							sle1.get_visualizer().set_color("green") </i>
-					</ul>
-				</td>
-				</tr>
-				<tr>
-				<tr>
-				<td class = "col-md-2">
-					<ul>
-						<li> Pass the handle of your data structure (reference to the
-								first element) of your data structure
-					</ul>
-				</td>
-				<td class = "col-md-8">
-					<ul>
-						<i>  bridges.set_data_structure(sle0)  <br></i>
-					</ul>
-				</td>
-				</tr>
-				<tr>
-				<tr>
-				<td class = "col-md-2">
-					<ul>
-						<li> Visualize the data structure
-					</ul>
-				</td>
-				<td class = "col-md-8">
-					<ul>
-						<i>  bridges.visualize()  <br></i>
-					</ul>
-				</td>
-				</tr>
-				<tr>
-				<tr>
-				<td class = "col-md-2">
-					<ul>
-						<li> To summarize, your HelloWorld.py should look like this:
-					</ul>
-				</td>
-				<td class = "col-md-8">
-<b><i>
-from bridges.bridges import * <br>
-from bridges.sl_element import * <p> <p>
+	  class HelloWorld: <p>
 
-class HelloWorld: <p>
+	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b>#create the Bridges object<b> <p>
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  bridges = Bridges(0, "YOUR_USER_ID", "YOUR_API_KEY") <p>
 
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b>#create the Bridges object<b> <p>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  bridges = Bridges(0, "YOUR_USER_ID", "YOUR_API_KEY") <p>
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </b>#create two singly-linked elements<b> <br>
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle0 = SLelement("Hello", "") <br>
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle1 = SLelement("World", "") <p>
 
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </b>#create two singly-linked elements<b> <br>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle0 = SLelement("Hello", "") <br>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle1 = SLelement("World", "") <p>
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </b># create a singly-linked list <br>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp # by adding sle1 as sle0's next element<b> <br>
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle0.set_next(sle1) <p>
 
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </b># create a singly-linked list <br>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp # by adding sle1 as sle0's next element<b> <br>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle0.set_next(sle1) <p>
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </b>#edit some visual properties of the two elements<b> <br>
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle0.get_visualizer().set_color("black") <br>
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle0.get_visualizer().set_opacity(0.5) <br>
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle1.get_visualizer().set_color("green") <p>
 
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </b>#edit some visual properties of the two elements<b> <br>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle0.get_visualizer().set_color("black") <br>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle0.get_visualizer().set_opacity(0.5) <br>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle1.get_visualizer().set_color("green") <p>
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b>#pass the first element of the list<b> <br>
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspbridges.set_data_structure(sle0) <p>
 
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b>#pass the first element of the list<b> <br>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspbridges.set_data_structure(sle0) <p>
-
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </b># visualize the list<b> <br>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp bridges.visualize() <p> </i> </b>
-				</td>
-				</tr>
-				<tr>
-				<td class = "col-md-2"> <b>Step 3: Running your Bridges program</b>
-					<ul>
-						<li> Once your code is in, run your project
-						<li> <i> Run-->Run </i>
-						<li> <i> Run --> HelloWorld</i>
-					</ul>
-				</td>
-				<td class = "col-md-8">
-					<img src = "./img/Tutorialv2/python/runHelloWorld.png" width="800"></img>
-                </td>
-				</tr>
-				</tr>
-				<tr>
-				<td class = "col-md-2"> <b>Step 4: Visualize your data structure</b>
-					<ul>
-						<li> If your code compiles correctly, the Eclipse console will
-							give you a link to the Bridges website. to view the
-							visualization. Copy/paste this link into your favorite
-							browser to view a visualization of the data structure
-							you just created.
-					</ul>
-				</td>
-				<td class = "col-md-8">
-					<img src = "./img/Tutorialv2/HelloWorld.png" width="800"></img>
-                </td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </b># visualize the list<b> <br>
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp bridges.visualize() <p> </i> </b>
+  </td>
+</tr>
+<tr>
+  <td class = "col-md-2"> <b>Step 3: Running your Bridges program</b>
+    <ul>
+      <li> Once your code is in, run your project
+      <li> <i> Run-->Run </i>
+      <li> <i> Run --> HelloWorld</i>
+    </ul>
+  </td>
+  <td class = "col-md-8">
+    <img src = "./img/Tutorialv2/python/runHelloWorld.png" width="800"></img>
+  </td>
+</tr>
+</tr>
+<tr>
+  <td class = "col-md-2"> <b>Step 4: Visualize your data structure</b>
+    <ul>
+      <li> If your code compiles correctly, the Eclipse console will
+	give you a link to the Bridges website. to view the
+	visualization. Copy/paste this link into your favorite
+	browser to view a visualization of the data structure
+	you just created.
+    </ul>
+  </td>
+  <td class = "col-md-8">
+    <img src = "./img/Tutorialv2/HelloWorld.png" width="800"></img>
+  </td>
+</tr>
+</tbody>
+</table>
 </div>
+</div>
+<div w3-include-html="./footer.html"></div>
 </div>
 </div>
 </body>

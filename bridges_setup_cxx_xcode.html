@@ -1,216 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>BRIDGES-C++ Setup Page</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="./bootstrap-3.3.6/dist/css/bootstrap.min.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="./bootstrap-3.3.6/dist/js/bootstrap.min.js"></script>
-	<script src="http://www.w3schools.com/lib/w3data.js"></script>
-	<link rel="stylesheet" type="text/css" href="./bootstrap/bridges.css">
-</head>
-<body>
+  <head>
+    <title>BRIDGES-C++ Setup Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./bootstrap-3.3.6/dist/css/bootstrap.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="./bootstrap-3.3.6/dist/js/bootstrap.min.js"></script>
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <link rel="stylesheet" type="text/css" href="./bootstrap/bridges.css">
+  </head>
+  <body>
 
-  <div w3-include-html="./navbar.html">
-    <script>
-      w3IncludeHTML();
-    </script>
-  </div>
-  
-<div class="container-fluid text-left">
-	<div class="row content">
+    <div w3-include-html="./navbar.html">
+      <script>
+	w3IncludeHTML();
+      </script>
+    </div>
+    
+    <div class="container-fluid text-left">
+      <div class="row content">
 	<div class="col-md-2 sidenav">
-			<div w3-include-html="./left_sidebar.html"></div>
-			<script>
-				w3IncludeHTML(); 
-			</script>  
+	  <div w3-include-html="./left_sidebar.html"></div>
+	  <script>
+	    w3IncludeHTML(); 
+	  </script>  
 	</div>
 	<div class="col-md-10 text-left"> 
-		<h3 class = "sep_heading">BRIDGES-C++: Getting Started[XCode]</h3>
-		<table class = "table table-bordered">
-			<thead>
-				<tr> 
-					<td colspan = "2"> <b>Step 1: Install Xcode</b>
-						<ul> 
-						<li> If you do not have Xcode installed on your Mac
-							installed, download it from the 
-							<a href = 
-								"https://developer.apple.com/xcode/downloads/"> Apple developer site</a>. 
-							and install it on your computer. 
-						<li> You must also install the Xcode command line 
-							tools; this can be done from the command line from 
-							Terminal window as follows:<p>
-							<i>xcode-select --install</i>
-						<li> If this completes successfully, you are now ready 
-							to use Xcode with BRIDGES.
-						<li> Open Xcode and you should see it on your dock(set
-							Options to keep it on the dock permanently).
-						</ul>
-					 </td>
-				</tr>
-				<tr> 
-					<td colspan = "2">
-					<b>Step 2: Create Bridges Account</b> 
-						Visit the Bridges 
-							<a href = "http://bridgesuncc.github.io"> main page</a> 
-							and create yourself an account by clicking 
-							the login button
-							on the top navigation bar. Please ensure that 
-                            your user id is devoid of spaces, as it will be 
-                            used as part of the web link for your projects.
-							After creating your account, click 
-							on your profile name in the upper right corner to 
-							view your profile. Once in your profile, you will see your
-							API Key; you will need this API key later
-							in the tutorial(as well as in every BRIDGES program 
-							you write). <b>NOTE:</b> Make sure to remember 
-							your password. There is no password recovery option(for now), 
-							and you can only have one account per email address.
-					</td>
-				</tr>
-				<tr> 
-					<td colspan = "2">
-					<b>Step 3: Download the Bridges C++ template files, Install 
-							CURL library</b> 
-					<ul> 
-					<li> Download the Bridges C++ class files from this 
-						<a href = "./sw/bridges-cxx-2.3.4.zip"> link</a>. Save this 
-						in a convenient folder. You will need this later.
-					<li> BRIDGES uses the <a href = "https://curl.haxx.se">CURL</a> 
-						library for communicating with the web 
-						server, and posting assignments. Download CURL from this 
-						<a href = "https://curl.haxx.se/download.html"> link</a> and 
-						install the library in a convenient location
-					</ul>
-					</td>
-				</tr>
-				<tr>
-					<td class = "col-md-2"> <b>Step 4: Create a C++ Project</b> 
-						<ul> 
-							<li> Open Xcode
-							<li> <i> File-->New-->Project</i> 
-							<li>Click on  <i>OSX-->Application--></i>,
-								and selecting <b>Command Line Tool</b>
-							<li> Specify a name for the project and a location
-								on your drive.
-							<li> You should now see a project on the left panel
-								 with a predefined main.cpp skeleton. Click
-								 on main.cpp to bring up the source file.
-						</ul>
-					</td> 
-					<td class = "col-md-8">  
-					<img src = "./img/Tutorial/cxx/xcode/new_proj.png" width = "400"></img> 
-					<img src = "./img/Tutorial/cxx/xcode/new_proj2.png" width = "400"></img> 
-					</td>
-				</tr>
-				<tr>
-					<td class = "col-md-2"> <b>Step 5: Type or paste in a Bridges example program</b>
-						<ul> 
-							<li> There are multiple ways to import a source 
-								file. Here we will simply copy/paste a 
-								BRIDGES program to illustrate a singly 
-								linked list  example.
-							<li> Notice the number of errors that show up; 
-								we will resolve them next.
-						</ul>
-					</td>
-					<td class = "col-md-8">  
-					<img src = "./img/Tutorial/cxx/xcode/bridges_src.png" width = "800"></img> 
-					</td>
-				</tr>
-				<tr> <td class = "col-md-2"> <b>Step 6: Project Settings</b>
-					<ul>
-						<li> Click on the Project. This will bring up the 
-							Project Settings (middle panel). Select 
-							<i> Build Settings</i> (top panel) 
-						<li> You will next need to specify the library and 
-							include search paths
-						<li> <b> Include Paths:</b> You will need to specify
-							the path to the CURL library include as well as 
-							the BRIDGES class include files(not all BRIDGES
-							sources are in include files)
-						<ul>
-							<li> Scroll down to the section  titled 
-								<i> Search Paths </i>
-							<li> Double click on the middle of line that 
-								says "Header Search Paths" and this will 										bring up an edit box(see figure on the right). 
-							<li> Click on the "+" character on the bottom to 								 	add a path. You will do this twice to add
-								the two include paths, as shown. These  paths
-								refer to the locations of the include files
-								of CURL library and the BRIDGES include files,
-								respectively.
-							<li> Click anywhere else to get rid of the 
-								editor box.
-						</ul>
-						<li> <b> Library Paths:</b> You will need to specify
-                            the path to the CURL library(this is usually under
-							the lib folder of your CURL installation).
-						<ul>
-							<li> Look for the "Library Search Paths" right 
-									under "Header Search Paths"
-							<li> Similar to the previous step, double click to
-								bring up the Editor box and enter Library Search
-								path.	
-							<li> Click anywhere else to get rid of the 
-								editor box.
-						</ul>
-						<li> <b> Link the CURL Library</b>
-						<ul>
-							<li> Scroll to top of Settings and click on
-								<i> Build Phases</i> Select "Link Binary with
-									Libraries".
-							<li> Click the <b>+</b> button  and select 
-								<b>Add Other</b>. Navigate to your Curl 
-									library installation and add the library
-									(liburl.dylib) to the project.
-						</ul>
-					<td class = "col-md-8"> 
-						<img src = "./img/Tutorial/cxx/xcode/includes.png" width = "800"></img> <p><p>
-						<img src = "./img/Tutorial/cxx/xcode/lib_path.png" width = "800"></img>
-						<img src = "./img/Tutorial/cxx/xcode/lib.png" width = "800"></img>
-                    </td>
-				</tr>
-				<tr>
-					<td class = "col-md-2"> <b>Step 7: Build and Run Project</b>
-						<ul> 
-							<li> To build and run your project, hit the 'Run'
-								button(rightward pointing filled triangle on 
-								the upper left window).
-							<li> If everything compiles correctly, you will see
-								a console window at the bottom with a web link
-								pointing to the visualization. Else if the build
-								failed, then click on the little triangle
-								with the exclamation point(below the 
-								Build/Run button) to see the build errors.
-						</ul>
-					</ul>
-					</td>
-					<td class = "col-md-8">  
-						<img src = "./img/Tutorial/cxx/xcode/run.png" width = "800"></img>
-					</td>
-				</tr>
-				<tr>
-					<td class = "col-md-2"> <b>Step 8: Visualize</b>
-						<ul>
-						<li> Paste the link into your browser to see the doubly linked
-							list.
-						<li> If you see the visualization, you are done with your 
-							first BRIDGES program. Congratulations!
-						<li> You should be able to move the visualization with your 
-							left button, click and pull the nodes,  see the labels on 
-							mouse over, etc.
-						</ul>
-					</td>
-					<td class = "col-md-8">  
-						<img src = "./img/Tutorial/cxx/xcode/sllist.png" width = "800"></img>
-					</td>
-				</tr>
-			</thead>
-		</table>
+	  <h3 class = "sep_heading">BRIDGES-C++: Getting Started[XCode]</h3>
+	  <table class = "table table-bordered">
+	    <thead>
+	      <tr> 
+		<td colspan = "2"> <b>Step 1: Install Xcode</b>
+		  <ul> 
+		    <li> If you do not have Xcode installed on your Mac
+		      installed, download it from the 
+		      <a href = 
+			 "https://developer.apple.com/xcode/downloads/"> Apple developer site</a>. 
+		      and install it on your computer. 
+		    <li> You must also install the Xcode command line 
+		      tools; this can be done from the command line from 
+		      Terminal window as follows:<p>
+			<i>xcode-select --install</i>
+			<li> If this completes successfully, you are now ready 
+			  to use Xcode with BRIDGES.
+			<li> Open Xcode and you should see it on your dock(set
+			  Options to keep it on the dock permanently).
+		  </ul>
+		</td>
+	      </tr>
+	      <tr> 
+		<td colspan = "2">
+		  <b>Step 2: Create Bridges Account</b> 
+		  Visit the Bridges 
+		  <a href = "http://bridgesuncc.github.io"> main page</a> 
+		  and create yourself an account by clicking 
+		  the login button
+		  on the top navigation bar. Please ensure that 
+                  your user id is devoid of spaces, as it will be 
+                  used as part of the web link for your projects.
+		  After creating your account, click 
+		  on your profile name in the upper right corner to 
+		  view your profile. Once in your profile, you will see your
+		  API Key; you will need this API key later
+		  in the tutorial(as well as in every BRIDGES program 
+		  you write). <b>NOTE:</b> Make sure to remember 
+		  your password. There is no password recovery option(for now), 
+		  and you can only have one account per email address.
+		</td>
+	      </tr>
+	      <tr> 
+		<td colspan = "2">
+		  <b>Step 3: Download the Bridges C++ template files, Install 
+		    CURL library</b> 
+		  <ul> 
+		    <li> Download the Bridges C++ class files from this 
+		      <a href = "./sw/bridges-cxx-2.3.4.zip"> link</a>. Save this 
+		      in a convenient folder. You will need this later.
+		    <li> BRIDGES uses the <a href = "https://curl.haxx.se">CURL</a> 
+		      library for communicating with the web 
+		      server, and posting assignments. Download CURL from this 
+		      <a href = "https://curl.haxx.se/download.html"> link</a> and 
+		      install the library in a convenient location
+		  </ul>
+		</td>
+	      </tr>
+	      <tr>
+		<td class = "col-md-2"> <b>Step 4: Create a C++ Project</b> 
+		  <ul> 
+		    <li> Open Xcode
+		    <li> <i> File-->New-->Project</i> 
+		    <li>Click on  <i>OSX-->Application--></i>,
+		      and selecting <b>Command Line Tool</b>
+		    <li> Specify a name for the project and a location
+		      on your drive.
+		    <li> You should now see a project on the left panel
+		      with a predefined main.cpp skeleton. Click
+		      on main.cpp to bring up the source file.
+		  </ul>
+		</td> 
+		<td class = "col-md-8">  
+		  <img src = "./img/Tutorial/cxx/xcode/new_proj.png" width = "400"></img> 
+		  <img src = "./img/Tutorial/cxx/xcode/new_proj2.png" width = "400"></img> 
+		</td>
+	      </tr>
+	      <tr>
+		<td class = "col-md-2"> <b>Step 5: Type or paste in a Bridges example program</b>
+		  <ul> 
+		    <li> There are multiple ways to import a source 
+		      file. Here we will simply copy/paste a 
+		      BRIDGES program to illustrate a singly 
+		      linked list  example.
+		    <li> Notice the number of errors that show up; 
+		      we will resolve them next.
+		  </ul>
+		</td>
+		<td class = "col-md-8">  
+		  <img src = "./img/Tutorial/cxx/xcode/bridges_src.png" width = "800"></img> 
+		</td>
+	      </tr>
+	      <tr> <td class = "col-md-2"> <b>Step 6: Project Settings</b>
+		  <ul>
+		    <li> Click on the Project. This will bring up the 
+		      Project Settings (middle panel). Select 
+		      <i> Build Settings</i> (top panel) 
+		    <li> You will next need to specify the library and 
+		      include search paths
+		    <li> <b> Include Paths:</b> You will need to specify
+		      the path to the CURL library include as well as 
+		      the BRIDGES class include files(not all BRIDGES
+		      sources are in include files)
+		      <ul>
+			<li> Scroll down to the section  titled 
+			  <i> Search Paths </i>
+			<li> Double click on the middle of line that 
+			  says "Header Search Paths" and this will 										bring up an edit box(see figure on the right). 
+			<li> Click on the "+" character on the bottom to 								 	add a path. You will do this twice to add
+			  the two include paths, as shown. These  paths
+			  refer to the locations of the include files
+			  of CURL library and the BRIDGES include files,
+			  respectively.
+			<li> Click anywhere else to get rid of the 
+			  editor box.
+		      </ul>
+		    <li> <b> Library Paths:</b> You will need to specify
+                      the path to the CURL library(this is usually under
+		      the lib folder of your CURL installation).
+		      <ul>
+			<li> Look for the "Library Search Paths" right 
+			  under "Header Search Paths"
+			<li> Similar to the previous step, double click to
+			  bring up the Editor box and enter Library Search
+			  path.	
+			<li> Click anywhere else to get rid of the 
+			  editor box.
+		      </ul>
+		    <li> <b> Link the CURL Library</b>
+		      <ul>
+			<li> Scroll to top of Settings and click on
+			  <i> Build Phases</i> Select "Link Binary with
+			  Libraries".
+			<li> Click the <b>+</b> button  and select 
+			  <b>Add Other</b>. Navigate to your Curl 
+			  library installation and add the library
+			  (liburl.dylib) to the project.
+		      </ul>
+		      <td class = "col-md-8"> 
+			<img src = "./img/Tutorial/cxx/xcode/includes.png" width = "800"></img> <p><p>
+			  <img src = "./img/Tutorial/cxx/xcode/lib_path.png" width = "800"></img>
+			  <img src = "./img/Tutorial/cxx/xcode/lib.png" width = "800"></img>
+                      </td>
+	      </tr>
+	      <tr>
+		<td class = "col-md-2"> <b>Step 7: Build and Run Project</b>
+		  <ul> 
+		    <li> To build and run your project, hit the 'Run'
+		      button(rightward pointing filled triangle on 
+		      the upper left window).
+		    <li> If everything compiles correctly, you will see
+		      a console window at the bottom with a web link
+		      pointing to the visualization. Else if the build
+		      failed, then click on the little triangle
+		      with the exclamation point(below the 
+		      Build/Run button) to see the build errors.
+		  </ul>
+
+		</td>
+		<td class = "col-md-8">  
+		  <img src = "./img/Tutorial/cxx/xcode/run.png" width = "800"></img>
+		</td>
+	      </tr>
+	      <tr>
+		<td class = "col-md-2"> <b>Step 8: Visualize</b>
+		  <ul>
+		    <li> Paste the link into your browser to see the doubly linked
+		      list.
+		    <li> If you see the visualization, you are done with your 
+		      first BRIDGES program. Congratulations!
+		    <li> You should be able to move the visualization with your 
+		      left button, click and pull the nodes,  see the labels on 
+		      mouse over, etc.
+		  </ul>
+		</td>
+		<td class = "col-md-8">  
+		  <img src = "./img/Tutorial/cxx/xcode/sllist.png" width = "800"></img>
+		</td>
+	      </tr>
+	    </thead>
+	  </table>
 	</div>
-</div>
-</div>
+      </div>
+    <div w3-include-html="./footer.html"></div>
 </div>
 </body>
 </html>
