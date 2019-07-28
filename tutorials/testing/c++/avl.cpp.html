@@ -12,49 +12,49 @@
                                 <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 	<span class="Comment">// set title, description</span>
 	bridges.setTitle(<span class="Constant">&quot;AVL Tree Example&quot;</span>);
-	bridges.setDescription(<span class="Constant">&quot;This AVL tree has six elements.  The root is magenta color and has three nodes on its left and two nodes on its right. The values from lower left to the root, 20, 40, 30, 50. And from lower right to root, 90, 70, 50. The node labels also illustrate the balance factors&quot;</span>);
+	bridges.setDescription(<span class="Constant">&quot;This AVL tree has six elements.  The root is magenta color and has three nodes on its left and two nodes on its right. The values from lower left to the root, 20, 40, 30, 50. And from lower right to root, 90, 70, 50. Hit the 'l' key to see the balance factors displayed at the nodes.&quot;</span>);
 
 	AVLTreeElement&lt;<span class="Type">int</span>, string&gt; *avl_root =
 		<span class="Statement">new</span> AVLTreeElement&lt;<span class="Type">int</span>, string&gt;(<span class="Constant">50</span>, <span class="Constant">&quot;50&quot;</span>, <span class="Constant">&quot;50&quot;</span>);
-	AVLTreeElement&lt;<span class="Type">int</span>, string&gt; *tle1 =
+	AVLTreeElement&lt;<span class="Type">int</span>, string&gt; *avl2 =
 		<span class="Statement">new</span> AVLTreeElement&lt;<span class="Type">int</span>, string&gt;(<span class="Constant">30</span>, <span class="Constant">&quot;30&quot;</span>, <span class="Constant">&quot;30&quot;</span>);
-	AVLTreeElement&lt;<span class="Type">int</span>, string&gt; *tle2 =
+	AVLTreeElement&lt;<span class="Type">int</span>, string&gt; *avl3 =
 		<span class="Statement">new</span> AVLTreeElement&lt;<span class="Type">int</span>, string&gt;(<span class="Constant">70</span>, <span class="Constant">&quot;70&quot;</span>, <span class="Constant">&quot;70&quot;</span>);
-	AVLTreeElement&lt;<span class="Type">int</span>, string&gt; *tle3 =
+	AVLTreeElement&lt;<span class="Type">int</span>, string&gt; *avl4 =
 		<span class="Statement">new</span> AVLTreeElement&lt;<span class="Type">int</span>, string&gt;(<span class="Constant">20</span>, <span class="Constant">&quot;20&quot;</span>, <span class="Constant">&quot;20&quot;</span>);
-	AVLTreeElement&lt;<span class="Type">int</span>, string&gt; *tle4 =
+	AVLTreeElement&lt;<span class="Type">int</span>, string&gt; *avl5 =
 		<span class="Statement">new</span> AVLTreeElement&lt;<span class="Type">int</span>, string&gt;(<span class="Constant">40</span>, <span class="Constant">&quot;40&quot;</span>, <span class="Constant">&quot;40&quot;</span>);
-	AVLTreeElement&lt;<span class="Type">int</span>, string&gt; *tle5 =
+	AVLTreeElement&lt;<span class="Type">int</span>, string&gt; *avl6 =
 		<span class="Statement">new</span> AVLTreeElement&lt;<span class="Type">int</span>, string&gt;(<span class="Constant">90</span>, <span class="Constant">&quot;90&quot;</span>, <span class="Constant">&quot;90&quot;</span>);
 
 	<span class="Comment">//  link the nodes</span>
-	avl_root-&gt;setLeft(tle1);
-	avl_root-&gt;setRight(tle2);
-	tle1-&gt;setLeft(tle3);
-	tle1-&gt;setRight(tle4);
-	tle2-&gt;setRight(tle5);
+	avl_root-&gt;setLeft(avl2);
+	avl_root-&gt;setRight(avl3 );
+	avl2-&gt;setLeft(avl4);
+	avl2-&gt;setRight(avl5);
+	avl3-&gt;setRight(avl6);
 
 	<span class="Comment">// set attributes</span>
-	avl_root-&gt;setColor(<span class="Constant">&quot;red&quot;</span>);
+	avl_root-&gt;setColor(<span class="Constant">&quot;magenta&quot;</span>);
 
-	avl_root-&gt;getLinkVisualizer(tle1)-&gt;setColor(<span class="Constant">&quot;red&quot;</span>);
-	avl_root-&gt;getLinkVisualizer(tle2)-&gt;setColor(<span class="Constant">&quot;green&quot;</span>);
+	avl_root-&gt;getLinkVisualizer(avl2)-&gt;setColor(<span class="Constant">&quot;cyan&quot;</span>);
+	avl_root-&gt;getLinkVisualizer(avl3)-&gt;setColor(<span class="Constant">&quot;blue&quot;</span>);
 
 	<span class="Comment">// illustrate balance factors in the node labels</span>
 	avl_root-&gt;setBalanceFactor(<span class="Constant">0</span>);
-	tle1-&gt;setBalanceFactor(<span class="Constant">0</span>);
-	tle2-&gt;setBalanceFactor(<span class="Constant">1</span>);
-	tle3-&gt;setBalanceFactor(<span class="Constant">0</span>);
-	tle4-&gt;setBalanceFactor(<span class="Constant">0</span>);
-	tle5-&gt;setBalanceFactor(<span class="Constant">0</span>);
+	avl2-&gt;setBalanceFactor(<span class="Constant">0</span>);
+	avl3-&gt;setBalanceFactor(<span class="Constant">1</span>);
+	avl4-&gt;setBalanceFactor(<span class="Constant">0</span>);
+	avl5-&gt;setBalanceFactor(<span class="Constant">0</span>);
+	avl6-&gt;setBalanceFactor(<span class="Constant">0</span>);
 
 	<span class="Comment">// display the balance factors (on mouseover)</span>
 	avl_root-&gt;setLabel(std::to_string(avl_root-&gt;getBalanceFactor()));
-	tle1-&gt;setLabel(std::to_string(tle1-&gt;getBalanceFactor()));
-	tle2-&gt;setLabel(std::to_string(tle2-&gt;getBalanceFactor()));
-	tle3-&gt;setLabel(std::to_string(tle3-&gt;getBalanceFactor()));
-	tle4-&gt;setLabel(std::to_string(tle4-&gt;getBalanceFactor()));
-	tle5-&gt;setLabel(std::to_string(tle5-&gt;getBalanceFactor()));
+	avl2-&gt;setLabel(std::to_string(avl2-&gt;getBalanceFactor()));
+	avl3-&gt;setLabel(std::to_string(avl3-&gt;getBalanceFactor()));
+	avl4-&gt;setLabel(std::to_string(avl4-&gt;getBalanceFactor()));
+	avl5-&gt;setLabel(std::to_string(avl5-&gt;getBalanceFactor()));
+	avl6-&gt;setLabel(std::to_string(avl6-&gt;getBalanceFactor()));
 
 	<span class="Comment">// provide BRIDGES the  handle to the tree structure</span>
 	bridges.setDataStructure(avl_root);

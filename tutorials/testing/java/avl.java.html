@@ -11,40 +11,46 @@
 			<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 		<span class="Comment">// title, description</span>
 		bridges.setTitle(<span class="Constant">&quot;AVL Tree Example&quot;</span>);
-		bridges.setDescription(<span class="Constant">&quot;This AVL tree has six elements. &quot;</span>
-			+ <span class="Constant">&quot;The root is magenta color and has three nodes on its left &quot;</span>
-			+ <span class="Constant">&quot;and two nodes on its right. The values from lower left to the root, 20, 40, 30, 50. &quot;</span>
-			+ <span class="Constant">&quot;And from lower right to root, 90, 70, 50.&quot;</span>);
+		bridges.setDescription(<span class="Constant">&quot;This AVL tree has six elements.  The root is magenta color and has three nodes on its left and two nodes on its right. The values from lower left to the root, 20, 40, 30, 50. And from lower right to root, 90, 70, 50. Hit the 'l' key to see the balance factors displayed at the nodes.&quot;</span>);
 
 		<span class="Comment">//create  an  AVL tree elements</span>
 		AVLTreeElement&lt;Integer, String&gt; avl_root = <span class="Statement">new</span> AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">50</span>, <span class="Constant">&quot;Hello&quot;</span>);
-		AVLTreeElement&lt;Integer, String&gt; avl_2 = <span class="Statement">new</span> AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">30</span>, <span class="Constant">&quot;This&quot;</span>);
-		AVLTreeElement&lt;Integer, String&gt; avl_3 = <span class="Statement">new</span> AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">70</span>, <span class="Constant">&quot;is&quot;</span>);
-		AVLTreeElement&lt;Integer, String&gt; avl_4 = <span class="Statement">new</span> AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">20</span>, <span class="Constant">&quot;an&quot;</span>);
-		AVLTreeElement&lt;Integer, String&gt; avl_5 = <span class="Statement">new</span> AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">40</span>, <span class="Constant">&quot;AVL&quot;</span>);
-		AVLTreeElement&lt;Integer, String&gt; avl_6 = <span class="Statement">new</span> AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">90</span>, <span class="Constant">&quot;Tree&quot;</span>);
+		AVLTreeElement&lt;Integer, String&gt; avl2 = <span class="Statement">new</span> AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">30</span>, <span class="Constant">&quot;This&quot;</span>);
+		AVLTreeElement&lt;Integer, String&gt; avl3 = <span class="Statement">new</span> AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">70</span>, <span class="Constant">&quot;is&quot;</span>);
+		AVLTreeElement&lt;Integer, String&gt; avl4 = <span class="Statement">new</span> AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">20</span>, <span class="Constant">&quot;an&quot;</span>);
+		AVLTreeElement&lt;Integer, String&gt; avl5 = <span class="Statement">new</span> AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">40</span>, <span class="Constant">&quot;AVL&quot;</span>);
+		AVLTreeElement&lt;Integer, String&gt; avl6 = <span class="Statement">new</span> AVLTreeElement&lt;Integer, String&gt;(<span class="Constant">90</span>, <span class="Constant">&quot;Tree&quot;</span>);
 
 		<span class="Comment">// put in the balance factors - done manually  here</span>
 		<span class="Comment">// for illustration, but in a real project, the user will</span>
 		<span class="Comment">// implement this as part of the insert/delete</span>
 		<span class="Comment">// operations on the tree to maintain a balanced tree</span>
-		avl_root.setLabel(<span class="Constant">&quot;0&quot;</span>);
-		avl_2.setLabel(<span class="Constant">&quot;0&quot;</span>);
-		avl_3.setLabel(<span class="Constant">&quot;-1&quot;</span>);
-		avl_4.setLabel(<span class="Constant">&quot;0&quot;</span>);
-		avl_5.setLabel(<span class="Constant">&quot;0&quot;</span>);
-		avl_6.setLabel(<span class="Constant">&quot;0&quot;</span>);
+
+		avl_root.setBalanceFactor (<span class="Constant">0</span>);
+		avl2.setBalanceFactor (<span class="Constant">0</span>);
+		avl3.setBalanceFactor (<span class="Constant">1</span>);
+		avl4.setBalanceFactor (<span class="Constant">0</span>);
+		avl5.setBalanceFactor (<span class="Constant">0</span>);
+		avl6.setBalanceFactor (<span class="Constant">0</span>);
+
+		avl_root.setLabel(String.valueOf(avl_root.getBalanceFactor()));
+		avl2.setLabel(String.valueOf(avl2.getBalanceFactor()));
+		avl3.setLabel(String.valueOf(avl3.getBalanceFactor()));
+		avl4.setLabel(String.valueOf(avl4.getBalanceFactor()));
+		avl5.setLabel(String.valueOf(avl5.getBalanceFactor()));
+		avl6.setLabel(String.valueOf(avl6.getBalanceFactor()));
 
 		<span class="Comment">// add the links between nodes</span>
-		avl_root.setLeft(avl_2);
-		avl_root.setRight(avl_3);
-		avl_2.setLeft(avl_4);
-		avl_2.setRight(avl_5);
-		avl_3.setRight(avl_6);
+		avl_root.setLeft(avl2);
+		avl_root.setRight(avl3);
+		avl2.setLeft(avl4);
+		avl2.setRight(avl5);
+		avl3.setRight(avl6);
 
 		<span class="Comment">// set some attributes</span>
 		avl_root.setColor(<span class="Constant">&quot;magenta&quot;</span>);
-		avl_root.setOpacity(<span class="Constant">0.8f</span>);
+		avl_root.getLinkVisualizer(avl2).setColor(<span class="Constant">&quot;cyan&quot;</span>);
+		avl_root.getLinkVisualizer(avl3).setColor(<span class="Constant">&quot;blue&quot;</span>);
 
 		<span class="Comment">//set visualizer type</span>
 		bridges.setDataStructure(avl_root);
