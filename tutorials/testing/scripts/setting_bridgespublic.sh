@@ -71,7 +71,7 @@ FORCE_BRIDGES_ASSIGNMENT=9310 ./graph_amatrix 9999 fakename fakeapi
 FORCE_BRIDGES_ASSIGNMENT=9400 ./shape_collection 9999 fakename fakeapi
 
 
-FORCE_BRIDGES_ASSIGNMENT=9500 ./minimal_game 9999 fakename fakeapi
+## games don't produce useful visualization
 
 
 ##snippets don't produce visualization
