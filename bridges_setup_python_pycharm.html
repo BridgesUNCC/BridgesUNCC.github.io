@@ -4,11 +4,15 @@
     <title>BRIDGES Python Setup Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./bootstrap-3.3.6/dist/css/bootstrap.min.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="./bootstrap-3.3.6/dist/js/bootstrap.min.js"></script>
-    <script src="http://www.w3schools.com/lib/w3data.js"></script>
-    <link rel="stylesheet" type="text/css" href="./bootstrap/bridges.css">
+
+    <!-- w3IncludeHTML() -->
+    <script src="https://www.w3schools.com/lib/w3data.js"></script>
+
+    <!-- all pages need those. -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/bridges.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/glyphicon.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/footer.css">
   </head>
   <body>
     <div w3-include-html="./navbar.html">
@@ -17,108 +21,100 @@
       </script>
     </div>
 
-    <div class="container-fluid text-left">
-      <div class="row content">
-	<div class="col-md-2 sidenav">
-	  <div w3-include-html="./left_sidebar.html"></div>
-	  <script>
-	    w3IncludeHTML();
-	  </script>
-	</div>
-	<div class="col-md-10 text-left">
-	  <h3 class = "sep_heading">BRIDGES(Python): Getting Started(Setup)</h3>
-	  <table class = "setup_table-part1">
-	    <thead>
-	      <tr>
-		<b>Step 1: Install PyCharm </b>
-		<ul> <li> If you do not have Eclipse
-		    installed, download it from the
-		    <a href = "https://www.jetbrains.com/pycharm/"> Pycharm site</a>
-		    and install it on your computer.
-		</ul>
-	      </tr>
-	      <tr>
-		<b>Step 2: Create Bridges Account</b>
-		<ul> <li> Visit the Bridges
-		    <a href = "http://bridgesuncc.github.io">
-		      main page</a> and create yourself an account
-		    by clicking the login button
-		    on the top navigation bar. <b>Please ensure that
-		      your user id is devoid of spaces, as it will be
-		      used as part of the web link for your projects.</b>
-		    After creating your account, click on your profile
-		    name in the upper right corner to view your
-		    profile. Once in your profile, you will see your
-		    API Key; you will need this API key in part 2
-		    of the tutorial(as well as in every BRIDGES program
-		    you write). <b>NOTE:</b> Make sure to remember
-		    your password. There is no password recovery option,
-		    and you can only have one account per email address.
-		</ul>
-	      </tr>
-	      <tr>
-		<b>Step 3: Python requests package</b>
-		<ul>
-		  <li>Use Pip to install requests package
-		  <li>For Mac, open your terminal and type <i> pip install requests</i>
-		  <li>For windows, open your terminal and navigate to the directory python is downloaded. Then type <i>python -m pip install requests</i>
-		</ul>
-	      </tr>
-	      <tr>
-		<td class = "col-md-2"> <b>Step 4a: Python Environment Setup </b>
-		  <ul>
-		    <li> Click configure at the bottom right corner of the IDE and click <i>Settings</i>
-		  </ul>
-		</td>
-		<td class = "col-md-8">
-		  <img src = "./img/Tutorialv2/python/pycharmWindow.PNG" width = "800"></img>
-		</td>
-	      </tr>
-	      <tr>
-		<td class = "col-md-2"> <b>Step 4b: Python Environment Setup </b>
-		  <ul>
-		    <li> In <i>project interpreter</i> click the gear icon on the far right and click <i>Add</i>
-		  </ul>
-		</td>
-		<td class = "col-md-8">
-		  <img src = "./img/Tutorialv2/python/addInterp.png" width = "800"></img>
-		</td>
-	      </tr>
-	      <tr>
-		<td class = "col-md-2"> <b>Step 4c: Python Environment Setup, New Global Enviornment. </b>
-		  <ul>
-		    <li> Locate a convenient place to save this new Environment in the <i>Location</i> attribute.
-		    <li> Locate the path of your python download for your <i>Base interpreter</i>
-		    <li> Be sure <i>Make available to all projects</i> is checked.
-		    <li><i> *Note, your location and base interpreter path will be different*</i>
-		  </ul>
-		</td>
-		<td class = "col-md-8">
-		  <img src = "./img/Tutorialv2/python/globalEnv.png" width = "800"></img>
-		</td>
-	      </tr>
-	      <tr> <td class = "col-md-2"> <b>Step 5a: Import Zip archive into project interpreter paths</b>
-		  <ul>
-		    <li> Download the Bridges.zip file from
-		      <a href = "http://bridgesuncc.github.io/sw/bridges-python-1.0.zip">
-			here </a> and save it somewhere convenient on your drive.
-		    <li> On Pycharm, go back to <i>project interpreter</i>, click the down arrow, and select <i>Show All</i>.
-		  </ul>
-		<td class = "col-md-8">
-		  <img src = "./img/Tutorialv2/python/showAll.png" width = "800"></img>
-        	</td>
-	      </tr>
-	      <tr>
-		<td class = "col-md-2"> <b>Step 5b: Import Bridges zip archive</b>
-		  <ul>
-		    <li> Select the Enviornment we just created.
-		    <li> Then Click <i> Show paths for selected interpreter </i>
-		  </ul>
-		</td>
-		<td class = "col-md-8">
-		  <img src = "./img/Tutorialv2/python/ShowPaths.png" width = "800"></img>
-		</td>
-	      </tr>
+    <h2>BRIDGES(Python): Getting Started(Setup)</h2>
+    
+    <table class = "setup_table-part1">
+      <thead>
+	<tr>
+	  <b>Step 1: Install PyCharm </b>
+	  <ul> <li> If you do not have Eclipse
+	      installed, download it from the
+	      <a href = "https://www.jetbrains.com/pycharm/"> Pycharm site</a>
+	      and install it on your computer.
+	  </ul>
+	</tr>
+	<tr>
+	  <b>Step 2: Create Bridges Account</b>
+	  <ul> <li> Visit the Bridges
+	      <a href = "http://bridgesuncc.github.io">
+		main page</a> and create yourself an account
+	      by clicking the login button
+	      on the top navigation bar. <b>Please ensure that
+		your user id is devoid of spaces, as it will be
+		used as part of the web link for your projects.</b>
+	      After creating your account, click on your profile
+	      name in the upper right corner to view your
+	      profile. Once in your profile, you will see your
+	      API Key; you will need this API key in part 2
+	      of the tutorial(as well as in every BRIDGES program
+	      you write). <b>NOTE:</b> Make sure to remember
+	      your password. There is no password recovery option,
+	      and you can only have one account per email address.
+	  </ul>
+	</tr>
+	<tr>
+	  <b>Step 3: Python requests package</b>
+	  <ul>
+	    <li>Use Pip to install requests package
+	    <li>For Mac, open your terminal and type <i> pip install requests</i>
+	    <li>For windows, open your terminal and navigate to the directory python is downloaded. Then type <i>python -m pip install requests</i>
+	  </ul>
+	</tr>
+	<tr>
+	  <td class = "col-md-2"> <b>Step 4a: Python Environment Setup </b>
+	    <ul>
+	      <li> Click configure at the bottom right corner of the IDE and click <i>Settings</i>
+	    </ul>
+	  </td>
+	  <td class = "col-md-8">
+	    <img src = "./img/Tutorialv2/python/pycharmWindow.PNG" width = "800"></img>
+	  </td>
+	</tr>
+	<tr>
+	  <td class = "col-md-2"> <b>Step 4b: Python Environment Setup </b>
+	    <ul>
+	      <li> In <i>project interpreter</i> click the gear icon on the far right and click <i>Add</i>
+	    </ul>
+	  </td>
+	  <td class = "col-md-8">
+	    <img src = "./img/Tutorialv2/python/addInterp.png" width = "800"></img>
+	  </td>
+	</tr>
+	<tr>
+	  <td class = "col-md-2"> <b>Step 4c: Python Environment Setup, New Global Enviornment. </b>
+	    <ul>
+	      <li> Locate a convenient place to save this new Environment in the <i>Location</i> attribute.
+	      <li> Locate the path of your python download for your <i>Base interpreter</i>
+	      <li> Be sure <i>Make available to all projects</i> is checked.
+	      <li><i> *Note, your location and base interpreter path will be different*</i>
+	    </ul>
+	  </td>
+	  <td class = "col-md-8">
+	    <img src = "./img/Tutorialv2/python/globalEnv.png" width = "800"></img>
+	  </td>
+	</tr>
+	<tr> <td class = "col-md-2"> <b>Step 5a: Import Zip archive into project interpreter paths</b>
+	    <ul>
+	      <li> Download the Bridges.zip file from
+		<a href = "http://bridgesuncc.github.io/sw/bridges-python-1.0.zip">
+		  here </a> and save it somewhere convenient on your drive.
+	      <li> On Pycharm, go back to <i>project interpreter</i>, click the down arrow, and select <i>Show All</i>.
+	    </ul>
+	  <td class = "col-md-8">
+	    <img src = "./img/Tutorialv2/python/showAll.png" width = "800"></img>
+          </td>
+	</tr>
+	<tr>
+	  <td class = "col-md-2"> <b>Step 5b: Import Bridges zip archive</b>
+	    <ul>
+	      <li> Select the Enviornment we just created.
+	      <li> Then Click <i> Show paths for selected interpreter </i>
+	    </ul>
+	  </td>
+	  <td class = "col-md-8">
+	    <img src = "./img/Tutorialv2/python/ShowPaths.png" width = "800"></img>
+	  </td>
+	</tr>
 </tr>
 <tr>
   <td class = "col-md-2"> <b>Step 5c: Import Bridges zip archive</b>
@@ -362,10 +358,5 @@
 </tbody>
 </table>
 <div w3-include-html="./footer.html"></div>
-</div>
-</div>
-
-</div>
-</div>
 </body>
 </html>

@@ -4,11 +4,15 @@
     <title>BRIDGES Python Setup Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./bootstrap-3.3.6/dist/css/bootstrap.min.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="./bootstrap-3.3.6/dist/js/bootstrap.min.js"></script>
-    <script src="http://www.w3schools.com/lib/w3data.js"></script>
-    <link rel="stylesheet" type="text/css" href="./bootstrap/bridges.css">
+
+    <!-- w3IncludeHTML() -->
+    <script src="https://www.w3schools.com/lib/w3data.js"></script>
+
+    <!-- all pages need those. -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/bridges.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/glyphicon.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/footer.css">
   </head>
   <body>
 
@@ -18,94 +22,85 @@
       </script>
     </div>
 
-    <div class="container-fluid text-left">
-      <div class="row content">
-	<div class="col-md-2 sidenav">
-	  <div w3-include-html="./left_sidebar.html"></div>
-	  <script>
-	    w3IncludeHTML();
-	  </script>
-	</div>
-	<div class="col-md-10 text-left">
-	  <h3 class = "sep_heading">BRIDGES(Python): Getting Started(Setup)</h3>
-	  <table class = "setup_table-part1">
-	    <thead>
-	      <tr>
-		<b>Step 1a: Install PyCharm </b>
-		<ul> <li> If you do not have Eclipse
-		    installed, download it from the
-		    <a href = "https://www.jetbrains.com/pycharm/"> Pycharm site</a>
-		    and install it on your computer.
-		</ul>
-	      </tr>
-	      <tr>
-		<b>Step 1b: (Optional) Install Pip </b>
-		<ul> <li> If you do not have Pip, install it from
-		    <a href = "https://pip.pypa.io/en/stable/installing/"> here</a>
-		</ul>
-	      </tr>
-	      <tr>
-		<b>Step 1b: (Optional) Install through Zip </b>
-		<ul> <li> Download the Bridges zip file from
-		    <a href = "http://bridgesuncc.github.io/sw/bridges-python-1.0.zip"> here</a>
-		  <li> In your terminal navigate to the <i>Bridges directory</i> (where you saved it).
-		  <li> Run the command <i>python setup.py install</i>
-		</ul>
-	      </tr>
-	      <tr>
-		<b>Step 2: Create Bridges Account</b>
-		<ul> <li> Visit the Bridges
-		    <a href = "http://bridgesuncc.github.io">
-		      main page</a> and create yourself an account
-		    by clicking the login button
-		    on the top navigation bar. <b>Please ensure that
-		      your user id is devoid of spaces, as it will be
-		      used as part of the web link for your projects.</b>
-		    After creating your account, click on your profile
-		    name in the upper right corner to view your
-		    profile. Once in your profile, you will see your
-		    API Key; you will need this API key in part 2
-		    of the tutorial(as well as in every BRIDGES program
-		    you write). <b>NOTE:</b> Make sure to remember
-		    your password. There is no password recovery option,
-		    and you can only have one account per email address.
-		</ul>
-	      </tr>
-	      <tr>
-		<td class = "col-md-2"> <b>Step 3: Creating Project </b>
-		  <ul>
-		    <li> Click <i>Create New project</i>
-		  </ul>
-		</td>
-		<td class = "col-md-8">
-		  <img src = "./img/Tutorialv2/python/pip_tutorial/newproject.png" width = "800"></img>
-		</td>
-	      </tr>
-	      <tr>
-		<td class = "col-md-2"> <b>Step 3b: Creating Project </b>
-		  <ul>
-		    <li> Name your project <i>HelloWorld</i> create a new enviornment using <i>virtualenv</i>
-		  </ul>
-		</td>
-		<td class = "col-md-8">
-		  <img src = "./img/Tutorialv2/python/pip_tutorial/projectconfig.png" width = "800"></img>
-		</td>
-	      </tr>
-	      <tr>
-		<td class = "col-md-2"> <b>Step 3c: Creating Project. </b>
-		  <ul>
-		    <li> Choose a location for the virtual environment
-		    <li> Choose the base interpreter for project - <i>Python 3.*</i>
-		    <li><i> *Note, your location and base interpreter path will be different*</i>
-		    <li> <b>Uncheck</b> Inherit global variables and <b>Check</b> Make available for all projects.
-		    <li><b> *Note, If you installed Bridges through the <i>Zip</i> file, <i>Check</i> Inherit global variables.</b>
-		    <li>Click <i>create</i> at the bottom right corner.
-		  </ul>
-		</td>
-		<td class = "col-md-8">
-		  <img src = "./img/Tutorialv2/python/pip_tutorial/projectconfig.png" width = "800"></img>
-		</td>
-	      </tr>
+    <h2>BRIDGES(Python): Getting Started(Setup)</h2>
+    <table class = "setup_table-part1">
+      <thead>
+	<tr>
+	  <b>Step 1a: Install PyCharm </b>
+	  <ul> <li> If you do not have Eclipse
+	      installed, download it from the
+	      <a href = "https://www.jetbrains.com/pycharm/"> Pycharm site</a>
+	      and install it on your computer.
+	  </ul>
+	</tr>
+	<tr>
+	  <b>Step 1b: (Optional) Install Pip </b>
+	  <ul> <li> If you do not have Pip, install it from
+	      <a href = "https://pip.pypa.io/en/stable/installing/"> here</a>
+	  </ul>
+	</tr>
+	<tr>
+	  <b>Step 1b: (Optional) Install through Zip </b>
+	  <ul> <li> Download the Bridges zip file from
+	      <a href = "http://bridgesuncc.github.io/sw/bridges-python-1.0.zip"> here</a>
+	    <li> In your terminal navigate to the <i>Bridges directory</i> (where you saved it).
+	    <li> Run the command <i>python setup.py install</i>
+	  </ul>
+	</tr>
+	<tr>
+	  <b>Step 2: Create Bridges Account</b>
+	  <ul> <li> Visit the Bridges
+	      <a href = "http://bridgesuncc.github.io">
+		main page</a> and create yourself an account
+	      by clicking the login button
+	      on the top navigation bar. <b>Please ensure that
+		your user id is devoid of spaces, as it will be
+		used as part of the web link for your projects.</b>
+	      After creating your account, click on your profile
+	      name in the upper right corner to view your
+	      profile. Once in your profile, you will see your
+	      API Key; you will need this API key in part 2
+	      of the tutorial(as well as in every BRIDGES program
+	      you write). <b>NOTE:</b> Make sure to remember
+	      your password. There is no password recovery option,
+	      and you can only have one account per email address.
+	  </ul>
+	</tr>
+	<tr>
+	  <td class = "col-md-2"> <b>Step 3: Creating Project </b>
+	    <ul>
+	      <li> Click <i>Create New project</i>
+	    </ul>
+	  </td>
+	  <td class = "col-md-8">
+	    <img src = "./img/Tutorialv2/python/pip_tutorial/newproject.png" width = "800"></img>
+	  </td>
+	</tr>
+	<tr>
+	  <td class = "col-md-2"> <b>Step 3b: Creating Project </b>
+	    <ul>
+	      <li> Name your project <i>HelloWorld</i> create a new enviornment using <i>virtualenv</i>
+	    </ul>
+	  </td>
+	  <td class = "col-md-8">
+	    <img src = "./img/Tutorialv2/python/pip_tutorial/projectconfig.png" width = "800"></img>
+	  </td>
+	</tr>
+	<tr>
+	  <td class = "col-md-2"> <b>Step 3c: Creating Project. </b>
+	    <ul>
+	      <li> Choose a location for the virtual environment
+	      <li> Choose the base interpreter for project - <i>Python 3.*</i>
+	      <li><i> *Note, your location and base interpreter path will be different*</i>
+	      <li> <b>Uncheck</b> Inherit global variables and <b>Check</b> Make available for all projects.
+	      <li><b> *Note, If you installed Bridges through the <i>Zip</i> file, <i>Check</i> Inherit global variables.</b>
+	      <li>Click <i>create</i> at the bottom right corner.
+	    </ul>
+	  </td>
+	  <td class = "col-md-8">
+	    <img src = "./img/Tutorialv2/python/pip_tutorial/projectconfig.png" width = "800"></img>
+	  </td>
+	</tr>
 </tr>
 <tr>
   <td class = "col-md-2"> <b>Step 4a: Installing Bridges <i>(Skip to step 4c if using Zip file)</i></b>
@@ -333,9 +328,5 @@
 </tbody>
 </table>
 <div w3-include-html="./footer.html"></div>
-</div>
-</div>
-</div>
-</div>
 </body>
 </html>
