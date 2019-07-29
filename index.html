@@ -4,8 +4,8 @@
     <title>BRIDGES Main Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- w3IncludeHTML() -->
     <script src="https://www.w3schools.com/lib/w3data.js"></script>
 
     <!-- all pages need those. -->
@@ -204,10 +204,11 @@
       </div>
     </div>
 
-    <div class="my_footer">
-      <p>All rights reserved, Copyright @2018,2019. The University of North Carolina
-	at Charlotte.</p>
+    <div w3-include-html="./footer.html">
+      <script>
+	w3IncludeHTML(); 
+      </script>
     </div>
-
+    
   </body>
 </html>
