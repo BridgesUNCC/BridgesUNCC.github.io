@@ -1,0 +1,59 @@
+body {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+nav
+{
+    margin: 0;
+    padding: 0;
+    z-index: -10;
+    background-color: black;
+    font-size: 12px;
+    display:inline-block;
+    width: 100vw;
+    color: lightgrey;
+}
+nav span
+{
+        cursor:default;
+}
+nav a
+{
+  display:inline-block;
+  color: white;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+nav > *
+{
+        float:left;
+}
+nav > *:hover {background-color: black;}
+
+nav *.dropdown-contents
+{
+        display: none;
+        position:absolute;
+}
+ nav *.dropdown-contents *
+{
+  color: lightgrey;
+  display: block;
+  background-color: black;
+  box-shadow: 0px 8px 16px black;
+}
+
+/* Highlights drop menu options lighter blue on hover */
+ nav *.dropdown-contents *:hover
+ {
+     background-color: black
+ }
+
+/* Displays drop menu options on hover */
+ nav > *:hover .dropdown-contents
+ {
+     display: block;
+ }
