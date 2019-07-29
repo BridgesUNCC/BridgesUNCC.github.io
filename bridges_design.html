@@ -4,11 +4,16 @@
     <title>BRIDGES Design</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./bootstrap-3.3.6/dist/css/bootstrap.min.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="./bootstrap-3.3.6/dist/js/bootstrap.min.js"></script>
-    <script src="http://www.w3schools.com/lib/w3data.js"></script> 
-    <link rel="stylesheet" type="text/css" href="./bootstrap/bridges.css">
+
+    <!-- w3IncludeHTML() -->
+    <script src="https://www.w3schools.com/lib/w3data.js"></script>
+
+    <!-- all pages need those. -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/bridges.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/glyphicon.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/footer.css">
+    
   </head>
 
   <body>
@@ -19,46 +24,33 @@
       </script>
     </div>
     
-    <div class="container-fluid text-left">
-      <div class="row content">
-	<div class="col-md-2 sidenav">
-	  <div w3-include-html="./left_sidebar.html"> </div>
-	  <script>
-	    w3IncludeHTML(); 
-	  </script>
-	</div>
+    <h2 class="sep_heading">BRIDGES Design</h2>
+    <img src="./img/bridges_design.jpg"></img>
+    
+    <p>In our design the student use our client on their personal computer. This 
+      client program is run via a gradle build script which allows it to be integrated 
+      into any IDE. We chose to do this because we may have students who are using 
+      Eclipse, JGrasp or Netbeans. This client can connect to the server via an API 
+      key or log in credentials. </p>
+    
+    <p>The server provides three main functions; a crawler which gets data from 
+      data-sources, an API which provides access to data from the client, and a website 
+      where students can view their visualizations, change their log in credentials, or 
+      validate their account with data-sources. Each time the client makes a request for 
+      data from a data-source we determine whether they have provided us with the 
+      authentication to access the data-source. If they have provided authorized access, 
+      we make a request on their behalf; otherwise, we make a request using our public 
+      account. The public account will only be able to fetch from certain providers 
+      because we have a limit to the amount of requests we can make with the public 
+      account. All requests are cached to prevent request throttling by the 
+      data-source's API. After receiving data, students will be required to manipulate 
+      this data and then make a post request with this data to the server via the API. 
+      These posts will store their submission in a database and generate a link to a 
+      webpage, where the data in the database will be visualized using D3.
+    </p>
 
-    	<div class="col-md-8 text-left"> 
-	  <h3 class = "sep_heading">BRIDGES Design</h3>
-	  <img src = "./img/bridges_design.jpg" style = "vertical-align:middle"></img>
-
-	  <p>In our design the student use our client on their personal computer. This 
-	    client program is run via a gradle build script which allows it to be integrated 
-	    into any IDE. We chose to do this because we may have students who are using 
-	    Eclipse, JGrasp or Netbeans. This client can connect to the server via an API 
-	    key or log in credentials. </p>
-	  
-	  <p>The server provides three main functions; a crawler which gets data from 
-	    data-sources, an API which provides access to data from the client, and a website 
-	    where students can view their visualizations, change their log in credentials, or 
-	    validate their account with data-sources. Each time the client makes a request for 
-	    data from a data-source we determine whether they have provided us with the 
-	    authentication to access the data-source. If they have provided authorized access, 
-	    we make a request on their behalf; otherwise, we make a request using our public 
-	    account. The public account will only be able to fetch from certain providers 
-	    because we have a limit to the amount of requests we can make with the public 
-	    account. All requests are cached to prevent request throttling by the 
-	    data-source's API. After receiving data, students will be required to manipulate 
-	    this data and then make a post request with this data to the server via the API. 
-	    These posts will store their submission in a database and generate a link to a 
-	    webpage, where the data in the database will be visualized using D3.
-	  </p>
-
-	  <div w3-include-html="./footer.html"></div>
-	  
-	</div>
-      </div>
-    </div>
+    <div w3-include-html="./footer.html"></div>
+    
   </body>
 </html>
 
