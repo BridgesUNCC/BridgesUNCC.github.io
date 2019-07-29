@@ -11,16 +11,16 @@ nav
     font-size: 12px;
     display:inline-block;
     width: 100vw;
-    color: lightgrey;
 }
 nav span
 {
         cursor:default;
 }
+
 nav a
 {
   display: inline-block;
-  color: white;
+  color: grey;
   box-sizing: border-box;
 
   padding-top: 1.5em;
@@ -36,17 +36,20 @@ nav > *
 {
         float:left;
 }
-nav > *:hover {background-color: black;}
+nav > *:hover {
+    background-color: black;
+}
 
 nav *.dropdown-contents
 {
-        display: none;
-        position:absolute;
-	z-index: 10;
+    color: grey;
+    display: none;
+    position: absolute;
+    z-index: 10;
 }
  nav *.dropdown-contents *
 {
-  color: lightgrey;
+  color: grey;
   display: block;
   background-color: black;
   box-shadow: 0px 8px 16px black;
@@ -71,3 +74,8 @@ nav *.dropdown-contents
      padding: .1em;
      margin: auto;
  }
+
+ 
+nav *:hover {
+    color: white;
+}
