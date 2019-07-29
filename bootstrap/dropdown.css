@@ -20,7 +20,6 @@ nav span
 nav a
 {
   display: inline-block;
-  color: grey;
   box-sizing: border-box;
 
   padding-top: 1.5em;
@@ -42,40 +41,44 @@ nav > *:hover {
 
 nav *.dropdown-contents
 {
-    color: grey;
     display: none;
     position: absolute;
     z-index: 10;
 }
- nav *.dropdown-contents *
-{
-  color: grey;
+
+nav *.dropdown-contents * {
   display: block;
   background-color: black;
   box-shadow: 0px 8px 16px black;
-  padding: .3em;
+  padding-left: .5em;
+  padding-right: .5em;
+  padding-top: .1em;
+  padding-bottom: .1em;
 }
 
 /* Highlights drop menu options lighter blue on hover */
- nav *.dropdown-contents *:hover
- {
+nav *.dropdown-contents *:hover {
      background-color: black
  }
 
 /* Displays drop menu options on hover */
- nav > *:hover .dropdown-contents
- {
+nav > *:hover .dropdown-contents {
      display: block;
- }
+}
 
 
- .logo a, .logo img, .logo span {
-     width: 70px;
-     padding: .1em;
-     margin: auto;
- }
+.logo a, .logo img, .logo span {
+    width: 70px;
+    padding: .1em;
+    margin: auto;
+}
 
- 
+nav *.dropdown-contents, nav *.dropdown-contents *, nav a
+{
+    color: #AAAAAA;
+    font-size: 120%;
+}
+
 nav *:hover {
     color: white;
 }
