@@ -5,19 +5,25 @@ body {
 
 nav
 {
+    /* A bar at the top most of the screen, */
     margin: 0;
     padding: 0;
+    width: 100vw;
+
+    /*A single block going from left ot right*/
+    display: inline-block;
+
     background-color: black;
     font-size: 12px;
-    display:inline-block;
-    width: 100vw;
+
 }
+
 nav span
 {
         cursor:default;
 }
 
-nav a
+nav a, nav li
 {
   display: inline-block;
   box-sizing: border-box;
@@ -35,6 +41,7 @@ nav > *
 {
         float:left;
 }
+
 nav > *:hover {
     background-color: black;
 }
@@ -56,29 +63,43 @@ nav *.dropdown-contents * {
   padding-bottom: .1em;
 }
 
-/* Highlights drop menu options lighter blue on hover */
-nav *.dropdown-contents *:hover {
-     background-color: black
- }
+/* Highlights drop menu when hover */
+nav  *:hover {
+    background-color: #222222;
+}
 
 /* Displays drop menu options on hover */
 nav > *:hover .dropdown-contents {
      display: block;
 }
 
-
-.logo a, .logo img, .logo span {
+.logo img {
     width: 70px;
-    padding: .1em;
-    margin: auto;
 }
 
-nav *.dropdown-contents, nav *.dropdown-contents *, nav a
+.logo a, .logo span {
+    padding: .5em;
+}
+/* Disable hover on logo*/
+.logo *:hover {
+    background-color: black;
+}
+
+nav *.dropdown-contents, nav *.dropdown-contents *, nav a, nav li, nav ul
 {
+    display-list: none;
     color: #AAAAAA;
-    font-size: 120%;
+}
+
+nav a
+{
+    font-size: 110%;
 }
 
 nav *:hover {
     color: white;
+}
+
+nav ul {
+    margin: 0;
 }
