@@ -19,11 +19,17 @@ nav span
 }
 nav a
 {
-  display:inline-block;
+  display: inline-block;
   color: white;
   box-sizing: border-box;
-  padding: 8px 16px;
+
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  padding-left: 1em;
+  padding-right: 1em;
   text-decoration: none;
+
+  vertical-align: middle;
 }
 
 nav > *
@@ -44,6 +50,7 @@ nav *.dropdown-contents
   display: block;
   background-color: black;
   box-shadow: 0px 8px 16px black;
+  padding: .3em;
 }
 
 /* Highlights drop menu options lighter blue on hover */
@@ -56,4 +63,11 @@ nav *.dropdown-contents
  nav > *:hover .dropdown-contents
  {
      display: block;
+ }
+
+
+ .logo a, .logo img, .logo span {
+     width: 70px;
+     padding: .1em;
+     margin: auto;
  }
