@@ -66,7 +66,7 @@ struct \hyperlink{structbridges_1_1datastructure_1_1_array3_d_1_1_bracket__helpe
 \item 
 virtual \hyperlink{classbridges_1_1datastructure_1_1_array3_d_afad3212fe6c2954859a7ea6dce7a739c}{$\sim$\+Array3D} ()
 \item 
-\hyperlink{classbridges_1_1datastructure_1_1_array3_d_afcda227020737d25a23774fc9f1a5259}{Array3D} (int cols, int rows, int slices)
+\hyperlink{classbridges_1_1datastructure_1_1_array3_d_af2d55bb9cf9057b9d5af4a24c6dc3173}{Array3D} (int slices, int rows, int columns)
 \item 
 int \hyperlink{classbridges_1_1datastructure_1_1_array3_d_a73aebe1098512ca4196cb8da0eb493fe}{get\+Num\+Rows} ()
 \item 
@@ -74,11 +74,11 @@ int \hyperlink{classbridges_1_1datastructure_1_1_array3_d_acbd00c0c4448ff7ff03c7
 \item 
 int \hyperlink{classbridges_1_1datastructure_1_1_array3_d_ad2fb0a0b8be702944c25b6fc807263f7}{get\+Num\+Slices} ()
 \item 
-\hyperlink{classbridges_1_1datastructure_1_1_element}{Element}$<$ E $>$ \& \hyperlink{classbridges_1_1datastructure_1_1_array3_d_abfe7d227f22474d78cf83f468d2ee111}{get\+Element} (int x, int y, int z)
+\hyperlink{classbridges_1_1datastructure_1_1_element}{Element}$<$ E $>$ \& \hyperlink{classbridges_1_1datastructure_1_1_array3_d_a1e4a2bea4f3a292289cfc0a4d530108f}{get\+Element} (int slice, int row, int col)
 \item 
-\hyperlink{classbridges_1_1datastructure_1_1_element}{Element}$<$ E $>$ const  \& \hyperlink{classbridges_1_1datastructure_1_1_array3_d_afc99aa28fe5f194af6759fbfdcfd199a}{get\+Element} (int x, int y, int z) const
+\hyperlink{classbridges_1_1datastructure_1_1_element}{Element}$<$ E $>$ const  \& \hyperlink{classbridges_1_1datastructure_1_1_array3_d_a8f9d33a89196ef13839f30334b25476d}{get\+Element} (int slice, int row, int col) const
 \item 
-void \hyperlink{classbridges_1_1datastructure_1_1_array3_d_aadcfac64b2c3eb242658f94580582c42}{set\+Element} (int x\+\_\+indx, int y\+\_\+indx, int z\+\_\+indx, \hyperlink{classbridges_1_1datastructure_1_1_element}{Element}$<$ E $>$ el)
+void \hyperlink{classbridges_1_1datastructure_1_1_array3_d_aaad4c68544d51cade79f318230ab2bcf}{set\+Element} (int slice, int row, int col, \hyperlink{classbridges_1_1datastructure_1_1_element}{Element}$<$ E $>$ el)
 \item 
 \hyperlink{structbridges_1_1datastructure_1_1_array3_d_1_1_bracket__helper}{Bracket\+\_\+helper} \hyperlink{classbridges_1_1datastructure_1_1_array3_d_a0b285b00e5d152d2968bee6b3aaf9349}{operator\mbox{[}$\,$\mbox{]}} (int index)
 \begin{DoxyCompactList}\small\item\em enables using the bracket \mbox{[}\mbox{]} operator \end{DoxyCompactList}\item 
@@ -95,12 +95,12 @@ void \hyperlink{classbridges_1_1datastructure_1_1_array3_d_aadcfac64b2c3eb242658
 {\footnotesize\ttfamily template$<$typename E$>$ \\
 virtual \hyperlink{classbridges_1_1datastructure_1_1_array3_d}{bridges\+::datastructure\+::\+Array3D}$<$ E $>$\+::$\sim$\hyperlink{classbridges_1_1datastructure_1_1_array3_d}{Array3D} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
-\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_array3_d_afcda227020737d25a23774fc9f1a5259}\label{classbridges_1_1datastructure_1_1_array3_d_afcda227020737d25a23774fc9f1a5259}} 
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_array3_d_af2d55bb9cf9057b9d5af4a24c6dc3173}\label{classbridges_1_1datastructure_1_1_array3_d_af2d55bb9cf9057b9d5af4a24c6dc3173}} 
 \index{bridges\+::datastructure\+::\+Array3D@{bridges\+::datastructure\+::\+Array3D}!Array3D@{Array3D}}
 \index{Array3D@{Array3D}!bridges\+::datastructure\+::\+Array3D@{bridges\+::datastructure\+::\+Array3D}}
 \subsubsection{\texorpdfstring{Array3\+D()}{Array3D()}}
 {\footnotesize\ttfamily template$<$typename E$>$ \\
-\hyperlink{classbridges_1_1datastructure_1_1_array3_d}{bridges\+::datastructure\+::\+Array3D}$<$ E $>$\+::\hyperlink{classbridges_1_1datastructure_1_1_array3_d}{Array3D} (\begin{DoxyParamCaption}\item[{int}]{cols,  }\item[{int}]{rows,  }\item[{int}]{slices }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\hyperlink{classbridges_1_1datastructure_1_1_array3_d}{bridges\+::datastructure\+::\+Array3D}$<$ E $>$\+::\hyperlink{classbridges_1_1datastructure_1_1_array3_d}{Array3D} (\begin{DoxyParamCaption}\item[{int}]{slices,  }\item[{int}]{rows,  }\item[{int}]{columns }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 builds a 3D array. 
 \begin{DoxyParams}{Parameters}
@@ -114,47 +114,47 @@ builds a 3D array.
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_array3_d_abfe7d227f22474d78cf83f468d2ee111}\label{classbridges_1_1datastructure_1_1_array3_d_abfe7d227f22474d78cf83f468d2ee111}} 
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_array3_d_a1e4a2bea4f3a292289cfc0a4d530108f}\label{classbridges_1_1datastructure_1_1_array3_d_a1e4a2bea4f3a292289cfc0a4d530108f}} 
 \index{bridges\+::datastructure\+::\+Array3D@{bridges\+::datastructure\+::\+Array3D}!get\+Element@{get\+Element}}
 \index{get\+Element@{get\+Element}!bridges\+::datastructure\+::\+Array3D@{bridges\+::datastructure\+::\+Array3D}}
 \subsubsection{\texorpdfstring{get\+Element()}{getElement()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename E$>$ \\
-\hyperlink{classbridges_1_1datastructure_1_1_element}{Element}$<$E$>$\& \hyperlink{classbridges_1_1datastructure_1_1_array3_d}{bridges\+::datastructure\+::\+Array3D}$<$ E $>$\+::get\+Element (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\hyperlink{classbridges_1_1datastructure_1_1_element}{Element}$<$E$>$\& \hyperlink{classbridges_1_1datastructure_1_1_array3_d}{bridges\+::datastructure\+::\+Array3D}$<$ E $>$\+::get\+Element (\begin{DoxyParamCaption}\item[{int}]{slice,  }\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Get the object at (x, y, z) for 3D arrays
+Get the object at (slice, row, col) for 3D arrays
 
 
 \begin{DoxyParams}{Parameters}
-{\em x} & -\/ column index \\
+{\em slice} & -\/ slice index \\
 \hline
-{\em y} & -\/ row index \\
+{\em row} & -\/ row index \\
 \hline
-{\em z} & -\/ slice index\\
+{\em col} & -\/ column index\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Element$<$\+E$>$ object at x, y, z 
+Element$<$\+E$>$ object at slice, row, col 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_array3_d_afc99aa28fe5f194af6759fbfdcfd199a}\label{classbridges_1_1datastructure_1_1_array3_d_afc99aa28fe5f194af6759fbfdcfd199a}} 
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_array3_d_a8f9d33a89196ef13839f30334b25476d}\label{classbridges_1_1datastructure_1_1_array3_d_a8f9d33a89196ef13839f30334b25476d}} 
 \index{bridges\+::datastructure\+::\+Array3D@{bridges\+::datastructure\+::\+Array3D}!get\+Element@{get\+Element}}
 \index{get\+Element@{get\+Element}!bridges\+::datastructure\+::\+Array3D@{bridges\+::datastructure\+::\+Array3D}}
 \subsubsection{\texorpdfstring{get\+Element()}{getElement()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$typename E$>$ \\
-\hyperlink{classbridges_1_1datastructure_1_1_element}{Element}$<$E$>$ const\& \hyperlink{classbridges_1_1datastructure_1_1_array3_d}{bridges\+::datastructure\+::\+Array3D}$<$ E $>$\+::get\+Element (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{z }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+\hyperlink{classbridges_1_1datastructure_1_1_element}{Element}$<$E$>$ const\& \hyperlink{classbridges_1_1datastructure_1_1_array3_d}{bridges\+::datastructure\+::\+Array3D}$<$ E $>$\+::get\+Element (\begin{DoxyParamCaption}\item[{int}]{slice,  }\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
-Get the object at (x, y, z) for 3D arrays
+Get the object at (slice, rows, col) for 3D arrays
 
 
 \begin{DoxyParams}{Parameters}
-{\em x} & column index \\
+{\em col} & column index \\
 \hline
-{\em y} & row index \\
+{\em row} & row index \\
 \hline
-{\em z} & slice index\\
+{\em slice} & slice index\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the \hyperlink{classbridges_1_1datastructure_1_1_element}{Element} at x, y, z 
+the \hyperlink{classbridges_1_1datastructure_1_1_element}{Element} at (slice, rows, col) 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1datastructure_1_1_array3_d_acbd00c0c4448ff7ff03c76bc0701f602}\label{classbridges_1_1datastructure_1_1_array3_d_acbd00c0c4448ff7ff03c76bc0701f602}} 
 \index{bridges\+::datastructure\+::\+Array3D@{bridges\+::datastructure\+::\+Array3D}!get\+Num\+Columns@{get\+Num\+Columns}}
@@ -208,22 +208,22 @@ enables using the bracket \mbox{[}\mbox{]} operator
 
 enables using the bracket \mbox{[}\mbox{]} operator 
 
-\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_array3_d_aadcfac64b2c3eb242658f94580582c42}\label{classbridges_1_1datastructure_1_1_array3_d_aadcfac64b2c3eb242658f94580582c42}} 
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_array3_d_aaad4c68544d51cade79f318230ab2bcf}\label{classbridges_1_1datastructure_1_1_array3_d_aaad4c68544d51cade79f318230ab2bcf}} 
 \index{bridges\+::datastructure\+::\+Array3D@{bridges\+::datastructure\+::\+Array3D}!set\+Element@{set\+Element}}
 \index{set\+Element@{set\+Element}!bridges\+::datastructure\+::\+Array3D@{bridges\+::datastructure\+::\+Array3D}}
 \subsubsection{\texorpdfstring{set\+Element()}{setElement()}}
 {\footnotesize\ttfamily template$<$typename E$>$ \\
-void \hyperlink{classbridges_1_1datastructure_1_1_array3_d}{bridges\+::datastructure\+::\+Array3D}$<$ E $>$\+::set\+Element (\begin{DoxyParamCaption}\item[{int}]{x\+\_\+indx,  }\item[{int}]{y\+\_\+indx,  }\item[{int}]{z\+\_\+indx,  }\item[{\hyperlink{classbridges_1_1datastructure_1_1_element}{Element}$<$ E $>$}]{el }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void \hyperlink{classbridges_1_1datastructure_1_1_array3_d}{bridges\+::datastructure\+::\+Array3D}$<$ E $>$\+::set\+Element (\begin{DoxyParamCaption}\item[{int}]{slice,  }\item[{int}]{row,  }\item[{int}]{col,  }\item[{\hyperlink{classbridges_1_1datastructure_1_1_element}{Element}$<$ E $>$}]{el }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Set the object at index x, y, z -\/ 3D array
+Set the object at index slice, row, col -\/ 3D array
 
 
 \begin{DoxyParams}{Parameters}
-{\em x\+\_\+indx} & col index into the array \\
+{\em slice} & slice index into the array \\
 \hline
-{\em y\+\_\+indx} & row index into the array \\
+{\em col} & column index into the array \\
 \hline
-{\em z\+\_\+indx} & slice index into the array \\
+{\em row} & row index into the array \\
 \hline
 {\em el} & -\/ \hyperlink{classbridges_1_1datastructure_1_1_element}{Element} object \\
 \hline

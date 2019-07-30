@@ -38,9 +38,9 @@ Example Tutorial at ~\newline
 \item 
 \hyperlink{classbridges_1_1base_1_1_array2_d_a51fab452b4705ce593199b90cee2a103}{Array2D} (int rows, int cols)
 \item 
-\hyperlink{classbridges_1_1base_1_1_element}{Element}$<$ E $>$ \hyperlink{classbridges_1_1base_1_1_array2_d_a65797bf0a9c176ad18fba85cdf6470bd}{get\+Element} (int x, int y)
+\hyperlink{classbridges_1_1base_1_1_element}{Element}$<$ E $>$ \hyperlink{classbridges_1_1base_1_1_array2_d_a592b728c34d26a16e25daa1549073f51}{get\+Element} (int row, int col)
 \item 
-void \hyperlink{classbridges_1_1base_1_1_array2_d_a093f0b451def8c5229fe1bed22658fb1}{set\+Element} (int x, int y, \hyperlink{classbridges_1_1base_1_1_element}{Element}$<$ E $>$ el)
+void \hyperlink{classbridges_1_1base_1_1_array2_d_a4f29fd9f736fdf46988ef6b3400684c3}{set\+Element} (int row, int col, \hyperlink{classbridges_1_1base_1_1_element}{Element}$<$ E $>$ el)
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
@@ -68,37 +68,37 @@ Create an array object with the specified dimensions
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classbridges_1_1base_1_1_array2_d_a65797bf0a9c176ad18fba85cdf6470bd}\label{classbridges_1_1base_1_1_array2_d_a65797bf0a9c176ad18fba85cdf6470bd}} 
+\mbox{\Hypertarget{classbridges_1_1base_1_1_array2_d_a592b728c34d26a16e25daa1549073f51}\label{classbridges_1_1base_1_1_array2_d_a592b728c34d26a16e25daa1549073f51}} 
 \index{bridges\+::base\+::\+Array2D@{bridges\+::base\+::\+Array2D}!get\+Element@{get\+Element}}
 \index{get\+Element@{get\+Element}!bridges\+::base\+::\+Array2D@{bridges\+::base\+::\+Array2D}}
 \subsubsection{\texorpdfstring{get\+Element()}{getElement()}}
-{\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_element}{Element}$<$E$>$ \hyperlink{classbridges_1_1base_1_1_array2_d}{bridges.\+base.\+Array2D}$<$ E $>$.get\+Element (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_element}{Element}$<$E$>$ \hyperlink{classbridges_1_1base_1_1_array2_d}{bridges.\+base.\+Array2D}$<$ E $>$.get\+Element (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})}
 
 Get the object at index x, y -- for 2D arrays
 
 
 \begin{DoxyParams}{Parameters}
-{\em x} & -\/ column index \\
+{\em row} & -\/ row index \\
 \hline
-{\em y} & -\/ row index \\
+{\em col} & -\/ column index \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Element$<$\+E$>$ object at x, y 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classbridges_1_1base_1_1_array2_d_a093f0b451def8c5229fe1bed22658fb1}\label{classbridges_1_1base_1_1_array2_d_a093f0b451def8c5229fe1bed22658fb1}} 
+\mbox{\Hypertarget{classbridges_1_1base_1_1_array2_d_a4f29fd9f736fdf46988ef6b3400684c3}\label{classbridges_1_1base_1_1_array2_d_a4f29fd9f736fdf46988ef6b3400684c3}} 
 \index{bridges\+::base\+::\+Array2D@{bridges\+::base\+::\+Array2D}!set\+Element@{set\+Element}}
 \index{set\+Element@{set\+Element}!bridges\+::base\+::\+Array2D@{bridges\+::base\+::\+Array2D}}
 \subsubsection{\texorpdfstring{set\+Element()}{setElement()}}
-{\footnotesize\ttfamily void \hyperlink{classbridges_1_1base_1_1_array2_d}{bridges.\+base.\+Array2D}$<$ E $>$.set\+Element (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{\hyperlink{classbridges_1_1base_1_1_element}{Element}$<$ E $>$}]{el }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void \hyperlink{classbridges_1_1base_1_1_array2_d}{bridges.\+base.\+Array2D}$<$ E $>$.set\+Element (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col,  }\item[{\hyperlink{classbridges_1_1base_1_1_element}{Element}$<$ E $>$}]{el }\end{DoxyParamCaption})}
 
 Set the input object at x, y -\/ 2D arrays
 
 
 \begin{DoxyParams}{Parameters}
-{\em x} & column index into the array \\
+{\em row} & row index into the array \\
 \hline
-{\em y} & row index into the array \\
+{\em col} & index index into the array \\
 \hline
 {\em el} & element object to be assigned at \textquotesingle{}indx\textquotesingle{} \\
 \hline

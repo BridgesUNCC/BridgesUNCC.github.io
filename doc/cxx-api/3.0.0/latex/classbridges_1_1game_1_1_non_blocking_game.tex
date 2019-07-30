@@ -40,13 +40,13 @@ For this reason the simplest game that can run is created by\+:
 
 This game does not do anything, but it is the minimal code that will run a game. Note that the constructor of my\+\_\+game passes 3 parameters to the constructor of \hyperlink{classbridges_1_1game_1_1_non_blocking_game_a3226aa7e7ff129e916f4bd5aabcb2e72}{Non\+Blocking\+Game()}. These three parameters are the classic parameters that the constructor of \hyperlink{classbridges_1_1_bridges}{bridges\+::\+Bridges} takes (\hyperlink{namespacebridges_1_1game_ab9a19c7ab6e2ebac2f95180e21733487ab2f5ff47436671b6e533d8dc3614845d}{e.\+g}., assignment\+ID, username, apikey).
 
-To change the board, two functions are used. \hyperlink{classbridges_1_1game_1_1_game_base_ab667bbca1c81e5fb3aa8d81d70fe8cd2}{set\+B\+G\+Color()} change the background color of a particular cell. It takes three parameters, the first two identify the cell of the board to change, and the last one is a color from a color palette provided by Named\+Color. draw\+Symbol() takes four parameters, the first two identify the cell of the board to change, the third is a symbol from a symbol palette provided by Named\+Symbol, the fourth is the color that symbol shold be drawn in and provided by Named\+Color.
+To change the board, two functions are used. \hyperlink{classbridges_1_1game_1_1_game_base_ab667bbca1c81e5fb3aa8d81d70fe8cd2}{set\+B\+G\+Color()} change the background color of a particular cell. It takes three parameters, the first two identify the cell of the board to change, and the last one is a color from a color palette provided by Named\+Color. \hyperlink{classbridges_1_1game_1_1_game_base_a415fa8f70bef364dfa966f2a86048901}{draw\+Symbol()} takes four parameters, the first two identify the cell of the board to change, the third is a symbol from a symbol palette provided by Named\+Symbol, the fourth is the color that symbol shold be drawn in and provided by Named\+Color.
 
 For instance, a very simple \hyperlink{classbridges_1_1game_1_1_game_base_a9b6eb6fa7fceaac09d204b549164037f}{initialize()} could look like\+: 
 \begin{DoxyCode}
 \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \hyperlink{classbridges_1_1game_1_1_game_base_a9b6eb6fa7fceaac09d204b549164037f}{initialize}()\textcolor{keyword}{ override }\{
   \hyperlink{classbridges_1_1game_1_1_game_base_ab667bbca1c81e5fb3aa8d81d70fe8cd2}{setBGColor}(0, 0, \hyperlink{namespacebridges_1_1game_afaa832a4322b25b6a4ebfba832f10f26}{NamedColor}.lightsalmon);
-  drawSymbol(0, 0, \hyperlink{namespacebridges_1_1game_ab9a19c7ab6e2ebac2f95180e21733487}{NamedSymbol}.sword, \hyperlink{namespacebridges_1_1game_afaa832a4322b25b6a4ebfba832f10f26}{NamedColor}.blue);
+  \hyperlink{classbridges_1_1game_1_1_game_base_a415fa8f70bef364dfa966f2a86048901}{drawSymbol}(0, 0, \hyperlink{namespacebridges_1_1game_ab9a19c7ab6e2ebac2f95180e21733487}{NamedSymbol}.sword, \hyperlink{namespacebridges_1_1game_afaa832a4322b25b6a4ebfba832f10f26}{NamedColor}.blue);
 \}
 \end{DoxyCode}
 
@@ -59,7 +59,7 @@ my\_game() : \hyperlink{classbridges_1_1game_1_1_non_blocking_game_a3226aa7e7ff1
 \end{DoxyCode}
 
 
-The bridges game engine will call the Game\+Loop() function at each frame of the game. You can write this function to modify the state of the game board using \hyperlink{classbridges_1_1game_1_1_game_base_ab667bbca1c81e5fb3aa8d81d70fe8cd2}{set\+B\+G\+Color()} and draw\+Symbol(). For instance, the following Game\+Loop() will color the board randomly one cell at a time.
+The bridges game engine will call the Game\+Loop() function at each frame of the game. You can write this function to modify the state of the game board using \hyperlink{classbridges_1_1game_1_1_game_base_ab667bbca1c81e5fb3aa8d81d70fe8cd2}{set\+B\+G\+Color()} and \hyperlink{classbridges_1_1game_1_1_game_base_a415fa8f70bef364dfa966f2a86048901}{draw\+Symbol()}. For instance, the following Game\+Loop() will color the board randomly one cell at a time.
 
 
 \begin{DoxyCode}

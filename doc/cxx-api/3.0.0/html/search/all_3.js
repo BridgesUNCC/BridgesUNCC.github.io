@@ -40,8 +40,7 @@ var searchData=
   ['dodgerblue',['dodgerblue',['../namespacebridges_1_1game.html#afaa832a4322b25b6a4ebfba832f10f26a5b5dda33a0ba88dc48e289ae551b2c31',1,'bridges::game']]],
   ['domain',['domain',['../classbridges_1_1datastructure_1_1_symbol_collection.html#a5e14cae08319875f60d6bdf7f8c880ab',1,'bridges::datastructure::SymbolCollection']]],
   ['donut',['donut',['../namespacebridges_1_1game.html#ab9a19c7ab6e2ebac2f95180e21733487a81bdd90fd4bc5a1c9b7b603014ff1388',1,'bridges::game']]],
-  ['drawobject',['drawObject',['../classbridges_1_1game_1_1_game_base.html#a3c76a4aac9c00a7ad54176f9e4d628ff',1,'bridges::game::GameBase']]],
-  ['drawsymbol',['drawSymbol',['../classbridges_1_1game_1_1_game_grid.html#a32c5c19c1dff8d50001d2aa57cbda70b',1,'bridges::game::GameGrid']]],
+  ['drawsymbol',['drawSymbol',['../classbridges_1_1game_1_1_game_base.html#a415fa8f70bef364dfa966f2a86048901',1,'bridges::game::GameBase::drawSymbol()'],['../classbridges_1_1game_1_1_game_grid.html#a32c5c19c1dff8d50001d2aa57cbda70b',1,'bridges::game::GameGrid::drawSymbol()']]],
   ['drink',['drink',['../namespacebridges_1_1game.html#ab9a19c7ab6e2ebac2f95180e21733487a0b18a3d7b9c43ff1750d2baa4606b8d0',1,'bridges::game']]],
   ['droplet',['droplet',['../namespacebridges_1_1game.html#ab9a19c7ab6e2ebac2f95180e21733487ad62950966c6b92350ad2edb75e18e64b',1,'bridges::game']]],
   ['duck',['duck',['../namespacebridges_1_1game.html#ab9a19c7ab6e2ebac2f95180e21733487a36846677e3a8f4c0b16d8bdf8ef18608',1,'bridges::game']]]

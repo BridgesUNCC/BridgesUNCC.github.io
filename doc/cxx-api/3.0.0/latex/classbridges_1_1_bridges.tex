@@ -9,8 +9,14 @@
 \subsection{Detailed Description}
 This class contains methods to connect and transmit a user\textquotesingle{}s data structure representation to the \hyperlink{classbridges_1_1_bridges}{Bridges} server. 
 
+If the F\+O\+R\+C\+E\+\_\+\+B\+R\+I\+D\+G\+E\+S\+\_\+\+A\+P\+I\+K\+EY environment variable is set, use the environment variable as A\+P\+Ikey in all cases.
+
+If the F\+O\+R\+C\+E\+\_\+\+B\+R\+I\+D\+G\+E\+S\+\_\+\+U\+S\+E\+R\+N\+A\+ME environment variable is set, use the environment variable as username in all cases.
+
+If the F\+O\+R\+C\+E\+\_\+\+B\+R\+I\+D\+G\+E\+S\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+NT environment variable is set, use the environment variable as assignment number in all cases.
+
 \begin{DoxyAuthor}{Author}
-Kalpathi Subramanian, Dakota Carmer 
+Kalpathi Subramanian, Dakota Carmer, Erik Saule 
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
 7/26/15, 6/5/17, 10/30/18, 7/12/19 
@@ -30,12 +36,12 @@ void \hyperlink{classbridges_1_1_bridges_a69aca37ab2729d0345e0549d7baf0423}{set\
 \item 
 const string \& \hyperlink{classbridges_1_1_bridges_ad16be2d94936fd555bc05f58c8c21f50}{get\+User\+Name} () const
 \item 
-void \hyperlink{classbridges_1_1_bridges_ab0b00033e54d25968f5ecb61c31c7de3}{set\+User\+Name} (const string \&name)
+void \hyperlink{classbridges_1_1_bridges_a383c5c1d3c85541f466e0cb60dde1c29}{set\+User\+Name} (string name)
 \begin{DoxyCompactList}\small\item\em Set user name. \end{DoxyCompactList}\item 
 const string \& \hyperlink{classbridges_1_1_bridges_a9a44f38d883859ef19c94ce17eec43b5}{get\+Api\+Key} () const
 \item 
-void \hyperlink{classbridges_1_1_bridges_a3f9f21464393b8fce79a77809c6aa17e}{set\+Api\+Key} (const string \&key)
-\item 
+void \hyperlink{classbridges_1_1_bridges_a589e77031841f06a2f32d5b29e25d4af}{set\+Api\+Key} (string key)
+\begin{DoxyCompactList}\small\item\em Set A\+PI key credentials. \end{DoxyCompactList}\item 
 unsigned int \hyperlink{classbridges_1_1_bridges_aa45b4ba781b5cbecc8cb04c76dfd527a}{get\+Assignment} () const
 \item 
 void \hyperlink{classbridges_1_1_bridges_aca7a68fb8cc0d1bec81656dfa77b1162}{set\+Assignment} (unsigned int num)
@@ -89,6 +95,10 @@ void \hyperlink{classbridges_1_1_bridges_a2806e395134614cdd6327400b53d28ad}{visu
 
 constructor to bridges 
 
+If the F\+O\+R\+C\+E\+\_\+\+B\+R\+I\+D\+G\+E\+S\+\_\+\+A\+P\+I\+K\+EY environment variable is set, use the environment variable as A\+P\+Ikey in all cases.
+
+If the F\+O\+R\+C\+E\+\_\+\+B\+R\+I\+D\+G\+E\+S\+\_\+\+U\+S\+E\+R\+N\+A\+ME environment variable is set, use the environment variable as username in all cases.
+
 
 \begin{DoxyParams}{Parameters}
 {\em name} & \hyperlink{classbridges_1_1_bridges}{Bridges} username \\
@@ -105,6 +115,12 @@ constructor to bridges
 
 
 constructor to bridges 
+
+If the F\+O\+R\+C\+E\+\_\+\+B\+R\+I\+D\+G\+E\+S\+\_\+\+A\+P\+I\+K\+EY environment variable is set, use the environment variable as A\+P\+Ikey in all cases.
+
+If the F\+O\+R\+C\+E\+\_\+\+B\+R\+I\+D\+G\+E\+S\+\_\+\+U\+S\+E\+R\+N\+A\+ME environment variable is set, use the environment variable as username in all cases.
+
+If the F\+O\+R\+C\+E\+\_\+\+B\+R\+I\+D\+G\+E\+S\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+NT environment variable is set, use the environment variable as assignment number in all cases.
 
 
 \begin{DoxyParams}{Parameters}
@@ -206,6 +222,12 @@ flag indicating if J\+S\+ON should be printed upon visualization
 
 Sets \hyperlink{classbridges_1_1_bridges}{Bridges} assignment and credential information. 
 
+If the F\+O\+R\+C\+E\+\_\+\+B\+R\+I\+D\+G\+E\+S\+\_\+\+A\+P\+I\+K\+EY environment variable is set, use the environment variable as A\+P\+Ikey in all cases.
+
+If the F\+O\+R\+C\+E\+\_\+\+B\+R\+I\+D\+G\+E\+S\+\_\+\+U\+S\+E\+R\+N\+A\+ME environment variable is set, use the environment variable as username in all cases.
+
+If the F\+O\+R\+C\+E\+\_\+\+B\+R\+I\+D\+G\+E\+S\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+NT environment variable is set, use the environment variable as assignment number in all cases.
+
 
 \begin{DoxyParams}{Parameters}
 {\em num} & The assignment number \\
@@ -215,13 +237,19 @@ Sets \hyperlink{classbridges_1_1_bridges}{Bridges} assignment and credential inf
 {\em username} & The username on the B\+R\+I\+D\+G\+ES server \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classbridges_1_1_bridges_a3f9f21464393b8fce79a77809c6aa17e}\label{classbridges_1_1_bridges_a3f9f21464393b8fce79a77809c6aa17e}} 
+\mbox{\Hypertarget{classbridges_1_1_bridges_a589e77031841f06a2f32d5b29e25d4af}\label{classbridges_1_1_bridges_a589e77031841f06a2f32d5b29e25d4af}} 
 \index{bridges\+::\+Bridges@{bridges\+::\+Bridges}!set\+Api\+Key@{set\+Api\+Key}}
 \index{set\+Api\+Key@{set\+Api\+Key}!bridges\+::\+Bridges@{bridges\+::\+Bridges}}
 \subsubsection{\texorpdfstring{set\+Api\+Key()}{setApiKey()}}
-{\footnotesize\ttfamily void bridges\+::\+Bridges\+::set\+Api\+Key (\begin{DoxyParamCaption}\item[{const string \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void bridges\+::\+Bridges\+::set\+Api\+Key (\begin{DoxyParamCaption}\item[{string}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Set A\+PI key credentials 
+
+
+Set A\+PI key credentials. 
+
+If the F\+O\+R\+C\+E\+\_\+\+B\+R\+I\+D\+G\+E\+S\+\_\+\+A\+P\+I\+K\+EY environment variable is set, use the environment variable as key and disregard the parameter.
+
+
 \begin{DoxyParams}{Parameters}
 {\em key} & A\+PI key to set for user \\
 \hline
@@ -233,6 +261,8 @@ Set A\+PI key credentials
 {\footnotesize\ttfamily void bridges\+::\+Bridges\+::set\+Assignment (\begin{DoxyParamCaption}\item[{unsigned int}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Set the assignment number
+
+If the F\+O\+R\+C\+E\+\_\+\+B\+R\+I\+D\+G\+E\+S\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+NT environment variable is set, use the environment variable as assignment number in all cases.
 
 
 \begin{DoxyParams}{Parameters}
@@ -328,15 +358,17 @@ Set title of visualization
 {\em t} & title of visualization \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classbridges_1_1_bridges_ab0b00033e54d25968f5ecb61c31c7de3}\label{classbridges_1_1_bridges_ab0b00033e54d25968f5ecb61c31c7de3}} 
+\mbox{\Hypertarget{classbridges_1_1_bridges_a383c5c1d3c85541f466e0cb60dde1c29}\label{classbridges_1_1_bridges_a383c5c1d3c85541f466e0cb60dde1c29}} 
 \index{bridges\+::\+Bridges@{bridges\+::\+Bridges}!set\+User\+Name@{set\+User\+Name}}
 \index{set\+User\+Name@{set\+User\+Name}!bridges\+::\+Bridges@{bridges\+::\+Bridges}}
 \subsubsection{\texorpdfstring{set\+User\+Name()}{setUserName()}}
-{\footnotesize\ttfamily void bridges\+::\+Bridges\+::set\+User\+Name (\begin{DoxyParamCaption}\item[{const string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void bridges\+::\+Bridges\+::set\+User\+Name (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Set user name. 
+
+If the F\+O\+R\+C\+E\+\_\+\+B\+R\+I\+D\+G\+E\+S\+\_\+\+U\+S\+E\+R\+N\+A\+ME environment variable is set, use the environment variable as username in all cases.
 
 
 \begin{DoxyParams}{Parameters}

@@ -31,6 +31,8 @@ Array\+List$<$ \hyperlink{classbridges_1_1data__src__dependent_1_1_cancer_incide
 \item 
 \hyperlink{classbridges_1_1data__src__dependent_1_1_osm_data}{bridges.\+data\+\_\+src\+\_\+dependent.\+Osm\+Data} \hyperlink{classbridges_1_1connect_1_1_data_source_ae82f6a4feff0af28f4aae55986e1560c}{get\+Osm\+Data} (String location, String level)  throws I\+O\+Exception 
 \item 
+\hyperlink{classbridges_1_1data__src__dependent_1_1_osm_data}{bridges.\+data\+\_\+src\+\_\+dependent.\+Osm\+Data} \hyperlink{classbridges_1_1connect_1_1_data_source_aceb702861d8db5e5540f4d459153b0a8}{get\+Osm\+Data\+Old} (String location)  throws I\+O\+Exception 
+\item 
 \hyperlink{classbridges_1_1data__src__dependent_1_1_osm_data}{bridges.\+data\+\_\+src\+\_\+dependent.\+Osm\+Data} \hyperlink{classbridges_1_1connect_1_1_data_source_af68a95ea0608f5bcf0be9e336f748d76}{get\+Osm\+Data} (double min\+Lat, double min\+Lon, double max\+Lat, double max\+Lon, String level)  throws I\+O\+Exception 
 \item 
 String \hyperlink{classbridges_1_1connect_1_1_data_source_af2f6cd7172acb64b2ba49f134b5391f8}{get\+Assignment\+J\+S\+ON} (String user, int assignment, int subassignment)  throws I\+O\+Exception 
@@ -268,6 +270,29 @@ Generates Open Street Map U\+RL request for a given set of coordinates and retur
 {\em max\+Lon} & maximum longitude value for the area requested \\
 \hline
 {\em level} & level of road detail on requested map \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Osm\+Data vertices and edges of Open Street Map data 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & If there is an error parsing response from server or is an invalid location name \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classbridges_1_1connect_1_1_data_source_aceb702861d8db5e5540f4d459153b0a8}\label{classbridges_1_1connect_1_1_data_source_aceb702861d8db5e5540f4d459153b0a8}} 
+\index{bridges\+::connect\+::\+Data\+Source@{bridges\+::connect\+::\+Data\+Source}!get\+Osm\+Data\+Old@{get\+Osm\+Data\+Old}}
+\index{get\+Osm\+Data\+Old@{get\+Osm\+Data\+Old}!bridges\+::connect\+::\+Data\+Source@{bridges\+::connect\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{get\+Osm\+Data\+Old()}{getOsmDataOld()}}
+{\footnotesize\ttfamily \hyperlink{classbridges_1_1data__src__dependent_1_1_osm_data}{bridges.\+data\+\_\+src\+\_\+dependent.\+Osm\+Data} bridges.\+connect.\+Data\+Source.\+get\+Osm\+Data\+Old (\begin{DoxyParamCaption}\item[{String}]{location }\end{DoxyParamCaption}) throws I\+O\+Exception}
+
+Generates Open Street Map U\+RL request for a given location and returns the map data
+
+This is a legacy function that only supports few cities\+: \char`\"{}uncc\+\_\+campus\char`\"{}, \char`\"{}charlotte\char`\"{}, \char`\"{}washington\+\_\+dc\char`\"{}, \char`\"{}saint\+\_\+paul\char`\"{}, \char`\"{}new\+\_\+york\char`\"{}, \char`\"{}los\+\_\+angeles\char`\"{}, \char`\"{}san\+\_\+francisco\char`\"{}, \char`\"{}miami\char`\"{}, \char`\"{}minneapolis\char`\"{}, \char`\"{}dallas\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em location} & name of city or area that the server supports \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

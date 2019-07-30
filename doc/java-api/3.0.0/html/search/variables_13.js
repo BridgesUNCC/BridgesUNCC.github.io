@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['t',['T',['../enumbridges_1_1base_1_1_named_symbol.html#afc59b2dc5938e73837c08d248fb98a7b',1,'bridges.base.NamedSymbol.T()'],['../enumbridges_1_1base_1_1_named_symbol.html#ad3e93d84dcdcca5c2af225efb8ae42ba',1,'bridges.base.NamedSymbol.t()']]],
+  ['t',['t',['../enumbridges_1_1base_1_1_named_symbol.html#ad3e93d84dcdcca5c2af225efb8ae42ba',1,'bridges.base.NamedSymbol.t()'],['../enumbridges_1_1base_1_1_named_symbol.html#afc59b2dc5938e73837c08d248fb98a7b',1,'bridges.base.NamedSymbol.T()']]],
   ['tan',['tan',['../enumbridges_1_1base_1_1_named_color.html#ac5ede4192a18ae31ae5ddbbe54f1538b',1,'bridges::base::NamedColor']]],
   ['target',['target',['../enumbridges_1_1base_1_1_named_symbol.html#a3471e0c182e171dd135d58ba70c70886',1,'bridges::base::NamedSymbol']]],
   ['teal',['teal',['../enumbridges_1_1base_1_1_named_color.html#af1b8b9f5b7a4d15a6a610a549f3345a6',1,'bridges::base::NamedColor']]],
