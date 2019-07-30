@@ -1,0 +1,229 @@
+\hypertarget{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element}{}\section{bridges.\+avl\+\_\+tree\+\_\+element.\+A\+V\+L\+Tree\+Element Class Reference}
+\label{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element}\index{bridges.\+avl\+\_\+tree\+\_\+element.\+A\+V\+L\+Tree\+Element@{bridges.\+avl\+\_\+tree\+\_\+element.\+A\+V\+L\+Tree\+Element}}
+Inheritance diagram for bridges.\+avl\+\_\+tree\+\_\+element.\+A\+V\+L\+Tree\+Element\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element}
+\end{center}
+\end{figure}
+
+
+\subsection{Detailed Description}
+This class extends the B\+S\+T\+Element class by adding a height and balance factor fields that are useful in A\+VL trees. 
+
+A\+VL tree elements include a \textquotesingle{}height\textquotesingle{} and a \textquotesingle{}bal\+Factor\textquotesingle{} value, representing the height and balance factor of the A\+VL tree at that node, respectively. This is useful in representing A\+VL trees.
+
+A\+V\+L\+Tree elements contain a visualizer (Element\+Visualizer) object for setting visual attributes (color, shape, opacity, size), necessary for displaying them in a web browser.
+
+A\+V\+L\+Tree elements also have a Link\+Visualizer object, that is used when they are linked to another element, appropriate for setting link attributes, for instance, between $\ast$ the current element and its left or right child
+
+\begin{DoxyAuthor}{Author}
+Kalpathi Subramanian, Mihai Mehedint, Matthew Mc\+Quaigue
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+6/22/16, 1/7/17, 5/17/17, 6/09/19
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+\href{http://bridgesuncc.github.io/tutorials/AVL.html}{\tt http\+://bridgesuncc.\+github.\+io/tutorials/\+A\+V\+L.\+html} 
+\end{DoxySeeAlso}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_a1b3255d91449ada8e7347bd78f166d84}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, args, kwargs)
+\begin{DoxyCompactList}\small\item\em A\+VL Tree constructor. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_a550eaee1c1de211c69a2cfc6d89544fe}{get\+\_\+data\+\_\+structure\+\_\+type} (self)
+\begin{DoxyCompactList}\small\item\em Get the data structure type. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_aa98417f116a2fa96bb4fd57a009a8517}{key} (self)
+\begin{DoxyCompactList}\small\item\em Getter for the search keys. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_ac262e026e103fc407f585dfc4dcfab9f}{height} (self)
+\begin{DoxyCompactList}\small\item\em Getter for height of the avl tree at this node. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_a0ee04b3b15bbb37562e15fd882f1b0cd}{height}
+\begin{DoxyCompactList}\small\item\em Setter function for the height of the avl tree. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_a44085ad5195b41ab0f552db065e43c9d}{balance\+\_\+factor} (self)
+\begin{DoxyCompactList}\small\item\em Getter for the balance factor of the tree at this node. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_abc448bdf8e9e494e148a8b70dbd02cbf}{balance\+\_\+factor}
+\begin{DoxyCompactList}\small\item\em Setter for the balance factor of the tree at this node. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_a717696b26736f5c9585fefc7c5ab88f1}{left} (self)
+\begin{DoxyCompactList}\small\item\em Getter for the left child of the avl tree. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_aa60894585b83e7cb526d8c10eca75a59}{left} (self, val)
+\item 
+def \hyperlink{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_aaab3b79617e7e503b1a7c28069d1eb15}{right} (self)
+\begin{DoxyCompactList}\small\item\em Getter for the right child of the avl tree. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_ad9b5962ea5c89c9b91d7767b1b258c8e}{right} (self, val)
+\item 
+def \hyperlink{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_a9c5d7ae75ec92d6ff208b56ebba710ca}{get\+\_\+element\+\_\+representation} (self)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_a1b3255d91449ada8e7347bd78f166d84}\label{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_a1b3255d91449ada8e7347bd78f166d84}} 
+\index{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element@{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element@{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def bridges.\+avl\+\_\+tree\+\_\+element.\+A\+V\+L\+Tree\+Element.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{args,  }\item[{}]{kwargs,  }\item[{}]{None }\end{DoxyParamCaption})}
+
+
+
+A\+VL Tree constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+{\em element} & \\
+\hline
+{\em key} & the search key \\
+\hline
+{\em e} & the the specific object that the element is holding \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+
+None 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_a44085ad5195b41ab0f552db065e43c9d}\label{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_a44085ad5195b41ab0f552db065e43c9d}} 
+\index{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element@{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element}!balance\+\_\+factor@{balance\+\_\+factor}}
+\index{balance\+\_\+factor@{balance\+\_\+factor}!bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element@{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection{\texorpdfstring{balance\+\_\+factor()}{balance\_factor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def bridges.\+avl\+\_\+tree\+\_\+element.\+A\+V\+L\+Tree\+Element.\+balance\+\_\+factor (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{int }\end{DoxyParamCaption})}
+
+
+
+Getter for the balance factor of the tree at this node. 
+
+\begin{DoxyReturn}{Returns}
+
+
+int representing the balance factor 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_abc448bdf8e9e494e148a8b70dbd02cbf}\label{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_abc448bdf8e9e494e148a8b70dbd02cbf}} 
+\index{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element@{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element}!balance\+\_\+factor@{balance\+\_\+factor}}
+\index{balance\+\_\+factor@{balance\+\_\+factor}!bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element@{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection{\texorpdfstring{balance\+\_\+factor()}{balance\_factor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def bridges.\+avl\+\_\+tree\+\_\+element.\+A\+V\+L\+Tree\+Element.\+balance\+\_\+factor (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+
+
+Setter for the balance factor of the tree at this node. 
+
+(int) value\+: An integer for the balance factor at this node \begin{DoxyReturn}{Returns}
+
+
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_a550eaee1c1de211c69a2cfc6d89544fe}\label{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_a550eaee1c1de211c69a2cfc6d89544fe}} 
+\index{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element@{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element}!get\+\_\+data\+\_\+structure\+\_\+type@{get\+\_\+data\+\_\+structure\+\_\+type}}
+\index{get\+\_\+data\+\_\+structure\+\_\+type@{get\+\_\+data\+\_\+structure\+\_\+type}!bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element@{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection{\texorpdfstring{get\+\_\+data\+\_\+structure\+\_\+type()}{get\_data\_structure\_type()}}
+{\footnotesize\ttfamily def bridges.\+avl\+\_\+tree\+\_\+element.\+A\+V\+L\+Tree\+Element.\+get\+\_\+data\+\_\+structure\+\_\+type (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{str }\end{DoxyParamCaption})}
+
+
+
+Get the data structure type. 
+
+\begin{DoxyReturn}{Returns}
+
+
+str the type of data structure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_a9c5d7ae75ec92d6ff208b56ebba710ca}\label{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_a9c5d7ae75ec92d6ff208b56ebba710ca}} 
+\index{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element@{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element}!get\+\_\+element\+\_\+representation@{get\+\_\+element\+\_\+representation}}
+\index{get\+\_\+element\+\_\+representation@{get\+\_\+element\+\_\+representation}!bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element@{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection{\texorpdfstring{get\+\_\+element\+\_\+representation()}{get\_element\_representation()}}
+{\footnotesize\ttfamily def bridges.\+avl\+\_\+tree\+\_\+element.\+A\+V\+L\+Tree\+Element.\+get\+\_\+element\+\_\+representation (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_ac262e026e103fc407f585dfc4dcfab9f}\label{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_ac262e026e103fc407f585dfc4dcfab9f}} 
+\index{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element@{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element}!height@{height}}
+\index{height@{height}!bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element@{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection{\texorpdfstring{height()}{height()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def bridges.\+avl\+\_\+tree\+\_\+element.\+A\+V\+L\+Tree\+Element.\+height (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{int }\end{DoxyParamCaption})}
+
+
+
+Getter for height of the avl tree at this node. 
+
+\begin{DoxyReturn}{Returns}
+
+
+int the height of the tree 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_a0ee04b3b15bbb37562e15fd882f1b0cd}\label{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_a0ee04b3b15bbb37562e15fd882f1b0cd}} 
+\index{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element@{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element}!height@{height}}
+\index{height@{height}!bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element@{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection{\texorpdfstring{height()}{height()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def bridges.\+avl\+\_\+tree\+\_\+element.\+A\+V\+L\+Tree\+Element.\+height (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+
+
+Setter function for the height of the avl tree. 
+
+(int) value\+: An integer for the height at this node \begin{DoxyReturn}{Returns}
+
+
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_aa98417f116a2fa96bb4fd57a009a8517}\label{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_aa98417f116a2fa96bb4fd57a009a8517}} 
+\index{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element@{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element}!key@{key}}
+\index{key@{key}!bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element@{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection{\texorpdfstring{key()}{key()}}
+{\footnotesize\ttfamily def bridges.\+avl\+\_\+tree\+\_\+element.\+A\+V\+L\+Tree\+Element.\+key (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{str }\end{DoxyParamCaption})}
+
+
+
+Getter for the search keys. 
+
+\begin{DoxyReturn}{Returns}
+
+
+str represeting the key 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_a717696b26736f5c9585fefc7c5ab88f1}\label{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_a717696b26736f5c9585fefc7c5ab88f1}} 
+\index{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element@{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element}!left@{left}}
+\index{left@{left}!bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element@{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection{\texorpdfstring{left()}{left()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def bridges.\+avl\+\_\+tree\+\_\+element.\+A\+V\+L\+Tree\+Element.\+left (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Getter for the left child of the avl tree. 
+
+\begin{DoxyReturn}{Returns}
+
+
+child 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_aa60894585b83e7cb526d8c10eca75a59}\label{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_aa60894585b83e7cb526d8c10eca75a59}} 
+\index{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element@{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element}!left@{left}}
+\index{left@{left}!bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element@{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection{\texorpdfstring{left()}{left()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def bridges.\+avl\+\_\+tree\+\_\+element.\+A\+V\+L\+Tree\+Element.\+left (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{val }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_aaab3b79617e7e503b1a7c28069d1eb15}\label{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_aaab3b79617e7e503b1a7c28069d1eb15}} 
+\index{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element@{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element}!right@{right}}
+\index{right@{right}!bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element@{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection{\texorpdfstring{right()}{right()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def bridges.\+avl\+\_\+tree\+\_\+element.\+A\+V\+L\+Tree\+Element.\+right (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Getter for the right child of the avl tree. 
+
+\begin{DoxyReturn}{Returns}
+right child of this tree element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_ad9b5962ea5c89c9b91d7767b1b258c8e}\label{classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element_ad9b5962ea5c89c9b91d7767b1b258c8e}} 
+\index{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element@{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element}!right@{right}}
+\index{right@{right}!bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element@{bridges\+::avl\+\_\+tree\+\_\+element\+::\+A\+V\+L\+Tree\+Element}}
+\subsubsection{\texorpdfstring{right()}{right()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def bridges.\+avl\+\_\+tree\+\_\+element.\+A\+V\+L\+Tree\+Element.\+right (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{val }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/erik/work/bridges/bridges-\/python/bridges/\hyperlink{avl__tree__element_8py}{avl\+\_\+tree\+\_\+element.\+py}\end{DoxyCompactItemize}
