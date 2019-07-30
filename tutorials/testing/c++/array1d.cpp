@@ -8,12 +8,13 @@ int main(int argc, char **argv) {
 	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
 	// title, description
 	bridges.setTitle("One-Dimensional Array Example");
-    bridges.setDescription("OneD array with colors in order left to right: "
-			"red, green, blue, cyan, magenta, yellow, red, green, blue, black.");
+	bridges.setDescription("Illustrates a one dimensional array with visual attributes");
 
 	// create, populate the array
 	Array1D<int> arr (10);
 
+	// populate the array, with squares of indices
+	// use the values to label the elements
 	for (int j = 0; j < 10; j++) {
 	  arr[j]=j*j;
 	  arr.getElement(j).setLabel(to_string(arr[j]));

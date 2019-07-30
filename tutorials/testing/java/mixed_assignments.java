@@ -1,7 +1,7 @@
 import bridges.connect.Bridges;
 import bridges.base.TreeElement;
 import bridges.base.CircSLelement;
-import bridges.base.Array;
+import bridges.base.Array2D;
 import bridges.base.Element;
 import bridges.base.SymbolCollection;
 import bridges.base.Rectangle;
@@ -66,7 +66,7 @@ public class mixed_assignments {
 				A R R A Y		2 D
 		*/
 		int num_rows = 4, num_cols = 4;
-		Array<Integer> my_array = new Array<Integer> (num_rows, num_cols);
+		Array2D<Integer> my_array = new Array2D<Integer> (num_rows, num_cols);
 
 		// populate the array
 		for (int row = 0; row < num_rows; row++) {

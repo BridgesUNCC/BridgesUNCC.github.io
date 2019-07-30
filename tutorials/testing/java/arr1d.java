@@ -10,8 +10,7 @@ public class arr1d {
 
 		// title, description
 		bridges.setTitle("One-Dimensional Array Example");
-		bridges.setDescription("OneD array with colors in order left to right: "
-			+	"red, green, blue, cyan, magenta, yellow, red, green, blue, black.");
+		bridges.setDescription("One dimensional  array with visual attributes");
 
 		//  set array dimensions, allocate array of elements
 		int arraySize = 10;
@@ -19,8 +18,10 @@ public class arr1d {
 		Array1D<Integer> arr = new Array1D<Integer> (arraySize);
 
 		// populate the array, with squares of indices
+		// use the values to label the elements
 		for (int k = 0; k < arr.getSize(); k++) {
 			arr.getElement(k).setValue(k * k);
+			arr.getElement(k).setLabel(String.valueOf(arr.getElement(k).getValue()));
 		}
 
 		// color the array elements

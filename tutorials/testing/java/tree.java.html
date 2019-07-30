@@ -27,14 +27,22 @@
 		<span class="Comment">// add links to children</span>
 		t0.addChild(t2);
 		t0.addChild(t3);
-		t0.addChild(t7);
-		t2.addChild(t4);
+		t0.addChild(t4);
 		t2.addChild(t5);
-		t3.addChild(t6);
+		t2.addChild(t6);
+		t3.addChild(t7);
 
 		<span class="Comment">// set some visual attributes</span>
 		t0.setColor(<span class="Constant">&quot;red&quot;</span>);
 		t0.setOpacity(<span class="Constant">0.3f</span>);
+
+		<span class="Comment">// link colors</span>
+		t0.getLinkVisualizer(t2).setColor(<span class="Constant">&quot;green&quot;</span>);
+		t0.getLinkVisualizer(t2).setThickness(<span class="Constant">2.0f</span>);
+		t0.getLinkVisualizer(t3).setColor(<span class="Constant">&quot;blue&quot;</span>);
+		t0.getLinkVisualizer(t3).setThickness(<span class="Constant">2.0f</span>);
+		t0.getLinkVisualizer(t4).setColor(<span class="Constant">&quot;orange&quot;</span>);
+		t0.getLinkVisualizer(t4).setThickness(<span class="Constant">2.0f</span>);
 
 		bridges.setTitle(<span class="Constant">&quot;A General Tree Example&quot;</span>);
 

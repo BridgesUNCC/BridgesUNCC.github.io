@@ -78,7 +78,6 @@ int main(int argc, char **argv) {
 	bridges.setDataStructure(sc);
 
 	// visualize the JSON and Collection
-	bridges.setVisualizeJSONFlag(true);
 	bridges.visualize();
 			
 	return 0;

@@ -40,12 +40,10 @@ int main(int argc, char **argv) {
 
     // color the links - must specify a valid terminating element
     el0->getLinkVisualizer(el1)->setColor("green");
-	// color the reverse link
-    el1->getLinkVisualizer(el0)->setColor("magenta");
+    el3->getLinkVisualizer(el4)->setColor("magenta");
 
     // adjust link thickness
-    el3->getLinkVisualizer(el4)->setThickness(3.0f);
-    el4->getLinkVisualizer(el3)->setThickness(6.0f);
+    el0->getLinkVisualizer(el1)->setThickness(2.0f);
 
 	// set link label
 	el2->getLinkVisualizer(el3)->setLabel("Link Label");

@@ -11,8 +11,7 @@
 
 		<span class="Comment">// title, description</span>
 		bridges.setTitle(<span class="Constant">&quot;One-Dimensional Array Example&quot;</span>);
-		bridges.setDescription(<span class="Constant">&quot;OneD array with colors in order left to right: &quot;</span>
-			+	<span class="Constant">&quot;red, green, blue, cyan, magenta, yellow, red, green, blue, black.&quot;</span>);
+		bridges.setDescription(<span class="Constant">&quot;One dimensional  array with visual attributes&quot;</span>);
 
 		<span class="Comment">//  set array dimensions, allocate array of elements</span>
 		<span class="Type">int</span> arraySize = <span class="Constant">10</span>;
@@ -20,8 +19,10 @@
 		Array1D&lt;Integer&gt; arr = <span class="Statement">new</span> Array1D&lt;Integer&gt; (arraySize);
 
 		<span class="Comment">// populate the array, with squares of indices</span>
+		<span class="Comment">// use the values to label the elements</span>
 		<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; arr.getSize(); k++) {
 			arr.getElement(k).setValue(k * k);
+			arr.getElement(k).setLabel(String.valueOf(arr.getElement(k).getValue()));
 		}
 
 		<span class="Comment">// color the array elements</span>

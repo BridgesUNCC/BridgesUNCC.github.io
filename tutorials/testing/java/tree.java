@@ -26,14 +26,22 @@ public class tree {
 		// add links to children
 		t0.addChild(t2);
 		t0.addChild(t3);
-		t0.addChild(t7);
-		t2.addChild(t4);
+		t0.addChild(t4);
 		t2.addChild(t5);
-		t3.addChild(t6);
+		t2.addChild(t6);
+		t3.addChild(t7);
 
 		// set some visual attributes
 		t0.setColor("red");
 		t0.setOpacity(0.3f);
+
+		// link colors
+		t0.getLinkVisualizer(t2).setColor("green");
+		t0.getLinkVisualizer(t2).setThickness(2.0f);
+		t0.getLinkVisualizer(t3).setColor("blue");
+		t0.getLinkVisualizer(t3).setThickness(2.0f);
+		t0.getLinkVisualizer(t4).setColor("orange");
+		t0.getLinkVisualizer(t4).setThickness(2.0f);
 
 		bridges.setTitle("A General Tree Example");
 
