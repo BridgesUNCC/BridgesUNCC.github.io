@@ -4,11 +4,15 @@
     <title>BRIDGES Evaluation Reports(UNC Charlotte)</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./bootstrap-3.3.6/dist/css/bootstrap.min.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="./bootstrap-3.3.6/dist/js/bootstrap.min.js"></script>
-    <script src="http://www.w3schools.com/lib/w3data.js"></script> 
-    <link rel="stylesheet" type="text/css" href="./bootstrap/bridges.css">
+
+    <!-- w3IncludeHTML() -->
+    <script src="https://www.w3schools.com/lib/w3data.js"></script>
+
+    <!-- all pages need those. -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/bridges.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/glyphicon.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/footer.css">
   </head>
 
   <body>
@@ -19,53 +23,39 @@
       </script>
     </div>
 
-    <div class="container-fluid text-left">
-      <div class="row content">
-	<div class="col-md-2 sidenav">
-	  <div w3-include-html="./left_sidebar.html"> </div>
-	  <script>
-	    w3IncludeHTML(); 
-	  </script>
-	</div>
-    	<div class="col-md-6 text-left"> 
-	  <h3 class = "sep_heading">BRIDGES Evaluation (UNC Charlotte)</h3>
+    <h2>BRIDGES Evaluation (UNC Charlotte)</h2>
 
-	  <h4> Instruments</h4>
-	  <ul style = "list-style-type:circle"> 
-	    <li> <a href = "./project_data/eval/instruments/presurvey.pdf"> 
-		Attitude Toward Computing(Pre Survey)</a></li>
-	    <li> <a href = 
-		    "./project_data/eval/instruments/postsurvey2214.pdf">
-		Attitude Toward Computing(Post Survey)</a></li>
-	    <li> 
-	      <a href = "./project_data/eval/instruments/project_survey.pdf"> 
-		Project Survey</a></li>
-	    <li> <a href = "./project_data/eval/instruments/qbank_mc.pdf"> 
-		Knowledge Test Question Bank(Multiple Choice)</a></li>
-	    <li><a href = "./project_data/eval/instruments/qbank_sa.pdf"> 
-		Knowledge Test Question Bank(Short Answer)</a></li>
-	  </ul>
+    <h3> Instruments</h3>
+    <ul style = "list-style-type:circle"> 
+      <li> <a href="./project_data/eval/instruments/presurvey.pdf"> 
+	  Attitude Toward Computing(Pre Survey)</a></li>
+      <li> <a href="./project_data/eval/instruments/postsurvey2214.pdf">
+	  Attitude Toward Computing(Post Survey)</a></li>
+      <li> <a href="./project_data/eval/instruments/project_survey.pdf"> 
+	  Project Survey</a></li>
+      <li> <a href="./project_data/eval/instruments/qbank_mc.pdf"> 
+	  Knowledge Test Question Bank(Multiple Choice)</a></li>
+      <li><a href="./project_data/eval/instruments/qbank_sa.pdf"> 
+	  Knowledge Test Question Bank(Short Answer)</a></li>
+    </ul>
 
-	  <h4> Reports</h4>
-	  <ul style = "list-style-type:circle"> 
-	    <li> <a href = "./project_data/eval/reports/eval_rpt_f13.pdf"> 
-		Fall 2013 Report</a></li>
-	    <li> <a href = "./project_data/eval/reports/eval_rpt_s14.pdf"> 
-		Spring 2014 Report</a></li>
-	    <li> <a href = "./project_data/eval/reports/eval_rpt_f14.pdf"> 
-		Fall 2014 Report</a></li>
-	    <li> <a href = "./project_data/eval/reports/eval_rpt_s15.pdf"> 
-		Spring 2015 Report</a></li>
-	    <li> <a href = "./project_data/eval/reports/eval_rpt_s16.pdf"> 
-		Fall 2015 Report</a></li>
-	    <li> <a href = "./project_data/eval/reports/stars_workshop_participant_responses.pdf"> 
-		Summer 2015 Stars Workshop Participant Report</a></li>
-	  </ul>
-	  
-	  <div w3-include-html="./footer.html"></div>
-	</div>
-      </div>
-    </div>
+    <h3> Reports</h3>
+    <ul style = "list-style-type:circle"> 
+      <li> <a href = "./project_data/eval/reports/eval_rpt_f13.pdf"> 
+	  Fall 2013 Report</a></li>
+      <li> <a href = "./project_data/eval/reports/eval_rpt_s14.pdf"> 
+	  Spring 2014 Report</a></li>
+      <li> <a href = "./project_data/eval/reports/eval_rpt_f14.pdf"> 
+	  Fall 2014 Report</a></li>
+      <li> <a href = "./project_data/eval/reports/eval_rpt_s15.pdf"> 
+	  Spring 2015 Report</a></li>
+      <li> <a href = "./project_data/eval/reports/eval_rpt_s16.pdf"> 
+	  Fall 2015 Report</a></li>
+      <li> <a href = "./project_data/eval/reports/stars_workshop_participant_responses.pdf"> 
+	  Summer 2015 Stars Workshop Participant Report</a></li>
+    </ul>
+    
+    <div w3-include-html="./footer.html"></div>
   </body>
 </html>
 

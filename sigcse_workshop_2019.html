@@ -4,11 +4,18 @@
     <title>SIGCSE 2019 BRIDGES Workshop Materials</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./bootstrap-3.3.6/dist/css/bootstrap.min.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="./bootstrap-3.3.6/dist/js/bootstrap.min.js"></script>
-    <script src="http://www.w3schools.com/lib/w3data.js"></script>
-    <link rel="stylesheet" type="text/css" href="./bootstrap/bridges.css">
+
+    <!-- w3IncludeHTML() -->
+    <script src="https://www.w3schools.com/lib/w3data.js"></script>
+
+    <!-- all pages need those. -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/bridges.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/glyphicon.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/footer.css">
+    
+    <!-- only pages with a left main part and a right panel needs these-->
+    <link rel="stylesheet" type="text/css" href="./assets/css/mygrid.css">
   </head>
   <body>
 
@@ -17,40 +24,29 @@
 	w3IncludeHTML();
       </script>
     </div>
+
+    <h2>SIGCSE 2019 BRIDGES workshop</h2>
     
-    <div class="container-fluid text-left">
-      <div class="row content">
-	<div class="col-md-2 sidenav">
-	  <div w3-include-html="./left_sidebar.html"></div>
-	  <script>
-	    w3IncludeHTML(); 
-	  </script>  
-	</div>
-	
-	<div class="col-md-10 text-left">
+    <h3>BRIDGES Documentation</h3>
+    <ul> 
+      <li> <a href="http://bridgesuncc.github.io/doc/java-api/2.4.2/html/index.html">Java Documentation(Doxygen) </a></li>
+      <li> <a href="http://bridgesuncc.github.io/doc/cxx-api/2.4.2/html/index.html">C++ Documentation(Doxygen) </a></li>
+      <li> <a href="http://bridgesuncc.github.io/doc/python-api/2.4.2/html/index.html">Python Documentation(Doxygen) </a></li>
+    </ul>
+    
+    <h3>Workshop Materials</h3>
+    <ul>
+      <li> <a href="http://bridgesuncc.github.io/workshops/2019/minneapolis/sigcse-2019-workshop-materials.zip"> Workshop Slides/Exercises/Software [ZIP] </a></li>
+      <li> <a href="http://bridgesuncc.github.io/workshops/2019/minneapolis/bridges-cxx-windows-sigcse19.zip"> MS Visual Studio C++ files [ZIP] </a></li>
+    </ul>
 	  
-	  <h3 class="sep_heading">BRIDGES Documentation</h3>
-	  <ul> 
-	    <li> <a href="http://bridgesuncc.github.io/doc/java-api/2.4.2/html/index.html">Java Documentation(Doxygen) </a></li>
-	    <li> <a href="http://bridgesuncc.github.io/doc/cxx-api/2.4.2/html/index.html">C++ Documentation(Doxygen) </a></li>
-	    <li> <a href="http://bridgesuncc.github.io/doc/python-api/2.4.2/html/index.html">Python Documentation(Doxygen) </a></li>
-	  </ul>
-	  
-	  <h3 class="sep_heading">Workshop Materials</h3>
-	  <ul>
-	    <li> <a href="http://bridgesuncc.github.io/workshops/2019/minneapolis/sigcse-2019-workshop-materials.zip"> Workshop Slides/Exercises/Software [ZIP] </a></li>
-	    <li> <a href="http://bridgesuncc.github.io/workshops/2019/minneapolis/bridges-cxx-windows-sigcse19.zip"> MS Visual Studio C++ files [ZIP] </a></li>
-	  </ul>
-	  
-	  <h3 class="sep_heading">Workshop Surveys</h3>
-	  <ul>
-	    <li> <a href="https://unccpsych.az1.qualtrics.com/jfe/form/SV_bgxw85Ztuirjltz">
-		BRIDGES Workshop Survey </a></li>	
-	    <li> <a href="https://bit.ly/sigcse2019-workshops-wednesday"> SIGCSE Workshop Survey</a></li>
-	  </ul>
-	</div>
-      </div>
-    </div>
+    <h3>Workshop Surveys</h3>
+    <ul>
+      <li> <a href="https://unccpsych.az1.qualtrics.com/jfe/form/SV_bgxw85Ztuirjltz">
+	  BRIDGES Workshop Survey </a></li>	
+      <li> <a href="https://bit.ly/sigcse2019-workshops-wednesday"> SIGCSE Workshop Survey</a></li>
+    </ul>
+
     <div w3-include-html="./footer.html"></div>
   </body>
 </html>
