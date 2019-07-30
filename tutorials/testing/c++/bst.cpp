@@ -16,8 +16,8 @@ int max_quakes = 25;
 
 int main(int argc, char **argv) {
 	// create Bridges object
-    Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID",
-                                "YOUR_API_KEY");
+	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID",
+		"YOUR_API_KEY");
 
 	// set title, description
 	bridges.setTitle("A Binary Search Tree Example with Earthquake Data");

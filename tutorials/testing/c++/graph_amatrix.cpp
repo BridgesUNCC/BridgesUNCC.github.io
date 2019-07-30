@@ -10,8 +10,8 @@ using namespace bridges;
 
 int main(int argc, char **argv) {
 	// create Bridges object
-    Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID",
-                                "YOUR_API_KEY");
+	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID",
+		"YOUR_API_KEY");
 
 	DataSource *ds = new DataSource;
 	vector<ActorMovieIMDB> actor_list = ds->getActorMovieIMDBData(1813);

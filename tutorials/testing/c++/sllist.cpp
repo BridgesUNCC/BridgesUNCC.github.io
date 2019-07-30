@@ -13,8 +13,8 @@ using namespace std;
 
 int main (int argc, char **argv) {
 	// create Bridges object
-    Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID",
-                                "YOUR_API_KEY");
+	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID",
+		"YOUR_API_KEY");
 	// set title
 	bridges.setTitle("A Single Linked List Example");
 
@@ -27,7 +27,7 @@ int main (int argc, char **argv) {
 	SLelement<string>  *el2 = new SLelement<string> ("Gladys Serino", "Gladys Serino");
 	SLelement<string>  *el3 = new SLelement<string> ("Karol Soderman", "Karol Soderman");
 	SLelement<string>  *el4 = new SLelement<string> ("Starr McGinn", "Starr McGinn");
- 
+
 	//  link the elements
 	el0->setNext(el1);
 	el1->setNext(el2);

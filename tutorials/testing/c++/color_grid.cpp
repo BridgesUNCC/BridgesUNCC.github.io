@@ -13,13 +13,13 @@ using namespace bridges;
 
 int main(int argc, char **argv) {
 	// create Bridges object
-    Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID",
-                                "YOUR_API_KEY");
+	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID",
+		"YOUR_API_KEY");
 
-	// set title, description 
+	// set title, description
 	bridges.setTitle("A CheckerBoard Example Using Grid Type");
 	bridges.setDescription("This is an example of the color grid with height and width 10. "
-		   "This example alternates between blue and red starting with red at the top left corner of the grid.");
+		"This example alternates between blue and red starting with red at the top left corner of the grid.");
 	int width = 200, height = 200;
 
 	ColorGrid *cg  = new ColorGrid(width, height, Color("red"));

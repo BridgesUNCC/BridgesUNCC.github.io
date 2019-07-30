@@ -6,9 +6,9 @@ using namespace bridges;
 using namespace std;
 
 int main (int argc, char **argv) {
-    // create Bridges object
-    Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID",
-                                "YOUR_API_KEY");
+	// create Bridges object
+	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID",
+		"YOUR_API_KEY");
 
 	bridges.setTitle("Sorting Benchmark");
 	bridges.setDescription("Sorting Benchmark test");

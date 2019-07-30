@@ -21,18 +21,18 @@ int main(int argc, char **argv) {
 	// set title
 	bridges.setTitle("Accessing USGIS Earthquake Data (USGIS Data)");
 
-	// read the earth quake  data 
+	// read the earth quake  data
 	DataSource ds (&bridges);
 	vector<EarthquakeUSGS> eq_list = ds.getEarthquakeUSGSData(max_quakes);
 
 	// print the first quake record
 	cout << "Earthquake 0:" << endl;
 	cout << "\tMagnitude:" << eq_list[0].getMagnitude() << endl
-		 << "\tDate:" << eq_list[0].getDateStr() << endl 
-		 << "\tLocation: " <<  eq_list[0].getLocation() << endl
-		 << "\tLat/Long:"  << eq_list[0].getLatit() << "," << 
-		 			eq_list[0].getLongit() << endl;
-		
+		<< "\tDate:" << eq_list[0].getDateStr() << endl
+		<< "\tLocation: " <<  eq_list[0].getLocation() << endl
+		<< "\tLat/Long:"  << eq_list[0].getLatit() << "," <<
+		eq_list[0].getLongit() << endl;
+
 
 	return 0;
 }

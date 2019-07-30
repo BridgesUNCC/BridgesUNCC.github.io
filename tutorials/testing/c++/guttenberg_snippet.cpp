@@ -11,10 +11,10 @@ using namespace bridges;
 
 // this program illustrates how to access the Gutenberg book meta data
 int main(int argc, char **argv) {
-		
+
 	// create bridges object
-    Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", 
-                                "YOUR_API_KEY");
+	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID",
+		"YOUR_API_KEY");
 
 
 	// set title
@@ -22,21 +22,21 @@ int main(int argc, char **argv) {
 
 	// read the Gutenberg book data
 	DataSource ds (&bridges);
-    vector<GutenbergBook> book_list = ds.getGutenbergBookData();
+	vector<GutenbergBook> book_list = ds.getGutenbergBookData();
 
 	// print the first book record
-	cout << "Guttenberg Book Data:" 
+	cout << "Guttenberg Book Data:"
 		<< "\tAuthor: "  << book_list[0].getAuthorName() << endl
 		<< "\tAuthor Birth: "  << book_list[0].getAuthorBirth() << endl
 		<< "\tAuthor Death: "  << book_list[0].getAuthorBirth() << endl
 		<< "\tTitle: "  << book_list[0].getTitle() << endl;
-		cout << "\tLanguage: ";
-		for (auto& i : book_list[0].getLang())
-			cout << i << ",";
-		cout << endl << "\tSubject: ";
-		for (auto& i : book_list[0].getSubject())
-			cout << i << ","; 
-		cout << endl << "\tNum Downloads: "  << book_list[0].getNumDownloads() << endl
+	cout << "\tLanguage: ";
+	for (auto& i : book_list[0].getLang())
+		cout << i << ",";
+	cout << endl << "\tSubject: ";
+	for (auto& i : book_list[0].getSubject())
+		cout << i << ",";
+	cout << endl << "\tNum Downloads: "  << book_list[0].getNumDownloads() << endl
 		<< "\tNum Words: "  << book_list[0].getNumWords() << endl
 		<< "\tNum Difficult Words: "  << book_list[0].getNumDifficultWords() << endl
 		<< "\tNum Sentences: "  <<  book_list[0].getNumSentences() << endl

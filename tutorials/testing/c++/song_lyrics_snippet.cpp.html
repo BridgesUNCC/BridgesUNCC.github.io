@@ -9,7 +9,7 @@
 
 <span class="Statement">using</span> <span class="Type">namespace</span> bridges;
 
-<span class="Comment">// This program fragment illustrates how to access and retrieve the song lyrics data </span>
+<span class="Comment">// This program fragment illustrates how to access and retrieve the song lyrics data</span>
 <span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span>* argv[]) {
 
 	<span class="Comment">//create the Bridges object, set credentials</span>
@@ -22,11 +22,11 @@
 	<span class="Comment">// create data source object</span>
 	DataSource ds (&amp;bridges);
 
-	<span class="Comment">// Get Song data </span>
+	<span class="Comment">// Get Song data</span>
 	Song s = ds.getSong(<span class="Constant">&quot;Harder Faster Better Stronger&quot;</span>, <span class="Constant">&quot;Daft Punk&quot;</span>);
 
 	<span class="Comment">// print lyrics</span>
-	std::cout&lt;&lt;s.getLyrics()&lt;&lt;std::endl;
+	std::cout &lt;&lt; s.getLyrics() &lt;&lt; std::endl;
 
 	<span class="Statement">return</span> <span class="Constant">0</span>;
 }

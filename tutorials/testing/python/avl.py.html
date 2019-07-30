@@ -33,19 +33,19 @@
     <span class="Comment"># for illustration, but in a real project, the user will</span>
     <span class="Comment"># implement this as part of the insert/delete</span>
     <span class="Comment"># operations on the tree to maintain a balanced tree</span>
-    avl_root.label(<span class="Constant">&quot;</span><span class="Constant">0</span><span class="Constant">&quot;</span>)
-    avl_2.label(<span class="Constant">&quot;</span><span class="Constant">0</span><span class="Constant">&quot;</span>)
-    avl_3.label(<span class="Constant">&quot;</span><span class="Constant">-1</span><span class="Constant">&quot;</span>)
-    avl_4.label(<span class="Constant">&quot;</span><span class="Constant">0</span><span class="Constant">&quot;</span>)
-    avl_5.label(<span class="Constant">&quot;</span><span class="Constant">0</span><span class="Constant">&quot;</span>)
-    avl_6.label(<span class="Constant">&quot;</span><span class="Constant">0</span><span class="Constant">&quot;</span>)
+    avl_root.set_label(<span class="Constant">&quot;</span><span class="Constant">0</span><span class="Constant">&quot;</span>)
+    avl_2.set_label(<span class="Constant">&quot;</span><span class="Constant">0</span><span class="Constant">&quot;</span>)
+    avl_3.set_label(<span class="Constant">&quot;</span><span class="Constant">-1</span><span class="Constant">&quot;</span>)
+    avl_4.set_label(<span class="Constant">&quot;</span><span class="Constant">0</span><span class="Constant">&quot;</span>)
+    avl_5.set_label(<span class="Constant">&quot;</span><span class="Constant">0</span><span class="Constant">&quot;</span>)
+    avl_6.set_label(<span class="Constant">&quot;</span><span class="Constant">0</span><span class="Constant">&quot;</span>)
 
     <span class="Comment"># add links between nodes</span>
-    avl_root.left(avl_2)
-    avl_root.right(avl_3)
-    avl_2.left(avl_4)
-    avl_2.right(avl_5)
-    avl_3.right(avl_6)
+    avl_root.set_left(avl_2)
+    avl_root.set_right(avl_3)
+    avl_2.set_left(avl_4)
+    avl_2.set_right(avl_5)
+    avl_3.set_right(avl_6)
 
     <span class="Comment"># add some visual attributes</span>
     avl_root.get_visualizer().set_color(<span class="Constant">&quot;</span><span class="Constant">magenta</span><span class="Constant">&quot;</span>)

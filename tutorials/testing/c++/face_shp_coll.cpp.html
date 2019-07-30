@@ -10,9 +10,9 @@
 <span class="Statement">using</span> <span class="Type">namespace</span> bridges;
 
 <span class="Type">int</span> main (<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
-    <span class="Comment">// create Bridges object</span>
-    Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
-                                <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+	<span class="Comment">// create Bridges object</span>
+	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+		<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 	<span class="Comment">// title, description</span>
 	bridges.setTitle(<span class="Constant">&quot;Symbol Collection - A Face Example&quot;</span>);
 	bridges.setDescription(<span class="Constant">&quot;Example of building a simple shape with transformations(translate, scale and rotation&quot;</span>);
@@ -40,7 +40,8 @@
 	Circle s3(<span class="Constant">25</span>);
 	s3.setStrokeColor(<span class="Constant">&quot;green&quot;</span>);
 	s3.setStrokeWidth(<span class="Constant">1.3</span>);
-	tf[<span class="Constant">0</span>] = <span class="Constant">25.</span>; tf[<span class="Constant">1</span>] = <span class="Constant">20.</span>;
+	tf[<span class="Constant">0</span>] = <span class="Constant">25.</span>;
+	tf[<span class="Constant">1</span>] = <span class="Constant">20.</span>;
 	s3.translate(tf[<span class="Constant">0</span>], tf[<span class="Constant">1</span>]);
 	s3.scale(<span class="Constant">0.3</span>);
 	sc.addSymbol(&amp;s3);
@@ -50,8 +51,10 @@
 	Rectangle s4(<span class="Constant">0</span>, <span class="Constant">0</span>, <span class="Constant">10</span>, <span class="Constant">10</span>);
 	s4.setFillColor(Color(<span class="Constant">&quot;blue&quot;</span>));
 	s4.setStrokeWidth(<span class="Constant">1.3</span>);
-	sf[<span class="Constant">0</span>] = <span class="Constant">0.5</span>; sf[<span class="Constant">1</span>] = <span class="Constant">3.0</span>;
-	tf[<span class="Constant">0</span>] = <span class="Constant">0.0</span>; tf[<span class="Constant">1</span>] = -<span class="Constant">10.0</span>;
+	sf[<span class="Constant">0</span>] = <span class="Constant">0.5</span>;
+	sf[<span class="Constant">1</span>] = <span class="Constant">3.0</span>;
+	tf[<span class="Constant">0</span>] = <span class="Constant">0.0</span>;
+	tf[<span class="Constant">1</span>] = -<span class="Constant">10.0</span>;
 	s4.scale(sf[<span class="Constant">0</span>], sf[<span class="Constant">1</span>]);
 	s4.translate(tf[<span class="Constant">0</span>], tf[<span class="Constant">1</span>]);
 	sc.addSymbol(&amp;s4);
@@ -60,8 +63,10 @@
 	Rectangle s5(<span class="Constant">0</span>, <span class="Constant">0</span>, <span class="Constant">10</span>, <span class="Constant">10</span>);
 	s5.setFillColor(Color(<span class="Constant">&quot;blue&quot;</span>));
 	s5.setStrokeWidth(<span class="Constant">1.3</span>);
-	sf[<span class="Constant">0</span>] = <span class="Constant">3.</span>; sf[<span class="Constant">1</span>] = <span class="Constant">0.5</span>;
-	tf[<span class="Constant">0</span>] = <span class="Constant">0.</span>; tf[<span class="Constant">1</span>] = -<span class="Constant">40.0</span>;
+	sf[<span class="Constant">0</span>] = <span class="Constant">3.</span>;
+	sf[<span class="Constant">1</span>] = <span class="Constant">0.5</span>;
+	tf[<span class="Constant">0</span>] = <span class="Constant">0.</span>;
+	tf[<span class="Constant">1</span>] = -<span class="Constant">40.0</span>;
 	s5.scale(sf[<span class="Constant">0</span>], sf[<span class="Constant">1</span>]);
 	s5.translate(tf[<span class="Constant">0</span>], tf[<span class="Constant">1</span>]);
 	sc.addSymbol(&amp;s5);
@@ -77,7 +82,7 @@
 
 	<span class="Comment">// add a title to the figure</span>
 	Label l;
-	l.setLocation(-<span class="Constant">50</span>,<span class="Constant">100</span>);
+	l.setLocation(-<span class="Constant">50</span>, <span class="Constant">100</span>);
 	l.setFontSize(<span class="Constant">16</span>);
 	l.setStrokeWidth(<span class="Constant">1.0f</span>);
 	l.setLabel(<span class="Constant">&quot;Its a Dorky Looking Face!&quot;</span>);

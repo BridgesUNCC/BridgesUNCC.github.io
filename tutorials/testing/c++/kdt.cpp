@@ -5,8 +5,8 @@ using namespace bridges;
 
 int main(int argc, char **argv) {
 	// create bridges object
-    Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID",
-                                "YOUR_API_KEY");
+	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID",
+		"YOUR_API_KEY");
 	bridges.setTitle("A Kd Tree Example");
 	bridges.setDescription("A three-level tree with partitioners cycling between X and Y. The root node color is set to red while the leaf nodes that represent code letters are set to orange.");
 

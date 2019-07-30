@@ -13,7 +13,7 @@ int main(int argc, char **argv) {
 	bridges.setTitle("Three-Dimensional Array Example");
 	bridges.setDescription("A 3 dimensional array with visual attributes. The third dimension is illustrated as a sequence of 2D slices");
 
-		
+
 	// specify array dimensions and create 3D array
 	int num_slices = 4, num_rows = 4, num_cols = 4;
 
@@ -22,8 +22,8 @@ int main(int argc, char **argv) {
 
 	// populate the elements with their array position
 	int n  = 0;
-	for (int k = 0; k < num_slices; k++) 
-		for (int j = 0; j < num_rows; j++) 
+	for (int k = 0; k < num_slices; k++)
+		for (int j = 0; j < num_rows; j++)
 			for (int i = 0; i < num_cols; i++) {
 				my_array.getElement(k, j, i).setLabel("El " + std::to_string(n));
 				n++;

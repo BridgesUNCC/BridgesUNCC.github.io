@@ -8,7 +8,7 @@
 
 using namespace bridges;
 
-// This program fragment illustrates how to access and retrieve the song lyrics data 
+// This program fragment illustrates how to access and retrieve the song lyrics data
 int main(int argc, char* argv[]) {
 
 	//create the Bridges object, set credentials
@@ -21,11 +21,11 @@ int main(int argc, char* argv[]) {
 	// create data source object
 	DataSource ds (&bridges);
 
-	// Get Song data 
+	// Get Song data
 	Song s = ds.getSong("Harder Faster Better Stronger", "Daft Punk");
 
 	// print lyrics
-	std::cout<<s.getLyrics()<<std::endl;
+	std::cout << s.getLyrics() << std::endl;
 
 	return 0;
 }

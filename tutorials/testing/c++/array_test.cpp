@@ -8,19 +8,19 @@ using namespace bridges;
 int main(int argc, char **argv) {
 
 	// create Bridges object
-    Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID",
-                                "YOUR_API_KEY");
+	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID",
+		"YOUR_API_KEY");
 
 	// title, description
 	bridges.setTitle("Two-Dimensional Array Example");
 	bridges.setDescription("A TwoD array with four rows and four columns. "
-						 "Row one left to right: red, neutral, neutral, blue. "
-						 "Row two left to right: neutral, cyan, neutral, neutral. "
-						 "Row three left to right: neutral, neutral, yellow, neutral. "
-						 "Row four left to right: green, neutral, neutral, magenta.");
+		"Row one left to right: red, neutral, neutral, blue. "
+		"Row two left to right: neutral, cyan, neutral, neutral. "
+		"Row three left to right: neutral, neutral, yellow, neutral. "
+		"Row four left to right: green, neutral, neutral, magenta.");
 
 	// create, populate 2D array
-	int dims[2] = {4, 4}; 
+	int dims[2] = {4, 4};
 	Array2D<string> arr(dims[1], dims[0]);
 
 	for (int i = 0; i < dims[0]; i++)

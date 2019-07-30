@@ -22,17 +22,17 @@
 	<span class="Comment">// set title</span>
 	bridges.setTitle(<span class="Constant">&quot;Accessing USGIS Earthquake Data (USGIS Data)&quot;</span>);
 
-	<span class="Comment">// read the earth quake  data </span>
+	<span class="Comment">// read the earth quake  data</span>
 	DataSource ds (&amp;bridges);
 	vector&lt;EarthquakeUSGS&gt; eq_list = ds.getEarthquakeUSGSData(max_quakes);
 
 	<span class="Comment">// print the first quake record</span>
 	cout &lt;&lt; <span class="Constant">&quot;Earthquake 0:&quot;</span> &lt;&lt; endl;
 	cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Magnitude:&quot;</span> &lt;&lt; eq_list[<span class="Constant">0</span>].getMagnitude() &lt;&lt; endl
-		 &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Date:&quot;</span> &lt;&lt; eq_list[<span class="Constant">0</span>].getDateStr() &lt;&lt; endl
-		 &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Location: &quot;</span> &lt;&lt;  eq_list[<span class="Constant">0</span>].getLocation() &lt;&lt; endl
-		 &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Lat/Long:&quot;</span>  &lt;&lt; eq_list[<span class="Constant">0</span>].getLatit() &lt;&lt; <span class="Constant">&quot;,&quot;</span> &lt;&lt;
-		 			eq_list[<span class="Constant">0</span>].getLongit() &lt;&lt; endl;
+		&lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Date:&quot;</span> &lt;&lt; eq_list[<span class="Constant">0</span>].getDateStr() &lt;&lt; endl
+		&lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Location: &quot;</span> &lt;&lt;  eq_list[<span class="Constant">0</span>].getLocation() &lt;&lt; endl
+		&lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Lat/Long:&quot;</span>  &lt;&lt; eq_list[<span class="Constant">0</span>].getLatit() &lt;&lt; <span class="Constant">&quot;,&quot;</span> &lt;&lt;
+		eq_list[<span class="Constant">0</span>].getLongit() &lt;&lt; endl;
 
 
 	<span class="Statement">return</span> <span class="Constant">0</span>;

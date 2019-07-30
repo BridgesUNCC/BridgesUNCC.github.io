@@ -9,8 +9,8 @@ using namespace bridges;
 
 int main(int argc, char **argv) {
 	// create Bridges object
-    Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID",
-                                "YOUR_API_KEY");
+	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID",
+		"YOUR_API_KEY");
 
 	// get the actor - movie data from IMDB dataset
 	DataSource *ds = new DataSource;
@@ -74,15 +74,15 @@ int main(int argc, char **argv) {
 
 	// we will use iterators to traverse the adjacency list
 
-	for (auto& edge: graph.outgoingEdgeSetOf(kevin_bacon)) {
-		string from = edge.from(), to = edge.to();	
+	for (auto& edge : graph.outgoingEdgeSetOf(kevin_bacon)) {
+		string from = edge.from(), to = edge.to();
 		if (to != "Denzel_Washington")
-			graph.getVisualizer(to)->setColor("turquoise");	
+			graph.getVisualizer(to)->setColor("turquoise");
 	}
-	for (auto& edge: graph.outgoingEdgeSetOf(denzel_washington)) {
-		string from = edge.from(), to = edge.to();	
+	for (auto& edge : graph.outgoingEdgeSetOf(denzel_washington)) {
+		string from = edge.from(), to = edge.to();
 		if (to != kevin_bacon)
-			graph.getVisualizer(to)->setColor("orange");	
+			graph.getVisualizer(to)->setColor("orange");
 	}
 
 	// provide BRIDGES the  handle to the tree structure
