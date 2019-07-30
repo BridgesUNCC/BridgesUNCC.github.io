@@ -34,11 +34,11 @@
     g.add_edge(a1, a2, <span class="Constant">1</span>)
 
     <span class="Comment"># color the two actor nodes</span>
-    g.get_vertices().get(<span class="Constant">&quot;</span><span class="Constant">Kevin_Bacon_(I)</span><span class="Constant">&quot;</span>).get_visualizer().set_color(col_name=<span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>)
-    g.get_vertices().get(<span class="Constant">&quot;</span><span class="Constant">Denzel_Washington</span><span class="Constant">&quot;</span>).get_visualizer().set_color(col_name=<span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>)
+    g.vertices.get(<span class="Constant">&quot;</span><span class="Constant">Kevin_Bacon_(I)</span><span class="Constant">&quot;</span>).color = <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>
+    g.vertices.get(<span class="Constant">&quot;</span><span class="Constant">Denzel_Washington</span><span class="Constant">&quot;</span>).color = <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>
     <span class="Comment"># make them a bit bigger</span>
-    g.get_vertices().get(<span class="Constant">&quot;</span><span class="Constant">Kevin_Bacon_(I)</span><span class="Constant">&quot;</span>).get_visualizer().set_size(<span class="Constant">20</span>)
-    g.get_vertices().get(<span class="Constant">&quot;</span><span class="Constant">Denzel_Washington</span><span class="Constant">&quot;</span>).get_visualizer().set_size(<span class="Constant">20</span>)
+    g.vertices.get(<span class="Constant">&quot;</span><span class="Constant">Kevin_Bacon_(I)</span><span class="Constant">&quot;</span>).size = <span class="Constant">20</span>
+    g.vertices.get(<span class="Constant">&quot;</span><span class="Constant">Denzel_Washington</span><span class="Constant">&quot;</span>).size = <span class="Constant">20</span>
 
     cnt1 = <span class="Constant">0</span>
     cnt2 = <span class="Constant">0</span>
@@ -47,8 +47,8 @@
     <span class="Comment"># and color those links and nodes by following their adjacency Matrix</span>
     <span class="Statement">for</span> k <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Identifier">len</span>(actor_movie_data)):
         <span class="Comment"># from the actor movie data, get and actor-movie pair</span>
-        a = actor_movie_data[k].get_actor()
-        m = actor_movie_data[k].get_movie()
+        a = actor_movie_data[k].actor
+        m = actor_movie_data[k].movie
 
         <span class="Statement">if</span> (a == <span class="Constant">&quot;</span><span class="Constant">Kevin_Bacon_(I)</span><span class="Constant">&quot;</span> <span class="Statement">and</span> cnt1 &lt; <span class="Constant">15</span>):
             <span class="Comment"># add vertices for this movie and an edge for the link</span>
@@ -56,7 +56,7 @@
             g.add_edge(a1, m, <span class="Constant">1</span>)
             g.add_edge(m, a1, <span class="Constant">1</span>)
             <span class="Comment"># make the movie node a bit transparent</span>
-            g.get_vertices().get(m).get_visualizer().set_opacity(<span class="Constant">0.5</span>)
+            g.vertices.get(m).opacity = <span class="Constant">0.5</span>
             cnt1 += <span class="Constant">1</span>
 
         <span class="Statement">elif</span> (a == <span class="Constant">&quot;</span><span class="Constant">Denzel_Washington</span><span class="Constant">&quot;</span> <span class="Statement">and</span> cnt2 &lt; <span class="Constant">15</span>):
@@ -65,7 +65,7 @@
             g.add_edge(a2, m, <span class="Constant">1</span>)
             g.add_edge(m, a2, <span class="Constant">1</span>)
             <span class="Comment"># make the movie node a bit transparent</span>
-            g.get_vertices().get(m).get_visualizer().set_opacity(<span class="Constant">0.5</span>)
+            g.vertices.get(m).opacity = <span class="Constant">0.5</span>
             cnt2 += <span class="Constant">1</span>
 
     <span class="Comment"># Next, we illustrate traversing the adjacency Matrix and color the movie</span>
@@ -74,13 +74,14 @@
     <span class="Comment"># first get the adjacency Matrix for Kevin Bacon</span>
     bacon_row = g.get_adjacency_matrix(<span class="Constant">&quot;</span><span class="Constant">Kevin_Bacon_(I)</span><span class="Constant">&quot;</span>)
     <span class="Statement">for</span> entry, key <span class="Statement">in</span> bacon_row.items():
-        <span class="Statement">if</span>(entry != <span class="Constant">&quot;</span><span class="Constant">Denzel Washington</span><span class="Constant">&quot;</span> <span class="Statement">and</span> key != <span class="Constant">0</span>):
-            g.get_visualizer(entry).set_color(col_name=<span class="Constant">&quot;</span><span class="Constant">green</span><span class="Constant">&quot;</span>)
+        <span class="Statement">if</span> (entry != <span class="Constant">&quot;</span><span class="Constant">Denzel_Washington</span><span class="Constant">&quot;</span> <span class="Statement">and</span> key != <span class="Constant">0</span>):
+            g.vertices.get(entry).color = <span class="Constant">&quot;</span><span class="Constant">green</span><span class="Constant">&quot;</span>
 
     <span class="Comment"># pass the grpah object to BRIDGES</span>
     bridges.set_data_structure(g)
     <span class="Comment"># visualize the graph</span>
     bridges.visualize()
+
 
 <span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
     main()

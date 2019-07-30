@@ -32,19 +32,19 @@
     g.add_vertex(a1, <span class="Constant">&quot;&quot;</span>)
     g.add_vertex(a2, <span class="Constant">&quot;&quot;</span>)
 
-    <span class="Comment"># add and edge between the two actors</span>
-    g.add_edge(a1, a2, <span class="Constant">1</span>)
+    g.get_vertex(a1).color = <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>
+    g.get_vertex(a1).size = <span class="Constant">30</span>
+    g.get_vertex(a2).color = <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>
+    g.get_vertex(a2).size = <span class="Constant">30</span>
 
-    <span class="Comment"># color the two actor nodes</span>
-    g.get_vertices().get(<span class="Constant">&quot;</span><span class="Constant">Kevin_Bacon_(I)</span><span class="Constant">&quot;</span>).get_visualizer().set_color(col_name=<span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>)
-    g.get_vertices().get(<span class="Constant">&quot;</span><span class="Constant">Denzel_Washington</span><span class="Constant">&quot;</span>).get_visualizer().set_color(col_name=<span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>)
-    <span class="Comment"># make them a bit bigger</span>
-    g.get_vertices().get(<span class="Constant">&quot;</span><span class="Constant">Kevin_Bacon_(I)</span><span class="Constant">&quot;</span>).get_visualizer().set_size(<span class="Constant">20</span>)
-    g.get_vertices().get(<span class="Constant">&quot;</span><span class="Constant">Denzel_Washington</span><span class="Constant">&quot;</span>).get_visualizer().set_size(<span class="Constant">20</span>)
+    <span class="Comment"># add and edge between the two actors</span>
+    g.add_edge(a1, a2)
+    g.get_link_visualizer(a1, a2).color = <span class="Constant">&quot;</span><span class="Constant">magenta</span><span class="Constant">&quot;</span>
+    g.get_link_visualizer(a1, a2).thickness = <span class="Constant">4.0</span>
 
     <span class="Comment"># get their nodes</span>
-    v1 = g.get_vertices().get(a1)
-    v2 = g.get_vertices().get(a2)
+    v1 = g.get_vertex(a1)
+    v2 = g.get_vertex(a2)
 
     cnt1 = <span class="Constant">0</span>
     cnt2 = <span class="Constant">0</span>
@@ -53,44 +53,42 @@
     <span class="Comment"># and color those links and nodes by following their adjacency lists</span>
     <span class="Statement">for</span> k <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Identifier">len</span>(actor_movie_data)):
         <span class="Comment"># from the actor movie data, get and actor-movie pair</span>
-        a = actor_movie_data[k].get_actor()
-        m = actor_movie_data[k].get_movie()
+        a = actor_movie_data[k].actor
+        m = actor_movie_data[k].movie
 
         <span class="Statement">if</span> (a == <span class="Constant">&quot;</span><span class="Constant">Kevin_Bacon_(I)</span><span class="Constant">&quot;</span> <span class="Statement">and</span> cnt1 &lt; <span class="Constant">15</span>):
             <span class="Comment"># add vertices for this movie and an edge for the link</span>
             g.add_vertex(m, <span class="Constant">&quot;&quot;</span>)
-            g.add_edge(a1, m, <span class="Constant">1</span>)
-            g.add_edge(m, a1, <span class="Constant">1</span>)
+            g.add_edge(a1, m)
+            g.add_edge(m, a1)
             <span class="Comment"># make the movie node a bit transparent</span>
-            g.get_vertices().get(m).get_visualizer().set_opacity(<span class="Constant">0.5</span>)
+            g.get_vertex(m).opacity = <span class="Constant">0.5</span>
             cnt1 += <span class="Constant">1</span>
 
         <span class="Statement">elif</span> (a == <span class="Constant">&quot;</span><span class="Constant">Denzel_Washington</span><span class="Constant">&quot;</span> <span class="Statement">and</span> cnt2 &lt; <span class="Constant">15</span>):
             <span class="Comment"># add vertices for this movie and an edge for the link</span>
             g.add_vertex(m, <span class="Constant">&quot;&quot;</span>)
-            g.add_edge(a2, m, <span class="Constant">1</span>)
-            g.add_edge(m, a2, <span class="Constant">1</span>)
+            g.add_edge(a2, m)
+            g.add_edge(m, a2)
             <span class="Comment"># make the movie node a bit transparent</span>
-            g.get_vertices().get(m).get_visualizer().set_opacity(<span class="Constant">0.5</span>)
+            g.get_vertex(m).opacity = <span class="Constant">0.5</span>
             cnt2 += <span class="Constant">1</span>
 
     <span class="Comment"># Next, we illustrate traversing the adjacency list and color the movie</span>
     <span class="Comment"># nodes adjacent to the Kevin Bacon node</span>
 
     <span class="Comment"># first get the adjacency list for Kevin Bacon</span>
-    head = g.get_adjacency_list().get(<span class="Constant">&quot;</span><span class="Constant">Kevin_Bacon_(I)</span><span class="Constant">&quot;</span>)
+    <span class="Statement">for</span> edge <span class="Statement">in</span> g.out_going_edge_set_of(a1):
+        f = edge.fromv
+        to = edge.tov
+        <span class="Statement">if</span> to != a2:
+            g.get_visualizer(to).color = <span class="Constant">&quot;</span><span class="Constant">turquoise</span><span class="Constant">&quot;</span>
 
-    sle = head
-    <span class="Comment"># traverse the adjacency list</span>
-    <span class="Statement">while</span>(sle <span class="Statement">is</span> <span class="Statement">not</span> <span class="Identifier">None</span>):
-        <span class="Comment"># get the terminating vertex</span>
-        term_vertex = sle.get_value().get_vertex()
-        <span class="Comment"># find the corresponding element</span>
-        el = g.get_vertices().get(term_vertex)
-        <span class="Comment"># set the color of the node except the Denzel W. node</span>
-        <span class="Statement">if</span>(term_vertex != <span class="Constant">&quot;</span><span class="Constant">Denzel Washington</span><span class="Constant">&quot;</span>):
-            el.get_visualizer().set_color(col_name=<span class="Constant">&quot;</span><span class="Constant">green</span><span class="Constant">&quot;</span>)
-        sle = sle.get_next()
+    <span class="Statement">for</span> edge <span class="Statement">in</span> g.out_going_edge_set_of(a2):
+        f = edge.fromv
+        to = edge.tov
+        <span class="Statement">if</span> to != a1:
+            g.get_visualizer(to).color = <span class="Constant">&quot;</span><span class="Constant">orange</span><span class="Constant">&quot;</span>
 
     <span class="Comment"># Pass the graph object to BRIDGES</span>
     bridges.set_data_structure(g)

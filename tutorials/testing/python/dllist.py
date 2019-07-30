@@ -1,6 +1,5 @@
 from bridges.dl_element import *
 from bridges.bridges import *
-from StudentInfo import *
 import sys
 
 
@@ -29,72 +28,41 @@ def main():
             +	" Node colors are as follows: Blue and red connected by magenta links, red and green connected by "
             +	"purple links, green and black connected by blue links, and black and cyan connected by red links.")
 
-    students = []
+    el0 = DLelement(e="Gretel Chaney", label="Gretel Chaney")
+    el1 = DLelement(e="Lamont Kyler", label="Lamont Kyler")
+    el2 = DLelement(e="Gladys Serino", label="Gladys Serino")
+    el3 = DLelement(e="Karol Soderman", label="Karol Soderman")
+    el4 = DLelement(e="Starr McGinn", label="Starr McGinn")
 
-    # load student info
-    students.append(Student("00000000000",
-                              "Gretel Chaney",
-                              "CS",
-                              "g.chaney@generated.com",
-                              "magenta",
-                              "blue",
-                              9.0))
+    el0.next = el1
+    el1.prev = el0
+    el1.next = el2
+    el2.prev = el1
+    el2.next = el3
+    el3.prev = el2
+    el3.next = el4
+    el4.prev = el3
 
-    students.append(Student("00000000001",
-                              "Karol Soderman",
-                              "SIS",
-                              "k.soderman@generated.com",
-                              "magenta",
-                              "red",
-                              11.0))
+    el0.color = "red"
+    el2.color = "aliceblue"
 
-    students.append(Student("00000000002",
-                              "Lamont Kyler",
-                              "BIO",
-                              "l.kyler@generated.com",
-                              "yellow",
-                              "green",
-                              50.0))
+    el0.get_link_visualizer(el1).color = "green"
+    el1.get_link_visualizer(el0).color = "magenta"
 
-    students.append(Student("00000000003",
-                              "Gladys Serino",
-                              "CS",
-                              "g.serino@generated.com",
-                              "green",
-                              "magenta",
-                              9.0))
+    el3.get_link_visualizer(el4).thickness = 3.0
+    el4.get_link_visualizer(el3).thickness = 6.0
 
-    students.append(Student("00000000004",
-                              "Starr Mcginn",
-                              "CS",
-                              "s.mcginn@generated.com",
-                              "red",
-                              "cyan",
-                              15.0))
+    el2.get_link_visualizer(el3).label = "link label"
 
-    # insert the students in front of the list
-    head = None
-    for i in range(len(students)):
-        head = insertFront(head, DLelement(label = "", e = students[i]))
+    el4.opacity = 0.5
 
-    # add visual attributes
-    curr = head
-    while curr is not None:
-        curr.set_label(curr.get_value().getName())
-        curr.get_visualizer().set_color(col_name=curr.get_value().getDislikeColor())
-
-        if curr.get_next()is not None:
-            next = curr.get_next()
-            curr.get_link_visualizer(next).set_color(col_name=curr.get_value().getDislikeColor())
-            next.get_link_visualizer(curr).set_color(col_name=curr.get_value().getDislikeColor())
-
-        curr = curr.get_next()
-
+    el0.size = 20
 
     # set dat structure to be visualized
-    bridges.set_data_structure(head)
+    bridges.set_data_structure(el0)
     # visualize the data structure
     bridges.visualize()
+
 
 if __name__ == "__main__":
     main()

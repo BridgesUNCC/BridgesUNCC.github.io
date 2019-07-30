@@ -35,18 +35,18 @@ def main():
     root = None
     # create BST nodes and insert into a tree
     for i in range(len(ami)):
-        bst_node = BSTElement(ami[i].get_magnitude(), ami[i])
+        bst_node = BSTElement(key=ami[i].magnitude, e=ami[i])
         # set label of the node
-        bst_node.set_label(ami[i].get_title() + ami[i].get_time())
+        bst_node.label = ami[i].title + ami[i].time
 
         root = insertR(root, bst_node)
 
     # set some visual attributes
-    root.get_visualizer().set_color("red")
+    root.color = "red"
 
-    #set visualizer type
+    # set visualizer type
     bridges.set_data_structure(root)
-    #visualize the tree
+    # visualize the tree
     bridges.visualize()
 
 

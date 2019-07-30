@@ -19,40 +19,39 @@
             +	<span class="Constant">&quot;</span><span class="Constant">The other six nodes are neutral color.</span><span class="Constant">&quot;</span>)
 
     <span class="Comment"># create tree nodes</span>
-    t0 = TreeElement(e = <span class="Constant">&quot;</span><span class="Constant">Hello</span><span class="Constant">&quot;</span>)
-    t1 = TreeElement(e= <span class="Constant">&quot;</span><span class="Constant">this</span><span class="Constant">&quot;</span>)
-    t2 = TreeElement(e=<span class="Constant">&quot;</span><span class="Constant">is</span><span class="Constant">&quot;</span>)
-    t3 = TreeElement(e=<span class="Constant">&quot;</span><span class="Constant">a</span><span class="Constant">&quot;</span>)
-    t4 = TreeElement(e=<span class="Constant">&quot;</span><span class="Constant">generic</span><span class="Constant">&quot;</span>)
-    t5 = TreeElement(e=<span class="Constant">&quot;</span><span class="Constant">tree</span><span class="Constant">&quot;</span>)
-    t6 = TreeElement(e=<span class="Constant">&quot;</span><span class="Constant">representation</span><span class="Constant">&quot;</span>)
-
-    <span class="Comment"># put in labels for each node; simply use integers</span>
-    t0.set_label(<span class="Constant">&quot;</span><span class="Constant">10</span><span class="Constant">&quot;</span>)
-    t1.set_label(<span class="Constant">&quot;</span><span class="Constant">20</span><span class="Constant">&quot;</span>)
-    t2.set_label(<span class="Constant">&quot;</span><span class="Constant">30</span><span class="Constant">&quot;</span>)
-    t3.set_label(<span class="Constant">&quot;</span><span class="Constant">40</span><span class="Constant">&quot;</span>)
-    t4.set_label(<span class="Constant">&quot;</span><span class="Constant">50</span><span class="Constant">&quot;</span>)
-    t5.set_label(<span class="Constant">&quot;</span><span class="Constant">60</span><span class="Constant">&quot;</span>)
-    t6.set_label(<span class="Constant">&quot;</span><span class="Constant">70</span><span class="Constant">&quot;</span>)
+    t0 = TreeElement(e=<span class="Constant">&quot;</span><span class="Constant">Hello</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Hello</span><span class="Constant">&quot;</span>)
+    t2 = TreeElement(e=<span class="Constant">&quot;</span><span class="Constant">this</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">this</span><span class="Constant">&quot;</span>)
+    t3 = TreeElement(e=<span class="Constant">&quot;</span><span class="Constant">is</span><span class="Constant">&quot;</span>, label=<span class="Constant">'</span><span class="Constant">is</span><span class="Constant">'</span>)
+    t4 = TreeElement(e=<span class="Constant">&quot;</span><span class="Constant">a</span><span class="Constant">&quot;</span>, label=<span class="Constant">'</span><span class="Constant">a</span><span class="Constant">'</span>)
+    t5 = TreeElement(e=<span class="Constant">&quot;</span><span class="Constant">generic</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">generic</span><span class="Constant">&quot;</span>)
+    t6 = TreeElement(e=<span class="Constant">&quot;</span><span class="Constant">tree</span><span class="Constant">&quot;</span>, label=<span class="Constant">'</span><span class="Constant">tree</span><span class="Constant">'</span>)
+    t7 = TreeElement(e=<span class="Constant">&quot;</span><span class="Constant">representation</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">representation</span><span class="Constant">&quot;</span>)
 
     <span class="Comment"># add links to children</span>
-    t0.add_child(t1)
     t0.add_child(t2)
-    t0.add_child(t5)
-    t2.add_child(t4)
+    t0.add_child(t3)
+    t0.add_child(t4)
     t2.add_child(t5)
-    t3.add_child(t6)
+    t2.add_child(t6)
+    t3.add_child(t7)
 
     <span class="Comment"># set some visual attributes</span>
-    t0.get_visualizer().set_color(<span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>)
-    t0.get_visualizer().set_opacity(<span class="Constant">0.3</span>)
+    t0.color = <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>
+    t0.opacity = <span class="Constant">0.3</span>
+
+    t0.get_link_visualizer(t2).color = <span class="Constant">&quot;</span><span class="Constant">green</span><span class="Constant">&quot;</span>
+    t0.get_link_visualizer(t2).thickness = <span class="Constant">2.0</span>
+    t0.get_link_visualizer(t3).color = <span class="Constant">&quot;</span><span class="Constant">blue</span><span class="Constant">&quot;</span>
+    t0.get_link_visualizer(t3).thickness = <span class="Constant">2.0</span>
+    t0.get_link_visualizer(t4).color = <span class="Constant">&quot;</span><span class="Constant">orange</span><span class="Constant">&quot;</span>
+    t0.get_link_visualizer(t4).thickness = <span class="Constant">2.0</span>
 
     <span class="Comment"># set visualizer type</span>
     bridges.set_data_structure(t0)
 
     <span class="Comment"># visualize the tree</span>
     bridges.visualize()
+
 
 <span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
     main()

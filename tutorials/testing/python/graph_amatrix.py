@@ -16,7 +16,7 @@ def main():
     #Title and Description
     bridges.set_title("A Simple Graph (Adjacency Matrix)  Example using IMDB Actor/Movie Data")
     bridges.set_description("Two lists each having an actor as the root node with 15 movies they played in as leaf nodes. "
-            +	"Root nodes are both red, Kevin Bacon's leaf nodes are green and Denzel Washington's leaf nodes are neutral.")  
+            +	"Root nodes are both red, Kevin Bacon's leaf nodes are green and Denzel Washington's leaf nodes are neutral.")
 
     actor_movie_data = get_actor_movie_imdb_data(1813)
     # create an adjacency Matrix based graph
@@ -33,11 +33,11 @@ def main():
     g.add_edge(a1, a2, 1)
 
     # color the two actor nodes
-    g.get_vertices().get("Kevin_Bacon_(I)").get_visualizer().set_color(col_name="red")
-    g.get_vertices().get("Denzel_Washington").get_visualizer().set_color(col_name="red")
+    g.vertices.get("Kevin_Bacon_(I)").color = "red"
+    g.vertices.get("Denzel_Washington").color = "red"
     # make them a bit bigger
-    g.get_vertices().get("Kevin_Bacon_(I)").get_visualizer().set_size(20)
-    g.get_vertices().get("Denzel_Washington").get_visualizer().set_size(20)
+    g.vertices.get("Kevin_Bacon_(I)").size = 20
+    g.vertices.get("Denzel_Washington").size = 20
 
     cnt1 = 0
     cnt2 = 0
@@ -46,8 +46,8 @@ def main():
     # and color those links and nodes by following their adjacency Matrix
     for k in range(len(actor_movie_data)):
         # from the actor movie data, get and actor-movie pair
-        a = actor_movie_data[k].get_actor()
-        m = actor_movie_data[k].get_movie()
+        a = actor_movie_data[k].actor
+        m = actor_movie_data[k].movie
 
         if (a == "Kevin_Bacon_(I)" and cnt1 < 15):
             # add vertices for this movie and an edge for the link
@@ -55,7 +55,7 @@ def main():
             g.add_edge(a1, m, 1)
             g.add_edge(m, a1, 1)
             # make the movie node a bit transparent
-            g.get_vertices().get(m).get_visualizer().set_opacity(0.5)
+            g.vertices.get(m).opacity = 0.5
             cnt1 += 1
 
         elif (a == "Denzel_Washington" and cnt2 < 15):
@@ -64,7 +64,7 @@ def main():
             g.add_edge(a2, m, 1)
             g.add_edge(m, a2, 1)
             # make the movie node a bit transparent
-            g.get_vertices().get(m).get_visualizer().set_opacity(0.5)
+            g.vertices.get(m).opacity = 0.5
             cnt2 += 1
 
     # Next, we illustrate traversing the adjacency Matrix and color the movie
@@ -73,13 +73,14 @@ def main():
     # first get the adjacency Matrix for Kevin Bacon
     bacon_row = g.get_adjacency_matrix("Kevin_Bacon_(I)")
     for entry, key in bacon_row.items():
-        if(entry != "Denzel Washington" and key != 0):
-            g.get_visualizer(entry).set_color(col_name="green")
+        if (entry != "Denzel_Washington" and key != 0):
+            g.vertices.get(entry).color = "green"
 
     # pass the grpah object to BRIDGES
     bridges.set_data_structure(g)
     # visualize the graph
     bridges.visualize()
+
 
 if __name__ == "__main__":
     main()

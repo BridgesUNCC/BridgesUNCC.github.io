@@ -18,7 +18,7 @@ def main():
     bridges.set_title("A Simple Graph (Adjacency List) Example using IMDB Actor/Movie Data")
     bridges.set_description("Two lists each having an actor as the root node with 15 movies they played in as leaf nodes. "
             +	"Root nodes are both red, Kevin Bacon's leaf nodes are green and Denzel Washington's leaf nodes are neutral.")
-            
+
     actor_movie_data = get_actor_movie_imdb_data(1813)
 
     # create an adjacency list based graph
@@ -31,19 +31,19 @@ def main():
     g.add_vertex(a1, "")
     g.add_vertex(a2, "")
 
-    # add and edge between the two actors
-    g.add_edge(a1, a2, 1)
+    g.get_vertex(a1).color = "red"
+    g.get_vertex(a1).size = 30
+    g.get_vertex(a2).color = "red"
+    g.get_vertex(a2).size = 30
 
-    # color the two actor nodes
-    g.get_vertices().get("Kevin_Bacon_(I)").get_visualizer().set_color(col_name="red")
-    g.get_vertices().get("Denzel_Washington").get_visualizer().set_color(col_name="red")
-    # make them a bit bigger
-    g.get_vertices().get("Kevin_Bacon_(I)").get_visualizer().set_size(20)
-    g.get_vertices().get("Denzel_Washington").get_visualizer().set_size(20)
+    # add and edge between the two actors
+    g.add_edge(a1, a2)
+    g.get_link_visualizer(a1, a2).color = "magenta"
+    g.get_link_visualizer(a1, a2).thickness = 4.0
 
     # get their nodes
-    v1 = g.get_vertices().get(a1)
-    v2 = g.get_vertices().get(a2)
+    v1 = g.get_vertex(a1)
+    v2 = g.get_vertex(a2)
 
     cnt1 = 0
     cnt2 = 0
@@ -52,44 +52,42 @@ def main():
     # and color those links and nodes by following their adjacency lists
     for k in range(len(actor_movie_data)):
         # from the actor movie data, get and actor-movie pair
-        a = actor_movie_data[k].get_actor()
-        m = actor_movie_data[k].get_movie()
+        a = actor_movie_data[k].actor
+        m = actor_movie_data[k].movie
 
         if (a == "Kevin_Bacon_(I)" and cnt1 < 15):
             # add vertices for this movie and an edge for the link
             g.add_vertex(m, "")
-            g.add_edge(a1, m, 1)
-            g.add_edge(m, a1, 1)
+            g.add_edge(a1, m)
+            g.add_edge(m, a1)
             # make the movie node a bit transparent
-            g.get_vertices().get(m).get_visualizer().set_opacity(0.5)
+            g.get_vertex(m).opacity = 0.5
             cnt1 += 1
 
         elif (a == "Denzel_Washington" and cnt2 < 15):
             # add vertices for this movie and an edge for the link
             g.add_vertex(m, "")
-            g.add_edge(a2, m, 1)
-            g.add_edge(m, a2, 1)
+            g.add_edge(a2, m)
+            g.add_edge(m, a2)
             # make the movie node a bit transparent
-            g.get_vertices().get(m).get_visualizer().set_opacity(0.5)
+            g.get_vertex(m).opacity = 0.5
             cnt2 += 1
 
     # Next, we illustrate traversing the adjacency list and color the movie
     # nodes adjacent to the Kevin Bacon node
 
     # first get the adjacency list for Kevin Bacon
-    head = g.get_adjacency_list().get("Kevin_Bacon_(I)")
+    for edge in g.out_going_edge_set_of(a1):
+        f = edge.fromv
+        to = edge.tov
+        if to != a2:
+            g.get_visualizer(to).color = "turquoise"
 
-    sle = head
-    # traverse the adjacency list
-    while(sle is not None):
-        # get the terminating vertex
-        term_vertex = sle.get_value().get_vertex()
-        # find the corresponding element
-        el = g.get_vertices().get(term_vertex)
-        # set the color of the node except the Denzel W. node
-        if(term_vertex != "Denzel Washington"):
-            el.get_visualizer().set_color(col_name="green")
-        sle = sle.get_next()
+    for edge in g.out_going_edge_set_of(a2):
+        f = edge.fromv
+        to = edge.tov
+        if to != a1:
+            g.get_visualizer(to).color = "orange"
 
     # Pass the graph object to BRIDGES
     bridges.set_data_structure(g)

@@ -36,18 +36,18 @@
     root = <span class="Identifier">None</span>
     <span class="Comment"># create BST nodes and insert into a tree</span>
     <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Identifier">len</span>(ami)):
-        bst_node = BSTElement(ami[i].get_magnitude(), ami[i])
+        bst_node = BSTElement(key=ami[i].magnitude, e=ami[i])
         <span class="Comment"># set label of the node</span>
-        bst_node.set_label(ami[i].get_title() + ami[i].get_time())
+        bst_node.label = ami[i].title + ami[i].time
 
         root = insertR(root, bst_node)
 
     <span class="Comment"># set some visual attributes</span>
-    root.get_visualizer().set_color(<span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>)
+    root.color = <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>
 
-    <span class="Comment">#set visualizer type</span>
+    <span class="Comment"># set visualizer type</span>
     bridges.set_data_structure(root)
-    <span class="Comment">#visualize the tree</span>
+    <span class="Comment"># visualize the tree</span>
     bridges.visualize()
 
 

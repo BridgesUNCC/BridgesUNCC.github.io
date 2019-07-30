@@ -20,33 +20,33 @@
                         + <span class="Constant">&quot;</span><span class="Constant">After initialization, colors of specific elements are changed manually using the </span><span class="Constant">&quot;</span>
                         + <span class="Constant">&quot;</span><span class="Constant"> setColor() function.</span><span class="Constant">&quot;</span>)
 
-    <span class="Comment">#speify array dimensions and create 3D array</span>
+    <span class="Comment"># speify array dimensions and create 3D array</span>
     num_slices = <span class="Constant">4</span>
     num_rows = <span class="Constant">4</span>
     num_cols = <span class="Constant">4</span>
 
-    my_array = Array(x_dim=num_slices, y_dim = num_rows, z_dim= num_cols)
+    my_array = Array(x_dim=num_slices, y_dim=num_rows, z_dim=num_cols)
 
-    <span class="Comment">#populate the elements with their array postition</span>
+    <span class="Comment"># populate the elements with their array postition</span>
     n = <span class="Constant">0</span>
     <span class="Statement">for</span> k <span class="Statement">in</span> <span class="Identifier">range</span>(num_slices):
         <span class="Statement">for</span> j <span class="Statement">in</span> <span class="Identifier">range</span>(num_rows):
             <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(num_cols):
-                my_array.get_element(x=i, y=j, z=k).set_label(<span class="Constant">&quot;</span><span class="Constant">El </span><span class="Constant">&quot;</span> + <span class="Identifier">str</span>(n))
+                my_array[i, j, k].label = <span class="Constant">&quot;</span><span class="Constant">El </span><span class="Constant">&quot;</span> + <span class="Identifier">str</span>(n)
                 n += n
 
-    <span class="Comment">#color some of the elements</span>
-    my_array.get_element(x=<span class="Constant">0</span>, y=<span class="Constant">0</span>, z=<span class="Constant">0</span>).get_visualizer().set_color(<span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>)
-    my_array.get_element(x=<span class="Constant">0</span>, y=<span class="Constant">3</span>, z=<span class="Constant">0</span>).get_visualizer().set_color(<span class="Constant">&quot;</span><span class="Constant">green</span><span class="Constant">&quot;</span>)
-    my_array.get_element(x=<span class="Constant">3</span>, y=<span class="Constant">0</span>, z=<span class="Constant">0</span>).get_visualizer().set_color(<span class="Constant">&quot;</span><span class="Constant">blue</span><span class="Constant">&quot;</span>)
-    my_array.get_element(x=<span class="Constant">3</span>, y=<span class="Constant">3</span>, z=<span class="Constant">0</span>).get_visualizer().set_color(<span class="Constant">&quot;</span><span class="Constant">magenta</span><span class="Constant">&quot;</span>)
-    my_array.get_element(x=<span class="Constant">1</span>, y=<span class="Constant">1</span>, z=<span class="Constant">0</span>).get_visualizer().set_color(<span class="Constant">&quot;</span><span class="Constant">cyan</span><span class="Constant">&quot;</span>)
-    my_array.get_element(x=<span class="Constant">2</span>, y=<span class="Constant">2</span>, z=<span class="Constant">0</span>).get_visualizer().set_color(<span class="Constant">&quot;</span><span class="Constant">yellow</span><span class="Constant">&quot;</span>)
+    <span class="Comment"># color some of the elements</span>
+    my_array[<span class="Constant">0</span>, <span class="Constant">0</span>, <span class="Constant">0</span>].visualizer.color = <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>
+    my_array[<span class="Constant">0</span>, <span class="Constant">3</span>, <span class="Constant">0</span>].visualizer.color = <span class="Constant">&quot;</span><span class="Constant">green</span><span class="Constant">&quot;</span>
+    my_array[<span class="Constant">3</span>, <span class="Constant">0</span>, <span class="Constant">0</span>].visualizer.color = <span class="Constant">&quot;</span><span class="Constant">blue</span><span class="Constant">&quot;</span>
+    my_array[<span class="Constant">3</span>, <span class="Constant">3</span>, <span class="Constant">0</span>].visualizer.color = <span class="Constant">&quot;</span><span class="Constant">magenta</span><span class="Constant">&quot;</span>
+    my_array[<span class="Constant">1</span>, <span class="Constant">1</span>, <span class="Constant">0</span>].visualizer.color = <span class="Constant">&quot;</span><span class="Constant">cyan</span><span class="Constant">&quot;</span>
+    my_array[<span class="Constant">2</span>, <span class="Constant">2</span>, <span class="Constant">0</span>].visualizer.color = <span class="Constant">&quot;</span><span class="Constant">yellow</span><span class="Constant">&quot;</span>
 
-    <span class="Comment">#set visualizer type</span>
+    <span class="Comment"># set visualizer type</span>
     bridges.set_data_structure(my_array)
 
-    <span class="Comment">#visualize the list</span>
+    <span class="Comment"># visualize the list</span>
     bridges.visualize()
 
 

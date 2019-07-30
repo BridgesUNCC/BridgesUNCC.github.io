@@ -20,53 +20,54 @@
             +	<span class="Constant">&quot;</span><span class="Constant">link from the neutral node is blue followed by a cyan link between two of the small square red nodes.</span><span class="Constant">&quot;</span>)
 
     <span class="Comment"># create multi linked list</span>
-    el0 = MLelement(<span class="Constant">&quot;</span><span class="Constant">0</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">0</span><span class="Constant">&quot;</span>)
-    el1 = MLelement(<span class="Constant">&quot;</span><span class="Constant">1</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">1</span><span class="Constant">&quot;</span>)
-    el2 = MLelement(<span class="Constant">&quot;</span><span class="Constant">2</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">2</span><span class="Constant">&quot;</span>)
-    el3 = MLelement(<span class="Constant">&quot;</span><span class="Constant">3</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">3</span><span class="Constant">&quot;</span>)
-    el4 = MLelement(<span class="Constant">&quot;</span><span class="Constant">4</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">4</span><span class="Constant">&quot;</span>)
+    el0 = MLelement(e=<span class="Constant">&quot;</span><span class="Constant">0</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">0</span><span class="Constant">&quot;</span>)
+    el1 = MLelement(e=<span class="Constant">&quot;</span><span class="Constant">1</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">1</span><span class="Constant">&quot;</span>)
+    el2 = MLelement(e=<span class="Constant">&quot;</span><span class="Constant">2</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">2</span><span class="Constant">&quot;</span>)
+    el3 = MLelement(e=<span class="Constant">&quot;</span><span class="Constant">3</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">3</span><span class="Constant">&quot;</span>)
+    el4 = MLelement(e=<span class="Constant">&quot;</span><span class="Constant">4</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">4</span><span class="Constant">&quot;</span>)
 
-    <span class="Comment">#create the links</span>
-    el0.set_next(el1)
-    el1.set_next(el2)
-    el2.set_next(el3)
-    el3.set_next(el4)
+    <span class="Comment"># create the links</span>
+    el0.next = el1
+    el1.next = el2
+    el2.next = el3
+    el3.next = el4
 
     <span class="Comment"># create the sublist from 2</span>
-    el5 = MLelement(<span class="Constant">&quot;</span><span class="Constant">5</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">5</span><span class="Constant">&quot;</span>)
-    el6 = MLelement(<span class="Constant">&quot;</span><span class="Constant">6</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">6</span><span class="Constant">&quot;</span>)
-    el7 = MLelement(<span class="Constant">&quot;</span><span class="Constant">7</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">7</span><span class="Constant">&quot;</span>)
+    el5 = MLelement(e=<span class="Constant">&quot;</span><span class="Constant">5</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">5</span><span class="Constant">&quot;</span>)
+    el6 = MLelement(e=<span class="Constant">&quot;</span><span class="Constant">6</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">6</span><span class="Constant">&quot;</span>)
+    el7 = MLelement(e=<span class="Constant">&quot;</span><span class="Constant">7</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">7</span><span class="Constant">&quot;</span>)
 
-    el5.set_next(el6)
-    el6.set_next(el7)
-    el2.set_sub_list(el5)
+    el5.next = el6
+    el6.next = el7
+    el2.sub_list = el5
 
-    el8 = MLelement(<span class="Constant">&quot;</span><span class="Constant">8</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">8</span><span class="Constant">&quot;</span>)
-    el9 = MLelement(<span class="Constant">&quot;</span><span class="Constant">9</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">9</span><span class="Constant">&quot;</span>)
+    el8 = MLelement(e=<span class="Constant">&quot;</span><span class="Constant">8</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">8</span><span class="Constant">&quot;</span>)
+    el9 = MLelement(e=<span class="Constant">&quot;</span><span class="Constant">9</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">9</span><span class="Constant">&quot;</span>)
 
-    <span class="Comment">#create second sublist</span>
-    el8.set_next(el9)
-    el3.set_sub_list(el8)
+    <span class="Comment"># create second sublist</span>
+    el8.next = el9
+    el3.sub_list = el8
 
-    el10 = MLelement(<span class="Constant">&quot;</span><span class="Constant">10</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">10</span><span class="Constant">&quot;</span>)
-    el11 = MLelement(<span class="Constant">&quot;</span><span class="Constant">11</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">11</span><span class="Constant">&quot;</span>)
+    el10 = MLelement(e=<span class="Constant">&quot;</span><span class="Constant">10</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">10</span><span class="Constant">&quot;</span>)
+    el11 = MLelement(e=<span class="Constant">&quot;</span><span class="Constant">11</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">11</span><span class="Constant">&quot;</span>)
 
-    <span class="Comment">#create 3rd sublist</span>
-    el10.set_next(el11)
-    el6.set_sub_list(el10)
+    <span class="Comment"># create 3rd sublist</span>
+    el10.next = el11
+    el6.sub_list = el10
 
-    el0.get_visualizer().set_size(<span class="Constant">40</span>)
-    el0.get_link_visualizer(el1).set_color(col_name=<span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>)
-    el0.get_link_visualizer(el1).set_thickness(<span class="Constant">3</span>)
-    el1.get_link_visualizer(el2).set_color(col_name=<span class="Constant">&quot;</span><span class="Constant">blue</span><span class="Constant">&quot;</span>)
-    el1.get_link_visualizer(el2).set_thickness(<span class="Constant">3</span>)
-    el2.get_link_visualizer(el3).set_color(col_name=<span class="Constant">&quot;</span><span class="Constant">cyan</span><span class="Constant">&quot;</span>)
-    el2.get_link_visualizer(el3).set_thickness(<span class="Constant">3</span>)
+    el0.visualizer.size = <span class="Constant">40</span>
+    el0.get_link_visualizer(el1).color = <span class="Constant">&quot;</span><span class="Constant">green</span><span class="Constant">&quot;</span>
+    el0.get_link_visualizer(el1).thickness = <span class="Constant">3</span>
+    el1.get_link_visualizer(el2).color = <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>
+    el1.get_link_visualizer(el2).thickness = <span class="Constant">3</span>
+    el2.get_link_visualizer(el3).color = <span class="Constant">&quot;</span><span class="Constant">cyan</span><span class="Constant">&quot;</span>
+    el2.get_link_visualizer(el3).thickness = <span class="Constant">3</span>
 
     <span class="Comment"># set visualizer type</span>
     bridges.set_data_structure(el0)
-    <span class="Comment">#visualize the multi linked list</span>
+    <span class="Comment"># visualize the multi linked list</span>
     bridges.visualize()
+
 
 <span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
     main()

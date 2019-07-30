@@ -15,10 +15,10 @@
 
     song = get_song(<span class="Constant">&quot;</span><span class="Constant">Delicate</span><span class="Constant">&quot;</span>)
 
-    <span class="Identifier">print</span>(song.get_artist())
-    <span class="Identifier">print</span>(song.get_album_title())
-    <span class="Identifier">print</span>(song.get_release_date())
-    <span class="Identifier">print</span>(song.get_lyrics()[<span class="Constant">0</span>:<span class="Identifier">min</span>(<span class="Constant">100</span>, <span class="Identifier">len</span>(song.get_lyrics()))])
+    <span class="Identifier">print</span>(song.artist)
+    <span class="Identifier">print</span>(song.album_title)
+    <span class="Identifier">print</span>(song.release_date)
+    <span class="Identifier">print</span>(song.lyrics[<span class="Constant">0</span>:<span class="Identifier">min</span>(<span class="Constant">100</span>, <span class="Identifier">len</span>(song.lyrics))])
 
 
 <span class="Statement">if</span> __name__ == <span class="Constant">'</span><span class="Constant">__main__</span><span class="Constant">'</span>:

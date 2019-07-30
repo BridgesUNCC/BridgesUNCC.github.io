@@ -1,4 +1,3 @@
-from StudentInfo import *
 from bridges.bridges import *
 from bridges.sl_element import *
 import sys
@@ -18,81 +17,26 @@ def main():
     bridges.set_title("A Single Linked List Example")
     bridges.set_description("A list of student data where each node is linked only to the next "
             +	"node in the list. Node and link colors from top of list to bottom: Blue with magenta link, "
-            +	"red with magenta link, green with yellow link, magenta with green link, cyan.")      
-
-    # create the linked list elements with student data
-
-    e01 = SLelement(e=Student("00000000000",
-                          "Gretel Chaney",
-                          "CS",
-                          "g.chaney@generated.com",
-                          "magenta",
-                          "blue",
-                          9.0), label="")
-
-    e02 = SLelement(e=Student("00000000001",
-                          "Karol Soderman",
-                          "SIS",
-                          "k.soderman@generated.com",
-                          "magenta",
-                          "red",
-                          11.0), label="")
-
-    e03 = SLelement(e=Student("00000000002",
-                          "Lamont Kyler",
-                          "BIO",
-                          "l.kyler@generated.com",
-                          "yellow",
-                          "green",
-                          50.0), label="")
-
-    e04 = SLelement(e=Student("00000000003",
-                          "Gladys Serino",
-                          "CS",
-                          "g.serino@generated.com",
-                          "green",
-                          "magenta",
-                          9.0), label="")
-
-    e05 = SLelement(e=Student("00000000004",
-                          "Starr Mcginn",
-                          "CS",
-                          "s.mcginn@generated.com",
-                          "red",
-                          "cyan",
-                          15.0), label="")
+            +	"red with magenta link, green with yellow link, magenta with green link, cyan.")
 
     # link the elements
-    e01.set_next(e02)
-    e02.set_next(e03)
-    e03.set_next(e04)
-    e04.set_next(e05)
+    el1 = SLelement(e="Gretel Chaney", label="Gretel Chaney")
+    el2 = SLelement(e="Gretel Chaney", label="Gretel Chaney")
+    el3 = SLelement(e="Gretel Chaney", label="Gretel Chaney")
+    el4 = SLelement(e="Gretel Chaney", label="Gretel Chaney")
+    el5 = SLelement(e="Gretel Chaney", label="Gretel Chaney")
 
-    # iterate through the list and add visual attributes
-    # to the elements; set the element color to the favorite
-    # color and the link to the disliked color
-    currentElement = e01
-    while currentElement is not None:
-        # color the node
-        si = currentElement.get_value()
-        currentElement.get_visualizer().set_color(col_name=si.getLikeColor())
+    el1.next = el2
+    el2.next = el3
+    el3.next = el4
+    el4.next = el5
 
-        if currentElement.get_next() is not None:
-            # color the link
-            currentElement.get_link_visualizer(currentElement.get_next()).set_color(col_name=si.getDislikeColor())
-            # adjust link thickness
-            currentElement.get_link_visualizer(currentElement.get_next()).set_thickness(si.getCreditHours() * 0.75)
+    el1.visualizer.color = "red"
+    el2.visualizer.color = 'magenta'
 
-        # set the label to the student info (label created in
-        # StudentInfo class
-        currentElement.set_label(si.getName())
-
-        currentElement = currentElement.get_next()
-
-    # set the data structure to be visualized
-    bridges.set_data_structure(e01)
-    # visualize the data structure
+    bridges.set_data_structure(el1)
     bridges.visualize()
+
 
 if __name__ == "__main__":
     main()

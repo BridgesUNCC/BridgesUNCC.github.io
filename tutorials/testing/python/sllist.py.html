@@ -1,5 +1,4 @@
 <pre id='vimCodeElement'>
-<span class="PreProc">from</span> StudentInfo <span class="PreProc">import</span> *
 <span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
 <span class="PreProc">from</span> bridges.sl_element <span class="PreProc">import</span> *
 <span class="PreProc">import</span> sys
@@ -21,79 +20,24 @@
             +	<span class="Constant">&quot;</span><span class="Constant">node in the list. Node and link colors from top of list to bottom: Blue with magenta link, </span><span class="Constant">&quot;</span>
             +	<span class="Constant">&quot;</span><span class="Constant">red with magenta link, green with yellow link, magenta with green link, cyan.</span><span class="Constant">&quot;</span>)
 
-    <span class="Comment"># create the linked list elements with student data</span>
-
-    e01 = SLelement(e=Student(<span class="Constant">&quot;</span><span class="Constant">00000000000</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">&quot;</span><span class="Constant">CS</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">&quot;</span><span class="Constant">g.chaney@generated.com</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">&quot;</span><span class="Constant">magenta</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">&quot;</span><span class="Constant">blue</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">9.0</span>), label=<span class="Constant">&quot;&quot;</span>)
-
-    e02 = SLelement(e=Student(<span class="Constant">&quot;</span><span class="Constant">00000000001</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">&quot;</span><span class="Constant">Karol Soderman</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">&quot;</span><span class="Constant">SIS</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">&quot;</span><span class="Constant">k.soderman@generated.com</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">&quot;</span><span class="Constant">magenta</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">11.0</span>), label=<span class="Constant">&quot;&quot;</span>)
-
-    e03 = SLelement(e=Student(<span class="Constant">&quot;</span><span class="Constant">00000000002</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">&quot;</span><span class="Constant">Lamont Kyler</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">&quot;</span><span class="Constant">BIO</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">&quot;</span><span class="Constant">l.kyler@generated.com</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">&quot;</span><span class="Constant">yellow</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">&quot;</span><span class="Constant">green</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">50.0</span>), label=<span class="Constant">&quot;&quot;</span>)
-
-    e04 = SLelement(e=Student(<span class="Constant">&quot;</span><span class="Constant">00000000003</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">&quot;</span><span class="Constant">Gladys Serino</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">&quot;</span><span class="Constant">CS</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">&quot;</span><span class="Constant">g.serino@generated.com</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">&quot;</span><span class="Constant">green</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">&quot;</span><span class="Constant">magenta</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">9.0</span>), label=<span class="Constant">&quot;&quot;</span>)
-
-    e05 = SLelement(e=Student(<span class="Constant">&quot;</span><span class="Constant">00000000004</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">&quot;</span><span class="Constant">Starr Mcginn</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">&quot;</span><span class="Constant">CS</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">&quot;</span><span class="Constant">s.mcginn@generated.com</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">&quot;</span><span class="Constant">cyan</span><span class="Constant">&quot;</span>,
-                          <span class="Constant">15.0</span>), label=<span class="Constant">&quot;&quot;</span>)
-
     <span class="Comment"># link the elements</span>
-    e01.set_next(e02)
-    e02.set_next(e03)
-    e03.set_next(e04)
-    e04.set_next(e05)
+    el1 = SLelement(e=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>)
+    el2 = SLelement(e=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>)
+    el3 = SLelement(e=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>)
+    el4 = SLelement(e=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>)
+    el5 = SLelement(e=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>)
 
-    <span class="Comment"># iterate through the list and add visual attributes</span>
-    <span class="Comment"># to the elements; set the element color to the favorite</span>
-    <span class="Comment"># color and the link to the disliked color</span>
-    currentElement = e01
-    <span class="Statement">while</span> currentElement <span class="Statement">is</span> <span class="Statement">not</span> <span class="Identifier">None</span>:
-        <span class="Comment"># color the node</span>
-        si = currentElement.get_value()
-        currentElement.get_visualizer().set_color(col_name=si.getLikeColor())
+    el1.next = el2
+    el2.next = el3
+    el3.next = el4
+    el4.next = el5
 
-        <span class="Statement">if</span> currentElement.get_next() <span class="Statement">is</span> <span class="Statement">not</span> <span class="Identifier">None</span>:
-            <span class="Comment"># color the link</span>
-            currentElement.get_link_visualizer(currentElement.get_next()).set_color(col_name=si.getDislikeColor())
-            <span class="Comment"># adjust link thickness</span>
-            currentElement.get_link_visualizer(currentElement.get_next()).set_thickness(si.getCreditHours() * <span class="Constant">0.75</span>)
+    el1.visualizer.color = <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>
+    el2.visualizer.color = <span class="Constant">'</span><span class="Constant">magenta</span><span class="Constant">'</span>
 
-        <span class="Comment"># set the label to the student info (label created in</span>
-        <span class="Comment"># StudentInfo class</span>
-        currentElement.set_label(si.getName())
-
-        currentElement = currentElement.get_next()
-
-    <span class="Comment"># set the data structure to be visualized</span>
-    bridges.set_data_structure(e01)
-    <span class="Comment"># visualize the data structure</span>
+    bridges.set_data_structure(el1)
     bridges.visualize()
+
 
 <span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
     main()

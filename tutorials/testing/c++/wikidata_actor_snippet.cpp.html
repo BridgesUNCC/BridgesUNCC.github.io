@@ -1,0 +1,40 @@
+<pre id='vimCodeElement'>
+
+<span class="PreProc">#include </span><span class="Constant">&lt;iostream&gt;</span>
+<span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
+<span class="PreProc">#include </span><span class="Constant">&lt;vector&gt;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> std;
+
+<span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;DataSource.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;data_src/MovieActorWikidata.h&quot;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
+
+<span class="Comment">// This program fragment illustrates how to access and read the Wikidata actor/movie data</span>
+<span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
+
+	<span class="Comment">// create Bridges object</span>
+	Bridges bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+		<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+	<span class="Comment">// set title</span>
+	bridges.setTitle(<span class="Constant">&quot;Accessing Wikidata Movie/Actor Data&quot;</span>);
+
+	<span class="Comment">// create data source object</span>
+	DataSource ds (&amp;bridges);
+
+	<span class="Comment">// get the actor movie Wikidata data through the BRIDGES API for 1955.</span>
+	<span class="Comment">// data are available from the early 20th century to now.</span>
+	std::vector&lt;MovieActorWikidata&gt; v = ds.getWikidataActorMovie(<span class="Constant">1955</span>, <span class="Constant">1955</span>);
+
+	<span class="Comment">// print out the first record of the dataset</span>
+	cout &lt;&lt; <span class="Constant">&quot;Actor-Movie Data:&quot;</span> &lt;&lt; endl
+	     &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Movie: &quot;</span> &lt;&lt; v[<span class="Constant">0</span>].getMovieURI() &lt;&lt; <span class="Constant">&quot; </span><span class="Special">\&quot;</span><span class="Constant">&quot;</span>&lt;&lt;v[<span class="Constant">0</span>].getMovieName()&lt;&lt; <span class="Constant">&quot;</span><span class="Special">\&quot;\n</span><span class="Constant">&quot;</span>
+	     &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Actor: &quot;</span> &lt;&lt; v[<span class="Constant">0</span>].getActorURI() &lt;&lt; <span class="Constant">&quot; </span><span class="Special">\&quot;</span><span class="Constant">&quot;</span>&lt;&lt;v[<span class="Constant">0</span>].getActorName() &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\&quot;\n</span><span class="Constant">&quot;</span>;
+
+	<span class="Statement">return</span> <span class="Constant">0</span>;
+}
+
+</pre>

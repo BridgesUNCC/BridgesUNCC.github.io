@@ -13,14 +13,14 @@
     <span class="Statement">if</span> <span class="Identifier">len</span>(args) &gt; <span class="Constant">3</span>:
         bridges.connector.set_server(args[<span class="Constant">3</span>])
 
-    book_list = get_gutenberg_book_data()
+        book_list = get_gutenberg_book_data()
 
-    book1 = book_list[random.randrange(<span class="Identifier">len</span>(book_list))]
+        book1 = book_list[random.randrange(<span class="Identifier">len</span>(book_list))]
 
-    <span class="Identifier">print</span>(book1.get_title())
-    <span class="Identifier">print</span>(book1.get_author_name())
-    <span class="Identifier">print</span>(book1.get_genre())
+        <span class="Identifier">print</span>(book1.title)
+        <span class="Identifier">print</span>(book1.name)
+        <span class="Identifier">print</span>(book1.genre)
 
-<span class="Statement">if</span> __name__ == <span class="Constant">'</span><span class="Constant">__main__</span><span class="Constant">'</span>:
-    main()
+    <span class="Statement">if</span> __name__ == <span class="Constant">'</span><span class="Constant">__main__</span><span class="Constant">'</span>:
+        main()
 </pre>

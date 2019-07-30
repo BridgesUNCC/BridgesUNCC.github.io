@@ -1,5 +1,4 @@
 from bridges.bridges import *
-from StudentInfo import *
 from bridges.circ_sl_element import *
 import sys
 
@@ -19,82 +18,38 @@ def main():
             +	"a magenta node with a blue link size 9, a red node with a magenta link size 11, and a yellow node with "
             +	"a red link size 15.")
 
-    students = []
+    # link the elements
+    el1 = CircSLelement(e="Gretel Chaney", label="Gretel Chaney")
+    el2 = CircSLelement(e="Gretel Chaney", label="Gretel Chaney")
+    el3 = CircSLelement(e="Gretel Chaney", label="Gretel Chaney")
+    el4 = CircSLelement(e="Gretel Chaney", label="Gretel Chaney")
+    el5 = CircSLelement(e="Gretel Chaney", label="Gretel Chaney")
 
-    students.append(Student("00000000000",
-                            "Gretel Chaney",
-                            "CS",
-                            "g.chaney@generated.com",
-                            "magenta",
-                            "blue",
-                            9.0))
+    el1.next = el2
+    el2.next = el3
+    el3.next = el4
+    el4.next = el5
 
-    students.append(Student("00000000001",
-                            "Karol Soderman",
-                            "SIS",
-                            "k.soderman@generated.com",
-                            "magenta",
-                            "red",
-                            11.0))
+    el5.next = el1
 
-    students.append(Student("00000000002",
-                            "Lamont Kyler",
-                            "BIO",
-                            "l.kyler@generated.com",
-                            "yellow",
-                            "green",
-                            50.0))
+    el1.visualizer.color = "red"
+    el2.visualizer.color = 'aliceblue'
 
-    students.append(Student("00000000003",
-                            "Gladys Serino",
-                            "CS",
-                            "g.serino@generated.com",
-                            "green",
-                            "magenta",
-                            9.0))
+    el1.get_link_visualizer(el2).color = "green"
+    el3.get_link_visualizer(el4).color = "magenta"
 
-    students.append(Student("00000000004",
-                            "Starr Mcginn",
-                            "CS",
-                            "s.mcginn@generated.com",
-                            "red",
-                            "cyan",
-                            15.0))
+    el3.get_link_visualizer(el4).thickness = 3.0
+    el4.get_link_visualizer(el3).thickness = 6.0
 
+    el4.opacity = 0.5
 
-    head = CircSLelement(label = "", e = students[0])
-    current = head
+    el1.size = 20
 
-    for i in range(1, len(students)):
-        current.set_next(CircSLelement(label = "", e = students[i]))
+    el2.get_link_visualizer(el3).label = "link label"
 
-        #handle the last element
-        if i is len(students)-1:
-            #getting the last element
-            current = current.get_next()
-
-            # point the last element to the first element
-            # so the list becomes circular
-            current.set_next(head)
-        # set the current element to be the next element
-        current = current.get_next()
-
-    current = head
-
-    # add visual attributes
-    for i in range(len(students)):
-
-        current.set_label(current.get_value().getName())
-        current.get_visualizer().set_color(col_name=current.get_value().getLikeColor())
-
-        current.get_link_visualizer(current.get_next()).set_color(col_name=current.get_value().getDislikeColor())
-
-        current.get_link_visualizer(current.get_next()).set_thickness(current.get_value().getCreditHours() *.03)
-
-        current = current.get_next()
-
-    bridges.set_data_structure(head)
+    bridges.set_data_structure(el1)
     bridges.visualize()
+
 
 if __name__ == "__main__":
     main()
