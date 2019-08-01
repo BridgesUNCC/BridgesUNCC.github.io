@@ -20,7 +20,7 @@ int main(int argc, char **argv) {
 	bridges.setTitle("A CheckerBoard Example Using Grid Type");
 	bridges.setDescription("This is an example of the color grid with height and width 10. "
 		"This example alternates between blue and red starting with red at the top left corner of the grid.");
-	int width = 200, height = 200;
+	int width = 100, height = 100;
 
 	ColorGrid *cg  = new ColorGrid(width, height, Color("red"));
 

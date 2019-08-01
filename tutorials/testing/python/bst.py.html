@@ -8,38 +8,34 @@
 <span class="Statement">def</span> <span class="Identifier">insertR</span>(rt, newel):
     <span class="Statement">if</span> (rt <span class="Statement">is</span> <span class="Identifier">None</span>):
         <span class="Statement">return</span> newel
-    <span class="Statement">elif</span> newel.get_key() &lt; rt.get_key():
-        rt.set_left(insertR(rt.get_left(), newel))
+    <span class="Statement">elif</span> newel.key &lt; rt.key:
+        rt.left = insertR(rt.left, newel)
     <span class="Statement">else</span>:
-        rt.set_right(insertR(rt.get_right(), newel))
+        rt.right = insertR(rt.right, newel)
     <span class="Statement">return</span> rt
 
 
 <span class="Statement">def</span> <span class="Identifier">main</span>():
-    args = sys.argv[<span class="Constant">1</span>:]
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>);
 
-    <span class="Comment"># create the Bridges object, set credentials</span>
-    bridges = Bridges(<span class="Identifier">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
-
-    <span class="Statement">if</span> <span class="Identifier">len</span>(args) &gt; <span class="Constant">3</span>:
-        bridges.connector.set_server(args[<span class="Constant">3</span>])
-
-    <span class="Comment">#Title and Description</span>
+    <span class="Comment"># title, description</span>
     bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">A Binary Search Tree Example with Earthquake Data</span><span class="Constant">&quot;</span>)
     bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">10 sets of earthquake are gathered and sorted with nodes whos magnitude is greater than </span><span class="Constant">&quot;</span>
         + <span class="Constant">&quot;</span><span class="Constant">the parent is set to the right and nodes with a magnitude less than the parent set to the left. </span><span class="Constant">&quot;</span>
         + <span class="Constant">&quot;</span><span class="Constant">The root is set to red the leaf nodes are neutral.</span><span class="Constant">&quot;</span>)
 
-    <span class="Comment"># Retrieve a list of 10 earthquake records from USGS using the BRIDGES API</span>
-    ami = get_earthquake_usgs_data(<span class="Constant">10</span>)
+    <span class="Comment"># Retrieve a list of 25 earthquake records from USGS using the BRIDGES API</span>
+    ami = get_earthquake_usgs_data(<span class="Constant">25</span>)
 
     root = <span class="Identifier">None</span>
     <span class="Comment"># create BST nodes and insert into a tree</span>
     <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Identifier">len</span>(ami)):
         bst_node = BSTElement(key=ami[i].magnitude, e=ami[i])
+
         <span class="Comment"># set label of the node</span>
         bst_node.label = ami[i].title + ami[i].time
 
+        <span class="Comment"># insert node into tree</span>
         root = insertR(root, bst_node)
 
     <span class="Comment"># set some visual attributes</span>

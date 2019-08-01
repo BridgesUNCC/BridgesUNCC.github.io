@@ -4,19 +4,12 @@
 <span class="PreProc">import</span> sys
 
 <span class="Statement">def</span> <span class="Identifier">main</span>():
-
-    args = sys.argv[<span class="Constant">1</span>:]
-
     <span class="Comment"># create the Bridges object, set credentials</span>
-    bridges = Bridges(<span class="Identifier">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>);
 
-    <span class="Statement">if</span> <span class="Identifier">len</span>(args) &gt; <span class="Constant">3</span>:
-        bridges.connector.set_server(args[<span class="Constant">3</span>])
-
-    <span class="Comment">#Title and Description</span>
+    <span class="Comment"># title, description</span>
     bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">A General Tree Example</span><span class="Constant">&quot;</span>)
-    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">A basic tree with seven nodes. Three on one side and three on the other. The root node is set to red with 0.3 opacity. </span><span class="Constant">&quot;</span>
-            +	<span class="Constant">&quot;</span><span class="Constant">The other six nodes are neutral color.</span><span class="Constant">&quot;</span>)
+    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">A basic tree with seven nodes. Three on one side and three on the other. The root node is set to red with 0.3 opacity. The other six nodes are neutral color.</span><span class="Constant">&quot;</span>)
 
     <span class="Comment"># create tree nodes</span>
     t0 = TreeElement(e=<span class="Constant">&quot;</span><span class="Constant">Hello</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Hello</span><span class="Constant">&quot;</span>)

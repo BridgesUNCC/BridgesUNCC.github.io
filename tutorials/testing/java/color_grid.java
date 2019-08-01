@@ -27,7 +27,7 @@ public class color_grid {
 		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID",
 			"YOUR_API_KEY");
 
-		int width = 200, height = 200;
+		int width = 100, height = 100;
 
 		Color blue = new Color("blue");
 		Color red = new Color("red");

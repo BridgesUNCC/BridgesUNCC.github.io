@@ -4,37 +4,22 @@
 <span class="PreProc">import</span> sys
 
 
-<span class="Statement">def</span> <span class="Identifier">insertFront</span>(front, new_el):
-    <span class="Statement">if</span> front <span class="Statement">is</span> <span class="Identifier">None</span>:
-        <span class="Statement">return</span> new_el
-
-    new_el.set_next(front)
-    front.set_prev(new_el)
-
-    <span class="Statement">return</span> new_el
-
 <span class="Statement">def</span> <span class="Identifier">main</span>():
-
-    args = sys.argv[<span class="Constant">1</span>:]
-
     <span class="Comment"># create the Bridges object, set credentials</span>
-    bridges = Bridges(<span class="Identifier">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>);
 
-    <span class="Statement">if</span> <span class="Identifier">len</span>(args) &gt; <span class="Constant">3</span>:
-        bridges.connector.set_server(args[<span class="Constant">3</span>])
-
-    <span class="Comment">#Title and Description</span>
+    <span class="Comment"># set title, description</span>
     bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">A doubly Linked List Example</span><span class="Constant">&quot;</span>)
-    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">This list has five nodes all linked to the nodes before and after them. </span><span class="Constant">&quot;</span>
-            +	<span class="Constant">&quot;</span><span class="Constant"> Node colors are as follows: Blue and red connected by magenta links, red and green connected by </span><span class="Constant">&quot;</span>
-            +	<span class="Constant">&quot;</span><span class="Constant">purple links, green and black connected by blue links, and black and cyan connected by red links.</span><span class="Constant">&quot;</span>)
+    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">This list has five nodes all linked to the nodes before and after them and illustrates visual attributes. </span><span class="Constant">&quot;</span>);
 
+	<span class="Comment"># create list elements</span>
     el0 = DLelement(e=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>)
     el1 = DLelement(e=<span class="Constant">&quot;</span><span class="Constant">Lamont Kyler</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Lamont Kyler</span><span class="Constant">&quot;</span>)
     el2 = DLelement(e=<span class="Constant">&quot;</span><span class="Constant">Gladys Serino</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Gladys Serino</span><span class="Constant">&quot;</span>)
     el3 = DLelement(e=<span class="Constant">&quot;</span><span class="Constant">Karol Soderman</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Karol Soderman</span><span class="Constant">&quot;</span>)
     el4 = DLelement(e=<span class="Constant">&quot;</span><span class="Constant">Starr McGinn</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Starr McGinn</span><span class="Constant">&quot;</span>)
 
+	<span class="Comment"># link elements</span>
     el0.next = el1
     el1.prev = el0
     el1.next = el2
@@ -44,6 +29,7 @@
     el3.next = el4
     el4.prev = el3
 
+	<span class="Comment"># add visual attributes</span>
     el0.color = <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>
     el2.color = <span class="Constant">&quot;</span><span class="Constant">aliceblue</span><span class="Constant">&quot;</span>
 
@@ -61,6 +47,7 @@
 
     <span class="Comment"># set dat structure to be visualized</span>
     bridges.set_data_structure(el0)
+
     <span class="Comment"># visualize the data structure</span>
     bridges.visualize()
 

@@ -12,19 +12,15 @@
     args = sys.argv[<span class="Constant">1</span>:]
 
     <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>);
 
-    bridges = Bridges(<span class="Identifier">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
-
-    <span class="Statement">if</span> <span class="Identifier">len</span>(args) &gt; <span class="Constant">3</span>:
-        bridges.connector.set_server(args[<span class="Constant">3</span>])
-
-    <span class="Comment">#Title and Description</span>
+    <span class="Comment"># title, description</span>
     bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">Symbol Collection</span><span class="Constant">&quot;</span>)
     bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">Red square, green circle, magenta horizontal and vertical lines, </span><span class="Constant">&quot;</span>
             +	<span class="Constant">&quot;</span><span class="Constant">and a test label with a purple outline.</span><span class="Constant">&quot;</span>)
 
     sc = SymbolCollection()
-    s1 = Rectangle(<span class="Constant">50</span>, <span class="Constant">50</span>, -<span class="Constant">25.0</span>, <span class="Constant">0.0</span>)
+    s1 = Rectangle(-<span class="Constant">25</span>, <span class="Constant">0</span>, <span class="Constant">50</span>, <span class="Constant">50</span>)
     s1.set_fill_color(Color(<span class="Constant">&quot;</span><span class="Constant">green</span><span class="Constant">&quot;</span>))
     sc.add_symbol(s1)
 

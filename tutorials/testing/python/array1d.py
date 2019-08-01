@@ -7,17 +7,15 @@ def main():
     args = sys.argv[1:]
 
     # create the Bridges object, set credentials
-    bridges = Bridges(int(args[0]), args[1], args[2])
-    #set array dimensions, allocate array fo elements
-    arraySize = 10
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
 
-    if len(args) > 3:
-        bridges.connector.set_server(args[3])
 
+	# Bridges title, description
     bridges.set_title("One-Dimensional Array Example")
-    bridges.set_description("OneD array with colors in order left to right: "
-                            + "red, green, blue, cyan, magenta, yellow, red, green, blue, black.")
+    bridges.set_description("Illustrates a one dimensional array with visual attributes");
 
+    #set array dimensions, allocate array of elements
+    arraySize = 10
     arr = Array(num_elements=arraySize)
 
     #populate the array with squares of indicies
@@ -35,8 +33,6 @@ def main():
     arr[7].visualizer.color = "green"
     arr[8].visualizer.color = "blue"
     arr[9].visualizer.color = "black"
-
-    arr[5].color = "white"
 
     # tell Bridges what data structure to visualize
     bridges.set_data_structure(arr)

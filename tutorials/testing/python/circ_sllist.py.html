@@ -4,51 +4,48 @@
 <span class="PreProc">import</span> sys
 
 <span class="Statement">def</span> <span class="Identifier">main</span>():
-    args = sys.argv[<span class="Constant">1</span>:]
-
     <span class="Comment"># create the Bridges object, set credentials</span>
-    bridges = Bridges(<span class="Identifier">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
 
-    <span class="Statement">if</span> <span class="Identifier">len</span>(args) &gt; <span class="Constant">3</span>:
-        bridges.connector.set_server(args[<span class="Constant">3</span>])
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>);
 
-    <span class="Comment">#Title and Description</span>
+
+    <span class="Comment"># title, description</span>
     bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">A Circle Singly Linked List Example</span><span class="Constant">&quot;</span>)
-    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">This example shows five nodes. Each node is linked only to its child node. </span><span class="Constant">&quot;</span>
-            +	<span class="Constant">&quot;</span><span class="Constant">Colors are: A green node with a yellow link size 12, a blue node with a magenta link size 9, </span><span class="Constant">&quot;</span>
-            +	<span class="Constant">&quot;</span><span class="Constant">a magenta node with a blue link size 9, a red node with a magenta link size 11, and a yellow node with </span><span class="Constant">&quot;</span>
-            +	<span class="Constant">&quot;</span><span class="Constant">a red link size 15.</span><span class="Constant">&quot;</span>)
+    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">This circular singly linked list example shows five nodes and attached visual attributes.</span><span class="Constant">&quot;</span>);
+
+	<span class="Comment"># create list elements</span>
+    el0 = CircSLelement(e=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>)
+    el1 = CircSLelement(e=<span class="Constant">&quot;</span><span class="Constant">Lamont Kyler</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Lamont Kyler</span><span class="Constant">&quot;</span>)
+    el2 = CircSLelement(e=<span class="Constant">&quot;</span><span class="Constant">Gladys Serino</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Gladys Serino</span><span class="Constant">&quot;</span>)
+    el3 = CircSLelement(e=<span class="Constant">&quot;</span><span class="Constant">Karol Soderman</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Karol Soderman</span><span class="Constant">&quot;</span>)
+    el4 = CircSLelement(e=<span class="Constant">&quot;</span><span class="Constant">Starr McGinn</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Starr McGinn</span><span class="Constant">&quot;</span>)
 
     <span class="Comment"># link the elements</span>
-    el1 = CircSLelement(e=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>)
-    el2 = CircSLelement(e=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>)
-    el3 = CircSLelement(e=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>)
-    el4 = CircSLelement(e=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>)
-    el5 = CircSLelement(e=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>)
-
+    el0.next = el1
     el1.next = el2
     el2.next = el3
     el3.next = el4
-    el4.next = el5
 
-    el5.next = el1
+	<span class="Comment"># link last node back to first node</span>
+    el4.next = el0
 
-    el1.visualizer.color = <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>
+	<span class="Comment"># set visual attributes</span>
+    el0.visualizer.color = <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>
     el2.visualizer.color = <span class="Constant">'</span><span class="Constant">aliceblue</span><span class="Constant">'</span>
 
-    el1.get_link_visualizer(el2).color = <span class="Constant">&quot;</span><span class="Constant">green</span><span class="Constant">&quot;</span>
+    el0.get_link_visualizer(el1).color = <span class="Constant">&quot;</span><span class="Constant">green</span><span class="Constant">&quot;</span>
     el3.get_link_visualizer(el4).color = <span class="Constant">&quot;</span><span class="Constant">magenta</span><span class="Constant">&quot;</span>
 
-    el3.get_link_visualizer(el4).thickness = <span class="Constant">3.0</span>
-    el4.get_link_visualizer(el3).thickness = <span class="Constant">6.0</span>
+    el0.get_link_visualizer(el1).thickness = <span class="Constant">2.0</span>
 
     el4.opacity = <span class="Constant">0.5</span>
 
-    el1.size = <span class="Constant">20</span>
+    el0.size = <span class="Constant">20</span>
 
-    el2.get_link_visualizer(el3).label = <span class="Constant">&quot;</span><span class="Constant">link label</span><span class="Constant">&quot;</span>
+    el2.get_link_visualizer(el3).label = <span class="Constant">&quot;</span><span class="Constant">Gladys_to_Karol</span><span class="Constant">&quot;</span>
 
-    bridges.set_data_structure(el1)
+	<span class="Comment"># visualize</span>
+    bridges.set_data_structure(el0)
     bridges.visualize()
 
 

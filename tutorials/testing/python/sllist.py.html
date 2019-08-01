@@ -6,36 +6,36 @@
 
 <span class="Statement">def</span> <span class="Identifier">main</span>():
 
-    args = sys.argv[<span class="Constant">1</span>:]
 
     <span class="Comment"># create the Bridges object, set credentials</span>
-    bridges = Bridges(<span class="Identifier">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>);
 
-    <span class="Statement">if</span> <span class="Identifier">len</span>(args) &gt; <span class="Constant">3</span>:
-        bridges.connector.set_server(args[<span class="Constant">3</span>])
-
-    <span class="Comment">#Title and Description</span>
+    <span class="Comment"># set title, description</span>
     bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">A Single Linked List Example</span><span class="Constant">&quot;</span>)
-    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">A list of student data where each node is linked only to the next </span><span class="Constant">&quot;</span>
-            +	<span class="Constant">&quot;</span><span class="Constant">node in the list. Node and link colors from top of list to bottom: Blue with magenta link, </span><span class="Constant">&quot;</span>
-            +	<span class="Constant">&quot;</span><span class="Constant">red with magenta link, green with yellow link, magenta with green link, cyan.</span><span class="Constant">&quot;</span>)
+    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">A singly linked list of node with student names, where each node is linked only to the next node in the list. Illustrates Node and link coloring, node size, link thickness and opacity</span><span class="Constant">&quot;</span>);
+
+	<span class="Comment"># create the list elements</span>
+    el0 = SLelement(e=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>)
+    el1 = SLelement(e=<span class="Constant">&quot;</span><span class="Constant">Lamont Kyler</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Lamont Kyler</span><span class="Constant">&quot;</span>)
+    el2 = SLelement(e=<span class="Constant">&quot;</span><span class="Constant">Gladys Serino</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Gladys Serino</span><span class="Constant">&quot;</span>)
+    el3 = SLelement(e=<span class="Constant">&quot;</span><span class="Constant">Karol Soderman</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Karol Soderman</span><span class="Constant">&quot;</span>)
+    el4 = SLelement(e=<span class="Constant">&quot;</span><span class="Constant">Starr McGinn</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Starr McGinn</span><span class="Constant">&quot;</span>)
 
     <span class="Comment"># link the elements</span>
-    el1 = SLelement(e=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>)
-    el2 = SLelement(e=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>)
-    el3 = SLelement(e=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>)
-    el4 = SLelement(e=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>)
-    el5 = SLelement(e=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>)
-
+    el0.next = el1
     el1.next = el2
     el2.next = el3
     el3.next = el4
-    el4.next = el5
 
-    el1.visualizer.color = <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>
-    el2.visualizer.color = <span class="Constant">'</span><span class="Constant">magenta</span><span class="Constant">'</span>
+    el0.color = <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>
+    el2.color = <span class="Constant">&quot;</span><span class="Constant">aliceblue</span><span class="Constant">&quot;</span>
 
-    bridges.set_data_structure(el1)
+    <span class="Comment"># color the links - must specify a valid terminating element</span>
+    el0.get_link_visualizer(el1).color = <span class="Constant">&quot;</span><span class="Constant">green</span><span class="Constant">&quot;</span>
+    el3.get_link_visualizer(el4).color = <span class="Constant">&quot;</span><span class="Constant">magenta</span><span class="Constant">&quot;</span>
+
+    <span class="Comment"># visualize</span>
+    bridges.set_data_structure(el0)
     bridges.visualize()
 
 

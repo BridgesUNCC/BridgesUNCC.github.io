@@ -3,51 +3,48 @@ from bridges.circ_sl_element import *
 import sys
 
 def main():
-    args = sys.argv[1:]
-
     # create the Bridges object, set credentials
-    bridges = Bridges(int(args[0]), args[1], args[2])
 
-    if len(args) > 3:
-        bridges.connector.set_server(args[3])
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
 
-    #Title and Description
+
+    # title, description
     bridges.set_title("A Circle Singly Linked List Example")
-    bridges.set_description("This example shows five nodes. Each node is linked only to its child node. "
-            +	"Colors are: A green node with a yellow link size 12, a blue node with a magenta link size 9, "
-            +	"a magenta node with a blue link size 9, a red node with a magenta link size 11, and a yellow node with "
-            +	"a red link size 15.")
+    bridges.set_description("This circular singly linked list example shows five nodes and attached visual attributes.");
+
+	# create list elements
+    el0 = CircSLelement(e="Gretel Chaney", label="Gretel Chaney")
+    el1 = CircSLelement(e="Lamont Kyler", label="Lamont Kyler")
+    el2 = CircSLelement(e="Gladys Serino", label="Gladys Serino")
+    el3 = CircSLelement(e="Karol Soderman", label="Karol Soderman")
+    el4 = CircSLelement(e="Starr McGinn", label="Starr McGinn")
 
     # link the elements
-    el1 = CircSLelement(e="Gretel Chaney", label="Gretel Chaney")
-    el2 = CircSLelement(e="Gretel Chaney", label="Gretel Chaney")
-    el3 = CircSLelement(e="Gretel Chaney", label="Gretel Chaney")
-    el4 = CircSLelement(e="Gretel Chaney", label="Gretel Chaney")
-    el5 = CircSLelement(e="Gretel Chaney", label="Gretel Chaney")
-
+    el0.next = el1
     el1.next = el2
     el2.next = el3
     el3.next = el4
-    el4.next = el5
 
-    el5.next = el1
+	# link last node back to first node
+    el4.next = el0
 
-    el1.visualizer.color = "red"
+	# set visual attributes
+    el0.visualizer.color = "red"
     el2.visualizer.color = 'aliceblue'
 
-    el1.get_link_visualizer(el2).color = "green"
+    el0.get_link_visualizer(el1).color = "green"
     el3.get_link_visualizer(el4).color = "magenta"
 
-    el3.get_link_visualizer(el4).thickness = 3.0
-    el4.get_link_visualizer(el3).thickness = 6.0
+    el0.get_link_visualizer(el1).thickness = 2.0
 
     el4.opacity = 0.5
 
-    el1.size = 20
+    el0.size = 20
 
-    el2.get_link_visualizer(el3).label = "link label"
+    el2.get_link_visualizer(el3).label = "Gladys_to_Karol"
 
-    bridges.set_data_structure(el1)
+	# visualize
+    bridges.set_data_structure(el0)
     bridges.visualize()
 
 

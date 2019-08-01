@@ -3,37 +3,22 @@ from bridges.bridges import *
 import sys
 
 
-def insertFront(front, new_el):
-    if front is None:
-        return new_el
-
-    new_el.set_next(front)
-    front.set_prev(new_el)
-
-    return new_el
-
 def main():
-
-    args = sys.argv[1:]
-
     # create the Bridges object, set credentials
-    bridges = Bridges(int(args[0]), args[1], args[2])
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
 
-    if len(args) > 3:
-        bridges.connector.set_server(args[3])
-
-    #Title and Description
+    # set title, description
     bridges.set_title("A doubly Linked List Example")
-    bridges.set_description("This list has five nodes all linked to the nodes before and after them. "
-            +	" Node colors are as follows: Blue and red connected by magenta links, red and green connected by "
-            +	"purple links, green and black connected by blue links, and black and cyan connected by red links.")
+    bridges.set_description("This list has five nodes all linked to the nodes before and after them and illustrates visual attributes. ");
 
+	# create list elements
     el0 = DLelement(e="Gretel Chaney", label="Gretel Chaney")
     el1 = DLelement(e="Lamont Kyler", label="Lamont Kyler")
     el2 = DLelement(e="Gladys Serino", label="Gladys Serino")
     el3 = DLelement(e="Karol Soderman", label="Karol Soderman")
     el4 = DLelement(e="Starr McGinn", label="Starr McGinn")
 
+	# link elements
     el0.next = el1
     el1.prev = el0
     el1.next = el2
@@ -43,6 +28,7 @@ def main():
     el3.next = el4
     el4.prev = el3
 
+	# add visual attributes
     el0.color = "red"
     el2.color = "aliceblue"
 
@@ -60,6 +46,7 @@ def main():
 
     # set dat structure to be visualized
     bridges.set_data_structure(el0)
+
     # visualize the data structure
     bridges.visualize()
 

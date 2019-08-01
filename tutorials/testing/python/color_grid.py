@@ -7,25 +7,22 @@ def main():
     # This example illustrates using the Bridges color grid
     # We will build a checker grid using two different colors
 
-    args = sys.argv[1:]
 
     # create the Bridges object, set credentials
-    bridges = Bridges(int(args[0]), args[1], args[2])
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
 
-    if len(args) > 3:
-        bridges.connector.set_server(args[3])
-
-    #Title and Description
+    # title, description
     bridges.set_title("A CheckerBoard Example Using Grid Type")
     bridges.set_description("This is an example of the color grid with height and width 10. "
         +   "This example alternates between blue and red starting with red at the top left corner of the grid.")
 
-    width = 200
-    height = 200
 
     blue = Color(col_name="blue")
     red = Color(col_name="red")
 
+    # create a 100x100 color grid
+    width = 100
+    height = 100
     cg = ColorGrid(width, height, red)
 
     # create a checkerboard pattern

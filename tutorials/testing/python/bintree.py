@@ -4,16 +4,11 @@ import sys
 
 
 def main():
-    args = sys.argv[1:]
-
     # create the Bridges object, set credentials
-    bridges = Bridges(int(args[0]), args[1], args[2])
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
 
-    if len(args) > 3:
-        bridges.connector.set_server(args[3])
-
-    #Title and Description
-    bridges.set_title("A Huffman Coding Tree Example")
+    # title, description
+    bridges.set_title("A Huffman Coding (Binary) Tree Example")
     bridges.set_description("[Binary Tree Application]: Huffman tree coding the symbols C, D, E, K, L, M, U, Z with frequencies 32, 42, 120, 7, 42, 24, 37, 2 "
             + "Root is set to red and leaf nodes are set to orange.")
 

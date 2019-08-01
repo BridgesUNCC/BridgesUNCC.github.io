@@ -5,36 +5,36 @@ import sys
 
 def main():
 
-    args = sys.argv[1:]
 
     # create the Bridges object, set credentials
-    bridges = Bridges(int(args[0]), args[1], args[2])
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
 
-    if len(args) > 3:
-        bridges.connector.set_server(args[3])
-
-    #Title and Description
+    # set title, description
     bridges.set_title("A Single Linked List Example")
-    bridges.set_description("A list of student data where each node is linked only to the next "
-            +	"node in the list. Node and link colors from top of list to bottom: Blue with magenta link, "
-            +	"red with magenta link, green with yellow link, magenta with green link, cyan.")
+    bridges.set_description("A singly linked list of node with student names, where each node is linked only to the next node in the list. Illustrates Node and link coloring, node size, link thickness and opacity");
+
+	# create the list elements
+    el0 = SLelement(e="Gretel Chaney", label="Gretel Chaney")
+    el1 = SLelement(e="Lamont Kyler", label="Lamont Kyler")
+    el2 = SLelement(e="Gladys Serino", label="Gladys Serino")
+    el3 = SLelement(e="Karol Soderman", label="Karol Soderman")
+    el4 = SLelement(e="Starr McGinn", label="Starr McGinn")
 
     # link the elements
-    el1 = SLelement(e="Gretel Chaney", label="Gretel Chaney")
-    el2 = SLelement(e="Gretel Chaney", label="Gretel Chaney")
-    el3 = SLelement(e="Gretel Chaney", label="Gretel Chaney")
-    el4 = SLelement(e="Gretel Chaney", label="Gretel Chaney")
-    el5 = SLelement(e="Gretel Chaney", label="Gretel Chaney")
-
+    el0.next = el1
     el1.next = el2
     el2.next = el3
     el3.next = el4
-    el4.next = el5
 
-    el1.visualizer.color = "red"
-    el2.visualizer.color = 'magenta'
+    el0.color = "red"
+    el2.color = "aliceblue"
 
-    bridges.set_data_structure(el1)
+    # color the links - must specify a valid terminating element
+    el0.get_link_visualizer(el1).color = "green"
+    el3.get_link_visualizer(el4).color = "magenta"
+
+    # visualize
+    bridges.set_data_structure(el0)
     bridges.visualize()
 
 
