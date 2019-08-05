@@ -135,12 +135,21 @@ addassignment() {
 	fi
 
 	#setup description 
-	cp ${srcdir}/README.md ${targetdir} #typicially a markdown file
+	cp ${srcdir}/README.md ${targetdir} #typically a markdown file
 	if [ -d ${srcdir}/figures ] #description may refer to figures
 	then
 	    cp -r ${srcdir}/figures ${targetdir}
 	fi
-	( cd ${targetdir}; markdown README.md > README.html ) #compile markdown
+
+	#check for an icon
+	if [ ! -f ${targetdir}/figures/icon.png ] ; then
+	    MSG="no icon for ${name}"
+	    echo ${MSG}
+	    REPORT="${REPORT}\n${MSG}"
+	fi
+
+	#compile markdown
+	( cd ${targetdir}; markdown README.md > README.html )
     fi
 
     prettyname=$name
@@ -170,10 +179,11 @@ addassignment() {
     #if there is an icon, use it
     if [ -f ${targetdir}/figures/icon.png ] ; then
 	echo "<div class=\"assignmenticon\"><img src=\"assignments/${targetdir}/figures/icon.png\" /></div>" >> ${HTMLOUTPUT}
-    else
-	MSG="no icon for ${name}"
-	echo ${MSG}
-	REPORT="${REPORT}\n${MSG}"
+	#else
+	 ##Warning already reported
+	 #MSG="no icon for ${name}"
+	 #echo ${MSG}
+	 #REPORT="${REPORT}\n${MSG}"
     fi
 
     echo '<div class="assignmentmain">' >> ${HTMLOUTPUT}
