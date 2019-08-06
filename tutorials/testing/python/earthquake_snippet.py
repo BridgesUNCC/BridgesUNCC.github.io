@@ -21,6 +21,7 @@ def main():
     print(quake1.location)
     print(quake1.title)
     print(quake1.magnitude)
+    print(quake1.time)
 
 
 if __name__ == '__main__':
