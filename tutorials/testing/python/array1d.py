@@ -1,5 +1,6 @@
 from bridges.bridges import *
 from bridges.array import *
+from bridges.array1d import *
 import sys
 
 
@@ -16,7 +17,7 @@ def main():
 
     #set array dimensions, allocate array of elements
     arraySize = 10
-    arr = Array(num_elements=arraySize)
+    arr = Array1D(arraySize)
 
     #populate the array with squares of indicies
     for i in range(arr.size):

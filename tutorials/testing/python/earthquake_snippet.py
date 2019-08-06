@@ -7,15 +7,15 @@ def main():
     args = sys.argv[1:]
 
     # create the Bridges object, set credentials
-    bridges = Bridges(int(args[0]), args[1], args[2])
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
 
-    if len(args) > 3:
-        bridges.connector.set_server(args[3])
+    # get 100 earthquake records
+    my_list = get_earthquake_usgs_data(100)
 
-    my_list = get_earthquake_usgs_data(1000)
-
+    # pick one at random
     quake1 = my_list[random.randrange(len(my_list))]
 
+    # print details of quake
     print(quake1.latit)
     print(quake1.longit)
     print(quake1.location)

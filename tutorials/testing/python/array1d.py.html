@@ -1,6 +1,7 @@
 <pre id='vimCodeElement'>
 <span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
 <span class="PreProc">from</span> bridges.array <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.array1d <span class="PreProc">import</span> *
 <span class="PreProc">import</span> sys
 
 
@@ -17,7 +18,7 @@
 
     <span class="Comment">#set array dimensions, allocate array of elements</span>
     arraySize = <span class="Constant">10</span>
-    arr = Array(num_elements=arraySize)
+    arr = Array1D(arraySize)
 
     <span class="Comment">#populate the array with squares of indicies</span>
     <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(arr.size):

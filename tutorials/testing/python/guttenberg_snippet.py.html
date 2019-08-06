@@ -10,16 +10,17 @@
     <span class="Comment"># create the Bridges object, set credentials</span>
     bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>);
 
-    <span class="Comment"># get imdb actor movie data</span>
-    my_list = get_actor_movie_imdb_data()
+    <span class="Comment"># get the guttenberg book meta data</span>
+    book_list = get_gutenberg_book_data()
 
-    <span class="Comment"># get an example pair of the data</span>
-    pair1 = my_list[random.randrange(<span class="Identifier">len</span>(my_list))]
+    <span class="Comment"># get the first book</span>
+    book1 = book_list[random.randrange(<span class="Identifier">len</span>(book_list))]
 
-    <span class="Comment"># print the actor and movie</span>
-    <span class="Identifier">print</span>(pair1.actor)
-    <span class="Identifier">print</span>(pair1.movie)
+    <span class="Comment"># print details to console</span>
+    <span class="Identifier">print</span>(book1.title)
+    <span class="Identifier">print</span>(book1.name)
+    <span class="Identifier">print</span>(book1.genre)
 
-<span class="Statement">if</span> __name__ == <span class="Constant">'</span><span class="Constant">__main__</span><span class="Constant">'</span>:
-    main()
+    <span class="Statement">if</span> __name__ == <span class="Constant">'</span><span class="Constant">__main__</span><span class="Constant">'</span>:
+        main()
 </pre>

@@ -1,6 +1,7 @@
 <pre id='vimCodeElement'>
 <span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
 <span class="PreProc">from</span> bridges.array <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.array2d <span class="PreProc">import</span> *
 <span class="PreProc">import</span> sys
 
 <span class="Statement">def</span> <span class="Identifier">main</span>():
@@ -17,7 +18,7 @@
     <span class="Comment"># for 2D array 6x6</span>
     num_rows = <span class="Constant">6</span>
     num_cols = <span class="Constant">6</span>
-    my_array = Array(y_dim = num_rows, x_dim = num_cols)
+    my_array = Array2D(rows = num_rows, col = num_cols)
 
     <span class="Comment">#populate the array</span>
     <span class="Statement">for</span> row <span class="Statement">in</span> <span class="Identifier">range</span>(num_rows):

@@ -19,35 +19,62 @@
     bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">Red square, green circle, magenta horizontal and vertical lines, </span><span class="Constant">&quot;</span>
             +	<span class="Constant">&quot;</span><span class="Constant">and a test label with a purple outline.</span><span class="Constant">&quot;</span>)
 
+    <span class="Comment"># draw a rectangle</span>
     sc = SymbolCollection()
-    s1 = Rectangle(-<span class="Constant">25</span>, <span class="Constant">0</span>, <span class="Constant">50</span>, <span class="Constant">50</span>)
-    s1.set_fill_color(Color(<span class="Constant">&quot;</span><span class="Constant">green</span><span class="Constant">&quot;</span>))
+    s1 = Rectangle(w=<span class="Constant">50</span>, h=<span class="Constant">50</span>, locx=-<span class="Constant">25.0</span>, locy=<span class="Constant">0.0</span>)
+    s1.fill_color = <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>
     sc.add_symbol(s1)
 
-    s2 = Circle(<span class="Constant">25.0</span>, <span class="Constant">0.0</span>, <span class="Constant">25</span>)
-    s2.set_fill_color(Color(<span class="Constant">&quot;</span><span class="Constant">green</span><span class="Constant">&quot;</span>))
+    <span class="Comment"># draw a rectangle</span>
+    s2 = Circle(locx=<span class="Constant">25.0</span>, locy=<span class="Constant">0.0</span>, r=<span class="Constant">25</span>)
+    s2.fill_color = <span class="Constant">&quot;</span><span class="Constant">green</span><span class="Constant">&quot;</span>
     sc.add_symbol(s2)
 
+    <span class="Comment"># draw a triangle</span>
     s3 = Polygon()
-    s3.add_point(-<span class="Constant">100</span>,<span class="Constant">0</span>)
-    s3.add_point(<span class="Constant">100</span>, <span class="Constant">0</span>)
-    s3.add_point(<span class="Constant">0</span>, <span class="Constant">0</span>)
-    s3.add_point(<span class="Constant">0</span>, -<span class="Constant">100</span>)
-    s3.add_point(<span class="Constant">0</span>, <span class="Constant">100</span>)
-    s3.add_point(<span class="Constant">0</span>, <span class="Constant">0</span>)
-    s3.set_stroke_color(Color(<span class="Constant">&quot;</span><span class="Constant">magenta</span><span class="Constant">&quot;</span>))
+    s3.add_point(-<span class="Constant">25</span>, -<span class="Constant">10</span>)
+    s3.add_point(<span class="Constant">25</span>, -<span class="Constant">10</span>)
+    s3.add_point(<span class="Constant">0.0</span>, <span class="Constant">50.0</span>)
+    s3.stroke_color = <span class="Constant">&quot;</span><span class="Constant">darkorchid</span><span class="Constant">&quot;</span>
+    s3.stroke_width = <span class="Constant">2.0</span>
     sc.add_symbol(s3)
+
+    <span class="Comment"># draw X axis</span>
+    s4 = Polyline()
+    s4.add_point(-<span class="Constant">100</span>, <span class="Constant">0</span>)
+    s4.add_point(<span class="Constant">100</span>, <span class="Constant">0</span>)
+    s4.stroke_color = <span class="Constant">&quot;</span><span class="Constant">magenta</span><span class="Constant">&quot;</span>
+    s4.stroke_width = <span class="Constant">2.0</span>
+    sc.add_symbol(s4)
+
+    <span class="Comment"># draw Y axis</span>
+    s5 = Polyline()
+    s5.add_point(<span class="Constant">0.0</span>, -<span class="Constant">100.0</span>)
+    s5.add_point(<span class="Constant">0.0</span>, <span class="Constant">100.0</span>)
+    s5.stroke_width = <span class="Constant">2.0</span>
+    sc.add_symbol(s5)
+
+    <span class="Comment"># draw another triangle</span>
+    s6 = Polygon()
+    s6.add_point(-<span class="Constant">30.0</span>, <span class="Constant">40.0</span>)
+    s6.add_point(<span class="Constant">30.0</span>, <span class="Constant">40.0</span>)
+    s6.add_point(<span class="Constant">0.0</span>, <span class="Constant">80.0</span>)
+    s6.stroke_color = <span class="Constant">&quot;</span><span class="Constant">cyan</span><span class="Constant">&quot;</span>
+    s6.fill_color = <span class="Constant">&quot;</span><span class="Constant">yellow</span><span class="Constant">&quot;</span>
+    s6.stroke_width = <span class="Constant">3.0</span>
+    sc.add_symbol(s6)
 
     l = Label()
     l.set_location(<span class="Constant">0</span>, <span class="Constant">25</span>)
-    l.set_font_size(<span class="Constant">12</span>)
-    l.set_stroke_width(<span class="Constant">1.0</span>)
-    l.set_label(<span class="Constant">&quot;</span><span class="Constant">test label</span><span class="Constant">&quot;</span>)
-    l.set_stroke_color(Color(<span class="Constant">&quot;</span><span class="Constant">purple</span><span class="Constant">&quot;</span>))
+    l.font_size = <span class="Constant">12</span>
+    l.stroke_width = <span class="Constant">1.0</span>
+    l.label = <span class="Constant">&quot;</span><span class="Constant">test label</span><span class="Constant">&quot;</span>
+    l.stroke_color = <span class="Constant">&quot;</span><span class="Constant">purple</span><span class="Constant">&quot;</span>
     sc.add_symbol(l)
 
     bridges.set_data_structure(sc)
     bridges.visualize()
+
 
 <span class="Statement">if</span> __name__ == <span class="Constant">'</span><span class="Constant">__main__</span><span class="Constant">'</span>:
     main()

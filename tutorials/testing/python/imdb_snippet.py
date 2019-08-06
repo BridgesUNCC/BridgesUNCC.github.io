@@ -7,15 +7,15 @@ def main():
     args = sys.argv[1:]
 
     # create the Bridges object, set credentials
-    bridges = Bridges(int(args[0]), args[1], args[2])
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
 
-    if len(args) > 3:
-        bridges.connector.set_server(args[3])
-
+    # get imdb actor movie data
     my_list = get_actor_movie_imdb_data()
 
+    # get an example pair of the data
     pair1 = my_list[random.randrange(len(my_list))]
 
+    # print the actor and movie
     print(pair1.actor)
     print(pair1.movie)
 

@@ -1,5 +1,6 @@
 from bridges.bridges import *
 from bridges.array import *
+from bridges.array2d import *
 import sys
 
 def main():
@@ -16,7 +17,7 @@ def main():
     # for 2D array 6x6
     num_rows = 6
     num_cols = 6
-    my_array = Array(y_dim = num_rows, x_dim = num_cols)
+    my_array = Array2D(rows = num_rows, col = num_cols)
 
     #populate the array
     for row in range(num_rows):

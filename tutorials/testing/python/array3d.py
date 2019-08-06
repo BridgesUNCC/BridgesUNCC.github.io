@@ -1,5 +1,6 @@
 from bridges.bridges import *
 from bridges.array import *
+from bridges.array3d import *
 import sys
 
 def main():
@@ -18,7 +19,7 @@ def main():
     num_rows = 4
     num_cols = 4
 
-    my_array = Array(z_dim=num_slices, y_dim=num_rows, x_dim=num_cols)
+    my_array = Array3D(slices=num_slices, rows=num_rows, cols=num_cols)
 
     # populate the elements with their array postition
     n = 0

@@ -1,6 +1,7 @@
 <pre id='vimCodeElement'>
 <span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
 <span class="PreProc">from</span> bridges.array <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.array3d <span class="PreProc">import</span> *
 <span class="PreProc">import</span> sys
 
 <span class="Statement">def</span> <span class="Identifier">main</span>():
@@ -19,7 +20,7 @@
     num_rows = <span class="Constant">4</span>
     num_cols = <span class="Constant">4</span>
 
-    my_array = Array(z_dim=num_slices, y_dim=num_rows, x_dim=num_cols)
+    my_array = Array3D(slices=num_slices, rows=num_rows, cols=num_cols)
 
     <span class="Comment"># populate the elements with their array postition</span>
     n = <span class="Constant">0</span>
