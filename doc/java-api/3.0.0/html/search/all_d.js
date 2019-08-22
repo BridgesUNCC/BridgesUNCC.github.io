@@ -13,7 +13,5 @@ var searchData=
   ['nine',['nine',['../enumbridges_1_1base_1_1_named_symbol.html#aec1fff03d65d8ade3e8f5ea4deb3fdd5',1,'bridges::base::NamedSymbol']]],
   ['node_5fshapes',['NODE_SHAPES',['../classbridges_1_1validation_1_1_validation.html#a43f1f9efc20d0086b7fcfa9b40bd7146',1,'bridges::validation::Validation']]],
   ['nodes',['nodes',['../classbridges_1_1data__src__dependent_1_1_assignment_data.html#a1d7c23816a57cf9b3bd1bc0b53f15e8e',1,'bridges.data_src_dependent.AssignmentData.nodes()'],['../classbridges_1_1data__src__dependent_1_1_osm_server_response.html#a09cf784347684b5c551cb88690bd1933',1,'bridges.data_src_dependent.OsmServerResponse.nodes()']]],
-  ['nonblockinggame',['NonBlockingGame',['../classbridges_1_1games_1_1_non_blocking_game.html',1,'bridges.games.NonBlockingGame'],['../classbridges_1_1games_1_1_non_blocking_game.html#ae85ea8dcc355372ba354f4e26323fb76',1,'bridges.games.NonBlockingGame.NonBlockingGame()']]],
-  ['nonblockinggame_2ejava',['NonBlockingGame.java',['../_non_blocking_game_8java.html',1,'']]],
   ['none',['none',['../enumbridges_1_1base_1_1_named_symbol.html#a7b46f7751456a226f8b7a72f1704ee44',1,'bridges::base::NamedSymbol']]]
 ];

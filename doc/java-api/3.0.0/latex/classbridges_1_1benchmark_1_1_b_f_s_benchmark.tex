@@ -1,0 +1,80 @@
+\hypertarget{classbridges_1_1benchmark_1_1_b_f_s_benchmark}{}\section{bridges.\+benchmark.\+B\+F\+S\+Benchmark Class Reference}
+\label{classbridges_1_1benchmark_1_1_b_f_s_benchmark}\index{bridges.\+benchmark.\+B\+F\+S\+Benchmark@{bridges.\+benchmark.\+B\+F\+S\+Benchmark}}
+
+
+Inherits bridges.\+benchmark.\+Graph\+Benchmark.
+
+
+
+\subsection{Detailed Description}
+Benchmarks Breadth First Search algorithms. 
+
+Benchmarks B\+FS algorithms and add time series to a Line\+Chart.
+
+One can also set a maximum time spent on a particular run using set\+Time\+Cap().
+
+and can be passed to the run function for being benchmarked. A typical use would look something like
+
+
+\begin{DoxyCode}
+LineChart lc;
+\mbox{\hyperlink{classbridges_1_1benchmark_1_1_b_f_s_benchmark_a47647a605d5cd6523e1472191e12ab94}{BFSBenchmark}} sb (lc) = \textcolor{keyword}{new} \mbox{\hyperlink{classbridges_1_1benchmark_1_1_b_f_s_benchmark_a47647a605d5cd6523e1472191e12ab94}{BFSBenchmark}}(lc);
+sb.run(\textcolor{stringliteral}{"mybfsalgorithm"}, bfsalgo);
+\end{DoxyCode}
+
+
+\begin{DoxyAuthor}{Author}
+Erik Saule 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+07/21/2019 
+\end{DoxyDate}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbridges_1_1benchmark_1_1_b_f_s_benchmark_a47647a605d5cd6523e1472191e12ab94}{B\+F\+S\+Benchmark}} (\mbox{\hyperlink{classbridges_1_1base_1_1_line_chart}{Line\+Chart}} plot, long time\+Cap)
+\item 
+\mbox{\hyperlink{classbridges_1_1benchmark_1_1_b_f_s_benchmark_afe4a4dd46295e41c1cb7ee25c616a2c9}{B\+F\+S\+Benchmark}} (\mbox{\hyperlink{classbridges_1_1base_1_1_line_chart}{Line\+Chart}} plot)
+\item 
+void \mbox{\hyperlink{classbridges_1_1benchmark_1_1_b_f_s_benchmark_a0f530ad46a8a379b86285e0efcf8d51c}{run}} (String algo\+Name, Consumer$<$ \mbox{\hyperlink{classbridges_1_1benchmark_1_1_b_f_s_params}{B\+F\+S\+Params}} $>$ bfs\+Algo)  throws I\+O\+Exception 
+\begin{DoxyCompactList}\small\item\em benchmark a particular B\+FS algorithm that accepts a single \mbox{\hyperlink{classbridges_1_1benchmark_1_1_b_f_s_params}{B\+F\+S\+Params}} argument \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1benchmark_1_1_b_f_s_benchmark_a47647a605d5cd6523e1472191e12ab94}\label{classbridges_1_1benchmark_1_1_b_f_s_benchmark_a47647a605d5cd6523e1472191e12ab94}} 
+\index{bridges\+::benchmark\+::\+B\+F\+S\+Benchmark@{bridges\+::benchmark\+::\+B\+F\+S\+Benchmark}!B\+F\+S\+Benchmark@{B\+F\+S\+Benchmark}}
+\index{B\+F\+S\+Benchmark@{B\+F\+S\+Benchmark}!bridges\+::benchmark\+::\+B\+F\+S\+Benchmark@{bridges\+::benchmark\+::\+B\+F\+S\+Benchmark}}
+\subsubsection{\texorpdfstring{B\+F\+S\+Benchmark()}{BFSBenchmark()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bridges.\+benchmark.\+B\+F\+S\+Benchmark.\+B\+F\+S\+Benchmark (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1base_1_1_line_chart}{Line\+Chart}}}]{plot,  }\item[{long}]{time\+Cap }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1benchmark_1_1_b_f_s_benchmark_afe4a4dd46295e41c1cb7ee25c616a2c9}\label{classbridges_1_1benchmark_1_1_b_f_s_benchmark_afe4a4dd46295e41c1cb7ee25c616a2c9}} 
+\index{bridges\+::benchmark\+::\+B\+F\+S\+Benchmark@{bridges\+::benchmark\+::\+B\+F\+S\+Benchmark}!B\+F\+S\+Benchmark@{B\+F\+S\+Benchmark}}
+\index{B\+F\+S\+Benchmark@{B\+F\+S\+Benchmark}!bridges\+::benchmark\+::\+B\+F\+S\+Benchmark@{bridges\+::benchmark\+::\+B\+F\+S\+Benchmark}}
+\subsubsection{\texorpdfstring{B\+F\+S\+Benchmark()}{BFSBenchmark()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bridges.\+benchmark.\+B\+F\+S\+Benchmark.\+B\+F\+S\+Benchmark (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1base_1_1_line_chart}{Line\+Chart}}}]{plot }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1benchmark_1_1_b_f_s_benchmark_a0f530ad46a8a379b86285e0efcf8d51c}\label{classbridges_1_1benchmark_1_1_b_f_s_benchmark_a0f530ad46a8a379b86285e0efcf8d51c}} 
+\index{bridges\+::benchmark\+::\+B\+F\+S\+Benchmark@{bridges\+::benchmark\+::\+B\+F\+S\+Benchmark}!run@{run}}
+\index{run@{run}!bridges\+::benchmark\+::\+B\+F\+S\+Benchmark@{bridges\+::benchmark\+::\+B\+F\+S\+Benchmark}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void bridges.\+benchmark.\+B\+F\+S\+Benchmark.\+run (\begin{DoxyParamCaption}\item[{String}]{algo\+Name,  }\item[{Consumer$<$ \mbox{\hyperlink{classbridges_1_1benchmark_1_1_b_f_s_params}{B\+F\+S\+Params}} $>$}]{bfs\+Algo }\end{DoxyParamCaption}) throws I\+O\+Exception}
+
+
+
+benchmark a particular B\+FS algorithm that accepts a single \mbox{\hyperlink{classbridges_1_1benchmark_1_1_b_f_s_params}{B\+F\+S\+Params}} argument 
+
+
+\begin{DoxyParams}{Parameters}
+{\em algo\+Name} & Screen name of the algorithm \\
+\hline
+{\em bfs\+Algo} & the actual algorithm \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/java/src/main/java/bridges/benchmark/\mbox{\hyperlink{_b_f_s_benchmark_8java}{B\+F\+S\+Benchmark.\+java}}\end{DoxyCompactItemize}

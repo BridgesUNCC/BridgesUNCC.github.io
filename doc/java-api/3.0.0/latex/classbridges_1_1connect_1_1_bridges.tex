@@ -3,16 +3,16 @@
 
 
 \subsection{Detailed Description}
-The \hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges} class is the main class that provides interfaces to datasets, maintains user and assignment information, and connects to the \hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges} server. 
+The \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges}} class is the main class that provides interfaces to datasets, maintains user and assignment information, and connects to the \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges}} server. 
 
-The \hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges} class is responsible for initializing the \hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges} system, specifying parameters (user id, assignment id, title, description, data structure type, etc) for the student assignment, generating the data structure representation and transmission to the \hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges} server. In addition, it provides interfaces to a number of real-\/world datasets, that makes it easy to access the data for use algorithms/data structure assignments. ~\newline
+The \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges}} class is responsible for initializing the \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges}} system, specifying parameters (user id, assignment id, title, description, data structure type, etc) for the student assignment, generating the data structure representation and transmission to the \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges}} server. In addition, it provides interfaces to a number of real-\/world datasets, that makes it easy to access the data for use algorithms/data structure assignments. ~\newline
 
 
 {\bfseries Datasets.} The datasets that are currently supported through the B\+R\+I\+D\+G\+ES A\+PI include U\+S\+GS Earthquake Data, I\+M\+DB Actor/\+Movie Data (2 versions), Gutenberg Book Collection Meta Data, a Video Game Dataset and Shakespeare Dataset. More information is found in the respective methods (below) and at 
 
 \href{http://bridgesuncc.github.io/datasets.html}{\tt http\+://bridgesuncc.\+github.\+io/datasets.\+html} 
 
-A typical \hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges} program includes creating the \hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges} object, followed by creation of the data structure by the user, assigning visual attributes to elements of the data structure, followed by specification of teh data structure type and the call to visualize the data structure (\hyperlink{classbridges_1_1connect_1_1_bridges_a921a6603b2445b1abe30a1b3d6f0c255}{Bridges\+::set\+Data\+Structure()} and \hyperlink{classbridges_1_1connect_1_1_bridges_a1853d64ffb8675ba2ec227a2b819cd24}{visualize()} methods).
+A typical \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges}} program includes creating the \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges}} object, followed by creation of the data structure by the user, assigning visual attributes to elements of the data structure, followed by specification of teh data structure type and the call to visualize the data structure (\mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_a921a6603b2445b1abe30a1b3d6f0c255}{Bridges\+::set\+Data\+Structure()}} and \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_a1853d64ffb8675ba2ec227a2b819cd24}{visualize()}} methods).
 
 \begin{DoxyAuthor}{Author}
 Sean Gallagher, Kalpathi Subramanaian, Mihai Mehedint, David Burlinson.
@@ -27,62 +27,62 @@ Tutorial examples at ~\newline
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classbridges_1_1connect_1_1_bridges_a42f0592841a829f93453506c78951b1f}{Bridges} ()
+\mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_a42f0592841a829f93453506c78951b1f}{Bridges}} ()
 \item 
-\hyperlink{classbridges_1_1connect_1_1_data_source}{Data\+Source} \hyperlink{classbridges_1_1connect_1_1_bridges_acfe00a832969a77504d9d33d783c4fcd}{get\+Data\+Source} ()
+\mbox{\hyperlink{classbridges_1_1connect_1_1_data_source}{Data\+Source}} \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_acfe00a832969a77504d9d33d783c4fcd}{get\+Data\+Source}} ()
 \item 
-\hyperlink{classbridges_1_1connect_1_1_bridges_a4c47eb7cbb94c5810dc38c38760db872}{Bridges} (int assignment, String username, String appl\+\_\+id)
+\mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_a4c47eb7cbb94c5810dc38c38760db872}{Bridges}} (int assignment, String username, String appl\+\_\+id)
 \item 
-void \hyperlink{classbridges_1_1connect_1_1_bridges_a87aa73367a43cfc8b3ae5e4926ea4895}{init} (int assignment, String username, String appl\+\_\+id)
+void \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_a87aa73367a43cfc8b3ae5e4926ea4895}{init}} (int assignment, String username, String appl\+\_\+id)
 \item 
-void \hyperlink{classbridges_1_1connect_1_1_bridges_aed3752ee6318a48dff271d9a9e2a8fcc}{set\+Title} (String title)
+void \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_aed3752ee6318a48dff271d9a9e2a8fcc}{set\+Title}} (String title)
 \begin{DoxyCompactList}\small\item\em Change the title of the assignment. \end{DoxyCompactList}\item 
-void \hyperlink{classbridges_1_1connect_1_1_bridges_a50d1d5aa64d312393b63d1be854e34a2}{set\+Description} (String description)
+void \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_a50d1d5aa64d312393b63d1be854e34a2}{set\+Description}} (String description)
 \begin{DoxyCompactList}\small\item\em Change the textual description of the assignment. \end{DoxyCompactList}\item 
-void \hyperlink{classbridges_1_1connect_1_1_bridges_ab43e412448e1dfc340e58c407519a576}{set\+Server} (String server)
+void \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_ab43e412448e1dfc340e58c407519a576}{set\+Server}} (String server)
 \item 
-void \hyperlink{classbridges_1_1connect_1_1_bridges_a4af383ba2f114ad7bd4e08eb44096973}{set\+Map\+Overlay} (Boolean flag)
+void \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_a4af383ba2f114ad7bd4e08eb44096973}{set\+Map\+Overlay}} (Boolean flag)
 \item 
-void \hyperlink{classbridges_1_1connect_1_1_bridges_aaa1a44a689daa26a841d0e8d31839861}{set\+Display\+Mode} (String mode)  throws Illegal\+Argument\+Exception 
+void \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_aaa1a44a689daa26a841d0e8d31839861}{set\+Display\+Mode}} (String mode)  throws Illegal\+Argument\+Exception 
 \item 
-void \hyperlink{classbridges_1_1connect_1_1_bridges_ade4a9c43e2b608e6b3dc774b73f95749}{set\+Coord\+System\+Type} (String coord)
+void \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_ade4a9c43e2b608e6b3dc774b73f95749}{set\+Coord\+System\+Type}} (String coord)
 \item 
-void \hyperlink{classbridges_1_1connect_1_1_bridges_ac2f9a8d7852e499a7ed3521f06d470bf}{set\+Window} (int x1, int x2, int y1, int y2)
+void \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_ac2f9a8d7852e499a7ed3521f06d470bf}{set\+Window}} (int x1, int x2, int y1, int y2)
 \begin{DoxyCompactList}\small\item\em Specify the window that will be used to render the view by default. \end{DoxyCompactList}\item 
-void \hyperlink{classbridges_1_1connect_1_1_bridges_afff6882285f7615b775c59b2fc62b1c3}{set\+Window} (float x1, float x2, float y1, float y2)
+void \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_afff6882285f7615b775c59b2fc62b1c3}{set\+Window}} (float x1, float x2, float y1, float y2)
 \begin{DoxyCompactList}\small\item\em Specify the window that will be used to render the view by default. \end{DoxyCompactList}\item 
-void \hyperlink{classbridges_1_1connect_1_1_bridges_a163a32a2fd3327c59d003f457e31eb63}{set\+Window} (double x1, double x2, double y1, double y2)
+void \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_a163a32a2fd3327c59d003f457e31eb63}{set\+Window}} (double x1, double x2, double y1, double y2)
 \begin{DoxyCompactList}\small\item\em Specify the window that will be used to render the view by default. \end{DoxyCompactList}\item 
-boolean \hyperlink{classbridges_1_1connect_1_1_bridges_afd3c63780396e92c94c923037385b31d}{visualize\+J\+S\+ON} ()
+boolean \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_afd3c63780396e92c94c923037385b31d}{visualize\+J\+S\+ON}} ()
 \item 
-void \hyperlink{classbridges_1_1connect_1_1_bridges_aa502aa32a9ac482da9c8455c6810b64d}{set\+Visualize\+J\+S\+ON} (boolean flag)
+void \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_aa502aa32a9ac482da9c8455c6810b64d}{set\+Visualize\+J\+S\+ON}} (boolean flag)
 \item 
-void \hyperlink{classbridges_1_1connect_1_1_bridges_a921a6603b2445b1abe30a1b3d6f0c255}{set\+Data\+Structure} (\hyperlink{classbridges_1_1base_1_1_data_struct}{Data\+Struct} ds)  throws Null\+Pointer\+Exception 
+void \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_a921a6603b2445b1abe30a1b3d6f0c255}{set\+Data\+Structure}} (\mbox{\hyperlink{classbridges_1_1base_1_1_data_struct}{Data\+Struct}} ds)  throws Null\+Pointer\+Exception 
 \item 
-void \hyperlink{classbridges_1_1connect_1_1_bridges_ad79081ca241e5bcb77b1ed52a09fdd39}{clear\+Assignment} ()
+void \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_ad79081ca241e5bcb77b1ed52a09fdd39}{clear\+Assignment}} ()
 \item 
-void \hyperlink{classbridges_1_1connect_1_1_bridges_a1853d64ffb8675ba2ec227a2b819cd24}{visualize} ()  throws I\+O\+Exception, Rate\+Limit\+Exception 
+void \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_a1853d64ffb8675ba2ec227a2b819cd24}{visualize}} ()  throws I\+O\+Exception, Rate\+Limit\+Exception 
 \end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void \hyperlink{classbridges_1_1connect_1_1_bridges_a9295b15aa880aa976706ed4f3337fb3b}{set\+Debug\+Flag} (Boolean flag)
+static void \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_a9295b15aa880aa976706ed4f3337fb3b}{set\+Debug\+Flag}} (Boolean flag)
 \item 
-static Boolean \hyperlink{classbridges_1_1connect_1_1_bridges_a5c9fa0dd62084bfd916c8bdecee3f517}{get\+Debug\+Flag} ()
+static Boolean \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_a5c9fa0dd62084bfd916c8bdecee3f517}{get\+Debug\+Flag}} ()
 \item 
-static String \hyperlink{classbridges_1_1connect_1_1_bridges_af049c06c532987eb616156fb16ea2f43}{get\+Assignment} ()
+static String \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_af049c06c532987eb616156fb16ea2f43}{get\+Assignment}} ()
 \item 
-static int \hyperlink{classbridges_1_1connect_1_1_bridges_ac13ed456687540b57c138adb11735d95}{get\+Assignment\+ID} ()
+static int \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_ac13ed456687540b57c138adb11735d95}{get\+Assignment\+ID}} ()
 \item 
-static void \hyperlink{classbridges_1_1connect_1_1_bridges_ad56c9d138965c41947bb51fe056c1cc9}{set\+Assignment} (int assignment)
+static void \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_ad56c9d138965c41947bb51fe056c1cc9}{set\+Assignment}} (int assignment)
 \item 
-static String \hyperlink{classbridges_1_1connect_1_1_bridges_a75f047cda3100e0cfa88378293c12961}{get\+User\+Name} ()
+static String \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_a75f047cda3100e0cfa88378293c12961}{get\+User\+Name}} ()
 \item 
-static void \hyperlink{classbridges_1_1connect_1_1_bridges_af9b9a2ca03ba02c0c2be4716594678a6}{set\+User\+Name} (String user\+Name)
+static void \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_af9b9a2ca03ba02c0c2be4716594678a6}{set\+User\+Name}} (String user\+Name)
 \item 
-static String \hyperlink{classbridges_1_1connect_1_1_bridges_a426897d6e5449601bb4e20c32b8346f5}{get\+Key} ()
+static String \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_a426897d6e5449601bb4e20c32b8346f5}{get\+Key}} ()
 \item 
-static void \hyperlink{classbridges_1_1connect_1_1_bridges_ab69e89ec7d2e674a8b8c4b0be0c63397}{set\+Key} (String key)
+static void \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_ab69e89ec7d2e674a8b8c4b0be0c63397}{set\+Key}} (String key)
 \end{DoxyCompactItemize}
 
 
@@ -93,13 +93,25 @@ static void \hyperlink{classbridges_1_1connect_1_1_bridges_ab69e89ec7d2e674a8b8c
 \subsubsection{\texorpdfstring{Bridges()}{Bridges()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily bridges.\+connect.\+Bridges.\+Bridges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Constructors \mbox{\Hypertarget{classbridges_1_1connect_1_1_bridges_a4c47eb7cbb94c5810dc38c38760db872}\label{classbridges_1_1connect_1_1_bridges_a4c47eb7cbb94c5810dc38c38760db872}} 
+Constructors
+
+If the F\+O\+R\+C\+E\+\_\+\+B\+R\+I\+D\+G\+E\+S\+\_\+\+A\+P\+I\+K\+EY environment variable is set, use the environment variable as A\+P\+Ikey in all cases.
+
+If the F\+O\+R\+C\+E\+\_\+\+B\+R\+I\+D\+G\+E\+S\+\_\+\+U\+S\+E\+R\+N\+A\+ME environment variable is set, use the environment variable as username in all cases.
+
+If the F\+O\+R\+C\+E\+\_\+\+B\+R\+I\+D\+G\+E\+S\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+NT environment variable is set, use the environment variable as assignment number in all cases. \mbox{\Hypertarget{classbridges_1_1connect_1_1_bridges_a4c47eb7cbb94c5810dc38c38760db872}\label{classbridges_1_1connect_1_1_bridges_a4c47eb7cbb94c5810dc38c38760db872}} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!Bridges@{Bridges}}
 \index{Bridges@{Bridges}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
 \subsubsection{\texorpdfstring{Bridges()}{Bridges()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily bridges.\+connect.\+Bridges.\+Bridges (\begin{DoxyParamCaption}\item[{int}]{assignment,  }\item[{String}]{username,  }\item[{String}]{appl\+\_\+id }\end{DoxyParamCaption})}
 
-Initialize \hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges} (Constructor)
+Initialize \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges}} (Constructor)
+
+If the F\+O\+R\+C\+E\+\_\+\+B\+R\+I\+D\+G\+E\+S\+\_\+\+A\+P\+I\+K\+EY environment variable is set, use the environment variable as A\+P\+Ikey in all cases.
+
+If the F\+O\+R\+C\+E\+\_\+\+B\+R\+I\+D\+G\+E\+S\+\_\+\+U\+S\+E\+R\+N\+A\+ME environment variable is set, use the environment variable as username in all cases.
+
+If the F\+O\+R\+C\+E\+\_\+\+B\+R\+I\+D\+G\+E\+S\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+NT environment variable is set, use the environment variable as assignment number in all cases.
 
 
 \begin{DoxyParams}{Parameters}
@@ -107,7 +119,7 @@ Initialize \hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges} (Constructor
 \hline
 {\em appl\+\_\+id} & this is the appl authentication key(from the Bridges account) \\
 \hline
-{\em username} & this is the username (from the \hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges} account) \\
+{\em username} & this is the username (from the \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges}} account) \\
 \hline
 \end{DoxyParams}
 
@@ -119,7 +131,7 @@ Initialize \hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges} (Constructor
 \subsubsection{\texorpdfstring{clear\+Assignment()}{clearAssignment()}}
 {\footnotesize\ttfamily void bridges.\+connect.\+Bridges.\+clear\+Assignment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-This method deletes the user\textquotesingle{}s current assignment from the \hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges} server
+This method deletes the user\textquotesingle{}s current assignment from the \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges}} server
 
 
 \begin{DoxyExceptions}{Exceptions}
@@ -147,7 +159,7 @@ assignment as a string
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!get\+Data\+Source@{get\+Data\+Source}}
 \index{get\+Data\+Source@{get\+Data\+Source}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
 \subsubsection{\texorpdfstring{get\+Data\+Source()}{getDataSource()}}
-{\footnotesize\ttfamily \hyperlink{classbridges_1_1connect_1_1_data_source}{Data\+Source} bridges.\+connect.\+Bridges.\+get\+Data\+Source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1connect_1_1_data_source}{Data\+Source}} bridges.\+connect.\+Bridges.\+get\+Data\+Source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{classbridges_1_1connect_1_1_bridges_a5c9fa0dd62084bfd916c8bdecee3f517}\label{classbridges_1_1connect_1_1_bridges_a5c9fa0dd62084bfd916c8bdecee3f517}} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!get\+Debug\+Flag@{get\+Debug\+Flag}}
@@ -183,7 +195,7 @@ user id (string)
 \subsubsection{\texorpdfstring{init()}{init()}}
 {\footnotesize\ttfamily void bridges.\+connect.\+Bridges.\+init (\begin{DoxyParamCaption}\item[{int}]{assignment,  }\item[{String}]{username,  }\item[{String}]{appl\+\_\+id }\end{DoxyParamCaption})}
 
-Initialize \hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges}
+Initialize \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges}}
 
 
 \begin{DoxyParams}{Parameters}
@@ -191,7 +203,7 @@ Initialize \hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges}
 \hline
 {\em appl\+\_\+id} & this is the appl authentication key(from the Bridges account) \\
 \hline
-{\em username} & this is the username (from the \hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges} account) \\
+{\em username} & this is the username (from the \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges}} account) \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classbridges_1_1connect_1_1_bridges_ad56c9d138965c41947bb51fe056c1cc9}\label{classbridges_1_1connect_1_1_bridges_ad56c9d138965c41947bb51fe056c1cc9}} 
@@ -218,11 +230,11 @@ set the assignment id
 {\em coord} & this is the desired coordinate space argument Options are\+: \mbox{[}\textquotesingle{}cartesian\textquotesingle{}, \textquotesingle{}albersusa\textquotesingle{}, \textquotesingle{}equirectangular\textquotesingle{}, \textquotesingle{}window\textquotesingle{}\mbox{]}, and \textquotesingle{}cartesian\textquotesingle{} is the default;\\
 \hline
 \end{DoxyParams}
-The \char`\"{}window\char`\"{} option only works for graphs and will automatically scale the view on the browser to include all vertices which have a fixed location. A different window can be specified using \hyperlink{classbridges_1_1connect_1_1_bridges_ac2f9a8d7852e499a7ed3521f06d470bf}{set\+Window()}. \mbox{\Hypertarget{classbridges_1_1connect_1_1_bridges_a921a6603b2445b1abe30a1b3d6f0c255}\label{classbridges_1_1connect_1_1_bridges_a921a6603b2445b1abe30a1b3d6f0c255}} 
+The \char`\"{}window\char`\"{} option only works for graphs and will automatically scale the view on the browser to include all vertices which have a fixed location. A different window can be specified using \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_ac2f9a8d7852e499a7ed3521f06d470bf}{set\+Window()}}. \mbox{\Hypertarget{classbridges_1_1connect_1_1_bridges_a921a6603b2445b1abe30a1b3d6f0c255}\label{classbridges_1_1connect_1_1_bridges_a921a6603b2445b1abe30a1b3d6f0c255}} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!set\+Data\+Structure@{set\+Data\+Structure}}
 \index{set\+Data\+Structure@{set\+Data\+Structure}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
 \subsubsection{\texorpdfstring{set\+Data\+Structure()}{setDataStructure()}}
-{\footnotesize\ttfamily void bridges.\+connect.\+Bridges.\+set\+Data\+Structure (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_data_struct}{Data\+Struct}}]{ds }\end{DoxyParamCaption}) throws Null\+Pointer\+Exception}
+{\footnotesize\ttfamily void bridges.\+connect.\+Bridges.\+set\+Data\+Structure (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1base_1_1_data_struct}{Data\+Struct}}}]{ds }\end{DoxyParamCaption}) throws Null\+Pointer\+Exception}
 
 This method sets the handle to the current data structure; this can be an array, the head of a linked list, root of a tree structure, a graph Arrays of upto 3 dimensions are suppported. It can be any of the data structures supported by B\+R\+I\+D\+G\+ES. Polymorphism and type casting is used to determine the actual data structure and extract its representtion.
 
@@ -353,11 +365,20 @@ set User id
 
 Specify the window that will be used to render the view by default. 
 
-This function enables specifying the window that will rendered by default in the view. This only works for graph data types. And the coordinate system need ot be set to \char`\"{}window\char`\"{} using \hyperlink{classbridges_1_1connect_1_1_bridges_ade4a9c43e2b608e6b3dc774b73f95749}{set\+Coord\+System\+Type()}. \begin{DoxyVerb}@param x1   minimum window x
-@param y1   minimum window y
-@param x2   maximum window x
-@param y2   maximum window y\end{DoxyVerb}
- \mbox{\Hypertarget{classbridges_1_1connect_1_1_bridges_afff6882285f7615b775c59b2fc62b1c3}\label{classbridges_1_1connect_1_1_bridges_afff6882285f7615b775c59b2fc62b1c3}} 
+This function enables specifying the window that will rendered by default in the view. This only works for graph data types. And the coordinate system need ot be set to \char`\"{}window\char`\"{} using \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_ade4a9c43e2b608e6b3dc774b73f95749}{set\+Coord\+System\+Type()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x1} & minimum window x \\
+\hline
+{\em y1} & minimum window y \\
+\hline
+{\em x2} & maximum window x \\
+\hline
+{\em y2} & maximum window y \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1connect_1_1_bridges_afff6882285f7615b775c59b2fc62b1c3}\label{classbridges_1_1connect_1_1_bridges_afff6882285f7615b775c59b2fc62b1c3}} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!set\+Window@{set\+Window}}
 \index{set\+Window@{set\+Window}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
 \subsubsection{\texorpdfstring{set\+Window()}{setWindow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
@@ -367,11 +388,20 @@ This function enables specifying the window that will rendered by default in the
 
 Specify the window that will be used to render the view by default. 
 
-This function enables specifying the window that will rendered by default in the view. This only works for graph data types. And the coordinate system need ot be set to \char`\"{}window\char`\"{} using \hyperlink{classbridges_1_1connect_1_1_bridges_ade4a9c43e2b608e6b3dc774b73f95749}{set\+Coord\+System\+Type()}. \begin{DoxyVerb}@param x1   minimum window x
-@param y1   minimum window y
-@param x2   maximum window x
-@param y2   maximum window y\end{DoxyVerb}
- \mbox{\Hypertarget{classbridges_1_1connect_1_1_bridges_a163a32a2fd3327c59d003f457e31eb63}\label{classbridges_1_1connect_1_1_bridges_a163a32a2fd3327c59d003f457e31eb63}} 
+This function enables specifying the window that will rendered by default in the view. This only works for graph data types. And the coordinate system need ot be set to \char`\"{}window\char`\"{} using \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_ade4a9c43e2b608e6b3dc774b73f95749}{set\+Coord\+System\+Type()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x1} & minimum window x \\
+\hline
+{\em y1} & minimum window y \\
+\hline
+{\em x2} & maximum window x \\
+\hline
+{\em y2} & maximum window y \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1connect_1_1_bridges_a163a32a2fd3327c59d003f457e31eb63}\label{classbridges_1_1connect_1_1_bridges_a163a32a2fd3327c59d003f457e31eb63}} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!set\+Window@{set\+Window}}
 \index{set\+Window@{set\+Window}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
 \subsubsection{\texorpdfstring{set\+Window()}{setWindow()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
@@ -381,17 +411,26 @@ This function enables specifying the window that will rendered by default in the
 
 Specify the window that will be used to render the view by default. 
 
-This function enables specifying the window that will rendered by default in the view. This only works for graph data types. And the coordinate system need ot be set to \char`\"{}window\char`\"{} using \hyperlink{classbridges_1_1connect_1_1_bridges_ade4a9c43e2b608e6b3dc774b73f95749}{set\+Coord\+System\+Type()}. \begin{DoxyVerb}@param x1   minimum window x
-@param y1   minimum window y
-@param x2   maximum window x
-@param y2   maximum window y\end{DoxyVerb}
- \mbox{\Hypertarget{classbridges_1_1connect_1_1_bridges_a1853d64ffb8675ba2ec227a2b819cd24}\label{classbridges_1_1connect_1_1_bridges_a1853d64ffb8675ba2ec227a2b819cd24}} 
+This function enables specifying the window that will rendered by default in the view. This only works for graph data types. And the coordinate system need ot be set to \char`\"{}window\char`\"{} using \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges_ade4a9c43e2b608e6b3dc774b73f95749}{set\+Coord\+System\+Type()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x1} & minimum window x \\
+\hline
+{\em y1} & minimum window y \\
+\hline
+{\em x2} & maximum window x \\
+\hline
+{\em y2} & maximum window y \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1connect_1_1_bridges_a1853d64ffb8675ba2ec227a2b819cd24}\label{classbridges_1_1connect_1_1_bridges_a1853d64ffb8675ba2ec227a2b819cd24}} 
 \index{bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}!visualize@{visualize}}
 \index{visualize@{visualize}!bridges\+::connect\+::\+Bridges@{bridges\+::connect\+::\+Bridges}}
 \subsubsection{\texorpdfstring{visualize()}{visualize()}}
-{\footnotesize\ttfamily void bridges.\+connect.\+Bridges.\+visualize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws I\+O\+Exception, \hyperlink{classbridges_1_1validation_1_1_rate_limit_exception}{Rate\+Limit\+Exception}}
+{\footnotesize\ttfamily void bridges.\+connect.\+Bridges.\+visualize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws I\+O\+Exception, \mbox{\hyperlink{classbridges_1_1validation_1_1_rate_limit_exception}{Rate\+Limit\+Exception}}}
 
-This method generates the representation of the current data structure (J\+S\+ON) and sends that to the \hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges} server for generating a visualization.
+This method generates the representation of the current data structure (J\+S\+ON) and sends that to the \mbox{\hyperlink{classbridges_1_1connect_1_1_bridges}{Bridges}} server for generating a visualization.
 
 
 \begin{DoxyExceptions}{Exceptions}
@@ -413,4 +452,4 @@ check if the flag to output the J\+S\+ON is set
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/erik/work/bridges/bridges-\/java/src/main/java/bridges/connect/\hyperlink{_bridges_8java}{Bridges.\+java}\end{DoxyCompactItemize}
+/\+Users/kalpathi/gr/bridges/client/java/src/main/java/bridges/connect/\mbox{\hyperlink{_bridges_8java}{Bridges.\+java}}\end{DoxyCompactItemize}

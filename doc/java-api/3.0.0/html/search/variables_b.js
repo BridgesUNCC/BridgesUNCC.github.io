@@ -9,6 +9,7 @@ var searchData=
   ['lawngreen',['lawngreen',['../enumbridges_1_1base_1_1_named_color.html#a6686557e4f9d73c0b054567f20c7f445',1,'bridges::base::NamedColor']]],
   ['lemon',['lemon',['../enumbridges_1_1base_1_1_named_symbol.html#add585836d35314cd6592078cb40f457a',1,'bridges::base::NamedSymbol']]],
   ['lemonchiffon',['lemonchiffon',['../enumbridges_1_1base_1_1_named_color.html#a3e7b076971ce4d32b06e637d56eb9f28',1,'bridges::base::NamedColor']]],
+  ['level',['level',['../classbridges_1_1benchmark_1_1_b_f_s_params.html#afb4eff1d30d1f3a25d63d1bf8a4577ad',1,'bridges::benchmark::BFSParams']]],
   ['lightblue',['lightblue',['../enumbridges_1_1base_1_1_named_color.html#a7e02f0d5b5efdbc1d1b75100e41204fe',1,'bridges::base::NamedColor']]],
   ['lightcoral',['lightcoral',['../enumbridges_1_1base_1_1_named_color.html#a7788c12b6d0b75601bce3f7d17782e08',1,'bridges::base::NamedColor']]],
   ['lightcyan',['lightcyan',['../enumbridges_1_1base_1_1_named_color.html#a18a5f47e2b197763746a42aabe97de58',1,'bridges::base::NamedColor']]],
