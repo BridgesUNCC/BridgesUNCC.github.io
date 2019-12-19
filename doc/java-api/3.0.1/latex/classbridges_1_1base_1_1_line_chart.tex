@@ -1,0 +1,464 @@
+\hypertarget{classbridges_1_1base_1_1_line_chart}{}\section{bridges.\+base.\+Line\+Chart Class Reference}
+\label{classbridges_1_1base_1_1_line_chart}\index{bridges.base.LineChart@{bridges.base.LineChart}}
+Inheritance diagram for bridges.\+base.\+Line\+Chart\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbridges_1_1base_1_1_line_chart}
+\end{center}
+\end{figure}
+
+
+\subsection{Detailed Description}
+Show series of data or functions using a line chart. 
+
+Line charts (\href{https://en.wikipedia.org/wiki/Line_chart}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Line\+\_\+chart}}) are used to represent graphically functions such as f(x) = 3$\ast$x+1, or data such as temperature of a liquid on a stove as time passes. A individual function or a set of data are called \char`\"{}series\char`\"{}.
+
+A series is represented by two arrays xdata and ydata such that there is a point at (xdata\mbox{[}0\mbox{]}, ydata\mbox{[}0\mbox{]}), an other at (xdata\mbox{[}1\mbox{]}, ydata\mbox{[}1\mbox{]}), ... One can add a series by passing the two arrays using \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_a586e9953b13e51ab9e592acfb034887b}{set\+Data\+Series()}} or add the arrays individually using \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_a2918179283e8280d47abb43df3c59195}{set\+X\+Data()}} and \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_a3076dc99debb599529169de40815aba2}{set\+Y\+Data()}}.
+
+The different series have a label associated with them by default which can be disabled (see \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_adae74cfb09585727a96cf74ddf74d098}{toggle\+Series\+Label()}}).
+
+The data is typically shown with axes that use a linear scale. However, the scale can be changed to logarithmic for each axis individually (see \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_ad3e5e54c382ac605a81b6b61c250ad16}{toggle\+Logarithmic\+X()}} and toggle\+Logarithmic()).
+
+The \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart}{Line\+Chart}} can have a title (see \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_aedc5f75b158298b755ba0c31bcf84138}{get\+Title()}} and \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_a893519da804666988c49b918c87da2a2}{set\+Title()}}) and a subtitle (see \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_ad24bfdd49194f8e152fdb80e039762ad}{set\+Sub\+Title()}} and \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_a102006e90f2a226886538db0eeda6b08}{get\+Sub\+Title()}}). \subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_ae864fe5ae85e80ae2f035471fb216e68}{Line\+Chart}} ()
+\item 
+String \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_ae5d7ebffc6f29256f6fff368ef9a6c84}{get\+Data\+Struct\+Type}} ()
+\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_a095d16c1544cf373b8d2bf68ca864bd9}{toggle\+Mouse\+Track}} (boolean val)
+\begin{DoxyCompactList}\small\item\em Enables or disables mouse tracking. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_adae74cfb09585727a96cf74ddf74d098}{toggle\+Series\+Label}} (boolean val)
+\begin{DoxyCompactList}\small\item\em Enables or disables series labels. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_ad3e5e54c382ac605a81b6b61c250ad16}{toggle\+LogarithmicX}} (boolean val)
+\begin{DoxyCompactList}\small\item\em Change the X-\/axis scale to logarithmic. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_a7946f217a7b3567ee1a1bd8266ed43ca}{toggle\+LogarithmicY}} (boolean val)
+\begin{DoxyCompactList}\small\item\em Change the Y-\/axis scale to logarithmic. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_a893519da804666988c49b918c87da2a2}{set\+Title}} (String t)
+\begin{DoxyCompactList}\small\item\em Title of the plot. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_aedc5f75b158298b755ba0c31bcf84138}{get\+Title}} ()
+\begin{DoxyCompactList}\small\item\em Title of the plot. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_ad24bfdd49194f8e152fdb80e039762ad}{set\+Sub\+Title}} (String s)
+\begin{DoxyCompactList}\small\item\em Subtitle of the plot. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_a102006e90f2a226886538db0eeda6b08}{get\+Sub\+Title}} ()
+\begin{DoxyCompactList}\small\item\em Subtitle of the plot. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_adddccbe77ebd2590f426fab9c8227457}{set\+Y\+Label}} (String yaxis\+Name)
+\begin{DoxyCompactList}\small\item\em Change the label for the Y-\/axis. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_ad3ae17da720b1f89406ab742379ddfd6}{get\+Y\+Label}} ()
+\begin{DoxyCompactList}\small\item\em Returns the label for the Y-\/axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_ab402a1134bb79919860368a234f62ea2}{set\+X\+Label}} (String xaxis\+Name)
+\begin{DoxyCompactList}\small\item\em Change the label for the X-\/axis. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_a0885f5c62f950d96397b1704da6e2798}{get\+X\+Label}} ()
+\begin{DoxyCompactList}\small\item\em Returns the label for the Y-\/axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_a586e9953b13e51ab9e592acfb034887b}{set\+Data\+Series}} (String series\+Name, double\mbox{[}$\,$\mbox{]} xdata, double\mbox{[}$\,$\mbox{]} ydata)
+\begin{DoxyCompactList}\small\item\em Add a series (or update it) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_ab3b577798d421da8d8519d73dcf7ceaf}{set\+Data\+Series}} (String series\+Name, Array\+List$<$ Double $>$ xdata, Array\+List$<$ Double $>$ ydata)
+\begin{DoxyCompactList}\small\item\em Add a series (or update it) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_ac650a150cfbf2e572a5ccdb5d25cb00b}{set\+Data\+Series}} (String series\+Name, double\mbox{[}$\,$\mbox{]} xdata, Array\+List$<$ Double $>$ ydata)
+\begin{DoxyCompactList}\small\item\em Add a series (or update it) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_a38eb16930491bc047a5343dd73052219}{set\+Data\+Series}} (String series\+Name, Array\+List$<$ Double $>$ xdata, double\mbox{[}$\,$\mbox{]} ydata)
+\begin{DoxyCompactList}\small\item\em Add a series (or update it) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_a2918179283e8280d47abb43df3c59195}{set\+X\+Data}} (String series, double\mbox{[}$\,$\mbox{]} xdata)
+\begin{DoxyCompactList}\small\item\em Changes the X data for a series. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_a2f141ec46fdafd92fb0d86900a2de46a}{set\+X\+Data}} (String series, Array\+List$<$ Double $>$ xdata)
+\begin{DoxyCompactList}\small\item\em Changes the X data for a series. \end{DoxyCompactList}\item 
+double \mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_a34ef6ace0633d287a78d0e224f38f2ed}{get\+X\+Data}} (String series)
+\begin{DoxyCompactList}\small\item\em Returns the X data for a series. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_a3076dc99debb599529169de40815aba2}{set\+Y\+Data}} (String series, Array\+List$<$ Double $>$ ydata)
+\begin{DoxyCompactList}\small\item\em Changes the Y data for a series. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_aa8094fad197ae35d93f9feab5de91f59}{set\+Y\+Data}} (String series, double\mbox{[}$\,$\mbox{]} ydata)
+\begin{DoxyCompactList}\small\item\em Changes the Y data for a series. \end{DoxyCompactList}\item 
+double \mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_a2bf257f45c1056808b41581af1f83645}{get\+Y\+Data}} (String series)
+\begin{DoxyCompactList}\small\item\em Returns the Y data for a series. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classbridges_1_1base_1_1_line_chart_a1d481880dc94fc8c2dfdcf64d2de2a3b}{get\+Data\+Structure\+Representation}} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_line_chart_ae864fe5ae85e80ae2f035471fb216e68}\label{classbridges_1_1base_1_1_line_chart_ae864fe5ae85e80ae2f035471fb216e68}} 
+\index{bridges.base.LineChart@{bridges.base.LineChart}!LineChart@{LineChart}}
+\index{LineChart@{LineChart}!bridges.base.LineChart@{bridges.base.LineChart}}
+\subsubsection{\texorpdfstring{LineChart()}{LineChart()}}
+{\footnotesize\ttfamily bridges.\+base.\+Line\+Chart.\+Line\+Chart (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_line_chart_ae5d7ebffc6f29256f6fff368ef9a6c84}\label{classbridges_1_1base_1_1_line_chart_ae5d7ebffc6f29256f6fff368ef9a6c84}} 
+\index{bridges.base.LineChart@{bridges.base.LineChart}!getDataStructType@{getDataStructType}}
+\index{getDataStructType@{getDataStructType}!bridges.base.LineChart@{bridges.base.LineChart}}
+\subsubsection{\texorpdfstring{getDataStructType()}{getDataStructType()}}
+{\footnotesize\ttfamily String bridges.\+base.\+Line\+Chart.\+get\+Data\+Struct\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1base_1_1_line_chart_a1d481880dc94fc8c2dfdcf64d2de2a3b}\label{classbridges_1_1base_1_1_line_chart_a1d481880dc94fc8c2dfdcf64d2de2a3b}} 
+\index{bridges.base.LineChart@{bridges.base.LineChart}!getDataStructureRepresentation@{getDataStructureRepresentation}}
+\index{getDataStructureRepresentation@{getDataStructureRepresentation}!bridges.base.LineChart@{bridges.base.LineChart}}
+\subsubsection{\texorpdfstring{getDataStructureRepresentation()}{getDataStructureRepresentation()}}
+{\footnotesize\ttfamily String bridges.\+base.\+Line\+Chart.\+get\+Data\+Structure\+Representation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1base_1_1_line_chart_a102006e90f2a226886538db0eeda6b08}\label{classbridges_1_1base_1_1_line_chart_a102006e90f2a226886538db0eeda6b08}} 
+\index{bridges.base.LineChart@{bridges.base.LineChart}!getSubTitle@{getSubTitle}}
+\index{getSubTitle@{getSubTitle}!bridges.base.LineChart@{bridges.base.LineChart}}
+\subsubsection{\texorpdfstring{getSubTitle()}{getSubTitle()}}
+{\footnotesize\ttfamily String bridges.\+base.\+Line\+Chart.\+get\+Sub\+Title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Subtitle of the plot. 
+
+\begin{DoxyReturn}{Returns}
+the subtitle to be shown 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_line_chart_aedc5f75b158298b755ba0c31bcf84138}\label{classbridges_1_1base_1_1_line_chart_aedc5f75b158298b755ba0c31bcf84138}} 
+\index{bridges.base.LineChart@{bridges.base.LineChart}!getTitle@{getTitle}}
+\index{getTitle@{getTitle}!bridges.base.LineChart@{bridges.base.LineChart}}
+\subsubsection{\texorpdfstring{getTitle()}{getTitle()}}
+{\footnotesize\ttfamily String bridges.\+base.\+Line\+Chart.\+get\+Title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Title of the plot. 
+
+\begin{DoxyReturn}{Returns}
+the title to be shown 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_line_chart_a34ef6ace0633d287a78d0e224f38f2ed}\label{classbridges_1_1base_1_1_line_chart_a34ef6ace0633d287a78d0e224f38f2ed}} 
+\index{bridges.base.LineChart@{bridges.base.LineChart}!getXData@{getXData}}
+\index{getXData@{getXData}!bridges.base.LineChart@{bridges.base.LineChart}}
+\subsubsection{\texorpdfstring{getXData()}{getXData()}}
+{\footnotesize\ttfamily double \mbox{[}$\,$\mbox{]} bridges.\+base.\+Line\+Chart.\+get\+X\+Data (\begin{DoxyParamCaption}\item[{String}]{series }\end{DoxyParamCaption})}
+
+
+
+Returns the X data for a series. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em series} & indicate the series to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the X data of series or null if the series is not in there 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_line_chart_a0885f5c62f950d96397b1704da6e2798}\label{classbridges_1_1base_1_1_line_chart_a0885f5c62f950d96397b1704da6e2798}} 
+\index{bridges.base.LineChart@{bridges.base.LineChart}!getXLabel@{getXLabel}}
+\index{getXLabel@{getXLabel}!bridges.base.LineChart@{bridges.base.LineChart}}
+\subsubsection{\texorpdfstring{getXLabel()}{getXLabel()}}
+{\footnotesize\ttfamily String bridges.\+base.\+Line\+Chart.\+get\+X\+Label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the label for the Y-\/axis. 
+
+\begin{DoxyReturn}{Returns}
+label shown for the Y-\/axis 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_line_chart_a2bf257f45c1056808b41581af1f83645}\label{classbridges_1_1base_1_1_line_chart_a2bf257f45c1056808b41581af1f83645}} 
+\index{bridges.base.LineChart@{bridges.base.LineChart}!getYData@{getYData}}
+\index{getYData@{getYData}!bridges.base.LineChart@{bridges.base.LineChart}}
+\subsubsection{\texorpdfstring{getYData()}{getYData()}}
+{\footnotesize\ttfamily double \mbox{[}$\,$\mbox{]} bridges.\+base.\+Line\+Chart.\+get\+Y\+Data (\begin{DoxyParamCaption}\item[{String}]{series }\end{DoxyParamCaption})}
+
+
+
+Returns the Y data for a series. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em series} & indicate the series to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the Y data of series or null if the data is not in there 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_line_chart_ad3ae17da720b1f89406ab742379ddfd6}\label{classbridges_1_1base_1_1_line_chart_ad3ae17da720b1f89406ab742379ddfd6}} 
+\index{bridges.base.LineChart@{bridges.base.LineChart}!getYLabel@{getYLabel}}
+\index{getYLabel@{getYLabel}!bridges.base.LineChart@{bridges.base.LineChart}}
+\subsubsection{\texorpdfstring{getYLabel()}{getYLabel()}}
+{\footnotesize\ttfamily String bridges.\+base.\+Line\+Chart.\+get\+Y\+Label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the label for the Y-\/axis. 
+
+\begin{DoxyReturn}{Returns}
+label shown for the Y-\/axis 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_line_chart_a586e9953b13e51ab9e592acfb034887b}\label{classbridges_1_1base_1_1_line_chart_a586e9953b13e51ab9e592acfb034887b}} 
+\index{bridges.base.LineChart@{bridges.base.LineChart}!setDataSeries@{setDataSeries}}
+\index{setDataSeries@{setDataSeries}!bridges.base.LineChart@{bridges.base.LineChart}}
+\subsubsection{\texorpdfstring{setDataSeries()}{setDataSeries()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void bridges.\+base.\+Line\+Chart.\+set\+Data\+Series (\begin{DoxyParamCaption}\item[{String}]{series\+Name,  }\item[{double \mbox{[}$\,$\mbox{]}}]{xdata,  }\item[{double \mbox{[}$\,$\mbox{]}}]{ydata }\end{DoxyParamCaption})}
+
+
+
+Add a series (or update it) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em series\+Name} & indicates the series to add (or change) \\
+\hline
+{\em xdata} & the X data in the series \\
+\hline
+{\em ydata} & the Y data in the series \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_line_chart_ab3b577798d421da8d8519d73dcf7ceaf}\label{classbridges_1_1base_1_1_line_chart_ab3b577798d421da8d8519d73dcf7ceaf}} 
+\index{bridges.base.LineChart@{bridges.base.LineChart}!setDataSeries@{setDataSeries}}
+\index{setDataSeries@{setDataSeries}!bridges.base.LineChart@{bridges.base.LineChart}}
+\subsubsection{\texorpdfstring{setDataSeries()}{setDataSeries()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void bridges.\+base.\+Line\+Chart.\+set\+Data\+Series (\begin{DoxyParamCaption}\item[{String}]{series\+Name,  }\item[{Array\+List$<$ Double $>$}]{xdata,  }\item[{Array\+List$<$ Double $>$}]{ydata }\end{DoxyParamCaption})}
+
+
+
+Add a series (or update it) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em series\+Name} & indicates the series to add (or change) \\
+\hline
+{\em xdata} & the X data in the series \\
+\hline
+{\em ydata} & the Y data in the series \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_line_chart_ac650a150cfbf2e572a5ccdb5d25cb00b}\label{classbridges_1_1base_1_1_line_chart_ac650a150cfbf2e572a5ccdb5d25cb00b}} 
+\index{bridges.base.LineChart@{bridges.base.LineChart}!setDataSeries@{setDataSeries}}
+\index{setDataSeries@{setDataSeries}!bridges.base.LineChart@{bridges.base.LineChart}}
+\subsubsection{\texorpdfstring{setDataSeries()}{setDataSeries()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void bridges.\+base.\+Line\+Chart.\+set\+Data\+Series (\begin{DoxyParamCaption}\item[{String}]{series\+Name,  }\item[{double \mbox{[}$\,$\mbox{]}}]{xdata,  }\item[{Array\+List$<$ Double $>$}]{ydata }\end{DoxyParamCaption})}
+
+
+
+Add a series (or update it) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em series\+Name} & indicates the series to add (or change) \\
+\hline
+{\em xdata} & the X data in the series \\
+\hline
+{\em ydata} & the Y data in the series \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_line_chart_a38eb16930491bc047a5343dd73052219}\label{classbridges_1_1base_1_1_line_chart_a38eb16930491bc047a5343dd73052219}} 
+\index{bridges.base.LineChart@{bridges.base.LineChart}!setDataSeries@{setDataSeries}}
+\index{setDataSeries@{setDataSeries}!bridges.base.LineChart@{bridges.base.LineChart}}
+\subsubsection{\texorpdfstring{setDataSeries()}{setDataSeries()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void bridges.\+base.\+Line\+Chart.\+set\+Data\+Series (\begin{DoxyParamCaption}\item[{String}]{series\+Name,  }\item[{Array\+List$<$ Double $>$}]{xdata,  }\item[{double \mbox{[}$\,$\mbox{]}}]{ydata }\end{DoxyParamCaption})}
+
+
+
+Add a series (or update it) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em series\+Name} & indicates the series to add (or change) \\
+\hline
+{\em xdata} & the X data in the series \\
+\hline
+{\em ydata} & the Y data in the series \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_line_chart_ad24bfdd49194f8e152fdb80e039762ad}\label{classbridges_1_1base_1_1_line_chart_ad24bfdd49194f8e152fdb80e039762ad}} 
+\index{bridges.base.LineChart@{bridges.base.LineChart}!setSubTitle@{setSubTitle}}
+\index{setSubTitle@{setSubTitle}!bridges.base.LineChart@{bridges.base.LineChart}}
+\subsubsection{\texorpdfstring{setSubTitle()}{setSubTitle()}}
+{\footnotesize\ttfamily void bridges.\+base.\+Line\+Chart.\+set\+Sub\+Title (\begin{DoxyParamCaption}\item[{String}]{s }\end{DoxyParamCaption})}
+
+
+
+Subtitle of the plot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & the subtitle to be shown \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_line_chart_a893519da804666988c49b918c87da2a2}\label{classbridges_1_1base_1_1_line_chart_a893519da804666988c49b918c87da2a2}} 
+\index{bridges.base.LineChart@{bridges.base.LineChart}!setTitle@{setTitle}}
+\index{setTitle@{setTitle}!bridges.base.LineChart@{bridges.base.LineChart}}
+\subsubsection{\texorpdfstring{setTitle()}{setTitle()}}
+{\footnotesize\ttfamily void bridges.\+base.\+Line\+Chart.\+set\+Title (\begin{DoxyParamCaption}\item[{String}]{t }\end{DoxyParamCaption})}
+
+
+
+Title of the plot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & the title to be shown \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_line_chart_a2918179283e8280d47abb43df3c59195}\label{classbridges_1_1base_1_1_line_chart_a2918179283e8280d47abb43df3c59195}} 
+\index{bridges.base.LineChart@{bridges.base.LineChart}!setXData@{setXData}}
+\index{setXData@{setXData}!bridges.base.LineChart@{bridges.base.LineChart}}
+\subsubsection{\texorpdfstring{setXData()}{setXData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void bridges.\+base.\+Line\+Chart.\+set\+X\+Data (\begin{DoxyParamCaption}\item[{String}]{series,  }\item[{double \mbox{[}$\,$\mbox{]}}]{xdata }\end{DoxyParamCaption})}
+
+
+
+Changes the X data for a series. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em series} & indicates the series to get \\
+\hline
+{\em xdata} & the X data in the series \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_line_chart_a2f141ec46fdafd92fb0d86900a2de46a}\label{classbridges_1_1base_1_1_line_chart_a2f141ec46fdafd92fb0d86900a2de46a}} 
+\index{bridges.base.LineChart@{bridges.base.LineChart}!setXData@{setXData}}
+\index{setXData@{setXData}!bridges.base.LineChart@{bridges.base.LineChart}}
+\subsubsection{\texorpdfstring{setXData()}{setXData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void bridges.\+base.\+Line\+Chart.\+set\+X\+Data (\begin{DoxyParamCaption}\item[{String}]{series,  }\item[{Array\+List$<$ Double $>$}]{xdata }\end{DoxyParamCaption})}
+
+
+
+Changes the X data for a series. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em series} & indicates the series to get \\
+\hline
+{\em xdata} & the X data in the series \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_line_chart_ab402a1134bb79919860368a234f62ea2}\label{classbridges_1_1base_1_1_line_chart_ab402a1134bb79919860368a234f62ea2}} 
+\index{bridges.base.LineChart@{bridges.base.LineChart}!setXLabel@{setXLabel}}
+\index{setXLabel@{setXLabel}!bridges.base.LineChart@{bridges.base.LineChart}}
+\subsubsection{\texorpdfstring{setXLabel()}{setXLabel()}}
+{\footnotesize\ttfamily void bridges.\+base.\+Line\+Chart.\+set\+X\+Label (\begin{DoxyParamCaption}\item[{String}]{xaxis\+Name }\end{DoxyParamCaption})}
+
+
+
+Change the label for the X-\/axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xaxis\+Name} & label to use for the X-\/axis \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_line_chart_a3076dc99debb599529169de40815aba2}\label{classbridges_1_1base_1_1_line_chart_a3076dc99debb599529169de40815aba2}} 
+\index{bridges.base.LineChart@{bridges.base.LineChart}!setYData@{setYData}}
+\index{setYData@{setYData}!bridges.base.LineChart@{bridges.base.LineChart}}
+\subsubsection{\texorpdfstring{setYData()}{setYData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void bridges.\+base.\+Line\+Chart.\+set\+Y\+Data (\begin{DoxyParamCaption}\item[{String}]{series,  }\item[{Array\+List$<$ Double $>$}]{ydata }\end{DoxyParamCaption})}
+
+
+
+Changes the Y data for a series. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em series} & indicates the series to get \\
+\hline
+{\em ydata} & the Y data in the series \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_line_chart_aa8094fad197ae35d93f9feab5de91f59}\label{classbridges_1_1base_1_1_line_chart_aa8094fad197ae35d93f9feab5de91f59}} 
+\index{bridges.base.LineChart@{bridges.base.LineChart}!setYData@{setYData}}
+\index{setYData@{setYData}!bridges.base.LineChart@{bridges.base.LineChart}}
+\subsubsection{\texorpdfstring{setYData()}{setYData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void bridges.\+base.\+Line\+Chart.\+set\+Y\+Data (\begin{DoxyParamCaption}\item[{String}]{series,  }\item[{double \mbox{[}$\,$\mbox{]}}]{ydata }\end{DoxyParamCaption})}
+
+
+
+Changes the Y data for a series. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em series} & indicates the series to get \\
+\hline
+{\em ydata} & the Y data in the series \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_line_chart_adddccbe77ebd2590f426fab9c8227457}\label{classbridges_1_1base_1_1_line_chart_adddccbe77ebd2590f426fab9c8227457}} 
+\index{bridges.base.LineChart@{bridges.base.LineChart}!setYLabel@{setYLabel}}
+\index{setYLabel@{setYLabel}!bridges.base.LineChart@{bridges.base.LineChart}}
+\subsubsection{\texorpdfstring{setYLabel()}{setYLabel()}}
+{\footnotesize\ttfamily void bridges.\+base.\+Line\+Chart.\+set\+Y\+Label (\begin{DoxyParamCaption}\item[{String}]{yaxis\+Name }\end{DoxyParamCaption})}
+
+
+
+Change the label for the Y-\/axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em yaxis\+Name} & label to show for the Y-\/axis \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_line_chart_ad3e5e54c382ac605a81b6b61c250ad16}\label{classbridges_1_1base_1_1_line_chart_ad3e5e54c382ac605a81b6b61c250ad16}} 
+\index{bridges.base.LineChart@{bridges.base.LineChart}!toggleLogarithmicX@{toggleLogarithmicX}}
+\index{toggleLogarithmicX@{toggleLogarithmicX}!bridges.base.LineChart@{bridges.base.LineChart}}
+\subsubsection{\texorpdfstring{toggleLogarithmicX()}{toggleLogarithmicX()}}
+{\footnotesize\ttfamily void bridges.\+base.\+Line\+Chart.\+toggle\+LogarithmicX (\begin{DoxyParamCaption}\item[{boolean}]{val }\end{DoxyParamCaption})}
+
+
+
+Change the X-\/axis scale to logarithmic. 
+
+When enabled, the X-\/axis scale becomes logarithmic (as opposed to linear).
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Should the X-\/axis use a logarithmic scale? \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_line_chart_a7946f217a7b3567ee1a1bd8266ed43ca}\label{classbridges_1_1base_1_1_line_chart_a7946f217a7b3567ee1a1bd8266ed43ca}} 
+\index{bridges.base.LineChart@{bridges.base.LineChart}!toggleLogarithmicY@{toggleLogarithmicY}}
+\index{toggleLogarithmicY@{toggleLogarithmicY}!bridges.base.LineChart@{bridges.base.LineChart}}
+\subsubsection{\texorpdfstring{toggleLogarithmicY()}{toggleLogarithmicY()}}
+{\footnotesize\ttfamily void bridges.\+base.\+Line\+Chart.\+toggle\+LogarithmicY (\begin{DoxyParamCaption}\item[{boolean}]{val }\end{DoxyParamCaption})}
+
+
+
+Change the Y-\/axis scale to logarithmic. 
+
+When enabled, the Y-\/axis scale becomes logarithmic (as opposed to linear).
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Should the Y-\/axis use a logarithmic scale? \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_line_chart_a095d16c1544cf373b8d2bf68ca864bd9}\label{classbridges_1_1base_1_1_line_chart_a095d16c1544cf373b8d2bf68ca864bd9}} 
+\index{bridges.base.LineChart@{bridges.base.LineChart}!toggleMouseTrack@{toggleMouseTrack}}
+\index{toggleMouseTrack@{toggleMouseTrack}!bridges.base.LineChart@{bridges.base.LineChart}}
+\subsubsection{\texorpdfstring{toggleMouseTrack()}{toggleMouseTrack()}}
+{\footnotesize\ttfamily void bridges.\+base.\+Line\+Chart.\+toggle\+Mouse\+Track (\begin{DoxyParamCaption}\item[{boolean}]{val }\end{DoxyParamCaption})}
+
+
+
+Enables or disables mouse tracking. 
+
+Mouse tracking show the value of a data point when the mouse hovers on a data point.
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Should mouse tracking be activated or not. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_line_chart_adae74cfb09585727a96cf74ddf74d098}\label{classbridges_1_1base_1_1_line_chart_adae74cfb09585727a96cf74ddf74d098}} 
+\index{bridges.base.LineChart@{bridges.base.LineChart}!toggleSeriesLabel@{toggleSeriesLabel}}
+\index{toggleSeriesLabel@{toggleSeriesLabel}!bridges.base.LineChart@{bridges.base.LineChart}}
+\subsubsection{\texorpdfstring{toggleSeriesLabel()}{toggleSeriesLabel()}}
+{\footnotesize\ttfamily void bridges.\+base.\+Line\+Chart.\+toggle\+Series\+Label (\begin{DoxyParamCaption}\item[{boolean}]{val }\end{DoxyParamCaption})}
+
+
+
+Enables or disables series labels. 
+
+When enabled, the name of the series will be shown on the line chart.
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Should series be labeled or not \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/java/src/main/java/bridges/base/\mbox{\hyperlink{_line_chart_8java}{Line\+Chart.\+java}}\end{DoxyCompactItemize}
