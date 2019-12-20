@@ -1,0 +1,262 @@
+\hypertarget{classbridges_1_1datastructure_1_1_element_visualizer}{}\section{bridges\+::datastructure\+::Element\+Visualizer Class Reference}
+\label{classbridges_1_1datastructure_1_1_element_visualizer}\index{bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}}
+
+
+{\ttfamily \#include $<$Element\+Visualizer.\+h$>$}
+
+
+
+\subsection{Detailed Description}
+This class maintains the visual properties of the a \mbox{\hyperlink{classbridges_1_1_bridges}{Bridges}} element. 
+
+This class is used to store the visualization elements for \mbox{\hyperlink{classbridges_1_1_bridges}{Bridges}} Visualiztions, including the color, shape, and size of the node. Defaults of green, circle, and 10.\+0 respectively.
+
+Size values must range from \mbox{[}1.\+0,50.\+0\mbox{]}.
+
+B\+R\+I\+D\+G\+ES supports the shapes listed in Shape (\char`\"{}circle\char`\"{}, \char`\"{}square\char`\"{}, \char`\"{}diamond\char`\"{}, \char`\"{}cross\char`\"{}, \char`\"{}wye\char`\"{}, \char`\"{}triangle\char`\"{}, \char`\"{}star\char`\"{}).
+
+Objects of this class are stored as properties of all \mbox{\hyperlink{classbridges_1_1datastructure_1_1_element}{Element}} subclasses.
+
+\begin{DoxyAuthor}{Author}
+Kalpathi Subramanian 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+6/11/15, 7/12/19 
+\end{DoxyDate}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_element_visualizer_a8104e42b94927a9b45a237064d75ca33}{Element\+Visualizer}} (const \mbox{\hyperlink{classbridges_1_1datastructure_1_1_color}{Color}} \&hue=\mbox{\hyperlink{classbridges_1_1datastructure_1_1_element_visualizer_a777a0295e8216e403108a6c90ce6790b}{D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+L\+OR}}(), const double \&sz=\mbox{\hyperlink{classbridges_1_1datastructure_1_1_element_visualizer_afa0fa3f844171f311c3d9c9025a826c5}{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+I\+ZE}}(), const \mbox{\hyperlink{namespacebridges_1_1datastructure_a3408f5f44d9c6062e5f3adb7e1bbb7f0}{Shape}} \&shp=\mbox{\hyperlink{classbridges_1_1datastructure_1_1_element_visualizer_adfba1c4d4f04ff92545d932bfce5b9d1}{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+H\+A\+PE}}())
+\item 
+void \mbox{\hyperlink{classbridges_1_1datastructure_1_1_element_visualizer_a021333b1c20dd55627ac80ae3a2138e6}{set\+Size}} (const double \&sz)
+\item 
+double \mbox{\hyperlink{classbridges_1_1datastructure_1_1_element_visualizer_a5c83b976308b254521189280bfbfbc43}{get\+Size}} () const
+\item 
+void \mbox{\hyperlink{classbridges_1_1datastructure_1_1_element_visualizer_aabf1373100f7c45b71d0caf04427644f}{set\+Color}} (const \mbox{\hyperlink{classbridges_1_1datastructure_1_1_color}{Color}} \&col)
+\begin{DoxyCompactList}\small\item\em Set the color to \char`\"{}col\char`\"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1datastructure_1_1_element_visualizer_a0068ebe250375b13c5b3d4af0df20dea}{set\+Color}} (const string \&col)
+\begin{DoxyCompactList}\small\item\em Set the color to a named color. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_color}{Color}} \mbox{\hyperlink{classbridges_1_1datastructure_1_1_element_visualizer_a611005282caa27575cf3ee7e3b1540c4}{get\+Color}} () const
+\item 
+void \mbox{\hyperlink{classbridges_1_1datastructure_1_1_element_visualizer_a03f0ba203affb77d4ba8d2f1a6b1eea0}{set\+Opacity}} (double opacity)
+\item 
+double \mbox{\hyperlink{classbridges_1_1datastructure_1_1_element_visualizer_af403e841efd1dab3669fdda2fd927f99}{get\+Opacity}} ()
+\begin{DoxyCompactList}\small\item\em Get opacity of element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1datastructure_1_1_element_visualizer_a316cccfc1e75ccbfdfe6d68da824b8b3}{set\+Shape}} (const \mbox{\hyperlink{namespacebridges_1_1datastructure_a3408f5f44d9c6062e5f3adb7e1bbb7f0}{Shape}} \&shp)
+\begin{DoxyCompactList}\small\item\em Set the shape of the element. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebridges_1_1datastructure_a3408f5f44d9c6062e5f3adb7e1bbb7f0}{Shape}} \mbox{\hyperlink{classbridges_1_1datastructure_1_1_element_visualizer_a3b1dd1d61f43844142adce1f0bd03dcf}{get\+Shape}} () const
+\begin{DoxyCompactList}\small\item\em Return the shape of the element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1datastructure_1_1_element_visualizer_ae980cb185ddb11ecd1cebeb4834734bf}{set\+Location}} (const double \&locX, const double \&locY)
+\item 
+double \mbox{\hyperlink{classbridges_1_1datastructure_1_1_element_visualizer_a8ee6ac3a3b03194d51cfbc08a1360b5d}{get\+LocationX}} () const
+\item 
+double \mbox{\hyperlink{classbridges_1_1datastructure_1_1_element_visualizer_a6012c9545e56e6210b6a6485873a5c92}{get\+LocationY}} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{classbridges_1_1datastructure_1_1_color}{Color}} \mbox{\hyperlink{classbridges_1_1datastructure_1_1_element_visualizer_a777a0295e8216e403108a6c90ce6790b}{D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+L\+OR}} ()
+\item 
+static constexpr \mbox{\hyperlink{namespacebridges_1_1datastructure_a3408f5f44d9c6062e5f3adb7e1bbb7f0}{Shape}} \mbox{\hyperlink{classbridges_1_1datastructure_1_1_element_visualizer_adfba1c4d4f04ff92545d932bfce5b9d1}{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+H\+A\+PE}} ()
+\item 
+static constexpr double \mbox{\hyperlink{classbridges_1_1datastructure_1_1_element_visualizer_afa0fa3f844171f311c3d9c9025a826c5}{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+I\+ZE}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_visualizer_a8104e42b94927a9b45a237064d75ca33}\label{classbridges_1_1datastructure_1_1_element_visualizer_a8104e42b94927a9b45a237064d75ca33}} 
+\index{bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}!ElementVisualizer@{ElementVisualizer}}
+\index{ElementVisualizer@{ElementVisualizer}!bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}}
+\subsubsection{\texorpdfstring{ElementVisualizer()}{ElementVisualizer()}}
+{\footnotesize\ttfamily bridges\+::datastructure\+::\+Element\+Visualizer\+::\+Element\+Visualizer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbridges_1_1datastructure_1_1_color}{Color}} \&}]{hue = {\ttfamily \mbox{\hyperlink{classbridges_1_1datastructure_1_1_element_visualizer_a777a0295e8216e403108a6c90ce6790b}{D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+L\+OR}}()},  }\item[{const double \&}]{sz = {\ttfamily \mbox{\hyperlink{classbridges_1_1datastructure_1_1_element_visualizer_afa0fa3f844171f311c3d9c9025a826c5}{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+I\+ZE}}()},  }\item[{const \mbox{\hyperlink{namespacebridges_1_1datastructure_a3408f5f44d9c6062e5f3adb7e1bbb7f0}{Shape}} \&}]{shp = {\ttfamily \mbox{\hyperlink{classbridges_1_1datastructure_1_1_element_visualizer_adfba1c4d4f04ff92545d932bfce5b9d1}{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+H\+A\+PE}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs an element with the provided \mbox{\hyperlink{classbridges_1_1datastructure_1_1_color}{Color}}, Size, and Shape. The defaults will be used if not provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hue} & The \mbox{\hyperlink{classbridges_1_1datastructure_1_1_color}{Color}} for display \\
+\hline
+{\em sz} & The Size for display \\
+\hline
+{\em shp} & The Shape for display \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_visualizer_a777a0295e8216e403108a6c90ce6790b}\label{classbridges_1_1datastructure_1_1_element_visualizer_a777a0295e8216e403108a6c90ce6790b}} 
+\index{bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}!DEFAULT\_COLOR@{DEFAULT\_COLOR}}
+\index{DEFAULT\_COLOR@{DEFAULT\_COLOR}!bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}}
+\subsubsection{\texorpdfstring{DEFAULT\_COLOR()}{DEFAULT\_COLOR()}}
+{\footnotesize\ttfamily static const \mbox{\hyperlink{classbridges_1_1datastructure_1_1_color}{Color}} bridges\+::datastructure\+::\+Element\+Visualizer\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+L\+OR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_visualizer_adfba1c4d4f04ff92545d932bfce5b9d1}\label{classbridges_1_1datastructure_1_1_element_visualizer_adfba1c4d4f04ff92545d932bfce5b9d1}} 
+\index{bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}!DEFAULT\_SHAPE@{DEFAULT\_SHAPE}}
+\index{DEFAULT\_SHAPE@{DEFAULT\_SHAPE}!bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}}
+\subsubsection{\texorpdfstring{DEFAULT\_SHAPE()}{DEFAULT\_SHAPE()}}
+{\footnotesize\ttfamily static constexpr \mbox{\hyperlink{namespacebridges_1_1datastructure_a3408f5f44d9c6062e5f3adb7e1bbb7f0}{Shape}} bridges\+::datastructure\+::\+Element\+Visualizer\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+H\+A\+PE (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_visualizer_afa0fa3f844171f311c3d9c9025a826c5}\label{classbridges_1_1datastructure_1_1_element_visualizer_afa0fa3f844171f311c3d9c9025a826c5}} 
+\index{bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}!DEFAULT\_SIZE@{DEFAULT\_SIZE}}
+\index{DEFAULT\_SIZE@{DEFAULT\_SIZE}!bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}}
+\subsubsection{\texorpdfstring{DEFAULT\_SIZE()}{DEFAULT\_SIZE()}}
+{\footnotesize\ttfamily static constexpr double bridges\+::datastructure\+::\+Element\+Visualizer\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+I\+ZE (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_visualizer_a611005282caa27575cf3ee7e3b1540c4}\label{classbridges_1_1datastructure_1_1_element_visualizer_a611005282caa27575cf3ee7e3b1540c4}} 
+\index{bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}!getColor@{getColor}}
+\index{getColor@{getColor}!bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}}
+\subsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1datastructure_1_1_color}{Color}} bridges\+::datastructure\+::\+Element\+Visualizer\+::get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the element color \begin{DoxyReturn}{Returns}
+The color of the element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_visualizer_a8ee6ac3a3b03194d51cfbc08a1360b5d}\label{classbridges_1_1datastructure_1_1_element_visualizer_a8ee6ac3a3b03194d51cfbc08a1360b5d}} 
+\index{bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}!getLocationX@{getLocationX}}
+\index{getLocationX@{getLocationX}!bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}}
+\subsubsection{\texorpdfstring{getLocationX()}{getLocationX()}}
+{\footnotesize\ttfamily double bridges\+::datastructure\+::\+Element\+Visualizer\+::get\+LocationX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the X coordinate of the element\textquotesingle{}s location attribute 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_visualizer_a6012c9545e56e6210b6a6485873a5c92}\label{classbridges_1_1datastructure_1_1_element_visualizer_a6012c9545e56e6210b6a6485873a5c92}} 
+\index{bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}!getLocationY@{getLocationY}}
+\index{getLocationY@{getLocationY}!bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}}
+\subsubsection{\texorpdfstring{getLocationY()}{getLocationY()}}
+{\footnotesize\ttfamily double bridges\+::datastructure\+::\+Element\+Visualizer\+::get\+LocationY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the Y coordinate of the element\textquotesingle{}s location attribute 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_visualizer_af403e841efd1dab3669fdda2fd927f99}\label{classbridges_1_1datastructure_1_1_element_visualizer_af403e841efd1dab3669fdda2fd927f99}} 
+\index{bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}!getOpacity@{getOpacity}}
+\index{getOpacity@{getOpacity}!bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}}
+\subsubsection{\texorpdfstring{getOpacity()}{getOpacity()}}
+{\footnotesize\ttfamily double bridges\+::datastructure\+::\+Element\+Visualizer\+::get\+Opacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get opacity of element. 
+
+\begin{DoxyReturn}{Returns}
+opacity 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_visualizer_a3b1dd1d61f43844142adce1f0bd03dcf}\label{classbridges_1_1datastructure_1_1_element_visualizer_a3b1dd1d61f43844142adce1f0bd03dcf}} 
+\index{bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}!getShape@{getShape}}
+\index{getShape@{getShape}!bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}}
+\subsubsection{\texorpdfstring{getShape()}{getShape()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebridges_1_1datastructure_a3408f5f44d9c6062e5f3adb7e1bbb7f0}{Shape}} bridges\+::datastructure\+::\+Element\+Visualizer\+::get\+Shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the shape of the element. 
+
+\begin{DoxyReturn}{Returns}
+The shape of the element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_visualizer_a5c83b976308b254521189280bfbfbc43}\label{classbridges_1_1datastructure_1_1_element_visualizer_a5c83b976308b254521189280bfbfbc43}} 
+\index{bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}!getSize@{getSize}}
+\index{getSize@{getSize}!bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}}
+\subsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily double bridges\+::datastructure\+::\+Element\+Visualizer\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The size in pixel weight of the element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_visualizer_aabf1373100f7c45b71d0caf04427644f}\label{classbridges_1_1datastructure_1_1_element_visualizer_aabf1373100f7c45b71d0caf04427644f}} 
+\index{bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}!setColor@{setColor}}
+\index{setColor@{setColor}!bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}}
+\subsubsection{\texorpdfstring{setColor()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void bridges\+::datastructure\+::\+Element\+Visualizer\+::set\+Color (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbridges_1_1datastructure_1_1_color}{Color}} \&}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the color to \char`\"{}col\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em col} & The color of the element \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_visualizer_a0068ebe250375b13c5b3d4af0df20dea}\label{classbridges_1_1datastructure_1_1_element_visualizer_a0068ebe250375b13c5b3d4af0df20dea}} 
+\index{bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}!setColor@{setColor}}
+\index{setColor@{setColor}!bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}}
+\subsubsection{\texorpdfstring{setColor()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void bridges\+::datastructure\+::\+Element\+Visualizer\+::set\+Color (\begin{DoxyParamCaption}\item[{const string \&}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the color to a named color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em col} & The color name. Check the \mbox{\hyperlink{classbridges_1_1datastructure_1_1_color}{Color}} class for supported values. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_visualizer_ae980cb185ddb11ecd1cebeb4834734bf}\label{classbridges_1_1datastructure_1_1_element_visualizer_ae980cb185ddb11ecd1cebeb4834734bf}} 
+\index{bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}!setLocation@{setLocation}}
+\index{setLocation@{setLocation}!bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}}
+\subsubsection{\texorpdfstring{setLocation()}{setLocation()}}
+{\footnotesize\ttfamily void bridges\+::datastructure\+::\+Element\+Visualizer\+::set\+Location (\begin{DoxyParamCaption}\item[{const double \&}]{locX,  }\item[{const double \&}]{locY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the location attributes of an element. Set location to I\+N\+F\+I\+N\+I\+TY for bridges to chose the location.
+
+
+\begin{DoxyParams}{Parameters}
+{\em locX} & X coordinate of the element location \\
+\hline
+{\em locY} & Y coordinate of the element location \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_visualizer_a03f0ba203affb77d4ba8d2f1a6b1eea0}\label{classbridges_1_1datastructure_1_1_element_visualizer_a03f0ba203affb77d4ba8d2f1a6b1eea0}} 
+\index{bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}!setOpacity@{setOpacity}}
+\index{setOpacity@{setOpacity}!bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}}
+\subsubsection{\texorpdfstring{setOpacity()}{setOpacity()}}
+{\footnotesize\ttfamily void bridges\+::datastructure\+::\+Element\+Visualizer\+::set\+Opacity (\begin{DoxyParamCaption}\item[{double}]{opacity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set opacity of element -\/ use the 4th color component
+
+
+\begin{DoxyParams}{Parameters}
+{\em opacity} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_visualizer_a316cccfc1e75ccbfdfe6d68da824b8b3}\label{classbridges_1_1datastructure_1_1_element_visualizer_a316cccfc1e75ccbfdfe6d68da824b8b3}} 
+\index{bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}!setShape@{setShape}}
+\index{setShape@{setShape}!bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}}
+\subsubsection{\texorpdfstring{setShape()}{setShape()}}
+{\footnotesize\ttfamily void bridges\+::datastructure\+::\+Element\+Visualizer\+::set\+Shape (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacebridges_1_1datastructure_a3408f5f44d9c6062e5f3adb7e1bbb7f0}{Shape}} \&}]{shp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the shape of the element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shp} & is one of Shape.\+C\+I\+R\+C\+LE, Shape.\+S\+Q\+U\+A\+RE, Shape.\+D\+I\+A\+M\+O\+ND, Shape.\+C\+R\+O\+SS, Shape.\+T\+R\+I\+A\+N\+G\+LE, Shape.\+W\+YE, Shape.\+S\+T\+AR. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_visualizer_a021333b1c20dd55627ac80ae3a2138e6}\label{classbridges_1_1datastructure_1_1_element_visualizer_a021333b1c20dd55627ac80ae3a2138e6}} 
+\index{bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}!setSize@{setSize}}
+\index{setSize@{setSize}!bridges::datastructure::ElementVisualizer@{bridges::datastructure::ElementVisualizer}}
+\subsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily void bridges\+::datastructure\+::\+Element\+Visualizer\+::set\+Size (\begin{DoxyParamCaption}\item[{const double \&}]{sz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets size to \char`\"{}sz\char`\"{} Valid Range\+:\mbox{[}1,50\mbox{]}
+
+
+\begin{DoxyParams}{Parameters}
+{\em sz} & The size in pixel weight of the element \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em string} & If size is invalid \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/cxx/src/\mbox{\hyperlink{_element_visualizer_8h}{Element\+Visualizer.\+h}}\end{DoxyCompactItemize}
