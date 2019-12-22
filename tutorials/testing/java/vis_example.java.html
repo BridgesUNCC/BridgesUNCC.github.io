@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/graphics/bridges/site/tutorials/testing/java/vis_example.java.html</title>
+<meta name="Generator" content="Vim/8.0">
+<meta name="plugin-version" content="vim7.4_v2">
+<meta name="syntax" content="java">
+<meta name="settings" content="use_css,pre_wrap,no_foldcolumn,expand_tabs,prevent_copy=">
+<meta name="colorscheme" content="murphy">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #87ffaf; background-color: #000000; }
+body { font-family: monospace; color: #87ffaf; background-color: #000000; }
+* { font-size: 1em; }
+.Comment { color: #ffd7d7; }
+.Constant { color: #87ffaf; }
+.Statement { color: #ffff00; }
+.PreProc { color: #5fd7ff; }
+.Type { color: #87ffaf; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="PreProc">import</span> bridges.base.DLelement;
+<span class="PreProc">import</span> bridges.base.Color;
+<span class="PreProc">import</span> bridges.connect.Bridges;
+
+<span class="Type">public</span> <span class="Type">class</span> vis_example {
+
+    <span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) <span class="Type">throws</span> Exception {
+
+
+        Bridges bridges = <span class="Statement">new</span> Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+            <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+        <span class="Comment">// set title</span>
+        bridges.setTitle(<span class="Constant">&quot;A Visualization Attributes Related Example Using Doubly Linked List&quot;</span>);
+
+        <span class="Comment">// create some elements</span>
+        DLelement&lt;String&gt;  el0 = <span class="Statement">new</span> DLelement&lt;String&gt; (<span class="Constant">&quot;element0&quot;</span>, <span class="Constant">&quot;Element 1&quot;</span>);
+        DLelement&lt;String&gt;  el1 = <span class="Statement">new</span> DLelement&lt;String&gt; (<span class="Constant">&quot;element1&quot;</span>, <span class="Constant">&quot;Element 1&quot;</span>);
+
+        <span class="Comment">// create the list</span>
+        el0.setNext(el1);
+        el1.setPrev(el0);
+
+        <span class="Comment">// node properties</span>
+
+        <span class="Comment">// set color, size , shape for list elements - see the Color class </span>
+        <span class="Comment">//for supported colors</span>
+        el0.setColor(<span class="Constant">&quot;red&quot;</span>);
+        el0.setSize(<span class="Constant">20.</span>);
+        el1.setShape(<span class="Constant">&quot;diamond&quot;</span>);
+
+        <span class="Comment">// set node transparency</span>
+        el0.setOpacity (<span class="Constant">0.3f</span>);
+
+        <span class="Comment">// color the links - must specify a valid terminating element</span>
+        <span class="Comment">// color the link from el0 to el1</span>
+        el0.getLinkVisualizer(el1).setColor(<span class="Constant">&quot;green&quot;</span>);
+
+        <span class="Comment">// color the link from el1 to el0, using rgb color </span>
+        el1.getLinkVisualizer(el0).setColor(<span class="Statement">new</span> Color(<span class="Constant">255</span>, <span class="Constant">0</span>, <span class="Constant">255</span>));
+
+        <span class="Comment">// adjust link thickness</span>
+        el0.getLinkVisualizer(el1).setThickness(<span class="Constant">2.0f</span>);
+        el1.getLinkVisualizer(el0).setThickness(<span class="Constant">4.0f</span>);
+
+        <span class="Comment">// set link label</span>
+        el0.getLinkVisualizer(el1).setLabel(<span class="Constant">&quot;Link Label&quot;</span>);
+
+        bridges.setDataStructure(el0);
+        bridges.visualize();
+    }
+}
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->
