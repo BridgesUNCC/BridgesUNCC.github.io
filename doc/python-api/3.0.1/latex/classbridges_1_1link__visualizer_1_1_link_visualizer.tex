@@ -1,0 +1,256 @@
+\hypertarget{classbridges_1_1link__visualizer_1_1_link_visualizer}{}\section{bridges.\+link\+\_\+visualizer.\+Link\+Visualizer Class Reference}
+\label{classbridges_1_1link__visualizer_1_1_link_visualizer}\index{bridges.\+link\+\_\+visualizer.\+Link\+Visualizer@{bridges.\+link\+\_\+visualizer.\+Link\+Visualizer}}
+
+
+\subsection{Detailed Description}
+This class maintains the visual attributes of links that join bridges elements. 
+
+Visual properties include color, thickness, and opacity. Objects of this class are stored as part of the Element class. Generally, a user will manipulate the \mbox{\hyperlink{classbridges_1_1link__visualizer_1_1_link_visualizer}{Link\+Visualizer}} returned from the Element\textquotesingle{}s get\+Link\+Visualizer(\+Element it) method (which it is the bridges element this element is linked to), and then set attributes using its methods. Links are utilized in all types of linked lists, tree and graph structures.
+
+Supported attribute values are as follows\+:
+
+{\bfseries Supported Colors by name\+: C\+SS colors; see the Color class for full list, or at \href{https://drafts.csswg.org/css-color-3/#svg-color}{\tt https\+://drafts.\+csswg.\+org/css-\/color-\/3/\#svg-\/color}}\+: 
+
+{\bfseries  Color by R\+G\+BA Specification \+:} Range\+: 0-\/255 for each component 
+
+{\bfseries  Thickness\+: } Range \+: 0.\+0-\/50.\+0
+
+{\bfseries  Opacity\+: } Range (0.\+0-\/1.\+0) 
+
+\begin{DoxyAuthor}{Author}
+Mihai Mehedint, Kalpathi Subramanian, Matthew Mc\+Quaigue
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2018, 6/24/19
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+Example Tutorial at ~\newline
+ \href{http://bridgesuncc.github.io/Hello_World_Tutorials/SLL.html}{\tt http\+://bridgesuncc.\+github.\+io/\+Hello\+\_\+\+World\+\_\+\+Tutorials/\+S\+L\+L.\+html} 
+\end{DoxySeeAlso}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classbridges_1_1link__visualizer_1_1_link_visualizer_a9994004a7808bdcaa6f18ebfd9b7717a}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em Constructor for the link visualizer\textquotesingle{}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1link__visualizer_1_1_link_visualizer_a4a89f95ecc6623ba17d2c47d7425c05b}{thickness}} (self)
+\begin{DoxyCompactList}\small\item\em Getter for the thickness of links visualization. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1link__visualizer_1_1_link_visualizer_af244bbe99885785f7dd3bb9460c1d21a}{thickness}} (self, th)
+\begin{DoxyCompactList}\small\item\em Setter for the thickness of links in visualization. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1link__visualizer_1_1_link_visualizer_ad87b36af48a35e41c9cad10239b4f7fb}{color}} (self)
+\begin{DoxyCompactList}\small\item\em Getter for the color of the link in the visualization. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1link__visualizer_1_1_link_visualizer_a3ae57af9d642648e0a581fd578084e08}{color}} (self, args, kwargs)
+\begin{DoxyCompactList}\small\item\em Setter for the color of the element in the bridges visualization. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1link__visualizer_1_1_link_visualizer_a777892e054f00e8ef0291c5d41ce7f75}{opacity}} (self)
+\begin{DoxyCompactList}\small\item\em Getter for the element opacity. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1link__visualizer_1_1_link_visualizer_acacbd654f9cdff27c8e10635b150f2c5}{opacity}} (self, opacity)
+\begin{DoxyCompactList}\small\item\em Setter for the elementopacity. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1link__visualizer_1_1_link_visualizer_afc00f309deac78e149f2e49f404de915}{label}} (self)
+\item 
+def \mbox{\hyperlink{classbridges_1_1link__visualizer_1_1_link_visualizer_a77a67a42f7f452715f7994cc9a791da9}{label}} (self, l)
+\item 
+def \mbox{\hyperlink{classbridges_1_1link__visualizer_1_1_link_visualizer_a4115c919bee0422f4f22308cba0c5c99}{get\+\_\+link\+\_\+properties}} (self)
+\begin{DoxyCompactList}\small\item\em Getter for the link properties. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1link__visualizer_1_1_link_visualizer_a36268a1bc712fb42f4401846e70536e6}{get\+\_\+label}} (self)
+\begin{DoxyCompactList}\small\item\em Getter for the link label. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1link__visualizer_1_1_link_visualizer_a51cb90a9162271fa083616321ae5faee}{set\+\_\+label}} (self, \mbox{\hyperlink{classbridges_1_1link__visualizer_1_1_link_visualizer_aace0e171fe2904f672b8ed3e0139343f}{label}})
+\begin{DoxyCompactList}\small\item\em Setter for the element label. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbridges_1_1link__visualizer_1_1_link_visualizer_aace0e171fe2904f672b8ed3e0139343f}{label}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1link__visualizer_1_1_link_visualizer_a9994004a7808bdcaa6f18ebfd9b7717a}\label{classbridges_1_1link__visualizer_1_1_link_visualizer_a9994004a7808bdcaa6f18ebfd9b7717a}} 
+\index{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer@{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer@{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def bridges.\+link\+\_\+visualizer.\+Link\+Visualizer.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{None }\end{DoxyParamCaption})}
+
+
+
+Constructor for the link visualizer\textquotesingle{}. 
+
+\begin{DoxyParagraph}{Retruns}
+None 
+\end{DoxyParagraph}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1link__visualizer_1_1_link_visualizer_ad87b36af48a35e41c9cad10239b4f7fb}\label{classbridges_1_1link__visualizer_1_1_link_visualizer_ad87b36af48a35e41c9cad10239b4f7fb}} 
+\index{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer@{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer}!color@{color}}
+\index{color@{color}!bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer@{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer}}
+\subsubsection{\texorpdfstring{color()}{color()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def bridges.\+link\+\_\+visualizer.\+Link\+Visualizer.\+color (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{Color }\end{DoxyParamCaption})}
+
+
+
+Getter for the color of the link in the visualization. 
+
+\begin{DoxyReturn}{Returns}
+
+
+Color 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1link__visualizer_1_1_link_visualizer_a3ae57af9d642648e0a581fd578084e08}\label{classbridges_1_1link__visualizer_1_1_link_visualizer_a3ae57af9d642648e0a581fd578084e08}} 
+\index{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer@{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer}!color@{color}}
+\index{color@{color}!bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer@{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer}}
+\subsubsection{\texorpdfstring{color()}{color()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def bridges.\+link\+\_\+visualizer.\+Link\+Visualizer.\+color (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{args,  }\item[{}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Setter for the color of the element in the bridges visualization. 
+
+(optional) list\+: requires either 3 ints 0-\/255 for R\+GB and an optional float 0.\+0-\/1.\+0 for alpha EX\+: color = \mbox{[}0, 255, 0, 1.\+0\mbox{]}. (optional) str\+: string representing the element color. Supported web colors\+: \href{https://developer.mozilla.org/en-US/docs/Web/CSS/color_value}{\tt https\+://developer.\+mozilla.\+org/en-\/\+U\+S/docs/\+Web/\+C\+S\+S/color\+\_\+value} \begin{DoxyReturn}{Returns}
+
+
+None
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Value\+Error} & if the color name provided is not available \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classbridges_1_1link__visualizer_1_1_link_visualizer_a36268a1bc712fb42f4401846e70536e6}\label{classbridges_1_1link__visualizer_1_1_link_visualizer_a36268a1bc712fb42f4401846e70536e6}} 
+\index{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer@{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer}!get\+\_\+label@{get\+\_\+label}}
+\index{get\+\_\+label@{get\+\_\+label}!bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer@{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer}}
+\subsubsection{\texorpdfstring{get\+\_\+label()}{get\_label()}}
+{\footnotesize\ttfamily def bridges.\+link\+\_\+visualizer.\+Link\+Visualizer.\+get\+\_\+label (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Getter for the link label. 
+
+\begin{DoxyReturn}{Returns}
+
+
+string link label 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1link__visualizer_1_1_link_visualizer_a4115c919bee0422f4f22308cba0c5c99}\label{classbridges_1_1link__visualizer_1_1_link_visualizer_a4115c919bee0422f4f22308cba0c5c99}} 
+\index{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer@{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer}!get\+\_\+link\+\_\+properties@{get\+\_\+link\+\_\+properties}}
+\index{get\+\_\+link\+\_\+properties@{get\+\_\+link\+\_\+properties}!bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer@{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer}}
+\subsubsection{\texorpdfstring{get\+\_\+link\+\_\+properties()}{get\_link\_properties()}}
+{\footnotesize\ttfamily def bridges.\+link\+\_\+visualizer.\+Link\+Visualizer.\+get\+\_\+link\+\_\+properties (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Getter for the link properties. 
+
+\begin{DoxyReturn}{Returns}
+
+
+dict link properties 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1link__visualizer_1_1_link_visualizer_afc00f309deac78e149f2e49f404de915}\label{classbridges_1_1link__visualizer_1_1_link_visualizer_afc00f309deac78e149f2e49f404de915}} 
+\index{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer@{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer}!label@{label}}
+\index{label@{label}!bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer@{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer}}
+\subsubsection{\texorpdfstring{label()}{label()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def bridges.\+link\+\_\+visualizer.\+Link\+Visualizer.\+label (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1link__visualizer_1_1_link_visualizer_a77a67a42f7f452715f7994cc9a791da9}\label{classbridges_1_1link__visualizer_1_1_link_visualizer_a77a67a42f7f452715f7994cc9a791da9}} 
+\index{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer@{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer}!label@{label}}
+\index{label@{label}!bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer@{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer}}
+\subsubsection{\texorpdfstring{label()}{label()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def bridges.\+link\+\_\+visualizer.\+Link\+Visualizer.\+label (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{l }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1link__visualizer_1_1_link_visualizer_a777892e054f00e8ef0291c5d41ce7f75}\label{classbridges_1_1link__visualizer_1_1_link_visualizer_a777892e054f00e8ef0291c5d41ce7f75}} 
+\index{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer@{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer}!opacity@{opacity}}
+\index{opacity@{opacity}!bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer@{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer}}
+\subsubsection{\texorpdfstring{opacity()}{opacity()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def bridges.\+link\+\_\+visualizer.\+Link\+Visualizer.\+opacity (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Getter for the element opacity. 
+
+\begin{DoxyReturn}{Returns}
+
+
+opacity element opacity 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1link__visualizer_1_1_link_visualizer_acacbd654f9cdff27c8e10635b150f2c5}\label{classbridges_1_1link__visualizer_1_1_link_visualizer_acacbd654f9cdff27c8e10635b150f2c5}} 
+\index{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer@{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer}!opacity@{opacity}}
+\index{opacity@{opacity}!bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer@{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer}}
+\subsubsection{\texorpdfstring{opacity()}{opacity()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def bridges.\+link\+\_\+visualizer.\+Link\+Visualizer.\+opacity (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{opacity }\end{DoxyParamCaption})}
+
+
+
+Setter for the elementopacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em opacity} & opacity value (0-\/1.\+0) to set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1link__visualizer_1_1_link_visualizer_a51cb90a9162271fa083616321ae5faee}\label{classbridges_1_1link__visualizer_1_1_link_visualizer_a51cb90a9162271fa083616321ae5faee}} 
+\index{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer@{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer}!set\+\_\+label@{set\+\_\+label}}
+\index{set\+\_\+label@{set\+\_\+label}!bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer@{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer}}
+\subsubsection{\texorpdfstring{set\+\_\+label()}{set\_label()}}
+{\footnotesize\ttfamily def bridges.\+link\+\_\+visualizer.\+Link\+Visualizer.\+set\+\_\+label (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{label }\end{DoxyParamCaption})}
+
+
+
+Setter for the element label. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & link label \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1link__visualizer_1_1_link_visualizer_a4a89f95ecc6623ba17d2c47d7425c05b}\label{classbridges_1_1link__visualizer_1_1_link_visualizer_a4a89f95ecc6623ba17d2c47d7425c05b}} 
+\index{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer@{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer}!thickness@{thickness}}
+\index{thickness@{thickness}!bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer@{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer}}
+\subsubsection{\texorpdfstring{thickness()}{thickness()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def bridges.\+link\+\_\+visualizer.\+Link\+Visualizer.\+thickness (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{float }\end{DoxyParamCaption})}
+
+
+
+Getter for the thickness of links visualization. 
+
+\begin{DoxyReturn}{Returns}
+
+
+float the thickness 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1link__visualizer_1_1_link_visualizer_af244bbe99885785f7dd3bb9460c1d21a}\label{classbridges_1_1link__visualizer_1_1_link_visualizer_af244bbe99885785f7dd3bb9460c1d21a}} 
+\index{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer@{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer}!thickness@{thickness}}
+\index{thickness@{thickness}!bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer@{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer}}
+\subsubsection{\texorpdfstring{thickness()}{thickness()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def bridges.\+link\+\_\+visualizer.\+Link\+Visualizer.\+thickness (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{th }\end{DoxyParamCaption})}
+
+
+
+Setter for the thickness of links in visualization. 
+
+(float) th\+: the thickness to be applied to the link \begin{DoxyReturn}{Returns}
+
+
+None 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classbridges_1_1link__visualizer_1_1_link_visualizer_aace0e171fe2904f672b8ed3e0139343f}\label{classbridges_1_1link__visualizer_1_1_link_visualizer_aace0e171fe2904f672b8ed3e0139343f}} 
+\index{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer@{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer}!label@{label}}
+\index{label@{label}!bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer@{bridges\+::link\+\_\+visualizer\+::\+Link\+Visualizer}}
+\subsubsection{\texorpdfstring{label}{label}}
+{\footnotesize\ttfamily bridges.\+link\+\_\+visualizer.\+Link\+Visualizer.\+label}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/python/bridges/\mbox{\hyperlink{link__visualizer_8py}{link\+\_\+visualizer.\+py}}\end{DoxyCompactItemize}
