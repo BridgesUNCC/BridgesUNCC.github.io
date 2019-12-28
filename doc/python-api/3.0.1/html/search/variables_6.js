@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['g',['g',['../classbridges_1_1named__symbol_1_1_named_symbol.html#acc5494a491765ea02a23788a6205495c',1,'bridges.named_symbol.NamedSymbol.g()'],['../classbridges_1_1named__symbol_1_1_named_symbol.html#a3c14915c740b796131858662b6fb4cbb',1,'bridges.named_symbol.NamedSymbol.G()']]],
+  ['g',['G',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a3c14915c740b796131858662b6fb4cbb',1,'bridges.named_symbol.NamedSymbol.G()'],['../classbridges_1_1named__symbol_1_1_named_symbol.html#acc5494a491765ea02a23788a6205495c',1,'bridges.named_symbol.NamedSymbol.g()']]],
   ['gainsboro',['gainsboro',['../classbridges_1_1named__color_1_1_named_color.html#a8866818165b26630e090baa4a89b1bc7',1,'bridges::named_color::NamedColor']]],
   ['game_5fstarted',['game_started',['../classbridges_1_1gamebase_1_1_game_base.html#a3686759454ab901fcb4afb81572b3104',1,'bridges.gamebase.GameBase.game_started()'],['../classbridges_1_1non__blocking__game_1_1_non_blocking_game.html#a9fdc4b04a7898b739ed05554d64560c7',1,'bridges.non_blocking_game.NonBlockingGame.game_started()']]],
+  ['gender',['gender',['../classbridges_1_1data__src__dependent_1_1cancer__incidence_1_1_cancer_incidence.html#ac417130839147c4049d9b204e7f7b0e4',1,'bridges::data_src_dependent::cancer_incidence::CancerIncidence']]],
   ['geometric',['geometric',['../classbridges_1_1sorting__benchmark_1_1_sorting_benchmark.html#a3f5b4fe45cba8268f53716f6eb322a66',1,'bridges::sorting_benchmark::SortingBenchmark']]],
   ['ghostwhite',['ghostwhite',['../classbridges_1_1named__color_1_1_named_color.html#a99ebdd82da9c43160e4b15db14949331',1,'bridges::named_color::NamedColor']]],
   ['giraffe',['giraffe',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a70d2f43de0b5784850165efbfed2901c',1,'bridges::named_symbol::NamedSymbol']]],

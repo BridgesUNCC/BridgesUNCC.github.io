@@ -1,6 +1,7 @@
 var searchData=
 [
   ['n',['N',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a0d08f0a019f5d3e38aa0124c3a1aba3a',1,'bridges.named_symbol.NamedSymbol.N()'],['../classbridges_1_1named__symbol_1_1_named_symbol.html#a061226247b64ffbd62ccd7c322fd086f',1,'bridges.named_symbol.NamedSymbol.n()']]],
+  ['name',['name',['../classbridges_1_1data__src__dependent_1_1osm_1_1_osm_data.html#adb5034420cd207bec97d80fab5e5be3a',1,'bridges::data_src_dependent::osm::OsmData']]],
   ['navajowhite',['navajowhite',['../classbridges_1_1named__color_1_1_named_color.html#a3c9ccc08d586934c10bb79ab53b3c9ce',1,'bridges::named_color::NamedColor']]],
   ['navy',['navy',['../classbridges_1_1named__color_1_1_named_color.html#a17b5377344646cee377acf39a112fdbb',1,'bridges::named_color::NamedColor']]],
   ['next',['next',['../classbridges_1_1circ__dl__element_1_1_circ_d_lelement.html#a0f01f7ff433628bac241d7c069a476fa',1,'bridges.circ_dl_element.CircDLelement.next()'],['../classbridges_1_1circ__sl__element_1_1_circ_s_lelement.html#afc8fa34bcbc539e7966db5ec471e3959',1,'bridges.circ_sl_element.CircSLelement.next()']]],

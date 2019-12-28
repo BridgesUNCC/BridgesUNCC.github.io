@@ -1,5 +1,5 @@
 \hypertarget{classbridges_1_1color__grid_1_1_color_grid}{}\section{bridges.\+color\+\_\+grid.\+Color\+Grid Class Reference}
-\label{classbridges_1_1color__grid_1_1_color_grid}\index{bridges.\+color\+\_\+grid.\+Color\+Grid@{bridges.\+color\+\_\+grid.\+Color\+Grid}}
+\label{classbridges_1_1color__grid_1_1_color_grid}\index{bridges.color\_grid.ColorGrid@{bridges.color\_grid.ColorGrid}}
 Inheritance diagram for bridges.\+color\+\_\+grid.\+Color\+Grid\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -14,9 +14,9 @@ This is a class in B\+R\+I\+D\+G\+ES for representing an (n x n) grid.
 A \mbox{\hyperlink{classbridges_1_1color__grid_1_1_color_grid}{Color\+Grid}} is essentially an image. One can construct an image of a particular size using the Color\+Grid() constructor to be either blank or filled with a particular Color depending on which constructor is called.
 
 
-\begin{DoxyCode}
-grid = new ColorGrid(rows, columns)
-grid.set(2, 3, Color(\textcolor{stringliteral}{"lightsalmon"})
+\begin{DoxyCode}{0}
+\DoxyCodeLine{grid = new ColorGrid(rows, columns)}
+\DoxyCodeLine{grid.set(2, 3, Color(\textcolor{stringliteral}{"lightsalmon"})}
 \end{DoxyCode}
 
 
@@ -28,22 +28,22 @@ David Burlinson, Matthew Mc\+Quaigue
 \begin{DoxyDate}{Date}
 2018, 7/24/19
 \end{DoxyDate}
-Color grid tutorial at \href{http://bridgesuncc.github.io/tutorials/Grid.html}{\tt http\+://bridgesuncc.\+github.\+io/tutorials/\+Grid.\+html} \subsection*{Public Member Functions}
+Color grid tutorial at \href{http://bridgesuncc.github.io/tutorials/Grid.html}{\texttt{ http\+://bridgesuncc.\+github.\+io/tutorials/\+Grid.\+html}} \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-def \mbox{\hyperlink{classbridges_1_1color__grid_1_1_color_grid_a4dbf23124fdc8edae222c100cf7b9363}{get\+\_\+data\+\_\+structure\+\_\+type}} (self)
+str \mbox{\hyperlink{classbridges_1_1color__grid_1_1_color_grid_a5340b1aed60318e37cab93eed6093070}{get\+\_\+data\+\_\+structure\+\_\+type}} (self)
 \begin{DoxyCompactList}\small\item\em Get the data structure type. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classbridges_1_1color__grid_1_1_color_grid_aa4b484e518b5fc0c970ea36e8500dbe5}{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+None \mbox{\hyperlink{classbridges_1_1color__grid_1_1_color_grid_a0dfc6a57286fca719146b68595cbff51}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, int rows=10, int cols=10, \mbox{\hyperlink{classbridges_1_1color_1_1_color}{Color}} color=\mbox{\hyperlink{classbridges_1_1color__grid_1_1_color_grid_ad2db62703be80114e46b490ff02f8bd9}{base\+Color}})
 \begin{DoxyCompactList}\small\item\em Color Grid constructor. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classbridges_1_1color__grid_1_1_color_grid_ad2b3ab19751cbf629096a25e31bb7f42}{initialize\+\_\+grid}} (self)
+None \mbox{\hyperlink{classbridges_1_1color__grid_1_1_color_grid_a7b21de607d59433f390ad4026aa9c3cf}{initialize\+\_\+grid}} (self)
 \begin{DoxyCompactList}\small\item\em initialize the grid anf populate with base colors \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classbridges_1_1color__grid_1_1_color_grid_a746dde66b828253bd0dfb32c906729fe}{set}}
+None \mbox{\hyperlink{classbridges_1_1color__grid_1_1_color_grid_a6160377225834aa80a5454fe5186da1e}{set}} (self, int row, int col, \mbox{\hyperlink{classbridges_1_1color_1_1_color}{Color}} color)
 \begin{DoxyCompactList}\small\item\em Set the (row, col) element in the color grid. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classbridges_1_1color__grid_1_1_color_grid_a48ded4391e60e4f42213fb3711730614}{get\+\_\+rle}} (self)
+bytearray \mbox{\hyperlink{classbridges_1_1color__grid_1_1_color_grid_a1a8e0a96bb381a7359aff7cff05b0d16}{get\+\_\+rle}} (self)
 \begin{DoxyCompactList}\small\item\em Get the run length encoding of color grid. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classbridges_1_1color__grid_1_1_color_grid_ab6685633fe237eb118cf2db2f624cd60}{get\+\_\+raw}} (self)
+bytearray \mbox{\hyperlink{classbridges_1_1color__grid_1_1_color_grid_aae710dfd1c06f37a98437a6b4fb813bf}{get\+\_\+raw}} (self)
 \begin{DoxyCompactList}\small\item\em Get raw encoding of color grid. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classbridges_1_1color__grid_1_1_color_grid_afda80f44711e0c32c96161d1e681d788}{get\+\_\+data\+\_\+structure\+\_\+representation}} (self)
+dict \mbox{\hyperlink{classbridges_1_1color__grid_1_1_color_grid_ab90bbb0fad3d759639171dcd9099914e}{get\+\_\+data\+\_\+structure\+\_\+representation}} (self)
 \begin{DoxyCompactList}\small\item\em Get the J\+S\+ON representation of the color grid. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -60,11 +60,11 @@ def \mbox{\hyperlink{classbridges_1_1color__grid_1_1_color_grid_afda80f44711e0c3
 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classbridges_1_1color__grid_1_1_color_grid_aa4b484e518b5fc0c970ea36e8500dbe5}\label{classbridges_1_1color__grid_1_1_color_grid_aa4b484e518b5fc0c970ea36e8500dbe5}} 
-\index{bridges\+::color\+\_\+grid\+::\+Color\+Grid@{bridges\+::color\+\_\+grid\+::\+Color\+Grid}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
-\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!bridges\+::color\+\_\+grid\+::\+Color\+Grid@{bridges\+::color\+\_\+grid\+::\+Color\+Grid}}
-\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
-{\footnotesize\ttfamily def bridges.\+color\+\_\+grid.\+Color\+Grid.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{rows }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classbridges_1_1color__grid_1_1_color_grid_a0dfc6a57286fca719146b68595cbff51}\label{classbridges_1_1color__grid_1_1_color_grid_a0dfc6a57286fca719146b68595cbff51}} 
+\index{bridges.color\_grid.ColorGrid@{bridges.color\_grid.ColorGrid}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!bridges.color\_grid.ColorGrid@{bridges.color\_grid.ColorGrid}}
+\subsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None bridges.\+color\+\_\+grid.\+Color\+Grid.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{int }]{rows = {\ttfamily 10},  }\item[{int }]{cols = {\ttfamily 10},  }\item[{\mbox{\hyperlink{classbridges_1_1color_1_1_color}{Color}} }]{color = {\ttfamily \mbox{\hyperlink{classbridges_1_1color__grid_1_1_color_grid_ad2db62703be80114e46b490ff02f8bd9}{base\+Color}}} }\end{DoxyParamCaption})}
 
 
 
@@ -87,11 +87,11 @@ None
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classbridges_1_1color__grid_1_1_color_grid_afda80f44711e0c32c96161d1e681d788}\label{classbridges_1_1color__grid_1_1_color_grid_afda80f44711e0c32c96161d1e681d788}} 
-\index{bridges\+::color\+\_\+grid\+::\+Color\+Grid@{bridges\+::color\+\_\+grid\+::\+Color\+Grid}!get\+\_\+data\+\_\+structure\+\_\+representation@{get\+\_\+data\+\_\+structure\+\_\+representation}}
-\index{get\+\_\+data\+\_\+structure\+\_\+representation@{get\+\_\+data\+\_\+structure\+\_\+representation}!bridges\+::color\+\_\+grid\+::\+Color\+Grid@{bridges\+::color\+\_\+grid\+::\+Color\+Grid}}
-\subsubsection{\texorpdfstring{get\+\_\+data\+\_\+structure\+\_\+representation()}{get\_data\_structure\_representation()}}
-{\footnotesize\ttfamily def bridges.\+color\+\_\+grid.\+Color\+Grid.\+get\+\_\+data\+\_\+structure\+\_\+representation (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{dict }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classbridges_1_1color__grid_1_1_color_grid_ab90bbb0fad3d759639171dcd9099914e}\label{classbridges_1_1color__grid_1_1_color_grid_ab90bbb0fad3d759639171dcd9099914e}} 
+\index{bridges.color\_grid.ColorGrid@{bridges.color\_grid.ColorGrid}!get\_data\_structure\_representation@{get\_data\_structure\_representation}}
+\index{get\_data\_structure\_representation@{get\_data\_structure\_representation}!bridges.color\_grid.ColorGrid@{bridges.color\_grid.ColorGrid}}
+\subsubsection{\texorpdfstring{get\_data\_structure\_representation()}{get\_data\_structure\_representation()}}
+{\footnotesize\ttfamily  dict bridges.\+color\+\_\+grid.\+Color\+Grid.\+get\+\_\+data\+\_\+structure\+\_\+representation (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
 
 
@@ -102,11 +102,11 @@ Get the J\+S\+ON representation of the color grid.
 
 str representing the json of the color grid 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classbridges_1_1color__grid_1_1_color_grid_a4dbf23124fdc8edae222c100cf7b9363}\label{classbridges_1_1color__grid_1_1_color_grid_a4dbf23124fdc8edae222c100cf7b9363}} 
-\index{bridges\+::color\+\_\+grid\+::\+Color\+Grid@{bridges\+::color\+\_\+grid\+::\+Color\+Grid}!get\+\_\+data\+\_\+structure\+\_\+type@{get\+\_\+data\+\_\+structure\+\_\+type}}
-\index{get\+\_\+data\+\_\+structure\+\_\+type@{get\+\_\+data\+\_\+structure\+\_\+type}!bridges\+::color\+\_\+grid\+::\+Color\+Grid@{bridges\+::color\+\_\+grid\+::\+Color\+Grid}}
-\subsubsection{\texorpdfstring{get\+\_\+data\+\_\+structure\+\_\+type()}{get\_data\_structure\_type()}}
-{\footnotesize\ttfamily def bridges.\+color\+\_\+grid.\+Color\+Grid.\+get\+\_\+data\+\_\+structure\+\_\+type (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{str }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classbridges_1_1color__grid_1_1_color_grid_a5340b1aed60318e37cab93eed6093070}\label{classbridges_1_1color__grid_1_1_color_grid_a5340b1aed60318e37cab93eed6093070}} 
+\index{bridges.color\_grid.ColorGrid@{bridges.color\_grid.ColorGrid}!get\_data\_structure\_type@{get\_data\_structure\_type}}
+\index{get\_data\_structure\_type@{get\_data\_structure\_type}!bridges.color\_grid.ColorGrid@{bridges.color\_grid.ColorGrid}}
+\subsubsection{\texorpdfstring{get\_data\_structure\_type()}{get\_data\_structure\_type()}}
+{\footnotesize\ttfamily  str bridges.\+color\+\_\+grid.\+Color\+Grid.\+get\+\_\+data\+\_\+structure\+\_\+type (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
 
 
@@ -117,11 +117,15 @@ Get the data structure type.
 
 str data structure type 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classbridges_1_1color__grid_1_1_color_grid_ab6685633fe237eb118cf2db2f624cd60}\label{classbridges_1_1color__grid_1_1_color_grid_ab6685633fe237eb118cf2db2f624cd60}} 
-\index{bridges\+::color\+\_\+grid\+::\+Color\+Grid@{bridges\+::color\+\_\+grid\+::\+Color\+Grid}!get\+\_\+raw@{get\+\_\+raw}}
-\index{get\+\_\+raw@{get\+\_\+raw}!bridges\+::color\+\_\+grid\+::\+Color\+Grid@{bridges\+::color\+\_\+grid\+::\+Color\+Grid}}
-\subsubsection{\texorpdfstring{get\+\_\+raw()}{get\_raw()}}
-{\footnotesize\ttfamily def bridges.\+color\+\_\+grid.\+Color\+Grid.\+get\+\_\+raw (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{bytearray }\end{DoxyParamCaption})}
+
+
+Reimplemented from \mbox{\hyperlink{classbridges_1_1grid_1_1_grid_af7a6658d4512112c2888afc6cd946461}{bridges.\+grid.\+Grid}}.
+
+\mbox{\Hypertarget{classbridges_1_1color__grid_1_1_color_grid_aae710dfd1c06f37a98437a6b4fb813bf}\label{classbridges_1_1color__grid_1_1_color_grid_aae710dfd1c06f37a98437a6b4fb813bf}} 
+\index{bridges.color\_grid.ColorGrid@{bridges.color\_grid.ColorGrid}!get\_raw@{get\_raw}}
+\index{get\_raw@{get\_raw}!bridges.color\_grid.ColorGrid@{bridges.color\_grid.ColorGrid}}
+\subsubsection{\texorpdfstring{get\_raw()}{get\_raw()}}
+{\footnotesize\ttfamily  bytearray bridges.\+color\+\_\+grid.\+Color\+Grid.\+get\+\_\+raw (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
 
 
@@ -132,11 +136,11 @@ Get raw encoding of color grid.
 
 bytearray representing the colors of grid cells 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classbridges_1_1color__grid_1_1_color_grid_a48ded4391e60e4f42213fb3711730614}\label{classbridges_1_1color__grid_1_1_color_grid_a48ded4391e60e4f42213fb3711730614}} 
-\index{bridges\+::color\+\_\+grid\+::\+Color\+Grid@{bridges\+::color\+\_\+grid\+::\+Color\+Grid}!get\+\_\+rle@{get\+\_\+rle}}
-\index{get\+\_\+rle@{get\+\_\+rle}!bridges\+::color\+\_\+grid\+::\+Color\+Grid@{bridges\+::color\+\_\+grid\+::\+Color\+Grid}}
-\subsubsection{\texorpdfstring{get\+\_\+rle()}{get\_rle()}}
-{\footnotesize\ttfamily def bridges.\+color\+\_\+grid.\+Color\+Grid.\+get\+\_\+rle (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{bytearray }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classbridges_1_1color__grid_1_1_color_grid_a1a8e0a96bb381a7359aff7cff05b0d16}\label{classbridges_1_1color__grid_1_1_color_grid_a1a8e0a96bb381a7359aff7cff05b0d16}} 
+\index{bridges.color\_grid.ColorGrid@{bridges.color\_grid.ColorGrid}!get\_rle@{get\_rle}}
+\index{get\_rle@{get\_rle}!bridges.color\_grid.ColorGrid@{bridges.color\_grid.ColorGrid}}
+\subsubsection{\texorpdfstring{get\_rle()}{get\_rle()}}
+{\footnotesize\ttfamily  bytearray bridges.\+color\+\_\+grid.\+Color\+Grid.\+get\+\_\+rle (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
 
 
@@ -147,11 +151,11 @@ Get the run length encoding of color grid.
 
 bytearray 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classbridges_1_1color__grid_1_1_color_grid_ad2b3ab19751cbf629096a25e31bb7f42}\label{classbridges_1_1color__grid_1_1_color_grid_ad2b3ab19751cbf629096a25e31bb7f42}} 
-\index{bridges\+::color\+\_\+grid\+::\+Color\+Grid@{bridges\+::color\+\_\+grid\+::\+Color\+Grid}!initialize\+\_\+grid@{initialize\+\_\+grid}}
-\index{initialize\+\_\+grid@{initialize\+\_\+grid}!bridges\+::color\+\_\+grid\+::\+Color\+Grid@{bridges\+::color\+\_\+grid\+::\+Color\+Grid}}
-\subsubsection{\texorpdfstring{initialize\+\_\+grid()}{initialize\_grid()}}
-{\footnotesize\ttfamily def bridges.\+color\+\_\+grid.\+Color\+Grid.\+initialize\+\_\+grid (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{None }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classbridges_1_1color__grid_1_1_color_grid_a7b21de607d59433f390ad4026aa9c3cf}\label{classbridges_1_1color__grid_1_1_color_grid_a7b21de607d59433f390ad4026aa9c3cf}} 
+\index{bridges.color\_grid.ColorGrid@{bridges.color\_grid.ColorGrid}!initialize\_grid@{initialize\_grid}}
+\index{initialize\_grid@{initialize\_grid}!bridges.color\_grid.ColorGrid@{bridges.color\_grid.ColorGrid}}
+\subsubsection{\texorpdfstring{initialize\_grid()}{initialize\_grid()}}
+{\footnotesize\ttfamily  None bridges.\+color\+\_\+grid.\+Color\+Grid.\+initialize\+\_\+grid (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
 
 
@@ -162,11 +166,11 @@ initialize the grid anf populate with base colors
 
 None 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classbridges_1_1color__grid_1_1_color_grid_a746dde66b828253bd0dfb32c906729fe}\label{classbridges_1_1color__grid_1_1_color_grid_a746dde66b828253bd0dfb32c906729fe}} 
-\index{bridges\+::color\+\_\+grid\+::\+Color\+Grid@{bridges\+::color\+\_\+grid\+::\+Color\+Grid}!set@{set}}
-\index{set@{set}!bridges\+::color\+\_\+grid\+::\+Color\+Grid@{bridges\+::color\+\_\+grid\+::\+Color\+Grid}}
+\mbox{\Hypertarget{classbridges_1_1color__grid_1_1_color_grid_a6160377225834aa80a5454fe5186da1e}\label{classbridges_1_1color__grid_1_1_color_grid_a6160377225834aa80a5454fe5186da1e}} 
+\index{bridges.color\_grid.ColorGrid@{bridges.color\_grid.ColorGrid}!set@{set}}
+\index{set@{set}!bridges.color\_grid.ColorGrid@{bridges.color\_grid.ColorGrid}}
 \subsubsection{\texorpdfstring{set()}{set()}}
-{\footnotesize\ttfamily def bridges.\+color\+\_\+grid.\+Color\+Grid.\+set (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{row }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily  None bridges.\+color\+\_\+grid.\+Color\+Grid.\+set (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{int}]{row,  }\item[{int}]{col,  }\item[{\mbox{\hyperlink{classbridges_1_1color_1_1_color}{Color}}}]{color }\end{DoxyParamCaption})}
 
 
 
@@ -190,25 +194,25 @@ None
 
 \subsection{Member Data Documentation}
 \mbox{\Hypertarget{classbridges_1_1color__grid_1_1_color_grid_af7c28369f01fb4dfc82a5824583a6dbf}\label{classbridges_1_1color__grid_1_1_color_grid_af7c28369f01fb4dfc82a5824583a6dbf}} 
-\index{bridges\+::color\+\_\+grid\+::\+Color\+Grid@{bridges\+::color\+\_\+grid\+::\+Color\+Grid}!base\+\_\+color@{base\+\_\+color}}
-\index{base\+\_\+color@{base\+\_\+color}!bridges\+::color\+\_\+grid\+::\+Color\+Grid@{bridges\+::color\+\_\+grid\+::\+Color\+Grid}}
-\subsubsection{\texorpdfstring{base\+\_\+color}{base\_color}}
+\index{bridges.color\_grid.ColorGrid@{bridges.color\_grid.ColorGrid}!base\_color@{base\_color}}
+\index{base\_color@{base\_color}!bridges.color\_grid.ColorGrid@{bridges.color\_grid.ColorGrid}}
+\subsubsection{\texorpdfstring{base\_color}{base\_color}}
 {\footnotesize\ttfamily bridges.\+color\+\_\+grid.\+Color\+Grid.\+base\+\_\+color}
 
 \mbox{\Hypertarget{classbridges_1_1color__grid_1_1_color_grid_ad2db62703be80114e46b490ff02f8bd9}\label{classbridges_1_1color__grid_1_1_color_grid_ad2db62703be80114e46b490ff02f8bd9}} 
-\index{bridges\+::color\+\_\+grid\+::\+Color\+Grid@{bridges\+::color\+\_\+grid\+::\+Color\+Grid}!base\+Color@{base\+Color}}
-\index{base\+Color@{base\+Color}!bridges\+::color\+\_\+grid\+::\+Color\+Grid@{bridges\+::color\+\_\+grid\+::\+Color\+Grid}}
-\subsubsection{\texorpdfstring{base\+Color}{baseColor}}
+\index{bridges.color\_grid.ColorGrid@{bridges.color\_grid.ColorGrid}!baseColor@{baseColor}}
+\index{baseColor@{baseColor}!bridges.color\_grid.ColorGrid@{bridges.color\_grid.ColorGrid}}
+\subsubsection{\texorpdfstring{baseColor}{baseColor}}
 {\footnotesize\ttfamily bridges.\+color\+\_\+grid.\+Color\+Grid.\+base\+Color = \mbox{\hyperlink{classbridges_1_1color_1_1_color}{Color}}(r=0, g=0, b=0, a=1.\+0)\hspace{0.3cm}{\ttfamily [static]}}
 
 \mbox{\Hypertarget{classbridges_1_1color__grid_1_1_color_grid_af248634de8b3d7b92feef01eed40821b}\label{classbridges_1_1color__grid_1_1_color_grid_af248634de8b3d7b92feef01eed40821b}} 
-\index{bridges\+::color\+\_\+grid\+::\+Color\+Grid@{bridges\+::color\+\_\+grid\+::\+Color\+Grid}!grid\+\_\+size@{grid\+\_\+size}}
-\index{grid\+\_\+size@{grid\+\_\+size}!bridges\+::color\+\_\+grid\+::\+Color\+Grid@{bridges\+::color\+\_\+grid\+::\+Color\+Grid}}
-\subsubsection{\texorpdfstring{grid\+\_\+size}{grid\_size}}
+\index{bridges.color\_grid.ColorGrid@{bridges.color\_grid.ColorGrid}!grid\_size@{grid\_size}}
+\index{grid\_size@{grid\_size}!bridges.color\_grid.ColorGrid@{bridges.color\_grid.ColorGrid}}
+\subsubsection{\texorpdfstring{grid\_size}{grid\_size}}
 {\footnotesize\ttfamily bridges.\+color\+\_\+grid.\+Color\+Grid.\+grid\+\_\+size}
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/\+Users/kalpathi/gr/bridges/client/python/bridges/\mbox{\hyperlink{color__grid_8py}{color\+\_\+grid.\+py}}\end{DoxyCompactItemize}
+/\+Users/kalpathi/gr/bridges/python/bridges/\mbox{\hyperlink{color__grid_8py}{color\+\_\+grid.\+py}}\end{DoxyCompactItemize}
