@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/graphics/bridges/site/tutorials/testing/python/display_game.py.html</title>
+<meta name="Generator" content="Vim/8.0">
+<meta name="plugin-version" content="vim7.4_v2">
+<meta name="syntax" content="python">
+<meta name="settings" content="use_css,pre_wrap,no_foldcolumn,expand_tabs,prevent_copy=">
+<meta name="colorscheme" content="murphy">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #87ffaf; background-color: #000000; }
+body { font-family: monospace; color: #87ffaf; background-color: #000000; }
+* { font-size: 1em; }
+.Constant { color: #87ffaf; }
+.Identifier { color: #afffff; font-weight: bold; }
+.Statement { color: #ffff00; }
+.PreProc { color: #5fd7ff; }
+.Comment { color: #ffd7d7; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges <span class="PreProc">import</span> *
+
+<span class="Statement">class</span> <span class="Identifier">DisplayGame</span> (NonBlockingGame):
+    <span class="Statement">def</span>  <span class="Identifier">__init__</span>(self, assid, user_id, api_key):
+        <span class="Comment"># substitute your username and api key</span>
+        <span class="Comment"># create a game board of 10x10</span>
+        <span class="Comment">#self.set_title (&quot;Game tutorial 2  - drawing symbols&quot;)</span>
+        <span class="Identifier">super</span>().__init__(assid, user_id,  api_key, <span class="Constant">10</span>, <span class="Constant">10</span>)
+
+    <span class="Statement">def</span> <span class="Identifier">initialize</span>(self):
+        <span class="Comment"># this gets executed once</span>
+        <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Constant">10</span>):
+            <span class="Statement">for</span> j <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Constant">10</span>):
+                self.set_bg_color(i, j, NamedColor.ivory)
+
+        self.draw_symbol(<span class="Constant">1</span>, <span class="Constant">1</span>, NamedSymbol.H, NamedColor.blue)
+        self.draw_symbol(<span class="Constant">1</span>, <span class="Constant">2</span>, NamedSymbol.E, NamedColor.yellow)
+        self.draw_symbol(<span class="Constant">1</span>, <span class="Constant">3</span>, NamedSymbol.L, NamedColor.black)
+        self.draw_symbol(<span class="Constant">1</span>, <span class="Constant">4</span>, NamedSymbol.L, NamedColor.green)
+        self.draw_symbol(<span class="Constant">1</span>, <span class="Constant">5</span>, NamedSymbol.O, NamedColor.red)
+
+    <span class="Statement">def</span> <span class="Identifier">game_loop</span>(self):
+        <span class="Comment"># this gets executed every frame</span>
+        <span class="Statement">pass</span>
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+    game = DisplayGame(<span class="Constant">1</span>, <span class="Constant">&quot;</span><span class="Constant">BRIDGES_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">BRIDGES_API_KEY</span><span class="Constant">&quot;</span>)
+    <span class="Comment"># start the game</span>
+    game.start()
+
+<span class="Statement">if</span> __name__ == <span class="Constant">'</span><span class="Constant">__main__</span><span class="Constant">'</span>:
+    main()
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->
