@@ -1,0 +1,544 @@
+\hypertarget{classbridges_1_1base_1_1_element}{}\section{bridges.\+base.\+Element$<$ E $>$ Class Template Reference}
+\label{classbridges_1_1base_1_1_element}\index{bridges.\+base.\+Element$<$ E $>$@{bridges.\+base.\+Element$<$ E $>$}}
+Inheritance diagram for bridges.\+base.\+Element$<$ E $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.788382cm]{classbridges_1_1base_1_1_element}
+\end{center}
+\end{figure}
+
+
+\subsection{Detailed Description}
+This is the main superclass in B\+R\+I\+D\+G\+ES for deriving a number of objects used in building arrays, lists, trees and graph data structures. 
+
+\mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}}, \mbox{\hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}}, \mbox{\hyperlink{classbridges_1_1base_1_1_circ_s_lelement}{Circ\+S\+Lelement}}, \mbox{\hyperlink{classbridges_1_1base_1_1_circ_d_lelement}{Circ\+D\+Lelement}}, \mbox{\hyperlink{classbridges_1_1base_1_1_tree_element}{Tree\+Element}}, \mbox{\hyperlink{classbridges_1_1base_1_1_bin_tree_element}{Bin\+Tree\+Element}}, \mbox{\hyperlink{classbridges_1_1base_1_1_b_s_t_element}{B\+S\+T\+Element}}, \mbox{\hyperlink{classbridges_1_1base_1_1_circ_s_lelement}{Circ\+S\+Lelement}}, \mbox{\hyperlink{classbridges_1_1base_1_1_circ_d_lelement}{Circ\+D\+Lelement}}, \mbox{\hyperlink{classbridges_1_1base_1_1_a_v_l_tree_element}{A\+V\+L\+Tree\+Element}} are all subclasses (see class hierarchy above). \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} contains two visualizer objects (\mbox{\hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Visualizer}}, \mbox{\hyperlink{classbridges_1_1base_1_1_link_visualizer}{Link\+Visualizer}}) for specifying visual attributes for nodes and links respectively. It also contains a label that that can be displayed in B\+R\+I\+D\+G\+ES visualizations.
+
+All the tutorials under
+
+\href{http://bridgesuncc.github.io/Hello_World_Tutorials/Overview.html}{\tt http\+://bridgesuncc.\+github.\+io/\+Hello\+\_\+\+World\+\_\+\+Tutorials/\+Overview.\+html}
+
+illustrate examples of using different types of \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} objects and how to manipulate their visual attributes.
+
+\begin{DoxyAuthor}{Author}
+Mihai Mehedint, Kalpathi Subramanian
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em E} & Elements are defined with an application specific generic parameter, that is defined by the user. These can be any legal Java type and manipulated using \mbox{\hyperlink{classbridges_1_1base_1_1_element_ab3cf1241da0bc4c59cea9d6f0fd7aaf4}{set\+Value()}}/get\+Value() methods. For more information on Java generics, see for example, \href{https://docs.oracle.com/javase/tutorial/java/generics/types.html}{\tt https\+://docs.\+oracle.\+com/javase/tutorial/java/generics/types.\+html} \\
+\hline
+\end{DoxyParams}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \mbox{\hyperlink{classbridges_1_1base_1_1_element_a6a1b70fa4b1936d10c6deb433acf8cd9}{get\+Data\+Struct\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} type name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_element_aa5fc5728f2ed4b041118a77409442390}{Element}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_element_a6cb9b3b85b923602aad5c1be6696d825}{Element}} (E val)
+\begin{DoxyCompactList}\small\item\em the constructor of \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_element_a14e857e8050eac518900a458f0364d8e}{Element}} (String label, E val)
+\begin{DoxyCompactList}\small\item\em Constructor of \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_element_a91db9de70b65a1d7b5f27c1c0b909832}{Element}} (\mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}}$<$ E $>$ original)
+\begin{DoxyCompactList}\small\item\em performing deep copy of an element when needed \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classbridges_1_1base_1_1_element_ad5496f568b4cca3909800eceea5fb47d}{get\+Identifier}} ()
+\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_element_a57153c203d8d2790650edb14ad61c338}{set\+Size}} (double sz)
+\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_element_aeb3336746d41a180e50b5efaff2dedc2}{set\+Color}} (\mbox{\hyperlink{classbridges_1_1base_1_1_color}{Color}} col)
+\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_color}{Color}} \mbox{\hyperlink{classbridges_1_1base_1_1_element_a6b80259f4f23b30df5486bf70f17c3b8}{get\+Color}} ()
+\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_element_a71c622f2cbb03b086c5a8f80d390b366}{set\+Opacity}} (float opacity)
+\item 
+double \mbox{\hyperlink{classbridges_1_1base_1_1_element_a1427af7efc2d5bc93e00a6a95d268c4d}{get\+Opacity}} ()
+\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_element_ae65bfb47628e028c21c43553ef59b7a2}{set\+Shape}} (String a\+Shape)
+\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Visualizer}} \mbox{\hyperlink{classbridges_1_1base_1_1_element_a42c84d41dfb7bd05a586e303cb33de72}{get\+Visualizer}} ()
+\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_element_a5befa95788099f1bc72cdf5361c55bed}{set\+Visualizer}} (\mbox{\hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Visualizer}} visualizer)
+\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_link_visualizer}{Link\+Visualizer}} \mbox{\hyperlink{classbridges_1_1base_1_1_element_a7978552c7b36e28c302f611fc1958e7f}{get\+Link\+Visualizer}} (\mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}}$<$ E $>$ el)
+\begin{DoxyCompactList}\small\item\em Returns the \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}}\textquotesingle{}s link visualizer object. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classbridges_1_1base_1_1_element_aa235244426486921bef319a28616bf8b}{get\+Class\+Name}} ()
+\item 
+int \mbox{\hyperlink{classbridges_1_1base_1_1_element_a6cd4c4f15c6a4f87f59e443cffe87a20}{compare\+To}} (\mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}}$<$ E $>$ e1)
+\item 
+boolean \mbox{\hyperlink{classbridges_1_1base_1_1_element_aff10d60700eb1aceca5c0b519bdccccb}{equals}} (\mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}}$<$ E $>$ e1)
+\item 
+String \mbox{\hyperlink{classbridges_1_1base_1_1_element_a8822450cfaf8495bc955d777ad35ea3f}{get\+Element\+Representation}} ()
+\item 
+String \mbox{\hyperlink{classbridges_1_1base_1_1_element_ab5e21b5941c018501db2ab41a6fb3823}{get\+Data\+Structure\+Representation}} ()
+\item 
+String \mbox{\hyperlink{classbridges_1_1base_1_1_element_ae32deb37d1ad95d2fdfaa616062f319d}{get\+Link\+Representation}} (\mbox{\hyperlink{classbridges_1_1base_1_1_link_visualizer}{Link\+Visualizer}} lv, String src, String dest)
+\item 
+String \mbox{\hyperlink{classbridges_1_1base_1_1_element_a5c831a0238de487765f6021a887f1542}{get\+Label}} ()
+\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_element_a942ccd766aeca0c4fdbe27ef8cbe78d9}{set\+Label}} (String label)
+\item 
+E \mbox{\hyperlink{classbridges_1_1base_1_1_element_a44ddc61db34b6cf0bab7dfba667d54af}{get\+Value}} ()
+\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_element_ab3cf1241da0bc4c59cea9d6f0fd7aaf4}{set\+Value}} (E value)
+\item 
+double \mbox{\hyperlink{classbridges_1_1base_1_1_element_add4b836e041e45e0c7a80eb7fd5a229d}{get\+Size}} ()
+\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_element_a336f2ff70a0873fde6f0b8a43b670ffc}{set\+Color}} (String col)
+\begin{DoxyCompactList}\small\item\em Change the element color. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classbridges_1_1base_1_1_element_aa0fe02d2f5491cf21cc6741f592536a8}{get\+Shape}} ()
+\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_element_a0fe9a52d06e8f3ccc8521e155ec72a27}{set\+Location}} (double locX, double locY)
+\begin{DoxyCompactList}\small\item\em Set the location attributes of an element. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classbridges_1_1base_1_1_element_a57cc1611e0d9cbec9da30d1cdcd3b23d}{get\+LocationX}} ()
+\item 
+double \mbox{\hyperlink{classbridges_1_1base_1_1_element_a3cfd6af5ca4cae0596845f62018ce004}{get\+LocationY}} ()
+\item 
+String \mbox{\hyperlink{classbridges_1_1base_1_1_element_a7dc685e317fd9dc2e73e049a9f907e42}{to\+String}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_element_af6251f52b9d277dd77e3bab1829d0197}{set\+Link\+Visualizer}} (\mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}}$<$ E $>$ el)
+\begin{DoxyCompactList}\small\item\em Sets the link from this element to a new incoming element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_element_a144cd54e043a801fab326769a5da01e2}{remove\+Link\+Visualizer}} (\mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}}$<$ E $>$ el)
+\begin{DoxyCompactList}\small\item\em Removes the link from this element to a new incoming element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_element_af1a60f4e6a91d379179f7d56e6dc3829}{validate\+Val}} (E value)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_aa5fc5728f2ed4b041118a77409442390}\label{classbridges_1_1base_1_1_element_aa5fc5728f2ed4b041118a77409442390}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!Element@{Element}}
+\index{Element@{Element}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{Element()}{Element()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.\mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} constructor. 
+
+creates an \mbox{\hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Visualizer}} object sets a unique identifier for the current \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} normally used from subclasses \mbox{\Hypertarget{classbridges_1_1base_1_1_element_a6cb9b3b85b923602aad5c1be6696d825}\label{classbridges_1_1base_1_1_element_a6cb9b3b85b923602aad5c1be6696d825}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!Element@{Element}}
+\index{Element@{Element}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{Element()}{Element()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.\mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} (\begin{DoxyParamCaption}\item[{E}]{val }\end{DoxyParamCaption})}
+
+
+
+the constructor of \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & generic parameter value used to construct \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_a14e857e8050eac518900a458f0364d8e}\label{classbridges_1_1base_1_1_element_a14e857e8050eac518900a458f0364d8e}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!Element@{Element}}
+\index{Element@{Element}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{Element()}{Element()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.\mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} (\begin{DoxyParamCaption}\item[{String}]{label,  }\item[{E}]{val }\end{DoxyParamCaption})}
+
+
+
+Constructor of \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em label} & the string that is visible on the Bridges Visualization \\
+\hline
+{\em val} & generic parameter value used to construct \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_a91db9de70b65a1d7b5f27c1c0b909832}\label{classbridges_1_1base_1_1_element_a91db9de70b65a1d7b5f27c1c0b909832}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!Element@{Element}}
+\index{Element@{Element}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{Element()}{Element()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.\mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}}$<$ E $>$}]{original }\end{DoxyParamCaption})}
+
+
+
+performing deep copy of an element when needed 
+
+
+\begin{DoxyParams}{Parameters}
+{\em original} & the \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} that is to be copied \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_a6cd4c4f15c6a4f87f59e443cffe87a20}\label{classbridges_1_1base_1_1_element_a6cd4c4f15c6a4f87f59e443cffe87a20}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!compare\+To@{compare\+To}}
+\index{compare\+To@{compare\+To}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{compare\+To()}{compareTo()}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.compare\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}}$<$ E $>$}]{e1 }\end{DoxyParamCaption})}
+
+Comparison between 2 elements 
+\begin{DoxyParams}{Parameters}
+{\em e1} & the \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} to compare this with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the 2 elements have the same label and the same identifier and a non\+Zero integer otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_aff10d60700eb1aceca5c0b519bdccccb}\label{classbridges_1_1base_1_1_element_aff10d60700eb1aceca5c0b519bdccccb}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!equals@{equals}}
+\index{equals@{equals}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{equals()}{equals()}}
+{\footnotesize\ttfamily boolean \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.equals (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}}$<$ E $>$}]{e1 }\end{DoxyParamCaption})}
+
+This method compares 2 Elements 
+\begin{DoxyParams}{Parameters}
+{\em e1} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_aa235244426486921bef319a28616bf8b}\label{classbridges_1_1base_1_1_element_aa235244426486921bef319a28616bf8b}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!get\+Class\+Name@{get\+Class\+Name}}
+\index{get\+Class\+Name@{get\+Class\+Name}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Class\+Name()}{getClassName()}}
+{\footnotesize\ttfamily String \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.get\+Class\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns the name of the class \begin{DoxyReturn}{Returns}
+the class name \char`\"{}\+Element\char`\"{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_a6b80259f4f23b30df5486bf70f17c3b8}\label{classbridges_1_1base_1_1_element_a6b80259f4f23b30df5486bf70f17c3b8}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!get\+Color@{get\+Color}}
+\index{get\+Color@{get\+Color}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Color()}{getColor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1base_1_1_color}{Color}} \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the current color of the element \begin{DoxyReturn}{Returns}
+The color of the element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_a6a1b70fa4b1936d10c6deb433acf8cd9}\label{classbridges_1_1base_1_1_element_a6a1b70fa4b1936d10c6deb433acf8cd9}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!get\+Data\+Struct\+Type@{get\+Data\+Struct\+Type}}
+\index{get\+Data\+Struct\+Type@{get\+Data\+Struct\+Type}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Data\+Struct\+Type()}{getDataStructType()}}
+{\footnotesize\ttfamily String \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.get\+Data\+Struct\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} type name. 
+
+\begin{DoxyReturn}{Returns}
+the element type (string) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_ab5e21b5941c018501db2ab41a6fb3823}\label{classbridges_1_1base_1_1_element_ab5e21b5941c018501db2ab41a6fb3823}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!get\+Data\+Structure\+Representation@{get\+Data\+Structure\+Representation}}
+\index{get\+Data\+Structure\+Representation@{get\+Data\+Structure\+Representation}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Data\+Structure\+Representation()}{getDataStructureRepresentation()}}
+{\footnotesize\ttfamily String \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.get\+Data\+Structure\+Representation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_a8822450cfaf8495bc955d777ad35ea3f}\label{classbridges_1_1base_1_1_element_a8822450cfaf8495bc955d777ad35ea3f}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!get\+Element\+Representation@{get\+Element\+Representation}}
+\index{get\+Element\+Representation@{get\+Element\+Representation}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Element\+Representation()}{getElementRepresentation()}}
+{\footnotesize\ttfamily String \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.get\+Element\+Representation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the J\+S\+ON representation of the element\textquotesingle{}s propertis
+
+\begin{DoxyReturn}{Returns}
+the encoded J\+S\+ON string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_ad5496f568b4cca3909800eceea5fb47d}\label{classbridges_1_1base_1_1_element_ad5496f568b4cca3909800eceea5fb47d}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!get\+Identifier@{get\+Identifier}}
+\index{get\+Identifier@{get\+Identifier}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Identifier()}{getIdentifier()}}
+{\footnotesize\ttfamily String \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.get\+Identifier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+this method returns the element\textquotesingle{}s unique identifier
+
+\begin{DoxyReturn}{Returns}
+the string identifier 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_a5c831a0238de487765f6021a887f1542}\label{classbridges_1_1base_1_1_element_a5c831a0238de487765f6021a887f1542}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!get\+Label@{get\+Label}}
+\index{get\+Label@{get\+Label}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Label()}{getLabel()}}
+{\footnotesize\ttfamily String \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.get\+Label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns the current label of the element
+
+\begin{DoxyReturn}{Returns}
+the label of the \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}}; the label is displayed on B\+R\+I\+D\+G\+ES visualizations. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_ae32deb37d1ad95d2fdfaa616062f319d}\label{classbridges_1_1base_1_1_element_ae32deb37d1ad95d2fdfaa616062f319d}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!get\+Link\+Representation@{get\+Link\+Representation}}
+\index{get\+Link\+Representation@{get\+Link\+Representation}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Link\+Representation()}{getLinkRepresentation()}}
+{\footnotesize\ttfamily String \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.get\+Link\+Representation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1base_1_1_link_visualizer}{Link\+Visualizer}}}]{lv,  }\item[{String}]{src,  }\item[{String}]{dest }\end{DoxyParamCaption})}
+
+Get the link visualizer representation, iterating through the link properties
+
+
+\begin{DoxyParams}{Parameters}
+{\em lv} & link visualizer \\
+\hline
+{\em src} & source node name \\
+\hline
+{\em dest} & destination node name \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_a7978552c7b36e28c302f611fc1958e7f}\label{classbridges_1_1base_1_1_element_a7978552c7b36e28c302f611fc1958e7f}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!get\+Link\+Visualizer@{get\+Link\+Visualizer}}
+\index{get\+Link\+Visualizer@{get\+Link\+Visualizer}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Link\+Visualizer()}{getLinkVisualizer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1base_1_1_link_visualizer}{Link\+Visualizer}} \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.get\+Link\+Visualizer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}}$<$ E $>$}]{el }\end{DoxyParamCaption})}
+
+
+
+Returns the \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}}\textquotesingle{}s link visualizer object. 
+
+The link visualizer object links this element to another element, which is specified by the argument to this method. This method is typically used to set the visual attributes of the links, such as in graphs or binary tree structures.
+
+
+\begin{DoxyParams}{Parameters}
+{\em el} & the element terminating the link\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the visualizer of the link from this to el 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_a57cc1611e0d9cbec9da30d1cdcd3b23d}\label{classbridges_1_1base_1_1_element_a57cc1611e0d9cbec9da30d1cdcd3b23d}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!get\+LocationX@{get\+LocationX}}
+\index{get\+LocationX@{get\+LocationX}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Location\+X()}{getLocationX()}}
+{\footnotesize\ttfamily double \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.get\+LocationX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the X coordinate of the element\textquotesingle{}s location \begin{DoxyReturn}{Returns}
+the X coordinate of the element\textquotesingle{}s location attribute 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_a3cfd6af5ca4cae0596845f62018ce004}\label{classbridges_1_1base_1_1_element_a3cfd6af5ca4cae0596845f62018ce004}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!get\+LocationY@{get\+LocationY}}
+\index{get\+LocationY@{get\+LocationY}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Location\+Y()}{getLocationY()}}
+{\footnotesize\ttfamily double \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.get\+LocationY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the Y coordinate of the element\textquotesingle{}s location \begin{DoxyReturn}{Returns}
+the Y coordinate of the element\textquotesingle{}s location attribute 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_a1427af7efc2d5bc93e00a6a95d268c4d}\label{classbridges_1_1base_1_1_element_a1427af7efc2d5bc93e00a6a95d268c4d}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!get\+Opacity@{get\+Opacity}}
+\index{get\+Opacity@{get\+Opacity}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Opacity()}{getOpacity()}}
+{\footnotesize\ttfamily double \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.get\+Opacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+get opacity of element
+
+\begin{DoxyReturn}{Returns}
+current opacity of element (0-\/1 range) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_aa0fe02d2f5491cf21cc6741f592536a8}\label{classbridges_1_1base_1_1_element_aa0fe02d2f5491cf21cc6741f592536a8}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!get\+Shape@{get\+Shape}}
+\index{get\+Shape@{get\+Shape}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Shape()}{getShape()}}
+{\footnotesize\ttfamily String \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.get\+Shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+The shape of the element(one of C\+I\+R\+C\+LE,S\+Q\+U\+A\+RE, D\+I\+A\+M\+O\+ND,C\+R\+O\+SS,T\+R\+I\+\_\+\+D\+O\+WN,T\+R\+I\+\_\+\+UP 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_add4b836e041e45e0c7a80eb7fd5a229d}\label{classbridges_1_1base_1_1_element_add4b836e041e45e0c7a80eb7fd5a229d}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Size()}{getSize()}}
+{\footnotesize\ttfamily double \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get element size \begin{DoxyReturn}{Returns}
+the size (in pixels) of the element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_a44ddc61db34b6cf0bab7dfba667d54af}\label{classbridges_1_1base_1_1_element_a44ddc61db34b6cf0bab7dfba667d54af}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Value()}{getValue()}}
+{\footnotesize\ttfamily E \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns the generic object held in the element.
+
+\begin{DoxyReturn}{Returns}
+the value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_a42c84d41dfb7bd05a586e303cb33de72}\label{classbridges_1_1base_1_1_element_a42c84d41dfb7bd05a586e303cb33de72}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!get\+Visualizer@{get\+Visualizer}}
+\index{get\+Visualizer@{get\+Visualizer}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Visualizer()}{getVisualizer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Visualizer}} \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.get\+Visualizer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}}\textquotesingle{}s visualizer object
+
+\begin{DoxyReturn}{Returns}
+the visualizer object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_a144cd54e043a801fab326769a5da01e2}\label{classbridges_1_1base_1_1_element_a144cd54e043a801fab326769a5da01e2}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!remove\+Link\+Visualizer@{remove\+Link\+Visualizer}}
+\index{remove\+Link\+Visualizer@{remove\+Link\+Visualizer}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{remove\+Link\+Visualizer()}{removeLinkVisualizer()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.remove\+Link\+Visualizer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}}$<$ E $>$}]{el }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Removes the link from this element to a new incoming element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em el} & the terminating element of the link to be removed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_aeb3336746d41a180e50b5efaff2dedc2}\label{classbridges_1_1base_1_1_element_aeb3336746d41a180e50b5efaff2dedc2}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{set\+Color()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.set\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1base_1_1_color}{Color}}}]{col }\end{DoxyParamCaption})}
+
+Set the color to \char`\"{}col\char`\"{} 
+\begin{DoxyParams}{Parameters}
+{\em col} & The color of the element. See the \mbox{\hyperlink{classbridges_1_1base_1_1_color}{Color}} class for details \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_a336f2ff70a0873fde6f0b8a43b670ffc}\label{classbridges_1_1base_1_1_element_a336f2ff70a0873fde6f0b8a43b670ffc}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{set\+Color()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.set\+Color (\begin{DoxyParamCaption}\item[{String}]{col }\end{DoxyParamCaption})}
+
+
+
+Change the element color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em col} & The new color of the element. See the \mbox{\hyperlink{classbridges_1_1base_1_1_color}{Color}} class for a complete list of supported color names. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_a942ccd766aeca0c4fdbe27ef8cbe78d9}\label{classbridges_1_1base_1_1_element_a942ccd766aeca0c4fdbe27ef8cbe78d9}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!set\+Label@{set\+Label}}
+\index{set\+Label@{set\+Label}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{set\+Label()}{setLabel()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.set\+Label (\begin{DoxyParamCaption}\item[{String}]{label }\end{DoxyParamCaption})}
+
+This method sets the label
+
+
+\begin{DoxyParams}{Parameters}
+{\em label} & the label to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_af6251f52b9d277dd77e3bab1829d0197}\label{classbridges_1_1base_1_1_element_af6251f52b9d277dd77e3bab1829d0197}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!set\+Link\+Visualizer@{set\+Link\+Visualizer}}
+\index{set\+Link\+Visualizer@{set\+Link\+Visualizer}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{set\+Link\+Visualizer()}{setLinkVisualizer()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.set\+Link\+Visualizer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}}$<$ E $>$}]{el }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Sets the link from this element to a new incoming element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em el} & the element to be linked to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_a0fe9a52d06e8f3ccc8521e155ec72a27}\label{classbridges_1_1base_1_1_element_a0fe9a52d06e8f3ccc8521e155ec72a27}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!set\+Location@{set\+Location}}
+\index{set\+Location@{set\+Location}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{set\+Location()}{setLocation()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.set\+Location (\begin{DoxyParamCaption}\item[{double}]{locX,  }\item[{double}]{locY }\end{DoxyParamCaption})}
+
+
+
+Set the location attributes of an element. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em locX,locY} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_a71c622f2cbb03b086c5a8f80d390b366}\label{classbridges_1_1base_1_1_element_a71c622f2cbb03b086c5a8f80d390b366}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!set\+Opacity@{set\+Opacity}}
+\index{set\+Opacity@{set\+Opacity}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{set\+Opacity()}{setOpacity()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.set\+Opacity (\begin{DoxyParamCaption}\item[{float}]{opacity }\end{DoxyParamCaption})}
+
+set opacity of element -\/ use the 4th color component
+
+
+\begin{DoxyParams}{Parameters}
+{\em opacity} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_ae65bfb47628e028c21c43553ef59b7a2}\label{classbridges_1_1base_1_1_element_ae65bfb47628e028c21c43553ef59b7a2}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!set\+Shape@{set\+Shape}}
+\index{set\+Shape@{set\+Shape}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{set\+Shape()}{setShape()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.set\+Shape (\begin{DoxyParamCaption}\item[{String}]{a\+Shape }\end{DoxyParamCaption})}
+
+Sets the shape of the \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} in the Bridges Visualization. Supported shapes include \char`\"{}star\char`\"{}, \char`\"{}circle\char`\"{}, \char`\"{}square\char`\"{}, \char`\"{}diamond\char`\"{}, \char`\"{}cross\char`\"{}, \char`\"{}triangle\char`\"{}, \char`\"{}wye\char`\"{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+Shape} & the string representing the shape of the \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} in the Bridges Visualization \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_a57153c203d8d2790650edb14ad61c338}\label{classbridges_1_1base_1_1_element_a57153c203d8d2790650edb14ad61c338}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!set\+Size@{set\+Size}}
+\index{set\+Size@{set\+Size}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{set\+Size()}{setSize()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.set\+Size (\begin{DoxyParamCaption}\item[{double}]{sz }\end{DoxyParamCaption})}
+
+Set the size of the \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} in the Bridge Visualization (in pixel units)
+
+
+\begin{DoxyParams}{Parameters}
+{\em sz} & the pixel size of the \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} in the Bridges Visualization. Must be in \mbox{[}1\+:50\mbox{]}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_ab3cf1241da0bc4c59cea9d6f0fd7aaf4}\label{classbridges_1_1base_1_1_element_ab3cf1241da0bc4c59cea9d6f0fd7aaf4}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!set\+Value@{set\+Value}}
+\index{set\+Value@{set\+Value}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{set\+Value()}{setValue()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.set\+Value (\begin{DoxyParamCaption}\item[{E}]{value }\end{DoxyParamCaption})}
+
+This method sets the generic object for this element.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & the value to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_a5befa95788099f1bc72cdf5361c55bed}\label{classbridges_1_1base_1_1_element_a5befa95788099f1bc72cdf5361c55bed}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!set\+Visualizer@{set\+Visualizer}}
+\index{set\+Visualizer@{set\+Visualizer}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{set\+Visualizer()}{setVisualizer()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.set\+Visualizer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Visualizer}}}]{visualizer }\end{DoxyParamCaption})}
+
+This method sets the visualizer object for the current element object
+
+
+\begin{DoxyParams}{Parameters}
+{\em visualizer} & the visualizer to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_a7dc685e317fd9dc2e73e049a9f907e42}\label{classbridges_1_1base_1_1_element_a7dc685e317fd9dc2e73e049a9f907e42}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily String \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1base_1_1_element_af1a60f4e6a91d379179f7d56e6dc3829}\label{classbridges_1_1base_1_1_element_af1a60f4e6a91d379179f7d56e6dc3829}} 
+\index{bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}!validate\+Val@{validate\+Val}}
+\index{validate\+Val@{validate\+Val}!bridges\+::base\+::\+Element@{bridges\+::base\+::\+Element}}
+\subsubsection{\texorpdfstring{validate\+Val()}{validateVal()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_element}{bridges.\+base.\+Element}}$<$ E $>$.validate\+Val (\begin{DoxyParamCaption}\item[{E}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Validates the \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}}\textquotesingle{}s value when the \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} is created A non null value is expected this will be unnecessary after we modify the server 
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/java/src/main/java/bridges/base/\mbox{\hyperlink{_element_8java}{Element.\+java}}\end{DoxyCompactItemize}

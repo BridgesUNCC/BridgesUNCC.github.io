@@ -1,0 +1,182 @@
+\hypertarget{classbridges_1_1base_1_1_grid}{}\section{bridges.\+base.\+Grid$<$ E $>$ Class Template Reference}
+\label{classbridges_1_1base_1_1_grid}\index{bridges.\+base.\+Grid$<$ E $>$@{bridges.\+base.\+Grid$<$ E $>$}}
+Inheritance diagram for bridges.\+base.\+Grid$<$ E $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbridges_1_1base_1_1_grid}
+\end{center}
+\end{figure}
+
+
+\subsection{Detailed Description}
+This is a class in B\+R\+I\+D\+G\+ES for representing an (m x n) grid. 
+
+\begin{DoxyAuthor}{Author}
+David Burlinson 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/14/18, 7/14/19 
+\end{DoxyDate}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \mbox{\hyperlink{classbridges_1_1base_1_1_grid_a81f268dd27c292ff2af9358039d4ebe6}{get\+Data\+Struct\+Type}} ()
+\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_grid_aa621ffc958db8341f7ce37ed78944d51}{Grid}} ()
+\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_grid_a9818d4959813f1292c6a234bc6f6aa9e}{Grid}} (int size)
+\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_grid_a43a699bd7ae2c6c986f978c515ff97d8}{Grid}} (int rows, int cols)
+\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_grid_ab9975b28d8dda7f3fbe0e35a7a026772}{Grid}} (int\mbox{[}$\,$\mbox{]} size)
+\item 
+int \mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classbridges_1_1base_1_1_grid_aee8a5b66095d65ff067a4e76f2611b0e}{get\+Dimensions}} ()
+\item 
+E \mbox{\hyperlink{classbridges_1_1base_1_1_grid_a698579bb5b7166f76a18a1b04916e090}{get}} (Integer row, Integer col)
+\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_grid_ab79ceb737423bb28ea2348e61a625a17}{set}} (Integer row, Integer col, E val)
+\item 
+String \mbox{\hyperlink{classbridges_1_1base_1_1_grid_a9a7faf2bbabae8d2f2babe9e29deb2c8}{get\+Data\+Structure\+Representation}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Array\+List$<$ Array\+List$<$ E $>$ $>$ \mbox{\hyperlink{classbridges_1_1base_1_1_grid_ad1f3f6968d58188425bd992c05c655a6}{grid}}
+\item 
+int \mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classbridges_1_1base_1_1_grid_a54a66479f78022570253d771206a0420}{grid\+Size}}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final int \mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classbridges_1_1base_1_1_grid_a45c2786d2af83624202192857a27724f}{default\+Grid\+Size}} = \{10, 10\}
+\item 
+static int \mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classbridges_1_1base_1_1_grid_a803fd4c070a22863c82581f0bb258c1c}{max\+Grid\+Size}} = \{1080, 1920\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_grid_aa621ffc958db8341f7ce37ed78944d51}\label{classbridges_1_1base_1_1_grid_aa621ffc958db8341f7ce37ed78944d51}} 
+\index{bridges\+::base\+::\+Grid@{bridges\+::base\+::\+Grid}!Grid@{Grid}}
+\index{Grid@{Grid}!bridges\+::base\+::\+Grid@{bridges\+::base\+::\+Grid}}
+\subsubsection{\texorpdfstring{Grid()}{Grid()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1base_1_1_grid}{bridges.\+base.\+Grid}}$<$ E $>$.\mbox{\hyperlink{classbridges_1_1base_1_1_grid}{Grid}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Construct a grid with default sizes \mbox{\Hypertarget{classbridges_1_1base_1_1_grid_a9818d4959813f1292c6a234bc6f6aa9e}\label{classbridges_1_1base_1_1_grid_a9818d4959813f1292c6a234bc6f6aa9e}} 
+\index{bridges\+::base\+::\+Grid@{bridges\+::base\+::\+Grid}!Grid@{Grid}}
+\index{Grid@{Grid}!bridges\+::base\+::\+Grid@{bridges\+::base\+::\+Grid}}
+\subsubsection{\texorpdfstring{Grid()}{Grid()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1base_1_1_grid}{bridges.\+base.\+Grid}}$<$ E $>$.\mbox{\hyperlink{classbridges_1_1base_1_1_grid}{Grid}} (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+Construct a size x size grid \mbox{\Hypertarget{classbridges_1_1base_1_1_grid_a43a699bd7ae2c6c986f978c515ff97d8}\label{classbridges_1_1base_1_1_grid_a43a699bd7ae2c6c986f978c515ff97d8}} 
+\index{bridges\+::base\+::\+Grid@{bridges\+::base\+::\+Grid}!Grid@{Grid}}
+\index{Grid@{Grid}!bridges\+::base\+::\+Grid@{bridges\+::base\+::\+Grid}}
+\subsubsection{\texorpdfstring{Grid()}{Grid()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1base_1_1_grid}{bridges.\+base.\+Grid}}$<$ E $>$.\mbox{\hyperlink{classbridges_1_1base_1_1_grid}{Grid}} (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{cols }\end{DoxyParamCaption})}
+
+Construct a rows x cols size grid
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & number of rows in grid \\
+\hline
+{\em cols} & number of rows in grid \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_grid_ab9975b28d8dda7f3fbe0e35a7a026772}\label{classbridges_1_1base_1_1_grid_ab9975b28d8dda7f3fbe0e35a7a026772}} 
+\index{bridges\+::base\+::\+Grid@{bridges\+::base\+::\+Grid}!Grid@{Grid}}
+\index{Grid@{Grid}!bridges\+::base\+::\+Grid@{bridges\+::base\+::\+Grid}}
+\subsubsection{\texorpdfstring{Grid()}{Grid()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1base_1_1_grid}{bridges.\+base.\+Grid}}$<$ E $>$.\mbox{\hyperlink{classbridges_1_1base_1_1_grid}{Grid}} (\begin{DoxyParamCaption}\item[{int \mbox{[}$\,$\mbox{]}}]{size }\end{DoxyParamCaption})}
+
+Construct a size\mbox{[}0\mbox{]} by size\mbox{[}1\mbox{]} sized grid 
+\begin{DoxyParams}{Parameters}
+{\em size\mbox{[}$\,$\mbox{]}} & specifies rows and column sizes of the grid \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_grid_a698579bb5b7166f76a18a1b04916e090}\label{classbridges_1_1base_1_1_grid_a698579bb5b7166f76a18a1b04916e090}} 
+\index{bridges\+::base\+::\+Grid@{bridges\+::base\+::\+Grid}!get@{get}}
+\index{get@{get}!bridges\+::base\+::\+Grid@{bridges\+::base\+::\+Grid}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily E \mbox{\hyperlink{classbridges_1_1base_1_1_grid}{bridges.\+base.\+Grid}}$<$ E $>$.get (\begin{DoxyParamCaption}\item[{Integer}]{row,  }\item[{Integer}]{col }\end{DoxyParamCaption})}
+
+Get the (row, col) element in the grid 
+\begin{DoxyParams}{Parameters}
+{\em row} & row number \\
+\hline
+{\em col} & number \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_grid_a81f268dd27c292ff2af9358039d4ebe6}\label{classbridges_1_1base_1_1_grid_a81f268dd27c292ff2af9358039d4ebe6}} 
+\index{bridges\+::base\+::\+Grid@{bridges\+::base\+::\+Grid}!get\+Data\+Struct\+Type@{get\+Data\+Struct\+Type}}
+\index{get\+Data\+Struct\+Type@{get\+Data\+Struct\+Type}!bridges\+::base\+::\+Grid@{bridges\+::base\+::\+Grid}}
+\subsubsection{\texorpdfstring{get\+Data\+Struct\+Type()}{getDataStructType()}}
+{\footnotesize\ttfamily String \mbox{\hyperlink{classbridges_1_1base_1_1_grid}{bridges.\+base.\+Grid}}$<$ E $>$.get\+Data\+Struct\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get data structure name \begin{DoxyReturn}{Returns}
+data type name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_grid_a9a7faf2bbabae8d2f2babe9e29deb2c8}\label{classbridges_1_1base_1_1_grid_a9a7faf2bbabae8d2f2babe9e29deb2c8}} 
+\index{bridges\+::base\+::\+Grid@{bridges\+::base\+::\+Grid}!get\+Data\+Structure\+Representation@{get\+Data\+Structure\+Representation}}
+\index{get\+Data\+Structure\+Representation@{get\+Data\+Structure\+Representation}!bridges\+::base\+::\+Grid@{bridges\+::base\+::\+Grid}}
+\subsubsection{\texorpdfstring{get\+Data\+Structure\+Representation()}{getDataStructureRepresentation()}}
+{\footnotesize\ttfamily String \mbox{\hyperlink{classbridges_1_1base_1_1_grid}{bridges.\+base.\+Grid}}$<$ E $>$.get\+Data\+Structure\+Representation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get data structure representation \mbox{\Hypertarget{classbridges_1_1base_1_1_grid_aee8a5b66095d65ff067a4e76f2611b0e}\label{classbridges_1_1base_1_1_grid_aee8a5b66095d65ff067a4e76f2611b0e}} 
+\index{bridges\+::base\+::\+Grid@{bridges\+::base\+::\+Grid}!get\+Dimensions@{get\+Dimensions}}
+\index{get\+Dimensions@{get\+Dimensions}!bridges\+::base\+::\+Grid@{bridges\+::base\+::\+Grid}}
+\subsubsection{\texorpdfstring{get\+Dimensions()}{getDimensions()}}
+{\footnotesize\ttfamily int \mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classbridges_1_1base_1_1_grid}{bridges.\+base.\+Grid}}$<$ E $>$.get\+Dimensions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the grid dimensions
+
+\begin{DoxyReturn}{Returns}
+an array of two values (rows, cols) of the grid 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_grid_ab79ceb737423bb28ea2348e61a625a17}\label{classbridges_1_1base_1_1_grid_ab79ceb737423bb28ea2348e61a625a17}} 
+\index{bridges\+::base\+::\+Grid@{bridges\+::base\+::\+Grid}!set@{set}}
+\index{set@{set}!bridges\+::base\+::\+Grid@{bridges\+::base\+::\+Grid}}
+\subsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_grid}{bridges.\+base.\+Grid}}$<$ E $>$.set (\begin{DoxyParamCaption}\item[{Integer}]{row,  }\item[{Integer}]{col,  }\item[{E}]{val }\end{DoxyParamCaption})}
+
+Set the (row, col) element in the grid 
+\begin{DoxyParams}{Parameters}
+{\em row,col} & cell to change \\
+\hline
+{\em val} & the value to be set to \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_grid_a45c2786d2af83624202192857a27724f}\label{classbridges_1_1base_1_1_grid_a45c2786d2af83624202192857a27724f}} 
+\index{bridges\+::base\+::\+Grid@{bridges\+::base\+::\+Grid}!default\+Grid\+Size@{default\+Grid\+Size}}
+\index{default\+Grid\+Size@{default\+Grid\+Size}!bridges\+::base\+::\+Grid@{bridges\+::base\+::\+Grid}}
+\subsubsection{\texorpdfstring{default\+Grid\+Size}{defaultGridSize}}
+{\footnotesize\ttfamily final int \mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classbridges_1_1base_1_1_grid}{bridges.\+base.\+Grid}}$<$ E $>$.default\+Grid\+Size = \{10, 10\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classbridges_1_1base_1_1_grid_ad1f3f6968d58188425bd992c05c655a6}\label{classbridges_1_1base_1_1_grid_ad1f3f6968d58188425bd992c05c655a6}} 
+\index{bridges\+::base\+::\+Grid@{bridges\+::base\+::\+Grid}!grid@{grid}}
+\index{grid@{grid}!bridges\+::base\+::\+Grid@{bridges\+::base\+::\+Grid}}
+\subsubsection{\texorpdfstring{grid}{grid}}
+{\footnotesize\ttfamily Array\+List$<$Array\+List$<$E$>$ $>$ \mbox{\hyperlink{classbridges_1_1base_1_1_grid}{bridges.\+base.\+Grid}}$<$ E $>$.grid\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classbridges_1_1base_1_1_grid_a54a66479f78022570253d771206a0420}\label{classbridges_1_1base_1_1_grid_a54a66479f78022570253d771206a0420}} 
+\index{bridges\+::base\+::\+Grid@{bridges\+::base\+::\+Grid}!grid\+Size@{grid\+Size}}
+\index{grid\+Size@{grid\+Size}!bridges\+::base\+::\+Grid@{bridges\+::base\+::\+Grid}}
+\subsubsection{\texorpdfstring{grid\+Size}{gridSize}}
+{\footnotesize\ttfamily int \mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classbridges_1_1base_1_1_grid}{bridges.\+base.\+Grid}}$<$ E $>$.grid\+Size\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classbridges_1_1base_1_1_grid_a803fd4c070a22863c82581f0bb258c1c}\label{classbridges_1_1base_1_1_grid_a803fd4c070a22863c82581f0bb258c1c}} 
+\index{bridges\+::base\+::\+Grid@{bridges\+::base\+::\+Grid}!max\+Grid\+Size@{max\+Grid\+Size}}
+\index{max\+Grid\+Size@{max\+Grid\+Size}!bridges\+::base\+::\+Grid@{bridges\+::base\+::\+Grid}}
+\subsubsection{\texorpdfstring{max\+Grid\+Size}{maxGridSize}}
+{\footnotesize\ttfamily int \mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classbridges_1_1base_1_1_grid}{bridges.\+base.\+Grid}}$<$ E $>$.max\+Grid\+Size = \{1080, 1920\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/java/src/main/java/bridges/base/\mbox{\hyperlink{_grid_8java}{Grid.\+java}}\end{DoxyCompactItemize}

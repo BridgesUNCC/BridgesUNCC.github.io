@@ -1,0 +1,310 @@
+\hypertarget{classbridges_1_1base_1_1_edge}{}\section{bridges.\+base.\+Edge$<$ K, E2 $>$ Class Template Reference}
+\label{classbridges_1_1base_1_1_edge}\index{bridges.\+base.\+Edge$<$ K, E2 $>$@{bridges.\+base.\+Edge$<$ K, E2 $>$}}
+
+
+\subsection{Detailed Description}
+This class is used to represent the edges in a graph and will appear as links in the B\+R\+I\+D\+G\+ES graph visualization. 
+
+This object is used in graphs and graph algorithms such as D\+FS, B\+FS and shortest path algorithms that need to visit graph edges. The adjacency list representation uses them as the generic paramter, as S\+Lelement$<$\+Edge$>$ Bridges represents Edges as links between pairs of elements
+
+\begin{DoxyAuthor}{Author}
+Kalpathi Subramanian
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em K} & holds the terminating vertex of the edge \\
+\hline
+{\em E2} & holds edge specific information \\
+\hline
+\end{DoxyParams}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_edge_a2a17f458612fbcee8e9efb8d91a6cc18}{Edge}} (K from, K to, E2 data, \mbox{\hyperlink{classbridges_1_1base_1_1_link_visualizer}{Link\+Visualizer}} lvis)
+\begin{DoxyCompactList}\small\item\em Construct an edge using each extremities, user data, and styling information. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_edge_aef1a55d996fc36217629b884435b9f35}{set\+From}} (K from)
+\begin{DoxyCompactList}\small\item\em Set source \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} (Vertex) of the edge. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_edge_a5e574139711be3f96c42da02a2702aea}{set\+To}} (K to)
+\begin{DoxyCompactList}\small\item\em Set identifier of the terminating \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} (Vertex) of edge. \end{DoxyCompactList}\item 
+K \mbox{\hyperlink{classbridges_1_1base_1_1_edge_ab451c13aa8173b5ef1cc2b2dd4f8508f}{get\+To}} ()
+\begin{DoxyCompactList}\small\item\em Get identifer of the terminating \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} of edge. \end{DoxyCompactList}\item 
+K \mbox{\hyperlink{classbridges_1_1base_1_1_edge_afc23a7c2ee8ab4c4f0950c9bf25edd56}{get\+From}} ()
+\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_edge_a733d7f5eb4950d1fc4e14b7096faeb5c}{set\+Edge\+Data}} (E2 data)
+\item 
+E2 \mbox{\hyperlink{classbridges_1_1base_1_1_edge_a19a623d647eb17b7e53f1360577b0703}{get\+Edge\+Data}} ()
+\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_link_visualizer}{Link\+Visualizer}} \mbox{\hyperlink{classbridges_1_1base_1_1_edge_a11c655622b8a54f2931f59b1d256f84a}{get\+Link\+Visualizer}} ()
+\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_edge_a1bb8008507d26245468bf9d0f1452072}{set\+Link\+Visualizer}} (\mbox{\hyperlink{classbridges_1_1base_1_1_link_visualizer}{Link\+Visualizer}} lvis)
+\begin{DoxyCompactList}\small\item\em Set the edge\textquotesingle{}s link visualizer. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classbridges_1_1base_1_1_edge_a8663708d930e8df460c57d8bdbab44b2}{get\+Label}} ()
+\begin{DoxyCompactList}\small\item\em Get the edge\textquotesingle{}s label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_edge_ad5f1d55a3c8caeb975f497dfe4f29242}{set\+Label}} (String label)
+\begin{DoxyCompactList}\small\item\em Set the edge\textquotesingle{}s label. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classbridges_1_1base_1_1_edge_a3431e83235fc5d5dd5cf747ed4853881}{get\+Thickness}} ()
+\begin{DoxyCompactList}\small\item\em Get the thickness of the edge. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_edge_ae8d87539f03f04479e5f5710ea9bf260}{set\+Thickness}} (double thickness)
+\begin{DoxyCompactList}\small\item\em Set the thickness of the edge. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_color}{Color}} \mbox{\hyperlink{classbridges_1_1base_1_1_edge_a243d9e6a57ebb570dda81bffe0cd4b77}{get\+Color}} ()
+\begin{DoxyCompactList}\small\item\em Get the color of the link in the Bridges Visualization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_edge_a77f6d36e94a3cbb8e478c85a1a6dad84}{set\+Color}} (\mbox{\hyperlink{classbridges_1_1base_1_1_color}{Color}} color)
+\begin{DoxyCompactList}\small\item\em Set the color of the link from an existing \mbox{\hyperlink{classbridges_1_1base_1_1_color}{Color}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_edge_adc2dbd9f8d74f8749ba64515ca052909}{set\+Color}} (String color)
+\begin{DoxyCompactList}\small\item\em Set the color of the link in the Bridges Visualization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_edge_a4ecf6bdaf140202b41c8a929fbdcdc0c}{set\+Color}} (int r, int g, int b, float a)
+\begin{DoxyCompactList}\small\item\em Set the color of the link given R\+G\+BA components. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_edge_a2a17f458612fbcee8e9efb8d91a6cc18}\label{classbridges_1_1base_1_1_edge_a2a17f458612fbcee8e9efb8d91a6cc18}} 
+\index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!Edge@{Edge}}
+\index{Edge@{Edge}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
+\subsubsection{\texorpdfstring{Edge()}{Edge()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}}$<$ K, E2 $>$.\mbox{\hyperlink{classbridges_1_1base_1_1_edge}{Edge}} (\begin{DoxyParamCaption}\item[{K}]{from,  }\item[{K}]{to,  }\item[{E2}]{data,  }\item[{\mbox{\hyperlink{classbridges_1_1base_1_1_link_visualizer}{Link\+Visualizer}}}]{lvis }\end{DoxyParamCaption})}
+
+
+
+Construct an edge using each extremities, user data, and styling information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & key of source vertex of the edge \\
+\hline
+{\em to} & key of terminating vertex of the edge \\
+\hline
+{\em data} & is the edge information object \\
+\hline
+{\em lvis} & is the object storing styling information for the edge \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_edge_a243d9e6a57ebb570dda81bffe0cd4b77}\label{classbridges_1_1base_1_1_edge_a243d9e6a57ebb570dda81bffe0cd4b77}} 
+\index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!get\+Color@{get\+Color}}
+\index{get\+Color@{get\+Color}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
+\subsubsection{\texorpdfstring{get\+Color()}{getColor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1base_1_1_color}{Color}} \mbox{\hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}}$<$ K, E2 $>$.get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the color of the link in the Bridges Visualization. 
+
+\begin{DoxyReturn}{Returns}
+the edge color 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_edge_a19a623d647eb17b7e53f1360577b0703}\label{classbridges_1_1base_1_1_edge_a19a623d647eb17b7e53f1360577b0703}} 
+\index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!get\+Edge\+Data@{get\+Edge\+Data}}
+\index{get\+Edge\+Data@{get\+Edge\+Data}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
+\subsubsection{\texorpdfstring{get\+Edge\+Data()}{getEdgeData()}}
+{\footnotesize\ttfamily E2 \mbox{\hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}}$<$ K, E2 $>$.get\+Edge\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get edge specific data.
+
+\begin{DoxyReturn}{Returns}
+edge data 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_edge_afc23a7c2ee8ab4c4f0950c9bf25edd56}\label{classbridges_1_1base_1_1_edge_afc23a7c2ee8ab4c4f0950c9bf25edd56}} 
+\index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!get\+From@{get\+From}}
+\index{get\+From@{get\+From}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
+\subsubsection{\texorpdfstring{get\+From()}{getFrom()}}
+{\footnotesize\ttfamily K \mbox{\hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}}$<$ K, E2 $>$.get\+From (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get identifer of the source \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} of edge
+
+\begin{DoxyReturn}{Returns}
+the identifier of the source \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_edge_a8663708d930e8df460c57d8bdbab44b2}\label{classbridges_1_1base_1_1_edge_a8663708d930e8df460c57d8bdbab44b2}} 
+\index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!get\+Label@{get\+Label}}
+\index{get\+Label@{get\+Label}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
+\subsubsection{\texorpdfstring{get\+Label()}{getLabel()}}
+{\footnotesize\ttfamily String \mbox{\hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}}$<$ K, E2 $>$.get\+Label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the edge\textquotesingle{}s label. 
+
+\begin{DoxyReturn}{Returns}
+label of this edge 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_edge_a11c655622b8a54f2931f59b1d256f84a}\label{classbridges_1_1base_1_1_edge_a11c655622b8a54f2931f59b1d256f84a}} 
+\index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!get\+Link\+Visualizer@{get\+Link\+Visualizer}}
+\index{get\+Link\+Visualizer@{get\+Link\+Visualizer}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
+\subsubsection{\texorpdfstring{get\+Link\+Visualizer()}{getLinkVisualizer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1base_1_1_link_visualizer}{Link\+Visualizer}} \mbox{\hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}}$<$ K, E2 $>$.get\+Link\+Visualizer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the edge\textquotesingle{}s link visualizer \begin{DoxyReturn}{Returns}
+link visualizer for this edge 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_edge_a3431e83235fc5d5dd5cf747ed4853881}\label{classbridges_1_1base_1_1_edge_a3431e83235fc5d5dd5cf747ed4853881}} 
+\index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!get\+Thickness@{get\+Thickness}}
+\index{get\+Thickness@{get\+Thickness}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
+\subsubsection{\texorpdfstring{get\+Thickness()}{getThickness()}}
+{\footnotesize\ttfamily double \mbox{\hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}}$<$ K, E2 $>$.get\+Thickness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the thickness of the edge. 
+
+\begin{DoxyReturn}{Returns}
+the size in pixels of the edge 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_edge_ab451c13aa8173b5ef1cc2b2dd4f8508f}\label{classbridges_1_1base_1_1_edge_ab451c13aa8173b5ef1cc2b2dd4f8508f}} 
+\index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!get\+To@{get\+To}}
+\index{get\+To@{get\+To}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
+\subsubsection{\texorpdfstring{get\+To()}{getTo()}}
+{\footnotesize\ttfamily K \mbox{\hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}}$<$ K, E2 $>$.get\+To (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get identifer of the terminating \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} of edge. 
+
+\begin{DoxyReturn}{Returns}
+the identifier of the terminating \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} (vertex) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_edge_a77f6d36e94a3cbb8e478c85a1a6dad84}\label{classbridges_1_1base_1_1_edge_a77f6d36e94a3cbb8e478c85a1a6dad84}} 
+\index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
+\subsubsection{\texorpdfstring{set\+Color()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}}$<$ K, E2 $>$.set\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1base_1_1_color}{Color}}}]{color }\end{DoxyParamCaption})}
+
+
+
+Set the color of the link from an existing \mbox{\hyperlink{classbridges_1_1base_1_1_color}{Color}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & the edge color to be assigned \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_edge_adc2dbd9f8d74f8749ba64515ca052909}\label{classbridges_1_1base_1_1_edge_adc2dbd9f8d74f8749ba64515ca052909}} 
+\index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
+\subsubsection{\texorpdfstring{set\+Color()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}}$<$ K, E2 $>$.set\+Color (\begin{DoxyParamCaption}\item[{String}]{color }\end{DoxyParamCaption})}
+
+
+
+Set the color of the link in the Bridges Visualization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & the string reprsenting the color. See the \mbox{\hyperlink{classbridges_1_1base_1_1_color}{Color}} class for the complete set of supported colors. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_edge_a4ecf6bdaf140202b41c8a929fbdcdc0c}\label{classbridges_1_1base_1_1_edge_a4ecf6bdaf140202b41c8a929fbdcdc0c}} 
+\index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
+\subsubsection{\texorpdfstring{set\+Color()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}}$<$ K, E2 $>$.set\+Color (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{g,  }\item[{int}]{b,  }\item[{float}]{a }\end{DoxyParamCaption})}
+
+
+
+Set the color of the link given R\+G\+BA components. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & red component \\
+\hline
+{\em g} & green component \\
+\hline
+{\em b} & blue component \\
+\hline
+{\em a} & alpha (transparency) component \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_edge_a733d7f5eb4950d1fc4e14b7096faeb5c}\label{classbridges_1_1base_1_1_edge_a733d7f5eb4950d1fc4e14b7096faeb5c}} 
+\index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!set\+Edge\+Data@{set\+Edge\+Data}}
+\index{set\+Edge\+Data@{set\+Edge\+Data}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
+\subsubsection{\texorpdfstring{set\+Edge\+Data()}{setEdgeData()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}}$<$ K, E2 $>$.set\+Edge\+Data (\begin{DoxyParamCaption}\item[{E2}]{data }\end{DoxyParamCaption})}
+
+Set edge specific data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & edge data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_edge_aef1a55d996fc36217629b884435b9f35}\label{classbridges_1_1base_1_1_edge_aef1a55d996fc36217629b884435b9f35}} 
+\index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!set\+From@{set\+From}}
+\index{set\+From@{set\+From}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
+\subsubsection{\texorpdfstring{set\+From()}{setFrom()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}}$<$ K, E2 $>$.set\+From (\begin{DoxyParamCaption}\item[{K}]{from }\end{DoxyParamCaption})}
+
+
+
+Set source \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} (Vertex) of the edge. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & the identifier of the source \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} (Vertex) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_edge_ad5f1d55a3c8caeb975f497dfe4f29242}\label{classbridges_1_1base_1_1_edge_ad5f1d55a3c8caeb975f497dfe4f29242}} 
+\index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!set\+Label@{set\+Label}}
+\index{set\+Label@{set\+Label}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
+\subsubsection{\texorpdfstring{set\+Label()}{setLabel()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}}$<$ K, E2 $>$.set\+Label (\begin{DoxyParamCaption}\item[{String}]{label }\end{DoxyParamCaption})}
+
+
+
+Set the edge\textquotesingle{}s label. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em label} & the label to be assigned \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_edge_a1bb8008507d26245468bf9d0f1452072}\label{classbridges_1_1base_1_1_edge_a1bb8008507d26245468bf9d0f1452072}} 
+\index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!set\+Link\+Visualizer@{set\+Link\+Visualizer}}
+\index{set\+Link\+Visualizer@{set\+Link\+Visualizer}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
+\subsubsection{\texorpdfstring{set\+Link\+Visualizer()}{setLinkVisualizer()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}}$<$ K, E2 $>$.set\+Link\+Visualizer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1base_1_1_link_visualizer}{Link\+Visualizer}}}]{lvis }\end{DoxyParamCaption})}
+
+
+
+Set the edge\textquotesingle{}s link visualizer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lvis} & link visualizer to be set for this edge \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_edge_ae8d87539f03f04479e5f5710ea9bf260}\label{classbridges_1_1base_1_1_edge_ae8d87539f03f04479e5f5710ea9bf260}} 
+\index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!set\+Thickness@{set\+Thickness}}
+\index{set\+Thickness@{set\+Thickness}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
+\subsubsection{\texorpdfstring{set\+Thickness()}{setThickness()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}}$<$ K, E2 $>$.set\+Thickness (\begin{DoxyParamCaption}\item[{double}]{thickness }\end{DoxyParamCaption})}
+
+
+
+Set the thickness of the edge. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thickness} & edge thickness to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_edge_a5e574139711be3f96c42da02a2702aea}\label{classbridges_1_1base_1_1_edge_a5e574139711be3f96c42da02a2702aea}} 
+\index{bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}!set\+To@{set\+To}}
+\index{set\+To@{set\+To}!bridges\+::base\+::\+Edge@{bridges\+::base\+::\+Edge}}
+\subsubsection{\texorpdfstring{set\+To()}{setTo()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_edge}{bridges.\+base.\+Edge}}$<$ K, E2 $>$.set\+To (\begin{DoxyParamCaption}\item[{K}]{to }\end{DoxyParamCaption})}
+
+
+
+Set identifier of the terminating \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} (Vertex) of edge. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em to} & the identifier of the terminating \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}} (Vertex) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/java/src/main/java/bridges/base/\mbox{\hyperlink{_edge_8java}{Edge.\+java}}\end{DoxyCompactItemize}

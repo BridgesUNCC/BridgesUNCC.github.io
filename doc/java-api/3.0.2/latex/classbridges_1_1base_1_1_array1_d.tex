@@ -1,0 +1,122 @@
+\hypertarget{classbridges_1_1base_1_1_array1_d}{}\section{bridges.\+base.\+Array1D$<$ E $>$ Class Template Reference}
+\label{classbridges_1_1base_1_1_array1_d}\index{bridges.\+base.\+Array1\+D$<$ E $>$@{bridges.\+base.\+Array1\+D$<$ E $>$}}
+Inheritance diagram for bridges.\+base.\+Array1D$<$ E $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classbridges_1_1base_1_1_array1_d}
+\end{center}
+\end{figure}
+
+
+\subsection{Detailed Description}
+This is a class can be used to create 1 dimensional arrays of type Element$<$\+E$>$. 
+
+\begin{DoxyAuthor}{Author}
+Kalpathi Subramanian
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7/18/19
+\end{DoxyDate}
+This class can be used to create 1D arrays of type Element$<$\+E$>$ where E is a generic object representing application specific data.
+
+\mbox{\hyperlink{classbridges_1_1base_1_1_array1_d}{Array1D}} has iterator semantic to enable range for loops. For instance,
+
+
+\begin{DoxyCode}
+Array1D<Integer> arr = something();
+\textcolor{keywordflow}{for} (Integer i : arr)
+  System.out.println(i);
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$\+E$>$} & The generic parameter object that is part of this element, representing application specific data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Example Tutorial at ~\newline
+ \href{http://bridgesuncc.github.io/tutorials/Array.html}{\tt http\+://bridgesuncc.\+github.\+io/tutorials/\+Array.\+html} (1D, 2D, and 3D \mbox{\hyperlink{classbridges_1_1base_1_1_array}{Array}})~\newline
+ 
+\end{DoxySeeAlso}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_array1_d_a6554a5e9d23c1f11ad67498545f99d95}{Array1D}} ()
+\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_array1_d_a80d42f7bf54c865988ef7d02e46951cd}{Array1D}} (int sz)
+\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}}$<$ E $>$ \mbox{\hyperlink{classbridges_1_1base_1_1_array1_d_abc1cd5b4fb76bac80ab9a640a083dc25}{get\+Element}} (int indx)
+\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_array1_d_ac749a6d97307998a2b37773456aca0fe}{set\+Element}} (int indx, \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}}$<$ E $>$ el)
+\item 
+Iterator$<$ E $>$ \mbox{\hyperlink{classbridges_1_1base_1_1_array1_d_aed723a9f55895c1673e73cb818be7c15}{iterator}} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_array1_d_a6554a5e9d23c1f11ad67498545f99d95}\label{classbridges_1_1base_1_1_array1_d_a6554a5e9d23c1f11ad67498545f99d95}} 
+\index{bridges\+::base\+::\+Array1D@{bridges\+::base\+::\+Array1D}!Array1D@{Array1D}}
+\index{Array1D@{Array1D}!bridges\+::base\+::\+Array1D@{bridges\+::base\+::\+Array1D}}
+\subsubsection{\texorpdfstring{Array1\+D()}{Array1D()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1base_1_1_array1_d}{bridges.\+base.\+Array1D}}$<$ E $>$.\mbox{\hyperlink{classbridges_1_1base_1_1_array1_d}{Array1D}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1base_1_1_array1_d_a80d42f7bf54c865988ef7d02e46951cd}\label{classbridges_1_1base_1_1_array1_d_a80d42f7bf54c865988ef7d02e46951cd}} 
+\index{bridges\+::base\+::\+Array1D@{bridges\+::base\+::\+Array1D}!Array1D@{Array1D}}
+\index{Array1D@{Array1D}!bridges\+::base\+::\+Array1D@{bridges\+::base\+::\+Array1D}}
+\subsubsection{\texorpdfstring{Array1\+D()}{Array1D()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1base_1_1_array1_d}{bridges.\+base.\+Array1D}}$<$ E $>$.\mbox{\hyperlink{classbridges_1_1base_1_1_array1_d}{Array1D}} (\begin{DoxyParamCaption}\item[{int}]{sz }\end{DoxyParamCaption})}
+
+Create a 1D array object
+
+
+\begin{DoxyParams}{Parameters}
+{\em sz} & number of elements in the array \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_array1_d_abc1cd5b4fb76bac80ab9a640a083dc25}\label{classbridges_1_1base_1_1_array1_d_abc1cd5b4fb76bac80ab9a640a083dc25}} 
+\index{bridges\+::base\+::\+Array1D@{bridges\+::base\+::\+Array1D}!get\+Element@{get\+Element}}
+\index{get\+Element@{get\+Element}!bridges\+::base\+::\+Array1D@{bridges\+::base\+::\+Array1D}}
+\subsubsection{\texorpdfstring{get\+Element()}{getElement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}}$<$E$>$ \mbox{\hyperlink{classbridges_1_1base_1_1_array1_d}{bridges.\+base.\+Array1D}}$<$ E $>$.get\+Element (\begin{DoxyParamCaption}\item[{int}]{indx }\end{DoxyParamCaption})}
+
+Get the object at \textquotesingle{}indx\textquotesingle{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em indx} & index into the array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Element$<$\+E$>$ object at \textquotesingle{}indx\textquotesingle{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_array1_d_aed723a9f55895c1673e73cb818be7c15}\label{classbridges_1_1base_1_1_array1_d_aed723a9f55895c1673e73cb818be7c15}} 
+\index{bridges\+::base\+::\+Array1D@{bridges\+::base\+::\+Array1D}!iterator@{iterator}}
+\index{iterator@{iterator}!bridges\+::base\+::\+Array1D@{bridges\+::base\+::\+Array1D}}
+\subsubsection{\texorpdfstring{iterator()}{iterator()}}
+{\footnotesize\ttfamily Iterator$<$E$>$ \mbox{\hyperlink{classbridges_1_1base_1_1_array1_d}{bridges.\+base.\+Array1D}}$<$ E $>$.iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1base_1_1_array1_d_ac749a6d97307998a2b37773456aca0fe}\label{classbridges_1_1base_1_1_array1_d_ac749a6d97307998a2b37773456aca0fe}} 
+\index{bridges\+::base\+::\+Array1D@{bridges\+::base\+::\+Array1D}!set\+Element@{set\+Element}}
+\index{set\+Element@{set\+Element}!bridges\+::base\+::\+Array1D@{bridges\+::base\+::\+Array1D}}
+\subsubsection{\texorpdfstring{set\+Element()}{setElement()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_array1_d}{bridges.\+base.\+Array1D}}$<$ E $>$.set\+Element (\begin{DoxyParamCaption}\item[{int}]{indx,  }\item[{\mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}}$<$ E $>$}]{el }\end{DoxyParamCaption})}
+
+Set the input object at \textquotesingle{}indx\textquotesingle{} -\/ for 1D array
+
+
+\begin{DoxyParams}{Parameters}
+{\em indx} & index into the array \\
+\hline
+{\em el} & element object to be assigned at \textquotesingle{}indx\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/java/src/main/java/bridges/base/\mbox{\hyperlink{_array1_d_8java}{Array1\+D.\+java}}\end{DoxyCompactItemize}
