@@ -32,9 +32,6 @@ struct my_game : public NonBlockingGame {
 };
 
 int main (int argc, char** argv) {
-	my_game g(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID",
-		"YOUR_API_KEY");
-
-
+	my_game g(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
 	g.start();
 }

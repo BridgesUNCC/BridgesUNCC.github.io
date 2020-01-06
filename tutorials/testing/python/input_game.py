@@ -28,8 +28,7 @@ class InputGame (NonBlockingGame):
 			self.draw_symbol(1, 5, NamedSymbol.none, NamedColor.red);
 
 def	main():
-	game = InputGame(1, "BRIDGES_USER_ID", "BRIDGES_API_KEY")
-
+	game = InputGame(1, "BRIDGES_USER_ID", "BRIDGES_API_KEY");
 	# start the game
 	game.start()
 

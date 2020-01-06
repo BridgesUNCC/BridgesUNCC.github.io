@@ -15,7 +15,7 @@ class MinimalGame (NonBlockingGame):
 		pass
 
 def	main():
-	game = MinimalGame(1, "BRIDGES_USER_ID", "BRIDGES_API_KEY")
+	game = MinimalGame(1, "BRIDGES_USER_ID", "BRIDGES_API_KEY");
 	# start the game
 	game.start()
 

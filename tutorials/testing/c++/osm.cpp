@@ -21,11 +21,11 @@ int main(int argc, char **argv) {
 
 	bridges.setServer("clone");
 
-	DataSource  *ds = new DataSource;
+	DataSource ds;
 	OSMData osm_data;
 	try {
 		//osm_data = ds->getOSMData(35.28, -80.75, 35.32, -80.71);
-		osm_data = ds->getOSMData("Charlotte");
+		osm_data = ds.getOSMData("Charlotte");
 	}
 	catch (std::string s) {
 		std::cerr << "Exception: " << s << "\n";
@@ -33,23 +33,23 @@ int main(int argc, char **argv) {
 	vector<OSMVertex> vertices = osm_data.getVertices();
 	vector<OSMEdge> edges = osm_data.getEdges();
 
-	GraphAdjList<int, int>  *gr = new GraphAdjList<int, int>;
+	GraphAdjList<int, int> gr;
 	double coords[2];
 
 	for (int k = 0; k < vertices.size(); k++) {
-		gr->addVertex(k);
+		gr.addVertex(k);
 		vertices[k].getCartesianCoords(coords);
-		gr->getVertex(k)->setLocation(coords[0], coords[1]);
-		gr->getVertex(k)->setColor(Color("green"));
+		gr.getVertex(k)->setLocation(coords[0], coords[1]);
+		gr.getVertex(k)->setColor(Color("green"));
 	}
 	for (int k = 0; k < edges.size(); k++) {
-		gr->addEdge(edges[k].getSourceVertex(), edges[k].getDestinationVertex(),
+		gr.addEdge(edges[k].getSourceVertex(), edges[k].getDestinationVertex(),
 			edges[k].getEdgeLength() );
-		gr->getLinkVisualizer(edges[k].getSourceVertex(), edges[k].getDestinationVertex())->setColor(Color("red"));
+		gr.getLinkVisualizer(edges[k].getSourceVertex(), edges[k].getDestinationVertex())->setColor(Color("red"));
 
 	}
 
-	gr->forceLargeVisualization(true);
+	gr.forceLargeVisualization(true);
 	bridges.setDataStructure(gr);
 	bridges.visualize();
 

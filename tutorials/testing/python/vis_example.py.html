@@ -1,33 +1,3 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>~/graphics/bridges/site/tutorials/testing/python/vis_example.py.html</title>
-<meta name="Generator" content="Vim/8.0">
-<meta name="plugin-version" content="vim7.4_v2">
-<meta name="syntax" content="python">
-<meta name="settings" content="use_css,pre_wrap,no_foldcolumn,expand_tabs,prevent_copy=">
-<meta name="colorscheme" content="murphy">
-<style type="text/css">
-<!--
-pre { white-space: pre-wrap; font-family: monospace; color: #87ffaf; background-color: #000000; }
-body { font-family: monospace; color: #87ffaf; background-color: #000000; }
-* { font-size: 1em; }
-.Constant { color: #87ffaf; }
-.Identifier { color: #afffff; font-weight: bold; }
-.Statement { color: #ffff00; }
-.PreProc { color: #5fd7ff; }
-.Comment { color: #ffd7d7; }
--->
-</style>
-
-<script type='text/javascript'>
-<!--
-
--->
-</script>
-</head>
-<body>
 <pre id='vimCodeElement'>
 <span class="PreProc">from</span> bridges.dl_element <span class="PreProc">import</span> *
 <span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
@@ -41,17 +11,17 @@ body { font-family: monospace; color: #87ffaf; background-color: #000000; }
     <span class="Comment"># set title, description</span>
     bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">A Visualization Attributes Related Example Using Doubly Linked List</span><span class="Constant">&quot;</span>)
 
-    <span class="Comment"># create list elements</span>
+	<span class="Comment"># create list elements</span>
     el0 = DLelement(e=<span class="Constant">&quot;</span><span class="Constant">element0</span><span class="Constant">&quot;</span>,  label=<span class="Constant">&quot;</span><span class="Constant">Element 0</span><span class="Constant">&quot;</span>)
     el1 = DLelement(e=<span class="Constant">&quot;</span><span class="Constant">element1</span><span class="Constant">&quot;</span>,  label=<span class="Constant">&quot;</span><span class="Constant">Element 1</span><span class="Constant">&quot;</span>)
 
-    <span class="Comment"># link elements</span>
+	<span class="Comment"># link elements</span>
     el0.next = el1
     el1.prev = el0
 
-    <span class="Comment"># add visual attributes</span>
+	<span class="Comment"># add visual attributes</span>
 
-    <span class="Comment"># set color, size , shape for list elements - see the Color class </span>
+	<span class="Comment"># set color, size , shape for list elements - see the Color class </span>
     <span class="Comment"># for supported colors</span>
     el0.color = <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>
     el0.setSize = <span class="Constant">20.</span>
@@ -85,6 +55,3 @@ body { font-family: monospace; color: #87ffaf; background-color: #000000; }
     main()
 
 </pre>
-</body>
-</html>
-<!-- vim: set foldmethod=manual : -->
