@@ -17,8 +17,8 @@ int main(int argc, char **argv) {
 	// set description
 
 	// create some elements
-	DLelement<string>  *el0 = new DLelement<string> ("element0", "Original");
-	DLelement<string>  *el1 = new DLelement<string> ("element1", "Changed");
+	DLelement<string>  *el0 = new DLelement<string> ("element0", "Element 0");
+	DLelement<string>  *el1 = new DLelement<string> ("element1", "Element 1");
 
 	// create the list
 	el0->setNext(el1);
@@ -42,8 +42,8 @@ int main(int argc, char **argv) {
 	el1->getLinkVisualizer(el0)->setColor(Color(255, 0, 255));
 
 	// adjust link thickness
-	el0->getLinkVisualizer(el1)->setThickness(3.0f);
-	el1->getLinkVisualizer(el0)->setThickness(6.0f);
+	el0->getLinkVisualizer(el1)->setThickness(2.0f);
+	el1->getLinkVisualizer(el0)->setThickness(4.0f);
 
 	// set link label
 	el0->getLinkVisualizer(el1)->setLabel("Link Label");

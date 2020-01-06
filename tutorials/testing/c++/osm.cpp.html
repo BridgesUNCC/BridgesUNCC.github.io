@@ -22,11 +22,11 @@
 
 	bridges.setServer(<span class="Constant">&quot;clone&quot;</span>);
 
-	DataSource  *ds = <span class="Statement">new</span> DataSource;
+	DataSource ds;
 	OSMData osm_data;
 	<span class="Statement">try</span> {
 		<span class="Comment">//osm_data = ds-&gt;getOSMData(35.28, -80.75, 35.32, -80.71);</span>
-		osm_data = ds-&gt;getOSMData(<span class="Constant">&quot;Charlotte&quot;</span>);
+		osm_data = ds.getOSMData(<span class="Constant">&quot;Charlotte&quot;</span>);
 	}
 	<span class="Statement">catch</span> (std::string s) {
 		std::cerr &lt;&lt; <span class="Constant">&quot;Exception: &quot;</span> &lt;&lt; s &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
@@ -34,23 +34,23 @@
 	vector&lt;OSMVertex&gt; vertices = osm_data.getVertices();
 	vector&lt;OSMEdge&gt; edges = osm_data.getEdges();
 
-	GraphAdjList&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;  *gr = <span class="Statement">new</span> GraphAdjList&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;;
+	GraphAdjList&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; gr;
 	<span class="Type">double</span> coords[<span class="Constant">2</span>];
 
 	<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; vertices.size(); k++) {
-		gr-&gt;addVertex(k);
+		gr.addVertex(k);
 		vertices[k].getCartesianCoords(coords);
-		gr-&gt;getVertex(k)-&gt;setLocation(coords[<span class="Constant">0</span>], coords[<span class="Constant">1</span>]);
-		gr-&gt;getVertex(k)-&gt;setColor(Color(<span class="Constant">&quot;green&quot;</span>));
+		gr.getVertex(k)-&gt;setLocation(coords[<span class="Constant">0</span>], coords[<span class="Constant">1</span>]);
+		gr.getVertex(k)-&gt;setColor(Color(<span class="Constant">&quot;green&quot;</span>));
 	}
 	<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; edges.size(); k++) {
-		gr-&gt;addEdge(edges[k].getSourceVertex(), edges[k].getDestinationVertex(),
+		gr.addEdge(edges[k].getSourceVertex(), edges[k].getDestinationVertex(),
 			edges[k].getEdgeLength() );
-		gr-&gt;getLinkVisualizer(edges[k].getSourceVertex(), edges[k].getDestinationVertex())-&gt;setColor(Color(<span class="Constant">&quot;red&quot;</span>));
+		gr.getLinkVisualizer(edges[k].getSourceVertex(), edges[k].getDestinationVertex())-&gt;setColor(Color(<span class="Constant">&quot;red&quot;</span>));
 
 	}
 
-	gr-&gt;forceLargeVisualization(<span class="Constant">true</span>);
+	gr.forceLargeVisualization(<span class="Constant">true</span>);
 	bridges.setDataStructure(gr);
 	bridges.visualize();
 
