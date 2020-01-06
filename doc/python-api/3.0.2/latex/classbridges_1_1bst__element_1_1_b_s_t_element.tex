@@ -1,0 +1,200 @@
+\hypertarget{classbridges_1_1bst__element_1_1_b_s_t_element}{}\section{bridges.\+bst\+\_\+element.\+B\+S\+T\+Element Class Reference}
+\label{classbridges_1_1bst__element_1_1_b_s_t_element}\index{bridges.\+bst\+\_\+element.\+B\+S\+T\+Element@{bridges.\+bst\+\_\+element.\+B\+S\+T\+Element}}
+Inheritance diagram for bridges.\+bst\+\_\+element.\+B\+S\+T\+Element\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classbridges_1_1bst__element_1_1_b_s_t_element}
+\end{center}
+\end{figure}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{classbridges_1_1bst__element_1_1_b_s_t_element}{B\+S\+T\+Element}} class is the building block for creating binary search trees. 
+
+The \mbox{\hyperlink{classbridges_1_1bst__element_1_1_b_s_t_element}{B\+S\+T\+Element}} class is the building block for creating binary search tree structures. It contains two children (viz., left, right), and a search key, to be used in search operations .
+
+\mbox{\hyperlink{classbridges_1_1bst__element_1_1_b_s_t_element}{B\+S\+T\+Element}} contains a visualizer (Element\+Visualizer) object for setting visual attributes (color, shape, opacity, size), necessary for displaying them in a web browser.
+
+B\+ST Elements also have a Link\+Visualizer object, that is used when they are linked to another element, appropriate for setting link attributes, for instance, between the current element and its left or right child
+
+\begin{DoxyAuthor}{Author}
+Kalpathi Subramanian, Mihai Mehedint, Matthew Mc\+Quaigue
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+6/22/16, 1/7/17, 5/17/17, 7/23/19
+\end{DoxyDate}
+This class extends the Bin\+Tree\+Element class by adding a \textquotesingle{}key\textquotesingle{} value for use in a binary search tree implementations.
+
+Binary Search Tree tutorial, \href{http://bridgesuncc.github.io/tutorials/BinarySearchTree.html}{\tt http\+://bridgesuncc.\+github.\+io/tutorials/\+Binary\+Search\+Tree.\+html} \subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classbridges_1_1bst__element_1_1_b_s_t_element_ab5f7e1266a3e1777472702f5a3f595c5}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, kwargs)
+\begin{DoxyCompactList}\small\item\em Constructor bst element. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1bst__element_1_1_b_s_t_element_ad6763a7381b91e16d9dc927a6f501c81}{get\+\_\+data\+\_\+structure\+\_\+type}} (self)
+\begin{DoxyCompactList}\small\item\em Get the data structure representation. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1bst__element_1_1_b_s_t_element_ab8fc663b1168808f83ab157e66c793d9}{key}} (self)
+\begin{DoxyCompactList}\small\item\em Getter for the bst element key. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1bst__element_1_1_b_s_t_element_a46236bc9db305c61429a56f7ed74df64}{key}}
+\begin{DoxyCompactList}\small\item\em Setter for the bst element key. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1bst__element_1_1_b_s_t_element_adb40ae0f98fe1cb7f153494c544d3f9f}{left}} (self)
+\begin{DoxyCompactList}\small\item\em Getter for the left element in B\+ST. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1bst__element_1_1_b_s_t_element_a0b45e63b73faabb6b969dd6222e07942}{left}} (self, l)
+\begin{DoxyCompactList}\small\item\em Setter for the left element in B\+ST. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1bst__element_1_1_b_s_t_element_a3ec82fbc56a5e6309b69d2d963b483fd}{right}} (self)
+\begin{DoxyCompactList}\small\item\em Getter for the right child in B\+ST. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1bst__element_1_1_b_s_t_element_a978ae0db366dee59703ed266eebca0e9}{right}} (self, r)
+\begin{DoxyCompactList}\small\item\em Setter for the right element in B\+ST. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1bst__element_1_1_b_s_t_element_a5f49ae18e50343ed63a83baa2c42e192}{get\+\_\+element\+\_\+representation}} (self)
+\begin{DoxyCompactList}\small\item\em Augment the element with the \char`\"{}key\char`\"{} field. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1bst__element_1_1_b_s_t_element_ab5f7e1266a3e1777472702f5a3f595c5}\label{classbridges_1_1bst__element_1_1_b_s_t_element_ab5f7e1266a3e1777472702f5a3f595c5}} 
+\index{bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def bridges.\+bst\+\_\+element.\+B\+S\+T\+Element.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{kwargs,  }\item[{}]{None }\end{DoxyParamCaption})}
+
+
+
+Constructor bst element. 
+
+(str) key\+: The label for the tree element that shows in visualization (generic) e\+: the generic object that the tree element will hold (Bin\+Tree\+Element) left\+: the tree element assigned to child 0 (Bin\+Tree\+Element) right\+: the tree element assigned to child 1 \begin{DoxyReturn}{Returns}
+
+
+None 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1bst__element_1_1_b_s_t_element_ad6763a7381b91e16d9dc927a6f501c81}\label{classbridges_1_1bst__element_1_1_b_s_t_element_ad6763a7381b91e16d9dc927a6f501c81}} 
+\index{bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}!get\+\_\+data\+\_\+structure\+\_\+type@{get\+\_\+data\+\_\+structure\+\_\+type}}
+\index{get\+\_\+data\+\_\+structure\+\_\+type@{get\+\_\+data\+\_\+structure\+\_\+type}!bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}}
+\subsubsection{\texorpdfstring{get\+\_\+data\+\_\+structure\+\_\+type()}{get\_data\_structure\_type()}}
+{\footnotesize\ttfamily def bridges.\+bst\+\_\+element.\+B\+S\+T\+Element.\+get\+\_\+data\+\_\+structure\+\_\+type (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{str }\end{DoxyParamCaption})}
+
+
+
+Get the data structure representation. 
+
+\begin{DoxyReturn}{Returns}
+
+
+str 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1bst__element_1_1_b_s_t_element_a5f49ae18e50343ed63a83baa2c42e192}\label{classbridges_1_1bst__element_1_1_b_s_t_element_a5f49ae18e50343ed63a83baa2c42e192}} 
+\index{bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}!get\+\_\+element\+\_\+representation@{get\+\_\+element\+\_\+representation}}
+\index{get\+\_\+element\+\_\+representation@{get\+\_\+element\+\_\+representation}!bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}}
+\subsubsection{\texorpdfstring{get\+\_\+element\+\_\+representation()}{get\_element\_representation()}}
+{\footnotesize\ttfamily def bridges.\+bst\+\_\+element.\+B\+S\+T\+Element.\+get\+\_\+element\+\_\+representation (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{dict }\end{DoxyParamCaption})}
+
+
+
+Augment the element with the \char`\"{}key\char`\"{} field. 
+
+\begin{DoxyReturn}{Returns}
+
+
+dict representing the json of this tree 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1bst__element_1_1_b_s_t_element_ab8fc663b1168808f83ab157e66c793d9}\label{classbridges_1_1bst__element_1_1_b_s_t_element_ab8fc663b1168808f83ab157e66c793d9}} 
+\index{bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}!key@{key}}
+\index{key@{key}!bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}}
+\subsubsection{\texorpdfstring{key()}{key()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def bridges.\+bst\+\_\+element.\+B\+S\+T\+Element.\+key (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{str }\end{DoxyParamCaption})}
+
+
+
+Getter for the bst element key. 
+
+\begin{DoxyReturn}{Returns}
+
+
+str the key label 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1bst__element_1_1_b_s_t_element_a46236bc9db305c61429a56f7ed74df64}\label{classbridges_1_1bst__element_1_1_b_s_t_element_a46236bc9db305c61429a56f7ed74df64}} 
+\index{bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}!key@{key}}
+\index{key@{key}!bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}}
+\subsubsection{\texorpdfstring{key()}{key()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def bridges.\+bst\+\_\+element.\+B\+S\+T\+Element.\+key (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{k }\end{DoxyParamCaption})}
+
+
+
+Setter for the bst element key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & the key for the element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1bst__element_1_1_b_s_t_element_adb40ae0f98fe1cb7f153494c544d3f9f}\label{classbridges_1_1bst__element_1_1_b_s_t_element_adb40ae0f98fe1cb7f153494c544d3f9f}} 
+\index{bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}!left@{left}}
+\index{left@{left}!bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}}
+\subsubsection{\texorpdfstring{left()}{left()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def bridges.\+bst\+\_\+element.\+B\+S\+T\+Element.\+left (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Getter for the left element in B\+ST. 
+
+\begin{DoxyReturn}{Returns}
+
+
+\mbox{\hyperlink{classbridges_1_1bst__element_1_1_b_s_t_element}{B\+S\+T\+Element}} the left child of this element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1bst__element_1_1_b_s_t_element_a0b45e63b73faabb6b969dd6222e07942}\label{classbridges_1_1bst__element_1_1_b_s_t_element_a0b45e63b73faabb6b969dd6222e07942}} 
+\index{bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}!left@{left}}
+\index{left@{left}!bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}}
+\subsubsection{\texorpdfstring{left()}{left()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def bridges.\+bst\+\_\+element.\+B\+S\+T\+Element.\+left (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{l }\end{DoxyParamCaption})}
+
+
+
+Setter for the left element in B\+ST. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & the value for the left child to be set as \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1bst__element_1_1_b_s_t_element_a3ec82fbc56a5e6309b69d2d963b483fd}\label{classbridges_1_1bst__element_1_1_b_s_t_element_a3ec82fbc56a5e6309b69d2d963b483fd}} 
+\index{bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}!right@{right}}
+\index{right@{right}!bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}}
+\subsubsection{\texorpdfstring{right()}{right()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def bridges.\+bst\+\_\+element.\+B\+S\+T\+Element.\+right (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Getter for the right child in B\+ST. 
+
+\begin{DoxyReturn}{Returns}
+
+
+\mbox{\hyperlink{classbridges_1_1bst__element_1_1_b_s_t_element}{B\+S\+T\+Element}} the right child of the element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1bst__element_1_1_b_s_t_element_a978ae0db366dee59703ed266eebca0e9}\label{classbridges_1_1bst__element_1_1_b_s_t_element_a978ae0db366dee59703ed266eebca0e9}} 
+\index{bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}!right@{right}}
+\index{right@{right}!bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element@{bridges\+::bst\+\_\+element\+::\+B\+S\+T\+Element}}
+\subsubsection{\texorpdfstring{right()}{right()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def bridges.\+bst\+\_\+element.\+B\+S\+T\+Element.\+right (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{r }\end{DoxyParamCaption})}
+
+
+
+Setter for the right element in B\+ST. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & the value for the right child to be set as \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/python/bridges/\mbox{\hyperlink{bst__element_8py}{bst\+\_\+element.\+py}}\end{DoxyCompactItemize}

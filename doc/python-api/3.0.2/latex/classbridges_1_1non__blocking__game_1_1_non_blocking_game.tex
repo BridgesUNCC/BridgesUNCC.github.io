@@ -1,0 +1,295 @@
+\hypertarget{classbridges_1_1non__blocking__game_1_1_non_blocking_game}{}\section{bridges.\+non\+\_\+blocking\+\_\+game.\+Non\+Blocking\+Game Class Reference}
+\label{classbridges_1_1non__blocking__game_1_1_non_blocking_game}\index{bridges.\+non\+\_\+blocking\+\_\+game.\+Non\+Blocking\+Game@{bridges.\+non\+\_\+blocking\+\_\+game.\+Non\+Blocking\+Game}}
+Inheritance diagram for bridges.\+non\+\_\+blocking\+\_\+game.\+Non\+Blocking\+Game\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classbridges_1_1non__blocking__game_1_1_non_blocking_game}
+\end{center}
+\end{figure}
+
+
+\subsection{Detailed Description}
+brief This class provides the features necessary to implement simple non blocking games. 
+
+The games that can be created out of \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game}{Non\+Blocking\+Game}} are based on a simple board grid of at most 1024 cells (e.\+g., 32x32, or any combinations less than 1024 cells). Each cell has a background color, and a colored symbol.
+
+This class is used by having another class derive from it and implement the two functions\+: \mbox{\hyperlink{classbridges_1_1gamebase_1_1_game_base_a336629d190f1601f1211ca57e4d5427d}{initialize()}} and Game\+Loop(). \mbox{\hyperlink{classbridges_1_1gamebase_1_1_game_base_a336629d190f1601f1211ca57e4d5427d}{initialize()}} is called exactly once, on the first frame of the game. It is used to make first time initializations of the game state (such as setting the board in its initial position, for instance in chess). However, Game\+Loop() is called at every frame of the game. The game starts when the function \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_ad6e23c265e1b710114459f0b666d25cb}{start()}} is called on the object you created.
+
+This game does not do anything, but it is the minimal code that will run a game. Note that the constructor of my\+\_\+game passes 3 parameters to the constructor of Non\+Blocking\+Game(). These three parameters are the classic parameters that the constructor of \mbox{\hyperlink{classbridges_1_1bridges_1_1_bridges}{bridges\+::\+Bridges}} takes (e.\+g., assignment\+ID, username, apikey).
+
+To change the board, two functions are used. set\+B\+G\+Color() change the background color of a particular cell. It takes three parameters, the first two identify the cell of the board to change, and the last one is a color from a color palette provided by Named\+Color. draw\+Symbol() takes four parameters, the first two identify the cell of the board to change, the third is a symbol from a symbol palette provided by Named\+Symbol, the fourth is the color that symbol shold be drawn in and provided by Named\+Color.
+
+For instance, a very simple \mbox{\hyperlink{classbridges_1_1gamebase_1_1_game_base_a336629d190f1601f1211ca57e4d5427d}{initialize()}} could look like\+: code\{.py\} def \mbox{\hyperlink{classbridges_1_1gamebase_1_1_game_base_a336629d190f1601f1211ca57e4d5427d}{initialize()}}\+: set\+\_\+bg\+\_\+color(0, 0, \mbox{\hyperlink{classbridges_1_1named__color_1_1_named_color_a616e82749b8c7711ede2554ce8e3a879}{Named\+Color.\+lightsalmon}}); draw\+\_\+symbol(0, 0, \mbox{\hyperlink{classbridges_1_1named__symbol_1_1_named_symbol_a02fc79c7bdc9a95febfbcb22ac7079d2}{Named\+Symbol.\+sword}}, \mbox{\hyperlink{classbridges_1_1named__color_1_1_named_color_a145708a26f3f348fb34085de800c6e67}{Named\+Color.\+blue}}); endcode
+
+Note that the size of the board is set by default at 10x10 and that drawing on a cell that does not exist will lead to an error. One can specify a gameboard of a different size by passing additional parameters to the \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game}{Non\+Blocking\+Game}} constructor. However, the game can not be more than 1024 cells in total, so a 15x15 board is possible, a 32x32 board is the largest square board possible, and a rectangular 64x16 rectangular board is also possible. But a 100x20 board would be 2000 cells and is not possible. For instance a board of 16 rows and 64 columns can be created defining the my\+\_\+game constructor as\+:
+
+code\{.py\} my\+\_\+game = \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game}{Non\+Blocking\+Game}} (1, \char`\"{}myuserid\char`\"{}, \char`\"{}myapikey\char`\"{}, 16, 64) endcode
+
+The bridges game engine will call the Game\+Loop() function at each frame of the game. You can write this function to modify the state of the game board using set\+B\+G\+Color() and draw\+Symbol(). For instance, the following Game\+Loop() will color the board randomly one cell at a time.
+
+code\{.py\} def game\+\_\+oop()\+: set\+\_\+\+B\+G\+\_\+\+Color(rand()\%10, rand()\%10, \mbox{\hyperlink{classbridges_1_1named__color_1_1_named_color_a616e82749b8c7711ede2554ce8e3a879}{Named\+Color.\+lightsalmon}}); endcode
+
+The game\+Loop can also probe the state of some keys of the keyboard using functions \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a7e853081cefe51511de0c6438aeea871}{key\+\_\+up()}}, \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a87490ef28d161f22e753aab5d3e67e46}{key\+\_\+left()}}, \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_af9a280c2d221140eddba0e4bcb0afb9b}{key\+\_\+down()}}, \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a31b6f78c39a93f0ba5350d346043bde9}{key\+\_\+right()}}, \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_abeb435c75a3022c50f472ee2a4207809}{key\+\_\+w()}}, \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a7076d0ff62aeba49a0caf71e213361db}{key\+\_\+a()}}, \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a2c587b12c3a8bc2b2e96bd2d09ceed1d}{key\+\_\+s()}}, \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a0c90fcb365dcdb7ccf49b98b3e63ecc8}{key\+\_\+d()}}, \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a1059ffd8d5daa3a0db2e6847f5724883}{key\+\_\+space()}}, and \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a75e94a930466b607828b6ef092f810d6}{key\+\_\+q()}}. These functions return a boolean that indicate whether the key is pressed at that frame or not. For instance, the following code will only color the board randomly when the up arrow is pressed.
+
+code\{.py\} def game\+Loop()\+: if \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a7e853081cefe51511de0c6438aeea871}{key\+\_\+up()}} set\+\_\+bg\+\_\+color(rand()\%10, rand()\%10, \mbox{\hyperlink{classbridges_1_1named__color_1_1_named_color_a616e82749b8c7711ede2554ce8e3a879}{Named\+Color.\+lightsalmon}}); endcode
+
+\begin{DoxyAuthor}{Author}
+Erik Saule 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+72119
+\end{DoxyDate}
+\mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game}{Non\+Blocking\+Game}} tutorial at\+: \href{http://bridgesuncc.github.io/tutorials/NonBlockingGame.html}{\tt http\+://bridgesuncc.\+github.\+io/tutorials/\+Non\+Blocking\+Game.\+html} \subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a19362773d256eec033f04cfd00b7160c}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, assid, login, apikey, cols, rows)
+\item 
+def \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a5763c5a20f130943cec948a9f42803a0}{fps}} (self)
+\begin{DoxyCompactList}\small\item\em What frame rate is the game running at? \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a46b4b4a25c7c7ffc78126a7b693b7ceb}{fps}} (self, frames)
+\item 
+def \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a2e4dca6a290c65472200e69012e01d16}{sleep\+\_\+timer}} (self, timems=None)
+\item 
+def \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_ad751eeccbf14adc09f9c11acce3757c9}{control\+\_\+framerate}} (self)
+\item 
+def \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_ad6e23c265e1b710114459f0b666d25cb}{start}} (self)
+\begin{DoxyCompactList}\small\item\em Call this function from main to start game. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a87490ef28d161f22e753aab5d3e67e46}{key\+\_\+left}} (self)
+\begin{DoxyCompactList}\small\item\em Is left currently pressed? \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a31b6f78c39a93f0ba5350d346043bde9}{key\+\_\+right}} (self)
+\begin{DoxyCompactList}\small\item\em Is right currently pressed? \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a7e853081cefe51511de0c6438aeea871}{key\+\_\+up}} (self)
+\begin{DoxyCompactList}\small\item\em Is up currently pressed? \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_af9a280c2d221140eddba0e4bcb0afb9b}{key\+\_\+down}} (self)
+\begin{DoxyCompactList}\small\item\em Is down currently pressed? \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a75e94a930466b607828b6ef092f810d6}{key\+\_\+q}} (self)
+\begin{DoxyCompactList}\small\item\em Is q currently pressed? \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a1059ffd8d5daa3a0db2e6847f5724883}{key\+\_\+space}} (self)
+\begin{DoxyCompactList}\small\item\em Is space currently pressed? \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_abeb435c75a3022c50f472ee2a4207809}{key\+\_\+w}} (self)
+\begin{DoxyCompactList}\small\item\em Is w currently pressed? \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a7076d0ff62aeba49a0caf71e213361db}{key\+\_\+a}} (self)
+\begin{DoxyCompactList}\small\item\em Is a currently pressed? \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a2c587b12c3a8bc2b2e96bd2d09ceed1d}{key\+\_\+s}} (self)
+\begin{DoxyCompactList}\small\item\em Is s currently pressed? \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a0c90fcb365dcdb7ccf49b98b3e63ecc8}{key\+\_\+d}} (self)
+\begin{DoxyCompactList}\small\item\em Is right currently pressed? \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a828f1abe5336e15ffc718411378da266}{time\+\_\+of\+\_\+last\+\_\+frame}}
+\item 
+\mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a5fd9d6e53b58f6237372dfaad03db961}{ih}}
+\item 
+\mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a9fdc4b04a7898b739ed05554d64560c7}{game\+\_\+started}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a19362773d256eec033f04cfd00b7160c}\label{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a19362773d256eec033f04cfd00b7160c}} 
+\index{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def bridges.\+non\+\_\+blocking\+\_\+game.\+Non\+Blocking\+Game.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{assid,  }\item[{}]{login,  }\item[{}]{apikey,  }\item[{}]{cols,  }\item[{}]{rows }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1non__blocking__game_1_1_non_blocking_game_ad751eeccbf14adc09f9c11acce3757c9}\label{classbridges_1_1non__blocking__game_1_1_non_blocking_game_ad751eeccbf14adc09f9c11acce3757c9}} 
+\index{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}!control\+\_\+framerate@{control\+\_\+framerate}}
+\index{control\+\_\+framerate@{control\+\_\+framerate}!bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}}
+\subsubsection{\texorpdfstring{control\+\_\+framerate()}{control\_framerate()}}
+{\footnotesize\ttfamily def bridges.\+non\+\_\+blocking\+\_\+game.\+Non\+Blocking\+Game.\+control\+\_\+framerate (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a5763c5a20f130943cec948a9f42803a0}\label{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a5763c5a20f130943cec948a9f42803a0}} 
+\index{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}!fps@{fps}}
+\index{fps@{fps}!bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}}
+\subsubsection{\texorpdfstring{fps()}{fps()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def bridges.\+non\+\_\+blocking\+\_\+game.\+Non\+Blocking\+Game.\+fps (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+What frame rate is the game running at? 
+
+\begin{DoxyReturn}{Returns}
+The target framerate. The game could be somewhat slower depending on how computationally expensive the gameloop is and on the speed of the network 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a46b4b4a25c7c7ffc78126a7b693b7ceb}\label{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a46b4b4a25c7c7ffc78126a7b693b7ceb}} 
+\index{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}!fps@{fps}}
+\index{fps@{fps}!bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}}
+\subsubsection{\texorpdfstring{fps()}{fps()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def bridges.\+non\+\_\+blocking\+\_\+game.\+Non\+Blocking\+Game.\+fps (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{frames }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a7076d0ff62aeba49a0caf71e213361db}\label{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a7076d0ff62aeba49a0caf71e213361db}} 
+\index{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}!key\+\_\+a@{key\+\_\+a}}
+\index{key\+\_\+a@{key\+\_\+a}!bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}}
+\subsubsection{\texorpdfstring{key\+\_\+a()}{key\_a()}}
+{\footnotesize\ttfamily def bridges.\+non\+\_\+blocking\+\_\+game.\+Non\+Blocking\+Game.\+key\+\_\+a (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Is a currently pressed? 
+
+\begin{DoxyReturn}{Returns}
+true if a is currently pressed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a0c90fcb365dcdb7ccf49b98b3e63ecc8}\label{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a0c90fcb365dcdb7ccf49b98b3e63ecc8}} 
+\index{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}!key\+\_\+d@{key\+\_\+d}}
+\index{key\+\_\+d@{key\+\_\+d}!bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}}
+\subsubsection{\texorpdfstring{key\+\_\+d()}{key\_d()}}
+{\footnotesize\ttfamily def bridges.\+non\+\_\+blocking\+\_\+game.\+Non\+Blocking\+Game.\+key\+\_\+d (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Is right currently pressed? 
+
+\begin{DoxyReturn}{Returns}
+true d right is currently pressed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1non__blocking__game_1_1_non_blocking_game_af9a280c2d221140eddba0e4bcb0afb9b}\label{classbridges_1_1non__blocking__game_1_1_non_blocking_game_af9a280c2d221140eddba0e4bcb0afb9b}} 
+\index{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}!key\+\_\+down@{key\+\_\+down}}
+\index{key\+\_\+down@{key\+\_\+down}!bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}}
+\subsubsection{\texorpdfstring{key\+\_\+down()}{key\_down()}}
+{\footnotesize\ttfamily def bridges.\+non\+\_\+blocking\+\_\+game.\+Non\+Blocking\+Game.\+key\+\_\+down (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Is down currently pressed? 
+
+\begin{DoxyReturn}{Returns}
+true if down is currently pressed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a87490ef28d161f22e753aab5d3e67e46}\label{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a87490ef28d161f22e753aab5d3e67e46}} 
+\index{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}!key\+\_\+left@{key\+\_\+left}}
+\index{key\+\_\+left@{key\+\_\+left}!bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}}
+\subsubsection{\texorpdfstring{key\+\_\+left()}{key\_left()}}
+{\footnotesize\ttfamily def bridges.\+non\+\_\+blocking\+\_\+game.\+Non\+Blocking\+Game.\+key\+\_\+left (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Is left currently pressed? 
+
+\begin{DoxyReturn}{Returns}
+true if left is currently pressed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a75e94a930466b607828b6ef092f810d6}\label{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a75e94a930466b607828b6ef092f810d6}} 
+\index{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}!key\+\_\+q@{key\+\_\+q}}
+\index{key\+\_\+q@{key\+\_\+q}!bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}}
+\subsubsection{\texorpdfstring{key\+\_\+q()}{key\_q()}}
+{\footnotesize\ttfamily def bridges.\+non\+\_\+blocking\+\_\+game.\+Non\+Blocking\+Game.\+key\+\_\+q (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Is q currently pressed? 
+
+\begin{DoxyReturn}{Returns}
+true if q is currently pressed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a31b6f78c39a93f0ba5350d346043bde9}\label{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a31b6f78c39a93f0ba5350d346043bde9}} 
+\index{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}!key\+\_\+right@{key\+\_\+right}}
+\index{key\+\_\+right@{key\+\_\+right}!bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}}
+\subsubsection{\texorpdfstring{key\+\_\+right()}{key\_right()}}
+{\footnotesize\ttfamily def bridges.\+non\+\_\+blocking\+\_\+game.\+Non\+Blocking\+Game.\+key\+\_\+right (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Is right currently pressed? 
+
+\begin{DoxyReturn}{Returns}
+true if right is currently pressed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a2c587b12c3a8bc2b2e96bd2d09ceed1d}\label{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a2c587b12c3a8bc2b2e96bd2d09ceed1d}} 
+\index{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}!key\+\_\+s@{key\+\_\+s}}
+\index{key\+\_\+s@{key\+\_\+s}!bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}}
+\subsubsection{\texorpdfstring{key\+\_\+s()}{key\_s()}}
+{\footnotesize\ttfamily def bridges.\+non\+\_\+blocking\+\_\+game.\+Non\+Blocking\+Game.\+key\+\_\+s (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Is s currently pressed? 
+
+\begin{DoxyReturn}{Returns}
+true if s is currently pressed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a1059ffd8d5daa3a0db2e6847f5724883}\label{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a1059ffd8d5daa3a0db2e6847f5724883}} 
+\index{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}!key\+\_\+space@{key\+\_\+space}}
+\index{key\+\_\+space@{key\+\_\+space}!bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}}
+\subsubsection{\texorpdfstring{key\+\_\+space()}{key\_space()}}
+{\footnotesize\ttfamily def bridges.\+non\+\_\+blocking\+\_\+game.\+Non\+Blocking\+Game.\+key\+\_\+space (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Is space currently pressed? 
+
+\begin{DoxyReturn}{Returns}
+true if space is currently pressed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a7e853081cefe51511de0c6438aeea871}\label{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a7e853081cefe51511de0c6438aeea871}} 
+\index{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}!key\+\_\+up@{key\+\_\+up}}
+\index{key\+\_\+up@{key\+\_\+up}!bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}}
+\subsubsection{\texorpdfstring{key\+\_\+up()}{key\_up()}}
+{\footnotesize\ttfamily def bridges.\+non\+\_\+blocking\+\_\+game.\+Non\+Blocking\+Game.\+key\+\_\+up (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Is up currently pressed? 
+
+\begin{DoxyReturn}{Returns}
+true if up is currently pressed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1non__blocking__game_1_1_non_blocking_game_abeb435c75a3022c50f472ee2a4207809}\label{classbridges_1_1non__blocking__game_1_1_non_blocking_game_abeb435c75a3022c50f472ee2a4207809}} 
+\index{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}!key\+\_\+w@{key\+\_\+w}}
+\index{key\+\_\+w@{key\+\_\+w}!bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}}
+\subsubsection{\texorpdfstring{key\+\_\+w()}{key\_w()}}
+{\footnotesize\ttfamily def bridges.\+non\+\_\+blocking\+\_\+game.\+Non\+Blocking\+Game.\+key\+\_\+w (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Is w currently pressed? 
+
+\begin{DoxyReturn}{Returns}
+true if w is currently pressed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a2e4dca6a290c65472200e69012e01d16}\label{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a2e4dca6a290c65472200e69012e01d16}} 
+\index{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}!sleep\+\_\+timer@{sleep\+\_\+timer}}
+\index{sleep\+\_\+timer@{sleep\+\_\+timer}!bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}}
+\subsubsection{\texorpdfstring{sleep\+\_\+timer()}{sleep\_timer()}}
+{\footnotesize\ttfamily def bridges.\+non\+\_\+blocking\+\_\+game.\+Non\+Blocking\+Game.\+sleep\+\_\+timer (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{timems = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1non__blocking__game_1_1_non_blocking_game_ad6e23c265e1b710114459f0b666d25cb}\label{classbridges_1_1non__blocking__game_1_1_non_blocking_game_ad6e23c265e1b710114459f0b666d25cb}} 
+\index{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}!start@{start}}
+\index{start@{start}!bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}}
+\subsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily def bridges.\+non\+\_\+blocking\+\_\+game.\+Non\+Blocking\+Game.\+start (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Call this function from main to start game. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a9fdc4b04a7898b739ed05554d64560c7}\label{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a9fdc4b04a7898b739ed05554d64560c7}} 
+\index{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}!game\+\_\+started@{game\+\_\+started}}
+\index{game\+\_\+started@{game\+\_\+started}!bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}}
+\subsubsection{\texorpdfstring{game\+\_\+started}{game\_started}}
+{\footnotesize\ttfamily bridges.\+non\+\_\+blocking\+\_\+game.\+Non\+Blocking\+Game.\+game\+\_\+started}
+
+\mbox{\Hypertarget{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a5fd9d6e53b58f6237372dfaad03db961}\label{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a5fd9d6e53b58f6237372dfaad03db961}} 
+\index{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}!ih@{ih}}
+\index{ih@{ih}!bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}}
+\subsubsection{\texorpdfstring{ih}{ih}}
+{\footnotesize\ttfamily bridges.\+non\+\_\+blocking\+\_\+game.\+Non\+Blocking\+Game.\+ih}
+
+\mbox{\Hypertarget{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a828f1abe5336e15ffc718411378da266}\label{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a828f1abe5336e15ffc718411378da266}} 
+\index{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}!time\+\_\+of\+\_\+last\+\_\+frame@{time\+\_\+of\+\_\+last\+\_\+frame}}
+\index{time\+\_\+of\+\_\+last\+\_\+frame@{time\+\_\+of\+\_\+last\+\_\+frame}!bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game@{bridges\+::non\+\_\+blocking\+\_\+game\+::\+Non\+Blocking\+Game}}
+\subsubsection{\texorpdfstring{time\+\_\+of\+\_\+last\+\_\+frame}{time\_of\_last\_frame}}
+{\footnotesize\ttfamily bridges.\+non\+\_\+blocking\+\_\+game.\+Non\+Blocking\+Game.\+time\+\_\+of\+\_\+last\+\_\+frame}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/python/bridges/\mbox{\hyperlink{non__blocking__game_8py}{non\+\_\+blocking\+\_\+game.\+py}}\end{DoxyCompactItemize}
