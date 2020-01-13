@@ -6,7 +6,7 @@ def main():
 
     # create the Bridges object, set credentials
 
-    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY")
 
     # title, description
     bridges.set_title("AVL Tree Example")
@@ -46,12 +46,12 @@ def main():
     avl_root.get_link_visualizer(avl3).color = "blue"
 
 	# display the balance factors (on mouseover)
-    avl_root.label = str(avl_root.balance_factor);
-    avl2.label = str(avl2.balance_factor);
-    avl3.label = str(avl3.balance_factor);
-    avl4.label = str(avl4.balance_factor);
-    avl5.label = str(avl5.balance_factor);
-    avl6.label = str(avl6.balance_factor);
+    avl_root.label = str(avl_root.balance_factor)
+    avl2.label = str(avl2.balance_factor)
+    avl3.label = str(avl3.balance_factor)
+    avl4.label = str(avl4.balance_factor)
+    avl5.label = str(avl5.balance_factor)
+    avl6.label = str(avl6.balance_factor)
 
     # set visualizer type
     bridges.set_data_structure(avl_root)

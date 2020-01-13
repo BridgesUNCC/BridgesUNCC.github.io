@@ -5,12 +5,12 @@ import sys
 def main():
     # create the Bridges object, set credentials
 
-    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY")
 
 
     # title, description
     bridges.set_title("A Circle Singly Linked List Example")
-    bridges.set_description("This circular singly linked list example shows five nodes and attached visual attributes.");
+    bridges.set_description("This circular singly linked list example shows five nodes and attached visual attributes.")
 
 	# create list elements
     el0 = CircSLelement(e="Gretel Chaney", label="Gretel Chaney")

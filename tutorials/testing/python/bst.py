@@ -15,7 +15,7 @@ def insertR(rt, newel):
 
 
 def main():
-    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY")
 
     # title, description
     bridges.set_title("A Binary Search Tree Example with Earthquake Data")

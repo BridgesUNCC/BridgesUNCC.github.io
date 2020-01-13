@@ -15,20 +15,21 @@ class InputGame (NonBlockingGame):
 	def	game_loop(self): 
 		# this gets executed every frame
 		if self.key_up():
-			self.draw_symbol(1, 1, NamedSymbol.H, NamedColor.blue);
-			self.draw_symbol(1, 2, NamedSymbol.E, NamedColor.yellow);
-			self.draw_symbol(1, 3, NamedSymbol.L, NamedColor.black);
-			self.draw_symbol(1, 4, NamedSymbol.L, NamedColor.green);
-			self.draw_symbol(1, 5, NamedSymbol.O, NamedColor.red);
+			self.draw_symbol(1, 1, NamedSymbol.H, NamedColor.blue)
+			self.draw_symbol(1, 2, NamedSymbol.E, NamedColor.yellow)
+			self.draw_symbol(1, 3, NamedSymbol.L, NamedColor.black)
+			self.draw_symbol(1, 4, NamedSymbol.L, NamedColor.green)
+			self.draw_symbol(1, 5, NamedSymbol.O, NamedColor.red)
 		else:
-			self.draw_symbol(1, 1, NamedSymbol.none, NamedColor.blue);
-			self.draw_symbol(1, 2, NamedSymbol.none, NamedColor.yellow);
-			self.draw_symbol(1, 3, NamedSymbol.none, NamedColor.black);
-			self.draw_symbol(1, 4, NamedSymbol.none, NamedColor.green);
-			self.draw_symbol(1, 5, NamedSymbol.none, NamedColor.red);
+			self.draw_symbol(1, 1, NamedSymbol.none, NamedColor.blue)
+			self.draw_symbol(1, 2, NamedSymbol.none, NamedColor.yellow)
+			self.draw_symbol(1, 3, NamedSymbol.none, NamedColor.black)
+			self.draw_symbol(1, 4, NamedSymbol.none, NamedColor.green)
+			self.draw_symbol(1, 5, NamedSymbol.none, NamedColor.red)
 
 def	main():
-	game = InputGame(1, "BRIDGES_USER_ID", "BRIDGES_API_KEY");
+#	game = InputGame(1, "BRIDGES_USER_ID", "BRIDGES_API_KEY")
+	game = InputGame(1, "kalpathi60", "486749122386")
 	# start the game
 	game.start()
 
