@@ -1,10 +1,10 @@
-\hypertarget{classbridges_1_1benchmark_1_1_page_rank_benchmark}{}\section{bridges\+::benchmark\+::Page\+Rank\+Benchmark Class Reference}
-\label{classbridges_1_1benchmark_1_1_page_rank_benchmark}\index{bridges::benchmark::PageRankBenchmark@{bridges::benchmark::PageRankBenchmark}}
+\hypertarget{classbridges_1_1benchmark_1_1_page_rank_benchmark}{}\section{bridges\+:\+:benchmark\+:\+:Page\+Rank\+Benchmark Class Reference}
+\label{classbridges_1_1benchmark_1_1_page_rank_benchmark}\index{bridges\+::benchmark\+::\+Page\+Rank\+Benchmark@{bridges\+::benchmark\+::\+Page\+Rank\+Benchmark}}
 
 
 {\ttfamily \#include $<$Page\+Rank\+Benchmark.\+h$>$}
 
-Inheritance diagram for bridges\+::benchmark\+::Page\+Rank\+Benchmark\+:\begin{figure}[H]
+Inheritance diagram for bridges\+:\+:benchmark\+:\+:Page\+Rank\+Benchmark\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2.000000cm]{classbridges_1_1benchmark_1_1_page_rank_benchmark}
@@ -17,7 +17,7 @@ Benchmarks Page Rank algorithms.
 
 Benchmarks Page\+Rank algorithms and add time series to a Line\+Chart.
 
-One can also set a maximum time spent on a particular run using \mbox{\hyperlink{classbridges_1_1benchmark_1_1_graph_benchmark_a56934eb2789e54c088e7b4423c3a7456}{set\+Time\+Cap()}}.
+One can also set a maximum time spent on a particular run using \hyperlink{classbridges_1_1benchmark_1_1_graph_benchmark_a56934eb2789e54c088e7b4423c3a7456}{set\+Time\+Cap()}.
 
 The Page\+Rank algorithms must have for prototype\+:
 
@@ -26,10 +26,10 @@ void ($\ast$pralgo)(const Graph\+Adj\+List$<$std\+::string$>$\& gr, std\+::unord
 and can be passed to the run function for being benchmarked. A typical use would look something like
 
 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{LineChart lc;}
-\DoxyCodeLine{\mbox{\hyperlink{classbridges_1_1benchmark_1_1_page_rank_benchmark_acdb9d6913f7559656aaae6c1f579d18b}{PageRankBenchmark}} sb (lc);}
-\DoxyCodeLine{sb.run(\textcolor{stringliteral}{"mybfsalgorithm"}, pralgo);}
+\begin{DoxyCode}
+LineChart lc;
+\hyperlink{classbridges_1_1benchmark_1_1_page_rank_benchmark_acdb9d6913f7559656aaae6c1f579d18b}{PageRankBenchmark} sb (lc);
+sb.run(\textcolor{stringliteral}{"mybfsalgorithm"}, pralgo);
 \end{DoxyCode}
 
 
@@ -42,28 +42,28 @@ Erik Saule
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classbridges_1_1benchmark_1_1_page_rank_benchmark_acdb9d6913f7559656aaae6c1f579d18b}{Page\+Rank\+Benchmark}} (\mbox{\hyperlink{classbridges_1_1datastructure_1_1_line_chart}{Line\+Chart}} \&p)
+\hyperlink{classbridges_1_1benchmark_1_1_page_rank_benchmark_acdb9d6913f7559656aaae6c1f579d18b}{Page\+Rank\+Benchmark} (\hyperlink{classbridges_1_1datastructure_1_1_line_chart}{Line\+Chart} \&p)
 \item 
-void \mbox{\hyperlink{classbridges_1_1benchmark_1_1_page_rank_benchmark_a090873837a04f96bb0349471ffca7cfa}{run}} (std\+::string algo\+Name, void($\ast$pralgo)(const \mbox{\hyperlink{classbridges_1_1datastructure_1_1_graph_adj_list}{Graph\+Adj\+List}}$<$ std\+::string $>$ \&gr, std\+::unordered\+\_\+map$<$ std\+::string, double $>$ \&out))
+void \hyperlink{classbridges_1_1benchmark_1_1_page_rank_benchmark_a090873837a04f96bb0349471ffca7cfa}{run} (std\+::string algo\+Name, void($\ast$pralgo)(const \hyperlink{classbridges_1_1datastructure_1_1_graph_adj_list}{Graph\+Adj\+List}$<$ std\+::string $>$ \&gr, std\+::unordered\+\_\+map$<$ std\+::string, double $>$ \&out))
 \begin{DoxyCompactList}\small\item\em benchmark one implementation \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classbridges_1_1benchmark_1_1_page_rank_benchmark_acdb9d6913f7559656aaae6c1f579d18b}\label{classbridges_1_1benchmark_1_1_page_rank_benchmark_acdb9d6913f7559656aaae6c1f579d18b}} 
-\index{bridges::benchmark::PageRankBenchmark@{bridges::benchmark::PageRankBenchmark}!PageRankBenchmark@{PageRankBenchmark}}
-\index{PageRankBenchmark@{PageRankBenchmark}!bridges::benchmark::PageRankBenchmark@{bridges::benchmark::PageRankBenchmark}}
-\subsubsection{\texorpdfstring{PageRankBenchmark()}{PageRankBenchmark()}}
-{\footnotesize\ttfamily bridges\+::benchmark\+::\+Page\+Rank\+Benchmark\+::\+Page\+Rank\+Benchmark (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1datastructure_1_1_line_chart}{Line\+Chart}} \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\index{bridges\+::benchmark\+::\+Page\+Rank\+Benchmark@{bridges\+::benchmark\+::\+Page\+Rank\+Benchmark}!Page\+Rank\+Benchmark@{Page\+Rank\+Benchmark}}
+\index{Page\+Rank\+Benchmark@{Page\+Rank\+Benchmark}!bridges\+::benchmark\+::\+Page\+Rank\+Benchmark@{bridges\+::benchmark\+::\+Page\+Rank\+Benchmark}}
+\subsubsection{\texorpdfstring{Page\+Rank\+Benchmark()}{PageRankBenchmark()}}
+{\footnotesize\ttfamily bridges\+::benchmark\+::\+Page\+Rank\+Benchmark\+::\+Page\+Rank\+Benchmark (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1datastructure_1_1_line_chart}{Line\+Chart} \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{classbridges_1_1benchmark_1_1_page_rank_benchmark_a090873837a04f96bb0349471ffca7cfa}\label{classbridges_1_1benchmark_1_1_page_rank_benchmark_a090873837a04f96bb0349471ffca7cfa}} 
-\index{bridges::benchmark::PageRankBenchmark@{bridges::benchmark::PageRankBenchmark}!run@{run}}
-\index{run@{run}!bridges::benchmark::PageRankBenchmark@{bridges::benchmark::PageRankBenchmark}}
+\index{bridges\+::benchmark\+::\+Page\+Rank\+Benchmark@{bridges\+::benchmark\+::\+Page\+Rank\+Benchmark}!run@{run}}
+\index{run@{run}!bridges\+::benchmark\+::\+Page\+Rank\+Benchmark@{bridges\+::benchmark\+::\+Page\+Rank\+Benchmark}}
 \subsubsection{\texorpdfstring{run()}{run()}}
-{\footnotesize\ttfamily void bridges\+::benchmark\+::\+Page\+Rank\+Benchmark\+::run (\begin{DoxyParamCaption}\item[{std\+::string}]{algo\+Name,  }\item[{void($\ast$)(const \mbox{\hyperlink{classbridges_1_1datastructure_1_1_graph_adj_list}{Graph\+Adj\+List}}$<$ std\+::string $>$ \&gr, std\+::unordered\+\_\+map$<$ std\+::string, double $>$ \&out)}]{pralgo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void bridges\+::benchmark\+::\+Page\+Rank\+Benchmark\+::run (\begin{DoxyParamCaption}\item[{std\+::string}]{algo\+Name,  }\item[{void($\ast$)(const \hyperlink{classbridges_1_1datastructure_1_1_graph_adj_list}{Graph\+Adj\+List}$<$ std\+::string $>$ \&gr, std\+::unordered\+\_\+map$<$ std\+::string, double $>$ \&out)}]{pralgo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -80,4 +80,4 @@ benchmark one implementation
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/\+Users/kalpathi/gr/bridges/cxx/src/\mbox{\hyperlink{_page_rank_benchmark_8h}{Page\+Rank\+Benchmark.\+h}}\end{DoxyCompactItemize}
+/home/erik/work/bridges/bridges-\/cxx/src/\hyperlink{_page_rank_benchmark_8h}{Page\+Rank\+Benchmark.\+h}\end{DoxyCompactItemize}

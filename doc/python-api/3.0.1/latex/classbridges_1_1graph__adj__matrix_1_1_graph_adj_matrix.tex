@@ -1,11 +1,11 @@
 \hypertarget{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix}{}\section{bridges.\+graph\+\_\+adj\+\_\+matrix.\+Graph\+Adj\+Matrix Class Reference}
-\label{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix}\index{bridges.graph\_adj\_matrix.GraphAdjMatrix@{bridges.graph\_adj\_matrix.GraphAdjMatrix}}
+\label{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix}\index{bridges.\+graph\+\_\+adj\+\_\+matrix.\+Graph\+Adj\+Matrix@{bridges.\+graph\+\_\+adj\+\_\+matrix.\+Graph\+Adj\+Matrix}}
 
 
 \subsection{Detailed Description}
-The \mbox{\hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix}{Graph\+Adj\+Matrix}} class can be used to represent adjacency matrix based graphs in B\+R\+I\+D\+G\+ES. 
+The \hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix}{Graph\+Adj\+Matrix} class can be used to represent adjacency matrix based graphs in B\+R\+I\+D\+G\+ES. 
 
-The \mbox{\hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix}{Graph\+Adj\+Matrix}} class can be used to represent adjacency matrix based graphs in B\+R\+I\+D\+G\+ES; it takes 2 generic parameters\+: (1) K, which is an orderable key value used in accessing vertices (in constant time) using a hashmap. This permits data sets that need to be accessed by keys that are strings, and (2) E, an application defined type, and used in the Edge representation. The class is simply a wrapper around the Java Hashmap class and, thus, derives all its operations from it. B\+R\+I\+D\+G\+ES provides methods to visualize the graph and its contents.
+The \hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix}{Graph\+Adj\+Matrix} class can be used to represent adjacency matrix based graphs in B\+R\+I\+D\+G\+ES; it takes 2 generic parameters\+: (1) K, which is an orderable key value used in accessing vertices (in constant time) using a hashmap. This permits data sets that need to be accessed by keys that are strings, and (2) E, an application defined type, and used in the Edge representation. The class is simply a wrapper around the Java Hashmap class and, thus, derives all its operations from it. B\+R\+I\+D\+G\+ES provides methods to visualize the graph and its contents.
 
 The vertices of the graph are held in a Java hashmap, for near constant time access; this lets us use strings or integral ids for vertices. The edges are accessed by a second hashmap from each vertex, again assuring near constant access time. Each edge contains the terminating vertex id and weight, as defined by the Edge class structure.
 
@@ -15,44 +15,44 @@ Convenience methods are provided to add vertices and edges to the graph. Edges a
 Kalpathi Subramanian, Mihai Mehedint
 \end{DoxyAuthor}
 \begin{DoxySeeAlso}{See also}
-Example tutorial at \href{http://bridgesuncc.github.io/tutorials/Graph_AM.html}{\texttt{ http\+://bridgesuncc.\+github.\+io/tutorials/\+Graph\+\_\+\+A\+M.\+html}} 
+Example tutorial at \href{http://bridgesuncc.github.io/tutorials/Graph_AM.html}{\tt http\+://bridgesuncc.\+github.\+io/tutorials/\+Graph\+\_\+\+A\+M.\+html} 
 \end{DoxySeeAlso}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a77b2efa6f296054ada425ee61e0d22a8}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+def \hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a77b2efa6f296054ada425ee61e0d22a8}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
 \begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a54eb655222dcff0a569728b150e493b7}{get\+\_\+data\+\_\+structure\+\_\+type}} (self)
-\item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_aa6fa31ebae643950dd33628269136d00}{add\+\_\+vertex}} (self, k, e)
+def \hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a54eb655222dcff0a569728b150e493b7}{get\+\_\+data\+\_\+structure\+\_\+type} (self)
+\begin{DoxyCompactList}\small\item\em This method gets the data structure type. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_aa6fa31ebae643950dd33628269136d00}{add\+\_\+vertex} (self, k, e)
 \begin{DoxyCompactList}\small\item\em Adds a new vertex to the graph, initializes the adjacency list; user is responsible for checking if the vertex already exists. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_aad67dc7b3da58ff67fd807a3455765c1}{add\+\_\+edge}} (self, src, dest, weight=None)
+def \hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_aad67dc7b3da58ff67fd807a3455765c1}{add\+\_\+edge} (self, src, dest, weight=None)
 \begin{DoxyCompactList}\small\item\em Adds a new edge to the graph, adds it to the index corresponding to the source, destination vertex ids; this version of the method assumes an edge weight of 1 (unweighted graph); user is responsible for checking if the vertices already exist, else an exception is thrown. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a2f7f0fe4ba172afeb1dcb1afc1f6bf31}{vertices}} (self)
+def \hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a2f7f0fe4ba172afeb1dcb1afc1f6bf31}{vertices} (self)
 \item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a96d735f98243acee1a604ed9dc990356}{set\+\_\+vertex\+\_\+data}} (self, src, vertex\+\_\+data)
+def \hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a96d735f98243acee1a604ed9dc990356}{set\+\_\+vertex\+\_\+data} (self, src, vertex\+\_\+data)
 \item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a6ae3c6fbe98c554ba976ef095a77871b}{get\+\_\+vertex\+\_\+data}} (self, src)
+def \hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a6ae3c6fbe98c554ba976ef095a77871b}{get\+\_\+vertex\+\_\+data} (self, src)
 \item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_ac456de9923ee8d671d1b6d908568b1bc}{set\+\_\+edge\+\_\+data}} (self, src, dest, data)
+def \hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_ac456de9923ee8d671d1b6d908568b1bc}{set\+\_\+edge\+\_\+data} (self, src, dest, data)
 \item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_aa3b7bc3f06d00e9a67f8d1cf6793ad70}{get\+\_\+edge\+\_\+data}} (self, src, dest)
+def \hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_aa3b7bc3f06d00e9a67f8d1cf6793ad70}{get\+\_\+edge\+\_\+data} (self, src, dest)
 \item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_aa64d4ed1525c6b4959269df0e4090e01}{get\+\_\+adjacency\+\_\+matrix}} (self, key=None)
-\item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a7071cdb99fdd2afd558d19f1470b8c9f}{get\+\_\+link\+\_\+visualizer}} (self, src, dest)
-\item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a96177ddfba9e474543b03d58fbc37e40}{get\+\_\+visualizer}} (self, vertex)
-\item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a9e8f53fc0dcd724bb29502fe08ea837e}{get\+\_\+data\+\_\+structure\+\_\+representation}} (self)
+def \hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_aa64d4ed1525c6b4959269df0e4090e01}{get\+\_\+adjacency\+\_\+matrix} (self, key=None)
+\begin{DoxyCompactList}\small\item\em Gets the adjacency matrix. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a7071cdb99fdd2afd558d19f1470b8c9f}{get\+\_\+link\+\_\+visualizer} (self, src, dest)
+\begin{DoxyCompactList}\small\item\em This is a convenience method to simplify access to the link visualizer; the method assumes the vertex names point to existing vertices, else an exception is thrown. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a96177ddfba9e474543b03d58fbc37e40}{get\+\_\+visualizer} (self, vertex)
+\begin{DoxyCompactList}\small\item\em This is a convenience method to simplify access to the element visualizer; the method assumes the vertex name points to an existing vertice, else an exception is thrown. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a9e8f53fc0dcd724bb29502fe08ea837e}{get\+\_\+data\+\_\+structure\+\_\+representation} (self)
 \begin{DoxyCompactList}\small\item\em Get the J\+S\+ON representation of the the data structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a77b2efa6f296054ada425ee61e0d22a8}\label{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a77b2efa6f296054ada425ee61e0d22a8}} 
-\index{bridges.graph\_adj\_matrix.GraphAdjMatrix@{bridges.graph\_adj\_matrix.GraphAdjMatrix}!\_\_init\_\_@{\_\_init\_\_}}
-\index{\_\_init\_\_@{\_\_init\_\_}!bridges.graph\_adj\_matrix.GraphAdjMatrix@{bridges.graph\_adj\_matrix.GraphAdjMatrix}}
-\subsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+\index{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix@{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix@{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
 {\footnotesize\ttfamily def bridges.\+graph\+\_\+adj\+\_\+matrix.\+Graph\+Adj\+Matrix.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
 
@@ -63,9 +63,9 @@ Constructor.
 
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_aad67dc7b3da58ff67fd807a3455765c1}\label{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_aad67dc7b3da58ff67fd807a3455765c1}} 
-\index{bridges.graph\_adj\_matrix.GraphAdjMatrix@{bridges.graph\_adj\_matrix.GraphAdjMatrix}!add\_edge@{add\_edge}}
-\index{add\_edge@{add\_edge}!bridges.graph\_adj\_matrix.GraphAdjMatrix@{bridges.graph\_adj\_matrix.GraphAdjMatrix}}
-\subsubsection{\texorpdfstring{add\_edge()}{add\_edge()}}
+\index{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix@{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix}!add\+\_\+edge@{add\+\_\+edge}}
+\index{add\+\_\+edge@{add\+\_\+edge}!bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix@{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection{\texorpdfstring{add\+\_\+edge()}{add\_edge()}}
 {\footnotesize\ttfamily def bridges.\+graph\+\_\+adj\+\_\+matrix.\+Graph\+Adj\+Matrix.\+add\+\_\+edge (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{src,  }\item[{}]{dest,  }\item[{}]{weight = {\ttfamily None} }\end{DoxyParamCaption})}
 
 
@@ -80,38 +80,34 @@ Adds a new edge to the graph, adds it to the index corresponding to the source, 
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_aa6fa31ebae643950dd33628269136d00}\label{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_aa6fa31ebae643950dd33628269136d00}} 
-\index{bridges.graph\_adj\_matrix.GraphAdjMatrix@{bridges.graph\_adj\_matrix.GraphAdjMatrix}!add\_vertex@{add\_vertex}}
-\index{add\_vertex@{add\_vertex}!bridges.graph\_adj\_matrix.GraphAdjMatrix@{bridges.graph\_adj\_matrix.GraphAdjMatrix}}
-\subsubsection{\texorpdfstring{add\_vertex()}{add\_vertex()}}
+\index{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix@{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix}!add\+\_\+vertex@{add\+\_\+vertex}}
+\index{add\+\_\+vertex@{add\+\_\+vertex}!bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix@{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection{\texorpdfstring{add\+\_\+vertex()}{add\_vertex()}}
 {\footnotesize\ttfamily def bridges.\+graph\+\_\+adj\+\_\+matrix.\+Graph\+Adj\+Matrix.\+add\+\_\+vertex (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{k,  }\item[{}]{e }\end{DoxyParamCaption})}
 
 
 
 Adds a new vertex to the graph, initializes the adjacency list; user is responsible for checking if the vertex already exists. 
 
-This method will replace the value for this key
-
-
-\begin{DoxyParams}{Parameters}
-{\em k} & -\/ vertex key value \\
-\hline
-{\em 3} & -\/ user specified data, part of the vertex data \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_aa64d4ed1525c6b4959269df0e4090e01}\label{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_aa64d4ed1525c6b4959269df0e4090e01}} 
-\index{bridges.graph\_adj\_matrix.GraphAdjMatrix@{bridges.graph\_adj\_matrix.GraphAdjMatrix}!get\_adjacency\_matrix@{get\_adjacency\_matrix}}
-\index{get\_adjacency\_matrix@{get\_adjacency\_matrix}!bridges.graph\_adj\_matrix.GraphAdjMatrix@{bridges.graph\_adj\_matrix.GraphAdjMatrix}}
-\subsubsection{\texorpdfstring{get\_adjacency\_matrix()}{get\_adjacency\_matrix()}}
+This method will replace the value for this key \begin{DoxyVerb}@param k - vertex key value
+@param 3 - user specified data, part of the vertex data\end{DoxyVerb}
+ \mbox{\Hypertarget{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_aa64d4ed1525c6b4959269df0e4090e01}\label{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_aa64d4ed1525c6b4959269df0e4090e01}} 
+\index{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix@{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix}!get\+\_\+adjacency\+\_\+matrix@{get\+\_\+adjacency\+\_\+matrix}}
+\index{get\+\_\+adjacency\+\_\+matrix@{get\+\_\+adjacency\+\_\+matrix}!bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix@{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection{\texorpdfstring{get\+\_\+adjacency\+\_\+matrix()}{get\_adjacency\_matrix()}}
 {\footnotesize\ttfamily def bridges.\+graph\+\_\+adj\+\_\+matrix.\+Graph\+Adj\+Matrix.\+get\+\_\+adjacency\+\_\+matrix (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{key = {\ttfamily None} }\end{DoxyParamCaption})}
 
-\begin{DoxyVerb}Gets the adjacency matrix
 
-@return - the graph's adjacency matrix
-\end{DoxyVerb}
- \mbox{\Hypertarget{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a9e8f53fc0dcd724bb29502fe08ea837e}\label{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a9e8f53fc0dcd724bb29502fe08ea837e}} 
-\index{bridges.graph\_adj\_matrix.GraphAdjMatrix@{bridges.graph\_adj\_matrix.GraphAdjMatrix}!get\_data\_structure\_representation@{get\_data\_structure\_representation}}
-\index{get\_data\_structure\_representation@{get\_data\_structure\_representation}!bridges.graph\_adj\_matrix.GraphAdjMatrix@{bridges.graph\_adj\_matrix.GraphAdjMatrix}}
-\subsubsection{\texorpdfstring{get\_data\_structure\_representation()}{get\_data\_structure\_representation()}}
+
+Gets the adjacency matrix. 
+
+\begin{DoxyReturn}{Returns}
+-\/ the graph\textquotesingle{}s adjacency matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a9e8f53fc0dcd724bb29502fe08ea837e}\label{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a9e8f53fc0dcd724bb29502fe08ea837e}} 
+\index{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix@{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix}!get\+\_\+data\+\_\+structure\+\_\+representation@{get\+\_\+data\+\_\+structure\+\_\+representation}}
+\index{get\+\_\+data\+\_\+structure\+\_\+representation@{get\+\_\+data\+\_\+structure\+\_\+representation}!bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix@{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection{\texorpdfstring{get\+\_\+data\+\_\+structure\+\_\+representation()}{get\_data\_structure\_representation()}}
 {\footnotesize\ttfamily def bridges.\+graph\+\_\+adj\+\_\+matrix.\+Graph\+Adj\+Matrix.\+get\+\_\+data\+\_\+structure\+\_\+representation (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
 
@@ -119,62 +115,65 @@ This method will replace the value for this key
 Get the J\+S\+ON representation of the the data structure. 
 
 \mbox{\Hypertarget{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a54eb655222dcff0a569728b150e493b7}\label{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a54eb655222dcff0a569728b150e493b7}} 
-\index{bridges.graph\_adj\_matrix.GraphAdjMatrix@{bridges.graph\_adj\_matrix.GraphAdjMatrix}!get\_data\_structure\_type@{get\_data\_structure\_type}}
-\index{get\_data\_structure\_type@{get\_data\_structure\_type}!bridges.graph\_adj\_matrix.GraphAdjMatrix@{bridges.graph\_adj\_matrix.GraphAdjMatrix}}
-\subsubsection{\texorpdfstring{get\_data\_structure\_type()}{get\_data\_structure\_type()}}
+\index{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix@{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix}!get\+\_\+data\+\_\+structure\+\_\+type@{get\+\_\+data\+\_\+structure\+\_\+type}}
+\index{get\+\_\+data\+\_\+structure\+\_\+type@{get\+\_\+data\+\_\+structure\+\_\+type}!bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix@{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection{\texorpdfstring{get\+\_\+data\+\_\+structure\+\_\+type()}{get\_data\_structure\_type()}}
 {\footnotesize\ttfamily def bridges.\+graph\+\_\+adj\+\_\+matrix.\+Graph\+Adj\+Matrix.\+get\+\_\+data\+\_\+structure\+\_\+type (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
-\begin{DoxyVerb}This method gets the data structure type
 
-@return  The date structure type as a string
-\end{DoxyVerb}
- \mbox{\Hypertarget{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_aa3b7bc3f06d00e9a67f8d1cf6793ad70}\label{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_aa3b7bc3f06d00e9a67f8d1cf6793ad70}} 
-\index{bridges.graph\_adj\_matrix.GraphAdjMatrix@{bridges.graph\_adj\_matrix.GraphAdjMatrix}!get\_edge\_data@{get\_edge\_data}}
-\index{get\_edge\_data@{get\_edge\_data}!bridges.graph\_adj\_matrix.GraphAdjMatrix@{bridges.graph\_adj\_matrix.GraphAdjMatrix}}
-\subsubsection{\texorpdfstring{get\_edge\_data()}{get\_edge\_data()}}
+
+This method gets the data structure type. 
+
+\begin{DoxyReturn}{Returns}
+The date structure type as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_aa3b7bc3f06d00e9a67f8d1cf6793ad70}\label{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_aa3b7bc3f06d00e9a67f8d1cf6793ad70}} 
+\index{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix@{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix}!get\+\_\+edge\+\_\+data@{get\+\_\+edge\+\_\+data}}
+\index{get\+\_\+edge\+\_\+data@{get\+\_\+edge\+\_\+data}!bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix@{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection{\texorpdfstring{get\+\_\+edge\+\_\+data()}{get\_edge\_data()}}
 {\footnotesize\ttfamily def bridges.\+graph\+\_\+adj\+\_\+matrix.\+Graph\+Adj\+Matrix.\+get\+\_\+edge\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{src,  }\item[{}]{dest }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a7071cdb99fdd2afd558d19f1470b8c9f}\label{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a7071cdb99fdd2afd558d19f1470b8c9f}} 
-\index{bridges.graph\_adj\_matrix.GraphAdjMatrix@{bridges.graph\_adj\_matrix.GraphAdjMatrix}!get\_link\_visualizer@{get\_link\_visualizer}}
-\index{get\_link\_visualizer@{get\_link\_visualizer}!bridges.graph\_adj\_matrix.GraphAdjMatrix@{bridges.graph\_adj\_matrix.GraphAdjMatrix}}
-\subsubsection{\texorpdfstring{get\_link\_visualizer()}{get\_link\_visualizer()}}
+\index{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix@{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix}!get\+\_\+link\+\_\+visualizer@{get\+\_\+link\+\_\+visualizer}}
+\index{get\+\_\+link\+\_\+visualizer@{get\+\_\+link\+\_\+visualizer}!bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix@{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection{\texorpdfstring{get\+\_\+link\+\_\+visualizer()}{get\_link\_visualizer()}}
 {\footnotesize\ttfamily def bridges.\+graph\+\_\+adj\+\_\+matrix.\+Graph\+Adj\+Matrix.\+get\+\_\+link\+\_\+visualizer (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{src,  }\item[{}]{dest }\end{DoxyParamCaption})}
 
-\begin{DoxyVerb} This is a convenience method to simplify access to the link visualizer;
- the method assumes the vertex names point to existing vertices, else an exception
- is thrown
-\end{DoxyVerb}
- \mbox{\Hypertarget{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a6ae3c6fbe98c554ba976ef095a77871b}\label{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a6ae3c6fbe98c554ba976ef095a77871b}} 
-\index{bridges.graph\_adj\_matrix.GraphAdjMatrix@{bridges.graph\_adj\_matrix.GraphAdjMatrix}!get\_vertex\_data@{get\_vertex\_data}}
-\index{get\_vertex\_data@{get\_vertex\_data}!bridges.graph\_adj\_matrix.GraphAdjMatrix@{bridges.graph\_adj\_matrix.GraphAdjMatrix}}
-\subsubsection{\texorpdfstring{get\_vertex\_data()}{get\_vertex\_data()}}
+
+
+This is a convenience method to simplify access to the link visualizer; the method assumes the vertex names point to existing vertices, else an exception is thrown. 
+
+\mbox{\Hypertarget{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a6ae3c6fbe98c554ba976ef095a77871b}\label{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a6ae3c6fbe98c554ba976ef095a77871b}} 
+\index{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix@{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix}!get\+\_\+vertex\+\_\+data@{get\+\_\+vertex\+\_\+data}}
+\index{get\+\_\+vertex\+\_\+data@{get\+\_\+vertex\+\_\+data}!bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix@{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection{\texorpdfstring{get\+\_\+vertex\+\_\+data()}{get\_vertex\_data()}}
 {\footnotesize\ttfamily def bridges.\+graph\+\_\+adj\+\_\+matrix.\+Graph\+Adj\+Matrix.\+get\+\_\+vertex\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{src }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a96177ddfba9e474543b03d58fbc37e40}\label{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a96177ddfba9e474543b03d58fbc37e40}} 
-\index{bridges.graph\_adj\_matrix.GraphAdjMatrix@{bridges.graph\_adj\_matrix.GraphAdjMatrix}!get\_visualizer@{get\_visualizer}}
-\index{get\_visualizer@{get\_visualizer}!bridges.graph\_adj\_matrix.GraphAdjMatrix@{bridges.graph\_adj\_matrix.GraphAdjMatrix}}
-\subsubsection{\texorpdfstring{get\_visualizer()}{get\_visualizer()}}
+\index{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix@{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix}!get\+\_\+visualizer@{get\+\_\+visualizer}}
+\index{get\+\_\+visualizer@{get\+\_\+visualizer}!bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix@{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection{\texorpdfstring{get\+\_\+visualizer()}{get\_visualizer()}}
 {\footnotesize\ttfamily def bridges.\+graph\+\_\+adj\+\_\+matrix.\+Graph\+Adj\+Matrix.\+get\+\_\+visualizer (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{vertex }\end{DoxyParamCaption})}
 
-\begin{DoxyVerb}This is a convenience method to simplify access to the element visualizer;
-the method assumes the vertex name points to an existing vertice, else an
-exception is thrown
-\end{DoxyVerb}
- \mbox{\Hypertarget{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_ac456de9923ee8d671d1b6d908568b1bc}\label{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_ac456de9923ee8d671d1b6d908568b1bc}} 
-\index{bridges.graph\_adj\_matrix.GraphAdjMatrix@{bridges.graph\_adj\_matrix.GraphAdjMatrix}!set\_edge\_data@{set\_edge\_data}}
-\index{set\_edge\_data@{set\_edge\_data}!bridges.graph\_adj\_matrix.GraphAdjMatrix@{bridges.graph\_adj\_matrix.GraphAdjMatrix}}
-\subsubsection{\texorpdfstring{set\_edge\_data()}{set\_edge\_data()}}
+
+
+This is a convenience method to simplify access to the element visualizer; the method assumes the vertex name points to an existing vertice, else an exception is thrown. 
+
+\mbox{\Hypertarget{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_ac456de9923ee8d671d1b6d908568b1bc}\label{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_ac456de9923ee8d671d1b6d908568b1bc}} 
+\index{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix@{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix}!set\+\_\+edge\+\_\+data@{set\+\_\+edge\+\_\+data}}
+\index{set\+\_\+edge\+\_\+data@{set\+\_\+edge\+\_\+data}!bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix@{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection{\texorpdfstring{set\+\_\+edge\+\_\+data()}{set\_edge\_data()}}
 {\footnotesize\ttfamily def bridges.\+graph\+\_\+adj\+\_\+matrix.\+Graph\+Adj\+Matrix.\+set\+\_\+edge\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{src,  }\item[{}]{dest,  }\item[{}]{data }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a96d735f98243acee1a604ed9dc990356}\label{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a96d735f98243acee1a604ed9dc990356}} 
-\index{bridges.graph\_adj\_matrix.GraphAdjMatrix@{bridges.graph\_adj\_matrix.GraphAdjMatrix}!set\_vertex\_data@{set\_vertex\_data}}
-\index{set\_vertex\_data@{set\_vertex\_data}!bridges.graph\_adj\_matrix.GraphAdjMatrix@{bridges.graph\_adj\_matrix.GraphAdjMatrix}}
-\subsubsection{\texorpdfstring{set\_vertex\_data()}{set\_vertex\_data()}}
+\index{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix@{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix}!set\+\_\+vertex\+\_\+data@{set\+\_\+vertex\+\_\+data}}
+\index{set\+\_\+vertex\+\_\+data@{set\+\_\+vertex\+\_\+data}!bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix@{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix}}
+\subsubsection{\texorpdfstring{set\+\_\+vertex\+\_\+data()}{set\_vertex\_data()}}
 {\footnotesize\ttfamily def bridges.\+graph\+\_\+adj\+\_\+matrix.\+Graph\+Adj\+Matrix.\+set\+\_\+vertex\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{src,  }\item[{}]{vertex\+\_\+data }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a2f7f0fe4ba172afeb1dcb1afc1f6bf31}\label{classbridges_1_1graph__adj__matrix_1_1_graph_adj_matrix_a2f7f0fe4ba172afeb1dcb1afc1f6bf31}} 
-\index{bridges.graph\_adj\_matrix.GraphAdjMatrix@{bridges.graph\_adj\_matrix.GraphAdjMatrix}!vertices@{vertices}}
-\index{vertices@{vertices}!bridges.graph\_adj\_matrix.GraphAdjMatrix@{bridges.graph\_adj\_matrix.GraphAdjMatrix}}
+\index{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix@{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix}!vertices@{vertices}}
+\index{vertices@{vertices}!bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix@{bridges\+::graph\+\_\+adj\+\_\+matrix\+::\+Graph\+Adj\+Matrix}}
 \subsubsection{\texorpdfstring{vertices()}{vertices()}}
 {\footnotesize\ttfamily def bridges.\+graph\+\_\+adj\+\_\+matrix.\+Graph\+Adj\+Matrix.\+vertices (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
@@ -182,4 +181,4 @@ exception is thrown
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/\+Users/kalpathi/gr/bridges/python/bridges/\mbox{\hyperlink{graph__adj__matrix_8py}{graph\+\_\+adj\+\_\+matrix.\+py}}\end{DoxyCompactItemize}
+/home/erik/work/bridges/bridges-\/python/bridges/\hyperlink{graph__adj__matrix_8py}{graph\+\_\+adj\+\_\+matrix.\+py}\end{DoxyCompactItemize}

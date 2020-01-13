@@ -2,6 +2,7 @@ var searchData=
 [
   ['actor_2ejava',['Actor.java',['../_actor_8java.html',1,'']]],
   ['actormovieimdb_2ejava',['ActorMovieIMDB.java',['../_actor_movie_i_m_d_b_8java.html',1,'']]],
+  ['actormoviewikidata_2ejava',['ActorMovieWikidata.java',['../_actor_movie_wikidata_8java.html',1,'']]],
   ['array_2ejava',['Array.java',['../_array_8java.html',1,'']]],
   ['array1d_2ejava',['Array1D.java',['../_array1_d_8java.html',1,'']]],
   ['array2d_2ejava',['Array2D.java',['../_array2_d_8java.html',1,'']]],

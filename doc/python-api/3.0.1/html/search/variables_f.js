@@ -14,7 +14,6 @@ var searchData=
   ['peru',['peru',['../classbridges_1_1named__color_1_1_named_color.html#ae3836a90a04a65cbaed71aa80bec7452',1,'bridges::named_color::NamedColor']]],
   ['pink',['pink',['../classbridges_1_1named__color_1_1_named_color.html#a9c878aa248c693ab01ff8bc622a96c83',1,'bridges::named_color::NamedColor']]],
   ['plum',['plum',['../classbridges_1_1named__color_1_1_named_color.html#a2e3d8cfacb740fa9f033ae69da5e971c',1,'bridges::named_color::NamedColor']]],
-  ['population',['population',['../classbridges_1_1data__src__dependent_1_1cancer__incidence_1_1_cancer_incidence.html#aa268840d92af80381bc3c9edebf8296b',1,'bridges::data_src_dependent::cancer_incidence::CancerIncidence']]],
   ['potion1',['potion1',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a2c0ff77ec8de721df53a4ff9de2ff109',1,'bridges::named_symbol::NamedSymbol']]],
   ['potion2',['potion2',['../classbridges_1_1named__symbol_1_1_named_symbol.html#adcc41fdbb3c384cfcbc8d14a1876aefb',1,'bridges::named_symbol::NamedSymbol']]],
   ['powderblue',['powderblue',['../classbridges_1_1named__color_1_1_named_color.html#a3e9429ab24941731de12cdd98316f97f',1,'bridges::named_color::NamedColor']]],

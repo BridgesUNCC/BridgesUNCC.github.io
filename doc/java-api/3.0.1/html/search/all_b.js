@@ -29,7 +29,6 @@ var searchData=
   ['lightyellow',['lightyellow',['../enumbridges_1_1base_1_1_named_color.html#afef38df36fdf63e6abae04c4a2ff3cfc',1,'bridges::base::NamedColor']]],
   ['lime',['lime',['../enumbridges_1_1base_1_1_named_color.html#a315145eebf98d49e770f6af2365ef2e0',1,'bridges::base::NamedColor']]],
   ['limegreen',['limegreen',['../enumbridges_1_1base_1_1_named_color.html#a5692aa381be40fe6564682ab04f97d5e',1,'bridges::base::NamedColor']]],
-  ['linearrange',['linearRange',['../classbridges_1_1base_1_1_sorting_benchmark.html#a2f412cbff4619ce2984a5c57ec5104e6',1,'bridges::base::SortingBenchmark']]],
   ['linechart',['LineChart',['../classbridges_1_1base_1_1_line_chart.html',1,'bridges.base.LineChart'],['../classbridges_1_1base_1_1_line_chart.html#ae864fe5ae85e80ae2f035471fb216e68',1,'bridges.base.LineChart.LineChart()']]],
   ['linechart_2ejava',['LineChart.java',['../_line_chart_8java.html',1,'']]],
   ['linen',['linen',['../enumbridges_1_1base_1_1_named_color.html#afba0725139f792f4e3d3b1f9ba6038e2',1,'bridges::base::NamedColor']]],
@@ -41,7 +40,5 @@ var searchData=
   ['logmessage',['logMessage',['../classbridges_1_1validation_1_1_output_log.html#aea898d0de8715c1451d4731f3d9ae91d',1,'bridges::validation::OutputLog']]],
   ['logstream',['logStream',['../classbridges_1_1validation_1_1_output_log.html#a007a8494bdda0f4164663df8afe2c392',1,'bridges::validation::OutputLog']]],
   ['logstream2',['logStream2',['../classbridges_1_1validation_1_1_output_log.html#a3b5198266da9d86da13fab21c096f18c',1,'bridges::validation::OutputLog']]],
-  ['longitude',['longitude',['../classbridges_1_1data__src__dependent_1_1_usgs_foo_1_1_geometry_1_1_coordinates.html#a45f2a0dc4220eb4a1e8ec576101f9633',1,'bridges::data_src_dependent::UsgsFoo::Geometry::Coordinates']]],
-  ['lrucache',['LRUCache',['../classbridges_1_1connect_1_1_l_r_u_cache.html',1,'bridges.connect.LRUCache'],['../classbridges_1_1connect_1_1_l_r_u_cache.html#a185b67de20303aa82abb39217f9a72e2',1,'bridges.connect.LRUCache.LRUCache()']]],
-  ['lrucache_2ejava',['LRUCache.java',['../_l_r_u_cache_8java.html',1,'']]]
+  ['longitude',['longitude',['../classbridges_1_1data__src__dependent_1_1_usgs_foo_1_1_geometry_1_1_coordinates.html#a45f2a0dc4220eb4a1e8ec576101f9633',1,'bridges::data_src_dependent::UsgsFoo::Geometry::Coordinates']]]
 ];

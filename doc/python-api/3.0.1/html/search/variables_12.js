@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['s',['S',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a1fc3ab7df5af45b655161ef4db755d0c',1,'bridges.named_symbol.NamedSymbol.S()'],['../classbridges_1_1named__symbol_1_1_named_symbol.html#a6a1e8241578e273f3e380cbd14ecec5a',1,'bridges.named_symbol.NamedSymbol.s()']]],
+  ['s',['s',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a6a1e8241578e273f3e380cbd14ecec5a',1,'bridges.named_symbol.NamedSymbol.s()'],['../classbridges_1_1named__symbol_1_1_named_symbol.html#a1fc3ab7df5af45b655161ef4db755d0c',1,'bridges.named_symbol.NamedSymbol.S()']]],
   ['s_5fkey',['s_key',['../classbridges_1_1input__helper_1_1_input_helper.html#a88978da995aaea7c6267a72cbd4d11c9',1,'bridges::input_helper::InputHelper']]],
   ['saddlebrown',['saddlebrown',['../classbridges_1_1named__color_1_1_named_color.html#aac1594a8ed63cd1e8a6d64fd3d2b62c3',1,'bridges::named_color::NamedColor']]],
   ['salmon',['salmon',['../classbridges_1_1named__color_1_1_named_color.html#aeadecb4aebd451365ed8247cfe84df1c',1,'bridges::named_color::NamedColor']]],
@@ -26,7 +26,6 @@ var searchData=
   ['sloth',['sloth',['../classbridges_1_1named__symbol_1_1_named_symbol.html#acaeb03fef19ac83a37b253fcfca4afed',1,'bridges::named_symbol::NamedSymbol']]],
   ['snow',['snow',['../classbridges_1_1named__color_1_1_named_color.html#a1f275813841baae4888174bdc4616f6f',1,'bridges::named_color::NamedColor']]],
   ['sock',['sock',['../classbridges_1_1gamebase_1_1_game_base.html#a4a7fe2d524c02966900937bddea195e7',1,'bridges::gamebase::GameBase']]],
-  ['source',['source',['../classbridges_1_1data__src__dependent_1_1osm_1_1_osm_edge.html#a968664892933e9784909282cc53b0315',1,'bridges::data_src_dependent::osm::OsmEdge']]],
   ['space_5fkey',['space_key',['../classbridges_1_1input__helper_1_1_input_helper.html#a7500af436b4d85fc13fb351d661cf0d9',1,'bridges::input_helper::InputHelper']]],
   ['speechbubble',['speechbubble',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a12ae6d5697851e3dfbbe760327dc9a56',1,'bridges::named_symbol::NamedSymbol']]],
   ['springgreen',['springgreen',['../classbridges_1_1named__color_1_1_named_color.html#a0d3796b624eb8e15f0d1f50fa079b922',1,'bridges::named_color::NamedColor']]],

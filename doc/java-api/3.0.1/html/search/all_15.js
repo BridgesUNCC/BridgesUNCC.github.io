@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['v',['V',['../enumbridges_1_1base_1_1_named_symbol.html#acf6aee403c995c4919c43069682acfa6',1,'bridges.base.NamedSymbol.V()'],['../enumbridges_1_1base_1_1_named_symbol.html#aa60846cdfa98ce4c4dd6c177bb2f43d8',1,'bridges.base.NamedSymbol.v()']]],
+  ['v',['v',['../enumbridges_1_1base_1_1_named_symbol.html#aa60846cdfa98ce4c4dd6c177bb2f43d8',1,'bridges.base.NamedSymbol.v()'],['../enumbridges_1_1base_1_1_named_symbol.html#acf6aee403c995c4919c43069682acfa6',1,'bridges.base.NamedSymbol.V()']]],
   ['validate_5fadt_5fsize',['validate_ADT_size',['../classbridges_1_1validation_1_1_validation.html#a0a3b322af9a6815fd1acba481858d0e3',1,'bridges::validation::Validation']]],
   ['validatecolor',['validateColor',['../classbridges_1_1validation_1_1_validation.html#ae529d673f5b86b457ed7b7d4d80a9dbf',1,'bridges::validation::Validation']]],
   ['validateopacity',['validateOpacity',['../classbridges_1_1validation_1_1_validation.html#ab6cd587755b3128031da73a35895f666',1,'bridges::validation::Validation']]],

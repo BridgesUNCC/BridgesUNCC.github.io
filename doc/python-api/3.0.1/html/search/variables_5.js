@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['f',['F',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a825003973fd3592c2564da32df47b7e1',1,'bridges.named_symbol.NamedSymbol.F()'],['../classbridges_1_1named__symbol_1_1_named_symbol.html#a045f706d096ee7de767fc672e441638f',1,'bridges.named_symbol.NamedSymbol.f()']]],
+  ['f',['f',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a045f706d096ee7de767fc672e441638f',1,'bridges.named_symbol.NamedSymbol.f()'],['../classbridges_1_1named__symbol_1_1_named_symbol.html#a825003973fd3592c2564da32df47b7e1',1,'bridges.named_symbol.NamedSymbol.F()']]],
   ['firebrick',['firebrick',['../classbridges_1_1named__color_1_1_named_color.html#abe33baddc4a23ae0aa188f797e1e15f6',1,'bridges::named_color::NamedColor']]],
   ['firsttime',['firsttime',['../classbridges_1_1gamebase_1_1_game_base.html#a1115f9b91c925f4aa5155ec0e7831ee2',1,'bridges::gamebase::GameBase']]],
   ['fishes',['fishes',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a7d4abbb95cebc5d510d95e06a5d42da2',1,'bridges::named_symbol::NamedSymbol']]],

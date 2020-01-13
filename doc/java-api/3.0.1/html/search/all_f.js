@@ -26,6 +26,5 @@ var searchData=
   ['prepareusgs',['prepareUSGS',['../classbridges_1_1connect_1_1_connector.html#aa0201e2569358ff906d3c14d654711e5',1,'bridges::connect::Connector']]],
   ['prev',['prev',['../classbridges_1_1base_1_1_d_lelement.html#a6eba4876f820b75ac6bde01d7dea9da7',1,'bridges::base::DLelement']]],
   ['properties',['Properties',['../classbridges_1_1data__src__dependent_1_1_usgs_foo_1_1_properties.html',1,'bridges.data_src_dependent.UsgsFoo.Properties'],['../classbridges_1_1data__src__dependent_1_1_usgs_foo.html#a030d83e136f146824b5bda34a4c6fd1c',1,'bridges.data_src_dependent.UsgsFoo.properties()']]],
-  ['purple',['purple',['../enumbridges_1_1base_1_1_named_color.html#a5f237aa59d1700ea8fc1b7097fa54053',1,'bridges::base::NamedColor']]],
-  ['put',['put',['../classbridges_1_1connect_1_1_l_r_u_cache.html#adfffe429c76956850b1038e372eec2eb',1,'bridges::connect::LRUCache']]]
+  ['purple',['purple',['../enumbridges_1_1base_1_1_named_color.html#a5f237aa59d1700ea8fc1b7097fa54053',1,'bridges::base::NamedColor']]]
 ];

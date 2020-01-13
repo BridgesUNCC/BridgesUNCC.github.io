@@ -1,10 +1,10 @@
-\hypertarget{classbridges_1_1benchmark_1_1_graph_benchmark}{}\section{bridges\+::benchmark\+::Graph\+Benchmark Class Reference}
-\label{classbridges_1_1benchmark_1_1_graph_benchmark}\index{bridges::benchmark::GraphBenchmark@{bridges::benchmark::GraphBenchmark}}
+\hypertarget{classbridges_1_1benchmark_1_1_graph_benchmark}{}\section{bridges\+:\+:benchmark\+:\+:Graph\+Benchmark Class Reference}
+\label{classbridges_1_1benchmark_1_1_graph_benchmark}\index{bridges\+::benchmark\+::\+Graph\+Benchmark@{bridges\+::benchmark\+::\+Graph\+Benchmark}}
 
 
 {\ttfamily \#include $<$Graph\+Benchmark.\+h$>$}
 
-Inheritance diagram for bridges\+::benchmark\+::Graph\+Benchmark\+:\begin{figure}[H]
+Inheritance diagram for bridges\+:\+:benchmark\+:\+:Graph\+Benchmark\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=1.382716cm]{classbridges_1_1benchmark_1_1_graph_benchmark}
@@ -18,67 +18,67 @@ Base class for a variety of graph based benchmark.
 This class is not meant to be used directly by students. \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classbridges_1_1benchmark_1_1_graph_benchmark_a56934eb2789e54c088e7b4423c3a7456}{set\+Time\+Cap}} (double cap\+\_\+in\+\_\+s)
+void \hyperlink{classbridges_1_1benchmark_1_1_graph_benchmark_a56934eb2789e54c088e7b4423c3a7456}{set\+Time\+Cap} (double cap\+\_\+in\+\_\+s)
 \begin{DoxyCompactList}\small\item\em sets an upper bound to the time of a run. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{classbridges_1_1benchmark_1_1_graph_benchmark_a2bfaccb0b170b831c1aa9776c0a64d72}{get\+Time\+Cap}} () const
+double \hyperlink{classbridges_1_1benchmark_1_1_graph_benchmark_a2bfaccb0b170b831c1aa9776c0a64d72}{get\+Time\+Cap} () const
 \begin{DoxyCompactList}\small\item\em Return time limit of a run. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classbridges_1_1benchmark_1_1_graph_benchmark_a617520fd2675b1ec03eb4eaf30affa9d}{Graph\+Benchmark}} ()
+\hyperlink{classbridges_1_1benchmark_1_1_graph_benchmark_a617520fd2675b1ec03eb4eaf30affa9d}{Graph\+Benchmark} ()
 \item 
-std\+::tuple$<$ long, long $>$ \mbox{\hyperlink{classbridges_1_1benchmark_1_1_graph_benchmark_a561d704a89e9e824cc6b246266cf05d7}{generate\+Wikidata\+Movie\+Actor}} (int yearmin, int yearmax, \mbox{\hyperlink{classbridges_1_1datastructure_1_1_graph_adj_list}{Graph\+Adj\+List}}$<$ std\+::string $>$ \&moviegraph)
+std\+::tuple$<$ long, long $>$ \hyperlink{classbridges_1_1benchmark_1_1_graph_benchmark_a561d704a89e9e824cc6b246266cf05d7}{generate\+Wikidata\+Movie\+Actor} (int yearmin, int yearmax, \hyperlink{classbridges_1_1datastructure_1_1_graph_adj_list}{Graph\+Adj\+List}$<$ std\+::string $>$ \&moviegraph)
 \item 
-std\+::string \mbox{\hyperlink{classbridges_1_1benchmark_1_1_graph_benchmark_a68b899e43ab8afc17cbca344004f65fb}{highest\+Degree\+Vertex}} (\mbox{\hyperlink{classbridges_1_1datastructure_1_1_graph_adj_list}{Graph\+Adj\+List}}$<$ std\+::string $>$ \&gr)
+std\+::string \hyperlink{classbridges_1_1benchmark_1_1_graph_benchmark_a68b899e43ab8afc17cbca344004f65fb}{highest\+Degree\+Vertex} (\hyperlink{classbridges_1_1datastructure_1_1_graph_adj_list}{Graph\+Adj\+List}$<$ std\+::string $>$ \&gr)
 \item 
-{\footnotesize template$<$typename Graph\+Type $>$ }\\long \mbox{\hyperlink{classbridges_1_1benchmark_1_1_graph_benchmark_aa8496248acdb735f170f46ee66bdb4ce}{count\+Vertices}} (const Graph\+Type \&gr)
+{\footnotesize template$<$typename Graph\+Type $>$ }\\long \hyperlink{classbridges_1_1benchmark_1_1_graph_benchmark_aa8496248acdb735f170f46ee66bdb4ce}{count\+Vertices} (const Graph\+Type \&gr)
 \item 
-{\footnotesize template$<$typename Graph\+Type $>$ }\\long \mbox{\hyperlink{classbridges_1_1benchmark_1_1_graph_benchmark_a18fc383926e9067fc98506449c819d22}{count\+Edges}} (const Graph\+Type \&gr)
+{\footnotesize template$<$typename Graph\+Type $>$ }\\long \hyperlink{classbridges_1_1benchmark_1_1_graph_benchmark_a18fc383926e9067fc98506449c819d22}{count\+Edges} (const Graph\+Type \&gr)
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-double \mbox{\hyperlink{classbridges_1_1benchmark_1_1_graph_benchmark_a59938016b721fb6db2ff8bdb2c9d41c1}{time\+\_\+cap}}
+double \hyperlink{classbridges_1_1benchmark_1_1_graph_benchmark_a59938016b721fb6db2ff8bdb2c9d41c1}{time\+\_\+cap}
 \end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classbridges_1_1benchmark_1_1_graph_benchmark_a617520fd2675b1ec03eb4eaf30affa9d}\label{classbridges_1_1benchmark_1_1_graph_benchmark_a617520fd2675b1ec03eb4eaf30affa9d}} 
-\index{bridges::benchmark::GraphBenchmark@{bridges::benchmark::GraphBenchmark}!GraphBenchmark@{GraphBenchmark}}
-\index{GraphBenchmark@{GraphBenchmark}!bridges::benchmark::GraphBenchmark@{bridges::benchmark::GraphBenchmark}}
-\subsubsection{\texorpdfstring{GraphBenchmark()}{GraphBenchmark()}}
+\index{bridges\+::benchmark\+::\+Graph\+Benchmark@{bridges\+::benchmark\+::\+Graph\+Benchmark}!Graph\+Benchmark@{Graph\+Benchmark}}
+\index{Graph\+Benchmark@{Graph\+Benchmark}!bridges\+::benchmark\+::\+Graph\+Benchmark@{bridges\+::benchmark\+::\+Graph\+Benchmark}}
+\subsubsection{\texorpdfstring{Graph\+Benchmark()}{GraphBenchmark()}}
 {\footnotesize\ttfamily bridges\+::benchmark\+::\+Graph\+Benchmark\+::\+Graph\+Benchmark (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
 
 
 
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{classbridges_1_1benchmark_1_1_graph_benchmark_a18fc383926e9067fc98506449c819d22}\label{classbridges_1_1benchmark_1_1_graph_benchmark_a18fc383926e9067fc98506449c819d22}} 
-\index{bridges::benchmark::GraphBenchmark@{bridges::benchmark::GraphBenchmark}!countEdges@{countEdges}}
-\index{countEdges@{countEdges}!bridges::benchmark::GraphBenchmark@{bridges::benchmark::GraphBenchmark}}
-\subsubsection{\texorpdfstring{countEdges()}{countEdges()}}
+\index{bridges\+::benchmark\+::\+Graph\+Benchmark@{bridges\+::benchmark\+::\+Graph\+Benchmark}!count\+Edges@{count\+Edges}}
+\index{count\+Edges@{count\+Edges}!bridges\+::benchmark\+::\+Graph\+Benchmark@{bridges\+::benchmark\+::\+Graph\+Benchmark}}
+\subsubsection{\texorpdfstring{count\+Edges()}{countEdges()}}
 {\footnotesize\ttfamily template$<$typename Graph\+Type $>$ \\
 long bridges\+::benchmark\+::\+Graph\+Benchmark\+::count\+Edges (\begin{DoxyParamCaption}\item[{const Graph\+Type \&}]{gr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
 
 \mbox{\Hypertarget{classbridges_1_1benchmark_1_1_graph_benchmark_aa8496248acdb735f170f46ee66bdb4ce}\label{classbridges_1_1benchmark_1_1_graph_benchmark_aa8496248acdb735f170f46ee66bdb4ce}} 
-\index{bridges::benchmark::GraphBenchmark@{bridges::benchmark::GraphBenchmark}!countVertices@{countVertices}}
-\index{countVertices@{countVertices}!bridges::benchmark::GraphBenchmark@{bridges::benchmark::GraphBenchmark}}
-\subsubsection{\texorpdfstring{countVertices()}{countVertices()}}
+\index{bridges\+::benchmark\+::\+Graph\+Benchmark@{bridges\+::benchmark\+::\+Graph\+Benchmark}!count\+Vertices@{count\+Vertices}}
+\index{count\+Vertices@{count\+Vertices}!bridges\+::benchmark\+::\+Graph\+Benchmark@{bridges\+::benchmark\+::\+Graph\+Benchmark}}
+\subsubsection{\texorpdfstring{count\+Vertices()}{countVertices()}}
 {\footnotesize\ttfamily template$<$typename Graph\+Type $>$ \\
 long bridges\+::benchmark\+::\+Graph\+Benchmark\+::count\+Vertices (\begin{DoxyParamCaption}\item[{const Graph\+Type \&}]{gr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
 
 \mbox{\Hypertarget{classbridges_1_1benchmark_1_1_graph_benchmark_a561d704a89e9e824cc6b246266cf05d7}\label{classbridges_1_1benchmark_1_1_graph_benchmark_a561d704a89e9e824cc6b246266cf05d7}} 
-\index{bridges::benchmark::GraphBenchmark@{bridges::benchmark::GraphBenchmark}!generateWikidataMovieActor@{generateWikidataMovieActor}}
-\index{generateWikidataMovieActor@{generateWikidataMovieActor}!bridges::benchmark::GraphBenchmark@{bridges::benchmark::GraphBenchmark}}
-\subsubsection{\texorpdfstring{generateWikidataMovieActor()}{generateWikidataMovieActor()}}
-{\footnotesize\ttfamily std\+::tuple$<$long, long$>$ bridges\+::benchmark\+::\+Graph\+Benchmark\+::generate\+Wikidata\+Movie\+Actor (\begin{DoxyParamCaption}\item[{int}]{yearmin,  }\item[{int}]{yearmax,  }\item[{\mbox{\hyperlink{classbridges_1_1datastructure_1_1_graph_adj_list}{Graph\+Adj\+List}}$<$ std\+::string $>$ \&}]{moviegraph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+\index{bridges\+::benchmark\+::\+Graph\+Benchmark@{bridges\+::benchmark\+::\+Graph\+Benchmark}!generate\+Wikidata\+Movie\+Actor@{generate\+Wikidata\+Movie\+Actor}}
+\index{generate\+Wikidata\+Movie\+Actor@{generate\+Wikidata\+Movie\+Actor}!bridges\+::benchmark\+::\+Graph\+Benchmark@{bridges\+::benchmark\+::\+Graph\+Benchmark}}
+\subsubsection{\texorpdfstring{generate\+Wikidata\+Movie\+Actor()}{generateWikidataMovieActor()}}
+{\footnotesize\ttfamily std\+::tuple$<$long, long$>$ bridges\+::benchmark\+::\+Graph\+Benchmark\+::generate\+Wikidata\+Movie\+Actor (\begin{DoxyParamCaption}\item[{int}]{yearmin,  }\item[{int}]{yearmax,  }\item[{\hyperlink{classbridges_1_1datastructure_1_1_graph_adj_list}{Graph\+Adj\+List}$<$ std\+::string $>$ \&}]{moviegraph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
 
 \begin{DoxyReturn}{Returns}
 a triplet\+: the graph, the number of vertices, and the number of edges 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1benchmark_1_1_graph_benchmark_a2bfaccb0b170b831c1aa9776c0a64d72}\label{classbridges_1_1benchmark_1_1_graph_benchmark_a2bfaccb0b170b831c1aa9776c0a64d72}} 
-\index{bridges::benchmark::GraphBenchmark@{bridges::benchmark::GraphBenchmark}!getTimeCap@{getTimeCap}}
-\index{getTimeCap@{getTimeCap}!bridges::benchmark::GraphBenchmark@{bridges::benchmark::GraphBenchmark}}
-\subsubsection{\texorpdfstring{getTimeCap()}{getTimeCap()}}
+\index{bridges\+::benchmark\+::\+Graph\+Benchmark@{bridges\+::benchmark\+::\+Graph\+Benchmark}!get\+Time\+Cap@{get\+Time\+Cap}}
+\index{get\+Time\+Cap@{get\+Time\+Cap}!bridges\+::benchmark\+::\+Graph\+Benchmark@{bridges\+::benchmark\+::\+Graph\+Benchmark}}
+\subsubsection{\texorpdfstring{get\+Time\+Cap()}{getTimeCap()}}
 {\footnotesize\ttfamily double bridges\+::benchmark\+::\+Graph\+Benchmark\+::get\+Time\+Cap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
@@ -91,15 +91,15 @@ The benchmark will end after a run if it takes more than the given amount of tim
 the time upper bound (in seconds) of a particular run. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1benchmark_1_1_graph_benchmark_a68b899e43ab8afc17cbca344004f65fb}\label{classbridges_1_1benchmark_1_1_graph_benchmark_a68b899e43ab8afc17cbca344004f65fb}} 
-\index{bridges::benchmark::GraphBenchmark@{bridges::benchmark::GraphBenchmark}!highestDegreeVertex@{highestDegreeVertex}}
-\index{highestDegreeVertex@{highestDegreeVertex}!bridges::benchmark::GraphBenchmark@{bridges::benchmark::GraphBenchmark}}
-\subsubsection{\texorpdfstring{highestDegreeVertex()}{highestDegreeVertex()}}
-{\footnotesize\ttfamily std\+::string bridges\+::benchmark\+::\+Graph\+Benchmark\+::highest\+Degree\+Vertex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1datastructure_1_1_graph_adj_list}{Graph\+Adj\+List}}$<$ std\+::string $>$ \&}]{gr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+\index{bridges\+::benchmark\+::\+Graph\+Benchmark@{bridges\+::benchmark\+::\+Graph\+Benchmark}!highest\+Degree\+Vertex@{highest\+Degree\+Vertex}}
+\index{highest\+Degree\+Vertex@{highest\+Degree\+Vertex}!bridges\+::benchmark\+::\+Graph\+Benchmark@{bridges\+::benchmark\+::\+Graph\+Benchmark}}
+\subsubsection{\texorpdfstring{highest\+Degree\+Vertex()}{highestDegreeVertex()}}
+{\footnotesize\ttfamily std\+::string bridges\+::benchmark\+::\+Graph\+Benchmark\+::highest\+Degree\+Vertex (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1datastructure_1_1_graph_adj_list}{Graph\+Adj\+List}$<$ std\+::string $>$ \&}]{gr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
 
 \mbox{\Hypertarget{classbridges_1_1benchmark_1_1_graph_benchmark_a56934eb2789e54c088e7b4423c3a7456}\label{classbridges_1_1benchmark_1_1_graph_benchmark_a56934eb2789e54c088e7b4423c3a7456}} 
-\index{bridges::benchmark::GraphBenchmark@{bridges::benchmark::GraphBenchmark}!setTimeCap@{setTimeCap}}
-\index{setTimeCap@{setTimeCap}!bridges::benchmark::GraphBenchmark@{bridges::benchmark::GraphBenchmark}}
-\subsubsection{\texorpdfstring{setTimeCap()}{setTimeCap()}}
+\index{bridges\+::benchmark\+::\+Graph\+Benchmark@{bridges\+::benchmark\+::\+Graph\+Benchmark}!set\+Time\+Cap@{set\+Time\+Cap}}
+\index{set\+Time\+Cap@{set\+Time\+Cap}!bridges\+::benchmark\+::\+Graph\+Benchmark@{bridges\+::benchmark\+::\+Graph\+Benchmark}}
+\subsubsection{\texorpdfstring{set\+Time\+Cap()}{setTimeCap()}}
 {\footnotesize\ttfamily void bridges\+::benchmark\+::\+Graph\+Benchmark\+::set\+Time\+Cap (\begin{DoxyParamCaption}\item[{double}]{cap\+\_\+in\+\_\+s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
@@ -117,13 +117,13 @@ The benchmark will end after a run if it takes more than the given amount of tim
 
 \subsection{Member Data Documentation}
 \mbox{\Hypertarget{classbridges_1_1benchmark_1_1_graph_benchmark_a59938016b721fb6db2ff8bdb2c9d41c1}\label{classbridges_1_1benchmark_1_1_graph_benchmark_a59938016b721fb6db2ff8bdb2c9d41c1}} 
-\index{bridges::benchmark::GraphBenchmark@{bridges::benchmark::GraphBenchmark}!time\_cap@{time\_cap}}
-\index{time\_cap@{time\_cap}!bridges::benchmark::GraphBenchmark@{bridges::benchmark::GraphBenchmark}}
-\subsubsection{\texorpdfstring{time\_cap}{time\_cap}}
+\index{bridges\+::benchmark\+::\+Graph\+Benchmark@{bridges\+::benchmark\+::\+Graph\+Benchmark}!time\+\_\+cap@{time\+\_\+cap}}
+\index{time\+\_\+cap@{time\+\_\+cap}!bridges\+::benchmark\+::\+Graph\+Benchmark@{bridges\+::benchmark\+::\+Graph\+Benchmark}}
+\subsubsection{\texorpdfstring{time\+\_\+cap}{time\_cap}}
 {\footnotesize\ttfamily double bridges\+::benchmark\+::\+Graph\+Benchmark\+::time\+\_\+cap\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/\+Users/kalpathi/gr/bridges/cxx/src/\mbox{\hyperlink{_graph_benchmark_8h}{Graph\+Benchmark.\+h}}\end{DoxyCompactItemize}
+/home/erik/work/bridges/bridges-\/cxx/src/\hyperlink{_graph_benchmark_8h}{Graph\+Benchmark.\+h}\end{DoxyCompactItemize}

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['key',['key',['../classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element.html#ac830bbf88d156574fd23a8b1eaa6bc69',1,'bridges.avl_tree_element.AVLTreeElement.key()'],['../classbridges_1_1bst__element_1_1_b_s_t_element.html#ae911a11782ad4623b21781c5eeeb7d39',1,'bridges.bst_element.BSTElement.key(self)'],['../classbridges_1_1bst__element_1_1_b_s_t_element.html#a646b48db2f62727bc86b51ed09069155',1,'bridges.bst_element.BSTElement.key(self, str k)']]],
+  ['key',['key',['../classbridges_1_1avl__tree__element_1_1_a_v_l_tree_element.html#aa98417f116a2fa96bb4fd57a009a8517',1,'bridges.avl_tree_element.AVLTreeElement.key()'],['../classbridges_1_1bst__element_1_1_b_s_t_element.html#ab8fc663b1168808f83ab157e66c793d9',1,'bridges.bst_element.BSTElement.key(self)'],['../classbridges_1_1bst__element_1_1_b_s_t_element.html#a46236bc9db305c61429a56f7ed74df64',1,'bridges.bst_element.BSTElement.key']]],
   ['key_5fa',['key_a',['../classbridges_1_1non__blocking__game_1_1_non_blocking_game.html#a7076d0ff62aeba49a0caf71e213361db',1,'bridges::non_blocking_game::NonBlockingGame']]],
   ['key_5fd',['key_d',['../classbridges_1_1non__blocking__game_1_1_non_blocking_game.html#a0c90fcb365dcdb7ccf49b98b3e63ecc8',1,'bridges::non_blocking_game::NonBlockingGame']]],
   ['key_5fdown',['key_down',['../classbridges_1_1non__blocking__game_1_1_non_blocking_game.html#af9a280c2d221140eddba0e4bcb0afb9b',1,'bridges::non_blocking_game::NonBlockingGame']]],
@@ -13,6 +13,6 @@ var searchData=
   ['key_5fspace',['key_space',['../classbridges_1_1non__blocking__game_1_1_non_blocking_game.html#a1059ffd8d5daa3a0db2e6847f5724883',1,'bridges::non_blocking_game::NonBlockingGame']]],
   ['key_5fup',['key_up',['../classbridges_1_1non__blocking__game_1_1_non_blocking_game.html#a7e853081cefe51511de0c6438aeea871',1,'bridges::non_blocking_game::NonBlockingGame']]],
   ['key_5fw',['key_w',['../classbridges_1_1non__blocking__game_1_1_non_blocking_game.html#abeb435c75a3022c50f472ee2a4207809',1,'bridges::non_blocking_game::NonBlockingGame']]],
-  ['keydown',['keydown',['../classbridges_1_1socket__connection_1_1_socket_connection.html#a95e4c127da0f193bc52417e0a3eceaab',1,'bridges::socket_connection::SocketConnection']]],
-  ['keyup',['keyup',['../classbridges_1_1socket__connection_1_1_socket_connection.html#adb8a6073c93fa6d2c23a14b11a1fe774',1,'bridges::socket_connection::SocketConnection']]]
+  ['keydown',['keydown',['../classbridges_1_1socket__connection_1_1_socket_connection.html#a6acd8ac3ac9d055de1ba086b447fbe7f',1,'bridges::socket_connection::SocketConnection']]],
+  ['keyup',['keyup',['../classbridges_1_1socket__connection_1_1_socket_connection.html#a4ee952f67b32414fba663d5e9c53bf14',1,'bridges::socket_connection::SocketConnection']]]
 ];
