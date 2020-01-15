@@ -5,7 +5,6 @@ var searchData=
   ['magnifying_5fglass',['magnifying_glass',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a949a3ff5a0976c0a074c64adecd0d00c',1,'bridges::named_symbol::NamedSymbol']]],
   ['man',['man',['../classbridges_1_1named__symbol_1_1_named_symbol.html#ac0749e1edbb5bf1132a9ad6c68ba0684',1,'bridges::named_symbol::NamedSymbol']]],
   ['maroon',['maroon',['../classbridges_1_1named__color_1_1_named_color.html#a13fe4a1b9f9afcbf82810fb83a478c0c',1,'bridges::named_color::NamedColor']]],
-  ['max_5fcache_5fsize',['max_cache_size',['../classbridges_1_1data__src__dependent_1_1lru__cache_1_1lru__cache.html#a87a170ed62886de32e1bbf0d9ac05cfd',1,'bridges::data_src_dependent::lru_cache::lru_cache']]],
   ['max_5fsize',['max_size',['../classbridges_1_1sorting__benchmark_1_1_sorting_benchmark.html#af1aa3db22656da5aad6992547146e1c7',1,'bridges::sorting_benchmark::SortingBenchmark']]],
   ['maxgridsize',['maxGridSize',['../classbridges_1_1grid_1_1_grid.html#a5585d466b6738e4eee71a7dda56b4153',1,'bridges::grid::Grid']]],
   ['mediumaquamarine',['mediumaquamarine',['../classbridges_1_1named__color_1_1_named_color.html#a77a4ef04ba8631b371668f11755ce950',1,'bridges::named_color::NamedColor']]],

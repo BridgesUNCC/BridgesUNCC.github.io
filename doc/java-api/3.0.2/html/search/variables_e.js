@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['o',['O',['../enumbridges_1_1base_1_1_named_symbol.html#a2760883e9d424dc10915dd1848cd0d84',1,'bridges.base.NamedSymbol.O()'],['../enumbridges_1_1base_1_1_named_symbol.html#a97963ffa7d079e50569ae457f67b4c02',1,'bridges.base.NamedSymbol.o()']]],
+  ['o',['o',['../enumbridges_1_1base_1_1_named_symbol.html#a97963ffa7d079e50569ae457f67b4c02',1,'bridges.base.NamedSymbol.o()'],['../enumbridges_1_1base_1_1_named_symbol.html#a2760883e9d424dc10915dd1848cd0d84',1,'bridges.base.NamedSymbol.O()']]],
   ['oldlace',['oldlace',['../enumbridges_1_1base_1_1_named_color.html#a7ae0332048eb221e34fc099705f2e285',1,'bridges::base::NamedColor']]],
   ['olive',['olive',['../enumbridges_1_1base_1_1_named_color.html#a86a89ee893b8236c4869fc5602a7dd04',1,'bridges::base::NamedColor']]],
   ['olivedrab',['olivedrab',['../enumbridges_1_1base_1_1_named_color.html#aae9f2514ff88caf0f23f991975dc75e2',1,'bridges::base::NamedColor']]],

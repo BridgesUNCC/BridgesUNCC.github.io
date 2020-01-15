@@ -30,7 +30,6 @@ var searchData=
   ['dimensions',['dimensions',['../classbridges_1_1data__src__dependent_1_1_assignment_data.html#ab4aa179a24395748542f6fb64307132c',1,'bridges::data_src_dependent::AssignmentData']]],
   ['dimgray',['dimgray',['../enumbridges_1_1base_1_1_named_color.html#ac9e88827d2e191fad3ce5cbcd096da45',1,'bridges::base::NamedColor']]],
   ['dimgrey',['dimgrey',['../enumbridges_1_1base_1_1_named_color.html#a6920c8b304105bf147539c1dc68d2541',1,'bridges::base::NamedColor']]],
-  ['distance',['distance',['../classbridges_1_1benchmark_1_1_shortest_path_params.html#a4fd89d26952a6e678436ef7cc46042c0',1,'bridges::benchmark::ShortestPathParams']]],
   ['dodgerblue',['dodgerblue',['../enumbridges_1_1base_1_1_named_color.html#a0be95c59e39316c78ffe13ce5998925d',1,'bridges::base::NamedColor']]],
   ['domain',['domain',['../classbridges_1_1base_1_1_symbol_collection.html#a7624e96d2a4b5b6264791eb8dacbd350',1,'bridges::base::SymbolCollection']]],
   ['donut',['donut',['../enumbridges_1_1base_1_1_named_symbol.html#ae77db709a676ecb5e20b85fee13f9b88',1,'bridges::base::NamedSymbol']]],

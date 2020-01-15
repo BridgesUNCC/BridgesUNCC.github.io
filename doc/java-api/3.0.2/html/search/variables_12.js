@@ -16,7 +16,6 @@ var searchData=
   ['slategrey',['slategrey',['../enumbridges_1_1base_1_1_named_color.html#a43e40e1c3db71ae925eb8bc37c95a762',1,'bridges::base::NamedColor']]],
   ['sloth',['sloth',['../enumbridges_1_1base_1_1_named_symbol.html#ab8ffedf44afbef7c8d5afedb4586096b',1,'bridges::base::NamedSymbol']]],
   ['snow',['snow',['../enumbridges_1_1base_1_1_named_color.html#a92ea18875f5defb08e57cc25e61c1df9',1,'bridges::base::NamedColor']]],
-  ['source',['source',['../classbridges_1_1benchmark_1_1_shortest_path_params.html#af3eb9881b40a82c81dfcc712f615628e',1,'bridges::benchmark::ShortestPathParams']]],
   ['speechbubble',['speechbubble',['../enumbridges_1_1base_1_1_named_symbol.html#acd21e7a7980d7efa3fb1562f55621f07',1,'bridges::base::NamedSymbol']]],
   ['springgreen',['springgreen',['../enumbridges_1_1base_1_1_named_color.html#a7a143a590a72dda8864959e149f5056e',1,'bridges::base::NamedColor']]],
   ['square',['square',['../enumbridges_1_1base_1_1_named_symbol.html#aa58fc8c99f479a1e04f480a90324c8dc',1,'bridges::base::NamedSymbol']]],

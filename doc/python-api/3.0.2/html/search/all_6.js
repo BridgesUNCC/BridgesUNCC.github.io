@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['f',['F',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a825003973fd3592c2564da32df47b7e1',1,'bridges.named_symbol.NamedSymbol.F()'],['../classbridges_1_1named__symbol_1_1_named_symbol.html#a045f706d096ee7de767fc672e441638f',1,'bridges.named_symbol.NamedSymbol.f()']]],
+  ['f',['f',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a045f706d096ee7de767fc672e441638f',1,'bridges.named_symbol.NamedSymbol.f()'],['../classbridges_1_1named__symbol_1_1_named_symbol.html#a825003973fd3592c2564da32df47b7e1',1,'bridges.named_symbol.NamedSymbol.F()']]],
   ['fg',['fg',['../classbridges_1_1game__cell_1_1_game_cell.html#a351a23a7e0c4a8b026ab95bff6c05e35',1,'bridges.game_cell.GameCell.fg(self)'],['../classbridges_1_1game__cell_1_1_game_cell.html#ae49f154ef62b58e70c06b6a1da230acc',1,'bridges.game_cell.GameCell.fg(self, color)']]],
   ['fill_5fcolor',['fill_color',['../classbridges_1_1symbol_1_1_symbol.html#a1a5e9147e426fb7ec74fe60a5cdc9ded',1,'bridges.symbol.Symbol.fill_color(self)'],['../classbridges_1_1symbol_1_1_symbol.html#acec37468f0018db1416622062983eb46',1,'bridges.symbol.Symbol.fill_color(self, args, kwargs)']]],
   ['firebrick',['firebrick',['../classbridges_1_1named__color_1_1_named_color.html#abe33baddc4a23ae0aa188f797e1e15f6',1,'bridges::named_color::NamedColor']]],

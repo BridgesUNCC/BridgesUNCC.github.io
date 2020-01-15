@@ -11,10 +11,8 @@ var searchData=
   ['removelinkvisualizer',['removeLinkVisualizer',['../classbridges_1_1base_1_1_element.html#a144cd54e043a801fab326769a5da01e2',1,'bridges::base::Element']]],
   ['returnstream',['returnStream',['../classbridges_1_1validation_1_1_output_log.html#a4ec6037db31ff9dc0664d341183f296f',1,'bridges::validation::OutputLog']]],
   ['rook',['rook',['../enumbridges_1_1base_1_1_named_symbol.html#a3b1a7b073a97ebea9cf47386d5f2d4e5',1,'bridges::base::NamedSymbol']]],
-  ['root',['root',['../classbridges_1_1benchmark_1_1_b_f_s_params.html#afb0381b52b0a8eddb60f420f119e4c99',1,'bridges::benchmark::BFSParams']]],
   ['rosybrown',['rosybrown',['../enumbridges_1_1base_1_1_named_color.html#a63e32efb60d734b553b96ecf6437511e',1,'bridges::base::NamedColor']]],
   ['rottentomatos',['RottenTomatos',['../classbridges_1_1data__src__dependent_1_1_rotten_tomatos.html',1,'bridges.data_src_dependent.RottenTomatos'],['../classbridges_1_1data__src__dependent_1_1_rotten_tomatos.html#af18285905c6f2b944c5aa2cf7fbaf454',1,'bridges.data_src_dependent.RottenTomatos.RottenTomatos()']]],
   ['rottentomatos_2ejava',['RottenTomatos.java',['../_rotten_tomatos_8java.html',1,'']]],
-  ['royalblue',['royalblue',['../enumbridges_1_1base_1_1_named_color.html#a15f4e401c13cbd5171f3819fc9029245',1,'bridges::base::NamedColor']]],
-  ['run',['run',['../classbridges_1_1benchmark_1_1_b_f_s_benchmark.html#a0f530ad46a8a379b86285e0efcf8d51c',1,'bridges.benchmark.BFSBenchmark.run()'],['../classbridges_1_1benchmark_1_1_page_rank_benchmark.html#a6738599d19f7a856a16615f69050c8b3',1,'bridges.benchmark.PageRankBenchmark.run()'],['../classbridges_1_1benchmark_1_1_shortest_path_benchmark.html#ad7e6918e142cfbdaac08493ccbf02acf',1,'bridges.benchmark.ShortestPathBenchmark.run()'],['../classbridges_1_1benchmark_1_1_sorting_benchmark.html#a1c16655634c06aeaf46026a2ddc8b888',1,'bridges.benchmark.SortingBenchmark.run()']]]
+  ['royalblue',['royalblue',['../enumbridges_1_1base_1_1_named_color.html#a15f4e401c13cbd5171f3819fc9029245',1,'bridges::base::NamedColor']]]
 ];

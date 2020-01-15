@@ -11,9 +11,9 @@ Benchmarks sorting algorithm.
 
 Benchmarks sorting algorithms and add time series to a Line\+Chart.
 
-The benchmark goes from an initial size controlled by \hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_afe0474d148c185ed1e479ff11f42ae51}{set\+Base\+Size()} to a largest size controlled by \hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_abdca289b823c7f240b648e248c07b059}{set\+Max\+Size()}. One can also set a maximum time spent on a particular run using \hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_a59b95f2510d62ac5a31bb33d472fdffc}{set\+Time\+Cap()}.
+The benchmark goes from an initial size controlled by \mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_afe0474d148c185ed1e479ff11f42ae51}{set\+Base\+Size()}} to a largest size controlled by \mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_abdca289b823c7f240b648e248c07b059}{set\+Max\+Size()}}. One can also set a maximum time spent on a particular run using \mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_a59b95f2510d62ac5a31bb33d472fdffc}{set\+Time\+Cap()}}.
 
-The benchmark goes from a array size of n to the next one of geo\+Base $\ast$ n + increment, where the base is controlled by \hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_ade76a5749b07d35b02623cce27c046ab}{set\+Geometric()} and increment is controlled by \hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_ae168533dc5756f3ede3436bdd7840047}{set\+Increment()}. For simpler use one can set a purley linear sampling with \hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_a993de51c8b82ec50eb186afef5dc7003}{linear\+Range()} or a purely geometric one with \hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_a32fa712ee712b633aabfd7bcaa83008a}{geometric\+Range()}.
+The benchmark goes from a array size of n to the next one of geo\+Base $\ast$ n + increment, where the base is controlled by \mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_ade76a5749b07d35b02623cce27c046ab}{set\+Geometric()}} and increment is controlled by \mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_ae168533dc5756f3ede3436bdd7840047}{set\+Increment()}}. For simpler use one can set a purley linear sampling with \mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_a993de51c8b82ec50eb186afef5dc7003}{linear\+Range()}} or a purely geometric one with \mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_a32fa712ee712b633aabfd7bcaa83008a}{geometric\+Range()}}.
 
 The sorting algorithms must have for prototype\+: void ({\itshape sort)(int} array, int arraysize); and can be passed to the run function for being benchmarked. A typical use would look something like
 
@@ -21,7 +21,7 @@ The sorting algorithms must have for prototype\+: void ({\itshape sort)(int} arr
 \begin{DoxyCode}
 \textcolor{keywordtype}{void} mysort(\textcolor{keywordtype}{int}* array, \textcolor{keywordtype}{int} arraysize);
 LineChart lc;
-\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_aed5731a3b5add3a7f4c80891b22b3093}{SortingBenchmark} sb (lc);
+\mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_aed5731a3b5add3a7f4c80891b22b3093}{SortingBenchmark}} sb (lc);
 sb.linearRange (100, 1000, 5);
 sb.run(\textcolor{stringliteral}{"mysortingalgorithm"}, mysort);
 \end{DoxyCode}
@@ -36,23 +36,23 @@ Erik Saule
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_aed5731a3b5add3a7f4c80891b22b3093}{Sorting\+Benchmark} (\hyperlink{classbridges_1_1datastructure_1_1_line_chart}{Line\+Chart} \&p)
+\mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_aed5731a3b5add3a7f4c80891b22b3093}{Sorting\+Benchmark}} (\mbox{\hyperlink{classbridges_1_1datastructure_1_1_line_chart}{Line\+Chart}} \&p)
 \item 
-void \hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_abdca289b823c7f240b648e248c07b059}{set\+Max\+Size} (int size)
+void \mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_abdca289b823c7f240b648e248c07b059}{set\+Max\+Size}} (int size)
 \begin{DoxyCompactList}\small\item\em Puts a cap on the largest array to be used. \end{DoxyCompactList}\item 
-void \hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_afe0474d148c185ed1e479ff11f42ae51}{set\+Base\+Size} (int size)
+void \mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_afe0474d148c185ed1e479ff11f42ae51}{set\+Base\+Size}} (int size)
 \begin{DoxyCompactList}\small\item\em Smallest array to be used. \end{DoxyCompactList}\item 
-void \hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_ae168533dc5756f3ede3436bdd7840047}{set\+Increment} (int inc)
+void \mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_ae168533dc5756f3ede3436bdd7840047}{set\+Increment}} (int inc)
 \begin{DoxyCompactList}\small\item\em Sets the increment for the benchmark size. \end{DoxyCompactList}\item 
-void \hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_ade76a5749b07d35b02623cce27c046ab}{set\+Geometric} (double base)
+void \mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_ade76a5749b07d35b02623cce27c046ab}{set\+Geometric}} (double base)
 \begin{DoxyCompactList}\small\item\em Sets a geometric progression for the benchmark size. \end{DoxyCompactList}\item 
-void \hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_a993de51c8b82ec50eb186afef5dc7003}{linear\+Range} (int base\+Size, int max\+Size, int nb\+Point)
+void \mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_a993de51c8b82ec50eb186afef5dc7003}{linear\+Range}} (int base\+Size, int max\+Size, int nb\+Point)
 \begin{DoxyCompactList}\small\item\em The benchmark will sample a range with a fixed number of points. \end{DoxyCompactList}\item 
-void \hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_a32fa712ee712b633aabfd7bcaa83008a}{geometric\+Range} (int base\+Size, int max\+Size, double base)
+void \mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_a32fa712ee712b633aabfd7bcaa83008a}{geometric\+Range}} (int base\+Size, int max\+Size, double base)
 \begin{DoxyCompactList}\small\item\em The benchmark will sample a range using in geometrically increasing sequence. \end{DoxyCompactList}\item 
-void \hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_a59b95f2510d62ac5a31bb33d472fdffc}{set\+Time\+Cap} (double cap\+\_\+in\+\_\+s)
+void \mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_a59b95f2510d62ac5a31bb33d472fdffc}{set\+Time\+Cap}} (double cap\+\_\+in\+\_\+s)
 \begin{DoxyCompactList}\small\item\em sets an upper bound to the time of a run. \end{DoxyCompactList}\item 
-void \hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_a790e43dd840f6787286133eedec32628}{run} (std\+::string algo\+Name, void($\ast$runnable)(int $\ast$, int))
+void \mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_a790e43dd840f6787286133eedec32628}{run}} (std\+::string algo\+Name, void($\ast$runnable)(int $\ast$, int))
 \begin{DoxyCompactList}\small\item\em benchmark one implementation \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -61,7 +61,7 @@ void \hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_a790e43dd840f678
 \index{bridges\+::benchmark\+::\+Sorting\+Benchmark@{bridges\+::benchmark\+::\+Sorting\+Benchmark}!Sorting\+Benchmark@{Sorting\+Benchmark}}
 \index{Sorting\+Benchmark@{Sorting\+Benchmark}!bridges\+::benchmark\+::\+Sorting\+Benchmark@{bridges\+::benchmark\+::\+Sorting\+Benchmark}}
 \subsubsection{\texorpdfstring{Sorting\+Benchmark()}{SortingBenchmark()}}
-{\footnotesize\ttfamily bridges\+::benchmark\+::\+Sorting\+Benchmark\+::\+Sorting\+Benchmark (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1datastructure_1_1_line_chart}{Line\+Chart} \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily bridges\+::benchmark\+::\+Sorting\+Benchmark\+::\+Sorting\+Benchmark (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1datastructure_1_1_line_chart}{Line\+Chart}} \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -206,4 +206,4 @@ The benchmark will end after a run if it takes more than the given amount of tim
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/erik/work/bridges/bridges-\/cxx/src/\hyperlink{_sorting_benchmark_8h}{Sorting\+Benchmark.\+h}\end{DoxyCompactItemize}
+/\+Users/kalpathi/gr/bridges/client/cxx/src/\mbox{\hyperlink{_sorting_benchmark_8h}{Sorting\+Benchmark.\+h}}\end{DoxyCompactItemize}

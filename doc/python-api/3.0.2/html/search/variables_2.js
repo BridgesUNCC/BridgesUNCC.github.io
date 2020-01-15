@@ -4,9 +4,6 @@ var searchData=
   ['cadetblue',['cadetblue',['../classbridges_1_1named__color_1_1_named_color.html#ae1f7eeec56380825f5af324ee7c24352',1,'bridges::named_color::NamedColor']]],
   ['campfire',['campfire',['../classbridges_1_1named__symbol_1_1_named_symbol.html#ab244958b6c372eb3e019b7acb6ad795c',1,'bridges::named_symbol::NamedSymbol']]],
   ['carrot',['carrot',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a9120328bcafa98d2a72ddf88d770127c',1,'bridges::named_symbol::NamedSymbol']]],
-  ['cartesian_5fcoord',['cartesian_coord',['../classbridges_1_1data__src__dependent_1_1osm_1_1_osm_vertex.html#a5f7c71b790312e337d344a311d5b0fae',1,'bridges::data_src_dependent::osm::OsmVertex']]],
-  ['cartesian_5frange_5fx',['cartesian_range_x',['../classbridges_1_1data__src__dependent_1_1osm_1_1_osm_data.html#a81e77104409461472dcaa68e68eb23da',1,'bridges::data_src_dependent::osm::OsmData']]],
-  ['cartesian_5frange_5fy',['cartesian_range_y',['../classbridges_1_1data__src__dependent_1_1osm_1_1_osm_data.html#a5eb0046aadd6da88ca4cac617b054eb3',1,'bridges::data_src_dependent::osm::OsmData']]],
   ['cat',['cat',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a2714343d7ef605943ddbb1006e0eebd8',1,'bridges::named_symbol::NamedSymbol']]],
   ['chartreuse',['chartreuse',['../classbridges_1_1named__color_1_1_named_color.html#a1c0ea1996bcc7315e1b18d35bb4266bb',1,'bridges::named_color::NamedColor']]],
   ['children',['children',['../classbridges_1_1tree__element_1_1_tree_element.html#a09e0e8ad32395e004b6b2d12c39ce390',1,'bridges::tree_element::TreeElement']]],
@@ -25,10 +22,7 @@ var searchData=
   ['coral',['coral',['../classbridges_1_1named__color_1_1_named_color.html#aeadcb6362da8d6dc7d257371672fe069',1,'bridges::named_color::NamedColor']]],
   ['cornflowerblue',['cornflowerblue',['../classbridges_1_1named__color_1_1_named_color.html#a4a5e66db0e6b54ef13132fc17cd449f5',1,'bridges::named_color::NamedColor']]],
   ['cornsilk',['cornsilk',['../classbridges_1_1named__color_1_1_named_color.html#afc23be46eaf44fe49d82fb411e3770d7',1,'bridges::named_color::NamedColor']]],
-  ['count',['count',['../classbridges_1_1data__src__dependent_1_1cancer__incidence_1_1_cancer_incidence.html#a5a8e63b1815221276c904fa7bd087498',1,'bridges::data_src_dependent::cancer_incidence::CancerIncidence']]],
   ['cowboyhat',['cowboyhat',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a4b63f062760236a12828b20d139506a8',1,'bridges::named_symbol::NamedSymbol']]],
   ['crimson',['crimson',['../classbridges_1_1named__color_1_1_named_color.html#a8853f09a4c7e5d203290bdedaa10315f',1,'bridges::named_color::NamedColor']]],
-  ['cruderate',['crudeRate',['../classbridges_1_1data__src__dependent_1_1cancer__incidence_1_1_cancer_incidence.html#a154e37b47ff489c8b6f41293a168029a',1,'bridges::data_src_dependent::cancer_incidence::CancerIncidence']]],
-  ['cruderateci',['crudeRateci',['../classbridges_1_1data__src__dependent_1_1cancer__incidence_1_1_cancer_incidence.html#a6528dfd0746c78cfa573c061b74816ff',1,'bridges::data_src_dependent::cancer_incidence::CancerIncidence']]],
   ['cyan',['cyan',['../classbridges_1_1named__color_1_1_named_color.html#abe887a1ec524dbec2ffd79ce054ef6bc',1,'bridges::named_color::NamedColor']]]
 ];

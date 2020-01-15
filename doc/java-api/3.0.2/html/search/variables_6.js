@@ -8,7 +8,6 @@ var searchData=
   ['giraffe',['giraffe',['../enumbridges_1_1base_1_1_named_symbol.html#a6a0a81247322cbcb209346c7a3f36b47',1,'bridges::base::NamedSymbol']]],
   ['gold',['gold',['../enumbridges_1_1base_1_1_named_color.html#a9195a89a01e5bbde2d18a18b733f2e08',1,'bridges::base::NamedColor']]],
   ['goldenrod',['goldenrod',['../enumbridges_1_1base_1_1_named_color.html#aa0a94d2e6d4623a213015c4b581fafea',1,'bridges::base::NamedColor']]],
-  ['graph',['graph',['../classbridges_1_1benchmark_1_1_b_f_s_params.html#a02dcb89b57adca32f76baae05d443503',1,'bridges.benchmark.BFSParams.graph()'],['../classbridges_1_1benchmark_1_1_page_rank_params.html#a5356d0005805dc3a9749e6e7a2659c49',1,'bridges.benchmark.PageRankParams.graph()'],['../classbridges_1_1benchmark_1_1_shortest_path_params.html#a75cd38cc65e6e3979668291496f39a69',1,'bridges.benchmark.ShortestPathParams.graph()']]],
   ['gray',['gray',['../enumbridges_1_1base_1_1_named_color.html#ac5a9674778e522abad99f09ca64d269b',1,'bridges::base::NamedColor']]],
   ['green',['green',['../enumbridges_1_1base_1_1_named_color.html#a0bf7d23ae5b707f7c02e1144766cca20',1,'bridges::base::NamedColor']]],
   ['greenyellow',['greenyellow',['../enumbridges_1_1base_1_1_named_color.html#a8c12df0a1f384d1c6dd0920658c4cdda',1,'bridges::base::NamedColor']]],
