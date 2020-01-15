@@ -5,7 +5,7 @@ import sys
 
 def main():
     # create the Bridges object, set credentials
-    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY")
 
     # set title, description
     bridges.set_title("A Visualization Attributes Related Example Using Doubly Linked List")
@@ -34,14 +34,14 @@ def main():
     el0.get_link_visualizer(el1).color = "green"
 
     # color the link from el1 to el0, using rgb color
-    el1.get_link_visualizer(el0).color = [255., 0., 255., 1.];
+    el1.get_link_visualizer(el0).color = [255., 0., 255., 1.]
 
     # adjust link thickness
     el0.get_link_visualizer(el1).thickness = 2.0
     el1.get_link_visualizer(el0).thickness = 4.0
 
     # set link label
-    el1.get_link_visualizer(el0).set_label("Link Label");
+    el1.get_link_visualizer(el0).set_label("Link Label")
 
     # set dat structure to be visualized
     bridges.set_data_structure(el0)

@@ -1,10 +1,10 @@
-\hypertarget{classbridges_1_1benchmark_1_1_shortest_path_benchmark}{}\section{bridges\+::benchmark\+::Shortest\+Path\+Benchmark Class Reference}
-\label{classbridges_1_1benchmark_1_1_shortest_path_benchmark}\index{bridges::benchmark::ShortestPathBenchmark@{bridges::benchmark::ShortestPathBenchmark}}
+\hypertarget{classbridges_1_1benchmark_1_1_shortest_path_benchmark}{}\section{bridges\+:\+:benchmark\+:\+:Shortest\+Path\+Benchmark Class Reference}
+\label{classbridges_1_1benchmark_1_1_shortest_path_benchmark}\index{bridges\+::benchmark\+::\+Shortest\+Path\+Benchmark@{bridges\+::benchmark\+::\+Shortest\+Path\+Benchmark}}
 
 
 {\ttfamily \#include $<$Shortest\+Path\+Benchmark.\+h$>$}
 
-Inheritance diagram for bridges\+::benchmark\+::Shortest\+Path\+Benchmark\+:\begin{figure}[H]
+Inheritance diagram for bridges\+:\+:benchmark\+:\+:Shortest\+Path\+Benchmark\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2.000000cm]{classbridges_1_1benchmark_1_1_shortest_path_benchmark}
@@ -17,7 +17,7 @@ Benchmarks Shortest Path algorithms.
 
 Benchmarks Shortest Path algorithms and add time series to a Line\+Chart.
 
-One can also set a maximum time spent on a particular run using \mbox{\hyperlink{classbridges_1_1benchmark_1_1_graph_benchmark_a56934eb2789e54c088e7b4423c3a7456}{set\+Time\+Cap()}}.
+One can also set a maximum time spent on a particular run using \hyperlink{classbridges_1_1benchmark_1_1_graph_benchmark_a56934eb2789e54c088e7b4423c3a7456}{set\+Time\+Cap()}.
 
 The Shortest Path algorithms must have for prototype\+:
 
@@ -26,10 +26,10 @@ void ($\ast$spalgo)(const Graph\+Adj\+List$<$int, O\+S\+M\+Vertex, double$>$\& g
 and can be passed to the run function for being benchmarked. A typical use would look something like
 
 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{LineChart lc;}
-\DoxyCodeLine{\mbox{\hyperlink{classbridges_1_1benchmark_1_1_shortest_path_benchmark_aa7109739d2ac254c113d820cff747df4}{ShortestPathBenchmark}} sb (lc);}
-\DoxyCodeLine{sb.run(\textcolor{stringliteral}{"mybfsalgorithm"}, spalgo);}
+\begin{DoxyCode}
+LineChart lc;
+\hyperlink{classbridges_1_1benchmark_1_1_shortest_path_benchmark_aa7109739d2ac254c113d820cff747df4}{ShortestPathBenchmark} sb (lc);
+sb.run(\textcolor{stringliteral}{"mybfsalgorithm"}, spalgo);
 \end{DoxyCode}
 
 
@@ -42,28 +42,28 @@ Erik Saule
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classbridges_1_1benchmark_1_1_shortest_path_benchmark_aa7109739d2ac254c113d820cff747df4}{Shortest\+Path\+Benchmark}} (\mbox{\hyperlink{classbridges_1_1datastructure_1_1_line_chart}{Line\+Chart}} \&p)
+\hyperlink{classbridges_1_1benchmark_1_1_shortest_path_benchmark_aa7109739d2ac254c113d820cff747df4}{Shortest\+Path\+Benchmark} (\hyperlink{classbridges_1_1datastructure_1_1_line_chart}{Line\+Chart} \&p)
 \item 
-void \mbox{\hyperlink{classbridges_1_1benchmark_1_1_shortest_path_benchmark_a012285a17bb34b443265a9962ef4d3c2}{run}} (std\+::string algo\+Name, void($\ast$spalgo)(const \mbox{\hyperlink{classbridges_1_1datastructure_1_1_graph_adj_list}{Graph\+Adj\+List}}$<$ int, \mbox{\hyperlink{classbridges_1_1dataset_1_1_o_s_m_vertex}{O\+S\+M\+Vertex}}, double $>$ \&gr, int source, std\+::unordered\+\_\+map$<$ int, double $>$ \&distance, std\+::unordered\+\_\+map$<$ int, int $>$ \&parent))
+void \hyperlink{classbridges_1_1benchmark_1_1_shortest_path_benchmark_a012285a17bb34b443265a9962ef4d3c2}{run} (std\+::string algo\+Name, void($\ast$spalgo)(const \hyperlink{classbridges_1_1datastructure_1_1_graph_adj_list}{Graph\+Adj\+List}$<$ int, \hyperlink{classbridges_1_1dataset_1_1_o_s_m_vertex}{O\+S\+M\+Vertex}, double $>$ \&gr, int source, std\+::unordered\+\_\+map$<$ int, double $>$ \&distance, std\+::unordered\+\_\+map$<$ int, int $>$ \&parent))
 \begin{DoxyCompactList}\small\item\em benchmark one implementation \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classbridges_1_1benchmark_1_1_shortest_path_benchmark_aa7109739d2ac254c113d820cff747df4}\label{classbridges_1_1benchmark_1_1_shortest_path_benchmark_aa7109739d2ac254c113d820cff747df4}} 
-\index{bridges::benchmark::ShortestPathBenchmark@{bridges::benchmark::ShortestPathBenchmark}!ShortestPathBenchmark@{ShortestPathBenchmark}}
-\index{ShortestPathBenchmark@{ShortestPathBenchmark}!bridges::benchmark::ShortestPathBenchmark@{bridges::benchmark::ShortestPathBenchmark}}
-\subsubsection{\texorpdfstring{ShortestPathBenchmark()}{ShortestPathBenchmark()}}
-{\footnotesize\ttfamily bridges\+::benchmark\+::\+Shortest\+Path\+Benchmark\+::\+Shortest\+Path\+Benchmark (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1datastructure_1_1_line_chart}{Line\+Chart}} \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\index{bridges\+::benchmark\+::\+Shortest\+Path\+Benchmark@{bridges\+::benchmark\+::\+Shortest\+Path\+Benchmark}!Shortest\+Path\+Benchmark@{Shortest\+Path\+Benchmark}}
+\index{Shortest\+Path\+Benchmark@{Shortest\+Path\+Benchmark}!bridges\+::benchmark\+::\+Shortest\+Path\+Benchmark@{bridges\+::benchmark\+::\+Shortest\+Path\+Benchmark}}
+\subsubsection{\texorpdfstring{Shortest\+Path\+Benchmark()}{ShortestPathBenchmark()}}
+{\footnotesize\ttfamily bridges\+::benchmark\+::\+Shortest\+Path\+Benchmark\+::\+Shortest\+Path\+Benchmark (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1datastructure_1_1_line_chart}{Line\+Chart} \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{classbridges_1_1benchmark_1_1_shortest_path_benchmark_a012285a17bb34b443265a9962ef4d3c2}\label{classbridges_1_1benchmark_1_1_shortest_path_benchmark_a012285a17bb34b443265a9962ef4d3c2}} 
-\index{bridges::benchmark::ShortestPathBenchmark@{bridges::benchmark::ShortestPathBenchmark}!run@{run}}
-\index{run@{run}!bridges::benchmark::ShortestPathBenchmark@{bridges::benchmark::ShortestPathBenchmark}}
+\index{bridges\+::benchmark\+::\+Shortest\+Path\+Benchmark@{bridges\+::benchmark\+::\+Shortest\+Path\+Benchmark}!run@{run}}
+\index{run@{run}!bridges\+::benchmark\+::\+Shortest\+Path\+Benchmark@{bridges\+::benchmark\+::\+Shortest\+Path\+Benchmark}}
 \subsubsection{\texorpdfstring{run()}{run()}}
-{\footnotesize\ttfamily void bridges\+::benchmark\+::\+Shortest\+Path\+Benchmark\+::run (\begin{DoxyParamCaption}\item[{std\+::string}]{algo\+Name,  }\item[{void($\ast$)(const \mbox{\hyperlink{classbridges_1_1datastructure_1_1_graph_adj_list}{Graph\+Adj\+List}}$<$ int, \mbox{\hyperlink{classbridges_1_1dataset_1_1_o_s_m_vertex}{O\+S\+M\+Vertex}}, double $>$ \&gr, int source, std\+::unordered\+\_\+map$<$ int, double $>$ \&distance, std\+::unordered\+\_\+map$<$ int, int $>$ \&parent)}]{spalgo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void bridges\+::benchmark\+::\+Shortest\+Path\+Benchmark\+::run (\begin{DoxyParamCaption}\item[{std\+::string}]{algo\+Name,  }\item[{void($\ast$)(const \hyperlink{classbridges_1_1datastructure_1_1_graph_adj_list}{Graph\+Adj\+List}$<$ int, \hyperlink{classbridges_1_1dataset_1_1_o_s_m_vertex}{O\+S\+M\+Vertex}, double $>$ \&gr, int source, std\+::unordered\+\_\+map$<$ int, double $>$ \&distance, std\+::unordered\+\_\+map$<$ int, int $>$ \&parent)}]{spalgo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -80,4 +80,4 @@ benchmark one implementation
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/\+Users/kalpathi/gr/bridges/cxx/src/\mbox{\hyperlink{_shortest_path_benchmark_8h}{Shortest\+Path\+Benchmark.\+h}}\end{DoxyCompactItemize}
+/home/erik/work/bridges/bridges-\/cxx/src/\hyperlink{_shortest_path_benchmark_8h}{Shortest\+Path\+Benchmark.\+h}\end{DoxyCompactItemize}

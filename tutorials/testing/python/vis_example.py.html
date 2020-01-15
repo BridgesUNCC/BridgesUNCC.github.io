@@ -6,7 +6,7 @@
 
 <span class="Statement">def</span> <span class="Identifier">main</span>():
     <span class="Comment"># create the Bridges object, set credentials</span>
-    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>);
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
 
     <span class="Comment"># set title, description</span>
     bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">A Visualization Attributes Related Example Using Doubly Linked List</span><span class="Constant">&quot;</span>)
@@ -35,14 +35,14 @@
     el0.get_link_visualizer(el1).color = <span class="Constant">&quot;</span><span class="Constant">green</span><span class="Constant">&quot;</span>
 
     <span class="Comment"># color the link from el1 to el0, using rgb color</span>
-    el1.get_link_visualizer(el0).color = [<span class="Constant">255.</span>, <span class="Constant">0.</span>, <span class="Constant">255.</span>, <span class="Constant">1.</span>];
+    el1.get_link_visualizer(el0).color = [<span class="Constant">255.</span>, <span class="Constant">0.</span>, <span class="Constant">255.</span>, <span class="Constant">1.</span>]
 
     <span class="Comment"># adjust link thickness</span>
     el0.get_link_visualizer(el1).thickness = <span class="Constant">2.0</span>
     el1.get_link_visualizer(el0).thickness = <span class="Constant">4.0</span>
 
     <span class="Comment"># set link label</span>
-    el1.get_link_visualizer(el0).set_label(<span class="Constant">&quot;</span><span class="Constant">Link Label</span><span class="Constant">&quot;</span>);
+    el1.get_link_visualizer(el0).set_label(<span class="Constant">&quot;</span><span class="Constant">Link Label</span><span class="Constant">&quot;</span>)
 
     <span class="Comment"># set dat structure to be visualized</span>
     bridges.set_data_structure(el0)

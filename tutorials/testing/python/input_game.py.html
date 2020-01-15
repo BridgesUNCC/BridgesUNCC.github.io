@@ -16,20 +16,21 @@
 	<span class="Statement">def</span>	<span class="Identifier">game_loop</span>(self):
 		<span class="Comment"># this gets executed every frame</span>
 		<span class="Statement">if</span> self.key_up():
-			self.draw_symbol(<span class="Constant">1</span>, <span class="Constant">1</span>, NamedSymbol.H, NamedColor.blue);
-			self.draw_symbol(<span class="Constant">1</span>, <span class="Constant">2</span>, NamedSymbol.E, NamedColor.yellow);
-			self.draw_symbol(<span class="Constant">1</span>, <span class="Constant">3</span>, NamedSymbol.L, NamedColor.black);
-			self.draw_symbol(<span class="Constant">1</span>, <span class="Constant">4</span>, NamedSymbol.L, NamedColor.green);
-			self.draw_symbol(<span class="Constant">1</span>, <span class="Constant">5</span>, NamedSymbol.O, NamedColor.red);
+			self.draw_symbol(<span class="Constant">1</span>, <span class="Constant">1</span>, NamedSymbol.H, NamedColor.blue)
+			self.draw_symbol(<span class="Constant">1</span>, <span class="Constant">2</span>, NamedSymbol.E, NamedColor.yellow)
+			self.draw_symbol(<span class="Constant">1</span>, <span class="Constant">3</span>, NamedSymbol.L, NamedColor.black)
+			self.draw_symbol(<span class="Constant">1</span>, <span class="Constant">4</span>, NamedSymbol.L, NamedColor.green)
+			self.draw_symbol(<span class="Constant">1</span>, <span class="Constant">5</span>, NamedSymbol.O, NamedColor.red)
 		<span class="Statement">else</span>:
-			self.draw_symbol(<span class="Constant">1</span>, <span class="Constant">1</span>, NamedSymbol.none, NamedColor.blue);
-			self.draw_symbol(<span class="Constant">1</span>, <span class="Constant">2</span>, NamedSymbol.none, NamedColor.yellow);
-			self.draw_symbol(<span class="Constant">1</span>, <span class="Constant">3</span>, NamedSymbol.none, NamedColor.black);
-			self.draw_symbol(<span class="Constant">1</span>, <span class="Constant">4</span>, NamedSymbol.none, NamedColor.green);
-			self.draw_symbol(<span class="Constant">1</span>, <span class="Constant">5</span>, NamedSymbol.none, NamedColor.red);
+			self.draw_symbol(<span class="Constant">1</span>, <span class="Constant">1</span>, NamedSymbol.none, NamedColor.blue)
+			self.draw_symbol(<span class="Constant">1</span>, <span class="Constant">2</span>, NamedSymbol.none, NamedColor.yellow)
+			self.draw_symbol(<span class="Constant">1</span>, <span class="Constant">3</span>, NamedSymbol.none, NamedColor.black)
+			self.draw_symbol(<span class="Constant">1</span>, <span class="Constant">4</span>, NamedSymbol.none, NamedColor.green)
+			self.draw_symbol(<span class="Constant">1</span>, <span class="Constant">5</span>, NamedSymbol.none, NamedColor.red)
 
 <span class="Statement">def</span>	<span class="Identifier">main</span>():
-	game = InputGame(<span class="Constant">1</span>, <span class="Constant">&quot;</span><span class="Constant">BRIDGES_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">BRIDGES_API_KEY</span><span class="Constant">&quot;</span>);
+<span class="Comment">#	game = InputGame(1, &quot;BRIDGES_USER_ID&quot;, &quot;BRIDGES_API_KEY&quot;)</span>
+	game = InputGame(<span class="Constant">1</span>, <span class="Constant">&quot;</span><span class="Constant">kalpathi60</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">486749122386</span><span class="Constant">&quot;</span>)
 	<span class="Comment"># start the game</span>
 	game.start()
 

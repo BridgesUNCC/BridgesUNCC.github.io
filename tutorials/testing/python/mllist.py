@@ -4,11 +4,11 @@ import sys
 
 def main():
     # create the Bridges object, set credentials
-    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY")
 
     # title, description
     bridges.set_title("A Multilist Example")
-    bridges.set_description("The large red node is the  beginning of list. Smaller red nodes spawn sublists, {2,5,{6, 10, 11},7}, {6, 10, 11} and {3,4}. Sublist origins are large green squares");
+    bridges.set_description("The large red node is the  beginning of list. Smaller red nodes spawn sublists, {2,5,{6, 10, 11},7}, {6, 10, 11} and {3,4}. Sublist origins are large green squares")
 
     # create  list nodes
     el0 = MLelement(e="0", label="0")

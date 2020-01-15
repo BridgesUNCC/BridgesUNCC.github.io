@@ -6,7 +6,7 @@ import sys
 # create the Bridges object, set credentials
 def main():
 
-    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY")
 
     # title, description 
     bridges.set_title("A Kd Tree Example")

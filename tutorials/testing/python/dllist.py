@@ -5,11 +5,11 @@ import sys
 
 def main():
     # create the Bridges object, set credentials
-    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY")
 
     # set title, description
     bridges.set_title("A doubly Linked List Example")
-    bridges.set_description("This list has five nodes all linked to the nodes before and after them and illustrates visual attributes. ");
+    bridges.set_description("This list has five nodes all linked to the nodes before and after them and illustrates visual attributes. ")
 
 	# create list elements
     el0 = DLelement(e="Gretel Chaney", label="Gretel Chaney")

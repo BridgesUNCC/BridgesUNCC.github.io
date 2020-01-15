@@ -14,6 +14,5 @@ var searchData=
   ['rosybrown',['rosybrown',['../enumbridges_1_1base_1_1_named_color.html#a63e32efb60d734b553b96ecf6437511e',1,'bridges::base::NamedColor']]],
   ['rottentomatos',['RottenTomatos',['../classbridges_1_1data__src__dependent_1_1_rotten_tomatos.html',1,'bridges.data_src_dependent.RottenTomatos'],['../classbridges_1_1data__src__dependent_1_1_rotten_tomatos.html#af18285905c6f2b944c5aa2cf7fbaf454',1,'bridges.data_src_dependent.RottenTomatos.RottenTomatos()']]],
   ['rottentomatos_2ejava',['RottenTomatos.java',['../_rotten_tomatos_8java.html',1,'']]],
-  ['royalblue',['royalblue',['../enumbridges_1_1base_1_1_named_color.html#a15f4e401c13cbd5171f3819fc9029245',1,'bridges::base::NamedColor']]],
-  ['run',['run',['../classbridges_1_1base_1_1_sorting_benchmark.html#a7dd663d99121f219966dc3518d89dab9',1,'bridges::base::SortingBenchmark']]]
+  ['royalblue',['royalblue',['../enumbridges_1_1base_1_1_named_color.html#a15f4e401c13cbd5171f3819fc9029245',1,'bridges::base::NamedColor']]]
 ];

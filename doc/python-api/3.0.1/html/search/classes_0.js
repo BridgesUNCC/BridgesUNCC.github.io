@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['actormovieimdb',['ActorMovieIMDB',['../classbridges_1_1data__src__dependent_1_1actor__movie__imdb_1_1_actor_movie_i_m_d_b.html',1,'bridges::data_src_dependent::actor_movie_imdb']]],
   ['array',['Array',['../classbridges_1_1array_1_1_array.html',1,'bridges::array']]],
   ['array1d',['Array1D',['../classbridges_1_1array1d_1_1_array1_d.html',1,'bridges::array1d']]],
   ['array2d',['Array2D',['../classbridges_1_1array2d_1_1_array2_d.html',1,'bridges::array2d']]],

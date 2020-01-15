@@ -2,6 +2,7 @@ var searchData=
 [
   ['actor',['Actor',['../classbridges_1_1data__src__dependent_1_1_actor.html',1,'bridges::data_src_dependent']]],
   ['actormovieimdb',['ActorMovieIMDB',['../classbridges_1_1data__src__dependent_1_1_actor_movie_i_m_d_b.html',1,'bridges::data_src_dependent']]],
+  ['actormoviewikidata',['ActorMovieWikidata',['../classbridges_1_1data__src__dependent_1_1_actor_movie_wikidata.html',1,'bridges::data_src_dependent']]],
   ['array',['Array',['../classbridges_1_1base_1_1_array.html',1,'bridges::base']]],
   ['array1d',['Array1D',['../classbridges_1_1base_1_1_array1_d.html',1,'bridges::base']]],
   ['array2d',['Array2D',['../classbridges_1_1base_1_1_array2_d.html',1,'bridges::base']]],

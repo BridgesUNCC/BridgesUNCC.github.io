@@ -1,5 +1,5 @@
 \hypertarget{classbridges_1_1bridges_1_1_bridges}{}\section{bridges.\+bridges.\+Bridges Class Reference}
-\label{classbridges_1_1bridges_1_1_bridges}\index{bridges.bridges.Bridges@{bridges.bridges.Bridges}}
+\label{classbridges_1_1bridges_1_1_bridges}\index{bridges.\+bridges.\+Bridges@{bridges.\+bridges.\+Bridges}}
 
 
 \subsection{Detailed Description}
@@ -8,11 +8,11 @@ The bridges class is the main class that provides interfaces to datasets, mainta
 The bridges class is responsible for initializing the bridges system, specifying parameters (user id, assignment id, title, description, data structure type, etc) for the student assignment, generating the data structure representation and transmission to the bridges server. In addition, it provides interfaces to a number of real-\/world datasets, that makes it easy to access the data for use algorithms/data structure assignments. ~\newline
 
 
-{\bfseries{Datasets.}} The datasets that are currently supported through the B\+R\+I\+D\+G\+ES A\+PI include U\+S\+GS Earthquake Data, I\+M\+DB Actor/\+Movie Data (2 versions), Gutenberg Book Collection Meta Data, a Video Game Dataset and Shakespeare Dataset. More information is found in the respective methods (below) and at 
+{\bfseries Datasets.} The datasets that are currently supported through the B\+R\+I\+D\+G\+ES A\+PI include U\+S\+GS Earthquake Data, I\+M\+DB Actor/\+Movie Data (2 versions), Gutenberg Book Collection Meta Data, a Video Game Dataset and Shakespeare Dataset. More information is found in the respective methods (below) and at 
 
-\href{http://bridgesuncc.github.io/datasets.html}{\texttt{ http\+://bridgesuncc.\+github.\+io/datasets.\+html}} 
+\href{http://bridgesuncc.github.io/datasets.html}{\tt http\+://bridgesuncc.\+github.\+io/datasets.\+html} 
 
-A typical bridges program includes creating the bridges object, followed by creation of the data structure by the user, assigning visual attributes to elements of the data structure, followed by specification of teh data structure type and the call to visualize the data structure (bridges\+::set\+Data\+Structure() and \mbox{\hyperlink{classbridges_1_1bridges_1_1_bridges_a822a7338e4dce27f7d8d0d322bdace08}{visualize()}} methods).
+A typical bridges program includes creating the bridges object, followed by creation of the data structure by the user, assigning visual attributes to elements of the data structure, followed by specification of teh data structure type and the call to visualize the data structure (bridges\+::set\+Data\+Structure() and \hyperlink{classbridges_1_1bridges_1_1_bridges_a3c1321f8be7b249639a47eba10b67c70}{visualize()} methods).
 
 \begin{DoxyAuthor}{Author}
 Sean Gallagher, Kalpathi Subramanaian, Mihai Mehedint, David Burlinson, Matthew Mcquaigue 
@@ -20,63 +20,59 @@ Sean Gallagher, Kalpathi Subramanaian, Mihai Mehedint, David Burlinson, Matthew 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{[}float\mbox{]} \mbox{\hyperlink{classbridges_1_1bridges_1_1_bridges_abe7d2ce9cd70820a94914b8b2964b215}{window}} (self)
+def \hyperlink{classbridges_1_1bridges_1_1_bridges_a1340374df9e4aa1490d9cd9be2b0e918}{window} (self)
 \item 
-None \mbox{\hyperlink{classbridges_1_1bridges_1_1_bridges_a0bec2e26f9b318f4eb89ed7281565771}{window}} (self, \mbox{[}float\mbox{]} value)
+def \hyperlink{classbridges_1_1bridges_1_1_bridges_ab434ee3f7b3b8c9eb4f8a07d97789a82}{window}
 \item 
-def \mbox{\hyperlink{classbridges_1_1bridges_1_1_bridges_af174072883f6f269a9fe7cc02e12c276}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, assignment, username, appl\+\_\+id)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classbridges_1_1bridges_1_1_bridges}{Bridges}} constructor. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classbridges_1_1bridges_1_1_bridges_a868f02fa66c87c1a1fc7bd6fbc799291}{set\+\_\+data\+\_\+structure}} (self, ds)
+def \hyperlink{classbridges_1_1bridges_1_1_bridges_af174072883f6f269a9fe7cc02e12c276}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, assignment, username, appl\+\_\+id)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classbridges_1_1bridges_1_1_bridges}{Bridges} constructor. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1bridges_1_1_bridges_a868f02fa66c87c1a1fc7bd6fbc799291}{set\+\_\+data\+\_\+structure} (self, ds)
 \item 
-def \mbox{\hyperlink{classbridges_1_1bridges_1_1_bridges_ab50d018b5178ca33de24157b7b6de285}{set\+\_\+visualize\+\_\+\+J\+S\+ON}} (self, flag)
+def \hyperlink{classbridges_1_1bridges_1_1_bridges_ab50d018b5178ca33de24157b7b6de285}{set\+\_\+visualize\+\_\+\+J\+S\+ON} (self, flag)
 \item 
-None \mbox{\hyperlink{classbridges_1_1bridges_1_1_bridges_a822a7338e4dce27f7d8d0d322bdace08}{visualize}} (self)
+def \hyperlink{classbridges_1_1bridges_1_1_bridges_a3c1321f8be7b249639a47eba10b67c70}{visualize} (self)
 \item 
-str \mbox{\hyperlink{classbridges_1_1bridges_1_1_bridges_ae74fd60689c1cb3088c80e6097d14e73}{get\+\_\+assignment}} (self)
+def \hyperlink{classbridges_1_1bridges_1_1_bridges_a1e7bd56f6a3beb03c91fc989cf3f7eb8}{get\+\_\+assignment} (self)
 \begin{DoxyCompactList}\small\item\em Getter for the assignment id. \end{DoxyCompactList}\item 
-None \mbox{\hyperlink{classbridges_1_1bridges_1_1_bridges_a46ecfa60298f97bd7605f1e224cfab10}{set\+\_\+title}} (self, title)
+def \hyperlink{classbridges_1_1bridges_1_1_bridges_a3b0c629c1ae0beaac05fa9d90846c423}{set\+\_\+title} (self, title)
 \begin{DoxyCompactList}\small\item\em Setter for the title of the bridges visualization. \end{DoxyCompactList}\item 
-None \mbox{\hyperlink{classbridges_1_1bridges_1_1_bridges_ac61a47f230c8f96f85d810498fad8b97}{set\+\_\+description}} (self, description)
+def \hyperlink{classbridges_1_1bridges_1_1_bridges_aba86088c031b505bbe88dbc530bf1331}{set\+\_\+description} (self, description)
 \begin{DoxyCompactList}\small\item\em Setter for the description of the bridges visualization. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classbridges_1_1bridges_1_1_bridges_ae9ed34b5878d9d120949da0b7e4d2911}{set\+\_\+map\+\_\+overlay}} (self, flag)
+def \hyperlink{classbridges_1_1bridges_1_1_bridges_ae9ed34b5878d9d120949da0b7e4d2911}{set\+\_\+map\+\_\+overlay} (self, flag)
 \begin{DoxyCompactList}\small\item\em Setter for if the visualization will have a map overlay. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classbridges_1_1bridges_1_1_bridges_a6bc905490b1995234f88f47af9aa8a17}{set\+\_\+coord\+\_\+system\+\_\+type}} (self, coord)
+def \hyperlink{classbridges_1_1bridges_1_1_bridges_a6bc905490b1995234f88f47af9aa8a17}{set\+\_\+coord\+\_\+system\+\_\+type} (self, coord)
 \begin{DoxyCompactList}\small\item\em Setter for the coordinate system type to use in the visualization. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classbridges_1_1color__grid_1_1_color_grid}{Color\+Grid}} \mbox{\hyperlink{classbridges_1_1bridges_1_1_bridges_a0f809dc3197c139c4e3d178c89b2fa46}{get\+\_\+color\+\_\+grid\+\_\+from\+\_\+assignment}} (self, str user, int assignment, int subassignment=0)
+def \hyperlink{classbridges_1_1bridges_1_1_bridges_a11c2be346fba56589955894c5f84747d}{get\+\_\+color\+\_\+grid\+\_\+from\+\_\+assignment}
 \begin{DoxyCompactList}\small\item\em Reconstruct a Color\+Grid from an existing Color\+Grid on the bridges server. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classbridges_1_1bridges_1_1_bridges_abf6fdb19db336c2ed14987fdd89d65fe}{get\+\_\+username}} (self)
+def \hyperlink{classbridges_1_1bridges_1_1_bridges_abf6fdb19db336c2ed14987fdd89d65fe}{get\+\_\+username} (self)
 \begin{DoxyCompactList}\small\item\em Getter for the assignment user name (B\+R\+I\+D\+G\+ES credentials) \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classbridges_1_1bridges_1_1_bridges_a94f39f11368031ad33800aac0bac2f7d}{get\+\_\+assignment\+\_\+id}} (self)
+def \hyperlink{classbridges_1_1bridges_1_1_bridges_a94f39f11368031ad33800aac0bac2f7d}{get\+\_\+assignment\+\_\+id} (self)
 \begin{DoxyCompactList}\small\item\em Getter for the assignment number. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classbridges_1_1bridges_1_1_bridges_afcdb0291c535b41fb7be31eaf5bf3677}{get\+\_\+key}} (self)
+def \hyperlink{classbridges_1_1bridges_1_1_bridges_afcdb0291c535b41fb7be31eaf5bf3677}{get\+\_\+key} (self)
 \begin{DoxyCompactList}\small\item\em Getter for the A\+PI key (B\+R\+I\+D\+G\+ES credentials) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classbridges_1_1bridges_1_1_bridges_a1c02ee44e7a4a3ee2f7d9c7d7da7d09f}{connector}}
+\hyperlink{classbridges_1_1bridges_1_1_bridges_a1c02ee44e7a4a3ee2f7d9c7d7da7d09f}{connector}
 \item 
-\mbox{\hyperlink{classbridges_1_1bridges_1_1_bridges_a7a6f25612be64d4f3e203d7d37cb4da4}{ds\+\_\+handle}}
+\hyperlink{classbridges_1_1bridges_1_1_bridges_a7a6f25612be64d4f3e203d7d37cb4da4}{ds\+\_\+handle}
 \item 
-\mbox{\hyperlink{classbridges_1_1bridges_1_1_bridges_a5ca152bf3830e2be1f72247463916f82}{vis\+\_\+type}}
+\hyperlink{classbridges_1_1bridges_1_1_bridges_a5ca152bf3830e2be1f72247463916f82}{vis\+\_\+type}
 \end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classbridges_1_1bridges_1_1_bridges_af174072883f6f269a9fe7cc02e12c276}\label{classbridges_1_1bridges_1_1_bridges_af174072883f6f269a9fe7cc02e12c276}} 
-\index{bridges.bridges.Bridges@{bridges.bridges.Bridges}!\_\_init\_\_@{\_\_init\_\_}}
-\index{\_\_init\_\_@{\_\_init\_\_}!bridges.bridges.Bridges@{bridges.bridges.Bridges}}
-\subsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+\index{bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
 {\footnotesize\ttfamily def bridges.\+bridges.\+Bridges.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{assignment,  }\item[{}]{username,  }\item[{}]{appl\+\_\+id }\end{DoxyParamCaption})}
 
 
 
-\mbox{\hyperlink{classbridges_1_1bridges_1_1_bridges}{Bridges}} constructor. 
+\hyperlink{classbridges_1_1bridges_1_1_bridges}{Bridges} constructor. 
 
-\begin{DoxyVerb}       (int) assignment: the number your bridges assignment will have
-       (str) username: your bridges username
-       (str) appl_id: your appl authentication key from bridges acc
-\end{DoxyVerb}
- \begin{DoxyReturn}{Returns}
+(int) assignment\+: the number your bridges assignment will have (str) username\+: your bridges username (str) appl\+\_\+id\+: your appl authentication key from bridges acc \begin{DoxyReturn}{Returns}
 
 
 None 
@@ -84,11 +80,11 @@ None
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classbridges_1_1bridges_1_1_bridges_ae74fd60689c1cb3088c80e6097d14e73}\label{classbridges_1_1bridges_1_1_bridges_ae74fd60689c1cb3088c80e6097d14e73}} 
-\index{bridges.bridges.Bridges@{bridges.bridges.Bridges}!get\_assignment@{get\_assignment}}
-\index{get\_assignment@{get\_assignment}!bridges.bridges.Bridges@{bridges.bridges.Bridges}}
-\subsubsection{\texorpdfstring{get\_assignment()}{get\_assignment()}}
-{\footnotesize\ttfamily  str bridges.\+bridges.\+Bridges.\+get\+\_\+assignment (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classbridges_1_1bridges_1_1_bridges_a1e7bd56f6a3beb03c91fc989cf3f7eb8}\label{classbridges_1_1bridges_1_1_bridges_a1e7bd56f6a3beb03c91fc989cf3f7eb8}} 
+\index{bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}!get\+\_\+assignment@{get\+\_\+assignment}}
+\index{get\+\_\+assignment@{get\+\_\+assignment}!bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}}
+\subsubsection{\texorpdfstring{get\+\_\+assignment()}{get\_assignment()}}
+{\footnotesize\ttfamily def bridges.\+bridges.\+Bridges.\+get\+\_\+assignment (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{str }\end{DoxyParamCaption})}
 
 
 
@@ -100,9 +96,9 @@ Getter for the assignment id.
 str representing the full assignment id including subassignment aspect 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1bridges_1_1_bridges_a94f39f11368031ad33800aac0bac2f7d}\label{classbridges_1_1bridges_1_1_bridges_a94f39f11368031ad33800aac0bac2f7d}} 
-\index{bridges.bridges.Bridges@{bridges.bridges.Bridges}!get\_assignment\_id@{get\_assignment\_id}}
-\index{get\_assignment\_id@{get\_assignment\_id}!bridges.bridges.Bridges@{bridges.bridges.Bridges}}
-\subsubsection{\texorpdfstring{get\_assignment\_id()}{get\_assignment\_id()}}
+\index{bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}!get\+\_\+assignment\+\_\+id@{get\+\_\+assignment\+\_\+id}}
+\index{get\+\_\+assignment\+\_\+id@{get\+\_\+assignment\+\_\+id}!bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}}
+\subsubsection{\texorpdfstring{get\+\_\+assignment\+\_\+id()}{get\_assignment\_id()}}
 {\footnotesize\ttfamily def bridges.\+bridges.\+Bridges.\+get\+\_\+assignment\+\_\+id (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
 
@@ -114,11 +110,11 @@ Getter for the assignment number.
 
 int assignment number 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classbridges_1_1bridges_1_1_bridges_a0f809dc3197c139c4e3d178c89b2fa46}\label{classbridges_1_1bridges_1_1_bridges_a0f809dc3197c139c4e3d178c89b2fa46}} 
-\index{bridges.bridges.Bridges@{bridges.bridges.Bridges}!get\_color\_grid\_from\_assignment@{get\_color\_grid\_from\_assignment}}
-\index{get\_color\_grid\_from\_assignment@{get\_color\_grid\_from\_assignment}!bridges.bridges.Bridges@{bridges.bridges.Bridges}}
-\subsubsection{\texorpdfstring{get\_color\_grid\_from\_assignment()}{get\_color\_grid\_from\_assignment()}}
-{\footnotesize\ttfamily  \mbox{\hyperlink{classbridges_1_1color__grid_1_1_color_grid}{Color\+Grid}} bridges.\+bridges.\+Bridges.\+get\+\_\+color\+\_\+grid\+\_\+from\+\_\+assignment (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{user,  }\item[{int}]{assignment,  }\item[{int }]{subassignment = {\ttfamily 0} }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classbridges_1_1bridges_1_1_bridges_a11c2be346fba56589955894c5f84747d}\label{classbridges_1_1bridges_1_1_bridges_a11c2be346fba56589955894c5f84747d}} 
+\index{bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}!get\+\_\+color\+\_\+grid\+\_\+from\+\_\+assignment@{get\+\_\+color\+\_\+grid\+\_\+from\+\_\+assignment}}
+\index{get\+\_\+color\+\_\+grid\+\_\+from\+\_\+assignment@{get\+\_\+color\+\_\+grid\+\_\+from\+\_\+assignment}!bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}}
+\subsubsection{\texorpdfstring{get\+\_\+color\+\_\+grid\+\_\+from\+\_\+assignment()}{get\_color\_grid\_from\_assignment()}}
+{\footnotesize\ttfamily def bridges.\+bridges.\+Bridges.\+get\+\_\+color\+\_\+grid\+\_\+from\+\_\+assignment (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{user }\end{DoxyParamCaption})}
 
 
 
@@ -139,9 +135,9 @@ Reconstruct a Color\+Grid from an existing Color\+Grid on the bridges server.
 Color\+Grid the Color\+Grid stored in the bridges server 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1bridges_1_1_bridges_afcdb0291c535b41fb7be31eaf5bf3677}\label{classbridges_1_1bridges_1_1_bridges_afcdb0291c535b41fb7be31eaf5bf3677}} 
-\index{bridges.bridges.Bridges@{bridges.bridges.Bridges}!get\_key@{get\_key}}
-\index{get\_key@{get\_key}!bridges.bridges.Bridges@{bridges.bridges.Bridges}}
-\subsubsection{\texorpdfstring{get\_key()}{get\_key()}}
+\index{bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}!get\+\_\+key@{get\+\_\+key}}
+\index{get\+\_\+key@{get\+\_\+key}!bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}}
+\subsubsection{\texorpdfstring{get\+\_\+key()}{get\_key()}}
 {\footnotesize\ttfamily def bridges.\+bridges.\+Bridges.\+get\+\_\+key (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
 
@@ -154,9 +150,9 @@ Getter for the A\+PI key (B\+R\+I\+D\+G\+ES credentials)
 str user\textquotesingle{}s A\+PI key 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1bridges_1_1_bridges_abf6fdb19db336c2ed14987fdd89d65fe}\label{classbridges_1_1bridges_1_1_bridges_abf6fdb19db336c2ed14987fdd89d65fe}} 
-\index{bridges.bridges.Bridges@{bridges.bridges.Bridges}!get\_username@{get\_username}}
-\index{get\_username@{get\_username}!bridges.bridges.Bridges@{bridges.bridges.Bridges}}
-\subsubsection{\texorpdfstring{get\_username()}{get\_username()}}
+\index{bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}!get\+\_\+username@{get\+\_\+username}}
+\index{get\+\_\+username@{get\+\_\+username}!bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}}
+\subsubsection{\texorpdfstring{get\+\_\+username()}{get\_username()}}
 {\footnotesize\ttfamily def bridges.\+bridges.\+Bridges.\+get\+\_\+username (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
 
@@ -169,9 +165,9 @@ Getter for the assignment user name (B\+R\+I\+D\+G\+ES credentials)
 str user name 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1bridges_1_1_bridges_a6bc905490b1995234f88f47af9aa8a17}\label{classbridges_1_1bridges_1_1_bridges_a6bc905490b1995234f88f47af9aa8a17}} 
-\index{bridges.bridges.Bridges@{bridges.bridges.Bridges}!set\_coord\_system\_type@{set\_coord\_system\_type}}
-\index{set\_coord\_system\_type@{set\_coord\_system\_type}!bridges.bridges.Bridges@{bridges.bridges.Bridges}}
-\subsubsection{\texorpdfstring{set\_coord\_system\_type()}{set\_coord\_system\_type()}}
+\index{bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}!set\+\_\+coord\+\_\+system\+\_\+type@{set\+\_\+coord\+\_\+system\+\_\+type}}
+\index{set\+\_\+coord\+\_\+system\+\_\+type@{set\+\_\+coord\+\_\+system\+\_\+type}!bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}}
+\subsubsection{\texorpdfstring{set\+\_\+coord\+\_\+system\+\_\+type()}{set\_coord\_system\_type()}}
 {\footnotesize\ttfamily def bridges.\+bridges.\+Bridges.\+set\+\_\+coord\+\_\+system\+\_\+type (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{coord }\end{DoxyParamCaption})}
 
 
@@ -184,109 +180,103 @@ Setter for the coordinate system type to use in the visualization.
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classbridges_1_1bridges_1_1_bridges_a868f02fa66c87c1a1fc7bd6fbc799291}\label{classbridges_1_1bridges_1_1_bridges_a868f02fa66c87c1a1fc7bd6fbc799291}} 
-\index{bridges.bridges.Bridges@{bridges.bridges.Bridges}!set\_data\_structure@{set\_data\_structure}}
-\index{set\_data\_structure@{set\_data\_structure}!bridges.bridges.Bridges@{bridges.bridges.Bridges}}
-\subsubsection{\texorpdfstring{set\_data\_structure()}{set\_data\_structure()}}
+\index{bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}!set\+\_\+data\+\_\+structure@{set\+\_\+data\+\_\+structure}}
+\index{set\+\_\+data\+\_\+structure@{set\+\_\+data\+\_\+structure}!bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}}
+\subsubsection{\texorpdfstring{set\+\_\+data\+\_\+structure()}{set\_data\_structure()}}
 {\footnotesize\ttfamily def bridges.\+bridges.\+Bridges.\+set\+\_\+data\+\_\+structure (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{ds }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classbridges_1_1bridges_1_1_bridges_ac61a47f230c8f96f85d810498fad8b97}\label{classbridges_1_1bridges_1_1_bridges_ac61a47f230c8f96f85d810498fad8b97}} 
-\index{bridges.bridges.Bridges@{bridges.bridges.Bridges}!set\_description@{set\_description}}
-\index{set\_description@{set\_description}!bridges.bridges.Bridges@{bridges.bridges.Bridges}}
-\subsubsection{\texorpdfstring{set\_description()}{set\_description()}}
-{\footnotesize\ttfamily  None bridges.\+bridges.\+Bridges.\+set\+\_\+description (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{description }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classbridges_1_1bridges_1_1_bridges_aba86088c031b505bbe88dbc530bf1331}\label{classbridges_1_1bridges_1_1_bridges_aba86088c031b505bbe88dbc530bf1331}} 
+\index{bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}!set\+\_\+description@{set\+\_\+description}}
+\index{set\+\_\+description@{set\+\_\+description}!bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}}
+\subsubsection{\texorpdfstring{set\+\_\+description()}{set\_description()}}
+{\footnotesize\ttfamily def bridges.\+bridges.\+Bridges.\+set\+\_\+description (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{description,  }\item[{}]{None }\end{DoxyParamCaption})}
 
 
 
 Setter for the description of the bridges visualization. 
 
-\begin{DoxyVerb}       (str) description: representing the assignment description
-\end{DoxyVerb}
- \begin{DoxyReturn}{Returns}
+(str) description\+: representing the assignment description \begin{DoxyReturn}{Returns}
 
 
 None 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1bridges_1_1_bridges_ae9ed34b5878d9d120949da0b7e4d2911}\label{classbridges_1_1bridges_1_1_bridges_ae9ed34b5878d9d120949da0b7e4d2911}} 
-\index{bridges.bridges.Bridges@{bridges.bridges.Bridges}!set\_map\_overlay@{set\_map\_overlay}}
-\index{set\_map\_overlay@{set\_map\_overlay}!bridges.bridges.Bridges@{bridges.bridges.Bridges}}
-\subsubsection{\texorpdfstring{set\_map\_overlay()}{set\_map\_overlay()}}
+\index{bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}!set\+\_\+map\+\_\+overlay@{set\+\_\+map\+\_\+overlay}}
+\index{set\+\_\+map\+\_\+overlay@{set\+\_\+map\+\_\+overlay}!bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}}
+\subsubsection{\texorpdfstring{set\+\_\+map\+\_\+overlay()}{set\_map\_overlay()}}
 {\footnotesize\ttfamily def bridges.\+bridges.\+Bridges.\+set\+\_\+map\+\_\+overlay (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{flag }\end{DoxyParamCaption})}
 
 
 
 Setter for if the visualization will have a map overlay. 
 
-\begin{DoxyVerb}       (bool) flag: boolean for if map overlay
-\end{DoxyVerb}
- \begin{DoxyReturn}{Returns}
+(bool) flag\+: boolean for if map overlay \begin{DoxyReturn}{Returns}
 
 
 None 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classbridges_1_1bridges_1_1_bridges_a46ecfa60298f97bd7605f1e224cfab10}\label{classbridges_1_1bridges_1_1_bridges_a46ecfa60298f97bd7605f1e224cfab10}} 
-\index{bridges.bridges.Bridges@{bridges.bridges.Bridges}!set\_title@{set\_title}}
-\index{set\_title@{set\_title}!bridges.bridges.Bridges@{bridges.bridges.Bridges}}
-\subsubsection{\texorpdfstring{set\_title()}{set\_title()}}
-{\footnotesize\ttfamily  None bridges.\+bridges.\+Bridges.\+set\+\_\+title (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{title }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classbridges_1_1bridges_1_1_bridges_a3b0c629c1ae0beaac05fa9d90846c423}\label{classbridges_1_1bridges_1_1_bridges_a3b0c629c1ae0beaac05fa9d90846c423}} 
+\index{bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}!set\+\_\+title@{set\+\_\+title}}
+\index{set\+\_\+title@{set\+\_\+title}!bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}}
+\subsubsection{\texorpdfstring{set\+\_\+title()}{set\_title()}}
+{\footnotesize\ttfamily def bridges.\+bridges.\+Bridges.\+set\+\_\+title (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{title,  }\item[{}]{None }\end{DoxyParamCaption})}
 
 
 
 Setter for the title of the bridges visualization. 
 
-\begin{DoxyVerb}       (str) title: representing the title
-\end{DoxyVerb}
- \begin{DoxyReturn}{Returns}
+(str) title\+: representing the title \begin{DoxyReturn}{Returns}
 
 
 None 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1bridges_1_1_bridges_ab50d018b5178ca33de24157b7b6de285}\label{classbridges_1_1bridges_1_1_bridges_ab50d018b5178ca33de24157b7b6de285}} 
-\index{bridges.bridges.Bridges@{bridges.bridges.Bridges}!set\_visualize\_JSON@{set\_visualize\_JSON}}
-\index{set\_visualize\_JSON@{set\_visualize\_JSON}!bridges.bridges.Bridges@{bridges.bridges.Bridges}}
-\subsubsection{\texorpdfstring{set\_visualize\_JSON()}{set\_visualize\_JSON()}}
+\index{bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}!set\+\_\+visualize\+\_\+\+J\+S\+ON@{set\+\_\+visualize\+\_\+\+J\+S\+ON}}
+\index{set\+\_\+visualize\+\_\+\+J\+S\+ON@{set\+\_\+visualize\+\_\+\+J\+S\+ON}!bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}}
+\subsubsection{\texorpdfstring{set\+\_\+visualize\+\_\+\+J\+S\+O\+N()}{set\_visualize\_JSON()}}
 {\footnotesize\ttfamily def bridges.\+bridges.\+Bridges.\+set\+\_\+visualize\+\_\+\+J\+S\+ON (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{flag }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classbridges_1_1bridges_1_1_bridges_a822a7338e4dce27f7d8d0d322bdace08}\label{classbridges_1_1bridges_1_1_bridges_a822a7338e4dce27f7d8d0d322bdace08}} 
-\index{bridges.bridges.Bridges@{bridges.bridges.Bridges}!visualize@{visualize}}
-\index{visualize@{visualize}!bridges.bridges.Bridges@{bridges.bridges.Bridges}}
+\mbox{\Hypertarget{classbridges_1_1bridges_1_1_bridges_a3c1321f8be7b249639a47eba10b67c70}\label{classbridges_1_1bridges_1_1_bridges_a3c1321f8be7b249639a47eba10b67c70}} 
+\index{bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}!visualize@{visualize}}
+\index{visualize@{visualize}!bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}}
 \subsubsection{\texorpdfstring{visualize()}{visualize()}}
-{\footnotesize\ttfamily  None bridges.\+bridges.\+Bridges.\+visualize (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily def bridges.\+bridges.\+Bridges.\+visualize (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{None }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classbridges_1_1bridges_1_1_bridges_abe7d2ce9cd70820a94914b8b2964b215}\label{classbridges_1_1bridges_1_1_bridges_abe7d2ce9cd70820a94914b8b2964b215}} 
-\index{bridges.bridges.Bridges@{bridges.bridges.Bridges}!window@{window}}
-\index{window@{window}!bridges.bridges.Bridges@{bridges.bridges.Bridges}}
+\mbox{\Hypertarget{classbridges_1_1bridges_1_1_bridges_a1340374df9e4aa1490d9cd9be2b0e918}\label{classbridges_1_1bridges_1_1_bridges_a1340374df9e4aa1490d9cd9be2b0e918}} 
+\index{bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}!window@{window}}
+\index{window@{window}!bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}}
 \subsubsection{\texorpdfstring{window()}{window()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily  \mbox{[}float\mbox{]} bridges.\+bridges.\+Bridges.\+window (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily def bridges.\+bridges.\+Bridges.\+window (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{float }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classbridges_1_1bridges_1_1_bridges_a0bec2e26f9b318f4eb89ed7281565771}\label{classbridges_1_1bridges_1_1_bridges_a0bec2e26f9b318f4eb89ed7281565771}} 
-\index{bridges.bridges.Bridges@{bridges.bridges.Bridges}!window@{window}}
-\index{window@{window}!bridges.bridges.Bridges@{bridges.bridges.Bridges}}
+\mbox{\Hypertarget{classbridges_1_1bridges_1_1_bridges_ab434ee3f7b3b8c9eb4f8a07d97789a82}\label{classbridges_1_1bridges_1_1_bridges_ab434ee3f7b3b8c9eb4f8a07d97789a82}} 
+\index{bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}!window@{window}}
+\index{window@{window}!bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}}
 \subsubsection{\texorpdfstring{window()}{window()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily  None bridges.\+bridges.\+Bridges.\+window (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{[}float\mbox{]}}]{value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily def bridges.\+bridges.\+Bridges.\+window (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
 
 
 
 \subsection{Member Data Documentation}
 \mbox{\Hypertarget{classbridges_1_1bridges_1_1_bridges_a1c02ee44e7a4a3ee2f7d9c7d7da7d09f}\label{classbridges_1_1bridges_1_1_bridges_a1c02ee44e7a4a3ee2f7d9c7d7da7d09f}} 
-\index{bridges.bridges.Bridges@{bridges.bridges.Bridges}!connector@{connector}}
-\index{connector@{connector}!bridges.bridges.Bridges@{bridges.bridges.Bridges}}
+\index{bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}!connector@{connector}}
+\index{connector@{connector}!bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}}
 \subsubsection{\texorpdfstring{connector}{connector}}
 {\footnotesize\ttfamily bridges.\+bridges.\+Bridges.\+connector}
 
 \mbox{\Hypertarget{classbridges_1_1bridges_1_1_bridges_a7a6f25612be64d4f3e203d7d37cb4da4}\label{classbridges_1_1bridges_1_1_bridges_a7a6f25612be64d4f3e203d7d37cb4da4}} 
-\index{bridges.bridges.Bridges@{bridges.bridges.Bridges}!ds\_handle@{ds\_handle}}
-\index{ds\_handle@{ds\_handle}!bridges.bridges.Bridges@{bridges.bridges.Bridges}}
-\subsubsection{\texorpdfstring{ds\_handle}{ds\_handle}}
+\index{bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}!ds\+\_\+handle@{ds\+\_\+handle}}
+\index{ds\+\_\+handle@{ds\+\_\+handle}!bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}}
+\subsubsection{\texorpdfstring{ds\+\_\+handle}{ds\_handle}}
 {\footnotesize\ttfamily bridges.\+bridges.\+Bridges.\+ds\+\_\+handle}
 
 \mbox{\Hypertarget{classbridges_1_1bridges_1_1_bridges_a5ca152bf3830e2be1f72247463916f82}\label{classbridges_1_1bridges_1_1_bridges_a5ca152bf3830e2be1f72247463916f82}} 
-\index{bridges.bridges.Bridges@{bridges.bridges.Bridges}!vis\_type@{vis\_type}}
-\index{vis\_type@{vis\_type}!bridges.bridges.Bridges@{bridges.bridges.Bridges}}
-\subsubsection{\texorpdfstring{vis\_type}{vis\_type}}
+\index{bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}!vis\+\_\+type@{vis\+\_\+type}}
+\index{vis\+\_\+type@{vis\+\_\+type}!bridges\+::bridges\+::\+Bridges@{bridges\+::bridges\+::\+Bridges}}
+\subsubsection{\texorpdfstring{vis\+\_\+type}{vis\_type}}
 {\footnotesize\ttfamily bridges.\+bridges.\+Bridges.\+vis\+\_\+type}
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/\+Users/kalpathi/gr/bridges/python/bridges/\mbox{\hyperlink{bridges_8py}{bridges.\+py}}\end{DoxyCompactItemize}
+/home/erik/work/bridges/bridges-\/python/bridges/\hyperlink{bridges_8py}{bridges.\+py}\end{DoxyCompactItemize}

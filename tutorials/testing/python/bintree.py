@@ -5,7 +5,7 @@ import sys
 
 def main():
     # create the Bridges object, set credentials
-    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY")
 
     # title, description
     bridges.set_title("A Huffman Coding (Binary) Tree Example")

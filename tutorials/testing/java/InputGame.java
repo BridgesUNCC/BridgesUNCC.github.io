@@ -4,7 +4,7 @@ import bridges.base.*;
 class InputGame extends NonBlockingGame {
     public InputGame() {
 	//substitute your username and api key
-	super (1, "myuserid",  "myapikey", 10, 10);
+	super (1, "BRIDGES_USER_ID",  "BRIDGES_API_KEY", 10, 10);
 	//this created a game board of 10x10 into assignment 1
     }
 
