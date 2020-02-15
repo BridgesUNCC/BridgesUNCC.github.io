@@ -28,6 +28,6 @@ fi
 
 ( cat bridges_doxygen_cxx.cfg; echo "INPUT=${BRIDGESCXX}/src ${BRIDGESCXX}/src/data_src" ) | doxygen -
 
-( cat bridges_doxygen_java.cfg; echo "INPUT=${BRIDGESJAVA}/src/main/java/bridges/base ${BRIDGESJAVA}/src/main/java/bridges/connect ${BRIDGESJAVA}/src/main/java/bridges/data_src_dependent ${BRIDGESJAVA}/src/main/java/bridges/validation ${BRIDGESJAVA}/src/main/java/bridges/games" ) | doxygen -
+( cat bridges_doxygen_java.cfg; echo "INPUT=${BRIDGESJAVA}/src/main/java/bridges/base ${BRIDGESJAVA}/src/main/java/bridges/benchmark ${BRIDGESJAVA}/src/main/java/bridges/connect ${BRIDGESJAVA}/src/main/java/bridges/data_src_dependent ${BRIDGESJAVA}/src/main/java/bridges/validation ${BRIDGESJAVA}/src/main/java/bridges/games" ) | doxygen -
 
 ( cat bridges_doxygen_python.cfg; echo "INPUT=${BRIDGESPYTHON}/bridges" ) | doxygen -
