@@ -31,3 +31,12 @@ Empty spaces are represented with a yellow color and will not catch fire.
 Trees are represented with green and can catch fire if there is a fire in an adjacent cell. However, the condition for catching fire is not only touching fire. There should also be a probability test that determines if it will ignite.
 ### Fire
 After a certain amount of time, a fire should go out and become an empty cell.
+
+### Help
+#### For C++
+
+[NonBlockingGame documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1game_1_1_non_blocking_game.html)
+
+#### For Python
+
+[NonBlockingGame documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1non__blocking__game_1_1_non_blocking_game.html)

@@ -48,6 +48,11 @@ In this assignment, the objective is to pull a song from Bridges, split the lyri
 	Song mySong = DataSource::getSong("My Favorite Song", "Optional Artist String");	
 	auto lyrics = mySong.getLyrics();
    ```
+   - in Python
+   ```python
+   so = get_song("My Favorite Song", "Optional Artist String")
+   song = so.get_lyrics()
+   ```
 4. Pass these lyrics through the provided helper function, which will clean up and split the
  lyrics into an array of squeaky clean `String`s.
 
@@ -81,3 +86,9 @@ In this assignment, the objective is to pull a song from Bridges, split the lyri
 
 [DataSource documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/namespacebridges_1_1_data_source.html#details)
 
+#### For Python
+[Bridges documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1bridges_1_1_bridges.html)
+
+[Color documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1color_1_1_color.html)
+
+[ColorGrid documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1color__grid_1_1_color_grid.html)

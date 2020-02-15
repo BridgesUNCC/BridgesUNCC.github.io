@@ -1,3 +1,4 @@
+
 Assignment 12 - AStar Maze
 ===========================
 
@@ -16,19 +17,26 @@ Goals
 
 Programming
 -----------
-### Tasks
+#### Tasks
 - Create a maze on a 2D grid. There are many maze algorithms 
 - Write a pathfinder using the AStar algorithm to traverse the 2D grid
 - Choose two points on opposite sides of the grid and use the pathfinder get from point a to b. 
 - During each step in the algorithm color in the pathfinder's current position
 - After the goal is reached pop back and display the full path.
  
-### Create the maze
+#### Create the maze
 There are plenty of algorithms for generating a maze. Prims algorithms is a good place to start. Then create a grid to display the maze and keep track of the open positions and walls on the grid.
 
-### Create the pathfinder
+#### Create the pathfinder
 Create a pathfinder that uses the AStar algorithm to traverse the grid towards a goal point.
 
 ### Help
 [AStar Explanation](https://www.geeksforgeeks.org/a-search-algorithm/)
 [Maze Algorithms](https://en.wikipedia.org/wiki/Maze_generation_algorithm)
+#### For C++
+
+[NonBlockingGame documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1game_1_1_non_blocking_game.html)
+
+#### For Python
+
+[NonBlockingGame documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1non__blocking__game_1_1_non_blocking_game.html)

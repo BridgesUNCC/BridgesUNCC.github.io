@@ -1,5 +1,6 @@
+
 Assignment 6 - Square Fill
-==========================
+====================
 
 Goals
 -----
@@ -15,48 +16,23 @@ You will generate a visualization that looks like [that](http://bridges-cs.herok
 Programming part
 ----------------
 
-### Task
+###Task
 
 You will be drawing Square Fill using the following logic: (examples provided below.)
 
-1. Start with an empty canvas.
-2. Generate a random point that has not been painted yet. Paint it, that is a square of dimension 0.
-3. If the outer layer of the square has not been painted yet (aka, if none of the pixel of the outer layer has been painted)
-4. Paint it and go to the next layer.
-5. Keep painting layers until you reach the border of the image, or one of the layer has a painted pixel.
-6. Pick a new random point.
+- Start with an empty canvas.
+- Repeat the following steps.
+	1. Search the canvas for an empty pixel.
+	2. Set the pixel to a random color.
+	3. If the surrounding square of pixels are empty and not outside the canvas continue otherwise go back to step 1. 
+	4. Color the surrounding square of pixels with a color.
+	5. Expand the square by 1 and repeat step 3.
+- Stop once the canvas is fully colored in.
 
-### Basic
+Reference
+------------
 
-1. Open your scaffolded code.
-2. Plug in your credentials.
-3. Complete the TODOs in the scaffoled code.
-4. Run and visualize your code
-
-### Build Square Fill 
-
-1. Plug in your credentials
-2. Observe how the code initizes the `ColorGrid`. The code provides a variable that represents a pixel is free, which is
- embedded into the `Color` objects alpha value. This allows for a much quicker check later on to see if a pixel is free,
- you may refactor this if you do not wish to use the alpha value for this purpose.
- 
-3. Provide the code necessary to generate a random point on the grid, check that point to make sure it is free, and then
- set that location to some random color.
- 
-4. An example snippet is provided in the next TODO that gives an example of how to set up some int's to keep track of each
-  layers boundaries. Ensure that these points are not out of bounds before continuing.
-  
-5. In the first for loop, provide the logic for checking each point on the current layer to make sure it is free, if not
- break the loops to generate a new point on the grid to start from.
- 
-6. If the current layer has no collisions, generate a random color and then begin filling in the points along the current
- layer with the generated color.
- 
-7. Run and visualize the code.
-
-### Help
-
-#### for Java
+####  Java
 
 [ColorGrid documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_color_grid.html)
 
@@ -64,7 +40,7 @@ You will be drawing Square Fill using the following logic: (examples provided be
 
 [Bridges class documentation](http://bridgesuncc.github.io/doc/java-api/current/html/namespacebridges_1_1base.html)
 
-#### for C++
+#### C++
 
 [ColorGrid documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_color_grid.html)
 
@@ -72,6 +48,10 @@ You will be drawing Square Fill using the following logic: (examples provided be
 
 [Bridges documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/namespacebridges_1_1_bridges.html)
 
-### Sample Output
+#### Python
 
-![Example3](figures/GridFillExample3.png)
+[ColorGrid documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1color__grid_1_1_color_grid.html)
+
+[Color documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1color_1_1_color.html)
+
+[Bridges documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1bridges_1_1_bridges.html)

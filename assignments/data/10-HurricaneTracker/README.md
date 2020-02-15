@@ -18,13 +18,39 @@ Programming
 -----------
 ### Tasks
 Read a csv file containing Hurricane position data such as the data given [here](https://www.wunderground.com/hurricane/atlantic/2017/hurricane-irma). Then map this data on a GridAdjList.
-### Read the csv file
-Parse the csv file data and create a class for storing this data
-### Build a graph
-Add the data points to the GraphAdjList, choosing points that are not too close together. Color the points from a range from green to red depending on the category at that point. Then go back and add edges between the points from start to end.
+#### Read the csv File
+Parse the csv file data and create a class for storing this data.
+#### Build the Graph
+- Create a `GraphAdjList`
+- Add each data point to the graph as vertices if they are within a certain distance
+- Change the color of the points based on the hurricane's category.
+- Add edges between points in order from first to last.
 ### Help
-[Bridges](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_bridges.html)
+#### For C++
+[Bridges documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_bridges.html)
+
 [File I/O](http://www.cplusplus.com/doc/tutorial/files/)
-[Element](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_element.html)
-[GraphAdjList](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_graph_adj_list.html)
-[ElementVisualizer](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_element_visualizer.html)
+
+[Element documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_element.html)
+
+[GraphAdjList documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_graph_adj_list.html)
+
+[ElementVisualizer documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_element_visualizer.html)
+#### For Java
+
+[Bridges documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1connect_1_1_bridges.html)
+
+[Element documenation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_element.html)
+
+[GraphAdjList documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_graph_adj_list.html)
+
+[ElementVisualizer documenation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_element_visualizer.html)
+#### For Python
+
+[Bridges documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1bridges_1_1_bridges.html)
+
+[Element documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1element_1_1_element.html)
+
+[GraphAdjList documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1graph__adj__list_1_1_graph_adj_list.html)
+
+[ElementVisualizer documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1element__visualizer_1_1_element_visualizer.html)

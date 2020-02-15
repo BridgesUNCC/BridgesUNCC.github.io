@@ -55,3 +55,9 @@ Main Method and Student Class Object
 
 Students must structure their class object to call "super" and pass the variables of their bridges account in order for the bridges server to visualize their game.
 Within the Class object students can also set their games title and a short description of the game. They must ensure the start() function is called here.
+
+### Help
+#### For C++
+[NonBlockingGame documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1game_1_1_non_blocking_game.html)
+#### For Python
+[NonBlockingGame documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1non__blocking__game_1_1_non_blocking_game.html)

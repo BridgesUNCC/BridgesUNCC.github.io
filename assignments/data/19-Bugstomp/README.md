@@ -56,3 +56,9 @@ More Details to Get You Started
 - quit() stops the game.
 - start() starts the game and calls the initialize() function once before it starts the gameLoop() function.
 - render() sends your updated game grid to the server once. This is a blocking game function.
+
+### Help
+#### For C++
+[NonBlockingGame documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1game_1_1_non_blocking_game.html)
+#### For Python
+[NonBlockingGame documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1non__blocking__game_1_1_non_blocking_game.html)

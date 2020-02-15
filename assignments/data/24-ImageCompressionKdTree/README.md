@@ -1,5 +1,6 @@
 
-# Representing and Compressing Images Using K-D Trees
+Representing and Compressing Images Using K-D Trees
+===================================================
 
 ## Goals
 1. Work with and manipulate binary search trees; here we use a spatial search tree, which is 
@@ -195,18 +196,9 @@ applications:
 3. Consider using other methods for homogeneity that might be more optimal from a compression 
 	perspective.
 
-## Additional Help
+## Help
 [BRIDGES Team:](http://bridgesuncc.github.io/) Contact the BRIDGES team for any issues with 
 the BRIDGES API. This is an active project.
-
-#### for Java
-[K-D Tree Element documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_kd_tree_element.html)
-
-[ColorGrid documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_color_grid.html)
-
-[Color documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_color.html)
-
-[Bridges class documentation](http://bridgesuncc.github.io/doc/java-api/current/html/namespacebridges_1_1base.html)
 
 #### for C++
 
@@ -218,3 +210,21 @@ the BRIDGES API. This is an active project.
 
 [Bridges documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classes.html)
 
+#### for Java
+[K-D Tree Element documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_kd_tree_element.html)
+
+[ColorGrid documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_color_grid.html)
+
+[Color documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_color.html)
+
+[Bridges class documentation](http://bridgesuncc.github.io/doc/java-api/current/html/namespacebridges_1_1base.html)
+
+#### for Python
+
+[K-D Tree Element documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1kd__tree__element_1_1_k_d_tree_element.html)
+
+[ColorGrid documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1color__grid_1_1_color_grid.html)
+
+[Color documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1color_1_1_color.html)
+
+[Bridges documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1bridges_1_1_bridges.html)

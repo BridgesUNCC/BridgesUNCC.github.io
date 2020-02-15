@@ -51,7 +51,6 @@ Build a BST based on earthquake data and highlight earthquakes based on magnitud
 
 [std::vector documentation](http://www.cplusplus.com/reference/vector/vector/)
 
-
 [Element documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_element.html)
 
 [BSTElement documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_b_s_t_element.html)
@@ -61,3 +60,13 @@ Build a BST based on earthquake data and highlight earthquakes based on magnitud
 [LinkVisualizer documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_link_visualizer.html)
 
 [EarthquakeUSGS documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_earthquake_u_s_g_s.html)
+
+### For Python
+
+[Element documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1element_1_1_element.html)
+
+[BSTElement documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1bst__element_1_1_b_s_t_element.html)
+
+[ElementVisualizer documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1element__visualizer_1_1_element_visualizer.html)
+
+[LinkVisualizer documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1link__visualizer_1_1_link_visualizer.html)

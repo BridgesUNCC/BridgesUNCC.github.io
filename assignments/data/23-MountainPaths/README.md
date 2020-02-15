@@ -1,13 +1,11 @@
-# Mountain Paths - Determining a low elevation through a mountain
+Mountain Paths - Determining a low elevation through a mountain
+===============================================================
 
 ## Goals
 
 1. Working with 2D images of elevation maps
 2. Understanding Greedy algorithms and its application to a real-world application
 3. CS concepts: 2D array addressing, greedy algorithms
-
-
-
 
 ## Source
 This assignment is adapted from a **[Nifty](http://nifty.stanford.edu/)  assignment 
@@ -116,3 +114,10 @@ issues with the BRIDGES API. This is an active project.
 
 
 #### for Python
+
+
+[ColorGrid documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1color__grid_1_1_color_grid.html)
+
+[Color documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1color_1_1_color.html)
+
+[Bridges documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1bridges_1_1_bridges.html)

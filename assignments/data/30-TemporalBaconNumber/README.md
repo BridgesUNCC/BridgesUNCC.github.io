@@ -44,4 +44,19 @@ they played in the same Movie. Would that be faster? Implement the
 problem using a graph of Actors (not including Movies) and confirm (or
 infirm) your intuition.
 
+### Help
 
+#### For C++
+[Bridges documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_bridges.html)
+
+[LineChart documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_line_chart.html)
+
+#### For Java
+[Bridges documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1connect_1_1_bridges.html)
+
+[LineChart documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_line_chart.html)
+
+#### For Python
+[Bridges documentation](http://bridgesuncc.github.io/doc/python-api/current/html/namespacebridges_1_1bst__element.html)
+
+[LineChart documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1line__chart_1_1_line_chart.html)

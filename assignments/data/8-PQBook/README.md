@@ -98,3 +98,11 @@ insert (Heap h, k) {
 [DataSource documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/namespacebridges_1_1_data_source.html)
 
 [Shakespeare documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_shakespeare.html)
+
+
+#### For Python
+[Bridges documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1bridges_1_1_bridges.html)
+
+[Color documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1color_1_1_color.html)
+
+[BinTreeElement documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1bin__tree__element_1_1_bin_tree_element.html)

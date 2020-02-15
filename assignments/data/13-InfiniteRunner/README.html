@@ -1,28 +1,49 @@
-<h1>Assignment 13 - Infinite Runner</h1>
+<h1>Assignment 14 - Spreading Fire</h1>
+
+<h2>Source</h2>
+
+<p>This is a nifty assignment from 2007 proposed by Angela B. Shiflet.
+<a href="http://nifty.stanford.edu/2007/shiflet-fire/">Source</a></p>
 
 <h2>Goals</h2>
 
-<p>The purpose of this assignment is to learn to
-- Handle collision of objects on a 2D grid
-- Implement core functionality in a base class and use inheritance</p>
+<p>The purpose of this assignment is to learn to 
+ - Organize data in two-dimensional arrays
+ - Use data from arrays to control conditional statements
+ - Practice recursion
+ - Practice simulation techniques
+ - Implement probabilities in code</p>
 
 <h2>Programming</h2>
 
-<h3>Tasks</h3>
+<h4>Tasks</h4>
 
 <ul>
-<li>Create a base object that gets called every game update</li>
-<li>Create a player, collectable, and enemy object</li>
+<li>Use loops to populate and update a grid with values that represent trees, empty spaces, and fire.</li>
+<li>Define the behavior of a grid cell that contains a fire, trees, or an empty space.</li>
+<li>Update the color of the grid cell when the values change.</li>
+<li>Continue updating the grid until all trees are burned out or the fire has gone out.</li>
+<li>Try different probabilities to see the different behaviors of fire depending on the location of empty spaces, fire, and trees. For example, try making an X across the grid with empty spaces. Or make a grid with empty spaces around the edges.</li>
 </ul>
 
-<h3>Player</h3>
+<h4>Empty spaces</h4>
 
-<p>The player object starts near the left side of the screen. It should check for jump input every update and if it is colliding with the ground it should move away from the ground for several turns then fall back to the ground and stop. If the player overlaps with a collectable it should be removed and points added. If colliding with an enemy then a life should be taken away and the enemy removed.</p>
+<p>Empty spaces are represented with a yellow color and will not catch fire.</p>
 
-<h3>Collectable</h3>
+<h4>Trees</h4>
 
-<p>The goal of the game is to get as many collectables as possible. The collectables start on the right side of the screen at a random y position that the player can reach and move left every update. If the player overlaps the collectable should be removed and points added. If the collectable reaches the other side of the screen a life is removed from the player.</p>
+<p>Trees are represented with green and can catch fire if there is a fire in an adjacent cell. However, the condition for catching fire is not only touching fire. There should also be a probability test that determines if it will ignite.</p>
 
-<h3>Enemy</h3>
+<h4>Fire</h4>
 
-<p>Enemies sometimes spawn along with the collectables on the right side of the screen and move left every update the same as the collectable. If they player collides with an enemy then the enemy should be removed and a life removed from the player.</p>
+<p>After a certain amount of time, a fire should go out and become an empty cell.</p>
+
+<h3>Help</h3>
+
+<h4>For C++</h4>
+
+<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1game_1_1_non_blocking_game.html">NonBlockingGame documentation</a></p>
+
+<h4>For Python</h4>
+
+<p><a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1non__blocking__game_1_1_non_blocking_game.html">NonBlockingGame documentation</a></p>
