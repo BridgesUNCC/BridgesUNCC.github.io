@@ -1,0 +1,189 @@
+\hypertarget{classbridges_1_1benchmark_1_1_sorting_benchmark}{}\doxysection{bridges.\+benchmark.\+Sorting\+Benchmark Class Reference}
+\label{classbridges_1_1benchmark_1_1_sorting_benchmark}\index{bridges.benchmark.SortingBenchmark@{bridges.benchmark.SortingBenchmark}}
+
+
+Inherits bridges.\+benchmark.\+Benchmark.
+
+
+
+\doxysubsection{Detailed Description}
+Benchmarks sorting algorithm. 
+
+Benchmarks sorting algorithms and add time series to a Line\+Chart.
+
+The benchmark goes from an initial size controlled by \mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_a7365a3586a08a0301ee90419a57c7aa3}{set\+Base\+Size()}} to a largest size controlled by \mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_a62db485e1a96afce2eed758e6e65555c}{set\+Max\+Size()}}. One can also set a maximum time spent on a particular run using set\+Time\+Cap().
+
+The benchmark goes from a array size of n to the next one of geo\+Base $\ast$ n + increment, where the base is controlled by \mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_ab6871c77ec75cc58225497a8a9f45a90}{set\+Geometric()}} and increment is controlled by \mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_a1a44c5c6d5db47a26c6a801d71d85b58}{set\+Increment()}}. For simpler use one can set a purley linear sampling with \mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_a2d68f3078ea820485a9e802a5b17d3d6}{linear\+Range()}} or a purely geometric one with \mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_abc089e72c37b77a78f93e374e430ce60}{geometric\+Range()}}.
+
+The sorting algorithms must have for prototype\+: static void mysort(int\mbox{[}$\,$\mbox{]}); and can be passed to the run function for being benchmarked. A typical use would look something like
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{LineChart lc;}
+\DoxyCodeLine{\mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_aac0afefefe7762d001f47820dba2ed21}{SortingBenchmark}} sb (lc);}
+\DoxyCodeLine{sb.linearRange (100, 1000, 5);}
+\DoxyCodeLine{sb.run(\textcolor{stringliteral}{"mysortingalgorithm"}, MyClass.mysort);}
+\end{DoxyCode}
+
+
+\begin{DoxyAuthor}{Author}
+Erik Saule 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+07/20/2019 
+\end{DoxyDate}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_aac0afefefe7762d001f47820dba2ed21}{Sorting\+Benchmark}} (\mbox{\hyperlink{classbridges_1_1base_1_1_line_chart}{Line\+Chart}} p)
+\item 
+void \mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_a62db485e1a96afce2eed758e6e65555c}{set\+Max\+Size}} (int size)
+\begin{DoxyCompactList}\small\item\em Puts a cap on the largest array to be used. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_a7365a3586a08a0301ee90419a57c7aa3}{set\+Base\+Size}} (int size)
+\begin{DoxyCompactList}\small\item\em Smallest array to be used. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_a1a44c5c6d5db47a26c6a801d71d85b58}{set\+Increment}} (int inc)
+\begin{DoxyCompactList}\small\item\em Sets the increment for the benchmark size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_ab6871c77ec75cc58225497a8a9f45a90}{set\+Geometric}} (double base)
+\begin{DoxyCompactList}\small\item\em Sets a geometric progression for the benchmark size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_a2d68f3078ea820485a9e802a5b17d3d6}{linear\+Range}} (int base\+Size, int max\+Size, int nb\+Point)
+\begin{DoxyCompactList}\small\item\em The benchmark will sample a range with a fixed number of points. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_abc089e72c37b77a78f93e374e430ce60}{geometric\+Range}} (int base\+Size, int max\+Size, double base)
+\begin{DoxyCompactList}\small\item\em The benchmark will sample a range using in geometrically increasing sequence. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1benchmark_1_1_sorting_benchmark_a1c16655634c06aeaf46026a2ddc8b888}{run}} (String algo\+Name, Consumer$<$ int\mbox{[}$\,$\mbox{]}$>$ runnable)
+\begin{DoxyCompactList}\small\item\em benchmark a particular algorithm \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1benchmark_1_1_sorting_benchmark_aac0afefefe7762d001f47820dba2ed21}\label{classbridges_1_1benchmark_1_1_sorting_benchmark_aac0afefefe7762d001f47820dba2ed21}} 
+\index{bridges.benchmark.SortingBenchmark@{bridges.benchmark.SortingBenchmark}!SortingBenchmark@{SortingBenchmark}}
+\index{SortingBenchmark@{SortingBenchmark}!bridges.benchmark.SortingBenchmark@{bridges.benchmark.SortingBenchmark}}
+\doxysubsubsection{\texorpdfstring{SortingBenchmark()}{SortingBenchmark()}}
+{\footnotesize\ttfamily bridges.\+benchmark.\+Sorting\+Benchmark.\+Sorting\+Benchmark (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1base_1_1_line_chart}{Line\+Chart}}}]{p }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1benchmark_1_1_sorting_benchmark_abc089e72c37b77a78f93e374e430ce60}\label{classbridges_1_1benchmark_1_1_sorting_benchmark_abc089e72c37b77a78f93e374e430ce60}} 
+\index{bridges.benchmark.SortingBenchmark@{bridges.benchmark.SortingBenchmark}!geometricRange@{geometricRange}}
+\index{geometricRange@{geometricRange}!bridges.benchmark.SortingBenchmark@{bridges.benchmark.SortingBenchmark}}
+\doxysubsubsection{\texorpdfstring{geometricRange()}{geometricRange()}}
+{\footnotesize\ttfamily void bridges.\+benchmark.\+Sorting\+Benchmark.\+geometric\+Range (\begin{DoxyParamCaption}\item[{int}]{base\+Size,  }\item[{int}]{max\+Size,  }\item[{double}]{base }\end{DoxyParamCaption})}
+
+
+
+The benchmark will sample a range using in geometrically increasing sequence. 
+
+The benchmark will sample the range \mbox{[}base\+Size; max\+Size\mbox{]} using a geometric distribution in base base. That is to say, it will sample base\+Size, base$\ast$base\+Size, base$\ast$base$\ast$base\+Size, ...
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Size} & lower bound of the range sampled \\
+\hline
+{\em max\+Size} & upper bound of the range sampled \\
+\hline
+{\em base} & base of the geometric increase \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1benchmark_1_1_sorting_benchmark_a2d68f3078ea820485a9e802a5b17d3d6}\label{classbridges_1_1benchmark_1_1_sorting_benchmark_a2d68f3078ea820485a9e802a5b17d3d6}} 
+\index{bridges.benchmark.SortingBenchmark@{bridges.benchmark.SortingBenchmark}!linearRange@{linearRange}}
+\index{linearRange@{linearRange}!bridges.benchmark.SortingBenchmark@{bridges.benchmark.SortingBenchmark}}
+\doxysubsubsection{\texorpdfstring{linearRange()}{linearRange()}}
+{\footnotesize\ttfamily void bridges.\+benchmark.\+Sorting\+Benchmark.\+linear\+Range (\begin{DoxyParamCaption}\item[{int}]{base\+Size,  }\item[{int}]{max\+Size,  }\item[{int}]{nb\+Point }\end{DoxyParamCaption})}
+
+
+
+The benchmark will sample a range with a fixed number of points. 
+
+The benchmark will sample about nb\+Point equally distributed in the range \mbox{[}base\+Size; max\+Size\mbox{]}
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Size} & lower bound of the range sampled \\
+\hline
+{\em max\+Size} & upper bound of the range sampled \\
+\hline
+{\em nb\+Point} & number of sample \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1benchmark_1_1_sorting_benchmark_a1c16655634c06aeaf46026a2ddc8b888}\label{classbridges_1_1benchmark_1_1_sorting_benchmark_a1c16655634c06aeaf46026a2ddc8b888}} 
+\index{bridges.benchmark.SortingBenchmark@{bridges.benchmark.SortingBenchmark}!run@{run}}
+\index{run@{run}!bridges.benchmark.SortingBenchmark@{bridges.benchmark.SortingBenchmark}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void bridges.\+benchmark.\+Sorting\+Benchmark.\+run (\begin{DoxyParamCaption}\item[{String}]{algo\+Name,  }\item[{Consumer$<$ int\mbox{[}$\,$\mbox{]}$>$}]{runnable }\end{DoxyParamCaption})}
+
+
+
+benchmark a particular algorithm 
+
+
+\begin{DoxyParams}{Parameters}
+{\em algo\+Name} & Screen name of the algorithm \\
+\hline
+{\em runnable} & the actual algorithm \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1benchmark_1_1_sorting_benchmark_a7365a3586a08a0301ee90419a57c7aa3}\label{classbridges_1_1benchmark_1_1_sorting_benchmark_a7365a3586a08a0301ee90419a57c7aa3}} 
+\index{bridges.benchmark.SortingBenchmark@{bridges.benchmark.SortingBenchmark}!setBaseSize@{setBaseSize}}
+\index{setBaseSize@{setBaseSize}!bridges.benchmark.SortingBenchmark@{bridges.benchmark.SortingBenchmark}}
+\doxysubsubsection{\texorpdfstring{setBaseSize()}{setBaseSize()}}
+{\footnotesize\ttfamily void bridges.\+benchmark.\+Sorting\+Benchmark.\+set\+Base\+Size (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Smallest array to be used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & of the smallest array to use/ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1benchmark_1_1_sorting_benchmark_ab6871c77ec75cc58225497a8a9f45a90}\label{classbridges_1_1benchmark_1_1_sorting_benchmark_ab6871c77ec75cc58225497a8a9f45a90}} 
+\index{bridges.benchmark.SortingBenchmark@{bridges.benchmark.SortingBenchmark}!setGeometric@{setGeometric}}
+\index{setGeometric@{setGeometric}!bridges.benchmark.SortingBenchmark@{bridges.benchmark.SortingBenchmark}}
+\doxysubsubsection{\texorpdfstring{setGeometric()}{setGeometric()}}
+{\footnotesize\ttfamily void bridges.\+benchmark.\+Sorting\+Benchmark.\+set\+Geometric (\begin{DoxyParamCaption}\item[{double}]{base }\end{DoxyParamCaption})}
+
+
+
+Sets a geometric progression for the benchmark size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & new base of the geometric progression \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1benchmark_1_1_sorting_benchmark_a1a44c5c6d5db47a26c6a801d71d85b58}\label{classbridges_1_1benchmark_1_1_sorting_benchmark_a1a44c5c6d5db47a26c6a801d71d85b58}} 
+\index{bridges.benchmark.SortingBenchmark@{bridges.benchmark.SortingBenchmark}!setIncrement@{setIncrement}}
+\index{setIncrement@{setIncrement}!bridges.benchmark.SortingBenchmark@{bridges.benchmark.SortingBenchmark}}
+\doxysubsubsection{\texorpdfstring{setIncrement()}{setIncrement()}}
+{\footnotesize\ttfamily void bridges.\+benchmark.\+Sorting\+Benchmark.\+set\+Increment (\begin{DoxyParamCaption}\item[{int}]{inc }\end{DoxyParamCaption})}
+
+
+
+Sets the increment for the benchmark size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inc} & new value of the increment \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1benchmark_1_1_sorting_benchmark_a62db485e1a96afce2eed758e6e65555c}\label{classbridges_1_1benchmark_1_1_sorting_benchmark_a62db485e1a96afce2eed758e6e65555c}} 
+\index{bridges.benchmark.SortingBenchmark@{bridges.benchmark.SortingBenchmark}!setMaxSize@{setMaxSize}}
+\index{setMaxSize@{setMaxSize}!bridges.benchmark.SortingBenchmark@{bridges.benchmark.SortingBenchmark}}
+\doxysubsubsection{\texorpdfstring{setMaxSize()}{setMaxSize()}}
+{\footnotesize\ttfamily void bridges.\+benchmark.\+Sorting\+Benchmark.\+set\+Max\+Size (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Puts a cap on the largest array to be used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Maximum size considered \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/java/src/main/java/bridges/benchmark/\mbox{\hyperlink{_sorting_benchmark_8java}{Sorting\+Benchmark.\+java}}\end{DoxyCompactItemize}

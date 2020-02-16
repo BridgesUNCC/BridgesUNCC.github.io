@@ -1,0 +1,284 @@
+\hypertarget{classbridges_1_1base_1_1_game_grid}{}\doxysection{bridges.\+base.\+Game\+Grid Class Reference}
+\label{classbridges_1_1base_1_1_game_grid}\index{bridges.base.GameGrid@{bridges.base.GameGrid}}
+Inheritance diagram for bridges.\+base.\+Game\+Grid\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbridges_1_1base_1_1_game_grid}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Detailed Description}
+This is a class in B\+R\+I\+D\+G\+ES for representing an (m x n) grid. Each position in the grid will hold a \mbox{\hyperlink{classbridges_1_1base_1_1_game_cell}{Game\+Cell}} object, each of which has a foreground color, background color, and a symbol. 
+
+\begin{DoxyAuthor}{Author}
+David Burlinson 
+\end{DoxyAuthor}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_game_grid_a2281cfd7d61dc9903c9b1358c9767a1e}{set\+Encoding}} (String encoding)
+\begin{DoxyCompactList}\small\item\em Enable changing the game grid encoding when building J\+S\+ON representation. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classbridges_1_1base_1_1_game_grid_a4d88979ac0f74f212392c5efe1400916}{get\+Data\+Struct\+Type}} ()
+\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_game_grid_a0b5330e66b504eddc00617c5f1fa6240}{Game\+Grid}} ()
+\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_game_grid_acfe6d52979dae94b1d883fed4965feb3}{Game\+Grid}} (int rows, int cols)
+\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_game_grid_a72d7d5b03b78fdc4110cee955727a523}{set\+B\+G\+Color}} (Integer row, Integer col, \mbox{\hyperlink{enumbridges_1_1base_1_1_named_color}{Named\+Color}} color)
+\item 
+\mbox{\hyperlink{enumbridges_1_1base_1_1_named_color}{Named\+Color}} \mbox{\hyperlink{classbridges_1_1base_1_1_game_grid_abf8435b464054c1f290985b05ce7cd97}{get\+B\+G\+Color}} (Integer row, Integer col)
+\item 
+\mbox{\hyperlink{enumbridges_1_1base_1_1_named_symbol}{Named\+Symbol}} \mbox{\hyperlink{classbridges_1_1base_1_1_game_grid_a974e33d5561a8f214966be626a9ca8ca}{get\+Symbol}} (Integer row, Integer col)
+\item 
+\mbox{\hyperlink{enumbridges_1_1base_1_1_named_color}{Named\+Color}} \mbox{\hyperlink{classbridges_1_1base_1_1_game_grid_ab094ebfd585aac9440836ad6875ce094}{get\+Symbol\+Color}} (Integer row, Integer col)
+\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_game_grid_a105b46f68bcc9413889e7255318bab4c}{set\+F\+G\+Color}} (Integer row, Integer col, \mbox{\hyperlink{enumbridges_1_1base_1_1_named_color}{Named\+Color}} color)
+\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_game_grid_ad655bef3f2c24cc19f222b86b5d31373}{set\+B\+G\+Color}} (Integer row, Integer col, String color)
+\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_game_grid_a860f2669ba46bc7691f4bb5c7adf907b}{set\+F\+G\+Color}} (Integer row, Integer col, String color)
+\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_game_grid_a8eee4918e2cbfc956a92a39252590114}{draw\+Symbol}} (Integer row, Integer col, Integer symbol)
+\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_game_grid_a8e8f99d386149e9cd888dd9e6796e5e0}{draw\+Symbol}} (Integer row, Integer col, \mbox{\hyperlink{enumbridges_1_1base_1_1_named_symbol}{Named\+Symbol}} symbol)
+\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_game_grid_a89a27cff9fd390f6d824b7e71534b256}{draw\+Symbol}} (Integer row, Integer col, Integer symbol, String color)
+\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_game_grid_a998fd9e2a9a64e290c9edb01d49f324a}{draw\+Symbol}} (Integer row, Integer col, \mbox{\hyperlink{enumbridges_1_1base_1_1_named_symbol}{Named\+Symbol}} symbol, String color)
+\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_game_grid_ad791794e65de113d96dbd173b34ae820}{draw\+Symbol}} (Integer row, Integer col, Integer symbol, \mbox{\hyperlink{enumbridges_1_1base_1_1_named_color}{Named\+Color}} color)
+\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_game_grid_a778e5b036a18278c9e93e01faa19421c}{draw\+Symbol}} (Integer row, Integer col, \mbox{\hyperlink{enumbridges_1_1base_1_1_named_symbol}{Named\+Symbol}} symbol, \mbox{\hyperlink{enumbridges_1_1base_1_1_named_color}{Named\+Color}} color)
+\item 
+String \mbox{\hyperlink{classbridges_1_1base_1_1_game_grid_a3c72c7277f9c72ceff82fd063298541e}{get\+Data\+Structure\+Representation}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_game_grid_a0b5330e66b504eddc00617c5f1fa6240}\label{classbridges_1_1base_1_1_game_grid_a0b5330e66b504eddc00617c5f1fa6240}} 
+\index{bridges.base.GameGrid@{bridges.base.GameGrid}!GameGrid@{GameGrid}}
+\index{GameGrid@{GameGrid}!bridges.base.GameGrid@{bridges.base.GameGrid}}
+\doxysubsubsection{\texorpdfstring{GameGrid()}{GameGrid()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bridges.\+base.\+Game\+Grid.\+Game\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default Game \mbox{\hyperlink{classbridges_1_1base_1_1_grid}{Grid}} constructor \mbox{\Hypertarget{classbridges_1_1base_1_1_game_grid_acfe6d52979dae94b1d883fed4965feb3}\label{classbridges_1_1base_1_1_game_grid_acfe6d52979dae94b1d883fed4965feb3}} 
+\index{bridges.base.GameGrid@{bridges.base.GameGrid}!GameGrid@{GameGrid}}
+\index{GameGrid@{GameGrid}!bridges.base.GameGrid@{bridges.base.GameGrid}}
+\doxysubsubsection{\texorpdfstring{GameGrid()}{GameGrid()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bridges.\+base.\+Game\+Grid.\+Game\+Grid (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{cols }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{classbridges_1_1base_1_1_grid}{Grid}} constructor with grid size arguments
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & -\/ int representing the number of rows of the grid \\
+\hline
+{\em cols} & -\/ int representing the number of columns of the grid \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_game_grid_a8eee4918e2cbfc956a92a39252590114}\label{classbridges_1_1base_1_1_game_grid_a8eee4918e2cbfc956a92a39252590114}} 
+\index{bridges.base.GameGrid@{bridges.base.GameGrid}!drawSymbol@{drawSymbol}}
+\index{drawSymbol@{drawSymbol}!bridges.base.GameGrid@{bridges.base.GameGrid}}
+\doxysubsubsection{\texorpdfstring{drawSymbol()}{drawSymbol()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily void bridges.\+base.\+Game\+Grid.\+draw\+Symbol (\begin{DoxyParamCaption}\item[{Integer}]{row,  }\item[{Integer}]{col,  }\item[{Integer}]{symbol }\end{DoxyParamCaption})}
+
+Draw a symbol at the specified location 
+\begin{DoxyParams}{Parameters}
+{\em row,col} & -\/ integer indices specifying the position to modify \\
+\hline
+{\em symbol} & -\/ Integer symbol argument to set the symbol at the chosen position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_game_grid_ad791794e65de113d96dbd173b34ae820}\label{classbridges_1_1base_1_1_game_grid_ad791794e65de113d96dbd173b34ae820}} 
+\index{bridges.base.GameGrid@{bridges.base.GameGrid}!drawSymbol@{drawSymbol}}
+\index{drawSymbol@{drawSymbol}!bridges.base.GameGrid@{bridges.base.GameGrid}}
+\doxysubsubsection{\texorpdfstring{drawSymbol()}{drawSymbol()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily void bridges.\+base.\+Game\+Grid.\+draw\+Symbol (\begin{DoxyParamCaption}\item[{Integer}]{row,  }\item[{Integer}]{col,  }\item[{Integer}]{symbol,  }\item[{\mbox{\hyperlink{enumbridges_1_1base_1_1_named_color}{Named\+Color}}}]{color }\end{DoxyParamCaption})}
+
+Draw a symbol at the specified location 
+\begin{DoxyParams}{Parameters}
+{\em row,col} & -\/ integer indices specifying the position to modify \\
+\hline
+{\em symbol} & -\/ Integer symbol argument to set the symbol at the chosen position \\
+\hline
+{\em color} & -\/ Named \mbox{\hyperlink{classbridges_1_1base_1_1_color}{Color}} enum argument to set the foreground at the chosen position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_game_grid_a89a27cff9fd390f6d824b7e71534b256}\label{classbridges_1_1base_1_1_game_grid_a89a27cff9fd390f6d824b7e71534b256}} 
+\index{bridges.base.GameGrid@{bridges.base.GameGrid}!drawSymbol@{drawSymbol}}
+\index{drawSymbol@{drawSymbol}!bridges.base.GameGrid@{bridges.base.GameGrid}}
+\doxysubsubsection{\texorpdfstring{drawSymbol()}{drawSymbol()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily void bridges.\+base.\+Game\+Grid.\+draw\+Symbol (\begin{DoxyParamCaption}\item[{Integer}]{row,  }\item[{Integer}]{col,  }\item[{Integer}]{symbol,  }\item[{String}]{color }\end{DoxyParamCaption})}
+
+Draw a symbol at the specified location 
+\begin{DoxyParams}{Parameters}
+{\em row,col} & -\/ integer indices specifying the position to modify \\
+\hline
+{\em symbol} & -\/ Integer symbol argument to set the symbol at the chosen position \\
+\hline
+{\em color} & -\/ String color argument to set the background at the chosen position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_game_grid_a8e8f99d386149e9cd888dd9e6796e5e0}\label{classbridges_1_1base_1_1_game_grid_a8e8f99d386149e9cd888dd9e6796e5e0}} 
+\index{bridges.base.GameGrid@{bridges.base.GameGrid}!drawSymbol@{drawSymbol}}
+\index{drawSymbol@{drawSymbol}!bridges.base.GameGrid@{bridges.base.GameGrid}}
+\doxysubsubsection{\texorpdfstring{drawSymbol()}{drawSymbol()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily void bridges.\+base.\+Game\+Grid.\+draw\+Symbol (\begin{DoxyParamCaption}\item[{Integer}]{row,  }\item[{Integer}]{col,  }\item[{\mbox{\hyperlink{enumbridges_1_1base_1_1_named_symbol}{Named\+Symbol}}}]{symbol }\end{DoxyParamCaption})}
+
+Draw a symbol at the specified location 
+\begin{DoxyParams}{Parameters}
+{\em row,col} & -\/ integer indices specifying the position to modify \\
+\hline
+{\em symbol} & -\/ Named symbol enum argument to set the symbol at the chosen position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_game_grid_a778e5b036a18278c9e93e01faa19421c}\label{classbridges_1_1base_1_1_game_grid_a778e5b036a18278c9e93e01faa19421c}} 
+\index{bridges.base.GameGrid@{bridges.base.GameGrid}!drawSymbol@{drawSymbol}}
+\index{drawSymbol@{drawSymbol}!bridges.base.GameGrid@{bridges.base.GameGrid}}
+\doxysubsubsection{\texorpdfstring{drawSymbol()}{drawSymbol()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily void bridges.\+base.\+Game\+Grid.\+draw\+Symbol (\begin{DoxyParamCaption}\item[{Integer}]{row,  }\item[{Integer}]{col,  }\item[{\mbox{\hyperlink{enumbridges_1_1base_1_1_named_symbol}{Named\+Symbol}}}]{symbol,  }\item[{\mbox{\hyperlink{enumbridges_1_1base_1_1_named_color}{Named\+Color}}}]{color }\end{DoxyParamCaption})}
+
+Draw a symbol at the specified location 
+\begin{DoxyParams}{Parameters}
+{\em row,col} & -\/ integer indices specifying the position to modify \\
+\hline
+{\em symbol} & -\/ Named \mbox{\hyperlink{classbridges_1_1base_1_1_symbol}{Symbol}} enum argument to set the symbol at the chosen position \\
+\hline
+{\em color} & -\/ Named \mbox{\hyperlink{classbridges_1_1base_1_1_color}{Color}} enum argument to set the foreground at the chosen position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_game_grid_a998fd9e2a9a64e290c9edb01d49f324a}\label{classbridges_1_1base_1_1_game_grid_a998fd9e2a9a64e290c9edb01d49f324a}} 
+\index{bridges.base.GameGrid@{bridges.base.GameGrid}!drawSymbol@{drawSymbol}}
+\index{drawSymbol@{drawSymbol}!bridges.base.GameGrid@{bridges.base.GameGrid}}
+\doxysubsubsection{\texorpdfstring{drawSymbol()}{drawSymbol()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily void bridges.\+base.\+Game\+Grid.\+draw\+Symbol (\begin{DoxyParamCaption}\item[{Integer}]{row,  }\item[{Integer}]{col,  }\item[{\mbox{\hyperlink{enumbridges_1_1base_1_1_named_symbol}{Named\+Symbol}}}]{symbol,  }\item[{String}]{color }\end{DoxyParamCaption})}
+
+Draw a symbol at the specified location 
+\begin{DoxyParams}{Parameters}
+{\em row,col} & -\/ integer indices specifying the position to modify \\
+\hline
+{\em symbol} & -\/ Named \mbox{\hyperlink{classbridges_1_1base_1_1_symbol}{Symbol}} enum argument to set the symbol at the chosen position \\
+\hline
+{\em color} & -\/ String color argument to set the background at the chosen position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_game_grid_abf8435b464054c1f290985b05ce7cd97}\label{classbridges_1_1base_1_1_game_grid_abf8435b464054c1f290985b05ce7cd97}} 
+\index{bridges.base.GameGrid@{bridges.base.GameGrid}!getBGColor@{getBGColor}}
+\index{getBGColor@{getBGColor}!bridges.base.GameGrid@{bridges.base.GameGrid}}
+\doxysubsubsection{\texorpdfstring{getBGColor()}{getBGColor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enumbridges_1_1base_1_1_named_color}{Named\+Color}} bridges.\+base.\+Game\+Grid.\+get\+B\+G\+Color (\begin{DoxyParamCaption}\item[{Integer}]{row,  }\item[{Integer}]{col }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1base_1_1_game_grid_a4d88979ac0f74f212392c5efe1400916}\label{classbridges_1_1base_1_1_game_grid_a4d88979ac0f74f212392c5efe1400916}} 
+\index{bridges.base.GameGrid@{bridges.base.GameGrid}!getDataStructType@{getDataStructType}}
+\index{getDataStructType@{getDataStructType}!bridges.base.GameGrid@{bridges.base.GameGrid}}
+\doxysubsubsection{\texorpdfstring{getDataStructType()}{getDataStructType()}}
+{\footnotesize\ttfamily String bridges.\+base.\+Game\+Grid.\+get\+Data\+Struct\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1base_1_1_game_grid_a3c72c7277f9c72ceff82fd063298541e}\label{classbridges_1_1base_1_1_game_grid_a3c72c7277f9c72ceff82fd063298541e}} 
+\index{bridges.base.GameGrid@{bridges.base.GameGrid}!getDataStructureRepresentation@{getDataStructureRepresentation}}
+\index{getDataStructureRepresentation@{getDataStructureRepresentation}!bridges.base.GameGrid@{bridges.base.GameGrid}}
+\doxysubsubsection{\texorpdfstring{getDataStructureRepresentation()}{getDataStructureRepresentation()}}
+{\footnotesize\ttfamily String bridges.\+base.\+Game\+Grid.\+get\+Data\+Structure\+Representation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+get the J\+S\+ON representation of the game grid. Contains separate foreground, background, and symbol arrays
+
+\begin{DoxyReturn}{Returns}
+the J\+S\+ON representation of the game grid 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_game_grid_a974e33d5561a8f214966be626a9ca8ca}\label{classbridges_1_1base_1_1_game_grid_a974e33d5561a8f214966be626a9ca8ca}} 
+\index{bridges.base.GameGrid@{bridges.base.GameGrid}!getSymbol@{getSymbol}}
+\index{getSymbol@{getSymbol}!bridges.base.GameGrid@{bridges.base.GameGrid}}
+\doxysubsubsection{\texorpdfstring{getSymbol()}{getSymbol()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enumbridges_1_1base_1_1_named_symbol}{Named\+Symbol}} bridges.\+base.\+Game\+Grid.\+get\+Symbol (\begin{DoxyParamCaption}\item[{Integer}]{row,  }\item[{Integer}]{col }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1base_1_1_game_grid_ab094ebfd585aac9440836ad6875ce094}\label{classbridges_1_1base_1_1_game_grid_ab094ebfd585aac9440836ad6875ce094}} 
+\index{bridges.base.GameGrid@{bridges.base.GameGrid}!getSymbolColor@{getSymbolColor}}
+\index{getSymbolColor@{getSymbolColor}!bridges.base.GameGrid@{bridges.base.GameGrid}}
+\doxysubsubsection{\texorpdfstring{getSymbolColor()}{getSymbolColor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enumbridges_1_1base_1_1_named_color}{Named\+Color}} bridges.\+base.\+Game\+Grid.\+get\+Symbol\+Color (\begin{DoxyParamCaption}\item[{Integer}]{row,  }\item[{Integer}]{col }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1base_1_1_game_grid_a72d7d5b03b78fdc4110cee955727a523}\label{classbridges_1_1base_1_1_game_grid_a72d7d5b03b78fdc4110cee955727a523}} 
+\index{bridges.base.GameGrid@{bridges.base.GameGrid}!setBGColor@{setBGColor}}
+\index{setBGColor@{setBGColor}!bridges.base.GameGrid@{bridges.base.GameGrid}}
+\doxysubsubsection{\texorpdfstring{setBGColor()}{setBGColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void bridges.\+base.\+Game\+Grid.\+set\+B\+G\+Color (\begin{DoxyParamCaption}\item[{Integer}]{row,  }\item[{Integer}]{col,  }\item[{\mbox{\hyperlink{enumbridges_1_1base_1_1_named_color}{Named\+Color}}}]{color }\end{DoxyParamCaption})}
+
+Set background color of a cell using an enum argument
+
+
+\begin{DoxyParams}{Parameters}
+{\em row,col} & -\/ integer indices specifying the position to modify \\
+\hline
+{\em color} & -\/ Named \mbox{\hyperlink{classbridges_1_1base_1_1_color}{Color}} enum argument to set the background at the chosen position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_game_grid_ad655bef3f2c24cc19f222b86b5d31373}\label{classbridges_1_1base_1_1_game_grid_ad655bef3f2c24cc19f222b86b5d31373}} 
+\index{bridges.base.GameGrid@{bridges.base.GameGrid}!setBGColor@{setBGColor}}
+\index{setBGColor@{setBGColor}!bridges.base.GameGrid@{bridges.base.GameGrid}}
+\doxysubsubsection{\texorpdfstring{setBGColor()}{setBGColor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void bridges.\+base.\+Game\+Grid.\+set\+B\+G\+Color (\begin{DoxyParamCaption}\item[{Integer}]{row,  }\item[{Integer}]{col,  }\item[{String}]{color }\end{DoxyParamCaption})}
+
+Set background color of a cell using an enum argument
+
+
+\begin{DoxyParams}{Parameters}
+{\em row,col} & -\/ integer indices specifying the position to modify \\
+\hline
+{\em color} & -\/ String color argument to set the background at the chosen position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_game_grid_a2281cfd7d61dc9903c9b1358c9767a1e}\label{classbridges_1_1base_1_1_game_grid_a2281cfd7d61dc9903c9b1358c9767a1e}} 
+\index{bridges.base.GameGrid@{bridges.base.GameGrid}!setEncoding@{setEncoding}}
+\index{setEncoding@{setEncoding}!bridges.base.GameGrid@{bridges.base.GameGrid}}
+\doxysubsubsection{\texorpdfstring{setEncoding()}{setEncoding()}}
+{\footnotesize\ttfamily void bridges.\+base.\+Game\+Grid.\+set\+Encoding (\begin{DoxyParamCaption}\item[{String}]{encoding }\end{DoxyParamCaption})}
+
+
+
+Enable changing the game grid encoding when building J\+S\+ON representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em encoding} & type of encoding. Supports \char`\"{}raw\char`\"{} and \char`\"{}rle\char`\"{} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_game_grid_a105b46f68bcc9413889e7255318bab4c}\label{classbridges_1_1base_1_1_game_grid_a105b46f68bcc9413889e7255318bab4c}} 
+\index{bridges.base.GameGrid@{bridges.base.GameGrid}!setFGColor@{setFGColor}}
+\index{setFGColor@{setFGColor}!bridges.base.GameGrid@{bridges.base.GameGrid}}
+\doxysubsubsection{\texorpdfstring{setFGColor()}{setFGColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void bridges.\+base.\+Game\+Grid.\+set\+F\+G\+Color (\begin{DoxyParamCaption}\item[{Integer}]{row,  }\item[{Integer}]{col,  }\item[{\mbox{\hyperlink{enumbridges_1_1base_1_1_named_color}{Named\+Color}}}]{color }\end{DoxyParamCaption})}
+
+Set foreground color of a cell using an enum argument
+
+
+\begin{DoxyParams}{Parameters}
+{\em row,col} & -\/ integer indices specifying the position to modify \\
+\hline
+{\em color} & -\/ Named \mbox{\hyperlink{classbridges_1_1base_1_1_color}{Color}} enum argument to set the foreground at the chosen position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_game_grid_a860f2669ba46bc7691f4bb5c7adf907b}\label{classbridges_1_1base_1_1_game_grid_a860f2669ba46bc7691f4bb5c7adf907b}} 
+\index{bridges.base.GameGrid@{bridges.base.GameGrid}!setFGColor@{setFGColor}}
+\index{setFGColor@{setFGColor}!bridges.base.GameGrid@{bridges.base.GameGrid}}
+\doxysubsubsection{\texorpdfstring{setFGColor()}{setFGColor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void bridges.\+base.\+Game\+Grid.\+set\+F\+G\+Color (\begin{DoxyParamCaption}\item[{Integer}]{row,  }\item[{Integer}]{col,  }\item[{String}]{color }\end{DoxyParamCaption})}
+
+Set background color of a cell using an enum argument
+
+
+\begin{DoxyParams}{Parameters}
+{\em row,col} & -\/ integer indices specifying the position to modify \\
+\hline
+{\em color} & -\/ String color argument to set the background at the chosen position \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/java/src/main/java/bridges/base/\mbox{\hyperlink{_game_grid_8java}{Game\+Grid.\+java}}\end{DoxyCompactItemize}
