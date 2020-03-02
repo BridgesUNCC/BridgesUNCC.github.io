@@ -20,38 +20,21 @@
 
 	<span class="Comment">//create the Bridges object, set credentials</span>
 
-	bridges.setServer(<span class="Constant">&quot;clone&quot;</span>);
-
 	DataSource ds;
 	OSMData osm_data;
 	<span class="Statement">try</span> {
-		<span class="Comment">//osm_data = ds-&gt;getOSMData(35.28, -80.75, 35.32, -80.71);</span>
-		osm_data = ds.getOSMData(<span class="Constant">&quot;Charlotte&quot;</span>);
+	  osm_data = ds.getOSMData(<span class="Constant">35.28</span>, -<span class="Constant">80.75</span>, <span class="Constant">35.32</span>, -<span class="Constant">80.71</span>);
+	  <span class="Comment">//osm_data = ds.getOSMData(&quot;Charlotte, North Carolina&quot;);</span>
 	}
 	<span class="Statement">catch</span> (std::string s) {
 		std::cerr &lt;&lt; <span class="Constant">&quot;Exception: &quot;</span> &lt;&lt; s &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
 	}
-	vector&lt;OSMVertex&gt; vertices = osm_data.getVertices();
-	vector&lt;OSMEdge&gt; edges = osm_data.getEdges();
 
-	GraphAdjList&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt; gr;
-	<span class="Type">double</span> coords[<span class="Constant">2</span>];
+	GraphAdjList&lt;<span class="Type">int</span>, OSMVertex, <span class="Type">double</span>&gt; graph;
+	osm_data.getGraph (&amp;graph);
 
-	<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; vertices.size(); k++) {
-		gr.addVertex(k);
-		vertices[k].getCartesianCoords(coords);
-		gr.getVertex(k)-&gt;setLocation(coords[<span class="Constant">0</span>], coords[<span class="Constant">1</span>]);
-		gr.getVertex(k)-&gt;setColor(Color(<span class="Constant">&quot;green&quot;</span>));
-	}
-	<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; edges.size(); k++) {
-		gr.addEdge(edges[k].getSourceVertex(), edges[k].getDestinationVertex(),
-			edges[k].getEdgeLength() );
-		gr.getLinkVisualizer(edges[k].getSourceVertex(), edges[k].getDestinationVertex())-&gt;setColor(Color(<span class="Constant">&quot;red&quot;</span>));
-
-	}
-
-	gr.forceLargeVisualization(<span class="Constant">true</span>);
-	bridges.setDataStructure(gr);
+	graph.forceLargeVisualization(<span class="Constant">true</span>);
+	bridges.setDataStructure(&amp;graph);
 	bridges.visualize();
 
 	<span class="Comment">// create graph object</span>

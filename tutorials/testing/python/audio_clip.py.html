@@ -1,0 +1,70 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">import</span> random
+<span class="PreProc">from</span> bridges <span class="PreProc">import</span> *
+
+<span class="Statement">class</span> <span class="Identifier">AudioTest</span>(AudioClip):
+    <span class="Statement">def</span> <span class="Identifier">remove_vocals</span>(self) -&gt; <span class="Identifier">None</span>:
+        <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(self.sample_count):
+            left = self.get_sample(<span class="Constant">0</span>, i)
+            right = self.get_sample(<span class="Constant">1</span>, i)
+            self.set_sample(<span class="Constant">0</span>, i, (left - right) / <span class="Constant">2.0</span>)
+            self.set_sample(<span class="Constant">1</span>, i, (left - right) / <span class="Constant">2.0</span>)
+
+    <span class="Statement">def</span> <span class="Identifier">fade_in</span>(self, fade_length: <span class="Identifier">int</span>) -&gt; <span class="Identifier">None</span>:
+        <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Identifier">min</span>(self.sample_count, fade_length)):
+            <span class="Statement">for</span> c <span class="Statement">in</span> <span class="Identifier">range</span>(self.num_channels):
+                self.set_sample(c, i, self.get_sample(c, i) * (i / <span class="Identifier">float</span>(fade_length)))
+
+    <span class="Statement">def</span> <span class="Identifier">fade_out</span>(self, fade_length: <span class="Identifier">int</span>) -&gt; <span class="Identifier">None</span>:
+        m = <span class="Identifier">min</span>(self.sample_count, fade_length)
+        <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(self.sample_count - <span class="Constant">1</span>, self.sample_count - m, -<span class="Constant">1</span>):
+            <span class="Statement">for</span> c <span class="Statement">in</span> <span class="Identifier">range</span>(self.num_channels):
+                self.set_sample(c, i, <span class="Identifier">int</span>(self.get_sample(c, i) * ((self.sample_count - i) / <span class="Identifier">float</span>(fade_length))))
+
+    <span class="Statement">def</span> <span class="Identifier">fade</span>(self, fade_length: <span class="Identifier">int</span>) -&gt; <span class="Identifier">None</span>:
+        self.fade_in(fade_length)
+        self.fade_out(fade_length)
+
+    <span class="Statement">def</span> <span class="Identifier">left_to_right</span>(self, pan_length: <span class="Identifier">int</span>) -&gt; <span class="Identifier">None</span>:
+        <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Identifier">min</span>(self.sample_count, pan_length)):
+            self.set_sample(<span class="Constant">0</span>, i, self.get_sample(<span class="Constant">0</span>, i) * (<span class="Constant">1.0</span> - (i / <span class="Identifier">float</span>(pan_length))))
+            self.set_sample(<span class="Constant">1</span>, i, self.get_sample(<span class="Constant">1</span>, i) * (i / <span class="Identifier">float</span>(pan_length)))
+
+    <span class="Statement">def</span> <span class="Identifier">generate_sawtooth</span>(self, period=<span class="Constant">500</span>) -&gt; <span class="Identifier">None</span>:
+        <span class="Statement">for</span> s <span class="Statement">in</span> <span class="Identifier">range</span>(self.sample_count):
+            <span class="Statement">for</span> c <span class="Statement">in</span> <span class="Identifier">range</span>(self.num_channels):
+                ratio = (<span class="Identifier">int</span>(s) % <span class="Identifier">int</span>(period)) / <span class="Identifier">float</span>(period)
+                ratio = (ratio - <span class="Constant">0.5</span>) / <span class="Constant">0.5</span>
+                self.set_sample(c, s, ratio * ((<span class="Constant">2</span> ** <span class="Constant">32</span> / <span class="Constant">2.0</span>) - <span class="Constant">1.0</span>))
+
+    <span class="Statement">def</span> <span class="Identifier">generate_sine</span>(self) -&gt; <span class="Identifier">None</span>:
+        <span class="Statement">for</span> s <span class="Statement">in</span> <span class="Identifier">range</span>(self.sample_count):
+            <span class="Statement">for</span> c <span class="Statement">in</span> <span class="Identifier">range</span>(self.num_channels):
+                val = math.sin(s / <span class="Constant">20</span>)
+                self.set_sample(c, s, val * ((<span class="Constant">2</span> ** <span class="Constant">32</span> / <span class="Constant">2.0</span>) - <span class="Constant">1.0</span>))
+
+    <span class="Statement">def</span> <span class="Identifier">generate_square</span>(self) -&gt; <span class="Identifier">None</span>:
+        <span class="Statement">for</span> s <span class="Statement">in</span> <span class="Identifier">range</span>(self.sample_count):
+            <span class="Statement">for</span> c <span class="Statement">in</span> <span class="Identifier">range</span>(self.num_channels):
+                val = math.sin(s / <span class="Constant">20</span>)
+                <span class="Statement">if</span> val &gt;= <span class="Constant">0</span>:
+                    val = <span class="Constant">0</span> <span class="Statement">if</span> val &lt; <span class="Constant">0.5</span> <span class="Statement">else</span> <span class="Constant">1</span>
+                <span class="Statement">else</span>:
+                    val = <span class="Constant">0</span> <span class="Statement">if</span> val &gt; -<span class="Constant">0.5</span> <span class="Statement">else</span> -<span class="Constant">1</span>
+                self.set_sample(c, s, val * ((<span class="Constant">2</span> ** <span class="Constant">32</span> / <span class="Constant">2.0</span>) - <span class="Constant">1.0</span>))
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+    clip = AudioTest(sample_count=<span class="Constant">44100</span>*<span class="Constant">5</span>, num_channels=<span class="Constant">2</span>)
+
+    clip.generate_sine()
+
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
+    bridges.connector.set_server(<span class="Constant">&quot;</span><span class="Constant">clone</span><span class="Constant">&quot;</span>)
+    bridges.set_data_structure(clip)
+
+    clip.display()
+    bridges.visualize()
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
+    main()
+</pre>

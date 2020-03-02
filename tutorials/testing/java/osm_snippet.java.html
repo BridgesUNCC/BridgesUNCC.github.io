@@ -17,13 +17,13 @@
         Bridges bridges = <span class="Statement">new</span> Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 
 		DataSource  ds = bridges.getDataSource();
-		OsmData osm_data = ds.getOsmDataOld(<span class="Constant">&quot;uncc_campus&quot;</span>);
+		OsmData osm_data = ds.getOsmData(<span class="Constant">&quot;Charlotte, North Carolina&quot;</span>);
 
 		OsmVertex[] vertices = osm_data.getVertices();
 		OsmEdge[] edges = osm_data.getEdges();
 
-		System.out.println(<span class="Constant">&quot;Number of Vertices [UNC Charlotte Campus]:&quot;</span> + vertices.length);
-		System.out.println(<span class="Constant">&quot;Number of Edges [UNC Charlotte Campus]:&quot;</span> + edges.length);
+		System.out.println(<span class="Constant">&quot;Number of Vertices [Charlotte]:&quot;</span> + vertices.length);
+		System.out.println(<span class="Constant">&quot;Number of Edges [Charlotte]:&quot;</span> + edges.length);
 
 		<span class="Comment">// get cartesian coordinate  location of first vertex</span>
 		<span class="Type">double</span>[] coords = osm_data.getVertices()[<span class="Constant">0</span>].getCartesian_coord();

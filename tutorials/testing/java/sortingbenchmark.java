@@ -1,5 +1,5 @@
 import bridges.base.LineChart;
-import bridges.base.SortingBenchmark;
+import bridges.benchmark.SortingBenchmark;
 import bridges.connect.Bridges;
 import bridges.validation.RateLimitException;
 

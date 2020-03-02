@@ -1,0 +1,207 @@
+<pre id='vimCodeElement'>
+
+<span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;ColorGrid.h&quot;</span>
+
+<span class="PreProc">#include </span><span class="Constant">&lt;iostream&gt;</span>
+<span class="PreProc">#include </span><span class="Constant">&lt;fstream&gt;</span>
+<span class="PreProc">#include </span><span class="Constant">&lt;sstream&gt;</span>
+<span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
+<span class="PreProc">#include </span><span class="Constant">&lt;climits&gt;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> std;
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
+
+<span class="Comment">// This program implements the mountain paths assignment in C++. See the README.md for a </span>
+<span class="Comment">// detailed description</span>
+
+<span class="Comment">// function prototypes</span>
+ColorGrid *getImage (<span class="Type">int</span> *img_arr, <span class="Type">int</span> imgWidth, <span class="Type">int</span> imgHeight, <span class="Type">int</span> maxVal);
+<span class="Type">int</span> *readData (<span class="Type">int</span> *imgWidth, <span class="Type">int</span> *imgHeight, <span class="Type">int</span> *maxVal, string file_name);
+<span class="Type">void</span> findPath(<span class="Type">int</span> *img_arr, <span class="Type">int</span> imgWidth, <span class="Type">int</span> imgHeight, <span class="Type">int</span> startRow, <span class="Type">int</span> maxVal);
+
+<span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
+
+	<span class="Comment">// bridges object initialization</span>
+
+    Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+        <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+	<span class="Comment">// defaults for row number and data file</span>
+	<span class="Type">int</span> startRow = <span class="Constant">300</span>;
+	string dataFile = <span class="Constant">&quot;./colorado1.dat&quot;</span>;
+
+	<span class="Comment">// set title</span>
+	bridges.setTitle(<span class="Constant">&quot;Mountain Paths - Greedy Algorithms Example&quot;</span>);
+
+
+	<span class="Comment">// read input elevation data</span>
+	<span class="Type">int</span> width, height, maxVal;
+	<span class="Type">int</span> *elev_data;
+
+	elev_data = readData(&amp;width, &amp;height, &amp;maxVal, dataFile);
+
+	<span class="Comment">// find path by applying a greedy algorithm</span>
+	findPath (elev_data, width, height, startRow, maxVal);
+
+
+	<span class="Comment">// get the path written into a color grid for visualization</span>
+	ColorGrid *cg = getImage(elev_data, width, height, maxVal);
+
+	<span class="Comment">// visualize</span>
+	bridges.setDataStructure(cg);
+	bridges.visualize();
+
+	<span class="Statement">return</span> <span class="Constant">0</span>;
+}
+
+<span class="Type">int</span> *readData(<span class="Type">int</span> *width, <span class="Type">int</span> *height, <span class="Type">int</span> *maxVal, string file_name) {
+
+	<span class="Comment">// open input, output files</span>
+	ifstream infile(file_name.c_str());
+	ofstream outfile(<span class="Constant">&quot;colorado1.ppm&quot;</span>);
+
+	<span class="Comment">// read header </span>
+	<span class="Type">int</span> min = <span class="Constant">INT_MAX</span>, max = <span class="Constant">INT_MIN</span>, w, h, val;
+	cout &lt;&lt; <span class="Constant">&quot;Min, Max:&quot;</span> &lt;&lt; min &lt;&lt; <span class="Constant">&quot;,&quot;</span> &lt;&lt; max &lt;&lt; endl;
+	infile &gt;&gt; w &gt;&gt; h;
+
+	*width = w; *height = h;
+
+	<span class="Comment">// allocate space for the input data</span>
+	<span class="Comment">// we will use a 1D array</span>
+	<span class="Type">int</span> size = w*h;
+	<span class="Type">int</span> *elev_data = <span class="Statement">new</span> <span class="Type">int</span>[size];
+
+	<span class="Comment">// read the elevation data</span>
+	<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; size; k++) {
+		infile &gt;&gt;  val;
+
+		<span class="Comment">// update the min, max val</span>
+		min = (val &lt; min) ? val : min;
+		max = (val &gt; max) ? val : max;
+
+		<span class="Comment">// store  in elevation array</span>
+		elev_data[k] = val;
+	}
+	<span class="Comment">// deal with negative elevation values - yes, you can be below sealevel!</span>
+
+	cout &lt;&lt; <span class="Constant">&quot;Min, Max:&quot;</span> &lt;&lt; min &lt;&lt; <span class="Constant">&quot;,&quot;</span> &lt;&lt; max &lt;&lt; endl;
+
+	<span class="Statement">if</span> (min &lt; <span class="Constant">0</span>) {
+		<span class="Type">int</span> offset = -min;
+		<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; size; k++)
+			elev_data[k] += offset;
+		max += offset;
+	}
+
+	<span class="Comment">// record the max value</span>
+	*maxVal = max;
+
+	<span class="Statement">return</span> elev_data;
+}
+
+<span class="Comment">// takes in the processed elevation data and returns a color grid for </span>
+<span class="Comment">// visualization using BRIDGES</span>
+ColorGrid *getImage(<span class="Type">int</span> *elev_data, <span class="Type">int</span> width, <span class="Type">int</span> height, <span class="Type">int</span> maxVal) {
+
+	<span class="Comment">// create color grid</span>
+	ColorGrid *cg = <span class="Statement">new</span> ColorGrid(height, width);
+
+	<span class="Type">float</span> pixel_val;
+	<span class="Type">int</span> n = <span class="Constant">0</span>, gray;
+
+	<span class="Comment">// load the elevation data</span>
+	<span class="Statement">for</span> (<span class="Type">int</span> j = <span class="Constant">0</span>; j &lt; height; j++)
+	<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; width; k++) {
+		pixel_val = (<span class="Type">float</span>) elev_data[n++];
+		<span class="Statement">if</span> (pixel_val == -<span class="Constant">1.</span>) {
+			<span class="Comment">// this is the path drawn in yellow across the image</span>
+			cg-&gt;set(j, k, Color(<span class="Constant">255</span>, <span class="Constant">0</span>, <span class="Constant">255</span>));
+		}
+		<span class="Statement">else</span> {
+			<span class="Comment">// scale value to be within 0-255, for r,g,b range</span>
+			gray = (<span class="Type">int</span>) (pixel_val*<span class="Constant">255.</span>/maxVal);
+			cg-&gt;set(j, k, Color(gray, gray, gray));
+		}
+	}
+
+	<span class="Statement">return</span> cg;
+
+}
+
+<span class="Comment">// determines the least effort path through the mountain starting a point on</span>
+<span class="Comment">// the left edge of the image</span>
+<span class="Type">void</span> findPath(<span class="Type">int</span> *elev_data, <span class="Type">int</span> imgWidth, <span class="Type">int</span> imgHeight, <span class="Type">int</span> startRow, <span class="Type">int</span> maxVal) {
+
+	<span class="Statement">if</span> (startRow &lt; <span class="Constant">0</span> || startRow &gt;= imgHeight)
+		<span class="Statement">return</span>;
+
+	<span class="Type">int</span> col = <span class="Constant">0</span>, row = startRow;
+	<span class="Type">int</span> pix_addr = startRow*imgWidth + col;
+
+	<span class="Statement">while</span> (col != imgWidth-<span class="Constant">2</span>) {
+		<span class="Comment">// hold neighbors in array</span>
+		<span class="Type">int</span> neighb[<span class="Constant">3</span>] = {<span class="Constant">0</span>, <span class="Constant">0</span>, <span class="Constant">0</span>};
+
+		<span class="Comment">// compute 2D address of pixel from 1D address</span>
+		row = pix_addr/imgWidth;
+		col = pix_addr - row*imgWidth;
+		<span class="Type">int</span> top_right = pix_addr - imgWidth + <span class="Constant">1</span>;
+		<span class="Type">int</span> right = pix_addr + <span class="Constant">1</span>;
+		<span class="Type">int</span> bottom_right = pix_addr + imgWidth + <span class="Constant">1</span>;
+		<span class="Type">int</span> cnt;
+
+		<span class="Comment">// color the pixel, its in the path</span>
+		elev_data[pix_addr] = -<span class="Constant">1</span>;
+
+		<span class="Comment">// deal with boundary cases first</span>
+		<span class="Statement">if</span> (row == <span class="Constant">0</span>) {
+			<span class="Comment">// must  go right or down</span>
+			cnt = <span class="Constant">2</span>;
+			neighb[<span class="Constant">0</span>] = right; neighb[<span class="Constant">1</span>] = bottom_right;
+		}
+		<span class="Statement">else</span> <span class="Statement">if</span> (row == imgHeight-<span class="Constant">1</span>){
+			<span class="Comment">// must go right or up</span>
+			cnt = <span class="Constant">2</span>;
+			neighb[<span class="Constant">0</span>] = right; neighb[<span class="Constant">1</span>] = top_right;
+		}
+		<span class="Statement">else</span> {
+			<span class="Comment">// general case</span>
+			<span class="Comment">// check the 3 right neighbors, make greedy decision </span>
+			cnt = <span class="Constant">3</span>;
+			neighb[<span class="Constant">0</span>] = top_right; neighb[<span class="Constant">1</span>] = right; neighb[<span class="Constant">2</span>] = bottom_right;
+		}
+
+		<span class="Comment">// compute differences with right neighbors</span>
+		<span class="Type">int</span> min = maxVal;
+		<span class="Type">int</span> diff[<span class="Constant">3</span>];
+		<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; cnt; k++)  {
+			<span class="Type">int</span> d = elev_data[pix_addr] - elev_data[neighb[k]];
+			diff[k] = (d &lt; <span class="Constant">0</span>) ? -d : d;
+		}
+		<span class="Comment">// choose pixe with the smallest difference</span>
+		<span class="Statement">switch</span> (cnt) {
+			<span class="Statement">case</span> <span class="Constant">2</span>:
+				pix_addr =  (diff[<span class="Constant">0</span>] &lt;= diff[<span class="Constant">1</span>]) ? neighb[<span class="Constant">0</span>] : neighb[<span class="Constant">1</span>];
+				<span class="Statement">break</span>;
+			<span class="Statement">case</span> <span class="Constant">3</span>:
+				<span class="Statement">if</span> (diff[<span class="Constant">0</span>] &lt; diff[<span class="Constant">1</span>] &amp;&amp; diff[<span class="Constant">0</span>] &lt; diff[<span class="Constant">2</span>])
+					pix_addr = neighb[<span class="Constant">0</span>];
+				<span class="Statement">else</span>
+					<span class="Statement">if</span> (diff[<span class="Constant">1</span>] &lt; diff[<span class="Constant">0</span>] &amp;&amp; diff[<span class="Constant">1</span>] &lt; diff[<span class="Constant">2</span>])
+						pix_addr = neighb[<span class="Constant">1</span>];
+				<span class="Statement">else</span>
+					<span class="Statement">if</span> (diff[<span class="Constant">2</span>] &lt; diff[<span class="Constant">0</span>] &amp;&amp; diff[<span class="Constant">2</span>] &lt; diff[<span class="Constant">1</span>])
+						pix_addr = neighb[<span class="Constant">2</span>];
+				<span class="Statement">else</span> <span class="Statement">if</span> ((diff[<span class="Constant">0</span>] == diff[<span class="Constant">1</span>]) || (diff[<span class="Constant">1</span>] == diff[<span class="Constant">2</span>]))
+						pix_addr = neighb[<span class="Constant">1</span>];
+				<span class="Statement">else</span> {
+					<span class="Type">double</span> val = drand48();
+					pix_addr = (val &lt; <span class="Constant">0.5</span>) ? neighb[<span class="Constant">0</span>] : neighb[<span class="Constant">2</span>];
+			}
+		}
+		col++;
+	}
+}
+</pre>
