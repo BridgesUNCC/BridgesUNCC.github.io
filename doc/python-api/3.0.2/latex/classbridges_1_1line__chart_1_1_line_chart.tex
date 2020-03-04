@@ -1,11 +1,11 @@
 \hypertarget{classbridges_1_1line__chart_1_1_line_chart}{}\section{bridges.\+line\+\_\+chart.\+Line\+Chart Class Reference}
-\label{classbridges_1_1line__chart_1_1_line_chart}\index{bridges.\+line\+\_\+chart.\+Line\+Chart@{bridges.\+line\+\_\+chart.\+Line\+Chart}}
+\label{classbridges_1_1line__chart_1_1_line_chart}\index{bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}}
 
 
 \subsection{Detailed Description}
 Show series of data or functions using a line chart. 
 
-Line charts (\href{https://en.wikipedia.org/wiki/Line_chart}{\tt https\+://en.\+wikipedia.\+org/wiki/\+Line\+\_\+chart}) are used to represent graphically functions such as f(x) = 3$\ast$x+1, or data such as temperature of a liquid on a stove as time passes. A individual function or a set of data is called \char`\"{}series\char`\"{}.
+Line charts (\href{https://en.wikipedia.org/wiki/Line_chart}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Line\+\_\+chart}}) are used to represent graphically functions such as f(x) = 3$\ast$x+1, or data such as temperature of a liquid on a stove as time passes. A individual function or a set of data is called \char`\"{}series\char`\"{}.
 
 A series is represented by two arrays xdata and ydata such that there is a point at (xdata\mbox{[}0\mbox{]}, ydata\mbox{[}0\mbox{]}), an other at (xdata\mbox{[}1\mbox{]}, ydata\mbox{[}1\mbox{]}), ... One can add a series by passing the two arrays using set\+Data\+Series() or add the arrays individually using set\+X\+Data() and set\+Y\+Data().
 
@@ -28,9 +28,9 @@ def \mbox{\hyperlink{classbridges_1_1line__chart_1_1_line_chart_a20c96d892b92624
 \item 
 def \mbox{\hyperlink{classbridges_1_1line__chart_1_1_line_chart_a8124cb8693d6564a64264747d6ca5021}{get\+\_\+data\+\_\+structure\+\_\+type}} (self)
 \begin{DoxyCompactList}\small\item\em Get the data type. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classbridges_1_1line__chart_1_1_line_chart_ad189e3efb7abb05944067fc171f6baf8}{mosue\+\_\+track}} (self)
+bool \mbox{\hyperlink{classbridges_1_1line__chart_1_1_line_chart_a524828aa8951e4e9a515ea20692fc654}{mosue\+\_\+track}} (self)
 \begin{DoxyCompactList}\small\item\em Is mounse tracking on? \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classbridges_1_1line__chart_1_1_line_chart_a193acd762b88d9e112729adf56cdbcd2}{mosue\+\_\+track}}
+def \mbox{\hyperlink{classbridges_1_1line__chart_1_1_line_chart_aadf9c7d6cc6b281e64563356fbe84ef8}{mosue\+\_\+track}} (self, bool val)
 \begin{DoxyCompactList}\small\item\em Set mouse tracking flag. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classbridges_1_1line__chart_1_1_line_chart_a0b93e3215dbaefa1e24bd2881393014c}{data\+\_\+label}} (self)
 \begin{DoxyCompactList}\small\item\em Getter for data label. \end{DoxyCompactList}\item 
@@ -72,7 +72,7 @@ def \mbox{\hyperlink{classbridges_1_1line__chart_1_1_line_chart_ad598554c70b1524
 \begin{DoxyCompactList}\small\item\em Getter for plot data on Y. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{classbridges_1_1line__chart_1_1_line_chart_ab9d76afae32e71d0a640ac26b13e645c}{convert}} (self, x\+\_\+data)
 \item 
-def \mbox{\hyperlink{classbridges_1_1line__chart_1_1_line_chart_a4d331f4d5906f70b09efd11728d703a7}{check}} (self)
+bool \mbox{\hyperlink{classbridges_1_1line__chart_1_1_line_chart_ac54bac5a0b78e88d1515dc4ec42dd61f}{check}} (self)
 \item 
 def \mbox{\hyperlink{classbridges_1_1line__chart_1_1_line_chart_a51cb18ae6ebe1fa514de14b8006cc238}{get\+\_\+data\+\_\+structure\+\_\+representation}} (self)
 \end{DoxyCompactItemize}
@@ -87,30 +87,30 @@ def \mbox{\hyperlink{classbridges_1_1line__chart_1_1_line_chart_a51cb18ae6ebe1fa
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_a20c96d892b92624aa367710c9b4386fa}\label{classbridges_1_1line__chart_1_1_line_chart_a20c96d892b92624aa367710c9b4386fa}} 
-\index{bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
-\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}}
-\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+\index{bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}}
+\subsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
 {\footnotesize\ttfamily def bridges.\+line\+\_\+chart.\+Line\+Chart.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_a4d331f4d5906f70b09efd11728d703a7}\label{classbridges_1_1line__chart_1_1_line_chart_a4d331f4d5906f70b09efd11728d703a7}} 
-\index{bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}!check@{check}}
-\index{check@{check}!bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}}
+\mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_ac54bac5a0b78e88d1515dc4ec42dd61f}\label{classbridges_1_1line__chart_1_1_line_chart_ac54bac5a0b78e88d1515dc4ec42dd61f}} 
+\index{bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}!check@{check}}
+\index{check@{check}!bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}}
 \subsubsection{\texorpdfstring{check()}{check()}}
-{\footnotesize\ttfamily def bridges.\+line\+\_\+chart.\+Line\+Chart.\+check (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{bool }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily  bool bridges.\+line\+\_\+chart.\+Line\+Chart.\+check (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_ab9d76afae32e71d0a640ac26b13e645c}\label{classbridges_1_1line__chart_1_1_line_chart_ab9d76afae32e71d0a640ac26b13e645c}} 
-\index{bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}!convert@{convert}}
-\index{convert@{convert}!bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}}
+\index{bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}!convert@{convert}}
+\index{convert@{convert}!bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}}
 \subsubsection{\texorpdfstring{convert()}{convert()}}
 {\footnotesize\ttfamily def bridges.\+line\+\_\+chart.\+Line\+Chart.\+convert (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{x\+\_\+data }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_a0b93e3215dbaefa1e24bd2881393014c}\label{classbridges_1_1line__chart_1_1_line_chart_a0b93e3215dbaefa1e24bd2881393014c}} 
-\index{bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}!data\+\_\+label@{data\+\_\+label}}
-\index{data\+\_\+label@{data\+\_\+label}!bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}}
-\subsubsection{\texorpdfstring{data\+\_\+label()}{data\_label()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\index{bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}!data\_label@{data\_label}}
+\index{data\_label@{data\_label}!bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}}
+\subsubsection{\texorpdfstring{data\_label()}{data\_label()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily def bridges.\+line\+\_\+chart.\+Line\+Chart.\+data\+\_\+label (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
 
@@ -123,9 +123,9 @@ Getter for data label.
 bool data label flag 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_a92796d1738604f9d6417fa7eebb4352e}\label{classbridges_1_1line__chart_1_1_line_chart_a92796d1738604f9d6417fa7eebb4352e}} 
-\index{bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}!data\+\_\+label@{data\+\_\+label}}
-\index{data\+\_\+label@{data\+\_\+label}!bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}}
-\subsubsection{\texorpdfstring{data\+\_\+label()}{data\_label()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\index{bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}!data\_label@{data\_label}}
+\index{data\_label@{data\_label}!bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}}
+\subsubsection{\texorpdfstring{data\_label()}{data\_label()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily def bridges.\+line\+\_\+chart.\+Line\+Chart.\+data\+\_\+label (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{val }\end{DoxyParamCaption})}
 
 
@@ -138,15 +138,15 @@ Setter for data label flag.
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_a51cb18ae6ebe1fa514de14b8006cc238}\label{classbridges_1_1line__chart_1_1_line_chart_a51cb18ae6ebe1fa514de14b8006cc238}} 
-\index{bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}!get\+\_\+data\+\_\+structure\+\_\+representation@{get\+\_\+data\+\_\+structure\+\_\+representation}}
-\index{get\+\_\+data\+\_\+structure\+\_\+representation@{get\+\_\+data\+\_\+structure\+\_\+representation}!bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}}
-\subsubsection{\texorpdfstring{get\+\_\+data\+\_\+structure\+\_\+representation()}{get\_data\_structure\_representation()}}
+\index{bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}!get\_data\_structure\_representation@{get\_data\_structure\_representation}}
+\index{get\_data\_structure\_representation@{get\_data\_structure\_representation}!bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}}
+\subsubsection{\texorpdfstring{get\_data\_structure\_representation()}{get\_data\_structure\_representation()}}
 {\footnotesize\ttfamily def bridges.\+line\+\_\+chart.\+Line\+Chart.\+get\+\_\+data\+\_\+structure\+\_\+representation (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_a8124cb8693d6564a64264747d6ca5021}\label{classbridges_1_1line__chart_1_1_line_chart_a8124cb8693d6564a64264747d6ca5021}} 
-\index{bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}!get\+\_\+data\+\_\+structure\+\_\+type@{get\+\_\+data\+\_\+structure\+\_\+type}}
-\index{get\+\_\+data\+\_\+structure\+\_\+type@{get\+\_\+data\+\_\+structure\+\_\+type}!bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}}
-\subsubsection{\texorpdfstring{get\+\_\+data\+\_\+structure\+\_\+type()}{get\_data\_structure\_type()}}
+\index{bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}!get\_data\_structure\_type@{get\_data\_structure\_type}}
+\index{get\_data\_structure\_type@{get\_data\_structure\_type}!bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}}
+\subsubsection{\texorpdfstring{get\_data\_structure\_type()}{get\_data\_structure\_type()}}
 {\footnotesize\ttfamily def bridges.\+line\+\_\+chart.\+Line\+Chart.\+get\+\_\+data\+\_\+structure\+\_\+type (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
 
@@ -157,9 +157,9 @@ Get the data type.
 name of the data type (used internally) 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_af1f00a86504734b3f1a8209c66052422}\label{classbridges_1_1line__chart_1_1_line_chart_af1f00a86504734b3f1a8209c66052422}} 
-\index{bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}!get\+\_\+x\+\_\+data@{get\+\_\+x\+\_\+data}}
-\index{get\+\_\+x\+\_\+data@{get\+\_\+x\+\_\+data}!bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}}
-\subsubsection{\texorpdfstring{get\+\_\+x\+\_\+data()}{get\_x\_data()}}
+\index{bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}!get\_x\_data@{get\_x\_data}}
+\index{get\_x\_data@{get\_x\_data}!bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}}
+\subsubsection{\texorpdfstring{get\_x\_data()}{get\_x\_data()}}
 {\footnotesize\ttfamily def bridges.\+line\+\_\+chart.\+Line\+Chart.\+get\+\_\+x\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{series }\end{DoxyParamCaption})}
 
 
@@ -172,9 +172,9 @@ Getter for plot data on X.
 dict plot data 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_ad598554c70b1524eb900b4a66635e367}\label{classbridges_1_1line__chart_1_1_line_chart_ad598554c70b1524eb900b4a66635e367}} 
-\index{bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}!get\+\_\+y\+\_\+data@{get\+\_\+y\+\_\+data}}
-\index{get\+\_\+y\+\_\+data@{get\+\_\+y\+\_\+data}!bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}}
-\subsubsection{\texorpdfstring{get\+\_\+y\+\_\+data()}{get\_y\_data()}}
+\index{bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}!get\_y\_data@{get\_y\_data}}
+\index{get\_y\_data@{get\_y\_data}!bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}}
+\subsubsection{\texorpdfstring{get\_y\_data()}{get\_y\_data()}}
 {\footnotesize\ttfamily def bridges.\+line\+\_\+chart.\+Line\+Chart.\+get\+\_\+y\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{series }\end{DoxyParamCaption})}
 
 
@@ -187,8 +187,8 @@ Getter for plot data on Y.
 dict plot data 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_a7f2d2f772e00af6ce08aa40e1efb195c}\label{classbridges_1_1line__chart_1_1_line_chart_a7f2d2f772e00af6ce08aa40e1efb195c}} 
-\index{bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}!logarithmicx@{logarithmicx}}
-\index{logarithmicx@{logarithmicx}!bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}}
+\index{bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}!logarithmicx@{logarithmicx}}
+\index{logarithmicx@{logarithmicx}!bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}}
 \subsubsection{\texorpdfstring{logarithmicx()}{logarithmicx()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily def bridges.\+line\+\_\+chart.\+Line\+Chart.\+logarithmicx (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
@@ -202,8 +202,8 @@ use logarithmic scale on X axis?
 bool logarthmic scale flag 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_a6feef7582874fb2338ff7fa7a469db5d}\label{classbridges_1_1line__chart_1_1_line_chart_a6feef7582874fb2338ff7fa7a469db5d}} 
-\index{bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}!logarithmicx@{logarithmicx}}
-\index{logarithmicx@{logarithmicx}!bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}}
+\index{bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}!logarithmicx@{logarithmicx}}
+\index{logarithmicx@{logarithmicx}!bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}}
 \subsubsection{\texorpdfstring{logarithmicx()}{logarithmicx()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily def bridges.\+line\+\_\+chart.\+Line\+Chart.\+logarithmicx (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{val }\end{DoxyParamCaption})}
 
@@ -222,8 +222,8 @@ Setter for logarithmic scale on X axis.
 None 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_a7ddc26feab771e7b36e9040ee38fab7f}\label{classbridges_1_1line__chart_1_1_line_chart_a7ddc26feab771e7b36e9040ee38fab7f}} 
-\index{bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}!logarithmicy@{logarithmicy}}
-\index{logarithmicy@{logarithmicy}!bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}}
+\index{bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}!logarithmicy@{logarithmicy}}
+\index{logarithmicy@{logarithmicy}!bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}}
 \subsubsection{\texorpdfstring{logarithmicy()}{logarithmicy()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily def bridges.\+line\+\_\+chart.\+Line\+Chart.\+logarithmicy (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
@@ -237,8 +237,8 @@ use logarithmic scale on Y axis?
 bool logarthmic scale flag 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_ac29eaedd760a3f608f7b11193befa1c5}\label{classbridges_1_1line__chart_1_1_line_chart_ac29eaedd760a3f608f7b11193befa1c5}} 
-\index{bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}!logarithmicy@{logarithmicy}}
-\index{logarithmicy@{logarithmicy}!bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}}
+\index{bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}!logarithmicy@{logarithmicy}}
+\index{logarithmicy@{logarithmicy}!bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}}
 \subsubsection{\texorpdfstring{logarithmicy()}{logarithmicy()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily def bridges.\+line\+\_\+chart.\+Line\+Chart.\+logarithmicy (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{val }\end{DoxyParamCaption})}
 
@@ -256,11 +256,11 @@ Setter for logarithmic scale on Y axis.
 
 None 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_ad189e3efb7abb05944067fc171f6baf8}\label{classbridges_1_1line__chart_1_1_line_chart_ad189e3efb7abb05944067fc171f6baf8}} 
-\index{bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}!mosue\+\_\+track@{mosue\+\_\+track}}
-\index{mosue\+\_\+track@{mosue\+\_\+track}!bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}}
-\subsubsection{\texorpdfstring{mosue\+\_\+track()}{mosue\_track()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily def bridges.\+line\+\_\+chart.\+Line\+Chart.\+mosue\+\_\+track (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{bool }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_a524828aa8951e4e9a515ea20692fc654}\label{classbridges_1_1line__chart_1_1_line_chart_a524828aa8951e4e9a515ea20692fc654}} 
+\index{bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}!mosue\_track@{mosue\_track}}
+\index{mosue\_track@{mosue\_track}!bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}}
+\subsubsection{\texorpdfstring{mosue\_track()}{mosue\_track()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily  bool bridges.\+line\+\_\+chart.\+Line\+Chart.\+mosue\+\_\+track (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
 
 
@@ -271,11 +271,11 @@ Is mounse tracking on?
 
 bool mouse tracking flag 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_a193acd762b88d9e112729adf56cdbcd2}\label{classbridges_1_1line__chart_1_1_line_chart_a193acd762b88d9e112729adf56cdbcd2}} 
-\index{bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}!mosue\+\_\+track@{mosue\+\_\+track}}
-\index{mosue\+\_\+track@{mosue\+\_\+track}!bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}}
-\subsubsection{\texorpdfstring{mosue\+\_\+track()}{mosue\_track()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily def bridges.\+line\+\_\+chart.\+Line\+Chart.\+mosue\+\_\+track (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{val }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_aadf9c7d6cc6b281e64563356fbe84ef8}\label{classbridges_1_1line__chart_1_1_line_chart_aadf9c7d6cc6b281e64563356fbe84ef8}} 
+\index{bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}!mosue\_track@{mosue\_track}}
+\index{mosue\_track@{mosue\_track}!bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}}
+\subsubsection{\texorpdfstring{mosue\_track()}{mosue\_track()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def bridges.\+line\+\_\+chart.\+Line\+Chart.\+mosue\+\_\+track (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{bool}]{val }\end{DoxyParamCaption})}
 
 
 
@@ -287,9 +287,9 @@ Set mouse tracking flag.
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_a989930527e9981b9d12cb0b56aefba76}\label{classbridges_1_1line__chart_1_1_line_chart_a989930527e9981b9d12cb0b56aefba76}} 
-\index{bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}!set\+\_\+data\+\_\+series@{set\+\_\+data\+\_\+series}}
-\index{set\+\_\+data\+\_\+series@{set\+\_\+data\+\_\+series}!bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}}
-\subsubsection{\texorpdfstring{set\+\_\+data\+\_\+series()}{set\_data\_series()}}
+\index{bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}!set\_data\_series@{set\_data\_series}}
+\index{set\_data\_series@{set\_data\_series}!bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}}
+\subsubsection{\texorpdfstring{set\_data\_series()}{set\_data\_series()}}
 {\footnotesize\ttfamily def bridges.\+line\+\_\+chart.\+Line\+Chart.\+set\+\_\+data\+\_\+series (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{series\+\_\+name,  }\item[{}]{x\+\_\+data,  }\item[{}]{y\+\_\+data }\end{DoxyParamCaption})}
 
 
@@ -309,9 +309,9 @@ Setter for plot data on X and Y axes.
 None 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_a74651645a41825887e8775a456176eac}\label{classbridges_1_1line__chart_1_1_line_chart_a74651645a41825887e8775a456176eac}} 
-\index{bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}!set\+\_\+x\+\_\+data@{set\+\_\+x\+\_\+data}}
-\index{set\+\_\+x\+\_\+data@{set\+\_\+x\+\_\+data}!bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}}
-\subsubsection{\texorpdfstring{set\+\_\+x\+\_\+data()}{set\_x\_data()}}
+\index{bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}!set\_x\_data@{set\_x\_data}}
+\index{set\_x\_data@{set\_x\_data}!bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}}
+\subsubsection{\texorpdfstring{set\_x\_data()}{set\_x\_data()}}
 {\footnotesize\ttfamily def bridges.\+line\+\_\+chart.\+Line\+Chart.\+set\+\_\+x\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{series,  }\item[{}]{x\+\_\+data }\end{DoxyParamCaption})}
 
 
@@ -331,9 +331,9 @@ Setter for plot data on X axis.
 None 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_ae5988ed81be128f96d63526560c61d9f}\label{classbridges_1_1line__chart_1_1_line_chart_ae5988ed81be128f96d63526560c61d9f}} 
-\index{bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}!set\+\_\+y\+\_\+data@{set\+\_\+y\+\_\+data}}
-\index{set\+\_\+y\+\_\+data@{set\+\_\+y\+\_\+data}!bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}}
-\subsubsection{\texorpdfstring{set\+\_\+y\+\_\+data()}{set\_y\_data()}}
+\index{bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}!set\_y\_data@{set\_y\_data}}
+\index{set\_y\_data@{set\_y\_data}!bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}}
+\subsubsection{\texorpdfstring{set\_y\_data()}{set\_y\_data()}}
 {\footnotesize\ttfamily def bridges.\+line\+\_\+chart.\+Line\+Chart.\+set\+\_\+y\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{series,  }\item[{}]{y\+\_\+data }\end{DoxyParamCaption})}
 
 
@@ -351,9 +351,9 @@ Setter for plot data on Y axis.
 None 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_a3361674c961f45bfa058cff38ba49bd8}\label{classbridges_1_1line__chart_1_1_line_chart_a3361674c961f45bfa058cff38ba49bd8}} 
-\index{bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}!sub\+\_\+title@{sub\+\_\+title}}
-\index{sub\+\_\+title@{sub\+\_\+title}!bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}}
-\subsubsection{\texorpdfstring{sub\+\_\+title()}{sub\_title()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\index{bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}!sub\_title@{sub\_title}}
+\index{sub\_title@{sub\_title}!bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}}
+\subsubsection{\texorpdfstring{sub\_title()}{sub\_title()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily def bridges.\+line\+\_\+chart.\+Line\+Chart.\+sub\+\_\+title (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
 
@@ -366,9 +366,9 @@ Getter for plot sub title.
 str plot sub title 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_ac26e0a4de0438a5463ba5dca95d2b0a3}\label{classbridges_1_1line__chart_1_1_line_chart_ac26e0a4de0438a5463ba5dca95d2b0a3}} 
-\index{bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}!sub\+\_\+title@{sub\+\_\+title}}
-\index{sub\+\_\+title@{sub\+\_\+title}!bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}}
-\subsubsection{\texorpdfstring{sub\+\_\+title()}{sub\_title()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\index{bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}!sub\_title@{sub\_title}}
+\index{sub\_title@{sub\_title}!bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}}
+\subsubsection{\texorpdfstring{sub\_title()}{sub\_title()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily def bridges.\+line\+\_\+chart.\+Line\+Chart.\+sub\+\_\+title (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{s }\end{DoxyParamCaption})}
 
 
@@ -386,8 +386,8 @@ Setter for plot sub title.
 None 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_ae9a4a1643095d0d0ac4d98e15adbeb3f}\label{classbridges_1_1line__chart_1_1_line_chart_ae9a4a1643095d0d0ac4d98e15adbeb3f}} 
-\index{bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}!title@{title}}
-\index{title@{title}!bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}}
+\index{bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}!title@{title}}
+\index{title@{title}!bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}}
 \subsubsection{\texorpdfstring{title()}{title()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily def bridges.\+line\+\_\+chart.\+Line\+Chart.\+title (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
@@ -401,8 +401,8 @@ Getter for plot title.
 str plot title 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_adbee0286b07ee001e0c762aa9c147946}\label{classbridges_1_1line__chart_1_1_line_chart_adbee0286b07ee001e0c762aa9c147946}} 
-\index{bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}!title@{title}}
-\index{title@{title}!bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}}
+\index{bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}!title@{title}}
+\index{title@{title}!bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}}
 \subsubsection{\texorpdfstring{title()}{title()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily def bridges.\+line\+\_\+chart.\+Line\+Chart.\+title (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{t }\end{DoxyParamCaption})}
 
@@ -421,9 +421,9 @@ Setter for plot title.
 None 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_a37436d14c6c63116d0d1540ea8ef7fc1}\label{classbridges_1_1line__chart_1_1_line_chart_a37436d14c6c63116d0d1540ea8ef7fc1}} 
-\index{bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}!x\+\_\+label@{x\+\_\+label}}
-\index{x\+\_\+label@{x\+\_\+label}!bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}}
-\subsubsection{\texorpdfstring{x\+\_\+label()}{x\_label()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\index{bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}!x\_label@{x\_label}}
+\index{x\_label@{x\_label}!bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}}
+\subsubsection{\texorpdfstring{x\_label()}{x\_label()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily def bridges.\+line\+\_\+chart.\+Line\+Chart.\+x\+\_\+label (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
 
@@ -436,9 +436,9 @@ Getter for plot X label.
 str plot label 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_ad30576a90dcc406c46efb5902fee86f1}\label{classbridges_1_1line__chart_1_1_line_chart_ad30576a90dcc406c46efb5902fee86f1}} 
-\index{bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}!x\+\_\+label@{x\+\_\+label}}
-\index{x\+\_\+label@{x\+\_\+label}!bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}}
-\subsubsection{\texorpdfstring{x\+\_\+label()}{x\_label()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\index{bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}!x\_label@{x\_label}}
+\index{x\_label@{x\_label}!bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}}
+\subsubsection{\texorpdfstring{x\_label()}{x\_label()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily def bridges.\+line\+\_\+chart.\+Line\+Chart.\+x\+\_\+label (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{label }\end{DoxyParamCaption})}
 
 
@@ -456,9 +456,9 @@ Setter for plot X label.
 None 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_a53234b2386393ec400bfbc969e8a5bf2}\label{classbridges_1_1line__chart_1_1_line_chart_a53234b2386393ec400bfbc969e8a5bf2}} 
-\index{bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}!y\+\_\+label@{y\+\_\+label}}
-\index{y\+\_\+label@{y\+\_\+label}!bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}}
-\subsubsection{\texorpdfstring{y\+\_\+label()}{y\_label()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\index{bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}!y\_label@{y\_label}}
+\index{y\_label@{y\_label}!bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}}
+\subsubsection{\texorpdfstring{y\_label()}{y\_label()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily def bridges.\+line\+\_\+chart.\+Line\+Chart.\+y\+\_\+label (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
 
@@ -471,9 +471,9 @@ Getter for plot Y label.
 str plot label 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_a13a80664727dc3302e7f7d4b29b58833}\label{classbridges_1_1line__chart_1_1_line_chart_a13a80664727dc3302e7f7d4b29b58833}} 
-\index{bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}!y\+\_\+label@{y\+\_\+label}}
-\index{y\+\_\+label@{y\+\_\+label}!bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}}
-\subsubsection{\texorpdfstring{y\+\_\+label()}{y\_label()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\index{bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}!y\_label@{y\_label}}
+\index{y\_label@{y\_label}!bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}}
+\subsubsection{\texorpdfstring{y\_label()}{y\_label()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily def bridges.\+line\+\_\+chart.\+Line\+Chart.\+y\+\_\+label (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{label }\end{DoxyParamCaption})}
 
 
@@ -494,19 +494,19 @@ None
 
 \subsection{Member Data Documentation}
 \mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_a13a52ecfbe82477fd6203aaa7569c1c7}\label{classbridges_1_1line__chart_1_1_line_chart_a13a52ecfbe82477fd6203aaa7569c1c7}} 
-\index{bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}!xaxis\+\_\+data@{xaxis\+\_\+data}}
-\index{xaxis\+\_\+data@{xaxis\+\_\+data}!bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}}
-\subsubsection{\texorpdfstring{xaxis\+\_\+data}{xaxis\_data}}
+\index{bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}!xaxis\_data@{xaxis\_data}}
+\index{xaxis\_data@{xaxis\_data}!bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}}
+\subsubsection{\texorpdfstring{xaxis\_data}{xaxis\_data}}
 {\footnotesize\ttfamily bridges.\+line\+\_\+chart.\+Line\+Chart.\+xaxis\+\_\+data}
 
 \mbox{\Hypertarget{classbridges_1_1line__chart_1_1_line_chart_ae32afdcdfe6398ef247f9431de603495}\label{classbridges_1_1line__chart_1_1_line_chart_ae32afdcdfe6398ef247f9431de603495}} 
-\index{bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}!yaxis\+\_\+data@{yaxis\+\_\+data}}
-\index{yaxis\+\_\+data@{yaxis\+\_\+data}!bridges\+::line\+\_\+chart\+::\+Line\+Chart@{bridges\+::line\+\_\+chart\+::\+Line\+Chart}}
-\subsubsection{\texorpdfstring{yaxis\+\_\+data}{yaxis\_data}}
+\index{bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}!yaxis\_data@{yaxis\_data}}
+\index{yaxis\_data@{yaxis\_data}!bridges.line\_chart.LineChart@{bridges.line\_chart.LineChart}}
+\subsubsection{\texorpdfstring{yaxis\_data}{yaxis\_data}}
 {\footnotesize\ttfamily bridges.\+line\+\_\+chart.\+Line\+Chart.\+yaxis\+\_\+data}
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/\+Users/kalpathi/gr/bridges/client/python/bridges/\mbox{\hyperlink{line__chart_8py}{line\+\_\+chart.\+py}}\end{DoxyCompactItemize}
+/\+Users/kalpathi/gr/bridges/python/bridges/\mbox{\hyperlink{line__chart_8py}{line\+\_\+chart.\+py}}\end{DoxyCompactItemize}

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['cancerincidence',['CancerIncidence',['../classbridges_1_1data__src__dependent_1_1cancer__incidence_1_1_cancer_incidence.html',1,'bridges::data_src_dependent::cancer_incidence']]],
   ['circdlelement',['CircDLelement',['../classbridges_1_1circ__dl__element_1_1_circ_d_lelement.html',1,'bridges::circ_dl_element']]],
   ['circle',['Circle',['../classbridges_1_1circle_1_1_circle.html',1,'bridges::circle']]],
   ['circslelement',['CircSLelement',['../classbridges_1_1circ__sl__element_1_1_circ_s_lelement.html',1,'bridges::circ_sl_element']]],

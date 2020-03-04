@@ -1,9 +1,12 @@
 var searchData=
 [
-  ['s',['s',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a6a1e8241578e273f3e380cbd14ecec5a',1,'bridges.named_symbol.NamedSymbol.s()'],['../classbridges_1_1named__symbol_1_1_named_symbol.html#a1fc3ab7df5af45b655161ef4db755d0c',1,'bridges.named_symbol.NamedSymbol.S()']]],
+  ['s',['S',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a1fc3ab7df5af45b655161ef4db755d0c',1,'bridges.named_symbol.NamedSymbol.S()'],['../classbridges_1_1named__symbol_1_1_named_symbol.html#a6a1e8241578e273f3e380cbd14ecec5a',1,'bridges.named_symbol.NamedSymbol.s()']]],
   ['s_5fkey',['s_key',['../classbridges_1_1input__helper_1_1_input_helper.html#a88978da995aaea7c6267a72cbd4d11c9',1,'bridges::input_helper::InputHelper']]],
   ['saddlebrown',['saddlebrown',['../classbridges_1_1named__color_1_1_named_color.html#aac1594a8ed63cd1e8a6d64fd3d2b62c3',1,'bridges::named_color::NamedColor']]],
   ['salmon',['salmon',['../classbridges_1_1named__color_1_1_named_color.html#aeadecb4aebd451365ed8247cfe84df1c',1,'bridges::named_color::NamedColor']]],
+  ['sample_5fbits',['sample_bits',['../classbridges_1_1audio__clip_1_1_audio_clip.html#a274e7ae8cd17a96d068265795b9c0718',1,'bridges::audio_clip::AudioClip']]],
+  ['sample_5fcount',['sample_count',['../classbridges_1_1audio__clip_1_1_audio_clip.html#ac9551b041b0d6b7e7b2a1db623c56159',1,'bridges::audio_clip::AudioClip']]],
+  ['sample_5frate',['sample_rate',['../classbridges_1_1audio__clip_1_1_audio_clip.html#a265e017578bdd94664f308f51b596c6d',1,'bridges::audio_clip::AudioClip']]],
   ['sandybrown',['sandybrown',['../classbridges_1_1named__color_1_1_named_color.html#a4e7b981e30a1736dfb11c520dc8b060a',1,'bridges::named_color::NamedColor']]],
   ['seagreen',['seagreen',['../classbridges_1_1named__color_1_1_named_color.html#a1eb01d1324a02f5949faadc9adbda851',1,'bridges::named_color::NamedColor']]],
   ['seashell',['seashell',['../classbridges_1_1named__color_1_1_named_color.html#adf776fc61e46c64dc4c7e16fedc42621',1,'bridges::named_color::NamedColor']]],
@@ -26,6 +29,7 @@ var searchData=
   ['sloth',['sloth',['../classbridges_1_1named__symbol_1_1_named_symbol.html#acaeb03fef19ac83a37b253fcfca4afed',1,'bridges::named_symbol::NamedSymbol']]],
   ['snow',['snow',['../classbridges_1_1named__color_1_1_named_color.html#a1f275813841baae4888174bdc4616f6f',1,'bridges::named_color::NamedColor']]],
   ['sock',['sock',['../classbridges_1_1gamebase_1_1_game_base.html#a4a7fe2d524c02966900937bddea195e7',1,'bridges::gamebase::GameBase']]],
+  ['source',['source',['../classbridges_1_1data__src__dependent_1_1osm_1_1_osm_edge.html#a968664892933e9784909282cc53b0315',1,'bridges::data_src_dependent::osm::OsmEdge']]],
   ['space_5fkey',['space_key',['../classbridges_1_1input__helper_1_1_input_helper.html#a7500af436b4d85fc13fb351d661cf0d9',1,'bridges::input_helper::InputHelper']]],
   ['speechbubble',['speechbubble',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a12ae6d5697851e3dfbbe760327dc9a56',1,'bridges::named_symbol::NamedSymbol']]],
   ['springgreen',['springgreen',['../classbridges_1_1named__color_1_1_named_color.html#a0d3796b624eb8e15f0d1f50fa079b922',1,'bridges::named_color::NamedColor']]],

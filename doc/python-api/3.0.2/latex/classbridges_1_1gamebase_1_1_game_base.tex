@@ -1,5 +1,5 @@
 \hypertarget{classbridges_1_1gamebase_1_1_game_base}{}\section{bridges.\+gamebase.\+Game\+Base Class Reference}
-\label{classbridges_1_1gamebase_1_1_game_base}\index{bridges.\+gamebase.\+Game\+Base@{bridges.\+gamebase.\+Game\+Base}}
+\label{classbridges_1_1gamebase_1_1_game_base}\index{bridges.gamebase.GameBase@{bridges.gamebase.GameBase}}
 Inheritance diagram for bridges.\+gamebase.\+Game\+Base\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,6 +12,8 @@ Inheritance diagram for bridges.\+gamebase.\+Game\+Base\+:\begin{figure}[H]
 def \mbox{\hyperlink{classbridges_1_1gamebase_1_1_game_base_a869c20436a432429580f1a4e5fb63b9e}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, assid, login, apikey, cols, rows)
 \item 
 def \mbox{\hyperlink{classbridges_1_1gamebase_1_1_game_base_ad0d97def82fd9c51fd7beed609663d50}{game\+\_\+base\+\_\+init}} (self, id, log, key, c, r)
+\item 
+def \mbox{\hyperlink{classbridges_1_1gamebase_1_1_game_base_aa30b096b3b2834d36a05acd982625517}{close}} (self)
 \item 
 def \mbox{\hyperlink{classbridges_1_1gamebase_1_1_game_base_ac60243e192a502fb7be51f86eb5b76b6}{register\+\_\+keypress}} (self, kl)
 \item 
@@ -67,18 +69,22 @@ bool \mbox{\hyperlink{classbridges_1_1gamebase_1_1_game_base_a25e8f6f349f5430066
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classbridges_1_1gamebase_1_1_game_base_a869c20436a432429580f1a4e5fb63b9e}\label{classbridges_1_1gamebase_1_1_game_base_a869c20436a432429580f1a4e5fb63b9e}} 
-\index{bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
-\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}}
-\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+\index{bridges.gamebase.GameBase@{bridges.gamebase.GameBase}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!bridges.gamebase.GameBase@{bridges.gamebase.GameBase}}
+\subsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
 {\footnotesize\ttfamily def bridges.\+gamebase.\+Game\+Base.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{assid,  }\item[{}]{login,  }\item[{}]{apikey,  }\item[{}]{cols,  }\item[{}]{rows }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_a19362773d256eec033f04cfd00b7160c}{bridges.\+non\+\_\+blocking\+\_\+game.\+Non\+Blocking\+Game}}, and \mbox{\hyperlink{classbridges_1_1blocking__game_1_1_blocking_game_ae2575c068499e269e2279695d5f598b4}{bridges.\+blocking\+\_\+game.\+Blocking\+Game}}.
 
 
 
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{classbridges_1_1gamebase_1_1_game_base_ad1595582d3b02aa4225efed3beab935f}\label{classbridges_1_1gamebase_1_1_game_base_ad1595582d3b02aa4225efed3beab935f}} 
-\index{bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}!board\+\_\+height@{board\+\_\+height}}
-\index{board\+\_\+height@{board\+\_\+height}!bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}}
-\subsubsection{\texorpdfstring{board\+\_\+height()}{board\_height()}}
+\index{bridges.gamebase.GameBase@{bridges.gamebase.GameBase}!board\_height@{board\_height}}
+\index{board\_height@{board\_height}!bridges.gamebase.GameBase@{bridges.gamebase.GameBase}}
+\subsubsection{\texorpdfstring{board\_height()}{board\_height()}}
 {\footnotesize\ttfamily def bridges.\+gamebase.\+Game\+Base.\+board\+\_\+height (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
 
@@ -86,19 +92,25 @@ bool \mbox{\hyperlink{classbridges_1_1gamebase_1_1_game_base_a25e8f6f349f5430066
 setter/getter property for board height 
 
 \mbox{\Hypertarget{classbridges_1_1gamebase_1_1_game_base_a46a635c075e1a0a651e4caa18369494d}\label{classbridges_1_1gamebase_1_1_game_base_a46a635c075e1a0a651e4caa18369494d}} 
-\index{bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}!board\+\_\+width@{board\+\_\+width}}
-\index{board\+\_\+width@{board\+\_\+width}!bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}}
-\subsubsection{\texorpdfstring{board\+\_\+width()}{board\_width()}}
+\index{bridges.gamebase.GameBase@{bridges.gamebase.GameBase}!board\_width@{board\_width}}
+\index{board\_width@{board\_width}!bridges.gamebase.GameBase@{bridges.gamebase.GameBase}}
+\subsubsection{\texorpdfstring{board\_width()}{board\_width()}}
 {\footnotesize\ttfamily def bridges.\+gamebase.\+Game\+Base.\+board\+\_\+width (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
 
 
 setter/getter property for board width 
 
+\mbox{\Hypertarget{classbridges_1_1gamebase_1_1_game_base_aa30b096b3b2834d36a05acd982625517}\label{classbridges_1_1gamebase_1_1_game_base_aa30b096b3b2834d36a05acd982625517}} 
+\index{bridges.gamebase.GameBase@{bridges.gamebase.GameBase}!close@{close}}
+\index{close@{close}!bridges.gamebase.GameBase@{bridges.gamebase.GameBase}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily def bridges.\+gamebase.\+Game\+Base.\+close (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{classbridges_1_1gamebase_1_1_game_base_a6c9a7b7e5d84874f42a6150ec25d3791}\label{classbridges_1_1gamebase_1_1_game_base_a6c9a7b7e5d84874f42a6150ec25d3791}} 
-\index{bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}!draw\+\_\+symbol@{draw\+\_\+symbol}}
-\index{draw\+\_\+symbol@{draw\+\_\+symbol}!bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}}
-\subsubsection{\texorpdfstring{draw\+\_\+symbol()}{draw\_symbol()}}
+\index{bridges.gamebase.GameBase@{bridges.gamebase.GameBase}!draw\_symbol@{draw\_symbol}}
+\index{draw\_symbol@{draw\_symbol}!bridges.gamebase.GameBase@{bridges.gamebase.GameBase}}
+\subsubsection{\texorpdfstring{draw\_symbol()}{draw\_symbol()}}
 {\footnotesize\ttfamily def bridges.\+gamebase.\+Game\+Base.\+draw\+\_\+symbol (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{row,  }\item[{}]{col,  }\item[{}]{s,  }\item[{}]{c }\end{DoxyParamCaption})}
 
 
@@ -120,21 +132,21 @@ draw symbol s with color col at cell (row, col)
 color of type Named\+Color 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1gamebase_1_1_game_base_ad0d97def82fd9c51fd7beed609663d50}\label{classbridges_1_1gamebase_1_1_game_base_ad0d97def82fd9c51fd7beed609663d50}} 
-\index{bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}!game\+\_\+base\+\_\+init@{game\+\_\+base\+\_\+init}}
-\index{game\+\_\+base\+\_\+init@{game\+\_\+base\+\_\+init}!bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}}
-\subsubsection{\texorpdfstring{game\+\_\+base\+\_\+init()}{game\_base\_init()}}
+\index{bridges.gamebase.GameBase@{bridges.gamebase.GameBase}!game\_base\_init@{game\_base\_init}}
+\index{game\_base\_init@{game\_base\_init}!bridges.gamebase.GameBase@{bridges.gamebase.GameBase}}
+\subsubsection{\texorpdfstring{game\_base\_init()}{game\_base\_init()}}
 {\footnotesize\ttfamily def bridges.\+gamebase.\+Game\+Base.\+game\+\_\+base\+\_\+init (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{id,  }\item[{}]{log,  }\item[{}]{key,  }\item[{}]{c,  }\item[{}]{r }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{classbridges_1_1gamebase_1_1_game_base_af650eeb756558d2cbcae43c74de5cce7}\label{classbridges_1_1gamebase_1_1_game_base_af650eeb756558d2cbcae43c74de5cce7}} 
-\index{bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}!game\+\_\+loop@{game\+\_\+loop}}
-\index{game\+\_\+loop@{game\+\_\+loop}!bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}}
-\subsubsection{\texorpdfstring{game\+\_\+loop()}{game\_loop()}}
+\index{bridges.gamebase.GameBase@{bridges.gamebase.GameBase}!game\_loop@{game\_loop}}
+\index{game\_loop@{game\_loop}!bridges.gamebase.GameBase@{bridges.gamebase.GameBase}}
+\subsubsection{\texorpdfstring{game\_loop()}{game\_loop()}}
 {\footnotesize\ttfamily def bridges.\+gamebase.\+Game\+Base.\+game\+\_\+loop (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{classbridges_1_1gamebase_1_1_game_base_a2e1fd4365bf805a85c19bef1eb197b22}\label{classbridges_1_1gamebase_1_1_game_base_a2e1fd4365bf805a85c19bef1eb197b22}} 
-\index{bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}!get\+\_\+bg\+\_\+color@{get\+\_\+bg\+\_\+color}}
-\index{get\+\_\+bg\+\_\+color@{get\+\_\+bg\+\_\+color}!bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}}
-\subsubsection{\texorpdfstring{get\+\_\+bg\+\_\+color()}{get\_bg\_color()}}
+\index{bridges.gamebase.GameBase@{bridges.gamebase.GameBase}!get\_bg\_color@{get\_bg\_color}}
+\index{get\_bg\_color@{get\_bg\_color}!bridges.gamebase.GameBase@{bridges.gamebase.GameBase}}
+\subsubsection{\texorpdfstring{get\_bg\_color()}{get\_bg\_color()}}
 {\footnotesize\ttfamily def bridges.\+gamebase.\+Game\+Base.\+get\+\_\+bg\+\_\+color (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{row,  }\item[{}]{col }\end{DoxyParamCaption})}
 
 
@@ -152,9 +164,9 @@ gets background color of a cell
 returns a Named\+Color 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1gamebase_1_1_game_base_a80a3f5e32f8d0ad45c3f72d3c3e134e3}\label{classbridges_1_1gamebase_1_1_game_base_a80a3f5e32f8d0ad45c3f72d3c3e134e3}} 
-\index{bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}!get\+\_\+symbol@{get\+\_\+symbol}}
-\index{get\+\_\+symbol@{get\+\_\+symbol}!bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}}
-\subsubsection{\texorpdfstring{get\+\_\+symbol()}{get\_symbol()}}
+\index{bridges.gamebase.GameBase@{bridges.gamebase.GameBase}!get\_symbol@{get\_symbol}}
+\index{get\_symbol@{get\_symbol}!bridges.gamebase.GameBase@{bridges.gamebase.GameBase}}
+\subsubsection{\texorpdfstring{get\_symbol()}{get\_symbol()}}
 {\footnotesize\ttfamily def bridges.\+gamebase.\+Game\+Base.\+get\+\_\+symbol (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{row,  }\item[{}]{col }\end{DoxyParamCaption})}
 
 
@@ -172,9 +184,9 @@ gets symbol of the cell at row, col
 Symbol of type Named\+Symbol 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1gamebase_1_1_game_base_a7cb6637713536701e89e870a5a3428a1}\label{classbridges_1_1gamebase_1_1_game_base_a7cb6637713536701e89e870a5a3428a1}} 
-\index{bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}!get\+\_\+symbol\+\_\+color@{get\+\_\+symbol\+\_\+color}}
-\index{get\+\_\+symbol\+\_\+color@{get\+\_\+symbol\+\_\+color}!bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}}
-\subsubsection{\texorpdfstring{get\+\_\+symbol\+\_\+color()}{get\_symbol\_color()}}
+\index{bridges.gamebase.GameBase@{bridges.gamebase.GameBase}!get\_symbol\_color@{get\_symbol\_color}}
+\index{get\_symbol\_color@{get\_symbol\_color}!bridges.gamebase.GameBase@{bridges.gamebase.GameBase}}
+\subsubsection{\texorpdfstring{get\_symbol\_color()}{get\_symbol\_color()}}
 {\footnotesize\ttfamily def bridges.\+gamebase.\+Game\+Base.\+get\+\_\+symbol\+\_\+color (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{row,  }\item[{}]{col }\end{DoxyParamCaption})}
 
 
@@ -192,14 +204,14 @@ gets symbol color of the cell at row, col
 color of type Named\+Color 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1gamebase_1_1_game_base_a336629d190f1601f1211ca57e4d5427d}\label{classbridges_1_1gamebase_1_1_game_base_a336629d190f1601f1211ca57e4d5427d}} 
-\index{bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}!initialize@{initialize}}
-\index{initialize@{initialize}!bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}}
+\index{bridges.gamebase.GameBase@{bridges.gamebase.GameBase}!initialize@{initialize}}
+\index{initialize@{initialize}!bridges.gamebase.GameBase@{bridges.gamebase.GameBase}}
 \subsubsection{\texorpdfstring{initialize()}{initialize()}}
 {\footnotesize\ttfamily def bridges.\+gamebase.\+Game\+Base.\+initialize (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{classbridges_1_1gamebase_1_1_game_base_a21742d4e630fa64dc76848c7b4fcb344}\label{classbridges_1_1gamebase_1_1_game_base_a21742d4e630fa64dc76848c7b4fcb344}} 
-\index{bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}!quit@{quit}}
-\index{quit@{quit}!bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}}
+\index{bridges.gamebase.GameBase@{bridges.gamebase.GameBase}!quit@{quit}}
+\index{quit@{quit}!bridges.gamebase.GameBase@{bridges.gamebase.GameBase}}
 \subsubsection{\texorpdfstring{quit()}{quit()}}
 {\footnotesize\ttfamily def bridges.\+gamebase.\+Game\+Base.\+quit (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
@@ -213,14 +225,14 @@ calling this function causes the game to end.
 None 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1gamebase_1_1_game_base_ac60243e192a502fb7be51f86eb5b76b6}\label{classbridges_1_1gamebase_1_1_game_base_ac60243e192a502fb7be51f86eb5b76b6}} 
-\index{bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}!register\+\_\+keypress@{register\+\_\+keypress}}
-\index{register\+\_\+keypress@{register\+\_\+keypress}!bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}}
-\subsubsection{\texorpdfstring{register\+\_\+keypress()}{register\_keypress()}}
+\index{bridges.gamebase.GameBase@{bridges.gamebase.GameBase}!register\_keypress@{register\_keypress}}
+\index{register\_keypress@{register\_keypress}!bridges.gamebase.GameBase@{bridges.gamebase.GameBase}}
+\subsubsection{\texorpdfstring{register\_keypress()}{register\_keypress()}}
 {\footnotesize\ttfamily def bridges.\+gamebase.\+Game\+Base.\+register\+\_\+keypress (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{kl }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{classbridges_1_1gamebase_1_1_game_base_a3ae3bcb9702097029509d4123bc9276e}\label{classbridges_1_1gamebase_1_1_game_base_a3ae3bcb9702097029509d4123bc9276e}} 
-\index{bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}!render@{render}}
-\index{render@{render}!bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}}
+\index{bridges.gamebase.GameBase@{bridges.gamebase.GameBase}!render@{render}}
+\index{render@{render}!bridges.gamebase.GameBase@{bridges.gamebase.GameBase}}
 \subsubsection{\texorpdfstring{render()}{render()}}
 {\footnotesize\ttfamily def bridges.\+gamebase.\+Game\+Base.\+render (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
@@ -229,9 +241,9 @@ None
 renders the board 
 
 \mbox{\Hypertarget{classbridges_1_1gamebase_1_1_game_base_a669740699d8d3a848172febbfbfa174f}\label{classbridges_1_1gamebase_1_1_game_base_a669740699d8d3a848172febbfbfa174f}} 
-\index{bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}!set\+\_\+bg\+\_\+color@{set\+\_\+bg\+\_\+color}}
-\index{set\+\_\+bg\+\_\+color@{set\+\_\+bg\+\_\+color}!bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}}
-\subsubsection{\texorpdfstring{set\+\_\+bg\+\_\+color()}{set\_bg\_color()}}
+\index{bridges.gamebase.GameBase@{bridges.gamebase.GameBase}!set\_bg\_color@{set\_bg\_color}}
+\index{set\_bg\_color@{set\_bg\_color}!bridges.gamebase.GameBase@{bridges.gamebase.GameBase}}
+\subsubsection{\texorpdfstring{set\_bg\_color()}{set\_bg\_color()}}
 {\footnotesize\ttfamily def bridges.\+gamebase.\+Game\+Base.\+set\+\_\+bg\+\_\+color (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{row,  }\item[{}]{col,  }\item[{}]{color }\end{DoxyParamCaption})}
 
 
@@ -251,9 +263,9 @@ sets background color of a cell
 None 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1gamebase_1_1_game_base_a75ecd56daf08036207772d6ce81c90b1}\label{classbridges_1_1gamebase_1_1_game_base_a75ecd56daf08036207772d6ce81c90b1}} 
-\index{bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}!set\+\_\+description@{set\+\_\+description}}
-\index{set\+\_\+description@{set\+\_\+description}!bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}}
-\subsubsection{\texorpdfstring{set\+\_\+description()}{set\_description()}}
+\index{bridges.gamebase.GameBase@{bridges.gamebase.GameBase}!set\_description@{set\_description}}
+\index{set\_description@{set\_description}!bridges.gamebase.GameBase@{bridges.gamebase.GameBase}}
+\subsubsection{\texorpdfstring{set\_description()}{set\_description()}}
 {\footnotesize\ttfamily def bridges.\+gamebase.\+Game\+Base.\+set\+\_\+description (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{desc }\end{DoxyParamCaption})}
 
 
@@ -266,9 +278,9 @@ sets description of the game
 None 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1gamebase_1_1_game_base_a7e7d4033c4b191b3699dbf0cb5f25933}\label{classbridges_1_1gamebase_1_1_game_base_a7e7d4033c4b191b3699dbf0cb5f25933}} 
-\index{bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}!set\+\_\+title@{set\+\_\+title}}
-\index{set\+\_\+title@{set\+\_\+title}!bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}}
-\subsubsection{\texorpdfstring{set\+\_\+title()}{set\_title()}}
+\index{bridges.gamebase.GameBase@{bridges.gamebase.GameBase}!set\_title@{set\_title}}
+\index{set\_title@{set\_title}!bridges.gamebase.GameBase@{bridges.gamebase.GameBase}}
+\subsubsection{\texorpdfstring{set\_title()}{set\_title()}}
 {\footnotesize\ttfamily def bridges.\+gamebase.\+Game\+Base.\+set\+\_\+title (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{title }\end{DoxyParamCaption})}
 
 
@@ -281,53 +293,57 @@ sets title of game
 None 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1gamebase_1_1_game_base_a05a30fccf88c2baba1137b5a06ba2ed7}\label{classbridges_1_1gamebase_1_1_game_base_a05a30fccf88c2baba1137b5a06ba2ed7}} 
-\index{bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}!start@{start}}
-\index{start@{start}!bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}}
+\index{bridges.gamebase.GameBase@{bridges.gamebase.GameBase}!start@{start}}
+\index{start@{start}!bridges.gamebase.GameBase@{bridges.gamebase.GameBase}}
 \subsubsection{\texorpdfstring{start()}{start()}}
 {\footnotesize\ttfamily def bridges.\+gamebase.\+Game\+Base.\+start (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
 
 
+Reimplemented in \mbox{\hyperlink{classbridges_1_1non__blocking__game_1_1_non_blocking_game_ad6e23c265e1b710114459f0b666d25cb}{bridges.\+non\+\_\+blocking\+\_\+game.\+Non\+Blocking\+Game}}, and \mbox{\hyperlink{classbridges_1_1blocking__game_1_1_blocking_game_ab7a2a5d6d83b2e72800ddffa3c0ad818}{bridges.\+blocking\+\_\+game.\+Blocking\+Game}}.
+
+
+
 \subsection{Member Data Documentation}
 \mbox{\Hypertarget{classbridges_1_1gamebase_1_1_game_base_a2310e51f398c089ca945b3af38c09231}\label{classbridges_1_1gamebase_1_1_game_base_a2310e51f398c089ca945b3af38c09231}} 
-\index{bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}!bridges@{bridges}}
-\index{bridges@{bridges}!bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}}
+\index{bridges.gamebase.GameBase@{bridges.gamebase.GameBase}!bridges@{bridges}}
+\index{bridges@{bridges}!bridges.gamebase.GameBase@{bridges.gamebase.GameBase}}
 \subsubsection{\texorpdfstring{bridges}{bridges}}
 {\footnotesize\ttfamily bridges.\+gamebase.\+Game\+Base.\+bridges}
 
 \mbox{\Hypertarget{classbridges_1_1gamebase_1_1_game_base_a25e8f6f349f54300666127f58669356c}\label{classbridges_1_1gamebase_1_1_game_base_a25e8f6f349f54300666127f58669356c}} 
-\index{bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}!debug@{debug}}
-\index{debug@{debug}!bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}}
+\index{bridges.gamebase.GameBase@{bridges.gamebase.GameBase}!debug@{debug}}
+\index{debug@{debug}!bridges.gamebase.GameBase@{bridges.gamebase.GameBase}}
 \subsubsection{\texorpdfstring{debug}{debug}}
 {\footnotesize\ttfamily bool bridges.\+gamebase.\+Game\+Base.\+debug = True\hspace{0.3cm}{\ttfamily [static]}}
 
 \mbox{\Hypertarget{classbridges_1_1gamebase_1_1_game_base_a1115f9b91c925f4aa5155ec0e7831ee2}\label{classbridges_1_1gamebase_1_1_game_base_a1115f9b91c925f4aa5155ec0e7831ee2}} 
-\index{bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}!firsttime@{firsttime}}
-\index{firsttime@{firsttime}!bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}}
+\index{bridges.gamebase.GameBase@{bridges.gamebase.GameBase}!firsttime@{firsttime}}
+\index{firsttime@{firsttime}!bridges.gamebase.GameBase@{bridges.gamebase.GameBase}}
 \subsubsection{\texorpdfstring{firsttime}{firsttime}}
 {\footnotesize\ttfamily bridges.\+gamebase.\+Game\+Base.\+firsttime}
 
 \mbox{\Hypertarget{classbridges_1_1gamebase_1_1_game_base_a3686759454ab901fcb4afb81572b3104}\label{classbridges_1_1gamebase_1_1_game_base_a3686759454ab901fcb4afb81572b3104}} 
-\index{bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}!game\+\_\+started@{game\+\_\+started}}
-\index{game\+\_\+started@{game\+\_\+started}!bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}}
-\subsubsection{\texorpdfstring{game\+\_\+started}{game\_started}}
+\index{bridges.gamebase.GameBase@{bridges.gamebase.GameBase}!game\_started@{game\_started}}
+\index{game\_started@{game\_started}!bridges.gamebase.GameBase@{bridges.gamebase.GameBase}}
+\subsubsection{\texorpdfstring{game\_started}{game\_started}}
 {\footnotesize\ttfamily bridges.\+gamebase.\+Game\+Base.\+game\+\_\+started}
 
 \mbox{\Hypertarget{classbridges_1_1gamebase_1_1_game_base_a556463882cb4a3a00c6c356d1c4a4322}\label{classbridges_1_1gamebase_1_1_game_base_a556463882cb4a3a00c6c356d1c4a4322}} 
-\index{bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}!grid@{grid}}
-\index{grid@{grid}!bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}}
+\index{bridges.gamebase.GameBase@{bridges.gamebase.GameBase}!grid@{grid}}
+\index{grid@{grid}!bridges.gamebase.GameBase@{bridges.gamebase.GameBase}}
 \subsubsection{\texorpdfstring{grid}{grid}}
 {\footnotesize\ttfamily bridges.\+gamebase.\+Game\+Base.\+grid}
 
 \mbox{\Hypertarget{classbridges_1_1gamebase_1_1_game_base_ae397f4d601671d036d9c92902ba2d7f1}\label{classbridges_1_1gamebase_1_1_game_base_ae397f4d601671d036d9c92902ba2d7f1}} 
-\index{bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}!grid\+\_\+state@{grid\+\_\+state}}
-\index{grid\+\_\+state@{grid\+\_\+state}!bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}}
-\subsubsection{\texorpdfstring{grid\+\_\+state}{grid\_state}}
+\index{bridges.gamebase.GameBase@{bridges.gamebase.GameBase}!grid\_state@{grid\_state}}
+\index{grid\_state@{grid\_state}!bridges.gamebase.GameBase@{bridges.gamebase.GameBase}}
+\subsubsection{\texorpdfstring{grid\_state}{grid\_state}}
 {\footnotesize\ttfamily bridges.\+gamebase.\+Game\+Base.\+grid\+\_\+state}
 
 \mbox{\Hypertarget{classbridges_1_1gamebase_1_1_game_base_a4a7fe2d524c02966900937bddea195e7}\label{classbridges_1_1gamebase_1_1_game_base_a4a7fe2d524c02966900937bddea195e7}} 
-\index{bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}!sock@{sock}}
-\index{sock@{sock}!bridges\+::gamebase\+::\+Game\+Base@{bridges\+::gamebase\+::\+Game\+Base}}
+\index{bridges.gamebase.GameBase@{bridges.gamebase.GameBase}!sock@{sock}}
+\index{sock@{sock}!bridges.gamebase.GameBase@{bridges.gamebase.GameBase}}
 \subsubsection{\texorpdfstring{sock}{sock}}
 {\footnotesize\ttfamily bridges.\+gamebase.\+Game\+Base.\+sock}
 
@@ -335,4 +351,4 @@ None
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/\+Users/kalpathi/gr/bridges/client/python/bridges/\mbox{\hyperlink{gamebase_8py}{gamebase.\+py}}\end{DoxyCompactItemize}
+/\+Users/kalpathi/gr/bridges/python/bridges/\mbox{\hyperlink{gamebase_8py}{gamebase.\+py}}\end{DoxyCompactItemize}

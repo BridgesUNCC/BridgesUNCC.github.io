@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['r',['r',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a2a2b1065b737c905d9008e3766137275',1,'bridges.named_symbol.NamedSymbol.r()'],['../classbridges_1_1sorting__benchmark_1_1_sorting_benchmark.html#ae7fb15c11ff3cd6f17a2966f70d26a92',1,'bridges.sorting_benchmark.SortingBenchmark.r()'],['../classbridges_1_1named__symbol_1_1_named_symbol.html#aae867b6105d307aa8ebab4bd7f0def7d',1,'bridges.named_symbol.NamedSymbol.R()']]],
+  ['r',['R',['../classbridges_1_1named__symbol_1_1_named_symbol.html#aae867b6105d307aa8ebab4bd7f0def7d',1,'bridges.named_symbol.NamedSymbol.R()'],['../classbridges_1_1named__symbol_1_1_named_symbol.html#a2a2b1065b737c905d9008e3766137275',1,'bridges.named_symbol.NamedSymbol.r()'],['../classbridges_1_1sorting__benchmark_1_1_sorting_benchmark.html#ae7fb15c11ff3cd6f17a2966f70d26a92',1,'bridges.sorting_benchmark.SortingBenchmark.r()']]],
+  ['race',['race',['../classbridges_1_1data__src__dependent_1_1cancer__incidence_1_1_cancer_incidence.html#a255300256320ed8dbbc566b75b909944',1,'bridges::data_src_dependent::cancer_incidence::CancerIncidence']]],
   ['radius',['radius',['../classbridges_1_1circle_1_1_circle.html#ab52ae32c28ea4175b815a7b04491205b',1,'bridges::circle::Circle']]],
   ['rain',['rain',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a4718755ac859e2609c57d3f71fac49e3',1,'bridges::named_symbol::NamedSymbol']]],
   ['red',['red',['../classbridges_1_1color_1_1_color.html#abb0aa417808af0140d3448a2e49d2d15',1,'bridges.color.Color.red()'],['../classbridges_1_1named__color_1_1_named_color.html#aa101609f4bdb9ea9b489fef516f12bad',1,'bridges.named_color.NamedColor.red()']]],
