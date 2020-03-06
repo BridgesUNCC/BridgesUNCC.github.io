@@ -5,6 +5,7 @@ Goals
 -----
 
 The purpose of this assignment is to learn to
+
 1. Access and manipulate remote data through BRIDGES.
 2. Manipulate a `GraphAdjList` object.
 3. Display a location on a map.
@@ -66,15 +67,15 @@ locations of the 100 strongest earthquakes.
 
 #### for C++
 
-[Element documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_element.html)
+[Element documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_element.html)
 
-[GraphAdjList documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_graph_adj_list.html)
+[GraphAdjList documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_graph_adj_list.html)
 
-[ElementVisualizer documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_element_visualizer.html)
+[ElementVisualizer documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_element_visualizer.html)
 
-[EarthquakeUSGS documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_earthquake_u_s_g_s.html)
+[EarthquakeUSGS documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1dataset_1_1_earthquake_u_s_g_s.html)
 
-[DataSource documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/namespacebridges_1_1_data_source.html)
+[DataSource documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_data_source.html)
 
 ### For Python
 
@@ -82,8 +83,8 @@ locations of the 100 strongest earthquakes.
 
 [GraphAdjList documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1graph__adj__list_1_1_graph_adj_list.html)
 
-[BSTElement documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1bst__element_1_1_b_s_t_element.html)
-
 [ElementVisualizer documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1element__visualizer_1_1_element_visualizer.html)
+
+[EarthquakeUSGS documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1data__src__dependent_1_1earthquake__usgs_1_1_earthquake_u_s_g_s.html)
 
 [LinkVisualizer documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1link__visualizer_1_1_link_visualizer.html)

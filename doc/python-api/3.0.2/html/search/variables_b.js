@@ -3,6 +3,8 @@ var searchData=
   ['l',['L',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a0f5d08603fc2dde1d2f353ed78f4f41c',1,'bridges.named_symbol.NamedSymbol.L()'],['../classbridges_1_1named__symbol_1_1_named_symbol.html#a55ffef64221bc2f1e96a22ca3080708a',1,'bridges.named_symbol.NamedSymbol.l()']]],
   ['label',['label',['../classbridges_1_1link__visualizer_1_1_link_visualizer.html#aace0e171fe2904f672b8ed3e0139343f',1,'bridges::link_visualizer::LinkVisualizer']]],
   ['largegraphvertsize',['LargeGraphVertSize',['../classbridges_1_1graph__adj__list_1_1_graph_adj_list.html#a093a64ead793e0bd3b1ce4e3456665c9',1,'bridges::graph_adj_list::GraphAdjList']]],
+  ['latitude',['latitude',['../classbridges_1_1data__src__dependent_1_1osm_1_1_osm_vertex.html#a2b346821c6310d148977b1b6212c4c59',1,'bridges::data_src_dependent::osm::OsmVertex']]],
+  ['latitude_5frange',['latitude_range',['../classbridges_1_1data__src__dependent_1_1osm_1_1_osm_data.html#a88caf10c4151c04822cb66af364fd45d',1,'bridges::data_src_dependent::osm::OsmData']]],
   ['lavender',['lavender',['../classbridges_1_1named__color_1_1_named_color.html#aa7424f36843ba0a7712836bddb048e64',1,'bridges::named_color::NamedColor']]],
   ['lavenderblush',['lavenderblush',['../classbridges_1_1named__color_1_1_named_color.html#a9c3db166dddbac046a0fcc51d0285864',1,'bridges::named_color::NamedColor']]],
   ['lawngreen',['lawngreen',['../classbridges_1_1named__color_1_1_named_color.html#a2c267420ee73d46609a48db2d78fc843',1,'bridges::named_color::NamedColor']]],
@@ -27,5 +29,9 @@ var searchData=
   ['lightyellow',['lightyellow',['../classbridges_1_1named__color_1_1_named_color.html#acee72a5014856c8971bde9ad1f6f2b69',1,'bridges::named_color::NamedColor']]],
   ['lime',['lime',['../classbridges_1_1named__color_1_1_named_color.html#a72bdae0466fe60c6687e920e905ac7e8',1,'bridges::named_color::NamedColor']]],
   ['limegreen',['limegreen',['../classbridges_1_1named__color_1_1_named_color.html#ac414217e1d9dfe3644845708f1f701e1',1,'bridges::named_color::NamedColor']]],
-  ['linen',['linen',['../classbridges_1_1named__color_1_1_named_color.html#af7e23db411aa5784ea66e44a230c17d0',1,'bridges::named_color::NamedColor']]]
+  ['linen',['linen',['../classbridges_1_1named__color_1_1_named_color.html#af7e23db411aa5784ea66e44a230c17d0',1,'bridges::named_color::NamedColor']]],
+  ['loc',['loc',['../classbridges_1_1data__src__dependent_1_1cancer__incidence_1_1_cancer_incidence.html#aaba4d2a3274657962d9a9e0e5cc72f19',1,'bridges::data_src_dependent::cancer_incidence::CancerIncidence']]],
+  ['longitude',['longitude',['../classbridges_1_1data__src__dependent_1_1osm_1_1_osm_vertex.html#a0dd0da0c52e3ca388cf8fbe5f613c273',1,'bridges::data_src_dependent::osm::OsmVertex']]],
+  ['longitude_5frange',['longitude_range',['../classbridges_1_1data__src__dependent_1_1osm_1_1_osm_data.html#a7745c671626fb8e97532ff8a9097a780',1,'bridges::data_src_dependent::osm::OsmData']]],
+  ['lru',['lru',['../classbridges_1_1data__src__dependent_1_1lru__cache_1_1lru__cache.html#a2568c6b5de855a1ad90f876276b8cf49',1,'bridges::data_src_dependent::lru_cache::lru_cache']]]
 ];

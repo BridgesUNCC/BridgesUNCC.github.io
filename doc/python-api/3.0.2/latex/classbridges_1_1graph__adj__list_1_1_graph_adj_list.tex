@@ -3,9 +3,9 @@
 
 
 \subsection{Detailed Description}
-The \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list}{Graph\+Adj\+List}} class can be used to represent adjacency list based graphs in B\+R\+I\+D\+G\+ES. 
+The \hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list}{Graph\+Adj\+List} class can be used to represent adjacency list based graphs in B\+R\+I\+D\+G\+ES. 
 
-The \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list}{Graph\+Adj\+List}} class can be used to represent adjacency list based graphs in B\+R\+I\+D\+G\+ES; it takes 2 generic parameters\+: (1) K, which is an orderable key value used in accessing vertices (in constant time) using a hashmap. This permits data sets that need to be accessed by keys that are strings, and (2) E, an application defined type, and used in the Edge representation. The class is simply a wrapper around the Java Hashmap class and, thus, derives all its operations from it. B\+R\+I\+D\+G\+ES provides methods to visualize the graph and its contents.
+The \hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list}{Graph\+Adj\+List} class can be used to represent adjacency list based graphs in B\+R\+I\+D\+G\+ES; it takes 2 generic parameters\+: (1) K, which is an orderable key value used in accessing vertices (in constant time) using a hashmap. This permits data sets that need to be accessed by keys that are strings, and (2) E, an application defined type, and used in the Edge representation. The class is simply a wrapper around the Java Hashmap class and, thus, derives all its operations from it. B\+R\+I\+D\+G\+ES provides methods to visualize the graph and its contents.
 
 The vertices of the graph are held in a Java hashmap, for near constant time access; this lets us use strings or integral ids for vertices. The adjacency lists, also a Java hashmap are built for each vertex and contain the edge (terminating vertex id, weight) in the Edge structure, defined separately. Adjacency lists are singly linked lists using the B\+R\+I\+D\+G\+ES S\+Lelement.
 
@@ -23,61 +23,61 @@ graph adjacency list tutorial, \href{http://bridgesuncc.github.io/tutorials/Grap
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a8258a38ef234f4140b971e9fb7be7784}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+def \hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a8258a38ef234f4140b971e9fb7be7784}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
 \begin{DoxyCompactList}\small\item\em Constructor for a graph adj list. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_afe3d470247e6b64f38c0d5d51dece920}{get\+\_\+data\+\_\+structure\+\_\+type}} (self)
+def \hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_afe3d470247e6b64f38c0d5d51dece920}{get\+\_\+data\+\_\+structure\+\_\+type} (self)
 \begin{DoxyCompactList}\small\item\em Getter for the data structure type. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a5e8ecd31b5ebdee85e4b35e89335e129}{add\+\_\+vertex}} (self, k, e)
+def \hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a5e8ecd31b5ebdee85e4b35e89335e129}{add\+\_\+vertex} (self, k, e)
 \item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_aa3f026bb5116f3816dad7ff0c193ee40}{add\+\_\+edge}} (self, src, dest, data=None)
+def \hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_aa3f026bb5116f3816dad7ff0c193ee40}{add\+\_\+edge} (self, src, dest, data=None)
 \item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a7b4669b353a04f6868710c22790bd263}{set\+\_\+vertex\+\_\+data}} (self, src, vertex\+\_\+data)
+def \hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a7b4669b353a04f6868710c22790bd263}{set\+\_\+vertex\+\_\+data} (self, src, vertex\+\_\+data)
 \begin{DoxyCompactList}\small\item\em Set for the data at a given vertex. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a0523e2e842042c131dcbe4fd66a6a296}{get\+\_\+vertex\+\_\+data}} (self, src)
+def \hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a0523e2e842042c131dcbe4fd66a6a296}{get\+\_\+vertex\+\_\+data} (self, src)
 \item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_aa1b179f2d1ded0135afa792278f3a500}{set\+\_\+edge\+\_\+data}} (self, src, dest, edge\+\_\+data)
+def \hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_aa1b179f2d1ded0135afa792278f3a500}{set\+\_\+edge\+\_\+data} (self, src, dest, edge\+\_\+data)
 \item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_ae41cb9193582a782d4880b18085fc1c6}{vertices}} (self)
+def \hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_ae41cb9193582a782d4880b18085fc1c6}{vertices} (self)
 \begin{DoxyCompactList}\small\item\em Getter for the graph nodes. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_af484d881d91177e723faf8b8a5c427e2}{get\+\_\+vertex}} (self, key)
+def \hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_af484d881d91177e723faf8b8a5c427e2}{get\+\_\+vertex} (self, key)
 \item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a523adce952c66505abc5ad14a83ae4c4}{get\+\_\+adjacency\+\_\+list}} (self, vertex=None)
+def \hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a523adce952c66505abc5ad14a83ae4c4}{get\+\_\+adjacency\+\_\+list} (self, vertex=None)
 \begin{DoxyCompactList}\small\item\em Gets the adjacency list. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a96e264e71acad7474e233a1ec1d1035a}{key\+\_\+set}} (self)
+def \hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a96e264e71acad7474e233a1ec1d1035a}{key\+\_\+set} (self)
 \item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_ae12db7b48cf37ba8d2852fa05ebaa2c0}{value\+\_\+set}} (self)
+def \hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_ae12db7b48cf37ba8d2852fa05ebaa2c0}{value\+\_\+set} (self)
 \item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a4ae90f3f2db5f44219fe2a6f9035c9d6}{out\+\_\+going\+\_\+edge\+\_\+set\+\_\+of}} (self, k)
+def \hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a4ae90f3f2db5f44219fe2a6f9035c9d6}{out\+\_\+going\+\_\+edge\+\_\+set\+\_\+of} (self, k)
 \item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_abf7a65867ab342ef0eda4a34b3fe011e}{get\+\_\+edge\+\_\+data}} (self, src, dest)
+def \hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_abf7a65867ab342ef0eda4a34b3fe011e}{get\+\_\+edge\+\_\+data} (self, src, dest)
 \item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a9041f2a5c754141afbc41f02c6a2771c}{are\+\_\+all\+\_\+vertices\+\_\+located}} (self)
+def \hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a9041f2a5c754141afbc41f02c6a2771c}{are\+\_\+all\+\_\+vertices\+\_\+located} (self)
 \item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_aa0eaa5a21f8d8905d02454a83151c20e}{force\+\_\+large\+\_\+visualization}} (self, f)
+def \hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_aa0eaa5a21f8d8905d02454a83151c20e}{force\+\_\+large\+\_\+visualization} (self, f)
 \item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a036b6368bf916474da748e96dd93ec5a}{force\+\_\+small\+\_\+visualization}} (self, f)
+def \hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a036b6368bf916474da748e96dd93ec5a}{force\+\_\+small\+\_\+visualization} (self, f)
 \item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_abaa3015ae78e0f5ebc6fd2d2d2772927}{get\+\_\+link\+\_\+visualizer}} (self, src, dest)
+def \hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_abaa3015ae78e0f5ebc6fd2d2d2772927}{get\+\_\+link\+\_\+visualizer} (self, src, dest)
 \begin{DoxyCompactList}\small\item\em This is a convenience method to simplify access to the link visualizer; the method assumes the vertex names point to existing vertices, else an exception is thrown. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_ad63fce416ec0fdfd99d05e6236807fd8}{get\+\_\+visualizer}} (self, vertex)
+def \hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_ad63fce416ec0fdfd99d05e6236807fd8}{get\+\_\+visualizer} (self, vertex)
 \begin{DoxyCompactList}\small\item\em This is a convenience method to simplify access to the element visualizer; the method assumes the vertex name points to an existing vertice, else an exception is thrown. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a20ea8a6a1aa03a82223a59474037b3e3}{get\+\_\+data\+\_\+structure\+\_\+representation}} (self)
+def \hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a20ea8a6a1aa03a82223a59474037b3e3}{get\+\_\+data\+\_\+structure\+\_\+representation} (self)
 \begin{DoxyCompactList}\small\item\em Get the representation of the data structure as a dict. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_aaffde74237de001232e0996a8c64ab82}{get\+\_\+data\+\_\+structure\+\_\+large\+\_\+graph}} (self)
+def \hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_aaffde74237de001232e0996a8c64ab82}{get\+\_\+data\+\_\+structure\+\_\+large\+\_\+graph} (self)
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_ad39dbb3db39a3ffc145c372e6996443c}{adj\+\_\+list}}
+\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_ad39dbb3db39a3ffc145c372e6996443c}{adj\+\_\+list}
 \end{DoxyCompactItemize}
 \subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a093a64ead793e0bd3b1ce4e3456665c9}{Large\+Graph\+Vert\+Size}} = 1000
+int \hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a093a64ead793e0bd3b1ce4e3456665c9}{Large\+Graph\+Vert\+Size} = 1000
 \item 
-bool \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_aa9f4209af428473fd2d6952a74eb22b9}{force\+\_\+large\+\_\+viz}} = False
+bool \hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_aa9f4209af428473fd2d6952a74eb22b9}{force\+\_\+large\+\_\+viz} = False
 \item 
-bool \mbox{\hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a27900e6bb5504036ccf5ec2e4d301ddb}{force\+\_\+small\+\_\+viz}} = False
+bool \hyperlink{classbridges_1_1graph__adj__list_1_1_graph_adj_list_a27900e6bb5504036ccf5ec2e4d301ddb}{force\+\_\+small\+\_\+viz} = False
 \end{DoxyCompactItemize}
 
 
@@ -333,4 +333,4 @@ dict
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/\+Users/kalpathi/gr/bridges/client/python/bridges/\mbox{\hyperlink{graph__adj__list_8py}{graph\+\_\+adj\+\_\+list.\+py}}\end{DoxyCompactItemize}
+/home/erik/work/bridges/bridges-\/python/bridges/\hyperlink{graph__adj__list_8py}{graph\+\_\+adj\+\_\+list.\+py}\end{DoxyCompactItemize}

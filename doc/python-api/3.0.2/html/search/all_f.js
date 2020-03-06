@@ -13,5 +13,10 @@ var searchData=
   ['orange',['orange',['../classbridges_1_1named__color_1_1_named_color.html#a8960b439c042f93c4a33e44c54539293',1,'bridges::named_color::NamedColor']]],
   ['orangered',['orangered',['../classbridges_1_1named__color_1_1_named_color.html#ae0cb5f7470c6a0ef6f1b5658dd002acc',1,'bridges::named_color::NamedColor']]],
   ['orchid',['orchid',['../classbridges_1_1named__color_1_1_named_color.html#a498f32ec0ec03a62f63688a44d7ffdd2',1,'bridges::named_color::NamedColor']]],
+  ['osm_2epy',['osm.py',['../osm_8py.html',1,'']]],
+  ['osm_5fserver_5frequest',['osm_server_request',['../namespacebridges_1_1data__src__dependent_1_1data__source.html#a5644517c9ee0f5ab9e59a4f4d64fa038',1,'bridges::data_src_dependent::data_source']]],
+  ['osmdata',['OsmData',['../classbridges_1_1data__src__dependent_1_1osm_1_1_osm_data.html',1,'bridges::data_src_dependent::osm']]],
+  ['osmedge',['OsmEdge',['../classbridges_1_1data__src__dependent_1_1osm_1_1_osm_edge.html',1,'bridges::data_src_dependent::osm']]],
+  ['osmvertex',['OsmVertex',['../classbridges_1_1data__src__dependent_1_1osm_1_1_osm_vertex.html',1,'bridges::data_src_dependent::osm']]],
   ['out_5fgoing_5fedge_5fset_5fof',['out_going_edge_set_of',['../classbridges_1_1graph__adj__list_1_1_graph_adj_list.html#a4ae90f3f2db5f44219fe2a6f9035c9d6',1,'bridges::graph_adj_list::GraphAdjList']]]
 ];

@@ -1,0 +1,116 @@
+\hypertarget{classbridges_1_1audio__channel_1_1_audio_channel}{}\section{bridges.\+audio\+\_\+channel.\+Audio\+Channel Class Reference}
+\label{classbridges_1_1audio__channel_1_1_audio_channel}\index{bridges.\+audio\+\_\+channel.\+Audio\+Channel@{bridges.\+audio\+\_\+channel.\+Audio\+Channel}}
+Inheritance diagram for bridges.\+audio\+\_\+channel.\+Audio\+Channel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbridges_1_1audio__channel_1_1_audio_channel}
+\end{center}
+\end{figure}
+
+
+\subsection{Detailed Description}
+This is a class in B\+R\+I\+D\+G\+ES a channel of audio data. 
+
+This class contains one channel of 8, 16, 24, or 32 bit audio samples.
+
+\begin{DoxyAuthor}{Author}
+Luke Sloop
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2020, 1/31/2020 
+\end{DoxyDate}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classbridges_1_1audio__channel_1_1_audio_channel_a70152da44f434f0ea87f1756a0a884fb}{\+\_\+\+\_\+init\+\_\+\+\_\+}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classbridges_1_1audio__channel_1_1_audio_channel}{Audio\+Channel} constructor. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1audio__channel_1_1_audio_channel_adc84cb1c65d84184353603d9fd051017}{set\+\_\+sample}
+\begin{DoxyCompactList}\small\item\em Set the sample at index. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1audio__channel_1_1_audio_channel_a1f695d07aa5c95866036b0a55f88d9ae}{get\+\_\+sample}
+\begin{DoxyCompactList}\small\item\em Get the sample at index. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1audio__channel_1_1_audio_channel_a5d4780923b9c11029a1d6847db5480d2}{get\+\_\+sample\+\_\+count} (self)
+\begin{DoxyCompactList}\small\item\em Get the number of samples or length of this channel. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1audio__channel_1_1_audio_channel_ae9b2e6e0f5aaebc5adc21815f4fe2f9a}{get\+\_\+sample\+\_\+bits} (self)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1audio__channel_1_1_audio_channel_a70152da44f434f0ea87f1756a0a884fb}\label{classbridges_1_1audio__channel_1_1_audio_channel_a70152da44f434f0ea87f1756a0a884fb}} 
+\index{bridges\+::audio\+\_\+channel\+::\+Audio\+Channel@{bridges\+::audio\+\_\+channel\+::\+Audio\+Channel}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!bridges\+::audio\+\_\+channel\+::\+Audio\+Channel@{bridges\+::audio\+\_\+channel\+::\+Audio\+Channel}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def bridges.\+audio\+\_\+channel.\+Audio\+Channel.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sample\+\_\+count }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classbridges_1_1audio__channel_1_1_audio_channel}{Audio\+Channel} constructor. 
+
+(int) sample\+\_\+count\+: The total number of samples in this audio channel \begin{DoxyReturn}{Returns}
+
+
+None 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1audio__channel_1_1_audio_channel_a1f695d07aa5c95866036b0a55f88d9ae}\label{classbridges_1_1audio__channel_1_1_audio_channel_a1f695d07aa5c95866036b0a55f88d9ae}} 
+\index{bridges\+::audio\+\_\+channel\+::\+Audio\+Channel@{bridges\+::audio\+\_\+channel\+::\+Audio\+Channel}!get\+\_\+sample@{get\+\_\+sample}}
+\index{get\+\_\+sample@{get\+\_\+sample}!bridges\+::audio\+\_\+channel\+::\+Audio\+Channel@{bridges\+::audio\+\_\+channel\+::\+Audio\+Channel}}
+\subsubsection{\texorpdfstring{get\+\_\+sample()}{get\_sample()}}
+{\footnotesize\ttfamily def bridges.\+audio\+\_\+channel.\+Audio\+Channel.\+get\+\_\+sample (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{index }\end{DoxyParamCaption})}
+
+
+
+Get the sample at index. 
+
+The sample will be a signed integer with \hyperlink{classbridges_1_1audio__channel_1_1_audio_channel_ae9b2e6e0f5aaebc5adc21815f4fe2f9a}{get\+\_\+sample\+\_\+bits()} number of bits. \begin{DoxyVerb}           (int) index: The sample index on this channel to get
+\end{DoxyVerb}
+ \begin{DoxyReturn}{Returns}
+
+
+int The sample at index that is an integer within the range of an integer of \hyperlink{classbridges_1_1audio__channel_1_1_audio_channel_ae9b2e6e0f5aaebc5adc21815f4fe2f9a}{get\+\_\+sample\+\_\+bits()} number of bits. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1audio__channel_1_1_audio_channel_ae9b2e6e0f5aaebc5adc21815f4fe2f9a}\label{classbridges_1_1audio__channel_1_1_audio_channel_ae9b2e6e0f5aaebc5adc21815f4fe2f9a}} 
+\index{bridges\+::audio\+\_\+channel\+::\+Audio\+Channel@{bridges\+::audio\+\_\+channel\+::\+Audio\+Channel}!get\+\_\+sample\+\_\+bits@{get\+\_\+sample\+\_\+bits}}
+\index{get\+\_\+sample\+\_\+bits@{get\+\_\+sample\+\_\+bits}!bridges\+::audio\+\_\+channel\+::\+Audio\+Channel@{bridges\+::audio\+\_\+channel\+::\+Audio\+Channel}}
+\subsubsection{\texorpdfstring{get\+\_\+sample\+\_\+bits()}{get\_sample\_bits()}}
+{\footnotesize\ttfamily def bridges.\+audio\+\_\+channel.\+Audio\+Channel.\+get\+\_\+sample\+\_\+bits (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{int }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1audio__channel_1_1_audio_channel_a5d4780923b9c11029a1d6847db5480d2}\label{classbridges_1_1audio__channel_1_1_audio_channel_a5d4780923b9c11029a1d6847db5480d2}} 
+\index{bridges\+::audio\+\_\+channel\+::\+Audio\+Channel@{bridges\+::audio\+\_\+channel\+::\+Audio\+Channel}!get\+\_\+sample\+\_\+count@{get\+\_\+sample\+\_\+count}}
+\index{get\+\_\+sample\+\_\+count@{get\+\_\+sample\+\_\+count}!bridges\+::audio\+\_\+channel\+::\+Audio\+Channel@{bridges\+::audio\+\_\+channel\+::\+Audio\+Channel}}
+\subsubsection{\texorpdfstring{get\+\_\+sample\+\_\+count()}{get\_sample\_count()}}
+{\footnotesize\ttfamily def bridges.\+audio\+\_\+channel.\+Audio\+Channel.\+get\+\_\+sample\+\_\+count (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{int }\end{DoxyParamCaption})}
+
+
+
+Get the number of samples or length of this channel. 
+
+\begin{DoxyReturn}{Returns}
+
+
+int The number of samples in this channel. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1audio__channel_1_1_audio_channel_adc84cb1c65d84184353603d9fd051017}\label{classbridges_1_1audio__channel_1_1_audio_channel_adc84cb1c65d84184353603d9fd051017}} 
+\index{bridges\+::audio\+\_\+channel\+::\+Audio\+Channel@{bridges\+::audio\+\_\+channel\+::\+Audio\+Channel}!set\+\_\+sample@{set\+\_\+sample}}
+\index{set\+\_\+sample@{set\+\_\+sample}!bridges\+::audio\+\_\+channel\+::\+Audio\+Channel@{bridges\+::audio\+\_\+channel\+::\+Audio\+Channel}}
+\subsubsection{\texorpdfstring{set\+\_\+sample()}{set\_sample()}}
+{\footnotesize\ttfamily def bridges.\+audio\+\_\+channel.\+Audio\+Channel.\+set\+\_\+sample (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{index }\end{DoxyParamCaption})}
+
+
+
+Set the sample at index. 
+
+The sample value should be a valid signed integer with \hyperlink{classbridges_1_1audio__channel_1_1_audio_channel_ae9b2e6e0f5aaebc5adc21815f4fe2f9a}{get\+\_\+sample\+\_\+bits()} number of bits. \begin{DoxyVerb}           (int) index: The index on this channel to set
+           (int) value: The signed integer value to set the sample to
+\end{DoxyVerb}
+ \begin{DoxyReturn}{Returns}
+
+
+None 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/erik/work/bridges/bridges-\/python/bridges/\hyperlink{audio__channel_8py}{audio\+\_\+channel.\+py}\end{DoxyCompactItemize}

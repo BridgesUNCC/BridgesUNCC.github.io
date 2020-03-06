@@ -3,6 +3,9 @@ var searchData=
   ['a',['A',['../classbridges_1_1named__symbol_1_1_named_symbol.html#ad5f315e2dbd3b3c40e9ce00947bda2ca',1,'bridges.named_symbol.NamedSymbol.A()'],['../classbridges_1_1named__symbol_1_1_named_symbol.html#aeafe1d071ba49f9225c34a571ab3fd02',1,'bridges.named_symbol.NamedSymbol.a()']]],
   ['a_5fkey',['a_key',['../classbridges_1_1input__helper_1_1_input_helper.html#acb7d988d14de58f5fff87ad91bef430f',1,'bridges::input_helper::InputHelper']]],
   ['adj_5flist',['adj_list',['../classbridges_1_1graph__adj__list_1_1_graph_adj_list.html#ad39dbb3db39a3ffc145c372e6996443c',1,'bridges::graph_adj_list::GraphAdjList']]],
+  ['affected_5farea',['affected_area',['../classbridges_1_1data__src__dependent_1_1cancer__incidence_1_1_cancer_incidence.html#a5504ec70a62fad900ae1f6ccaf78d67a',1,'bridges::data_src_dependent::cancer_incidence::CancerIncidence']]],
+  ['ageadjustedrate',['ageAdjustedRate',['../classbridges_1_1data__src__dependent_1_1cancer__incidence_1_1_cancer_incidence.html#af99c9d777e4d3fc607d79bf52382e36f',1,'bridges::data_src_dependent::cancer_incidence::CancerIncidence']]],
+  ['ageadjustedrateci',['ageAdjustedRateci',['../classbridges_1_1data__src__dependent_1_1cancer__incidence_1_1_cancer_incidence.html#af829019b09bd6de2000ffa1181675062',1,'bridges::data_src_dependent::cancer_incidence::CancerIncidence']]],
   ['aliceblue',['aliceblue',['../classbridges_1_1named__color_1_1_named_color.html#aee5ed43983f4942acabae2cb74b9c6fd',1,'bridges::named_color::NamedColor']]],
   ['alpha',['alpha',['../classbridges_1_1color_1_1_color.html#a2e170f068eeb77ace0427d23b36f2b27',1,'bridges::color::Color']]],
   ['antiquewhite',['antiquewhite',['../classbridges_1_1named__color_1_1_named_color.html#a095e0f1c39cca4646342de08f3e2ae08',1,'bridges::named_color::NamedColor']]],
@@ -15,5 +18,6 @@ var searchData=
   ['arrow_5fup',['arrow_up',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a0072ce207be4eaffeab0aa9ed182dca5',1,'bridges::named_symbol::NamedSymbol']]],
   ['assignment',['assignment',['../classbridges_1_1connector_1_1_connector.html#a2df020c062b6224d4eeb2c5407c02656',1,'bridges::connector::Connector']]],
   ['astro_5fhelmet',['astro_helmet',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a486c9de7fe25712e632ee75c02ce59ad',1,'bridges::named_symbol::NamedSymbol']]],
+  ['author_5fdeath',['author_death',['../classbridges_1_1data__src__dependent_1_1gutenberg__book_1_1_gutenberg_book.html#afd78a02948accf9b270e7b9cb9e38856',1,'bridges::data_src_dependent::gutenberg_book::GutenbergBook']]],
   ['azure',['azure',['../classbridges_1_1named__color_1_1_named_color.html#a470c7fda14d73fcc3e5e88173f16b61f',1,'bridges::named_color::NamedColor']]]
 ];

@@ -253,6 +253,7 @@ addassignment "15-FallingSand"
 addassignment "20-Minesweeper"
 addassignment "21-RaceCar"
 addassignment "22-Snake"
+addassignment "32-TicTacToe"
 
 addgroup "Data Structure"
 addsubgroup "LinkedList"

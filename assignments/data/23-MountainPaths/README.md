@@ -45,13 +45,14 @@ the right edge of the image.
 
 ##Tasks
 
-1. *Read dataset, create image.* Use file I/O to read the dataset. You can read the data 
-into a 1D or 2D array.   As you read the data, keep track of the maximum value, as you 
-will need to scale the values to the (0-255) range to display the image. PPM images in text
-are easiest to read (other formats might require a libray API).
+1. *get dataset, visualize as an image* You will use BRIDGES to define a lat/long range (rectangular bounding box of your choice) to access the elevation data (returned in an object
+containing the elevation values).  You will need to calculate maximum elevation value, as you 
+will need to scale the values to the (0-255) range to display the image in a ColorGrid. 
+(Backup plan is to read from a PPM image, if there are any issues accessing data from
+an external source)
 
-2.  *Display the image using BRIDGES.* Once you have read the dataset into your array, 
-then scale the values to 0-255 range and convert that to an integer (divide each value 
+2.  *Display the image using BRIDGES.* Once you have acquired the dataset,
+scale the values to 0-255 range and convert that to an integer (divide each value 
 by the largest and scale to 255). Use the BRIDGES ColorGrid class to hold the image. 
 This can then  be visualized directly in BRIDGES. Check the tutorial for the ColorGrid
 object that illustrates the calls needed  for visualization. The ColorGrid class has the 
@@ -65,11 +66,12 @@ in elevation and draw this path in a distinct color (like red). Pixels in the pa
 have their values changed to this color (for instance, use (255, 0, 0) for red.  
 As you compute these low elevation points, modify your color grid to draw the red pixels.  
 You need to keep track of the pixel addresses and the image height and width, so that you 
-dont go past the boundaries of  the dataset (grid).
+dont go past the boundaries of  the dataset (grid). Note that if you are on the boundaries
+of the grid, your choices will be reduced.
 
 4. *Display the image.*  Again, use BRIDGES to display your final image with the chosen 
-path. You can have a simple User Interface to specify the starting point and rerun your 
-program to display different paths.
+path (see example above). You can have a simple User Interface to specify the starting 
+point and rerun your program to display different paths.
 
 
 
@@ -97,7 +99,10 @@ local choice. Here are some possibilities:
 [BRIDGES Team:](http://bridgesuncc.github.io/) Contact the BRIDGES team for any 
 issues with the BRIDGES API. This is an active project.
 
+
 #### for Java
+[DataSource](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1connect_1_1_data_source.html)
+
 [ColorGrid documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_color_grid.html)
 
 [Color documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_color.html)
@@ -105,19 +110,21 @@ issues with the BRIDGES API. This is an active project.
 [Bridges class documentation](http://bridgesuncc.github.io/doc/java-api/current/html/namespacebridges_1_1base.html)
 
 #### for C++
+[DataSource](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_data_source.html)
 
-[ColorGrid documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_color_grid.html)
+[ColorGrid documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_color_grid.html)
 
-[Color documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_color.html)
+[Color documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_color.html)
 
-[Bridges Class documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classes.html)
+[Bridges Class documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_bridges.html)
 
 
 #### for Python
-
 
 [ColorGrid documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1color__grid_1_1_color_grid.html)
 
 [Color documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1color_1_1_color.html)
 
 [Bridges documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1bridges_1_1_bridges.html)
+
+[DataSource](http://bridgesuncc.github.io/doc/python-api/current/html/data__source_8py.html)

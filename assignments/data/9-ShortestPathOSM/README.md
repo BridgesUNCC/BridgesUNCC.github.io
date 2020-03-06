@@ -60,6 +60,8 @@ application for using quad-trees.
 
 [ShortestPathBenchmark documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1benchmark_1_1_shortest_path_benchmark.html)
 
+[DataSource documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_data_source.html)
+
 #### For Java
 
 [Bridges documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1connect_1_1_bridges.html)
@@ -70,8 +72,15 @@ application for using quad-trees.
 
 [ShortestPathBenchmark documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1benchmark_1_1_shortest_path_benchmark.html)
 
+[DataSource documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1connect_1_1_data_source.html)
+
 #### For Python
 
 [Bridges documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1bridges_1_1_bridges.html)
 
 [GraphAdjList documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1graph__adj__list_1_1_graph_adj_list.html)
+
+[OSMData documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1data__src__dependent_1_1osm_1_1_osm_data.html)
+
+[ShortestPathBenchmark documentation](http://bridgesuncc.github.io/doc/python-api/current/html/namespacebridges_1_1shortest__path__benchmark.html)
+

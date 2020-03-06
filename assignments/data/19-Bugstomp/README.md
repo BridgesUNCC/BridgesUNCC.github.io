@@ -2,10 +2,11 @@ Bugstomp Game
 ============
 
 Goals
- -----
- The purpose of this assignment is to learn to
- 1. Move a character sprite around a 2D grid to step on randomly generated bug sprites.
- 2. Use loops, 2D arrays, and conditional statements to move the character and check if he has stepped on a bug sprite.
+-----
+The purpose of this assignment is to learn to
+
+1. Move a character sprite around a 2D grid to step on randomly generated bug sprites.
+2. Use loops, 2D arrays, and conditional statements to move the character and check if he has stepped on a bug sprite.
 
 Programming
 -----------
@@ -33,7 +34,8 @@ More Details to Get You Started
 - keyA()
 - keyD()
 
-###Key Press Events - Blocking Games
+// Not Used Now //
+####Key Press Events - Blocking Games
 - getKeyPress(); Returns a string.
 - "ArrowLeft"
 - "ArrowRight"
@@ -44,6 +46,7 @@ More Details to Get You Started
 - "a"
 - "d"
 - etc...
+// Not Used Now //
 
 ###Variables, Colors, and Sprite Symbols
 - NamedSymbol.symbolname;
@@ -58,6 +61,8 @@ More Details to Get You Started
 - render() sends your updated game grid to the server once. This is a blocking game function.
 
 ### Help
+#### For Java
+[NonBlockingGame documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1games_1_1_non_blocking_game.html)
 #### For C++
 [NonBlockingGame documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1game_1_1_non_blocking_game.html)
 #### For Python
