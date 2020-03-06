@@ -33,7 +33,8 @@ More Details to Get You Started
 - keyA()
 - keyD()
 
-###Key Press Events - Blocking Games
+// Not Used Now //
+####Key Press Events - Blocking Games
 - getKeyPress(); Returns a string.
 - "ArrowLeft"
 - "ArrowRight"
@@ -44,6 +45,7 @@ More Details to Get You Started
 - "a"
 - "d"
 - etc...
+// Not Used Now //
 
 ###Variables, Colors, and Sprite Symbols
 - NamedSymbol.symbolname;
@@ -58,6 +60,8 @@ More Details to Get You Started
 - render() sends your updated game grid to the server once. This is a blocking game function.
 
 ### Help
+#### For Java
+[NonBlockingGame documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1games_1_1_non_blocking_game.html)
 #### For C++
 [NonBlockingGame documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1game_1_1_non_blocking_game.html)
 #### For Python

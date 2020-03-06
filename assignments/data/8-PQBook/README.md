@@ -91,13 +91,13 @@ insert (Heap h, k) {
 
 #### for C++
 
-[Color documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_color.html)
+[Color documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_color.html)
 
-[BinTreeElement documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_bin_tree_element.html)
+[BinTreeElement documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_bin_tree_element.html)
 
-[DataSource documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/namespacebridges_1_1_data_source.html)
+[DataSource documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_data_source.html)
 
-[Shakespeare documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_shakespeare.html)
+[Shakespeare documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1dataset_1_1_shakespeare.html)
 
 
 #### For Python
