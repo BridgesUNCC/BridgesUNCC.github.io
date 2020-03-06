@@ -229,8 +229,7 @@ addassignment "27-GameGridBasic"
 
 
 addsubgroup "Tests and Conditions"
-addassignment "17-ControlsTutorial"
-addassignment "18-ControlsTutorialTwo"
+addassignment "34-ControlsTutorial"
 addassignment "19-Bugstomp"
 
 addsubgroup "Loops"
