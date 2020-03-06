@@ -80,4 +80,7 @@ application for using quad-trees.
 
 [GraphAdjList documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1graph__adj__list_1_1_graph_adj_list.html)
 
+[OSMData documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1data__src__dependent_1_1osm_1_1_osm_data.html)
+
+[ShortestPathBenchmark documentation](http://bridgesuncc.github.io/doc/python-api/current/html/namespacebridges_1_1shortest__path__benchmark.html)
 

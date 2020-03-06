@@ -2,10 +2,11 @@ Bugstomp Game
 ============
 
 Goals
- -----
- The purpose of this assignment is to learn to
- 1. Move a character sprite around a 2D grid to step on randomly generated bug sprites.
- 2. Use loops, 2D arrays, and conditional statements to move the character and check if he has stepped on a bug sprite.
+-----
+The purpose of this assignment is to learn to
+
+1. Move a character sprite around a 2D grid to step on randomly generated bug sprites.
+2. Use loops, 2D arrays, and conditional statements to move the character and check if he has stepped on a bug sprite.
 
 Programming
 -----------
