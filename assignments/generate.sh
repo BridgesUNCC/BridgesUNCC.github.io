@@ -4,32 +4,13 @@
 
 REPORT=""
 
-#bail if git is not clean
-if ! git diff --quiet ;
-then
-    echo git repository is dirty. Commit changes and run script again
-    exit 1
-fi
-
-#bail if markdown is not installed
-if [ ! -e "$(which markdown)" ] ;
-then
-    echo markdown is not installed. 
-	exit 1
-fi
 
 
 ASSIGNDIR=data/
 BRIDGESASSIGNMENT=$1
 HTMLOUTPUT=../newassignments.html
 
-
-#if ${BRIDGESASSIGNMENT} does not point to bridges assignment repo, bail.
-if ! [ -e ${BRIDGESASSIGNMENT}/isbridgesassignment ];
-then
-    echo can not find bridges assignment repository. pass it as parameter 1 to this script.
-    exit 1
-fi
+check_for_context
 
 #remove ASSIGNDIR if exist.
 #This is necessary to clean up previous assignment data which may not be included anymore an help making sure all files are up to date.

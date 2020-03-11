@@ -20,6 +20,30 @@ prepare_assignment_scaffold() {
     
 }
 
+check_for_context() {
+    #bail if git is not clean
+    if ! git diff --quiet ;
+    then
+	echo git repository is dirty. Commit changes and run script again
+	exit 1
+    fi
+    
+    #bail if markdown is not installed
+    if [ ! -e "$(which markdown)" ] ;
+    then
+	echo markdown is not installed. 
+	exit 1
+    fi
+
+    
+    #if ${BRIDGESASSIGNMENT} does not point to bridges assignment repo, bail.
+    if ! [ -e ${BRIDGESASSIGNMENT}/isbridgesassignment ];
+    then
+	echo can not find bridges assignment repository. pass it as parameter 1 to this script.
+	exit 1
+    fi
+}
+
 writeheader() {
     cat header >> ${HTMLOUTPUT}
 }
