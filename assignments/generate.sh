@@ -58,7 +58,7 @@ writefooter() {
 
 
 addgroup() {
-    name=$1
+    local name=$1
 
     printf "%s"'<div class="assignmentgroup"> <p>' >> ${HTMLOUTPUT}
     printf "%s" "${name}"  >> ${HTMLOUTPUT}
@@ -67,7 +67,7 @@ addgroup() {
 }
 
 addsubgroup() {
-    name=$1
+    local name=$1
 
     printf "%s" '<div class="assignmentsubgroup"> <p>' >> ${HTMLOUTPUT}
     printf "%s" "${name}" >> ${HTMLOUTPUT}
@@ -77,7 +77,7 @@ addsubgroup() {
 
 
 addassignment() {
-    name=$1
+    local name=$1
 
     #bail if assignment name is empty
     if [ ! -n "${name}" ]
