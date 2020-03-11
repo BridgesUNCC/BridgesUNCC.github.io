@@ -44,6 +44,24 @@ check_for_context() {
     fi
 }
 
+reset_context() {
+    #remove ASSIGNDIR if exist.
+    #This is necessary to clean up previous assignment data which may not be included anymore an help making sure all files are up to date.
+    if [ -e  ${ASSIGNDIR} ]
+    then
+	rm -rf ${ASSIGNDIR}
+    fi
+    
+    
+    #remove ${HTMLOUTPUT} if it exists
+    if [ -e ${HTMLOUTPUT} ]
+    then
+	rm ${HTMLOUTPUT}
+    fi
+    
+    mkdir ${ASSIGNDIR}
+}
+
 writeheader() {
     cat header >> ${HTMLOUTPUT}
 }

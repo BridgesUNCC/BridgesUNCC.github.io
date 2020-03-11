@@ -4,29 +4,13 @@
 
 REPORT=""
 
-
-
 ASSIGNDIR=data/
 BRIDGESASSIGNMENT=$1
 HTMLOUTPUT=../newassignments.html
 
 check_for_context
 
-#remove ASSIGNDIR if exist.
-#This is necessary to clean up previous assignment data which may not be included anymore an help making sure all files are up to date.
-if [ -e  ${ASSIGNDIR} ]
-then
-    rm -rf ${ASSIGNDIR}
-fi
-
-
-#remove ${HTMLOUTPUT} if it exists
-if [ -e ${HTMLOUTPUT} ]
-then
-    rm ${HTMLOUTPUT}
-fi
-
-mkdir ${ASSIGNDIR}
+reset_context
 
 
 
