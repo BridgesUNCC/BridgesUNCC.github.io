@@ -1,5 +1,7 @@
 #!/bin/sh
 
+. ./util.sh
+
 REPORT=""
 
 #bail if git is not clean
@@ -105,7 +107,7 @@ addassignment() {
 	#generate scaffold archives
 	if [ -d ${srcdir}/c++ ];
 	then
-	    zip -j -r ${targetdir}/c++.zip ${srcdir}/c++
+	    prepare_assignment_scaffold ${targetdir}/c++.zip ${srcdir}/c++
 	else
 	    MSG="no C++ scaffold for ${name}"
 	    echo ${MSG}
@@ -113,7 +115,7 @@ addassignment() {
 	fi
 	if [ -d ${srcdir}/java ];
 	then
-	    zip -j -r ${targetdir}/java.zip ${srcdir}/java
+	    prepare_assignment_scaffold ${targetdir}/java.zip ${srcdir}/java
 	else
 	    MSG="no JAVA scaffold for ${name}"
 	    echo ${MSG}
@@ -121,7 +123,7 @@ addassignment() {
 	fi
 	if [ -d ${srcdir}/python ];
 	then
-	    zip -j -r ${targetdir}/python.zip ${srcdir}/python
+	    prepare_assignment_scaffold ${targetdir}/python.zip ${srcdir}/python
 	else
 	    MSG="no Python scaffold for ${name}"
 	    echo ${MSG}
