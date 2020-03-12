@@ -1,5 +1,5 @@
-Assignment 9 - Shortest Path  OSM
-==================================
+Shortest Path in Real Cities
+============================
 
 Goals
 -----
@@ -29,8 +29,7 @@ shortest path algorithm such as Dijkstra's algorithm.
 Sample Output
 -------------
 
-![Sample Output](figures/Minneapolis.png)
-
+<img src="figures/Minneapolis.png" alt="Sample Output" width="400px" />
 
 Variants
 --------

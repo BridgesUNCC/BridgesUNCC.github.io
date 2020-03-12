@@ -22,7 +22,7 @@ Programming
 
 More Details to Get You Started
 -------------------------------
-###Key Press Events - NonBlocking Games
+### Key Press Events - NonBlocking Games
 - keyUp()
 - keyDown()
 - keyLeft()
@@ -34,27 +34,13 @@ More Details to Get You Started
 - keyA()
 - keyD()
 
-// Not Used Now //
-####Key Press Events - Blocking Games
-- getKeyPress(); Returns a string.
-- "ArrowLeft"
-- "ArrowRight"
-- "ArrowUp"
-- "ArrowDown"
-- "w"
-- "s"
-- "a"
-- "d"
-- etc...
-// Not Used Now //
-
-###Variables, Colors, and Sprite Symbols
+### Variables, Colors, and Sprite Symbols
 - NamedSymbol.symbolname;
 - NamedColor.colorname;
-- drawObject(column, row, NamedSymbol, NamedColor);
+- drawSymbol(column, row, NamedSymbol, NamedColor);
 - setBGColor(column, row, NamedColor);
 
-###Important Functions
+### Important Functions
 - The gameLoop() function loops until the game is over.
 - quit() stops the game.
 - start() starts the game and calls the initialize() function once before it starts the gameLoop() function.

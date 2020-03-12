@@ -1,5 +1,5 @@
-Assignment 4 - Graph Earthquake
-===============================
+Earthquake Tracker
+==================
 
 Goals
 -----

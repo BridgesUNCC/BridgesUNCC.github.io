@@ -1,5 +1,5 @@
-Assignment 34 - Game Tutorial
-=============================
+BRIDGES Game API Tutorial
+=========================
 
 Goals
 -----
@@ -19,6 +19,12 @@ ToDo
 2. Upon a key press, display a different message
 
 Check comments in the scaffold for details.
+
+
+Sample Output
+-------------
+
+<img src="figures/icon.png" alt="Sample Output" width="400px" />
 
 Variables
 ---------
@@ -47,16 +53,16 @@ gameLoop():
 
 Boolean values that are true when a specific key is being pressed:
 
--keyUp()
--keyDown()
--keyLeft()
--keyRight()
--keyW()
--keyS()
--keyA()
--keyD()
--keyQ()
--keySpace()
+- keyUp()
+- keyDown()
+- keyLeft()
+- keyRight()
+- keyW()
+- keyS()
+- keyA()
+- keyD()
+- keyQ()
+- keySpace()
 
 Documentation
 -------------

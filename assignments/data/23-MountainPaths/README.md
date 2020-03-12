@@ -1,5 +1,5 @@
-Mountain Paths - Determining a low elevation through a mountain
-===============================================================
+Mountain Paths - Determining a path of low elevation through a mountain
+=======================================================================
 
 ## Goals
 
@@ -18,7 +18,7 @@ you through the points with the lowest elevation changes, in an effort to minimi
 overall effort in walking through the path. For this you will use a `greedy' approach and 
 make local decisions in determining the successive points in the path.
 
-![Example Elevation Image!](./figures/colorado1.jpg)
+<img src="./figures/colorado1.jpg" alt="Example Elevation Image" width="400px" />
 
 Input gray scale image of a terrain with  gray shades mapped to elevation. Elevation ranges from low (dark shades) to high (lighter shades)
 
@@ -26,7 +26,7 @@ The image above shows a mountainous region; lighter regions are higher elevation
 and the red line shows the path taken by a walker.
 
  
-###Algorithm To Determine the Path:
+### Algorithm To Determine the Path:
 
 ![Greedy Algorithm(4 cases) !](./figures/greedy.png)
 
@@ -43,7 +43,7 @@ the right edge of the image.
 
  
 
-##Tasks
+## Tasks
 
 1. *get dataset, visualize as an image* You will use BRIDGES to define a lat/long range (rectangular bounding box of your choice) to access the elevation data (returned in an object
 containing the elevation values).  You will need to calculate maximum elevation value, as you 

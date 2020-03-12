@@ -1,5 +1,5 @@
-Assignment 7 - Grid Lyrics
-==========================
+Repetition in Lyrics
+====================
 
 Goals
 -----
@@ -11,6 +11,7 @@ The purpose of this assignment is to learn to
 
 You will generate a visualization that looks like [that](http://bridges-cs.herokuapp.com/assignments/7/bridges_workshop)!
 
+<img src="figures/icon.png" alt="Sample Output" width="400px" />
 
 Programming part
 ----------------
