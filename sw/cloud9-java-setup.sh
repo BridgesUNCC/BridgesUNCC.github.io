@@ -2,7 +2,7 @@
 
 wget http://bridgesuncc.github.io/sw/bridges-java-3.0.3.jar -O ~/bridges-java.jar
 
-echo >> ~/.bashrc <<EOF
+cat >> ~/.bashrc <<EOF
 
 export CLASSPATH=~/bridges-java.jar:.
 
