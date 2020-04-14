@@ -1,21 +1,73 @@
-<h1>Assignment 8 - Priority Queue Book</h1>
+<h1>Shakespearean Words</h1>
 
 <h2>Goals</h2>
 
 <p>The purpose of this assignment is to learn to</p>
 
 <ol>
-<li>Access Shakespear's work with BRIDGES</li>
+<li>Access Shakespeare's work with BRIDGES</li>
+<li>Write a Dictionary using BRIDGES</li>
 <li>Write your own tree based data structure: A Binary Min-Heap</li>
 </ol>
 
 <p>You will generate a visualization that looks like <a href="http://bridges-cs.herokuapp.com/assignments/8/bridges_workshop">that</a>!</p>
 
+<h2>Purpose</h2>
+
+<p>The purpose of the assignment is to analyze out of Shakespeare works
+which words are used most often. The assignment is in two
+pieces. First, we will need to count how many times each words
+appear. This will be accomplished using a Dictionary implemented as a
+Binary Search Tree. Then, we will extract the words used most
+often. This will be accomplished using a Min Heap.</p>
+
 <h2>Programming part</h2>
 
-<h3>Task</h3>
+<h3>Counting word appearances using a Dictionary implemented as Binary Search Tree</h3>
 
-<p>The purpose of this assignment is to build a MinHeap in BRIDGES
+<p>A Dictionary (sometimes called associative arrays) enable to store and
+retrieve (key, value) pairs. In this assignment they will be useful to
+count how many times a particular word appear in Shakespeare's
+work. The keys are going to be words. And the value associated with
+that key is going to be how many times that word appears. Counting the
+words then becomes:</p>
+
+<p>```algorithm
+Dictionary d</p>
+
+<p>for each word w in document
+  entry = d.get(w)
+  if (entry is NULL)
+    d.insert (w, 1)
+  else
+    entry.value += 1
+```</p>
+
+<h4>Getting Started</h4>
+
+<ol>
+<li>Open your scaffolded code.</li>
+<li>Plug in your credentials.</li>
+<li>Observe the Dictionary interface.</li>
+</ol>
+
+<h4>Tasks</h4>
+
+<ol>
+<li>Implement a Dictionnary using a Binary Search Tree leveraging the BSTElement of BRIDGES.</li>
+<li>Visualize the Dictionary using BRIDGES.</li>
+</ol>
+
+<h4>If you have time</h4>
+
+<ol>
+<li>Implement the Dictionary using a HashTable.</li>
+<li>Use BRIDGES SymbolCollection to generate a visualization of the HashTable.</li>
+</ol>
+
+<h3>Extracting the most frequent words using a Min Heap</h3>
+
+<p>The purpose of this task is to build a MinHeap in BRIDGES
 represented as a binary tree (as opposed to the more common array
 representation of a heap)</p>
 
@@ -24,16 +76,14 @@ two subheaps. The invariant of a min heap is that the root of any heap
 should have a lower (or equal) key than any node contained in the
 heap.</p>
 
-<h3>Getting Started</h3>
+<h4>Getting Started</h4>
 
 <ol>
-<li>Open your scaffolded code.</li>
-<li>Plug in your credentials.</li>
 <li>Observe the <code>MyHeapElement</code> class that extends BRIDGES's <code>BinTreeElement</code>.</li>
 <li>Observe the <code>MyHeap</code> class that provide Min Heap features. </li>
 </ol>
 
-<h3>Build a Binary Min Heap</h3>
+<h4>Build a Binary Min Heap</h4>
 
 <ol>
 <li>Write the insert function in MyHeap. There are todos to guide you.</li>
@@ -73,7 +123,7 @@ Heap {
 }
 ```</p>
 
-<h3>If you have time</h3>
+<h4>If you have time</h4>
 
 <ol>
 <li>Use all of Shakespeare's works.</li>
