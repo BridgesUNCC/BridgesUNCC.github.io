@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['n',['n',['../enumbridges_1_1base_1_1_named_symbol.html#af8fbacd65ed7dae49b7da7f3d35a27e3',1,'bridges.base.NamedSymbol.n()'],['../enumbridges_1_1base_1_1_named_symbol.html#ac13211aeb821086ad44e2abc36ce9bd2',1,'bridges.base.NamedSymbol.N()']]],
+  ['n',['N',['../enumbridges_1_1base_1_1_named_symbol.html#ac13211aeb821086ad44e2abc36ce9bd2',1,'bridges.base.NamedSymbol.N()'],['../enumbridges_1_1base_1_1_named_symbol.html#af8fbacd65ed7dae49b7da7f3d35a27e3',1,'bridges.base.NamedSymbol.n()']]],
   ['name',['name',['../classbridges_1_1data__src__dependent_1_1_osm_server_response_meta.html#aa966c46c2ed35dfff9ac877286e0fd56',1,'bridges::data_src_dependent::OsmServerResponseMeta']]],
   ['navajowhite',['navajowhite',['../enumbridges_1_1base_1_1_named_color.html#aad5a4d534d028cb567547b3926e303e3',1,'bridges::base::NamedColor']]],
   ['navy',['navy',['../enumbridges_1_1base_1_1_named_color.html#a820aac2f4d068ddb43e632e31fbe6421',1,'bridges::base::NamedColor']]],

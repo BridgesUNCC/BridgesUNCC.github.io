@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['m',['m',['../enumbridges_1_1base_1_1_named_symbol.html#a05c1a04f5e429c775dde7783c69ddef0',1,'bridges.base.NamedSymbol.m()'],['../enumbridges_1_1base_1_1_named_symbol.html#aa7e774881f6c41c43e4b126e0250ef75',1,'bridges.base.NamedSymbol.M()']]],
+  ['m',['M',['../enumbridges_1_1base_1_1_named_symbol.html#aa7e774881f6c41c43e4b126e0250ef75',1,'bridges.base.NamedSymbol.M()'],['../enumbridges_1_1base_1_1_named_symbol.html#a05c1a04f5e429c775dde7783c69ddef0',1,'bridges.base.NamedSymbol.m()']]],
   ['mag',['mag',['../classbridges_1_1data__src__dependent_1_1_usgs_foo_1_1_properties.html#a114163b5773ae63dc7554d0fb365f540',1,'bridges::data_src_dependent::UsgsFoo::Properties']]],
   ['magenta',['magenta',['../enumbridges_1_1base_1_1_named_color.html#a222d381e14e181670a111124de9c3a53',1,'bridges::base::NamedColor']]],
   ['magnifying_5fglass',['magnifying_glass',['../enumbridges_1_1base_1_1_named_symbol.html#abaf4dec18e031543a69411a7b2776ca1',1,'bridges::base::NamedSymbol']]],

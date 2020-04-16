@@ -19,7 +19,7 @@ var searchData=
   ['close_5fcurly',['CLOSE_CURLY',['../classbridges_1_1tree__element_1_1_tree_element.html#a30e6828805446c2c86423c334c81c981',1,'bridges::tree_element::TreeElement']]],
   ['close_5fparen',['CLOSE_PAREN',['../classbridges_1_1tree__element_1_1_tree_element.html#ae6264b1611ca448a64e3ef3ac4baf8da',1,'bridges::tree_element::TreeElement']]],
   ['colon',['COLON',['../classbridges_1_1tree__element_1_1_tree_element.html#a1ece84d898aec2a9340f45e52ace2313',1,'bridges::tree_element::TreeElement']]],
-  ['color',['color',['../classbridges_1_1element__visualizer_1_1_element_visualizer.html#a1fd985698e1c56289ed49fa7849d43ab',1,'bridges::element_visualizer::ElementVisualizer']]],
+  ['color',['color',['../classbridges_1_1edge_1_1_edge.html#ac54b17a05cab4803f7169dc6114cd9d9',1,'bridges.edge.Edge.color()'],['../classbridges_1_1element_1_1_element.html#a568fd16a353d7852571aa947433095ea',1,'bridges.element.Element.color()'],['../classbridges_1_1element__visualizer_1_1_element_visualizer.html#a1fd985698e1c56289ed49fa7849d43ab',1,'bridges.element_visualizer.ElementVisualizer.color()']]],
   ['comma',['COMMA',['../classbridges_1_1tree__element_1_1_tree_element.html#a427a0eaaae4cf421dc0353ca8f4047d2',1,'bridges::tree_element::TreeElement']]],
   ['connector',['connector',['../classbridges_1_1bridges_1_1_bridges.html#a1c02ee44e7a4a3ee2f7d9c7d7da7d09f',1,'bridges::bridges::Bridges']]],
   ['coral',['coral',['../classbridges_1_1named__color_1_1_named_color.html#aeadcb6362da8d6dc7d257371672fe069',1,'bridges::named_color::NamedColor']]],

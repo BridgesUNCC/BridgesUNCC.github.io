@@ -76,8 +76,7 @@ $(function() {
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="classbridges_1_1graph__adj__list_1_1_graph_adj_list.html" title="The GraphAdjList class can be used to represent adjacency list based graphs in BRIDGES. ">GraphAdjList</a> class can be used to represent adjacency list based graphs in BRIDGES. </p>
-<p>The <a class="el" href="classbridges_1_1graph__adj__list_1_1_graph_adj_list.html" title="The GraphAdjList class can be used to represent adjacency list based graphs in BRIDGES. ">GraphAdjList</a> class can be used to represent adjacency list based graphs in BRIDGES; it takes 2 generic parameters: (1) K, which is an orderable key value used in accessing vertices (in constant time) using a hashmap. This permits data sets that need to be accessed by keys that are strings, and (2) E, an application defined type, and used in the Edge representation. The class is simply a wrapper around the Java Hashmap class and, thus, derives all its operations from it. BRIDGES provides methods to visualize the graph and its contents.</p>
-<p>The vertices of the graph are held in a Java hashmap, for near constant time access; this lets us use strings or integral ids for vertices. The adjacency lists, also a Java hashmap are built for each vertex and contain the edge (terminating vertex id, weight) in the Edge structure, defined separately. Adjacency lists are singly linked lists using the BRIDGES SLelement.</p>
+<p>The <a class="el" href="classbridges_1_1graph__adj__list_1_1_graph_adj_list.html" title="The GraphAdjList class can be used to represent adjacency list based graphs in BRIDGES. ">GraphAdjList</a> class can be used to represent adjacency list based graphs in BRIDGES</p>
 <p>Convenience methods are provided to add vertices and edges to the graph as well as retrieve the adjacency list of a vertex, given its id.</p>
 <dl class="section author"><dt>Author</dt><dd>Matthew Mcquaigue </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2018, 7/23/19</dd></dl>
@@ -91,10 +90,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afe3d470247e6b64f38c0d5d51dece920"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1graph__adj__list_1_1_graph_adj_list.html#afe3d470247e6b64f38c0d5d51dece920">get_data_structure_type</a> (self)</td></tr>
 <tr class="memdesc:afe3d470247e6b64f38c0d5d51dece920"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the data structure type.  <a href="#afe3d470247e6b64f38c0d5d51dece920">More...</a><br /></td></tr>
 <tr class="separator:afe3d470247e6b64f38c0d5d51dece920"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e8ecd31b5ebdee85e4b35e89335e129"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1graph__adj__list_1_1_graph_adj_list.html#a5e8ecd31b5ebdee85e4b35e89335e129">add_vertex</a> (self, k, e)</td></tr>
-<tr class="separator:a5e8ecd31b5ebdee85e4b35e89335e129"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3f026bb5116f3816dad7ff0c193ee40"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1graph__adj__list_1_1_graph_adj_list.html#aa3f026bb5116f3816dad7ff0c193ee40">add_edge</a> (self, src, dest, data=None)</td></tr>
-<tr class="separator:aa3f026bb5116f3816dad7ff0c193ee40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61f1ad2a4f358a1e5137c189ba2b1de7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1graph__adj__list_1_1_graph_adj_list.html#a61f1ad2a4f358a1e5137c189ba2b1de7">add_vertex</a></td></tr>
+<tr class="separator:a61f1ad2a4f358a1e5137c189ba2b1de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20a8e0801a34cce09ed429c58c1d851a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1graph__adj__list_1_1_graph_adj_list.html#a20a8e0801a34cce09ed429c58c1d851a">add_edge</a></td></tr>
+<tr class="separator:a20a8e0801a34cce09ed429c58c1d851a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b4669b353a04f6868710c22790bd263"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1graph__adj__list_1_1_graph_adj_list.html#a7b4669b353a04f6868710c22790bd263">set_vertex_data</a> (self, src, vertex_data)</td></tr>
 <tr class="memdesc:a7b4669b353a04f6868710c22790bd263"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set for the data at a given vertex.  <a href="#a7b4669b353a04f6868710c22790bd263">More...</a><br /></td></tr>
 <tr class="separator:a7b4669b353a04f6868710c22790bd263"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,6 +117,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4ae90f3f2db5f44219fe2a6f9035c9d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf7a65867ab342ef0eda4a34b3fe011e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1graph__adj__list_1_1_graph_adj_list.html#abf7a65867ab342ef0eda4a34b3fe011e">get_edge_data</a> (self, src, dest)</td></tr>
 <tr class="separator:abf7a65867ab342ef0eda4a34b3fe011e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f4c60fcaa52adcb509b3bb8138bc3a1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1graph__adj__list_1_1_graph_adj_list.html#a2f4c60fcaa52adcb509b3bb8138bc3a1">get_edge</a></td></tr>
+<tr class="separator:a2f4c60fcaa52adcb509b3bb8138bc3a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9041f2a5c754141afbc41f02c6a2771c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1graph__adj__list_1_1_graph_adj_list.html#a9041f2a5c754141afbc41f02c6a2771c">are_all_vertices_located</a> (self)</td></tr>
 <tr class="separator:a9041f2a5c754141afbc41f02c6a2771c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0eaa5a21f8d8905d02454a83151c20e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1graph__adj__list_1_1_graph_adj_list.html#aa0eaa5a21f8d8905d02454a83151c20e">force_large_visualization</a> (self, f)</td></tr>
@@ -185,8 +186,8 @@ None </dd></dl>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa3f026bb5116f3816dad7ff0c193ee40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3f026bb5116f3816dad7ff0c193ee40">&#9670;&nbsp;</a></span>add_edge()</h2>
+<a id="a20a8e0801a34cce09ed429c58c1d851a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20a8e0801a34cce09ed429c58c1d851a">&#9670;&nbsp;</a></span>add_edge()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -201,25 +202,7 @@ None </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>src</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>dest</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>data</em> = <code>None</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>None</em>&#160;</td>
+          <td class="paramname"><em>src</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -231,8 +214,8 @@ None </dd></dl>
 
 </div>
 </div>
-<a id="a5e8ecd31b5ebdee85e4b35e89335e129"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e8ecd31b5ebdee85e4b35e89335e129">&#9670;&nbsp;</a></span>add_vertex()</h2>
+<a id="a61f1ad2a4f358a1e5137c189ba2b1de7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61f1ad2a4f358a1e5137c189ba2b1de7">&#9670;&nbsp;</a></span>add_vertex()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -247,19 +230,7 @@ None </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>k</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>e</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>None</em>&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -475,6 +446,34 @@ dict representing the JSON format before dumping to server </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd></dd>
 <dd>
 str representing the type </dd></dl>
+
+</div>
+</div>
+<a id="a2f4c60fcaa52adcb509b3bb8138bc3a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f4c60fcaa52adcb509b3bb8138bc3a1">&#9670;&nbsp;</a></span>get_edge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def bridges.graph_adj_list.GraphAdjList.get_edge </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>src</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -774,7 +773,7 @@ str representing the type </dd></dl>
 <p>Set for the data at a given vertex. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">src</td><td>the source vetrex </td></tr>
+    <tr><td class="paramname">src</td><td>the source vertex </td></tr>
     <tr><td class="paramname">vertex_data</td><td>The data for the vertex </td></tr>
   </table>
   </dd>
@@ -929,7 +928,7 @@ dict </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 6 2020 14:50:13 for Bridges-Python-3.0.2 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Apr 16 2020 12:03:33 for Bridges-Python-3.0.2 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

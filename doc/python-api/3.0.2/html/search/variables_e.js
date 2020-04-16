@@ -6,6 +6,7 @@ var searchData=
   ['olivedrab',['olivedrab',['../classbridges_1_1named__color_1_1_named_color.html#af3c4a4c36882a1b39d6a0e3ac65f267d',1,'bridges::named_color::NamedColor']]],
   ['one',['one',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a3f15fb44885c13c20f703001dae4ddf3',1,'bridges::named_symbol::NamedSymbol']]],
   ['onion',['onion',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a9ea1aacaa57384079439cf00100a34c3',1,'bridges::named_symbol::NamedSymbol']]],
+  ['opacity',['opacity',['../classbridges_1_1element_1_1_element.html#a5af50d5fc696eb8c295245bd5d1c0c91',1,'bridges::element::Element']]],
   ['open_5fbox',['OPEN_BOX',['../classbridges_1_1tree__element_1_1_tree_element.html#a61cd10ef5adf34b1aa56a6be855fb2c9',1,'bridges::tree_element::TreeElement']]],
   ['open_5fcurly',['OPEN_CURLY',['../classbridges_1_1tree__element_1_1_tree_element.html#abff31b93e3dfe4c3089d3a14abeede86',1,'bridges::tree_element::TreeElement']]],
   ['open_5fparen',['OPEN_PAREN',['../classbridges_1_1tree__element_1_1_tree_element.html#a09d8d27767e40f3b84a8395123cfa15a',1,'bridges::tree_element::TreeElement']]],

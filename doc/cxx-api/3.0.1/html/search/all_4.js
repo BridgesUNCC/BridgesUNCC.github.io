@@ -16,6 +16,8 @@ var searchData=
   ['elementvisualizer',['ElementVisualizer',['../classbridges_1_1datastructure_1_1_element_visualizer.html',1,'bridges::datastructure::ElementVisualizer'],['../classbridges_1_1datastructure_1_1_element_visualizer.html#a8104e42b94927a9b45a237064d75ca33',1,'bridges::datastructure::ElementVisualizer::ElementVisualizer()']]],
   ['elementvisualizer_2eh',['ElementVisualizer.h',['../_element_visualizer_8h.html',1,'']]],
   ['elephant',['elephant',['../namespacebridges_1_1game.html#ab9a19c7ab6e2ebac2f95180e21733487ae4b48fd541b3dcb99cababc87c2ee88f',1,'bridges::game']]],
+  ['elevationdata',['ElevationData',['../classbridges_1_1dataset_1_1_elevation_data.html',1,'bridges::dataset::ElevationData'],['../classbridges_1_1dataset_1_1_elevation_data.html#a5b18c287b0c0030a5e454b705778a3f6',1,'bridges::dataset::ElevationData::ElevationData()'],['../classbridges_1_1dataset_1_1_elevation_data.html#a89635a4704d9d4f67421661a74cc954d',1,'bridges::dataset::ElevationData::ElevationData(int r, int c)'],['../classbridges_1_1dataset_1_1_elevation_data.html#af51b3b3db6299140005988c03fcd12c9',1,'bridges::dataset::ElevationData::ElevationData(int cols, int rows, int xll, int yll, int cellsize, int maxVal)']]],
+  ['elevationdata_2eh',['ElevationData.h',['../_elevation_data_8h.html',1,'']]],
   ['empty0',['empty0',['../namespacebridges_1_1game.html#ab9a19c7ab6e2ebac2f95180e21733487ac60b056ea9f180836548f28c72040351',1,'bridges::game']]],
   ['empty1',['empty1',['../namespacebridges_1_1game.html#ab9a19c7ab6e2ebac2f95180e21733487aedef2dc73589d53bc2b30be1446d22bc',1,'bridges::game']]],
   ['empty2',['empty2',['../namespacebridges_1_1game.html#ab9a19c7ab6e2ebac2f95180e21733487a085724c672c3bc054d1c266613d17803',1,'bridges::game']]],

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['s',['S',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a1fc3ab7df5af45b655161ef4db755d0c',1,'bridges.named_symbol.NamedSymbol.S()'],['../classbridges_1_1named__symbol_1_1_named_symbol.html#a6a1e8241578e273f3e380cbd14ecec5a',1,'bridges.named_symbol.NamedSymbol.s()']]],
+  ['s',['s',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a6a1e8241578e273f3e380cbd14ecec5a',1,'bridges.named_symbol.NamedSymbol.s()'],['../classbridges_1_1named__symbol_1_1_named_symbol.html#a1fc3ab7df5af45b655161ef4db755d0c',1,'bridges.named_symbol.NamedSymbol.S()']]],
   ['s_5fkey',['s_key',['../classbridges_1_1input__helper_1_1_input_helper.html#a88978da995aaea7c6267a72cbd4d11c9',1,'bridges::input_helper::InputHelper']]],
   ['saddlebrown',['saddlebrown',['../classbridges_1_1named__color_1_1_named_color.html#aac1594a8ed63cd1e8a6d64fd3d2b62c3',1,'bridges::named_color::NamedColor']]],
   ['salmon',['salmon',['../classbridges_1_1named__color_1_1_named_color.html#aeadecb4aebd451365ed8247cfe84df1c',1,'bridges::named_color::NamedColor']]],

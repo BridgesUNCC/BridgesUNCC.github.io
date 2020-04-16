@@ -13,11 +13,15 @@ Matthew Mc\+Quaigue
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-def \hyperlink{classbridges_1_1edge_1_1_edge_a3c5cbf52efec4e42a242bbcee7bc8051}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, v1, v2, data=None)
+def \hyperlink{classbridges_1_1edge_1_1_edge_aafbac2adad409525c0fc55191fb7cfa8}{\+\_\+\+\_\+init\+\_\+\+\_\+}
 \begin{DoxyCompactList}\small\item\em Constructor for a edge. \end{DoxyCompactList}\item 
 def \hyperlink{classbridges_1_1edge_1_1_edge_a70e81381eaa6abafd0c40962326351a9}{tov} (self)
 \begin{DoxyCompactList}\small\item\em Getter for the to vertex. \end{DoxyCompactList}\item 
 def \hyperlink{classbridges_1_1edge_1_1_edge_a63bf9365bcaa4e07d687b845b1d6f9f2}{fromv} (self)
+\begin{DoxyCompactList}\small\item\em Getter for the from vertex. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1edge_1_1_edge_aec8b0dbb915416ac8504684a2b3f6fe4}{destination} (self)
+\begin{DoxyCompactList}\small\item\em Getter for the to vertex. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1edge_1_1_edge_a70271a1d9eaf4b6bdda3179b6821703e}{source} (self)
 \begin{DoxyCompactList}\small\item\em Getter for the from vertex. \end{DoxyCompactList}\item 
 def \hyperlink{classbridges_1_1edge_1_1_edge_a1155b5f604410cd46a81902bb8aa348b}{thickness} (self)
 \begin{DoxyCompactList}\small\item\em Getter for the link thickness. \end{DoxyCompactList}\item 
@@ -31,16 +35,33 @@ def \hyperlink{classbridges_1_1edge_1_1_edge_a24a4845aeae4ca6fc432b6d0b7fa78c2}{
 \begin{DoxyCompactList}\small\item\em Getter for edge color. \end{DoxyCompactList}\item 
 def \hyperlink{classbridges_1_1edge_1_1_edge_a81ccb5ffd5838829e1a2217846c4df77}{color} (self, color)
 \begin{DoxyCompactList}\small\item\em Setter for edge color. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1edge_1_1_edge_ab65d08382b8773d4051e2a1161db8ca6}{opacity} (self)
+\begin{DoxyCompactList}\small\item\em Getter for the element opacity. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1edge_1_1_edge_aa2dca1c00c4d2ec377cdb0dd8eefd93d}{opacity} (self, opacity)
+\begin{DoxyCompactList}\small\item\em Setter for the elementopacity. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1edge_1_1_edge_a3a2e3ddaeb54695f9e076eb89a8108fd}{label} (self)
+\item 
+def \hyperlink{classbridges_1_1edge_1_1_edge_a16327b62c38de382f24a4e3a06bd5648}{label} (self, l)
+\item 
 def \hyperlink{classbridges_1_1edge_1_1_edge_a406b906ea8e177a6e54f6c794c04df3d}{get\+\_\+edge} (self)
 \begin{DoxyCompactList}\small\item\em Get this edge object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbridges_1_1edge_1_1_edge_a20512d31b922b73872c168d7863bf7bf}{label}
+\item 
+\hyperlink{classbridges_1_1edge_1_1_edge_ac54b17a05cab4803f7169dc6114cd9d9}{color}
+\item 
+\hyperlink{classbridges_1_1edge_1_1_edge_ac1fead90d70b6fce8392b4477388f22d}{thickness}
+\end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classbridges_1_1edge_1_1_edge_a3c5cbf52efec4e42a242bbcee7bc8051}\label{classbridges_1_1edge_1_1_edge_a3c5cbf52efec4e42a242bbcee7bc8051}} 
+\mbox{\Hypertarget{classbridges_1_1edge_1_1_edge_aafbac2adad409525c0fc55191fb7cfa8}\label{classbridges_1_1edge_1_1_edge_aafbac2adad409525c0fc55191fb7cfa8}} 
 \index{bridges\+::edge\+::\+Edge@{bridges\+::edge\+::\+Edge}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
 \index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!bridges\+::edge\+::\+Edge@{bridges\+::edge\+::\+Edge}}
 \subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
-{\footnotesize\ttfamily def bridges.\+edge.\+Edge.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{v1,  }\item[{}]{v2,  }\item[{}]{data = {\ttfamily None},  }\item[{}]{None }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily def bridges.\+edge.\+Edge.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{v1,  }\item[{}]{v2,  }\item[{}]{data = {\ttfamily None},  }\item[{}]{label }\end{DoxyParamCaption})}
 
 
 
@@ -95,6 +116,21 @@ Setter for edge color.
 
 
 None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1edge_1_1_edge_aec8b0dbb915416ac8504684a2b3f6fe4}\label{classbridges_1_1edge_1_1_edge_aec8b0dbb915416ac8504684a2b3f6fe4}} 
+\index{bridges\+::edge\+::\+Edge@{bridges\+::edge\+::\+Edge}!destination@{destination}}
+\index{destination@{destination}!bridges\+::edge\+::\+Edge@{bridges\+::edge\+::\+Edge}}
+\subsubsection{\texorpdfstring{destination()}{destination()}}
+{\footnotesize\ttfamily def bridges.\+edge.\+Edge.\+destination (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Getter for the to vertex. 
+
+\begin{DoxyReturn}{Returns}
+
+
+vertex terminating vertex of edge 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1edge_1_1_edge_abc3f52467d38ad2d7e06113d0c714ed6}\label{classbridges_1_1edge_1_1_edge_abc3f52467d38ad2d7e06113d0c714ed6}} 
 \index{bridges\+::edge\+::\+Edge@{bridges\+::edge\+::\+Edge}!edge\+\_\+data@{edge\+\_\+data}}
@@ -161,6 +197,68 @@ Get this edge object.
 
 self this edge object 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1edge_1_1_edge_a3a2e3ddaeb54695f9e076eb89a8108fd}\label{classbridges_1_1edge_1_1_edge_a3a2e3ddaeb54695f9e076eb89a8108fd}} 
+\index{bridges\+::edge\+::\+Edge@{bridges\+::edge\+::\+Edge}!label@{label}}
+\index{label@{label}!bridges\+::edge\+::\+Edge@{bridges\+::edge\+::\+Edge}}
+\subsubsection{\texorpdfstring{label()}{label()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def bridges.\+edge.\+Edge.\+label (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1edge_1_1_edge_a16327b62c38de382f24a4e3a06bd5648}\label{classbridges_1_1edge_1_1_edge_a16327b62c38de382f24a4e3a06bd5648}} 
+\index{bridges\+::edge\+::\+Edge@{bridges\+::edge\+::\+Edge}!label@{label}}
+\index{label@{label}!bridges\+::edge\+::\+Edge@{bridges\+::edge\+::\+Edge}}
+\subsubsection{\texorpdfstring{label()}{label()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def bridges.\+edge.\+Edge.\+label (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{l }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1edge_1_1_edge_ab65d08382b8773d4051e2a1161db8ca6}\label{classbridges_1_1edge_1_1_edge_ab65d08382b8773d4051e2a1161db8ca6}} 
+\index{bridges\+::edge\+::\+Edge@{bridges\+::edge\+::\+Edge}!opacity@{opacity}}
+\index{opacity@{opacity}!bridges\+::edge\+::\+Edge@{bridges\+::edge\+::\+Edge}}
+\subsubsection{\texorpdfstring{opacity()}{opacity()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def bridges.\+edge.\+Edge.\+opacity (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Getter for the element opacity. 
+
+\begin{DoxyReturn}{Returns}
+
+
+opacity element opacity 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1edge_1_1_edge_aa2dca1c00c4d2ec377cdb0dd8eefd93d}\label{classbridges_1_1edge_1_1_edge_aa2dca1c00c4d2ec377cdb0dd8eefd93d}} 
+\index{bridges\+::edge\+::\+Edge@{bridges\+::edge\+::\+Edge}!opacity@{opacity}}
+\index{opacity@{opacity}!bridges\+::edge\+::\+Edge@{bridges\+::edge\+::\+Edge}}
+\subsubsection{\texorpdfstring{opacity()}{opacity()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def bridges.\+edge.\+Edge.\+opacity (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{opacity }\end{DoxyParamCaption})}
+
+
+
+Setter for the elementopacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em opacity} & opacity value (0-\/1.\+0) to set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1edge_1_1_edge_a70271a1d9eaf4b6bdda3179b6821703e}\label{classbridges_1_1edge_1_1_edge_a70271a1d9eaf4b6bdda3179b6821703e}} 
+\index{bridges\+::edge\+::\+Edge@{bridges\+::edge\+::\+Edge}!source@{source}}
+\index{source@{source}!bridges\+::edge\+::\+Edge@{bridges\+::edge\+::\+Edge}}
+\subsubsection{\texorpdfstring{source()}{source()}}
+{\footnotesize\ttfamily def bridges.\+edge.\+Edge.\+source (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Getter for the from vertex. 
+
+\begin{DoxyReturn}{Returns}
+
+
+vertex source vertex of edge 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classbridges_1_1edge_1_1_edge_a1155b5f604410cd46a81902bb8aa348b}\label{classbridges_1_1edge_1_1_edge_a1155b5f604410cd46a81902bb8aa348b}} 
 \index{bridges\+::edge\+::\+Edge@{bridges\+::edge\+::\+Edge}!thickness@{thickness}}
 \index{thickness@{thickness}!bridges\+::edge\+::\+Edge@{bridges\+::edge\+::\+Edge}}
@@ -211,6 +309,27 @@ Getter for the to vertex.
 
 vertex terminating vertex of edge 
 \end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classbridges_1_1edge_1_1_edge_ac54b17a05cab4803f7169dc6114cd9d9}\label{classbridges_1_1edge_1_1_edge_ac54b17a05cab4803f7169dc6114cd9d9}} 
+\index{bridges\+::edge\+::\+Edge@{bridges\+::edge\+::\+Edge}!color@{color}}
+\index{color@{color}!bridges\+::edge\+::\+Edge@{bridges\+::edge\+::\+Edge}}
+\subsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily bridges.\+edge.\+Edge.\+color}
+
+\mbox{\Hypertarget{classbridges_1_1edge_1_1_edge_a20512d31b922b73872c168d7863bf7bf}\label{classbridges_1_1edge_1_1_edge_a20512d31b922b73872c168d7863bf7bf}} 
+\index{bridges\+::edge\+::\+Edge@{bridges\+::edge\+::\+Edge}!label@{label}}
+\index{label@{label}!bridges\+::edge\+::\+Edge@{bridges\+::edge\+::\+Edge}}
+\subsubsection{\texorpdfstring{label}{label}}
+{\footnotesize\ttfamily bridges.\+edge.\+Edge.\+label}
+
+\mbox{\Hypertarget{classbridges_1_1edge_1_1_edge_ac1fead90d70b6fce8392b4477388f22d}\label{classbridges_1_1edge_1_1_edge_ac1fead90d70b6fce8392b4477388f22d}} 
+\index{bridges\+::edge\+::\+Edge@{bridges\+::edge\+::\+Edge}!thickness@{thickness}}
+\index{thickness@{thickness}!bridges\+::edge\+::\+Edge@{bridges\+::edge\+::\+Edge}}
+\subsubsection{\texorpdfstring{thickness}{thickness}}
+{\footnotesize\ttfamily bridges.\+edge.\+Edge.\+thickness}
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

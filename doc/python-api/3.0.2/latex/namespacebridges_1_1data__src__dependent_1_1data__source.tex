@@ -39,7 +39,7 @@ def \hyperlink{namespacebridges_1_1data__src__dependent_1_1data__source_acbb9052
 def \hyperlink{namespacebridges_1_1data__src__dependent_1_1data__source_a5232b70889e93385e68a7cd1b296123e}{elevation\+\_\+server} (url)
 \item 
 def \hyperlink{namespacebridges_1_1data__src__dependent_1_1data__source_a5193a0d8e1507b1cedb5de65f1d702bd}{get\+\_\+elevation\+\_\+data} (args)
-\item 
+\begin{DoxyCompactList}\small\item\em This function returns elevation data for the requested location and resolution. \end{DoxyCompactList}\item 
 def \hyperlink{namespacebridges_1_1data__src__dependent_1_1data__source_a15db0d52db8b6e096db60f99b2f0171d}{get\+\_\+wiki\+\_\+data\+\_\+actor\+\_\+movie} (year\+\_\+begin, year\+\_\+end)
 \end{DoxyCompactItemize}
 
@@ -139,7 +139,15 @@ a list of earthquake records
 \subsubsection{\texorpdfstring{get\+\_\+elevation\+\_\+data()}{get\_elevation\_data()}}
 {\footnotesize\ttfamily def bridges.\+data\+\_\+src\+\_\+dependent.\+data\+\_\+source.\+get\+\_\+elevation\+\_\+data (\begin{DoxyParamCaption}\item[{}]{args }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespacebridges_1_1data__src__dependent_1_1data__source_a31b64b8c7a42cdfca0a5f0ae3da187d2}\label{namespacebridges_1_1data__src__dependent_1_1data__source_a31b64b8c7a42cdfca0a5f0ae3da187d2}} 
+
+
+This function returns elevation data for the requested location and resolution. 
+
+Note that the data returned may be for a slightly different location and resolution than requested.
+
+\+:param args\mbox{[}0\mbox{]}\+: a bounding box, aka an array \mbox{[}min\+Lat, min\+Lon, max\+Lat, max\+Lon\mbox{]} \+:param args\mbox{[}1\mbox{]}\+: spatial resolution, aka the distance between two samples (in degrees)
+
+\+:return Ele\+Data for the bounding box and resolution requested (approximately) \mbox{\Hypertarget{namespacebridges_1_1data__src__dependent_1_1data__source_a31b64b8c7a42cdfca0a5f0ae3da187d2}\label{namespacebridges_1_1data__src__dependent_1_1data__source_a31b64b8c7a42cdfca0a5f0ae3da187d2}} 
 \index{bridges\+::data\+\_\+src\+\_\+dependent\+::data\+\_\+source@{bridges\+::data\+\_\+src\+\_\+dependent\+::data\+\_\+source}!get\+\_\+game\+\_\+data@{get\+\_\+game\+\_\+data}}
 \index{get\+\_\+game\+\_\+data@{get\+\_\+game\+\_\+data}!bridges\+::data\+\_\+src\+\_\+dependent\+::data\+\_\+source@{bridges\+::data\+\_\+src\+\_\+dependent\+::data\+\_\+source}}
 \subsubsection{\texorpdfstring{get\+\_\+game\+\_\+data()}{get\_game\_data()}}

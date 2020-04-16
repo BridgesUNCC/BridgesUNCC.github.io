@@ -15,6 +15,7 @@ var searchData=
   ['arrow_5fup',['arrow_up',['../enumbridges_1_1base_1_1_named_symbol.html#ab1e200bd475795462767826d187e2aeb',1,'bridges::base::NamedSymbol']]],
   ['assignmentid',['assignmentID',['../classbridges_1_1data__src__dependent_1_1_assignment.html#a88c98da9e5ba6f8d83326d6fbae659d8',1,'bridges::data_src_dependent::Assignment']]],
   ['astro_5fhelmet',['astro_helmet',['../enumbridges_1_1base_1_1_named_symbol.html#a32c0ad85cface866b0123d7280ce3d98',1,'bridges::base::NamedSymbol']]],
+  ['autoscaledomain',['autoscaledomain',['../classbridges_1_1base_1_1_symbol_collection.html#ab7f055b5525eda8fc4056244999c739d',1,'bridges::base::SymbolCollection']]],
   ['available_5factor_5fnames',['available_actor_names',['../classbridges_1_1data__src__dependent_1_1_sample_data_generator.html#aac86cadaeb8859e94b6ed47a066cbbfc',1,'bridges::data_src_dependent::SampleDataGenerator']]],
   ['available_5ffriend_5fnames',['available_friend_names',['../classbridges_1_1data__src__dependent_1_1_sample_data_generator.html#a304c946018534a5a2b0049aace9d4472',1,'bridges::data_src_dependent::SampleDataGenerator']]],
   ['azure',['azure',['../enumbridges_1_1base_1_1_named_color.html#af0ae4fa86b6735a98706ad6c9e898062',1,'bridges::base::NamedColor']]]

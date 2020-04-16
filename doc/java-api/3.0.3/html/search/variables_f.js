@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['p',['p',['../enumbridges_1_1base_1_1_named_symbol.html#a86ab708a037bde49d01a743a905bec85',1,'bridges.base.NamedSymbol.p()'],['../enumbridges_1_1base_1_1_named_symbol.html#aac770e81ad6f9d505097713b617bc029',1,'bridges.base.NamedSymbol.P()']]],
+  ['p',['P',['../enumbridges_1_1base_1_1_named_symbol.html#aac770e81ad6f9d505097713b617bc029',1,'bridges.base.NamedSymbol.P()'],['../enumbridges_1_1base_1_1_named_symbol.html#a86ab708a037bde49d01a743a905bec85',1,'bridges.base.NamedSymbol.p()']]],
   ['pagerank',['pageRank',['../classbridges_1_1benchmark_1_1_page_rank_params.html#aaf852c1fecafa8ed2d222edea9246f7a',1,'bridges::benchmark::PageRankParams']]],
   ['palegoldenrod',['palegoldenrod',['../enumbridges_1_1base_1_1_named_color.html#a932aad5037d69e4ab2ce2afeb11ff08b',1,'bridges::base::NamedColor']]],
   ['palegreen',['palegreen',['../enumbridges_1_1base_1_1_named_color.html#accbb07c64f164edd041aa56bc6f90b5a',1,'bridges::base::NamedColor']]],

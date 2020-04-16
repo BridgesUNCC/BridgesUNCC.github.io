@@ -11,5 +11,7 @@ var searchData=
   ['arrayofelement',['ArrayOfElement',['../classbridges_1_1base_1_1_array_of_element.html',1,'bridges::base']]],
   ['assignment',['Assignment',['../classbridges_1_1data__src__dependent_1_1_assignment.html',1,'bridges::data_src_dependent']]],
   ['assignmentdata',['AssignmentData',['../classbridges_1_1data__src__dependent_1_1_assignment_data.html',1,'bridges::data_src_dependent']]],
+  ['audiochannel',['AudioChannel',['../classbridges_1_1base_1_1_audio_channel.html',1,'bridges::base']]],
+  ['audioclip',['AudioClip',['../classbridges_1_1base_1_1_audio_clip.html',1,'bridges::base']]],
   ['avltreeelement',['AVLTreeElement',['../classbridges_1_1base_1_1_a_v_l_tree_element.html',1,'bridges::base']]]
 ];

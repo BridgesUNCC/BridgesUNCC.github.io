@@ -120,6 +120,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a25b33736b4ae9ffea5fe4ebf5dbb3a63"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classbridges_1_1dataset_1_1_movie_actor_wikidata.html">MovieActorWikidata</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1_data_source.html#a25b33736b4ae9ffea5fe4ebf5dbb3a63">getWikidataActorMovie</a> (int yearbegin, int yearend)</td></tr>
 <tr class="memdesc:a25b33736b4ae9ffea5fe4ebf5dbb3a63"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns the Movie and Actors playing in them between two years.  <a href="#a25b33736b4ae9ffea5fe4ebf5dbb3a63">More...</a><br /></td></tr>
 <tr class="separator:a25b33736b4ae9ffea5fe4ebf5dbb3a63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ddc2f97700fb443448b7de57873173b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbridges_1_1dataset_1_1_elevation_data.html">ElevationData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1_data_source.html#a4ddc2f97700fb443448b7de57873173b">getElevationData</a> (double latitMin, double longitMin, double latitMax, double longitMax, double res=0.0166)</td></tr>
+<tr class="separator:a4ddc2f97700fb443448b7de57873173b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31df6ed545263d74dabce76d537237e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbridges_1_1dataset_1_1_elevation_data.html">ElevationData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1_data_source.html#a31df6ed545263d74dabce76d537237e0">getElevationDataFromJSON</a> (string elev_json)</td></tr>
+<tr class="separator:a31df6ed545263d74dabce76d537237e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afc95b52d2ca03a92c1f1ee1594a097c7"></a>
@@ -364,6 +368,97 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a list of earthquake records </dd></dl>
+
+</div>
+</div>
+<a id="a4ddc2f97700fb443448b7de57873173b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ddc2f97700fb443448b7de57873173b">&#9670;&nbsp;</a></span>getElevationData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbridges_1_1dataset_1_1_elevation_data.html">ElevationData</a>* bridges::DataSource::getElevationData </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>latitMin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>longitMin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>latitMax</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>longitMax</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>res</em> = <code>0.0166</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns ElevationData for the provided coordinate box at the given resolution. Note that the ElevationData that is returned may have slightly different location and resolution.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">latitMin</td><td>minimum latitude requested </td></tr>
+    <tr><td class="paramname">longitMin</td><td>maximum latitude requested </td></tr>
+    <tr><td class="paramname">latitMax</td><td>minimum longitude requested </td></tr>
+    <tr><td class="paramname">longitMax</td><td>maximum longitude requested </td></tr>
+    <tr><td class="paramname">res</td><td>spatial resolution, aka the distance between two samples (in degrees) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a31df6ed545263d74dabce76d537237e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31df6ed545263d74dabce76d537237e0">&#9670;&nbsp;</a></span>getElevationDataFromJSON()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbridges_1_1dataset_1_1_elevation_data.html">ElevationData</a>* bridges::DataSource::getElevationDataFromJSON </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>elev_json</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -846,7 +941,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 13 2020 11:58:21 for Bridges-C++-3.0.1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Apr 16 2020 12:03:05 for Bridges-C++-3.0.1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

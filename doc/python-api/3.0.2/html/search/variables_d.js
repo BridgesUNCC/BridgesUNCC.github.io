@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['n',['n',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a061226247b64ffbd62ccd7c322fd086f',1,'bridges.named_symbol.NamedSymbol.n()'],['../classbridges_1_1named__symbol_1_1_named_symbol.html#a0d08f0a019f5d3e38aa0124c3a1aba3a',1,'bridges.named_symbol.NamedSymbol.N()']]],
+  ['n',['N',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a0d08f0a019f5d3e38aa0124c3a1aba3a',1,'bridges.named_symbol.NamedSymbol.N()'],['../classbridges_1_1named__symbol_1_1_named_symbol.html#a061226247b64ffbd62ccd7c322fd086f',1,'bridges.named_symbol.NamedSymbol.n()']]],
   ['name',['name',['../classbridges_1_1data__src__dependent_1_1elevation_1_1_ele_data.html#a431422aff25816133deb0e1da55397bb',1,'bridges.data_src_dependent.elevation.EleData.name()'],['../classbridges_1_1data__src__dependent_1_1osm_1_1_osm_data.html#adb5034420cd207bec97d80fab5e5be3a',1,'bridges.data_src_dependent.osm.OsmData.name()']]],
   ['navajowhite',['navajowhite',['../classbridges_1_1named__color_1_1_named_color.html#a3c9ccc08d586934c10bb79ab53b3c9ce',1,'bridges::named_color::NamedColor']]],
   ['navy',['navy',['../classbridges_1_1named__color_1_1_named_color.html#a17b5377344646cee377acf39a112fdbb',1,'bridges::named_color::NamedColor']]],

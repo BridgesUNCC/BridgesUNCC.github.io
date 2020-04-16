@@ -114,6 +114,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0321f13830707107198df2d96ff0bc2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9862bde7b85254224963e23dd9bcee29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1datastructure_1_1_kd_tree_element.html#a9862bde7b85254224963e23dd9bcee29">setDimension</a> (const int &amp;dim)</td></tr>
 <tr class="separator:a9862bde7b85254224963e23dd9bcee29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae75460d9b4cfbcf013b0376a8f2948ec"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1datastructure_1_1_kd_tree_element.html#ae75460d9b4cfbcf013b0376a8f2948ec">getThickness</a> () const</td></tr>
+<tr class="separator:ae75460d9b4cfbcf013b0376a8f2948ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6c83b12eddf3bafc4b617812b6bbc8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1datastructure_1_1_kd_tree_element.html#ae6c83b12eddf3bafc4b617812b6bbc8e">setThickness</a> (const float &amp;th)</td></tr>
+<tr class="separator:ae6c83b12eddf3bafc4b617812b6bbc8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b284e9ba808f70e163977ee1e35ba86"><td class="memItemLeft" align="right" valign="top">K&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1datastructure_1_1_kd_tree_element.html#a6b284e9ba808f70e163977ee1e35ba86">getPartitioner</a> () const</td></tr>
+<tr class="separator:a6b284e9ba808f70e163977ee1e35ba86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b16d09eaad8da023bb48ead6f3dcfad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1datastructure_1_1_kd_tree_element.html#a4b16d09eaad8da023bb48ead6f3dcfad">setPartitioner</a> (const K &amp;p)</td></tr>
+<tr class="separator:a4b16d09eaad8da023bb48ead6f3dcfad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a875bfa2dfd88a7740f7bcd28a117c12a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classbridges_1_1datastructure_1_1_kd_tree_element.html">KdTreeElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1datastructure_1_1_kd_tree_element.html#a875bfa2dfd88a7740f7bcd28a117c12a">getLeft</a> () override</td></tr>
 <tr class="separator:a875bfa2dfd88a7740f7bcd28a117c12a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a653597918fbc6e31b84fcf8dbdf67122"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classbridges_1_1datastructure_1_1_kd_tree_element.html">KdTreeElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbridges_1_1datastructure_1_1_kd_tree_element.html#a653597918fbc6e31b84fcf8dbdf67122">getLeft</a> () const override</td></tr>
@@ -544,6 +552,34 @@ template&lt;typename K , typename E &gt; </div>
 
 </div>
 </div>
+<a id="a6b284e9ba808f70e163977ee1e35ba86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b284e9ba808f70e163977ee1e35ba86">&#9670;&nbsp;</a></span>getPartitioner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename E &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">K <a class="el" href="classbridges_1_1datastructure_1_1_kd_tree_element.html">bridges::datastructure::KdTreeElement</a>&lt; K, E &gt;::getPartitioner </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get partitioner value </p><dl class="section return"><dt>Returns</dt><dd>return the partitioner value </dd></dl>
+
+</div>
+</div>
 <a id="a366e3b0987169220d3a145043be2373d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a366e3b0987169220d3a145043be2373d">&#9670;&nbsp;</a></span>getRight() <span class="overload">[1/2]</span></h2>
 
@@ -602,6 +638,34 @@ template&lt;typename K , typename E &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>The right child </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classbridges_1_1datastructure_1_1_b_s_t_element.html#a012f0eb09c3d62b14c73109e6ded0879">bridges::datastructure::BSTElement&lt; K, E &gt;</a>.</p>
+
+</div>
+</div>
+<a id="ae75460d9b4cfbcf013b0376a8f2948ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae75460d9b4cfbcf013b0376a8f2948ec">&#9670;&nbsp;</a></span>getThickness()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename E &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float <a class="el" href="classbridges_1_1datastructure_1_1_kd_tree_element.html">bridges::datastructure::KdTreeElement</a>&lt; K, E &gt;::getThickness </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get thickness of the partition </p><dl class="section return"><dt>Returns</dt><dd>return the partitioner thickness </dd></dl>
 
 </div>
 </div>
@@ -675,6 +739,41 @@ template&lt;typename K , typename E &gt; </div>
 
 </div>
 </div>
+<a id="a4b16d09eaad8da023bb48ead6f3dcfad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b16d09eaad8da023bb48ead6f3dcfad">&#9670;&nbsp;</a></span>setPartitioner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename E &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classbridges_1_1datastructure_1_1_kd_tree_element.html">bridges::datastructure::KdTreeElement</a>&lt; K, E &gt;::setPartitioner </td>
+          <td>(</td>
+          <td class="paramtype">const K &amp;&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set partitioning dimension to "dim"</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dim</td><td>The partitioning dimension of this Kd tree element </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aee269fced2901e0cb580f998457176ca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aee269fced2901e0cb580f998457176ca">&#9670;&nbsp;</a></span>setRight()</h2>
 
@@ -710,13 +809,48 @@ template&lt;typename K , typename E &gt; </div>
 
 </div>
 </div>
+<a id="ae6c83b12eddf3bafc4b617812b6bbc8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6c83b12eddf3bafc4b617812b6bbc8e">&#9670;&nbsp;</a></span>setThickness()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename K , typename E &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classbridges_1_1datastructure_1_1_kd_tree_element.html">bridges::datastructure::KdTreeElement</a>&lt; K, E &gt;::setThickness </td>
+          <td>(</td>
+          <td class="paramtype">const float &amp;&#160;</td>
+          <td class="paramname"><em>th</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set partitioning dimension to "dim"</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dim</td><td>The partitioning dimension of this Kd tree element </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/erik/work/bridges/bridges-cxx/src/<a class="el" href="_kd_tree_element_8h_source.html">KdTreeElement.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 13 2020 11:58:26 for Bridges-C++-3.0.1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Apr 16 2020 12:03:11 for Bridges-C++-3.0.1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

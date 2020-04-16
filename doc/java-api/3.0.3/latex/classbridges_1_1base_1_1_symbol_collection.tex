@@ -1,5 +1,5 @@
-\hypertarget{classbridges_1_1base_1_1_symbol_collection}{}\doxysection{bridges.\+base.\+Symbol\+Collection Class Reference}
-\label{classbridges_1_1base_1_1_symbol_collection}\index{bridges.base.SymbolCollection@{bridges.base.SymbolCollection}}
+\hypertarget{classbridges_1_1base_1_1_symbol_collection}{}\section{bridges.\+base.\+Symbol\+Collection Class Reference}
+\label{classbridges_1_1base_1_1_symbol_collection}\index{bridges.\+base.\+Symbol\+Collection@{bridges.\+base.\+Symbol\+Collection}}
 Inheritance diagram for bridges.\+base.\+Symbol\+Collection\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -8,11 +8,11 @@ Inheritance diagram for bridges.\+base.\+Symbol\+Collection\+:\begin{figure}[H]
 \end{figure}
 
 
-\doxysubsection{Detailed Description}
+\subsection{Detailed Description}
 the Shape\+Collection represents a collection of symbols to visualize in Bridges 
 
 \begin{DoxySeeAlso}{See also}
-See tutorial at \href{http://bridgesuncc.github.io/tutorials/Symbol_Collection.html}{\texttt{ http\+://bridgesuncc.\+github.\+io/tutorials/\+Symbol\+\_\+\+Collection.\+html}}
+See tutorial at \href{http://bridgesuncc.github.io/tutorials/Symbol_Collection.html}{\tt http\+://bridgesuncc.\+github.\+io/tutorials/\+Symbol\+\_\+\+Collection.\+html}
 \end{DoxySeeAlso}
 \begin{DoxyAuthor}{Author}
 David Burlinson 
@@ -20,39 +20,49 @@ David Burlinson
 \begin{DoxyDate}{Date}
 2018, 7/15/19 
 \end{DoxyDate}
-\doxysubsection*{Public Member Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classbridges_1_1base_1_1_symbol_collection_a8959dab963ce54f56560c6c27a3a3de5}{Symbol\+Collection}} ()
+void \hyperlink{classbridges_1_1base_1_1_symbol_collection_a59af7625aad721a9f14ac1fec22c8bde}{set\+Viewport} (float xmin, float xmax, float ymin, float ymax)
 \item 
-String \mbox{\hyperlink{classbridges_1_1base_1_1_symbol_collection_afbc928d2e6818edec96d10f52feebacb}{get\+Data\+Struct\+Type}} ()
+\hyperlink{classbridges_1_1base_1_1_symbol_collection_a8959dab963ce54f56560c6c27a3a3de5}{Symbol\+Collection} ()
 \item 
-void \mbox{\hyperlink{classbridges_1_1base_1_1_symbol_collection_a8e934c53b78b05a7e982f3ff2362adea}{add\+Symbol}} (\mbox{\hyperlink{classbridges_1_1base_1_1_symbol}{Symbol}} s)
+String \hyperlink{classbridges_1_1base_1_1_symbol_collection_afbc928d2e6818edec96d10f52feebacb}{get\+Data\+Struct\+Type} ()
 \item 
-String \mbox{\hyperlink{classbridges_1_1base_1_1_symbol_collection_a706ad8a7bcf12c194403ac3281c73674}{get\+Data\+Structure\+Representation}} ()
+void \hyperlink{classbridges_1_1base_1_1_symbol_collection_a8e934c53b78b05a7e982f3ff2362adea}{add\+Symbol} (\hyperlink{classbridges_1_1base_1_1_symbol}{Symbol} s)
+\item 
+String \hyperlink{classbridges_1_1base_1_1_symbol_collection_a706ad8a7bcf12c194403ac3281c73674}{get\+Data\+Structure\+Representation} ()
 \end{DoxyCompactItemize}
-\doxysubsection*{Protected Attributes}
+\subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-Float \mbox{\hyperlink{classbridges_1_1base_1_1_symbol_collection_a7624e96d2a4b5b6264791eb8dacbd350}{domain}} = 100.\+0f
+Float \hyperlink{classbridges_1_1base_1_1_symbol_collection_a808f462a3da6890685739ea62e87abae}{domainxmin} = -\/100.\+0f
+\item 
+Float \hyperlink{classbridges_1_1base_1_1_symbol_collection_a1b65abde241d7659588601d919670cd2}{domainxmax} = 100.\+0f
+\item 
+Float \hyperlink{classbridges_1_1base_1_1_symbol_collection_a38859e6dad1904650267a0a32d49e65f}{domainymin} = -\/100.\+0f
+\item 
+Float \hyperlink{classbridges_1_1base_1_1_symbol_collection_acd92edee421384e0c044a67145df8a8b}{domainymax} = 100.\+0f
+\item 
+boolean \hyperlink{classbridges_1_1base_1_1_symbol_collection_ab7f055b5525eda8fc4056244999c739d}{autoscaledomain} = true
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Constructor \& Destructor Documentation}
+\subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classbridges_1_1base_1_1_symbol_collection_a8959dab963ce54f56560c6c27a3a3de5}\label{classbridges_1_1base_1_1_symbol_collection_a8959dab963ce54f56560c6c27a3a3de5}} 
-\index{bridges.base.SymbolCollection@{bridges.base.SymbolCollection}!SymbolCollection@{SymbolCollection}}
-\index{SymbolCollection@{SymbolCollection}!bridges.base.SymbolCollection@{bridges.base.SymbolCollection}}
-\doxysubsubsection{\texorpdfstring{SymbolCollection()}{SymbolCollection()}}
+\index{bridges\+::base\+::\+Symbol\+Collection@{bridges\+::base\+::\+Symbol\+Collection}!Symbol\+Collection@{Symbol\+Collection}}
+\index{Symbol\+Collection@{Symbol\+Collection}!bridges\+::base\+::\+Symbol\+Collection@{bridges\+::base\+::\+Symbol\+Collection}}
+\subsubsection{\texorpdfstring{Symbol\+Collection()}{SymbolCollection()}}
 {\footnotesize\ttfamily bridges.\+base.\+Symbol\+Collection.\+Symbol\+Collection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 Constructor 
 
-\doxysubsection{Member Function Documentation}
+\subsection{Member Function Documentation}
 \mbox{\Hypertarget{classbridges_1_1base_1_1_symbol_collection_a8e934c53b78b05a7e982f3ff2362adea}\label{classbridges_1_1base_1_1_symbol_collection_a8e934c53b78b05a7e982f3ff2362adea}} 
-\index{bridges.base.SymbolCollection@{bridges.base.SymbolCollection}!addSymbol@{addSymbol}}
-\index{addSymbol@{addSymbol}!bridges.base.SymbolCollection@{bridges.base.SymbolCollection}}
-\doxysubsubsection{\texorpdfstring{addSymbol()}{addSymbol()}}
-{\footnotesize\ttfamily void bridges.\+base.\+Symbol\+Collection.\+add\+Symbol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1base_1_1_symbol}{Symbol}}}]{s }\end{DoxyParamCaption})}
+\index{bridges\+::base\+::\+Symbol\+Collection@{bridges\+::base\+::\+Symbol\+Collection}!add\+Symbol@{add\+Symbol}}
+\index{add\+Symbol@{add\+Symbol}!bridges\+::base\+::\+Symbol\+Collection@{bridges\+::base\+::\+Symbol\+Collection}}
+\subsubsection{\texorpdfstring{add\+Symbol()}{addSymbol()}}
+{\footnotesize\ttfamily void bridges.\+base.\+Symbol\+Collection.\+add\+Symbol (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_symbol}{Symbol}}]{s }\end{DoxyParamCaption})}
 
 This method adds a symbol to the collection 
 \begin{DoxyParams}{Parameters}
@@ -60,9 +70,9 @@ This method adds a symbol to the collection
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classbridges_1_1base_1_1_symbol_collection_afbc928d2e6818edec96d10f52feebacb}\label{classbridges_1_1base_1_1_symbol_collection_afbc928d2e6818edec96d10f52feebacb}} 
-\index{bridges.base.SymbolCollection@{bridges.base.SymbolCollection}!getDataStructType@{getDataStructType}}
-\index{getDataStructType@{getDataStructType}!bridges.base.SymbolCollection@{bridges.base.SymbolCollection}}
-\doxysubsubsection{\texorpdfstring{getDataStructType()}{getDataStructType()}}
+\index{bridges\+::base\+::\+Symbol\+Collection@{bridges\+::base\+::\+Symbol\+Collection}!get\+Data\+Struct\+Type@{get\+Data\+Struct\+Type}}
+\index{get\+Data\+Struct\+Type@{get\+Data\+Struct\+Type}!bridges\+::base\+::\+Symbol\+Collection@{bridges\+::base\+::\+Symbol\+Collection}}
+\subsubsection{\texorpdfstring{get\+Data\+Struct\+Type()}{getDataStructType()}}
 {\footnotesize\ttfamily String bridges.\+base.\+Symbol\+Collection.\+get\+Data\+Struct\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 This method gets the data structure type
@@ -70,34 +80,56 @@ This method gets the data structure type
 \begin{DoxyReturn}{Returns}
 The date structure type as a string 
 \end{DoxyReturn}
-
-
-Reimplemented from \mbox{\hyperlink{classbridges_1_1base_1_1_data_struct_a3bae9d0d68a85e517a34be482e90fdd4}{bridges.\+base.\+Data\+Struct}}.
-
 \mbox{\Hypertarget{classbridges_1_1base_1_1_symbol_collection_a706ad8a7bcf12c194403ac3281c73674}\label{classbridges_1_1base_1_1_symbol_collection_a706ad8a7bcf12c194403ac3281c73674}} 
-\index{bridges.base.SymbolCollection@{bridges.base.SymbolCollection}!getDataStructureRepresentation@{getDataStructureRepresentation}}
-\index{getDataStructureRepresentation@{getDataStructureRepresentation}!bridges.base.SymbolCollection@{bridges.base.SymbolCollection}}
-\doxysubsubsection{\texorpdfstring{getDataStructureRepresentation()}{getDataStructureRepresentation()}}
+\index{bridges\+::base\+::\+Symbol\+Collection@{bridges\+::base\+::\+Symbol\+Collection}!get\+Data\+Structure\+Representation@{get\+Data\+Structure\+Representation}}
+\index{get\+Data\+Structure\+Representation@{get\+Data\+Structure\+Representation}!bridges\+::base\+::\+Symbol\+Collection@{bridges\+::base\+::\+Symbol\+Collection}}
+\subsubsection{\texorpdfstring{get\+Data\+Structure\+Representation()}{getDataStructureRepresentation()}}
 {\footnotesize\ttfamily String bridges.\+base.\+Symbol\+Collection.\+get\+Data\+Structure\+Representation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 Get the J\+S\+ON representation of the the data structure \begin{DoxyReturn}{Returns}
 J\+S\+ON of symbol collection (string) 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_symbol_collection_a59af7625aad721a9f14ac1fec22c8bde}\label{classbridges_1_1base_1_1_symbol_collection_a59af7625aad721a9f14ac1fec22c8bde}} 
+\index{bridges\+::base\+::\+Symbol\+Collection@{bridges\+::base\+::\+Symbol\+Collection}!set\+Viewport@{set\+Viewport}}
+\index{set\+Viewport@{set\+Viewport}!bridges\+::base\+::\+Symbol\+Collection@{bridges\+::base\+::\+Symbol\+Collection}}
+\subsubsection{\texorpdfstring{set\+Viewport()}{setViewport()}}
+{\footnotesize\ttfamily void bridges.\+base.\+Symbol\+Collection.\+set\+Viewport (\begin{DoxyParamCaption}\item[{float}]{xmin,  }\item[{float}]{xmax,  }\item[{float}]{ymin,  }\item[{float}]{ymax }\end{DoxyParamCaption})}
 
 
-Reimplemented from \mbox{\hyperlink{classbridges_1_1base_1_1_data_struct_a21991621db575fd832f7a08233cefdc2}{bridges.\+base.\+Data\+Struct}}.
 
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_symbol_collection_ab7f055b5525eda8fc4056244999c739d}\label{classbridges_1_1base_1_1_symbol_collection_ab7f055b5525eda8fc4056244999c739d}} 
+\index{bridges\+::base\+::\+Symbol\+Collection@{bridges\+::base\+::\+Symbol\+Collection}!autoscaledomain@{autoscaledomain}}
+\index{autoscaledomain@{autoscaledomain}!bridges\+::base\+::\+Symbol\+Collection@{bridges\+::base\+::\+Symbol\+Collection}}
+\subsubsection{\texorpdfstring{autoscaledomain}{autoscaledomain}}
+{\footnotesize\ttfamily boolean bridges.\+base.\+Symbol\+Collection.\+autoscaledomain = true\hspace{0.3cm}{\ttfamily [protected]}}
 
+\mbox{\Hypertarget{classbridges_1_1base_1_1_symbol_collection_a1b65abde241d7659588601d919670cd2}\label{classbridges_1_1base_1_1_symbol_collection_a1b65abde241d7659588601d919670cd2}} 
+\index{bridges\+::base\+::\+Symbol\+Collection@{bridges\+::base\+::\+Symbol\+Collection}!domainxmax@{domainxmax}}
+\index{domainxmax@{domainxmax}!bridges\+::base\+::\+Symbol\+Collection@{bridges\+::base\+::\+Symbol\+Collection}}
+\subsubsection{\texorpdfstring{domainxmax}{domainxmax}}
+{\footnotesize\ttfamily Float bridges.\+base.\+Symbol\+Collection.\+domainxmax = 100.\+0f\hspace{0.3cm}{\ttfamily [protected]}}
 
-\doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classbridges_1_1base_1_1_symbol_collection_a7624e96d2a4b5b6264791eb8dacbd350}\label{classbridges_1_1base_1_1_symbol_collection_a7624e96d2a4b5b6264791eb8dacbd350}} 
-\index{bridges.base.SymbolCollection@{bridges.base.SymbolCollection}!domain@{domain}}
-\index{domain@{domain}!bridges.base.SymbolCollection@{bridges.base.SymbolCollection}}
-\doxysubsubsection{\texorpdfstring{domain}{domain}}
-{\footnotesize\ttfamily Float bridges.\+base.\+Symbol\+Collection.\+domain = 100.\+0f\hspace{0.3cm}{\ttfamily [protected]}}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_symbol_collection_a808f462a3da6890685739ea62e87abae}\label{classbridges_1_1base_1_1_symbol_collection_a808f462a3da6890685739ea62e87abae}} 
+\index{bridges\+::base\+::\+Symbol\+Collection@{bridges\+::base\+::\+Symbol\+Collection}!domainxmin@{domainxmin}}
+\index{domainxmin@{domainxmin}!bridges\+::base\+::\+Symbol\+Collection@{bridges\+::base\+::\+Symbol\+Collection}}
+\subsubsection{\texorpdfstring{domainxmin}{domainxmin}}
+{\footnotesize\ttfamily Float bridges.\+base.\+Symbol\+Collection.\+domainxmin = -\/100.\+0f\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classbridges_1_1base_1_1_symbol_collection_acd92edee421384e0c044a67145df8a8b}\label{classbridges_1_1base_1_1_symbol_collection_acd92edee421384e0c044a67145df8a8b}} 
+\index{bridges\+::base\+::\+Symbol\+Collection@{bridges\+::base\+::\+Symbol\+Collection}!domainymax@{domainymax}}
+\index{domainymax@{domainymax}!bridges\+::base\+::\+Symbol\+Collection@{bridges\+::base\+::\+Symbol\+Collection}}
+\subsubsection{\texorpdfstring{domainymax}{domainymax}}
+{\footnotesize\ttfamily Float bridges.\+base.\+Symbol\+Collection.\+domainymax = 100.\+0f\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classbridges_1_1base_1_1_symbol_collection_a38859e6dad1904650267a0a32d49e65f}\label{classbridges_1_1base_1_1_symbol_collection_a38859e6dad1904650267a0a32d49e65f}} 
+\index{bridges\+::base\+::\+Symbol\+Collection@{bridges\+::base\+::\+Symbol\+Collection}!domainymin@{domainymin}}
+\index{domainymin@{domainymin}!bridges\+::base\+::\+Symbol\+Collection@{bridges\+::base\+::\+Symbol\+Collection}}
+\subsubsection{\texorpdfstring{domainymin}{domainymin}}
+{\footnotesize\ttfamily Float bridges.\+base.\+Symbol\+Collection.\+domainymin = -\/100.\+0f\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/\+Users/kalpathi/gr/bridges/client/java/src/main/java/bridges/base/\mbox{\hyperlink{_symbol_collection_8java}{Symbol\+Collection.\+java}}\end{DoxyCompactItemize}
+/home/erik/work/bridges/bridges-\/java/src/main/java/bridges/base/\hyperlink{_symbol_collection_8java}{Symbol\+Collection.\+java}\end{DoxyCompactItemize}

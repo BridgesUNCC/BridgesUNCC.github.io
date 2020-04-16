@@ -122,6 +122,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a5232b70889e93385e68a7cd1b296123e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebridges_1_1data__src__dependent_1_1data__source.html#a5232b70889e93385e68a7cd1b296123e">elevation_server</a> (url)</td></tr>
 <tr class="separator:a5232b70889e93385e68a7cd1b296123e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5193a0d8e1507b1cedb5de65f1d702bd"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebridges_1_1data__src__dependent_1_1data__source.html#a5193a0d8e1507b1cedb5de65f1d702bd">get_elevation_data</a> (args)</td></tr>
+<tr class="memdesc:a5193a0d8e1507b1cedb5de65f1d702bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns elevation data for the requested location and resolution.  <a href="#a5193a0d8e1507b1cedb5de65f1d702bd">More...</a><br /></td></tr>
 <tr class="separator:a5193a0d8e1507b1cedb5de65f1d702bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15db0d52db8b6e096db60f99b2f0171d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebridges_1_1data__src__dependent_1_1data__source.html#a15db0d52db8b6e096db60f99b2f0171d">get_wiki_data_actor_movie</a> (year_begin, year_end)</td></tr>
 <tr class="separator:a15db0d52db8b6e096db60f99b2f0171d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -305,6 +306,11 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This function returns elevation data for the requested location and resolution. </p>
+<p>Note that the data returned may be for a slightly different location and resolution than requested.</p>
+<p>:param args[0]: a bounding box, aka an array [minLat, minLon, maxLat, maxLon] :param args[1]: spatial resolution, aka the distance between two samples (in degrees)</p>
+<p>:return EleData for the bounding box and resolution requested (approximately) </p>
 
 </div>
 </div>
@@ -571,7 +577,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 6 2020 14:50:12 for Bridges-Python-3.0.2 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Apr 16 2020 12:03:32 for Bridges-Python-3.0.2 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

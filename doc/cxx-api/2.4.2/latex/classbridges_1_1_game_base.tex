@@ -1,0 +1,258 @@
+\hypertarget{classbridges_1_1_game_base}{}\section{bridges\+:\+:Game\+Base Class Reference}
+\label{classbridges_1_1_game_base}\index{bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}}
+
+
+{\ttfamily \#include $<$Game\+Base.\+h$>$}
+
+Inheritance diagram for bridges\+:\+:Game\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbridges_1_1_game_base}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbridges_1_1_game_base_ab10dc09af0e332770d214f822040f977}{Game\+Base} (int assignment\+ID, std\+::string username, std\+::string apikey, int nb\+Row=10, int nb\+Column=10)
+\item 
+virtual void \hyperlink{classbridges_1_1_game_base_ae19dd2b80fdda7736f5ab22ff89a0873}{initialize} ()=0
+\begin{DoxyCompactList}\small\item\em This function is called once when the game starts. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classbridges_1_1_game_base_a46334f53935edc32d73d5e37ca8d2603}{Game\+Loop} ()=0
+\begin{DoxyCompactList}\small\item\em This function is called once per frame of the game. \end{DoxyCompactList}\item 
+void \hyperlink{classbridges_1_1_game_base_a64dd212f3b3252d53a629266ef6fc30b}{register\+Key\+Listener} (\hyperlink{classbridges_1_1_keypress_listener}{Keypress\+Listener} $\ast$\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda83878c91171338902e0fe0fb97a8c47a}{p})
+\begin{DoxyCompactList}\small\item\em register a new \hyperlink{classbridges_1_1_keypress_listener}{Keypress\+Listener} \end{DoxyCompactList}\item 
+void \hyperlink{classbridges_1_1_game_base_a7b05208b74523a3add8502fdc7659b15}{render} ()
+\begin{DoxyCompactList}\small\item\em Renders the game. \end{DoxyCompactList}\item 
+bool \hyperlink{classbridges_1_1_game_base_ad3ac7f4a90a8e9041696f0fca5249b5b}{gameover} () const
+\item 
+void \hyperlink{classbridges_1_1_game_base_aa31abcf3f253d701ce6c9c51e0a41ec5}{quit} ()
+\begin{DoxyCompactList}\small\item\em calling this function causes the game to end. \end{DoxyCompactList}\item 
+void \hyperlink{classbridges_1_1_game_base_a5d26e92863c37054acfd216878d741a5}{set\+B\+G\+Color} (int row, int col, \hyperlink{namespacebridges_ad811207d8898a7fd6b72a74725e68357}{Named\+Color} nc)
+\begin{DoxyCompactList}\small\item\em Change the background color of a cell. \end{DoxyCompactList}\item 
+void \hyperlink{classbridges_1_1_game_base_aca81c3d696ee509f2f95546fcd328202}{draw\+Object} (int row, int col, \hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50ed}{Named\+Symbol} symb, \hyperlink{namespacebridges_ad811207d8898a7fd6b72a74725e68357}{Named\+Color} nc)
+\begin{DoxyCompactList}\small\item\em Draw an object on the game. \end{DoxyCompactList}\item 
+void \hyperlink{classbridges_1_1_game_base_aece7bcc2abff75e54f66d6b3864da76c}{set\+Title} (std\+::string title)
+\begin{DoxyCompactList}\small\item\em Set the title of the game. \end{DoxyCompactList}\item 
+void \hyperlink{classbridges_1_1_game_base_a56dbb3a095631643f7a9047df230605f}{set\+Description} (std\+::string desc)
+\begin{DoxyCompactList}\small\item\em Set a short description of the game. \end{DoxyCompactList}\item 
+\hyperlink{namespacebridges_ad811207d8898a7fd6b72a74725e68357}{Named\+Color} \hyperlink{classbridges_1_1_game_base_ab56452f544bd4090886b911f12bac3b6}{get\+B\+G\+Color} (int row, int col)
+\begin{DoxyCompactList}\small\item\em What color is this cell? \end{DoxyCompactList}\item 
+\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50ed}{Named\+Symbol} \hyperlink{classbridges_1_1_game_base_a95527dc7b0294883f27a380c3a27e78e}{get\+Symbol} (int row, int col)
+\begin{DoxyCompactList}\small\item\em What object is in this cell? \end{DoxyCompactList}\item 
+\hyperlink{namespacebridges_ad811207d8898a7fd6b72a74725e68357}{Named\+Color} \hyperlink{classbridges_1_1_game_base_a365f55e4004bd9b01b0dd1431bea9876}{get\+Symbol\+Color} (int row, int col)
+\begin{DoxyCompactList}\small\item\em What color is object in this cell? \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classbridges_1_1_game_base_a5db5d0838bee9722fc90465166c55d26}{debug} = true
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1_game_base_ab10dc09af0e332770d214f822040f977}\label{classbridges_1_1_game_base_ab10dc09af0e332770d214f822040f977}} 
+\index{bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}!Game\+Base@{Game\+Base}}
+\index{Game\+Base@{Game\+Base}!bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}}
+\subsubsection{\texorpdfstring{Game\+Base()}{GameBase()}}
+{\footnotesize\ttfamily bridges\+::\+Game\+Base\+::\+Game\+Base (\begin{DoxyParamCaption}\item[{int}]{assignment\+ID,  }\item[{std\+::string}]{username,  }\item[{std\+::string}]{apikey,  }\item[{int}]{nb\+Row = {\ttfamily 10},  }\item[{int}]{nb\+Column = {\ttfamily 10} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Having a protected constructor prevent the object from being directly created. Since \hyperlink{classbridges_1_1_game_base}{Game\+Base} is meant to be a purely internal class, that seems appropriate. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1_game_base_aca81c3d696ee509f2f95546fcd328202}\label{classbridges_1_1_game_base_aca81c3d696ee509f2f95546fcd328202}} 
+\index{bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}!draw\+Object@{draw\+Object}}
+\index{draw\+Object@{draw\+Object}!bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}}
+\subsubsection{\texorpdfstring{draw\+Object()}{drawObject()}}
+{\footnotesize\ttfamily void bridges\+::\+Game\+Base\+::draw\+Object (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col,  }\item[{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50ed}{Named\+Symbol}}]{symb,  }\item[{\hyperlink{namespacebridges_ad811207d8898a7fd6b72a74725e68357}{Named\+Color}}]{nc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Draw an object on the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & row of the cell to draw the object on \\
+\hline
+{\em y} & column of the cell to draw the object on \\
+\hline
+{\em s} & symbol representing the object \\
+\hline
+{\em c} & color of the object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1_game_base_a46334f53935edc32d73d5e37ca8d2603}\label{classbridges_1_1_game_base_a46334f53935edc32d73d5e37ca8d2603}} 
+\index{bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}!Game\+Loop@{Game\+Loop}}
+\index{Game\+Loop@{Game\+Loop}!bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}}
+\subsubsection{\texorpdfstring{Game\+Loop()}{GameLoop()}}
+{\footnotesize\ttfamily virtual void bridges\+::\+Game\+Base\+::\+Game\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+This function is called once per frame of the game. 
+
+Students write this function. It will be called at each frame of the game. \mbox{\Hypertarget{classbridges_1_1_game_base_ad3ac7f4a90a8e9041696f0fca5249b5b}\label{classbridges_1_1_game_base_ad3ac7f4a90a8e9041696f0fca5249b5b}} 
+\index{bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}!gameover@{gameover}}
+\index{gameover@{gameover}!bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}}
+\subsubsection{\texorpdfstring{gameover()}{gameover()}}
+{\footnotesize\ttfamily bool bridges\+::\+Game\+Base\+::gameover (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classbridges_1_1_game_base_ab56452f544bd4090886b911f12bac3b6}\label{classbridges_1_1_game_base_ab56452f544bd4090886b911f12bac3b6}} 
+\index{bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}!get\+B\+G\+Color@{get\+B\+G\+Color}}
+\index{get\+B\+G\+Color@{get\+B\+G\+Color}!bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}}
+\subsubsection{\texorpdfstring{get\+B\+G\+Color()}{getBGColor()}}
+{\footnotesize\ttfamily \hyperlink{namespacebridges_ad811207d8898a7fd6b72a74725e68357}{Named\+Color} bridges\+::\+Game\+Base\+::get\+B\+G\+Color (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+What color is this cell? 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & row of the cell \\
+\hline
+{\em col} & column of the cell \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1_game_base_a95527dc7b0294883f27a380c3a27e78e}\label{classbridges_1_1_game_base_a95527dc7b0294883f27a380c3a27e78e}} 
+\index{bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}!get\+Symbol@{get\+Symbol}}
+\index{get\+Symbol@{get\+Symbol}!bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}}
+\subsubsection{\texorpdfstring{get\+Symbol()}{getSymbol()}}
+{\footnotesize\ttfamily \hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50ed}{Named\+Symbol} bridges\+::\+Game\+Base\+::get\+Symbol (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+What object is in this cell? 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & row of the cell \\
+\hline
+{\em y} & column of the cell \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1_game_base_a365f55e4004bd9b01b0dd1431bea9876}\label{classbridges_1_1_game_base_a365f55e4004bd9b01b0dd1431bea9876}} 
+\index{bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}!get\+Symbol\+Color@{get\+Symbol\+Color}}
+\index{get\+Symbol\+Color@{get\+Symbol\+Color}!bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}}
+\subsubsection{\texorpdfstring{get\+Symbol\+Color()}{getSymbolColor()}}
+{\footnotesize\ttfamily \hyperlink{namespacebridges_ad811207d8898a7fd6b72a74725e68357}{Named\+Color} bridges\+::\+Game\+Base\+::get\+Symbol\+Color (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+What color is object in this cell? 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & row of the cell \\
+\hline
+{\em col} & column of the cell \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1_game_base_ae19dd2b80fdda7736f5ab22ff89a0873}\label{classbridges_1_1_game_base_ae19dd2b80fdda7736f5ab22ff89a0873}} 
+\index{bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}!initialize@{initialize}}
+\index{initialize@{initialize}!bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily virtual void bridges\+::\+Game\+Base\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+This function is called once when the game starts. 
+
+Students write this function. It will be called once at the begining of the game. \mbox{\Hypertarget{classbridges_1_1_game_base_aa31abcf3f253d701ce6c9c51e0a41ec5}\label{classbridges_1_1_game_base_aa31abcf3f253d701ce6c9c51e0a41ec5}} 
+\index{bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}!quit@{quit}}
+\index{quit@{quit}!bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}}
+\subsubsection{\texorpdfstring{quit()}{quit()}}
+{\footnotesize\ttfamily void bridges\+::\+Game\+Base\+::quit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+calling this function causes the game to end. 
+
+That is to say, the current frame will be the last frame of the game. \mbox{\Hypertarget{classbridges_1_1_game_base_a64dd212f3b3252d53a629266ef6fc30b}\label{classbridges_1_1_game_base_a64dd212f3b3252d53a629266ef6fc30b}} 
+\index{bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}!register\+Key\+Listener@{register\+Key\+Listener}}
+\index{register\+Key\+Listener@{register\+Key\+Listener}!bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}}
+\subsubsection{\texorpdfstring{register\+Key\+Listener()}{registerKeyListener()}}
+{\footnotesize\ttfamily void bridges\+::\+Game\+Base\+::register\+Key\+Listener (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1_keypress_listener}{Keypress\+Listener} $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+register a new \hyperlink{classbridges_1_1_keypress_listener}{Keypress\+Listener} 
+
+Students should not have to call this function directly. The \hyperlink{classbridges_1_1_keypress_listener}{Keypress\+Listener} listener will get notified of all keypresses (up and down) that happens in the game.
+
+
+\begin{DoxyParams}{Parameters}
+{\em kl} & a \hyperlink{classbridges_1_1_keypress_listener}{Keypress\+Listener} to register \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1_game_base_a7b05208b74523a3add8502fdc7659b15}\label{classbridges_1_1_game_base_a7b05208b74523a3add8502fdc7659b15}} 
+\index{bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}!render@{render}}
+\index{render@{render}!bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}}
+\subsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void bridges\+::\+Game\+Base\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Renders the game. 
+
+Student should not have to call this function directly. It is called automatically by \hyperlink{classbridges_1_1_bridges}{Bridges}. \mbox{\Hypertarget{classbridges_1_1_game_base_a5d26e92863c37054acfd216878d741a5}\label{classbridges_1_1_game_base_a5d26e92863c37054acfd216878d741a5}} 
+\index{bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}!set\+B\+G\+Color@{set\+B\+G\+Color}}
+\index{set\+B\+G\+Color@{set\+B\+G\+Color}!bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}}
+\subsubsection{\texorpdfstring{set\+B\+G\+Color()}{setBGColor()}}
+{\footnotesize\ttfamily void bridges\+::\+Game\+Base\+::set\+B\+G\+Color (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col,  }\item[{\hyperlink{namespacebridges_ad811207d8898a7fd6b72a74725e68357}{Named\+Color}}]{nc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Change the background color of a cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & row of the cell to set \\
+\hline
+{\em y} & column of the cell to set \\
+\hline
+{\em c} & Named\+Color to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1_game_base_a56dbb3a095631643f7a9047df230605f}\label{classbridges_1_1_game_base_a56dbb3a095631643f7a9047df230605f}} 
+\index{bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}!set\+Description@{set\+Description}}
+\index{set\+Description@{set\+Description}!bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}}
+\subsubsection{\texorpdfstring{set\+Description()}{setDescription()}}
+{\footnotesize\ttfamily void bridges\+::\+Game\+Base\+::set\+Description (\begin{DoxyParamCaption}\item[{std\+::string}]{desc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Set a short description of the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em desc} & Description of the game \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1_game_base_aece7bcc2abff75e54f66d6b3864da76c}\label{classbridges_1_1_game_base_aece7bcc2abff75e54f66d6b3864da76c}} 
+\index{bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}!set\+Title@{set\+Title}}
+\index{set\+Title@{set\+Title}!bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}}
+\subsubsection{\texorpdfstring{set\+Title()}{setTitle()}}
+{\footnotesize\ttfamily void bridges\+::\+Game\+Base\+::set\+Title (\begin{DoxyParamCaption}\item[{std\+::string}]{title }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Set the title of the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & Title of the game \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classbridges_1_1_game_base_a5db5d0838bee9722fc90465166c55d26}\label{classbridges_1_1_game_base_a5db5d0838bee9722fc90465166c55d26}} 
+\index{bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}!debug@{debug}}
+\index{debug@{debug}!bridges\+::\+Game\+Base@{bridges\+::\+Game\+Base}}
+\subsubsection{\texorpdfstring{debug}{debug}}
+{\footnotesize\ttfamily bool bridges\+::\+Game\+Base\+::debug = true\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/erik/work/bridges/bridges-\/cxx/src/\hyperlink{_game_base_8h}{Game\+Base.\+h}\end{DoxyCompactItemize}

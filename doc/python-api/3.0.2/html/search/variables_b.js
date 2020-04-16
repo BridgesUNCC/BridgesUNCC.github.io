@@ -1,7 +1,7 @@
 var searchData=
 [
   ['l',['L',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a0f5d08603fc2dde1d2f353ed78f4f41c',1,'bridges.named_symbol.NamedSymbol.L()'],['../classbridges_1_1named__symbol_1_1_named_symbol.html#a55ffef64221bc2f1e96a22ca3080708a',1,'bridges.named_symbol.NamedSymbol.l()']]],
-  ['label',['label',['../classbridges_1_1link__visualizer_1_1_link_visualizer.html#aace0e171fe2904f672b8ed3e0139343f',1,'bridges::link_visualizer::LinkVisualizer']]],
+  ['label',['label',['../classbridges_1_1edge_1_1_edge.html#a20512d31b922b73872c168d7863bf7bf',1,'bridges.edge.Edge.label()'],['../classbridges_1_1link__visualizer_1_1_link_visualizer.html#aace0e171fe2904f672b8ed3e0139343f',1,'bridges.link_visualizer.LinkVisualizer.label()']]],
   ['largegraphvertsize',['LargeGraphVertSize',['../classbridges_1_1graph__adj__list_1_1_graph_adj_list.html#a093a64ead793e0bd3b1ce4e3456665c9',1,'bridges::graph_adj_list::GraphAdjList']]],
   ['latitude',['latitude',['../classbridges_1_1data__src__dependent_1_1osm_1_1_osm_vertex.html#a2b346821c6310d148977b1b6212c4c59',1,'bridges::data_src_dependent::osm::OsmVertex']]],
   ['latitude_5frange',['latitude_range',['../classbridges_1_1data__src__dependent_1_1osm_1_1_osm_data.html#a88caf10c4151c04822cb66af364fd45d',1,'bridges::data_src_dependent::osm::OsmData']]],

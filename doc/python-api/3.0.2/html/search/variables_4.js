@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['e',['E',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a77a54e04406ed9d84fd0f9835e433aa4',1,'bridges.named_symbol.NamedSymbol.E()'],['../classbridges_1_1named__symbol_1_1_named_symbol.html#ae9ca9e4c129662462491cec2d28ecfc4',1,'bridges.named_symbol.NamedSymbol.e()']]],
+  ['e',['e',['../classbridges_1_1named__symbol_1_1_named_symbol.html#ae9ca9e4c129662462491cec2d28ecfc4',1,'bridges.named_symbol.NamedSymbol.e()'],['../classbridges_1_1named__symbol_1_1_named_symbol.html#a77a54e04406ed9d84fd0f9835e433aa4',1,'bridges.named_symbol.NamedSymbol.E()']]],
   ['edgelist',['EdgeList',['../classbridges_1_1data__src__dependent_1_1osm_1_1_osm_data.html#a18b0ef38dba7bedcddd29d38d71d91d2',1,'bridges::data_src_dependent::osm::OsmData']]],
   ['eight',['eight',['../classbridges_1_1named__symbol_1_1_named_symbol.html#aa15e71d3a358b5b7eb7fb712ab94d775',1,'bridges::named_symbol::NamedSymbol']]],
   ['elephant',['elephant',['../classbridges_1_1named__symbol_1_1_named_symbol.html#afcf435a5758ee6bd119055a82d4737f5',1,'bridges::named_symbol::NamedSymbol']]],

@@ -49,7 +49,11 @@ vector$<$ \hyperlink{classbridges_1_1dataset_1_1_cancer_incidence}{Cancer\+Incid
 \hyperlink{classbridges_1_1datastructure_1_1_color_grid}{bridges\+::\+Color\+Grid} \hyperlink{classbridges_1_1_data_source_aa65136879011e1ec237380ef8587fea2}{get\+Color\+Grid\+From\+Assignment} (const std\+::string \&user, int assignment, int subassignment=0)
 \item 
 std\+::vector$<$ \hyperlink{classbridges_1_1dataset_1_1_movie_actor_wikidata}{Movie\+Actor\+Wikidata} $>$ \hyperlink{classbridges_1_1_data_source_a25b33736b4ae9ffea5fe4ebf5dbb3a63}{get\+Wikidata\+Actor\+Movie} (int yearbegin, int yearend)
-\begin{DoxyCompactList}\small\item\em This function returns the Movie and Actors playing in them between two years. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This function returns the Movie and Actors playing in them between two years. \end{DoxyCompactList}\item 
+\hyperlink{classbridges_1_1dataset_1_1_elevation_data}{Elevation\+Data} $\ast$ \hyperlink{classbridges_1_1_data_source_a4ddc2f97700fb443448b7de57873173b}{get\+Elevation\+Data} (double latit\+Min, double longit\+Min, double latit\+Max, double longit\+Max, double res=0.\+0166)
+\item 
+\hyperlink{classbridges_1_1dataset_1_1_elevation_data}{Elevation\+Data} $\ast$ \hyperlink{classbridges_1_1_data_source_a31df6ed545263d74dabce76d537237e0}{get\+Elevation\+Data\+From\+J\+S\+ON} (string elev\+\_\+json)
+\end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -152,6 +156,33 @@ Get U\+S\+GS earthquake data U\+S\+GS Tweet data (\href{https://earthquake.usgs.
 \begin{DoxyReturn}{Returns}
 a list of earthquake records 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_data_source_a4ddc2f97700fb443448b7de57873173b}\label{classbridges_1_1_data_source_a4ddc2f97700fb443448b7de57873173b}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Elevation\+Data@{get\+Elevation\+Data}}
+\index{get\+Elevation\+Data@{get\+Elevation\+Data}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{get\+Elevation\+Data()}{getElevationData()}}
+{\footnotesize\ttfamily \hyperlink{classbridges_1_1dataset_1_1_elevation_data}{Elevation\+Data}$\ast$ bridges\+::\+Data\+Source\+::get\+Elevation\+Data (\begin{DoxyParamCaption}\item[{double}]{latit\+Min,  }\item[{double}]{longit\+Min,  }\item[{double}]{latit\+Max,  }\item[{double}]{longit\+Max,  }\item[{double}]{res = {\ttfamily 0.0166} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns Elevation\+Data for the provided coordinate box at the given resolution. Note that the Elevation\+Data that is returned may have slightly different location and resolution.
+
+
+\begin{DoxyParams}{Parameters}
+{\em latit\+Min} & minimum latitude requested \\
+\hline
+{\em longit\+Min} & maximum latitude requested \\
+\hline
+{\em latit\+Max} & minimum longitude requested \\
+\hline
+{\em longit\+Max} & maximum longitude requested \\
+\hline
+{\em res} & spatial resolution, aka the distance between two samples (in degrees) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1_data_source_a31df6ed545263d74dabce76d537237e0}\label{classbridges_1_1_data_source_a31df6ed545263d74dabce76d537237e0}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Elevation\+Data\+From\+J\+S\+ON@{get\+Elevation\+Data\+From\+J\+S\+ON}}
+\index{get\+Elevation\+Data\+From\+J\+S\+ON@{get\+Elevation\+Data\+From\+J\+S\+ON}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{get\+Elevation\+Data\+From\+J\+S\+O\+N()}{getElevationDataFromJSON()}}
+{\footnotesize\ttfamily \hyperlink{classbridges_1_1dataset_1_1_elevation_data}{Elevation\+Data}$\ast$ bridges\+::\+Data\+Source\+::get\+Elevation\+Data\+From\+J\+S\+ON (\begin{DoxyParamCaption}\item[{string}]{elev\+\_\+json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 \mbox{\Hypertarget{classbridges_1_1_data_source_aa902e1dffd4169e2f6e6820299b8cde1}\label{classbridges_1_1_data_source_aa902e1dffd4169e2f6e6820299b8cde1}} 
 \index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Game\+Data@{get\+Game\+Data}}
 \index{get\+Game\+Data@{get\+Game\+Data}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}

@@ -4,6 +4,7 @@ var searchData=
   ['tan',['tan',['../classbridges_1_1named__color_1_1_named_color.html#aec34f362841f5de3305cbd74e6857bec',1,'bridges::named_color::NamedColor']]],
   ['target',['target',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a657d7b97b77ff7666b0b392828073416',1,'bridges::named_symbol::NamedSymbol']]],
   ['teal',['teal',['../classbridges_1_1named__color_1_1_named_color.html#acff734e464d9e49184474d7e4c434de2',1,'bridges::named_color::NamedColor']]],
+  ['thickness',['thickness',['../classbridges_1_1edge_1_1_edge.html#ac1fead90d70b6fce8392b4477388f22d',1,'bridges::edge::Edge']]],
   ['thistle',['thistle',['../classbridges_1_1named__color_1_1_named_color.html#ac27ec92a7501e5af8e032590c2390c6f',1,'bridges::named_color::NamedColor']]],
   ['thoughtbubble',['thoughtbubble',['../classbridges_1_1named__symbol_1_1_named_symbol.html#ac293ccb7cf13f827c110f471782fec76',1,'bridges::named_symbol::NamedSymbol']]],
   ['three',['three',['../classbridges_1_1named__symbol_1_1_named_symbol.html#a3dcb7fb97e7f3d16f51fc890f71c8366',1,'bridges::named_symbol::NamedSymbol']]],

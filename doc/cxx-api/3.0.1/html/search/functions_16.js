@@ -7,6 +7,7 @@ var searchData=
   ['_7edatastructure',['~DataStructure',['../classbridges_1_1datastructure_1_1_data_structure.html#a54bde1c8f14ca3bff47910a2e48d586a',1,'bridges::datastructure::DataStructure']]],
   ['_7eedge',['~Edge',['../classbridges_1_1datastructure_1_1_edge.html#a7160632622b92c93036cd6fdcec75959',1,'bridges::datastructure::Edge']]],
   ['_7eelement',['~Element',['../classbridges_1_1datastructure_1_1_element.html#ad7ed60da8ed4a31b7a2678d0aa5db205',1,'bridges::datastructure::Element']]],
+  ['_7eelevationdata',['~ElevationData',['../classbridges_1_1dataset_1_1_elevation_data.html#a253e44f5f60891569c21ca926a356547',1,'bridges::dataset::ElevationData']]],
   ['_7egraphadjlist',['~GraphAdjList',['../classbridges_1_1datastructure_1_1_graph_adj_list.html#a17413dc27d7e60e1aa31cafa32082d12',1,'bridges::datastructure::GraphAdjList']]],
   ['_7egrid',['~Grid',['../classbridges_1_1datastructure_1_1_grid.html#aa04b4929a35fa359dbaab86e46fda204',1,'bridges::datastructure::Grid']]],
   ['_7esocketconnection',['~SocketConnection',['../classbridges_1_1game_1_1_socket_connection.html#ab91626d225be212db188465f73c5de27',1,'bridges::game::SocketConnection']]]

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['l',['l',['../enumbridges_1_1base_1_1_named_symbol.html#a6400e236b0aacea44c8dbcdee1ca9ce5',1,'bridges.base.NamedSymbol.l()'],['../enumbridges_1_1base_1_1_named_symbol.html#a6751511f840df9f13e0a2fa75301cff2',1,'bridges.base.NamedSymbol.L()']]],
-  ['label',['Label',['../classbridges_1_1base_1_1_label.html',1,'bridges.base.Label'],['../classbridges_1_1base_1_1_symbol.html#ad2adcc82e6a96c2f3c465702502655e9',1,'bridges.base.Symbol.label()'],['../classbridges_1_1base_1_1_label.html#adaed1c29dc02eb0f77d772b256b9eae4',1,'bridges.base.Label.Label()'],['../classbridges_1_1base_1_1_label.html#a0ffb2cdafae3f2c21e0925f2fe23df87',1,'bridges.base.Label.Label(String label)']]],
+  ['label',['Label',['../classbridges_1_1base_1_1_label.html',1,'bridges.base.Label'],['../classbridges_1_1base_1_1_label.html#adaed1c29dc02eb0f77d772b256b9eae4',1,'bridges.base.Label.Label()'],['../classbridges_1_1base_1_1_label.html#a0ffb2cdafae3f2c21e0925f2fe23df87',1,'bridges.base.Label.Label(String label)'],['../classbridges_1_1base_1_1_symbol.html#ad2adcc82e6a96c2f3c465702502655e9',1,'bridges.base.Symbol.label()']]],
   ['label_2ejava',['Label.java',['../_label_8java.html',1,'']]],
   ['lat_5fmin',['lat_min',['../classbridges_1_1data__src__dependent_1_1_osm_server_response_meta.html#a98c390a5adf668e227a9048904ebb533',1,'bridges::data_src_dependent::OsmServerResponseMeta']]],
   ['latitude',['latitude',['../classbridges_1_1data__src__dependent_1_1_usgs_foo_1_1_geometry_1_1_coordinates.html#a8ab648886a19cd5d07f330e1558b8175',1,'bridges::data_src_dependent::UsgsFoo::Geometry::Coordinates']]],

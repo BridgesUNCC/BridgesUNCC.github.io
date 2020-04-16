@@ -11,5 +11,7 @@ var searchData=
   ['arrayofelement_2ejava',['ArrayOfElement.java',['../_array_of_element_8java.html',1,'']]],
   ['assignment_2ejava',['Assignment.java',['../_assignment_8java.html',1,'']]],
   ['assignmentdata_2ejava',['AssignmentData.java',['../_assignment_data_8java.html',1,'']]],
+  ['audiochannel_2ejava',['AudioChannel.java',['../_audio_channel_8java.html',1,'']]],
+  ['audioclip_2ejava',['AudioClip.java',['../_audio_clip_8java.html',1,'']]],
   ['avltreeelement_2ejava',['AVLTreeElement.java',['../_a_v_l_tree_element_8java.html',1,'']]]
 ];
