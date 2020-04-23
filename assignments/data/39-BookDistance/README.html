@@ -1,0 +1,75 @@
+<h1>Book Distance</h1>
+
+<h2>Overview</h2>
+
+<p>Using a simple metric, compute the distance between books using
+Dictionary data structure. Then find clusters of books.</p>
+
+<h2>Principle</h2>
+
+<h2>Tasks</h2>
+
+<h3>Access a book through BRIDGES API</h3>
+
+<p>for instance a shakespeare poem is good to start with</p>
+
+<h3>Compute the Word frequency vector of the book</h3>
+
+<h4>Compute word occurence vector</h4>
+
+<p>Simply count how many time each words appear</p>
+
+<h4>Compute word frequency vector</h4>
+
+<ol>
+<li><p>count how many words in the document</p></li>
+<li><p>Divide all counts by the total number of words to get a frequency vector.</p></li>
+</ol>
+
+<h3>Compare two books</h3>
+
+<ol>
+<li><p>Access two books</p></li>
+<li><p>Derive word frequency vectors</p></li>
+<li><p>Compute L2 distance between the two vectors</p></li>
+<li><p>Observe how two close books are more similar than two distant book
+(say 2 books by shakespeare and a book by Shakespear and one by Mark
+Twain)</p></li>
+</ol>
+
+<h4>Variants</h4>
+
+<ol>
+<li>use tfidf</li>
+<li>use cosine similarity</li>
+</ol>
+
+<h3>Implement your own Dictionary</h3>
+
+<h4>Using an Array</h4>
+
+<h4>Using a Sorted Array</h4>
+
+<h4>Using a Linked List</h4>
+
+<h4>Using a BST</h4>
+
+<h4>Using a HashMap</h4>
+
+<h4>Implement multiple Dictionary and compare their performance</h4>
+
+<h3>Island Clustering</h3>
+
+<ol>
+<li><p>For all books available, compute all pairwise distance</p></li>
+<li><p>Build an islanding graph, aka, a graph where</p>
+
+<ol>
+<li>Each Book is a different vertex.</li>
+<li>There is an edge between two books if their distance is smaller than T (a user specified threshold)</li>
+<li>Build the graph using Bridges Adjacency List interface</li>
+</ol></li>
+<li><p>Visualize the graph in BRIDGES</p></li>
+<li><p>Observe how the graph change when the threshold varies. Do cluster
+appear? Do they make sense?</p></li>
+</ol>

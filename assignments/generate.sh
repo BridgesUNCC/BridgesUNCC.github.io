@@ -41,12 +41,16 @@ addassignment "16-ImagePuzzle"
 addsubgroup "Games"
 addassignment "11-2048Game"
 addassignment "13-InfiniteRunner"
-addassignment "14-SpreadingFire"
-addassignment "15-FallingSand"
 addassignment "20-Minesweeper"
 addassignment "21-RaceCar"
 addassignment "22-Snake"
 addassignment "32-TicTacToe"
+addassignment "35-ConnectFour"
+addassignment "36-Pong"
+
+addsubgroup "Simulation"
+addassignment "14-SpreadingFire"
+addassignment "15-FallingSand"
 
 addgroup "Data Structure"
 addsubgroup "LinkedList"
@@ -59,9 +63,14 @@ addassignment "26-TowersOfHanoi"
 addassignment "22-Snake"
 
 addsubgroup "Trees"
-addassignment "5-BstEq"
+addassignment "37-BST_Earthquakes"
 addassignment "8-PQBook"
 addassignment "24-ImageCompressionKdTree"
+addassignment "39-BookDistance"
+
+addsubgroup "Hashing, Hash Tables, and Hash Maps"
+addassignment "8-PQBook"
+addassignment "39-BookDistance"
 
 addsubgroup "Graphs"
 addassignment "12-AStarMaze"
@@ -70,6 +79,7 @@ addassignment "30-TemporalBaconNumber"
 addassignment "4-GraphEQ"
 addassignment "9-ShortestPathOSM"
 addassignment "31-TemporalPageRank"
+addassignment "39-BookDistance"
 
 addgroup "Algorithms"
 addsubgroup "Big Oh"
@@ -83,15 +93,26 @@ addassignment "9-ShortestPathOSM"
 addassignment "30-TemporalBaconNumber"
 addassignment "31-TemporalPageRank"
 
+addsubgroup "Spanning Tree"
+addassignment "38-GeologicalSurvey"
+
+addsubgroup "Matching"
+addassignment "38-GeologicalSurvey"
+
 addsubgroup "Greedy Algorithms"
 addassignment "23-MountainPaths"
+addassignment "9-ShortestPathOSM"
+addassignment "38-GeologicalSurvey"
 
 addsubgroup "Dynamic Programing"
 addassignment "23-MountainPaths"
+addassignment "9-ShortestPathOSM"
+
+addsubgroup "NP-Complete problems"
+addassignment "38-GeologicalSurvey"
 
 addsubgroup "Multi objective optimization"
 addassignment "23-MountainPaths"
-
 
 writefooter
 
