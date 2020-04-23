@@ -23,7 +23,7 @@ often. This will be accomplished using a Min Heap.</p>
 
 <h2>Programming part</h2>
 
-<h3>Counting word appearances using a Dictionary implemented as Binary Search Tree</h3>
+<h3>Counting word appearances using a Dictionary and a custom implementation</h3>
 
 <p>A Dictionary (sometimes called associative arrays) enable to store and
 retrieve (key, value) pairs. In this assignment they will be useful to
@@ -54,7 +54,8 @@ Dictionary d</p>
 <h4>Tasks</h4>
 
 <ol>
-<li>Implement a Dictionnary using a Binary Search Tree leveraging the BSTElement of BRIDGES.</li>
+<li>Use the Dictionary implementation to compute the number of occurencecs of each word.</li>
+<li>Implement you own Dictionary using a Binary Search Tree leveraging the BSTElement of BRIDGES.</li>
 <li>Visualize the Dictionary using BRIDGES.</li>
 </ol>
 
@@ -63,6 +64,7 @@ Dictionary d</p>
 <ol>
 <li>Implement the Dictionary using a HashTable.</li>
 <li>Use BRIDGES SymbolCollection to generate a visualization of the HashTable.</li>
+<li>Use all of Shakespeare work and measure the performance difference between the HashTable and the BST implementations.</li>
 </ol>
 
 <h3>Extracting the most frequent words using a Min Heap</h3>
@@ -86,7 +88,7 @@ heap.</p>
 <h4>Build a Binary Min Heap</h4>
 
 <ol>
-<li>Write the insert function in MyHeap. There are todos to guide you.</li>
+<li>Write the insert function in MyHeap. </li>
 </ol>
 
 <p>The algorithm for inserting in a heap is as follows. (This algorithm
@@ -123,12 +125,20 @@ Heap {
 }
 ```</p>
 
+<ol>
+<li><p>Write a pop function that return the element with the lowest key.</p></li>
+<li><p>Use the heap to identify the most occuring words in Shakespeare
+work.</p></li>
+</ol>
+
 <h4>If you have time</h4>
 
 <ol>
-<li>Use all of Shakespeare's works.</li>
-<li>Change the location of the insert and pop in the main function to keep only the 100 most occuring words in the heap at any time.</li>
-<li>Style the heap so that words with more than 1000 occurences are highlighted.</li>
+<li><p>Use all of Shakespeare's works.</p></li>
+<li><p>Using the pop function, keep only the 100 most occuring words in the heap at any time.</p></li>
+<li><p>Measure the performance difference between keeping all entries in
+the heap and only the top-100 most occuring words.</p></li>
+<li><p>Style the heap so that words with more than 1000 occurences are highlighted.</p></li>
 </ol>
 
 <h3>Help</h3>

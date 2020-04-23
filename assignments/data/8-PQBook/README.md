@@ -26,7 +26,7 @@ often. This will be accomplished using a Min Heap.
 Programming part
 ----------------
 
-### Counting word appearances using a Dictionary implemented as Binary Search Tree
+### Counting word appearances using a Dictionary and a custom implementation
 
 A Dictionary (sometimes called associative arrays) enable to store and
 retrieve (key, value) pairs. In this assignment they will be useful to
@@ -56,13 +56,15 @@ for each word w in document
 
 #### Tasks
 
-1. Implement a Dictionnary using a Binary Search Tree leveraging the BSTElement of BRIDGES.
-2. Visualize the Dictionary using BRIDGES.
+1. Use the Dictionary implementation to compute the number of occurencecs of each word.
+2. Implement you own Dictionary using a Binary Search Tree leveraging the BSTElement of BRIDGES.
+3. Visualize the Dictionary using BRIDGES.
 
 #### If you have time
 
 1. Implement the Dictionary using a HashTable.
 2. Use BRIDGES SymbolCollection to generate a visualization of the HashTable.
+3. Use all of Shakespeare work and measure the performance difference between the HashTable and the BST implementations.
 
 ### Extracting the most frequent words using a Min Heap 
 
@@ -82,7 +84,7 @@ heap.
 
 #### Build a Binary Min Heap
 
-1. Write the insert function in MyHeap. There are todos to guide you.
+1. Write the insert function in MyHeap. 
 
 The algorithm for inserting in a heap is as follows. (This algorithm
 ignores that there is a key and a value.) Note that it uses
@@ -118,11 +120,21 @@ insert (Heap h, k) {
 }
 ```
 
+2. Write a pop function that return the element with the lowest key.
+
+3. Use the heap to identify the most occuring words in Shakespeare
+work.
+
 #### If you have time
 
 1. Use all of Shakespeare's works.
-2. Change the location of the insert and pop in the main function to keep only the 100 most occuring words in the heap at any time.
-3. Style the heap so that words with more than 1000 occurences are highlighted.
+
+2. Using the pop function, keep only the 100 most occuring words in the heap at any time.
+
+3. Measure the performance difference between keeping all entries in
+the heap and only the top-100 most occuring words.
+
+4. Style the heap so that words with more than 1000 occurences are highlighted.
 
 
 ### Help

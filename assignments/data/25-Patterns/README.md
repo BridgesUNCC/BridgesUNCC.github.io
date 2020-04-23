@@ -1,27 +1,30 @@
-Assignment 23: Patterns
-=======================
+Patterns
+========
 
 Goals
 -----
-1) Learn how to modify and display a ColorGrid to Bridges
-2) Practice using simple loops to display patters to a ColorGrid
+1) Learn how to modify and display a ColorGrid using Bridges
+2) Learn how to set/change colors for each pixel in the grid
+2) Practice using simple loops to display patterns using the BRIDGES 
+ ColorGrid data structure
 
-Programming
------------
-#### Setup
-- Download the Bridges library from the Bridges website http://bridgesuncc.github.io/
-- Follow the Getting Started tutorial for the IDE you are using http://bridgesuncc.github.io/bridges_setup.html
-- Enter the assignment number, username, and api key values into the main method of the class file given to you for this assignment.
-- Run your code and follow the link in the output to view your grid.
-- Make changes as needed to adjust how your grid looks.
+ColorGrid
+---------
+The BRIDGES ColorGrid class is an abstraction for representing 2D images. 
+It serves as a convenient way to display operations on images or other
+two dimensional structures. A similar structure is used in the BRIDGES Game 
+API.
 
 #### Assignement
-- Use Bridges ColorGrid to display simple pattern
-- Call ColorGrid.set to set the color of a pixel in the grid
+- Use Bridges ColorGrid to display a simple pattern
+- Call ColorGrid.set() method to set the color of a pixel in the grid
+	(the color is passed as a generic of the class to the method)
 - Loop through the grid and set each pixel to match a pattern
 
 #### Examples
 - Checker board, display 2 colors in an alternating checker board pattern
+or something thats interesting or relevant to you, your school's colors, 
+mascot, team.
 - Frame, display a frame around the entire board with the center filled
 - Quadrants, Cut the image in four quadrants of different colors
 - Or make a customized pattern of your own
@@ -29,11 +32,11 @@ Programming
 ### Help
 #### for C++
 
-[ColorGrid documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_color_grid.html)
+[ColorGrid documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_color_grid.html)
 
-[Color documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_color.html)
+[Color documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_color.html)
 
-[Bridges documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classes.html)
+[Bridges class documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_bridges.html)
 
 #### for Java
 
@@ -41,7 +44,7 @@ Programming
 
 [Color documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_color.html)
 
-[Bridges class documentation](http://bridgesuncc.github.io/doc/java-api/current/html/namespacebridges_1_1base.html)
+[Bridges class documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1connect_1_1_bridges.html)
 
 #### for Python
 
@@ -49,4 +52,4 @@ Programming
 
 [Color documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1color_1_1_color.html)
 
-[Bridges documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1bridges_1_1_bridges.html)
+[Bridges class documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1bridges_1_1_bridges.html)
