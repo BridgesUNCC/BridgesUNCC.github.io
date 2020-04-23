@@ -72,7 +72,7 @@ writefooter() {
 
 
 addgroup() {
-    local name=$1
+    local name="$1"
 
     printf "%s"'<div class="assignmentgroup"> <p>' >> ${HTMLOUTPUT}
     printf "%s" "${name}"  >> ${HTMLOUTPUT}
@@ -81,7 +81,7 @@ addgroup() {
 }
 
 addsubgroup() {
-    local name=$1
+    local name="$1"
 
     printf "%s" '<div class="assignmentsubgroup"> <p>' >> ${HTMLOUTPUT}
     printf "%s" "${name}" >> ${HTMLOUTPUT}
