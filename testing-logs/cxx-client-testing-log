@@ -48,46 +48,136 @@ g++ -g -o array2d array2d.cpp -g -I/home/bridges-testing/bridges-cxx-install/inc
 g++ -g -o array3d array3d.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
 g++ -g -o array_test array_test.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
 g++ -g -o audio_clip audio_clip.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
-audio_clip.cpp: In function ‘int main()’:
-audio_clip.cpp:24:31: error: ‘YOUR_ASSSIGNMENT_NUMBER’ was not declared in this scope
-     Bridges bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
-                               ^~~~~~~~~~~~~~~~~~~~~~~
-audio_clip.cpp:32:39: error: no matching function for call to ‘bridges::datastructure::AudioClip::AudioClip(int)’
-     AudioClip clip = AudioClip(44100*5);
-                                       ^
-In file included from audio_clip.cpp:1:
-/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:27:13: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(int, int, int, int)’
-             AudioClip(int sampleCount, int numChannels, int sampleBits, int sampleRate) {
-             ^~~~~~~~~
-/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:27:13: note:   candidate expects 4 arguments, 1 provided
-/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(const bridges::datastructure::AudioClip&)’
-         class AudioClip : public DataStructure {
-               ^~~~~~~~~
-/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘int’ to ‘const bridges::datastructure::AudioClip&’
-/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(bridges::datastructure::AudioClip&&)’
-/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘int’ to ‘bridges::datastructure::AudioClip&&’
-make[1]: *** [Makefile:40: audio_clip] Error 1
+g++ -g -o avl avl.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
+g++ -g -o bintree bintree.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
+g++ -g -o bst bst.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
+g++ -g -o cancer_snippet cancer_snippet.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
+g++ -g -o circ_dllist circ_dllist.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
+g++ -g -o circ_sllist circ_sllist.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
+g++ -g -o color_grid color_grid.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
+g++ -g -o display_game display_game.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
+g++ -g -o dllist dllist.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
+g++ -g -o elevation_snippet elevation_snippet.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
+g++ -g -o eq_snippet eq_snippet.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
+g++ -g -o face_shp_coll face_shp_coll.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
+face_shp_coll.cpp: In function ‘int main(int, char**)’:
+face_shp_coll.cpp:29:18: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Circle*)’
+  sc.addSymbol(&s1);
+                  ^
+In file included from face_shp_coll.cpp:2:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol&)’
+     void addSymbol(Symbol& s) {
+          ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Circle*’ to ‘bridges::datastructure::Symbol&’
+face_shp_coll.cpp:39:18: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Circle*)’
+  sc.addSymbol(&s2);
+                  ^
+In file included from face_shp_coll.cpp:2:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol&)’
+     void addSymbol(Symbol& s) {
+          ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Circle*’ to ‘bridges::datastructure::Symbol&’
+face_shp_coll.cpp:49:18: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Circle*)’
+  sc.addSymbol(&s3);
+                  ^
+In file included from face_shp_coll.cpp:2:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol&)’
+     void addSymbol(Symbol& s) {
+          ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Circle*’ to ‘bridges::datastructure::Symbol&’
+face_shp_coll.cpp:62:18: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Rectangle*)’
+  sc.addSymbol(&s4);
+                  ^
+In file included from face_shp_coll.cpp:2:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol&)’
+     void addSymbol(Symbol& s) {
+          ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Rectangle*’ to ‘bridges::datastructure::Symbol&’
+face_shp_coll.cpp:74:18: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Rectangle*)’
+  sc.addSymbol(&s5);
+                  ^
+In file included from face_shp_coll.cpp:2:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol&)’
+     void addSymbol(Symbol& s) {
+          ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Rectangle*’ to ‘bridges::datastructure::Symbol&’
+face_shp_coll.cpp:83:18: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Polyline*)’
+  sc.addSymbol(&s6);
+                  ^
+In file included from face_shp_coll.cpp:2:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol&)’
+     void addSymbol(Symbol& s) {
+          ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Polyline*’ to ‘bridges::datastructure::Symbol&’
+face_shp_coll.cpp:92:17: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Label*)’
+  sc.addSymbol(&l);
+                 ^
+In file included from face_shp_coll.cpp:2:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol&)’
+     void addSymbol(Symbol& s) {
+          ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Label*’ to ‘bridges::datastructure::Symbol&’
+make[1]: *** [Makefile:40: face_shp_coll] Error 1
 make[1]: Leaving directory '/home/bridges-testing/bridges-client-testing/c++/web_tutorial_testing'
 make[1]: Entering directory '/home/bridges-testing/bridges-client-testing/c++/web_tutorial_testing'
-g++ -g -o audio_clip audio_clip.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
-audio_clip.cpp: In function ‘int main()’:
-audio_clip.cpp:24:31: error: ‘YOUR_ASSSIGNMENT_NUMBER’ was not declared in this scope
-     Bridges bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
-                               ^~~~~~~~~~~~~~~~~~~~~~~
-audio_clip.cpp:32:39: error: no matching function for call to ‘bridges::datastructure::AudioClip::AudioClip(int)’
-     AudioClip clip = AudioClip(44100*5);
-                                       ^
-In file included from audio_clip.cpp:1:
-/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:27:13: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(int, int, int, int)’
-             AudioClip(int sampleCount, int numChannels, int sampleBits, int sampleRate) {
-             ^~~~~~~~~
-/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:27:13: note:   candidate expects 4 arguments, 1 provided
-/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(const bridges::datastructure::AudioClip&)’
-         class AudioClip : public DataStructure {
-               ^~~~~~~~~
-/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘int’ to ‘const bridges::datastructure::AudioClip&’
-/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(bridges::datastructure::AudioClip&&)’
-/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘int’ to ‘bridges::datastructure::AudioClip&&’
-make[1]: *** [Makefile:40: audio_clip] Error 1
+g++ -g -o face_shp_coll face_shp_coll.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
+face_shp_coll.cpp: In function ‘int main(int, char**)’:
+face_shp_coll.cpp:29:18: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Circle*)’
+  sc.addSymbol(&s1);
+                  ^
+In file included from face_shp_coll.cpp:2:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol&)’
+     void addSymbol(Symbol& s) {
+          ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Circle*’ to ‘bridges::datastructure::Symbol&’
+face_shp_coll.cpp:39:18: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Circle*)’
+  sc.addSymbol(&s2);
+                  ^
+In file included from face_shp_coll.cpp:2:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol&)’
+     void addSymbol(Symbol& s) {
+          ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Circle*’ to ‘bridges::datastructure::Symbol&’
+face_shp_coll.cpp:49:18: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Circle*)’
+  sc.addSymbol(&s3);
+                  ^
+In file included from face_shp_coll.cpp:2:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol&)’
+     void addSymbol(Symbol& s) {
+          ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Circle*’ to ‘bridges::datastructure::Symbol&’
+face_shp_coll.cpp:62:18: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Rectangle*)’
+  sc.addSymbol(&s4);
+                  ^
+In file included from face_shp_coll.cpp:2:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol&)’
+     void addSymbol(Symbol& s) {
+          ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Rectangle*’ to ‘bridges::datastructure::Symbol&’
+face_shp_coll.cpp:74:18: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Rectangle*)’
+  sc.addSymbol(&s5);
+                  ^
+In file included from face_shp_coll.cpp:2:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol&)’
+     void addSymbol(Symbol& s) {
+          ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Rectangle*’ to ‘bridges::datastructure::Symbol&’
+face_shp_coll.cpp:83:18: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Polyline*)’
+  sc.addSymbol(&s6);
+                  ^
+In file included from face_shp_coll.cpp:2:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol&)’
+     void addSymbol(Symbol& s) {
+          ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Polyline*’ to ‘bridges::datastructure::Symbol&’
+face_shp_coll.cpp:92:17: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Label*)’
+  sc.addSymbol(&l);
+                 ^
+In file included from face_shp_coll.cpp:2:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol&)’
+     void addSymbol(Symbol& s) {
+          ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Label*’ to ‘bridges::datastructure::Symbol&’
+make[1]: *** [Makefile:40: face_shp_coll] Error 1
 make[1]: Leaving directory '/home/bridges-testing/bridges-client-testing/c++/web_tutorial_testing'
 make: *** [Makefile:21: make_c++] Error 2

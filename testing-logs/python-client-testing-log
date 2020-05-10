@@ -29,7 +29,7 @@ unifdef -DTESTING=1 -o ../web_tutorial_testing/display_game.py display_game.py ;
 unifdef -DTESTING=1 -o ../web_tutorial_testing/kdt.py kdt.py ; [ $? != 2 ]
 unifdef -DTESTING=1 -o ../web_tutorial_testing/color_grid.py color_grid.py ; [ $? != 2 ]
 unifdef -DTESTING=1 -o ../web_tutorial_testing/mllist.py mllist.py ; [ $? != 2 ]
-unifdef -DTESTING=1 -o ../web_tutorial_testing/elevation_snippet.py elevation_snippet.py ; [ $? != 2 ]
+unifdef -DTESTING=1 -o ../web_tutorial_testing/graph_amatrix.py graph_amatrix.py ; [ $? != 2 ]
 make[1]: Leaving directory '/home/bridges-testing/bridges-client-testing/python/web_tutorial_mastercopy'
 cd python/web_tutorial_testing; make; make run;
 make[1]: Entering directory '/home/bridges-testing/bridges-client-testing/python/web_tutorial_testing'
@@ -121,12 +121,12 @@ http://bridges-cs.herokuapp.com/assignments/3010/bridges_testing
 
 
 python3 earthquake_snippet.py 3011 bridges_testing 1321549621122 live
-62.0135
--150.2898
-28km SW of Y, Alaska
-M 1.7 - 28km SW of Y, Alaska
-1.7
-2020-05-09 01:19:15
+-11.6318
+165.0801
+130km SW of Lata, Solomon Islands
+M 4.9 - 130km SW of Lata, Solomon Islands
+4.9
+2020-05-09 23:35:12
 python3 elevation_snippet.py 3012 bridges_testing 1321549621122 live
 Traceback (most recent call last):
   File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 159, in _new_conn
@@ -158,7 +158,7 @@ Traceback (most recent call last):
     conn = self._new_conn()
   File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 168, in _new_conn
     self, "Failed to establish a new connection: %s" % e)
-urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fd1ec8d5240>: Failed to establish a new connection: [Errno -2] Name or service not known
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f46b8e5c278>: Failed to establish a new connection: [Errno -2] Name or service not known
 
 During handling of the above exception, another exception occurred:
 
@@ -169,7 +169,7 @@ Traceback (most recent call last):
     _stacktrace=sys.exc_info()[2])
   File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 398, in increment
     raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=-98.02593749997456&minLon=41.03133177632377&maxLat=-96.94531249997696&maxLon=42.508577297430456&resX=0.0166&resY=0.0166 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd1ec8d5240>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=-98.02593749997456&minLon=41.03133177632377&maxLat=-96.94531249997696&maxLon=42.508577297430456&resX=0.0166&resY=0.0166 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f46b8e5c278>: Failed to establish a new connection: [Errno -2] Name or service not known'))
 
 During handling of the above exception, another exception occurred:
 
@@ -190,12 +190,12 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File "/usr/lib/python3/dist-packages/requests/adapters.py", line 516, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=-98.02593749997456&minLon=41.03133177632377&maxLat=-96.94531249997696&maxLon=42.508577297430456&resX=0.0166&resY=0.0166 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd1ec8d5240>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=-98.02593749997456&minLon=41.03133177632377&maxLat=-96.94531249997696&maxLon=42.508577297430456&resX=0.0166&resY=0.0166 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f46b8e5c278>: Failed to establish a new connection: [Errno -2] Name or service not known'))
 python3 game_snippet.py 3013 bridges_testing 1321549621122 live
-Anarchy Online
-PC
-7.2
-['RPG']
+The Club
+PlayStation 3
+6.9
+['Action']
 python3 graph_alist.py 3014 bridges_testing 1321549621122 live
 Visualization Title restricted to50 characters. truncated title...
 
@@ -214,8 +214,8 @@ http://bridges-cs.herokuapp.com/assignments/3015/bridges_testing
 
 python3 guttenberg_snippet.py 3016 bridges_testing 1321549621122 live
 python3 imdb_snippet.py 3017 bridges_testing 1321549621122 live
-Kevin_Bacon_(I)
-Hollow_Man:_Anatomy_of_a_Thriller_(2000)
+Charisma_Carpenter
+Josh_Kirby..._Time_Warrior:_Chapter_1,_Planet_of_the_Dino-Knights_(1995)
 python3 kdt.py 3018 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -261,7 +261,7 @@ Traceback (most recent call last):
     conn = self._new_conn()
   File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 168, in _new_conn
     self, "Failed to establish a new connection: %s" % e)
-urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f3f66b03358>: Failed to establish a new connection: [Errno -2] Name or service not known
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f3e78acb2e8>: Failed to establish a new connection: [Errno -2] Name or service not known
 
 During handling of the above exception, another exception occurred:
 
@@ -272,7 +272,7 @@ Traceback (most recent call last):
     _stacktrace=sys.exc_info()[2])
   File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 398, in increment
     raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=6.0&minLon=46.1&maxLat=9.0&maxLon=47.7&resX=0.0166&resY=0.0166 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f66b03358>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=6.0&minLon=46.1&maxLat=9.0&maxLon=47.7&resX=0.0166&resY=0.0166 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3e78acb2e8>: Failed to establish a new connection: [Errno -2] Name or service not known'))
 
 During handling of the above exception, another exception occurred:
 
@@ -295,18 +295,18 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File "/usr/lib/python3/dist-packages/requests/adapters.py", line 516, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=6.0&minLon=46.1&maxLat=9.0&maxLon=47.7&resX=0.0166&resY=0.0166 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3f66b03358>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=6.0&minLon=46.1&maxLat=9.0&maxLon=47.7&resX=0.0166&resY=0.0166 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3e78acb2e8>: Failed to establish a new connection: [Errno -2] Name or service not known'))
 python3 osm_snippet.py 3021 bridges_testing 1321549621122 live
 Number of Vertices [Charlotte]: 9992
 Number of Edges [Charlotte]: 15997
 Position of first vertex: lat=35.224978 long=-80.865467
 Cartesian Coordinate of first vertex: 827.1273231300758, -5144.073405550668
 python3 shakespeare_snippet.py 3022 bridges_testing 1321549621122 live
-Sonnet 108
+Sonnet 62
 poem
-What's in the brain that ink may character,
- Which hath not figured to thee my true spirit,
- What's 
+Sin of self-love possesseth all mine eye,
+ And all my soul, and all my every part;
+ And for this sin
 python3 shape_collection.py 3023 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
