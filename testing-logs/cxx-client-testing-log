@@ -54,37 +54,51 @@ g++ -g -o bst bst.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I
 g++ -g -o cancer_snippet cancer_snippet.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
 g++ -g -o circ_dllist circ_dllist.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
 circ_dllist.cpp: In function ‘int main(int, char**)’:
-circ_dllist.cpp:49:25: error: ‘CircDLelement_listhelper’ is not a member of ‘bridges::datastructure::CircDLelement<std::__cxx11::basic_string<char> >’
-  CircDLelement<string>::CircDLelement_listhelper list(el0);
-                         ^~~~~~~~~~~~~~~~~~~~~~~~
-circ_dllist.cpp:50:17: error: ‘list’ was not declared in this scope
-     auto iter = list.begin();
-                 ^~~~
-circ_dllist.cpp:50:17: note: ‘std::list’ is defined in header ‘<list>’; did you forget to ‘#include <list>’?
+circ_dllist.cpp:49:2: error: ‘CircDLelement_List’ was not declared in this scope
+  CircDLelement_List<string> list(el0);
+  ^~~~~~~~~~~~~~~~~~
+circ_dllist.cpp:49:2: note: suggested alternative: ‘DLelement_H’
+  CircDLelement_List<string> list(el0);
+  ^~~~~~~~~~~~~~~~~~
+  DLelement_H
+circ_dllist.cpp:49:27: error: expected primary-expression before ‘>’ token
+  CircDLelement_List<string> list(el0);
+                           ^
+circ_dllist.cpp:49:29: error: ‘list’ was not declared in this scope
+  CircDLelement_List<string> list(el0);
+                             ^~~~
+circ_dllist.cpp:49:29: note: ‘std::list’ is defined in header ‘<list>’; did you forget to ‘#include <list>’?
 circ_dllist.cpp:8:1:
 +#include <list>
  #include <string>
-circ_dllist.cpp:50:17:
-     auto iter = list.begin();
-                 ^~~~
+circ_dllist.cpp:49:29:
+  CircDLelement_List<string> list(el0);
+                             ^~~~
 make[1]: *** [Makefile:40: circ_dllist] Error 1
 make[1]: Leaving directory '/home/bridges-testing/bridges-client-testing/c++/web_tutorial_testing'
 make[1]: Entering directory '/home/bridges-testing/bridges-client-testing/c++/web_tutorial_testing'
 g++ -g -o circ_dllist circ_dllist.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
 circ_dllist.cpp: In function ‘int main(int, char**)’:
-circ_dllist.cpp:49:25: error: ‘CircDLelement_listhelper’ is not a member of ‘bridges::datastructure::CircDLelement<std::__cxx11::basic_string<char> >’
-  CircDLelement<string>::CircDLelement_listhelper list(el0);
-                         ^~~~~~~~~~~~~~~~~~~~~~~~
-circ_dllist.cpp:50:17: error: ‘list’ was not declared in this scope
-     auto iter = list.begin();
-                 ^~~~
-circ_dllist.cpp:50:17: note: ‘std::list’ is defined in header ‘<list>’; did you forget to ‘#include <list>’?
+circ_dllist.cpp:49:2: error: ‘CircDLelement_List’ was not declared in this scope
+  CircDLelement_List<string> list(el0);
+  ^~~~~~~~~~~~~~~~~~
+circ_dllist.cpp:49:2: note: suggested alternative: ‘DLelement_H’
+  CircDLelement_List<string> list(el0);
+  ^~~~~~~~~~~~~~~~~~
+  DLelement_H
+circ_dllist.cpp:49:27: error: expected primary-expression before ‘>’ token
+  CircDLelement_List<string> list(el0);
+                           ^
+circ_dllist.cpp:49:29: error: ‘list’ was not declared in this scope
+  CircDLelement_List<string> list(el0);
+                             ^~~~
+circ_dllist.cpp:49:29: note: ‘std::list’ is defined in header ‘<list>’; did you forget to ‘#include <list>’?
 circ_dllist.cpp:8:1:
 +#include <list>
  #include <string>
-circ_dllist.cpp:50:17:
-     auto iter = list.begin();
-                 ^~~~
+circ_dllist.cpp:49:29:
+  CircDLelement_List<string> list(el0);
+                             ^~~~
 make[1]: *** [Makefile:40: circ_dllist] Error 1
 make[1]: Leaving directory '/home/bridges-testing/bridges-client-testing/c++/web_tutorial_testing'
 make: *** [Makefile:21: make_c++] Error 2
