@@ -38,7 +38,7 @@ unifdef -DTESTING=1 -o ../web_tutorial_testing/sllist.java sllist.java ; [ $? !=
 unifdef -DTESTING=1 -o ../web_tutorial_testing/song_lyrics_snippet.java song_lyrics_snippet.java ; [ $? != 2 ]
 unifdef -DTESTING=1 -o ../web_tutorial_testing/song_snippet.java song_snippet.java ; [ $? != 2 ]
 unifdef -DTESTING=1 -o ../web_tutorial_testing/sortingbenchmark.java sortingbenchmark.java ; [ $? != 2 ]
-unifdef -DTESTING=1 -o ../web_tutorial_testing/tree.java tree.java ; [ $? != 2 ]
+unifdef -DTESTING=1 -o ../web_tutorial_testing/vis_example.java vis_example.java ; [ $? != 2 ]
 make[1]: Leaving directory '/home/bridges-testing/bridges-client-testing/java/web_tutorial_mastercopy'
 cd java/web_tutorial_testing; make; make run;
 make[1]: Entering directory '/home/bridges-testing/bridges-client-testing/java/web_tutorial_testing'
@@ -74,26 +74,8 @@ ASSIGNMENTID=2000 ; for TEST in arr1d arr2d arr3d audio_clip avl bintree book_sn
 	ASSIGNMENTID=`expr $ASSIGNMENTID + 1`; \
 done
 java arr1d 2000 bridges_testing 1321549621122 live
-
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2000/bridges_testing
-
-
 java arr2d 2001 bridges_testing 1321549621122 live
-
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2001/bridges_testing
-
-
 java arr3d 2002 bridges_testing 1321549621122 live
-
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2002/bridges_testing
-
-
 java audio_clip 2003 bridges_testing 1321549621122 live
 Error: Could not find or load main class audio_clip
 Caused by: java.lang.ClassNotFoundException: audio_clip
@@ -225,111 +207,15 @@ ASSIGNMENTID=2100 ; for TEST in bst_eq bst_games bst_gutenberg bst_shakespeare g
 	ASSIGNMENTID=`expr $ASSIGNMENTID + 1`; \
 done
 Testing bst_eq
-
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2100/bridges_testing
-
-
 Testing bst_games
-
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2101/bridges_testing
-
-
 Testing bst_gutenberg
-
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2102/bridges_testing
-
-
 Testing bst_shakespeare
-
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2103/bridges_testing
-
-
 Testing graph_bacon_number
-
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2104/bridges_testing
-
-
 Testing graph_eq
-
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2105/bridges_testing
-
-
-
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2105/bridges_testing
-
-
-
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2105/bridges_testing
-
-
 Testing graph_imdb_by_genre
-
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2106/bridges_testing
-
-
 Testing grid_from_bridges
-
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2107/bridges_testing
-
-
-
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2107/bridges_testing
-
-
 Testing grid_lyrics
-
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2108/bridges_testing
-
-
-
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2108/bridges_testing
-
-
 Testing grid_square_fill
-
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2109/bridges_testing
-
-
 Testing list_eq
-
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2110/bridges_testing
-
-
 Testing list_imdb
-
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2111/bridges_testing
-
-
 make[1]: Leaving directory '/home/bridges-testing/bridges-client-testing/java/data_src_dependent'
