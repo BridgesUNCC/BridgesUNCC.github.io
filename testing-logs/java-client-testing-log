@@ -36,8 +36,9 @@ unifdef -DTESTING=1 -o ../web_tutorial_testing/shakespeare_snippet.java shakespe
 unifdef -DTESTING=1 -o ../web_tutorial_testing/shape_collection.java shape_collection.java ; [ $? != 2 ]
 unifdef -DTESTING=1 -o ../web_tutorial_testing/sllist.java sllist.java ; [ $? != 2 ]
 unifdef -DTESTING=1 -o ../web_tutorial_testing/song_lyrics_snippet.java song_lyrics_snippet.java ; [ $? != 2 ]
+unifdef -DTESTING=1 -o ../web_tutorial_testing/song_snippet.java song_snippet.java ; [ $? != 2 ]
 unifdef -DTESTING=1 -o ../web_tutorial_testing/sortingbenchmark.java sortingbenchmark.java ; [ $? != 2 ]
-unifdef -DTESTING=1 -o ../web_tutorial_testing/vis_example.java vis_example.java ; [ $? != 2 ]
+unifdef -DTESTING=1 -o ../web_tutorial_testing/tree.java tree.java ; [ $? != 2 ]
 make[1]: Leaving directory '/home/bridges-testing/bridges-client-testing/java/web_tutorial_mastercopy'
 cd java/web_tutorial_testing; make; make run;
 make[1]: Entering directory '/home/bridges-testing/bridges-client-testing/java/web_tutorial_testing'
@@ -73,8 +74,14 @@ ASSIGNMENTID=2000 ; for TEST in arr1d arr2d arr3d audio_clip avl bintree book_sn
 	ASSIGNMENTID=`expr $ASSIGNMENTID + 1`; \
 done
 java arr1d 2000 bridges_testing 1321549621122 live
+There was a problem sending the visualization representation to the server. 
+Received an empty JSON response from the server. 
 java arr2d 2001 bridges_testing 1321549621122 live
+There was a problem sending the visualization representation to the server. 
+Received an empty JSON response from the server. 
 java arr3d 2002 bridges_testing 1321549621122 live
+There was a problem sending the visualization representation to the server. 
+Received an empty JSON response from the server. 
 java audio_clip 2003 bridges_testing 1321549621122 live
 Error: Could not find or load main class audio_clip
 Caused by: java.lang.ClassNotFoundException: audio_clip
@@ -206,15 +213,75 @@ ASSIGNMENTID=2100 ; for TEST in bst_eq bst_games bst_gutenberg bst_shakespeare g
 	ASSIGNMENTID=`expr $ASSIGNMENTID + 1`; \
 done
 Testing bst_eq
+There was a problem sending the visualization representation to the server. 
+Received an empty JSON response from the server. 
 Testing bst_games
+There was a problem sending the visualization representation to the server. 
+Received an empty JSON response from the server. 
 Testing bst_gutenberg
+There was a problem sending the visualization representation to the server. 
+Received an empty JSON response from the server. 
 Testing bst_shakespeare
+There was a problem sending the visualization representation to the server. 
+Received an empty JSON response from the server. 
 Testing graph_bacon_number
+There was a problem sending the visualization representation to the server. 
+Received an empty JSON response from the server. 
 Testing graph_eq
+There was a problem sending the visualization representation to the server. 
+Received an empty JSON response from the server. 
+There was a problem sending the visualization representation to the server. 
+Received an empty JSON response from the server. 
+There was a problem sending the visualization representation to the server. 
+Received an empty JSON response from the server. 
 Testing graph_imdb_by_genre
+There was a problem sending the visualization representation to the server. 
+Received an empty JSON response from the server. 
 Testing grid_from_bridges
+There was a problem sending the visualization representation to the server. 
+Received an empty JSON response from the server. 
+Exception in thread "main" org.apache.http.client.HttpResponseException: HTTP Request Failed. Error Code: 503. Message: <!DOCTYPE html>
+	<html>
+	  <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+		<title>Application Error</title>
+		<style media="screen">
+		  html,body,iframe {
+			margin: 0;
+			padding: 0;
+		  }
+		  html,body {
+			height: 100%;
+			overflow: hidden;
+		  }
+		  iframe {
+			width: 100%;
+			height: 100%;
+			border: 0;
+		  }
+		</style>
+	  </head>
+	  <body>
+		<iframe src="//www.herokucdn.com/error-pages/application-error.html"></iframe>
+	  </body>
+	</html>
+	at bridges.connect.DataFormatter.getAssignment(DataFormatter.java:1106)
+	at bridges.connect.DataFormatter.getColorGridFromAssignment(DataFormatter.java:974)
+	at bridges.connect.DataSource.getColorGridFromAssignment(DataSource.java:351)
+	at grid_from_bridges.main(grid_from_bridges.java:34)
 Testing grid_lyrics
+There was a problem sending the visualization representation to the server. 
+Received an empty JSON response from the server. 
+There was a problem sending the visualization representation to the server. 
+Received an empty JSON response from the server. 
 Testing grid_square_fill
+There was a problem sending the visualization representation to the server. 
+Received an empty JSON response from the server. 
 Testing list_eq
+There was a problem sending the visualization representation to the server. 
+Received an empty JSON response from the server. 
 Testing list_imdb
+There was a problem sending the visualization representation to the server. 
+Received an empty JSON response from the server. 
 make[1]: Leaving directory '/home/bridges-testing/bridges-client-testing/java/data_src_dependent'
