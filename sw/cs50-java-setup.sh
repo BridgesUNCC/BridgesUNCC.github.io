@@ -4,11 +4,11 @@ wget http://bridgesuncc.github.io/sw/bridges-java-3.1.0.jar -O ~/bridges-java.ja
 
 cat >> ~/.profile <<EOF
 
-if [ "$CLASSPATH" = "" ] ;
+if [ "\${CLASSPATH}" = "" ] ;
 then
 	export CLASSPATH=.:~/bridges-java.jar
 else
-	export CLASSPATH=${CLASSPATH}:~/bridges-java.jar
+	export CLASSPATH=\${CLASSPATH}:~/bridges-java.jar
 fi
 
 EOF
