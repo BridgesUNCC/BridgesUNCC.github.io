@@ -38,7 +38,7 @@ unifdef -DTESTING=1 -o ../web_tutorial_testing/sllist.java sllist.java ; [ $? !=
 unifdef -DTESTING=1 -o ../web_tutorial_testing/song_lyrics_snippet.java song_lyrics_snippet.java ; [ $? != 2 ]
 unifdef -DTESTING=1 -o ../web_tutorial_testing/song_snippet.java song_snippet.java ; [ $? != 2 ]
 unifdef -DTESTING=1 -o ../web_tutorial_testing/sortingbenchmark.java sortingbenchmark.java ; [ $? != 2 ]
-unifdef -DTESTING=1 -o ../web_tutorial_testing/vis_example.java vis_example.java ; [ $? != 2 ]
+unifdef -DTESTING=1 -o ../web_tutorial_testing/tree.java tree.java ; [ $? != 2 ]
 make[1]: Leaving directory '/home/bridges-testing/bridges-client-testing/java/web_tutorial_mastercopy'
 cd java/web_tutorial_testing; make; make run;
 make[1]: Entering directory '/home/bridges-testing/bridges-client-testing/java/web_tutorial_testing'
@@ -46,26 +46,38 @@ javac arr1d.java
 javac arr2d.java
 javac arr3d.java
 javac audio_clip.java
-audio_clip.java:18: error: cannot find symbol
-	public static void main(String[] args) throws IOException, WavFileException, RateLimitException {
-	                                                           ^
-  symbol:   class WavFileException
-  location: class audio_clip
-audio_clip.java:19: error: cannot find symbol
-		Bridges bridges = new Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
-		                              ^
-  symbol:   variable YOUR_ASSSIGNMENT_NUMBER
-  location: class audio_clip
-audio_clip.java:23: error: no suitable constructor found for AudioClip(int)
-	    AudioClip ac = new AudioClip(44100*5);
-	                   ^
-    constructor AudioClip.AudioClip(WavFile) is not applicable
-      (argument mismatch; int cannot be converted to WavFile)
-    constructor AudioClip.AudioClip(String) is not applicable
-      (argument mismatch; int cannot be converted to String)
-Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
-3 errors
-make[1]: *** [Makefile:29: audio_clip.class] Error 1
+javac avl.java
+javac bintree.java
+javac book_snippet.java
+javac bst.java
+javac bst_eq.java
+javac cancer_snippet.java
+javac cdllist.java
+javac color_grid.java
+javac csllist.java
+javac dllist.java
+javac elevation_snippet.java
+javac eq_snippet.java
+javac face_shp_coll.java
+javac game_snippet.java
+javac graph_al.java
+javac graph_am.java
+javac graph_maps.java
+javac guttenberg_snippet.java
+javac imdb_snippet.java
+javac kdt.java
+javac linechart.java
+javac mixed_assignments.java
+javac mllist.java
+javac osm_snippet.java
+javac shakespeare_snippet.java
+javac shape_collection.java
+javac sllist.java
+javac song_lyrics_snippet.java
+javac song_snippet.java
+javac sortingbenchmark.java
+javac tree.java
+javac vis_example.java
 make[1]: Leaving directory '/home/bridges-testing/bridges-client-testing/java/web_tutorial_testing'
 make[1]: Entering directory '/home/bridges-testing/bridges-client-testing/java/web_tutorial_testing'
 ASSIGNMENTID=2000 ; for TEST in arr1d arr2d arr3d audio_clip avl bintree book_snippet bst bst_eq cancer_snippet cdllist color_grid csllist dllist elevation_snippet eq_snippet face_shp_coll game_snippet graph_al graph_am graph_maps guttenberg_snippet imdb_snippet kdt linechart mixed_assignments mllist osm_snippet shakespeare_snippet shape_collection sllist song_lyrics_snippet song_snippet sortingbenchmark tree vis_example; do \
@@ -95,104 +107,444 @@ http://bridges-cs.herokuapp.com/assignments/2002/bridges_testing
 
 
 java audio_clip 2003 bridges_testing 1321549621122 live
-Error: Could not find or load main class audio_clip
-Caused by: java.lang.ClassNotFoundException: audio_clip
+
+Check Your Visualization at the following link:
+
+http://bridges-clone.herokuapp.com/assignments/2003/bridges_testing
+
+
 java avl 2004 bridges_testing 1321549621122 live
-Error: Could not find or load main class avl
-Caused by: java.lang.ClassNotFoundException: avl
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2004/bridges_testing
+
+
 java bintree 2005 bridges_testing 1321549621122 live
-Error: Could not find or load main class bintree
-Caused by: java.lang.ClassNotFoundException: bintree
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2005/bridges_testing
+
+
 java book_snippet 2006 bridges_testing 1321549621122 live
-Error: Could not find or load main class book_snippet
-Caused by: java.lang.ClassNotFoundException: book_snippet
+Survival Type
+Bone, Jesse F. (Jesse Franklin)
+[]
 java bst 2007 bridges_testing 1321549621122 live
-Error: Could not find or load main class bst
-Caused by: java.lang.ClassNotFoundException: bst
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2007/bridges_testing
+
+
 java bst_eq 2008 bridges_testing 1321549621122 live
-Error: Could not find or load main class bst_eq
-Caused by: java.lang.ClassNotFoundException: bst_eq
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2008/bridges_testing
+
+
 java cancer_snippet 2009 bridges_testing 1321549621122 live
-Error: Could not find or load main class cancer_snippet
-Caused by: java.lang.ClassNotFoundException: cancer_snippet
+16512
+Incident 0:
+	Type: Mortality
+	Year: 1999
+	Population: 472739
+	Race: White
+	Gender: Male and Female
+	CrudeRate: 186.1(more rate information available) 
+	Location: 42.7475, -107.2085
+	Count: 0
 java cdllist 2010 bridges_testing 1321549621122 live
-Error: Could not find or load main class cdllist
-Caused by: java.lang.ClassNotFoundException: cdllist
+Using foreach range loop.
+	Gretel Chaney
+	Lamont Kyler
+	Gladys Serino
+	Karol Soderman
+	Starr McGinn
+Using iterators..
+	Gretel Chaney
+	Lamont Kyler
+	Gladys Serino
+	Karol Soderman
+	Starr McGinn
+Using reverse iterator..
+	Gretel Chaney
+	Starr McGinn
+	Karol Soderman
+	Gladys Serino
+	Lamont Kyler
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2010/bridges_testing
+
+
 java color_grid 2011 bridges_testing 1321549621122 live
-Error: Could not find or load main class color_grid
-Caused by: java.lang.ClassNotFoundException: color_grid
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2011/bridges_testing
+
+
 java csllist 2012 bridges_testing 1321549621122 live
-Error: Could not find or load main class csllist
-Caused by: java.lang.ClassNotFoundException: csllist
+Using iterators..
+	Gretel Chaney
+	Lamont Kyler
+	Gladys Serino
+	Karol Soderman
+	Starr McGinn
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2012/bridges_testing
+
+
 java dllist 2013 bridges_testing 1321549621122 live
-Error: Could not find or load main class dllist
-Caused by: java.lang.ClassNotFoundException: dllist
+Using range for loop:
+	 Gretel Chaney
+	 Lamont Kyler
+	 Gladys Serino
+	 Karol Soderman
+	 Starr McGinn
+Using forward iterators..
+	Gretel Chaney
+	Lamont Kyler
+	Gladys Serino
+	Karol Soderman
+	Starr McGinn
+Using reverse iterator..
+	Starr McGinn
+	Karol Soderman
+	Gladys Serino
+	Lamont Kyler
+	Gretel Chaney
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2013/bridges_testing
+
+
 java elevation_snippet 2014 bridges_testing 1321549621122 live
-Error: Could not find or load main class elevation_snippet
-Caused by: java.lang.ClassNotFoundException: elevation_snippet
+Exception in thread "main" java.net.UnknownHostException: cci-bridges-elevation-t.dyn.uncc.edu: Name or service not known
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:102)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:357)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:218)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:194)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:85)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at bridges.connect.DataFormatter.makeRequest(DataFormatter.java:579)
+	at bridges.connect.DataFormatter.getElevationData(DataFormatter.java:1330)
+	at bridges.connect.DataSource.getElevationData(DataSource.java:303)
+	at elevation_snippet.main(elevation_snippet.java:17)
 java eq_snippet 2015 bridges_testing 1321549621122 live
-Error: Could not find or load main class eq_snippet
-Caused by: java.lang.ClassNotFoundException: eq_snippet
+Earthquake 0:
+	Magnitude:0.99
+	Date:Jul 10 2020  03:12:09.980 EDT
+	Location: 14km SW of Searles Valley, CA
+	Lat/Long:35.6776667,-117.5171667
 java face_shp_coll 2016 bridges_testing 1321549621122 live
-Error: Could not find or load main class face_shp_coll
-Caused by: java.lang.ClassNotFoundException: face_shp_coll
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2016/bridges_testing
+
+
 java game_snippet 2017 bridges_testing 1321549621122 live
-Error: Could not find or load main class game_snippet
-Caused by: java.lang.ClassNotFoundException: game_snippet
+Galidor: Defenders of the Outer Dimension 
+Game Boy Advance
+4.0
+[Action]
 java graph_al 2018 bridges_testing 1321549621122 live
-Error: Could not find or load main class graph_al
-Caused by: java.lang.ClassNotFoundException: graph_al
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2018/bridges_testing
+
+
 java graph_am 2019 bridges_testing 1321549621122 live
-Error: Could not find or load main class graph_am
-Caused by: java.lang.ClassNotFoundException: graph_am
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2019/bridges_testing
+
+
 java graph_maps 2020 bridges_testing 1321549621122 live
-Error: Could not find or load main class graph_maps
-Caused by: java.lang.ClassNotFoundException: graph_maps
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2020/bridges_testing
+
+
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2020/bridges_testing
+
+
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2020/bridges_testing
+
+
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2020/bridges_testing
+
+
 java guttenberg_snippet 2021 bridges_testing 1321549621122 live
-Error: Could not find or load main class guttenberg_snippet
-Caused by: java.lang.ClassNotFoundException: guttenberg_snippet
+Captain Cook's Journal During His First Voyage Round the World: Made in H. M. Bark 'Endeavour', 1768-71
+Cook, James
+[early works to 1800]
 java imdb_snippet 2022 bridges_testing 1321549621122 live
-Error: Could not find or load main class imdb_snippet
-Caused by: java.lang.ClassNotFoundException: imdb_snippet
+Cary_Grant
+That's_Entertainment!_(1974)
 java kdt 2023 bridges_testing 1321549621122 live
-Error: Could not find or load main class kdt
-Caused by: java.lang.ClassNotFoundException: kdt
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2023/bridges_testing
+
+
 java linechart 2024 bridges_testing 1321549621122 live
-Error: Could not find or load main class linechart
-Caused by: java.lang.ClassNotFoundException: linechart
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2024/bridges_testing
+
+
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2024/bridges_testing
+
+
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2024/bridges_testing
+
+
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2024/bridges_testing
+
+
 java mixed_assignments 2025 bridges_testing 1321549621122 live
-Error: Could not find or load main class mixed_assignments
-Caused by: java.lang.ClassNotFoundException: mixed_assignments
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2025/bridges_testing
+
+
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2025/bridges_testing
+
+
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2025/bridges_testing
+
+
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2025/bridges_testing
+
+
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2025/bridges_testing
+
+
 java mllist 2026 bridges_testing 1321549621122 live
-Error: Could not find or load main class mllist
-Caused by: java.lang.ClassNotFoundException: mllist
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2026/bridges_testing
+
+
 java osm_snippet 2027 bridges_testing 1321549621122 live
-Error: Could not find or load main class osm_snippet
-Caused by: java.lang.ClassNotFoundException: osm_snippet
+Number of Vertices [Charlotte]:10246
+Number of Edges [Charlotte]:16299
+Location of first vertex [Cartesian Coord]: 827.1273231300758,-5144.073405550668
 java shakespeare_snippet 2028 bridges_testing 1321549621122 live
-Error: Could not find or load main class shakespeare_snippet
-Caused by: java.lang.ClassNotFoundException: shakespeare_snippet
+Sonnet 17
+poem
+Who will believe my verse in time to come
+ If it were filled with your most high deserts?
+ Though ye...
 java shape_collection 2029 bridges_testing 1321549621122 live
-Error: Could not find or load main class shape_collection
-Caused by: java.lang.ClassNotFoundException: shape_collection
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2029/bridges_testing
+
+
 java sllist 2030 bridges_testing 1321549621122 live
-Error: Could not find or load main class sllist
-Caused by: java.lang.ClassNotFoundException: sllist
+Using range for loop:
+	 Gretel Chaney
+	 Lamont Kyler
+	 Gladys Serino
+	 Karol Soderman
+	 Starr McGinn
+Using iterators..
+	Gretel Chaney
+	Lamont Kyler
+	Gladys Serino
+	Karol Soderman
+	Starr McGinn
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2030/bridges_testing
+
+
 java song_lyrics_snippet 2031 bridges_testing 1321549621122 live
-Error: Could not find or load main class song_lyrics_snippet
-Caused by: java.lang.ClassNotFoundException: song_lyrics_snippet
+Harder, Better, Faster, Stronger
+Daft Punk
+Discovery
+2001-02-26
+
+
+[Intro]
+Work it, make it
+Do it, makes us
+Harder, better
+Faster, stronger
+More than, hour
+Hour, never
+Ever, after
+Work is, over
+Work it, make it
+Do it, makes us
+Harder, better
+Faster, stronger
+
+[Chorus 1]
+Work it harder, make it better
+Do it faster, makes us stronger
+More than ever, hour after hour
+Work is never over
+Work it harder, make it better
+Do it faster, makes us stronger
+More than ever, hour after hour
+Work is never over
+Work it harder, make it better
+Do it faster, makes us stronger
+More than ever, hour after hour
+Work is never over
+Work it harder, make it better
+Do it faster, makes us stronger
+More than ever, hour after hour
+Work is never over
+Work it harder, make it better
+Do it faster, makes us stronger
+More than ever, hour after hour
+Work is never over
+Work it harder, make it better
+Do it faster, makes us
+More than ever, hour after hour
+Work is never over
+Work it harder, make it better
+Do it faster, makes us stronger
+More than ever, hour after hour
+Work is never over
+
+[Chorus 2]
+Work it harder, make it
+Do it faster, makes us
+More than ever, hour after hour
+Work is never over
+Work it harder, make it better
+Do it faster, makes us stronger
+More than ever, hour after hour
+Work is never over
+Work it, make it better
+Do it faster, makes us stronger
+More than ever, hour after hour
+Work is never over
+Work it harder, make it better
+Do it faster, makes us stronger
+More than ever, hour after hour
+Work is never over
+Work it harder, make it better
+Do it faster, makes us stronger
+More than ever, hour after hour
+Work is never over
+
+[Outro]
+Work it harder
+Do it faster
+More than ever, hour
+Work is never over
+Work it harder, make it better
+Do it faster, makes us stronger
+More than ever, hour after hour
+Work is never over
+
+
 java song_snippet 2032 bridges_testing 1321549621122 live
-Error: Could not find or load main class song_snippet
-Caused by: java.lang.ClassNotFoundException: song_snippet
+B.O.B
+OutKast
+Stankonia
+2000-09-19
+
+
+[Intro: André 3000]
+One, two
+One, two, three, yeah!
+
+[Verse 1: Andre 3000]
+Inslumnational, undergr...
 java sortingbenchmark 2033 bridges_testing 1321549621122 live
-Error: Could not find or load main class sortingbenchmark
-Caused by: java.lang.ClassNotFoundException: sortingbenchmark
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2033/bridges_testing
+
+
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2033/bridges_testing
+
+
 java tree 2034 bridges_testing 1321549621122 live
-Error: Could not find or load main class tree
-Caused by: java.lang.ClassNotFoundException: tree
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2034/bridges_testing
+
+
 java vis_example 2035 bridges_testing 1321549621122 live
-Error: Could not find or load main class vis_example
-Caused by: java.lang.ClassNotFoundException: vis_example
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2035/bridges_testing
+
+
 make[1]: Leaving directory '/home/bridges-testing/bridges-client-testing/java/web_tutorial_testing'
 cd java/data_src_dependent; make; make run;
 make[1]: Entering directory '/home/bridges-testing/bridges-client-testing/java/data_src_dependent'
