@@ -38,7 +38,7 @@ unifdef -DTESTING=1 -o ../web_tutorial_testing/sllist.java sllist.java ; [ $? !=
 unifdef -DTESTING=1 -o ../web_tutorial_testing/song_lyrics_snippet.java song_lyrics_snippet.java ; [ $? != 2 ]
 unifdef -DTESTING=1 -o ../web_tutorial_testing/song_snippet.java song_snippet.java ; [ $? != 2 ]
 unifdef -DTESTING=1 -o ../web_tutorial_testing/sortingbenchmark.java sortingbenchmark.java ; [ $? != 2 ]
-unifdef -DTESTING=1 -o ../web_tutorial_testing/tree.java tree.java ; [ $? != 2 ]
+unifdef -DTESTING=1 -o ../web_tutorial_testing/vis_example.java vis_example.java ; [ $? != 2 ]
 make[1]: Leaving directory '/home/bridges-testing/bridges-client-testing/java/web_tutorial_mastercopy'
 cd java/web_tutorial_testing; make; make run;
 make[1]: Entering directory '/home/bridges-testing/bridges-client-testing/java/web_tutorial_testing'
@@ -76,7 +76,7 @@ javac sllist.java
 javac song_lyrics_snippet.java
 javac song_snippet.java
 javac sortingbenchmark.java
-javac tree.java
+javac vis_example.java
 make[1]: Leaving directory '/home/bridges-testing/bridges-client-testing/java/web_tutorial_testing'
 make[1]: Entering directory '/home/bridges-testing/bridges-client-testing/java/web_tutorial_testing'
 ASSIGNMENTID=2000 ; for TEST in arr1d arr2d arr3d audio_clip avl bintree book_snippet bst bst_eq cancer_snippet cdllist color_grid csllist dllist elevation_snippet eq_snippet face_shp_coll game_snippet graph_al graph_am graph_maps guttenberg_snippet imdb_snippet kdt linechart mixed_assignments mllist osm_snippet shakespeare_snippet shape_collection sllist song_lyrics_snippet song_snippet sortingbenchmark tree vis_example; do \
@@ -127,9 +127,9 @@ http://bridges-cs.herokuapp.com/assignments/2005/bridges_testing
 
 
 java book_snippet 2006 bridges_testing 1321549621122 live
-Cicero: Letters to Atticus, Volume III (of 3)
-Cicero, Marcus Tullius
-[]
+The Social Cancer: A Complete English Version of Noli Me Tangere
+Rizal, Jose
+[fiction, historical fiction]
 java bst 2007 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -252,10 +252,10 @@ Exception in thread "main" java.net.UnknownHostException: cci-bridges-elevation-
 	at elevation_snippet.main(elevation_snippet.java:17)
 java eq_snippet 2015 bridges_testing 1321549621122 live
 Earthquake 0:
-	Magnitude:1.2
-	Date:Jul 12 2020  03:15:14.938 EDT
-	Location: 49 km NW of Stevens Village, Alaska
-	Lat/Long:66.2818,-149.9378
+	Magnitude:1.5
+	Date:Jul 13 2020  03:21:07.380 EDT
+	Location: 27 km SSE of Mina, Nevada
+	Lat/Long:38.149,-118.0337
 java face_shp_coll 2016 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -264,10 +264,10 @@ http://bridges-cs.herokuapp.com/assignments/2016/bridges_testing
 
 
 java game_snippet 2017 bridges_testing 1321549621122 live
-Iron Warriors: T-72 Tank Commander
-PC
-6.0
-[Simulation]
+Madagascar: Escape 2 Africa
+PlayStation 3
+4.7
+[Platformer]
 java graph_al 2018 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -308,12 +308,12 @@ http://bridges-cs.herokuapp.com/assignments/2020/bridges_testing
 
 
 java guttenberg_snippet 2021 bridges_testing 1321549621122 live
-Les Fleurs du Mal
-Baudelaire, Charles
-[poetry]
+David Copperfield
+Dickens, Charles
+[fiction, bildungsromans, autobiographical fiction]
 java imdb_snippet 2022 bridges_testing 1321549621122 live
-James_Stewart_(I)
-'Rear_Window'_Ethics:_Remembering_and_Restoring_a_Hitchcock_Classic_(2000)
+Ann_Pala
+Adam_Sandler_Goes_to_Hell_(2001)
 java kdt 2023 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -389,11 +389,11 @@ Number of Vertices [Charlotte]:10246
 Number of Edges [Charlotte]:16299
 Location of first vertex [Cartesian Coord]: 827.1273231300758,-5144.073405550668
 java shakespeare_snippet 2028 bridges_testing 1321549621122 live
-Sonnet 18
+Sonnet 44
 poem
-Shall I compare thee to a summer's day?
- Thou art more lovely and more temperate:
- Rough winds do sh...
+If the dull substance of my flesh were thought,
+ Injurious distance should not stop my way,
+ For the...
 java shape_collection 2029 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -505,15 +505,16 @@ Work is never over
 
 
 java song_snippet 2032 bridges_testing 1321549621122 live
-Take It Easy
-Eagles
-Eagles
-1972-05-01
+Too Good at Goodbyes
+Sam Smith
+The Thrill of It All
+2017-09-08
 
 
 [Verse 1]
-Well, I'm running down the road tryin' to loosen my load
-I've got seven women on my mind...
+You must think that I'm stupid
+You must think that I'm a fool
+You must think that I'm ne...
 java sortingbenchmark 2033 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
