@@ -37,8 +37,7 @@ unifdef -DTESTING=1 -o ../web_tutorial_testing/shape_collection.java shape_colle
 unifdef -DTESTING=1 -o ../web_tutorial_testing/sllist.java sllist.java ; [ $? != 2 ]
 unifdef -DTESTING=1 -o ../web_tutorial_testing/song_lyrics_snippet.java song_lyrics_snippet.java ; [ $? != 2 ]
 unifdef -DTESTING=1 -o ../web_tutorial_testing/song_snippet.java song_snippet.java ; [ $? != 2 ]
-unifdef -DTESTING=1 -o ../web_tutorial_testing/sortingbenchmark.java sortingbenchmark.java ; [ $? != 2 ]
-unifdef -DTESTING=1 -o ../web_tutorial_testing/tree.java tree.java ; [ $? != 2 ]
+unifdef -DTESTING=1 -o ../web_tutorial_testing/vis_example.java vis_example.java ; [ $? != 2 ]
 make[1]: Leaving directory '/home/bridges-testing/bridges-client-testing/java/web_tutorial_mastercopy'
 cd java/web_tutorial_testing; make; make run;
 make[1]: Entering directory '/home/bridges-testing/bridges-client-testing/java/web_tutorial_testing'
@@ -75,8 +74,7 @@ javac shape_collection.java
 javac sllist.java
 javac song_lyrics_snippet.java
 javac song_snippet.java
-javac sortingbenchmark.java
-javac tree.java
+javac vis_example.java
 make[1]: Leaving directory '/home/bridges-testing/bridges-client-testing/java/web_tutorial_testing'
 make[1]: Entering directory '/home/bridges-testing/bridges-client-testing/java/web_tutorial_testing'
 ASSIGNMENTID=2000 ; for TEST in arr1d arr2d arr3d audio_clip avl bintree book_snippet bst bst_eq cancer_snippet cdllist color_grid csllist dllist elevation_snippet eq_snippet face_shp_coll game_snippet graph_al graph_am graph_maps guttenberg_snippet imdb_snippet kdt linechart mixed_assignments mllist osm_snippet shakespeare_snippet shape_collection sllist song_lyrics_snippet song_snippet sortingbenchmark tree vis_example; do \
@@ -127,9 +125,9 @@ http://bridges-cs.herokuapp.com/assignments/2005/bridges_testing
 
 
 java book_snippet 2006 bridges_testing 1321549621122 live
-The Elder Eddas of Saemund Sigfusson; and the Younger Eddas of Snorre Sturleson
-Snorri Sturluson
-[mythology, norse, scalds and scaldic poetry]
+A Discourse Upon the Origin and the Foundation of the Inequality Among Mankind
+Rousseau, Jean-Jacques
+[natural law, equality, political science]
 java bst 2007 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -252,10 +250,10 @@ Exception in thread "main" java.net.UnknownHostException: cci-bridges-elevation-
 	at elevation_snippet.main(elevation_snippet.java:17)
 java eq_snippet 2015 bridges_testing 1321549621122 live
 Earthquake 0:
-	Magnitude:1.01
-	Date:Jul 14 2020  03:11:01.790 EDT
-	Location: 17km E of Little Lake, CA
-	Lat/Long:35.9205,-117.72
+	Magnitude:1.03
+	Date:Jul 15 2020  02:57:16.320 EDT
+	Location: 7km ENE of Moreno Valley, CA
+	Lat/Long:33.9601669,-117.1628342
 java face_shp_coll 2016 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -264,10 +262,10 @@ http://bridges-cs.herokuapp.com/assignments/2016/bridges_testing
 
 
 java game_snippet 2017 bridges_testing 1321549621122 live
-Massive Snowboarding
+Bliss
 Wireless
-9.0
-[Racing]
+6.7
+[Puzzle]
 java graph_al 2018 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -308,12 +306,12 @@ http://bridges-cs.herokuapp.com/assignments/2020/bridges_testing
 
 
 java guttenberg_snippet 2021 bridges_testing 1321549621122 live
-The Romance of Tristan and Iseult
-Bedier, Joseph
-[adaptations]
+Siddhartha: eine indische Dichtung
+Hesse, Hermann
+[fiction, religious fiction]
 java imdb_snippet 2022 bridges_testing 1321549621122 live
-Christina_Ricci
-Souvenir_(1998)
+James_Stewart_(I)
+How_the_West_Was_Won_(1962)
 java kdt 2023 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -389,11 +387,11 @@ Number of Vertices [Charlotte]:10246
 Number of Edges [Charlotte]:16299
 Location of first vertex [Cartesian Coord]: 827.1273231300758,-5144.073405550668
 java shakespeare_snippet 2028 bridges_testing 1321549621122 live
-Sonnet 127
+Sonnet 122
 poem
-In the old age black was not counted fair,
- Or if it were it bore not beauty's name:
- But now is bla...
+Thy gift, thy tables, are within my brain
+ Full charactered with lasting memory,
+ Which shall above ...
 java shape_collection 2029 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -505,20 +503,17 @@ Work is never over
 
 
 java song_snippet 2032 bridges_testing 1321549621122 live
-Lucid Dreams
-Juice WRLD
-JuiceWrld 9 9 9
-2017-07-01
+DasfasdfasdfdfaQrqwerqwerqewr
+XxxzsaQrqwerqwerqewr
+Qrqwerqwerqewrsdfsadffripcity
+2018-09-25
 
 
-[Intro]
-Enviyon on the mix
-No, no, no, no
-No-no, no, no, no
-No, no, no, no, no
-No, no, no, no
+[VERSE 1]
 
-[Ch...
+I'm a dragon, I ain't bragging
+You're the one who I keep draggin'!
+I'm the one whose on...
 java sortingbenchmark 2033 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
