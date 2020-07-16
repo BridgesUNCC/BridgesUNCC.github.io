@@ -36,8 +36,8 @@ unifdef -DTESTING=1 -o ../web_tutorial_testing/shakespeare_snippet.java shakespe
 unifdef -DTESTING=1 -o ../web_tutorial_testing/shape_collection.java shape_collection.java ; [ $? != 2 ]
 unifdef -DTESTING=1 -o ../web_tutorial_testing/sllist.java sllist.java ; [ $? != 2 ]
 unifdef -DTESTING=1 -o ../web_tutorial_testing/song_lyrics_snippet.java song_lyrics_snippet.java ; [ $? != 2 ]
-unifdef -DTESTING=1 -o ../web_tutorial_testing/song_snippet.java song_snippet.java ; [ $? != 2 ]
-unifdef -DTESTING=1 -o ../web_tutorial_testing/vis_example.java vis_example.java ; [ $? != 2 ]
+unifdef -DTESTING=1 -o ../web_tutorial_testing/sortingbenchmark.java sortingbenchmark.java ; [ $? != 2 ]
+unifdef -DTESTING=1 -o ../web_tutorial_testing/tree.java tree.java ; [ $? != 2 ]
 make[1]: Leaving directory '/home/bridges-testing/bridges-client-testing/java/web_tutorial_mastercopy'
 cd java/web_tutorial_testing; make; make run;
 make[1]: Entering directory '/home/bridges-testing/bridges-client-testing/java/web_tutorial_testing'
@@ -45,36 +45,12 @@ javac arr1d.java
 javac arr2d.java
 javac arr3d.java
 javac audio_clip.java
-javac avl.java
-javac bintree.java
-javac book_snippet.java
-javac bst.java
-javac bst_eq.java
-javac cancer_snippet.java
-javac cdllist.java
-javac color_grid.java
-javac csllist.java
-javac dllist.java
-javac elevation_snippet.java
-javac eq_snippet.java
-javac face_shp_coll.java
-javac game_snippet.java
-javac graph_al.java
-javac graph_am.java
-javac graph_maps.java
-javac guttenberg_snippet.java
-javac imdb_snippet.java
-javac kdt.java
-javac linechart.java
-javac mixed_assignments.java
-javac mllist.java
-javac osm_snippet.java
-javac shakespeare_snippet.java
-javac shape_collection.java
-javac sllist.java
-javac song_lyrics_snippet.java
-javac song_snippet.java
-javac vis_example.java
+audio_clip.java:30: error: incompatible types: possible lossy conversion from double to int
+            AudioClip ac = new AudioClip(44100*.25, 1, 32, 44100);
+                                              ^
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+1 error
+make[1]: *** [Makefile:29: audio_clip.class] Error 1
 make[1]: Leaving directory '/home/bridges-testing/bridges-client-testing/java/web_tutorial_testing'
 make[1]: Entering directory '/home/bridges-testing/bridges-client-testing/java/web_tutorial_testing'
 ASSIGNMENTID=2000 ; for TEST in arr1d arr2d arr3d audio_clip avl bintree book_snippet bst bst_eq cancer_snippet cdllist color_grid csllist dllist elevation_snippet eq_snippet face_shp_coll game_snippet graph_al graph_am graph_maps guttenberg_snippet imdb_snippet kdt linechart mixed_assignments mllist osm_snippet shakespeare_snippet shape_collection sllist song_lyrics_snippet song_snippet sortingbenchmark tree vis_example; do \
@@ -125,9 +101,9 @@ http://bridges-cs.herokuapp.com/assignments/2005/bridges_testing
 
 
 java book_snippet 2006 bridges_testing 1321549621122 live
-A Discourse Upon the Origin and the Foundation of the Inequality Among Mankind
-Rousseau, Jean-Jacques
-[natural law, equality, political science]
+The Old Curiosity Shop
+Dickens, Charles
+[fiction, didactic fiction, domestic fiction]
 java bst 2007 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -250,10 +226,10 @@ Exception in thread "main" java.net.UnknownHostException: cci-bridges-elevation-
 	at elevation_snippet.main(elevation_snippet.java:17)
 java eq_snippet 2015 bridges_testing 1321549621122 live
 Earthquake 0:
-	Magnitude:1.03
-	Date:Jul 15 2020  02:57:16.320 EDT
-	Location: 7km ENE of Moreno Valley, CA
-	Lat/Long:33.9601669,-117.1628342
+	Magnitude:1.7
+	Date:Jul 16 2020  03:19:48.016 EDT
+	Location: 35 km NNE of Whittier, Alaska
+	Lat/Long:61.0739,-148.4456
 java face_shp_coll 2016 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -262,10 +238,10 @@ http://bridges-cs.herokuapp.com/assignments/2016/bridges_testing
 
 
 java game_snippet 2017 bridges_testing 1321549621122 live
-Bliss
-Wireless
-6.7
-[Puzzle]
+Ultimate Hunt Challenge
+PC
+5.5
+[Hunting]
 java graph_al 2018 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -306,12 +282,12 @@ http://bridges-cs.herokuapp.com/assignments/2020/bridges_testing
 
 
 java guttenberg_snippet 2021 bridges_testing 1321549621122 live
-Siddhartha: eine indische Dichtung
-Hesse, Hermann
-[fiction, religious fiction]
+The Girls From Earth
+Robinson, Frank M.
+[]
 java imdb_snippet 2022 bridges_testing 1321549621122 live
-James_Stewart_(I)
-How_the_West_Was_Won_(1962)
+Daniel_Hansen
+Being_John_Malkovich_(1999)
 java kdt 2023 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -387,11 +363,18 @@ Number of Vertices [Charlotte]:10246
 Number of Edges [Charlotte]:16299
 Location of first vertex [Cartesian Coord]: 827.1273231300758,-5144.073405550668
 java shakespeare_snippet 2028 bridges_testing 1321549621122 live
-Sonnet 122
-poem
-Thy gift, thy tables, are within my brain
- Full charactered with lasting memory,
- Which shall above ...
+The Taming Of The Shrew
+play
+1594
+
+THE TAMING OF THE SHREW
+
+by William Shakespeare
+
+Dramatis Personae
+
+ Persons in the Induction
+...
 java shape_collection 2029 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -503,17 +486,16 @@ Work is never over
 
 
 java song_snippet 2032 bridges_testing 1321549621122 live
-DasfasdfasdfdfaQrqwerqwerqewr
-XxxzsaQrqwerqwerqewr
-Qrqwerqwerqewrsdfsadffripcity
-2018-09-25
+Never Be the Same
+Camila Cabello
+Camila
+2017-12-07
 
 
-[VERSE 1]
-
-I'm a dragon, I ain't bragging
-You're the one who I keep draggin'!
-I'm the one whose on...
+[Verse 1]
+Somethin' must've gone wrong in my brain
+Got your chemicals all in my veins
+Feelin' all ...
 java sortingbenchmark 2033 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:

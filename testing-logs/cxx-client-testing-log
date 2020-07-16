@@ -17,6 +17,7 @@ unifdef -DTESTING=1 -o ../web_tutorial_testing/circ_dllist.cpp circ_dllist.cpp ;
 unifdef -DTESTING=1 -o ../web_tutorial_testing/osm_snippet.cpp osm_snippet.cpp ; [ $? != 2 ]
 unifdef -DTESTING=1 -o ../web_tutorial_testing/graph_alist.cpp graph_alist.cpp ; [ $? != 2 ]
 unifdef -DTESTING=1 -o ../web_tutorial_testing/avl.cpp avl.cpp ; [ $? != 2 ]
+unifdef -DTESTING=1 -o ../web_tutorial_testing/audio_clip2.cpp audio_clip2.cpp ; [ $? != 2 ]
 unifdef -DTESTING=1 -o ../web_tutorial_testing/bintree.cpp bintree.cpp ; [ $? != 2 ]
 unifdef -DTESTING=1 -o ../web_tutorial_testing/game_snippet.cpp game_snippet.cpp ; [ $? != 2 ]
 unifdef -DTESTING=1 -o ../web_tutorial_testing/face_shp_coll.cpp face_shp_coll.cpp ; [ $? != 2 ]
@@ -48,57 +49,124 @@ g++ -g -o array2d array2d.cpp -g -I/home/bridges-testing/bridges-cxx-install/inc
 g++ -g -o array3d array3d.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
 g++ -g -o array_test array_test.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
 g++ -g -o audio_clip audio_clip.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
-g++ -g -o avl avl.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
-g++ -g -o bintree bintree.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
-g++ -g -o bst bst.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
-g++ -g -o cancer_snippet cancer_snippet.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
-g++ -g -o circ_dllist circ_dllist.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
-circ_dllist.cpp: In function ‘int main(int, char**)’:
-circ_dllist.cpp:49:2: error: ‘CircDLelement_List’ was not declared in this scope
-  CircDLelement_List<string> list(el0);
-  ^~~~~~~~~~~~~~~~~~
-circ_dllist.cpp:49:2: note: suggested alternative: ‘DLelement_H’
-  CircDLelement_List<string> list(el0);
-  ^~~~~~~~~~~~~~~~~~
-  DLelement_H
-circ_dllist.cpp:49:27: error: expected primary-expression before ‘>’ token
-  CircDLelement_List<string> list(el0);
-                           ^
-circ_dllist.cpp:49:29: error: ‘list’ was not declared in this scope
-  CircDLelement_List<string> list(el0);
-                             ^~~~
-circ_dllist.cpp:49:29: note: ‘std::list’ is defined in header ‘<list>’; did you forget to ‘#include <list>’?
-circ_dllist.cpp:8:1:
-+#include <list>
- #include <string>
-circ_dllist.cpp:49:29:
-  CircDLelement_List<string> list(el0);
-                             ^~~~
-make[1]: *** [Makefile:40: circ_dllist] Error 1
+audio_clip.cpp: In function ‘int main(int, char**)’:
+audio_clip.cpp:45:47: error: no matching function for call to ‘bridges::datastructure::AudioClip::AudioClip(const char [25])’
+      AudioClip ac2 ("../../data/clap-8bit.wav");
+                                               ^
+In file included from audio_clip.cpp:1:
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:27:13: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(int, int, int, int)’
+             AudioClip(int sampleCount, int numChannels, int sampleBits, int sampleRate) {
+             ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:27:13: note:   candidate expects 4 arguments, 1 provided
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(const bridges::datastructure::AudioClip&)’
+         class AudioClip : public DataStructure {
+               ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [25]’ to ‘const bridges::datastructure::AudioClip&’
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(bridges::datastructure::AudioClip&&)’
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [25]’ to ‘bridges::datastructure::AudioClip&&’
+audio_clip.cpp:51:48: error: no matching function for call to ‘bridges::datastructure::AudioClip::AudioClip(const char [26])’
+      AudioClip ac3 ("../../data/clap-16bit.wav");
+                                                ^
+In file included from audio_clip.cpp:1:
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:27:13: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(int, int, int, int)’
+             AudioClip(int sampleCount, int numChannels, int sampleBits, int sampleRate) {
+             ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:27:13: note:   candidate expects 4 arguments, 1 provided
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(const bridges::datastructure::AudioClip&)’
+         class AudioClip : public DataStructure {
+               ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [26]’ to ‘const bridges::datastructure::AudioClip&’
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(bridges::datastructure::AudioClip&&)’
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [26]’ to ‘bridges::datastructure::AudioClip&&’
+audio_clip.cpp:57:48: error: no matching function for call to ‘bridges::datastructure::AudioClip::AudioClip(const char [26])’
+      AudioClip ac4 ("../../data/clap-24bit.wav");
+                                                ^
+In file included from audio_clip.cpp:1:
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:27:13: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(int, int, int, int)’
+             AudioClip(int sampleCount, int numChannels, int sampleBits, int sampleRate) {
+             ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:27:13: note:   candidate expects 4 arguments, 1 provided
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(const bridges::datastructure::AudioClip&)’
+         class AudioClip : public DataStructure {
+               ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [26]’ to ‘const bridges::datastructure::AudioClip&’
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(bridges::datastructure::AudioClip&&)’
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [26]’ to ‘bridges::datastructure::AudioClip&&’
+audio_clip.cpp:65:48: error: no matching function for call to ‘bridges::datastructure::AudioClip::AudioClip(const char [26])’
+      AudioClip ac5 ("../../data/clap-32bit.wav");
+                                                ^
+In file included from audio_clip.cpp:1:
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:27:13: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(int, int, int, int)’
+             AudioClip(int sampleCount, int numChannels, int sampleBits, int sampleRate) {
+             ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:27:13: note:   candidate expects 4 arguments, 1 provided
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(const bridges::datastructure::AudioClip&)’
+         class AudioClip : public DataStructure {
+               ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [26]’ to ‘const bridges::datastructure::AudioClip&’
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(bridges::datastructure::AudioClip&&)’
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [26]’ to ‘bridges::datastructure::AudioClip&&’
+make[1]: *** [Makefile:40: audio_clip] Error 1
 make[1]: Leaving directory '/home/bridges-testing/bridges-client-testing/c++/web_tutorial_testing'
 make[1]: Entering directory '/home/bridges-testing/bridges-client-testing/c++/web_tutorial_testing'
-g++ -g -o circ_dllist circ_dllist.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
-circ_dllist.cpp: In function ‘int main(int, char**)’:
-circ_dllist.cpp:49:2: error: ‘CircDLelement_List’ was not declared in this scope
-  CircDLelement_List<string> list(el0);
-  ^~~~~~~~~~~~~~~~~~
-circ_dllist.cpp:49:2: note: suggested alternative: ‘DLelement_H’
-  CircDLelement_List<string> list(el0);
-  ^~~~~~~~~~~~~~~~~~
-  DLelement_H
-circ_dllist.cpp:49:27: error: expected primary-expression before ‘>’ token
-  CircDLelement_List<string> list(el0);
-                           ^
-circ_dllist.cpp:49:29: error: ‘list’ was not declared in this scope
-  CircDLelement_List<string> list(el0);
-                             ^~~~
-circ_dllist.cpp:49:29: note: ‘std::list’ is defined in header ‘<list>’; did you forget to ‘#include <list>’?
-circ_dllist.cpp:8:1:
-+#include <list>
- #include <string>
-circ_dllist.cpp:49:29:
-  CircDLelement_List<string> list(el0);
-                             ^~~~
-make[1]: *** [Makefile:40: circ_dllist] Error 1
+g++ -g -o audio_clip audio_clip.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
+audio_clip.cpp: In function ‘int main(int, char**)’:
+audio_clip.cpp:45:47: error: no matching function for call to ‘bridges::datastructure::AudioClip::AudioClip(const char [25])’
+      AudioClip ac2 ("../../data/clap-8bit.wav");
+                                               ^
+In file included from audio_clip.cpp:1:
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:27:13: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(int, int, int, int)’
+             AudioClip(int sampleCount, int numChannels, int sampleBits, int sampleRate) {
+             ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:27:13: note:   candidate expects 4 arguments, 1 provided
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(const bridges::datastructure::AudioClip&)’
+         class AudioClip : public DataStructure {
+               ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [25]’ to ‘const bridges::datastructure::AudioClip&’
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(bridges::datastructure::AudioClip&&)’
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [25]’ to ‘bridges::datastructure::AudioClip&&’
+audio_clip.cpp:51:48: error: no matching function for call to ‘bridges::datastructure::AudioClip::AudioClip(const char [26])’
+      AudioClip ac3 ("../../data/clap-16bit.wav");
+                                                ^
+In file included from audio_clip.cpp:1:
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:27:13: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(int, int, int, int)’
+             AudioClip(int sampleCount, int numChannels, int sampleBits, int sampleRate) {
+             ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:27:13: note:   candidate expects 4 arguments, 1 provided
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(const bridges::datastructure::AudioClip&)’
+         class AudioClip : public DataStructure {
+               ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [26]’ to ‘const bridges::datastructure::AudioClip&’
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(bridges::datastructure::AudioClip&&)’
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [26]’ to ‘bridges::datastructure::AudioClip&&’
+audio_clip.cpp:57:48: error: no matching function for call to ‘bridges::datastructure::AudioClip::AudioClip(const char [26])’
+      AudioClip ac4 ("../../data/clap-24bit.wav");
+                                                ^
+In file included from audio_clip.cpp:1:
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:27:13: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(int, int, int, int)’
+             AudioClip(int sampleCount, int numChannels, int sampleBits, int sampleRate) {
+             ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:27:13: note:   candidate expects 4 arguments, 1 provided
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(const bridges::datastructure::AudioClip&)’
+         class AudioClip : public DataStructure {
+               ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [26]’ to ‘const bridges::datastructure::AudioClip&’
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(bridges::datastructure::AudioClip&&)’
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [26]’ to ‘bridges::datastructure::AudioClip&&’
+audio_clip.cpp:65:48: error: no matching function for call to ‘bridges::datastructure::AudioClip::AudioClip(const char [26])’
+      AudioClip ac5 ("../../data/clap-32bit.wav");
+                                                ^
+In file included from audio_clip.cpp:1:
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:27:13: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(int, int, int, int)’
+             AudioClip(int sampleCount, int numChannels, int sampleBits, int sampleRate) {
+             ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:27:13: note:   candidate expects 4 arguments, 1 provided
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(const bridges::datastructure::AudioClip&)’
+         class AudioClip : public DataStructure {
+               ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [26]’ to ‘const bridges::datastructure::AudioClip&’
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(bridges::datastructure::AudioClip&&)’
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [26]’ to ‘bridges::datastructure::AudioClip&&’
+make[1]: *** [Makefile:40: audio_clip] Error 1
 make[1]: Leaving directory '/home/bridges-testing/bridges-client-testing/c++/web_tutorial_testing'
 make: *** [Makefile:21: make_c++] Error 2
