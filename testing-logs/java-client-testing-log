@@ -38,7 +38,7 @@ unifdef -DTESTING=1 -o ../web_tutorial_testing/sllist.java sllist.java ; [ $? !=
 unifdef -DTESTING=1 -o ../web_tutorial_testing/song_lyrics_snippet.java song_lyrics_snippet.java ; [ $? != 2 ]
 unifdef -DTESTING=1 -o ../web_tutorial_testing/song_snippet.java song_snippet.java ; [ $? != 2 ]
 unifdef -DTESTING=1 -o ../web_tutorial_testing/sortingbenchmark.java sortingbenchmark.java ; [ $? != 2 ]
-unifdef -DTESTING=1 -o ../web_tutorial_testing/vis_example.java vis_example.java ; [ $? != 2 ]
+unifdef -DTESTING=1 -o ../web_tutorial_testing/tree.java tree.java ; [ $? != 2 ]
 make[1]: Leaving directory '/home/bridges-testing/bridges-client-testing/java/web_tutorial_mastercopy'
 cd java/web_tutorial_testing; make; make run;
 make[1]: Entering directory '/home/bridges-testing/bridges-client-testing/java/web_tutorial_testing'
@@ -102,9 +102,9 @@ http://bridges-cs.herokuapp.com/assignments/2005/bridges_testing
 
 
 java book_snippet 2006 bridges_testing 1321549621122 live
-The Mysterious Stranger, and Other Stories
-Twain, Mark
-[short stories, fiction, humorous stories, american]
+The Uncensored Letters of a Canteen Girl
+Morse, Katharine Duncan
+[]
 java bst 2007 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -227,10 +227,10 @@ Exception in thread "main" java.net.UnknownHostException: cci-bridges-elevation-
 	at elevation_snippet.main(elevation_snippet.java:17)
 java eq_snippet 2015 bridges_testing 1321549621122 live
 Earthquake 0:
-	Magnitude:1.38
-	Date:Jul 17 2020  03:21:49.450 EDT
-	Location: 6km E of Mammoth Lakes, CA
-	Lat/Long:37.6313324,-118.9131699
+	Magnitude:1.1
+	Date:Jul 18 2020  03:20:12.130 EDT
+	Location: 26 km SSE of Mina, Nevada
+	Lat/Long:38.1538,-118.0402
 java face_shp_coll 2016 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -239,10 +239,10 @@ http://bridges-cs.herokuapp.com/assignments/2016/bridges_testing
 
 
 java game_snippet 2017 bridges_testing 1321549621122 live
-TransWorld Surf
-PlayStation 2
-7.8
-[Sports]
+Hexen
+PlayStation
+5.0
+[Action]
 java graph_al 2018 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -283,12 +283,12 @@ http://bridges-cs.herokuapp.com/assignments/2020/bridges_testing
 
 
 java guttenberg_snippet 2021 bridges_testing 1321549621122 live
-The Ambassadors
-James, Henry
-[fiction, psychological fiction]
+Fundamental Principles of the Metaphysic of Morals
+Kant, Immanuel
+[philosophy, german, ethics]
 java imdb_snippet 2022 bridges_testing 1321549621122 live
-Morgan_Freeman_(I)
-Big_Bounce,_The_(2004)
+Christopher_Lee_(I)
+Lord_of_the_Rings:_The_Return_of_the_King,_The_(2003)
 java kdt 2023 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -364,11 +364,11 @@ Number of Vertices [Charlotte]:10246
 Number of Edges [Charlotte]:16299
 Location of first vertex [Cartesian Coord]: 827.1273231300758,-5144.073405550668
 java shakespeare_snippet 2028 bridges_testing 1321549621122 live
-Sonnet 68
+Sonnet 114
 poem
-Thus is his cheek the map of days outworn,
- When beauty lived and died as flowers do now,
- Before th...
+Or whether doth my mind being crowned with you
+ Drink up the monarch's plague this flattery?
+ Or whe...
 java shape_collection 2029 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -480,16 +480,16 @@ Work is never over
 
 
 java song_snippet 2032 bridges_testing 1321549621122 live
-It's the End of the World as We Know It (And I Feel Fine)
-R.E.M.
-Document
-1987-09-01
+My Shot
+Original Broadway Cast of Hamilton
+Hamilton (Original Broadway Cast Recording)
+2015-09-25
 
 
-[Verse 1]
-That's great, it starts with an earthquake
-Birds and snakes and aeroplanes
-Lenny Bruce i...
+[HAMILTON]
+I am not throwing away my shot!
+I am not throwing away my shot!
+Hey yo, I’m just like m...
 java sortingbenchmark 2033 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:

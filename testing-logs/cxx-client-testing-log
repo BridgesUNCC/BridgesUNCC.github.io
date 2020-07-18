@@ -106,6 +106,20 @@ In file included from audio_clip.cpp:1:
 /home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [26]’ to ‘const bridges::datastructure::AudioClip&’
 /home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(bridges::datastructure::AudioClip&&)’
 /home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [26]’ to ‘bridges::datastructure::AudioClip&&’
+audio_clip.cpp:70:43: error: no matching function for call to ‘bridges::datastructure::AudioClip::AudioClip(const char [21])’
+      AudioClip ac6 ("../../data/piano.wav");
+                                           ^
+In file included from audio_clip.cpp:1:
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:27:13: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(int, int, int, int)’
+             AudioClip(int sampleCount, int numChannels, int sampleBits, int sampleRate) {
+             ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:27:13: note:   candidate expects 4 arguments, 1 provided
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(const bridges::datastructure::AudioClip&)’
+         class AudioClip : public DataStructure {
+               ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [21]’ to ‘const bridges::datastructure::AudioClip&’
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(bridges::datastructure::AudioClip&&)’
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [21]’ to ‘bridges::datastructure::AudioClip&&’
 make[1]: *** [Makefile:40: audio_clip] Error 1
 make[1]: Leaving directory '/home/bridges-testing/bridges-client-testing/c++/web_tutorial_testing'
 make[1]: Entering directory '/home/bridges-testing/bridges-client-testing/c++/web_tutorial_testing'
@@ -167,6 +181,20 @@ In file included from audio_clip.cpp:1:
 /home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [26]’ to ‘const bridges::datastructure::AudioClip&’
 /home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(bridges::datastructure::AudioClip&&)’
 /home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [26]’ to ‘bridges::datastructure::AudioClip&&’
+audio_clip.cpp:70:43: error: no matching function for call to ‘bridges::datastructure::AudioClip::AudioClip(const char [21])’
+      AudioClip ac6 ("../../data/piano.wav");
+                                           ^
+In file included from audio_clip.cpp:1:
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:27:13: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(int, int, int, int)’
+             AudioClip(int sampleCount, int numChannels, int sampleBits, int sampleRate) {
+             ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:27:13: note:   candidate expects 4 arguments, 1 provided
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(const bridges::datastructure::AudioClip&)’
+         class AudioClip : public DataStructure {
+               ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [21]’ to ‘const bridges::datastructure::AudioClip&’
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(bridges::datastructure::AudioClip&&)’
+/home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [21]’ to ‘bridges::datastructure::AudioClip&&’
 make[1]: *** [Makefile:40: audio_clip] Error 1
 make[1]: Leaving directory '/home/bridges-testing/bridges-client-testing/c++/web_tutorial_testing'
 make: *** [Makefile:21: make_c++] Error 2
