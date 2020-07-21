@@ -38,7 +38,7 @@ unifdef -DTESTING=1 -o ../web_tutorial_testing/sllist.java sllist.java ; [ $? !=
 unifdef -DTESTING=1 -o ../web_tutorial_testing/song_lyrics_snippet.java song_lyrics_snippet.java ; [ $? != 2 ]
 unifdef -DTESTING=1 -o ../web_tutorial_testing/song_snippet.java song_snippet.java ; [ $? != 2 ]
 unifdef -DTESTING=1 -o ../web_tutorial_testing/sortingbenchmark.java sortingbenchmark.java ; [ $? != 2 ]
-unifdef -DTESTING=1 -o ../web_tutorial_testing/tree.java tree.java ; [ $? != 2 ]
+unifdef -DTESTING=1 -o ../web_tutorial_testing/vis_example.java vis_example.java ; [ $? != 2 ]
 make[1]: Leaving directory '/home/bridges-testing/bridges-client-testing/java/web_tutorial_mastercopy'
 cd java/web_tutorial_testing; make; make run;
 make[1]: Entering directory '/home/bridges-testing/bridges-client-testing/java/web_tutorial_testing'
@@ -102,9 +102,9 @@ http://bridges-cs.herokuapp.com/assignments/2005/bridges_testing
 
 
 java book_snippet 2006 bridges_testing 1321549621122 live
-Tales of the Jazz Age
-Fitzgerald, F. Scott (Francis Scott)
-[fiction, short stories]
+Through the Looking-Glass
+Carroll, Lewis
+[fantasy]
 java bst 2007 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -227,10 +227,10 @@ Exception in thread "main" java.net.UnknownHostException: cci-bridges-elevation-
 	at elevation_snippet.main(elevation_snippet.java:17)
 java eq_snippet 2015 bridges_testing 1321549621122 live
 Earthquake 0:
-	Magnitude:3.8
-	Date:Jul 20 2020  03:08:49.907 EDT
-	Location: Kenai Peninsula, Alaska
-	Lat/Long:60.7876,-151.4422
+	Magnitude:1.62
+	Date:Jul 21 2020  03:21:56.990 EDT
+	Location: 3km ESE of Lake Henshaw, CA
+	Lat/Long:33.2291679,-116.7386703
 java face_shp_coll 2016 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -239,9 +239,9 @@ http://bridges-cs.herokuapp.com/assignments/2016/bridges_testing
 
 
 java game_snippet 2017 bridges_testing 1321549621122 live
-Manhunt 2
-PlayStation 2
-7.5
+Teen Titans 2
+Game Boy Advance
+5.0
 [Action]
 java graph_al 2018 bridges_testing 1321549621122 live
 
@@ -283,12 +283,12 @@ http://bridges-cs.herokuapp.com/assignments/2020/bridges_testing
 
 
 java guttenberg_snippet 2021 bridges_testing 1321549621122 live
-Pragmatism: A New Name for Some Old Ways of Thinking
-James, William
-[pragmatism]
+The Lady of the Lake
+Scott, Walter
+[arthurian romances, romances]
 java imdb_snippet 2022 bridges_testing 1321549621122 live
-Billy_Crystal
-America's_Sweethearts_(2001)
+James_Earl_Jones
+Man,_The_(1972)
 java kdt 2023 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -364,11 +364,11 @@ Number of Vertices [Charlotte]:10246
 Number of Edges [Charlotte]:16299
 Location of first vertex [Cartesian Coord]: 827.1273231300758,-5144.073405550668
 java shakespeare_snippet 2028 bridges_testing 1321549621122 live
-Sonnet 101
+Sonnet 4
 poem
-O truant Muse what shall be thy amends,
- For thy neglect of truth in beauty dyed?
- Both truth and be...
+Unthrifty loveliness why dost thou spend,
+ Upon thy self thy beauty's legacy?
+ Nature's bequest give...
 java shape_collection 2029 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -480,16 +480,17 @@ Work is never over
 
 
 java song_snippet 2032 bridges_testing 1321549621122 live
-Discovery [Credits]
-Daft Punk
-Discovery
-2001-02-26
+Call Me Maybe
+Carly Rae Jepsen
+Kiss
+2011-09-21
 
 
-One More Time
-Vocals performed by Romanthony
-(T. Bangalter - G-M de Homem-Christo - A. Moore)
-Zomb...
+[Verse 1]
+I threw a wish in the well
+Don't ask me, I'll never tell
+I looked to you as it fell
+And ...
 java sortingbenchmark 2033 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
