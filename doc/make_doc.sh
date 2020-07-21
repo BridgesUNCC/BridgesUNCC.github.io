@@ -26,8 +26,55 @@ then
     exit 1
 fi
 
-( cat bridges_doxygen_cxx.cfg; echo "INPUT=${BRIDGESCXX}/src ${BRIDGESCXX}/src/data_src" ) | doxygen -
+##Figuring out version numbers
 
-( cat bridges_doxygen_java.cfg; echo "INPUT=${BRIDGESJAVA}/src/main/java/bridges/base ${BRIDGESJAVA}/src/main/java/bridges/benchmark ${BRIDGESJAVA}/src/main/java/bridges/connect ${BRIDGESJAVA}/src/main/java/bridges/data_src_dependent ${BRIDGESJAVA}/src/main/java/bridges/validation ${BRIDGESJAVA}/src/main/java/bridges/games" ) | doxygen -
+CXX_VERSION_NUMBER=unknown
 
-( cat bridges_doxygen_python.cfg; echo "INPUT=${BRIDGESPYTHON}/bridges ${BRIDGESPYTHON}/bridges/data_src_dependent" ) | doxygen -
+cd ${BRIDGESCXX}
+CXX_VERSION_NUMBER=`git describe --tags`
+cd -
+
+JAVA_VERSION_NUMBER=unknown
+
+cd ${BRIDGESJAVA}
+JAVA_VERSION_NUMBER=`git describe --tags`
+cd -
+
+PYTHON_VERSION_NUMBER=unknown
+
+cd ${BRIDGESPYTHON}
+PYTHON_VERSION_NUMBER=`git describe --tags`
+cd -
+
+##Generating C++ doc
+
+(
+    cat bridges_doxygen_cxx.cfg;
+    cat <<EOF
+INPUT=${BRIDGESCXX}/src ${BRIDGESCXX}/src/data_src
+PROJECT_NUMBER = ${CXX_VERSION_NUMBER}	
+OUTPUT_DIRECTORY = ./cxx-api/${CXX_VERSION_NUMBER}/
+EOF
+) | doxygen -
+
+##Generating JAVA doc
+
+(
+    cat bridges_doxygen_java.cfg;
+    cat <<EOF
+INPUT=${BRIDGESJAVA}/src/main/java/bridges/base ${BRIDGESJAVA}/src/main/java/bridges/benchmark ${BRIDGESJAVA}/src/main/java/bridges/connect ${BRIDGESJAVA}/src/main/java/bridges/data_src_dependent ${BRIDGESJAVA}/src/main/java/bridges/validation ${BRIDGESJAVA}/src/main/java/bridges/games
+PROJECT_NUMBER = ${JAVA_VERSION_NUMBER}	
+OUTPUT_DIRECTORY = ./java-api/${JAVA_VERSION_NUMBER}/
+EOF
+) | doxygen -
+
+##Generating Python doc
+
+(
+    cat bridges_doxygen_python.cfg;
+    cat<<EOF
+INPUT=${BRIDGESPYTHON}/bridges ${BRIDGESPYTHON}/bridges/data_src_dependent
+PROJECT_NUMBER = ${PYTHON_VERSION_NUMBER}	
+OUTPUT_DIRECTORY = ./python-api/${PYTHON_VERSION_NUMBER}/
+EOF
+) | doxygen -
