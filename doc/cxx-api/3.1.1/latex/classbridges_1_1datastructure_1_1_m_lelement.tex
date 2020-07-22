@@ -1,0 +1,265 @@
+\hypertarget{classbridges_1_1datastructure_1_1_m_lelement}{}\section{bridges\+:\+:datastructure\+:\+:M\+Lelement$<$ E $>$ Class Template Reference}
+\label{classbridges_1_1datastructure_1_1_m_lelement}\index{bridges\+::datastructure\+::\+M\+Lelement$<$ E $>$@{bridges\+::datastructure\+::\+M\+Lelement$<$ E $>$}}
+
+
+{\ttfamily \#include $<$M\+Lelement.\+h$>$}
+
+Inheritance diagram for bridges\+:\+:datastructure\+:\+:M\+Lelement$<$ E $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classbridges_1_1datastructure_1_1_m_lelement}
+\end{center}
+\end{figure}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename E$>$\newline
+class bridges\+::datastructure\+::\+M\+Lelement$<$ E $>$}
+
+This class can be used to instantiate Multi-\/list Elements. 
+
+This class extends \hyperlink{classbridges_1_1datastructure_1_1_s_lelement}{S\+Lelement} (singly linked list element) to build multi-\/lists; Multilist elements contain a tag (boolean) that indicates if the element contains a sublist or not; if the tag is true, then there is a sublist beginning at this node and the starting point is the `sublist\textquotesingle{} field in the element. If the tag is false, then the list continues as a normal singly linked list. The sublists are re recursive\+: any sublist can have its own sublists and so on. As in singly linked elements, the next pointer points to the following list element and each element contains a generic application specific object.
+
+Multi-\/list elements contain a visualizer (\hyperlink{classbridges_1_1datastructure_1_1_element_visualizer}{Element\+Visualizer}) object for setting visual attributes (color, shape, opacity, size), necessary for displaying them in a web browser.
+
+Elements also have a \hyperlink{classbridges_1_1datastructure_1_1_link_visualizer}{Link\+Visualizer} object, that is used when they are linked to another element, appropriate for setting link attributes, for instance, between the current element and its next element. In this case, the link in question is that which connects the element to the following elements; a similar logic follows for sublists.
+
+\begin{DoxySeeAlso}{See also}
+There is a tutorial about Multi Lists \+: \href{http://bridgesuncc.github.io/tutorials/MultiList.html}{\tt http\+://bridgesuncc.\+github.\+io/tutorials/\+Multi\+List.\+html}
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+, Kalpathi Subramanian
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/24/17, 7/12/19
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em E} & The generic parameter object that is part of this element, representing either application specific data, or a pointer to a sublist. \\
+\hline
+\end{DoxyParams}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbridges_1_1datastructure_1_1_m_lelement_af73050e460a47d0b5d82ee6ae49b6c59}{M\+Lelement} (const E \&val=E(), const string \&lab=string())
+\item 
+\hyperlink{classbridges_1_1datastructure_1_1_m_lelement_aae22c04d644bcab2eba56bb8dc84d5eb}{M\+Lelement} (string label)
+\item 
+\hyperlink{classbridges_1_1datastructure_1_1_m_lelement_ac3349ecdbce79646839cdb9ea1e90b2f}{M\+Lelement} (E e, \hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{M\+Lelement}$<$ E $>$ $\ast$\hyperlink{classbridges_1_1datastructure_1_1_s_lelement_afc016a593a4a5aba82021ee34edadbfc}{next})
+\item 
+void \hyperlink{classbridges_1_1datastructure_1_1_m_lelement_a5d6a2fa775c819c8c7609b539c93fe9f}{set\+Sub\+List} (\hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{M\+Lelement}$<$ E $>$ $\ast$sl)
+\item 
+\hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{M\+Lelement} $\ast$ \hyperlink{classbridges_1_1datastructure_1_1_m_lelement_a9faeb30ffd023746ce36e05705a62b2d}{get\+Sub\+List} ()
+\item 
+\hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{M\+Lelement}$<$ E $>$ $\ast$ \hyperlink{classbridges_1_1datastructure_1_1_m_lelement_a47b417db0b948b6899eece572bef9274}{get\+Next} () override
+\item 
+\hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{M\+Lelement}$<$ E $>$ $\ast$ \hyperlink{classbridges_1_1datastructure_1_1_m_lelement_a611b3e7d54fdfbc622004a50ca718e6e}{get\+Next} () const override
+\item 
+void \hyperlink{classbridges_1_1datastructure_1_1_m_lelement_a13dfba9b3fa1af26c6d344fa7a086429}{set\+Next} (\hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{M\+Lelement}$<$ E $>$ $\ast$n)
+\item 
+void \hyperlink{classbridges_1_1datastructure_1_1_m_lelement_a32ba4ec57e6f5e1e65f82784a7f45804}{set\+Tag} (bool t)
+\begin{DoxyCompactList}\small\item\em Sets the tag of the element. \end{DoxyCompactList}\item 
+bool \hyperlink{classbridges_1_1datastructure_1_1_m_lelement_a44ef87048b6b0424478f498cf99149f2}{get\+Tag} ()
+\begin{DoxyCompactList}\small\item\em Gets the tag of the element. \end{DoxyCompactList}\item 
+virtual const string \hyperlink{classbridges_1_1datastructure_1_1_m_lelement_a735c3cb43648b4d4e7d3316cdc1a1952}{get\+D\+Stype} () const override
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{M\+Lelement}$<$ E $>$ $\ast$ \hyperlink{classbridges_1_1datastructure_1_1_m_lelement_afe31ff363c0861efb8eacc12f2a651df}{sub\+\_\+list} = nullptr
+\item 
+bool \hyperlink{classbridges_1_1datastructure_1_1_m_lelement_aef061a364a85ebb0c0f2cdaff8c726e6}{tag} = false
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_m_lelement_af73050e460a47d0b5d82ee6ae49b6c59}\label{classbridges_1_1datastructure_1_1_m_lelement_af73050e460a47d0b5d82ee6ae49b6c59}} 
+\index{bridges\+::datastructure\+::\+M\+Lelement@{bridges\+::datastructure\+::\+M\+Lelement}!M\+Lelement@{M\+Lelement}}
+\index{M\+Lelement@{M\+Lelement}!bridges\+::datastructure\+::\+M\+Lelement@{bridges\+::datastructure\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{M\+Lelement()}{MLelement()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+\hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{bridges\+::datastructure\+::\+M\+Lelement}$<$ E $>$\+::\hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{M\+Lelement} (\begin{DoxyParamCaption}\item[{const E \&}]{val = {\ttfamily E()},  }\item[{const string \&}]{lab = {\ttfamily string()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This constructor creates an \hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{M\+Lelement} object and sets the next pointer to null
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & generic object \\
+\hline
+{\em lab} & label \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_m_lelement_aae22c04d644bcab2eba56bb8dc84d5eb}\label{classbridges_1_1datastructure_1_1_m_lelement_aae22c04d644bcab2eba56bb8dc84d5eb}} 
+\index{bridges\+::datastructure\+::\+M\+Lelement@{bridges\+::datastructure\+::\+M\+Lelement}!M\+Lelement@{M\+Lelement}}
+\index{M\+Lelement@{M\+Lelement}!bridges\+::datastructure\+::\+M\+Lelement@{bridges\+::datastructure\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{M\+Lelement()}{MLelement()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+\hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{bridges\+::datastructure\+::\+M\+Lelement}$<$ E $>$\+::\hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{M\+Lelement} (\begin{DoxyParamCaption}\item[{string}]{label }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This constructor creates an \hyperlink{classbridges_1_1datastructure_1_1_s_lelement}{S\+Lelement} object of generic parameter object E, and label \char`\"{}label\char`\"{} and sets the next pointer to null
+
+
+\begin{DoxyParams}{Parameters}
+{\em label} & the label of \hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{M\+Lelement} that shows up on the \hyperlink{classbridges_1_1_bridges}{Bridges} visualization \\
+\hline
+{\em e} & the generic object that this \hyperlink{classbridges_1_1datastructure_1_1_s_lelement}{S\+Lelement} will hold \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_m_lelement_ac3349ecdbce79646839cdb9ea1e90b2f}\label{classbridges_1_1datastructure_1_1_m_lelement_ac3349ecdbce79646839cdb9ea1e90b2f}} 
+\index{bridges\+::datastructure\+::\+M\+Lelement@{bridges\+::datastructure\+::\+M\+Lelement}!M\+Lelement@{M\+Lelement}}
+\index{M\+Lelement@{M\+Lelement}!bridges\+::datastructure\+::\+M\+Lelement@{bridges\+::datastructure\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{M\+Lelement()}{MLelement()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+\hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{bridges\+::datastructure\+::\+M\+Lelement}$<$ E $>$\+::\hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{M\+Lelement} (\begin{DoxyParamCaption}\item[{E}]{e,  }\item[{\hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{M\+Lelement}$<$ E $>$ $\ast$}]{next }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a new element with value \char`\"{}e\char`\"{} and sets the next pointer to the \hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{M\+Lelement} referenced by the \char`\"{}next\char`\"{} argument
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & the generic object that this element will hold \\
+\hline
+{\em next} & the element that should be assigned to the next pointer \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_m_lelement_a735c3cb43648b4d4e7d3316cdc1a1952}\label{classbridges_1_1datastructure_1_1_m_lelement_a735c3cb43648b4d4e7d3316cdc1a1952}} 
+\index{bridges\+::datastructure\+::\+M\+Lelement@{bridges\+::datastructure\+::\+M\+Lelement}!get\+D\+Stype@{get\+D\+Stype}}
+\index{get\+D\+Stype@{get\+D\+Stype}!bridges\+::datastructure\+::\+M\+Lelement@{bridges\+::datastructure\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{get\+D\+Stype()}{getDStype()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+virtual const string \hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{bridges\+::datastructure\+::\+M\+Lelement}$<$ E $>$\+::get\+D\+Stype (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The string representation of this data structure type 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classbridges_1_1datastructure_1_1_s_lelement_a602156aacacd73d1faa365d68d8af31b}{bridges\+::datastructure\+::\+S\+Lelement$<$ E $>$}.
+
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_m_lelement_a47b417db0b948b6899eece572bef9274}\label{classbridges_1_1datastructure_1_1_m_lelement_a47b417db0b948b6899eece572bef9274}} 
+\index{bridges\+::datastructure\+::\+M\+Lelement@{bridges\+::datastructure\+::\+M\+Lelement}!get\+Next@{get\+Next}}
+\index{get\+Next@{get\+Next}!bridges\+::datastructure\+::\+M\+Lelement@{bridges\+::datastructure\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{get\+Next()}{getNext()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+\hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{M\+Lelement}$<$E$>$$\ast$ \hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{bridges\+::datastructure\+::\+M\+Lelement}$<$ E $>$\+::get\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Retrieves the element following this element
+
+\begin{DoxyReturn}{Returns}
+M\+Lelement$<$\+E$>$ assigned to next 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classbridges_1_1datastructure_1_1_s_lelement_ae43dd771d9ced7cb17f1d35f34cd9a42}{bridges\+::datastructure\+::\+S\+Lelement$<$ E $>$}.
+
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_m_lelement_a611b3e7d54fdfbc622004a50ca718e6e}\label{classbridges_1_1datastructure_1_1_m_lelement_a611b3e7d54fdfbc622004a50ca718e6e}} 
+\index{bridges\+::datastructure\+::\+M\+Lelement@{bridges\+::datastructure\+::\+M\+Lelement}!get\+Next@{get\+Next}}
+\index{get\+Next@{get\+Next}!bridges\+::datastructure\+::\+M\+Lelement@{bridges\+::datastructure\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{get\+Next()}{getNext()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+\hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{M\+Lelement}$<$E$>$$\ast$ \hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{bridges\+::datastructure\+::\+M\+Lelement}$<$ E $>$\+::get\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Retrieves the element following this element -\/ const version
+
+\begin{DoxyReturn}{Returns}
+M\+Lelement$<$\+E$>$ assigned to next 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classbridges_1_1datastructure_1_1_s_lelement_a8c62cb82fa64bbfe9ebb7334a5fea417}{bridges\+::datastructure\+::\+S\+Lelement$<$ E $>$}.
+
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_m_lelement_a9faeb30ffd023746ce36e05705a62b2d}\label{classbridges_1_1datastructure_1_1_m_lelement_a9faeb30ffd023746ce36e05705a62b2d}} 
+\index{bridges\+::datastructure\+::\+M\+Lelement@{bridges\+::datastructure\+::\+M\+Lelement}!get\+Sub\+List@{get\+Sub\+List}}
+\index{get\+Sub\+List@{get\+Sub\+List}!bridges\+::datastructure\+::\+M\+Lelement@{bridges\+::datastructure\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{get\+Sub\+List()}{getSubList()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+\hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{M\+Lelement}$\ast$ \hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{bridges\+::datastructure\+::\+M\+Lelement}$<$ E $>$\+::get\+Sub\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the sublist at this node, if it exists
+
+\begin{DoxyReturn}{Returns}
+the sublist head element, if it exists 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_m_lelement_a44ef87048b6b0424478f498cf99149f2}\label{classbridges_1_1datastructure_1_1_m_lelement_a44ef87048b6b0424478f498cf99149f2}} 
+\index{bridges\+::datastructure\+::\+M\+Lelement@{bridges\+::datastructure\+::\+M\+Lelement}!get\+Tag@{get\+Tag}}
+\index{get\+Tag@{get\+Tag}!bridges\+::datastructure\+::\+M\+Lelement@{bridges\+::datastructure\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{get\+Tag()}{getTag()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+bool \hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{bridges\+::datastructure\+::\+M\+Lelement}$<$ E $>$\+::get\+Tag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the tag of the element. 
+
+\begin{DoxyReturn}{Returns}
+tag of the element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_m_lelement_a13dfba9b3fa1af26c6d344fa7a086429}\label{classbridges_1_1datastructure_1_1_m_lelement_a13dfba9b3fa1af26c6d344fa7a086429}} 
+\index{bridges\+::datastructure\+::\+M\+Lelement@{bridges\+::datastructure\+::\+M\+Lelement}!set\+Next@{set\+Next}}
+\index{set\+Next@{set\+Next}!bridges\+::datastructure\+::\+M\+Lelement@{bridges\+::datastructure\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{set\+Next()}{setNext()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+void \hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{bridges\+::datastructure\+::\+M\+Lelement}$<$ E $>$\+::set\+Next (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{M\+Lelement}$<$ E $>$ $\ast$}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the element to point to the next \hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{M\+Lelement}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & M\+Lelement$<$\+E$>$ that should be assigned to the next pointer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_m_lelement_a5d6a2fa775c819c8c7609b539c93fe9f}\label{classbridges_1_1datastructure_1_1_m_lelement_a5d6a2fa775c819c8c7609b539c93fe9f}} 
+\index{bridges\+::datastructure\+::\+M\+Lelement@{bridges\+::datastructure\+::\+M\+Lelement}!set\+Sub\+List@{set\+Sub\+List}}
+\index{set\+Sub\+List@{set\+Sub\+List}!bridges\+::datastructure\+::\+M\+Lelement@{bridges\+::datastructure\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{set\+Sub\+List()}{setSubList()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+void \hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{bridges\+::datastructure\+::\+M\+Lelement}$<$ E $>$\+::set\+Sub\+List (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{M\+Lelement}$<$ E $>$ $\ast$}]{sl }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the start of a new sublist. to the \hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{M\+Lelement} \char`\"{}next\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em sl} & the \hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{M\+Lelement} that is the beginning of a sublist \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_m_lelement_a32ba4ec57e6f5e1e65f82784a7f45804}\label{classbridges_1_1datastructure_1_1_m_lelement_a32ba4ec57e6f5e1e65f82784a7f45804}} 
+\index{bridges\+::datastructure\+::\+M\+Lelement@{bridges\+::datastructure\+::\+M\+Lelement}!set\+Tag@{set\+Tag}}
+\index{set\+Tag@{set\+Tag}!bridges\+::datastructure\+::\+M\+Lelement@{bridges\+::datastructure\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{set\+Tag()}{setTag()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+void \hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{bridges\+::datastructure\+::\+M\+Lelement}$<$ E $>$\+::set\+Tag (\begin{DoxyParamCaption}\item[{bool}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the tag of the element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & tag to set \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_m_lelement_afe31ff363c0861efb8eacc12f2a651df}\label{classbridges_1_1datastructure_1_1_m_lelement_afe31ff363c0861efb8eacc12f2a651df}} 
+\index{bridges\+::datastructure\+::\+M\+Lelement@{bridges\+::datastructure\+::\+M\+Lelement}!sub\+\_\+list@{sub\+\_\+list}}
+\index{sub\+\_\+list@{sub\+\_\+list}!bridges\+::datastructure\+::\+M\+Lelement@{bridges\+::datastructure\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{sub\+\_\+list}{sub\_list}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+\hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{M\+Lelement}$<$E$>$$\ast$ \hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{bridges\+::datastructure\+::\+M\+Lelement}$<$ E $>$\+::sub\+\_\+list = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_m_lelement_aef061a364a85ebb0c0f2cdaff8c726e6}\label{classbridges_1_1datastructure_1_1_m_lelement_aef061a364a85ebb0c0f2cdaff8c726e6}} 
+\index{bridges\+::datastructure\+::\+M\+Lelement@{bridges\+::datastructure\+::\+M\+Lelement}!tag@{tag}}
+\index{tag@{tag}!bridges\+::datastructure\+::\+M\+Lelement@{bridges\+::datastructure\+::\+M\+Lelement}}
+\subsubsection{\texorpdfstring{tag}{tag}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+bool \hyperlink{classbridges_1_1datastructure_1_1_m_lelement}{bridges\+::datastructure\+::\+M\+Lelement}$<$ E $>$\+::tag = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/erik/work/bridges/bridges-\/cxx/src/\hyperlink{_m_lelement_8h}{M\+Lelement.\+h}\end{DoxyCompactItemize}

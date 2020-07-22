@@ -1,0 +1,556 @@
+\hypertarget{classbridges_1_1datastructure_1_1_element}{}\section{bridges\+:\+:datastructure\+:\+:Element$<$ E $>$ Class Template Reference}
+\label{classbridges_1_1datastructure_1_1_element}\index{bridges\+::datastructure\+::\+Element$<$ E $>$@{bridges\+::datastructure\+::\+Element$<$ E $>$}}
+
+
+{\ttfamily \#include $<$Element.\+h$>$}
+
+Inheritance diagram for bridges\+:\+:datastructure\+:\+:Element$<$ E $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.917808cm]{classbridges_1_1datastructure_1_1_element}
+\end{center}
+\end{figure}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename E$>$\newline
+class bridges\+::datastructure\+::\+Element$<$ E $>$}
+
+This is the fundamental building block for all data structures in B\+R\+I\+D\+G\+ES. 
+
+This is the Superclass \hyperlink{classbridges_1_1datastructure_1_1_element}{Element} with \hyperlink{classbridges_1_1datastructure_1_1_s_lelement}{S\+Lelement}, \hyperlink{classbridges_1_1datastructure_1_1_d_lelement}{D\+Lelement}, M\+L\+Element, Circ\+Sl\+Element, Circ\+Dl\+Element, \hyperlink{classbridges_1_1datastructure_1_1_tree_element}{Tree\+Element}, \hyperlink{classbridges_1_1datastructure_1_1_bin_tree_element}{Bin\+Tree\+Element}, \hyperlink{classbridges_1_1datastructure_1_1_b_s_t_element}{B\+S\+T\+Element}, \hyperlink{classbridges_1_1datastructure_1_1_a_v_l_tree_element}{A\+V\+L\+Tree\+Element}, \hyperlink{classbridges_1_1datastructure_1_1_kd_tree_element}{Kd\+Tree\+Element} subclasses.
+
+The label field(string type) is used to label the visualization of the element.
+
+\hyperlink{classbridges_1_1datastructure_1_1_element}{Element} holds a \hyperlink{classbridges_1_1datastructure_1_1_link_visualizer}{Link\+Visualizer} for each of its links and an \hyperlink{classbridges_1_1datastructure_1_1_element_visualizer}{Element\+Visualizer} for itself
+
+
+\begin{DoxyParams}{Parameters}
+{\em E} & the application data type\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Kalpathi Subramanian
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+6/11/15, 11/27/16, 7/12/19 
+\end{DoxyDate}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbridges_1_1datastructure_1_1_element_a21820b1d88f2eb25adfe768bd03046d6}{Element} (const E \&val=E(), const string \&lab=string())
+\item 
+\hyperlink{classbridges_1_1datastructure_1_1_element_a80eb6ac6925c4974c2e88e7e1446e231}{Element} (const \hyperlink{classbridges_1_1datastructure_1_1_element}{Element} \&e)
+\item 
+\hyperlink{classbridges_1_1datastructure_1_1_element}{Element} \& \hyperlink{classbridges_1_1datastructure_1_1_element_a6446ad27ba42a854ff93b74b4d7eb3cb}{operator=} (const \hyperlink{classbridges_1_1datastructure_1_1_element}{Element} \&e)
+\item 
+E \& \hyperlink{classbridges_1_1datastructure_1_1_element_a18ffc753328275e95bb1ee967f88a00a}{operator=} (E const \&e)
+\item 
+virtual \hyperlink{classbridges_1_1datastructure_1_1_element_ad7ed60da8ed4a31b7a2678d0aa5db205}{$\sim$\+Element} ()
+\item 
+\hyperlink{classbridges_1_1datastructure_1_1_element_visualizer}{Element\+Visualizer} $\ast$ \hyperlink{classbridges_1_1datastructure_1_1_element_ad4f9ca479938bacd4586df8e7ede2116}{get\+Visualizer} ()
+\item 
+const \hyperlink{classbridges_1_1datastructure_1_1_element_visualizer}{Element\+Visualizer} $\ast$ \hyperlink{classbridges_1_1datastructure_1_1_element_a75a7770c3b6b1a6cd826293ea33d2d0a}{get\+Visualizer} () const
+\item 
+\hyperlink{classbridges_1_1datastructure_1_1_link_visualizer}{Link\+Visualizer} $\ast$ \hyperlink{classbridges_1_1datastructure_1_1_element_a531bde8ec32ef31b6d88af37cb029d86}{get\+Link\+Visualizer} (const \hyperlink{classbridges_1_1datastructure_1_1_element}{Element} $\ast$el)
+\item 
+\hyperlink{classbridges_1_1datastructure_1_1_link_visualizer}{Link\+Visualizer} $\ast$ \hyperlink{classbridges_1_1datastructure_1_1_element_a5e3b55d5098d72d4a83b68a60584a3a1}{get\+Link\+Visualizer} (const \hyperlink{classbridges_1_1datastructure_1_1_element}{Element} $\ast$el) const
+\item 
+string const  \& \hyperlink{classbridges_1_1datastructure_1_1_element_a44949edf79379a4d48490e98c15992a6}{get\+Label} () const
+\item 
+void \hyperlink{classbridges_1_1datastructure_1_1_element_a3a1fe4e3aa100125710c30f6e401e8c3}{set\+Label} (const string \&lab)
+\item 
+E const  \& \hyperlink{classbridges_1_1datastructure_1_1_element_acf6e068c6b00ff0d20ed42af32ff1f38}{get\+Value} () const
+\item 
+E \& \hyperlink{classbridges_1_1datastructure_1_1_element_abba0b4c03eb6fd08aed17eeb3be5bd1b}{get\+Value} ()
+\item 
+void \hyperlink{classbridges_1_1datastructure_1_1_element_a26f2aceb9eed7195fd55b3538f3c059f}{set\+Value} (const E \&val)
+\item 
+void \hyperlink{classbridges_1_1datastructure_1_1_element_a3200b0ac712c1720db62d1f0bbcb14be}{set\+Size} (const double \&sz)
+\begin{DoxyCompactList}\small\item\em Sets size of the element. \end{DoxyCompactList}\item 
+double \hyperlink{classbridges_1_1datastructure_1_1_element_a8c0b15450978b03c8ebf6a3c23092cba}{get\+Size} () const
+\item 
+void \hyperlink{classbridges_1_1datastructure_1_1_element_a17d75aae50a48b3404f3c6811c62ae1c}{set\+Color} (const \hyperlink{classbridges_1_1datastructure_1_1_color}{Color} \&col)
+\begin{DoxyCompactList}\small\item\em Set the color of the \hyperlink{classbridges_1_1datastructure_1_1_element}{Element}. \end{DoxyCompactList}\item 
+void \hyperlink{classbridges_1_1datastructure_1_1_element_a3792c8d514f4d644d739c6124f26bcbf}{set\+Color} (const string col)
+\begin{DoxyCompactList}\small\item\em Set the color by name. \end{DoxyCompactList}\item 
+\hyperlink{classbridges_1_1datastructure_1_1_color}{Color} \hyperlink{classbridges_1_1datastructure_1_1_element_adf441bce0ef9e4abd36c1df00ea5932c}{get\+Color} () const
+\begin{DoxyCompactList}\small\item\em Get the current color of the element. \end{DoxyCompactList}\item 
+void \hyperlink{classbridges_1_1datastructure_1_1_element_acb5d0b5734a6b3c17b7b1784ae1dc79c}{set\+Opacity} (double opacity)
+\item 
+double \hyperlink{classbridges_1_1datastructure_1_1_element_acf14bfc12da42565b237a7bd79bd36c2}{get\+Opacity} ()
+\item 
+void \hyperlink{classbridges_1_1datastructure_1_1_element_a1ef398bf1027244a624575e58a569ed9}{set\+Shape} (const \hyperlink{namespacebridges_1_1datastructure_a3408f5f44d9c6062e5f3adb7e1bbb7f0}{Shape} \&shp)
+\begin{DoxyCompactList}\small\item\em Set the shape of the element. \end{DoxyCompactList}\item 
+\hyperlink{namespacebridges_1_1datastructure_a3408f5f44d9c6062e5f3adb7e1bbb7f0}{Shape} \hyperlink{classbridges_1_1datastructure_1_1_element_acb8680aa406733d36411fd189017706c}{get\+Shape} () const
+\begin{DoxyCompactList}\small\item\em Returns the shape of the element. \end{DoxyCompactList}\item 
+void \hyperlink{classbridges_1_1datastructure_1_1_element_af3af017c9d6efcbc2124d0231b57e7a6}{set\+Location} (const double \&locX, const double \&locY)
+\item 
+double \hyperlink{classbridges_1_1datastructure_1_1_element_a471f2f69147deb0f514bb9720e0e18ea}{get\+LocationX} () const
+\item 
+double \hyperlink{classbridges_1_1datastructure_1_1_element_a6394039086bc1f27f2e6adf73294a74b}{get\+LocationY} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual const string \hyperlink{classbridges_1_1datastructure_1_1_element_a285fc51d6dfcb8bff2d72f7e4addfe6d}{get\+Element\+Representation} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const string \hyperlink{classbridges_1_1datastructure_1_1_element_a0d43c0aaa96192b49dfc0a499d63a325}{get\+Link\+Representation} (const \hyperlink{classbridges_1_1datastructure_1_1_link_visualizer}{Link\+Visualizer} \&lv, const string \&src, const string \&dest)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unordered\+\_\+map$<$ \hyperlink{classbridges_1_1datastructure_1_1_element}{Element} $\ast$, \hyperlink{classbridges_1_1datastructure_1_1_link_visualizer}{Link\+Visualizer} $>$ \hyperlink{classbridges_1_1datastructure_1_1_element_ac296ae66e6b04e95f31f4134228524f8}{links}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename K , typename E1 , typename E2 $>$ }\\class \hyperlink{classbridges_1_1datastructure_1_1_element_a65850138f0763fec43a76fb942f0eccc}{Graph\+Adj\+List}
+\item 
+{\footnotesize template$<$typename K , typename E1 , typename E2 $>$ }\\class \hyperlink{classbridges_1_1datastructure_1_1_element_a1935808473b7eb8ff54149c5436c3ac9}{Graph\+Adj\+Matrix}
+\item 
+{\footnotesize template$<$typename K $>$ }\\class \hyperlink{classbridges_1_1datastructure_1_1_element_ab1a595168ea1870ce436dfd2d8e69b6d}{Array}
+\item 
+{\footnotesize template$<$typename K $>$ }\\class \hyperlink{classbridges_1_1datastructure_1_1_element_a71a2fa1cdcc1e193c1790c39b8267780}{Array1D}
+\item 
+{\footnotesize template$<$typename K $>$ }\\class \hyperlink{classbridges_1_1datastructure_1_1_element_a335c96c00a46d6b064b5af268ae03e42}{Array2D}
+\item 
+{\footnotesize template$<$typename K $>$ }\\class \hyperlink{classbridges_1_1datastructure_1_1_element_a2adb97d98cc3a6fe0cd1daaf40058938}{Array3D}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_a21820b1d88f2eb25adfe768bd03046d6}\label{classbridges_1_1datastructure_1_1_element_a21820b1d88f2eb25adfe768bd03046d6}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!Element@{Element}}
+\index{Element@{Element}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{Element()}{Element()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+\hyperlink{classbridges_1_1datastructure_1_1_element}{bridges\+::datastructure\+::\+Element}$<$ E $>$\+::\hyperlink{classbridges_1_1datastructure_1_1_element}{Element} (\begin{DoxyParamCaption}\item[{const E \&}]{val = {\ttfamily E()},  }\item[{const string \&}]{lab = {\ttfamily string()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+Constructs an element with the provided value and label. The defaults will be used if not provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The data to hold \\
+\hline
+{\em lab} & The label to show \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_a80eb6ac6925c4974c2e88e7e1446e231}\label{classbridges_1_1datastructure_1_1_element_a80eb6ac6925c4974c2e88e7e1446e231}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!Element@{Element}}
+\index{Element@{Element}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{Element()}{Element()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+\hyperlink{classbridges_1_1datastructure_1_1_element}{bridges\+::datastructure\+::\+Element}$<$ E $>$\+::\hyperlink{classbridges_1_1datastructure_1_1_element}{Element} (\begin{DoxyParamCaption}\item[{const \hyperlink{classbridges_1_1datastructure_1_1_element}{Element}$<$ E $>$ \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs an element with the provided element as input 
+\begin{DoxyParams}{Parameters}
+{\em e} & element \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_ad7ed60da8ed4a31b7a2678d0aa5db205}\label{classbridges_1_1datastructure_1_1_element_ad7ed60da8ed4a31b7a2678d0aa5db205}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!````~Element@{$\sim$\+Element}}
+\index{````~Element@{$\sim$\+Element}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{$\sim$\+Element()}{~Element()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+virtual \hyperlink{classbridges_1_1datastructure_1_1_element}{bridges\+::datastructure\+::\+Element}$<$ E $>$\+::$\sim$\hyperlink{classbridges_1_1datastructure_1_1_element}{Element} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\hyperlink{classbridges_1_1datastructure_1_1_element}{Element} destructor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_adf441bce0ef9e4abd36c1df00ea5932c}\label{classbridges_1_1datastructure_1_1_element_adf441bce0ef9e4abd36c1df00ea5932c}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!get\+Color@{get\+Color}}
+\index{get\+Color@{get\+Color}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Color()}{getColor()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+\hyperlink{classbridges_1_1datastructure_1_1_color}{Color} \hyperlink{classbridges_1_1datastructure_1_1_element}{bridges\+::datastructure\+::\+Element}$<$ E $>$\+::get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the current color of the element. 
+
+\begin{DoxyReturn}{Returns}
+The color of the element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_a285fc51d6dfcb8bff2d72f7e4addfe6d}\label{classbridges_1_1datastructure_1_1_element_a285fc51d6dfcb8bff2d72f7e4addfe6d}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!get\+Element\+Representation@{get\+Element\+Representation}}
+\index{get\+Element\+Representation@{get\+Element\+Representation}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Element\+Representation()}{getElementRepresentation()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+virtual const string \hyperlink{classbridges_1_1datastructure_1_1_element}{bridges\+::datastructure\+::\+Element}$<$ E $>$\+::get\+Element\+Representation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Gets the J\+S\+ON string of the element representation \begin{DoxyReturn}{Returns}
+The J\+S\+ON string of this element\textquotesingle{}s properties 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classbridges_1_1datastructure_1_1_kd_tree_element_a5413ecaf152e3df5fb45dd85da812888}{bridges\+::datastructure\+::\+Kd\+Tree\+Element$<$ K, E $>$}, and \hyperlink{classbridges_1_1datastructure_1_1_b_s_t_element_a8f962a01b6e0eff59abeee7768264fd9}{bridges\+::datastructure\+::\+B\+S\+T\+Element$<$ K, E $>$}.
+
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_a44949edf79379a4d48490e98c15992a6}\label{classbridges_1_1datastructure_1_1_element_a44949edf79379a4d48490e98c15992a6}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!get\+Label@{get\+Label}}
+\index{get\+Label@{get\+Label}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Label()}{getLabel()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+string const\& \hyperlink{classbridges_1_1datastructure_1_1_element}{bridges\+::datastructure\+::\+Element}$<$ E $>$\+::get\+Label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the label of this element \begin{DoxyReturn}{Returns}
+The label of the element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_a0d43c0aaa96192b49dfc0a499d63a325}\label{classbridges_1_1datastructure_1_1_element_a0d43c0aaa96192b49dfc0a499d63a325}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!get\+Link\+Representation@{get\+Link\+Representation}}
+\index{get\+Link\+Representation@{get\+Link\+Representation}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Link\+Representation()}{getLinkRepresentation()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+static const string \hyperlink{classbridges_1_1datastructure_1_1_element}{bridges\+::datastructure\+::\+Element}$<$ E $>$\+::get\+Link\+Representation (\begin{DoxyParamCaption}\item[{const \hyperlink{classbridges_1_1datastructure_1_1_link_visualizer}{Link\+Visualizer} \&}]{lv,  }\item[{const string \&}]{src,  }\item[{const string \&}]{dest }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+Gets the J\+S\+ON representation of this link visualizer using the supplied source and destination strings
+
+
+\begin{DoxyParams}{Parameters}
+{\em lv} & The \hyperlink{classbridges_1_1datastructure_1_1_link_visualizer}{Link\+Visualizer} \\
+\hline
+{\em src} & The source vertex \\
+\hline
+{\em dest} & The destination vertex \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The J\+S\+ON of this link visualizer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_a531bde8ec32ef31b6d88af37cb029d86}\label{classbridges_1_1datastructure_1_1_element_a531bde8ec32ef31b6d88af37cb029d86}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!get\+Link\+Visualizer@{get\+Link\+Visualizer}}
+\index{get\+Link\+Visualizer@{get\+Link\+Visualizer}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Link\+Visualizer()}{getLinkVisualizer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+\hyperlink{classbridges_1_1datastructure_1_1_link_visualizer}{Link\+Visualizer}$\ast$ \hyperlink{classbridges_1_1datastructure_1_1_element}{bridges\+::datastructure\+::\+Element}$<$ E $>$\+::get\+Link\+Visualizer (\begin{DoxyParamCaption}\item[{const \hyperlink{classbridges_1_1datastructure_1_1_element}{Element}$<$ E $>$ $\ast$}]{el }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the \hyperlink{classbridges_1_1datastructure_1_1_link_visualizer}{Link\+Visualizer} of element \char`\"{}el\char`\"{} or N\+U\+LL if no link exists
+
+
+\begin{DoxyParams}{Parameters}
+{\em el} & The terminating element of the link\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{classbridges_1_1datastructure_1_1_link_visualizer}{Link\+Visualizer} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_a5e3b55d5098d72d4a83b68a60584a3a1}\label{classbridges_1_1datastructure_1_1_element_a5e3b55d5098d72d4a83b68a60584a3a1}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!get\+Link\+Visualizer@{get\+Link\+Visualizer}}
+\index{get\+Link\+Visualizer@{get\+Link\+Visualizer}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Link\+Visualizer()}{getLinkVisualizer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+\hyperlink{classbridges_1_1datastructure_1_1_link_visualizer}{Link\+Visualizer}$\ast$ \hyperlink{classbridges_1_1datastructure_1_1_element}{bridges\+::datastructure\+::\+Element}$<$ E $>$\+::get\+Link\+Visualizer (\begin{DoxyParamCaption}\item[{const \hyperlink{classbridges_1_1datastructure_1_1_element}{Element}$<$ E $>$ $\ast$}]{el }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the \hyperlink{classbridges_1_1datastructure_1_1_link_visualizer}{Link\+Visualizer} of element \char`\"{}el\char`\"{} -\/ Constant version
+
+
+\begin{DoxyParams}{Parameters}
+{\em el} & The terminating element of the link \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{classbridges_1_1datastructure_1_1_link_visualizer}{Link\+Visualizer} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_a471f2f69147deb0f514bb9720e0e18ea}\label{classbridges_1_1datastructure_1_1_element_a471f2f69147deb0f514bb9720e0e18ea}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!get\+LocationX@{get\+LocationX}}
+\index{get\+LocationX@{get\+LocationX}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Location\+X()}{getLocationX()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+double \hyperlink{classbridges_1_1datastructure_1_1_element}{bridges\+::datastructure\+::\+Element}$<$ E $>$\+::get\+LocationX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the X coordinate of the location \begin{DoxyReturn}{Returns}
+the X coordinate of the element\textquotesingle{}s location attribute 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_a6394039086bc1f27f2e6adf73294a74b}\label{classbridges_1_1datastructure_1_1_element_a6394039086bc1f27f2e6adf73294a74b}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!get\+LocationY@{get\+LocationY}}
+\index{get\+LocationY@{get\+LocationY}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Location\+Y()}{getLocationY()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+double \hyperlink{classbridges_1_1datastructure_1_1_element}{bridges\+::datastructure\+::\+Element}$<$ E $>$\+::get\+LocationY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the Y coordinate of the location \begin{DoxyReturn}{Returns}
+the Y coordinate of the element\textquotesingle{}s location attribute 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_acf14bfc12da42565b237a7bd79bd36c2}\label{classbridges_1_1datastructure_1_1_element_acf14bfc12da42565b237a7bd79bd36c2}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!get\+Opacity@{get\+Opacity}}
+\index{get\+Opacity@{get\+Opacity}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Opacity()}{getOpacity()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+double \hyperlink{classbridges_1_1datastructure_1_1_element}{bridges\+::datastructure\+::\+Element}$<$ E $>$\+::get\+Opacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+get opacity of element
+
+\begin{DoxyReturn}{Returns}
+opacity 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_acb8680aa406733d36411fd189017706c}\label{classbridges_1_1datastructure_1_1_element_acb8680aa406733d36411fd189017706c}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!get\+Shape@{get\+Shape}}
+\index{get\+Shape@{get\+Shape}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Shape()}{getShape()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+\hyperlink{namespacebridges_1_1datastructure_a3408f5f44d9c6062e5f3adb7e1bbb7f0}{Shape} \hyperlink{classbridges_1_1datastructure_1_1_element}{bridges\+::datastructure\+::\+Element}$<$ E $>$\+::get\+Shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the shape of the element. 
+
+\begin{DoxyReturn}{Returns}
+The shape of the element(one of Shape.\+C\+I\+R\+C\+LE, Shape.\+S\+Q\+U\+A\+RE, Shape.\+D\+I\+A\+M\+O\+ND, Shape.\+C\+R\+O\+SS, Shape.\+T\+R\+I\+A\+N\+G\+LE, Shape.\+W\+YE, Shape.\+S\+T\+AR) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_a8c0b15450978b03c8ebf6a3c23092cba}\label{classbridges_1_1datastructure_1_1_element_a8c0b15450978b03c8ebf6a3c23092cba}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Size()}{getSize()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+double \hyperlink{classbridges_1_1datastructure_1_1_element}{bridges\+::datastructure\+::\+Element}$<$ E $>$\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get element size \begin{DoxyReturn}{Returns}
+the size (in pixels) of the element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_acf6e068c6b00ff0d20ed42af32ff1f38}\label{classbridges_1_1datastructure_1_1_element_acf6e068c6b00ff0d20ed42af32ff1f38}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Value()}{getValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+E const\& \hyperlink{classbridges_1_1datastructure_1_1_element}{bridges\+::datastructure\+::\+Element}$<$ E $>$\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the object (generic) held in the element -\/ const version \begin{DoxyReturn}{Returns}
+The value of the element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_abba0b4c03eb6fd08aed17eeb3be5bd1b}\label{classbridges_1_1datastructure_1_1_element_abba0b4c03eb6fd08aed17eeb3be5bd1b}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Value()}{getValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+E\& \hyperlink{classbridges_1_1datastructure_1_1_element}{bridges\+::datastructure\+::\+Element}$<$ E $>$\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the object (generic) held in the element \begin{DoxyReturn}{Returns}
+The value of the element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_ad4f9ca479938bacd4586df8e7ede2116}\label{classbridges_1_1datastructure_1_1_element_ad4f9ca479938bacd4586df8e7ede2116}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!get\+Visualizer@{get\+Visualizer}}
+\index{get\+Visualizer@{get\+Visualizer}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Visualizer()}{getVisualizer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+\hyperlink{classbridges_1_1datastructure_1_1_element_visualizer}{Element\+Visualizer}$\ast$ \hyperlink{classbridges_1_1datastructure_1_1_element}{bridges\+::datastructure\+::\+Element}$<$ E $>$\+::get\+Visualizer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the element visualizer object \begin{DoxyReturn}{Returns}
+The \hyperlink{classbridges_1_1datastructure_1_1_element_visualizer}{Element\+Visualizer} of this element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_a75a7770c3b6b1a6cd826293ea33d2d0a}\label{classbridges_1_1datastructure_1_1_element_a75a7770c3b6b1a6cd826293ea33d2d0a}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!get\+Visualizer@{get\+Visualizer}}
+\index{get\+Visualizer@{get\+Visualizer}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{get\+Visualizer()}{getVisualizer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+const \hyperlink{classbridges_1_1datastructure_1_1_element_visualizer}{Element\+Visualizer}$\ast$ \hyperlink{classbridges_1_1datastructure_1_1_element}{bridges\+::datastructure\+::\+Element}$<$ E $>$\+::get\+Visualizer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the element visualizer object -\/ constant version
+
+\begin{DoxyReturn}{Returns}
+The \hyperlink{classbridges_1_1datastructure_1_1_element_visualizer}{Element\+Visualizer} of this element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_a6446ad27ba42a854ff93b74b4d7eb3cb}\label{classbridges_1_1datastructure_1_1_element_a6446ad27ba42a854ff93b74b4d7eb3cb}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!operator=@{operator=}}
+\index{operator=@{operator=}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+\hyperlink{classbridges_1_1datastructure_1_1_element}{Element}\& \hyperlink{classbridges_1_1datastructure_1_1_element}{bridges\+::datastructure\+::\+Element}$<$ E $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classbridges_1_1datastructure_1_1_element}{Element}$<$ E $>$ \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_a18ffc753328275e95bb1ee967f88a00a}\label{classbridges_1_1datastructure_1_1_element_a18ffc753328275e95bb1ee967f88a00a}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!operator=@{operator=}}
+\index{operator=@{operator=}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+E\& \hyperlink{classbridges_1_1datastructure_1_1_element}{bridges\+::datastructure\+::\+Element}$<$ E $>$\+::operator= (\begin{DoxyParamCaption}\item[{E const \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_a17d75aae50a48b3404f3c6811c62ae1c}\label{classbridges_1_1datastructure_1_1_element_a17d75aae50a48b3404f3c6811c62ae1c}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{set\+Color()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+void \hyperlink{classbridges_1_1datastructure_1_1_element}{bridges\+::datastructure\+::\+Element}$<$ E $>$\+::set\+Color (\begin{DoxyParamCaption}\item[{const \hyperlink{classbridges_1_1datastructure_1_1_color}{Color} \&}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the color of the \hyperlink{classbridges_1_1datastructure_1_1_element}{Element}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em col} & The color of the element \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_a3792c8d514f4d644d739c6124f26bcbf}\label{classbridges_1_1datastructure_1_1_element_a3792c8d514f4d644d739c6124f26bcbf}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{set\+Color()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+void \hyperlink{classbridges_1_1datastructure_1_1_element}{bridges\+::datastructure\+::\+Element}$<$ E $>$\+::set\+Color (\begin{DoxyParamCaption}\item[{const string}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the color by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em col} & The color name. Refer to the \hyperlink{classbridges_1_1datastructure_1_1_color}{Color} class for supported color names. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_a3a1fe4e3aa100125710c30f6e401e8c3}\label{classbridges_1_1datastructure_1_1_element_a3a1fe4e3aa100125710c30f6e401e8c3}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!set\+Label@{set\+Label}}
+\index{set\+Label@{set\+Label}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{set\+Label()}{setLabel()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+void \hyperlink{classbridges_1_1datastructure_1_1_element}{bridges\+::datastructure\+::\+Element}$<$ E $>$\+::set\+Label (\begin{DoxyParamCaption}\item[{const string \&}]{lab }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets label of this element
+
+
+\begin{DoxyParams}{Parameters}
+{\em lab} & The label of the element \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_af3af017c9d6efcbc2124d0231b57e7a6}\label{classbridges_1_1datastructure_1_1_element_af3af017c9d6efcbc2124d0231b57e7a6}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!set\+Location@{set\+Location}}
+\index{set\+Location@{set\+Location}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{set\+Location()}{setLocation()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+void \hyperlink{classbridges_1_1datastructure_1_1_element}{bridges\+::datastructure\+::\+Element}$<$ E $>$\+::set\+Location (\begin{DoxyParamCaption}\item[{const double \&}]{locX,  }\item[{const double \&}]{locY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the location attributes of an element.
+
+
+\begin{DoxyParams}{Parameters}
+{\em locX} & X coordinate of the element location \\
+\hline
+{\em locY} & Y coordinate of the element location \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_acb5d0b5734a6b3c17b7b1784ae1dc79c}\label{classbridges_1_1datastructure_1_1_element_acb5d0b5734a6b3c17b7b1784ae1dc79c}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!set\+Opacity@{set\+Opacity}}
+\index{set\+Opacity@{set\+Opacity}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{set\+Opacity()}{setOpacity()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+void \hyperlink{classbridges_1_1datastructure_1_1_element}{bridges\+::datastructure\+::\+Element}$<$ E $>$\+::set\+Opacity (\begin{DoxyParamCaption}\item[{double}]{opacity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+set opacity of element -\/ use the 4th color component
+
+
+\begin{DoxyParams}{Parameters}
+{\em opacity} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_a1ef398bf1027244a624575e58a569ed9}\label{classbridges_1_1datastructure_1_1_element_a1ef398bf1027244a624575e58a569ed9}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!set\+Shape@{set\+Shape}}
+\index{set\+Shape@{set\+Shape}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{set\+Shape()}{setShape()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+void \hyperlink{classbridges_1_1datastructure_1_1_element}{bridges\+::datastructure\+::\+Element}$<$ E $>$\+::set\+Shape (\begin{DoxyParamCaption}\item[{const \hyperlink{namespacebridges_1_1datastructure_a3408f5f44d9c6062e5f3adb7e1bbb7f0}{Shape} \&}]{shp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the shape of the element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shp} & is one of Shape.\+C\+I\+R\+C\+LE, Shape.\+S\+Q\+U\+A\+RE, Shape.\+D\+I\+A\+M\+O\+ND, Shape.\+C\+R\+O\+SS, Shape.\+T\+R\+I\+A\+N\+G\+LE, Shape.\+W\+YE, Shape.\+S\+T\+AR \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_a3200b0ac712c1720db62d1f0bbcb14be}\label{classbridges_1_1datastructure_1_1_element_a3200b0ac712c1720db62d1f0bbcb14be}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!set\+Size@{set\+Size}}
+\index{set\+Size@{set\+Size}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{set\+Size()}{setSize()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+void \hyperlink{classbridges_1_1datastructure_1_1_element}{bridges\+::datastructure\+::\+Element}$<$ E $>$\+::set\+Size (\begin{DoxyParamCaption}\item[{const double \&}]{sz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets size of the element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sz} & The size in pixel weight of the element. Valid Range\+:\mbox{[}1;50\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_a26f2aceb9eed7195fd55b3538f3c059f}\label{classbridges_1_1datastructure_1_1_element_a26f2aceb9eed7195fd55b3538f3c059f}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!set\+Value@{set\+Value}}
+\index{set\+Value@{set\+Value}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{set\+Value()}{setValue()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+void \hyperlink{classbridges_1_1datastructure_1_1_element}{bridges\+::datastructure\+::\+Element}$<$ E $>$\+::set\+Value (\begin{DoxyParamCaption}\item[{const E \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets generic object to \char`\"{}val\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The value of the element to be set \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_ab1a595168ea1870ce436dfd2d8e69b6d}\label{classbridges_1_1datastructure_1_1_element_ab1a595168ea1870ce436dfd2d8e69b6d}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!Array@{Array}}
+\index{Array@{Array}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{Array}{Array}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+template$<$typename K $>$ \\
+friend class \hyperlink{classbridges_1_1datastructure_1_1_array}{Array}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_a71a2fa1cdcc1e193c1790c39b8267780}\label{classbridges_1_1datastructure_1_1_element_a71a2fa1cdcc1e193c1790c39b8267780}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!Array1D@{Array1D}}
+\index{Array1D@{Array1D}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{Array1D}{Array1D}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+template$<$typename K $>$ \\
+friend class \hyperlink{classbridges_1_1datastructure_1_1_array1_d}{Array1D}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_a335c96c00a46d6b064b5af268ae03e42}\label{classbridges_1_1datastructure_1_1_element_a335c96c00a46d6b064b5af268ae03e42}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!Array2D@{Array2D}}
+\index{Array2D@{Array2D}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{Array2D}{Array2D}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+template$<$typename K $>$ \\
+friend class \hyperlink{classbridges_1_1datastructure_1_1_array2_d}{Array2D}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_a2adb97d98cc3a6fe0cd1daaf40058938}\label{classbridges_1_1datastructure_1_1_element_a2adb97d98cc3a6fe0cd1daaf40058938}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!Array3D@{Array3D}}
+\index{Array3D@{Array3D}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{Array3D}{Array3D}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+template$<$typename K $>$ \\
+friend class \hyperlink{classbridges_1_1datastructure_1_1_array3_d}{Array3D}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_a65850138f0763fec43a76fb942f0eccc}\label{classbridges_1_1datastructure_1_1_element_a65850138f0763fec43a76fb942f0eccc}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!Graph\+Adj\+List@{Graph\+Adj\+List}}
+\index{Graph\+Adj\+List@{Graph\+Adj\+List}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{Graph\+Adj\+List}{GraphAdjList}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+template$<$typename K , typename E1 , typename E2 $>$ \\
+friend class \hyperlink{classbridges_1_1datastructure_1_1_graph_adj_list}{Graph\+Adj\+List}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_a1935808473b7eb8ff54149c5436c3ac9}\label{classbridges_1_1datastructure_1_1_element_a1935808473b7eb8ff54149c5436c3ac9}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix}}
+\index{Graph\+Adj\+Matrix@{Graph\+Adj\+Matrix}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{Graph\+Adj\+Matrix}{GraphAdjMatrix}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+template$<$typename K , typename E1 , typename E2 $>$ \\
+friend class \hyperlink{classbridges_1_1datastructure_1_1_graph_adj_matrix}{Graph\+Adj\+Matrix}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_element_ac296ae66e6b04e95f31f4134228524f8}\label{classbridges_1_1datastructure_1_1_element_ac296ae66e6b04e95f31f4134228524f8}} 
+\index{bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}!links@{links}}
+\index{links@{links}!bridges\+::datastructure\+::\+Element@{bridges\+::datastructure\+::\+Element}}
+\subsubsection{\texorpdfstring{links}{links}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+unordered\+\_\+map$<$\hyperlink{classbridges_1_1datastructure_1_1_element}{Element}$\ast$, \hyperlink{classbridges_1_1datastructure_1_1_link_visualizer}{Link\+Visualizer}$>$ \hyperlink{classbridges_1_1datastructure_1_1_element}{bridges\+::datastructure\+::\+Element}$<$ E $>$\+::links\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/erik/work/bridges/bridges-\/cxx/src/\hyperlink{_element_8h}{Element.\+h}\end{DoxyCompactItemize}
