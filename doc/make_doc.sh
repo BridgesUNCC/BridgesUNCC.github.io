@@ -82,3 +82,13 @@ EOF
 
 ./generate_old_doc.sh > old_docs.html
 
+echo
+echo ==================================
+echo
+echo Note that while documentations were created/modified, the content of the git repository has not.
+echo If you have created new documentation, you still need to git-add them.
+echo If you have changed existing documentation, you still need to git-add them or git commit -a.
+echo If the current documentation has changed, you still need to update the symlinks cxx-api/current, java-api/current, and python-api/current
+echo
+echo ==================================
+echo
