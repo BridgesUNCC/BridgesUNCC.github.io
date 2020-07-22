@@ -78,3 +78,7 @@ PROJECT_NUMBER = ${PYTHON_VERSION_NUMBER}
 OUTPUT_DIRECTORY = ./python-api/${PYTHON_VERSION_NUMBER}/
 EOF
 ) | doxygen -
+
+
+./generate_old_doc.sh > old_docs.html
+
