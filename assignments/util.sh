@@ -51,6 +51,7 @@ reset_context() {
     then
 	rm -rf ${ASSIGNDIR}
     fi
+
     
     
     #remove ${HTMLOUTPUT} if it exists
@@ -60,6 +61,11 @@ reset_context() {
     fi
     
     mkdir ${ASSIGNDIR}
+    cat >> ${ASSIGNDIR}/README.md <<EOF
+DO NOT EDIT THIS DIRECTORY.
+
+Its content is generated automatically from the content of the bridges-assignments repository by assignments/generate.sh
+EOF
 }
 
 writeheader() {
