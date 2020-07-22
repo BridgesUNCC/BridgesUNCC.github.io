@@ -18,7 +18,7 @@ listversions() {
 }
 
 cat <<EOF
-<!-- DO NOT MANUALLY EDIT THIS FILE. IT IS GENERATED AUTOMATICALLY. -->
+<!-- DO NOT MANUALLY EDIT THIS FILE. IT IS GENERATED AUTOMATICALLY. READ doc/README.md for details -->
 
         <h2>BRIDGES documentations</h2>
 EOF
