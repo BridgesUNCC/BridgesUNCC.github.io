@@ -37,7 +37,8 @@ unifdef -DTESTING=1 -o ../web_tutorial_testing/shape_collection.java shape_colle
 unifdef -DTESTING=1 -o ../web_tutorial_testing/sllist.java sllist.java ; [ $? != 2 ]
 unifdef -DTESTING=1 -o ../web_tutorial_testing/song_lyrics_snippet.java song_lyrics_snippet.java ; [ $? != 2 ]
 unifdef -DTESTING=1 -o ../web_tutorial_testing/song_snippet.java song_snippet.java ; [ $? != 2 ]
-unifdef -DTESTING=1 -o ../web_tutorial_testing/vis_example.java vis_example.java ; [ $? != 2 ]
+unifdef -DTESTING=1 -o ../web_tutorial_testing/sortingbenchmark.java sortingbenchmark.java ; [ $? != 2 ]
+unifdef -DTESTING=1 -o ../web_tutorial_testing/tree.java tree.java ; [ $? != 2 ]
 make[1]: Leaving directory '/home/bridges-testing/bridges-client-testing/java/web_tutorial_mastercopy'
 cd java/web_tutorial_testing; make; make run;
 make[1]: Entering directory '/home/bridges-testing/bridges-client-testing/java/web_tutorial_testing'
@@ -101,9 +102,9 @@ http://bridges-cs.herokuapp.com/assignments/2005/bridges_testing
 
 
 java book_snippet 2006 bridges_testing 1321549621122 live
-Alice's Adventures in Wonderland
-Carroll, Lewis
-[fantasy]
+Platero y yo
+Jimenez, Juan Ramon
+[fiction]
 java bst 2007 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -226,10 +227,10 @@ Exception in thread "main" java.net.UnknownHostException: cci-bridges-elevation-
 	at elevation_snippet.main(elevation_snippet.java:17)
 java eq_snippet 2015 bridges_testing 1321549621122 live
 Earthquake 0:
-	Magnitude:2.3
-	Date:Jul 23 2020  03:11:41.860 EDT
-	Location: 27 km SSE of Mina, Nevada
-	Lat/Long:38.1483,-118.0308
+	Magnitude:3.57
+	Date:Jul 24 2020  03:05:13.690 EDT
+	Location: 18km SSE of Lone Pine, CA
+	Lat/Long:36.4453316,-117.9613342
 java face_shp_coll 2016 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -238,10 +239,10 @@ http://bridges-cs.herokuapp.com/assignments/2016/bridges_testing
 
 
 java game_snippet 2017 bridges_testing 1321549621122 live
-Home Run Battle 3D
-iPhone
-8.0
-[Sports]
+Bladestorm: The Hundred Years War
+Xbox 360
+6.5
+[Strategy]
 java graph_al 2018 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -282,12 +283,12 @@ http://bridges-cs.herokuapp.com/assignments/2020/bridges_testing
 
 
 java guttenberg_snippet 2021 bridges_testing 1321549621122 live
-Othmar
-Ouida
+The Mysteries of London, v. 2/4
+Reynolds, George W. M. (George William MacArthur)
 []
 java imdb_snippet 2022 bridges_testing 1321549621122 live
-Denzel_Washington
-Carbon_Copy_(1981)
+Alec_Guinness
+Kafka_(1991)
 java kdt 2023 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -363,11 +364,11 @@ Number of Vertices [Charlotte]:10246
 Number of Edges [Charlotte]:16299
 Location of first vertex [Cartesian Coord]: 827.1273231300758,-5144.073405550668
 java shakespeare_snippet 2028 bridges_testing 1321549621122 live
-Sonnet 70
+Sonnet 147
 poem
-That thou art blamed shall not be thy defect,
- For slander's mark was ever yet the fair,
- The orname...
+My love is as a fever longing still,
+ For that which longer nurseth the disease,
+ Feeding on that wh...
 java shape_collection 2029 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
@@ -479,19 +480,17 @@ Work is never over
 
 
 java song_snippet 2032 bridges_testing 1321549621122 live
-Radio Ga Ga
-Queen
-The Works
-1984-01-23
+WGW
+Louis Mattrs
+Slow Waves - EP
+2015-10-28
 
 
-[Intro]
-Radio...
-Radio...
+[Produced by Cadenza]
 
-[Verse 1]
-I'd sit alone and watch your light
-My only friend through tee...
+[Verse 1: Louis Mattrs]
+Down and out on the beach
+Drowning out all the week...
 java sortingbenchmark 2033 bridges_testing 1321549621122 live
 
 Check Your Visualization at the following link:
