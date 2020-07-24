@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="author" content="Bridges"/>
+    <meta name="description" content="Bridges Tutorials"/>
+
+    <link rel="stylesheet" type="text/css" href="./tutorial.css" />
+    <link rel="stylesheet" type="text/css" href="./vim.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="http://bridgesuncc.github.io/favicon.png"/>
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <script src="./tutorial.js"></script>
+
+    <title>Bridges - Audio Clip Visualization Tutorial</title>
+
+    <script src="./prettyprint.js" defer></script>
+  </head>
+
+  <body>
+    <div>
+
+      <header w3-include-html="./Tutorial_Header.html"></header>
+
+      <main>
+	AudioClip is a representation of <i>sound</i> in BRIDGES. 
+	You can use the AudioClip class to create and manipulate sound files, and then display and hear them in your browser.
+	<h2>How do AudioClips work?</h2>
+	<p>
+	  An AudioClip is a collection of samples, which are numbers, each one representing a single part of the sound wave in the clip. 
+	  Most audio clips will have many samples, often in the hundreds of thousands or higher, depending on the sample rate and the duration. 
+	  Each sample is a number, positive or negative, and can be of varying sizes depending on the bit depth. 
+	  Specifically, they represent the height (or depth) of a specific point on a sound wave. 
+	  Currently, you can generate an AudioClip by setting the samples individually or from a WAV file.
+	</p>
+	<p>
+	  The AudioClip object will also have a sample count, a channel count, a bit depth, and a sample rate. 
+	  The sample count is the total number of samples in the clip, which is a function of the duration and the sample rate of the clip. 
+	  The channel count is the number of “channels”, or continuous streams of samples. 
+	  With multiple channels, you can play different sound waves simultaneously, which is used for things like stereo audio (a different wave for each ear).
+	  The bit depth is the size of each sample, which has an effect on the quality (16 is CD quality, for example).
+	  Finally, sample rate is the frequency at which samples are taken from the sound wave, in hertz.
+	  A higher sample rate means more samples are taken per second, which means higher quality. CDs use a sample rate of 44,100Hz.
+	</p>
+	<p>
+	  Below is an example of how samples are taken from an audio clip.
+	  At every slice in time, a sample is taken that is a measure of the height of that part of the sound wave.
+	  In the example below, the first sample is 0, the second is 2, the third is 4, and so on.
+	  The sample count is 21, meaning there are 21 slices taken.
+	  The image represents a single channel, but the audio clip could have multiple channels by having multiple waves simultaneously.
+	  The bit depth in this image is 4, meaning the size of each number is 4 bits (2^4 or 16 options for the height of the wave.
+	  Note that the minimum bit depth supported by BRIDGES is 8, 4 bits is simply for example’s sake.
+	  The sample rate is the number of samples taken per second, so if this clip were a second long, the sample rate would be 21Hz.
+	  This is extremely low, a real audio clip would likely not have less than 8,000Hz, or 8,000 samples per second, for its sample rate.
+	<br><br><img width="500em" src="./images/svg/sampling.svg"><br><br>
+	</p>
+	<hr/>
+
+	<h2>Creating an Audio Clip - BRIDGES Example</h2>
+
+	<div w3-include-html="bridges_program_elements.html"></div>
+	<h2> Example Details</h2>
+	<ul>
+	  <li>This example illustrates the process of creating an audio clip from scratch
+      <li>Sample values can be set individually by using the setSample(channel, index, value) method.
+      <li>In the example, we’ll create an audio clip, then iterate over it and set each sample according to a specific mathematical function to make a sine wave.
+
+	</ul>
+
+	<h2>Here is the final code:</h2>
+
+	<div class="tabs">
+	  <div onclick="displayCode('Java',this)">Java</div>
+	  <div onclick="displayCode('C++',this)" >C++</div>
+	  <div onclick="displayCode('Python',this)" >Python</div>
+	</div>
+	<div class="tabContents">
+	  <div id="Java">
+	    <pre w3-include-html="./testing/java/SineWave.java.html" class="prettyprint" />
+	  </div>
+	  <div id="C++">
+	    <pre w3-include-html="./testing/c++/SineWave.cpp.html" class="prettyprint" />
+	  </div>
+	  <div id="Python">
+	    <pre w3-include-html="./testing/python/SineWave.py.html" class="prettyprint" />
+	  </div>
+	</div>
+
+	<h3>Bridges Visualization</h3>
+	<ul>
+	  <li>Once all your code is in order, run your program.</li>
+	  <li>Assuming all your code is correct and it compiles correctly, a link to the Bridges website will be generated.</li>
+	  <li>Copy/paste this link into your favorite browser to view a visualization of the data structure you’ve just created.</li>
+	  <li>It should look something like this:</li>
+	</ul>
+	<div class="iframe-wrapper">
+	  <iframe src="http://bridges-cs.herokuapp.com/assignments/106/kreto" data-src="http://bridges-cs.herokuapp.com/assignments/106/kreto" scrolling="no">
+	    <p>Sorry, your browser doesn't seem to support iframes -
+              <a href="http://bridges-cs.herokuapp.com/assignments/106/kreto">Frame Link</a>
+	    </p>
+	  </iframe>
+	</div>
+	
+	<hr/>
+	
+	<h2>Manipulating an Audio Clip - BRIDGES Example</h2>
+
+	<div w3-include-html="bridges_program_elements.html"></div>
+	<h2> Example Details</h2>
+	<ul>
+	  <li>This example illustrates manipulation of an audio clip by changing sample values.</li>
+      <li>Sample values can be found by using the getSample(channel, index) method.</li>
+      <li>In the example, each sample in the clip is divided by two, which halves the volume of each sample and in turn the entire clip.</li>
+
+
+	</ul>
+
+	<h2>Here is the final code:</h2>
+
+	<div class="tabs">
+	  <div onclick="displayCode('Java',this)">Java</div>
+	  <div onclick="displayCode('C++',this)" >C++</div>
+	  <div onclick="displayCode('Python',this)" >Python</div>
+	</div>
+	<div class="tabContents">
+	  <div id="Java">
+	    <pre w3-include-html="./testing/java/AudioClipManipulation.java.html" class="prettyprint" />
+	  </div>
+	  <div id="C++">
+	    <pre w3-include-html="./testing/c++/AudioClipManipulation.cpp.html" class="prettyprint" />
+	  </div>
+	  <div id="Python">
+	    <pre w3-include-html="./testing/python/AudioClipManipulation.py.html" class="prettyprint" />
+	  </div>
+	</div>
+
+	<h3>Bridges Visualization</h3>
+	<ul>
+	  <li>Once all your code is in order, run your program.</li>
+	  <li>Assuming all your code is correct and it compiles correctly, a link to the Bridges website will be generated.</li>
+	  <li>Copy/paste this link into your favorite browser to view a visualization of the data structure you’ve just created.</li>
+	  <li>It should look something like this:</li>
+	</ul>
+	<div class="iframe-wrapper">
+	  <iframe src="http://bridges-cs.herokuapp.com/assignments/105/kreto" 
+	  data-src="http://bridges-cs.herokuapp.com/assignments/105/kreto" scrolling="no">
+	    <p>Sorry, your browser doesn't seem to support iframes -
+              <a href="http://bridges-cs.herokuapp.com/assignments/105/kreto">Frame Link</a>
+	    </p>
+	  </iframe>
+	</div>
+	
+	<p>Well done! You’ve just created your Bridges Audio Clip project!</p>
+      </main>
+
+      <footer w3-include-html="./Tutorial_Footer.html"></footer>
+
+    </div>
+    <script>
+      w3IncludeHTML();
+      document.querySelector("*.tabs > *").click();
+    </script>
+  </body>
+</html>
