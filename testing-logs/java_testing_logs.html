@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Java</h1>
-	<p>Running at Wed 29 Jul 2020 03:29:06 AM EDT</p>
+	<p>Running at Thu 30 Jul 2020 03:29:07 AM EDT</p>
   <div id="summaryarr1d.java" class="success">
     <h2><a href="java_testing_logs.html#javalogarr1d.java">Test arr1d.java</a> </h2>
     <p>
@@ -291,12 +291,12 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summarysong_lyrics_snippet.java" class="failure">
+  <div id="summarysong_lyrics_snippet.java" class="success">
     <h2><a href="java_testing_logs.html#javalogsong_lyrics_snippet.java">Test song_lyrics_snippet.java</a> </h2>
     <p>
       <ul>
         <li> Build : <a href="java_testing_logs.html#javalogsong_lyrics_snippet.java-buildtest">success</a></li>
-        <li> Run : <a href="java_testing_logs.html#javalogsong_lyrics_snippet.java-runtest">error</a></li>
+        <li> Run : <a href="java_testing_logs.html#javalogsong_lyrics_snippet.java-runtest">success</a></li>
       </ul>
     </p>
   </div>
@@ -490,9 +490,9 @@ http://bridges-cs.herokuapp.com/assignments/2005/bridges_testing
 </div>
 <div class="success">
 <h3><span id="javalogbook_snippet.java-runtest">Run for test book_snippet.java</span></h3>
-<pre><code>Great Expectations
-Dickens, Charles
-[fiction, bildungsromans]
+<pre><code>Looking Backward, 2000 to 1887
+Bellamy, Edward
+[fiction, science fiction, utopian fiction]
 </code></pre>
 </div>
     
@@ -733,10 +733,10 @@ could not run test elevation_snippet.java
 <div class="success">
 <h3><span id="javalogeq_snippet.java-runtest">Run for test eq_snippet.java</span></h3>
 <pre><code>Earthquake 0:
-	Magnitude:2.2
-	Date:Jul 29 2020  03:10:07.894 EDT
-	Location: 6 km N of North Bath, Maine
-	Lat/Long:43.9963,-69.8016
+	Magnitude:2.01999998
+	Date:Jul 30 2020  03:23:24.070 EDT
+	Location: 1 km E of Pāhala, Hawaii
+	Lat/Long:19.2019996643066,-155.460998535156
 </code></pre>
 </div>
     
@@ -771,10 +771,10 @@ http://bridges-cs.herokuapp.com/assignments/2016/bridges_testing
 </div>
 <div class="success">
 <h3><span id="javaloggame_snippet.java-runtest">Run for test game_snippet.java</span></h3>
-<pre><code>Duke Nukem: Total Meltdown
-PlayStation
-7.0
-[Shooter]
+<pre><code>No More Heroes: Heroes Paradise
+PlayStation 3
+7.5
+[Action]
 </code></pre>
 </div>
     
@@ -867,9 +867,9 @@ http://bridges-cs.herokuapp.com/assignments/2020/bridges_testing
 </div>
 <div class="success">
 <h3><span id="javalogguttenberg_snippet.java-runtest">Run for test guttenberg_snippet.java</span></h3>
-<pre><code>Pascal's Pensées
-Pascal, Blaise
-[apologetics, philosophy]
+<pre><code>Siddhartha
+Hesse, Hermann
+[fiction, religious fiction]
 </code></pre>
 </div>
     
@@ -884,8 +884,8 @@ Pascal, Blaise
 </div>
 <div class="success">
 <h3><span id="javalogimdb_snippet.java-runtest">Run for test imdb_snippet.java</span></h3>
-<pre><code>John_Malkovich
-Adaptation._(2002)
+<pre><code>James_Stewart_(I)
+Frank_Capra's_'It's_a_Wonderful_Life':_A_Personal_Remembrance_(1991)
 </code></pre>
 </div>
     
@@ -1039,17 +1039,18 @@ Location of first vertex [Cartesian Coord]: 827.1273231300758,-5144.073405550668
 </div>
 <div class="success">
 <h3><span id="javalogshakespeare_snippet.java-runtest">Run for test shakespeare_snippet.java</span></h3>
-<pre><code>The First Part Of King Henry The Sixth
+<pre><code>The Life of King Henry the Eighth
 play
-1592
+1611
 
-THE FIRST PART OF HENRY THE SIXTH
+KING HENRY THE EIGHTH
 
 by William Shakespeare
 
-Dramatis Personae
+DRAMATIS PERSONAE
 
- KING HENRY THE ...
+ KING HENRY THE EIGHTH
+ CARD...
 </code></pre>
 </div>
     
@@ -1114,38 +1115,91 @@ http://bridges-cs.herokuapp.com/assignments/2030/bridges_testing
 <pre><code>Compiling test song_lyrics_snippet.java
 </code></pre>
 </div>
-<div class="failure">
+<div class="success">
 <h3><span id="javalogsong_lyrics_snippet.java-runtest">Run for test song_lyrics_snippet.java</span></h3>
-<pre><code>Exception in thread &quot;main&quot; org.apache.http.client.HttpResponseException: HTTP Request Failed. Error Code: 503. Message: &lt;!DOCTYPE html&gt;
-	&lt;html&gt;
-	  &lt;head&gt;
-		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-		&lt;meta charset=&quot;utf-8&quot;&gt;
-		&lt;title&gt;Application Error&lt;/title&gt;
-		&lt;style media=&quot;screen&quot;&gt;
-		  html,body,iframe {
-			margin: 0;
-			padding: 0;
-		  }
-		  html,body {
-			height: 100%;
-			overflow: hidden;
-		  }
-		  iframe {
-			width: 100%;
-			height: 100%;
-			border: 0;
-		  }
-		&lt;/style&gt;
-	  &lt;/head&gt;
-	  &lt;body&gt;
-		&lt;iframe src=&quot;//www.herokucdn.com/error-pages/application-error.html&quot;&gt;&lt;/iframe&gt;
-	  &lt;/body&gt;
-	&lt;/html&gt;
-	at bridges.connect.DataFormatter.getSong(DataFormatter.java:940)
-	at bridges.connect.DataSource.getSong(DataSource.java:140)
-	at song_lyrics_snippet.main(song_lyrics_snippet.java:24)
-could not run test song_lyrics_snippet.java
+<pre><code>Harder, Better, Faster, Stronger
+Daft Punk
+Discovery
+2001-02-26
+
+
+[Intro]
+Work it, make it
+Do it, makes us
+Harder, better
+Faster, stronger
+More than, hour
+Hour, never
+Ever, after
+Work is, over
+Work it, make it
+Do it, makes us
+Harder, better
+Faster, stronger
+
+[Chorus 1]
+Work it harder, make it better
+Do it faster, makes us stronger
+More than ever, hour after hour
+Work is never over
+Work it harder, make it better
+Do it faster, makes us stronger
+More than ever, hour after hour
+Work is never over
+Work it harder, make it better
+Do it faster, makes us stronger
+More than ever, hour after hour
+Work is never over
+Work it harder, make it better
+Do it faster, makes us stronger
+More than ever, hour after hour
+Work is never over
+Work it harder, make it better
+Do it faster, makes us stronger
+More than ever, hour after hour
+Work is never over
+Work it harder, make it better
+Do it faster, makes us
+More than ever, hour after hour
+Work is never over
+Work it harder, make it better
+Do it faster, makes us stronger
+More than ever, hour after hour
+Work is never over
+
+[Chorus 2]
+Work it harder, make it
+Do it faster, makes us
+More than ever, hour after hour
+Work is never over
+Work it harder, make it better
+Do it faster, makes us stronger
+More than ever, hour after hour
+Work is never over
+Work it, make it better
+Do it faster, makes us stronger
+More than ever, hour after hour
+Work is never over
+Work it harder, make it better
+Do it faster, makes us stronger
+More than ever, hour after hour
+Work is never over
+Work it harder, make it better
+Do it faster, makes us stronger
+More than ever, hour after hour
+Work is never over
+
+[Outro]
+Work it harder
+Do it faster
+More than ever, hour
+Work is never over
+Work it harder, make it better
+Do it faster, makes us stronger
+More than ever, hour after hour
+Work is never over
+
+
 </code></pre>
 </div>
     
@@ -1160,16 +1214,15 @@ could not run test song_lyrics_snippet.java
 </div>
 <div class="success">
 <h3><span id="javalogsong_snippet.java-runtest">Run for test song_snippet.java</span></h3>
-<pre><code>Chicken Noodle Soup
-​j-hope
+<pre><code>Fhkfh
+Fhsdksfh
 null
-2019-09-27
+null
 
 
-[Intro: Becky G]
-I let it rain, I clear it out
-I let it rain, I clear it out
-I let it rain, I clea...
+fhsdfk
+
+...
 </code></pre>
 </div>
     
