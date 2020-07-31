@@ -70,6 +70,9 @@ FORCE_BRIDGES_ASSIGNMENT=9310 ./graph_amatrix 9999 fakename fakeapi
 
 FORCE_BRIDGES_ASSIGNMENT=9400 ./shape_collection 9999 fakename fakeapi
 
+FORCE_BRIDGES_ASSIGNMENT=9500 ./sine_wave 9999 fakename fakeapi
+
+FORCE_BRIDGES_ASSIGNMENT=9510 ./audio_clip_manipulation 9999 fakename fakeapi
 
 ## games don't produce useful visualization
 
