@@ -4,6 +4,7 @@
  */
 import bridges.connect.Bridges;
 import bridges.base.SLelement;
+import java.util.Iterator;
 
 public class sllist {
 
@@ -30,6 +31,20 @@ public class sllist {
 		el1.setNext(el2);
 		el2.setNext(el3);
 		el3.setNext(el4);
+
+		// test SLelement iterators
+
+		// using a for-each loop
+		System.out.println("Using range for loop:");
+		for (String s: el0)
+			System.out.println("\t " + s);
+
+		// use the iterator
+		System.out.println("Using iterators..");
+		Iterator<String> iter = el0.iterator();
+		while (iter.hasNext()) {
+			System.out.println("\t" + iter.next());
+		}
 
 		// set colors for list elements - see the Color class for supported colors
 		el0.setColor("red");

@@ -5,6 +5,7 @@
 <span class="Comment"> */</span>
 <span class="PreProc">import</span> bridges.connect.Bridges;
 <span class="PreProc">import</span> bridges.base.SLelement;
+<span class="PreProc">import</span> java.util.Iterator;
 
 <span class="Type">public</span> <span class="Type">class</span> sllist {
 
@@ -31,6 +32,20 @@
 		el1.setNext(el2);
 		el2.setNext(el3);
 		el3.setNext(el4);
+
+		<span class="Comment">// test SLelement iterators</span>
+
+		<span class="Comment">// using a for-each loop</span>
+		System.out.println(<span class="Constant">&quot;Using range for loop:&quot;</span>);
+		<span class="Statement">for</span> (String s: el0)
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant"> &quot;</span> + s);
+
+		<span class="Comment">// use the iterator</span>
+		System.out.println(<span class="Constant">&quot;Using iterators..&quot;</span>);
+		Iterator&lt;String&gt; iter = el0.iterator();
+		<span class="Statement">while</span> (iter.hasNext()) {
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">&quot;</span> + iter.next());
+		}
 
 		<span class="Comment">// set colors for list elements - see the Color class for supported colors</span>
 		el0.setColor(<span class="Constant">&quot;red&quot;</span>);

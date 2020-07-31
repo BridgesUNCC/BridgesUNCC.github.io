@@ -39,6 +39,21 @@
 	el4-&gt;setNext(el0);
 	el0-&gt;setPrev(el4);
 
+	cout &lt;&lt; <span class="Constant">&quot;Testing forward list iterator..&quot;</span> &lt;&lt; endl;
+	CircDLelement_List&lt;string&gt; list(el0);
+    <span class="Type">auto</span> iter = list.begin();
+    <span class="Statement">do</span> {
+        cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">&quot;</span> &lt;&lt; *iter &lt;&lt; endl;
+        ++iter;
+    } <span class="Statement">while</span> (iter != list.end());
+
+	cout &lt;&lt; <span class="Constant">&quot;Testing reverse list iterator..&quot;</span> &lt;&lt; endl;
+    iter = list.rbegin();
+    <span class="Statement">do</span> {
+        cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">&quot;</span> &lt;&lt; *iter &lt;&lt; endl;
+        --iter;
+    } <span class="Statement">while</span> (iter != list.rend());
+
 	<span class="Comment">// add  element colors</span>
 	<span class="Comment">// set colors for list elements - see the Color class for supported colors</span>
 	el0-&gt;setColor(<span class="Constant">&quot;red&quot;</span>);

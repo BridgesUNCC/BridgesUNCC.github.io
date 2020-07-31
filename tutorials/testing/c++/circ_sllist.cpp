@@ -27,6 +27,16 @@ int main (int argc, char **argv) {
 	el1->setNext(el2);
 	el2->setNext(el3);
 	el3->setNext(el4);
+	el4->setNext(el0);
+
+	// test the element's iterators
+	cout << "Testing list iterator.." << endl;
+	CircSLelement_List<string> list(el0);
+	auto iter = list.begin();
+	do {
+		cout << "\t" << *iter << endl;
+		++iter;
+	} while (iter != list.end());
 
 	// connect the last element to the first element to form the circular list
 	el4->setNext(el0);
@@ -44,6 +54,7 @@ int main (int argc, char **argv) {
 
 	// set node transparency
 	el4->setOpacity (0.5f);
+
 
 	// set node size
 	el0->setSize (20);

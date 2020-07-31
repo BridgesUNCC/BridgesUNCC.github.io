@@ -1,5 +1,6 @@
 import bridges.base.DLelement;
 import bridges.connect.Bridges;
+import java.util.Iterator;
 
 public class dllist {
 
@@ -32,6 +33,27 @@ public class dllist {
 		el3.setPrev(el2);
 		el3.setNext(el4);
 		el4.setPrev(el3);
+
+	        // test SLelement iterators
+
+        // using a for-each loop
+		System.out.println("Using range for loop:");
+		for (String s: el0)
+			System.out.println("\t " + s);
+
+		// use the forward iterator
+		System.out.println("Using forward iterators..");
+		Iterator<String> iter = el0.iterator();
+		while (iter.hasNext()) {
+			System.out.println("\t" + iter.next());
+        }
+
+		// use the reverse iterator
+		System.out.println("Using reverse iterator..");
+		iter = el4.reverse_iterator();
+		while (iter.hasNext()) {
+			System.out.println("\t" + iter.next());
+		}
 
 		// add  element colors
 		// set colors for list elements - see the Color class for supported colors

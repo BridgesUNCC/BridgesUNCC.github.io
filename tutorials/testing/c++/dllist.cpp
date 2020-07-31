@@ -40,6 +40,16 @@ int main(int argc, char **argv) {
 	el3->setNext(el4);
 	el4->setPrev(el3);
 
+	// test the iterators in DLelement
+	DLelement_List<string> list(el0);
+
+	cout <<  "Forward Iteration:" << endl;
+	for (auto iter = list.begin(); iter != list.end(); iter++)
+		cout << "\t" << *iter << endl;
+	cout <<  "Reverse Iteration:" << endl;
+	for (auto iter = list.rbegin(); iter != list.rend(); iter--)
+		cout << "\t" << *iter << endl;
+
 	// add  element colors
 	// set colors for list elements - see the Color class for supported colors
 	el0->setColor("red");

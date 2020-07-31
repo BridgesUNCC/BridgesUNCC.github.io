@@ -22,6 +22,10 @@ def main():
 
     print ("Position of first vertex: lat="+str(vertices[0].latitude)+
            " long="+ str(vertices[0].longitude));
+
+    print ("Cartesian Coordinate of first vertex: "+str(vertices[0].cartesian_coord[0])+
+           ", "+ str(vertices[0].cartesian_coord[1]));
+
     
 if __name__ == '__main__':
     main()

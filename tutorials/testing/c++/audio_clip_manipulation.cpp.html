@@ -1,0 +1,48 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">#include </span><span class="Constant">&quot;AudioClip.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> std;
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
+
+<span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
+	<span class="Comment">// create Bridges object</span>
+	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+		<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+
+
+    <span class="Comment">// Title, description</span>
+        bridges.setTitle(<span class="Constant">&quot;An AudioClip Example&quot;</span>);
+        bridges.setDescription(<span class="Constant">&quot;This program takes any input audio clip and lowers its volume by half. To do this, we'll iterate through all the samples in the clip and halve them.&quot;</span>);
+
+        <span class="Comment">// Create the audio clip object from a .wav file</span>
+        <span class="Comment">// We do this by passing the path to the file into the constructor</span>
+        <span class="Comment">// Change the path to be any .wav file on your system.</span>
+        AudioClip oldAudioClip = AudioClip(<span class="Constant">&quot;../../data/piano.wav&quot;</span>);
+
+        <span class="Comment">// Create a new audio clip object to store our changes on.</span>
+        <span class="Comment">// Copy the sample count, sample bit depth, and sample rate from the old clip.</span>
+        AudioClip newAudioClip = AudioClip(oldAudioClip.getSampleCount(), <span class="Constant">1</span>,
+                oldAudioClip.getSampleBits(), oldAudioClip.getSampleRate());
+
+        <span class="Comment">// Iterate through every sample in the clip</span>
+        <span class="Statement">for</span> (<span class="Type">int</span> i = <span class="Constant">0</span>; i &lt; newAudioClip.getSampleCount(); i++){
+            <span class="Comment">// Get the sample at i in the first (and only) channel.</span>
+            <span class="Type">int</span> sampleValue = oldAudioClip.getSample(<span class="Constant">0</span>, i);
+            <span class="Comment">// Halve the value of the sample</span>
+            <span class="Type">int</span> newSampleValue = sampleValue / <span class="Constant">2</span>;
+            <span class="Comment">// Set the sample at i to the new value</span>
+            newAudioClip.setSample(<span class="Constant">0</span>, i, newSampleValue);
+        }
+
+        <span class="Comment">// Visualize the original audio clip</span>
+        bridges.setDataStructure(oldAudioClip);
+        bridges.visualize();
+
+        <span class="Comment">//Visualize the new audio clip</span>
+        bridges.setDataStructure(newAudioClip);
+        bridges.visualize();
+    <span class="Statement">return</span> <span class="Constant">0</span>;
+}
+</pre>

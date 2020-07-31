@@ -27,7 +27,7 @@
 	Rectangle s1(-<span class="Constant">25</span>, <span class="Constant">0</span>, <span class="Constant">50</span>, <span class="Constant">50</span>);
 	s1.setFillColor(Color(<span class="Constant">&quot;red&quot;</span>));
 	<span class="Type">float</span> sf[] = {<span class="Constant">0.5</span>, <span class="Constant">1.</span>};
-	s1.scale(sf[<span class="Constant">0</span>], sf[<span class="Constant">1</span>]);
+	s1.scale(sf);
 <span class="Comment">//	sc.addSymbol(&amp;s1);</span>
 
 	Circle s2(<span class="Constant">25</span>, <span class="Constant">0</span>, <span class="Constant">25</span>);
@@ -50,7 +50,7 @@
 	s4.addPoint(<span class="Constant">25</span>, <span class="Constant">0</span>);
 	s4.addPoint(<span class="Constant">0</span>, <span class="Constant">25</span>);
 	s4.addPoint(-<span class="Constant">25</span>, <span class="Constant">0</span>);
-	s4.scale(sf[<span class="Constant">0</span>], sf[<span class="Constant">1</span>]);
+	s4.scale(sf);
 	s4.setStrokeColor(<span class="Constant">&quot;darkorchid&quot;</span>);
 	s4.setStrokeWidth(<span class="Constant">2.0f</span>);
 	sc.addSymbol(&amp;s4);

@@ -26,7 +26,7 @@ int main(int argc, char **argv) {
 	Rectangle s1(-25, 0, 50, 50);
 	s1.setFillColor(Color("red"));
 	float sf[] = {0.5, 1.};
-	s1.scale(sf[0], sf[1]);
+	s1.scale(sf);
 //	sc.addSymbol(&s1);
 
 	Circle s2(25, 0, 25);
@@ -49,7 +49,7 @@ int main(int argc, char **argv) {
 	s4.addPoint(25, 0);
 	s4.addPoint(0, 25);
 	s4.addPoint(-25, 0);
-	s4.scale(sf[0], sf[1]);
+	s4.scale(sf);
 	s4.setStrokeColor("darkorchid");
 	s4.setStrokeWidth(2.0f);
 	sc.addSymbol(&s4);

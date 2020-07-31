@@ -26,7 +26,9 @@
 	<span class="Comment">// draw a rectangle</span>
 	Rectangle s1(-<span class="Constant">25</span>, <span class="Constant">0</span>, <span class="Constant">50</span>, <span class="Constant">50</span>);
 	s1.setFillColor(Color(<span class="Constant">&quot;red&quot;</span>));
+	s1.setOpacity(<span class="Constant">0.3f</span>);
 	sc.addSymbol(&amp;s1);
+
 
 	<span class="Comment">// and a circle next to it</span>
 	Circle s2(<span class="Constant">25</span>, <span class="Constant">0</span>, <span class="Constant">25</span>);
@@ -79,7 +81,6 @@
 	bridges.setDataStructure(sc);
 
 	<span class="Comment">// visualize the JSON and Collection</span>
-	bridges.setVisualizeJSONFlag(<span class="Constant">true</span>);
 	bridges.visualize();
 
 	<span class="Statement">return</span> <span class="Constant">0</span>;

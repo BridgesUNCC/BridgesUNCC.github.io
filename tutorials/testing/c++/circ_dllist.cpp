@@ -38,6 +38,21 @@ int main(int argc, char **argv) {
 	el4->setNext(el0);
 	el0->setPrev(el4);
 
+	cout << "Testing forward list iterator.." << endl;
+	CircDLelement_List<string> list(el0);
+    auto iter = list.begin();
+    do {
+        cout << "\t" << *iter << endl;
+        ++iter;
+    } while (iter != list.end());
+
+	cout << "Testing reverse list iterator.." << endl;
+    iter = list.rbegin();
+    do {
+        cout << "\t" << *iter << endl;
+        --iter;
+    } while (iter != list.rend());
+
 	// add  element colors
 	// set colors for list elements - see the Color class for supported colors
 	el0->setColor("red");

@@ -41,6 +41,16 @@ DLelement&lt;string&gt; *insertFront(DLelement&lt;string&gt; *front,
 	el3-&gt;setNext(el4);
 	el4-&gt;setPrev(el3);
 
+	<span class="Comment">// test the iterators in DLelement</span>
+	DLelement_List&lt;string&gt; list(el0);
+
+	cout &lt;&lt;  <span class="Constant">&quot;Forward Iteration:&quot;</span> &lt;&lt; endl;
+	<span class="Statement">for</span> (<span class="Type">auto</span> iter = list.begin(); iter != list.end(); iter++)
+		cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">&quot;</span> &lt;&lt; *iter &lt;&lt; endl;
+	cout &lt;&lt;  <span class="Constant">&quot;Reverse Iteration:&quot;</span> &lt;&lt; endl;
+	<span class="Statement">for</span> (<span class="Type">auto</span> iter = list.rbegin(); iter != list.rend(); iter--)
+		cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">&quot;</span> &lt;&lt; *iter &lt;&lt; endl;
+
 	<span class="Comment">// add  element colors</span>
 	<span class="Comment">// set colors for list elements - see the Color class for supported colors</span>
 	el0-&gt;setColor(<span class="Constant">&quot;red&quot;</span>);

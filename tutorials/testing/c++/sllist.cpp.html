@@ -35,6 +35,13 @@
 	el2-&gt;setNext(el3);
 	el3-&gt;setNext(el4);
 
+	<span class="Comment">// SLelement also has an iterator that can be used to iterate over the list</span>
+	SLelement_List&lt;string&gt; list(el0);
+
+	<span class="Comment">// print the names of the students in the list using the iterator</span>
+    <span class="Statement">for</span> (<span class="Type">auto</span> iter = list.begin(); iter != list.end(); ++iter)
+        cout &lt;&lt; *iter &lt;&lt; endl;
+
 	<span class="Comment">// set colors for list elements - see the Color class for supported colors</span>
 	el0-&gt;setColor(<span class="Constant">&quot;red&quot;</span>);
 	el2-&gt;setColor(<span class="Constant">&quot;aliceblue&quot;</span>);

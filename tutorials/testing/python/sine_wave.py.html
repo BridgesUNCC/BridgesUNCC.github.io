@@ -1,0 +1,46 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges <span class="PreProc">import</span> AudioClip
+<span class="PreProc">from</span> bridges <span class="PreProc">import</span> Bridges
+<span class="PreProc">import</span> sys
+<span class="PreProc">import</span> math
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># Title, description</span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">An AudioClip Example</span><span class="Constant">&quot;</span>)
+    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">This program creates a sine wave audio clip to demonstrate the </span><span class="Constant">&quot;</span> +
+            <span class="Constant">&quot;</span><span class="Constant">process of creating an audio clip from scratch.</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># Create an audio clip to add the samples to</span>
+    SAMPLE_RATE = <span class="Constant">44100</span> <span class="Comment"># Hz</span>
+    NUM_SAMPLES = SAMPLE_RATE * <span class="Constant">10</span> <span class="Comment">#10 seconds</span>
+    ac = AudioClip(sample_count=NUM_SAMPLES, num_channels=<span class="Constant">1</span>, sample_bits=<span class="Constant">32</span>, sample_rate=SAMPLE_RATE)
+
+    <span class="Comment"># Iterate through every sample in the clip</span>
+    <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(ac.get_sample_count()):
+        <span class="Comment"># Number of oscillations per second, 261.63 is middle C</span>
+        frequency = <span class="Constant">261.63</span>
+        <span class="Comment"># Where the cycle is at i = 0</span>
+        phase = <span class="Constant">0</span>
+        <span class="Comment"># The maximum amplitude of the wave (value of the highest point)</span>
+        amplitude = <span class="Constant">2</span>**<span class="Constant">31</span> / <span class="Constant">4.0</span>
+        <span class="Comment"># The current second (with decimals) of the clip</span>
+        time = i / SAMPLE_RATE
+        <span class="Comment"># This gives the sine curve</span>
+        val = math.sin((<span class="Constant">2</span> * math.pi)  * frequency * time + phase)
+        <span class="Comment"># Scale the curve up to the amplitude and cast to int</span>
+        sampleValue = val * amplitude
+
+        <span class="Comment"># Set the sample at i to the new value</span>
+        ac.set_sample(<span class="Constant">0</span>, i, sampleValue)
+
+    <span class="Comment"># Visualize the audio clip</span>
+    bridges.set_data_structure(ac)
+    bridges.visualize()
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
+    main()
+</pre>

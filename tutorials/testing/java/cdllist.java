@@ -1,5 +1,6 @@
 import bridges.base.CircDLelement;
 import bridges.connect.Bridges;
+import java.util.Iterator;
 
 public class cdllist {
 
@@ -31,6 +32,26 @@ public class cdllist {
 		// link the last element to the first
 		el4.setNext (el0);
 		el0.setPrev (el4);
+
+		// test CurcDLelement iterators
+
+
+        System.out.println("Using foreach range loop.");
+        Iterator<String> iter = el0.iterator();
+		for (String s : el0)
+            System.out.println("\t" + iter.next());
+
+        // use the iterator
+        System.out.println("Using iterators..");
+		iter = el0.iterator();
+		while (iter.hasNext())
+            System.out.println("\t" + iter.next());
+		// test reverse iterator
+		System.out.println("Using reverse iterator..");
+        iter = el0.reverse_iterator();
+		while (iter.hasNext())
+            System.out.println("\t" + iter.next());
+
 
 		// set colors for list elements - see the Color class for supported colors
 		el0.setColor("red");

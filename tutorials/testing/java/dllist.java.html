@@ -1,6 +1,7 @@
 <pre id='vimCodeElement'>
 <span class="PreProc">import</span> bridges.base.DLelement;
 <span class="PreProc">import</span> bridges.connect.Bridges;
+<span class="PreProc">import</span> java.util.Iterator;
 
 <span class="Type">public</span> <span class="Type">class</span> dllist {
 
@@ -33,6 +34,27 @@
 		el3.setPrev(el2);
 		el3.setNext(el4);
 		el4.setPrev(el3);
+
+	        <span class="Comment">// test SLelement iterators</span>
+
+        <span class="Comment">// using a for-each loop</span>
+		System.out.println(<span class="Constant">&quot;Using range for loop:&quot;</span>);
+		<span class="Statement">for</span> (String s: el0)
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant"> &quot;</span> + s);
+
+		<span class="Comment">// use the forward iterator</span>
+		System.out.println(<span class="Constant">&quot;Using forward iterators..&quot;</span>);
+		Iterator&lt;String&gt; iter = el0.iterator();
+		<span class="Statement">while</span> (iter.hasNext()) {
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">&quot;</span> + iter.next());
+        }
+
+		<span class="Comment">// use the reverse iterator</span>
+		System.out.println(<span class="Constant">&quot;Using reverse iterator..&quot;</span>);
+		iter = el4.reverse_iterator();
+		<span class="Statement">while</span> (iter.hasNext()) {
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">&quot;</span> + iter.next());
+		}
 
 		<span class="Comment">// add  element colors</span>
 		<span class="Comment">// set colors for list elements - see the Color class for supported colors</span>

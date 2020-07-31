@@ -1,0 +1,47 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">#include </span><span class="Constant">&quot;AudioClip.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> std;
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
+
+<span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
+	<span class="Comment">// create Bridges object</span>
+	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+		<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+    <span class="Comment">// Title, description</span>
+    bridges.setTitle(<span class="Constant">&quot;Sine Wave&quot;</span>);
+    bridges.setDescription(<span class="Constant">&quot;This program creates a sine wave audio clip to demonstrate the process of creating an audio clip from scratch.&quot;</span>);
+
+    <span class="Comment">// Create an audio clip to add the samples to</span>
+        <span class="Type">const</span> <span class="Type">int</span> SAMPLE_RATE = <span class="Constant">44100</span>; <span class="Comment">// Hz</span>
+        <span class="Type">const</span> <span class="Type">int</span> NUM_SAMPLES = SAMPLE_RATE * <span class="Constant">10</span>; <span class="Comment">//10 seconds</span>
+        AudioClip ac = AudioClip(NUM_SAMPLES, <span class="Constant">1</span>, <span class="Constant">32</span>, SAMPLE_RATE);
+
+        <span class="Comment">// Iterate through every sample in the clip</span>
+        <span class="Statement">for</span> (<span class="Type">int</span> i = <span class="Constant">0</span>; i &lt; ac.getSampleCount(); i++){
+
+            <span class="Comment">// Number of oscillations per second, 261.63 is middle C</span>
+            <span class="Type">double</span> frequency = <span class="Constant">261.63</span>;
+            <span class="Comment">// Where the cycle is at i = 0</span>
+            <span class="Type">double</span> phase = <span class="Constant">0</span>;
+            <span class="Comment">// The maximum amplitude of the wave (value of the highest point)</span>
+            <span class="Type">double</span> amplitude = <span class="Constant">INT_MAX</span> / <span class="Constant">4.0</span>;
+            <span class="Comment">// The current second (with decimals) of the clip</span>
+            <span class="Type">double</span> time = (<span class="Type">double</span>)i / SAMPLE_RATE;
+            <span class="Comment">// This gives the sine curve</span>
+            <span class="Type">double</span> val = sin((<span class="Constant">2</span> * <span class="Constant">M_PI</span>)  * frequency * time + phase);
+            <span class="Comment">// Scale the curve up to the amplitude and cast to int</span>
+            <span class="Type">int</span> sampleValue = (<span class="Type">int</span>)(val * amplitude);
+
+            <span class="Comment">// Set the sample at i to the new value</span>
+            ac.setSample(<span class="Constant">0</span>, i, sampleValue);
+        }
+
+        <span class="Comment">// Visualize the audio clip</span>
+        bridges.setDataStructure(ac);
+        bridges.visualize();
+    <span class="Statement">return</span> <span class="Constant">0</span>;
+}
+</pre>

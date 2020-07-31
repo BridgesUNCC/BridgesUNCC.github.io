@@ -11,15 +11,15 @@
     bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
 
 
-    ele_obj = data_source.get_elevation_data([-<span class="Constant">98.02593749997456</span>, <span class="Constant">41.03133177632377</span>, -<span class="Constant">96.94531249997696</span>, <span class="Constant">42.508577297430456</span>])
+    ele_obj = data_source.get_elevation_data([<span class="Constant">41.03133177632377</span>, -<span class="Constant">98.02593749997456</span>, <span class="Constant">42.508577297430456</span>, -<span class="Constant">96.94531249997696</span>])
     <span class="Identifier">print</span>(<span class="Constant">&quot;</span><span class="Constant">Width: </span><span class="Constant">&quot;</span>+<span class="Identifier">str</span>(ele_obj.cols))
     <span class="Identifier">print</span>(<span class="Constant">&quot;</span><span class="Constant">Height: </span><span class="Constant">&quot;</span>+<span class="Identifier">str</span>(ele_obj.rows))
     <span class="Identifier">print</span>(<span class="Constant">&quot;</span><span class="Constant">Coordinate of lower left corner: </span><span class="Constant">&quot;</span>+<span class="Identifier">str</span>(ele_obj.xll)+<span class="Constant">&quot;</span><span class="Constant">, </span><span class="Constant">&quot;</span>+<span class="Identifier">str</span>(ele_obj.yll))
-    <span class="Identifier">print</span>(<span class="Constant">&quot;</span><span class="Constant">Spatial resolution: </span><span class="Constant">&quot;</span> + ele_obj.cellsize)
+    <span class="Identifier">print</span>(<span class="Constant">&quot;</span><span class="Constant">Spatial resolution: </span><span class="Constant">&quot;</span> + <span class="Identifier">str</span>(ele_obj.cellsize))
 
     <span class="Identifier">print</span>(<span class="Constant">&quot;</span><span class="Constant">First 10 elevations:</span><span class="Constant">&quot;</span>)
     <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Constant">0</span>, <span class="Constant">10</span>):
-        <span class="Identifier">print</span>(ele_obj.data[<span class="Constant">0</span>][i])
+        <span class="Identifier">print</span>(<span class="Identifier">str</span>(ele_obj.data[<span class="Constant">0</span>][i]))
 
 
 

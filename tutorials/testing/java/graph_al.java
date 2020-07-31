@@ -79,7 +79,7 @@ public class graph_al {
 			}
 		}
 
-		// Next, we illustrate traversing the adacency list and color the
+		// Next, we illustrate traversing the adjacency list and color the
 		// movie nodes adjacent to the Kevin Bacon node.
 
 		// first get the adjacency list for Kevin Bacon

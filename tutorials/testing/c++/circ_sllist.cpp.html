@@ -28,6 +28,16 @@
 	el1-&gt;setNext(el2);
 	el2-&gt;setNext(el3);
 	el3-&gt;setNext(el4);
+	el4-&gt;setNext(el0);
+
+	<span class="Comment">// test the element's iterators</span>
+	cout &lt;&lt; <span class="Constant">&quot;Testing list iterator..&quot;</span> &lt;&lt; endl;
+	CircSLelement_List&lt;string&gt; list(el0);
+	<span class="Type">auto</span> iter = list.begin();
+	<span class="Statement">do</span> {
+		cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">&quot;</span> &lt;&lt; *iter &lt;&lt; endl;
+		++iter;
+	} <span class="Statement">while</span> (iter != list.end());
 
 	<span class="Comment">// connect the last element to the first element to form the circular list</span>
 	el4-&gt;setNext(el0);
@@ -45,6 +55,7 @@
 
 	<span class="Comment">// set node transparency</span>
 	el4-&gt;setOpacity (<span class="Constant">0.5f</span>);
+
 
 	<span class="Comment">// set node size</span>
 	el0-&gt;setSize (<span class="Constant">20</span>);

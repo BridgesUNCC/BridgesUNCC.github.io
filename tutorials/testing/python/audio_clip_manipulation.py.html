@@ -1,0 +1,46 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges <span class="PreProc">import</span> AudioClip
+<span class="PreProc">from</span> bridges <span class="PreProc">import</span> Bridges
+<span class="PreProc">import</span> sys
+<span class="PreProc">import</span> math
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># Title, description</span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">An AudioClip Example</span><span class="Constant">&quot;</span>)
+    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">This program takes any input audio clip and lowers its volume by half. To do this, we'll</span><span class="Constant">&quot;</span> +
+                <span class="Constant">&quot;</span><span class="Constant"> iterate through all the samples in the clip and halve them.</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># Create the audio clip object from a .wav file</span>
+    <span class="Comment"># We do this by passing the path to the file into the constructor</span>
+    <span class="Comment"># Change the path to be any .wav file on your system.</span>
+    oldAudioClip = AudioClip(<span class="Constant">&quot;</span><span class="Constant">../../data/piano.wav</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># Create a new audio clip object to store our changes on.</span>
+    <span class="Comment"># Copy the sample count, sample bit depth, and sample rate from the old clip.</span>
+    newAudioClip = AudioClip(sample_count=oldAudioClip.get_sample_count(), num_channels=<span class="Constant">1</span>,
+            sample_bits=oldAudioClip.get_sample_bits(), sample_rate=oldAudioClip.get_sample_rate())
+
+    <span class="Comment"># Iterate through every sample in the clip</span>
+    <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(newAudioClip.get_sample_count()):
+        <span class="Comment"># Get the sample at i in the first (and only) channel.</span>
+        sampleValue = oldAudioClip.get_sample(<span class="Constant">0</span>, i)
+        <span class="Comment"># Halve the value of the sample</span>
+        newSampleValue = <span class="Identifier">int</span>(sampleValue / <span class="Constant">2</span>)
+        <span class="Comment"># Set the sample at i to the new value</span>
+        newAudioClip.set_sample(<span class="Constant">0</span>, i, newSampleValue)
+
+    <span class="Comment"># Visualize the original audio clip</span>
+    bridges.set_data_structure(oldAudioClip)
+    bridges.visualize()
+
+    <span class="Comment">#Visualize the new audio clip</span>
+    bridges.set_data_structure(newAudioClip)
+    bridges.visualize()
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
+    main()
+</pre>

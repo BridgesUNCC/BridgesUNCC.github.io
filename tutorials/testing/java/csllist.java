@@ -1,6 +1,8 @@
 import bridges.base.CircSLelement;
 import bridges.connect.Bridges;
 
+import java.util.Iterator;
+
 public class csllist {
 
 	public static void main(String[] args) throws Exception {
@@ -29,6 +31,13 @@ public class csllist {
 
 		// link the last to the first
 		el4.setNext(el0);
+
+        // use the iterator
+        System.out.println("Using iterators..");
+        Iterator<String> iter = el0.iterator();
+		do {
+            System.out.println("\t" + iter.next());
+		} while (iter.hasNext());
 
 		// set colors for list elements - see the Color class for supported colors
 		el0.setColor("red");
