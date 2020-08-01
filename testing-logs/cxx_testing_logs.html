@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for C++</h1>
-	<p>Running at Fri 31 Jul 2020 03:25:20 AM EDT</p>
+	<p>Running at Sat 01 Aug 2020 03:25:22 AM EDT</p>
   <div id="summaryarray1d.cpp" class="success">
     <h2><a href="cxx_testing_logs.html#cxxlogarray1d.cpp">Test array1d.cpp</a> </h2>
     <p>
@@ -336,11 +336,11 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summarysine_wave.cpp" class="failure">
+  <div id="summarysine_wave.cpp" class="success">
     <h2><a href="cxx_testing_logs.html#cxxlogsine_wave.cpp">Test sine_wave.cpp</a> </h2>
     <p>
       <ul>
-        <li> Build : <a href="cxx_testing_logs.html#cxxlogsine_wave.cpp-buildtest">error</a></li>
+        <li> Build : <a href="cxx_testing_logs.html#cxxlogsine_wave.cpp-buildtest">success</a></li>
         <li> Run : <a href="cxx_testing_logs.html#cxxlogsine_wave.cpp-runtest">success</a></li>
       </ul>
     </p>
@@ -516,7 +516,7 @@ could not compile c++/ for assignment in
 rm -f array1d array2d array3d array_test audio_clip audio_clip2 audio_clip_manipulation avl bintree bst cancer_snippet circ_dllist circ_sllist color_grid display_game dllist elevation_snippet eq_snippet face_shp_coll game_snippet graph_alist graph_amatrix guttenberg_snippet imdb_snippet input_game kdt linechart lyrics_snippet minimal_game mllist mnt_path osm osm_oldstyle osm_snippet shakespeare_snippet shape_collection sine_wave sllist song_lyrics_snippet tree vis_example wikidata_actor_snippet array1d.o array2d.o array3d.o array_test.o audio_clip.o audio_clip2.o audio_clip_manipulation.o avl.o bintree.o bst.o cancer_snippet.o circ_dllist.o circ_sllist.o color_grid.o display_game.o dllist.o elevation_snippet.o eq_snippet.o face_shp_coll.o game_snippet.o graph_alist.o graph_amatrix.o guttenberg_snippet.o imdb_snippet.o input_game.o kdt.o linechart.o lyrics_snippet.o minimal_game.o mllist.o mnt_path.o osm.o osm_oldstyle.o osm_snippet.o shakespeare_snippet.o shape_collection.o sine_wave.o sllist.o song_lyrics_snippet.o tree.o vis_example.o wikidata_actor_snippet.o
 g++ -g -o audio_clip audio_clip.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
 audio_clip.cpp: In function ‘int main(int, char**)’:
-audio_clip.cpp:45:47: error: no matching function for call to ‘bridges::datastructure::AudioClip::AudioClip(const char [25])’
+audio_clip.cpp:59:47: error: no matching function for call to ‘bridges::datastructure::AudioClip::AudioClip(const char [25])’
       AudioClip ac2 (&quot;../../data/clap-8bit.wav&quot;);
                                                ^
 In file included from audio_clip.cpp:1:
@@ -530,7 +530,7 @@ In file included from audio_clip.cpp:1:
 /home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [25]’ to ‘const bridges::datastructure::AudioClip&amp;’
 /home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(bridges::datastructure::AudioClip&amp;&amp;)’
 /home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [25]’ to ‘bridges::datastructure::AudioClip&amp;&amp;’
-audio_clip.cpp:51:48: error: no matching function for call to ‘bridges::datastructure::AudioClip::AudioClip(const char [26])’
+audio_clip.cpp:65:48: error: no matching function for call to ‘bridges::datastructure::AudioClip::AudioClip(const char [26])’
       AudioClip ac3 (&quot;../../data/clap-16bit.wav&quot;);
                                                 ^
 In file included from audio_clip.cpp:1:
@@ -544,7 +544,7 @@ In file included from audio_clip.cpp:1:
 /home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [26]’ to ‘const bridges::datastructure::AudioClip&amp;’
 /home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(bridges::datastructure::AudioClip&amp;&amp;)’
 /home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [26]’ to ‘bridges::datastructure::AudioClip&amp;&amp;’
-audio_clip.cpp:57:48: error: no matching function for call to ‘bridges::datastructure::AudioClip::AudioClip(const char [26])’
+audio_clip.cpp:71:48: error: no matching function for call to ‘bridges::datastructure::AudioClip::AudioClip(const char [26])’
       AudioClip ac4 (&quot;../../data/clap-24bit.wav&quot;);
                                                 ^
 In file included from audio_clip.cpp:1:
@@ -558,7 +558,7 @@ In file included from audio_clip.cpp:1:
 /home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [26]’ to ‘const bridges::datastructure::AudioClip&amp;’
 /home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(bridges::datastructure::AudioClip&amp;&amp;)’
 /home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [26]’ to ‘bridges::datastructure::AudioClip&amp;&amp;’
-audio_clip.cpp:65:48: error: no matching function for call to ‘bridges::datastructure::AudioClip::AudioClip(const char [26])’
+audio_clip.cpp:79:48: error: no matching function for call to ‘bridges::datastructure::AudioClip::AudioClip(const char [26])’
       AudioClip ac5 (&quot;../../data/clap-32bit.wav&quot;);
                                                 ^
 In file included from audio_clip.cpp:1:
@@ -572,7 +572,7 @@ In file included from audio_clip.cpp:1:
 /home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [26]’ to ‘const bridges::datastructure::AudioClip&amp;’
 /home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note: candidate: ‘bridges::datastructure::AudioClip::AudioClip(bridges::datastructure::AudioClip&amp;&amp;)’
 /home/bridges-testing/bridges-cxx-install/include/AudioClip.h:13:15: note:   no known conversion for argument 1 from ‘const char [26]’ to ‘bridges::datastructure::AudioClip&amp;&amp;’
-audio_clip.cpp:70:43: error: no matching function for call to ‘bridges::datastructure::AudioClip::AudioClip(const char [21])’
+audio_clip.cpp:84:43: error: no matching function for call to ‘bridges::datastructure::AudioClip::AudioClip(const char [21])’
       AudioClip ac6 (&quot;../../data/piano.wav&quot;);
                                            ^
 In file included from audio_clip.cpp:1:
@@ -604,11 +604,8 @@ could not compile c++/ for assignment in
 <pre><code>Compiling test audio_clip_manipulation.cpp
 rm -f array1d array2d array3d array_test audio_clip audio_clip2 audio_clip_manipulation avl bintree bst cancer_snippet circ_dllist circ_sllist color_grid display_game dllist elevation_snippet eq_snippet face_shp_coll game_snippet graph_alist graph_amatrix guttenberg_snippet imdb_snippet input_game kdt linechart lyrics_snippet minimal_game mllist mnt_path osm osm_oldstyle osm_snippet shakespeare_snippet shape_collection sine_wave sllist song_lyrics_snippet tree vis_example wikidata_actor_snippet array1d.o array2d.o array3d.o array_test.o audio_clip.o audio_clip2.o audio_clip_manipulation.o avl.o bintree.o bst.o cancer_snippet.o circ_dllist.o circ_sllist.o color_grid.o display_game.o dllist.o elevation_snippet.o eq_snippet.o face_shp_coll.o game_snippet.o graph_alist.o graph_amatrix.o guttenberg_snippet.o imdb_snippet.o input_game.o kdt.o linechart.o lyrics_snippet.o minimal_game.o mllist.o mnt_path.o osm.o osm_oldstyle.o osm_snippet.o shakespeare_snippet.o shape_collection.o sine_wave.o sllist.o song_lyrics_snippet.o tree.o vis_example.o wikidata_actor_snippet.o
 g++ -g -o audio_clip_manipulation audio_clip_manipulation.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
-audio_clip_manipulation.cpp: In function ‘int main()’:
-audio_clip_manipulation.cpp:9:31: error: ‘YOUR_ASSIGNMENT_NUMBER’ was not declared in this scope
-     Bridges bridges = Bridges(YOUR_ASSIGNMENT_NUMBER, &quot;YOUR_USER_ID&quot;,
-                               ^~~~~~~~~~~~~~~~~~~~~~
-audio_clip_manipulation.cpp:19:66: error: no matching function for call to ‘bridges::datastructure::AudioClip::AudioClip(const char [21])’
+audio_clip_manipulation.cpp: In function ‘int main(int, char**)’:
+audio_clip_manipulation.cpp:24:66: error: no matching function for call to ‘bridges::datastructure::AudioClip::AudioClip(const char [21])’
          AudioClip oldAudioClip = AudioClip(&quot;../../data/piano.wav&quot;);
                                                                   ^
 In file included from audio_clip_manipulation.cpp:1:
@@ -828,8 +825,8 @@ g++ -g -o display_game display_game.cpp -g -I/home/bridges-testing/bridges-cxx-i
 </div>
 <div class="success">
 <h3><span id="cxxlogdisplay_game.cpp-runtest">Run for test display_game.cpp</span></h3>
-<pre><code>[2020-07-31 03:26:50] [connect] Successful connection
-[2020-07-31 03:26:50] [connect] WebSocket Connection 50.16.248.36:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1596180410 101
+<pre><code>[2020-08-01 03:26:37] [connect] Successful connection
+[2020-08-01 03:26:37] [connect] WebSocket Connection 34.192.67.85:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1596266797 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -922,10 +919,10 @@ g++ -g -o eq_snippet eq_snippet.cpp -g -I/home/bridges-testing/bridges-cxx-insta
 <div class="success">
 <h3><span id="cxxlogeq_snippet.cpp-runtest">Run for test eq_snippet.cpp</span></h3>
 <pre><code>Earthquake 0:
-	Magnitude:1.3
-	Date:  Jul. 31  2020  7:9:5
-	Location: 30 km S of Mina, Nevada
-	Lat/Long:38.1153,-118.094
+	Magnitude:4.9
+	Date:  Aug. 1  2020  7:0:12
+	Location: 74 km S of Sand Point, Alaska
+	Lat/Long:54.6723,-160.31
 </code></pre>
 </div>
     
@@ -1126,8 +1123,8 @@ g++ -g -o input_game input_game.cpp -g -I/home/bridges-testing/bridges-cxx-insta
 </div>
 <div class="success">
 <h3><span id="cxxloginput_game.cpp-runtest">Run for test input_game.cpp</span></h3>
-<pre><code>[2020-07-31 03:27:41] [connect] Successful connection
-[2020-07-31 03:27:41] [connect] WebSocket Connection 50.16.248.36:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1596180461 101
+<pre><code>[2020-08-01 03:27:27] [connect] Successful connection
+[2020-08-01 03:27:27] [connect] WebSocket Connection 34.192.67.85:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1596266847 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -1303,8 +1300,8 @@ g++ -g -o minimal_game minimal_game.cpp -g -I/home/bridges-testing/bridges-cxx-i
 </div>
 <div class="success">
 <h3><span id="cxxlogminimal_game.cpp-runtest">Run for test minimal_game.cpp</span></h3>
-<pre><code>[2020-07-31 03:28:02] [connect] Successful connection
-[2020-07-31 03:28:02] [connect] WebSocket Connection 50.19.23.117:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1596180482 101
+<pre><code>[2020-08-01 03:27:49] [connect] Successful connection
+[2020-08-01 03:27:49] [connect] WebSocket Connection 54.165.86.182:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1596266869 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -1536,22 +1533,21 @@ could not compile c++/ for assignment in
     <div id="cxxlogsine_wave.cpp" class="logdetails">
       <h2>Test sine_wave.cpp full log</h2>
     
-<div class="failure">
+<div class="success">
 <h3><span id="cxxlogsine_wave.cpp-buildtest">Build for test sine_wave.cpp</span></h3>
 <pre><code>Compiling test sine_wave.cpp
 rm -f array1d array2d array3d array_test audio_clip audio_clip2 audio_clip_manipulation avl bintree bst cancer_snippet circ_dllist circ_sllist color_grid display_game dllist elevation_snippet eq_snippet face_shp_coll game_snippet graph_alist graph_amatrix guttenberg_snippet imdb_snippet input_game kdt linechart lyrics_snippet minimal_game mllist mnt_path osm osm_oldstyle osm_snippet shakespeare_snippet shape_collection sine_wave sllist song_lyrics_snippet tree vis_example wikidata_actor_snippet array1d.o array2d.o array3d.o array_test.o audio_clip.o audio_clip2.o audio_clip_manipulation.o avl.o bintree.o bst.o cancer_snippet.o circ_dllist.o circ_sllist.o color_grid.o display_game.o dllist.o elevation_snippet.o eq_snippet.o face_shp_coll.o game_snippet.o graph_alist.o graph_amatrix.o guttenberg_snippet.o imdb_snippet.o input_game.o kdt.o linechart.o lyrics_snippet.o minimal_game.o mllist.o mnt_path.o osm.o osm_oldstyle.o osm_snippet.o shakespeare_snippet.o shape_collection.o sine_wave.o sllist.o song_lyrics_snippet.o tree.o vis_example.o wikidata_actor_snippet.o
 g++ -g -o sine_wave sine_wave.cpp -g -I/home/bridges-testing/bridges-cxx-install/include  -I/  -I/ -DTESTING=1 -std=c++14 -L /home/bridges-testing/bridges-cxx-install/lib -L/  -lcurl -l pthread -l bridges
-sine_wave.cpp: In function ‘int main()’:
-sine_wave.cpp:9:31: error: ‘YOUR_ASSIGNMENT_NUMBER’ was not declared in this scope
-     Bridges bridges = Bridges(YOUR_ASSIGNMENT_NUMBER, &quot;YOUR_USER_ID&quot;,
-                               ^~~~~~~~~~~~~~~~~~~~~~
-make: *** [Makefile:40: sine_wave] Error 1
-could not compile c++/ for assignment in
 </code></pre>
 </div>
 <div class="success">
 <h3><span id="cxxlogsine_wave.cpp-runtest">Run for test sine_wave.cpp</span></h3>
-<pre><code></code></pre>
+<pre><code>Success: Assignment posted to the server. 
+Check out your visualization at:
+
+http://bridges-cs.herokuapp.com/assignments/1036/bridges_testing
+
+</code></pre>
 </div>
     
     </div>
