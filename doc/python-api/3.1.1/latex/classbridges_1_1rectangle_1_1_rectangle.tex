@@ -1,0 +1,257 @@
+\hypertarget{classbridges_1_1rectangle_1_1_rectangle}{}\section{bridges.\+rectangle.\+Rectangle Class Reference}
+\label{classbridges_1_1rectangle_1_1_rectangle}\index{bridges.\+rectangle.\+Rectangle@{bridges.\+rectangle.\+Rectangle}}
+Inheritance diagram for bridges.\+rectangle.\+Rectangle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbridges_1_1rectangle_1_1_rectangle}
+\end{center}
+\end{figure}
+
+
+\subsection{Detailed Description}
+This class defines a rectangle and is part of the symbol collection. 
+
+A rectangle has height and width
+
+\begin{DoxyAuthor}{Author}
+Matthew Mcquaigue 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2018, 7/23/19
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+Shape collection tutorial, \href{http://bridgesuncc.github.io/tutorials/Symbol_Collection.html}{\tt http\+://bridgesuncc.\+github.\+io/tutorials/\+Symbol\+\_\+\+Collection.\+html} 
+\end{DoxySeeAlso}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classbridges_1_1rectangle_1_1_rectangle_aad5cb2fdd1da2686fb67de2150f55d42}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, kwargs)
+\begin{DoxyCompactList}\small\item\em Constructor for the rectangle symbol. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1rectangle_1_1_rectangle_aad74ee17feb376967249296d34dfcb74}{get\+\_\+name} (self)
+\begin{DoxyCompactList}\small\item\em Getter for the name of the shape. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1rectangle_1_1_rectangle_a862f1154bb5e73c1811c38e7871f93a5}{width} (self)
+\begin{DoxyCompactList}\small\item\em Getter for the rectangle width. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1rectangle_1_1_rectangle_a6b4b58e7312278fdc5d314bd574096bc}{width} (self, w)
+\begin{DoxyCompactList}\small\item\em Setter for the width of the rectangles. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1rectangle_1_1_rectangle_a74a2af961f5eb512ccd5f7faded6645c}{height} (self)
+\begin{DoxyCompactList}\small\item\em Getter for the height of the rectangle. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1rectangle_1_1_rectangle_ad150b377d0bc9f08c85f7f16643a6bf4}{height} (self, h)
+\begin{DoxyCompactList}\small\item\em Setter for the height of the rectangle. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1rectangle_1_1_rectangle_a3f3823c7058ee639a92494276c2c9f22}{get\+\_\+dimensions} (self)
+\begin{DoxyCompactList}\small\item\em Getter for the dimensions of the rectangle. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1rectangle_1_1_rectangle_a187376dcdc5c10c5b1ce5f3f00a80961}{set\+\_\+rectangle} (self, locx, locy, w, h)
+\begin{DoxyCompactList}\small\item\em Setter function for setting the rectangles size and location from scratch. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1rectangle_1_1_rectangle_aa032816d119516e90a4237cd979a5d41}{translate} (self, tx, ty)
+\item 
+def \hyperlink{classbridges_1_1rectangle_1_1_rectangle_af540e714f768efb6142310047fffc8c7}{scale} (self, sx, sy)
+\item 
+def \hyperlink{classbridges_1_1rectangle_1_1_rectangle_abed807aa2b797312357395f874577a64}{get\+\_\+json\+\_\+representation} (self)
+\begin{DoxyCompactList}\small\item\em Getter function for the json representation of the data structure/shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbridges_1_1rectangle_1_1_rectangle_acd8a51dab1da86bd859fb47fb7ab1884}{shape\+\_\+type}
+\item 
+\hyperlink{classbridges_1_1rectangle_1_1_rectangle_ac70360e861fb0dfab5fae8525ffc86ba}{width}
+\item 
+\hyperlink{classbridges_1_1rectangle_1_1_rectangle_a3b7a2448881d5eea95e86aac8dfae467}{height}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1rectangle_1_1_rectangle_aad5cb2fdd1da2686fb67de2150f55d42}\label{classbridges_1_1rectangle_1_1_rectangle_aad5cb2fdd1da2686fb67de2150f55d42}} 
+\index{bridges\+::rectangle\+::\+Rectangle@{bridges\+::rectangle\+::\+Rectangle}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!bridges\+::rectangle\+::\+Rectangle@{bridges\+::rectangle\+::\+Rectangle}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def bridges.\+rectangle.\+Rectangle.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{kwargs,  }\item[{}]{None }\end{DoxyParamCaption})}
+
+
+
+Constructor for the rectangle symbol. 
+
+(float) w\+: width of the rectangle (float) h\+: height of the rectangle (float) locx\+: x location of rectangle (float) locy\+: y loaction of rectangle \begin{DoxyReturn}{Returns}
+
+
+None
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Value\+Error} & if the width or height is less than 0 \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1rectangle_1_1_rectangle_a3f3823c7058ee639a92494276c2c9f22}\label{classbridges_1_1rectangle_1_1_rectangle_a3f3823c7058ee639a92494276c2c9f22}} 
+\index{bridges\+::rectangle\+::\+Rectangle@{bridges\+::rectangle\+::\+Rectangle}!get\+\_\+dimensions@{get\+\_\+dimensions}}
+\index{get\+\_\+dimensions@{get\+\_\+dimensions}!bridges\+::rectangle\+::\+Rectangle@{bridges\+::rectangle\+::\+Rectangle}}
+\subsubsection{\texorpdfstring{get\+\_\+dimensions()}{get\_dimensions()}}
+{\footnotesize\ttfamily def bridges.\+rectangle.\+Rectangle.\+get\+\_\+dimensions (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{list }\end{DoxyParamCaption})}
+
+
+
+Getter for the dimensions of the rectangle. 
+
+\begin{DoxyReturn}{Returns}
+
+
+list the bounding box of the shape (xmin, xmax, ymin, ymax) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1rectangle_1_1_rectangle_abed807aa2b797312357395f874577a64}\label{classbridges_1_1rectangle_1_1_rectangle_abed807aa2b797312357395f874577a64}} 
+\index{bridges\+::rectangle\+::\+Rectangle@{bridges\+::rectangle\+::\+Rectangle}!get\+\_\+json\+\_\+representation@{get\+\_\+json\+\_\+representation}}
+\index{get\+\_\+json\+\_\+representation@{get\+\_\+json\+\_\+representation}!bridges\+::rectangle\+::\+Rectangle@{bridges\+::rectangle\+::\+Rectangle}}
+\subsubsection{\texorpdfstring{get\+\_\+json\+\_\+representation()}{get\_json\_representation()}}
+{\footnotesize\ttfamily def bridges.\+rectangle.\+Rectangle.\+get\+\_\+json\+\_\+representation (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{dict }\end{DoxyParamCaption})}
+
+
+
+Getter function for the json representation of the data structure/shape. 
+
+\begin{DoxyReturn}{Returns}
+
+
+dict representing the json 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1rectangle_1_1_rectangle_aad74ee17feb376967249296d34dfcb74}\label{classbridges_1_1rectangle_1_1_rectangle_aad74ee17feb376967249296d34dfcb74}} 
+\index{bridges\+::rectangle\+::\+Rectangle@{bridges\+::rectangle\+::\+Rectangle}!get\+\_\+name@{get\+\_\+name}}
+\index{get\+\_\+name@{get\+\_\+name}!bridges\+::rectangle\+::\+Rectangle@{bridges\+::rectangle\+::\+Rectangle}}
+\subsubsection{\texorpdfstring{get\+\_\+name()}{get\_name()}}
+{\footnotesize\ttfamily def bridges.\+rectangle.\+Rectangle.\+get\+\_\+name (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{str }\end{DoxyParamCaption})}
+
+
+
+Getter for the name of the shape. 
+
+\begin{DoxyReturn}{Returns}
+
+
+str shape name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1rectangle_1_1_rectangle_a74a2af961f5eb512ccd5f7faded6645c}\label{classbridges_1_1rectangle_1_1_rectangle_a74a2af961f5eb512ccd5f7faded6645c}} 
+\index{bridges\+::rectangle\+::\+Rectangle@{bridges\+::rectangle\+::\+Rectangle}!height@{height}}
+\index{height@{height}!bridges\+::rectangle\+::\+Rectangle@{bridges\+::rectangle\+::\+Rectangle}}
+\subsubsection{\texorpdfstring{height()}{height()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def bridges.\+rectangle.\+Rectangle.\+height (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{float }\end{DoxyParamCaption})}
+
+
+
+Getter for the height of the rectangle. 
+
+\begin{DoxyReturn}{Returns}
+
+
+float the height of the rectangle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1rectangle_1_1_rectangle_ad150b377d0bc9f08c85f7f16643a6bf4}\label{classbridges_1_1rectangle_1_1_rectangle_ad150b377d0bc9f08c85f7f16643a6bf4}} 
+\index{bridges\+::rectangle\+::\+Rectangle@{bridges\+::rectangle\+::\+Rectangle}!height@{height}}
+\index{height@{height}!bridges\+::rectangle\+::\+Rectangle@{bridges\+::rectangle\+::\+Rectangle}}
+\subsubsection{\texorpdfstring{height()}{height()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def bridges.\+rectangle.\+Rectangle.\+height (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{h,  }\item[{}]{None }\end{DoxyParamCaption})}
+
+
+
+Setter for the height of the rectangle. 
+
+(float) h\+: the height to be applied \begin{DoxyReturn}{Returns}
+
+
+None
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Value\+Error} & if the height is $<$ 0 or $>$ 300 \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classbridges_1_1rectangle_1_1_rectangle_af540e714f768efb6142310047fffc8c7}\label{classbridges_1_1rectangle_1_1_rectangle_af540e714f768efb6142310047fffc8c7}} 
+\index{bridges\+::rectangle\+::\+Rectangle@{bridges\+::rectangle\+::\+Rectangle}!scale@{scale}}
+\index{scale@{scale}!bridges\+::rectangle\+::\+Rectangle@{bridges\+::rectangle\+::\+Rectangle}}
+\subsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily def bridges.\+rectangle.\+Rectangle.\+scale (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sx,  }\item[{}]{sy }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1rectangle_1_1_rectangle_a187376dcdc5c10c5b1ce5f3f00a80961}\label{classbridges_1_1rectangle_1_1_rectangle_a187376dcdc5c10c5b1ce5f3f00a80961}} 
+\index{bridges\+::rectangle\+::\+Rectangle@{bridges\+::rectangle\+::\+Rectangle}!set\+\_\+rectangle@{set\+\_\+rectangle}}
+\index{set\+\_\+rectangle@{set\+\_\+rectangle}!bridges\+::rectangle\+::\+Rectangle@{bridges\+::rectangle\+::\+Rectangle}}
+\subsubsection{\texorpdfstring{set\+\_\+rectangle()}{set\_rectangle()}}
+{\footnotesize\ttfamily def bridges.\+rectangle.\+Rectangle.\+set\+\_\+rectangle (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{locx,  }\item[{}]{locy,  }\item[{}]{w,  }\item[{}]{h }\end{DoxyParamCaption})}
+
+
+
+Setter function for setting the rectangles size and location from scratch. 
+
+(float) locx\+: the x location of rectangle (float) locy\+: the y location of rectangle (float) w\+: the width of rectangle (float) h\+: the height of rectangle \begin{DoxyReturn}{Returns}
+
+
+None
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Value\+Error} & if the height or width is $<$ 0 or $>$ 300 \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classbridges_1_1rectangle_1_1_rectangle_aa032816d119516e90a4237cd979a5d41}\label{classbridges_1_1rectangle_1_1_rectangle_aa032816d119516e90a4237cd979a5d41}} 
+\index{bridges\+::rectangle\+::\+Rectangle@{bridges\+::rectangle\+::\+Rectangle}!translate@{translate}}
+\index{translate@{translate}!bridges\+::rectangle\+::\+Rectangle@{bridges\+::rectangle\+::\+Rectangle}}
+\subsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily def bridges.\+rectangle.\+Rectangle.\+translate (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{tx,  }\item[{}]{ty }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1rectangle_1_1_rectangle_a862f1154bb5e73c1811c38e7871f93a5}\label{classbridges_1_1rectangle_1_1_rectangle_a862f1154bb5e73c1811c38e7871f93a5}} 
+\index{bridges\+::rectangle\+::\+Rectangle@{bridges\+::rectangle\+::\+Rectangle}!width@{width}}
+\index{width@{width}!bridges\+::rectangle\+::\+Rectangle@{bridges\+::rectangle\+::\+Rectangle}}
+\subsubsection{\texorpdfstring{width()}{width()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def bridges.\+rectangle.\+Rectangle.\+width (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{float }\end{DoxyParamCaption})}
+
+
+
+Getter for the rectangle width. 
+
+\begin{DoxyReturn}{Returns}
+
+
+float the width 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1rectangle_1_1_rectangle_a6b4b58e7312278fdc5d314bd574096bc}\label{classbridges_1_1rectangle_1_1_rectangle_a6b4b58e7312278fdc5d314bd574096bc}} 
+\index{bridges\+::rectangle\+::\+Rectangle@{bridges\+::rectangle\+::\+Rectangle}!width@{width}}
+\index{width@{width}!bridges\+::rectangle\+::\+Rectangle@{bridges\+::rectangle\+::\+Rectangle}}
+\subsubsection{\texorpdfstring{width()}{width()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def bridges.\+rectangle.\+Rectangle.\+width (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{w,  }\item[{}]{None }\end{DoxyParamCaption})}
+
+
+
+Setter for the width of the rectangles. 
+
+(float) w\+: the width to be applied to rectangle \begin{DoxyReturn}{Returns}
+
+
+None
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Value\+Error} & if the width is $<$ 0 or $>$ 300 \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classbridges_1_1rectangle_1_1_rectangle_a3b7a2448881d5eea95e86aac8dfae467}\label{classbridges_1_1rectangle_1_1_rectangle_a3b7a2448881d5eea95e86aac8dfae467}} 
+\index{bridges\+::rectangle\+::\+Rectangle@{bridges\+::rectangle\+::\+Rectangle}!height@{height}}
+\index{height@{height}!bridges\+::rectangle\+::\+Rectangle@{bridges\+::rectangle\+::\+Rectangle}}
+\subsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily bridges.\+rectangle.\+Rectangle.\+height}
+
+\mbox{\Hypertarget{classbridges_1_1rectangle_1_1_rectangle_acd8a51dab1da86bd859fb47fb7ab1884}\label{classbridges_1_1rectangle_1_1_rectangle_acd8a51dab1da86bd859fb47fb7ab1884}} 
+\index{bridges\+::rectangle\+::\+Rectangle@{bridges\+::rectangle\+::\+Rectangle}!shape\+\_\+type@{shape\+\_\+type}}
+\index{shape\+\_\+type@{shape\+\_\+type}!bridges\+::rectangle\+::\+Rectangle@{bridges\+::rectangle\+::\+Rectangle}}
+\subsubsection{\texorpdfstring{shape\+\_\+type}{shape\_type}}
+{\footnotesize\ttfamily bridges.\+rectangle.\+Rectangle.\+shape\+\_\+type}
+
+\mbox{\Hypertarget{classbridges_1_1rectangle_1_1_rectangle_ac70360e861fb0dfab5fae8525ffc86ba}\label{classbridges_1_1rectangle_1_1_rectangle_ac70360e861fb0dfab5fae8525ffc86ba}} 
+\index{bridges\+::rectangle\+::\+Rectangle@{bridges\+::rectangle\+::\+Rectangle}!width@{width}}
+\index{width@{width}!bridges\+::rectangle\+::\+Rectangle@{bridges\+::rectangle\+::\+Rectangle}}
+\subsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily bridges.\+rectangle.\+Rectangle.\+width}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/erik/work/bridges/bridges-\/python/bridges/\hyperlink{rectangle_8py}{rectangle.\+py}\end{DoxyCompactItemize}

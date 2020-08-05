@@ -1,0 +1,80 @@
+\hypertarget{classbridges_1_1benchmark_1_1_shortest_path_benchmark}{}\section{bridges.\+benchmark.\+Shortest\+Path\+Benchmark Class Reference}
+\label{classbridges_1_1benchmark_1_1_shortest_path_benchmark}\index{bridges.\+benchmark.\+Shortest\+Path\+Benchmark@{bridges.\+benchmark.\+Shortest\+Path\+Benchmark}}
+
+
+Inherits bridges.\+benchmark.\+Graph\+Benchmark.
+
+
+
+\subsection{Detailed Description}
+Benchmarks Shortest Path algorithms. 
+
+Benchmarks Shortest Path algorithms and add time series to a Line\+Chart.
+
+One can also set a maximum time spent on a particular run using set\+Time\+Cap();
+
+and can be passed to the run function for being benchmarked. A typical use would look something like
+
+
+\begin{DoxyCode}
+LineChart lc;
+\hyperlink{classbridges_1_1benchmark_1_1_shortest_path_benchmark_ad878c2ad9c6912170601092423c54c43}{ShortestPathBenchmark} sb = \textcolor{keyword}{new} \hyperlink{classbridges_1_1benchmark_1_1_shortest_path_benchmark_ad878c2ad9c6912170601092423c54c43}{ShortestPathBenchmark}(lc);
+sb.run(\textcolor{stringliteral}{"mybfsalgorithm"}, spalgo);
+\end{DoxyCode}
+
+
+\begin{DoxyAuthor}{Author}
+Erik Saule 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+07/21/2019 
+\end{DoxyDate}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbridges_1_1benchmark_1_1_shortest_path_benchmark_ad878c2ad9c6912170601092423c54c43}{Shortest\+Path\+Benchmark} (\hyperlink{classbridges_1_1base_1_1_line_chart}{Line\+Chart} plot, long time\+Cap)
+\item 
+\hyperlink{classbridges_1_1benchmark_1_1_shortest_path_benchmark_ac84a2afc6e663b9d4edc61b3d4c4701c}{Shortest\+Path\+Benchmark} (\hyperlink{classbridges_1_1base_1_1_line_chart}{Line\+Chart} plot)
+\item 
+void \hyperlink{classbridges_1_1benchmark_1_1_shortest_path_benchmark_ad7e6918e142cfbdaac08493ccbf02acf}{run} (String algo\+Name, Consumer$<$ \hyperlink{classbridges_1_1benchmark_1_1_shortest_path_params}{Shortest\+Path\+Params} $>$ sp\+Algo)  throws I\+O\+Exception 
+\begin{DoxyCompactList}\small\item\em benchmark a particular Shortest Path algorithm that accepts a single \hyperlink{classbridges_1_1benchmark_1_1_shortest_path_params}{Shortest\+Path\+Params} argument \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1benchmark_1_1_shortest_path_benchmark_ad878c2ad9c6912170601092423c54c43}\label{classbridges_1_1benchmark_1_1_shortest_path_benchmark_ad878c2ad9c6912170601092423c54c43}} 
+\index{bridges\+::benchmark\+::\+Shortest\+Path\+Benchmark@{bridges\+::benchmark\+::\+Shortest\+Path\+Benchmark}!Shortest\+Path\+Benchmark@{Shortest\+Path\+Benchmark}}
+\index{Shortest\+Path\+Benchmark@{Shortest\+Path\+Benchmark}!bridges\+::benchmark\+::\+Shortest\+Path\+Benchmark@{bridges\+::benchmark\+::\+Shortest\+Path\+Benchmark}}
+\subsubsection{\texorpdfstring{Shortest\+Path\+Benchmark()}{ShortestPathBenchmark()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bridges.\+benchmark.\+Shortest\+Path\+Benchmark.\+Shortest\+Path\+Benchmark (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_line_chart}{Line\+Chart}}]{plot,  }\item[{long}]{time\+Cap }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1benchmark_1_1_shortest_path_benchmark_ac84a2afc6e663b9d4edc61b3d4c4701c}\label{classbridges_1_1benchmark_1_1_shortest_path_benchmark_ac84a2afc6e663b9d4edc61b3d4c4701c}} 
+\index{bridges\+::benchmark\+::\+Shortest\+Path\+Benchmark@{bridges\+::benchmark\+::\+Shortest\+Path\+Benchmark}!Shortest\+Path\+Benchmark@{Shortest\+Path\+Benchmark}}
+\index{Shortest\+Path\+Benchmark@{Shortest\+Path\+Benchmark}!bridges\+::benchmark\+::\+Shortest\+Path\+Benchmark@{bridges\+::benchmark\+::\+Shortest\+Path\+Benchmark}}
+\subsubsection{\texorpdfstring{Shortest\+Path\+Benchmark()}{ShortestPathBenchmark()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bridges.\+benchmark.\+Shortest\+Path\+Benchmark.\+Shortest\+Path\+Benchmark (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_line_chart}{Line\+Chart}}]{plot }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1benchmark_1_1_shortest_path_benchmark_ad7e6918e142cfbdaac08493ccbf02acf}\label{classbridges_1_1benchmark_1_1_shortest_path_benchmark_ad7e6918e142cfbdaac08493ccbf02acf}} 
+\index{bridges\+::benchmark\+::\+Shortest\+Path\+Benchmark@{bridges\+::benchmark\+::\+Shortest\+Path\+Benchmark}!run@{run}}
+\index{run@{run}!bridges\+::benchmark\+::\+Shortest\+Path\+Benchmark@{bridges\+::benchmark\+::\+Shortest\+Path\+Benchmark}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void bridges.\+benchmark.\+Shortest\+Path\+Benchmark.\+run (\begin{DoxyParamCaption}\item[{String}]{algo\+Name,  }\item[{Consumer$<$ \hyperlink{classbridges_1_1benchmark_1_1_shortest_path_params}{Shortest\+Path\+Params} $>$}]{sp\+Algo }\end{DoxyParamCaption}) throws I\+O\+Exception}
+
+
+
+benchmark a particular Shortest Path algorithm that accepts a single \hyperlink{classbridges_1_1benchmark_1_1_shortest_path_params}{Shortest\+Path\+Params} argument 
+
+
+\begin{DoxyParams}{Parameters}
+{\em algo\+Name} & Screen name of the algorithm \\
+\hline
+{\em sp\+Algo} & the actual algorithm \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/erik/work/bridges/bridges-\/java/src/main/java/bridges/benchmark/\hyperlink{_shortest_path_benchmark_8java}{Shortest\+Path\+Benchmark.\+java}\end{DoxyCompactItemize}
