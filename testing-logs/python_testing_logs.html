@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Python</h1>
-	<p>Running at Wed 05 Aug 2020 03:30:56 AM EDT</p>
+	<p>Running at Thu 06 Aug 2020 03:30:47 AM EDT</p>
   <div id="summaryarray1d.py" class="success">
     <h2><a href="python_testing_logs.html#pythonlogarray1d.py">Test array1d.py</a> </h2>
     <p>
@@ -100,11 +100,11 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summarydisplay_game.py" class="success">
+  <div id="summarydisplay_game.py" class="failure">
     <h2><a href="python_testing_logs.html#pythonlogdisplay_game.py">Test display_game.py</a> </h2>
     <p>
       <ul>
-        <li> Run : <a href="python_testing_logs.html#pythonlogdisplay_game.py-runtest">success</a></li>
+        <li> Run : <a href="python_testing_logs.html#pythonlogdisplay_game.py-runtest">error</a></li>
       </ul>
     </p>
   </div>
@@ -129,6 +129,14 @@ background-color: springgreen;
     <p>
       <ul>
         <li> Run : <a href="python_testing_logs.html#pythonlogelevation_snippet.py-runtest">error</a></li>
+      </ul>
+    </p>
+  </div>
+  <div id="summarygame_size_test.py" class="failure">
+    <h2><a href="python_testing_logs.html#pythonloggame_size_test.py">Test game_size_test.py</a> </h2>
+    <p>
+      <ul>
+        <li> Run : <a href="python_testing_logs.html#pythonloggame_size_test.py-runtest">error</a></li>
       </ul>
     </p>
   </div>
@@ -172,11 +180,11 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summaryinput_game.py" class="success">
+  <div id="summaryinput_game.py" class="failure">
     <h2><a href="python_testing_logs.html#pythonloginput_game.py">Test input_game.py</a> </h2>
     <p>
       <ul>
-        <li> Run : <a href="python_testing_logs.html#pythonloginput_game.py-runtest">success</a></li>
+        <li> Run : <a href="python_testing_logs.html#pythonloginput_game.py-runtest">error</a></li>
       </ul>
     </p>
   </div>
@@ -188,11 +196,11 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summaryminimal_game.py" class="success">
+  <div id="summaryminimal_game.py" class="failure">
     <h2><a href="python_testing_logs.html#pythonlogminimal_game.py">Test minimal_game.py</a> </h2>
     <p>
       <ul>
-        <li> Run : <a href="python_testing_logs.html#pythonlogminimal_game.py-runtest">success</a></li>
+        <li> Run : <a href="python_testing_logs.html#pythonlogminimal_game.py-runtest">error</a></li>
       </ul>
     </p>
   </div>
@@ -508,18 +516,13 @@ http://bridges-cs.herokuapp.com/assignments/3010/bridges_testing
     <div id="pythonlogdisplay_game.py" class="logdetails">
       <h2>Test display_game.py full log</h2>
     
-<div class="success">
+<div class="failure">
 <h3><span id="pythonlogdisplay_game.py-runtest">Run for test display_game.py</span></h3>
-<pre><code>passing student credentials to server..
-Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7fc3b57f7668&gt;
-limiting number of frame to 10
-
-Check Your Visualization at the following link:
-
-http://bridges-games.herokuapp.com/assignments/3011/bridges_testing
-
-
-frame limit of 10 frames reached
+<pre><code>  File &quot;display_game.py&quot;, line 31
+    game.start()
+               ^
+TabError: inconsistent use of tabs and spaces in indentation
+could not run test display_game.py
 </code></pre>
 </div>
     
@@ -544,12 +547,12 @@ http://bridges-cs.herokuapp.com/assignments/3012/bridges_testing
     
 <div class="success">
 <h3><span id="pythonlogearthquake_snippet.py-runtest">Run for test earthquake_snippet.py</span></h3>
-<pre><code>-28.3008
--176.403
-Kermadec Islands region
-M 4.9 - Kermadec Islands region
-4.9
-2020-08-05 02:20:59
+<pre><code>64.5989
+-146.4601
+22 km ENE of Salcha, Alaska
+M 1.3 - 22 km ENE of Salcha, Alaska
+1.3
+2020-08-05 23:10:12
 </code></pre>
 </div>
     
@@ -589,7 +592,7 @@ Traceback (most recent call last):
     conn = self._new_conn()
   File &quot;/usr/lib/python3/dist-packages/urllib3/connection.py&quot;, line 168, in _new_conn
     self, &quot;Failed to establish a new connection: %s&quot; % e)
-urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x7f58a15d6c50&gt;: Failed to establish a new connection: [Errno -2] Name or service not known
+urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x7fef61eb9a90&gt;: Failed to establish a new connection: [Errno -2] Name or service not known
 
 During handling of the above exception, another exception occurred:
 
@@ -600,7 +603,7 @@ Traceback (most recent call last):
     _stacktrace=sys.exc_info()[2])
   File &quot;/usr/lib/python3/dist-packages/urllib3/util/retry.py&quot;, line 398, in increment
     raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f58a15d6c50&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fef61eb9a90&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
 
 During handling of the above exception, another exception occurred:
 
@@ -609,8 +612,8 @@ Traceback (most recent call last):
     main()
   File &quot;elevation_snippet.py&quot;, line 17, in main
     ele_obj = data_source.get_elevation_data([41.03133177632377, -98.02593749997456, 42.508577297430456, -96.94531249997696])
-  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.0-py3.7.egg/bridges/data_src_dependent/data_source.py&quot;, line 684, in get_elevation_data
-  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.0-py3.7.egg/bridges/data_src_dependent/data_source.py&quot;, line 637, in elevation_server
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/data_src_dependent/data_source.py&quot;, line 684, in get_elevation_data
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/data_src_dependent/data_source.py&quot;, line 637, in elevation_server
   File &quot;/usr/lib/python3/dist-packages/requests/api.py&quot;, line 75, in get
     return request('get', url, params=params, **kwargs)
   File &quot;/usr/lib/python3/dist-packages/requests/api.py&quot;, line 60, in request
@@ -621,8 +624,22 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File &quot;/usr/lib/python3/dist-packages/requests/adapters.py&quot;, line 516, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f58a15d6c50&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fef61eb9a90&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
 could not run test elevation_snippet.py
+</code></pre>
+</div>
+    
+    </div>
+    <div id="pythonloggame_size_test.py" class="logdetails">
+      <h2>Test game_size_test.py full log</h2>
+    
+<div class="failure">
+<h3><span id="pythonloggame_size_test.py-runtest">Run for test game_size_test.py</span></h3>
+<pre><code>  File &quot;game_size_test.py&quot;, line 31
+    game.start()
+               ^
+TabError: inconsistent use of tabs and spaces in indentation
+could not run test game_size_test.py
 </code></pre>
 </div>
     
@@ -632,10 +649,10 @@ could not run test elevation_snippet.py
     
 <div class="success">
 <h3><span id="pythonloggame_snippet.py-runtest">Run for test game_snippet.py</span></h3>
-<pre><code>Marvel Pinball
-PlayStation 3
-8
-['Pinball']
+<pre><code>Victory Run
+Wii
+6.5
+['Racing']
 </code></pre>
 </div>
     
@@ -649,7 +666,7 @@ PlayStation 3
 
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3016/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3017/bridges_testing
 
 
 </code></pre>
@@ -665,7 +682,7 @@ http://bridges-cs.herokuapp.com/assignments/3016/bridges_testing
 
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3017/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3018/bridges_testing
 
 
 </code></pre>
@@ -677,9 +694,9 @@ http://bridges-cs.herokuapp.com/assignments/3017/bridges_testing
     
 <div class="success">
 <h3><span id="pythonlogguttenberg_snippet.py-runtest">Run for test guttenberg_snippet.py</span></h3>
-<pre><code>The Tenniel Illustrations for Carroll's Alice in Wonderland
-Tenniel, John
-['fantasy fiction', &quot;children's stories&quot;]
+<pre><code>Gulliver's Travels into Several Remote Regions of the World
+Swift, Jonathan
+['fantasy fiction', 'satire', 'early works to 1800', 'fiction']
 </code></pre>
 </div>
     
@@ -689,8 +706,8 @@ Tenniel, John
     
 <div class="success">
 <h3><span id="pythonlogimdb_snippet.py-runtest">Run for test imdb_snippet.py</span></h3>
-<pre><code>Christopher_Lee_(I)
-Devil_Rides_Out,_The_(1968)
+<pre><code>Christian_Slater
+Good_Shepherd,_The_(2004)
 </code></pre>
 </div>
     
@@ -698,18 +715,13 @@ Devil_Rides_Out,_The_(1968)
     <div id="pythonloginput_game.py" class="logdetails">
       <h2>Test input_game.py full log</h2>
     
-<div class="success">
+<div class="failure">
 <h3><span id="pythonloginput_game.py-runtest">Run for test input_game.py</span></h3>
-<pre><code>passing student credentials to server..
-Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f5e755229e8&gt;
-limiting number of frame to 10
-
-Check Your Visualization at the following link:
-
-http://bridges-games.herokuapp.com/assignments/3020/bridges_testing
-
-
-frame limit of 10 frames reached
+<pre><code>  File &quot;input_game.py&quot;, line 35
+    game.start()
+               ^
+TabError: inconsistent use of tabs and spaces in indentation
+could not run test input_game.py
 </code></pre>
 </div>
     
@@ -722,7 +734,7 @@ frame limit of 10 frames reached
 <pre><code>
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3021/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3022/bridges_testing
 
 
 </code></pre>
@@ -732,18 +744,13 @@ http://bridges-cs.herokuapp.com/assignments/3021/bridges_testing
     <div id="pythonlogminimal_game.py" class="logdetails">
       <h2>Test minimal_game.py full log</h2>
     
-<div class="success">
+<div class="failure">
 <h3><span id="pythonlogminimal_game.py-runtest">Run for test minimal_game.py</span></h3>
-<pre><code>passing student credentials to server..
-Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f15633d1898&gt;
-limiting number of frame to 10
-
-Check Your Visualization at the following link:
-
-http://bridges-games.herokuapp.com/assignments/3022/bridges_testing
-
-
-frame limit of 10 frames reached
+<pre><code>  File &quot;minimal_game.py&quot;, line 22
+    game.start()
+               ^
+TabError: inconsistent use of tabs and spaces in indentation
+could not run test minimal_game.py
 </code></pre>
 </div>
     
@@ -756,7 +763,7 @@ frame limit of 10 frames reached
 <pre><code>
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3023/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3024/bridges_testing
 
 
 </code></pre>
@@ -798,7 +805,7 @@ Traceback (most recent call last):
     conn = self._new_conn()
   File &quot;/usr/lib/python3/dist-packages/urllib3/connection.py&quot;, line 168, in _new_conn
     self, &quot;Failed to establish a new connection: %s&quot; % e)
-urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x7feeafa84e48&gt;: Failed to establish a new connection: [Errno -2] Name or service not known
+urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x7f9f65567d68&gt;: Failed to establish a new connection: [Errno -2] Name or service not known
 
 During handling of the above exception, another exception occurred:
 
@@ -809,7 +816,7 @@ Traceback (most recent call last):
     _stacktrace=sys.exc_info()[2])
   File &quot;/usr/lib/python3/dist-packages/urllib3/util/retry.py&quot;, line 398, in increment
     raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=6.0&amp;minLon=46.1&amp;maxLat=9.0&amp;maxLon=47.7&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7feeafa84e48&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=6.0&amp;minLon=46.1&amp;maxLat=9.0&amp;maxLon=47.7&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f9f65567d68&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
 
 During handling of the above exception, another exception occurred:
 
@@ -820,8 +827,8 @@ Traceback (most recent call last):
     img = Image()
   File &quot;mountainpath.py&quot;, line 7, in __init__
     self.ele_obj = data_source.get_elevation_data([6.0,46.10, 9.0,47.7]) #Switzerland
-  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.0-py3.7.egg/bridges/data_src_dependent/data_source.py&quot;, line 684, in get_elevation_data
-  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.0-py3.7.egg/bridges/data_src_dependent/data_source.py&quot;, line 637, in elevation_server
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/data_src_dependent/data_source.py&quot;, line 684, in get_elevation_data
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/data_src_dependent/data_source.py&quot;, line 637, in elevation_server
   File &quot;/usr/lib/python3/dist-packages/requests/api.py&quot;, line 75, in get
     return request('get', url, params=params, **kwargs)
   File &quot;/usr/lib/python3/dist-packages/requests/api.py&quot;, line 60, in request
@@ -832,7 +839,7 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File &quot;/usr/lib/python3/dist-packages/requests/adapters.py&quot;, line 516, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=6.0&amp;minLon=46.1&amp;maxLat=9.0&amp;maxLon=47.7&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7feeafa84e48&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=6.0&amp;minLon=46.1&amp;maxLat=9.0&amp;maxLon=47.7&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f9f65567d68&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
 could not run test mountainpath.py
 </code></pre>
 </div>
@@ -856,11 +863,11 @@ Cartesian Coordinate of first vertex: 827.1273231300758, -5144.073405550668
     
 <div class="success">
 <h3><span id="pythonlogshakespeare_snippet.py-runtest">Run for test shakespeare_snippet.py</span></h3>
-<pre><code>Sonnet 139
+<pre><code>Sonnet 40
 poem
-O call not me to justify the wrong,
- That thy unkindness lays upon my heart,
- Wound me not with thin
+Take all my loves, my love, yea take them all,
+ What hast thou then more than thou hadst before?
+ No
 </code></pre>
 </div>
     
@@ -873,7 +880,7 @@ O call not me to justify the wrong,
 <pre><code>
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3027/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3028/bridges_testing
 
 
 </code></pre>
@@ -888,7 +895,7 @@ http://bridges-cs.herokuapp.com/assignments/3027/bridges_testing
 <pre><code>
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3028/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3029/bridges_testing
 
 
 </code></pre>
@@ -903,7 +910,7 @@ http://bridges-cs.herokuapp.com/assignments/3028/bridges_testing
 <pre><code>
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3029/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3030/bridges_testing
 
 
 </code></pre>
@@ -1010,7 +1017,7 @@ Work is never over
 <pre><code>
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3031/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3032/bridges_testing
 
 
 </code></pre>
@@ -1026,7 +1033,7 @@ http://bridges-cs.herokuapp.com/assignments/3031/bridges_testing
 
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3032/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3033/bridges_testing
 
 
 </code></pre>
