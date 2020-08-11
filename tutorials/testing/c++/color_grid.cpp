@@ -22,7 +22,7 @@ int main(int argc, char **argv) {
 		"This example alternates between blue and red starting with red at the top left corner of the grid.");
 	int width = 100, height = 100;
 
-	ColorGrid *cg  = new ColorGrid(width, height, Color("red"));
+	ColorGrid cg(width, height, Color("red"));
 
 	// create a checkerboard pattern
 	// 10 x 10 grid
@@ -51,10 +51,10 @@ int main(int argc, char **argv) {
 			// color the square
 			for (int row = origin_y; row < origin_y + sq_height; row++)
 				for (int column = origin_x; column < origin_x + sq_width; column++)
-					cg->set(row, column, Color(col));
+					cg.set(row, column, Color(col));
 		}
 
-	bridges.setDataStructure(cg);
+	bridges.setDataStructure(&cg);
 
 	bridges.visualize();
 

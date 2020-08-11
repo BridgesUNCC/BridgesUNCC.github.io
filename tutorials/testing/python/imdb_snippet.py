@@ -19,5 +19,5 @@ def main():
     print(pair1.actor)
     print(pair1.movie)
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

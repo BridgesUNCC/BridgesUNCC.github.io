@@ -1,4 +1,5 @@
 from bridges import *
+import sys
 
 class DisplayGame (NonBlockingGame): 
 	def	 __init__(self, assid, user_id, api_key):
@@ -24,9 +25,9 @@ class DisplayGame (NonBlockingGame):
 		pass
 
 def	main():
-	game = DisplayGame(1, "BRIDGES_USER_ID", "BRIDGES_API_KEY")
+	game = DisplayGame(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY")
 	# start the game
 	game.start()
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 	main()

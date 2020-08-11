@@ -1,0 +1,42 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">import</span> bridges.games.*;
+<span class="PreProc">import</span> bridges.base.*;
+
+<span class="Type">class</span> input_game <span class="Type">extends</span> NonBlockingGame {
+	<span class="Type">public</span> input_game(<span class="Type">int</span> assignmentnumber, String username, String apikey) {
+		<span class="Type">super</span> (assignmentnumber, username,  apikey, <span class="Constant">10</span>, <span class="Constant">10</span>);
+		<span class="Comment">//this created a game board of 10x10 into assignment 1</span>
+	}
+
+	<span class="Type">public</span> <span class="Type">void</span> initialize() {
+		<span class="Statement">for</span> (<span class="Type">int</span> i = <span class="Constant">0</span>; i &lt; getBoardHeight(); ++i)
+			<span class="Statement">for</span> (<span class="Type">int</span> j = <span class="Constant">0</span>; j &lt; getBoardWidth(); ++j)
+				setBGColor(i, j, NamedColor.ivory);
+	}
+
+	<span class="Type">public</span> <span class="Type">void</span> gameLoop() {
+		<span class="Comment">//This function is executed each frame of the game</span>
+
+		<span class="Statement">if</span> (keyUp()) {
+			drawSymbol(<span class="Constant">1</span>, <span class="Constant">1</span>, NamedSymbol.H, NamedColor.blue);
+			drawSymbol(<span class="Constant">1</span>, <span class="Constant">2</span>, NamedSymbol.E, NamedColor.yellow);
+			drawSymbol(<span class="Constant">1</span>, <span class="Constant">3</span>, NamedSymbol.L, NamedColor.black);
+			drawSymbol(<span class="Constant">1</span>, <span class="Constant">4</span>, NamedSymbol.L, NamedColor.green);
+			drawSymbol(<span class="Constant">1</span>, <span class="Constant">5</span>, NamedSymbol.O, NamedColor.red);
+		}
+		<span class="Statement">else</span> {
+			drawSymbol(<span class="Constant">1</span>, <span class="Constant">1</span>, NamedSymbol.none, NamedColor.blue);
+			drawSymbol(<span class="Constant">1</span>, <span class="Constant">2</span>, NamedSymbol.none, NamedColor.yellow);
+			drawSymbol(<span class="Constant">1</span>, <span class="Constant">3</span>, NamedSymbol.none, NamedColor.black);
+			drawSymbol(<span class="Constant">1</span>, <span class="Constant">4</span>, NamedSymbol.none, NamedColor.green);
+			drawSymbol(<span class="Constant">1</span>, <span class="Constant">5</span>, NamedSymbol.none, NamedColor.red);
+		}
+	}
+
+	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main (String args[]) {
+		input_game g = <span class="Statement">new</span> input_game(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+			<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+		g.start();
+	}
+}
+</pre>

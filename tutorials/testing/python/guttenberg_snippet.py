@@ -20,5 +20,5 @@ def main():
     print(book1.name)
     print(book1.genre)
 
-    if __name__ == '__main__':
+if __name__ == "__main__":
         main()

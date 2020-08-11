@@ -17,14 +17,14 @@
 		ElevationData elev_data = ds.getElevationData(<span class="Constant">41.03133177632377</span>, -<span class="Constant">98.02593749997456</span>, <span class="Constant">42.508577297430456</span>, -<span class="Constant">96.94531249997696</span>, <span class="Constant">0.02</span>);
 
 
-		System.out.println(<span class="Constant">&quot;Width: &quot;</span>+elev_data.getCols());
-		System.out.println(<span class="Constant">&quot;Height: &quot;</span>+elev_data.getRows());
-		System.out.println(<span class="Constant">&quot;Resolution: &quot;</span>+elev_data.getCellSize());
-		System.out.println(<span class="Constant">&quot;Lower Left Corner: &quot;</span>+elev_data.getxll()+<span class="Constant">&quot;, &quot;</span>+elev_data.getyll());
+		System.out.println(<span class="Constant">&quot;Width: &quot;</span> + elev_data.getCols());
+		System.out.println(<span class="Constant">&quot;Height: &quot;</span> + elev_data.getRows());
+		System.out.println(<span class="Constant">&quot;Resolution: &quot;</span> + elev_data.getCellSize());
+		System.out.println(<span class="Constant">&quot;Lower Left Corner: &quot;</span> + elev_data.getxll() + <span class="Constant">&quot;, &quot;</span> + elev_data.getyll());
 
 		System.out.println(<span class="Constant">&quot;first 10 elevations:&quot;</span>);
-		<span class="Statement">for</span> (<span class="Type">int</span> i=<span class="Constant">0</span>; i&lt;<span class="Constant">10</span>; ++i) {
-		    System.out.println(elev_data.getData()[<span class="Constant">0</span>][i]);
+		<span class="Statement">for</span> (<span class="Type">int</span> i = <span class="Constant">0</span>; i &lt; <span class="Constant">10</span>; ++i) {
+			System.out.println(elev_data.getData()[<span class="Constant">0</span>][i]);
 		}
 
 

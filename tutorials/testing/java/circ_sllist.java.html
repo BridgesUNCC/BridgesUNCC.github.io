@@ -1,0 +1,67 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">import</span> bridges.base.CircSLelement;
+<span class="PreProc">import</span> bridges.connect.Bridges;
+
+<span class="PreProc">import</span> java.util.Iterator;
+
+<span class="Type">public</span> <span class="Type">class</span> circ_sllist {
+
+	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) <span class="Type">throws</span> Exception {
+
+		<span class="Comment">// create Bridges object</span>
+		Bridges bridges = <span class="Statement">new</span> Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+			<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+		<span class="Comment">// title, description</span>
+		bridges.setTitle(<span class="Constant">&quot;A Circle Singly Linked List Example&quot;</span>);
+
+		<span class="Comment">// set  description</span>
+		bridges.setDescription(<span class="Constant">&quot;A circular singly linked list of node with student names, where each node is linked only to the next node in the list and the last node is linked to the first.  Illustrates Node and link coloring, node size, link thickness and opacity&quot;</span>);
+
+		<span class="Comment">// create the linked list elements with student names</span>
+		CircSLelement&lt;String&gt;  el0 = <span class="Statement">new</span> CircSLelement&lt;String&gt; (<span class="Constant">&quot;Gretel Chaney&quot;</span>, <span class="Constant">&quot;Gretel Chaney&quot;</span>);
+		CircSLelement&lt;String&gt;  el1 = <span class="Statement">new</span> CircSLelement&lt;String&gt; (<span class="Constant">&quot;Lamont Kyler&quot;</span>, <span class="Constant">&quot;Lamont Kyler&quot;</span>);
+		CircSLelement&lt;String&gt;  el2 = <span class="Statement">new</span> CircSLelement&lt;String&gt; (<span class="Constant">&quot;Gladys Serino&quot;</span>, <span class="Constant">&quot;Gladys Serino&quot;</span>);
+		CircSLelement&lt;String&gt;  el3 = <span class="Statement">new</span> CircSLelement&lt;String&gt; (<span class="Constant">&quot;Karol Soderman&quot;</span>, <span class="Constant">&quot;Karol Soderman&quot;</span>);
+		CircSLelement&lt;String&gt;  el4 = <span class="Statement">new</span> CircSLelement&lt;String&gt; (<span class="Constant">&quot;Starr McGinn&quot;</span>, <span class="Constant">&quot;Starr McGinn&quot;</span>);
+
+		<span class="Comment">//  link the elements</span>
+		el0.setNext(el1);
+		el1.setNext(el2);
+		el2.setNext(el3);
+		el3.setNext(el4);
+
+		<span class="Comment">// link the last to the first</span>
+		el4.setNext(el0);
+
+		<span class="Comment">// use the iterator</span>
+		System.out.println(<span class="Constant">&quot;Using iterators..&quot;</span>);
+		Iterator&lt;String&gt; iter = el0.iterator();
+		<span class="Statement">do</span> {
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">&quot;</span> + iter.next());
+		} <span class="Statement">while</span> (iter.hasNext());
+
+		<span class="Comment">// set colors for list elements - see the Color class for supported colors</span>
+		el0.setColor(<span class="Constant">&quot;red&quot;</span>);
+		el2.setColor(<span class="Constant">&quot;aliceblue&quot;</span>);
+
+		<span class="Comment">// color the links - must specify a valid terminating element</span>
+		el0.getLinkVisualizer(el1).setColor(<span class="Constant">&quot;green&quot;</span>);
+		el3.getLinkVisualizer(el4).setColor(<span class="Constant">&quot;magenta&quot;</span>);
+
+		<span class="Comment">// adjust link thickness</span>
+		el0.getLinkVisualizer(el1).setThickness(<span class="Constant">2.0f</span>);
+
+		<span class="Comment">// set node transparency</span>
+		el4.setOpacity (<span class="Constant">0.5f</span>);
+
+		<span class="Comment">// set node size</span>
+		el0.setSize (<span class="Constant">20</span>);
+
+		<span class="Comment">// set link label</span>
+		el2.getLinkVisualizer(el3).setLabel(<span class="Constant">&quot;Gladys_to_Karol&quot;</span>);
+
+		bridges.setDataStructure(el0);
+		bridges.visualize();
+	}
+}
+</pre>

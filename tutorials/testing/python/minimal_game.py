@@ -1,4 +1,5 @@
 from bridges import *
+import sys
 
 class MinimalGame (NonBlockingGame): 
 	def	 __init__(self, assid, user_id, api_key):
@@ -15,9 +16,9 @@ class MinimalGame (NonBlockingGame):
 		pass
 
 def	main():
-	game = MinimalGame(1, "BRIDGES_USER_ID", "BRIDGES_API_KEY")
+	game = MinimalGame(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY")
 	# start the game
 	game.start()
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 	main()

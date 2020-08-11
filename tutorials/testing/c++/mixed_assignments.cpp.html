@@ -1,0 +1,122 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">#include </span><span class="Constant">&quot;TreeElement.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;CircSLelement.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Array2D.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Rectangle.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Circle.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Label.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Polygon.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Color.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;ColorGrid.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;SymbolCollection.h&quot;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
+<span class="Statement">using</span> <span class="Type">namespace</span> std;
+
+<span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
+	<span class="Comment">//create the Bridges object</span>
+    Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+	<span class="Comment">// Tree</span>
+	TreeElement&lt;string&gt; *t0 = <span class="Statement">new</span> TreeElement&lt;string&gt;(<span class="Constant">&quot;Root&quot;</span>);
+	TreeElement&lt;string&gt; *t1 = <span class="Statement">new</span> TreeElement&lt;string&gt;(<span class="Constant">&quot;Child1&quot;</span>);
+	TreeElement&lt;string&gt; *t2 = <span class="Statement">new</span> TreeElement&lt;string&gt;(<span class="Constant">&quot;Child2&quot;</span>);
+	TreeElement&lt;string&gt; *t3 = <span class="Statement">new</span> TreeElement&lt;string&gt;(<span class="Constant">&quot;Child3&quot;</span>);
+
+	<span class="Comment">// add links to children</span>
+	t0-&gt;addChild(t1);
+	t0-&gt;addChild(t2);
+	t0-&gt;addChild(t3);
+
+	<span class="Comment">// set some visual attributes</span>
+	t0-&gt;setColor(<span class="Constant">&quot;red&quot;</span>);
+	t0-&gt;setShape(DIAMOND);
+	t0-&gt;setOpacity(<span class="Constant">0.5f</span>);
+
+	<span class="Comment">// set data structure and visualize</span>
+	bridges.setTitle(<span class="Constant">&quot;A multiple subassignment example&quot;</span>);
+	bridges.setDataStructure(t0);
+	bridges.visualize();
+
+	<span class="Comment">// circular list</span>
+	CircSLelement&lt;string&gt; *head = <span class="Statement">new</span> CircSLelement&lt;string&gt;(<span class="Constant">&quot;&quot;</span>, <span class="Constant">&quot;head&quot;</span>);
+	CircSLelement&lt;string&gt; *csl1 = <span class="Statement">new</span> CircSLelement&lt;string&gt;(<span class="Constant">&quot;&quot;</span>, <span class="Constant">&quot;el1&quot;</span>);
+	CircSLelement&lt;string&gt; *csl2 = <span class="Statement">new</span> CircSLelement&lt;string&gt;(<span class="Constant">&quot;&quot;</span>, <span class="Constant">&quot;el2&quot;</span>);
+	CircSLelement&lt;string&gt; *tail = <span class="Statement">new</span> CircSLelement&lt;string&gt;(<span class="Constant">&quot;&quot;</span>, <span class="Constant">&quot;tail&quot;</span>);
+
+	<span class="Comment">// add links to list</span>
+	head-&gt;setNext(csl1);
+	csl1-&gt;setNext(csl2);
+	csl2-&gt;setNext(tail);
+	tail-&gt;setNext(head);
+
+	<span class="Comment">// set data structure and visualize</span>
+	bridges.setTitle(<span class="Constant">&quot;A small circular singly linked list&quot;</span>);
+	bridges.setDataStructure(head);
+	bridges.visualize();
+
+	<span class="Comment">// 2D Array </span>
+	<span class="Type">int</span> num_rows = <span class="Constant">4</span>, num_cols = <span class="Constant">4</span>;
+	Array2D&lt;<span class="Type">int</span>&gt; *my_array = <span class="Statement">new</span> Array2D&lt;<span class="Type">int</span>&gt; (num_rows, num_cols);
+
+	<span class="Comment">// populate the array</span>
+	<span class="Statement">for</span> (<span class="Type">int</span> row = <span class="Constant">0</span>; row &lt; num_rows; row++) {
+		<span class="Statement">for</span> (<span class="Type">int</span> col = <span class="Constant">0</span>; col &lt; num_cols; col++) {
+			my_array-&gt;getElement(row, col).setLabel(<span class="Constant">&quot;El &quot;</span> +
+				std::to_string (row * num_cols + col));
+		}
+	}
+
+	<span class="Comment">// set a color</span>
+	my_array-&gt;getElement(<span class="Constant">0</span>, <span class="Constant">0</span>).setColor(<span class="Constant">&quot;purple&quot;</span>);
+
+	<span class="Comment">// set data structure and visualize</span>
+	bridges.setTitle(<span class="Constant">&quot;A 2D Array&quot;</span>);
+	bridges.setDataStructure(my_array);
+	bridges.visualize();
+
+	<span class="Comment">// Shape collection</span>
+	SymbolCollection *sc = <span class="Statement">new</span> SymbolCollection();
+
+	Rectangle *r1 = <span class="Statement">new</span> Rectangle(<span class="Constant">0.0f</span>, <span class="Constant">0.0f</span>, <span class="Constant">25</span>, <span class="Constant">25</span>);
+	r1-&gt;setFillColor(<span class="Constant">&quot;black&quot;</span>);
+	sc-&gt;addSymbol(r1);
+
+	Circle *s1 = <span class="Statement">new</span> Circle(<span class="Constant">25.0f</span>, <span class="Constant">0.0f</span>, <span class="Constant">10</span>);
+	s1-&gt;setFillColor(<span class="Constant">&quot;yellow&quot;</span>);
+	sc-&gt;addSymbol(s1);
+
+	Circle *s2 = <span class="Statement">new</span> Circle(-<span class="Constant">25.0f</span>, <span class="Constant">0.0f</span>, <span class="Constant">10</span>);
+	s2-&gt;setFillColor(<span class="Constant">&quot;yellow&quot;</span>);
+	sc-&gt;addSymbol(s2);
+
+	Circle *s3 = <span class="Statement">new</span> Circle(<span class="Constant">0.0f</span>, <span class="Constant">25.0f</span>, <span class="Constant">10</span>);
+	s3-&gt;setFillColor(<span class="Constant">&quot;yellow&quot;</span>);
+	sc-&gt;addSymbol(s3);
+
+	Circle *s4 = <span class="Statement">new</span> Circle(<span class="Constant">0.0f</span>, -<span class="Constant">25.0f</span>, <span class="Constant">10</span>);
+	s4-&gt;setFillColor(<span class="Constant">&quot;yellow&quot;</span>);
+	sc-&gt;addSymbol(s4);
+
+	<span class="Comment">// set data structure and visualize</span>
+	bridges.setTitle(<span class="Constant">&quot;A Symbol Collection&quot;</span>);
+	bridges.setDataStructure(sc);
+	bridges.visualize();
+
+	<span class="Comment">// color grid</span>
+	<span class="Type">int</span> rows = <span class="Constant">30</span>, cols = <span class="Constant">30</span>;
+
+	ColorGrid *cg  = <span class="Statement">new</span> ColorGrid(rows, cols, Color(<span class="Constant">&quot;purple&quot;</span>));
+
+	cg-&gt;set(<span class="Constant">12</span>, <span class="Constant">12</span>, Color(<span class="Constant">&quot;black&quot;</span>));
+	cg-&gt;set(<span class="Constant">12</span>, <span class="Constant">18</span>, Color(<span class="Constant">&quot;black&quot;</span>));
+
+	<span class="Statement">for</span> (<span class="Type">int</span> i = <span class="Constant">0</span>; i &lt; <span class="Constant">10</span>; i++) {
+		cg-&gt;set(<span class="Constant">18</span>, <span class="Constant">10</span> + i, Color(<span class="Constant">&quot;black&quot;</span>));
+	}
+
+	<span class="Comment">// set data structure and visualize</span>
+	bridges.setTitle(<span class="Constant">&quot;Color Grid Example&quot;</span>);
+	bridges.setDataStructure(cg);
+	bridges.visualize();
+}
+</pre>

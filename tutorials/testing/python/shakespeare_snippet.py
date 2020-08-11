@@ -22,5 +22,5 @@ def main():
     print(work1.text[0:min(100, len(work1.text))])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

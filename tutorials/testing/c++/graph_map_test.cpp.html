@@ -1,0 +1,67 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;DataSource.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;GraphAdjList.h&quot;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
+
+<span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
+	<span class="Comment">// create Bridges object</span>
+    Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+        <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+	<span class="Comment">// create an adjacency list based graph</span>
+	GraphAdjList&lt;string, string&gt; g;
+
+	<span class="Statement">for</span> (<span class="Type">int</span> i = <span class="Constant">0</span>; i &lt; <span class="Constant">10</span>; i++) {
+		g.addVertex(<span class="Constant">&quot;node&quot;</span> + std::to_string(i), <span class="Constant">&quot;node&quot;</span> + std::to_string(i));
+		<span class="Statement">if</span> (i &gt; <span class="Constant">0</span>) {
+			g.addEdge(<span class="Constant">&quot;node&quot;</span> + std::to_string(i), <span class="Constant">&quot;node&quot;</span> + std::to_string(i - <span class="Constant">1</span>));
+		}
+	}
+
+	<span class="Comment">// Pass the graph object to BRIDGES</span>
+	bridges.setDataStructure(g);
+
+	<span class="Comment">// visualize SVG AlbersUSA map</span>
+	bridges.setCoordSystemType(<span class="Constant">&quot;albersusa&quot;</span>);
+	bridges.setMapOverlay(<span class="Constant">true</span>);
+	bridges.visualize();
+
+	<span class="Comment">// visualize SVG World map</span>
+	bridges.setCoordSystemType(<span class="Constant">&quot;equirectangular&quot;</span>);
+	bridges.setMapOverlay(<span class="Constant">true</span>);
+	bridges.setTitle(<span class="Constant">&quot;SVG World Map&quot;</span>);
+	bridges.visualize();
+
+
+	<span class="Comment">// CANVAS VERSIONS (add &gt;100 nodes)</span>
+	<span class="Statement">for</span> (<span class="Type">int</span> i = <span class="Constant">10</span>; i &lt; <span class="Constant">110</span>; i++) {
+		g.addVertex(<span class="Constant">&quot;node&quot;</span> + std::to_string(i), <span class="Constant">&quot;node&quot;</span> + std::to_string(i));
+		<span class="Statement">if</span> (i &gt; <span class="Constant">0</span>) {
+			g.addEdge(<span class="Constant">&quot;node&quot;</span> + std::to_string(i), <span class="Constant">&quot;node&quot;</span> + std::to_string(i - <span class="Constant">1</span>));
+		}
+	}
+
+	<span class="Comment">// fix a node over Charlotte, NC</span>
+	g.getVertex(<span class="Constant">&quot;node6&quot;</span>)-&gt;setLocation(-<span class="Constant">80.8431</span>, <span class="Constant">35.2271</span>);
+	g.getVertex(<span class="Constant">&quot;node6&quot;</span>)-&gt;setColor(<span class="Constant">&quot;red&quot;</span>);
+
+	<span class="Comment">// visualize Canvas AlbersUSA map</span>
+	bridges.setCoordSystemType(<span class="Constant">&quot;albersusa&quot;</span>);
+	bridges.setMapOverlay(<span class="Constant">true</span>);
+	bridges.setTitle(<span class="Constant">&quot;Canvas USA Map&quot;</span>);
+	bridges.visualize();
+
+	<span class="Comment">// fix a node over London</span>
+	g.getVertex(<span class="Constant">&quot;node10&quot;</span>)-&gt;setLocation(-<span class="Constant">0.1278</span>, <span class="Constant">51.5074</span>);
+	g.getVertex(<span class="Constant">&quot;node10&quot;</span>)-&gt;setColor(<span class="Constant">&quot;red&quot;</span>);
+
+	<span class="Comment">// visualize Canvas World map</span>
+	bridges.setCoordSystemType(<span class="Constant">&quot;equirectangular&quot;</span>);
+	bridges.setMapOverlay(<span class="Constant">true</span>);
+	bridges.setTitle(<span class="Constant">&quot;Canvas World Map&quot;</span>);
+	bridges.visualize();
+}
+</pre>

@@ -1,0 +1,33 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">#include </span><span class="Constant">&lt;NonBlockingGame.h&gt;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges::game;
+
+<span class="Type">struct</span> my_game : <span class="Statement">public</span> NonBlockingGame {
+	my_game(<span class="Type">int</span> assID, std::string username, std::string apikey)
+		: NonBlockingGame (assID, username,  apikey, <span class="Constant">10</span>, <span class="Constant">20</span>) {
+	}
+	<span class="Type">virtual</span> <span class="Type">void</span> initialize() <span class="Type">override</span> {
+		<span class="Statement">for</span> (<span class="Type">int</span> i = <span class="Constant">0</span>; i &lt; getBoardHeight(); ++i)
+			<span class="Statement">for</span> (<span class="Type">int</span> j = <span class="Constant">0</span>; j &lt; getBoardWidth(); ++j)
+				setBGColor(i, j, NamedColor::ivory);
+
+		drawSymbol(<span class="Constant">0</span>, <span class="Constant">0</span>, NamedSymbol::U, NamedColor::blue);
+		drawSymbol(<span class="Constant">0</span>, <span class="Constant">19</span>, NamedSymbol::N, NamedColor::red);
+		drawSymbol(<span class="Constant">9</span>, <span class="Constant">0</span>, NamedSymbol::C, NamedColor::black);
+		drawSymbol(<span class="Constant">9</span>, <span class="Constant">19</span>, NamedSymbol::C, NamedColor::green);
+
+	}
+	<span class="Type">virtual</span> <span class="Type">void</span> gameLoop() <span class="Type">override</span> {
+		<span class="Comment">//This function is executed each frame of the game</span>
+	}
+};
+
+<span class="Type">int</span> main (<span class="Type">int</span> argc, <span class="Type">char</span>** argv) {
+	my_game g(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+		<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+
+	g.start();
+}
+</pre>

@@ -20,9 +20,9 @@ public class eq_snippet {
 		// print the first record
 		System.out.println("Earthquake 0:");
 		System.out.println ("\tMagnitude:"  + eq_list.get(0).getMagnitude() + "\n"
-			 + "\tDate:" + eq_list.get(0).getTime() + "\n"
-			 + "\tLocation: " +  eq_list.get(0).getLocation() + "\n"  
-			 + "\tLat/Long:"  + eq_list.get(0).getLatit() + "," + 
-						eq_list.get(0).getLongit());
+			+ "\tDate:" + eq_list.get(0).getTime() + "\n"
+			+ "\tLocation: " +  eq_list.get(0).getLocation() + "\n"
+			+ "\tLat/Long:"  + eq_list.get(0).getLatit() + "," +
+			eq_list.get(0).getLongit());
 	}
 }

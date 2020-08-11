@@ -65,5 +65,22 @@ int main(int argc, char **argv) {
 	// visualize
 	bridges.visualize();
 
+	// freeing memory
+	delete t0;
+	delete t1;
+	delete t2;
+	delete t3;
+	delete t4;
+	delete t5;
+	delete t6;
+	delete t7;
+	delete t8;
+	delete t9;
+	delete t10;
+	delete t11;
+	delete t12;
+	delete t13;
+	delete t14;
+	
 	return 0;
 }

@@ -27,5 +27,5 @@ def main():
            ", "+ str(vertices[0].cartesian_coord[1]));
 
     
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

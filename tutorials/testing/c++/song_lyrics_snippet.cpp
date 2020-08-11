@@ -24,6 +24,12 @@ int main(int argc, char* argv[]) {
 	// Get Song data
 	Song s = ds.getSong("Harder Faster Better Stronger", "Daft Punk");
 
+	// print song attributes
+	cout << endl << "Title: " << s.getSongTitle() << endl 
+		 << "Artist: " << s.getArtist() << endl
+		 << "Album: " << s.getAlbumTitle() << endl
+		 << "Release Date: " << s.getReleaseDate() << endl;
+
 	// print lyrics
 	std::cout << s.getLyrics() << std::endl;
 

@@ -10,54 +10,54 @@
 	<span class="Type">private</span> <span class="Type">static</span> <span class="Type">void</span> generateSine(AudioClip ac) {
 		<span class="Statement">for</span> (<span class="Type">int</span> s = <span class="Constant">0</span>; s &lt; ac.getSampleCount(); s++) {
 			<span class="Statement">for</span> (<span class="Type">int</span> c = <span class="Constant">0</span>; c &lt; ac.getNumChannels(); c++) {
-				<span class="Type">double</span> val = Math.sin(s /<span class="Constant">20.</span>);
+				<span class="Type">double</span> val = Math.sin(s / <span class="Constant">20.</span>);
 
 				ac.setSample(c, s, (<span class="Type">int</span>)(val * Integer.MAX_VALUE));
 			}
 		}
 	}
 
-<span class="Comment">//	public static void main(String[] args) throws IOException, WavFileException, RateLimitException {</span>
+	<span class="Comment">//	public static void main(String[] args) throws IOException, WavFileException, RateLimitException {</span>
 	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) <span class="Type">throws</span> IOException, RateLimitException {
-        Bridges bridges = <span class="Statement">new</span> Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
-            <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+		Bridges bridges = <span class="Statement">new</span> Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+			<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 
 
-	    bridges.setTitle(<span class="Constant">&quot;Audio Test&quot;</span>);
+		bridges.setTitle(<span class="Constant">&quot;Audio Test&quot;</span>);
 
-            AudioClip ac = <span class="Statement">new</span> AudioClip((<span class="Type">int</span>) (<span class="Constant">44100</span>*<span class="Constant">.25</span>), <span class="Constant">1</span>, <span class="Constant">32</span>, <span class="Constant">44100</span>);
+		AudioClip ac = <span class="Statement">new</span> AudioClip((<span class="Type">int</span>) (<span class="Constant">44100</span> * <span class="Constant">.25</span>), <span class="Constant">1</span>, <span class="Constant">32</span>, <span class="Constant">44100</span>);
 
-	    generateSine(ac);
+		generateSine(ac);
 
-	    bridges.setDataStructure(ac);
+		bridges.setDataStructure(ac);
 
-	    bridges.visualize();
-
-
-
-	    AudioClip ac2 = <span class="Statement">new</span> AudioClip(<span class="Constant">&quot;../../data/clap-8bit.wav&quot;</span>);
-
-	    bridges.setDataStructure(ac2);
-
-	    bridges.visualize();
-
-	    AudioClip ac3 = <span class="Statement">new</span> AudioClip(<span class="Constant">&quot;../../data/clap-16bit.wav&quot;</span>);
-
-	    bridges.setDataStructure(ac3);
-
-	    bridges.visualize();
-
-	    AudioClip ac4 = <span class="Statement">new</span> AudioClip(<span class="Constant">&quot;../../data/clap-24bit.wav&quot;</span>);
+		bridges.visualize();
 
 
-	    bridges.setDataStructure(ac4);
 
-	    bridges.visualize();
+		AudioClip ac2 = <span class="Statement">new</span> AudioClip(<span class="Constant">&quot;../../data/clap-8bit.wav&quot;</span>);
+
+		bridges.setDataStructure(ac2);
+
+		bridges.visualize();
+
+		AudioClip ac3 = <span class="Statement">new</span> AudioClip(<span class="Constant">&quot;../../data/clap-16bit.wav&quot;</span>);
+
+		bridges.setDataStructure(ac3);
+
+		bridges.visualize();
+
+		AudioClip ac4 = <span class="Statement">new</span> AudioClip(<span class="Constant">&quot;../../data/clap-24bit.wav&quot;</span>);
 
 
-	    AudioClip ac5 = <span class="Statement">new</span> AudioClip(<span class="Constant">&quot;../../data/clap-32bit.wav&quot;</span>);
+		bridges.setDataStructure(ac4);
 
-	    bridges.setDataStructure(ac5);
+		bridges.visualize();
+
+
+		AudioClip ac5 = <span class="Statement">new</span> AudioClip(<span class="Constant">&quot;../../data/clap-32bit.wav&quot;</span>);
+
+		bridges.setDataStructure(ac5);
 
 		bridges.visualize();
 
