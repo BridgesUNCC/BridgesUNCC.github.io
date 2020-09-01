@@ -16,7 +16,7 @@
 		DataSource ds = bridges.getDataSource();
 		List&lt;Shakespeare&gt; mylist = ds.getShakespeareData();
 
-		<span class="Comment">// Inspect a random Shakespeare object </span>
+		<span class="Comment">// Inspect a random Shakespeare object</span>
 		Shakespeare work1 = mylist.get((<span class="Statement">new</span> Random()).nextInt(mylist.size()));
 		System.out.println(work1.getTitle());
 		System.out.println(work1.getType());

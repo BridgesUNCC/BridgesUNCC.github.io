@@ -50,5 +50,14 @@ int main(int argc, char **argv) {
 	bridges.setDataStructure(t0);
 	bridges.visualize();
 
+	// Reclaiming memory
+	delete t0;
+	delete t1;
+	delete t2;
+	delete t3;
+	delete t4;
+	delete t5;
+	delete t6;
+	
 	return 0;
 }

@@ -1,0 +1,31 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">import</span> bridges.games.*;
+<span class="PreProc">import</span> bridges.base.*;
+
+<span class="Type">class</span> game_size_test <span class="Type">extends</span> NonBlockingGame {
+	<span class="Type">public</span> game_size_test(<span class="Type">int</span> assignmentnumber, String username, String apikey) {
+		<span class="Type">super</span> (assignmentnumber, username,  apikey, <span class="Constant">10</span>, <span class="Constant">20</span>);
+	}
+
+	<span class="Type">public</span> <span class="Type">void</span> initialize() {
+		<span class="Statement">for</span> (<span class="Type">int</span> i = <span class="Constant">0</span>; i &lt; getBoardHeight(); ++i)
+			<span class="Statement">for</span> (<span class="Type">int</span> j = <span class="Constant">0</span>; j &lt; getBoardWidth(); ++j)
+				setBGColor(i, j, NamedColor.ivory);
+
+		drawSymbol(<span class="Constant">0</span>, <span class="Constant">0</span>, NamedSymbol.U, NamedColor.red);
+		drawSymbol(<span class="Constant">0</span>, <span class="Constant">19</span>, NamedSymbol.N, NamedColor.green);
+		drawSymbol(<span class="Constant">9</span>, <span class="Constant">0</span>, NamedSymbol.C, NamedColor.blue);
+		drawSymbol(<span class="Constant">9</span>, <span class="Constant">19</span>, NamedSymbol.C, NamedColor.cyan);
+	}
+
+	<span class="Type">public</span> <span class="Type">void</span> gameLoop() {
+		<span class="Comment">//This function is executed each frame of the game</span>
+	}
+
+	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main (String args[]) {
+		game_size_test  g = <span class="Statement">new</span> game_size_test(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+			<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+		g.start();
+	}
+}
+</pre>

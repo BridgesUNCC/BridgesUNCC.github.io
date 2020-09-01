@@ -60,5 +60,14 @@ int main(int argc, char **argv) {
 
 	bridges.visualize();
 
+	// deallocating memory
+	
+	delete avl_root;
+	delete avl2;
+	delete avl3;
+	delete avl4;
+	delete avl5;
+	delete avl6;
+	
 	return 0;
 }

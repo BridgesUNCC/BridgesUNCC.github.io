@@ -23,7 +23,7 @@
 		<span class="Constant">&quot;This example alternates between blue and red starting with red at the top left corner of the grid.&quot;</span>);
 	<span class="Type">int</span> width = <span class="Constant">100</span>, height = <span class="Constant">100</span>;
 
-	ColorGrid *cg  = <span class="Statement">new</span> ColorGrid(width, height, Color(<span class="Constant">&quot;red&quot;</span>));
+	ColorGrid cg(width, height, Color(<span class="Constant">&quot;red&quot;</span>));
 
 	<span class="Comment">// create a checkerboard pattern</span>
 	<span class="Comment">// 10 x 10 grid</span>
@@ -52,10 +52,10 @@
 			<span class="Comment">// color the square</span>
 			<span class="Statement">for</span> (<span class="Type">int</span> row = origin_y; row &lt; origin_y + sq_height; row++)
 				<span class="Statement">for</span> (<span class="Type">int</span> column = origin_x; column &lt; origin_x + sq_width; column++)
-					cg-&gt;set(row, column, Color(col));
+					cg.set(row, column, Color(col));
 		}
 
-	bridges.setDataStructure(cg);
+	bridges.setDataStructure(&amp;cg);
 
 	bridges.visualize();
 

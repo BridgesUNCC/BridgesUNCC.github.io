@@ -15,7 +15,7 @@ public class shakespeare_snippet {
 		DataSource ds = bridges.getDataSource();
 		List<Shakespeare> mylist = ds.getShakespeareData();
 
-		// Inspect a random Shakespeare object 
+		// Inspect a random Shakespeare object
 		Shakespeare work1 = mylist.get((new Random()).nextInt(mylist.size()));
 		System.out.println(work1.getTitle());
 		System.out.println(work1.getType());

@@ -21,9 +21,9 @@ public class vis_example {
 		el0.setNext(el1);
 		el1.setPrev(el0);
 
-    	// node properties
+		// node properties
 
-    	// set color, size , shape for list elements - see the Color class 
+		// set color, size , shape for list elements - see the Color class
 		//for supported colors
 		el0.setColor("red");
 		el0.setSize(20.);
@@ -36,7 +36,7 @@ public class vis_example {
 		// color the link from el0 to el1
 		el0.getLinkVisualizer(el1).setColor("green");
 
-		// color the link from el1 to el0, using rgb color 
+		// color the link from el1 to el0, using rgb color
 		el1.getLinkVisualizer(el0).setColor(new Color(255, 0, 255));
 
 		// adjust link thickness

@@ -25,6 +25,12 @@
 	<span class="Comment">// Get Song data</span>
 	Song s = ds.getSong(<span class="Constant">&quot;Harder Faster Better Stronger&quot;</span>, <span class="Constant">&quot;Daft Punk&quot;</span>);
 
+	<span class="Comment">// print song attributes</span>
+	cout &lt;&lt; endl &lt;&lt; <span class="Constant">&quot;Title: &quot;</span> &lt;&lt; s.getSongTitle() &lt;&lt; endl
+		 &lt;&lt; <span class="Constant">&quot;Artist: &quot;</span> &lt;&lt; s.getArtist() &lt;&lt; endl
+		 &lt;&lt; <span class="Constant">&quot;Album: &quot;</span> &lt;&lt; s.getAlbumTitle() &lt;&lt; endl
+		 &lt;&lt; <span class="Constant">&quot;Release Date: &quot;</span> &lt;&lt; s.getReleaseDate() &lt;&lt; endl;
+
 	<span class="Comment">// print lyrics</span>
 	std::cout &lt;&lt; s.getLyrics() &lt;&lt; std::endl;
 

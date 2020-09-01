@@ -34,11 +34,11 @@ public class dllist {
 		el3.setNext(el4);
 		el4.setPrev(el3);
 
-	        // test SLelement iterators
+		// test SLelement iterators
 
-        // using a for-each loop
+		// using a for-each loop
 		System.out.println("Using range for loop:");
-		for (String s: el0)
+		for (String s : el0)
 			System.out.println("\t " + s);
 
 		// use the forward iterator
@@ -46,7 +46,7 @@ public class dllist {
 		Iterator<String> iter = el0.iterator();
 		while (iter.hasNext()) {
 			System.out.println("\t" + iter.next());
-        }
+		}
 
 		// use the reverse iterator
 		System.out.println("Using reverse iterator..");

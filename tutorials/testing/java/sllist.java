@@ -36,7 +36,7 @@ public class sllist {
 
 		// using a for-each loop
 		System.out.println("Using range for loop:");
-		for (String s: el0)
+		for (String s : el0)
 			System.out.println("\t " + s);
 
 		// use the iterator

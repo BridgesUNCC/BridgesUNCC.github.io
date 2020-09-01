@@ -67,4 +67,20 @@ int main(int argc, char **argv)  {
 
 	// visualize the list
 	bridges.visualize();
+
+	//freeing memory
+	delete el0;
+	delete el1;
+	delete el2;
+	delete el3;
+	delete el4;
+	delete el5;
+	delete el6;
+	delete el7;
+	delete el8;
+	delete el9;
+	delete el10;
+	delete el11;
+					
+	
 }

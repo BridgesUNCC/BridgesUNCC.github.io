@@ -1,0 +1,90 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges.symbol_collection <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.circle <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.rectangle <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.polygon <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.polyline <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.rectangle <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.label <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.color <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+    args = sys.argv[<span class="Constant">1</span>:]
+
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># title, description</span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">Drawing a Face Example</span><span class="Constant">&quot;</span>)
+
+    sc = SymbolCollection()
+
+    <span class="Comment"># left eye</span>
+    s1 = Circle(r = <span class="Constant">25.0</span>)
+    s1.set_stroke_color = <span class="Constant">&quot;</span><span class="Constant">green</span><span class="Constant">&quot;</span>
+    s1.set_stroke_width = <span class="Constant">1.2</span>
+    tf = [-<span class="Constant">25.</span>, <span class="Constant">20.</span>]
+    sf = [<span class="Constant">0.3</span>]
+    s1.translate(tf[<span class="Constant">0</span>], tf[<span class="Constant">1</span>])
+    s1.scale(sf[<span class="Constant">0</span>])
+    sc.add_symbol (s1)
+
+
+    <span class="Comment"># right eye</span>
+    s2 = Circle(r = <span class="Constant">25.0</span>)
+    s2.set_stroke_color = <span class="Constant">&quot;</span><span class="Constant">green</span><span class="Constant">&quot;</span>
+    s2.set_stroke_width = <span class="Constant">1.3</span>
+    tf = [<span class="Constant">25.</span>, <span class="Constant">20.</span>]
+    s2.translate(tf[<span class="Constant">0</span>], tf[<span class="Constant">1</span>])
+    s2.scale(sf[<span class="Constant">0</span>])
+    sc.add_symbol (s2)
+
+
+    <span class="Comment">#nose</span>
+    s3 = Rectangle(w=<span class="Constant">10.0</span>, h=<span class="Constant">10.0</span>, locx=<span class="Constant">0.0</span>, locy=<span class="Constant">0.0</span>)
+    s3.fill_color = <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>
+    s3.set_stroke_width = <span class="Constant">1.3</span>
+    sf = [<span class="Constant">0.5</span>, <span class="Constant">3.0</span>]
+    tf = [<span class="Constant">0.0</span>, -<span class="Constant">10.0</span>]
+    s3.translate(tf[<span class="Constant">0</span>], tf[<span class="Constant">1</span>])
+    s3.scale(sf[<span class="Constant">0</span>], sf[<span class="Constant">1</span>])
+    sc.add_symbol(s3)
+
+    <span class="Comment"># mouth is a rectangle, use scale and translation</span>
+    s4 = Rectangle(w=<span class="Constant">10</span>, h=<span class="Constant">10</span>, locx=<span class="Constant">0.0</span>, locy=<span class="Constant">0.0</span>)
+    s4.fil_color = <span class="Constant">&quot;</span><span class="Constant">blue</span><span class="Constant">&quot;</span>
+    s4.set_stroke_width = <span class="Constant">1.3</span>
+    sf= [<span class="Constant">3.</span>, <span class="Constant">0.5</span>]
+    tf = [-<span class="Constant">10.</span>, -<span class="Constant">40.</span>]
+    s4.scale(sf[<span class="Constant">0</span>], sf[<span class="Constant">1</span>]);
+    s4.translate(tf[<span class="Constant">0</span>], tf[<span class="Constant">1</span>]);
+    sc.add_symbol(s4);
+
+
+    <span class="Comment"># put a hat on the head</span>
+    s5 = Polyline();
+    s5.stroke_color = <span class="Constant">&quot;</span><span class="Constant">darkorchid</span><span class="Constant">&quot;</span>;
+    s5.stroke_width = <span class="Constant">3.0</span>;
+    s5.add_point(-<span class="Constant">50.0</span>, <span class="Constant">22.0</span>);
+    s5.add_point(<span class="Constant">0.0</span>, <span class="Constant">120.0</span>);
+    s5.add_point(<span class="Constant">50.0</span>, <span class="Constant">22.0</span>);
+    sc.add_symbol(s5);
+
+    <span class="Comment"># add a title to figure</span>
+    l = Label()
+    l.set_location(-<span class="Constant">70</span>, <span class="Constant">120</span>)
+    l.font_size = <span class="Constant">16</span>
+    l.stroke_width = <span class="Constant">1.0</span>
+    l.label = <span class="Constant">&quot;</span><span class="Constant">Its a Dorky Looking Face!</span><span class="Constant">&quot;</span>
+    l.stroke_color = <span class="Constant">&quot;</span><span class="Constant">purple</span><span class="Constant">&quot;</span>
+    sc.add_symbol(l)
+
+    bridges.set_data_structure(sc)
+    bridges.visualize()
+
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
+    main()
+</pre>

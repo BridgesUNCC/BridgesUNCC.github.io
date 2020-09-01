@@ -10,20 +10,26 @@
 <span class="Type">public</span> <span class="Type">class</span> bst_eq {
 	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) <span class="Type">throws</span> Exception {
 
-		<span class="Statement">if</span> (args.length &lt; <span class="Constant">2</span>)
-			<span class="Statement">throw</span> <span class="Statement">new</span> IllegalArgumentException(<span class="Constant">&quot;Need to provide user ID and API key as command-line arguments!&quot;</span>);
 
 		<span class="Comment">//create the Bridges object</span>
 		Bridges bridges = <span class="Statement">new</span> Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
 			<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+		<span class="Comment">// title, description</span>
+		bridges.setTitle(<span class="Constant">&quot;A Binary Search Tree Example with Earthquake Data&quot;</span>);
+		bridges.setDescription(<span class="Constant">&quot;10 sets of earthquake are gathered and sorted with nodes whos magnitude is greater than &quot;</span>
+			+ <span class="Constant">&quot;the parent is set to the right and nodes with a magnitude less than the parent set to the left. &quot;</span>
+			+ <span class="Constant">&quot;The root is set to red the leaf nodes are neutral.&quot;</span>);
 
-		<span class="Comment">// Retrieve a list of 10 earthquake  records  from USGS using the BRIDGES API</span>
+
+		<span class="Comment">// Retrieve a list of 25 earthquake  records  from USGS using the BRIDGES API</span>
+		<span class="Type">int</span> Max_Quakes = <span class="Constant">25</span>;
+
 		DataSource ds = bridges.getDataSource();
-		List&lt;EarthquakeUSGS&gt; eqlist = ds.getEarthquakeUSGSData(<span class="Constant">10</span>);
+		List&lt;EarthquakeUSGS&gt; eqlist = ds.getEarthquakeUSGSData(Max_Quakes);
 
 		<span class="Comment">// create BST nodes and insert into a tree</span>
 		BSTElement&lt;Double, EarthquakeUSGS&gt; root = <span class="Constant">null</span>;
-		<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; <span class="Constant">10</span>; k++) {
+		<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; Max_Quakes; k++) {
 			BSTElement&lt;Double, EarthquakeUSGS&gt; bst_node =
 				<span class="Statement">new</span> BSTElement&lt;Double, EarthquakeUSGS&gt;(eqlist.get(k).getMagnitude(), eqlist.get(k));
 			<span class="Comment">// set label of the node</span>

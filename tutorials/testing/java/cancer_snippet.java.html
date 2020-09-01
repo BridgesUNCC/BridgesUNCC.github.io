@@ -7,14 +7,14 @@
 
 <span class="Comment">// This program fragment illustrates how to access the Cancer Incidence data</span>
 <span class="Type">public</span> <span class="Type">class</span> cancer_snippet {
-    <span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) <span class="Type">throws</span> Exception {
+	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) <span class="Type">throws</span> Exception {
 
-        <span class="Comment">//create the Bridges object</span>
-        Bridges bridges = <span class="Statement">new</span> Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+		<span class="Comment">//create the Bridges object</span>
+		Bridges bridges = <span class="Statement">new</span> Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 		<span class="Comment">// set title</span>
 		bridges.setTitle(<span class="Constant">&quot;How to access the Cancer Incidence Data&quot;</span>);
 
-		<span class="Comment">// read the IGN game data </span>
+		<span class="Comment">// read the IGN game data</span>
 		DataSource ds  = bridges.getDataSource();
 		List&lt;CancerIncidence&gt; ca = ds.getCancerIncidenceData();
 
@@ -25,13 +25,13 @@
 		CancerIncidence c = ca.get(<span class="Constant">0</span>);
 
 		System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Type: &quot;</span> + c.getEventType() + <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>
-			 + <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Year: &quot;</span> + c.getYear() + <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>
-			 + <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Population: &quot;</span> + c.getPopulation() + <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>
-			 + <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Race: &quot;</span> + c.getRace() + <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>
-			 + <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Gender: &quot;</span> + c.getGender() + <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>
-			 + <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">CrudeRate: &quot;</span> + c.getCrudeRate() + <span class="Constant">&quot;(more rate information available) </span><span class="Special">\n</span><span class="Constant">&quot;</span>
-			 + <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Location: &quot;</span> + c.getLocationX() + <span class="Constant">&quot;, &quot;</span>+c.getLocationY() + <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>
-			 + <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Count: &quot;</span> + c.getCount());
+			+ <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Year: &quot;</span> + c.getYear() + <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>
+			+ <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Population: &quot;</span> + c.getPopulation() + <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>
+			+ <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Race: &quot;</span> + c.getRace() + <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>
+			+ <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Gender: &quot;</span> + c.getGender() + <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>
+			+ <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">CrudeRate: &quot;</span> + c.getCrudeRate() + <span class="Constant">&quot;(more rate information available) </span><span class="Special">\n</span><span class="Constant">&quot;</span>
+			+ <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Location: &quot;</span> + c.getLocationX() + <span class="Constant">&quot;, &quot;</span> + c.getLocationY() + <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>
+			+ <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Count: &quot;</span> + c.getCount());
 	}
 }
 </pre>

@@ -1,0 +1,129 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.tree_element <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.array2d <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.circ_sl_element <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.rectangle <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.circle <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.label <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.polygon <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.polyline <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.color <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.color_grid <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.symbol_collection <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># title, description</span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">A Mixed Assignments Test</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># create tree nodes</span>
+    t0 = TreeElement(e=<span class="Constant">&quot;</span><span class="Constant">Root</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Root</span><span class="Constant">&quot;</span>)
+    t1 = TreeElement(e=<span class="Constant">&quot;</span><span class="Constant">Child1</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Child1</span><span class="Constant">&quot;</span>)
+    t2 = TreeElement(e=<span class="Constant">&quot;</span><span class="Constant">Child2</span><span class="Constant">&quot;</span>, label=<span class="Constant">'</span><span class="Constant">Child2</span><span class="Constant">'</span>)
+    t3 = TreeElement(e=<span class="Constant">&quot;</span><span class="Constant">Child3</span><span class="Constant">&quot;</span>, label=<span class="Constant">'</span><span class="Constant">Child3</span><span class="Constant">'</span>)
+
+    <span class="Comment"># add links to children</span>
+    t0.add_child(t1)
+    t0.add_child(t2)
+    t0.add_child(t3)
+
+    <span class="Comment"># set some visual attributes</span>
+    t0.color = <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>
+    t0.shape = <span class="Constant">&quot;</span><span class="Constant">diamond</span><span class="Constant">&quot;</span>
+    t0.opacity = <span class="Constant">0.5</span>
+
+    <span class="Comment"># visualize</span>
+    bridges.set_data_structure(t0)
+    bridges.visualize()
+
+    <span class="Comment">#list</span>
+    head = CircSLelement(e=<span class="Constant">&quot;</span><span class="Constant">head</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">head</span><span class="Constant">&quot;</span>);
+    csl1 = CircSLelement(e=<span class="Constant">&quot;</span><span class="Constant">head</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">el1</span><span class="Constant">&quot;</span>);
+    csl2 = CircSLelement(e=<span class="Constant">&quot;</span><span class="Constant">head</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">el2</span><span class="Constant">&quot;</span>);
+    tail = CircSLelement(e=<span class="Constant">&quot;</span><span class="Constant">head</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">tail</span><span class="Constant">&quot;</span>);
+
+    <span class="Comment"># add links to list</span>
+    head.next = csl1;
+    csl1.next = csl2;
+    csl2.next = tail;
+    tail.next = head;
+
+    <span class="Comment"># set data structure and visualize</span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">A small circular singly linked list</span><span class="Constant">&quot;</span>)
+    bridges.set_data_structure(head);
+    bridges.visualize();
+
+
+    <span class="Comment">#2D array</span>
+    num_rows = <span class="Constant">4</span>
+    num_cols = <span class="Constant">4</span>
+    my_array = Array2D(rows = num_rows, cols = num_cols);
+
+    <span class="Comment"># populate the array</span>
+    <span class="Statement">for</span> row <span class="Statement">in</span> <span class="Identifier">range</span>(num_rows):
+        <span class="Statement">for</span> col <span class="Statement">in</span> <span class="Identifier">range</span>(num_cols):
+            my_array[row, col].label = <span class="Constant">&quot;</span><span class="Constant">El </span><span class="Constant">&quot;</span> + <span class="Identifier">str</span>(row * num_cols + col);
+
+    <span class="Comment"># set a color</span>
+    my_array[<span class="Constant">0</span>, <span class="Constant">0</span>].color = <span class="Constant">&quot;</span><span class="Constant">purple</span><span class="Constant">&quot;</span>;
+
+    <span class="Comment"># set data structure and visualize</span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">A 2D Array</span><span class="Constant">&quot;</span>);
+    bridges.set_data_structure(my_array);
+    bridges.visualize();
+
+    <span class="Comment">#shape collection</span>
+    sc = SymbolCollection();
+
+    r1 = Rectangle(w=<span class="Constant">25</span>, h=<span class="Constant">25</span>);
+    r1.fill_color = <span class="Constant">&quot;</span><span class="Constant">black</span><span class="Constant">&quot;</span>
+    sc.add_symbol(r1);
+
+    s1 = Circle(locx = <span class="Constant">25.0</span>, locy = <span class="Constant">0.0</span>, r = <span class="Constant">10</span>);
+    s1.fill_color = <span class="Constant">&quot;</span><span class="Constant">yellow</span><span class="Constant">&quot;</span>
+    sc.add_symbol(s1);
+
+    s2 = Circle(locx = -<span class="Constant">25.0</span>, locy = <span class="Constant">0.0</span>, r = <span class="Constant">10</span>);
+    s2.fill_color = <span class="Constant">&quot;</span><span class="Constant">yellow</span><span class="Constant">&quot;</span>;
+    sc.add_symbol(s2);
+
+    s3 = Circle(locx=<span class="Constant">0.0</span>, locy=<span class="Constant">25.0</span>, r = <span class="Constant">10</span>);
+    s3.fill_color = <span class="Constant">&quot;</span><span class="Constant">yellow</span><span class="Constant">&quot;</span>;
+    sc.add_symbol(s3);
+
+    s4 = Circle(locx= <span class="Constant">0.0</span>, locy = -<span class="Constant">25.0</span>, r = <span class="Constant">10</span>);
+    s4.fill_color = <span class="Constant">&quot;</span><span class="Constant">yellow</span><span class="Constant">&quot;</span>
+    sc.add_symbol(s4);
+
+    <span class="Comment"># set data structure and visualize</span>
+    bridges.title = <span class="Constant">&quot;</span><span class="Constant">A Symbol Collection</span><span class="Constant">&quot;</span>;
+    bridges.set_data_structure(sc);
+    bridges.visualize();
+
+    <span class="Comment">#color grid</span>
+    rows = <span class="Constant">30</span>
+    cols = <span class="Constant">30</span>
+    purple = Color(<span class="Constant">&quot;</span><span class="Constant">purple</span><span class="Constant">&quot;</span>);
+    black = Color(<span class="Constant">&quot;</span><span class="Constant">black</span><span class="Constant">&quot;</span>);
+
+    cg = ColorGrid(rows, cols, purple);
+
+    cg.set(<span class="Constant">12</span>, <span class="Constant">12</span>, black);
+    cg.set(<span class="Constant">12</span>, <span class="Constant">18</span>, black);
+
+    <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Constant">10</span>):
+        cg.set(<span class="Constant">18</span>, <span class="Constant">10</span> + i, black);
+
+    <span class="Comment"># set data structure and visualize</span>
+    bridges.title = <span class="Constant">&quot;</span><span class="Constant">Color Grid Example</span><span class="Constant">&quot;</span>;
+    bridges.set_data_structure(cg);
+    bridges.visualize();
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
+    main()
+
+</pre>

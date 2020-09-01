@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for C++</h1>
-	<p>Running at Wed 05 Aug 2020 03:31:50 AM EDT</p>
+	<p>Running at Tue 01 Sep 2020 03:43:33 AM EDT</p>
   <div id="summary0" class="success">
     <h2><a href="cxx_logs.html#cxxlog0">Assignment 0</a> </h2>
     <p>
@@ -97,8 +97,8 @@ background-color: springgreen;
     <p>
       <ul>
         <li> Build : <a href="cxx_logs.html#cxxlog8-buildscaffold">error</a></li>
-        <li> Build : <a href="cxx_logs.html#cxxlog8-buildanswer">success</a></li>
-        <li> Run : <a href="cxx_logs.html#cxxlog8-runanswer">success</a></li>
+        <li> Build : <a href="cxx_logs.html#cxxlog8-buildanswer">error</a></li>
+        <li> Run : <a href="cxx_logs.html#cxxlog8-runanswer">error</a></li>
       </ul>
     </p>
   </div>
@@ -347,8 +347,8 @@ background-color: springgreen;
     <p>
       <ul>
         <li> Build : <a href="cxx_logs.html#cxxlog33-buildscaffold">error</a></li>
-        <li> Build : <a href="cxx_logs.html#cxxlog33-buildanswer">error</a></li>
-        <li> Run : <a href="cxx_logs.html#cxxlog33-runanswer">error</a></li>
+        <li> Build : <a href="cxx_logs.html#cxxlog33-buildanswer">success</a></li>
+        <li> Run : <a href="cxx_logs.html#cxxlog33-runanswer">success</a></li>
       </ul>
     </p>
   </div>
@@ -731,177 +731,95 @@ make: *** [Makefile:26: PQBook.o] Error 1
 could not compile c++/ for assignment in ../assignmentdb/8-PQBook/c++
 </code></pre>
 </div>
-<div class="success">
+<div class="failure">
 <h3><span id="cxxlog8-buildanswer">Build for Assignment 8</span></h3>
 <pre><code>Compiling c++_answer/ for assignment in ../assignmentdb/8-PQBook/c++_answer
 rm PQBook.o
+rm: cannot remove 'PQBook.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm PQBook
 rm: cannot remove 'PQBook': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
 g++ -g  -std=c++14 -I /home/bridges-testing/bridges-cxx-install/include/ -c PQBook.cpp -o PQBook.o
-g++ -o PQBook PQBook.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ -pthread -lcurl -l bridges 
+In file included from PQBook.cpp:8:
+MyHashtable.hpp: In member function ‘void MyHashtable&lt;K, V&gt;::visualize(bridges::Bridges&amp;)’:
+MyHashtable.hpp:189:27: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Rectangle&amp;)’
+       vis-&gt;addSymbol(*rect);
+                           ^
+In file included from MyHashtable.hpp:7,
+                 from PQBook.cpp:8:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:87:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol*)’
+     void addSymbol(Symbol *s) {
+          ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:87:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Rectangle’ to ‘bridges::datastructure::Symbol*’
+In file included from PQBook.cpp:8:
+MyHashtable.hpp:194:28: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Label&amp;)’
+       vis-&gt;addSymbol(*label);
+                            ^
+In file included from MyHashtable.hpp:7,
+                 from PQBook.cpp:8:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:87:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol*)’
+     void addSymbol(Symbol *s) {
+          ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:87:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Label’ to ‘bridges::datastructure::Symbol*’
+In file included from PQBook.cpp:8:
+MyHashtable.hpp:202:22: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Rectangle&amp;)’
+  vis-&gt;addSymbol(*rect);
+                      ^
+In file included from MyHashtable.hpp:7,
+                 from PQBook.cpp:8:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:87:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol*)’
+     void addSymbol(Symbol *s) {
+          ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:87:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Rectangle’ to ‘bridges::datastructure::Symbol*’
+In file included from PQBook.cpp:8:
+MyHashtable.hpp:207:23: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Label&amp;)’
+  vis-&gt;addSymbol(*label);
+                       ^
+In file included from MyHashtable.hpp:7,
+                 from PQBook.cpp:8:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:87:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol*)’
+     void addSymbol(Symbol *s) {
+          ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:87:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Label’ to ‘bridges::datastructure::Symbol*’
+In file included from PQBook.cpp:8:
+MyHashtable.hpp:217:22: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Polyline&amp;)’
+  vis-&gt;addSymbol(*line);
+                      ^
+In file included from MyHashtable.hpp:7,
+                 from PQBook.cpp:8:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:87:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol*)’
+     void addSymbol(Symbol *s) {
+          ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:87:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Polyline’ to ‘bridges::datastructure::Symbol*’
+In file included from PQBook.cpp:8:
+MyHashtable.hpp:225:27: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Rectangle&amp;)’
+       vis-&gt;addSymbol(*rect);
+                           ^
+In file included from MyHashtable.hpp:7,
+                 from PQBook.cpp:8:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:87:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol*)’
+     void addSymbol(Symbol *s) {
+          ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:87:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Rectangle’ to ‘bridges::datastructure::Symbol*’
+In file included from PQBook.cpp:8:
+MyHashtable.hpp:230:28: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Label&amp;)’
+       vis-&gt;addSymbol(*label);
+                            ^
+In file included from MyHashtable.hpp:7,
+                 from PQBook.cpp:8:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:87:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol*)’
+     void addSymbol(Symbol *s) {
+          ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:87:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Label’ to ‘bridges::datastructure::Symbol*’
+make: *** [Makefile:26: PQBook.o] Error 1
+could not compile c++_answer/ for assignment in ../assignmentdb/8-PQBook/c++_answer
 </code></pre>
 </div>
-<div class="success">
+<div class="failure">
 <h3><span id="cxxlog8-runanswer">Run for Assignment 8</span></h3>
-<pre><code>Guessing ./PQBook is the right binary file where main is
-
- 0
-with 4
-watching 3
-thou 4
-faults 5
-hath 1
-sight 2
-whereon 1
-not 5
-till 6
-keep'st 7
-O 3
-no 3
-be 5
-Love's 5
-How 6
-No 7
-foul 8
-fled 1
-so 4
-blind 5
-find 6
-love 3
-head 2
-to 3
-mistake 4
-sun 5
-Lest 6
-should 7
-eyes 3
-falsely 2
-though 3
-judgment 1
-world 2
-it 6
-well-seeing 7
-is 4
-aright 2
-If 4
-fair 4
-eye 6
-tears 8
-in 1
-Or 2
-if 3
-false 4
-then 6
-thy 7
-correspondence 1
-view 2
-sees 3
-dote 1
-marvel 2
-What 1
-well 2
-The 3
-censures 1
-self 2
-heaven 3
-cunning 4
-they 2
-that 3
-what 2
-say 3
-denote 4
-as 5
-all 6
-men's 7
-my 4
-see 3
-means 4
-love's 5
-me 2
-the 2
-I 3
-put 1
-That 3
-vexed 4
-Success: Assignment posted to the server. 
-Check out your visualization at:
-
-http://bridges-clone.herokuapp.com/assignments/108/bridges_testing
-
-0 
-1 hath
-1 whereon
-1 dote
-1 put
-1 What
-1 fled
-1 judgment
-1 correspondence
-1 censures
-1 in
-2 head
-2 Or
-2 view
-2 self
-2 the
-2 aright
-2 world
-2 me
-2 marvel
-2 they
-2 sight
-2 falsely
-2 well
-2 what
-3 though
-3 say
-3 The
-3 O
-3 eyes
-3 see
-3 that
-3 no
-3 to
-3 if
-3 That
-3 sees
-3 watching
-3 I
-3 heaven
-3 love
-4 fair
-4 thou
-4 so
-4 cunning
-4 mistake
-4 with
-4 vexed
-4 false
-4 denote
-4 my
-4 is
-4 means
-4 If
-5 love's
-5 as
-5 be
-5 not
-5 faults
-5 blind
-5 sun
-5 Love's
-6 How
-6 Lest
-6 till
-6 find
-6 eye
-6 all
-Success: Assignment posted to the server. 
-Check out your visualization at:
-
-http://bridges-clone.herokuapp.com/assignments/108/bridges_testing
-
+<pre><code>can't guess a binary file to run
+could not run c++_answer for assignment in ../assignmentdb/8-PQBook/c++_answer
 </code></pre>
 </div>
     
@@ -936,7 +854,7 @@ g++ -o ShortestPathOSM osm.o -g -L /home/bridges-testing/bridges-cxx-install/lib
 <pre><code>Guessing ./ShortestPathOSM is the right binary file where main is
 
 url: http://cci-bridges-osm.uncc.edu/loc?location=Charlotte%2C%20North%20Carolina&amp;level=default
-10321
+10680
 Success: Assignment posted to the server. 
 Check out your visualization at:
 
@@ -1032,8 +950,8 @@ g++ -o 2048 2048.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ -pthread
 <h3><span id="cxxlog11-runanswer">Run for Assignment 11</span></h3>
 <pre><code>Guessing ./2048 is the right binary file where main is
 
-[2020-08-05 03:34:31] [connect] Successful connection
-[2020-08-05 03:34:31] [connect] WebSocket Connection 54.165.85.111:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1596612871 101
+[2020-09-01 03:46:27] [connect] Successful connection
+[2020-09-01 03:46:27] [connect] WebSocket Connection 34.196.141.188:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1598946387 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -1074,8 +992,8 @@ g++ -o AStarMaze pathfinder.o -g -L /home/bridges-testing/bridges-cxx-install/li
 <h3><span id="cxxlog12-runanswer">Run for Assignment 12</span></h3>
 <pre><code>Guessing ./AStarMaze is the right binary file where main is
 
-[2020-08-05 03:34:41] [connect] Successful connection
-[2020-08-05 03:34:41] [connect] WebSocket Connection 54.165.85.111:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1596612881 101
+[2020-09-01 03:46:37] [connect] Successful connection
+[2020-09-01 03:46:37] [connect] WebSocket Connection 34.196.141.188:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1598946397 101
 (0, 0)
 (1, 0)
 (2, 0)
@@ -2077,8 +1995,8 @@ g++ -o InfiniteRunner runner.o -g -L /home/bridges-testing/bridges-cxx-install/l
 <h3><span id="cxxlog13-runanswer">Run for Assignment 13</span></h3>
 <pre><code>Guessing ./InfiniteRunner is the right binary file where main is
 
-[2020-08-05 03:34:51] [connect] Successful connection
-[2020-08-05 03:34:51] [connect] WebSocket Connection 52.6.130.2:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1596612891 101
+[2020-09-01 03:46:47] [connect] Successful connection
+[2020-09-01 03:46:47] [connect] WebSocket Connection 52.201.119.187:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1598946407 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -2133,8 +2051,8 @@ g++ -o SpreadingFire SpreadingFire.o -g -L /home/bridges-testing/bridges-cxx-ins
 <h3><span id="cxxlog14-runanswer">Run for Assignment 14</span></h3>
 <pre><code>Guessing ./SpreadingFire is the right binary file where main is
 
-[2020-08-05 03:34:58] [connect] Successful connection
-[2020-08-05 03:34:58] [connect] WebSocket Connection 52.72.204.18:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1596612898 101
+[2020-09-01 03:46:55] [connect] Successful connection
+[2020-09-01 03:46:55] [connect] WebSocket Connection 34.233.8.4:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1598946415 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -2175,8 +2093,8 @@ g++ -o FallingSand FallingSand.o -g -L /home/bridges-testing/bridges-cxx-install
 <h3><span id="cxxlog15-runanswer">Run for Assignment 15</span></h3>
 <pre><code>Guessing ./FallingSand is the right binary file where main is
 
-[2020-08-05 03:35:07] [connect] Successful connection
-[2020-08-05 03:35:07] [connect] WebSocket Connection 18.214.20.169:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1596612907 101
+[2020-09-01 03:47:04] [connect] Successful connection
+[2020-09-01 03:47:04] [connect] WebSocket Connection 52.200.75.86:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1598946424 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -2257,8 +2175,8 @@ g++ -o ControlsTutorial Controls_Tutorial.o -g -L /home/bridges-testing/bridges-
 <h3><span id="cxxlog17-runanswer">Run for Assignment 17</span></h3>
 <pre><code>Guessing ./ControlsTutorial is the right binary file where main is
 
-[2020-08-05 03:35:29] [connect] Successful connection
-[2020-08-05 03:35:29] [connect] WebSocket Connection 54.165.85.111:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1596612929 101
+[2020-09-01 03:47:26] [connect] Successful connection
+[2020-09-01 03:47:26] [connect] WebSocket Connection 54.210.38.236:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1598946446 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -2299,8 +2217,8 @@ g++ -o ControlsTutorial2 Controls_Tutorial2.o -g -L /home/bridges-testing/bridge
 <h3><span id="cxxlog18-runanswer">Run for Assignment 18</span></h3>
 <pre><code>Guessing ./ControlsTutorial2 is the right binary file where main is
 
-[2020-08-05 03:35:38] [connect] Successful connection
-[2020-08-05 03:35:38] [connect] WebSocket Connection 54.209.162.80:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1596612938 101
+[2020-09-01 03:47:35] [connect] Successful connection
+[2020-09-01 03:47:35] [connect] WebSocket Connection 54.210.38.236:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1598946455 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -2345,8 +2263,8 @@ g++ -o BugStomp BugStomp.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ 
 <h3><span id="cxxlog19-runanswer">Run for Assignment 19</span></h3>
 <pre><code>Guessing ./BugStomp is the right binary file where main is
 
-[2020-08-05 03:35:47] [connect] Successful connection
-[2020-08-05 03:35:47] [connect] WebSocket Connection 54.209.162.80:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1596612947 101
+[2020-09-01 03:47:45] [connect] Successful connection
+[2020-09-01 03:47:45] [connect] WebSocket Connection 34.235.102.117:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1598946465 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -2387,8 +2305,8 @@ g++ -o Minesweeper minesweeper.o -g -L /home/bridges-testing/bridges-cxx-install
 <h3><span id="cxxlog20-runanswer">Run for Assignment 20</span></h3>
 <pre><code>Guessing ./Minesweeper is the right binary file where main is
 
-[2020-08-05 03:35:57] [connect] Successful connection
-[2020-08-05 03:35:57] [connect] WebSocket Connection 52.72.160.125:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1596612957 101
+[2020-09-01 03:47:54] [connect] Successful connection
+[2020-09-01 03:47:54] [connect] WebSocket Connection 54.197.91.173:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1598946474 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -2429,8 +2347,8 @@ g++ -o RaceCar RaceCar.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ -p
 <h3><span id="cxxlog21-runanswer">Run for Assignment 21</span></h3>
 <pre><code>Guessing ./RaceCar is the right binary file where main is
 
-[2020-08-05 03:36:06] [connect] Successful connection
-[2020-08-05 03:36:06] [connect] WebSocket Connection 52.202.112.181:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1596612966 101
+[2020-09-01 03:48:04] [connect] Successful connection
+[2020-09-01 03:48:04] [connect] WebSocket Connection 52.20.110.77:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1598946484 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -2471,8 +2389,8 @@ g++ -o Snake Snake.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ -pthre
 <h3><span id="cxxlog22-runanswer">Run for Assignment 22</span></h3>
 <pre><code>Guessing ./Snake is the right binary file where main is
 
-[2020-08-05 03:36:16] [connect] Successful connection
-[2020-08-05 03:36:16] [connect] WebSocket Connection 34.195.100.73:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1596612976 101
+[2020-09-01 03:48:13] [connect] Successful connection
+[2020-09-01 03:48:13] [connect] WebSocket Connection 54.210.38.236:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1598946493 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -2620,55 +2538,6 @@ toh.cpp:15:5: error: ‘bridges’ does not name a type
 toh.cpp:16:5: error: ‘bridges’ does not name a type
      bridges.setDescription(&quot;Solve the towers of hanoi problem with loops.&quot;);
      ^~~~~~~
-toh.cpp: In constructor ‘TOHData::TOHData()’:
-toh.cpp:31:27: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Rectangle*)’
-       sc.addSymbol(&amp;srcPeg);
-                           ^
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol&amp;)’
-     void addSymbol(Symbol&amp; s) {
-          ^~~~~~~~~
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Rectangle*’ to ‘bridges::datastructure::Symbol&amp;’
-toh.cpp:32:28: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Rectangle*)’
-       sc.addSymbol(&amp;destPeg);
-                            ^
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol&amp;)’
-     void addSymbol(Symbol&amp; s) {
-          ^~~~~~~~~
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Rectangle*’ to ‘bridges::datastructure::Symbol&amp;’
-toh.cpp:33:27: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Rectangle*)’
-       sc.addSymbol(&amp;auxPeg);
-                           ^
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol&amp;)’
-     void addSymbol(Symbol&amp; s) {
-          ^~~~~~~~~
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Rectangle*’ to ‘bridges::datastructure::Symbol&amp;’
-toh.cpp:35:26: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Rectangle*)’
-       sc.addSymbol(&amp;disk1);
-                          ^
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol&amp;)’
-     void addSymbol(Symbol&amp; s) {
-          ^~~~~~~~~
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Rectangle*’ to ‘bridges::datastructure::Symbol&amp;’
-toh.cpp:36:26: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Rectangle*)’
-       sc.addSymbol(&amp;disk2);
-                          ^
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol&amp;)’
-     void addSymbol(Symbol&amp; s) {
-          ^~~~~~~~~
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Rectangle*’ to ‘bridges::datastructure::Symbol&amp;’
-toh.cpp:37:26: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Rectangle*)’
-       sc.addSymbol(&amp;disk3);
-                          ^
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol&amp;)’
-     void addSymbol(Symbol&amp; s) {
-          ^~~~~~~~~
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Rectangle*’ to ‘bridges::datastructure::Symbol&amp;’
 make: *** [Makefile:26: toh.o] Error 1
 could not compile c++/ for assignment in ../assignmentdb/26-TowersOfHanoi/c++
 </code></pre>
@@ -2689,55 +2558,6 @@ toh.cpp:15:5: error: ‘bridges’ does not name a type
 toh.cpp:16:5: error: ‘bridges’ does not name a type
      bridges.setDescription(&quot;Solve the towers of hanoi problem with loops.&quot;);
      ^~~~~~~
-toh.cpp: In constructor ‘TOHData::TOHData()’:
-toh.cpp:35:27: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Rectangle*)’
-       sc.addSymbol(&amp;srcPeg);
-                           ^
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol&amp;)’
-     void addSymbol(Symbol&amp; s) {
-          ^~~~~~~~~
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Rectangle*’ to ‘bridges::datastructure::Symbol&amp;’
-toh.cpp:36:28: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Rectangle*)’
-       sc.addSymbol(&amp;destPeg);
-                            ^
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol&amp;)’
-     void addSymbol(Symbol&amp; s) {
-          ^~~~~~~~~
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Rectangle*’ to ‘bridges::datastructure::Symbol&amp;’
-toh.cpp:37:27: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Rectangle*)’
-       sc.addSymbol(&amp;auxPeg);
-                           ^
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol&amp;)’
-     void addSymbol(Symbol&amp; s) {
-          ^~~~~~~~~
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Rectangle*’ to ‘bridges::datastructure::Symbol&amp;’
-toh.cpp:39:26: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Rectangle*)’
-       sc.addSymbol(&amp;disk1);
-                          ^
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol&amp;)’
-     void addSymbol(Symbol&amp; s) {
-          ^~~~~~~~~
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Rectangle*’ to ‘bridges::datastructure::Symbol&amp;’
-toh.cpp:40:26: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Rectangle*)’
-       sc.addSymbol(&amp;disk2);
-                          ^
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol&amp;)’
-     void addSymbol(Symbol&amp; s) {
-          ^~~~~~~~~
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Rectangle*’ to ‘bridges::datastructure::Symbol&amp;’
-toh.cpp:41:26: error: no matching function for call to ‘bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Rectangle*)’
-       sc.addSymbol(&amp;disk3);
-                          ^
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note: candidate: ‘void bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol&amp;)’
-     void addSymbol(Symbol&amp; s) {
-          ^~~~~~~~~
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:86:10: note:   no known conversion for argument 1 from ‘bridges::datastructure::Rectangle*’ to ‘bridges::datastructure::Symbol&amp;’
 make: *** [Makefile:26: toh.o] Error 1
 could not compile c++_answer/ for assignment in ../assignmentdb/26-TowersOfHanoi/c++_answer
 </code></pre>
@@ -2779,8 +2599,8 @@ g++ -o SmileyFace SmileyFace.o -g -L /home/bridges-testing/bridges-cxx-install/l
 <h3><span id="cxxlog27-runanswer">Run for Assignment 27</span></h3>
 <pre><code>Guessing ./SmileyFace is the right binary file where main is
 
-[2020-08-05 03:37:02] [connect] Successful connection
-[2020-08-05 03:37:02] [connect] WebSocket Connection 3.208.124.204:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1596613022 101
+[2020-09-01 03:49:00] [connect] Successful connection
+[2020-09-01 03:49:00] [connect] WebSocket Connection 54.210.38.236:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1598946540 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -2901,7 +2721,114 @@ g++ -o TemporalBaconNumber wikidata_actor.o -g -L /home/bridges-testing/bridges-
 <h3><span id="cxxlog30-runanswer">Run for Assignment 30</span></h3>
 <pre><code>Guessing ./TemporalBaconNumber is the right binary file where main is
 
-*************Alarm clock
+*getting year 2019
+*getting year 2018
+getting year 2019
+*getting year 2017
+getting year 2018
+getting year 2019
+*getting year 2016
+getting year 2017
+getting year 2018
+getting year 2019
+*getting year 2015
+getting year 2016
+getting year 2017
+getting year 2018
+getting year 2019
+*getting year 2014
+getting year 2015
+getting year 2016
+getting year 2017
+getting year 2018
+getting year 2019
+*getting year 2012
+getting year 2013
+getting year 2014
+getting year 2015
+getting year 2016
+getting year 2017
+getting year 2018
+getting year 2019
+*getting year 2010
+getting year 2011
+getting year 2012
+getting year 2013
+getting year 2014
+getting year 2015
+getting year 2016
+getting year 2017
+getting year 2018
+getting year 2019
+*getting year 2008
+getting year 2009
+getting year 2010
+getting year 2011
+getting year 2012
+getting year 2013
+getting year 2014
+getting year 2015
+getting year 2016
+getting year 2017
+getting year 2018
+getting year 2019
+*getting year 2005
+getting year 2006
+getting year 2007
+getting year 2008
+getting year 2009
+getting year 2010
+getting year 2011
+getting year 2012
+getting year 2013
+getting year 2014
+getting year 2015
+getting year 2016
+getting year 2017
+getting year 2018
+getting year 2019
+*getting year 2002
+getting year 2003
+getting year 2004
+getting year 2005
+getting year 2006
+getting year 2007
+getting year 2008
+getting year 2009
+getting year 2010
+getting year 2011
+getting year 2012
+getting year 2013
+getting year 2014
+getting year 2015
+getting year 2016
+getting year 2017
+getting year 2018
+getting year 2019
+*getting year 1998
+getting year 1999
+getting year 2000
+getting year 2001
+getting year 2002
+getting year 2003
+getting year 2004
+getting year 2005
+getting year 2006
+getting year 2007
+getting year 2008
+getting year 2009
+getting year 2010
+getting year 2011
+getting year 2012
+getting year 2013
+getting year 2014
+getting year 2015
+getting year 2016
+getting year 2017
+getting year 2018
+getting year 2019
+*getting year 1993
+Alarm clock
 could not run c++_answer for assignment in ../assignmentdb/30-TemporalBaconNumber/c++_answer
 </code></pre>
 </div>
@@ -2930,6 +2857,132 @@ g++ -o TemporalPageRank wikidata_actor.o -g -L /home/bridges-testing/bridges-cxx
 <h3><span id="cxxlog31-runanswer">Run for Assignment 31</span></h3>
 <pre><code>Guessing ./TemporalPageRank is the right binary file where main is
 
+getting year 1999
+getting year 2000
+getting year 2001
+getting year 2002
+getting year 2003
+getting year 2004
+getting year 2005
+getting year 2006
+getting year 2007
+getting year 2008
+getting year 2009
+getting year 2010
+getting year 2011
+getting year 2012
+getting year 2013
+getting year 2014
+getting year 2015
+getting year 2016
+getting year 2017
+getting year 2018
+getting year 2019
+data get: 5.69764 seconds
+yearlb: 1999 vertices: 37146 edge: 215190
+graphbuild get: 3.72103 seconds
+Samuel L. Jackson 0.000261638
+James Franco 0.000232458
+Willem Dafoe 0.000211881
+Danny Trejo 0.000209237
+Eric Roberts 0.000208118
+J. K. Simmons 0.000207794
+Bruce Willis 0.000206027
+Danny Glover 0.000200199
+Nicolas Cage 0.000194383
+Brian Cox 0.000191628
+prtime : 6.67349 seconds
+getting year 1998
+getting year 1999
+getting year 2000
+getting year 2001
+getting year 2002
+getting year 2003
+getting year 2004
+getting year 2005
+getting year 2006
+getting year 2007
+getting year 2008
+getting year 2009
+getting year 2010
+getting year 2011
+getting year 2012
+getting year 2013
+getting year 2014
+getting year 2015
+getting year 2016
+getting year 2017
+getting year 2018
+data get: 5.63783 seconds
+yearlb: 1998 vertices: 37169 edge: 213912
+graphbuild get: 3.61145 seconds
+Samuel L. Jackson 0.000247931
+James Franco 0.000230911
+Eric Roberts 0.000211202
+Danny Trejo 0.000205802
+Bruce Willis 0.00020298
+J. K. Simmons 0.000202362
+Willem Dafoe 0.000201577
+Brian Cox 0.000200362
+Danny Glover 0.000192113
+Morgan Freeman 0.000190518
+prtime : 6.64844 seconds
+getting year 1997
+getting year 1998
+getting year 1999
+getting year 2000
+getting year 2001
+getting year 2002
+getting year 2003
+getting year 2004
+getting year 2005
+getting year 2006
+getting year 2007
+getting year 2008
+getting year 2009
+getting year 2010
+getting year 2011
+getting year 2012
+getting year 2013
+getting year 2014
+getting year 2015
+getting year 2016
+getting year 2017
+data get: 5.57983 seconds
+yearlb: 1997 vertices: 37181 edge: 211937
+graphbuild get: 3.58119 seconds
+Samuel L. Jackson 0.000251519
+James Franco 0.000224486
+Eric Roberts 0.000212408
+Danny Trejo 0.000207779
+J. K. Simmons 0.00020242
+Willem Dafoe 0.000201039
+Bruce Willis 0.000198552
+Brian Cox 0.000197416
+Peter Stormare 0.00019063
+Morgan Freeman 0.000190617
+prtime : 6.63988 seconds
+getting year 1996
+getting year 1997
+getting year 1998
+getting year 1999
+getting year 2000
+getting year 2001
+getting year 2002
+getting year 2003
+getting year 2004
+getting year 2005
+getting year 2006
+getting year 2007
+getting year 2008
+getting year 2009
+getting year 2010
+getting year 2011
+getting year 2012
+getting year 2013
+getting year 2014
+getting year 2015
+getting year 2016
 Alarm clock
 could not run c++_answer for assignment in ../assignmentdb/31-TemporalPageRank/c++_answer
 </code></pre>
@@ -2973,8 +3026,8 @@ g++ -o TicTacToe tic_tac_toe.o -g -L /home/bridges-testing/bridges-cxx-install/l
 <h3><span id="cxxlog32-runanswer">Run for Assignment 32</span></h3>
 <pre><code>Guessing ./TicTacToe is the right binary file where main is
 
-[2020-08-05 03:40:06] [connect] Successful connection
-[2020-08-05 03:40:06] [connect] WebSocket Connection 3.214.66.96:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1596613206 101
+[2020-09-01 03:52:05] [connect] Successful connection
+[2020-09-01 03:52:05] [connect] WebSocket Connection 52.201.101.26:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1598946725 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -2992,23 +3045,62 @@ sio closed
 <div class="failure">
 <h3><span id="cxxlog33-buildscaffold">Build for Assignment 33</span></h3>
 <pre><code>Compiling c++/ for assignment in ../assignmentdb/33-AudioMixing/c++
-make: *** No rule to make target 'clean'.  Stop.
-make: *** No targets specified and no makefile found.  Stop.
+rm AudioMixing.o
+rm: cannot remove 'AudioMixing.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
+rm AudioMixing
+rm: cannot remove 'AudioMixing': No such file or directory
+make: [Makefile:32: clean] Error 1 (ignored)
+g++ -g  -std=c++14 -I /home/bridges-testing/bridges-cxx-install/include/ -c AudioMixing.cpp -o AudioMixing.o
+AudioMixing.cpp: In function ‘bridges::datastructure::AudioClip mixClips(bridges::datastructure::AudioClip&amp;, bridges::datastructure::AudioClip&amp;, int)’:
+AudioMixing.cpp:25:15: error: expected primary-expression before ‘acMix’
+     AudioClip acMix = AudioClip(sampleCount, 1, ac1.getSampleBits(), SAMPLE_RATE);
+               ^~~~~
+AudioMixing.cpp:29:25: error: ‘acMix’ was not declared in this scope
+     for (int i = 0; i &lt; acMix.getSampleCount(); i++) {
+                         ^~~~~
+AudioMixing.cpp:40:12: error: ‘acMix’ was not declared in this scope
+     return acMix;
+            ^~~~~
+make: *** [Makefile:26: AudioMixing.o] Error 1
 could not compile c++/ for assignment in ../assignmentdb/33-AudioMixing/c++
 </code></pre>
 </div>
-<div class="failure">
+<div class="success">
 <h3><span id="cxxlog33-buildanswer">Build for Assignment 33</span></h3>
 <pre><code>Compiling c++_answer/ for assignment in ../assignmentdb/33-AudioMixing/c++_answer
-make: *** No rule to make target 'clean'.  Stop.
-make: *** No targets specified and no makefile found.  Stop.
-could not compile c++_answer/ for assignment in ../assignmentdb/33-AudioMixing/c++_answer
+rm AudioMixing.o
+rm AudioMixing
+rm: cannot remove 'AudioMixing': No such file or directory
+make: [Makefile:32: clean] Error 1 (ignored)
+g++ -g  -std=c++14 -I /home/bridges-testing/bridges-cxx-install/include/ -c AudioMixing.cpp -o AudioMixing.o
+g++ -o AudioMixing AudioMixing.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ -pthread -lcurl -l bridges 
 </code></pre>
 </div>
-<div class="failure">
+<div class="success">
 <h3><span id="cxxlog33-runanswer">Run for Assignment 33</span></h3>
-<pre><code>can't guess a binary file to run
-could not run c++_answer for assignment in ../assignmentdb/33-AudioMixing/c++_answer
+<pre><code>Guessing ./AudioMixing is the right binary file where main is
+
+Success: Assignment posted to the server. 
+Check out your visualization at:
+
+http://bridges-cs.herokuapp.com/assignments/33/bridges_testing
+
+Success: Assignment posted to the server. 
+Check out your visualization at:
+
+http://bridges-cs.herokuapp.com/assignments/33/bridges_testing
+
+Success: Assignment posted to the server. 
+Check out your visualization at:
+
+http://bridges-cs.herokuapp.com/assignments/33/bridges_testing
+
+Success: Assignment posted to the server. 
+Check out your visualization at:
+
+http://bridges-cs.herokuapp.com/assignments/33/bridges_testing
+
 </code></pre>
 </div>
     
@@ -3042,8 +3134,8 @@ g++ -o GameTutorial GameTutorial.o -g -L /home/bridges-testing/bridges-cxx-insta
 <h3><span id="cxxlog34-runanswer">Run for Assignment 34</span></h3>
 <pre><code>Guessing ./GameTutorial is the right binary file where main is
 
-[2020-08-05 03:40:16] [connect] Successful connection
-[2020-08-05 03:40:16] [connect] WebSocket Connection 3.214.66.96:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1596613216 101
+[2020-09-01 03:52:19] [connect] Successful connection
+[2020-09-01 03:52:19] [connect] WebSocket Connection 52.201.101.26:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1598946739 101
 Size:10,10
 Setting framelimit to 10
 Success: Assignment posted to the server. 

@@ -1,0 +1,35 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
+
+<span class="Statement">class</span> <span class="Identifier">GameSizeTest</span> (NonBlockingGame):
+	<span class="Statement">def</span>	 <span class="Identifier">__init__</span>(self, assid, user_id, api_key):
+		<span class="Comment"># substitute your username and api key</span>
+		<span class="Comment"># create a game board of 10x10</span>
+		<span class="Comment">#self.set_title (&quot;Game tutorial 2  - drawing symbols&quot;)</span>
+		<span class="Identifier">super</span>().__init__(assid, user_id,  api_key, <span class="Constant">10</span>, <span class="Constant">20</span>)
+
+	<span class="Statement">def</span>	<span class="Identifier">initialize</span>(self):
+		<span class="Comment"># this gets executed once</span>
+		<span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Constant">10</span>):
+			<span class="Statement">for</span> j <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Constant">10</span>):
+				self.set_bg_color(i, j, NamedColor.ivory)
+
+		self.draw_symbol(<span class="Constant">0</span>, <span class="Constant">0</span>, NamedSymbol.H, NamedColor.red)
+		self.draw_symbol(<span class="Constant">0</span>, <span class="Constant">19</span>, NamedSymbol.E, NamedColor.green)
+		self.draw_symbol(<span class="Constant">9</span>, <span class="Constant">0</span>, NamedSymbol.L, NamedColor.blue)
+		self.draw_symbol(<span class="Constant">9</span>, <span class="Constant">19</span>, NamedSymbol.O, NamedColor.cyan)
+
+	<span class="Statement">def</span>	<span class="Identifier">game_loop</span>(self):
+		<span class="Comment"># this gets executed every frame</span>
+		<span class="Statement">pass</span>
+
+<span class="Statement">def</span>	<span class="Identifier">main</span>():
+	game = GameSizeTest(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
+
+	<span class="Comment"># start the game</span>
+	game.start()
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
+	main()
+</pre>

@@ -19,7 +19,7 @@ public class song_lyrics_snippet {
 		// create data source object
 		DataSource ds  = bridges.getDataSource();
 
-		// Get Song data 
+		// Get Song data
 		Song s = ds.getSong("Harder Faster Better Stronger", "Daft Punk");
 
 
