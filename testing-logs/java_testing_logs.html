@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Java</h1>
-	<p>Running at Tue 01 Sep 2020 03:36:01 AM EDT</p>
+	<p>Running at Wed 02 Sep 2020 03:35:41 AM EDT</p>
   <div id="summaryarray1d.java" class="success">
     <h2><a href="java_testing_logs.html#javalogarray1d.java">Test array1d.java</a> </h2>
     <p>
@@ -75,12 +75,12 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summarybst_eq.java" class="success">
+  <div id="summarybst_eq.java" class="failure">
     <h2><a href="java_testing_logs.html#javalogbst_eq.java">Test bst_eq.java</a> </h2>
     <p>
       <ul>
         <li> Build : <a href="java_testing_logs.html#javalogbst_eq.java-buildtest">success</a></li>
-        <li> Run : <a href="java_testing_logs.html#javalogbst_eq.java-runtest">success</a></li>
+        <li> Run : <a href="java_testing_logs.html#javalogbst_eq.java-runtest">error</a></li>
       </ul>
     </p>
   </div>
@@ -147,12 +147,12 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summaryeq_snippet.java" class="success">
+  <div id="summaryeq_snippet.java" class="failure">
     <h2><a href="java_testing_logs.html#javalogeq_snippet.java">Test eq_snippet.java</a> </h2>
     <p>
       <ul>
         <li> Build : <a href="java_testing_logs.html#javalogeq_snippet.java-buildtest">success</a></li>
-        <li> Run : <a href="java_testing_logs.html#javalogeq_snippet.java-runtest">success</a></li>
+        <li> Run : <a href="java_testing_logs.html#javalogeq_snippet.java-runtest">error</a></li>
       </ul>
     </p>
   </div>
@@ -550,14 +550,13 @@ http://bridges-cs.herokuapp.com/assignments/2006/bridges_testing
 <pre><code>Compiling test bst_eq.java
 </code></pre>
 </div>
-<div class="success">
+<div class="failure">
 <h3><span id="javalogbst_eq.java-runtest">Run for test bst_eq.java</span></h3>
-<pre><code>
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2007/bridges_testing
-
-
+<pre><code>Exception in thread &quot;main&quot; org.apache.http.client.HttpResponseException: HTTP Request Failed. Error Code: 503
+	at bridges.connect.DataFormatter.getEarthquakeUSGSData(DataFormatter.java:635)
+	at bridges.connect.DataSource.getEarthquakeUSGSData(DataSource.java:35)
+	at bst_eq.main(bst_eq.java:29)
+could not run test bst_eq.java
 </code></pre>
 </div>
     
@@ -778,13 +777,13 @@ could not run test elevation_snippet.java
 <pre><code>Compiling test eq_snippet.java
 </code></pre>
 </div>
-<div class="success">
+<div class="failure">
 <h3><span id="javalogeq_snippet.java-runtest">Run for test eq_snippet.java</span></h3>
-<pre><code>Earthquake 0:
-	Magnitude:1.5
-	Date:Sep 01 2020  03:13:02.210 EDT
-	Location: 86 km NW of Karluk, Alaska
-	Lat/Long:58.1626,-155.4019
+<pre><code>Exception in thread &quot;main&quot; org.apache.http.client.HttpResponseException: HTTP Request Failed. Error Code: 503
+	at bridges.connect.DataFormatter.getEarthquakeUSGSData(DataFormatter.java:635)
+	at bridges.connect.DataSource.getEarthquakeUSGSData(DataSource.java:35)
+	at eq_snippet.main(eq_snippet.java:20)
+could not run test eq_snippet.java
 </code></pre>
 </div>
     
@@ -842,10 +841,10 @@ could not run test game_size_test.java
 </div>
 <div class="success">
 <h3><span id="javaloggame_snippet.java-runtest">Run for test game_snippet.java</span></h3>
-<pre><code>Star Fox 64
-Wii
-8.5
-[Flight, Action]
+<pre><code>Hitman: Codename 47
+PC
+7.5
+[Action]
 </code></pre>
 </div>
     
@@ -967,8 +966,8 @@ http://bridges-cs.herokuapp.com/assignments/2021/bridges_testing
 </div>
 <div class="success">
 <h3><span id="javalogimdb_snippet.java-runtest">Run for test imdb_snippet.java</span></h3>
-<pre><code>Arnold_Schwarzenegger
-Terminator_2:_Judgment_Day_(1992)
+<pre><code>David_Wyler_(I)
+Being_John_Malkovich_(1999)
 </code></pre>
 </div>
     
@@ -1188,11 +1187,11 @@ Location of first vertex [Cartesian Coord]: 827.1273231300758,-5144.073405550668
 </div>
 <div class="success">
 <h3><span id="javalogshakespeare_snippet.java-runtest">Run for test shakespeare_snippet.java</span></h3>
-<pre><code>Sonnet 66
+<pre><code>Sonnet 128
 poem
-Tired with all these for restful death I cry,
- As to behold desert a beggar born,
- And needy nothing...
+How oft when thou, my music, music play'st,
+ Upon that blessed wood whose motion sounds
+ With thy sw...
 </code></pre>
 </div>
     
