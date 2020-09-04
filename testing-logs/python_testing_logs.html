@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Python</h1>
-	<p>Running at Thu 03 Sep 2020 03:42:21 AM EDT</p>
+	<p>Running at Fri 04 Sep 2020 03:40:55 AM EDT</p>
   <div id="summaryarray1d.py" class="success">
     <h2><a href="python_testing_logs.html#pythonlogarray1d.py">Test array1d.py</a> </h2>
     <p>
@@ -68,11 +68,11 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summarybst_eq.py" class="failure">
+  <div id="summarybst_eq.py" class="success">
     <h2><a href="python_testing_logs.html#pythonlogbst_eq.py">Test bst_eq.py</a> </h2>
     <p>
       <ul>
-        <li> Run : <a href="python_testing_logs.html#pythonlogbst_eq.py-runtest">error</a></li>
+        <li> Run : <a href="python_testing_logs.html#pythonlogbst_eq.py-runtest">success</a></li>
       </ul>
     </p>
   </div>
@@ -132,11 +132,11 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summaryeq_snippet.py" class="failure">
+  <div id="summaryeq_snippet.py" class="success">
     <h2><a href="python_testing_logs.html#pythonlogeq_snippet.py">Test eq_snippet.py</a> </h2>
     <p>
       <ul>
-        <li> Run : <a href="python_testing_logs.html#pythonlogeq_snippet.py-runtest">error</a></li>
+        <li> Run : <a href="python_testing_logs.html#pythonlogeq_snippet.py-runtest">success</a></li>
       </ul>
     </p>
   </div>
@@ -495,24 +495,14 @@ http://bridges-cs.herokuapp.com/assignments/3006/bridges_testing
     <div id="pythonlogbst_eq.py" class="logdetails">
       <h2>Test bst_eq.py full log</h2>
     
-<div class="failure">
+<div class="success">
 <h3><span id="pythonlogbst_eq.py-runtest">Run for test bst_eq.py</span></h3>
-<pre><code>Traceback (most recent call last):
-  File &quot;bst_eq.py&quot;, line 54, in &lt;module&gt;
-    main()
-  File &quot;bst_eq.py&quot;, line 31, in main
-    ami = get_earthquake_usgs_data(25)
-  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/data_src_dependent/data_source.py&quot;, line 155, in get_earthquake_usgs_data
-  File &quot;/usr/lib/python3/dist-packages/requests/models.py&quot;, line 897, in json
-    return complexjson.loads(self.text, **kwargs)
-  File &quot;/usr/lib/python3.7/json/__init__.py&quot;, line 348, in loads
-    return _default_decoder.decode(s)
-  File &quot;/usr/lib/python3.7/json/decoder.py&quot;, line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-  File &quot;/usr/lib/python3.7/json/decoder.py&quot;, line 355, in raw_decode
-    raise JSONDecodeError(&quot;Expecting value&quot;, s, err.value) from None
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-could not run test bst_eq.py
+<pre><code>
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/3007/bridges_testing
+
+
 </code></pre>
 </div>
     
@@ -587,7 +577,7 @@ http://bridges-cs.herokuapp.com/assignments/3011/bridges_testing
 <div class="success">
 <h3><span id="pythonlogdisplay_game.py-runtest">Run for test display_game.py</span></h3>
 <pre><code>passing student credentials to server..
-Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f266a208908&gt;
+Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f92e97ca908&gt;
 limiting number of frame to 10
 
 Check Your Visualization at the following link:
@@ -650,7 +640,7 @@ Traceback (most recent call last):
     conn = self._new_conn()
   File &quot;/usr/lib/python3/dist-packages/urllib3/connection.py&quot;, line 168, in _new_conn
     self, &quot;Failed to establish a new connection: %s&quot; % e)
-urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x7ffa7055bd68&gt;: Failed to establish a new connection: [Errno -2] Name or service not known
+urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x7fc690d6cb70&gt;: Failed to establish a new connection: [Errno -2] Name or service not known
 
 During handling of the above exception, another exception occurred:
 
@@ -661,7 +651,7 @@ Traceback (most recent call last):
     _stacktrace=sys.exc_info()[2])
   File &quot;/usr/lib/python3/dist-packages/urllib3/util/retry.py&quot;, line 398, in increment
     raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7ffa7055bd68&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fc690d6cb70&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
 
 During handling of the above exception, another exception occurred:
 
@@ -682,7 +672,7 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File &quot;/usr/lib/python3/dist-packages/requests/adapters.py&quot;, line 516, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7ffa7055bd68&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fc690d6cb70&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
 could not run test elevation_snippet.py
 </code></pre>
 </div>
@@ -691,24 +681,12 @@ could not run test elevation_snippet.py
     <div id="pythonlogeq_snippet.py" class="logdetails">
       <h2>Test eq_snippet.py full log</h2>
     
-<div class="failure">
+<div class="success">
 <h3><span id="pythonlogeq_snippet.py-runtest">Run for test eq_snippet.py</span></h3>
-<pre><code>Traceback (most recent call last):
-  File &quot;eq_snippet.py&quot;, line 30, in &lt;module&gt;
-    main()
-  File &quot;eq_snippet.py&quot;, line 17, in main
-    my_list = get_earthquake_usgs_data(100)
-  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/data_src_dependent/data_source.py&quot;, line 155, in get_earthquake_usgs_data
-  File &quot;/usr/lib/python3/dist-packages/requests/models.py&quot;, line 897, in json
-    return complexjson.loads(self.text, **kwargs)
-  File &quot;/usr/lib/python3.7/json/__init__.py&quot;, line 348, in loads
-    return _default_decoder.decode(s)
-  File &quot;/usr/lib/python3.7/json/decoder.py&quot;, line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-  File &quot;/usr/lib/python3.7/json/decoder.py&quot;, line 355, in raw_decode
-    raise JSONDecodeError(&quot;Expecting value&quot;, s, err.value) from None
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-could not run test eq_snippet.py
+<pre><code>Magnitude: 1.4
+Date: 2020-09-04 07:17:21
+Location:3 km WSW of Houston, Alaska
+Lat/Long:61.6231,-149.8917
 </code></pre>
 </div>
     
@@ -734,7 +712,7 @@ http://bridges-cs.herokuapp.com/assignments/3016/bridges_testing
 <div class="success">
 <h3><span id="pythonloggame_size_test.py-runtest">Run for test game_size_test.py</span></h3>
 <pre><code>passing student credentials to server..
-Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7fca49b17da0&gt;
+Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f4679890f98&gt;
 limiting number of frame to 10
 
 Check Your Visualization at the following link:
@@ -752,9 +730,9 @@ frame limit of 10 frames reached
     
 <div class="success">
 <h3><span id="pythonloggame_snippet.py-runtest">Run for test game_snippet.py</span></h3>
-<pre><code>Teen Titans
-Game Boy Advance
-5.5
+<pre><code>Mafia II: Jimmys Vendetta 
+PlayStation 3
+7
 ['Action']
 </code></pre>
 </div>
@@ -830,9 +808,9 @@ http://bridges-cs.herokuapp.com/assignments/3021/bridges_testing
     
 <div class="success">
 <h3><span id="pythonlogguttenberg_snippet.py-runtest">Run for test guttenberg_snippet.py</span></h3>
-<pre><code>Rilla of Ingleside
-Montgomery, L. M. (Lucy Maud)
-['juvenile fiction']
+<pre><code>The Analysis of Beauty: Written with a view of fixing the fluctuating ideas of taste
+Hogarth, William
+[]
 </code></pre>
 </div>
     
@@ -842,8 +820,8 @@ Montgomery, L. M. (Lucy Maud)
     
 <div class="success">
 <h3><span id="pythonlogimdb_snippet.py-runtest">Run for test imdb_snippet.py</span></h3>
-<pre><code>Paul_Reubens
-Blow_(2001)
+<pre><code>Denzel_Washington
+Mo'_Better_Blues_(1990)
 </code></pre>
 </div>
     
@@ -854,7 +832,7 @@ Blow_(2001)
 <div class="success">
 <h3><span id="pythonloginput_game.py-runtest">Run for test input_game.py</span></h3>
 <pre><code>passing student credentials to server..
-Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f06f0bfa780&gt;
+Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f1dd64406a0&gt;
 limiting number of frame to 10
 
 Check Your Visualization at the following link:
@@ -921,7 +899,7 @@ http://bridges-cs.herokuapp.com/assignments/3026/bridges_testing
 <div class="success">
 <h3><span id="pythonlogminimal_game.py-runtest">Run for test minimal_game.py</span></h3>
 <pre><code>passing student credentials to server..
-Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f19f6994828&gt;
+Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7fd6ff38b748&gt;
 limiting number of frame to 10
 
 Check Your Visualization at the following link:
@@ -1024,11 +1002,10 @@ Cartesian Coordinate of first vertex: 827.1273231300758, -5144.073405550668
     
 <div class="success">
 <h3><span id="pythonlogshakespeare_snippet.py-runtest">Run for test shakespeare_snippet.py</span></h3>
-<pre><code>Sonnet 10
+<pre><code>Sonnet 58
 poem
-For shame deny that thou bear'st love to any
- Who for thy self art so unprovident.
- Grant if thou wi
+That god forbid, that made me first your slave,
+ I should in thought control your times of pleasure,
 </code></pre>
 </div>
     
