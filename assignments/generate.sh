@@ -99,6 +99,9 @@ addassignment "38-GeologicalSurvey"
 addsubgroup "Matching"
 addassignment "38-GeologicalSurvey"
 
+addsubgroup "Spatial Problems"
+addassignment "43-SpatialIndexing"
+
 addsubgroup "Greedy Algorithms"
 addassignment "23-MountainPaths"
 addassignment "9-ShortestPathOSM"
