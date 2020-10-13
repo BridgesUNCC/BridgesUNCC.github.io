@@ -56,7 +56,7 @@ FORCE_BRIDGES_ASSIGNMENT=9200 ./tree 9999 fakename fakeapi
 
 FORCE_BRIDGES_ASSIGNMENT=9210 ./bintree 9999 fakename fakeapi
 
-FORCE_BRIDGES_ASSIGNMENT=9220 ./bst 9999 fakename fakeapi
+FORCE_BRIDGES_ASSIGNMENT=9220 ./bst_eq 9999 fakename fakeapi
 
 FORCE_BRIDGES_ASSIGNMENT=9230 ./avl 9999 fakename fakeapi
 
