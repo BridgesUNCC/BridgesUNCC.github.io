@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Java</h1>
-	<p>Running at Wed 02 Dec 2020 03:34:28 AM EST</p>
+	<p>Running at Thu 03 Dec 2020 03:34:31 AM EST</p>
   <div id="summaryarray1d.java" class="success">
     <h2><a href="java_testing_logs.html#javalogarray1d.java">Test array1d.java</a> </h2>
     <p>
@@ -282,12 +282,12 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summaryosm.java" class="success">
+  <div id="summaryosm.java" class="failure">
     <h2><a href="java_testing_logs.html#javalogosm.java">Test osm.java</a> </h2>
     <p>
       <ul>
-        <li> Build : <a href="java_testing_logs.html#javalogosm.java-buildtest">success</a></li>
-        <li> Run : <a href="java_testing_logs.html#javalogosm.java-runtest">success</a></li>
+        <li> Build : <a href="java_testing_logs.html#javalogosm.java-buildtest">error</a></li>
+        <li> Run : <a href="java_testing_logs.html#javalogosm.java-runtest">error</a></li>
       </ul>
     </p>
   </div>
@@ -761,8 +761,8 @@ http://bridges-cs.herokuapp.com/assignments/2013/bridges_testing
 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
-	at bridges.connect.DataFormatter.makeRequest(DataFormatter.java:579)
-	at bridges.connect.DataFormatter.getElevationData(DataFormatter.java:1330)
+	at bridges.connect.DataFormatter.makeRequest(DataFormatter.java:580)
+	at bridges.connect.DataFormatter.getElevationData(DataFormatter.java:1331)
 	at bridges.connect.DataSource.getElevationData(DataSource.java:303)
 	at elevation_snippet.main(elevation_snippet.java:17)
 could not run test elevation_snippet.java
@@ -781,10 +781,10 @@ could not run test elevation_snippet.java
 <div class="success">
 <h3><span id="javalogeq_snippet.java-runtest">Run for test eq_snippet.java</span></h3>
 <pre><code>Earthquake 0:
-	Magnitude:1.7
-	Date:Dec 02 2020  03:19:54.310 EST
-	Location: 25 km S of Mina, Nevada
-	Lat/Long:38.1672,-118.069
+	Magnitude:1.2
+	Date:Dec 03 2020  03:15:10.660 EST
+	Location: 26 km S of Mina, Nevada
+	Lat/Long:38.1535,-118.0767
 </code></pre>
 </div>
     
@@ -842,10 +842,10 @@ could not run test game_size_test.java
 </div>
 <div class="success">
 <h3><span id="javaloggame_snippet.java-runtest">Run for test game_snippet.java</span></h3>
-<pre><code>Saints &amp;amp; Sinners Bingo
-Wireless
-7.4
-[Board]
+<pre><code>Mystery Case Files: MillionHeir
+Nintendo DS
+7.7
+[Adventure]
 </code></pre>
 </div>
     
@@ -968,8 +968,8 @@ http://bridges-cs.herokuapp.com/assignments/2021/bridges_testing
 </div>
 <div class="success">
 <h3><span id="javalogimdb_snippet.java-runtest">Run for test imdb_snippet.java</span></h3>
-<pre><code>Carrie_Fisher
-Under_the_Rainbow_(1981)
+<pre><code>Christopher_Lee_(I)
+Ratsel_der_roten_Orchidee,_Das_(1962)
 </code></pre>
 </div>
     
@@ -1145,19 +1145,23 @@ http://bridges-cs.herokuapp.com/assignments/2029/bridges_testing
     <div id="javalogosm.java" class="logdetails">
       <h2>Test osm.java full log</h2>
     
-<div class="success">
+<div class="failure">
 <h3><span id="javalogosm.java-buildtest">Build for test osm.java</span></h3>
 <pre><code>Compiling test osm.java
+osm.java:23: error: cannot find symbol
+		OsmData  osm_data = ds.getOSMData(35.28, -80.75, 35.32, -80.71);
+		                      ^
+  symbol:   method getOSMData(double,double,double,double)
+  location: variable ds of type DataSource
+1 error
+could not compile java_answer/ for assignment in
 </code></pre>
 </div>
-<div class="success">
+<div class="failure">
 <h3><span id="javalogosm.java-runtest">Run for test osm.java</span></h3>
-<pre><code>
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2030/bridges_testing
-
-
+<pre><code>Error: Could not find or load main class osm
+Caused by: java.lang.ClassNotFoundException: osm
+could not run test osm.java
 </code></pre>
 </div>
     
@@ -1189,11 +1193,11 @@ Location of first vertex [Cartesian Coord]: 827.1273231300758,-5144.073405550668
 </div>
 <div class="success">
 <h3><span id="javalogshakespeare_snippet.java-runtest">Run for test shakespeare_snippet.java</span></h3>
-<pre><code>Sonnet 112
+<pre><code>Sonnet 15
 poem
-Your love and pity doth th' impression fill,
- Which vulgar scandal stamped upon my brow,
- For what c...
+When I consider every thing that grows
+ Holds in perfection but a little moment.
+ That this huge sta...
 </code></pre>
 </div>
     
