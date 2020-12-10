@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html lang="en">
   <head>
     <title>BRIDGES Java Setup Page(for BlueJ IDE)</title>
@@ -33,7 +33,8 @@
 	      <li> If you do not have BlueJ 
 		installed, download it from the 
 		<a href = "http://www.bluej.org/"> BlueJ site</a> 
-		and install it on your computer. 
+		and install it on your computer -- <b>these instructions were written
+		for version 4.2.2</b>. 
 	      <li> BlueJ requres Java JDK to be installed, else you will
 		get the error <b>"BlueJ could not find any Java systems. 
 		  A JDK must be installed to run BlueJ."</b>
@@ -56,9 +57,7 @@
 		you will see your
 		API Key; you will need this API key in part 2 
 		of the tutorial(as well as in every BRIDGES program 
-		you write). <b>NOTE:</b> Make sure to remember 
-		your password. There is no password recovery option, 
-		and you can only have one account per email address.
+		you write). 
 	    </ul>
 	  </td>
 	</tr>
@@ -74,7 +73,7 @@
 	    </ul>
 	  </td> 
 	  <td class = "col-md-8">  
-	    <img src = "./img/Tutorialv2/java/bluej/new_proj.png" width = "800" />
+	    <img src = "./img/Tutorialv3/java/bluej/new_proj.png" width = "800" />
 	  </td>
 	</tr>
 	<tr>
@@ -93,6 +92,50 @@
 		the program; they should both be strings.
 	    </ul>
 	  </td>
+	<td>
+    <b><i>
+	import bridges.connect.Bridges; <br> 
+	import bridges.base.SLelement; <p> <p>
+	</b>
+
+	  public class sllist { <p>
+	  &nbsp&nbsp&nbsp&nbsp	public static void main(String[] args) throws Exception{ <p>
+
+	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp //create the Bridges object and set title for the project <p>
+	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Bridges<String> bridges = new Bridges<String>(0, "YOUR_USER_ID", "YOUR_API_KEY"); <p>
+	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp bridges.setTitle("A Singly Linked List Example");<p>
+	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp bridges.setTitle("A Linked List is a linear collection of elements");<p>
+	
+
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp //create linked list elements <br>
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp SLelement &lt String &gt sle0 = new SLelement &lt String &gt ("First", "");<br>
+		  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp SLelement &lt String &gt sle1 = new SLelement &lt String &gt("Second", ""); <p>
+		  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp SLelement &lt String &gt sle2 = new SLelement &lt String &gt("Third", ""); <p>
+		  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp SLelement &lt String &gt sle3 = new SLelement &lt String &gt("Fourth", ""); <p>
+
+		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp // link the elements<br>
+		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle0.setNext(sle1); <p>
+		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle1.setNext(sle2); <p>
+		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle2.setNext(sle3); <p>
+
+		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp //edit some visual properties of the two elements <br>
+		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle0.getVisualizer().setSize(40); <br>
+		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle1.getVisualizer().setColor("red"); <br>
+		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle0.getLinkVisualizer(sle1).setThickness(2); <br>
+		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle1.getLinkVisualizer(sle2).setColor("blue"); <p>
+		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle3.getVisualizer().setColor("cyan"); <br>
+		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle2.getLinkVisualizer(sle3).setThickness(10); <br>
+
+		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle0.getVisualizer().setColor("red"); <br>
+
+		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp //pass the first element of the list <br>
+		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspbridges.setDataStructure(sle0); <p>
+
+		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp // visualize the list <br>
+		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp bridges.visualize(); <p> </i> </b>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp} <br>
+    &nbsp&nbsp&nbsp&nbsp}<br>
+  </td>
 	  <td class = "col-md-8">  
 	    <img src = "./img/Tutorialv2/java/bluej/program.png" width = "800" />
 	  </td>
@@ -100,8 +143,8 @@
 	<tr> <td class = "col-md-2"> <b>Step 5: Import Jar File into project</b>
 	    <ul>
 	      <li> Download the Bridges.jar file from 
-		<a href = "http://bridgesuncc.github.io/sw/bridges-2.3.3.jar">
-		  this link </a> and save it somewhere convenient 
+		<a href = "http://bridgesuncc.github.io">
+		  Bridges Website (Downloads button)</a> and save it somewhere convenient 
 		on your drive.
 	      <li> On BlueJ, follow <i>BlueJ-->Preferences</i> and select the <i>Libraries</i> tab;
 	      <li> Click the <i>Add  File</i> button, to add the downloaded BRIDGES 
@@ -144,7 +187,7 @@
 	    </ul>
 	  </td>
 	  <td class = "col-md-8">  
-	    <img src = "./img/Tutorialv2/java/bluej/vis.png" width = "800" />
+	    <img src = "./img/Tutorialv3/java/bluej/vis.png" width = "800" />
 	  </td>
 	</tr>
       </thead>
