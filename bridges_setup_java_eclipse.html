@@ -166,12 +166,14 @@
 	      <ul>
 		<li> Create the bridges object with your API Key and User ID. 
 		  Since we want our project to print out ``Hello World" 
-		  use String as the type.
+		  use String as the type. Also provide a title for the project.
 	      </ul>
 	    </td>
 	    <td class = "col-md-8">
 	      <ul>
-		<i>  Bridges  bridges = new Bridges(0, "YOUR_USER_ID", "YOUR_API_KEY");</i>
+		<i>  Bridges  bridges = new Bridges(0, "YOUR_USER_ID", "YOUR_API_KEY");</i><p>
+		<i>  bridges.setTitle("Hello World");</i>
+
 	      </ul>
 	    </td>
 	  </tr>
@@ -258,8 +260,10 @@
 	  public class sllist { <p>
 	  &nbsp&nbsp&nbsp&nbsp	public static void main(String[] args) throws Exception{ <p>
 
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp //create the Bridges object <p>
+	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp //create the Bridges object and set title for the project <p>
 	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Bridges<String> bridges = new Bridges<String>(0, "YOUR_USER_ID", "YOUR_API_KEY"); <p>
+	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp bridges.setTitle("Hello World");<p>
+	
 
 		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp //create two singly-linked elements <br>
 		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp SLelement &lt String &gt sle0 = new SLelement &lt String &gt ("Hello", ""); <br>
