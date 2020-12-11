@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Python</h1>
-	<p>Running at Thu 10 Dec 2020 03:40:08 AM EST</p>
+	<p>Running at Fri 11 Dec 2020 03:40:26 AM EST</p>
   <div id="summaryarray1d.py" class="success">
     <h2><a href="python_testing_logs.html#pythonlogarray1d.py">Test array1d.py</a> </h2>
     <p>
@@ -108,11 +108,11 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summarydisplay_game.py" class="failure">
+  <div id="summarydisplay_game.py" class="success">
     <h2><a href="python_testing_logs.html#pythonlogdisplay_game.py">Test display_game.py</a> </h2>
     <p>
       <ul>
-        <li> Run : <a href="python_testing_logs.html#pythonlogdisplay_game.py-runtest">error</a></li>
+        <li> Run : <a href="python_testing_logs.html#pythonlogdisplay_game.py-runtest">success</a></li>
       </ul>
     </p>
   </div>
@@ -169,6 +169,14 @@ background-color: springgreen;
     <p>
       <ul>
         <li> Run : <a href="python_testing_logs.html#pythonloggraph_alist.py-runtest">success</a></li>
+      </ul>
+    </p>
+  </div>
+  <div id="summarygraph_alist_empty.py" class="failure">
+    <h2><a href="python_testing_logs.html#pythonloggraph_alist_empty.py">Test graph_alist_empty.py</a> </h2>
+    <p>
+      <ul>
+        <li> Run : <a href="python_testing_logs.html#pythonloggraph_alist_empty.py-runtest">error</a></li>
       </ul>
     </p>
   </div>
@@ -574,26 +582,18 @@ http://bridges-cs.herokuapp.com/assignments/3011/bridges_testing
     <div id="pythonlogdisplay_game.py" class="logdetails">
       <h2>Test display_game.py full log</h2>
     
-<div class="failure">
+<div class="success">
 <h3><span id="pythonlogdisplay_game.py-runtest">Run for test display_game.py</span></h3>
 <pre><code>passing student credentials to server..
-Traceback (most recent call last):
-  File &quot;display_game.py&quot;, line 34, in &lt;module&gt;
-    main()
-  File &quot;display_game.py&quot;, line 29, in main
-    game = DisplayGame(int(args[0]), args[1], args[2])
-  File &quot;display_game.py&quot;, line 9, in __init__
-    super().__init__(assid, user_id,  api_key, 10, 10)
-  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/non_blocking_game.py&quot;, line 105, in __init__
-  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/gamebase.py&quot;, line 16, in __init__
-  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/gamebase.py&quot;, line 33, in game_base_init
-  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/socket_connection.py&quot;, line 30, in setup_connection
-  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/python_socketio-5.0.1-py3.7.egg/socketio/client.py&quot;, line 325, in emit
-    namespace + ' is not a connected namespace.')
-socketio.exceptions.BadNamespaceError: / is not a connected namespace.
-packet queue is empty, aborting
-Alarm clock
-could not run test display_game.py
+Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7fc5743eaa58&gt;
+limiting number of frame to 10
+
+Check Your Visualization at the following link:
+
+http://bridges-games.herokuapp.com/assignments/3012/bridges_testing
+
+
+frame limit of 10 frames reached
 </code></pre>
 </div>
     
@@ -648,7 +648,7 @@ Traceback (most recent call last):
     conn = self._new_conn()
   File &quot;/usr/lib/python3/dist-packages/urllib3/connection.py&quot;, line 168, in _new_conn
     self, &quot;Failed to establish a new connection: %s&quot; % e)
-urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x7f8045966e48&gt;: Failed to establish a new connection: [Errno -2] Name or service not known
+urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x7f164caefbe0&gt;: Failed to establish a new connection: [Errno -2] Name or service not known
 
 During handling of the above exception, another exception occurred:
 
@@ -659,7 +659,7 @@ Traceback (most recent call last):
     _stacktrace=sys.exc_info()[2])
   File &quot;/usr/lib/python3/dist-packages/urllib3/util/retry.py&quot;, line 398, in increment
     raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f8045966e48&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f164caefbe0&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
 
 During handling of the above exception, another exception occurred:
 
@@ -680,7 +680,7 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File &quot;/usr/lib/python3/dist-packages/requests/adapters.py&quot;, line 516, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f8045966e48&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f164caefbe0&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
 could not run test elevation_snippet.py
 </code></pre>
 </div>
@@ -691,10 +691,10 @@ could not run test elevation_snippet.py
     
 <div class="success">
 <h3><span id="pythonlogeq_snippet.py-runtest">Run for test eq_snippet.py</span></h3>
-<pre><code>Magnitude: 1.59
-Date: 2020-12-10 08:16:14
-Location:18km N of Yucca Valley, CA
-Lat/Long:34.2718333,-116.4471667
+<pre><code>Magnitude: 1.4
+Date: 2020-12-11 08:19:50
+Location:26 km SSE of Minto, Alaska
+Lat/Long:64.9337,-149.1101
 </code></pre>
 </div>
     
@@ -746,10 +746,10 @@ could not run test game_size_test.py
     
 <div class="success">
 <h3><span id="pythonloggame_snippet.py-runtest">Run for test game_snippet.py</span></h3>
-<pre><code>Mat Hoffmans Pro BMX
-Dreamcast
-8.1
-['Sports']
+<pre><code>Medal of Honor
+PlayStation 3
+6
+['Shooter']
 </code></pre>
 </div>
     
@@ -770,6 +770,23 @@ http://bridges-cs.herokuapp.com/assignments/3019/bridges_testing
 </div>
     
     </div>
+    <div id="pythonloggraph_alist_empty.py" class="logdetails">
+      <h2>Test graph_alist_empty.py full log</h2>
+    
+<div class="failure">
+<h3><span id="pythonloggraph_alist_empty.py-runtest">Run for test graph_alist_empty.py</span></h3>
+<pre><code>Traceback (most recent call last):
+  File &quot;graph_alist_empty.py&quot;, line 43, in &lt;module&gt;
+    main()
+  File &quot;graph_alist_empty.py&quot;, line 33, in main
+    for edge in g.out_going_edge_set_of(a2):
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/sl_element.py&quot;, line 95, in list_helper
+AttributeError: 'NoneType' object has no attribute 'next'
+could not run test graph_alist_empty.py
+</code></pre>
+</div>
+    
+    </div>
     <div id="pythonloggraph_amatrix.py" class="logdetails">
       <h2>Test graph_amatrix.py full log</h2>
     
@@ -779,7 +796,7 @@ http://bridges-cs.herokuapp.com/assignments/3019/bridges_testing
 
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3020/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3021/bridges_testing
 
 
 </code></pre>
@@ -794,25 +811,25 @@ http://bridges-cs.herokuapp.com/assignments/3020/bridges_testing
 <pre><code>
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3021/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3022/bridges_testing
 
 
 
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3021/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3022/bridges_testing
 
 
 
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3021/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3022/bridges_testing
 
 
 
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3021/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3022/bridges_testing
 
 
 </code></pre>
@@ -824,9 +841,9 @@ http://bridges-cs.herokuapp.com/assignments/3021/bridges_testing
     
 <div class="success">
 <h3><span id="pythonlogguttenberg_snippet.py-runtest">Run for test guttenberg_snippet.py</span></h3>
-<pre><code>The Underground Railroad: A Record of Facts, Authentic Narratives, Letters, &amp;c., Narrating the Hardships, Hair-Breadth Escapes and Death Struggles of the Slaves in Their Efforts for Freedom, As Related by Themselves and Others, or Witnessed by the Author.
-Still, William
-['biography', '19th century', 'underground railroad']
+<pre><code>Florante at Laura
+Balagtas, Francisco
+['tagalog poetry']
 </code></pre>
 </div>
     
@@ -836,8 +853,8 @@ Still, William
     
 <div class="success">
 <h3><span id="pythonlogimdb_snippet.py-runtest">Run for test imdb_snippet.py</span></h3>
-<pre><code>James_Stewart_(I)
-Winning_Your_Wings_(1942)
+<pre><code>Billy_Bob_Thornton
+Alamo,_The_(2004)
 </code></pre>
 </div>
     
@@ -877,7 +894,7 @@ could not run test input_game.py
 <pre><code>
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3025/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3026/bridges_testing
 
 
 </code></pre>
@@ -892,25 +909,25 @@ http://bridges-cs.herokuapp.com/assignments/3025/bridges_testing
 <pre><code>
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3026/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3027/bridges_testing
 
 
 
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3026/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3027/bridges_testing
 
 
 
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3026/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3027/bridges_testing
 
 
 
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3026/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3027/bridges_testing
 
 
 </code></pre>
@@ -952,32 +969,32 @@ could not run test minimal_game.py
 <pre><code>
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3028/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3029/bridges_testing
 
 
 
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3028/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3029/bridges_testing
 
 
 
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3028/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3029/bridges_testing
 
 
 
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3028/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3029/bridges_testing
 
 
 RLE ran
 
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3028/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3029/bridges_testing
 
 
 </code></pre>
@@ -992,7 +1009,7 @@ http://bridges-cs.herokuapp.com/assignments/3028/bridges_testing
 <pre><code>
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3029/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3030/bridges_testing
 
 
 </code></pre>
@@ -1009,7 +1026,7 @@ Number of Edges [Charlotte]: 995
 
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3030/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3031/bridges_testing
 
 
 </code></pre>
@@ -1034,11 +1051,11 @@ Cartesian Coordinate of first vertex: 827.1273231300758, -5144.073405550668
     
 <div class="success">
 <h3><span id="pythonlogshakespeare_snippet.py-runtest">Run for test shakespeare_snippet.py</span></h3>
-<pre><code>Sonnet 110
+<pre><code>Sonnet 46
 poem
-Alas 'tis true, I have gone here and there,
- And made my self a motley to the view,
- Gored mine own 
+Mine eye and heart are at a mortal war,
+ How to divide the conquest of thy sight,
+ Mine eye, my hear
 </code></pre>
 </div>
     
@@ -1051,7 +1068,7 @@ Alas 'tis true, I have gone here and there,
 <pre><code>
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3033/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3034/bridges_testing
 
 
 </code></pre>
@@ -1066,7 +1083,7 @@ http://bridges-cs.herokuapp.com/assignments/3033/bridges_testing
 <pre><code>
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3034/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3035/bridges_testing
 
 
 </code></pre>
@@ -1081,7 +1098,7 @@ http://bridges-cs.herokuapp.com/assignments/3034/bridges_testing
 <pre><code>
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3035/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3036/bridges_testing
 
 
 </code></pre>
@@ -1188,7 +1205,7 @@ Work is never over
 <pre><code>
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3037/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3038/bridges_testing
 
 
 </code></pre>
@@ -1204,7 +1221,7 @@ http://bridges-cs.herokuapp.com/assignments/3037/bridges_testing
 
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3038/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3039/bridges_testing
 
 
 </code></pre>
