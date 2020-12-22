@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Python</h1>
-	<p>Running at Mon 21 Dec 2020 03:40:22 AM EST</p>
+	<p>Running at Tue 22 Dec 2020 03:40:36 AM EST</p>
   <div id="summaryarray1d.py" class="success">
     <h2><a href="python_testing_logs.html#pythonlogarray1d.py">Test array1d.py</a> </h2>
     <p>
@@ -148,11 +148,11 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summarygame_size_test.py" class="success">
+  <div id="summarygame_size_test.py" class="failure">
     <h2><a href="python_testing_logs.html#pythonloggame_size_test.py">Test game_size_test.py</a> </h2>
     <p>
       <ul>
-        <li> Run : <a href="python_testing_logs.html#pythonloggame_size_test.py-runtest">success</a></li>
+        <li> Run : <a href="python_testing_logs.html#pythonloggame_size_test.py-runtest">error</a></li>
       </ul>
     </p>
   </div>
@@ -656,7 +656,7 @@ Traceback (most recent call last):
     conn = self._new_conn()
   File &quot;/usr/lib/python3/dist-packages/urllib3/connection.py&quot;, line 168, in _new_conn
     self, &quot;Failed to establish a new connection: %s&quot; % e)
-urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x7ff75334bc18&gt;: Failed to establish a new connection: [Errno -2] Name or service not known
+urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x7f45c9e10e80&gt;: Failed to establish a new connection: [Errno -2] Name or service not known
 
 During handling of the above exception, another exception occurred:
 
@@ -667,7 +667,7 @@ Traceback (most recent call last):
     _stacktrace=sys.exc_info()[2])
   File &quot;/usr/lib/python3/dist-packages/urllib3/util/retry.py&quot;, line 398, in increment
     raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7ff75334bc18&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f45c9e10e80&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
 
 During handling of the above exception, another exception occurred:
 
@@ -688,7 +688,7 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File &quot;/usr/lib/python3/dist-packages/requests/adapters.py&quot;, line 516, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7ff75334bc18&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f45c9e10e80&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
 could not run test elevation_snippet.py
 </code></pre>
 </div>
@@ -699,10 +699,10 @@ could not run test elevation_snippet.py
     
 <div class="success">
 <h3><span id="pythonlogeq_snippet.py-runtest">Run for test eq_snippet.py</span></h3>
-<pre><code>Magnitude: 1.87
-Date: 2020-12-21 08:15:58
-Location:7km N of Day Valley, CA
-Lat/Long:37.0970001,-121.8495026
+<pre><code>Magnitude: 2.18000007
+Date: 2020-12-22 08:23:20
+Location:7 km SW of Volcano, Hawaii
+Lat/Long:19.3893337249756,-155.280166625977
 </code></pre>
 </div>
     
@@ -725,18 +725,26 @@ http://bridges-cs.herokuapp.com/assignments/3016/bridges_testing
     <div id="pythonloggame_size_test.py" class="logdetails">
       <h2>Test game_size_test.py full log</h2>
     
-<div class="success">
+<div class="failure">
 <h3><span id="pythonloggame_size_test.py-runtest">Run for test game_size_test.py</span></h3>
 <pre><code>passing student credentials to server..
-Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f71b960ecc0&gt;
-limiting number of frame to 10
-
-Check Your Visualization at the following link:
-
-http://bridges-games.herokuapp.com/assignments/3017/bridges_testing
-
-
-frame limit of 10 frames reached
+Traceback (most recent call last):
+  File &quot;game_size_test.py&quot;, line 34, in &lt;module&gt;
+    main()
+  File &quot;game_size_test.py&quot;, line 28, in main
+    game = GameSizeTest(int(args[0]), args[1], args[2])
+  File &quot;game_size_test.py&quot;, line 9, in __init__
+    super().__init__(assid, user_id,  api_key, 10, 20)
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/non_blocking_game.py&quot;, line 105, in __init__
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/gamebase.py&quot;, line 16, in __init__
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/gamebase.py&quot;, line 33, in game_base_init
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/socket_connection.py&quot;, line 30, in setup_connection
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/python_socketio-5.0.3-py3.7.egg/socketio/client.py&quot;, line 325, in emit
+    namespace + ' is not a connected namespace.')
+socketio.exceptions.BadNamespaceError: / is not a connected namespace.
+packet queue is empty, aborting
+Alarm clock
+could not run test game_size_test.py
 </code></pre>
 </div>
     
@@ -746,10 +754,10 @@ frame limit of 10 frames reached
     
 <div class="success">
 <h3><span id="pythonloggame_snippet.py-runtest">Run for test game_snippet.py</span></h3>
-<pre><code>Mystical Ninja Starring Goemon
-Nintendo 64
-7.6
-['Action', 'Adventure']
+<pre><code>Killing Zone
+PlayStation
+2
+['Fighting']
 </code></pre>
 </div>
     
@@ -841,9 +849,9 @@ http://bridges-cs.herokuapp.com/assignments/3022/bridges_testing
     
 <div class="success">
 <h3><span id="pythonlogguttenberg_snippet.py-runtest">Run for test guttenberg_snippet.py</span></h3>
-<pre><code>Electricity in Locomotion: An Account of its Mechanism, its Achievements, and its Prospects
-Whyte, Adam Gowens
-[]
+<pre><code>A Defence of Poetry and Other Essays
+Shelley, Percy Bysshe
+['english essays', 'poetry']
 </code></pre>
 </div>
     
@@ -853,8 +861,8 @@ Whyte, Adam Gowens
     
 <div class="success">
 <h3><span id="pythonlogimdb_snippet.py-runtest">Run for test imdb_snippet.py</span></h3>
-<pre><code>Cary_Grant
-Hot_Saturday_(1932)
+<pre><code>Christopher_Lee_(I)
+Hannie_Caulder_(1971)
 </code></pre>
 </div>
     
@@ -1051,11 +1059,11 @@ Cartesian Coordinate of first vertex: 827.1273231300758, -5144.073405550668
     
 <div class="success">
 <h3><span id="pythonlogshakespeare_snippet.py-runtest">Run for test shakespeare_snippet.py</span></h3>
-<pre><code>Sonnet 143
+<pre><code>Sonnet 68
 poem
-Lo as a careful huswife runs to catch,
- One of her feathered creatures broke away,
- Sets down her ba
+Thus is his cheek the map of days outworn,
+ When beauty lived and died as flowers do now,
+ Before th
 </code></pre>
 </div>
     
