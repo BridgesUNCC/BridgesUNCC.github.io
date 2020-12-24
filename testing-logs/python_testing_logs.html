@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Python</h1>
-	<p>Running at Wed 23 Dec 2020 03:41:03 AM EST</p>
+	<p>Running at Thu 24 Dec 2020 03:40:46 AM EST</p>
   <div id="summaryarray1d.py" class="success">
     <h2><a href="python_testing_logs.html#pythonlogarray1d.py">Test array1d.py</a> </h2>
     <p>
@@ -656,7 +656,7 @@ Traceback (most recent call last):
     conn = self._new_conn()
   File &quot;/usr/lib/python3/dist-packages/urllib3/connection.py&quot;, line 168, in _new_conn
     self, &quot;Failed to establish a new connection: %s&quot; % e)
-urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x7f07bb19ed68&gt;: Failed to establish a new connection: [Errno -2] Name or service not known
+urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x7f588e7d6cc0&gt;: Failed to establish a new connection: [Errno -2] Name or service not known
 
 During handling of the above exception, another exception occurred:
 
@@ -667,7 +667,7 @@ Traceback (most recent call last):
     _stacktrace=sys.exc_info()[2])
   File &quot;/usr/lib/python3/dist-packages/urllib3/util/retry.py&quot;, line 398, in increment
     raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f07bb19ed68&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f588e7d6cc0&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
 
 During handling of the above exception, another exception occurred:
 
@@ -688,7 +688,7 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File &quot;/usr/lib/python3/dist-packages/requests/adapters.py&quot;, line 516, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f07bb19ed68&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f588e7d6cc0&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
 could not run test elevation_snippet.py
 </code></pre>
 </div>
@@ -699,10 +699,10 @@ could not run test elevation_snippet.py
     
 <div class="success">
 <h3><span id="pythonlogeq_snippet.py-runtest">Run for test eq_snippet.py</span></h3>
-<pre><code>Magnitude: 2.1
-Date: 2020-12-23 07:54:53
-Location:7 km NNE of Cantwell, Alaska
-Lat/Long:63.4541,-148.8925
+<pre><code>Magnitude: 2.4
+Date: 2020-12-24 08:19:06
+Location:34 km NNE of Chenega, Alaska
+Lat/Long:60.3549,-147.7857
 </code></pre>
 </div>
     
@@ -754,10 +754,10 @@ could not run test game_size_test.py
     
 <div class="success">
 <h3><span id="pythonloggame_snippet.py-runtest">Run for test game_snippet.py</span></h3>
-<pre><code>Deadliest Warrior: Legends
-PlayStation 3
+<pre><code>Disciples II: Servants of the Dark
+PC
 7
-['Fighting', 'Action']
+['Strategy']
 </code></pre>
 </div>
     
@@ -849,9 +849,9 @@ http://bridges-cs.herokuapp.com/assignments/3022/bridges_testing
     
 <div class="success">
 <h3><span id="pythonlogguttenberg_snippet.py-runtest">Run for test guttenberg_snippet.py</span></h3>
-<pre><code>Lord of the World
-Benson, Robert Hugh
-['science fiction', 'fiction']
+<pre><code>The Shunned House
+Lovecraft, H. P. (Howard Phillips)
+['horror tales, american', 'fiction']
 </code></pre>
 </div>
     
@@ -861,8 +861,8 @@ Benson, Robert Hugh
     
 <div class="success">
 <h3><span id="pythonlogimdb_snippet.py-runtest">Run for test imdb_snippet.py</span></h3>
-<pre><code>Cary_Grant
-Sinners_in_the_Sun_(1932)
+<pre><code>James_Stewart_(I)
+Heart_of_Show_Business,_The_(1957)
 </code></pre>
 </div>
     
@@ -1059,11 +1059,17 @@ Cartesian Coordinate of first vertex: 827.1273231300758, -5144.073405550668
     
 <div class="success">
 <h3><span id="pythonlogshakespeare_snippet.py-runtest">Run for test shakespeare_snippet.py</span></h3>
-<pre><code>Sonnet 128
-poem
-How oft when thou, my music, music play'st,
- Upon that blessed wood whose motion sounds
- With thy sw
+<pre><code>The Tragedy Of Antony And Cleopatra
+play
+1607
+
+THE TRAGEDY OF ANTONY AND CLEOPATRA
+
+by William Shakespeare
+
+DRAMATIS PERSONAE
+
+ MARK ANTONY, 
 </code></pre>
 </div>
     
