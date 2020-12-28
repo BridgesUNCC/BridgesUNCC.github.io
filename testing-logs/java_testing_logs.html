@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Java</h1>
-	<p>Running at Sun 27 Dec 2020 03:34:52 AM EST</p>
+	<p>Running at Mon 28 Dec 2020 03:34:45 AM EST</p>
   <div id="summaryarray1d.java" class="success">
     <h2><a href="java_testing_logs.html#javalogarray1d.java">Test array1d.java</a> </h2>
     <p>
@@ -228,12 +228,12 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summaryimdb_snippet.java" class="success">
+  <div id="summaryimdb_snippet.java" class="failure">
     <h2><a href="java_testing_logs.html#javalogimdb_snippet.java">Test imdb_snippet.java</a> </h2>
     <p>
       <ul>
-        <li> Build : <a href="java_testing_logs.html#javalogimdb_snippet.java-buildtest">success</a></li>
-        <li> Run : <a href="java_testing_logs.html#javalogimdb_snippet.java-runtest">success</a></li>
+        <li> Build : <a href="java_testing_logs.html#javalogimdb_snippet.java-buildtest">error</a></li>
+        <li> Run : <a href="java_testing_logs.html#javalogimdb_snippet.java-runtest">error</a></li>
       </ul>
     </p>
   </div>
@@ -521,8 +521,12 @@ http://bridges-cs.herokuapp.com/assignments/2004/bridges_testing
 </div>
 <div class="success">
 <h3><span id="javalogavl.java-runtest">Run for test avl.java</span></h3>
-<pre><code>There was a problem sending the visualization representation to the server. 
-Received an empty JSON response from the server. 
+<pre><code>
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2005/bridges_testing
+
+
 </code></pre>
 </div>
     
@@ -557,8 +561,12 @@ http://bridges-cs.herokuapp.com/assignments/2006/bridges_testing
 </div>
 <div class="success">
 <h3><span id="javalogbst_eq.java-runtest">Run for test bst_eq.java</span></h3>
-<pre><code>There was a problem sending the visualization representation to the server. 
-Received an empty JSON response from the server. 
+<pre><code>
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2007/bridges_testing
+
+
 </code></pre>
 </div>
     
@@ -762,9 +770,8 @@ http://bridges-cs.herokuapp.com/assignments/2013/bridges_testing
 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
-	at bridges.connect.DataFormatter.makeRequest(DataFormatter.java:590)
-	at bridges.connect.DataFormatter.getElevationData(DataFormatter.java:1344)
-	at bridges.connect.DataSource.getElevationData(DataSource.java:345)
+	at bridges.connect.DataSource.makeRequest(DataSource.java:312)
+	at bridges.connect.DataSource.getElevationData(DataSource.java:904)
 	at elevation_snippet.main(elevation_snippet.java:17)
 could not run test elevation_snippet.java
 </code></pre>
@@ -782,10 +789,10 @@ could not run test elevation_snippet.java
 <div class="success">
 <h3><span id="javalogeq_snippet.java-runtest">Run for test eq_snippet.java</span></h3>
 <pre><code>Earthquake 0:
-	Magnitude:1.31
-	Date:Dec 27 2020  03:21:24.790 EST
-	Location: 21km ESE of Bodfish, CA
-	Lat/Long:35.4885,-118.2948333
+	Magnitude:1.8
+	Date:Dec 28 2020  03:07:19.338 EST
+	Location: 33 km S of Manley Hot Springs, Alaska
+	Lat/Long:64.6999,-150.7211
 </code></pre>
 </div>
     
@@ -843,10 +850,10 @@ could not run test game_size_test.java
 </div>
 <div class="success">
 <h3><span id="javaloggame_snippet.java-runtest">Run for test game_snippet.java</span></h3>
-<pre><code>Pulseman
-Wii
-8.0
-[Action]
+<pre><code>The O.C.
+Wireless
+7.0
+[Simulation]
 </code></pre>
 </div>
     
@@ -979,15 +986,24 @@ http://bridges-cs.herokuapp.com/assignments/2022/bridges_testing
     <div id="javalogimdb_snippet.java" class="logdetails">
       <h2>Test imdb_snippet.java full log</h2>
     
-<div class="success">
+<div class="failure">
 <h3><span id="javalogimdb_snippet.java-buildtest">Build for test imdb_snippet.java</span></h3>
 <pre><code>Compiling test imdb_snippet.java
+imdb_snippet.java:20: error: method getActorMovieIMDBData in class DataSource cannot be applied to given types;
+		List&lt;ActorMovieIMDB&gt; mylist = ds.getActorMovieIMDBData();
+		                                ^
+  required: int
+  found: no arguments
+  reason: actual and formal argument lists differ in length
+1 error
+could not compile java_answer/ for assignment in
 </code></pre>
 </div>
-<div class="success">
+<div class="failure">
 <h3><span id="javalogimdb_snippet.java-runtest">Run for test imdb_snippet.java</span></h3>
-<pre><code>Bill_Murray_(I)
-Man_Who_Knew_Too_Little,_The_(1997)
+<pre><code>Error: Could not find or load main class imdb_snippet
+Caused by: java.lang.ClassNotFoundException: imdb_snippet
+could not run test imdb_snippet.java
 </code></pre>
 </div>
     
@@ -1025,8 +1041,12 @@ could not run test input_game.java
 </div>
 <div class="success">
 <h3><span id="javalogkdt.java-runtest">Run for test kdt.java</span></h3>
-<pre><code>There was a problem sending the visualization representation to the server. 
-Received an empty JSON response from the server. 
+<pre><code>
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/2026/bridges_testing
+
+
 </code></pre>
 </div>
     
@@ -1207,11 +1227,11 @@ Location of first vertex [Cartesian Coord]: 827.1273231300758,-5144.073405550668
 </div>
 <div class="success">
 <h3><span id="javalogshakespeare_snippet.java-runtest">Run for test shakespeare_snippet.java</span></h3>
-<pre><code>Sonnet 110
+<pre><code>Sonnet 106
 poem
-Alas 'tis true, I have gone here and there,
- And made my self a motley to the view,
- Gored mine own ...
+When in the chronicle of wasted time,
+ I see descriptions of the fairest wights,
+ And beauty making ...
 </code></pre>
 </div>
     
