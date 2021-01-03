@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Python</h1>
-	<p>Running at Sat 02 Jan 2021 03:40:46 AM EST</p>
+	<p>Running at Sun 03 Jan 2021 03:40:50 AM EST</p>
   <div id="summaryarray1d.py" class="success">
     <h2><a href="python_testing_logs.html#pythonlogarray1d.py">Test array1d.py</a> </h2>
     <p>
@@ -164,11 +164,11 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summarygraph_alist.py" class="success">
+  <div id="summarygraph_alist.py" class="failure">
     <h2><a href="python_testing_logs.html#pythonloggraph_alist.py">Test graph_alist.py</a> </h2>
     <p>
       <ul>
-        <li> Run : <a href="python_testing_logs.html#pythonloggraph_alist.py-runtest">success</a></li>
+        <li> Run : <a href="python_testing_logs.html#pythonloggraph_alist.py-runtest">error</a></li>
       </ul>
     </p>
   </div>
@@ -594,9 +594,9 @@ Traceback (most recent call last):
   File &quot;display_game.py&quot;, line 9, in __init__
     super().__init__(assid, user_id,  api_key, 10, 10)
   File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/non_blocking_game.py&quot;, line 105, in __init__
-  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/gamebase.py&quot;, line 25, in __init__
-  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/gamebase.py&quot;, line 50, in game_base_init
-  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/socket_connection.py&quot;, line 30, in setup_connection
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/gamebase.py&quot;, line 23, in __init__
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/gamebase.py&quot;, line 49, in game_base_init
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/socket_connection.py&quot;, line 35, in setup_connection
   File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/python_socketio-5.0.4-py3.7.egg/socketio/client.py&quot;, line 329, in emit
     namespace + ' is not a connected namespace.')
 socketio.exceptions.BadNamespaceError: / is not a connected namespace.
@@ -657,7 +657,7 @@ Traceback (most recent call last):
     conn = self._new_conn()
   File &quot;/usr/lib/python3/dist-packages/urllib3/connection.py&quot;, line 168, in _new_conn
     self, &quot;Failed to establish a new connection: %s&quot; % e)
-urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x7f01b4293cf8&gt;: Failed to establish a new connection: [Errno -2] Name or service not known
+urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x7fcc738c8cf8&gt;: Failed to establish a new connection: [Errno -2] Name or service not known
 
 During handling of the above exception, another exception occurred:
 
@@ -668,7 +668,7 @@ Traceback (most recent call last):
     _stacktrace=sys.exc_info()[2])
   File &quot;/usr/lib/python3/dist-packages/urllib3/util/retry.py&quot;, line 398, in increment
     raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f01b4293cf8&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fcc738c8cf8&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
 
 During handling of the above exception, another exception occurred:
 
@@ -677,8 +677,8 @@ Traceback (most recent call last):
     main()
   File &quot;elevation_snippet.py&quot;, line 17, in main
     ele_obj = data_source.get_elevation_data([41.03133177632377, -98.02593749997456, 42.508577297430456, -96.94531249997696])
-  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/data_src_dependent/data_source.py&quot;, line 723, in get_elevation_data
-  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/data_src_dependent/data_source.py&quot;, line 676, in elevation_server
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/data_src_dependent/data_source.py&quot;, line 731, in get_elevation_data
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/data_src_dependent/data_source.py&quot;, line 684, in elevation_server
   File &quot;/usr/lib/python3/dist-packages/requests/api.py&quot;, line 75, in get
     return request('get', url, params=params, **kwargs)
   File &quot;/usr/lib/python3/dist-packages/requests/api.py&quot;, line 60, in request
@@ -689,7 +689,7 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File &quot;/usr/lib/python3/dist-packages/requests/adapters.py&quot;, line 516, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f01b4293cf8&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fcc738c8cf8&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
 could not run test elevation_snippet.py
 </code></pre>
 </div>
@@ -700,7 +700,7 @@ could not run test elevation_snippet.py
     
 <div class="failure">
 <h3><span id="pythonlogeq_snippet.py-runtest">Run for test eq_snippet.py</span></h3>
-<pre><code>Magnitude: 2.93
+<pre><code>Magnitude: 2.3
 Traceback (most recent call last):
   File &quot;eq_snippet.py&quot;, line 30, in &lt;module&gt;
     main()
@@ -741,9 +741,9 @@ Traceback (most recent call last):
   File &quot;game_size_test.py&quot;, line 9, in __init__
     super().__init__(assid, user_id,  api_key, 10, 20)
   File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/non_blocking_game.py&quot;, line 105, in __init__
-  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/gamebase.py&quot;, line 25, in __init__
-  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/gamebase.py&quot;, line 50, in game_base_init
-  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/socket_connection.py&quot;, line 30, in setup_connection
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/gamebase.py&quot;, line 23, in __init__
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/gamebase.py&quot;, line 49, in game_base_init
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/socket_connection.py&quot;, line 35, in setup_connection
   File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/python_socketio-5.0.4-py3.7.egg/socketio/client.py&quot;, line 329, in emit
     namespace + ' is not a connected namespace.')
 socketio.exceptions.BadNamespaceError: / is not a connected namespace.
@@ -759,10 +759,10 @@ could not run test game_size_test.py
     
 <div class="success">
 <h3><span id="pythonloggame_snippet.py-runtest">Run for test game_snippet.py</span></h3>
-<pre><code>World Series Baseball 2K2
-Dreamcast
-8.7
-['Sports']
+<pre><code>Final Fantasy Tactics A2: Grimoire of the Rift
+Nintendo DS
+9
+['Strategy', 'RPG']
 </code></pre>
 </div>
     
@@ -770,15 +770,17 @@ Dreamcast
     <div id="pythonloggraph_alist.py" class="logdetails">
       <h2>Test graph_alist.py full log</h2>
     
-<div class="success">
+<div class="failure">
 <h3><span id="pythonloggraph_alist.py-runtest">Run for test graph_alist.py</span></h3>
 <pre><code>Visualization Title restricted to50 characters. truncated title...
-
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/3019/bridges_testing
-
-
+Traceback (most recent call last):
+  File &quot;graph_alist.py&quot;, line 98, in &lt;module&gt;
+    main()
+  File &quot;graph_alist.py&quot;, line 79, in main
+    for edge in g.out_going_edge_set_of(a1):
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/graph_adj_list.py&quot;, line 240, in out_going_edge_set_of
+NameError: name 'k' is not defined
+could not run test graph_alist.py
 </code></pre>
 </div>
     
@@ -791,10 +793,10 @@ http://bridges-cs.herokuapp.com/assignments/3019/bridges_testing
 <pre><code>Traceback (most recent call last):
   File &quot;graph_alist_empty.py&quot;, line 43, in &lt;module&gt;
     main()
-  File &quot;graph_alist_empty.py&quot;, line 33, in main
-    for edge in g.out_going_edge_set_of(a2):
-  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/sl_element.py&quot;, line 95, in list_helper
-AttributeError: 'NoneType' object has no attribute 'next'
+  File &quot;graph_alist_empty.py&quot;, line 28, in main
+    for edge in g.out_going_edge_set_of(a1):
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/graph_adj_list.py&quot;, line 240, in out_going_edge_set_of
+NameError: name 'k' is not defined
 could not run test graph_alist_empty.py
 </code></pre>
 </div>
@@ -854,9 +856,9 @@ http://bridges-cs.herokuapp.com/assignments/3022/bridges_testing
     
 <div class="success">
 <h3><span id="pythonlogguttenberg_snippet.py-runtest">Run for test guttenberg_snippet.py</span></h3>
-<pre><code>On the Origin of Species By Means of Natural Selection: Or, the Preservation of Favoured Races in the Struggle for Life
-Darwin, Charles
-['evolution (biology)', 'natural selection']
+<pre><code>The Vampyre; a Tale
+Polidori, John William
+['fiction', 'horror tales', 'gothic fiction (literary genre)']
 </code></pre>
 </div>
     
@@ -866,8 +868,8 @@ Darwin, Charles
     
 <div class="success">
 <h3><span id="pythonlogimdb_snippet.py-runtest">Run for test imdb_snippet.py</span></h3>
-<pre><code>Elizabeth_Rivera
-Being_John_Malkovich_(1999)
+<pre><code>Denzel_Washington
+Mississippi_Masala_(1991)
 </code></pre>
 </div>
     
@@ -886,9 +888,9 @@ Traceback (most recent call last):
   File &quot;input_game.py&quot;, line 8, in __init__
     super().__init__(assid, user_id,  api_key, 10, 10)
   File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/non_blocking_game.py&quot;, line 105, in __init__
-  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/gamebase.py&quot;, line 25, in __init__
-  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/gamebase.py&quot;, line 50, in game_base_init
-  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/socket_connection.py&quot;, line 30, in setup_connection
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/gamebase.py&quot;, line 23, in __init__
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/gamebase.py&quot;, line 49, in game_base_init
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/socket_connection.py&quot;, line 35, in setup_connection
   File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/python_socketio-5.0.4-py3.7.egg/socketio/client.py&quot;, line 329, in emit
     namespace + ' is not a connected namespace.')
 socketio.exceptions.BadNamespaceError: / is not a connected namespace.
@@ -961,9 +963,9 @@ Traceback (most recent call last):
   File &quot;minimal_game.py&quot;, line 8, in __init__
     super().__init__(assid, user_id,  api_key, 10, 10)
   File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/non_blocking_game.py&quot;, line 105, in __init__
-  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/gamebase.py&quot;, line 25, in __init__
-  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/gamebase.py&quot;, line 50, in game_base_init
-  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/socket_connection.py&quot;, line 30, in setup_connection
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/gamebase.py&quot;, line 23, in __init__
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/gamebase.py&quot;, line 49, in game_base_init
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/socket_connection.py&quot;, line 35, in setup_connection
   File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/python_socketio-5.0.4-py3.7.egg/socketio/client.py&quot;, line 329, in emit
     namespace + ' is not a connected namespace.')
 socketio.exceptions.BadNamespaceError: / is not a connected namespace.
@@ -1064,11 +1066,11 @@ Cartesian Coordinate of first vertex: 827.1273231300758, -5144.073405550668
     
 <div class="success">
 <h3><span id="pythonlogshakespeare_snippet.py-runtest">Run for test shakespeare_snippet.py</span></h3>
-<pre><code>Sonnet 83
+<pre><code>Sonnet 139
 poem
-I never saw that you did painting need,
- And therefore to your fair no painting set,
- I found (or th
+O call not me to justify the wrong,
+ That thy unkindness lays upon my heart,
+ Wound me not with thin
 </code></pre>
 </div>
     
