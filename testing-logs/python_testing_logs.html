@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Python</h1>
-	<p>Running at Fri 08 Jan 2021 03:41:54 AM EST</p>
+	<p>Running at Sat 09 Jan 2021 03:42:32 AM EST</p>
   <div id="summaryarray1d.py" class="success">
     <h2><a href="python_testing_logs.html#pythonlogarray1d.py">Test array1d.py</a> </h2>
     <p>
@@ -321,6 +321,54 @@ background-color: springgreen;
     <p>
       <ul>
         <li> Run : <a href="python_testing_logs.html#pythonlogtree.py-runtest">success</a></li>
+      </ul>
+    </p>
+  </div>
+  <div id="summarytut_bst_p1.py" class="success">
+    <h2><a href="python_testing_logs.html#pythonlogtut_bst_p1.py">Test tut_bst_p1.py</a> </h2>
+    <p>
+      <ul>
+        <li> Run : <a href="python_testing_logs.html#pythonlogtut_bst_p1.py-runtest">success</a></li>
+      </ul>
+    </p>
+  </div>
+  <div id="summarytut_bst_p2.py" class="success">
+    <h2><a href="python_testing_logs.html#pythonlogtut_bst_p2.py">Test tut_bst_p2.py</a> </h2>
+    <p>
+      <ul>
+        <li> Run : <a href="python_testing_logs.html#pythonlogtut_bst_p2.py-runtest">success</a></li>
+      </ul>
+    </p>
+  </div>
+  <div id="summarytut_bst_p3.py" class="success">
+    <h2><a href="python_testing_logs.html#pythonlogtut_bst_p3.py">Test tut_bst_p3.py</a> </h2>
+    <p>
+      <ul>
+        <li> Run : <a href="python_testing_logs.html#pythonlogtut_bst_p3.py-runtest">success</a></li>
+      </ul>
+    </p>
+  </div>
+  <div id="summarytut_col_grid_p1.py" class="success">
+    <h2><a href="python_testing_logs.html#pythonlogtut_col_grid_p1.py">Test tut_col_grid_p1.py</a> </h2>
+    <p>
+      <ul>
+        <li> Run : <a href="python_testing_logs.html#pythonlogtut_col_grid_p1.py-runtest">success</a></li>
+      </ul>
+    </p>
+  </div>
+  <div id="summarytut_col_grid_p2.py" class="success">
+    <h2><a href="python_testing_logs.html#pythonlogtut_col_grid_p2.py">Test tut_col_grid_p2.py</a> </h2>
+    <p>
+      <ul>
+        <li> Run : <a href="python_testing_logs.html#pythonlogtut_col_grid_p2.py-runtest">success</a></li>
+      </ul>
+    </p>
+  </div>
+  <div id="summarytut_col_grid_p3.py" class="success">
+    <h2><a href="python_testing_logs.html#pythonlogtut_col_grid_p3.py">Test tut_col_grid_p3.py</a> </h2>
+    <p>
+      <ul>
+        <li> Run : <a href="python_testing_logs.html#pythonlogtut_col_grid_p3.py-runtest">success</a></li>
       </ul>
     </p>
   </div>
@@ -680,7 +728,7 @@ Traceback (most recent call last):
     conn = self._new_conn()
   File &quot;/usr/lib/python3/dist-packages/urllib3/connection.py&quot;, line 168, in _new_conn
     self, &quot;Failed to establish a new connection: %s&quot; % e)
-urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x7f5a236774a8&gt;: Failed to establish a new connection: [Errno -2] Name or service not known
+urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x7f504aa23080&gt;: Failed to establish a new connection: [Errno -2] Name or service not known
 
 During handling of the above exception, another exception occurred:
 
@@ -691,7 +739,7 @@ Traceback (most recent call last):
     _stacktrace=sys.exc_info()[2])
   File &quot;/usr/lib/python3/dist-packages/urllib3/util/retry.py&quot;, line 398, in increment
     raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f5a236774a8&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f504aa23080&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
 
 During handling of the above exception, another exception occurred:
 
@@ -712,7 +760,7 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File &quot;/usr/lib/python3/dist-packages/requests/adapters.py&quot;, line 516, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f5a236774a8&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f504aa23080&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
 could not run test elevation_snippet.py
 </code></pre>
 </div>
@@ -723,10 +771,10 @@ could not run test elevation_snippet.py
     
 <div class="success">
 <h3><span id="pythonlogeq_snippet.py-runtest">Run for test eq_snippet.py</span></h3>
-<pre><code>Magnitude: 0.96
-Date: 2021-01-08 08:21:02
-Location:21km SSW of Little Lake, CA
-Lat/Long:35.7698333,-118.0113333
+<pre><code>Magnitude: 2.3
+Date: 2021-01-09 08:25:57
+Location:30 km W of Cohoe, Alaska
+Lat/Long:60.4171,-151.8494
 </code></pre>
 </div>
     
@@ -778,10 +826,10 @@ could not run test game_size_test.py
     
 <div class="success">
 <h3><span id="pythonloggame_snippet.py-runtest">Run for test game_snippet.py</span></h3>
-<pre><code>The Lord of the Rings: The Third Age
-PlayStation 2
-8.5
-['RPG']
+<pre><code>Jet Set Radio
+iPhone
+5.6
+['Action']
 </code></pre>
 </div>
     
@@ -865,9 +913,9 @@ http://bridges-cs.herokuapp.com/assignments/3022/bridges_testing
     
 <div class="success">
 <h3><span id="pythonlogguttenberg_snippet.py-runtest">Run for test guttenberg_snippet.py</span></h3>
-<pre><code>Apology, Crito, and Phaedo of Socrates
-Plato
-['socrates, 470 bc-399 bc']
+<pre><code>Forbidden Fruit: Luscious and exciting story and More forbidden fruit or; Master Percy's progress in and beyond the domestic circle
+Anonymous
+['erotic stories']
 </code></pre>
 </div>
     
@@ -877,8 +925,8 @@ Plato
     
 <div class="success">
 <h3><span id="pythonlogimdb_snippet.py-runtest">Run for test imdb_snippet.py</span></h3>
-<pre><code>Cary_Grant
-Notre_Dame_de_la_Croisette_(1981)
+<pre><code>Christopher_Lee_(I)
+100_Years_of_Horror:_Giants_and_Dinosaurs_(1996)
 </code></pre>
 </div>
     
@@ -1075,11 +1123,11 @@ Cartesian Coordinate of first vertex: 827.1273231300758, -5144.073405550668
     
 <div class="success">
 <h3><span id="pythonlogshakespeare_snippet.py-runtest">Run for test shakespeare_snippet.py</span></h3>
-<pre><code>Sonnet 82
+<pre><code>Sonnet 112
 poem
-I grant thou wert not married to my muse,
- And therefore mayst without attaint o'erlook
- The dedicat
+Your love and pity doth th' impression fill,
+ Which vulgar scandal stamped upon my brow,
+ For what c
 </code></pre>
 </div>
     
@@ -1236,6 +1284,115 @@ http://bridges-cs.herokuapp.com/assignments/3038/bridges_testing
 </div>
     
     </div>
+    <div id="pythonlogtut_bst_p1.py" class="logdetails">
+      <h2>Test tut_bst_p1.py full log</h2>
+    
+<div class="success">
+<h3><span id="pythonlogtut_bst_p1.py-runtest">Run for test tut_bst_p1.py</span></h3>
+<pre><code>
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/3039/bridges_testing
+
+
+</code></pre>
+</div>
+    
+    </div>
+    <div id="pythonlogtut_bst_p2.py" class="logdetails">
+      <h2>Test tut_bst_p2.py full log</h2>
+    
+<div class="success">
+<h3><span id="pythonlogtut_bst_p2.py-runtest">Run for test tut_bst_p2.py</span></h3>
+<pre><code>
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/3040/bridges_testing
+
+
+</code></pre>
+</div>
+    
+    </div>
+    <div id="pythonlogtut_bst_p3.py" class="logdetails">
+      <h2>Test tut_bst_p3.py full log</h2>
+    
+<div class="success">
+<h3><span id="pythonlogtut_bst_p3.py-runtest">Run for test tut_bst_p3.py</span></h3>
+<pre><code>Yay! Found it!
+
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/3041/bridges_testing
+
+
+</code></pre>
+</div>
+    
+    </div>
+    <div id="pythonlogtut_col_grid_p1.py" class="logdetails">
+      <h2>Test tut_col_grid_p1.py full log</h2>
+    
+<div class="success">
+<h3><span id="pythonlogtut_col_grid_p1.py-runtest">Run for test tut_col_grid_p1.py</span></h3>
+<pre><code>RLE ran
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/3042/bridges_testing
+
+
+</code></pre>
+</div>
+    
+    </div>
+    <div id="pythonlogtut_col_grid_p2.py" class="logdetails">
+      <h2>Test tut_col_grid_p2.py full log</h2>
+    
+<div class="success">
+<h3><span id="pythonlogtut_col_grid_p2.py-runtest">Run for test tut_col_grid_p2.py</span></h3>
+<pre><code>RLE ran
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/3043/bridges_testing
+
+
+RLE ran
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/3043/bridges_testing
+
+
+RLE ran
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/3043/bridges_testing
+
+
+</code></pre>
+</div>
+    
+    </div>
+    <div id="pythonlogtut_col_grid_p3.py" class="logdetails">
+      <h2>Test tut_col_grid_p3.py full log</h2>
+    
+<div class="success">
+<h3><span id="pythonlogtut_col_grid_p3.py-runtest">Run for test tut_col_grid_p3.py</span></h3>
+<pre><code>RLE ran
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/3044/bridges_testing
+
+
+</code></pre>
+</div>
+    
+    </div>
     <div id="pythonlogtut_sllist_p1.py" class="logdetails">
       <h2>Test tut_sllist_p1.py full log</h2>
     
@@ -1244,7 +1401,7 @@ http://bridges-cs.herokuapp.com/assignments/3038/bridges_testing
 <pre><code>
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3039/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3045/bridges_testing
 
 
 </code></pre>
@@ -1259,7 +1416,7 @@ http://bridges-cs.herokuapp.com/assignments/3039/bridges_testing
 <pre><code>
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3040/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3046/bridges_testing
 
 
 </code></pre>
@@ -1274,7 +1431,7 @@ http://bridges-cs.herokuapp.com/assignments/3040/bridges_testing
 <pre><code>
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3041/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3047/bridges_testing
 
 
 </code></pre>
@@ -1290,7 +1447,7 @@ http://bridges-cs.herokuapp.com/assignments/3041/bridges_testing
 
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3042/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3048/bridges_testing
 
 
 </code></pre>
