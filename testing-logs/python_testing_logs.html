@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Python</h1>
-	<p>Running at Mon 11 Jan 2021 03:44:11 AM EST</p>
+	<p>Running at Tue 12 Jan 2021 03:44:28 AM EST</p>
   <div id="summaryarray1d.py" class="success">
     <h2><a href="python_testing_logs.html#pythonlogarray1d.py">Test array1d.py</a> </h2>
     <p>
@@ -396,6 +396,30 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
+  <div id="summarytut_dllist_p1.py" class="success">
+    <h2><a href="python_testing_logs.html#pythonlogtut_dllist_p1.py">Test tut_dllist_p1.py</a> </h2>
+    <p>
+      <ul>
+        <li> Run : <a href="python_testing_logs.html#pythonlogtut_dllist_p1.py-runtest">success</a></li>
+      </ul>
+    </p>
+  </div>
+  <div id="summarytut_dllist_p2.py" class="success">
+    <h2><a href="python_testing_logs.html#pythonlogtut_dllist_p2.py">Test tut_dllist_p2.py</a> </h2>
+    <p>
+      <ul>
+        <li> Run : <a href="python_testing_logs.html#pythonlogtut_dllist_p2.py-runtest">success</a></li>
+      </ul>
+    </p>
+  </div>
+  <div id="summarytut_dllist_p3.py" class="success">
+    <h2><a href="python_testing_logs.html#pythonlogtut_dllist_p3.py">Test tut_dllist_p3.py</a> </h2>
+    <p>
+      <ul>
+        <li> Run : <a href="python_testing_logs.html#pythonlogtut_dllist_p3.py-runtest">success</a></li>
+      </ul>
+    </p>
+  </div>
   <div id="summarytut_graph_p1.py" class="success">
     <h2><a href="python_testing_logs.html#pythonlogtut_graph_p1.py">Test tut_graph_p1.py</a> </h2>
     <p>
@@ -776,7 +800,7 @@ Traceback (most recent call last):
     conn = self._new_conn()
   File &quot;/usr/lib/python3/dist-packages/urllib3/connection.py&quot;, line 168, in _new_conn
     self, &quot;Failed to establish a new connection: %s&quot; % e)
-urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x7f47c298e198&gt;: Failed to establish a new connection: [Errno -2] Name or service not known
+urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x7ffbe2ab82b0&gt;: Failed to establish a new connection: [Errno -2] Name or service not known
 
 During handling of the above exception, another exception occurred:
 
@@ -787,7 +811,7 @@ Traceback (most recent call last):
     _stacktrace=sys.exc_info()[2])
   File &quot;/usr/lib/python3/dist-packages/urllib3/util/retry.py&quot;, line 398, in increment
     raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f47c298e198&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7ffbe2ab82b0&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
 
 During handling of the above exception, another exception occurred:
 
@@ -808,7 +832,7 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File &quot;/usr/lib/python3/dist-packages/requests/adapters.py&quot;, line 516, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f47c298e198&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='cci-bridges-elevation-t.dyn.uncc.edu', port=80): Max retries exceeded with url: /hash?minLat=41.03133177632377&amp;minLon=-98.02593749997456&amp;maxLat=42.508577297430456&amp;maxLon=-96.94531249997696&amp;resX=0.0166&amp;resY=0.0166 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7ffbe2ab82b0&gt;: Failed to establish a new connection: [Errno -2] Name or service not known'))
 could not run test elevation_snippet.py
 </code></pre>
 </div>
@@ -819,10 +843,10 @@ could not run test elevation_snippet.py
     
 <div class="success">
 <h3><span id="pythonlogeq_snippet.py-runtest">Run for test eq_snippet.py</span></h3>
-<pre><code>Magnitude: 1.2
-Date: 2021-01-11 08:06:35
-Location:3km SE of The Geysers, CA
-Lat/Long:38.7606659,-122.7296677
+<pre><code>Magnitude: 1.9
+Date: 2021-01-12 08:00:20
+Location:48 km W of Cohoe, Alaska
+Lat/Long:60.4477,-152.1653
 </code></pre>
 </div>
     
@@ -874,10 +898,10 @@ could not run test game_size_test.py
     
 <div class="success">
 <h3><span id="pythonloggame_snippet.py-runtest">Run for test game_snippet.py</span></h3>
-<pre><code>Max Trigger: Insurgence
-Wireless
-6.2
-['Shooter']
+<pre><code>Top Gear Pocket 2
+Game Boy Color
+8
+['Racing']
 </code></pre>
 </div>
     
@@ -961,9 +985,9 @@ http://bridges-cs.herokuapp.com/assignments/3022/bridges_testing
     
 <div class="success">
 <h3><span id="pythonlogguttenberg_snippet.py-runtest">Run for test guttenberg_snippet.py</span></h3>
-<pre><code>Tamburlaine the Great — Part 1
-Marlowe, Christopher
-['english drama', 'historical drama', 'drama', 'tragedies']
+<pre><code>The Romance of Tristan and Iseult
+Bedier, Joseph
+['adaptations']
 </code></pre>
 </div>
     
@@ -974,7 +998,7 @@ Marlowe, Christopher
 <div class="success">
 <h3><span id="pythonlogimdb_snippet.py-runtest">Run for test imdb_snippet.py</span></h3>
 <pre><code>Christopher_Lee_(I)
-Two_Faces_of_Dr._Jekyll,_The_(1960)
+To_the_Devil..._The_Death_of_Hammer_(2002)
 </code></pre>
 </div>
     
@@ -1171,18 +1195,11 @@ Cartesian Coordinate of first vertex: 827.1273231300758, -5144.073405550668
     
 <div class="success">
 <h3><span id="pythonlogshakespeare_snippet.py-runtest">Run for test shakespeare_snippet.py</span></h3>
-<pre><code>The Life Of King Henry The Fifth
-play
-1599
-
-THE LIFE OF KING HENRY THE FIFTH
-
-by William Shakespeare
-
-DRAMATIS PERSONAE
-
- CHORUS
- KING HEN
+<pre><code>Sonnet 145
+poem
+Those lips that Love's own hand did make,
+ Breathed forth the sound that said 'I hate',
+ To me that 
 </code></pre>
 </div>
     
@@ -1525,6 +1542,56 @@ http://bridges-cs.herokuapp.com/assignments/3047/bridges_testing
 </div>
     
     </div>
+    <div id="pythonlogtut_dllist_p1.py" class="logdetails">
+      <h2>Test tut_dllist_p1.py full log</h2>
+    
+<div class="success">
+<h3><span id="pythonlogtut_dllist_p1.py-runtest">Run for test tut_dllist_p1.py</span></h3>
+<pre><code>
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/3048/bridges_testing
+
+
+</code></pre>
+</div>
+    
+    </div>
+    <div id="pythonlogtut_dllist_p2.py" class="logdetails">
+      <h2>Test tut_dllist_p2.py full log</h2>
+    
+<div class="success">
+<h3><span id="pythonlogtut_dllist_p2.py-runtest">Run for test tut_dllist_p2.py</span></h3>
+<pre><code>
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/3049/bridges_testing
+
+
+</code></pre>
+</div>
+    
+    </div>
+    <div id="pythonlogtut_dllist_p3.py" class="logdetails">
+      <h2>Test tut_dllist_p3.py full log</h2>
+    
+<div class="success">
+<h3><span id="pythonlogtut_dllist_p3.py-runtest">Run for test tut_dllist_p3.py</span></h3>
+<pre><code>	Gretel Chaney
+	Lamont Kyler
+	Gladys Serino
+	Karol Soderman
+	Starr McGinn
+
+Check Your Visualization at the following link:
+
+http://bridges-cs.herokuapp.com/assignments/3050/bridges_testing
+
+
+</code></pre>
+</div>
+    
+    </div>
     <div id="pythonlogtut_graph_p1.py" class="logdetails">
       <h2>Test tut_graph_p1.py full log</h2>
     
@@ -1533,7 +1600,7 @@ http://bridges-cs.herokuapp.com/assignments/3047/bridges_testing
 <pre><code>
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3048/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3051/bridges_testing
 
 
 </code></pre>
@@ -1548,7 +1615,7 @@ http://bridges-cs.herokuapp.com/assignments/3048/bridges_testing
 <pre><code>
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3049/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3052/bridges_testing
 
 
 </code></pre>
@@ -1583,7 +1650,7 @@ Using iterator to print the graph vertices..
 
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3050/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3053/bridges_testing
 
 
 </code></pre>
@@ -1598,7 +1665,7 @@ http://bridges-cs.herokuapp.com/assignments/3050/bridges_testing
 <pre><code>
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3051/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3054/bridges_testing
 
 
 </code></pre>
@@ -1613,7 +1680,7 @@ http://bridges-cs.herokuapp.com/assignments/3051/bridges_testing
 <pre><code>
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3052/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3055/bridges_testing
 
 
 </code></pre>
@@ -1636,7 +1703,7 @@ Starr McGinn
 
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3053/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3056/bridges_testing
 
 
 </code></pre>
@@ -1652,7 +1719,7 @@ http://bridges-cs.herokuapp.com/assignments/3053/bridges_testing
 
 Check Your Visualization at the following link:
 
-http://bridges-cs.herokuapp.com/assignments/3054/bridges_testing
+http://bridges-cs.herokuapp.com/assignments/3057/bridges_testing
 
 
 </code></pre>
