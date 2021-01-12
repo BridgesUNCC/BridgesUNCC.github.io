@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="author" content="Bridges"/>
+    <meta name="description" content="Bridges Tutorials"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="./tutorial.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./tutorial.css" />
+    <link rel="stylesheet" type="text/css" href="./vim.css" />
+
+    <link rel="shortcut icon" href="https://bridgesuncc.github.io/favicon.png"/>
+    <script src="https://www.w3schools.com/lib/w3data.js"></script>
+
+    <title>Bridges - Hello World Visualization Tutorial</title>
+
+    <script src="./prettyprint.js" defer></script>
+  </head>
+
+  <body>
+    <div>
+
+      <header w3-include-html="./Tutorial_Header.html"></header>
+
+	<h2> Color Grid Tutorial</h2>
+      <main>
+	<br>
+	Grid&lt;E&gt; implements a <i> 2D grid structure </i> in BRIDGES, and 
+	it can be used to represent 2D image like structures (more efficient than 
+	the 2D array representation for large arrays), as well as implementation 
+	of simple 2D games that operate on moderate
+	sized grids. <strong>ColorGrid</strong> is derived from Grid&lt;E&gt; 
+	where E is replaced by the Color type.
+
+	The setDimensions() method is used to set the grid dimensions. The ColorGrid
+	subclass specializes this class to use Color for each grid element and 
+	is the subject of the tutorial here. As before, &lt;E&gt; represents 
+	the generic class parameter.  The Grid type uses a base64 representation 
+	for its contents.
+	<hr/>
+
+	<h3> Look at  the following classes that are directly or indirectly
+        used in this tutorial: </h3>
+    <ol>
+    <li> Grid </li>
+    <li> ColorGrid </li>
+    <li> Color </li>
+	</ol>
+
+	<p>
+      This tutorial will illustrate the use of Color Grid in BRIDGES.
+	  The tutorial consists of 3 parts:
+	</p>
+	  <ol>
+	    <li> A basic tutorial on how to create a color grid and draws a 
+			 Plus sign in different colors
+	    <li> How to style the color grid elements with various visual 
+			attributes </li>
+	    <li> Demonstrates an algorithm to construct a checkerboard pattern </li>
+	  </ol>
+
+	<h2>1. Getting Started: Build a Simple Color Grid</h2>
+	
+	<p> In the first part of the tutorial, we will create a color grid
+		with  a few squares set to different colors that will show a + sign
+		at the center
+
+	  Here is the code for this tutorial.
+	</p>
+	
+	<div class="tabs">
+	  <div onclick="displayCode('Java1',this)">Java</div>
+	  <div onclick="displayCode('C++1',this)">C++</div>
+	  <div onclick="displayCode('Python1',this)">Python</div>
+	</div>
+
+	<div class="tabContents">
+	  <div id="Java1" w3-include-html="./Java_ColorGrid_Basic.html"></div>
+	  <div id="C++1"  w3-include-html="./Cpp_ColorGrid_Basic.html"></div>
+	  <div id="Python1"  w3-include-html="./Python_ColorGrid_Basic.html"></div>
+	</div>
+
+	<p>Make sure that you can run the basic tutorial.</p>
+	
+	<p>
+	If you follow the URL given to you when the application runs, it
+	will get to to the Bridges webpage that shows your output. 
+	You do not need to be logged into your BRIDGES account to see the 
+	output. If you are logged into your account, the output will show 
+	up in your gallery.
+	</p> 
+
+	<h2>2. What Visual Attributes are supported for the Color Grid?</h2>
+
+	<p> The grid you created uses a few primary colors and show show to 
+		construct and set colors on elements of the grid.</p>
+
+	<p> Next, we will style the grid we just created. For Color Grids, you can
+		set the <strong>color, opacity </strong> of the 
+		elements. The tutorial also shows how you can set color either
+		by name or by R,G,B triplets or R,G,B,A where A represents the 
+		opacity of the element.  Check out the links to the classes 
+		(listed above) that supports these attributes and also details the 
+		possible colors you can use and how to specify them. 
+	</p>
+
+	<p>The following code styles the color grid we created in part 1 and adds
+		visual attributes.
+	</p>
+
+	<div class="tabs">
+	  <div onclick="displayCode('Java2',this)">Java</div>
+	  <div onclick="displayCode('C++2',this)" >C++</div>
+	  <div onclick="displayCode('Python2',this)" >Python</div>
+	</div>
+	<div class="tabContents">
+	  <div id="Java2" w3-include-html="./Java_ColorGrid_Styling.html"></div>
+	  <div id="C++2"  w3-include-html="./Cpp_ColorGrid_Styling.html"></div>
+	  <div id="Python2"  w3-include-html="./Python_ColorGrid_Styling.html"></div>
+	</div>
+
+	<h2>3. Advanced Features.</h2>
+
+	<p> In the last part of this tutorial, we show an algorithm to generate
+		a checkerboard pattern using the Color Grid.
+	</p>
+	<p>The following code illustrates the checkerboard generation algorithm
+
+	</p>
+
+	<div class="tabs">
+	  <div onclick="displayCode('Java3',this)">Java</div>
+	  <div onclick="displayCode('C++3',this)" >C++</div>
+	  <div onclick="displayCode('Python3',this)" >Python</div>
+	</div>
+	<div class="tabContents">
+	  <div id="Java3" w3-include-html="./Java_ColorGrid_Advanced.html"></div>
+	  <div id="C++3"  w3-include-html="./Cpp_ColorGrid_Advanced.html"></div>
+	  <div id="Python3"  w3-include-html="./Python_ColorGrid_Advanced.html"></div>
+	</div>
+
+	<h2>Going Further</h2>
+	<p>Check Bridges <a href="../newassignments.html">assignment</a> page for color grid  based assignments
+      </main>
+
+      <footer w3-include-html="./Tutorial_Footer.html"></footer>
+
+    </div>
+    <script>
+      w3IncludeHTML();
+      document.querySelector("*.tabs > *").click();
+    </script>
+  </body>
+</html>
+
+
+	<h2>Grid - Example BRIDGES Program - A checkerboard implementation using the ColorGrid)</h2>
+	<ul>
+	  <li> In this example, we will build and visualize a checkerboard in two colors using ColorGrid, which is subclassed from the Grid type (using the Color type as the generic parameter to the Grid type).</li>
+	  <li> Once we have identified the square to which a pixel belongs, its colored in one of two colors.</li>
+	</ul>
+
+	<div w3-include-html="bridges_program_elements.html"></div> 
+
+	<h2>Here's the final code:</h2>
+
+	<div class="tabs">
+	  <div onclick="displayCode('Java',this)">Java</div>
+	  <div onclick="displayCode('C++',this)" >C++</div>
+	  <div onclick="displayCode('Python',this)" >Python</div>
+	</div>
+	<div class="tabContents">
+	  <div id="Java">
+	    <pre w3-include-html="./testing/java/color_grid.java.html" class="prettyprint"></pre>
+	  </div>
+	  <div id="C++">
+	    <pre w3-include-html="./testing/c++/color_grid.cpp.html" class="prettyprint"></pre>
+	  </div>
+	  <div id="Python">
+	    <pre w3-include-html="./testing/python/color_grid.py.html" class="prettyprint"></pre>
+	  </div>
+	</div>
+
+
+	<h2>Bridges Visualization</h2>
+	<ul>
+	  <li>Once all your code is in order, run your file.</li>
+	  <li>Assuming all your code is correct and it compiles correctly, a
+	    link to the Bridges website will be generated on the console.</li>
+	  <li>Copy/paste this link into your favorite browser to view a visualization
+	    of the data structure you just created.</li>
+	  <li>It should look something like this:</li>
+	</ul>
+	<div class="iframe-wrapper">
+	  <iframe src="https://bridges-cs.herokuapp.com/assignments/9010/bridges_public" scrolling="no">
+	    <p>Sorry, your browser doesn't seem to support iframes -
+              <a href="https://bridges-cs.herokuapp.com/assignments/9010/bridges_public" scrolling="no">Frame0 Link</a>
+	    </p>
+	  </iframe>
+	</div>
+	<p>Well done! You’ve just created your Bridges Color Grid based Checker Board project!</p>
+      </main>
+
+      <footer w3-include-html="./Tutorial_Footer.html"></footer>
+
+    </div>
+    <script>
+      w3IncludeHTML();
+      document.querySelector("*.tabs > *").click();
+    </script>
+  </body>
+</html>
