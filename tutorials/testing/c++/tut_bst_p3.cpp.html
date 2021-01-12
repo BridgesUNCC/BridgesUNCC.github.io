@@ -1,0 +1,88 @@
+<pre id='vimCodeElement'>
+
+<span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;BSTElement.h&quot;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> std;
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
+
+<span class="Comment">// Part 3 of this tutorial will illustrate traversing a binary search tree</span>
+<span class="Comment">// to find a specific key value and mark it as well as style the path to it</span>
+
+<span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
+	<span class="Comment">// create Bridges object, set credentials</span>
+	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+		<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+	<span class="Comment">// set title</span>
+	bridges.setTitle(<span class="Constant">&quot;A Simple  Binary Search Tree Example&quot;</span>);
+
+	<span class="Comment">// set description</span>
+	bridges.setDescription(<span class="Constant">&quot;This example illustrates finding a key in a constructed binary search tree and styling the visited nodes and links&quot;</span>);
+
+	<span class="Comment">// we will create the tree manually in this example</span>
+
+	<span class="Comment">// create the nodes</span>
+	BSTElement&lt;<span class="Type">int</span>, string&gt; *root = <span class="Statement">new</span> BSTElement&lt;<span class="Type">int</span>, string&gt;(<span class="Constant">100</span>);
+	BSTElement&lt;<span class="Type">int</span>, string&gt; *node1 = <span class="Statement">new</span> BSTElement&lt;<span class="Type">int</span>, string&gt;(<span class="Constant">50</span>);
+	BSTElement&lt;<span class="Type">int</span>, string&gt; *node2 = <span class="Statement">new</span> BSTElement&lt;<span class="Type">int</span>, string&gt;(<span class="Constant">200</span>);
+	BSTElement&lt;<span class="Type">int</span>, string&gt; *node3 = <span class="Statement">new</span> BSTElement&lt;<span class="Type">int</span>, string&gt;(<span class="Constant">250</span>);
+	BSTElement&lt;<span class="Type">int</span>, string&gt; *node4 = <span class="Statement">new</span> BSTElement&lt;<span class="Type">int</span>, string&gt;(<span class="Constant">75</span>);
+	BSTElement&lt;<span class="Type">int</span>, string&gt; *node5 = <span class="Statement">new</span> BSTElement&lt;<span class="Type">int</span>, string&gt;(<span class="Constant">33</span>);
+
+	<span class="Comment">// construct the tree</span>
+	root-&gt;setLeft(node1);
+	root-&gt;setRight(node2);
+	node2-&gt;setRight(node3);
+	node1-&gt;setRight(node4);
+    node1-&gt;setLeft(node5);
+
+	<span class="Comment">// traverse the tree to the largest node and style them to find </span>
+	<span class="Comment">// key value 75</span>
+	BSTElement&lt;<span class="Type">int</span>, string&gt; *r  = root, *left, *right;
+	<span class="Type">bool</span> found = <span class="Constant">false</span>;
+	<span class="Type">int</span> search_key = <span class="Constant">75</span>;
+	<span class="Statement">while</span> (!found &amp;&amp; r != <span class="Constant">nullptr</span>) {
+		<span class="Comment">// style the node</span>
+		<span class="Statement">if</span> (r) {
+			r-&gt;setColor(<span class="Constant">&quot;red&quot;</span>);
+			r-&gt;setShape(SQUARE);
+			r-&gt;setShape(SQUARE);
+			r-&gt;setSize(<span class="Constant">20</span>);
+		}
+		<span class="Type">int</span> key = r-&gt;getKey();
+		<span class="Statement">if</span> (key  == search_key) { 	<span class="Comment">// found it</span>
+			found = <span class="Constant">true</span>;
+			r-&gt;setColor(<span class="Constant">&quot;orange&quot;</span>);
+			r-&gt;setSize(<span class="Constant">49</span>);
+			cout &lt;&lt; <span class="Constant">&quot;Yay!</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+		}
+		<span class="Statement">else</span> <span class="Statement">if</span> (search_key &lt; key){  <span class="Comment">// go left</span>
+			left = r-&gt;getLeft();
+			<span class="Statement">if</span> (left) {  <span class="Comment">// style link</span>
+				r-&gt;getLinkVisualizer(left)-&gt;setColor(<span class="Constant">&quot;cyan&quot;</span>);
+				r-&gt;getLinkVisualizer(left)-&gt;setThickness(<span class="Constant">5.0f</span>);
+			}
+			r = left;
+		}
+		<span class="Statement">else</span> {
+			right = r-&gt;getRight();
+			<span class="Statement">if</span> (right) { <span class="Comment">// style link</span>
+				r-&gt;getLinkVisualizer(right)-&gt;setColor(<span class="Constant">&quot;cyan&quot;</span>);
+				r-&gt;getLinkVisualizer(right)-&gt;setThickness(<span class="Constant">5.0f</span>);
+			}
+			r = right;
+		}
+	}
+
+	<span class="Comment">// privide BRIDGES a handle to the root of the tree</span>
+	bridges.setDataStructure(root);
+
+	<span class="Comment">// visualize the binary search tree</span>
+	<span class="Comment">// Hit the 'l' key to see the node labels</span>
+	bridges.visualize();
+
+	<span class="Statement">return</span> <span class="Constant">0</span>;
+}
+</pre>

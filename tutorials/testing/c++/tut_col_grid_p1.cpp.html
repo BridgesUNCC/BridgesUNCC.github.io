@@ -1,0 +1,48 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> std;
+
+<span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Color.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;ColorGrid.h&quot;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
+
+<span class="Comment">// This tutorial illustrates using the Bridges Color Grid</span>
+<span class="Comment">// and how to set elements within the grid</span>
+
+<span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
+	<span class="Comment">// create Bridges object, set credentials</span>
+	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+		<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+	<span class="Comment">// set title</span>
+	bridges.setTitle(<span class="Constant">&quot;BRIDGES Color Grid Tutorial - Part 1&quot;</span>);
+
+	<span class="Comment">// set description</span>
+	bridges.setDescription(<span class="Constant">&quot;This is an example of the color grid with height and width of 10 units each&quot;</span>);
+
+	<span class="Type">int</span> width = <span class="Constant">10</span>, height = <span class="Constant">10</span>;
+
+	<span class="Comment">// create a 10 by 10 color grid  and initialize the grid to be all red</span>
+	<span class="Comment">// all supported colors are stated in the Color class</span>
+	ColorGrid cg(height, width, Color(<span class="Constant">&quot;lightgoldenrodyellow&quot;</span>));
+
+	<span class="Comment">// color a few squares and make a + sign at the center</span>
+
+	cg.set(<span class="Constant">5</span>, <span class="Constant">5</span>, Color(<span class="Constant">&quot;red&quot;</span>));
+	cg.set(<span class="Constant">5</span>, <span class="Constant">4</span>, Color(<span class="Constant">&quot;blue&quot;</span>));
+	cg.set(<span class="Constant">5</span>, <span class="Constant">6</span>, Color(<span class="Constant">&quot;blue&quot;</span>));
+	cg.set(<span class="Constant">4</span>, <span class="Constant">5</span>, Color(<span class="Constant">&quot;green&quot;</span>));
+	cg.set(<span class="Constant">6</span>, <span class="Constant">5</span>, Color(<span class="Constant">&quot;green&quot;</span>));
+
+	<span class="Comment">// tell Bridges the the color grid object to visualize</span>
+	bridges.setDataStructure(&amp;cg);
+
+	<span class="Comment">// visualize</span>
+	bridges.visualize();
+
+	<span class="Statement">return</span> <span class="Constant">0</span>;
+}
+</pre>

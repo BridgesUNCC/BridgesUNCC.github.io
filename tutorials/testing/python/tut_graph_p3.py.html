@@ -1,0 +1,86 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges.data_src_dependent <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.graph_adj_list <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
+
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+    <span class="Comment"># In Part 3 of this tutorial will demonstrate some advanced features </span>
+    <span class="Comment"># of adjacency list  based graphs in BRIDGES, such as graph traversal </span>
+    <span class="Comment"># and iterators that make it more convenient.</span>
+    <span class="Comment"># </span>
+    <span class="Comment"># We will continue using the same graph of actors</span>
+    <span class="Comment"># </span>
+    <span class="Comment"># References: GraphAdjList class</span>
+    <span class="Comment">#</span>
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># set a title </span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">A Simple Adjacency list based Graph Example.</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># set  description</span>
+    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">Demonstrate advanced features of graphs, traversal of adjacency lists, use of iterators</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># create an adjacency list based graph</span>
+    graph = GraphAdjList()
+
+    <span class="Comment"># create some actor names to be added to the graph</span>
+    kevin_bacon = <span class="Constant">&quot;</span><span class="Constant">Kevin Bacon</span><span class="Constant">&quot;</span>
+    denzel_washington = <span class="Constant">&quot;</span><span class="Constant">Denzel Washington</span><span class="Constant">&quot;</span>
+    morgan_freeman = <span class="Constant">&quot;</span><span class="Constant">Morgan Freeman</span><span class="Constant">&quot;</span>
+    tom_cruise = <span class="Constant">&quot;</span><span class="Constant">Tom Cruise</span><span class="Constant">&quot;</span>
+    angelina_jolie = <span class="Constant">&quot;</span><span class="Constant">Angelina Jolie</span><span class="Constant">&quot;</span>
+    amy_adams = <span class="Constant">&quot;</span><span class="Constant">Amy Adams</span><span class="Constant">&quot;</span>
+    brad_pitt = <span class="Constant">&quot;</span><span class="Constant">Brad Pitt</span><span class="Constant">&quot;</span>
+
+    <span class="Comment"># add them to the graph</span>
+    graph.add_vertex(kevin_bacon)
+    graph.add_vertex(denzel_washington)
+    graph.add_vertex(morgan_freeman)
+    graph.add_vertex(tom_cruise)
+    graph.add_vertex(angelina_jolie)
+    graph.add_vertex(amy_adams)
+    graph.add_vertex(brad_pitt)
+
+    <span class="Comment"># add edges</span>
+    graph.add_edge(kevin_bacon, denzel_washington)
+    graph.add_edge(kevin_bacon, morgan_freeman)
+    graph.add_edge(kevin_bacon, angelina_jolie)
+    graph.add_edge(amy_adams, angelina_jolie)
+    graph.add_edge(tom_cruise, amy_adams)
+    graph.add_edge(angelina_jolie, brad_pitt)
+    graph.add_edge(brad_pitt, denzel_washington)
+
+    <span class="Comment"># Next, we illustrate traversing the adacency list  in different ways</span>
+    <span class="Comment"># using core BRIDGES classes to print who Kevin Bacon is connected to</span>
+
+    <span class="Identifier">print</span>(<span class="Constant">&quot;</span><span class="Constant">Using core Bridges classes to print who Kevin Bacon is connected to</span><span class="Special">\n</span><span class="Constant">&quot;</span>)
+    sle = graph.get_adjacency_list(kevin_bacon)
+    <span class="Statement">while</span> sle != <span class="Identifier">None</span>:
+        edge = sle.value;
+        <span class="Identifier">print</span>(edge.fromv + <span class="Constant">&quot;</span><span class="Constant"> --&gt; </span><span class="Constant">&quot;</span> + sle.value.tov)
+        sle = sle.next
+
+    <span class="Comment"># using iterators to print the actors Kevin Bacon is connected to</span>
+    <span class="Identifier">print</span>(<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">Using iterator to print who Kevin Bacon is connected to</span><span class="Special">\n</span><span class="Constant">&quot;</span>)
+    <span class="Statement">for</span> edge <span class="Statement">in</span> graph.out_going_edge_set_of(kevin_bacon):
+        <span class="Identifier">print</span>(edge.fromv + <span class="Constant">&quot;</span><span class="Constant">---&gt;</span><span class="Constant">&quot;</span> + edge.tov)
+
+    <span class="Comment"># finally, list the vertices of the graph, using iterators</span>
+    <span class="Identifier">print</span>(<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">Using iterator to print the graph vertices..</span><span class="Constant">&quot;</span>)
+    <span class="Statement">for</span> key <span class="Statement">in</span> graph.key_set():
+        <span class="Identifier">print</span>(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">&quot;</span>  + key)
+
+
+    <span class="Comment"># Pass the graph object to BRIDGES</span>
+    bridges.set_data_structure(graph)
+
+    <span class="Comment"># visualize the graph</span>
+    bridges.visualize()
+
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
+    main()
+
+</pre>

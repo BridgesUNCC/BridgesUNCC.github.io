@@ -1,0 +1,77 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.bst_element <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+
+    <span class="Comment"># Part 3 of this tutorial will illustrate traversing a binary search tree</span>
+    <span class="Comment"># to find a specific key value and mark it as well as style the path to it</span>
+
+    <span class="Comment"># create Bridges object, set credentials</span>
+
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># title, description</span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">A Simple  Binary Search Tree Example</span><span class="Constant">&quot;</span>)
+    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">This example illustrates finding a key in a constructed binary search tree and styling the visited nodes and links</span><span class="Constant">&quot;</span>)
+
+
+    <span class="Comment"># we will create the tree manually in this example</span>
+
+    <span class="Comment"># create the nodes</span>
+    root  = BSTElement(key=<span class="Constant">100</span>)
+    node1 = BSTElement(key = <span class="Constant">50</span>)
+    node2 = BSTElement(key = <span class="Constant">200</span>)
+    node3 = BSTElement(key = <span class="Constant">250</span>)
+    node4 = BSTElement(key = <span class="Constant">75</span>)
+    node5 = BSTElement(key = <span class="Constant">33</span>)
+
+    <span class="Comment"># construct the tree</span>
+    root.left = node1
+    root.right = node2
+    node2.right = node3
+    node1.right = node4
+    node1.left = node5
+
+    <span class="Comment"># traverse the tree to the largest node and style them to find </span>
+    <span class="Comment"># key value 75</span>
+    r = root
+    left = <span class="Identifier">None</span>
+    right = <span class="Identifier">None</span>
+    found = <span class="Identifier">False</span>
+    search_key = <span class="Constant">75</span>
+    <span class="Statement">while</span> (<span class="Statement">not</span> found <span class="Statement">and</span> (r != <span class="Identifier">None</span>)):
+        <span class="Comment"># style the node</span>
+        r.color = <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>
+        r.shape = <span class="Constant">&quot;</span><span class="Constant">square</span><span class="Constant">&quot;</span>
+        r.size = <span class="Constant">20</span>
+
+        <span class="Statement">if</span> (r.key  == search_key):
+            found = <span class="Identifier">True</span>
+            r.color = <span class="Constant">&quot;</span><span class="Constant">orange</span><span class="Constant">&quot;</span>
+            r.size = <span class="Constant">49</span>
+            <span class="Identifier">print</span>(<span class="Constant">&quot;</span><span class="Constant">Yay! Found it!</span><span class="Special">\n</span><span class="Constant">&quot;</span>)
+        <span class="Statement">elif</span> (search_key &lt; r.key):  <span class="Comment"># go left</span>
+            left = r.left
+            <span class="Statement">if</span> (left):   <span class="Comment"># style link</span>
+                r.get_link_visualizer(left).color = <span class="Constant">&quot;</span><span class="Constant">cyan</span><span class="Constant">&quot;</span>
+                r.get_link_visualizer(left).thickness = <span class="Constant">5.0</span>
+            r = left
+        <span class="Statement">else</span>:
+            right = r.right
+            <span class="Statement">if</span> (right):  <span class="Comment"># style link</span>
+                r.get_link_visualizer(right).color = <span class="Constant">&quot;</span><span class="Constant">cyan</span><span class="Constant">&quot;</span>
+                r.get_link_visualizer(right).thickness = <span class="Constant">5.0</span>
+            r = right
+
+    <span class="Comment"># set visualizer type</span>
+    bridges.set_data_structure(root)
+    <span class="Comment"># visualize the tree</span>
+    bridges.visualize()
+
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
+    main()
+
+</pre>

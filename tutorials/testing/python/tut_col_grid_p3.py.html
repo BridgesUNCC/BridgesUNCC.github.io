@@ -1,0 +1,78 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges.color_grid <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.color <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+
+    <span class="Comment"># In the final part of this  tutorial we will build a checkerboard</span>
+    <span class="Comment"># pattern using the ColorGrid</span>
+
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># set title</span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">BRIDGES Color Grid Tutorial - Part 2</span><span class="Constant">&quot;</span>);
+
+    <span class="Comment"># set description</span>
+    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">This example generates a checkerboard pattern</span><span class="Constant">&quot;</span>);
+
+    red =  Color(col_name=<span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>)
+    blue = Color(col_name=<span class="Constant">&quot;</span><span class="Constant">blue</span><span class="Constant">&quot;</span>)
+
+    col = Color(col_name=<span class="Constant">&quot;</span><span class="Constant">green</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># create a 100 x100  color grid</span>
+    width = <span class="Constant">100</span>
+    height = <span class="Constant">100</span>
+    cg = ColorGrid(height, width, Color(col_name=<span class="Constant">&quot;</span><span class="Constant">white</span><span class="Constant">&quot;</span>))
+
+    <span class="Comment"># create a checkerboard pattern</span>
+    <span class="Comment"># 10x10 grid</span>
+    num_squares_x = <span class="Constant">10</span>
+    num_squares_y = <span class="Constant">10</span>
+
+    sq_width = width/num_squares_x
+    sq_height = width/num_squares_y
+
+    <span class="Statement">for</span> j <span class="Statement">in</span> <span class="Identifier">range</span>(num_squares_y):
+        <span class="Statement">for</span> k <span class="Statement">in</span> <span class="Identifier">range</span>(num_squares_x):
+
+            <span class="Comment"># use even/odd value of pixel to figure out the color of the squares</span>
+            x_even = k % <span class="Constant">2</span> == <span class="Constant">0</span>
+            y_even = j % <span class="Constant">2</span> == <span class="Constant">0</span>
+
+            <span class="Statement">if</span> (y_even == <span class="Identifier">True</span>):
+                <span class="Statement">if</span> (x_even == <span class="Identifier">True</span>):
+                    col = red
+                <span class="Statement">else</span>:
+                    col = blue
+            <span class="Statement">else</span>:
+                <span class="Statement">if</span> (x_even == <span class="Identifier">True</span>):
+                    col = blue
+                <span class="Statement">else</span>:
+                    col = red
+
+            <span class="Comment"># find the address of the square</span>
+            origin_x = k * sq_width
+            origin_y = j * sq_height
+
+            <span class="Comment"># color the square</span>
+            <span class="Statement">for</span> y <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Identifier">int</span>(origin_y), <span class="Identifier">int</span>(origin_y + sq_height)):
+                <span class="Statement">for</span> x <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Identifier">int</span>(origin_x), <span class="Identifier">int</span>(origin_x + sq_width)):
+                    cg.set(x, y, col)
+                    x = x + <span class="Constant">1</span>
+                y = y + <span class="Constant">1</span>
+
+    <span class="Comment"># tell Bridges the the color grid object to visualize</span>
+    bridges.set_data_structure(cg);
+
+    <span class="Comment"># visualize</span>
+    bridges.visualize();
+
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
+    main()
+
+</pre>

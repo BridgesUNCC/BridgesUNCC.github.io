@@ -1,0 +1,49 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;DataSource.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;GraphAdjList.h&quot;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> std;
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
+
+<span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
+	<span class="Comment">// create Bridges object</span>
+	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+		<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+	<span class="Comment">// create a graph</span>
+	GraphAdjList&lt;string, string, <span class="Type">int</span>&gt; graph;
+
+	string kevin_bacon = <span class="Constant">&quot;Kevin_Bacon_(I)&quot;</span>, denzel_washington = <span class="Constant">&quot;Denzel_Washington&quot;</span>, noone= <span class="Constant">&quot;NoOne&quot;</span>;
+
+	graph.addVertex(kevin_bacon, <span class="Constant">&quot;&quot;</span>);
+	graph.addVertex(denzel_washington, <span class="Constant">&quot;&quot;</span>);
+	graph.addVertex(noone, <span class="Constant">&quot;&quot;</span>);
+
+	graph.addEdge(kevin_bacon, denzel_washington, <span class="Constant">1</span>);
+
+
+
+
+	<span class="Statement">for</span> (<span class="Type">auto</span>&amp; edge : graph.outgoingEdgeSetOf(kevin_bacon)) {
+		string from = edge.from(), to = edge.to();
+		<span class="Statement">if</span> (to != <span class="Constant">&quot;Denzel_Washington&quot;</span>)
+			graph.getVisualizer(to)-&gt;setColor(<span class="Constant">&quot;turquoise&quot;</span>);
+	}
+	<span class="Statement">for</span> (<span class="Type">auto</span>&amp; edge : graph.outgoingEdgeSetOf(denzel_washington)) {
+		string from = edge.from(), to = edge.to();
+		<span class="Statement">if</span> (to != kevin_bacon)
+			graph.getVisualizer(to)-&gt;setColor(<span class="Constant">&quot;orange&quot;</span>);
+	}
+	<span class="Statement">for</span> (<span class="Type">auto</span>&amp; edge : graph.outgoingEdgeSetOf(noone)) {
+		string from = edge.from(), to = edge.to();
+		<span class="Statement">if</span> (to != kevin_bacon)
+			graph.getVisualizer(to)-&gt;setColor(<span class="Constant">&quot;orange&quot;</span>);
+	}
+
+
+
+	<span class="Statement">return</span> <span class="Constant">0</span>;
+}
+</pre>

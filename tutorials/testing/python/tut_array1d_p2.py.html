@@ -1,0 +1,60 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.array <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.array1d <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
+
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+
+    <span class="Comment"># Part 2 of this tutorial describes how to style arrays created </span>
+    <span class="Comment"># using BRIDGES.  We will use the same array as Part 1 </span>
+
+    args = sys.argv[<span class="Constant">1</span>:]
+
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(ASSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">API_KEY</span><span class="Constant">&quot;</span>)
+
+
+	<span class="Comment"># set  title </span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">One-Dimensional Array Example</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># set description</span>
+    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">Demonstrate styling 1D array elements</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment">#set array dimensions, allocate array of elements</span>
+    arraySize = <span class="Constant">10</span>
+    arr = Array1D(arraySize)
+
+    <span class="Comment">#populate the array with squares of indicies</span>
+    <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(arr.size):
+        arr[i].label = i*i
+
+    <span class="Comment"># style the array - only color, opacity and label are supported for arrays</span>
+
+    <span class="Comment"># color the elements</span>
+    arr.get_element(<span class="Constant">0</span>).color = <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>
+    arr.get_element(<span class="Constant">1</span>).color = <span class="Constant">&quot;</span><span class="Constant">green</span><span class="Constant">&quot;</span>
+    arr.get_element(<span class="Constant">2</span>).color = <span class="Constant">&quot;</span><span class="Constant">blue</span><span class="Constant">&quot;</span>
+    arr.get_element(<span class="Constant">3</span>).color = <span class="Constant">&quot;</span><span class="Constant">cyan</span><span class="Constant">&quot;</span>
+    arr.get_element(<span class="Constant">4</span>).color = <span class="Constant">&quot;</span><span class="Constant">magenta</span><span class="Constant">&quot;</span>
+    arr.get_element(<span class="Constant">5</span>).color = <span class="Constant">&quot;</span><span class="Constant">yellow</span><span class="Constant">&quot;</span>
+    arr.get_element(<span class="Constant">6</span>).color = <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>
+    arr.get_element(<span class="Constant">7</span>).color = <span class="Constant">&quot;</span><span class="Constant">green</span><span class="Constant">&quot;</span>
+    arr.get_element(<span class="Constant">8</span>).color = <span class="Constant">&quot;</span><span class="Constant">blue</span><span class="Constant">&quot;</span>
+    arr.get_element(<span class="Constant">9</span>).color = <span class="Constant">&quot;</span><span class="Constant">black</span><span class="Constant">&quot;</span>
+
+    <span class="Comment"># opacity</span>
+    arr.get_element(<span class="Constant">3</span>).opacity = <span class="Constant">0.2</span>
+    arr.get_element(<span class="Constant">9</span>).opacity = <span class="Constant">0.2</span>
+
+
+    <span class="Comment"># tell Bridges what data structure to visualize</span>
+    bridges.set_data_structure(arr)
+
+    <span class="Comment"># visualize the list</span>
+    bridges.visualize()
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
+    main()
+</pre>

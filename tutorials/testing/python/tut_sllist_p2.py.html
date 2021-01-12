@@ -1,0 +1,82 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.sl_element <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
+
+<span class="Comment">#</span>
+<span class="Comment"># In part 2 of this tutorial we demonstrate how we can style the nodes and links</span>
+<span class="Comment"># of the singly linked list  and displays them</span>
+<span class="Comment">#</span>
+<span class="Comment"># Reference: SLelement, Bridges classes, ElementVisualizer, LinkVisualizer, Color</span>
+<span class="Comment">#</span>
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># set title, description</span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">A Singly Linked List Example</span><span class="Constant">&quot;</span>)
+    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">A singly linked list of 4 nodes with names; the nodes in this example use string as the generic type</span><span class="Constant">&quot;</span>)
+
+	<span class="Comment"># create the list elements</span>
+    st0 = SLelement(e=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>)
+    st1 = SLelement(e=<span class="Constant">&quot;</span><span class="Constant">Lamont Kyler</span><span class="Constant">&quot;</span>)
+    st2 = SLelement(e=<span class="Constant">&quot;</span><span class="Constant">Gladys Serino</span><span class="Constant">&quot;</span>)
+    st3 = SLelement(e=<span class="Constant">&quot;</span><span class="Constant">Karol Soderman</span><span class="Constant">&quot;</span>)
+    st4 = SLelement(e=<span class="Constant">&quot;</span><span class="Constant">Starr McGinn</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># link the elements</span>
+    st0.next = st1
+    st1.next = st2
+    st2.next = st3
+    st3.next = st4
+
+    <span class="Comment"># we want to see these names in the visualization so we will </span>
+    <span class="Comment">#set them as the nodes' labels. We will retrieve the nodes' </span>
+    <span class="Comment">#generic data for the label</span>
+    st0.label = st0.value
+    st1.label = st1.value
+    st2.label = st2.value
+    st3.label = st3.value
+    st4.label = st4.value
+
+
+    <span class="Comment"># now we want to style the nodes and links to illustrate the visual</span>
+    <span class="Comment"># attributes that can be applied to elements and links between links</span>
+    <span class="Comment"># Elements have color, opacity, shape and opacity attributes. Links</span>
+    <span class="Comment"># have color, thickness and label attributes</span>
+
+    <span class="Comment"># set colors for list elements - see the Color class for supported colors</span>
+    st0.color = <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>;
+    st2.color = <span class="Constant">&quot;</span><span class="Constant">aliceblue</span><span class="Constant">&quot;</span>;
+
+    <span class="Comment"># color the links - must specify a valid terminating element</span>
+    st0.get_link_visualizer(st1).color = <span class="Constant">&quot;</span><span class="Constant">green</span><span class="Constant">&quot;</span>
+    st3.get_link_visualizer(st4).color = <span class="Constant">&quot;</span><span class="Constant">magenta</span><span class="Constant">&quot;</span>
+
+    <span class="Comment"># adjust link thickness</span>
+    st2.get_link_visualizer(st3).thickness = <span class="Constant">5.0</span>
+
+    <span class="Comment"># set node transparency</span>
+    st4.opacity = <span class="Constant">0.5</span>
+
+    <span class="Comment"># set link labels</span>
+    st0.get_link_visualizer(st1).label = <span class="Constant">&quot;</span><span class="Constant">Gretel Chaney --&gt; Lamont Kyler</span><span class="Constant">&quot;</span>;
+
+    <span class="Comment"># set shape of node</span>
+    st2.shape = <span class="Constant">&quot;</span><span class="Constant">square</span><span class="Constant">&quot;</span>;
+    st4.shape = <span class="Constant">&quot;</span><span class="Constant">triangle</span><span class="Constant">&quot;</span>;
+
+
+    <span class="Comment"># tell Bridges the head of the list</span>
+    bridges.set_data_structure(st0)
+
+    <span class="Comment"># visualize</span>
+    bridges.visualize()
+
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
+    main()
+
+</pre>

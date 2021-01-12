@@ -1,0 +1,36 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Array1D.h&quot;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
+
+<span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
+
+	<span class="Comment">// create Bridges object, set credentials</span>
+	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+	<span class="Comment">// set title</span>
+	bridges.setTitle(<span class="Constant">&quot;A One-Dimensional Array Example&quot;</span>);
+
+	<span class="Comment">// set description</span>
+	bridges.setDescription(<span class="Constant">&quot;Create a 1 dimensional array with integer values and display them&quot;</span>);
+
+	<span class="Comment">// create, populate the array</span>
+	Array1D&lt;<span class="Type">int</span>&gt; arr (<span class="Constant">10</span>);
+
+	<span class="Comment">// populate the array, with squares of indices</span>
+	<span class="Statement">for</span> (<span class="Type">int</span> j = <span class="Constant">0</span>; j &lt; <span class="Constant">10</span>; j++) {
+		arr[j] = j * j;
+
+		<span class="Comment">// use the array values to label the elements</span>
+		arr.getElement(j).setLabel(to_string(arr[j]));
+	}
+
+	<span class="Comment">// provide BRIDGES a handle to the data structure</span>
+	bridges.setDataStructure(&amp;arr);
+
+	<span class="Comment">// visualize</span>
+	bridges.visualize();
+
+	<span class="Statement">return</span> <span class="Constant">0</span>;
+}
+</pre>

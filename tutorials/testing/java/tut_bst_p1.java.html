@@ -1,0 +1,50 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">import</span> bridges.connect.Bridges;
+<span class="PreProc">import</span> bridges.base.BSTElement;
+
+<span class="Comment">// Part 1 of this tutorial will illustrate the use of the BRIDGES in building</span>
+<span class="Comment">// binary search trees.  We will begin by constructing the tree manually and</span>
+<span class="Comment">// displaying it</span>
+
+<span class="Type">public</span> <span class="Type">class</span> tut_bst_p1 {
+	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) <span class="Type">throws</span> Exception {
+
+
+		<span class="Comment">//create the Bridges object, set credentials</span>
+		Bridges bridges = <span class="Statement">new</span> Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+			<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+		<span class="Comment">// set title </span>
+		bridges.setTitle(<span class="Constant">&quot;A Simple  Binary Search Tree Example&quot;</span>);
+
+		<span class="Comment">// set description</span>
+		bridges.setDescription(<span class="Constant">&quot;This example illustrates a binary search tree built using BRIDGES&quot;</span>);
+
+		<span class="Comment">// we will create the tree manually in this example</span>
+
+		<span class="Comment">// create the nodes</span>
+		<span class="Comment">// the constructors sets the key and the node's label.</span>
+		<span class="Comment">// Labels may also be set by the setLabel() method of the object</span>
+		BSTElement&lt;Integer, String&gt; root = <span class="Statement">new</span> BSTElement&lt;Integer, String&gt;(<span class="Constant">100</span>, <span class="Constant">&quot;Root&quot;</span>);
+		BSTElement&lt;Integer, String&gt; node1 = <span class="Statement">new</span> BSTElement&lt;Integer, String&gt;(<span class="Constant">50</span>, <span class="Constant">&quot;Node1&quot;</span>);
+		BSTElement&lt;Integer, String&gt; node2 = <span class="Statement">new</span> BSTElement&lt;Integer, String&gt;(<span class="Constant">200</span>, <span class="Constant">&quot;Node2&quot;</span>);
+		BSTElement&lt;Integer, String&gt; node3 = <span class="Statement">new</span> BSTElement&lt;Integer, String&gt;(<span class="Constant">250</span>, <span class="Constant">&quot;Node3&quot;</span>);
+		BSTElement&lt;Integer, String&gt; node4 = <span class="Statement">new</span> BSTElement&lt;Integer, String&gt;(<span class="Constant">75</span>, <span class="Constant">&quot;Node4&quot;</span>);
+		BSTElement&lt;Integer, String&gt; node5 = <span class="Statement">new</span> BSTElement&lt;Integer, String&gt;(<span class="Constant">33</span>, <span class="Constant">&quot;Node4&quot;</span>);
+
+		<span class="Comment">// construct the tree</span>
+		root.setLeft(node1);
+		root.setRight(node2);
+		node2.setRight(node3);
+		node1.setRight(node4);
+		node1.setLeft(node5);
+
+
+		<span class="Comment">// privide BRIDGES a handle to the root of the tree</span>
+		bridges.setDataStructure(root);
+
+		<span class="Comment">// visualize the binary search tree</span>
+		<span class="Comment">// Hit the 'l' key to see the node labels</span>
+		bridges.visualize();
+	}
+}
+</pre>

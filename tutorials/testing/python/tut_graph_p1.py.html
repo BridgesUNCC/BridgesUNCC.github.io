@@ -1,0 +1,63 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges.data_src_dependent <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.graph_adj_list <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
+
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+    <span class="Comment"># This tutorial will demonstrate how to build an adjacency list based graph</span>
+    <span class="Comment"># using BRIDGES and display it.</span>
+    <span class="Comment"># References: GraphAdjList class</span>
+
+    <span class="Comment"># create the Bridges object, set credentials</span>
+
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># set a title </span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">A Simple Adjacency list based Graph Example.</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># set  description</span>
+    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">Demonstrate how to create a graph with a few nodes and display it</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># create an adjacency list based graph</span>
+    graph = GraphAdjList()
+
+    <span class="Comment"># create some actor names to be added to the graph</span>
+    kevin_bacon = <span class="Constant">&quot;</span><span class="Constant">Kevin Bacon</span><span class="Constant">&quot;</span>
+    denzel_washington = <span class="Constant">&quot;</span><span class="Constant">Denzel Washington</span><span class="Constant">&quot;</span>
+    morgan_freeman = <span class="Constant">&quot;</span><span class="Constant">Morgan Freeman</span><span class="Constant">&quot;</span>
+    tom_cruise = <span class="Constant">&quot;</span><span class="Constant">Tom Cruise</span><span class="Constant">&quot;</span>
+    angelina_jolie = <span class="Constant">&quot;</span><span class="Constant">Angelina Jolie</span><span class="Constant">&quot;</span>
+    amy_adams = <span class="Constant">&quot;</span><span class="Constant">Amy Adams</span><span class="Constant">&quot;</span>
+    brad_pitt = <span class="Constant">&quot;</span><span class="Constant">Brad Pitt</span><span class="Constant">&quot;</span>
+
+    <span class="Comment"># add them to the graph</span>
+    graph.add_vertex(kevin_bacon)
+    graph.add_vertex(denzel_washington)
+    graph.add_vertex(morgan_freeman)
+    graph.add_vertex(tom_cruise)
+    graph.add_vertex(angelina_jolie)
+    graph.add_vertex(amy_adams)
+    graph.add_vertex(brad_pitt)
+
+    <span class="Comment"># add edges</span>
+    graph.add_edge(kevin_bacon, denzel_washington)
+    graph.add_edge(kevin_bacon, morgan_freeman)
+    graph.add_edge(kevin_bacon, angelina_jolie)
+    graph.add_edge(amy_adams, angelina_jolie)
+    graph.add_edge(tom_cruise, amy_adams)
+    graph.add_edge(angelina_jolie, brad_pitt)
+    graph.add_edge(brad_pitt, denzel_washington)
+
+    <span class="Comment"># Pass the graph object to BRIDGES</span>
+    bridges.set_data_structure(graph)
+
+    <span class="Comment"># visualize the graph</span>
+    bridges.visualize()
+
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
+    main()
+
+</pre>

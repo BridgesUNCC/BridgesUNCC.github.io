@@ -1,0 +1,41 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">import</span> bridges.connect.Bridges;
+<span class="PreProc">import</span> bridges.base.Array1D;
+
+<span class="Comment">// This tutorial describes how to create a 1 dimensional array, populate</span>
+<span class="Comment">// it with integer values and display them</span>
+
+<span class="Type">public</span> <span class="Type">class</span> tut_array1d_p1 {
+	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) <span class="Type">throws</span> Exception {
+
+		<span class="Comment">//create the Bridges object, set credentials</span>
+		Bridges bridges = <span class="Statement">new</span> Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+			<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+		<span class="Comment">// set title</span>
+		bridges.setTitle(<span class="Constant">&quot;One-Dimensional Array Example&quot;</span>);
+
+		<span class="Comment">// set description</span>
+		bridges.setDescription(<span class="Constant">&quot;Create a 1 dimensional array with integer values and display them&quot;</span>);
+
+		<span class="Comment">//  set array dimensions, allocate array of elements</span>
+		<span class="Type">int</span> arraySize = <span class="Constant">10</span>;
+
+		Array1D&lt;Integer&gt; arr = <span class="Statement">new</span> Array1D&lt;Integer&gt; (arraySize);
+
+		<span class="Comment">// populate the array, with squares of indices</span>
+		<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; arr.getSize(); k++) {
+			arr.getElement(k).setValue(k * k);
+
+			<span class="Comment">// use the array values to label the elements</span>
+			arr.getElement(k).setLabel(String.valueOf(arr.getElement(k).getValue()));
+		}
+
+		<span class="Comment">// tell Bridges the  datastructure to visualize</span>
+		bridges.setDataStructure(arr);
+
+		<span class="Comment">// visualize the list</span>
+		bridges.visualize();
+	}
+}
+</pre>

@@ -1,0 +1,40 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.array <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.array1d <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
+
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+    <span class="Comment"># This tutorial describes how to create a 1 dimensional array, populate</span>
+    <span class="Comment"># it with integer values and display them</span>
+
+    args = sys.argv[<span class="Constant">1</span>:]
+
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(ASSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">API_KEY</span><span class="Constant">&quot;</span>)
+
+
+	<span class="Comment"># set  title </span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">One-Dimensional Array Example</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># set description</span>
+    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">Create a 1 dimensional array with integer values and display them</span><span class="Constant">&quot;</span>);
+
+    <span class="Comment">#set array dimensions, allocate array of elements</span>
+    arraySize = <span class="Constant">10</span>
+    arr = Array1D(arraySize)
+
+    <span class="Comment">#populate the array with squares of indicies</span>
+    <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(arr.size):
+        arr[i].label = i*i
+
+    <span class="Comment"># tell Bridges what data structure to visualize</span>
+    bridges.set_data_structure(arr)
+
+    <span class="Comment"># visualize the list</span>
+    bridges.visualize()
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
+    main()
+</pre>

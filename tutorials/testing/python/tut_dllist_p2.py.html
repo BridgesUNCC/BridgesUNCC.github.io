@@ -1,0 +1,81 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges.dl_element <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
+
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+    <span class="Comment"># Part 2 of the tutorial illustrates styling features in a doubly </span>
+    <span class="Comment"># linked list. Uses the same list as part 1 </span>
+    <span class="Comment">#</span>
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># set title </span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">A doubly Linked List Example</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># description</span>
+    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">Illustrates styling features in a doubly linked list</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># create list elements</span>
+    el0 = DLelement(e=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>)
+    el1 = DLelement(e=<span class="Constant">&quot;</span><span class="Constant">Lamont Kyler</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Lamont Kyler</span><span class="Constant">&quot;</span>)
+    el2 = DLelement(e=<span class="Constant">&quot;</span><span class="Constant">Gladys Serino</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Gladys Serino</span><span class="Constant">&quot;</span>)
+    el3 = DLelement(e=<span class="Constant">&quot;</span><span class="Constant">Karol Soderman</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Karol Soderman</span><span class="Constant">&quot;</span>)
+    el4 = DLelement(e=<span class="Constant">&quot;</span><span class="Constant">Starr McGinn</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Starr McGinn</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># link elements</span>
+    el0.next = el1
+    el1.prev = el0
+    el1.next = el2
+    el2.prev = el1
+    el2.next = el3
+    el3.prev = el2
+    el3.next = el4
+    el4.prev = el3
+
+    <span class="Comment"># style the nodes and links in the list </span>
+
+    <span class="Comment"># color the elements</span>
+    el0.color = <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>
+    el1.color = <span class="Constant">&quot;</span><span class="Constant">green</span><span class="Constant">&quot;</span>
+    el2.color = <span class="Constant">&quot;</span><span class="Constant">blue</span><span class="Constant">&quot;</span>
+    el3.color = <span class="Constant">&quot;</span><span class="Constant">cyan</span><span class="Constant">&quot;</span>
+    el4.color = <span class="Constant">&quot;</span><span class="Constant">yellow</span><span class="Constant">&quot;</span>
+
+    <span class="Comment"># element size</span>
+    el0.size = <span class="Constant">40</span>
+    el1.size = <span class="Constant">40</span>
+
+    <span class="Comment"># element opacity</span>
+    el1.opacity = <span class="Constant">0.2</span>
+    el3.opacity = <span class="Constant">0.2</span>
+
+    <span class="Comment"># shape</span>
+    el2.shape = <span class="Constant">&quot;</span><span class="Constant">triangle</span><span class="Constant">&quot;</span>
+    el3.shape = <span class="Constant">&quot;</span><span class="Constant">square</span><span class="Constant">&quot;</span>
+
+    <span class="Comment"># thickness</span>
+    el3.get_link_visualizer(el4).thickness = <span class="Constant">6.0</span>
+    el4.get_link_visualizer(el3).thickness = <span class="Constant">6.0</span>
+
+    <span class="Comment"># link color</span>
+    el3.get_link_visualizer(el4).color = <span class="Constant">&quot;</span><span class="Constant">orange</span><span class="Constant">&quot;</span>
+    el4.get_link_visualizer(el3).color = <span class="Constant">&quot;</span><span class="Constant">orange</span><span class="Constant">&quot;</span>
+
+    <span class="Comment"># link label</span>
+    el0.get_link_visualizer(el1).label = <span class="Constant">&quot;</span><span class="Constant">Chaney--&gt;Kyler</span><span class="Constant">&quot;</span>
+    el1.get_link_visualizer(el0).label = <span class="Constant">&quot;</span><span class="Constant">Kyler--&gt;Chaney</span><span class="Constant">&quot;</span>
+
+
+    <span class="Comment"># set data structure to be visualized</span>
+    bridges.set_data_structure(el0)
+
+    <span class="Comment"># visualize the data structure</span>
+    bridges.visualize()
+
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
+    main()
+
+</pre>

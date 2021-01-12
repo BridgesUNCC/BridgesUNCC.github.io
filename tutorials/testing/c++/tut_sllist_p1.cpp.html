@@ -1,0 +1,64 @@
+<pre id='vimCodeElement'>
+<span class="Comment">/*</span><span class="Comment">*</span>
+<span class="Comment"> * Created by Kalpathi Subramanian, 1/30/18</span>
+<span class="Comment"> * krs@uncc.edu</span>
+<span class="Comment"> </span><span class="Comment">*/</span>
+
+<span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;SLelement.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
+<span class="Statement">using</span> <span class="Type">namespace</span> std;
+
+<span class="Comment">//</span>
+<span class="Comment">// This tutorial creates a set of singly linked list elements, links them </span>
+<span class="Comment">// and displays them</span>
+<span class="Comment">//</span>
+<span class="Comment">// Reference: SLelement, Bridges classes</span>
+<span class="Comment">//</span>
+<span class="Type">int</span> main (<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
+	<span class="Comment">// create Bridges object</span>
+	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+		<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+	<span class="Comment">// set title</span>
+	bridges.setTitle(<span class="Constant">&quot;A Singly Linked List Example&quot;</span>);
+
+	<span class="Comment">// set  description</span>
+	bridges.setDescription(<span class="Constant">&quot;A singly linked list of 4 nodes with names; the nodes in this example use string as the generic type&quot;</span>);
+
+	<span class="Comment">// create the linked list elements with student names</span>
+	SLelement&lt;string&gt;  *st0 = <span class="Statement">new</span> SLelement&lt;string&gt; (<span class="Constant">&quot;Gretel Chaney&quot;</span>);
+	SLelement&lt;string&gt;  *st1 = <span class="Statement">new</span> SLelement&lt;string&gt; (<span class="Constant">&quot;Lamont Kyler&quot;</span>);
+	SLelement&lt;string&gt;  *st2 = <span class="Statement">new</span> SLelement&lt;string&gt; (<span class="Constant">&quot;Gladys Serino&quot;</span>);
+	SLelement&lt;string&gt;  *st3 = <span class="Statement">new</span> SLelement&lt;string&gt; (<span class="Constant">&quot;Karol Soderman&quot;</span>);
+	SLelement&lt;string&gt;  *st4 = <span class="Statement">new</span> SLelement&lt;string&gt; (<span class="Constant">&quot;Starr McGinn&quot;</span>);
+
+	<span class="Comment">// we want to see these names in the visualization so we will set them as</span>
+	<span class="Comment">// the nodes' labels. We will retrieve the nodes' generic data for the label</span>
+	st0-&gt;setLabel(st0-&gt;getValue());
+	st1-&gt;setLabel(st1-&gt;getValue());
+	st2-&gt;setLabel(st2-&gt;getValue());
+	st3-&gt;setLabel(st3-&gt;getValue());
+	st4-&gt;setLabel(st4-&gt;getValue());
+
+	<span class="Comment">//  link the elements into a list</span>
+	st0-&gt;setNext(st1);
+	st1-&gt;setNext(st2);
+	st2-&gt;setNext(st3);
+	st3-&gt;setNext(st4);
+
+	<span class="Comment">// tell Bridges the head of the list</span>
+	bridges.setDataStructure(st0);
+
+	<span class="Comment">// visualize the linked list (hit the key 'l' on the visualzation to see all labels</span>
+	bridges.visualize();
+
+	<span class="Comment">//cleanup</span>
+	<span class="Statement">delete</span> st0;
+	<span class="Statement">delete</span> st1;
+	<span class="Statement">delete</span> st2;
+	<span class="Statement">delete</span> st3;
+	<span class="Statement">delete</span> st4;
+}
+</pre>

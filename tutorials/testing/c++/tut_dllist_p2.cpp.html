@@ -1,0 +1,98 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;DLelement.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
+<span class="Statement">using</span> std::string;
+
+<span class="Comment">// Part 2 of the tutorial illustrates styling features in a doubly linked list</span>
+<span class="Comment">// Uses the same list as part 1</span>
+
+<span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
+
+	<span class="Comment">// create Bridges object, set credentials</span>
+	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+		<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+	<span class="Comment">// set title</span>
+	bridges.setTitle(<span class="Constant">&quot;A doubly Linked List Example&quot;</span>);
+
+	<span class="Comment">// set description</span>
+	bridges.setDescription(<span class="Constant">&quot;Illustrates styling features in a doubly linked list&quot;</span>);
+
+
+	<span class="Comment">// create the nodes</span>
+	DLelement&lt;string&gt;  *el0 = <span class="Statement">new</span> DLelement&lt;string&gt; (<span class="Constant">&quot;Gretel Chaney&quot;</span>);
+	DLelement&lt;string&gt;  *el1 = <span class="Statement">new</span> DLelement&lt;string&gt; (<span class="Constant">&quot;Lamont Kyler&quot;</span>);
+	DLelement&lt;string&gt;  *el2 = <span class="Statement">new</span> DLelement&lt;string&gt; (<span class="Constant">&quot;Gladys Serino&quot;</span>);
+	DLelement&lt;string&gt;  *el3 = <span class="Statement">new</span> DLelement&lt;string&gt; (<span class="Constant">&quot;Karol Soderman&quot;</span>);
+	DLelement&lt;string&gt;  *el4 = <span class="Statement">new</span> DLelement&lt;string&gt; (<span class="Constant">&quot;Starr McGinn&quot;</span>);
+
+	<span class="Comment">// set the names to be the label (for seeing it in the visualization)</span>
+	el0-&gt;setLabel(<span class="Constant">&quot;Gretal Chaney&quot;</span>);
+	el1-&gt;setLabel(<span class="Constant">&quot;Lamont Kyler&quot;</span>);
+	el2-&gt;setLabel(<span class="Constant">&quot;Gladys Serino&quot;</span>);
+	el3-&gt;setLabel(<span class="Constant">&quot;Karol Soderman&quot;</span>);
+	el4-&gt;setLabel(<span class="Constant">&quot;Starr McGinn&quot;</span>);
+
+	<span class="Comment">// link the elements, create the list</span>
+	el0-&gt;setNext(el1);
+	el1-&gt;setPrev(el0);
+	el1-&gt;setNext(el2);
+	el2-&gt;setPrev(el1);
+	el2-&gt;setNext(el3);
+	el3-&gt;setPrev(el2);
+	el3-&gt;setNext(el4);
+	el4-&gt;setPrev(el3);
+
+	<span class="Comment">// style the nodes and links in the list </span>
+
+	<span class="Comment">// color the elements</span>
+	el0-&gt;setColor(<span class="Constant">&quot;red&quot;</span>);
+	el1-&gt;setColor(<span class="Constant">&quot;green&quot;</span>);
+	el2-&gt;setColor(<span class="Constant">&quot;blue&quot;</span>);
+	el3-&gt;setColor(<span class="Constant">&quot;cyan&quot;</span>);
+	el4-&gt;setColor(<span class="Constant">&quot;yellow&quot;</span>);
+
+	<span class="Comment">// element size</span>
+	el0-&gt;setSize(<span class="Constant">40</span>);
+	el1-&gt;setSize(<span class="Constant">40</span>);
+
+	<span class="Comment">// element opacity</span>
+	el1-&gt;setOpacity(<span class="Constant">0.2f</span>);
+	el3-&gt;setOpacity(<span class="Constant">0.2f</span>);
+
+	<span class="Comment">// shape</span>
+	el2-&gt;setShape(TRIANGLE);
+	el3-&gt;setShape(SQUARE);
+
+	<span class="Comment">// thickness</span>
+	el3-&gt;getLinkVisualizer(el4)-&gt;setThickness(<span class="Constant">6.0f</span>);
+    el4-&gt;getLinkVisualizer(el3)-&gt;setThickness(<span class="Constant">6.0f</span>);
+
+	<span class="Comment">// link color</span>
+	el3-&gt;getLinkVisualizer(el4)-&gt;setColor(<span class="Constant">&quot;orange&quot;</span>);
+    el4-&gt;getLinkVisualizer(el3)-&gt;setColor(<span class="Constant">&quot;orange&quot;</span>);
+
+	<span class="Comment">// link label</span>
+	el0-&gt;getLinkVisualizer(el1)-&gt;setLabel(<span class="Constant">&quot;Chaney--&gt;Kyler&quot;</span>);
+	el1-&gt;getLinkVisualizer(el0)-&gt;setLabel(<span class="Constant">&quot;Kyler--&gt;Chaney&quot;</span>);
+
+
+	<span class="Comment">// provide BRIDGES the head of the list</span>
+	bridges.setDataStructure(el0);
+
+	<span class="Comment">// visualize -- hit the 'l' key in the visualization to see the labels</span>
+	bridges.visualize();
+
+	<span class="Comment">// cleanup</span>
+	<span class="Statement">delete</span> el0;
+	<span class="Statement">delete</span> el1;
+	<span class="Statement">delete</span> el2;
+	<span class="Statement">delete</span> el3;
+	<span class="Statement">delete</span> el4;
+
+	<span class="Statement">return</span> <span class="Constant">0</span>;
+}
+</pre>

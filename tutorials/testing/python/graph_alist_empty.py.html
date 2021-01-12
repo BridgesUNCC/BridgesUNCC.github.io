@@ -1,0 +1,42 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges.graph_adj_list <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+
+<span class="PreProc">import</span> sys
+
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
+
+
+    <span class="Comment"># creating a 3 vertices graph with one edge.</span>
+    g = GraphAdjList()
+    a1 = <span class="Constant">&quot;</span><span class="Constant">Kevin_Bacon_(I)</span><span class="Constant">&quot;</span>
+    a2 = <span class="Constant">&quot;</span><span class="Constant">Denzel_Washington</span><span class="Constant">&quot;</span>
+    a3 = <span class="Constant">&quot;</span><span class="Constant">Noone</span><span class="Constant">&quot;</span>
+    g.add_vertex(a1, <span class="Constant">&quot;&quot;</span>)
+    g.add_vertex(a2, <span class="Constant">&quot;&quot;</span>)
+    g.add_vertex(a3, <span class="Constant">&quot;&quot;</span>)
+    g.add_edge(a1, a2)
+
+    <span class="Comment"># works</span>
+    <span class="Statement">for</span> edge <span class="Statement">in</span> g.out_going_edge_set_of(a1):
+        f = edge.fromv
+        to = edge.tov
+
+    <span class="Comment"># does not work</span>
+    <span class="Statement">for</span> edge <span class="Statement">in</span> g.out_going_edge_set_of(a2):
+        f = edge.fromv
+        to = edge.tov
+
+    <span class="Comment"># does not work</span>
+    <span class="Statement">for</span> edge <span class="Statement">in</span> g.out_going_edge_set_of(a3):
+        f = edge.fromv
+        to = edge.tov
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
+    main()
+
+</pre>

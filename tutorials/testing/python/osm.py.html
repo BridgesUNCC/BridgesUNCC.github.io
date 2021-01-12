@@ -1,0 +1,37 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges.data_src_dependent <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.graph_adj_list <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
+
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># title, description</span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">Open Street Map Test</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># create an adjacency list based graph</span>
+    osm_data = data_source.get_osm_data(<span class="Constant">35.28</span>, -<span class="Constant">80.75</span>, <span class="Constant">35.32</span>, -<span class="Constant">80.71</span>, <span class="Constant">&quot;</span><span class="Constant">default</span><span class="Constant">&quot;</span>)
+    <span class="Comment">#osm_data = data_source.get_osm_data(&quot;Charlotte, North Carolina&quot;, &quot;default&quot;)</span>
+
+    <span class="Identifier">print</span> (<span class="Constant">&quot;</span><span class="Constant">Number of Vertices [Charlotte]: </span><span class="Constant">&quot;</span> + <span class="Identifier">str</span>(<span class="Identifier">len</span>(osm_data.vertices)))
+    <span class="Identifier">print</span> (<span class="Constant">&quot;</span><span class="Constant">Number of Edges [Charlotte]: </span><span class="Constant">&quot;</span> + <span class="Identifier">str</span>(<span class="Identifier">len</span>(osm_data.edges)))
+
+    <span class="Comment"># get the graph of this dataset</span>
+    g = osm_data.get_graph()
+
+    g.force_large_visualization(<span class="Identifier">True</span>)
+
+    <span class="Comment"># Pass the graph object to BRIDGES</span>
+    bridges.set_data_structure(g)
+    <span class="Comment"># visualize the graph</span>
+    bridges.visualize()
+
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
+    main()
+
+</pre>

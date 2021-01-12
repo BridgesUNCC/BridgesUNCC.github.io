@@ -1,0 +1,54 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.sl_element <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
+
+<span class="Comment">#</span>
+<span class="Comment"># This tutorial creates a set of singly linked list elements, links them </span>
+<span class="Comment"># and displays them</span>
+<span class="Comment">#</span>
+<span class="Comment"># Reference: SLelement, Bridges classes</span>
+<span class="Comment">#</span>
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># set title, description</span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">A Singly Linked List Example</span><span class="Constant">&quot;</span>)
+    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">A singly linked list of 4 nodes with names; the nodes in this example use string as the generic type</span><span class="Constant">&quot;</span>)
+
+	<span class="Comment"># create the list elements</span>
+    st0 = SLelement(e=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>)
+    st1 = SLelement(e=<span class="Constant">&quot;</span><span class="Constant">Lamont Kyler</span><span class="Constant">&quot;</span>)
+    st2 = SLelement(e=<span class="Constant">&quot;</span><span class="Constant">Gladys Serino</span><span class="Constant">&quot;</span>)
+    st3 = SLelement(e=<span class="Constant">&quot;</span><span class="Constant">Karol Soderman</span><span class="Constant">&quot;</span>)
+    st4 = SLelement(e=<span class="Constant">&quot;</span><span class="Constant">Starr McGinn</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># link the elements</span>
+    st0.next = st1
+    st1.next = st2
+    st2.next = st3
+    st3.next = st4
+
+    <span class="Comment"># we want to see these names in the visualization so we will </span>
+    <span class="Comment">#set them as the nodes' labels. We will retrieve the nodes' </span>
+    <span class="Comment">#generic data for the label</span>
+    st0.label = st0.value
+    st1.label = st1.value
+    st2.label = st2.value
+    st3.label = st3.value
+    st4.label = st4.value
+
+    <span class="Comment"># tell Bridges the head of the list</span>
+    bridges.set_data_structure(st0)
+
+    <span class="Comment"># visualize</span>
+    bridges.visualize()
+
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
+    main()
+
+</pre>

@@ -1,0 +1,54 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.bst_element <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+    <span class="Comment"># Part 1 of this tutorial will illustrate the use of the BRIDGES in building</span>
+    <span class="Comment"># binary search trees.  We will begin by constructing the tree manually and</span>
+    <span class="Comment"># displaying it</span>
+
+    <span class="Comment"># create Bridgs object, set credentials</span>
+
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># title, description</span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">A Simple  Binary Search Tree Example</span><span class="Constant">&quot;</span>)
+    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">This example illustrates a binary search tree built using BRIDGES</span><span class="Constant">&quot;</span>)
+
+
+    <span class="Comment"># we will create the tree manually in this example</span>
+
+    <span class="Comment"># create the nodes</span>
+    root  = BSTElement(key=<span class="Constant">100</span>)
+    node1 = BSTElement(key = <span class="Constant">50</span>)
+    node2 = BSTElement(key = <span class="Constant">200</span>)
+    node3 = BSTElement(key = <span class="Constant">250</span>)
+    node4 = BSTElement(key = <span class="Constant">75</span>)
+    node5 = BSTElement(key = <span class="Constant">33</span>)
+
+    <span class="Comment"># construct the tree</span>
+    root.left = node1
+    root.right = node2
+    node2.right = node3
+    node1.right = node4
+    node1.left = node5
+
+    <span class="Comment"># label the nodes </span>
+    root.label = <span class="Constant">&quot;</span><span class="Constant">Root</span><span class="Constant">&quot;</span>
+    node1.label =  <span class="Constant">&quot;</span><span class="Constant">Node1</span><span class="Constant">&quot;</span>
+    node2.label = <span class="Constant">&quot;</span><span class="Constant">Node2</span><span class="Constant">&quot;</span>
+    node3.label = <span class="Constant">&quot;</span><span class="Constant">Node3</span><span class="Constant">&quot;</span>
+    node4.label = <span class="Constant">&quot;</span><span class="Constant">Node4</span><span class="Constant">&quot;</span>
+    node5.label = <span class="Constant">&quot;</span><span class="Constant">Node5</span><span class="Constant">&quot;</span>
+
+    <span class="Comment"># set visualizer type</span>
+    bridges.set_data_structure(root)
+    <span class="Comment"># visualize the tree</span>
+    bridges.visualize()
+
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
+    main()
+
+</pre>

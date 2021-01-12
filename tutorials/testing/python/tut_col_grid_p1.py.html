@@ -1,0 +1,47 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges.color_grid <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.color <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+
+    <span class="Comment"># This tutorial illustrates using the Bridges Color Grid</span>
+    <span class="Comment"># and how to set elements within the grid</span>
+
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># set title</span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">BRIDGES Color Grid Tutorial - Part 1</span><span class="Constant">&quot;</span>);
+
+    <span class="Comment"># set description</span>
+    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">This is an example of the color grid with height and width of 10 units each</span><span class="Constant">&quot;</span>);
+
+    red =  Color(col_name=<span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>)
+    green = Color(col_name=<span class="Constant">&quot;</span><span class="Constant">green</span><span class="Constant">&quot;</span>)
+    blue = Color(col_name=<span class="Constant">&quot;</span><span class="Constant">blue</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># create a 10x10 color grid</span>
+    width = <span class="Constant">10</span>
+    height = <span class="Constant">10</span>
+    cg = ColorGrid(height, width, Color(col_name=<span class="Constant">&quot;</span><span class="Constant">lightgoldenrodyellow</span><span class="Constant">&quot;</span>))
+
+    <span class="Comment"># color a few squares and make a + sign at the center</span>
+    cg.set(<span class="Constant">5</span>, <span class="Constant">5</span>, red);
+    cg.set(<span class="Constant">5</span>, <span class="Constant">4</span>, blue);
+    cg.set(<span class="Constant">5</span>, <span class="Constant">6</span>, blue);
+    cg.set(<span class="Constant">4</span>, <span class="Constant">5</span>, green);
+    cg.set(<span class="Constant">6</span>, <span class="Constant">5</span>, green);
+
+    <span class="Comment"># tell Bridges the the color grid object to visualize</span>
+    bridges.set_data_structure(cg);
+
+    <span class="Comment"># visualize</span>
+    bridges.visualize();
+
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
+    main()
+
+</pre>

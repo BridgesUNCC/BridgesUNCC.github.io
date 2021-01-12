@@ -1,0 +1,47 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges.dl_element <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
+
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+    <span class="Comment"># This tutorial creates a number of BRIDGES doubly linked list elements, </span>
+    <span class="Comment"># links them into a list and displays them</span>
+    <span class="Comment">#</span>
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># set title </span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">A doubly Linked List Example</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># description</span>
+    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">Create a doubly linked  list of five nodes and display it</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># create list elements</span>
+    el0 = DLelement(e=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Gretel Chaney</span><span class="Constant">&quot;</span>)
+    el1 = DLelement(e=<span class="Constant">&quot;</span><span class="Constant">Lamont Kyler</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Lamont Kyler</span><span class="Constant">&quot;</span>)
+    el2 = DLelement(e=<span class="Constant">&quot;</span><span class="Constant">Gladys Serino</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Gladys Serino</span><span class="Constant">&quot;</span>)
+    el3 = DLelement(e=<span class="Constant">&quot;</span><span class="Constant">Karol Soderman</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Karol Soderman</span><span class="Constant">&quot;</span>)
+    el4 = DLelement(e=<span class="Constant">&quot;</span><span class="Constant">Starr McGinn</span><span class="Constant">&quot;</span>, label=<span class="Constant">&quot;</span><span class="Constant">Starr McGinn</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># link elements</span>
+    el0.next = el1
+    el1.prev = el0
+    el1.next = el2
+    el2.prev = el1
+    el2.next = el3
+    el3.prev = el2
+    el3.next = el4
+    el4.prev = el3
+
+    <span class="Comment"># set data structure to be visualized</span>
+    bridges.set_data_structure(el0)
+
+    <span class="Comment"># visualize the data structure</span>
+    bridges.visualize()
+
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
+    main()
+
+</pre>

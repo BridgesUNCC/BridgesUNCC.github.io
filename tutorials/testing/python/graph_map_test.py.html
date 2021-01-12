@@ -1,0 +1,71 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges.data_src_dependent <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.graph_adj_list <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
+
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># title, description</span>
+    bridges.title = <span class="Constant">&quot;</span><span class="Constant">Testing map capabilities in BRIDGES with graphs</span><span class="Constant">&quot;</span>
+
+    <span class="Comment"># create an adjacency list based graph</span>
+    g = GraphAdjList()
+
+    <span class="Comment"># create some nodes</span>
+    <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Constant">10</span>):
+       g.add_vertex(<span class="Constant">&quot;</span><span class="Constant">node</span><span class="Constant">&quot;</span> + <span class="Identifier">str</span>(i), <span class="Constant">&quot;</span><span class="Constant">node</span><span class="Constant">&quot;</span> + <span class="Identifier">str</span>(i))
+
+    <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Constant">10</span>):
+       <span class="Statement">if</span> i &gt; <span class="Constant">0</span>:
+          g.add_edge(<span class="Constant">&quot;</span><span class="Constant">node</span><span class="Constant">&quot;</span> + <span class="Identifier">str</span>(i), <span class="Constant">&quot;</span><span class="Constant">node</span><span class="Constant">&quot;</span> + <span class="Identifier">str</span>(i - <span class="Constant">1</span>))
+
+
+    <span class="Comment">#visualize in SVG AlbersUSA map</span>
+    bridges.set_coord_system_type(<span class="Constant">&quot;</span><span class="Constant">albersusa</span><span class="Constant">&quot;</span>)
+    bridges.set_map_overlay(<span class="Identifier">True</span>)
+
+    bridges.set_data_structure(g)
+    bridges.visualize()
+
+
+    <span class="Comment"># visualize SVG World map</span>
+    bridges.set_coord_system_type(<span class="Constant">&quot;</span><span class="Constant">equirectangular</span><span class="Constant">&quot;</span>)
+    bridges.set_map_overlay(<span class="Identifier">True</span>)
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">SVG World Map</span><span class="Constant">&quot;</span>)
+    bridges.visualize()
+
+    <span class="Comment"># CANVAS VERSIONS (add &gt;100 nodes)</span>
+    <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Constant">110</span>):
+        g.add_vertex(<span class="Constant">&quot;</span><span class="Constant">node</span><span class="Constant">&quot;</span> + <span class="Identifier">str</span>(i), <span class="Constant">&quot;</span><span class="Constant">node</span><span class="Constant">&quot;</span> + <span class="Identifier">str</span>(i))
+        <span class="Statement">if</span> i &gt; <span class="Constant">0</span>:
+            g.add_edge(<span class="Constant">&quot;</span><span class="Constant">node</span><span class="Constant">&quot;</span> + <span class="Identifier">str</span>(i), <span class="Constant">&quot;</span><span class="Constant">node</span><span class="Constant">&quot;</span> + <span class="Identifier">str</span>(i - <span class="Constant">1</span>))
+
+    <span class="Comment">#fix a node over Charlotte, NC</span>
+    g.get_vertex(<span class="Constant">&quot;</span><span class="Constant">node6</span><span class="Constant">&quot;</span>).set_location(-<span class="Constant">80.8431</span>, <span class="Constant">35.2271</span>)
+    g.get_vertex(<span class="Constant">&quot;</span><span class="Constant">node6</span><span class="Constant">&quot;</span>).color = <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>
+
+    <span class="Comment"># visualize Canvas AlbersUSA map</span>
+    bridges.set_coord_system_type(<span class="Constant">&quot;</span><span class="Constant">equirectangular</span><span class="Constant">&quot;</span>)
+    bridges.set_map_overlay(<span class="Identifier">True</span>)
+    bridges.title = <span class="Constant">&quot;</span><span class="Constant">Canvas USA Map</span><span class="Constant">&quot;</span>
+    bridges.visualize()
+
+    <span class="Comment">#fix a node over London</span>
+    g.get_vertex(<span class="Constant">&quot;</span><span class="Constant">node10</span><span class="Constant">&quot;</span>).set_location(-<span class="Constant">0.1278</span>, <span class="Constant">51.5074</span>)
+    g.get_vertex(<span class="Constant">&quot;</span><span class="Constant">node10</span><span class="Constant">&quot;</span>).color = <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>
+
+    <span class="Comment"># visualize Canvas World map</span>
+    bridges.set_coord_system_type(<span class="Constant">&quot;</span><span class="Constant">equirectangular</span><span class="Constant">&quot;</span>)
+    bridges.set_map_overlay(<span class="Identifier">True</span>)
+    bridges.title = <span class="Constant">&quot;</span><span class="Constant">Canvas World Map</span><span class="Constant">&quot;</span>
+    bridges.visualize()
+
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
+    main()
+</pre>

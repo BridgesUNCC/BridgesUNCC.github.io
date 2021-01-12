@@ -1,0 +1,63 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;GraphAdjList.h&quot;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> std;
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
+
+<span class="Comment">// This tutorial will demonstrate how to build an adjacency list based graph</span>
+<span class="Comment">// using BRIDGES and display it.</span>
+<span class="Comment">// References: GraphAdjList class</span>
+
+<span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
+	<span class="Comment">// create Bridges object, set credentials</span>
+	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+	<span class="Comment">// set a title </span>
+	bridges.setTitle(<span class="Constant">&quot;A Simple Adjacency list based Graph Example.&quot;</span>);
+
+	<span class="Comment">// set  description</span>
+	bridges.setDescription(<span class="Constant">&quot;Demonstrate how to create a graph with a few nodes and display it&quot;</span>);
+
+	<span class="Comment">// create a graph with key values of type string. See the</span>
+	<span class="Comment">// the documentation for GraphAdjList for its full capabilities</span>
+	GraphAdjList&lt;string&gt; graph;
+
+	<span class="Comment">// first create a few vertices </span>
+
+	<span class="Comment">// create some actor names to be added to the graph</span>
+	string 	kevin_bacon = <span class="Constant">&quot;Kevin Bacon&quot;</span>,
+			denzel_washington = <span class="Constant">&quot;Denzel Washington&quot;</span>,
+			morgan_freeman = <span class="Constant">&quot;Morgan Freeman&quot;</span>,
+			tom_cruise = <span class="Constant">&quot;Tom Cruise&quot;</span>,
+			angelina_jolie = <span class="Constant">&quot;Angelina Jolie&quot;</span>,
+			amy_adams = <span class="Constant">&quot;Amy Adams&quot;</span>,
+			brad_pitt = <span class="Constant">&quot;Brad Pitt&quot;</span>;
+	<span class="Comment">// add them to the graph</span>
+	graph.addVertex(kevin_bacon);
+	graph.addVertex(denzel_washington);
+	graph.addVertex(morgan_freeman);
+	graph.addVertex(tom_cruise);
+	graph.addVertex(angelina_jolie);
+	graph.addVertex(amy_adams);
+	graph.addVertex(brad_pitt);
+
+	<span class="Comment">// add edges</span>
+	graph.addEdge(kevin_bacon, denzel_washington);
+	graph.addEdge(kevin_bacon, morgan_freeman);
+	graph.addEdge(kevin_bacon, angelina_jolie);
+	graph.addEdge(amy_adams, angelina_jolie);
+	graph.addEdge(tom_cruise, amy_adams);
+	graph.addEdge(angelina_jolie, brad_pitt);
+	graph.addEdge(brad_pitt, denzel_washington);
+
+	<span class="Comment">// provide BRIDGES the  handle to the tree structure</span>
+	bridges.setDataStructure(&amp;graph);
+
+	<span class="Comment">// Visualize the graph</span>
+	bridges.visualize();
+
+	<span class="Statement">return</span> <span class="Constant">0</span>;
+}
+</pre>
