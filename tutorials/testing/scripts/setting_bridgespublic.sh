@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. ./config.sh
+#. ./config.sh
 
 if [ "${FORCE_BRIDGES_USERNAME}" = "" ]
 then
@@ -73,6 +73,34 @@ FORCE_BRIDGES_ASSIGNMENT=9400 ./shape_collection 9999 fakename fakeapi
 FORCE_BRIDGES_ASSIGNMENT=9500 ./sine_wave 9999 fakename fakeapi
 
 FORCE_BRIDGES_ASSIGNMENT=9510 ./audio_clip_manipulation 9999 fakename fakeapi
+
+
+## New tutorials (added by KRS - 1/12/21
+
+FORCE_BRIDGES_ASSIGNMENT=10000 ./tut_array1d_p1 9999 fakename fakeapi
+FORCE_BRIDGES_ASSIGNMENT=10010 ./tut_array1d_p2 9999 fakename fakeapi
+FORCE_BRIDGES_ASSIGNMENT=10020 ./tut_array1d_p3 9999 fakename fakeapi
+
+FORCE_BRIDGES_ASSIGNMENT=10030 ./tut_sllist_p1 9999 fakename fakeapi
+FORCE_BRIDGES_ASSIGNMENT=10040 ./tut_sllist_p2 9999 fakename fakeapi
+FORCE_BRIDGES_ASSIGNMENT=10050 ./tut_sllist_p3 9999 fakename fakeapi
+
+FORCE_BRIDGES_ASSIGNMENT=10060 ./tut_dllist_p1 9999 fakename fakeapi
+FORCE_BRIDGES_ASSIGNMENT=10070 ./tut_dllist_p2 9999 fakename fakeapi
+FORCE_BRIDGES_ASSIGNMENT=10080 ./tut_dllist_p3 9999 fakename fakeapi
+
+FORCE_BRIDGES_ASSIGNMENT=10090 ./tut_bst_p1 9999 fakename fakeapi
+FORCE_BRIDGES_ASSIGNMENT=10100 ./tut_bst_p2 9999 fakename fakeapi
+FORCE_BRIDGES_ASSIGNMENT=10110 ./tut_bst_p3 9999 fakename fakeapi
+
+FORCE_BRIDGES_ASSIGNMENT=10120 ./tut_col_grid_p1 9999 fakename fakeapi
+FORCE_BRIDGES_ASSIGNMENT=10130 ./tut_col_grid_p2 9999 fakename fakeapi
+FORCE_BRIDGES_ASSIGNMENT=10140 ./tut_col_grid_p3 9999 fakename fakeapi
+
+FORCE_BRIDGES_ASSIGNMENT=10150 ./tut_graph_p1 9999 fakename fakeapi
+FORCE_BRIDGES_ASSIGNMENT=10160 ./tut_graph_p2 9999 fakename fakeapi
+FORCE_BRIDGES_ASSIGNMENT=10170 ./tut_graph_p3 9999 fakename fakeapi
+
 
 ## games don't produce useful visualization
 
