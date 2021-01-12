@@ -26,7 +26,8 @@
 	<h2>What is Bridges?</h2>
 	<p>
 	  The <strong>BRIDGES</strong>(<i>Bridging Real-world Infrastructure
-	    Designed to Goal-align, Engage, and Stimulate</i>), an NSF TUES project,
+	    Designed to Goal-align, Engage, and Stimulate</i>), an NSF TUES/iUSE 
+		project,
 	  is focused on providing
 	  easy-to-use interfaces to real-world internet-based information systems,
 	  that are exciting, engaging and commonly used by undergraduate students,
@@ -39,7 +40,8 @@
 	  projects,  and (2) provides visualizations of the data structures
 	  constructed by the student as part of his/her project.
 
-	  BRIDGES currently supports the following types of Elements:
+	  BRIDGES currently supports the following types of Elements that are
+	  used to construct data structures:
 	  <ul>
 	    <li><strong>Element</strong>
 	      - the basic element(abstract) that just holds application specific data and supports some basic operations</li>
@@ -115,7 +117,8 @@
 	<p>
 	  Since we did not put any restrictions on &lt;E&gt; inside the Element
 	  definition,
-	  we can only call methods of &lt;E&gt; that are common to ALL classes. We will
+	  we can only call methods of &lt;E&gt; that are common to ALL classes. Specifically,  there is a getValue() and a setValue() method defined on &lt;E&gt; We will
+This provides access to the generic object. Depending on the user's definition of the generic object, additional methods specific to the object will be available.
 	  not be allowed to call a method on E that is particular to any one class. Also,
 	  as Element&lt;E&gt; is an abstract class, users only access it indirectly
 	  via its subclasses.
@@ -129,11 +132,11 @@
 	  <h2>What about Graphs?</h2>
 	<p>
 	  Bridges also contains the GraphAdjacencyList and GraphAdjacencyMatrix classes,
-	  however, these do not subclass from Element.
-	  <br>
-	  This is because Graphs themselves are containers, possibly holding Bridges
-	  elements.  When you interact with the graphs you will typically be
-	  adding an Element to them or retrieving an Element from them.
+	  however, these do not subclass from Element; This is because Graphs 
+	themselves are containers, possibly holding Bridges
+  elements.  When you interact with the graphs you will typically be
+  adding an Element to them or retrieving an Element from them.<br>
+  The graph's adjacency lists are built using singly linked elements.
 	<p>
       </main>
       <footer w3-include-html="Tutorial_Footer.html"></footer>
