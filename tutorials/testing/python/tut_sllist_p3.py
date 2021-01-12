@@ -19,7 +19,7 @@ def main():
 
     # set title, description
     bridges.set_title("A Singly Linked List Example")
-    bridges.set_description("A singly linked list of 4 nodes with names; the nodes in this example use string as the generic type")
+    bridges.set_description("Demonstrate advanced features, looping, iterators")
 
 	# create the list elements
     st0 = SLelement(e="Gretel Chaney")

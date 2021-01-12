@@ -14,7 +14,7 @@ int main(int argc, char **argv) {
 	bridges.setTitle("A One-Dimensional Array Example");
 
 	// set description
-	bridges.setDescription("Create a 1 dimensional array with integer values and display them");
+	bridges.setDescription("Illustrating looping and iterators in 1D Arrays");
 
 	// create, populate the array
 	Array1D<int> arr (10);

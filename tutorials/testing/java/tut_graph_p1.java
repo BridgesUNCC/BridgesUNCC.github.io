@@ -54,7 +54,7 @@ public class tut_graph_p1 {
 		graph.addEdge(brad_pitt, denzel_washington);
 
 		// Pass the graph object to BRIDGES
-		bridges.setDataStructure(g);
+		bridges.setDataStructure(graph);
 
 		// Finaly we call the visualize function
 		bridges.visualize();

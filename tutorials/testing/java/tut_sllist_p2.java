@@ -19,7 +19,7 @@ public class tut_sllist_p2 {
 		bridges.setTitle("A Single Linked List Example");
 
 		// set  description
-		bridges.setDescription("A singly linked list of 4 nodes with names; the nodes in this example use string as the generic type"); 
+		bridges.setDescription("Demonstrate styling linked list nodes and links");
 
 		// create the linked list elements with student names
 		SLelement<String>  st0 = new SLelement<String> ("Gretel Chaney");

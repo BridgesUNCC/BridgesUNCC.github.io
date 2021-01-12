@@ -24,7 +24,7 @@ public class tut_col_grid_p2 {
     	bridges.setTitle("BRIDGES Color Grid Tutorial - Part 1");
 
 		// set description
-		bridges.setDescription("This is an example of the color grid with height and width of 10 units each");
+		bridges.setDescription("This is an example to illustrate different ways of setting colors in the ColorGrid");
 
 		int width = 10, height = 10;
 

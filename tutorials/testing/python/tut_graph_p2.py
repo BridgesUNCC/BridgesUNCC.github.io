@@ -17,7 +17,7 @@ def main():
     bridges.set_title("A Simple Adjacency list based Graph Example.")
 
     # set  description
-    bridges.set_description("Demonstrate how to create a graph with a few nodes and display it")
+    bridges.set_description("Demonstrate styling graph nodes and links with visual attributes")
 
     # create an adjacency list based graph
     graph = GraphAdjList()

@@ -14,7 +14,7 @@ def main():
     bridges.set_title("A doubly Linked List Example")
 
     # description
-    bridges.set_description("Create a doubly linked  list of five nodes and display it")
+    bridges.set_description("Illustrate the user of iterators with doubly linked lists")
 
     # create list elements
     el0 = DLelement(e="Gretel Chaney", label="Gretel Chaney")

@@ -22,7 +22,7 @@ public class tut_graph_p2 {
 		bridges.setTitle("A Simple Adjacency list based Graph Example.");
 
 		// set  description
-		bridges.setDescription("Demonstrate how to create a graph with a few nodes and display it");
+		bridges.setDescription("Demonstrate styling graph nodes and links with visual attributes");
 
 		// create an adjacency list based graph
 		GraphAdjListSimple<String> graph = new GraphAdjListSimple<String>();

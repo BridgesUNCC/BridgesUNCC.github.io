@@ -16,7 +16,7 @@ public class tut_array1d_p3 {
 		bridges.setTitle("One-Dimensional Array Example");
 
 		// set description
-		bridges.setDescription("Using iterators with 1D arrays");
+		bridges.setDescription("Illustrating looping and iterators in 1D Arrays");
 
 		//  set array dimensions, allocate array of elements
 		int arraySize = 10;

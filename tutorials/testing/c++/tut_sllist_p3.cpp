@@ -26,7 +26,7 @@ int main (int argc, char **argv) {
 	bridges.setTitle("A Singly Linked List Example");
 
 	// set  description
-	bridges.setDescription("A singly linked list of 4 nodes with names; the nodes in this example use string as the generic type"); 
+	bridges.setDescription("Demonstrate advanced features, looping, iterators"); 
 
 	// create the linked list elements with student names
 	SLelement<string>  *st0 = new SLelement<string> ("Gretel Chaney");

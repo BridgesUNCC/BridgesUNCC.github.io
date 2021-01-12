@@ -15,7 +15,7 @@ public class tut_array1d_p2 {
 		bridges.setTitle("One-Dimensional Array Example");
 
 		// set description
-		bridges.setDescription("One dimensional  array with visual attributes");
+		bridges.setDescription("Demonstrating Styling 1D Array with visual attributes");
 
 		//  set array dimensions, allocate array of elements
 		int arraySize = 10;
