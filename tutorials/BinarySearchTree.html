@@ -9,13 +9,14 @@
 
     <link rel="stylesheet" type="text/css" href="./tutorial.css" />
     <link rel="stylesheet" type="text/css" href="./vim.css" />
+    
+    <link rel="shortcut icon" href="https://bridgesuncc.github.io/favicon.png"/>
 
-    <link rel="shortcut icon" href="http://bridgesuncc.github.io/favicon.png"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://www.w3schools.com/lib/w3data.js"></script>
     <script src="./tutorial.js"></script>
 
-    <title>Bridges - Hello World Visualization Tutorial</title>
+    <title>Bridges - Tutorials</title>
 
     <script src="./prettyprint.js" defer></script>
   </head>
@@ -25,85 +26,171 @@
 
       <header w3-include-html="./Tutorial_Header.html"></header>
 
-      <main>
-	BSTElement&lt;K,E&gt; implements a <i> binary search tree element </i> and is
-	inherited from TreeElement&lt;K,E&gt;
-	<br><br><img width="175em" src="./images/bst_el.png"><br><br>
-	<h2>How does the BSTElement&lt;K,E&gt; work?</h2>
+      <main> 
+	<h2>Binary Search Tree Tutorial</h2>
+
+	
 	<p>
-	  BSTElement&lt;K,E&gt; is a type of container that has two links that point
-	  to two child BSTElements. It uses the same conventions as the
-	  TreeElement&ltE&gt;.
-	  <br><br>
-	  At this point, you may be wondering how a BSTElement&lt;K,E&gt; differs from a
-	  regular Binary Tree Element. The fundamental difference between the two classes
-	  is that the BSTElement&lt;K,E&gt; is used to build <i>search trees</i>,
-	  and holds an additional piece of data, the generic parameter K,
-	  called the "key".  The key is used to enforce an ordering on the tree
-	  structure independent of the element that is being held.
-	  <br><br>
-	  A typical example would be a binary search tree where all of the keys of
-	  the left child are smaller than the keys of the right child.
-	  <br/><br/><img width="600em" src="./images/BSTElement.png"/><br/><br/>
-	  Notice that the key for BST1 is smaller than the key for the root so it's to
-	  the left of the root. Also notice that the key for BST3 is smaller than
-	  the key for BST2, but larger than the key for the root. So BST3 sits on
-	  the left subtree of BST2, but in the right subtree of the Root.
+      This tutorial will illustrate the use of Binary Search Trees in BRIDGES.
+	  BRIDGES supports hierarchy of tree elements, such general trees with
+	  arbitrary number of children, binary trees, AVL and K-D trees.
+	  Check the TreeElement class to see the full hierarchy. The BSTElement
+	  which denotes a node of the binary search tree is inherited from 
+	  Element and has two generic parameters, one for the 
+	<strong>Key</strong>, which must be an orderable type and a second 
+	parameter, E,  to  hold application specific data.
+	</p>
 	<p>
+      BSTElement&lt;K,E&gt; is a container that has two links that point
+      to two child BSTElements. It uses the same conventions as the
+      TreeElement&ltE&gt;.
+	</p>
+	<p>
+      You might wonder how a BSTElement&lt;K,E&gt; differs from a
+      regular Binary Tree Element. The fundamental difference between the 
+	  two classes
+      is that the BSTElement&lt;K,E&gt; is used to build <i>search trees</i>,
+      and holds an additional piece of data, the generic parameter K,
+      called the "key".  The key is used to enforce an ordering on the tree
+      structure independent of the element that is being held.
+      <br><br>
+      A typical example would be a binary search tree where all of the keys of
+      the left child are smaller than the keys of the right child.
+      <br/><br/><img width="600em" src="./images/BSTElement.png"/><br/><br/>
+      Notice that the key for BST1 is smaller than the key for the root so it's to
+      the left of the root. Also notice that the key for BST3 is smaller than
+      the key for BST2, but larger than the key for the root. So BST3 sits on
+      the left subtree of BST2, but in the right subtree of the Root.
+    </p>
 
-	  <hr>
 
-	  <h2>BSTElement - Example Using Earthquake Data</h2>
-	  We will illustrate a binary search tree example that  retrieve
-	  earthquake records and display them as
-	  a binary search tree using the quake
-	    magnitude as the search key.
+	<p>
+	This tutorial consists of 3 parts:
+	  <ol>
+	    <li> A basic tutorial on how to create manually a small binary search
+			tree and  visualize it</li>
+	    <li> How to style the binary search tree with visual attributes </li>
+	    <li> Advanced: how to build a binary search tree automatically using
+				an insertion function</li>
+	  </ol>
 
-	    <div w3-include-html="bridges_program_elements.html"></div>
-	    <h2> Example Details</h2>
-	    <ul>
-	      <li> We will illustrate a binary search tree example that uses the BRIDGES API 
-		to retrieve 50 earthquake records (actually comes as Tweets) from USGS.gov. 
-	      <li> These will be inserted into a binary search tree, using the 
-		BSTElement&lt;float, EarthquakeUSGS&gt; elements. The quake magnitude will be 
-		  used as the search key. 
-		  <li>The elements are labeled with information about the quake and visualized.
-		    and visualized.
-	    </ul>
-	    <h2>Here's the final code:</h2>
+	<h2>1. Getting Started: Build a Barebones Binary Search Tree</h2>
+	
+	<p> In the first part of the tutorial, we will create a set of BSTElement
+		nodes with some labels, , provide BRIDGES a handle to the
+		data structure and visualize the array.
 
-	    <div class="tabs">
-	      <div onclick="displayCode('Java',this)">Java</div>
-	      <div onclick="displayCode('C++',this)" >C++</div>
-	      <div onclick="displayCode('Python',this)" >Python</div>
-	    </div>
-	    <div class="tabContents">
-	      <div id="Java">
-		<pre w3-include-html="./testing/java/bst_eq.java.html" class="prettyprint" />
-	      </div>
-	      <div id="C++">
-		<pre w3-include-html="./testing/c++/bst_eq.cpp.html" class="prettyprint"></pre>
-	      </div>
-	      <div id="Python">
-		<pre w3-include-html="./testing/python/bst_eq.py.html" class="prettyprint"></pre>
-	      </div>
-	    </div>
+	  Here is the code for this part. The visualization follows that. Hit
+		the 'l' button to turn on the labels.
+	</p>
+	
+	<div class="tabs">
+	  <div onclick="displayCode('Java1',this)">Java</div>
+	  <div onclick="displayCode('C++1',this)">C++</div>
+	  <div onclick="displayCode('Python1',this)">Python</div>
+	</div>
 
-	    <h3>Bridges Visualization</h3>
-	    <ul>
-	      <li>Once all your code is in order, run your program.</li>
-	      <li>Assuming all your code is correct and it compiles correctly, a link to the Bridges website will be generated.</li>
-	      <li>Copy/paste this link into your favorite browser to view a visualization of the data structure you’ve just created.</li>
-	      <li>It should look something like this:</li>
-	    </ul>
-	    <div class="iframe-wrapper">
-	      <iframe src="https://bridges-cs.herokuapp.com/assignments/9220/bridges_public" scrolling="no">
+	<div class="tabContents">
+	  <div id="Java1" w3-include-html="./Java_BST_Basic.html"></div>
+	  <div id="C++1"  w3-include-html="./Cpp_BST_Basic.html"></div>
+	  <div id="Python1"  w3-include-html="./Python_BST_Basic.html"></div>
+	</div>
+
+	<p>Make sure that you can run the basic tutorial.</p>
+	
+	<p>
+	If you follow the URL given to you when the application runs, it
+	will get to to the Bridges webpage that shows your output. 
+	You do not need to be logged into your BRIDGES account to see the 
+	output. If you are logged into your account, the output will show 
+	up in your gallery.
+	</p> 
+	<div class="iframe-wrapper">
+	<iframe src="https://bridges-cs.herokuapp.com/assignments/10090/bridges_public" scrolling="no">
 		<p>Sorry, your browser doesn't seem to support iframes -
-		  <a href="https://bridges-cs.herokuapp.com/assignments/9220/bridges_public">Frame Link</a>
+		<a href="https://bridges-cs.herokuapp.com/assignments/10090/bridges_public">Frame Link</a>
 		</p>
-	      </iframe>
-	    </div>
-	    <p>Well done! You’ve just created your Bridges Binary Search Tree project!</p>
+	</iframe>
+	</div>
+	<hr>
+
+	<h2>2. What Visual Attributes are supported for Binary Search Trees?</h2>
+
+	<p> The binary search tree  you created in the first part of the 
+		tutorial uses
+		default attributes and is pretty boring, but it gives you the
+		basic structure of a BRIDGES program.</p>
+
+	<p> Next, we will style the binary search tree  we just created. For
+		trees,  , you can
+		set the <strong>shape, color, opacity and label</strong> of the tree 
+		nodes, and <strong> color, thickness,  opacity and label</strong> for 
+		the links.  Check out the Bridges 'Element' and 'Color' 
+		classes that supports these attributes and also details the possible
+		colors you can use and how to specify them. 
+	</p>
+
+	<p>The following code styles the binary search tree we created in part 1 
+		and adds visual attributes. The visualization follows that.
+	</p>
+
+	<div class="tabs">
+	  <div onclick="displayCode('Java2',this)">Java</div>
+	  <div onclick="displayCode('C++2',this)" >C++</div>
+	  <div onclick="displayCode('Python2',this)" >Python</div>
+	</div>
+	<div class="tabContents">
+	  <div id="Java2" w3-include-html="./Java_BST_Styling.html"></div>
+	  <div id="C++2"  w3-include-html="./Cpp_BST_Styling.html"></div>
+	  <div id="Python2"  w3-include-html="./Python_BST_Styling.html"></div>
+	</div>
+	<div class="iframe-wrapper">
+	<iframe src="https://bridges-cs.herokuapp.com/assignments/10100/bridges_public" scrolling="no">
+		<p>Sorry, your browser doesn't seem to support iframes -
+		<a href="https://bridges-cs.herokuapp.com/assignments/10100/bridges_public">Frame Link</a>
+		</p>
+	</iframe>
+	</div>
+	<hr>
+
+	<h2>3. Advanced Features.</h2>
+
+	<p> In the last part of this tutorial, we illustrate a search algorithm
+		to find a specific value in the binary search tree. We also 
+		illustrate how the tree can be styled to show the nodes visited
+		and the path taken by the search algorithm
+
+	</p>
+	<p>The following code illustrates the search algorithm in a binary search tree. 
+		The visualization follows that.
+	</p>
+
+	<div class="tabs">
+	  <div onclick="displayCode('Java3',this)">Java</div>
+	  <div onclick="displayCode('C++3',this)" >C++</div>
+	  <div onclick="displayCode('Python3',this)" >Python</div>
+	</div>
+	<div class="tabContents">
+	  <div id="Java3" w3-include-html="./Java_BST_Advanced.html"></div>
+	  <div id="C++3"  w3-include-html="./Cpp_BST_Advanced.html"></div>
+	  <div id="Python3"  w3-include-html="./Python_BST_Advanced.html"></div>
+	</div>
+
+	<div class="iframe-wrapper">
+	<iframe src="https://bridges-cs.herokuapp.com/assignments/10110/bridges_public" scrolling="no">
+		<p>Sorry, your browser doesn't seem to support iframes -
+		<a href="https://bridges-cs.herokuapp.com/assignments/10110/bridges_public">Frame Link</a>
+		</p>
+	</iframe>
+	</div>
+	<hr>
+    <p>Well done! You’ve just created your Bridges Binary Search Tree project!</p>
+
+	<h2>Going Further</h2>
+	<p> Array2D and Array3D are similar in terms of the features. Try 
+		these tutorials with these structures.
+	<p>Check Bridges <a href="../newassignments.html">assignment</a> page for array based assignments
+
       </main>
 
       <footer w3-include-html="./Tutorial_Footer.html"></footer>

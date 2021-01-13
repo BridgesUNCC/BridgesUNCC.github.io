@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"/> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+    <meta name="author" content="Bridges"/>
+    <meta name="description" content="Bridges Tutorials"/>
+
+    <link rel="stylesheet" type="text/css" href="./tutorial.css" />
+    <link rel="stylesheet" type="text/css" href="./vim.css" />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <link rel="shortcut icon" href="http://bridgesuncc.github.io/favicon.png"/>
+    <script src="https://www.w3schools.com/lib/w3data.js"></script>
+    <script src="./tutorial.js"></script>
+
+    <title>Bridges - Hello World Visualization Tutorial</title>
+
+    <script src="./prettyprint.js" defer></script>
+  </head>
+
+  <body>
+    <div>
+
+      <header w3-include-html="./Tutorial_Header.html"></header>
+
+	<h2>  Adjacency List  Based Graph Tutorial </h2>
+      <main>
+	<h2>How does the GraphAdjList&lt;K,E&gt work? </h2>
+	<p>
+	  A graph is a set of vertices connected by edges. Unlike tree structures, a
+	  vertex can be an ancestor or a child and can have multiple emanating edges.
+	  In fact, a tree structure is just a special case of a graph.
+	  <br/><br/><img class="img-responsive" width="400em" src="./images/Graph.png"/><br/><br/>
+	  Bridges represents graph structures in one of two ways: either using an
+	  adjacency list representation or an adjacency matrix representation.
+	  Access to the vertices is similar to indexing into an array (O(1) complexity).
+	  The main difference in our implementation is that vertex ids can be 
+		numerical values or strings;
+	  BRIDGES implements constant access to vertices using maps (in Java, C++
+		and Python).
+	  <br/><br/>
+	  In the adjacency list representation, the GraphAdjList is holding a Map
+	  of vertices, each  of which is associated with a linked list of Edges.
+	  These <i>Edge</i> vertices
+	  are of type SLElement&lt;E&gt; with the generic object E used to hold edge	  information (terminating vertex, edge weight, etc). Finally, graph
+	  vertices and edges can have application specific data objects associated 
+     with them.
+	  <br/><br/>
+
+	  The graph  class provides some convenient methods to add vertices 
+		and edges
+	  (GraphAdjList::addVertex(), GraphAdjList::addEdge()) to build the graph,
+		and to access or set visual attributes. There are also methods to 
+		iterate through the outgoing edges of a vertex, iterators, all of which
+		will be demonstrated in this tutorial.
+	</p>
+
+	<hr/>
+
+	<h3> Look at  the following classes that are directly or indirectly
+		used in this tutorial: </h3>
+	<ol>
+	<li> GraphAdjList </li>
+	<li> SLelement </li>
+	<li> Edge </li>
+	<li> Color </li>
+	<li> ElementVisualizer </li>
+	<li> LinkVisualizer </li>
+	</ol>
+
+	<p>
+      This tutorial will illustrate the use of adjacency based graphs in BRIDGES.
+	  The tutorial consists of 3 parts:
+	</p>
+	  <ol>
+	    <li> A basic tutorial on how to create a simple graph of a few nodes
+		 	elements and visualize it.</li>
+	    <li> How to style the graph with visual attributes </li>
+	    <li> Advanced features, such as convenience methods, iterators 
+			for traversal, loop over an adjacency list in multiple ways.
+				</li>
+	  </ol>
+
+	<h2>1. Getting Started: Build a Barebones Adjacency List Based Graph</h2>
+	
+	<p> In the first part of the tutorial, we will create a graph 
+		with  nodes containing string labels, add some edges between 
+		nodes, provide BRIDGES a handle to the data structure and 
+		visualize the graph.
+	</p>
+	<p>
+	If you follow the URL given to you when the application runs, it
+	will get to to the Bridges webpage that shows your output. 
+	You do not need to be logged into your BRIDGES account to see the 
+	output. If you are logged into your account, the output will show 
+	up in your gallery.
+	</p> 
+
+	<p>Make sure that you can run the basic tutorial.
+	  Here is the code for this tutorial. The visualization follows that. Hit
+        the 'l' button to turn on the labels.
+
+	</p>
+	
+	<div class="tabs">
+	  <div onclick="displayCode('Java1',this)">Java</div>
+	  <div onclick="displayCode('C++1',this)">C++</div>
+	  <div onclick="displayCode('Python1',this)">Python</div>
+	</div>
+
+	<div class="tabContents">
+	  <div id="Java1" w3-include-html="./Java_Graph_Basic.html"></div>
+	  <div id="C++1"  w3-include-html="./Cpp_Graph_Basic.html"></div>
+	  <div id="Python1"  w3-include-html="./Python_Graph_Basic.html"></div>
+	</div>
+
+	<div class="iframe-wrapper">
+	<iframe src="https://bridges-cs.herokuapp.com/assignments/10150/bridges_public" scrolling="no">
+		<p>Sorry, your browser doesn't seem to support iframes -
+		<a href="https://bridges-cs.herokuapp.com/assignments/10150/bridges_public">Frame Link</a>
+		</p>
+	</iframe>
+	</div>
+	<hr>
+	
+
+	<h2>2. What Visual Attributes are supported for Graphs?</h2>
+
+	<p> The graph you created in the first part of the tutorial uses
+		default attributes and is pretty boring, but it gives you the
+		basic structure of a BRIDGES program.</p>
+
+	<p> Next, we will style the graph we just created. For graphs, you can
+		set the <strong>shape, color, opacity and label</strong> of the 
+		nodes (vertices), and for the links, <strong> color, opacity, 
+		thickness and
+		label</strong>.  Check out the links to the classes (listed above)
+		that supports these attributes and also details the possible
+		colors and shapes you can use and how to specify them. 
+	</p>
+
+	<p>The following code styles the graph we created in part 1 and adds
+		visual attributes. The visualization follows that.
+	</p>
+
+	<div class="tabs">
+	  <div onclick="displayCode('Java2',this)">Java</div>
+	  <div onclick="displayCode('C++2',this)" >C++</div>
+	  <div onclick="displayCode('Python2',this)" >Python</div>
+	</div>
+	<div class="tabContents">
+	  <div id="Java2" w3-include-html="./Java_Graph_Styling.html"></div>
+	  <div id="C++2"  w3-include-html="./Cpp_Graph_Styling.html"></div>
+	  <div id="Python2"  w3-include-html="./Python_Graph_Styling.html"></div>
+	</div>
+	<div class="iframe-wrapper">
+	<iframe src="https://bridges-cs.herokuapp.com/assignments/10160/bridges_public" scrolling="no">
+		<p>Sorry, your browser doesn't seem to support iframes -
+		<a href="https://bridges-cs.herokuapp.com/assignments/10160/bridges_public">Frame Link</a>
+		</p>
+	</iframe>
+	</div>
+	<hr>
+
+	<h2>3. Advanced Features.</h2>
+
+	<p> In the last part of this tutorial, we show some advanced features with 
+		graphs.  An operation that is frequently required in graph algorithms
+		is to traverse  through the edges from a given vertex. The 
+		convenience method <strong>outgoingEdgeSetOf()</strong> combined
+		with iterators makes it easy to perform this operation. We demonstrate
+		multiple  ways  of doing the traversal in this tutorial.
+		These features make it more intuitive and convenient to traverse 
+		the data structure. A similar feature is provided to list the vertices
+		in the graph, using the <strong>keySet()</strong> method.
+	</p>
+	<p>The following code illustrates these advanced features of graphs. The visualization follows that. Hit
+		the 'l' button to turn on the labels.
+	</p>
+
+	<div class="tabs">
+	  <div onclick="displayCode('Java3',this)">Java</div>
+	  <div onclick="displayCode('C++3',this)" >C++</div>
+	  <div onclick="displayCode('Python3',this)" >Python</div>
+	</div>
+	<div class="tabContents">
+	  <div id="Java3" w3-include-html="./Java_Graph_Advanced.html"></div>
+	  <div id="C++3"  w3-include-html="./Cpp_Graph_Advanced.html"></div>
+	  <div id="Python3"  w3-include-html="./Python_Graph_Advanced.html"></div>
+	</div>
+	<div class="iframe-wrapper">
+	<iframe src="https://bridges-cs.herokuapp.com/assignments/10170/bridges_public" scrolling="no">
+		<p>Sorry, your browser doesn't seem to support iframes -
+		<a href="https://bridges-cs.herokuapp.com/assignments/10170/bridges_public">Frame Link</a>
+		</p>
+	</iframe>
+	</div>
+	<hr>
+    <p>Well done! You’ve just created your first Bridges Graph!</p>
+
+	<h2>Going Further</h2>
+	<p>Check Bridges <a href="../newassignments.html">assignment</a> page for graph based assignments
+
+      </main>
+
+      <footer w3-include-html="./Tutorial_Footer.html"></footer>
+
+    </div>
+    <script>
+      w3IncludeHTML();
+      document.querySelector("*.tabs > *").click();
+    </script>
+  </body>
+</html>
