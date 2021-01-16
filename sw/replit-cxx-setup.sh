@@ -1,7 +1,9 @@
 #!/bin/sh
 
+#
+# the command line argument should reflect the path to repl folder root
+#
 REPL_PATH=$1
-echo ${REPL_PATH}
 #
 # install Curl - can only use the install-pkg script which is buggy
 #
@@ -18,22 +20,28 @@ mv ~/.apt/usr/*  ${REPL_PATH}/curl
 #
 wget http://bridgesuncc.github.io/sw/bridges-cxx-3.1.1-x86_64-linux-gnu.tgz  -O ~/bridges-cxx.tgz
 
+# get an example makefile for repl
+wget http://bridgesuncc.github.io/sw/replit-example-Makefile -O Makefile
+
 #
 # explode it in the REPL directory
 #
 cd ${REPL_PATH}
 tar xvfz ~/bridges-cxx.tgz
 
+# mv the Makefile to the REPL folder
+mv ${HOME}/Makefile .
+
 #
 # need to set up environment variables that need to be appended to the .bashrc
+# done in the Makefile now
+#cat >> ~/.bashrc <<EOF
+
+#export BRIDGES_CXXFLAGS="-I${REPL_PATH}/bridges-cxx-3.1.1-x86_64-linux-gnu/include -I${REPL_PATH}/curl/include/x86_64-linux-gnu"
+#export BRIDGES_LDFLAGS="-L${REPL_PATH}/bridges-cxx-3.1.1-x86_64-linux-gnu/lib -L{HOME}/${REPL_PATH}/curl/lib/x86_64-linux-gnu"
 #
-cat >> ~/.bashrc <<EOF
+#export BRIDGES_CXX=clang++
+#export BRIDGES_CC=clang++
+#export BRIDGES_LD=clang++
 
-export BRIDGES_CXXFLAGS="-I${REPL_PATH}/bridges-cxx-3.1.1-x86_64-linux-gnu/include -I${REPL_PATH}/curl/include/x86_64-linux-gnu"
-export BRIDGES_LDFLAGS="-L${REPL_PATH}/bridges-cxx-3.1.1-x86_64-linux-gnu/lib -L{HOME}/${REPL_PATH}/curl/lib/x86_64-linux-gnu"
-
-export BRIDGES_CXX=clang++
-export BRIDGES_CC=clang++
-export BRIDGES_LD=clang++
-
-EOF
+#EOF
