@@ -1,0 +1,44 @@
+REPL_PATH=${HOME}/ScriptTest1
+
+export BRIDGES_CXXFLAGS=-I${REPL_PATH}/bridges-cxx-3.1.1-x86_64-linux-gnu/include -I${REPL_PATH}/curl/include/x86_64-linux-gnu
+
+export BRIDGES_LDFLAGS=-L${REPL_PATH}/bridges-cxx-3.1.1-x86_64-linux-gnu/lib -L${REPL_PATH}/curl/lib/x86_64-linux-gnu
+
+export BRIDGES_CXX=clang++
+export BRIDGES_CC=clang++
+export BRIDGES_LD=clang++
+
+SRCS = GridLyrics.cpp
+EXE  = GridLyrics
+
+#
+# Everything below that should not have to change ever.
+#
+
+CXX=$(BRIDGES_CXX)
+LD=$(BRIDGES_LD)
+CC=$(BRIDGES_CC)
+
+TARGET =  all 
+
+OBJS = $(SRCS:.cpp=.o)
+
+CXXFLAGS = -g  -std=c++14 $(BRIDGES_CXXFLAGS)
+
+LDFLAGS = -g $(BRIDGES_LDFLAGS) -pthread
+LIBS =  -lcurl -lbridges 
+
+$(EXE): $(OBJS)
+	$(CXX) -o $(EXE) $(OBJS) $(LDFLAGS) $(LIBS)
+
+.SUFFIXES: .cpp
+
+.cpp.o:  
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+all : $(EXE)
+
+clean:
+	-rm $(OBJS)
+	-rm $(EXE)
+
