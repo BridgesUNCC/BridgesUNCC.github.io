@@ -21,7 +21,7 @@ mv ~/.apt/usr/*  ${REPL_PATH}/curl
 wget http://bridgesuncc.github.io/sw/bridges-cxx-3.1.1-x86_64-linux-gnu.tgz  -O ~/bridges-cxx.tgz
 
 # get an example makefile for repl
-wget http://bridgesuncc.github.io/sw/replit-example-Makefile -O Makefile
+wget http://bridgesuncc.github.io/sw/replit-example-Makefile -O ${HOME}/Makefile
 
 #
 # explode it in the REPL directory
