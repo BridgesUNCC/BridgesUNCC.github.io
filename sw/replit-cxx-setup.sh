@@ -30,7 +30,7 @@ cd ${REPL_PATH}
 tar xvfz ~/bridges-cxx.tgz
 
 # mv the Makefile to the REPL folder
-mv ${HOME}/Makefile .
+mv ${HOME}/Makefile ${REPL_PATH}
 
 #
 # need to set up environment variables that need to be appended to the .bashrc
