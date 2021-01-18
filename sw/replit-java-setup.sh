@@ -10,7 +10,7 @@ mkdir ${REPL_PATH}/lib
 
 # download the BRIDGES Java client
 #
-wget http://bridgesuncc.github.io/sw/bridges-java-3.1.0.jar  -O ${REPL_PATH}/lib/bridges-java.jar
+wget http://bridgesuncc.github.io/sw/bridges-java-3.1.2.jar  -O ${REPL_PATH}/lib/bridges-java.jar
 
 
 #
