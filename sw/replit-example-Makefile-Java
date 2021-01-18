@@ -1,0 +1,26 @@
+
+# Fill in the path to your Repl folder root
+# default is the current directory; if you are in the repl folder, then no changes
+# are needed for this path
+
+
+REPL_PATH=./
+
+#
+# the final executable - name of class containing main()
+#
+EXE=dllist
+
+# put in the source and executable file names
+# multiple source files are separated by spaces
+SRCS = dllist.java
+
+
+export CLASSPATH=${REPL_PATH}/lib/bridges-java.jar:.
+
+
+all:
+	javac  ${SRCS}
+	java ${EXE}
+
+
