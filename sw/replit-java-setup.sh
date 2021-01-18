@@ -12,6 +12,8 @@ mkdir ${REPL_PATH}/lib
 #
 wget http://bridgesuncc.github.io/sw/bridges-java-3.1.2.jar  -O ${REPL_PATH}/lib/bridges-java.jar
 
+# get an example makefile for repl
+wget http://bridgesuncc.github.io/sw/replit-example-Makefile-Java -O ${REPL_PATH}/Makefile
 
 #
 #set CLASSPATH
