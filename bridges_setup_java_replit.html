@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BRIDGES-Java Setup Using Repl.it </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- w3IncludeHTML() -->
+    <script src="https://www.w3schools.com/lib/w3data.js"></script>
+
+    <!-- all pages need those. -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/bridges.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/glyphicon.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/footer.css">
+  </head>
+  <body>
+
+    <div w3-include-html="./navbar.html">
+      <script>
+	w3IncludeHTML();
+      </script>
+    </div>
+    
+    <h2> BRIDGES-Java Setup Using Repl.it</h2>
+    <table class = "table table-bordered">
+      <thead>
+	<tr> 
+	<td class = "col-md-2"> 
+		<b>Step 1: Create Repl.it account</b> 
+	    <ul> 
+	    <li> If you do not have a Repl.it  account navigate to the 
+			<a href = "http://repl.it">Repl.it site</a> and create an account for
+			yourself.
+	    </ul>
+	  </td>
+	  <td class = "col-md-8"> 
+	    <img src = "./img/replit_home.png" width = "600"></img> 
+	  </td>
+	</tr>
+	<tr> 
+	<td colspan = "2">
+	<b>Step 2: Create Bridges Account</b> 
+	 	Visit the Bridges 
+	 	<a href = "http://bridgesuncc.github.io"> main page</a> 
+	    	and create yourself an account by clicking the login button
+	    	on the top navigation bar.  Please ensure that 
+            your user id is devoid of spaces, as it will be 
+            used as part of the web link for your projects.
+	    	After creating your account, click 
+	    	on your profile name in the upper right corner to 
+	    	view your profile. Once in your profile, you will see your
+	    	API Key; <b>you will need this API key later
+	    	in the tutorial(as well as in every BRIDGES program 
+	    	you write). NOTE: Make sure to remember 
+	    	your password</b>. 
+	</td>
+	</tr>
+	<tr> 
+	<td colspan = "2">
+	<b>Step 3: Get Installation script to install Bridges Java files, Makefile</b> 
+	<ul> 
+		<li> The install includes getting the Java BRIDGES Jar file 
+			and an example Makefile. 
+		<li> To simplify the install, you will set up BRIDGES by running
+			a bash shell script. The script is 
+			<a href = "http://bridgesuncc.github.io/sw/replit-java-setup.sh">
+			here </a>. Save this file in a convenient place. <b> As Repl.it makes it 
+			difficult to access a persistent or shared folders, <b>this script must be run
+			for each repl (or project, you create) once</b>.
+	</ul>
+	</td>
+	</tr>
+
+	<tr>
+	<td class = "col-md-2"> <b>Step 3: Create a Repl Project</b> 
+		<ul> 
+			<li> Log into Repl.it and create a New repl project, by clicking on 
+				<b>New repl</b> button on top left
+			<li>  Follow the menus to create a Java project
+			<li> You will see a new project like what is shown on the right, with the 
+					the files on the left panel and the bash shell console on the right.
+			<li> You should be able to click the green Run (or Play) button at the top to 
+				run the 'Hello World' program.
+		</ul>
+	</td> 
+	<td class = "col-md-8"> 
+		<img src = "./img/repl_proj_java.png" width = "800"></img> 
+	</td>
+	</tr>
+
+	<tr>
+	<td class = "col-md-2"> 
+	<b>Step 4: Run the bash script, install BRIDGES and Curl</b>
+	<ul> 
+		<li> Bring the installation script you downloaded into the Repl; you can use
+			drag and drop from your file browser, or use the Upload Files button that
+			you get by hitting the 3 vertical dots on the Files bar(top left). You will
+			see the script file added to your list of files.
+		<li> On the console, run the script by typing <p><br>
+				<i>sh replit-java-setup.sh path-to-repl-project</i>  <p> <br>
+		<li> In the above command, the 'path-to-repl-project' should be replaced by the 
+			path to your project. For instance if you created a JavaTest repl, then 
+			you would use <p><br>
+				<i>sh replit-java-setup.sh ${HOME}/JavaTest</i>  <p> <br>
+		<li> This will take about a few seconds to complete 
+		<li> <strong> Validation:</strong> You should see a 'lib' folder containing the
+			the Bridges jar file. You will also see
+			a Makefile, that will be useful for compiling and building the Java program.
+	</ul>
+	</td>
+	<td class = "col-md-8">  
+		<img src = "./img/replit_file_upload.png" width = "300"></img>
+	</td>
+	<tr>
+	<td class = "col-md-2"> 
+	<b>Step 5: Compile and run an example BRIDGES program </b>
+	<ul> 
+		<li> Go to the <a href="http://bridgesuncc.github.io/tutorials/Overview.html">
+			tutorials pages</a> and pick a BRIDGES tutorial. Select  the singly linked
+			list tutorial (under Lists) and pick the first one (be sure to hit the 
+			Jave tab to get the Java version!).
+		<li> Copy/Paste that program into a file called sllist.java on your replit file
+			browser (you can remove Main.java).
+		<li> You should see something like the figure on the right.
+		<li> Add your BRIDGES credentials on the first line of the program: assignment
+			number can be any positive number, user id and api key are from your 
+			BRIDGES account (when you login to BRIDGES, the profile button will display
+			the credentials).
+        <li> Modify the classname to match the file name
+		<li> Click on the Makefile
+		<li> The SRCS line should be modified to point to your source file: sllist.java. 
+			If you have multiple files, then these would be listed in sequence.
+		<li> The EXE file should be modified to sllist (or the executable name you choose).
+		<li> Compile and execute thlde program. You can type 'make' on the console or 
+			hit the 'Run' button  to compile the program. 
+	    </ul>
+	  </td>
+	<td class = "col-md-8">  
+		<img src = "./img/repl_sllist_java.png" width = "800"></img>
+	</td>
+	</tr>
+	</tr>
+	<tr>
+	<td class = "col-md-2"> <b>Step 8: Visualize</b>
+	<ul>
+		<li> Executing the program will print a web link on the console. Click on the 
+			link to see the visualization. You will see a linked list on the console. 
+			Hit the 'l' button to turn on the labels. You can pan and zoom into 
+			the visualization with your mouse.
+	</ul>
+	</td>
+
+	<td class = "col-md-8">  
+		<img src = "./img/replit_sllist_vis.png" width = "600"></img>
+	</td>
+	</tr>
+	<tr>
+	<td class = "col-md-2"> <b>Final Notes</b>
+	<ul>
+		<li> Note that the bash script is run once at the beginning for each repl that is
+			created.
+		<li> The changes to the Makefile are also made once, unless new source files are
+			added, in which case the SRCS variable needs to be updated.
+	</ul>
+	<ul>
+      </thead>
+    </table>
+    <div w3-include-html="./footer.html"></div>
+
+  </body>
+</html>
+
