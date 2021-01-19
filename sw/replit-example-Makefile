@@ -10,7 +10,7 @@ REPL_PATH=./
 SRCS = GridLyrics.cpp
 
 # executable name
-EXE  = GridLyrics
+EXE  = CxxTest
 
 #
 # Everything below that should not have to change ever.
@@ -45,6 +45,9 @@ $(EXE): $(OBJS)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 all : $(EXE)
+	./$(EXE)
+
+	
 
 clean:
 	-rm $(OBJS)
