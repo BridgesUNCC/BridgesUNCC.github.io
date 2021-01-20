@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Python</h1>
-	<p>Running at Tue 19 Jan 2021 03:39:03 AM EST</p>
+	<p>Running at Wed 20 Jan 2021 03:39:05 AM EST</p>
   <div id="summaryarray1d.py" class="success">
     <h2><a href="python_testing_logs.html#pythonlogarray1d.py">Test array1d.py</a> </h2>
     <p>
@@ -124,11 +124,11 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summaryelevation_snippet.py" class="failure">
+  <div id="summaryelevation_snippet.py" class="success">
     <h2><a href="python_testing_logs.html#pythonlogelevation_snippet.py">Test elevation_snippet.py</a> </h2>
     <p>
       <ul>
-        <li> Run : <a href="python_testing_logs.html#pythonlogelevation_snippet.py-runtest">error</a></li>
+        <li> Run : <a href="python_testing_logs.html#pythonlogelevation_snippet.py-runtest">success</a></li>
       </ul>
     </p>
   </div>
@@ -236,11 +236,11 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summaryminimal_game.py" class="success">
+  <div id="summaryminimal_game.py" class="failure">
     <h2><a href="python_testing_logs.html#pythonlogminimal_game.py">Test minimal_game.py</a> </h2>
     <p>
       <ul>
-        <li> Run : <a href="python_testing_logs.html#pythonlogminimal_game.py-runtest">success</a></li>
+        <li> Run : <a href="python_testing_logs.html#pythonlogminimal_game.py-runtest">error</a></li>
       </ul>
     </p>
   </div>
@@ -768,18 +768,23 @@ http://bridges-cs.herokuapp.com/assignments/3013/bridges_testing
     <div id="pythonlogelevation_snippet.py" class="logdetails">
       <h2>Test elevation_snippet.py full log</h2>
     
-<div class="failure">
+<div class="success">
 <h3><span id="pythonlogelevation_snippet.py-runtest">Run for test elevation_snippet.py</span></h3>
 <pre><code>Width: 54
 Height: 74
-Traceback (most recent call last):
-  File &quot;elevation_snippet.py&quot;, line 31, in &lt;module&gt;
-    main()
-  File &quot;elevation_snippet.py&quot;, line 20, in main
-    print(&quot;Coordinate of lower left corner: &quot;+str(ele_obj.xll)+&quot;, &quot;+str(ele_obj.yll))
-  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/data_src_dependent/elevation.py&quot;, line 76, in xll
-AttributeError: 'ElevationData' object has no attribute '_x11'
-could not run test elevation_snippet.py
+Coordinate of lower left corner: -98.0259, 41.029538888889
+Spatial resolution: 0.020011111111
+First 10 elevations:
+504
+504
+500
+501
+497
+491
+488
+497
+524
+522
 </code></pre>
 </div>
     
@@ -789,10 +794,10 @@ could not run test elevation_snippet.py
     
 <div class="success">
 <h3><span id="pythonlogeq_snippet.py-runtest">Run for test eq_snippet.py</span></h3>
-<pre><code>Magnitude: 2.08
-Date: 2021-01-19 08:02:52
-Location:4 km WSW of Fuig, Puerto Rico
-Lat/Long:17.9753,-66.9518
+<pre><code>Magnitude: 3.1
+Date: 2021-01-20 08:22:01
+Location:55 km S of Whites City, New Mexico
+Lat/Long:31.6723,-104.4229
 </code></pre>
 </div>
     
@@ -844,10 +849,10 @@ could not run test game_size_test.py
     
 <div class="success">
 <h3><span id="pythonloggame_snippet.py-runtest">Run for test game_snippet.py</span></h3>
-<pre><code>Br&amp;uuml;tal Legend
-Xbox 360
-9
-['Action']
+<pre><code>Stickman BMX
+iPhone
+6
+['Sports']
 </code></pre>
 </div>
     
@@ -931,9 +936,9 @@ http://bridges-cs.herokuapp.com/assignments/3022/bridges_testing
     
 <div class="success">
 <h3><span id="pythonlogguttenberg_snippet.py-runtest">Run for test guttenberg_snippet.py</span></h3>
-<pre><code>Against the Grain
-Huysmans, J.-K. (Joris-Karl)
-['translations into english']
+<pre><code>Jane Eyre: An Autobiography
+Bronte, Charlotte
+['fiction', 'bildungsromans', 'love stories']
 </code></pre>
 </div>
     
@@ -944,7 +949,7 @@ Huysmans, J.-K. (Joris-Karl)
 <div class="success">
 <h3><span id="pythonlogimdb_snippet.py-runtest">Run for test imdb_snippet.py</span></h3>
 <pre><code>Christopher_Lee_(I)
-Dark_Avenger,_The_(1955)
+Girl,_The_(1986)
 </code></pre>
 </div>
     
@@ -1027,19 +1032,26 @@ http://bridges-cs.herokuapp.com/assignments/3027/bridges_testing
     <div id="pythonlogminimal_game.py" class="logdetails">
       <h2>Test minimal_game.py full log</h2>
     
-<div class="success">
+<div class="failure">
 <h3><span id="pythonlogminimal_game.py-runtest">Run for test minimal_game.py</span></h3>
 <pre><code>passing student credentials to server..
-Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f9bc1930d30&gt;
-limiting number of frame to 10
-
-Check Your Visualization at the following link:
-
-http://bridges-games.herokuapp.com/assignments/3028/bridges_testing
-
-
-frame limit of 10 frames reached
-disconnected
+Traceback (most recent call last):
+  File &quot;minimal_game.py&quot;, line 25, in &lt;module&gt;
+    main()
+  File &quot;minimal_game.py&quot;, line 20, in main
+    game = MinimalGame(int(args[0]), args[1], args[2])
+  File &quot;minimal_game.py&quot;, line 8, in __init__
+    super().__init__(assid, user_id,  api_key, 10, 10)
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/non_blocking_game.py&quot;, line 105, in __init__
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/gamebase.py&quot;, line 30, in __init__
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/gamebase.py&quot;, line 56, in game_base_init
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/bridges-3.1.1-py3.7.egg/bridges/socket_connection.py&quot;, line 35, in setup_connection
+  File &quot;/home/bridges-testing/.local/lib/python3.7/site-packages/python_socketio-5.0.4-py3.7.egg/socketio/client.py&quot;, line 329, in emit
+    namespace + ' is not a connected namespace.')
+socketio.exceptions.BadNamespaceError: / is not a connected namespace.
+packet queue is empty, aborting
+Alarm clock
+could not run test minimal_game.py
 </code></pre>
 </div>
     
@@ -1138,11 +1150,18 @@ Cartesian Coordinate of first vertex: 827.1273231300758, -5144.073405550668
     
 <div class="success">
 <h3><span id="pythonlogshakespeare_snippet.py-runtest">Run for test shakespeare_snippet.py</span></h3>
-<pre><code>Sonnet 116
-poem
-Let me not to the marriage of true minds
- Admit impediments, love is not love
- Which alters when it 
+<pre><code>The Life of King Henry the Eighth
+play
+1611
+
+KING HENRY THE EIGHTH
+
+by William Shakespeare
+
+DRAMATIS PERSONAE
+
+ KING HENRY THE EIGHTH
+ CARD
 </code></pre>
 </div>
     
