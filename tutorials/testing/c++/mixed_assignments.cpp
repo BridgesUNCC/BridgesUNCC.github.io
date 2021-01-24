@@ -36,6 +36,12 @@ int main(int argc, char **argv) {
 	bridges.setDataStructure(t0);
 	bridges.visualize();
 
+	delete t0;
+	delete t1;
+	delete t2;
+	delete t3;
+	
+	
 	// circular list
 	CircSLelement<string> *head = new CircSLelement<string>("", "head");
 	CircSLelement<string> *csl1 = new CircSLelement<string>("", "el1");
@@ -53,64 +59,79 @@ int main(int argc, char **argv) {
 	bridges.setDataStructure(head);
 	bridges.visualize();
 
+
+	delete head;
+	delete csl1;
+	delete csl2;
+	delete tail;
+
+	
 	// 2D Array 
 	int num_rows = 4, num_cols = 4;
-	Array2D<int> *my_array = new Array2D<int> (num_rows, num_cols);
+	Array2D<int> my_array (num_rows, num_cols);
 
 	// populate the array
 	for (int row = 0; row < num_rows; row++) {
 		for (int col = 0; col < num_cols; col++) {
-			my_array->getElement(row, col).setLabel("El " +
+			my_array.getElement(row, col).setLabel("El " +
 				std::to_string (row * num_cols + col));
 		}
 	}
 
 	// set a color
-	my_array->getElement(0, 0).setColor("purple");
+	my_array.getElement(0, 0).setColor("purple");
 
 	// set data structure and visualize
 	bridges.setTitle("A 2D Array");
 	bridges.setDataStructure(my_array);
 	bridges.visualize();
 
+	
 	// Shape collection
-	SymbolCollection *sc = new SymbolCollection();
+	SymbolCollection sc;
 
 	Rectangle *r1 = new Rectangle(0.0f, 0.0f, 25, 25);
 	r1->setFillColor("black");
-	sc->addSymbol(r1);
+	sc.addSymbol(r1);
 
 	Circle *s1 = new Circle(25.0f, 0.0f, 10);
 	s1->setFillColor("yellow");
-	sc->addSymbol(s1);
+	sc.addSymbol(s1);
 
 	Circle *s2 = new Circle(-25.0f, 0.0f, 10);
 	s2->setFillColor("yellow");
-	sc->addSymbol(s2);
+	sc.addSymbol(s2);
 
 	Circle *s3 = new Circle(0.0f, 25.0f, 10);
 	s3->setFillColor("yellow");
-	sc->addSymbol(s3);
+	sc.addSymbol(s3);
 
 	Circle *s4 = new Circle(0.0f, -25.0f, 10);
 	s4->setFillColor("yellow");
-	sc->addSymbol(s4);
+	sc.addSymbol(s4);
 
 	// set data structure and visualize
 	bridges.setTitle("A Symbol Collection");
 	bridges.setDataStructure(sc);
 	bridges.visualize();
 
+	delete r1;
+	delete s1;
+	delete s2;	
+	delete s3;
+	delete s4;
+		
+
 	// color grid
 	int rows = 30, cols = 30;
 
-	ColorGrid *cg  = new ColorGrid(rows, cols, Color("purple"));
+	ColorGrid cg  (rows, cols, Color("purple"));
 
-	cg->set(12, 12, Color("black"));
-	cg->set(12, 18, Color("black"));
+	cg.set(12, 12, Color("black"));
+	cg.set(12, 18, Color("black"));
 
 	for (int i = 0; i < 10; i++) {
-		cg->set(18, 10 + i, Color("black"));
+		cg.set(18, 10 + i, Color("black"));
 	}
 
 	// set data structure and visualize

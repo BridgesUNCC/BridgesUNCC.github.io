@@ -1,0 +1,67 @@
+<pre id='vimCodeElement'>
+
+<span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;DataSource.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;data_src/EarthquakeUSGS.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;BSTElement.h&quot;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> std;
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges::dataset;
+
+BSTElement&lt;<span class="Type">float</span>, EarthquakeUSGS&gt; *insert (BSTElement&lt;<span class="Type">float</span>, EarthquakeUSGS&gt; *rt,
+	BSTElement&lt;<span class="Type">float</span>, EarthquakeUSGS&gt; *new_el);
+
+<span class="Type">int</span> max_quakes = <span class="Constant">25</span>;
+
+<span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
+	<span class="Comment">// create Bridges object</span>
+	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+		<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+	<span class="Comment">// set title, description</span>
+	bridges.setTitle(<span class="Constant">&quot;A Binary Search Tree Example with Earthquake Data&quot;</span>);
+	bridges.setDescription(<span class="Constant">&quot;10 sets of earthquake are gathered and sorted with nodes whos magnitude is greater than the parent is set to the right and nodes with a magnitude less than the parent set to the left. The root is set to red the leaf nodes are neutral.&quot;</span>);
+
+	<span class="Comment">// get earthquake data</span>
+	DataSource *ds = <span class="Statement">new</span> DataSource;
+	vector&lt;EarthquakeUSGS&gt; eq_list = ds-&gt;getEarthquakeUSGSData(max_quakes);
+
+	<span class="Comment">// create the binary tree root</span>
+	BSTElement&lt;<span class="Type">float</span>, EarthquakeUSGS&gt; *root = <span class="Constant">nullptr</span>;
+
+	<span class="Comment">// insert quake records into the tree</span>
+	<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; max_quakes; k++) {
+		EarthquakeUSGS eq = eq_list[k];
+		BSTElement&lt;<span class="Type">float</span>, EarthquakeUSGS&gt;
+		*bst_node = <span class="Statement">new</span> BSTElement&lt;<span class="Type">float</span>, EarthquakeUSGS&gt;(eq.getMagnitude(), eq);
+		bst_node-&gt;setLabel(eq.getTitle() + <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">Lat/Long: ( &quot;</span> +
+			to_string(eq.getLatit()) + <span class="Constant">&quot;,&quot;</span> + to_string(eq.getLongit()) + <span class="Constant">&quot; )</span><span class="Special">\n</span><span class="Constant">&quot;</span> +
+			eq.getDateStr());
+		root = insert (root, bst_node);
+		root-&gt;setColor(<span class="Constant">&quot;red&quot;</span>);
+	}
+
+	<span class="Comment">// visualize the binary search tree</span>
+	bridges.setDataStructure(root);
+	bridges.visualize();
+
+	<span class="Statement">return</span> <span class="Constant">0</span>;
+}
+
+<span class="Comment">// inserts a record into the tree</span>
+BSTElement&lt;<span class="Type">float</span>, EarthquakeUSGS&gt; *insert (BSTElement&lt;<span class="Type">float</span>, EarthquakeUSGS&gt; *rt,
+	BSTElement&lt;<span class="Type">float</span>, EarthquakeUSGS&gt; *new_el) {
+	<span class="Statement">if</span> (rt == <span class="Constant">nullptr</span>)
+		<span class="Statement">return</span> new_el;
+	<span class="Statement">else</span> <span class="Statement">if</span> (new_el-&gt;getKey() &lt; rt-&gt;getKey())
+		rt-&gt;setLeft(insert(rt-&gt;getLeft(), new_el));
+	<span class="Statement">else</span>
+		rt-&gt;setRight(insert(rt-&gt;getRight(), new_el));
+
+	<span class="Statement">return</span> rt;
+}
+
+
+</pre>

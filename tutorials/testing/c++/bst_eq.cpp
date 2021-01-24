@@ -46,6 +46,21 @@ int main(int argc, char **argv) {
 	bridges.setDataStructure(root);
 	bridges.visualize();
 
+	//cleanup
+	std::function<void(BSTElement<float, EarthquakeUSGS>*)> rec_cleanup;
+	rec_cleanup = [&rec_cleanup](BSTElement<float, EarthquakeUSGS>* b) -> void {
+			if (b->getLeft() != nullptr) {
+			  rec_cleanup(b->getLeft());
+			  b->setLeft(nullptr);
+			}
+			if (b->getRight() != nullptr) {
+			  rec_cleanup(b->getRight());
+			  b->setRight(nullptr);
+			}
+			delete b;
+		      };
+	rec_cleanup(root);
+	
 	return 0;
 }
 

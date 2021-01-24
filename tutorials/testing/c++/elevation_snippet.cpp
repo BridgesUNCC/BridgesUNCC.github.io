@@ -15,7 +15,7 @@ int main(int argc, char **argv) {
 	//create the Bridges object, set credentials
 
 	DataSource ds;
-	dataset::ElevationData *elev_data;
+	dataset::ElevationData elev_data;
 	try {
 		elev_data = ds.getElevationData(41.03133177632377, -98.02593749997456, 42.508577297430456, -96.94531249997696, 0.02);
 	}
@@ -24,15 +24,15 @@ int main(int argc, char **argv) {
 	}
 
 	// print the data dimensions  and the firs 10 elevation data values
-	cout << "\tWidth: " << elev_data->getCols() << endl
-		<< "\tHeight: " << elev_data->getRows() << endl
-		<< "\tResolution: " <<  elev_data->getCellSize() << endl 
-		<< "\tLower Left Corner: "  << elev_data->getxll()  << 
-				 ", " <<  elev_data->getyll() <<endl;
+	cout << "\tWidth: " << elev_data.getCols() << endl
+		<< "\tHeight: " << elev_data.getRows() << endl
+		<< "\tResolution: " <<  elev_data.getCellSize() << endl 
+		<< "\tLower Left Corner: "  << elev_data.getxll()  << 
+				 ", " <<  elev_data.getyll() <<endl;
 
 	cout << "The first 10 elevation values.." << endl;
 	for (int k = 0; k < 10; k++)
-		cout << elev_data->getVal(0, k) << "  " << endl;
+		cout << elev_data.getVal(0, k) << "  " << endl;
 	cout << endl;
 
 	return 0;

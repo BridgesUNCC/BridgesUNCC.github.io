@@ -45,5 +45,13 @@ int main(int argc, char **argv) {
 
 	bridges.visualize();
 
+	delete t0;
+	delete t2;
+	delete t3;
+	delete t4;
+	delete t5;
+	delete t6;
+	delete t7;
+	
 	return 0;
 }

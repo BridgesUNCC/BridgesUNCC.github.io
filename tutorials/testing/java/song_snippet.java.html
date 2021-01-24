@@ -1,0 +1,27 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">import</span> java.util.List;
+<span class="PreProc">import</span> java.util.Random;
+<span class="PreProc">import</span> bridges.connect.Bridges;
+<span class="PreProc">import</span> bridges.connect.DataSource;
+<span class="PreProc">import</span> bridges.data_src_dependent.Song;
+
+<span class="Type">public</span> <span class="Type">class</span> song_snippet {
+	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) <span class="Type">throws</span> Exception {
+
+		<span class="Comment">//create the Bridges object</span>
+		Bridges bridges = <span class="Statement">new</span> Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+		<span class="Comment">/* Get a List of ActorMovieIMDB objects from Bridges */</span>
+		DataSource ds = bridges.getDataSource();
+		List&lt;Song&gt; mylist = ds.getSongData();
+
+		<span class="Comment">/* Inspect a random ActorMovieIMDB object */</span>
+		Song song1 = mylist.get((<span class="Statement">new</span> Random()).nextInt(mylist.size()));
+		System.out.println(song1.getSongTitle());
+		System.out.println(song1.getArtist());
+		System.out.println(song1.getAlbumTitle());
+		System.out.println(song1.getReleaseDate());
+		System.out.println(song1.getLyrics().substring(<span class="Constant">0</span>, Math.min(<span class="Constant">100</span>, song1.getLyrics().length())) + <span class="Constant">&quot;...&quot;</span>);
+	}
+}
+</pre>

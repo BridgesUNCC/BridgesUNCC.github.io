@@ -47,6 +47,21 @@ BSTElement&lt;<span class="Type">float</span>, EarthquakeUSGS&gt; *insert (BSTEl
 	bridges.setDataStructure(root);
 	bridges.visualize();
 
+	<span class="Comment">//cleanup</span>
+	std::function&lt;<span class="Type">void</span>(BSTElement&lt;<span class="Type">float</span>, EarthquakeUSGS&gt;*)&gt; rec_cleanup;
+	rec_cleanup = [&amp;rec_cleanup](BSTElement&lt;<span class="Type">float</span>, EarthquakeUSGS&gt;* b) -&gt; <span class="Type">void</span> {
+			<span class="Statement">if</span> (b-&gt;getLeft() != <span class="Constant">nullptr</span>) {
+			  rec_cleanup(b-&gt;getLeft());
+			  b-&gt;setLeft(<span class="Constant">nullptr</span>);
+			}
+			<span class="Statement">if</span> (b-&gt;getRight() != <span class="Constant">nullptr</span>) {
+			  rec_cleanup(b-&gt;getRight());
+			  b-&gt;setRight(<span class="Constant">nullptr</span>);
+			}
+			<span class="Statement">delete</span> b;
+		      };
+	rec_cleanup(root);
+
 	<span class="Statement">return</span> <span class="Constant">0</span>;
 }
 

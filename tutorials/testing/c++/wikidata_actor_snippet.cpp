@@ -27,7 +27,6 @@ int main(int argc, char **argv) {
 	// get the actor movie Wikidata data through the BRIDGES API for 1955.
 	// data are available from the early 20th century to now.
 	std::vector<MovieActorWikidata> v = ds.getWikidataActorMovie(1955, 1955);
-cout << "here.." << endl;
 
 	// print out the first record of the dataset
 	cout << "Actor-Movie Data:" << endl

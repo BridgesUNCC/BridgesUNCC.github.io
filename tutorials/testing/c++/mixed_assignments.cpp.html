@@ -37,6 +37,12 @@
 	bridges.setDataStructure(t0);
 	bridges.visualize();
 
+	<span class="Statement">delete</span> t0;
+	<span class="Statement">delete</span> t1;
+	<span class="Statement">delete</span> t2;
+	<span class="Statement">delete</span> t3;
+
+
 	<span class="Comment">// circular list</span>
 	CircSLelement&lt;string&gt; *head = <span class="Statement">new</span> CircSLelement&lt;string&gt;(<span class="Constant">&quot;&quot;</span>, <span class="Constant">&quot;head&quot;</span>);
 	CircSLelement&lt;string&gt; *csl1 = <span class="Statement">new</span> CircSLelement&lt;string&gt;(<span class="Constant">&quot;&quot;</span>, <span class="Constant">&quot;el1&quot;</span>);
@@ -54,64 +60,79 @@
 	bridges.setDataStructure(head);
 	bridges.visualize();
 
+
+	<span class="Statement">delete</span> head;
+	<span class="Statement">delete</span> csl1;
+	<span class="Statement">delete</span> csl2;
+	<span class="Statement">delete</span> tail;
+
+
 	<span class="Comment">// 2D Array </span>
 	<span class="Type">int</span> num_rows = <span class="Constant">4</span>, num_cols = <span class="Constant">4</span>;
-	Array2D&lt;<span class="Type">int</span>&gt; *my_array = <span class="Statement">new</span> Array2D&lt;<span class="Type">int</span>&gt; (num_rows, num_cols);
+	Array2D&lt;<span class="Type">int</span>&gt; my_array (num_rows, num_cols);
 
 	<span class="Comment">// populate the array</span>
 	<span class="Statement">for</span> (<span class="Type">int</span> row = <span class="Constant">0</span>; row &lt; num_rows; row++) {
 		<span class="Statement">for</span> (<span class="Type">int</span> col = <span class="Constant">0</span>; col &lt; num_cols; col++) {
-			my_array-&gt;getElement(row, col).setLabel(<span class="Constant">&quot;El &quot;</span> +
+			my_array.getElement(row, col).setLabel(<span class="Constant">&quot;El &quot;</span> +
 				std::to_string (row * num_cols + col));
 		}
 	}
 
 	<span class="Comment">// set a color</span>
-	my_array-&gt;getElement(<span class="Constant">0</span>, <span class="Constant">0</span>).setColor(<span class="Constant">&quot;purple&quot;</span>);
+	my_array.getElement(<span class="Constant">0</span>, <span class="Constant">0</span>).setColor(<span class="Constant">&quot;purple&quot;</span>);
 
 	<span class="Comment">// set data structure and visualize</span>
 	bridges.setTitle(<span class="Constant">&quot;A 2D Array&quot;</span>);
 	bridges.setDataStructure(my_array);
 	bridges.visualize();
 
+
 	<span class="Comment">// Shape collection</span>
-	SymbolCollection *sc = <span class="Statement">new</span> SymbolCollection();
+	SymbolCollection sc;
 
 	Rectangle *r1 = <span class="Statement">new</span> Rectangle(<span class="Constant">0.0f</span>, <span class="Constant">0.0f</span>, <span class="Constant">25</span>, <span class="Constant">25</span>);
 	r1-&gt;setFillColor(<span class="Constant">&quot;black&quot;</span>);
-	sc-&gt;addSymbol(r1);
+	sc.addSymbol(r1);
 
 	Circle *s1 = <span class="Statement">new</span> Circle(<span class="Constant">25.0f</span>, <span class="Constant">0.0f</span>, <span class="Constant">10</span>);
 	s1-&gt;setFillColor(<span class="Constant">&quot;yellow&quot;</span>);
-	sc-&gt;addSymbol(s1);
+	sc.addSymbol(s1);
 
 	Circle *s2 = <span class="Statement">new</span> Circle(-<span class="Constant">25.0f</span>, <span class="Constant">0.0f</span>, <span class="Constant">10</span>);
 	s2-&gt;setFillColor(<span class="Constant">&quot;yellow&quot;</span>);
-	sc-&gt;addSymbol(s2);
+	sc.addSymbol(s2);
 
 	Circle *s3 = <span class="Statement">new</span> Circle(<span class="Constant">0.0f</span>, <span class="Constant">25.0f</span>, <span class="Constant">10</span>);
 	s3-&gt;setFillColor(<span class="Constant">&quot;yellow&quot;</span>);
-	sc-&gt;addSymbol(s3);
+	sc.addSymbol(s3);
 
 	Circle *s4 = <span class="Statement">new</span> Circle(<span class="Constant">0.0f</span>, -<span class="Constant">25.0f</span>, <span class="Constant">10</span>);
 	s4-&gt;setFillColor(<span class="Constant">&quot;yellow&quot;</span>);
-	sc-&gt;addSymbol(s4);
+	sc.addSymbol(s4);
 
 	<span class="Comment">// set data structure and visualize</span>
 	bridges.setTitle(<span class="Constant">&quot;A Symbol Collection&quot;</span>);
 	bridges.setDataStructure(sc);
 	bridges.visualize();
 
+	<span class="Statement">delete</span> r1;
+	<span class="Statement">delete</span> s1;
+	<span class="Statement">delete</span> s2;
+	<span class="Statement">delete</span> s3;
+	<span class="Statement">delete</span> s4;
+
+
 	<span class="Comment">// color grid</span>
 	<span class="Type">int</span> rows = <span class="Constant">30</span>, cols = <span class="Constant">30</span>;
 
-	ColorGrid *cg  = <span class="Statement">new</span> ColorGrid(rows, cols, Color(<span class="Constant">&quot;purple&quot;</span>));
+	ColorGrid cg  (rows, cols, Color(<span class="Constant">&quot;purple&quot;</span>));
 
-	cg-&gt;set(<span class="Constant">12</span>, <span class="Constant">12</span>, Color(<span class="Constant">&quot;black&quot;</span>));
-	cg-&gt;set(<span class="Constant">12</span>, <span class="Constant">18</span>, Color(<span class="Constant">&quot;black&quot;</span>));
+	cg.set(<span class="Constant">12</span>, <span class="Constant">12</span>, Color(<span class="Constant">&quot;black&quot;</span>));
+	cg.set(<span class="Constant">12</span>, <span class="Constant">18</span>, Color(<span class="Constant">&quot;black&quot;</span>));
 
 	<span class="Statement">for</span> (<span class="Type">int</span> i = <span class="Constant">0</span>; i &lt; <span class="Constant">10</span>; i++) {
-		cg-&gt;set(<span class="Constant">18</span>, <span class="Constant">10</span> + i, Color(<span class="Constant">&quot;black&quot;</span>));
+		cg.set(<span class="Constant">18</span>, <span class="Constant">10</span> + i, Color(<span class="Constant">&quot;black&quot;</span>));
 	}
 
 	<span class="Comment">// set data structure and visualize</span>

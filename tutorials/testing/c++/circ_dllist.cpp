@@ -61,13 +61,12 @@ int main(int argc, char **argv) {
 	// color the links - must specify a valid terminating element
 	el0->getLinkVisualizer(el1)->setColor("green");
 	el3->getLinkVisualizer(el4)->setColor("magenta");
-	el3->getLinkVisualizer(el4)->setLabel("magenta");
 
 	// adjust link thickness
 	el0->getLinkVisualizer(el1)->setThickness(2.0f);
 
 	// set link label
-	el2->getLinkVisualizer(el3)->setLabel("Gladys Serino to Karol Soderman");
+	el2->getLinkVisualizer(el3)->setLabel("Link Label");
 
 	// set node transparency
 	el4->setOpacity (0.5f);

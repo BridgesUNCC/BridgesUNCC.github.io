@@ -52,7 +52,6 @@ public class kdt {
 		// provide BRIDGES the  handle to the tree structure
 		bridges.setDataStructure(t0);
 
-		bridges.setVisualizeJSON(true);
 
 		// visualize the tree
 		bridges.visualize();

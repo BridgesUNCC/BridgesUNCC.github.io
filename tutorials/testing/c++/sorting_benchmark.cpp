@@ -34,7 +34,7 @@ int main (int argc, char **argv) {
 
   bridges::benchmark::SortingBenchmark sb(plot);
 
-  sb.geometricRange (100, 100000, 2.0);
+  sb.geometricRange (100, 10000, 2.0);
 
   sb.run("bubblesort", bubblesort);
   sb.run("std::sort", standardsort);

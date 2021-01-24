@@ -13,8 +13,10 @@ def main():
     bridges.set_title("Open Street Map Test")
 
     # create an adjacency list based graph
-    osm_data = data_source.get_osm_data(35.28, -80.75, 35.32, -80.71, "default")
-    #osm_data = data_source.get_osm_data("Charlotte, North Carolina", "default")
+    osm_data = data_source.get_osm_data("Charlotte, North Carolina", "default")
+    # Alternatively, one can use a bounding box in latitude and longitude
+    # osm_data = data_source.get_osm_data(35.28, -80.75, 35.32, -80.71, "default")
+    
 
     print ("Number of Vertices [Charlotte]: " + str(len(osm_data.vertices)))
     print ("Number of Edges [Charlotte]: " + str(len(osm_data.edges)))

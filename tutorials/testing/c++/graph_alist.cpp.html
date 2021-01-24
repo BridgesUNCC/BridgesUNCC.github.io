@@ -13,8 +13,8 @@
 		<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 
 	<span class="Comment">// get the actor - movie data from IMDB dataset</span>
-	DataSource *ds = <span class="Statement">new</span> DataSource;
-	vector&lt;ActorMovieIMDB&gt; actor_list = ds-&gt;getActorMovieIMDBData(<span class="Constant">1813</span>);
+	DataSource ds (bridges);
+	vector&lt;ActorMovieIMDB&gt; actor_list = ds.getActorMovieIMDBData(<span class="Constant">1813</span>);
 
 	<span class="Comment">// create a graph</span>
 	GraphAdjList&lt;string, string, <span class="Type">int</span>&gt; graph;

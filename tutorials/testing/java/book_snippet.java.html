@@ -1,0 +1,30 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">import</span> java.util.List;
+<span class="PreProc">import</span> java.util.Random;
+<span class="PreProc">import</span> bridges.connect.Bridges;
+<span class="PreProc">import</span> bridges.connect.DataSource;
+<span class="PreProc">import</span> bridges.data_src_dependent.GutenbergBook;
+
+<span class="Comment">/*! A test class that fetches a random book from Gutenberg Book then sends the</span>
+<span class="Comment">	title, authors name, and genre to the console as output.</span>
+<span class="Comment">	There is no visual output to the users BRIDGES gallery after running this code.*/</span>
+
+<span class="Type">public</span> <span class="Type">class</span> book_snippet {
+	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) <span class="Type">throws</span> Exception {
+
+		<span class="Comment">//create the Bridges object</span>
+		Bridges bridges = <span class="Statement">new</span> Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+		<span class="Comment">/* Get a List of GutenbergBook objects from Bridges */</span>
+    DataSource ds = bridges.getDataSource();
+    List&lt;GutenbergBook&gt; mylist = ds.getGutenbergBookMetaData();
+
+		<span class="Comment">/* Inspect a random GutenbergBook object */</span>
+		GutenbergBook book1 = mylist.get((<span class="Statement">new</span> Random()).nextInt(mylist.size()));
+		System.out.println(book1.getTitle());
+		System.out.println(book1.getAuthorName());
+		System.out.println(book1.getGenres());
+
+	}
+}
+</pre>

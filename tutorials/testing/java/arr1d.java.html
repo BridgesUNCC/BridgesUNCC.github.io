@@ -1,0 +1,47 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">import</span> bridges.connect.Bridges;
+<span class="PreProc">import</span> bridges.base.Array1D;
+
+<span class="Type">public</span> <span class="Type">class</span> arr1d {
+	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) <span class="Type">throws</span> Exception {
+
+		<span class="Comment">//create the Bridges object, set credentials</span>
+		Bridges bridges = <span class="Statement">new</span> Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+			<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+		<span class="Comment">// title, description</span>
+		bridges.setTitle(<span class="Constant">&quot;One-Dimensional Array Example&quot;</span>);
+		bridges.setDescription(<span class="Constant">&quot;One dimensional  array with visual attributes&quot;</span>);
+
+		<span class="Comment">//  set array dimensions, allocate array of elements</span>
+		<span class="Type">int</span> arraySize = <span class="Constant">10</span>;
+
+		Array1D&lt;Integer&gt; arr = <span class="Statement">new</span> Array1D&lt;Integer&gt; (arraySize);
+
+		<span class="Comment">// populate the array, with squares of indices</span>
+		<span class="Comment">// use the values to label the elements</span>
+		<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; arr.getSize(); k++) {
+			arr.getElement(k).setValue(k * k);
+			arr.getElement(k).setLabel(String.valueOf(arr.getElement(k).getValue()));
+		}
+
+		<span class="Comment">// color the array elements</span>
+		arr.getElement(<span class="Constant">0</span>).setColor(<span class="Constant">&quot;red&quot;</span>);
+		arr.getElement(<span class="Constant">1</span>).setColor(<span class="Constant">&quot;green&quot;</span>);
+		arr.getElement(<span class="Constant">2</span>).setColor(<span class="Constant">&quot;blue&quot;</span>);
+		arr.getElement(<span class="Constant">3</span>).setColor(<span class="Constant">&quot;cyan&quot;</span>);
+		arr.getElement(<span class="Constant">4</span>).setColor(<span class="Constant">&quot;magenta&quot;</span>);
+		arr.getElement(<span class="Constant">5</span>).setColor(<span class="Constant">&quot;yellow&quot;</span>);
+		arr.getElement(<span class="Constant">6</span>).setColor(<span class="Constant">&quot;red&quot;</span>);
+		arr.getElement(<span class="Constant">7</span>).setColor(<span class="Constant">&quot;green&quot;</span>);
+		arr.getElement(<span class="Constant">8</span>).setColor(<span class="Constant">&quot;blue&quot;</span>);
+		arr.getElement(<span class="Constant">9</span>).setColor(<span class="Constant">&quot;black&quot;</span>);
+
+		<span class="Comment">// tell Bridges what datastructure to visualize</span>
+		bridges.setDataStructure(arr);
+
+		<span class="Comment">// visualize the list</span>
+		bridges.visualize();
+	}
+}
+</pre>

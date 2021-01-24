@@ -82,5 +82,13 @@ int main(int argc, char **argv) {
 	// visualize the binary search tree
 	bridges.visualize();
 
+	//cleaning up
+	delete root;
+	delete node1;
+	delete node2;
+	delete node3;
+	delete node4;
+	delete node5;
+	
 	return 0;
 }
