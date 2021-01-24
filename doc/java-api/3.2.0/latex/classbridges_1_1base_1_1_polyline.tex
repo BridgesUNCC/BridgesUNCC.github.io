@@ -1,0 +1,188 @@
+\hypertarget{classbridges_1_1base_1_1_polyline}{}\section{bridges.\+base.\+Polyline Class Reference}
+\label{classbridges_1_1base_1_1_polyline}\index{bridges.\+base.\+Polyline@{bridges.\+base.\+Polyline}}
+Inheritance diagram for bridges.\+base.\+Polyline\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classbridges_1_1base_1_1_polyline}
+\end{center}
+\end{figure}
+
+
+\subsection{Detailed Description}
+This class defines a polyline and is part of the symbol collection. A polyline has a sequence of points (x, y coordinate pairs) 
+
+Basic styling such as stroke and fill are defined in the superclass \hyperlink{classbridges_1_1base_1_1_symbol}{Symbol}.
+
+\begin{DoxySeeAlso}{See also}
+An example tutorial can be found at \href{http://bridgesuncc.github.io/tutorials/Symbol_Collection.html}{\tt http\+://bridgesuncc.\+github.\+io/tutorials/\+Symbol\+\_\+\+Collection.\+html}
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+David Burlinson, Kalpathi Subramanian 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+12/23/18, 7/15/19 
+\end{DoxyDate}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbridges_1_1base_1_1_polyline_a8842a3d3737dfa5b26424a05dc965a4b}{Polyline} ()
+\item 
+\hyperlink{classbridges_1_1base_1_1_polyline_a11d14fddddd6e89e0902e94aa1bac875}{Polyline} (Array\+List$<$ Float $>$ pts)
+\item 
+String \hyperlink{classbridges_1_1base_1_1_polyline_a5b56cee642a6381ea940c75a336076ea}{get\+Name} ()
+\item 
+void \hyperlink{classbridges_1_1base_1_1_polyline_a24b99307181f1a938ea408355984d191}{add\+Point} (float x, float y)
+\item 
+Array\+List$<$ Float $>$ \hyperlink{classbridges_1_1base_1_1_polyline_ae610d680975558db90a06949991583f8}{get\+Points} ()
+\item 
+void \hyperlink{classbridges_1_1base_1_1_polyline_a3fec0c95e9f26b173cba105bd39e9df1}{set\+Polyline} (Array\+List$<$ Float $>$ pts)
+\item 
+float \mbox{[}$\,$\mbox{]} \hyperlink{classbridges_1_1base_1_1_polyline_a5665bd906b841ca71a668581aeb7a181}{get\+Dimensions} ()
+\item 
+void \hyperlink{classbridges_1_1base_1_1_polyline_a8c0589441852bb08f223004d948818f1}{translate} (float tx, float ty)
+\item 
+void \hyperlink{classbridges_1_1base_1_1_polyline_ad0bb71fa4d15e2b3afc6fd26636a7931}{rotate} (float angle)
+\begin{DoxyCompactList}\small\item\em Rotate the polyline about its center. \end{DoxyCompactList}\item 
+void \hyperlink{classbridges_1_1base_1_1_polyline_a5f07434dd7f07b68ac6a57ad267ad25c}{scale} (float sx, float sy)
+\begin{DoxyCompactList}\small\item\em Scale the polyline about its center. \end{DoxyCompactList}\item 
+J\+S\+O\+N\+Object \hyperlink{classbridges_1_1base_1_1_polyline_a4ac266909645f8db9b7fcc4836f6069a}{get\+J\+S\+O\+N\+Representation} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_polyline_a8842a3d3737dfa5b26424a05dc965a4b}\label{classbridges_1_1base_1_1_polyline_a8842a3d3737dfa5b26424a05dc965a4b}} 
+\index{bridges\+::base\+::\+Polyline@{bridges\+::base\+::\+Polyline}!Polyline@{Polyline}}
+\index{Polyline@{Polyline}!bridges\+::base\+::\+Polyline@{bridges\+::base\+::\+Polyline}}
+\subsubsection{\texorpdfstring{Polyline()}{Polyline()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bridges.\+base.\+Polyline.\+Polyline (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Construct a default polyline structure \mbox{\Hypertarget{classbridges_1_1base_1_1_polyline_a11d14fddddd6e89e0902e94aa1bac875}\label{classbridges_1_1base_1_1_polyline_a11d14fddddd6e89e0902e94aa1bac875}} 
+\index{bridges\+::base\+::\+Polyline@{bridges\+::base\+::\+Polyline}!Polyline@{Polyline}}
+\index{Polyline@{Polyline}!bridges\+::base\+::\+Polyline@{bridges\+::base\+::\+Polyline}}
+\subsubsection{\texorpdfstring{Polyline()}{Polyline()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bridges.\+base.\+Polyline.\+Polyline (\begin{DoxyParamCaption}\item[{Array\+List$<$ Float $>$}]{pts }\end{DoxyParamCaption})}
+
+Construct a polyline with the give set of points
+
+
+\begin{DoxyParams}{Parameters}
+{\em pts} & the given set of input 2D points \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_polyline_a24b99307181f1a938ea408355984d191}\label{classbridges_1_1base_1_1_polyline_a24b99307181f1a938ea408355984d191}} 
+\index{bridges\+::base\+::\+Polyline@{bridges\+::base\+::\+Polyline}!add\+Point@{add\+Point}}
+\index{add\+Point@{add\+Point}!bridges\+::base\+::\+Polyline@{bridges\+::base\+::\+Polyline}}
+\subsubsection{\texorpdfstring{add\+Point()}{addPoint()}}
+{\footnotesize\ttfamily void bridges.\+base.\+Polyline.\+add\+Point (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})}
+
+This method adds a point to the polyline
+
+
+\begin{DoxyParams}{Parameters}
+{\em x,y} & Coordinates of the point \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_polyline_a5665bd906b841ca71a668581aeb7a181}\label{classbridges_1_1base_1_1_polyline_a5665bd906b841ca71a668581aeb7a181}} 
+\index{bridges\+::base\+::\+Polyline@{bridges\+::base\+::\+Polyline}!get\+Dimensions@{get\+Dimensions}}
+\index{get\+Dimensions@{get\+Dimensions}!bridges\+::base\+::\+Polyline@{bridges\+::base\+::\+Polyline}}
+\subsubsection{\texorpdfstring{get\+Dimensions()}{getDimensions()}}
+{\footnotesize\ttfamily float \mbox{[}$\,$\mbox{]} bridges.\+base.\+Polyline.\+get\+Dimensions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns the dimensions of the shape\+: min and max values in X and Y
+
+\begin{DoxyReturn}{Returns}
+Bounding box of the point list (array of 4 values) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_polyline_a4ac266909645f8db9b7fcc4836f6069a}\label{classbridges_1_1base_1_1_polyline_a4ac266909645f8db9b7fcc4836f6069a}} 
+\index{bridges\+::base\+::\+Polyline@{bridges\+::base\+::\+Polyline}!get\+J\+S\+O\+N\+Representation@{get\+J\+S\+O\+N\+Representation}}
+\index{get\+J\+S\+O\+N\+Representation@{get\+J\+S\+O\+N\+Representation}!bridges\+::base\+::\+Polyline@{bridges\+::base\+::\+Polyline}}
+\subsubsection{\texorpdfstring{get\+J\+S\+O\+N\+Representation()}{getJSONRepresentation()}}
+{\footnotesize\ttfamily J\+S\+O\+N\+Object bridges.\+base.\+Polyline.\+get\+J\+S\+O\+N\+Representation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns the J\+S\+ON representation of the shape
+
+\begin{DoxyReturn}{Returns}
+string J\+S\+ON string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_polyline_a5b56cee642a6381ea940c75a336076ea}\label{classbridges_1_1base_1_1_polyline_a5b56cee642a6381ea940c75a336076ea}} 
+\index{bridges\+::base\+::\+Polyline@{bridges\+::base\+::\+Polyline}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!bridges\+::base\+::\+Polyline@{bridges\+::base\+::\+Polyline}}
+\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
+{\footnotesize\ttfamily String bridges.\+base.\+Polyline.\+get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method gets the name of the shape
+
+\begin{DoxyReturn}{Returns}
+shape name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_polyline_ae610d680975558db90a06949991583f8}\label{classbridges_1_1base_1_1_polyline_ae610d680975558db90a06949991583f8}} 
+\index{bridges\+::base\+::\+Polyline@{bridges\+::base\+::\+Polyline}!get\+Points@{get\+Points}}
+\index{get\+Points@{get\+Points}!bridges\+::base\+::\+Polyline@{bridges\+::base\+::\+Polyline}}
+\subsubsection{\texorpdfstring{get\+Points()}{getPoints()}}
+{\footnotesize\ttfamily Array\+List$<$Float$>$ bridges.\+base.\+Polyline.\+get\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns the point list of the polyline
+
+\begin{DoxyReturn}{Returns}
+points point list of the polyline -\/ sequence of x, y values 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_polyline_ad0bb71fa4d15e2b3afc6fd26636a7931}\label{classbridges_1_1base_1_1_polyline_ad0bb71fa4d15e2b3afc6fd26636a7931}} 
+\index{bridges\+::base\+::\+Polyline@{bridges\+::base\+::\+Polyline}!rotate@{rotate}}
+\index{rotate@{rotate}!bridges\+::base\+::\+Polyline@{bridges\+::base\+::\+Polyline}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void bridges.\+base.\+Polyline.\+rotate (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})}
+
+
+
+Rotate the polyline about its center. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & rotation angle in degree \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_polyline_a5f07434dd7f07b68ac6a57ad267ad25c}\label{classbridges_1_1base_1_1_polyline_a5f07434dd7f07b68ac6a57ad267ad25c}} 
+\index{bridges\+::base\+::\+Polyline@{bridges\+::base\+::\+Polyline}!scale@{scale}}
+\index{scale@{scale}!bridges\+::base\+::\+Polyline@{bridges\+::base\+::\+Polyline}}
+\subsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily void bridges.\+base.\+Polyline.\+scale (\begin{DoxyParamCaption}\item[{float}]{sx,  }\item[{float}]{sy }\end{DoxyParamCaption})}
+
+
+
+Scale the polyline about its center. 
+
+That is to say, the center of the polyline will not change location, but the object itself will grow bigger or smaller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sx,sy} & scale factor \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_polyline_a3fec0c95e9f26b173cba105bd39e9df1}\label{classbridges_1_1base_1_1_polyline_a3fec0c95e9f26b173cba105bd39e9df1}} 
+\index{bridges\+::base\+::\+Polyline@{bridges\+::base\+::\+Polyline}!set\+Polyline@{set\+Polyline}}
+\index{set\+Polyline@{set\+Polyline}!bridges\+::base\+::\+Polyline@{bridges\+::base\+::\+Polyline}}
+\subsubsection{\texorpdfstring{set\+Polyline()}{setPolyline()}}
+{\footnotesize\ttfamily void bridges.\+base.\+Polyline.\+set\+Polyline (\begin{DoxyParamCaption}\item[{Array\+List$<$ Float $>$}]{pts }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1base_1_1_polyline_a8c0589441852bb08f223004d948818f1}\label{classbridges_1_1base_1_1_polyline_a8c0589441852bb08f223004d948818f1}} 
+\index{bridges\+::base\+::\+Polyline@{bridges\+::base\+::\+Polyline}!translate@{translate}}
+\index{translate@{translate}!bridges\+::base\+::\+Polyline@{bridges\+::base\+::\+Polyline}}
+\subsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily void bridges.\+base.\+Polyline.\+translate (\begin{DoxyParamCaption}\item[{float}]{tx,  }\item[{float}]{ty }\end{DoxyParamCaption})}
+
+Translate the polyline by the given factors in X and Y
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx,ty} & translation vector \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/erik/work/bridges/bridges-\/java/src/main/java/bridges/base/\hyperlink{_polyline_8java}{Polyline.\+java}\end{DoxyCompactItemize}

@@ -1,0 +1,448 @@
+\hypertarget{classbridges_1_1_data_source}{}\section{bridges\+:\+:Data\+Source Class Reference}
+\label{classbridges_1_1_data_source}\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+
+
+{\ttfamily \#include $<$Data\+Source.\+h$>$}
+
+
+
+\subsection{Detailed Description}
+This class provides an A\+PI to various data sources used in B\+R\+I\+D\+G\+ES. 
+
+B\+R\+I\+D\+G\+ES currently supports a few external datasets for use with B\+R\+I\+D\+G\+ES assignments\+: U\+S\+G\+IS Earthquake Tweeet streaming data feed, I\+M\+DB (file), Book metadata collection, I\+GN Game Data, Shakespear book/poem meta data, etc.
+
+Functions are provided that access a user specified number of data records; objects of the appropriate type are returned as a list. \subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbridges_1_1_data_source_afc95b52d2ca03a92c1f1ee1594a097c7}{Data\+Source} (\hyperlink{classbridges_1_1_bridges}{bridges\+::\+Bridges} $\ast$br=nullptr)
+\item 
+\hyperlink{classbridges_1_1_data_source_a0da0dc59d798aa3266df7931a396a4c9}{Data\+Source} (\hyperlink{classbridges_1_1_bridges}{bridges\+::\+Bridges} \&br)
+\item 
+vector$<$ \hyperlink{classbridges_1_1dataset_1_1_game}{Game} $>$ \hyperlink{classbridges_1_1_data_source_aa902e1dffd4169e2f6e6820299b8cde1}{get\+Game\+Data} ()
+\begin{DoxyCompactList}\small\item\em Get meta data of the I\+GN games collection. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{classbridges_1_1dataset_1_1_actor_movie_i_m_d_b}{Actor\+Movie\+I\+M\+DB} $>$ \hyperlink{classbridges_1_1_data_source_a664694136550312ab3f5a82bebb91bca}{get\+Actor\+Movie\+I\+M\+D\+B\+Data} (int number=0)
+\begin{DoxyCompactList}\small\item\em Get Actor\+Movie I\+M\+DB Data Data is retrieved, formatted into a list of Actor\+Movie\+I\+M\+DB objects. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{classbridges_1_1dataset_1_1_actor_movie_i_m_d_b}{Actor\+Movie\+I\+M\+DB} $>$ \hyperlink{classbridges_1_1_data_source_a00f0a0a1871d4864c6ccdd04195e0fb2}{get\+Actor\+Movie\+I\+M\+D\+B\+Data2} ()
+\begin{DoxyCompactList}\small\item\em Get Actor\+Movie I\+M\+DB Data Data is retrieved, formatted into a list of Actor\+Movie\+I\+M\+DB objects. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{classbridges_1_1dataset_1_1_earthquake_u_s_g_s}{Earthquake\+U\+S\+GS} $>$ \hyperlink{classbridges_1_1_data_source_a6645e2029915550fcac5f9fed7870119}{get\+Earthquake\+U\+S\+G\+S\+Data} (int number=0)
+\begin{DoxyCompactList}\small\item\em Get U\+S\+GS earthquake data U\+S\+GS Tweet data (\href{https://earthquake.usgs.gov/earthquakes/map/}{\tt https\+://earthquake.\+usgs.\+gov/earthquakes/map/}) retrieved, formatted into a list of Earthquake\+U\+S\+GS objects. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{classbridges_1_1dataset_1_1_shakespeare}{Shakespeare} $>$ \hyperlink{classbridges_1_1_data_source_a8b73299a4c1c71d2e32431a8d4a7be81}{get\+Shakespeare\+Data} (string type=\char`\"{}\char`\"{}, bool textonly=false)
+\begin{DoxyCompactList}\small\item\em Get data of Shakespeare works (plays, poems) \end{DoxyCompactList}\item 
+\hyperlink{classbridges_1_1dataset_1_1_song}{Song} \hyperlink{classbridges_1_1_data_source_a284c9d572415b67df6989ab8ab97d0e2}{get\+Song} (string song\+Title, string artist\+Name)
+\begin{DoxyCompactList}\small\item\em Get data of a particular songs (including lyrics) using the Genius A\+PI (\href{https://docs.genius.com/}{\tt https\+://docs.\+genius.\+com/}), given the song title and artist name. Valid endpoints\+: \href{http://bridgesdata.herokuapp.com/api/songs/find/}{\tt http\+://bridgesdata.\+herokuapp.\+com/api/songs/find/} Valid query\+Params\+: song title, artist name. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{classbridges_1_1dataset_1_1_song}{Song} $>$ \hyperlink{classbridges_1_1_data_source_a5e8d035a1becf96c71569e0966e93849}{get\+Song\+Data} ()
+\begin{DoxyCompactList}\small\item\em Get data of the songs (including lyrics) using the Genius A\+PI \href{https://docs.genius.com/}{\tt https\+://docs.\+genius.\+com/} Valid endpoints\+: \href{https://bridgesdata.herokuapp.com/api/songs/}{\tt https\+://bridgesdata.\+herokuapp.\+com/api/songs/}. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{classbridges_1_1dataset_1_1_gutenberg_book}{Gutenberg\+Book} $>$ \hyperlink{classbridges_1_1_data_source_a1057509d6adf4cbfd881854adb274304}{get\+Gutenberg\+Book\+Data} (int num=0)
+\begin{DoxyCompactList}\small\item\em Get meta data of the Gutenberg book collection. This function retrieves, and formats the data into a list of Gutenberg\+Book objects. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{classbridges_1_1dataset_1_1_cancer_incidence}{Cancer\+Incidence} $>$ \hyperlink{classbridges_1_1_data_source_a52d8161e7c093ab3615acea7085f6689}{get\+Cancer\+Incidence\+Data} (int num=0)
+\begin{DoxyCompactList}\small\item\em Retrieves the C\+DC dataset of Cancer Incidence. Data is retrieved into a vector of records See Cancer\+Incidence class for more information. \end{DoxyCompactList}\item 
+\hyperlink{classbridges_1_1dataset_1_1_o_s_m_data}{O\+S\+M\+Data} \hyperlink{classbridges_1_1_data_source_a1b483de1cce9921b70116213382cdaf0}{get\+O\+S\+M\+Data\+From\+J\+S\+ON} (const string \&osm\+\_\+json)
+\begin{DoxyCompactList}\small\item\em Retrieves the Open Street Map data from a prebuilt J\+S\+ON of O\+SM dataset. \end{DoxyCompactList}\item 
+\hyperlink{classbridges_1_1dataset_1_1_o_s_m_data}{O\+S\+M\+Data} \hyperlink{classbridges_1_1_data_source_a57736934a90bdb86948a7c338ec81a2d}{get\+O\+S\+M\+Data} (double lat\+\_\+min, double long\+\_\+min, double lat\+\_\+max, double long\+\_\+max, string level=\char`\"{}default\char`\"{})
+\begin{DoxyCompactList}\small\item\em Get Open\+Street\+Map data given a bounding rectangle of lat/long values. \end{DoxyCompactList}\item 
+void \hyperlink{classbridges_1_1_data_source_acdd904b0aea30e34738aa8d5fa0efba5}{get\+Amenity\+Data} (double min\+Lat, double min\+Lon, double max\+Lat, double max\+Lon, std\+::string amenity)
+\item 
+void \hyperlink{classbridges_1_1_data_source_acbd6561dccd99a331f137d605f6cf6f7}{get\+Amenity\+Data} (const std\+::string \&location, const std\+::string \&amenity)
+\item 
+\hyperlink{classbridges_1_1dataset_1_1_o_s_m_data}{O\+S\+M\+Data} \hyperlink{classbridges_1_1_data_source_a3151f5b2a27b5d6b11e1c5cb55d51655}{get\+O\+S\+M\+Data} (string location, string level=\char`\"{}default\char`\"{})
+\item 
+\hyperlink{classbridges_1_1datastructure_1_1_graph_adj_list}{bridges\+::\+Graph\+Adj\+List}$<$ int, std\+::string $>$ \hyperlink{classbridges_1_1_data_source_ac4edf55c163c60f17b13f5499e5d2e65}{get\+Graph\+From\+Assignment} (const std\+::string \&user, int assignment, int subassignment=0)
+\begin{DoxyCompactList}\small\item\em old interface for the O\+SM data set. \end{DoxyCompactList}\item 
+\hyperlink{classbridges_1_1datastructure_1_1_color_grid}{bridges\+::\+Color\+Grid} \hyperlink{classbridges_1_1_data_source_aa65136879011e1ec237380ef8587fea2}{get\+Color\+Grid\+From\+Assignment} (const std\+::string \&user, int assignment, int subassignment=0)
+\item 
+std\+::vector$<$ \hyperlink{classbridges_1_1dataset_1_1_movie_actor_wikidata}{Movie\+Actor\+Wikidata} $>$ \hyperlink{classbridges_1_1_data_source_a25b33736b4ae9ffea5fe4ebf5dbb3a63}{get\+Wikidata\+Actor\+Movie} (int yearbegin, int yearend)
+\begin{DoxyCompactList}\small\item\em This function returns the Movie and Actors playing in them between two years. \end{DoxyCompactList}\item 
+\hyperlink{classbridges_1_1dataset_1_1_elevation_data}{Elevation\+Data} \hyperlink{classbridges_1_1_data_source_a7fc5797c544d79f245ac49af1cc138a3}{get\+Elevation\+Data} (double latit\+Min, double longit\+Min, double latit\+Max, double longit\+Max, double res=0.\+0166)
+\item 
+\hyperlink{classbridges_1_1dataset_1_1_elevation_data}{Elevation\+Data} \hyperlink{classbridges_1_1_data_source_a59db809fd5ab69176f73134ebdb968d1}{get\+Elevation\+Data\+From\+J\+S\+ON} (string elev\+\_\+json)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1_data_source_afc95b52d2ca03a92c1f1ee1594a097c7}\label{classbridges_1_1_data_source_afc95b52d2ca03a92c1f1ee1594a097c7}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!Data\+Source@{Data\+Source}}
+\index{Data\+Source@{Data\+Source}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{Data\+Source()}{DataSource()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bridges\+::\+Data\+Source\+::\+Data\+Source (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1_bridges}{bridges\+::\+Bridges} $\ast$}]{br = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1_data_source_a0da0dc59d798aa3266df7931a396a4c9}\label{classbridges_1_1_data_source_a0da0dc59d798aa3266df7931a396a4c9}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!Data\+Source@{Data\+Source}}
+\index{Data\+Source@{Data\+Source}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{Data\+Source()}{DataSource()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bridges\+::\+Data\+Source\+::\+Data\+Source (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1_bridges}{bridges\+::\+Bridges} \&}]{br }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1_data_source_a664694136550312ab3f5a82bebb91bca}\label{classbridges_1_1_data_source_a664694136550312ab3f5a82bebb91bca}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Actor\+Movie\+I\+M\+D\+B\+Data@{get\+Actor\+Movie\+I\+M\+D\+B\+Data}}
+\index{get\+Actor\+Movie\+I\+M\+D\+B\+Data@{get\+Actor\+Movie\+I\+M\+D\+B\+Data}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{get\+Actor\+Movie\+I\+M\+D\+B\+Data()}{getActorMovieIMDBData()}}
+{\footnotesize\ttfamily vector$<$\hyperlink{classbridges_1_1dataset_1_1_actor_movie_i_m_d_b}{Actor\+Movie\+I\+M\+DB}$>$ bridges\+::\+Data\+Source\+::get\+Actor\+Movie\+I\+M\+D\+B\+Data (\begin{DoxyParamCaption}\item[{int}]{number = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Actor\+Movie I\+M\+DB Data Data is retrieved, formatted into a list of Actor\+Movie\+I\+M\+DB objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & the number of actor/movie pairs, but currently unused, returns all records. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the request fails\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+a list of Actor\+Movie\+I\+M\+DB objects, but only actor and movie fields in this version 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_data_source_a00f0a0a1871d4864c6ccdd04195e0fb2}\label{classbridges_1_1_data_source_a00f0a0a1871d4864c6ccdd04195e0fb2}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Actor\+Movie\+I\+M\+D\+B\+Data2@{get\+Actor\+Movie\+I\+M\+D\+B\+Data2}}
+\index{get\+Actor\+Movie\+I\+M\+D\+B\+Data2@{get\+Actor\+Movie\+I\+M\+D\+B\+Data2}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{get\+Actor\+Movie\+I\+M\+D\+B\+Data2()}{getActorMovieIMDBData2()}}
+{\footnotesize\ttfamily vector$<$\hyperlink{classbridges_1_1dataset_1_1_actor_movie_i_m_d_b}{Actor\+Movie\+I\+M\+DB}$>$ bridges\+::\+Data\+Source\+::get\+Actor\+Movie\+I\+M\+D\+B\+Data2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Actor\+Movie I\+M\+DB Data Data is retrieved, formatted into a list of Actor\+Movie\+I\+M\+DB objects. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the request fails\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+a list of Actor\+Movie\+I\+M\+DB objects, consisting of actor name, movie name, movie genre and movie rating is returned. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_data_source_acdd904b0aea30e34738aa8d5fa0efba5}\label{classbridges_1_1_data_source_acdd904b0aea30e34738aa8d5fa0efba5}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Amenity\+Data@{get\+Amenity\+Data}}
+\index{get\+Amenity\+Data@{get\+Amenity\+Data}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{get\+Amenity\+Data()}{getAmenityData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void bridges\+::\+Data\+Source\+::get\+Amenity\+Data (\begin{DoxyParamCaption}\item[{double}]{min\+Lat,  }\item[{double}]{min\+Lon,  }\item[{double}]{max\+Lat,  }\item[{double}]{max\+Lon,  }\item[{std\+::string}]{amenity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1_data_source_acbd6561dccd99a331f137d605f6cf6f7}\label{classbridges_1_1_data_source_acbd6561dccd99a331f137d605f6cf6f7}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Amenity\+Data@{get\+Amenity\+Data}}
+\index{get\+Amenity\+Data@{get\+Amenity\+Data}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{get\+Amenity\+Data()}{getAmenityData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void bridges\+::\+Data\+Source\+::get\+Amenity\+Data (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{location,  }\item[{const std\+::string \&}]{amenity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1_data_source_a52d8161e7c093ab3615acea7085f6689}\label{classbridges_1_1_data_source_a52d8161e7c093ab3615acea7085f6689}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Cancer\+Incidence\+Data@{get\+Cancer\+Incidence\+Data}}
+\index{get\+Cancer\+Incidence\+Data@{get\+Cancer\+Incidence\+Data}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{get\+Cancer\+Incidence\+Data()}{getCancerIncidenceData()}}
+{\footnotesize\ttfamily vector$<$\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence}{Cancer\+Incidence}$>$ bridges\+::\+Data\+Source\+::get\+Cancer\+Incidence\+Data (\begin{DoxyParamCaption}\item[{int}]{num = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the C\+DC dataset of Cancer Incidence. Data is retrieved into a vector of records See Cancer\+Incidence class for more information. 
+
+\mbox{\Hypertarget{classbridges_1_1_data_source_aa65136879011e1ec237380ef8587fea2}\label{classbridges_1_1_data_source_aa65136879011e1ec237380ef8587fea2}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Color\+Grid\+From\+Assignment@{get\+Color\+Grid\+From\+Assignment}}
+\index{get\+Color\+Grid\+From\+Assignment@{get\+Color\+Grid\+From\+Assignment}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{get\+Color\+Grid\+From\+Assignment()}{getColorGridFromAssignment()}}
+{\footnotesize\ttfamily \hyperlink{classbridges_1_1datastructure_1_1_color_grid}{bridges\+::\+Color\+Grid} bridges\+::\+Data\+Source\+::get\+Color\+Grid\+From\+Assignment (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{user,  }\item[{int}]{assignment,  }\item[{int}]{subassignment = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Reconstruct a Color\+Grid from an existing Color\+Grid on the \hyperlink{classbridges_1_1_bridges}{Bridges} server
+
+\begin{DoxyReturn}{Returns}
+the Color\+Grid stored in the bridges server 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em user} & the name of the user who uploaded the assignment \\
+\hline
+{\em assignment} & the ID of the assignment to get \\
+\hline
+{\em subassignment} & the ID of the subassignment to get \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1_data_source_a6645e2029915550fcac5f9fed7870119}\label{classbridges_1_1_data_source_a6645e2029915550fcac5f9fed7870119}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Earthquake\+U\+S\+G\+S\+Data@{get\+Earthquake\+U\+S\+G\+S\+Data}}
+\index{get\+Earthquake\+U\+S\+G\+S\+Data@{get\+Earthquake\+U\+S\+G\+S\+Data}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{get\+Earthquake\+U\+S\+G\+S\+Data()}{getEarthquakeUSGSData()}}
+{\footnotesize\ttfamily vector$<$\hyperlink{classbridges_1_1dataset_1_1_earthquake_u_s_g_s}{Earthquake\+U\+S\+GS}$>$ bridges\+::\+Data\+Source\+::get\+Earthquake\+U\+S\+G\+S\+Data (\begin{DoxyParamCaption}\item[{int}]{number = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get U\+S\+GS earthquake data U\+S\+GS Tweet data (\href{https://earthquake.usgs.gov/earthquakes/map/}{\tt https\+://earthquake.\+usgs.\+gov/earthquakes/map/}) retrieved, formatted into a list of Earthquake\+U\+S\+GS objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & the number of earthquake records retrieved, limited to 5000 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the request fails\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+a list of earthquake records 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_data_source_a7fc5797c544d79f245ac49af1cc138a3}\label{classbridges_1_1_data_source_a7fc5797c544d79f245ac49af1cc138a3}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Elevation\+Data@{get\+Elevation\+Data}}
+\index{get\+Elevation\+Data@{get\+Elevation\+Data}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{get\+Elevation\+Data()}{getElevationData()}}
+{\footnotesize\ttfamily \hyperlink{classbridges_1_1dataset_1_1_elevation_data}{Elevation\+Data} bridges\+::\+Data\+Source\+::get\+Elevation\+Data (\begin{DoxyParamCaption}\item[{double}]{latit\+Min,  }\item[{double}]{longit\+Min,  }\item[{double}]{latit\+Max,  }\item[{double}]{longit\+Max,  }\item[{double}]{res = {\ttfamily 0.0166} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns Elevation\+Data for the provided coordinate box at the given resolution. Note that the Elevation\+Data that is returned may have slightly different location and resolution.
+
+
+\begin{DoxyParams}{Parameters}
+{\em latit\+Min} & minimum latitude requested \\
+\hline
+{\em longit\+Min} & maximum latitude requested \\
+\hline
+{\em latit\+Max} & minimum longitude requested \\
+\hline
+{\em longit\+Max} & maximum longitude requested \\
+\hline
+{\em res} & spatial resolution, aka the distance between two samples (in degrees) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1_data_source_a59db809fd5ab69176f73134ebdb968d1}\label{classbridges_1_1_data_source_a59db809fd5ab69176f73134ebdb968d1}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Elevation\+Data\+From\+J\+S\+ON@{get\+Elevation\+Data\+From\+J\+S\+ON}}
+\index{get\+Elevation\+Data\+From\+J\+S\+ON@{get\+Elevation\+Data\+From\+J\+S\+ON}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{get\+Elevation\+Data\+From\+J\+S\+O\+N()}{getElevationDataFromJSON()}}
+{\footnotesize\ttfamily \hyperlink{classbridges_1_1dataset_1_1_elevation_data}{Elevation\+Data} bridges\+::\+Data\+Source\+::get\+Elevation\+Data\+From\+J\+S\+ON (\begin{DoxyParamCaption}\item[{string}]{elev\+\_\+json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1_data_source_aa902e1dffd4169e2f6e6820299b8cde1}\label{classbridges_1_1_data_source_aa902e1dffd4169e2f6e6820299b8cde1}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Game\+Data@{get\+Game\+Data}}
+\index{get\+Game\+Data@{get\+Game\+Data}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{get\+Game\+Data()}{getGameData()}}
+{\footnotesize\ttfamily vector$<$\hyperlink{classbridges_1_1dataset_1_1_game}{Game}$>$ bridges\+::\+Data\+Source\+::get\+Game\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get meta data of the I\+GN games collection. 
+
+This function retrieves and formats the data into a list of Game objects
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the request fails\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+a list of Game objects, 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_data_source_ac4edf55c163c60f17b13f5499e5d2e65}\label{classbridges_1_1_data_source_ac4edf55c163c60f17b13f5499e5d2e65}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Graph\+From\+Assignment@{get\+Graph\+From\+Assignment}}
+\index{get\+Graph\+From\+Assignment@{get\+Graph\+From\+Assignment}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{get\+Graph\+From\+Assignment()}{getGraphFromAssignment()}}
+{\footnotesize\ttfamily \hyperlink{classbridges_1_1datastructure_1_1_graph_adj_list}{bridges\+::\+Graph\+Adj\+List}$<$int, std\+::string$>$ bridges\+::\+Data\+Source\+::get\+Graph\+From\+Assignment (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{user,  }\item[{int}]{assignment,  }\item[{int}]{subassignment = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+old interface for the O\+SM data set. 
+
+This is hitting a simpler A\+PI that has only a few map in there\+: \char`\"{}uncc\+\_\+campus\char`\"{}, \char`\"{}charlotte\char`\"{}, \char`\"{}washington\+\_\+dc\char`\"{}, \char`\"{}saint\+\_\+paul\char`\"{}, \char`\"{}new\+\_\+york\char`\"{}, \char`\"{}los\+\_\+angeles\char`\"{}, \char`\"{}san\+\_\+francisco\char`\"{}, \char`\"{}miami\char`\"{}, \char`\"{}minneapolis\char`\"{}, \char`\"{}dallas\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em location} & which location to get the map from O\+S\+M\+Data get\+O\+S\+M\+Data\+Old (string location) \{ std\+::transform(location.\+begin(), location.\+end(), location.\+begin(), \+::tolower); std\+::string osm\+\_\+json; bool from\+\_\+cache = false; try \{ if (my\+\_\+cache.\+in\+Cache(location)) \{ osm\+\_\+json = my\+\_\+cache.\+get\+Doc(location); from\+\_\+cache = true; \} \} catch (\hyperlink{classbridges_1_1_cache_exception}{Cache\+Exception}\& ce) \{ something went bad trying to access the cache std\+::cout $<$$<$ \char`\"{}\+Exception while reading from cache. Ignoring cache and continue.\char`\"{} $<$$<$ std\+::endl; \}\\
+\hline
+\end{DoxyParams}
+string url = string(\char`\"{}http\+://osm-\/api.\+herokuapp.\+com/name/\char`\"{}) + location;
+
+if (!from\+\_\+cache) \{ get the O\+SM data json osm\+\_\+json = Server\+Comm\+::make\+Request(url, \{\char`\"{}\+Accept\+: application/json\char`\"{}\});
+
+try \{ my\+\_\+cache.\+put\+Doc(location, osm\+\_\+json); \} catch (\hyperlink{classbridges_1_1_cache_exception}{Cache\+Exception}\& ce) \{ something went bad trying to access the cache std\+::cerr $<$$<$ \char`\"{}\+Exception while storing in cache. Weird but not critical.\char`\"{} $<$$<$ std\+::endl; \} \}
+
+return get\+O\+S\+M\+Data\+From\+J\+S\+O\+N(osm\+\_\+json);
+
+\} Reconstruct a Graph\+Adj\+List from an existing Graph\+Adj\+List on the \hyperlink{classbridges_1_1_bridges}{Bridges} server
+
+The reconstructed assignment sees vertices identified as integers in the order they are stored in the server. The data associated with a vertex is a string that comes from the label of that vertices. The data associated with an edge is the string that comes from the label of that edge. The edge weights are also reobtained from the bridges server.
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & the name of the user who uploaded the assignment \\
+\hline
+{\em assignment} & the ID of the assignment to get \\
+\hline
+{\em subassignment} & the ID of the subassignment to get\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the Color\+Grid stored in the bridges server 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_data_source_a1057509d6adf4cbfd881854adb274304}\label{classbridges_1_1_data_source_a1057509d6adf4cbfd881854adb274304}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Gutenberg\+Book\+Data@{get\+Gutenberg\+Book\+Data}}
+\index{get\+Gutenberg\+Book\+Data@{get\+Gutenberg\+Book\+Data}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{get\+Gutenberg\+Book\+Data()}{getGutenbergBookData()}}
+{\footnotesize\ttfamily vector$<$\hyperlink{classbridges_1_1dataset_1_1_gutenberg_book}{Gutenberg\+Book}$>$ bridges\+::\+Data\+Source\+::get\+Gutenberg\+Book\+Data (\begin{DoxyParamCaption}\item[{int}]{num = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get meta data of the Gutenberg book collection. This function retrieves, and formats the data into a list of Gutenberg\+Book objects. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the request fails\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+a list of Gutenberg\+Book objects, 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_data_source_a57736934a90bdb86948a7c338ec81a2d}\label{classbridges_1_1_data_source_a57736934a90bdb86948a7c338ec81a2d}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+O\+S\+M\+Data@{get\+O\+S\+M\+Data}}
+\index{get\+O\+S\+M\+Data@{get\+O\+S\+M\+Data}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{get\+O\+S\+M\+Data()}{getOSMData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classbridges_1_1dataset_1_1_o_s_m_data}{O\+S\+M\+Data} bridges\+::\+Data\+Source\+::get\+O\+S\+M\+Data (\begin{DoxyParamCaption}\item[{double}]{lat\+\_\+min,  }\item[{double}]{long\+\_\+min,  }\item[{double}]{lat\+\_\+max,  }\item[{double}]{long\+\_\+max,  }\item[{string}]{level = {\ttfamily \char`\"{}default\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Open\+Street\+Map data given a bounding rectangle of lat/long values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lat\+\_\+min} & latitude minimum \\
+\hline
+{\em long\+\_\+min} & longitude minimum \\
+\hline
+{\em lat\+\_\+max} & latitude maximum \\
+\hline
+{\em long\+\_\+max} & longitude maximum \\
+\hline
+{\em level} & data resolution \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the request fails\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+an O\+S\+M\+Data object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_data_source_a3151f5b2a27b5d6b11e1c5cb55d51655}\label{classbridges_1_1_data_source_a3151f5b2a27b5d6b11e1c5cb55d51655}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+O\+S\+M\+Data@{get\+O\+S\+M\+Data}}
+\index{get\+O\+S\+M\+Data@{get\+O\+S\+M\+Data}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{get\+O\+S\+M\+Data()}{getOSMData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classbridges_1_1dataset_1_1_o_s_m_data}{O\+S\+M\+Data} bridges\+::\+Data\+Source\+::get\+O\+S\+M\+Data (\begin{DoxyParamCaption}\item[{string}]{location,  }\item[{string}]{level = {\ttfamily \char`\"{}default\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get Open\+Street\+Map data given a city name and resolution level
+
+
+\begin{DoxyParams}{Parameters}
+{\em location} & location name (string) \\
+\hline
+{\em level} & data resolution\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the request fails\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+an O\+S\+M\+Data object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_data_source_a1b483de1cce9921b70116213382cdaf0}\label{classbridges_1_1_data_source_a1b483de1cce9921b70116213382cdaf0}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+O\+S\+M\+Data\+From\+J\+S\+ON@{get\+O\+S\+M\+Data\+From\+J\+S\+ON}}
+\index{get\+O\+S\+M\+Data\+From\+J\+S\+ON@{get\+O\+S\+M\+Data\+From\+J\+S\+ON}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{get\+O\+S\+M\+Data\+From\+J\+S\+O\+N()}{getOSMDataFromJSON()}}
+{\footnotesize\ttfamily \hyperlink{classbridges_1_1dataset_1_1_o_s_m_data}{O\+S\+M\+Data} bridges\+::\+Data\+Source\+::get\+O\+S\+M\+Data\+From\+J\+S\+ON (\begin{DoxyParamCaption}\item[{const string \&}]{osm\+\_\+json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the Open Street Map data from a prebuilt J\+S\+ON of O\+SM dataset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em osm\+\_\+json} & J\+S\+ON string \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1_data_source_a8b73299a4c1c71d2e32431a8d4a7be81}\label{classbridges_1_1_data_source_a8b73299a4c1c71d2e32431a8d4a7be81}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Shakespeare\+Data@{get\+Shakespeare\+Data}}
+\index{get\+Shakespeare\+Data@{get\+Shakespeare\+Data}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{get\+Shakespeare\+Data()}{getShakespeareData()}}
+{\footnotesize\ttfamily vector$<$\hyperlink{classbridges_1_1dataset_1_1_shakespeare}{Shakespeare}$>$ bridges\+::\+Data\+Source\+::get\+Shakespeare\+Data (\begin{DoxyParamCaption}\item[{string}]{type = {\ttfamily \char`\"{}\char`\"{}},  }\item[{bool}]{textonly = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get data of Shakespeare works (plays, poems) 
+
+This function retrieves and formats the data into a a list of Shakespeare objects.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the request fails\\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em type} & can be \char`\"{}plays\char`\"{}, \char`\"{}poems\char`\"{}, or \char`\"{}\char`\"{}. If this is specified, then only these types of works are retrieved. \\
+\hline
+{\em textonly} & if this is set, then only the text is retrieved. (that is to say punctuation is stripped out)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an array of Shakespeare objects 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_data_source_a284c9d572415b67df6989ab8ab97d0e2}\label{classbridges_1_1_data_source_a284c9d572415b67df6989ab8ab97d0e2}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Song@{get\+Song}}
+\index{get\+Song@{get\+Song}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{get\+Song()}{getSong()}}
+{\footnotesize\ttfamily \hyperlink{classbridges_1_1dataset_1_1_song}{Song} bridges\+::\+Data\+Source\+::get\+Song (\begin{DoxyParamCaption}\item[{string}]{song\+Title,  }\item[{string}]{artist\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get data of a particular songs (including lyrics) using the Genius A\+PI (\href{https://docs.genius.com/}{\tt https\+://docs.\+genius.\+com/}), given the song title and artist name. Valid endpoints\+: \href{http://bridgesdata.herokuapp.com/api/songs/find/}{\tt http\+://bridgesdata.\+herokuapp.\+com/api/songs/find/} Valid query\+Params\+: song title, artist name. 
+
+This function retrieves and formats the data into a Song object. The song if not cached in the local DB is queried and added to the DB
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the request fails\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+a Song object, 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_data_source_a5e8d035a1becf96c71569e0966e93849}\label{classbridges_1_1_data_source_a5e8d035a1becf96c71569e0966e93849}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Song\+Data@{get\+Song\+Data}}
+\index{get\+Song\+Data@{get\+Song\+Data}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{get\+Song\+Data()}{getSongData()}}
+{\footnotesize\ttfamily vector$<$\hyperlink{classbridges_1_1dataset_1_1_song}{Song}$>$ bridges\+::\+Data\+Source\+::get\+Song\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get data of the songs (including lyrics) using the Genius A\+PI \href{https://docs.genius.com/}{\tt https\+://docs.\+genius.\+com/} Valid endpoints\+: \href{https://bridgesdata.herokuapp.com/api/songs/}{\tt https\+://bridgesdata.\+herokuapp.\+com/api/songs/}. 
+
+This function retrieves and formats the data into a list of Song objects. This version of the A\+PI retrieves all the cached songs in the local DB.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & if the request fails\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+a list of Song objects, 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_data_source_a25b33736b4ae9ffea5fe4ebf5dbb3a63}\label{classbridges_1_1_data_source_a25b33736b4ae9ffea5fe4ebf5dbb3a63}} 
+\index{bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}!get\+Wikidata\+Actor\+Movie@{get\+Wikidata\+Actor\+Movie}}
+\index{get\+Wikidata\+Actor\+Movie@{get\+Wikidata\+Actor\+Movie}!bridges\+::\+Data\+Source@{bridges\+::\+Data\+Source}}
+\subsubsection{\texorpdfstring{get\+Wikidata\+Actor\+Movie()}{getWikidataActorMovie()}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{classbridges_1_1dataset_1_1_movie_actor_wikidata}{Movie\+Actor\+Wikidata}$>$ bridges\+::\+Data\+Source\+::get\+Wikidata\+Actor\+Movie (\begin{DoxyParamCaption}\item[{int}]{yearbegin,  }\item[{int}]{yearend }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function returns the Movie and Actors playing in them between two years. 
+
+Return movie pair in the \mbox{[}yearbegin; yearend\mbox{]} interval.
+
+
+\begin{DoxyParams}{Parameters}
+{\em yearbegin} & first year to include \\
+\hline
+{\em yearend} & last year to include \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/erik/work/bridges/bridges-\/cxx/src/\hyperlink{_data_source_8h}{Data\+Source.\+h}\end{DoxyCompactItemize}
