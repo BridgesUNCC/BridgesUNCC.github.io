@@ -1,1 +1,151 @@
-<h1>Spatial Indexing</h1>
+<h1>Spatial Indexing : Finding Closest Point in a  Map from a Given Location</h1>
+
+<h2>Goals</h2>
+
+<ol>
+<li>Working with OpenStreet Map Data</li>
+<li>Given a map of locations and amenities, to find the closest point or
+amenity of that type</li>
+<li>CS concepts: 2D array addressing, using acceleration structures 
+for efficient search</li>
+</ol>
+
+<h2>Source</h2>
+
+<p>In this assignment we will use Open Street map data to retrieve a set of 
+locations from a specified section of a city or region. BRIDGES API will be
+used to retrieve OpenStreet Map data. </p>
+
+<h2>Description</h2>
+
+<p>Given a 2D location, the goal is 
+to find the closest point (or amenity).</p>
+
+<p>You are given a dataset that represents a region of map data, from
+OpenStreet Map. The data is in the form of a list of locations with
+Lat/Long values. Your goal is, given a 2D location (X, Y), to find the
+closest point on the map. Given that the data can contain tens of thousands
+of locations, you will use a uniform grid to accelerate the search.</p>
+
+<h3>Search Algorithm:</h3>
+
+<p>You want an algorithm that is scalable to very large datasets; hence you will
+use a data structure to make this process efficient. A uniform grid overlaid
+on the search area will be used to hold the location data. The algorithm
+will broadly consist of the following steps:</p>
+
+<ol>
+<li><p>A uniform 2D grid of a  specified size will be used to store the 
+location data. Each of the location will be inserted into its appropriate
+2D cell of the grid and held in a list. Locations within the cell will need
+to queried linearly.</p></li>
+<li><p>Once the data is in the search structure, the algorithm starts by locating
+the cell containing the query point. All points within the cell are queried
+to compute the distance to the query point and the closest point and distance
+is retained. Note that the cell may not contain any points.</p></li>
+<li><p>The algorithm next identifies the cells neighboring the cell containing
+the query point. Points within these cells are searched for the closest
+point.</p></li>
+<li><p>Step 3 can be furhter accelerated by firs determined the orthogonal
+distance  to neighboring cells (to row above and below, columns to the
+left and right) and only if this distance is smaller the currently 
+stored smallest distance would the correponding cells need to be searched.</p></li>
+<li><p>As needed, the algorithm proceeds layer by layer starting from the query
+cell. See the following two figures that illustrates the layers generated 
+(step 3), displayed in a ColorGrid:</p></li>
+</ol>
+
+<p><img src="./figures/fig1.png" alt="drawing" width="350"></img>
+<img src="./figures/fig2.png" alt="drawing" width="350"></img></p>
+
+<ol>
+<li>If a layer results in no updates to the closest point, then the algorithm
+can be terminated.</li>
+</ol>
+
+<h2>Tasks</h2>
+
+<ol>
+<li><p>Get the OpenStreet map data. The BRIDGES API will be used to obtain this 
+data. Note that the data size has limitations, requiring the bounding box
+specified to be reduced.</p></li>
+<li><p>Display the are using BRIDGES (this can be visualized as a graph).</p></li>
+<li><p>Write a function to identify the cells of a layer. Layer 0 contains
+the cell of the query point, its immediate neighors (neighbors of 
+the red cell in the above figures) are layer 0, and its neighbors are 
+layer 1, etc.</p></li>
+<li><p>Given the query point, write functions to compute the distance to 
+the current layer's rows and columns. This will be needed to determine if
+these cells need to be examined for closer points. Note that the row or column
+might be outside the bounds of the grid and should be ignored in that case.</p></li>
+<li><p>Combine steps 3 and 4 into the algorithm and return the closest point
+and distance.</p></li>
+<li><p>Verification: Write up a brute force algorithm, i.e., no uniform grid to
+find the closest point to check to ensure your algorithm's output matches. 
+Depending on the data size, this test might need to be done a smaller dataset.</p></li>
+<li><p>[Optional:] You may augment your algorithm to display the cells 
+queried by the algorithm by recording the cell indices and display them (colored cells) in a ColorGrid. This is also a good way to verify your layers are
+being computed correctly (link to 2D assignment).</p></li>
+</ol>
+
+<h2>Variants</h2>
+
+<p>One can make variants of this assignment: </p>
+
+<p>Instead of just looking at Lat/Long data, you might retrieve a set of
+resturant locations (say Macdonald's) and look for the closest Macdonalds
+from your location(home), or the nearest hospital, fire station, etc.</p>
+
+<h2>Additional Help:</h2>
+
+<p><a href="http://bridgesuncc.github.io/">BRIDGES Team:</a> Contact the BRIDGES team for any 
+issues with the BRIDGES API. This is an active project.</p>
+
+<h4>for Java</h4>
+
+<p><a href="
+http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1data__src__dependent_1_1_osm_data.html">OpenStreet Map Documentation</a></p>
+
+<p>[OSMVertex] (http://bridgesuncc.github.io/doc/java-api/current/html/classbridges<em>1</em>1data<strong>src</strong>dependent<em>1</em>1<em>osm</em>vertex.html)</p>
+
+<p>[OSMEdge] (http://bridgesuncc.github.io/doc/java-api/current/html/classbridges<em>1</em>1data<strong>src</strong>dependent<em>1</em>1<em>osm</em>edge.html)</p>
+
+<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1connect_1_1_data_source.html">DataSource</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_color_grid.html">ColorGrid documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_color.html">Color documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1connect_1_1_bridges.html">Bridges class documentation</a></p>
+
+<h4>for C++</h4>
+
+<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1dataset_1_1_o_s_m_data.html">OpenStreet Map Documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1dataset_1_1_o_s_m_vertex.html">OSMVertex</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1dataset_1_1_o_s_m_edge.html">OSMEdge</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_data_source.html">DataSource</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_color_grid.html">ColorGrid documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_color.html">Color documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_bridges.html">Bridges Class documentation</a></p>
+
+<h4>for Python</h4>
+
+<p><a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1data__src__dependent_1_1osm_1_1_osm_data.html">OSM Data Documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1data__src__dependent_1_1osm_1_1_osm_vertex.html">OSM Vertex Documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1data__src__dependent_1_1osm_1_1_osm_edge.html">OSM Edge Documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1color__grid_1_1_color_grid.html">ColorGrid documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1color_1_1_color.html">Color documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1bridges_1_1_bridges.html">Bridges documentation</a></p>
+
+<p><a href="http://bridgesuncc.github.io/doc/python-api/current/html/data__source_8py.html">DataSource</a></p>
