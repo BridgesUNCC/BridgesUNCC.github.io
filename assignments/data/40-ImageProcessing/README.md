@@ -21,7 +21,7 @@ operations on the provided input images, such as the one given below.
 
 **Example Images**
 
-<img src="./images/yosemite.jpg" alt="Example Image" width="300px" /> <img src="./images/Lenna.jpg" alt="Example Image" width="250px" />
+<img src="./figures/yosemite.jpg" alt="Example Image" width="300px" /> <img src="./figures/Lenna.jpg" alt="Example Image" width="250px" />
 
 Students are provided with a skeleton of an Image class that they will use
 to implement the required image processing operations listed below.
