@@ -19,7 +19,7 @@ writeheader
 addgroup "CS1"
 addsubgroup "Basic API Calls"
 addassignment "27-GameGridBasic"
-
+addassignment "56-2DIndexing"
 
 addsubgroup "Tests and Conditions"
 addassignment "34-GameTutorials"
@@ -28,6 +28,7 @@ addassignment "19-Bugstomp"
 addsubgroup "Loops"
 addassignment "25-Patterns"
 addassignment "23-MountainPaths"
+addassignment "56-2DIndexing"
 
 addsubgroup "Input/Output"
 addassignment "10-HurricaneTracker"
@@ -36,6 +37,7 @@ addsubgroup "2D Arrays"
 addassignment "6-GridSquareFill"
 addassignment "7-GridLyrics"
 addassignment "16-ImagePuzzle"
+addassignment "40-ImageProcessing"
 
 
 addsubgroup "Games"
@@ -47,6 +49,7 @@ addassignment "22-Snake"
 addassignment "32-TicTacToe"
 addassignment "35-ConnectFour"
 addassignment "36-Pong"
+addassignment "35-ConnectFour"
 
 addsubgroup "Simulation"
 addassignment "14-SpreadingFire"
