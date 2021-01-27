@@ -38,6 +38,7 @@ addassignment "6-GridSquareFill"
 addassignment "7-GridLyrics"
 addassignment "16-ImagePuzzle"
 addassignment "40-ImageProcessing"
+addassignment "56-2DIndexing"
 
 
 addsubgroup "Games"
