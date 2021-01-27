@@ -18,7 +18,7 @@ mv ~/.apt/usr/*  ${REPL_PATH}/curl
 
 # download the BRIDGES C++ client
 #
-wget http://bridgesuncc.github.io/sw/bridges-cxx-3.1.1-x86_64-linux-gnu.tgz  -O ~/bridges-cxx.tgz
+wget http://bridgesuncc.github.io/sw/bridges-cxx-3.2.0-x86_64-linux-gnu.tgz  -O ~/bridges-cxx.tgz
 
 # get an example makefile for repl
 wget http://bridgesuncc.github.io/sw/replit-example-Makefile -O ${HOME}/Makefile
@@ -32,6 +32,14 @@ tar xvfz ~/bridges-cxx.tgz
 # mv the Makefile to the REPL folder
 mv ${HOME}/Makefile ${REPL_PATH}
 
+
+#
+rm -f ${REPL_PATH}/.replit
+cat >> ${REPL_PATH}/.replit << EOF
+
+run = "make run"
+
+EOF
 #
 # need to set up environment variables that need to be appended to the .bashrc
 # done in the Makefile now
