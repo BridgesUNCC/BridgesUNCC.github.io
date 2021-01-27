@@ -47,7 +47,6 @@ addassignment "20-Minesweeper"
 addassignment "21-RaceCar"
 addassignment "22-Snake"
 addassignment "32-TicTacToe"
-addassignment "35-ConnectFour"
 addassignment "36-Pong"
 addassignment "35-ConnectFour"
 
