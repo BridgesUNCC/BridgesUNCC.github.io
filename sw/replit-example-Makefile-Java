@@ -23,5 +23,6 @@ OBJS = $(SRCS:.java=.class)
 export CLASSPATH=${REPL_PATH}/lib/bridges-java.jar:.
 
 
-all:  ${SRCS}
+all: 
 	javac  ${SRCS}
+	java   $(EXE)
