@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Java</h1>
-	<p>Running at Fri 29 Jan 2021 03:36:59 AM EST</p>
+	<p>Running at Sat 30 Jan 2021 03:36:52 AM EST</p>
   <div id="summaryarray1d.java" class="success">
     <h2><a href="java_testing_logs.html#javalogarray1d.java">Test array1d.java</a> </h2>
     <p>
@@ -309,12 +309,12 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summaryosm_snippet.java" class="success">
+  <div id="summaryosm_snippet.java" class="failure">
     <h2><a href="java_testing_logs.html#javalogosm_snippet.java">Test osm_snippet.java</a> </h2>
     <p>
       <ul>
         <li> Build : <a href="java_testing_logs.html#javalogosm_snippet.java-buildtest">success</a></li>
-        <li> Run : <a href="java_testing_logs.html#javalogosm_snippet.java-runtest">success</a></li>
+        <li> Run : <a href="java_testing_logs.html#javalogosm_snippet.java-runtest">error</a></li>
       </ul>
     </p>
   </div>
@@ -964,10 +964,10 @@ first 10 elevations:
 <div class="success">
 <h3><span id="javalogeq_snippet.java-runtest">Run for test eq_snippet.java</span></h3>
 <pre><code>Earthquake 0:
-	Magnitude:1.19
-	Date:Jan 29 2021  03:22:00.820 EST
-	Location: 19km SSE of Big Bear City, CA
-	Lat/Long:34.0936667,-116.7891667
+	Magnitude:1.9
+	Date:Jan 30 2021  03:23:48.802 EST
+	Location: 5 km N of Happy Valley, Alaska
+	Lat/Long:59.9999,-151.7398
 </code></pre>
 </div>
     
@@ -1025,10 +1025,10 @@ could not run test game_size_test.java
 </div>
 <div class="success">
 <h3><span id="javaloggame_snippet.java-runtest">Run for test game_snippet.java</span></h3>
-<pre><code>Tim Burtons The Nightmare Before Christmas: Oogies Revenge
-Xbox
-6.0
-[Action, Adventure]
+<pre><code>Castlevania: The Dracula X Chronicles
+PlayStation Portable
+8.0
+[Action]
 </code></pre>
 </div>
     
@@ -1406,11 +1406,31 @@ Lon: -77.0317015
 <pre><code>Compiling test osm_snippet.java
 </code></pre>
 </div>
-<div class="success">
+<div class="failure">
 <h3><span id="javalogosm_snippet.java-runtest">Run for test osm_snippet.java</span></h3>
-<pre><code>Number of Vertices [Charlotte]:11084
-Number of Edges [Charlotte]:17578
-Location of first vertex [Cartesian Coord]: 827.1273231300758,-5144.073405550668
+<pre><code>URLs:http://bridges-data-server-osm.bridgesuncc.org/loc?location=Charlotte%2C+North+Carolina&amp;level=default
+http://bridges-data-server-osm.bridgesuncc.org/hash?location=Charlotte%2C+North+Carolina&amp;level=default
+Status code:200
+Exception in thread &quot;main&quot; java.nio.file.NoSuchFileException: /home/bridges-testing/.cache/bridges_data/&lt;!DOCTYPE HTML PUBLIC &quot;-/W3C/DTD HTML 3.2 Final/EN&quot;&gt;
+&lt;title&gt;400 Bad Request&lt;/title&gt;
+&lt;h1&gt;Bad Request&lt;/h1&gt;
+&lt;p&gt;The browser (or proxy) sent a request that this server could not understand.&lt;/p&gt;
+
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:219)
+	at java.base/java.nio.file.spi.FileSystemProvider.newOutputStream(FileSystemProvider.java:478)
+	at java.base/java.nio.file.Files.newOutputStream(Files.java:219)
+	at java.base/java.nio.file.Files.write(Files.java:3424)
+	at bridges.cache.SimpleCache.putDoc(SimpleCache.java:24)
+	at bridges.cache.LRUCache.putDoc(LRUCache.java:52)
+	at bridges.connect.DataSource.getDataSetJSON(DataSource.java:959)
+	at bridges.connect.DataSource.parseOSMData(DataSource.java:730)
+	at bridges.connect.DataSource.getOsmDataDS(DataSource.java:678)
+	at bridges.connect.DataSource.getOsmData(DataSource.java:290)
+	at osm_snippet.main(osm_snippet.java:20)
+could not run test osm_snippet.java
 </code></pre>
 </div>
     
@@ -1425,11 +1445,18 @@ Location of first vertex [Cartesian Coord]: 827.1273231300758,-5144.073405550668
 </div>
 <div class="success">
 <h3><span id="javalogshakespeare_snippet.java-runtest">Run for test shakespeare_snippet.java</span></h3>
-<pre><code>Sonnet 19
-poem
-Devouring Time blunt thou the lion's paws,
- And make the earth devour her own sweet brood,
- Pluck th...
+<pre><code>The Merchant Of Venice
+play
+1597
+
+THE MERCHANT OF VENICE
+
+by William Shakespeare
+
+DRAMATIS PERSONAE
+
+ THE DUKE OF VENICE
+ THE PR...
 </code></pre>
 </div>
     
