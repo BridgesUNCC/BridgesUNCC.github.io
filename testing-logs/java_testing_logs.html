@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Java</h1>
-	<p>Running at Sun 31 Jan 2021 03:36:50 AM EST</p>
+	<p>Running at Mon 01 Feb 2021 03:36:50 AM EST</p>
   <div id="summaryarray1d.java" class="success">
     <h2><a href="java_testing_logs.html#javalogarray1d.java">Test array1d.java</a> </h2>
     <p>
@@ -309,12 +309,12 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summaryosm_snippet.java" class="failure">
+  <div id="summaryosm_snippet.java" class="success">
     <h2><a href="java_testing_logs.html#javalogosm_snippet.java">Test osm_snippet.java</a> </h2>
     <p>
       <ul>
         <li> Build : <a href="java_testing_logs.html#javalogosm_snippet.java-buildtest">success</a></li>
-        <li> Run : <a href="java_testing_logs.html#javalogosm_snippet.java-runtest">error</a></li>
+        <li> Run : <a href="java_testing_logs.html#javalogosm_snippet.java-runtest">success</a></li>
       </ul>
     </p>
   </div>
@@ -354,12 +354,12 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summarysong_lyrics_snippet.java" class="success">
+  <div id="summarysong_lyrics_snippet.java" class="failure">
     <h2><a href="java_testing_logs.html#javalogsong_lyrics_snippet.java">Test song_lyrics_snippet.java</a> </h2>
     <p>
       <ul>
         <li> Build : <a href="java_testing_logs.html#javalogsong_lyrics_snippet.java-buildtest">success</a></li>
-        <li> Run : <a href="java_testing_logs.html#javalogsong_lyrics_snippet.java-runtest">success</a></li>
+        <li> Run : <a href="java_testing_logs.html#javalogsong_lyrics_snippet.java-runtest">error</a></li>
       </ul>
     </p>
   </div>
@@ -964,10 +964,10 @@ first 10 elevations:
 <div class="success">
 <h3><span id="javalogeq_snippet.java-runtest">Run for test eq_snippet.java</span></h3>
 <pre><code>Earthquake 0:
-	Magnitude:0.97
-	Date:Jan 31 2021  03:26:19.710 EST
-	Location: 10km WNW of The Geysers, CA
-	Lat/Long:38.8251648,-122.8551636
+	Magnitude:1.25
+	Date:Feb 01 2021  03:18:03.650 EST
+	Location: 14km WNW of Calipatria, CA
+	Lat/Long:33.1745,-115.6506667
 </code></pre>
 </div>
     
@@ -1025,10 +1025,10 @@ could not run test game_size_test.java
 </div>
 <div class="success">
 <h3><span id="javaloggame_snippet.java-runtest">Run for test game_snippet.java</span></h3>
-<pre><code>Pro Evolution Soccer 2013
-PlayStation 3
-8.5
-[Sports]
+<pre><code>Hells Kitchen
+PC
+5.0
+[Simulation]
 </code></pre>
 </div>
     
@@ -1406,29 +1406,12 @@ Lon: -77.0317015
 <pre><code>Compiling test osm_snippet.java
 </code></pre>
 </div>
-<div class="failure">
+<div class="success">
 <h3><span id="javalogosm_snippet.java-runtest">Run for test osm_snippet.java</span></h3>
 <pre><code>[Data request:] Status code:200
-Exception in thread &quot;main&quot; java.nio.file.NoSuchFileException: /home/bridges-testing/.cache/bridges_data/&lt;!DOCTYPE HTML PUBLIC &quot;-/W3C/DTD HTML 3.2 Final/EN&quot;&gt;
-&lt;title&gt;400 Bad Request&lt;/title&gt;
-&lt;h1&gt;Bad Request&lt;/h1&gt;
-&lt;p&gt;The browser (or proxy) sent a request that this server could not understand.&lt;/p&gt;
-
-	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
-	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
-	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
-	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:219)
-	at java.base/java.nio.file.spi.FileSystemProvider.newOutputStream(FileSystemProvider.java:478)
-	at java.base/java.nio.file.Files.newOutputStream(Files.java:219)
-	at java.base/java.nio.file.Files.write(Files.java:3424)
-	at bridges.cache.SimpleCache.putDoc(SimpleCache.java:24)
-	at bridges.cache.LRUCache.putDoc(LRUCache.java:52)
-	at bridges.connect.DataSource.getDataSetJSON(DataSource.java:963)
-	at bridges.connect.DataSource.parseOSMData(DataSource.java:733)
-	at bridges.connect.DataSource.getOsmDataDS(DataSource.java:681)
-	at bridges.connect.DataSource.getOsmData(DataSource.java:294)
-	at osm_snippet.main(osm_snippet.java:20)
-could not run test osm_snippet.java
+Number of Vertices [Charlotte]:11085
+Number of Edges [Charlotte]:17580
+Location of first vertex [Cartesian Coord]: 827.1273231300758,-5144.073405550668
 </code></pre>
 </div>
     
@@ -1443,11 +1426,11 @@ could not run test osm_snippet.java
 </div>
 <div class="success">
 <h3><span id="javalogshakespeare_snippet.java-runtest">Run for test shakespeare_snippet.java</span></h3>
-<pre><code>Sonnet 136
+<pre><code>Sonnet 123
 poem
-If thy soul check thee that I come so near,
- Swear to thy blind soul that I was thy 'Will',
- And wil...
+No! Time, thou shalt not boast that I do change,
+ Thy pyramids built up with newer might
+ To me are ...
 </code></pre>
 </div>
     
@@ -1532,91 +1515,23 @@ http://bridges-cs.herokuapp.com/assignments/2037/bridges_testing
 <pre><code>Compiling test song_lyrics_snippet.java
 </code></pre>
 </div>
-<div class="success">
+<div class="failure">
 <h3><span id="javalogsong_lyrics_snippet.java-runtest">Run for test song_lyrics_snippet.java</span></h3>
-<pre><code>Harder, Better, Faster, Stronger
-Daft Punk
-Discovery
-2001-02-26
-
-
-[Intro]
-Work it, make it
-Do it, makes us
-Harder, better
-Faster, stronger
-More than, hour
-Hour, never
-Ever, after
-Work is, over
-Work it, make it
-Do it, makes us
-Harder, better
-Faster, stronger
-
-[Chorus 1]
-Work it harder, make it better
-Do it faster, makes us stronger
-More than ever, hour after hour
-Work is never over
-Work it harder, make it better
-Do it faster, makes us stronger
-More than ever, hour after hour
-Work is never over
-Work it harder, make it better
-Do it faster, makes us stronger
-More than ever, hour after hour
-Work is never over
-Work it harder, make it better
-Do it faster, makes us stronger
-More than ever, hour after hour
-Work is never over
-Work it harder, make it better
-Do it faster, makes us stronger
-More than ever, hour after hour
-Work is never over
-Work it harder, make it better
-Do it faster, makes us
-More than ever, hour after hour
-Work is never over
-Work it harder, make it better
-Do it faster, makes us stronger
-More than ever, hour after hour
-Work is never over
-
-[Chorus 2]
-Work it harder, make it
-Do it faster, makes us
-More than ever, hour after hour
-Work is never over
-Work it harder, make it better
-Do it faster, makes us stronger
-More than ever, hour after hour
-Work is never over
-Work it, make it better
-Do it faster, makes us stronger
-More than ever, hour after hour
-Work is never over
-Work it harder, make it better
-Do it faster, makes us stronger
-More than ever, hour after hour
-Work is never over
-Work it harder, make it better
-Do it faster, makes us stronger
-More than ever, hour after hour
-Work is never over
-
-[Outro]
-Work it harder
-Do it faster
-More than ever, hour
-Work is never over
-Work it harder, make it better
-Do it faster, makes us stronger
-More than ever, hour after hour
-Work is never over
-
-
+<pre><code>Exception in thread &quot;main&quot; java.lang.IllegalArgumentException: Illegal character in path at index 55: https://bridgesdata.herokuapp.com/api/songs/find/Harder Faster Better Stronger?artistName=Daft Punk
+	at java.base/java.net.URI.create(URI.java:883)
+	at org.apache.http.client.methods.HttpGet.&lt;init&gt;(HttpGet.java:69)
+	at bridges.connect.DataSource.makeRequest(DataSource.java:330)
+	at bridges.connect.DataSource.getSong(DataSource.java:644)
+	at song_lyrics_snippet.main(song_lyrics_snippet.java:24)
+Caused by: java.net.URISyntaxException: Illegal character in path at index 55: https://bridgesdata.herokuapp.com/api/songs/find/Harder Faster Better Stronger?artistName=Daft Punk
+	at java.base/java.net.URI$Parser.fail(URI.java:2913)
+	at java.base/java.net.URI$Parser.checkChars(URI.java:3084)
+	at java.base/java.net.URI$Parser.parseHierarchical(URI.java:3166)
+	at java.base/java.net.URI$Parser.parse(URI.java:3114)
+	at java.base/java.net.URI.&lt;init&gt;(URI.java:600)
+	at java.base/java.net.URI.create(URI.java:881)
+	... 4 more
+could not run test song_lyrics_snippet.java
 </code></pre>
 </div>
     
