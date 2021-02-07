@@ -38,6 +38,7 @@ addassignment "6-GridSquareFill"
 addassignment "7-GridLyrics"
 addassignment "16-ImagePuzzle"
 addassignment "40-ImageProcessing"
+addassignment "56-2DIndexing"
 
 
 addsubgroup "Games"
@@ -47,7 +48,6 @@ addassignment "20-Minesweeper"
 addassignment "21-RaceCar"
 addassignment "22-Snake"
 addassignment "32-TicTacToe"
-addassignment "35-ConnectFour"
 addassignment "36-Pong"
 addassignment "35-ConnectFour"
 

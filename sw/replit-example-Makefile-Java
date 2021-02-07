@@ -17,12 +17,12 @@ EXE=java_test
 
 SRCS = java_test.java
 
+OBJS = $(SRCS:.java=.class)
+
 
 export CLASSPATH=${REPL_PATH}/lib/bridges-java.jar:.
 
 
-all:
+all: 
 	javac  ${SRCS}
-	java ${EXE}
-
-
+	java   $(EXE)

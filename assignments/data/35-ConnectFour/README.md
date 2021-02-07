@@ -20,6 +20,8 @@ The purpose of this assignment is to learn to
 - Create a tie condition
 - Correctly handle edge cases
 
+![Connect 4 Board !](./figures/icon.png)
+
 ## More Details to Get You Started
 
 ### Key Press Events - NonBlocking Games
