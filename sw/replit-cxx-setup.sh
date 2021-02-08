@@ -18,7 +18,7 @@ mv ~/.apt/usr/*  ${REPL_PATH}/curl
 
 # download the BRIDGES C++ client
 #
-wget http://bridgesuncc.github.io/sw/bridges-cxx-3.2.0-x86_64-linux-gnu.tgz  -O ~/bridges-cxx.tgz
+wget http://bridgesuncc.github.io/sw/bridges-cxx-3.2.1-x86_64-linux-gnu.tgz  -O ~/bridges-cxx.tgz
 
 # get an example makefile for repl
 wget http://bridgesuncc.github.io/sw/replit-example-Makefile -O ${HOME}/Makefile
