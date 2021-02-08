@@ -11,11 +11,14 @@ install-pkg libcurl4
 install-pkg libcurl4-openssl-dev
 
 
+#
 # create directory for curl includes and libraries
+#
 mkdir ${REPL_PATH}/curl
 
 mv ~/.apt/usr/*  ${REPL_PATH}/curl
 
+#
 # download the BRIDGES C++ client
 #
 wget http://bridgesuncc.github.io/sw/bridges-cxx-3.2.1-x86_64-linux-gnu.tgz  -O ~/bridges-cxx.tgz
@@ -29,10 +32,13 @@ wget http://bridgesuncc.github.io/sw/replit-example-Makefile -O ${HOME}/Makefile
 cd ${REPL_PATH}
 tar xvfz ~/bridges-cxx.tgz
 
+#
 # mv the Makefile to the REPL folder
+#
 mv ${HOME}/Makefile ${REPL_PATH}
 
-
+#
+#
 #
 rm -f ${REPL_PATH}/.replit
 cat >> ${REPL_PATH}/.replit << EOF
