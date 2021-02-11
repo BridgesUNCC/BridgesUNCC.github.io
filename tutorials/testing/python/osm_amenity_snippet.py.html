@@ -1,0 +1,38 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.data_src_dependent <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
+<span class="PreProc">import</span> random
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(<span class="Identifier">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
+
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">Amenity Data Access Example</span><span class="Constant">&quot;</span>)
+
+    <span class="Identifier">print</span> (<span class="Constant">&quot;</span><span class="Constant">Retrieving all schools in Charlotte, North Carolina</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># get the OsmData</span>
+    amenitydata = data_source.get_amenity_data(<span class="Constant">&quot;</span><span class="Constant">Charlotte, North Carolina</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">school</span><span class="Constant">&quot;</span>)
+    <span class="Comment"># Alternately, one can use a bounding box expressed with latitude and longitude</span>
+    <span class="Comment"># There are other types than &quot;school&quot; available. Check documentation for details.</span>
+    <span class="Comment">#amenitydata = data_source.get_amenity_data(35.28, -80.75, 35.32, -80.71, &quot;food&quot;)</span>
+
+
+
+    meta = amenitydata.meta
+
+    <span class="Identifier">print</span> (<span class="Constant">&quot;</span><span class="Constant">Number of amenities: </span><span class="Constant">&quot;</span> + <span class="Identifier">str</span>(meta.count))
+
+    <span class="Identifier">print</span> (<span class="Constant">&quot;</span><span class="Constant">Position of first amenity: lat=</span><span class="Constant">&quot;</span>+<span class="Identifier">str</span>(amenitydata.data[<span class="Constant">0</span>].lat)+
+           <span class="Constant">&quot;</span><span class="Constant"> long=</span><span class="Constant">&quot;</span>+ <span class="Identifier">str</span>(amenitydata.data[<span class="Constant">0</span>].lon)+<span class="Constant">&quot;</span><span class="Constant"> name=</span><span class="Constant">&quot;</span>+<span class="Identifier">str</span>(amenitydata.data[<span class="Constant">0</span>].name)+
+           <span class="Constant">&quot;</span><span class="Constant"> id=</span><span class="Constant">&quot;</span> + <span class="Identifier">str</span>(amenitydata.data[<span class="Constant">0</span>].id) + <span class="Constant">&quot;</span><span class="Constant"> other=</span><span class="Constant">&quot;</span>+<span class="Identifier">str</span>(amenitydata.data[<span class="Constant">0</span>].other))
+
+    <span class="Comment">#print (&quot;Cartesian Coordinate of first vertex: &quot;+str(vertices[0].cartesian_coord[0])+ &quot;, &quot;+ str(vertices[0].cartesian_coord[1]))</span>
+
+
+<span class="Statement">if</span> __name__ == <span class="Constant">'</span><span class="Constant">__main__</span><span class="Constant">'</span>:
+    main()
+</pre>
