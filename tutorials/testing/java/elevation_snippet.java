@@ -13,7 +13,8 @@ public class elevation_snippet {
 
 		// Get a List of Shakespeare objects from Bridges
 		DataSource ds = bridges.getDataSource();
-		ElevationData elev_data = ds.getElevationData(41.03133177632377, -98.02593749997456, 42.508577297430456, -96.94531249997696, 0.02);
+		ElevationData elev_data = ds.getElevationData(41.33133177632377, 
+			-98.02593749997456, 42.508577297430456, -96.94531249997696, 0.02);
 
 
 		System.out.println("Width: " + elev_data.getCols());
