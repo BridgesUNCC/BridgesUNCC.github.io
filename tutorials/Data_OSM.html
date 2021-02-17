@@ -36,6 +36,30 @@ in graph algorithms and graph based applications (Bacon Number, Dijkstra's algor
 MST, etc.).  We have the capability to specify city names or bounding box of locations
 to retrieve the map data.
 </p>
+ <p>
+Possible filtering values include:
+<ul>
+    <li>motorway</li>
+    <li>trunk (includes the above too)</li>
+    <li>primary (includes the above too)</li>
+    <li>secondary (includes the above too)</li>
+    <li>tertiary (includes the above too)</li>
+    <li>unclassified (includes the above too)</li>
+    <li>residential (includes the above too)</li>
+    <li>living_street (includes the above too)</li>
+    <li>service (includes the above too)</li>
+    <li>trails</li>
+    <li>walking (includes trails)</li>
+    <li>bicycle (includes tertiary, unclassified, residential and living_street)</li>
+</ul>
+</p>
+<p>A list of avaliable cities can be found at <a href="http://bridges-data-server-osm.bridgesuncc.org/cities">Bridges OSM Cities</a></p>
+<p>
+When using a bounding box for your input slection put the coordinates in the order of minLat, minLon, maxLat, maxLon or (SWNE).
+</p>
+<h3>Suggested Examples:</h3>
+<p>data_source.get_osm_data("New York, New York", "default")<br>data_source.get_osm_data("Denver, Colorado", "default")<br>data_source.get_osm_data("Chicago, Illinois", "residential")</p>
+
 <p>
 The program snippet below illustrates how to obtain map data of the UNC Charlotte.
 </p>
