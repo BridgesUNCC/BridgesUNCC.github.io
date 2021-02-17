@@ -48,9 +48,12 @@ Possible filtering values include:
     <li>heli</li>
 </ul>
 </p>
+<p>A list of avaliable cities can be found at <a href="http://bridges-data-server-osm.bridgesuncc.org/cities">Bridges OSM Cities</a></p>
 <p>
 When using a bounding box for your input slection put the coordinates in the order of minLat, minLon, maxLat, maxLon or (SWNE).
 </p>
+<h3>Suggested Examples:</h3>
+<p>data_source.get_amenity_data("New York, New York", "food")<br>data_source.get_amenity_data("Los Angeles, California", "school")<br>data_source.get_amenity_data("Chicago, Illinois", "firestation")</p>
 
 <p>
 The program snippet below illustrates how to obtain map data of the UNC Charlotte.
