@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for C++</h1>
-	<p>Running at Thu 18 Feb 2021 03:48:19 AM EST</p>
+	<p>Running at Fri 19 Feb 2021 03:50:05 AM EST</p>
   <div id="summary0" class="success">
     <h2><a href="cxx_logs.html#cxxlog0">Assignment 0</a> </h2>
     <p>
@@ -92,13 +92,13 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summary8" class="failure">
+  <div id="summary8" class="success">
     <h2><a href="cxx_logs.html#cxxlog8">Assignment 8</a> </h2>
     <p>
       <ul>
         <li> Build : <a href="cxx_logs.html#cxxlog8-buildscaffold">success</a></li>
-        <li> Build : <a href="cxx_logs.html#cxxlog8-buildanswer">error</a></li>
-        <li> Run : <a href="cxx_logs.html#cxxlog8-runanswer">error</a></li>
+        <li> Build : <a href="cxx_logs.html#cxxlog8-buildanswer">success</a></li>
+        <li> Run : <a href="cxx_logs.html#cxxlog8-runanswer">success</a></li>
       </ul>
     </p>
   </div>
@@ -934,7 +934,7 @@ g++ -g  -std=c++14 -I /home/bridges-testing/bridges-cxx-install/include/ -c PQBo
 g++ -o PQBook PQBook.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ -pthread -lcurl -l bridges 
 </code></pre>
 </div>
-<div class="failure">
+<div class="success">
 <h3><span id="cxxlog8-buildanswer">Build for Assignment 8</span></h3>
 <pre><code>Compiling c++_answer/ for assignment in ../assignmentdb/8-PQBook/c++_answer
 rm PQBook.o
@@ -944,863 +944,254 @@ rm PQBook
 rm: cannot remove 'PQBook': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
 g++ -g  -std=c++14 -I /home/bridges-testing/bridges-cxx-install/include/ -c PQBook.cpp -o PQBook.o
-In file included from PQBook.cpp:8:
-MyHashtable.hpp: In instantiation of ‘V MyHashtable&lt;K, V&gt;::get(const K&amp;) const [with K = std::__cxx11::basic_string&lt;char&gt;; V = int]’:
-MyHashtable.hpp:113:13:   required from here
-MyHashtable.hpp:118:22: error: no match for ‘operator!=’ (operand types are ‘const std::__cxx11::basic_string&lt;char&gt;’ and ‘std::nullptr_t’)
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/regex:62,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/ElementVisualizer.h:4,
-                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:12,
-                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
-                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/regex.h:991:5: note: candidate: ‘template&lt;class _BiIter&gt; bool std::__cxx11::operator!=(const std::__cxx11::sub_match&lt;_BiIter&gt;&amp;, const std::__cxx11::sub_match&lt;_BiIter&gt;&amp;)’
-     operator!=(const sub_match&lt;_BiIter&gt;&amp; __lhs, const sub_match&lt;_BiIter&gt;&amp; __rhs)
-     ^~~~~~~~
-/usr/include/c++/8/bits/regex.h:991:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::__cxx11::sub_match&lt;_BiIter&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/regex:62,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/ElementVisualizer.h:4,
-                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:12,
-                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
-                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/regex.h:1069:5: note: candidate: ‘template&lt;class _Bi_iter, class _Ch_traits, class _Ch_alloc&gt; bool std::__cxx11::operator!=(std::__cxx11::__sub_match_string&lt;_Bi_iter, _Ch_traits, _Ch_alloc&gt;&amp;, const std::__cxx11::sub_match&lt;_BiIter&gt;&amp;)’
-     operator!=(const __sub_match_string&lt;_Bi_iter, _Ch_traits, _Ch_alloc&gt;&amp; __lhs,
-     ^~~~~~~~
-/usr/include/c++/8/bits/regex.h:1069:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   mismatched types ‘const std::__cxx11::sub_match&lt;_BiIter&gt;’ and ‘std::nullptr_t’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/regex:62,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/ElementVisualizer.h:4,
-                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:12,
-                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
-                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/regex.h:1149:5: note: candidate: ‘template&lt;class _Bi_iter, class _Ch_traits, class _Ch_alloc&gt; bool std::__cxx11::operator!=(const std::__cxx11::sub_match&lt;_BiIter&gt;&amp;, std::__cxx11::__sub_match_string&lt;_Bi_iter, _Ch_traits, _Ch_alloc&gt;&amp;)’
-     operator!=(const sub_match&lt;_Bi_iter&gt;&amp; __lhs,
-     ^~~~~~~~
-/usr/include/c++/8/bits/regex.h:1149:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::__cxx11::sub_match&lt;_BiIter&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/regex:62,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/ElementVisualizer.h:4,
-                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:12,
-                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
-                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/regex.h:1226:5: note: candidate: ‘template&lt;class _Bi_iter&gt; bool std::__cxx11::operator!=(const typename std::iterator_traits&lt;_Iter&gt;::value_type*, const std::__cxx11::sub_match&lt;_BiIter&gt;&amp;)’
-     operator!=(typename iterator_traits&lt;_Bi_iter&gt;::value_type const* __lhs,
-     ^~~~~~~~
-/usr/include/c++/8/bits/regex.h:1226:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   mismatched types ‘const std::__cxx11::sub_match&lt;_BiIter&gt;’ and ‘std::nullptr_t’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/regex:62,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/ElementVisualizer.h:4,
-                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:12,
-                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
-                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/regex.h:1300:5: note: candidate: ‘template&lt;class _Bi_iter&gt; bool std::__cxx11::operator!=(const std::__cxx11::sub_match&lt;_BiIter&gt;&amp;, const typename std::iterator_traits&lt;_Iter&gt;::value_type*)’
-     operator!=(const sub_match&lt;_Bi_iter&gt;&amp; __lhs,
-     ^~~~~~~~
-/usr/include/c++/8/bits/regex.h:1300:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::__cxx11::sub_match&lt;_BiIter&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/regex:62,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/ElementVisualizer.h:4,
-                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:12,
-                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
-                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/regex.h:1377:5: note: candidate: ‘template&lt;class _Bi_iter&gt; bool std::__cxx11::operator!=(const typename std::iterator_traits&lt;_Iter&gt;::value_type&amp;, const std::__cxx11::sub_match&lt;_BiIter&gt;&amp;)’
-     operator!=(typename iterator_traits&lt;_Bi_iter&gt;::value_type const&amp; __lhs,
-     ^~~~~~~~
-/usr/include/c++/8/bits/regex.h:1377:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   mismatched types ‘const std::__cxx11::sub_match&lt;_BiIter&gt;’ and ‘std::nullptr_t’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/regex:62,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/ElementVisualizer.h:4,
-                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:12,
-                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
-                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/regex.h:1457:5: note: candidate: ‘template&lt;class _Bi_iter&gt; bool std::__cxx11::operator!=(const std::__cxx11::sub_match&lt;_BiIter&gt;&amp;, const typename std::iterator_traits&lt;_Iter&gt;::value_type&amp;)’
-     operator!=(const sub_match&lt;_Bi_iter&gt;&amp; __lhs,
-     ^~~~~~~~
-/usr/include/c++/8/bits/regex.h:1457:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::__cxx11::sub_match&lt;_BiIter&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/regex:62,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/ElementVisualizer.h:4,
-                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:12,
-                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
-                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/regex.h:1981:5: note: candidate: ‘template&lt;class _Bi_iter, class _Alloc&gt; bool std::__cxx11::operator!=(const std::__cxx11::match_results&lt;_BiIter, _Alloc&gt;&amp;, const std::__cxx11::match_results&lt;_BiIter, _Alloc&gt;&amp;)’
-     operator!=(const match_results&lt;_Bi_iter, _Alloc&gt;&amp; __m1,
-     ^~~~~~~~
-/usr/include/c++/8/bits/regex.h:1981:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::__cxx11::match_results&lt;_BiIter, _Alloc&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/iosfwd:40,
-                 from /usr/include/c++/8/ios:38,
-                 from /usr/include/c++/8/ostream:38,
-                 from /usr/include/c++/8/iostream:39,
-                 from /home/bridges-testing/bridges-cxx-install/include/Bridges.h:4,
-                 from PQBook.cpp:1:
-/usr/include/c++/8/bits/postypes.h:221:5: note: candidate: ‘template&lt;class _StateT&gt; bool std::operator!=(const std::fpos&lt;_StateT&gt;&amp;, const std::fpos&lt;_StateT&gt;&amp;)’
-     operator!=(const fpos&lt;_StateT&gt;&amp; __lhs, const fpos&lt;_StateT&gt;&amp; __rhs)
-     ^~~~~~~~
-/usr/include/c++/8/bits/postypes.h:221:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::fpos&lt;_StateT&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/bits/stl_algobase.h:64,
-                 from /usr/include/c++/8/bits/char_traits.h:39,
-                 from /usr/include/c++/8/ios:40,
-                 from /usr/include/c++/8/ostream:38,
-                 from /usr/include/c++/8/iostream:39,
-                 from /home/bridges-testing/bridges-cxx-install/include/Bridges.h:4,
-                 from PQBook.cpp:1:
-/usr/include/c++/8/bits/stl_pair.h:461:5: note: candidate: ‘template&lt;class _T1, class _T2&gt; constexpr bool std::operator!=(const std::pair&lt;_T1, _T2&gt;&amp;, const std::pair&lt;_T1, _T2&gt;&amp;)’
-     operator!=(const pair&lt;_T1, _T2&gt;&amp; __x, const pair&lt;_T1, _T2&gt;&amp; __y)
-     ^~~~~~~~
-/usr/include/c++/8/bits/stl_pair.h:461:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::pair&lt;_T1, _T2&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/bits/stl_algobase.h:67,
-                 from /usr/include/c++/8/bits/char_traits.h:39,
-                 from /usr/include/c++/8/ios:40,
-                 from /usr/include/c++/8/ostream:38,
-                 from /usr/include/c++/8/iostream:39,
-                 from /home/bridges-testing/bridges-cxx-install/include/Bridges.h:4,
-                 from PQBook.cpp:1:
-/usr/include/c++/8/bits/stl_iterator.h:314:5: note: candidate: ‘template&lt;class _Iterator&gt; bool std::operator!=(const std::reverse_iterator&lt;_Iterator&gt;&amp;, const std::reverse_iterator&lt;_Iterator&gt;&amp;)’
-     operator!=(const reverse_iterator&lt;_Iterator&gt;&amp; __x,
-     ^~~~~~~~
-/usr/include/c++/8/bits/stl_iterator.h:314:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::reverse_iterator&lt;_Iterator&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/bits/stl_algobase.h:67,
-                 from /usr/include/c++/8/bits/char_traits.h:39,
-                 from /usr/include/c++/8/ios:40,
-                 from /usr/include/c++/8/ostream:38,
-                 from /usr/include/c++/8/iostream:39,
-                 from /home/bridges-testing/bridges-cxx-install/include/Bridges.h:4,
-                 from PQBook.cpp:1:
-/usr/include/c++/8/bits/stl_iterator.h:352:5: note: candidate: ‘template&lt;class _IteratorL, class _IteratorR&gt; bool std::operator!=(const std::reverse_iterator&lt;_Iterator&gt;&amp;, const std::reverse_iterator&lt;_IteratorR&gt;&amp;)’
-     operator!=(const reverse_iterator&lt;_IteratorL&gt;&amp; __x,
-     ^~~~~~~~
-/usr/include/c++/8/bits/stl_iterator.h:352:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::reverse_iterator&lt;_Iterator&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/bits/stl_algobase.h:67,
-                 from /usr/include/c++/8/bits/char_traits.h:39,
-                 from /usr/include/c++/8/ios:40,
-                 from /usr/include/c++/8/ostream:38,
-                 from /usr/include/c++/8/iostream:39,
-                 from /home/bridges-testing/bridges-cxx-install/include/Bridges.h:4,
-                 from PQBook.cpp:1:
-/usr/include/c++/8/bits/stl_iterator.h:1127:5: note: candidate: ‘template&lt;class _IteratorL, class _IteratorR&gt; bool std::operator!=(const std::move_iterator&lt;_IteratorL&gt;&amp;, const std::move_iterator&lt;_IteratorR&gt;&amp;)’
-     operator!=(const move_iterator&lt;_IteratorL&gt;&amp; __x,
-     ^~~~~~~~
-/usr/include/c++/8/bits/stl_iterator.h:1127:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::move_iterator&lt;_IteratorL&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/bits/stl_algobase.h:67,
-                 from /usr/include/c++/8/bits/char_traits.h:39,
-                 from /usr/include/c++/8/ios:40,
-                 from /usr/include/c++/8/ostream:38,
-                 from /usr/include/c++/8/iostream:39,
-                 from /home/bridges-testing/bridges-cxx-install/include/Bridges.h:4,
-                 from PQBook.cpp:1:
-/usr/include/c++/8/bits/stl_iterator.h:1133:5: note: candidate: ‘template&lt;class _Iterator&gt; bool std::operator!=(const std::move_iterator&lt;_IteratorL&gt;&amp;, const std::move_iterator&lt;_IteratorL&gt;&amp;)’
-     operator!=(const move_iterator&lt;_Iterator&gt;&amp; __x,
-     ^~~~~~~~
-/usr/include/c++/8/bits/stl_iterator.h:1133:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::move_iterator&lt;_IteratorL&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/string:41,
-                 from /usr/include/c++/8/bits/locale_classes.h:40,
-                 from /usr/include/c++/8/bits/ios_base.h:41,
-                 from /usr/include/c++/8/ios:42,
-                 from /usr/include/c++/8/ostream:38,
-                 from /usr/include/c++/8/iostream:39,
-                 from /home/bridges-testing/bridges-cxx-install/include/Bridges.h:4,
-                 from PQBook.cpp:1:
-/usr/include/c++/8/bits/allocator.h:158:5: note: candidate: ‘template&lt;class _T1, class _T2&gt; bool std::operator!=(const std::allocator&lt;_CharT&gt;&amp;, const std::allocator&lt;_T2&gt;&amp;)’
-     operator!=(const allocator&lt;_T1&gt;&amp;, const allocator&lt;_T2&gt;&amp;)
-     ^~~~~~~~
-/usr/include/c++/8/bits/allocator.h:158:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::allocator&lt;_CharT&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/string:41,
-                 from /usr/include/c++/8/bits/locale_classes.h:40,
-                 from /usr/include/c++/8/bits/ios_base.h:41,
-                 from /usr/include/c++/8/ios:42,
-                 from /usr/include/c++/8/ostream:38,
-                 from /usr/include/c++/8/iostream:39,
-                 from /home/bridges-testing/bridges-cxx-install/include/Bridges.h:4,
-                 from PQBook.cpp:1:
-/usr/include/c++/8/bits/allocator.h:164:5: note: candidate: ‘template&lt;class _Tp&gt; bool std::operator!=(const std::allocator&lt;_CharT&gt;&amp;, const std::allocator&lt;_CharT&gt;&amp;)’
-     operator!=(const allocator&lt;_Tp&gt;&amp;, const allocator&lt;_Tp&gt;&amp;)
-     ^~~~~~~~
-/usr/include/c++/8/bits/allocator.h:164:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::allocator&lt;_CharT&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/string:52,
-                 from /usr/include/c++/8/bits/locale_classes.h:40,
-                 from /usr/include/c++/8/bits/ios_base.h:41,
-                 from /usr/include/c++/8/ios:42,
-                 from /usr/include/c++/8/ostream:38,
-                 from /usr/include/c++/8/iostream:39,
-                 from /home/bridges-testing/bridges-cxx-install/include/Bridges.h:4,
-                 from PQBook.cpp:1:
-/usr/include/c++/8/bits/basic_string.h:6095:5: note: candidate: ‘template&lt;class _CharT, class _Traits, class _Alloc&gt; bool std::operator!=(const std::__cxx11::basic_string&lt;_CharT, _Traits, _Alloc&gt;&amp;, const std::__cxx11::basic_string&lt;_CharT, _Traits, _Alloc&gt;&amp;)’
-     operator!=(const basic_string&lt;_CharT, _Traits, _Alloc&gt;&amp; __lhs,
-     ^~~~~~~~
-/usr/include/c++/8/bits/basic_string.h:6095:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   mismatched types ‘const std::__cxx11::basic_string&lt;_CharT, _Traits, _Alloc&gt;’ and ‘std::nullptr_t’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/string:52,
-                 from /usr/include/c++/8/bits/locale_classes.h:40,
-                 from /usr/include/c++/8/bits/ios_base.h:41,
-                 from /usr/include/c++/8/ios:42,
-                 from /usr/include/c++/8/ostream:38,
-                 from /usr/include/c++/8/iostream:39,
-                 from /home/bridges-testing/bridges-cxx-install/include/Bridges.h:4,
-                 from PQBook.cpp:1:
-/usr/include/c++/8/bits/basic_string.h:6108:5: note: candidate: ‘template&lt;class _CharT, class _Traits, class _Alloc&gt; bool std::operator!=(const _CharT*, const std::__cxx11::basic_string&lt;_CharT, _Traits, _Alloc&gt;&amp;)’
-     operator!=(const _CharT* __lhs,
-     ^~~~~~~~
-/usr/include/c++/8/bits/basic_string.h:6108:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   mismatched types ‘const _CharT*’ and ‘std::__cxx11::basic_string&lt;char&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/string:52,
-                 from /usr/include/c++/8/bits/locale_classes.h:40,
-                 from /usr/include/c++/8/bits/ios_base.h:41,
-                 from /usr/include/c++/8/ios:42,
-                 from /usr/include/c++/8/ostream:38,
-                 from /usr/include/c++/8/iostream:39,
-                 from /home/bridges-testing/bridges-cxx-install/include/Bridges.h:4,
-                 from PQBook.cpp:1:
-/usr/include/c++/8/bits/basic_string.h:6120:5: note: candidate: ‘template&lt;class _CharT, class _Traits, class _Alloc&gt; bool std::operator!=(const std::__cxx11::basic_string&lt;_CharT, _Traits, _Alloc&gt;&amp;, const _CharT*)’
-     operator!=(const basic_string&lt;_CharT, _Traits, _Alloc&gt;&amp; __lhs,
-     ^~~~~~~~
-/usr/include/c++/8/bits/basic_string.h:6120:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   mismatched types ‘const _CharT*’ and ‘std::nullptr_t’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/bits/ios_base.h:46,
-                 from /usr/include/c++/8/ios:42,
-                 from /usr/include/c++/8/ostream:38,
-                 from /usr/include/c++/8/iostream:39,
-                 from /home/bridges-testing/bridges-cxx-install/include/Bridges.h:4,
-                 from PQBook.cpp:1:
-/usr/include/c++/8/system_error:319:3: note: candidate: ‘bool std::operator!=(const std::error_code&amp;, const std::error_code&amp;)’
-   operator!=(const error_code&amp; __lhs, const error_code&amp; __rhs) noexcept
-   ^~~~~~~~
-/usr/include/c++/8/system_error:319:3: note:   no known conversion for argument 1 from ‘const std::__cxx11::basic_string&lt;char&gt;’ to ‘const std::error_code&amp;’
-/usr/include/c++/8/system_error:323:3: note: candidate: ‘bool std::operator!=(const std::error_code&amp;, const std::error_condition&amp;)’
-   operator!=(const error_code&amp; __lhs, const error_condition&amp; __rhs) noexcept
-   ^~~~~~~~
-/usr/include/c++/8/system_error:323:3: note:   no known conversion for argument 1 from ‘const std::__cxx11::basic_string&lt;char&gt;’ to ‘const std::error_code&amp;’
-/usr/include/c++/8/system_error:327:3: note: candidate: ‘bool std::operator!=(const std::error_condition&amp;, const std::error_code&amp;)’
-   operator!=(const error_condition&amp; __lhs, const error_code&amp; __rhs) noexcept
-   ^~~~~~~~
-/usr/include/c++/8/system_error:327:3: note:   no known conversion for argument 1 from ‘const std::__cxx11::basic_string&lt;char&gt;’ to ‘const std::error_condition&amp;’
-/usr/include/c++/8/system_error:331:3: note: candidate: ‘bool std::operator!=(const std::error_condition&amp;, const std::error_condition&amp;)’
-   operator!=(const error_condition&amp; __lhs,
-   ^~~~~~~~
-/usr/include/c++/8/system_error:331:3: note:   no known conversion for argument 1 from ‘const std::__cxx11::basic_string&lt;char&gt;’ to ‘const std::error_condition&amp;’
-In file included from /usr/include/c++/8/bits/locale_facets.h:48,
-                 from /usr/include/c++/8/bits/basic_ios.h:37,
-                 from /usr/include/c++/8/ios:44,
-                 from /usr/include/c++/8/ostream:38,
-                 from /usr/include/c++/8/iostream:39,
-                 from /home/bridges-testing/bridges-cxx-install/include/Bridges.h:4,
-                 from PQBook.cpp:1:
-/usr/include/c++/8/bits/streambuf_iterator.h:209:5: note: candidate: ‘template&lt;class _CharT, class _Traits&gt; bool std::operator!=(const std::istreambuf_iterator&lt;_CharT, _Traits&gt;&amp;, const std::istreambuf_iterator&lt;_CharT, _Traits&gt;&amp;)’
-     operator!=(const istreambuf_iterator&lt;_CharT, _Traits&gt;&amp; __a,
-     ^~~~~~~~
-/usr/include/c++/8/bits/streambuf_iterator.h:209:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::istreambuf_iterator&lt;_CharT, _Traits&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/vector:64,
-                 from /home/bridges-testing/bridges-cxx-install/include/ServerComm.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/Bridges.h:9,
-                 from PQBook.cpp:1:
-/usr/include/c++/8/bits/stl_vector.h:1777:5: note: candidate: ‘template&lt;class _Tp, class _Alloc&gt; bool std::operator!=(const std::vector&lt;_Tp, _Alloc&gt;&amp;, const std::vector&lt;_Tp, _Alloc&gt;&amp;)’
-     operator!=(const vector&lt;_Tp, _Alloc&gt;&amp; __x, const vector&lt;_Tp, _Alloc&gt;&amp; __y)
-     ^~~~~~~~
-/usr/include/c++/8/bits/stl_vector.h:1777:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::vector&lt;_Tp, _Alloc&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/iterator:66,
-                 from /home/bridges-testing/bridges-cxx-install/include/rapidjson/document.h:43,
-                 from /home/bridges-testing/bridges-cxx-install/include/JSONutil.h:24,
-                 from /home/bridges-testing/bridges-cxx-install/include/Bridges.h:11,
-                 from PQBook.cpp:1:
-/usr/include/c++/8/bits/stream_iterator.h:137:5: note: candidate: ‘template&lt;class _Tp, class _CharT, class _Traits, class _Dist&gt; bool std::operator!=(const std::istream_iterator&lt;_Tp, _CharT, _Traits, _Dist&gt;&amp;, const std::istream_iterator&lt;_Tp, _CharT, _Traits, _Dist&gt;&amp;)’
-     operator!=(const istream_iterator&lt;_Tp, _CharT, _Traits, _Dist&gt;&amp; __x,
-     ^~~~~~~~
-/usr/include/c++/8/bits/stream_iterator.h:137:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::istream_iterator&lt;_Tp, _CharT, _Traits, _Dist&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/tuple:39,
-                 from /usr/include/c++/8/bits/hashtable_policy.h:34,
-                 from /usr/include/c++/8/bits/hashtable.h:35,
-                 from /usr/include/c++/8/unordered_map:46,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:6,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/array:257:5: note: candidate: ‘template&lt;class _Tp, long unsigned int _Nm&gt; bool std::operator!=(const std::array&lt;_Tp, _Nm&gt;&amp;, const std::array&lt;_Tp, _Nm&gt;&amp;)’
-     operator!=(const array&lt;_Tp, _Nm&gt;&amp; __one, const array&lt;_Tp, _Nm&gt;&amp; __two)
-     ^~~~~~~~
-/usr/include/c++/8/array:257:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::array&lt;_Tp, _Nm&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/bits/hashtable_policy.h:34,
-                 from /usr/include/c++/8/bits/hashtable.h:35,
-                 from /usr/include/c++/8/unordered_map:46,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:6,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/tuple:1439:5: note: candidate: ‘template&lt;class ... _TElements, class ... _UElements&gt; constexpr bool std::operator!=(const std::tuple&lt;_Tps ...&gt;&amp;, const std::tuple&lt;_Elements ...&gt;&amp;)’
-     operator!=(const tuple&lt;_TElements...&gt;&amp; __t,
-     ^~~~~~~~
-/usr/include/c++/8/tuple:1439:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::tuple&lt;_Tps ...&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/unordered_map:47,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:6,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/unordered_map.h:2063:5: note: candidate: ‘template&lt;class _Key, class _Tp, class _Hash, class _Pred, class _Alloc&gt; bool std::operator!=(const std::unordered_map&lt;_Key, _Tp, _Hash, _Pred, _Alloc&gt;&amp;, const std::unordered_map&lt;_Key, _Tp, _Hash, _Pred, _Alloc&gt;&amp;)’
-     operator!=(const unordered_map&lt;_Key, _Tp, _Hash, _Pred, _Alloc&gt;&amp; __x,
-     ^~~~~~~~
-/usr/include/c++/8/bits/unordered_map.h:2063:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::unordered_map&lt;_Key, _Tp, _Hash, _Pred, _Alloc&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/unordered_map:47,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:6,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/unordered_map.h:2075:5: note: candidate: ‘template&lt;class _Key, class _Tp, class _Hash, class _Pred, class _Alloc&gt; bool std::operator!=(const std::unordered_multimap&lt;_Key, _Tp, _Hash, _Pred, _Alloc&gt;&amp;, const std::unordered_multimap&lt;_Key, _Tp, _Hash, _Pred, _Alloc&gt;&amp;)’
-     operator!=(const unordered_multimap&lt;_Key, _Tp, _Hash, _Pred, _Alloc&gt;&amp; __x,
-     ^~~~~~~~
-/usr/include/c++/8/bits/unordered_map.h:2075:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::unordered_multimap&lt;_Key, _Tp, _Hash, _Pred, _Alloc&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/unordered_set:47,
-                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
-                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/unordered_set.h:1675:5: note: candidate: ‘template&lt;class _Value, class _Hash, class _Pred, class _Alloc&gt; bool std::operator!=(const std::unordered_set&lt;_Value, _Hash, _Pred, _Alloc&gt;&amp;, const std::unordered_set&lt;_Value, _Hash, _Pred, _Alloc&gt;&amp;)’
-     operator!=(const unordered_set&lt;_Value, _Hash, _Pred, _Alloc&gt;&amp; __x,
-     ^~~~~~~~
-/usr/include/c++/8/bits/unordered_set.h:1675:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::unordered_set&lt;_Value, _Hash, _Pred, _Alloc&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/unordered_set:47,
-                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
-                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/unordered_set.h:1687:5: note: candidate: ‘template&lt;class _Value, class _Hash, class _Pred, class _Alloc&gt; bool std::operator!=(const std::unordered_multiset&lt;_Value, _Hash, _Pred, _Alloc&gt;&amp;, const std::unordered_multiset&lt;_Value, _Hash, _Pred, _Alloc&gt;&amp;)’
-     operator!=(const unordered_multiset&lt;_Value, _Hash, _Pred, _Alloc&gt;&amp; __x,
-     ^~~~~~~~
-/usr/include/c++/8/bits/unordered_set.h:1687:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::unordered_multiset&lt;_Value, _Hash, _Pred, _Alloc&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/bits/locale_conv.h:41,
-                 from /usr/include/c++/8/locale:43,
-                 from /usr/include/c++/8/regex:44,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/ElementVisualizer.h:4,
-                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:12,
-                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
-                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/unique_ptr.h:706:5: note: candidate: ‘template&lt;class _Tp, class _Dp, class _Up, class _Ep&gt; bool std::operator!=(const std::unique_ptr&lt;_Tp, _Dp&gt;&amp;, const std::unique_ptr&lt;_Up, _Ep&gt;&amp;)’
-     operator!=(const unique_ptr&lt;_Tp, _Dp&gt;&amp; __x,
-     ^~~~~~~~
-/usr/include/c++/8/bits/unique_ptr.h:706:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::unique_ptr&lt;_Tp, _Dp&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/bits/locale_conv.h:41,
-                 from /usr/include/c++/8/locale:43,
-                 from /usr/include/c++/8/regex:44,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/ElementVisualizer.h:4,
-                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:12,
-                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
-                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/unique_ptr.h:712:5: note: candidate: ‘template&lt;class _Tp, class _Dp&gt; bool std::operator!=(const std::unique_ptr&lt;_Tp, _Dp&gt;&amp;, std::nullptr_t)’
-     operator!=(const unique_ptr&lt;_Tp, _Dp&gt;&amp; __x, nullptr_t) noexcept
-     ^~~~~~~~
-/usr/include/c++/8/bits/unique_ptr.h:712:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::unique_ptr&lt;_Tp, _Dp&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/bits/locale_conv.h:41,
-                 from /usr/include/c++/8/locale:43,
-                 from /usr/include/c++/8/regex:44,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/ElementVisualizer.h:4,
-                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:12,
-                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
-                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/unique_ptr.h:717:5: note: candidate: ‘template&lt;class _Tp, class _Dp&gt; bool std::operator!=(std::nullptr_t, const std::unique_ptr&lt;_Tp, _Dp&gt;&amp;)’
-     operator!=(nullptr_t, const unique_ptr&lt;_Tp, _Dp&gt;&amp; __x) noexcept
-     ^~~~~~~~
-/usr/include/c++/8/bits/unique_ptr.h:717:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   mismatched types ‘const std::unique_ptr&lt;_Tp, _Dp&gt;’ and ‘std::nullptr_t’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/bits/shared_ptr.h:52,
-                 from /usr/include/c++/8/memory:81,
-                 from /usr/include/c++/8/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/ElementVisualizer.h:4,
-                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:12,
-                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
-                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/shared_ptr_base.h:1426:5: note: candidate: ‘template&lt;class _Tp1, class _Tp2, __gnu_cxx::_Lock_policy _Lp&gt; bool std::operator!=(const std::__shared_ptr&lt;_Tp1, _Lp&gt;&amp;, const std::__shared_ptr&lt;_Tp2, _Lp&gt;&amp;)’
-     operator!=(const __shared_ptr&lt;_Tp1, _Lp&gt;&amp; __a,
-     ^~~~~~~~
-/usr/include/c++/8/bits/shared_ptr_base.h:1426:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::__shared_ptr&lt;_Tp1, _Lp&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/bits/shared_ptr.h:52,
-                 from /usr/include/c++/8/memory:81,
-                 from /usr/include/c++/8/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/ElementVisualizer.h:4,
-                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:12,
-                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
-                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/shared_ptr_base.h:1432:5: note: candidate: ‘template&lt;class _Tp, __gnu_cxx::_Lock_policy _Lp&gt; bool std::operator!=(const std::__shared_ptr&lt;_Tp, _Lp&gt;&amp;, std::nullptr_t)’
-     operator!=(const __shared_ptr&lt;_Tp, _Lp&gt;&amp; __a, nullptr_t) noexcept
-     ^~~~~~~~
-/usr/include/c++/8/bits/shared_ptr_base.h:1432:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::__shared_ptr&lt;_Tp, _Lp&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/bits/shared_ptr.h:52,
-                 from /usr/include/c++/8/memory:81,
-                 from /usr/include/c++/8/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/ElementVisualizer.h:4,
-                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:12,
-                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
-                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/shared_ptr_base.h:1437:5: note: candidate: ‘template&lt;class _Tp, __gnu_cxx::_Lock_policy _Lp&gt; bool std::operator!=(std::nullptr_t, const std::__shared_ptr&lt;_Tp, _Lp&gt;&amp;)’
-     operator!=(nullptr_t, const __shared_ptr&lt;_Tp, _Lp&gt;&amp; __a) noexcept
-     ^~~~~~~~
-/usr/include/c++/8/bits/shared_ptr_base.h:1437:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   mismatched types ‘const std::__shared_ptr&lt;_Tp, _Lp&gt;’ and ‘std::nullptr_t’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/memory:81,
-                 from /usr/include/c++/8/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/ElementVisualizer.h:4,
-                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:12,
-                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
-                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/shared_ptr.h:398:5: note: candidate: ‘template&lt;class _Tp, class _Up&gt; bool std::operator!=(const std::shared_ptr&lt;_Tp&gt;&amp;, const std::shared_ptr&lt;_Tp&gt;&amp;)’
-     operator!=(const shared_ptr&lt;_Tp&gt;&amp; __a, const shared_ptr&lt;_Up&gt;&amp; __b) noexcept
-     ^~~~~~~~
-/usr/include/c++/8/bits/shared_ptr.h:398:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::shared_ptr&lt;_Tp&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/memory:81,
-                 from /usr/include/c++/8/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/ElementVisualizer.h:4,
-                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:12,
-                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
-                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/shared_ptr.h:403:5: note: candidate: ‘template&lt;class _Tp&gt; bool std::operator!=(const std::shared_ptr&lt;_Tp&gt;&amp;, std::nullptr_t)’
-     operator!=(const shared_ptr&lt;_Tp&gt;&amp; __a, nullptr_t) noexcept
-     ^~~~~~~~
-/usr/include/c++/8/bits/shared_ptr.h:403:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::shared_ptr&lt;_Tp&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/memory:81,
-                 from /usr/include/c++/8/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/ElementVisualizer.h:4,
-                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:12,
-                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
-                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/shared_ptr.h:408:5: note: candidate: ‘template&lt;class _Tp&gt; bool std::operator!=(std::nullptr_t, const std::shared_ptr&lt;_Tp&gt;&amp;)’
-     operator!=(nullptr_t, const shared_ptr&lt;_Tp&gt;&amp; __a) noexcept
-     ^~~~~~~~
-/usr/include/c++/8/bits/shared_ptr.h:408:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   mismatched types ‘const std::shared_ptr&lt;_Tp&gt;’ and ‘std::nullptr_t’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/deque:64,
-                 from /usr/include/c++/8/stack:60,
-                 from /usr/include/c++/8/regex:47,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/ElementVisualizer.h:4,
-                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:12,
-                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
-                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/stl_deque.h:281:5: note: candidate: ‘template&lt;class _Tp, class _Ref, class _Ptr&gt; bool std::operator!=(const std::_Deque_iterator&lt;_Tp, _Ref, _Ptr&gt;&amp;, const std::_Deque_iterator&lt;_Tp, _Ref, _Ptr&gt;&amp;)’
-     operator!=(const _Deque_iterator&lt;_Tp, _Ref, _Ptr&gt;&amp; __x,
-     ^~~~~~~~
-/usr/include/c++/8/bits/stl_deque.h:281:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::_Deque_iterator&lt;_Tp, _Ref, _Ptr&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/deque:64,
-                 from /usr/include/c++/8/stack:60,
-                 from /usr/include/c++/8/regex:47,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/ElementVisualizer.h:4,
-                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:12,
-                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
-                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/stl_deque.h:288:5: note: candidate: ‘template&lt;class _Tp, class _RefL, class _PtrL, class _RefR, class _PtrR&gt; bool std::operator!=(const std::_Deque_iterator&lt;_Tp, _Ref, _Ptr&gt;&amp;, const std::_Deque_iterator&lt;_Tp, _RefR, _PtrR&gt;&amp;)’
-     operator!=(const _Deque_iterator&lt;_Tp, _RefL, _PtrL&gt;&amp; __x,
-     ^~~~~~~~
-/usr/include/c++/8/bits/stl_deque.h:288:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::_Deque_iterator&lt;_Tp, _Ref, _Ptr&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/deque:64,
-                 from /usr/include/c++/8/stack:60,
-                 from /usr/include/c++/8/regex:47,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/ElementVisualizer.h:4,
-                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:12,
-                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
-                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/stl_deque.h:2303:5: note: candidate: ‘template&lt;class _Tp, class _Alloc&gt; bool std::operator!=(const std::deque&lt;_Tp, _Alloc&gt;&amp;, const std::deque&lt;_Tp, _Alloc&gt;&amp;)’
-     operator!=(const deque&lt;_Tp, _Alloc&gt;&amp; __x,
-     ^~~~~~~~
-/usr/include/c++/8/bits/stl_deque.h:2303:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::deque&lt;_Tp, _Alloc&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/stack:61,
-                 from /usr/include/c++/8/regex:47,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/ElementVisualizer.h:4,
-                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:12,
-                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
-                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/stl_stack.h:329:5: note: candidate: ‘template&lt;class _Tp, class _Seq&gt; bool std::operator!=(const std::stack&lt;_Tp, _Seq&gt;&amp;, const std::stack&lt;_Tp, _Seq&gt;&amp;)’
-     operator!=(const stack&lt;_Tp, _Seq&gt;&amp; __x, const stack&lt;_Tp, _Seq&gt;&amp; __y)
-     ^~~~~~~~
-/usr/include/c++/8/bits/stl_stack.h:329:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::stack&lt;_Tp, _Seq&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/map:60,
-                 from /usr/include/c++/8/regex:52,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/ElementVisualizer.h:4,
-                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:12,
-                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
-                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/stl_tree.h:412:5: note: candidate: ‘template&lt;class _Val&gt; bool std::operator!=(const std::_Rb_tree_iterator&lt;_Tp&gt;&amp;, const std::_Rb_tree_const_iterator&lt;_Val&gt;&amp;)’
-     operator!=(const _Rb_tree_iterator&lt;_Val&gt;&amp; __x,
-     ^~~~~~~~
-/usr/include/c++/8/bits/stl_tree.h:412:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::_Rb_tree_iterator&lt;_Tp&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/map:60,
-                 from /usr/include/c++/8/regex:52,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/ElementVisualizer.h:4,
-                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:12,
-                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
-                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/stl_tree.h:1569:5: note: candidate: ‘template&lt;class _Key, class _Val, class _KeyOfValue, class _Compare, class _Alloc&gt; bool std::operator!=(const std::_Rb_tree&lt;_Key, _Val, _KeyOfValue, _Compare, _Alloc&gt;&amp;, const std::_Rb_tree&lt;_Key, _Val, _KeyOfValue, _Compare, _Alloc&gt;&amp;)’
-     operator!=(const _Rb_tree&lt;_Key, _Val, _KeyOfValue, _Compare, _Alloc&gt;&amp; __x,
-     ^~~~~~~~
-/usr/include/c++/8/bits/stl_tree.h:1569:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::_Rb_tree&lt;_Key, _Val, _KeyOfValue, _Compare, _Alloc&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/map:61,
-                 from /usr/include/c++/8/regex:52,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/ElementVisualizer.h:4,
-                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:12,
-                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
-                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/stl_map.h:1458:5: note: candidate: ‘template&lt;class _Key, class _Tp, class _Compare, class _Alloc&gt; bool std::operator!=(const std::map&lt;_Key, _Tp, _Compare, _Alloc&gt;&amp;, const std::map&lt;_Key, _Tp, _Compare, _Alloc&gt;&amp;)’
-     operator!=(const map&lt;_Key, _Tp, _Compare, _Alloc&gt;&amp; __x,
-     ^~~~~~~~
-/usr/include/c++/8/bits/stl_map.h:1458:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::map&lt;_Key, _Tp, _Compare, _Alloc&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/map:62,
-                 from /usr/include/c++/8/regex:52,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/ElementVisualizer.h:4,
-                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:12,
-                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
-                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/stl_multimap.h:1122:5: note: candidate: ‘template&lt;class _Key, class _Tp, class _Compare, class _Alloc&gt; bool std::operator!=(const std::multimap&lt;_Key, _Tp, _Compare, _Alloc&gt;&amp;, const std::multimap&lt;_Key, _Tp, _Compare, _Alloc&gt;&amp;)’
-     operator!=(const multimap&lt;_Key, _Tp, _Compare, _Alloc&gt;&amp; __x,
-     ^~~~~~~~
-/usr/include/c++/8/bits/stl_multimap.h:1122:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::multimap&lt;_Key, _Tp, _Compare, _Alloc&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/regex:56,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/ElementVisualizer.h:4,
-                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:12,
-                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
-                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/std_function.h:763:5: note: candidate: ‘template&lt;class _Res, class ... _Args&gt; bool std::operator!=(const std::function&lt;_Res(_ArgTypes ...)&gt;&amp;, std::nullptr_t)’
-     operator!=(const function&lt;_Res(_Args...)&gt;&amp; __f, nullptr_t) noexcept
-     ^~~~~~~~
-/usr/include/c++/8/bits/std_function.h:763:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const std::function&lt;_Res(_ArgTypes ...)&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/regex:56,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/ElementVisualizer.h:4,
-                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:12,
-                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
-                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
-                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
-                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
-                 from PQBook.cpp:2:
-/usr/include/c++/8/bits/std_function.h:769:5: note: candidate: ‘template&lt;class _Res, class ... _Args&gt; bool std::operator!=(std::nullptr_t, const std::function&lt;_Res(_ArgTypes ...)&gt;&amp;)’
-     operator!=(nullptr_t, const function&lt;_Res(_Args...)&gt;&amp; __f) noexcept
-     ^~~~~~~~
-/usr/include/c++/8/bits/std_function.h:769:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   mismatched types ‘const std::function&lt;_Res(_ArgTypes ...)&gt;’ and ‘std::nullptr_t’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/bits/stl_algobase.h:67,
-                 from /usr/include/c++/8/bits/char_traits.h:39,
-                 from /usr/include/c++/8/ios:40,
-                 from /usr/include/c++/8/ostream:38,
-                 from /usr/include/c++/8/iostream:39,
-                 from /home/bridges-testing/bridges-cxx-install/include/Bridges.h:4,
-                 from PQBook.cpp:1:
-/usr/include/c++/8/bits/stl_iterator.h:877:5: note: candidate: ‘template&lt;class _IteratorL, class _IteratorR, class _Container&gt; bool __gnu_cxx::operator!=(const __gnu_cxx::__normal_iterator&lt;_IteratorL, _Container&gt;&amp;, const __gnu_cxx::__normal_iterator&lt;_IteratorR, _Container&gt;&amp;)’
-     operator!=(const __normal_iterator&lt;_IteratorL, _Container&gt;&amp; __lhs,
-     ^~~~~~~~
-/usr/include/c++/8/bits/stl_iterator.h:877:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const __gnu_cxx::__normal_iterator&lt;_IteratorL, _Container&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/8/bits/stl_algobase.h:67,
-                 from /usr/include/c++/8/bits/char_traits.h:39,
-                 from /usr/include/c++/8/ios:40,
-                 from /usr/include/c++/8/ostream:38,
-                 from /usr/include/c++/8/iostream:39,
-                 from /home/bridges-testing/bridges-cxx-install/include/Bridges.h:4,
-                 from PQBook.cpp:1:
-/usr/include/c++/8/bits/stl_iterator.h:884:5: note: candidate: ‘template&lt;class _Iterator, class _Container&gt; bool __gnu_cxx::operator!=(const __gnu_cxx::__normal_iterator&lt;_Iterator, _Container&gt;&amp;, const __gnu_cxx::__normal_iterator&lt;_Iterator, _Container&gt;&amp;)’
-     operator!=(const __normal_iterator&lt;_Iterator, _Container&gt;&amp; __lhs,
-     ^~~~~~~~
-/usr/include/c++/8/bits/stl_iterator.h:884:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const __gnu_cxx::__normal_iterator&lt;_Iterator, _Container&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/x86_64-linux-gnu/c++/8/bits/c++allocator.h:33,
-                 from /usr/include/c++/8/bits/allocator.h:46,
-                 from /usr/include/c++/8/string:41,
-                 from /usr/include/c++/8/bits/locale_classes.h:40,
-                 from /usr/include/c++/8/bits/ios_base.h:41,
-                 from /usr/include/c++/8/ios:42,
-                 from /usr/include/c++/8/ostream:38,
-                 from /usr/include/c++/8/iostream:39,
-                 from /home/bridges-testing/bridges-cxx-install/include/Bridges.h:4,
-                 from PQBook.cpp:1:
-/usr/include/c++/8/ext/new_allocator.h:160:5: note: candidate: ‘template&lt;class _Tp&gt; bool __gnu_cxx::operator!=(const __gnu_cxx::new_allocator&lt;_Tp&gt;&amp;, const __gnu_cxx::new_allocator&lt;_Tp&gt;&amp;)’
-     operator!=(const new_allocator&lt;_Tp&gt;&amp;, const new_allocator&lt;_Tp&gt;&amp;)
-     ^~~~~~~~
-/usr/include/c++/8/ext/new_allocator.h:160:5: note:   template argument deduction/substitution failed:
-In file included from PQBook.cpp:8:
-MyHashtable.hpp:118:22: note:   ‘const std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘const __gnu_cxx::new_allocator&lt;_Tp&gt;’
-     while (node-&gt;key != nullptr) {
-            ~~~~~~~~~~^~~~~~~~~~
-make: *** [Makefile:26: PQBook.o] Error 1
-could not compile c++_answer/ for assignment in ../assignmentdb/8-PQBook/c++_answer
+g++ -o PQBook PQBook.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ -pthread -lcurl -l bridges 
 </code></pre>
 </div>
-<div class="failure">
+<div class="success">
 <h3><span id="cxxlog8-runanswer">Run for Assignment 8</span></h3>
-<pre><code>can't guess a binary file to run
-could not run c++_answer for assignment in ../assignmentdb/8-PQBook/c++_answer
+<pre><code>Guessing ./PQBook is the right binary file where main is
+
+write 1
+any 1
+believe 1
+first-born 1
+with 4
+with 4
+painted 1
+with 3
+with 2
+sea's 1
+not 4
+not 4
+of 2
+candles 1
+not 3
+this 1
+flowers 1
+of 2
+not 2
+Let 1
+true 1
+more 1
+O 1
+Stirred 1
+will 1
+them 1
+so 1
+to 2
+love 2
+love 2
+sun 1
+compare 1
+to 2
+though 1
+And 2
+but 1
+rare 1
+gems 1
+a 2
+And 2
+a 2
+sell 1
+it 2
+it 2
+bright 1
+ornament 1
+verse 1
+couplement 1
+rehearse 1
+child 1
+fair 3
+is 2
+fair 3
+fair 2
+use 1
+is 2
+and 3
+and 3
+and 2
+Making 1
+muse 1
+air 2
+in 3
+mother's 1
+then 1
+in 3
+hems 1
+in 2
+air 2
+rondure 1
+proud 1
+for 1
+well 1
+moon 1
+gold 1
+doth 2
+doth 2
+purpose 1
+like 1
+With 2
+With 2
+self 1
+heaven 1
+by 1
+let 1
+that 3
+that 3
+earth 1
+that 2
+say 1
+as 2
+huge 1
+all 1
+every 1
+beauty 1
+as 2
+praise 1
+my 1
+truly 1
+April's 1
+I 1
+me 3
+me 3
+me 2
+hearsay 1
+fixed 1
+So 1
+heaven's 2
+As 2
+As 2
+heaven's 2
+That 1
+rich 1
+Who 1
+those 1
+things 1
+his 2
+his 2
+Success: Assignment posted to the server. 
+Check out your visualization at:
+
+http://bridges-cs.herokuapp.com/assignments/108/bridges_testing
+
+Success: Assignment posted to the server. 
+Check out your visualization at:
+
+http://bridges-cs.herokuapp.com/assignments/108/bridges_testing
+
+1 write
+1 any
+1 first-born
+1 this
+1 compare
+1 mother's
+1 couplement
+1 That
+1 Stirred
+1 for
+1 earth
+1 Let
+1 but
+1 April's
+1 by
+1 things
+1 Making
+1 huge
+1 sea's
+1 them
+1 though
+1 my
+1 child
+1 self
+1 Who
+1 sell
+1 moon
+1 fixed
+1 say
+1 candles
+1 more
+1 gems
+1 rondure
+1 ornament
+1 purpose
+1 every
+1 believe
+1 flowers
+1 will
+1 rehearse
+1 then
+1 praise
+1 rich
+1 well
+1 hearsay
+1 true
+1 rare
+1 I
+1 let
+1 bright
+1 muse
+1 all
+1 painted
+1 so
+1 hems
+1 truly
+1 heaven
+1 those
+1 gold
+1 So
+1 O
+1 use
+1 proud
+1 sun
+1 verse
+1 like
+1 beauty
+2 as
+2 With
+2 And
+2 me
+2 is
+2 in
+2 is
+2 it
+2 doth
+2 heaven's
+2 to
+2 of
+2 fair
+2 his
+2 love
+2 As
+2 air
+2 With
+2 to
+2 with
+2 a
+2 that
+2 air
+2 of
+2 his
+2 love
+2 doth
+2 As
+2 And
+2 not
+2 it
+2 and
+2 as
+2 a
+2 heaven's
+3 with
+3 in
+3 and
+3 me
+3 that
+3 and
+Success: Assignment posted to the server. 
+Check out your visualization at:
+
+http://bridges-cs.herokuapp.com/assignments/108/bridges_testing
+
 </code></pre>
 </div>
     
@@ -1929,8 +1320,8 @@ g++ -o 2048 2048.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ -pthread
 <h3><span id="cxxlog11-runanswer">Run for Assignment 11</span></h3>
 <pre><code>Guessing ./2048 is the right binary file where main is
 
-[2021-02-18 03:51:07] [connect] Successful connection
-[2021-02-18 03:51:07] [connect] WebSocket Connection 34.192.53.253:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613638267 101
+[2021-02-19 03:53:14] [connect] Successful connection
+[2021-02-19 03:53:14] [connect] WebSocket Connection 3.208.49.102:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613724794 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -1971,8 +1362,8 @@ g++ -o AStarMaze pathfinder.o -g -L /home/bridges-testing/bridges-cxx-install/li
 <h3><span id="cxxlog12-runanswer">Run for Assignment 12</span></h3>
 <pre><code>Guessing ./AStarMaze is the right binary file where main is
 
-[2021-02-18 03:51:17] [connect] Successful connection
-[2021-02-18 03:51:17] [connect] WebSocket Connection 34.192.53.253:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613638277 101
+[2021-02-19 03:53:25] [connect] Successful connection
+[2021-02-19 03:53:25] [connect] WebSocket Connection 3.208.49.102:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613724805 101
 (0, 0)
 (1, 0)
 (2, 0)
@@ -2974,8 +2365,8 @@ g++ -o InfiniteRunner runner.o -g -L /home/bridges-testing/bridges-cxx-install/l
 <h3><span id="cxxlog13-runanswer">Run for Assignment 13</span></h3>
 <pre><code>Guessing ./InfiniteRunner is the right binary file where main is
 
-[2021-02-18 03:51:26] [connect] Successful connection
-[2021-02-18 03:51:26] [connect] WebSocket Connection 52.44.99.2:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613638286 101
+[2021-02-19 03:53:43] [connect] Successful connection
+[2021-02-19 03:53:43] [connect] WebSocket Connection 54.165.0.49:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613724823 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -3030,8 +2421,8 @@ g++ -o SpreadingFire SpreadingFire.o -g -L /home/bridges-testing/bridges-cxx-ins
 <h3><span id="cxxlog14-runanswer">Run for Assignment 14</span></h3>
 <pre><code>Guessing ./SpreadingFire is the right binary file where main is
 
-[2021-02-18 03:51:34] [connect] Successful connection
-[2021-02-18 03:51:34] [connect] WebSocket Connection 52.1.61.222:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613638294 101
+[2021-02-19 03:53:50] [connect] Successful connection
+[2021-02-19 03:53:50] [connect] WebSocket Connection 3.223.146.62:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613724830 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -3072,8 +2463,8 @@ g++ -o FallingSand FallingSand.o -g -L /home/bridges-testing/bridges-cxx-install
 <h3><span id="cxxlog15-runanswer">Run for Assignment 15</span></h3>
 <pre><code>Guessing ./FallingSand is the right binary file where main is
 
-[2021-02-18 03:51:43] [connect] Successful connection
-[2021-02-18 03:51:43] [connect] WebSocket Connection 52.72.160.125:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613638303 101
+[2021-02-19 03:54:00] [connect] Successful connection
+[2021-02-19 03:54:00] [connect] WebSocket Connection 52.86.12.80:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613724840 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -3154,8 +2545,8 @@ g++ -o ControlsTutorial Controls_Tutorial.o -g -L /home/bridges-testing/bridges-
 <h3><span id="cxxlog17-runanswer">Run for Assignment 17</span></h3>
 <pre><code>Guessing ./ControlsTutorial is the right binary file where main is
 
-[2021-02-18 03:52:05] [connect] Successful connection
-[2021-02-18 03:52:05] [connect] WebSocket Connection 34.192.53.253:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613638325 101
+[2021-02-19 03:54:22] [connect] Successful connection
+[2021-02-19 03:54:22] [connect] WebSocket Connection 50.16.224.176:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613724862 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -3196,8 +2587,8 @@ g++ -o ControlsTutorial2 Controls_Tutorial2.o -g -L /home/bridges-testing/bridge
 <h3><span id="cxxlog18-runanswer">Run for Assignment 18</span></h3>
 <pre><code>Guessing ./ControlsTutorial2 is the right binary file where main is
 
-[2021-02-18 03:52:14] [connect] Successful connection
-[2021-02-18 03:52:14] [connect] WebSocket Connection 54.85.152.210:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613638334 101
+[2021-02-19 03:54:32] [connect] Successful connection
+[2021-02-19 03:54:32] [connect] WebSocket Connection 50.16.224.176:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613724872 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -3242,8 +2633,8 @@ g++ -o BugStomp BugStomp.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ 
 <h3><span id="cxxlog19-runanswer">Run for Assignment 19</span></h3>
 <pre><code>Guessing ./BugStomp is the right binary file where main is
 
-[2021-02-18 03:52:24] [connect] Successful connection
-[2021-02-18 03:52:24] [connect] WebSocket Connection 54.85.152.210:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613638344 101
+[2021-02-19 03:54:42] [connect] Successful connection
+[2021-02-19 03:54:42] [connect] WebSocket Connection 52.54.2.203:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613724882 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -3284,8 +2675,8 @@ g++ -o Minesweeper minesweeper.o -g -L /home/bridges-testing/bridges-cxx-install
 <h3><span id="cxxlog20-runanswer">Run for Assignment 20</span></h3>
 <pre><code>Guessing ./Minesweeper is the right binary file where main is
 
-[2021-02-18 03:52:33] [connect] Successful connection
-[2021-02-18 03:52:33] [connect] WebSocket Connection 52.54.232.157:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613638353 101
+[2021-02-19 03:54:51] [connect] Successful connection
+[2021-02-19 03:54:51] [connect] WebSocket Connection 52.54.11.249:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613724891 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -3326,8 +2717,8 @@ g++ -o RaceCar RaceCar.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ -p
 <h3><span id="cxxlog21-runanswer">Run for Assignment 21</span></h3>
 <pre><code>Guessing ./RaceCar is the right binary file where main is
 
-[2021-02-18 03:52:42] [connect] Successful connection
-[2021-02-18 03:52:42] [connect] WebSocket Connection 52.2.212.80:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613638362 101
+[2021-02-19 03:55:01] [connect] Successful connection
+[2021-02-19 03:55:01] [connect] WebSocket Connection 3.211.220.61:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613724901 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -3368,8 +2759,8 @@ g++ -o Snake Snake.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ -pthre
 <h3><span id="cxxlog22-runanswer">Run for Assignment 22</span></h3>
 <pre><code>Guessing ./Snake is the right binary file where main is
 
-[2021-02-18 03:52:52] [connect] Successful connection
-[2021-02-18 03:52:52] [connect] WebSocket Connection 34.230.186.67:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613638372 101
+[2021-02-19 03:55:11] [connect] Successful connection
+[2021-02-19 03:55:11] [connect] WebSocket Connection 50.16.224.176:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613724911 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -3581,8 +2972,8 @@ g++ -o SmileyFace SmileyFace.o -g -L /home/bridges-testing/bridges-cxx-install/l
 <h3><span id="cxxlog27-runanswer">Run for Assignment 27</span></h3>
 <pre><code>Guessing ./SmileyFace is the right binary file where main is
 
-[2021-02-18 03:53:39] [connect] Successful connection
-[2021-02-18 03:53:39] [connect] WebSocket Connection 3.212.104.174:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613638419 101
+[2021-02-19 03:56:01] [connect] Successful connection
+[2021-02-19 03:56:01] [connect] WebSocket Connection 34.230.186.67:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613724960 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -3860,9 +3251,9 @@ getting year 2016
 getting year 2017
 getting year 2018
 getting year 2019
-data get: 5.66942 seconds
+data get: 5.67939 seconds
 yearlb: 1999 vertices: 37146 edge: 215190
-graphbuild get: 3.7275 seconds
+graphbuild get: 3.80037 seconds
 Samuel L. Jackson 0.000261638
 James Franco 0.000232458
 Willem Dafoe 0.000211881
@@ -3873,7 +3264,7 @@ Bruce Willis 0.000206027
 Danny Glover 0.000200199
 Nicolas Cage 0.000194383
 Brian Cox 0.000191628
-prtime : 6.69005 seconds
+prtime : 6.67576 seconds
 getting year 1998
 getting year 1999
 getting year 2000
@@ -3895,9 +3286,9 @@ getting year 2015
 getting year 2016
 getting year 2017
 getting year 2018
-data get: 5.61026 seconds
+data get: 5.60713 seconds
 yearlb: 1998 vertices: 37169 edge: 213912
-graphbuild get: 3.6158 seconds
+graphbuild get: 3.61483 seconds
 Samuel L. Jackson 0.000247931
 James Franco 0.000230911
 Eric Roberts 0.000211202
@@ -3908,7 +3299,7 @@ Willem Dafoe 0.000201577
 Brian Cox 0.000200362
 Danny Glover 0.000192113
 Morgan Freeman 0.000190518
-prtime : 6.66771 seconds
+prtime : 6.66514 seconds
 getting year 1997
 getting year 1998
 getting year 1999
@@ -3930,9 +3321,9 @@ getting year 2014
 getting year 2015
 getting year 2016
 getting year 2017
-data get: 5.55178 seconds
+data get: 5.55122 seconds
 yearlb: 1997 vertices: 37181 edge: 211937
-graphbuild get: 3.58031 seconds
+graphbuild get: 3.57785 seconds
 Samuel L. Jackson 0.000251519
 James Franco 0.000224486
 Eric Roberts 0.000212408
@@ -3943,7 +3334,7 @@ Bruce Willis 0.000198552
 Brian Cox 0.000197416
 Peter Stormare 0.00019063
 Morgan Freeman 0.000190617
-prtime : 6.60255 seconds
+prtime : 6.59881 seconds
 getting year 1996
 getting year 1997
 getting year 1998
@@ -4008,8 +3399,8 @@ g++ -o TicTacToe tic_tac_toe.o -g -L /home/bridges-testing/bridges-cxx-install/l
 <h3><span id="cxxlog32-runanswer">Run for Assignment 32</span></h3>
 <pre><code>Guessing ./TicTacToe is the right binary file where main is
 
-[2021-02-18 03:56:44] [connect] Successful connection
-[2021-02-18 03:56:44] [connect] WebSocket Connection 3.225.186.86:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613638604 101
+[2021-02-19 03:59:09] [connect] Successful connection
+[2021-02-19 03:59:09] [connect] WebSocket Connection 3.226.201.238:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613725149 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -4116,8 +3507,8 @@ g++ -o GameTutorial GameTutorial.o -g -L /home/bridges-testing/bridges-cxx-insta
 <h3><span id="cxxlog34-runanswer">Run for Assignment 34</span></h3>
 <pre><code>Guessing ./GameTutorial is the right binary file where main is
 
-[2021-02-18 03:56:58] [connect] Successful connection
-[2021-02-18 03:56:58] [connect] WebSocket Connection 3.225.186.86:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613638618 101
+[2021-02-19 03:59:25] [connect] Successful connection
+[2021-02-19 03:59:25] [connect] WebSocket Connection 3.226.201.238:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613725165 101
 Size:10,10
 Setting framelimit to 10
 Success: Assignment posted to the server. 
@@ -4310,7 +3701,7 @@ Check out your visualization at:
 
 http://bridges-cs.herokuapp.com/assignments/40/bridges_testing
 
-width,height, maxval:21981,2143954256,0
+width,height, maxval:22064,1253184848,0
 Success: Assignment posted to the server. 
 Check out your visualization at:
 
@@ -4349,8 +3740,8 @@ g++ -o SpaceInvaders SpaceInvaders.o -g -L /home/bridges-testing/bridges-cxx-ins
 <h3><span id="cxxlog41-runanswer">Run for Assignment 41</span></h3>
 <pre><code>Guessing ./SpaceInvaders is the right binary file where main is
 
-[2021-02-18 03:57:34] [connect] Successful connection
-[2021-02-18 03:57:34] [connect] WebSocket Connection 3.211.196.1:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613638654 101
+[2021-02-19 04:00:02] [connect] Successful connection
+[2021-02-19 04:00:02] [connect] WebSocket Connection 3.225.122.170:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613725202 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -5034,7 +4425,7 @@ Check out your visualization at:
 
 http://bridges-cs.herokuapp.com/assignments/143/bridges_testing
 
-elapsed time: 0.129746s
+elapsed time: 0.495588s
 Success: Assignment posted to the server. 
 Check out your visualization at:
 
@@ -5093,8 +4484,8 @@ g++ -o ExplorerRobot ExplorerRobot.o -g -L /home/bridges-testing/bridges-cxx-ins
 <h3><span id="cxxlog45-runanswer">Run for Assignment 45</span></h3>
 <pre><code>Guessing ./ExplorerRobot is the right binary file where main is
 
-[2021-02-18 03:58:00] [connect] Successful connection
-[2021-02-18 03:58:00] [connect] WebSocket Connection 34.192.43.98:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613638680 101
+[2021-02-19 04:00:29] [connect] Successful connection
+[2021-02-19 04:00:29] [connect] WebSocket Connection 52.1.4.45:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1613725229 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
