@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Java</h1>
-	<p>Running at Sun 07 Mar 2021 03:36:57 AM EST</p>
+	<p>Running at Mon 08 Mar 2021 03:37:10 AM EST</p>
   <div id="summaryarray1d.java" class="success">
     <h2><a href="java_testing_logs.html#javalogarray1d.java">Test array1d.java</a> </h2>
     <p>
@@ -156,12 +156,12 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summaryface_shp_coll.java" class="success">
+  <div id="summaryface_shp_coll.java" class="failure">
     <h2><a href="java_testing_logs.html#javalogface_shp_coll.java">Test face_shp_coll.java</a> </h2>
     <p>
       <ul>
-        <li> Build : <a href="java_testing_logs.html#javalogface_shp_coll.java-buildtest">success</a></li>
-        <li> Run : <a href="java_testing_logs.html#javalogface_shp_coll.java-runtest">success</a></li>
+        <li> Build : <a href="java_testing_logs.html#javalogface_shp_coll.java-buildtest">error</a></li>
+        <li> Run : <a href="java_testing_logs.html#javalogface_shp_coll.java-runtest">error</a></li>
       </ul>
     </p>
   </div>
@@ -327,12 +327,12 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summaryshape_collection.java" class="success">
+  <div id="summaryshape_collection.java" class="failure">
     <h2><a href="java_testing_logs.html#javalogshape_collection.java">Test shape_collection.java</a> </h2>
     <p>
       <ul>
-        <li> Build : <a href="java_testing_logs.html#javalogshape_collection.java-buildtest">success</a></li>
-        <li> Run : <a href="java_testing_logs.html#javalogshape_collection.java-runtest">success</a></li>
+        <li> Build : <a href="java_testing_logs.html#javalogshape_collection.java-buildtest">error</a></li>
+        <li> Run : <a href="java_testing_logs.html#javalogshape_collection.java-runtest">error</a></li>
       </ul>
     </p>
   </div>
@@ -951,10 +951,10 @@ first 10 elevations:
 <div class="success">
 <h3><span id="javalogeq_snippet.java-runtest">Run for test eq_snippet.java</span></h3>
 <pre><code>Earthquake 0:
-	Magnitude:1.29
-	Date:Mar 07 2021  03:15:22.690 EST
-	Location: 8km NW of The Geysers, CA
-	Lat/Long:38.8336678,-122.8166656
+	Magnitude:0.99
+	Date:Mar 08 2021  02:48:17.470 EST
+	Location: 8km ESE of Mammoth Lakes, CA
+	Lat/Long:37.6066666,-118.8984985
 </code></pre>
 </div>
     
@@ -962,19 +962,22 @@ first 10 elevations:
     <div id="javalogface_shp_coll.java" class="logdetails">
       <h2>Test face_shp_coll.java full log</h2>
     
-<div class="success">
+<div class="failure">
 <h3><span id="javalogface_shp_coll.java-buildtest">Build for test face_shp_coll.java</span></h3>
 <pre><code>Compiling test face_shp_coll.java
+face_shp_coll.java:91: error: incompatible types: int cannot be converted to Float
+		l.setFontSize(16);
+		              ^
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+1 error
+could not compile java_answer/ for assignment in
 </code></pre>
 </div>
-<div class="success">
+<div class="failure">
 <h3><span id="javalogface_shp_coll.java-runtest">Run for test face_shp_coll.java</span></h3>
-<pre><code>
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2016/bridges_testing
-
-
+<pre><code>Error: Could not find or load main class face_shp_coll
+Caused by: java.lang.ClassNotFoundException: face_shp_coll
+could not run test face_shp_coll.java
 </code></pre>
 </div>
     
@@ -1012,10 +1015,10 @@ could not run test game_size_test.java
 </div>
 <div class="success">
 <h3><span id="javaloggame_snippet.java-runtest">Run for test game_snippet.java</span></h3>
-<pre><code>Naruto: Ultimate Ninja
-PlayStation 2
-7.5
-[Fighting]
+<pre><code>Minecraft
+PC
+9.0
+[Action]
 </code></pre>
 </div>
     
@@ -1155,8 +1158,8 @@ http://bridges-cs.herokuapp.com/assignments/2022/bridges_testing
 </div>
 <div class="success">
 <h3><span id="javalogimdb_snippet.java-runtest">Run for test imdb_snippet.java</span></h3>
-<pre><code>Mary_Kay_Place
-Being_John_Malkovich_(1999)
+<pre><code>Christopher_Lee_(I)
+Corridors_of_Blood_(1962)
 </code></pre>
 </div>
     
@@ -1398,11 +1401,11 @@ Location of first vertex [Cartesian Coord]: -657.974041556194,-4700.217494637191
 </div>
 <div class="success">
 <h3><span id="javalogshakespeare_snippet.java-runtest">Run for test shakespeare_snippet.java</span></h3>
-<pre><code>Sonnet 6
+<pre><code>Sonnet 100
 poem
-Then let not winter's ragged hand deface,
- In thee thy summer ere thou be distilled:
- Make sweet som...
+Where art thou Muse that thou forget'st so long,
+ To speak of that which gives thee all thy might?
+ ...
 </code></pre>
 </div>
     
@@ -1410,19 +1413,22 @@ Then let not winter's ragged hand deface,
     <div id="javalogshape_collection.java" class="logdetails">
       <h2>Test shape_collection.java full log</h2>
     
-<div class="success">
+<div class="failure">
 <h3><span id="javalogshape_collection.java-buildtest">Build for test shape_collection.java</span></h3>
 <pre><code>Compiling test shape_collection.java
+shape_collection.java:75: error: incompatible types: int cannot be converted to Float
+		l.setFontSize(12);
+		              ^
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+1 error
+could not compile java_answer/ for assignment in
 </code></pre>
 </div>
-<div class="success">
+<div class="failure">
 <h3><span id="javalogshape_collection.java-runtest">Run for test shape_collection.java</span></h3>
-<pre><code>
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2035/bridges_testing
-
-
+<pre><code>Error: Could not find or load main class shape_collection
+Caused by: java.lang.ClassNotFoundException: shape_collection
+could not run test shape_collection.java
 </code></pre>
 </div>
     
