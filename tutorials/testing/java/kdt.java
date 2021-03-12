@@ -1,6 +1,5 @@
 import bridges.connect.Bridges;
 import bridges.base.KdTreeElement;
-import bridges.data_src_dependent.Tweet;
 import java.util.List;
 
 public class kdt {

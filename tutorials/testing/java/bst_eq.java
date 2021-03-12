@@ -2,13 +2,10 @@ import bridges.connect.Bridges;
 import bridges.connect.DataSource;
 import bridges.base.BSTElement;
 import bridges.data_src_dependent.EarthquakeUSGS;
-import bridges.data_src_dependent.Tweet;
-import bridges.data_src_dependent.USGSaccount;
 import java.util.List;
 
 public class bst_eq {
 	public static void main(String[] args) throws Exception {
-
 
 		//create the Bridges object
 		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID",
@@ -18,7 +15,6 @@ public class bst_eq {
 		bridges.setDescription("10 sets of earthquake are gathered and sorted with nodes whos magnitude is greater than "
 			+ "the parent is set to the right and nodes with a magnitude less than the parent set to the left. "
 			+ "The root is set to red the leaf nodes are neutral.");
-
 
 		// Retrieve a list of 25 earthquake  records  from USGS using the BRIDGES API
 		int Max_Quakes = 25;
@@ -40,7 +36,7 @@ public class bst_eq {
 
 
 		// set some visual attributes
-		root.setColor("red");
+		root.setColor("cyan");
 
 		//set visualizer type
 		bridges.setDataStructure(root);

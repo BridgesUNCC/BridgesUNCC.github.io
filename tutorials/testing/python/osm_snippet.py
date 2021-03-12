@@ -16,8 +16,6 @@ def main():
     # Alternatively, one can use a bounding box in latitude and longitude:
     # osmdata = data_source.get_osm_data(35.28, -80.75, 35.32, -80.71, "default")
 
-
-    
     vertices = osmdata.vertices
     edges = osmdata.edges
 

@@ -19,7 +19,10 @@
 
 		<span class="Comment">// get the OSM data</span>
 		DataSource ds = bridges.getDataSource();
-		OsmData  osm_data = ds.getOSMData(<span class="Constant">35.28</span>, -<span class="Constant">80.75</span>, <span class="Constant">35.32</span>, -<span class="Constant">80.71</span>);
+		OsmData  osm_data = ds.getOsmData(<span class="Constant">35.28</span>, -<span class="Constant">80.75</span>, <span class="Constant">35.32</span>, -<span class="Constant">80.71</span>);
+<span class="Comment">//		OsmData osm_data = ds.getOsmData(41.03133177632377, -98.02593749997456, </span>
+<span class="Comment">//							42.008577297430456, -97.94531249997696);</span>
+
 
 		<span class="Comment">// get the graph of this dataset</span>
 		GraphAdjList&lt;Integer, OsmVertex, Double&gt; graph = osm_data.getGraph();

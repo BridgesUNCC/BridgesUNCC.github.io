@@ -1,5 +1,4 @@
 import bridges.connect.Bridges;
-import bridges.data_src_dependent.Tweet;
 import bridges.base.AVLTreeElement;
 
 public class avl {

@@ -18,7 +18,9 @@ int main(int argc, char **argv) {
 	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
 
 	DataSource ds(bridges);
-	OSMData osm_data = ds.getOSMData("Charlotte, North Carolina");
+//	OSMData osm_data = ds.getOSMData("Charlotte, North Carolina");
+	OSMData osm_data = ds.getOSMData(41.03133177632377, -98.02593749997456, 
+						42.008577297430456, -97.94531249997696);
 	
 	vector<OSMVertex> vertices = osm_data.getVertices();
 	vector<OSMEdge> edges = osm_data.getEdges();
