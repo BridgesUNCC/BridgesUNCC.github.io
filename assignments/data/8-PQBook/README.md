@@ -35,17 +35,17 @@ work. The keys are going to be words. And the value associated with
 that key is going to be how many times that word appears. Counting the
 words then becomes:
 
-```algorithm
-Dictionary d
+<pre><code> 
+Algorithm:
 
+Dictionary d
 for each word w in document
   entry = d.get(w)
   if (entry is NULL)
     d.insert (w, 1)
   else
     entry.value += 1
-```
-
+</code></pre>
 
 
 #### Getting Started
