@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for C++</h1>
-	<p>Running at Tue 30 Mar 2021 03:45:15 AM EDT</p>
+	<p>Running at Wed 31 Mar 2021 03:44:56 AM EDT</p>
   <div id="summary0" class="success">
     <h2><a href="cxx_logs.html#cxxlog0">Assignment 0</a> </h2>
     <p>
@@ -92,13 +92,13 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summary8" class="success">
+  <div id="summary8" class="failure">
     <h2><a href="cxx_logs.html#cxxlog8">Assignment 8</a> </h2>
     <p>
       <ul>
         <li> Build : <a href="cxx_logs.html#cxxlog8-buildscaffold">success</a></li>
-        <li> Build : <a href="cxx_logs.html#cxxlog8-buildanswer">success</a></li>
-        <li> Run : <a href="cxx_logs.html#cxxlog8-runanswer">success</a></li>
+        <li> Build : <a href="cxx_logs.html#cxxlog8-buildanswer">error</a></li>
+        <li> Run : <a href="cxx_logs.html#cxxlog8-runanswer">error</a></li>
       </ul>
     </p>
   </div>
@@ -934,7 +934,7 @@ g++ -g  -std=c++14 -I /home/bridges-testing/bridges-cxx-install/include/ -c PQBo
 g++ -o PQBook PQBook.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ -pthread -lcurl -l bridges 
 </code></pre>
 </div>
-<div class="success">
+<div class="failure">
 <h3><span id="cxxlog8-buildanswer">Build for Assignment 8</span></h3>
 <pre><code>Compiling c++_answer/ for assignment in ../assignmentdb/8-PQBook/c++_answer
 rm PQBook.o
@@ -942,230 +942,850 @@ rm PQBook
 rm: cannot remove 'PQBook': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
 g++ -g  -std=c++14 -I /home/bridges-testing/bridges-cxx-install/include/ -c PQBook.cpp -o PQBook.o
-g++ -o PQBook PQBook.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ -pthread -lcurl -l bridges 
+In file included from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
+                 from MyHashtable.hpp:7,
+                 from PQBook.cpp:8:
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:432:3: error: expected ‘;’ after class definition
+  }
+   ^
+   ;
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h: In member function ‘void bridges::datastructure::Symbol::matMult(float (*)[3], float (*)[3], float*)’:
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:69:7: error: ‘m3’ was not declared in this scope
+       m3[i][j]+=m1[i][k]*m2[k][j];
+       ^~
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:69:7: note: suggested alternative: ‘m1’
+       m3[i][j]+=m1[i][k]*m2[k][j];
+       ^~
+       m1
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h: In member function ‘void bridges::datastructure::Symbol::copyMat(float (*)[3], float (*)[3])’:
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:77:4: error: expected primary-expression before ‘public’
+    public:
+    ^~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:89:5: error: ‘virtual’ outside class declaration
+     virtual const string getSymbolRepresentation() const  = 0;
+     ^~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:89:52: error: non-member function ‘const string bridges::datastructure::getSymbolRepresentation()’ cannot have cv-qualifier
+     virtual const string getSymbolRepresentation() const  = 0;
+                                                    ^~~~~
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:89:52: warning: declaration of ‘const string bridges::datastructure::getSymbolRepresentation()’ has ‘extern’ and is initialized
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:89:61: error: function ‘const string bridges::datastructure::getSymbolRepresentation()’ is initialized like a variable
+     virtual const string getSymbolRepresentation() const  = 0;
+                                                             ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:95:5: error: ‘virtual’ outside class declaration
+     virtual vector&lt;float&gt; getDimensions() const = 0;
+     ^~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:95:43: error: non-member function ‘std::vector&lt;float&gt; bridges::datastructure::getDimensions()’ cannot have cv-qualifier
+     virtual vector&lt;float&gt; getDimensions() const = 0;
+                                           ^~~~~
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:95:43: warning: declaration of ‘std::vector&lt;float&gt; bridges::datastructure::getDimensions()’ has ‘extern’ and is initialized
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:95:51: error: function ‘std::vector&lt;float&gt; bridges::datastructure::getDimensions()’ is initialized like a variable
+     virtual vector&lt;float&gt; getDimensions() const = 0;
+                                                   ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:102:11: error: expected primary-expression before ‘(’ token
+     Symbol(string symb) {
+           ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:102:19: error: expected primary-expression before ‘symb’
+     Symbol(string symb) {
+                   ^~~~
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:114:25: error: a function-definition is not allowed here before ‘{’ token
+     int getIdentifier() {
+                         ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:123:31: error: a function-definition is not allowed here before ‘{’ token
+     void setLabel(string lbl) {
+                               ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:132:32: error: a function-definition is not allowed here before ‘{’ token
+     void setFillColor(Color c) {
+                                ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:140:33: error: a function-definition is not allowed here before ‘{’ token
+     void setFillColor(string c) {
+                                 ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:148:26: error: a function-definition is not allowed here before ‘{’ token
+     Color getFillColor() {
+                          ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:157:34: error: a function-definition is not allowed here before ‘{’ token
+     void setStrokeColor(Color c) {
+                                  ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:166:35: error: a function-definition is not allowed here before ‘{’ token
+     void setStrokeColor(string c) {
+                                   ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:175:28: error: a function-definition is not allowed here before ‘{’ token
+     Color getStrokeColor() {
+                            ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:184:43: error: a function-definition is not allowed here before ‘{’ token
+     void setStrokeWidth(float strk_width) {
+                                           ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:196:28: error: a function-definition is not allowed here before ‘{’ token
+     float getStrokeWidth() {
+                            ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:205:31: error: a function-definition is not allowed here before ‘{’ token
+     void setOpacity(float op) {
+                               ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:217:24: error: a function-definition is not allowed here before ‘{’ token
+     float getOpacity() {
+                        ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:226:34: error: a function-definition is not allowed here before ‘{’ token
+     void setStrokeDash(int dash) {
+                                  ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:238:25: error: a function-definition is not allowed here before ‘{’ token
+     int getStrokeDash() {
+                         ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:248:36: error: a function-definition is not allowed here before ‘{’ token
+     void setLocation(int x, int y) {
+                                    ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:258:42: error: a function-definition is not allowed here before ‘{’ token
+     void setLocation(double x, double y) {
+                                          ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:269:40: error: a function-definition is not allowed here before ‘{’ token
+     void setLocation(float x, float y) {
+                                        ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:283:38: error: a function-definition is not allowed here before ‘{’ token
+     const float *getLocation() const {
+                                      ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:292:29: error: a function-definition is not allowed here before ‘{’ token
+     string getName()  const {
+                             ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:296:4: error: expected primary-expression before ‘protected’
+    protected:
+    ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:310:33: error: a function-definition is not allowed here before ‘{’ token
+     string getShapeType() const {
+                                 ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:331:57: error: a function-definition is not allowed here before ‘{’ token
+     void translatePoint (float *pt, float tx, float ty) {
+                                                         ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:346:53: error: a function-definition is not allowed here before ‘{’ token
+     void scalePoint (float *pt, float sx, float sy) {
+                                                     ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:362:53: error: a function-definition is not allowed here before ‘{’ token
+     void rotatePoint (float *pt, float angle) const {
+                                                     ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:385:59: error: a function-definition is not allowed here before ‘{’ token
+     const string getSymbolAttributeRepresentation() const {
+                                                           ^
+In file included from MyHashtable.hpp:7,
+                 from PQBook.cpp:8:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h: In member function ‘void bridges::bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol*)’:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:100:17: error: ‘class bridges::datastructure::Symbol’ has no member named ‘getIdentifier’; did you mean ‘identifier’?
+      symbols[s-&gt;getIdentifier()] = s;
+                 ^~~~~~~~~~~~~
+                 identifier
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h: In member function ‘void bridges::bridges::datastructure::SymbolCollection::updateAxisDomains(const bridges::datastructure::Symbol*) const’:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:112:30: error: ‘const class bridges::datastructure::Symbol’ has no member named ‘getDimensions’
+      vector&lt;float&gt; dims = s-&gt;getDimensions();
+                              ^~~~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h: In member function ‘virtual const string bridges::bridges::datastructure::SymbolCollection::getDataStructureRepresentation() const’:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:152:22: error: ‘class bridges::datastructure::Symbol’ has no member named ‘getSymbolRepresentation’
+        entry.second-&gt;getSymbolRepresentation() + COMMA;
+                      ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from MyHashtable.hpp:8,
+                 from PQBook.cpp:8:
+/home/bridges-testing/bridges-cxx-install/include/Label.h: In constructor ‘bridges::bridges::datastructure::Label::Label(std::__cxx11::string)’:
+/home/bridges-testing/bridges-cxx-install/include/Label.h:51:6: error: ‘setLabel’ was not declared in this scope
+      setLabel(l);
+      ^~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Label.h:51:6: note: suggested alternative: ‘Label’
+      setLabel(l);
+      ^~~~~~~~
+      Label
+/home/bridges-testing/bridges-cxx-install/include/Label.h: In member function ‘std::vector&lt;float&gt; bridges::bridges::datastructure::Label::getBoundingBox() const’:
+/home/bridges-testing/bridges-cxx-install/include/Label.h:170:19: error: ‘getLabel’ was not declared in this scope
+      string str = getLabel();
+                   ^~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Label.h:170:19: note: suggested alternative: ‘getName’
+      string str = getLabel();
+                   ^~~~~~~~
+                   getName
+/home/bridges-testing/bridges-cxx-install/include/Label.h:207:30: error: ‘getLocation’ was not declared in this scope
+      const float *location = getLocation();
+                              ^~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Label.h:207:30: note: suggested alternative: ‘location’
+      const float *location = getLocation();
+                              ^~~~~~~~~~~
+                              location
+/home/bridges-testing/bridges-cxx-install/include/Label.h:232:7: error: ‘rotatePoint’ was not declared in this scope
+       rotatePoint (pt, rotation_angle);
+       ^~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Label.h: In member function ‘const string bridges::bridges::datastructure::Label::getSymbolRepresentation() const’:
+/home/bridges-testing/bridges-cxx-install/include/Label.h:268:26: error: ‘getSymbolAttributeRepresentation’ was not declared in this scope
+      string shape_json = getSymbolAttributeRepresentation();
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Label.h:268:26: note: suggested alternative: ‘getSymbolRepresentation’
+      string shape_json = getSymbolAttributeRepresentation();
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                          getSymbolRepresentation
+/home/bridges-testing/bridges-cxx-install/include/Label.h:271:49: error: ‘getLabel’ was not declared in this scope
+       QUOTE + &quot;name&quot; + QUOTE + COLON +  QUOTE + getLabel() + QUOTE + COMMA +
+                                                 ^~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Label.h:271:49: note: suggested alternative: ‘getName’
+       QUOTE + &quot;name&quot; + QUOTE + COLON +  QUOTE + getLabel() + QUOTE + COMMA +
+                                                 ^~~~~~~~
+                                                 getName
+In file included from MyHashtable.hpp:9,
+                 from PQBook.cpp:8:
+/home/bridges-testing/bridges-cxx-install/include/Polyline.h: In constructor ‘bridges::bridges::datastructure::Polyline::Polyline()’:
+/home/bridges-testing/bridges-cxx-install/include/Polyline.h:35:6: error: ‘setShapeType’ was not declared in this scope
+      setShapeType(&quot;polyline&quot;);
+      ^~~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Polyline.h:35:6: note: suggested alternative: ‘shape_type’
+      setShapeType(&quot;polyline&quot;);
+      ^~~~~~~~~~~~
+      shape_type
+/home/bridges-testing/bridges-cxx-install/include/Polyline.h: In member function ‘void bridges::bridges::datastructure::Polyline::setPolyline(std::vector&lt;float&gt;)’:
+/home/bridges-testing/bridges-cxx-install/include/Polyline.h:93:6: error: ‘setShapeType’ was not declared in this scope
+      setShapeType(&quot;polyline&quot;);
+      ^~~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Polyline.h:93:6: note: suggested alternative: ‘shape_type’
+      setShapeType(&quot;polyline&quot;);
+      ^~~~~~~~~~~~
+      shape_type
+/home/bridges-testing/bridges-cxx-install/include/Polyline.h: In member function ‘void bridges::bridges::datastructure::Polyline::rotate(float)’:
+/home/bridges-testing/bridges-cxx-install/include/Polyline.h:124:7: error: ‘rotatePoint’ was not declared in this scope
+       rotatePoint (tmp,  angle);
+       ^~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Polyline.h:124:7: note: suggested alternative: ‘addPoint’
+       rotatePoint (tmp,  angle);
+       ^~~~~~~~~~~
+       addPoint
+/home/bridges-testing/bridges-cxx-install/include/Polyline.h: In member function ‘const string bridges::bridges::datastructure::Polyline::getSymbolRepresentation() const’:
+/home/bridges-testing/bridges-cxx-install/include/Polyline.h:214:26: error: ‘getSymbolAttributeRepresentation’ was not declared in this scope
+      string shape_json = getSymbolAttributeRepresentation();
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Polyline.h:214:26: note: suggested alternative: ‘getSymbolRepresentation’
+      string shape_json = getSymbolAttributeRepresentation();
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                          getSymbolRepresentation
+/home/bridges-testing/bridges-cxx-install/include/Polyline.h:215:21: error: ‘getShapeType’ was not declared in this scope
+      string shape = getShapeType();
+                     ^~~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Polyline.h:215:21: note: suggested alternative: ‘shape_type’
+      string shape = getShapeType();
+                     ^~~~~~~~~~~~
+                     shape_type
+/home/bridges-testing/bridges-cxx-install/include/Polyline.h:218:49: error: ‘getLabel’ was not declared in this scope
+       QUOTE + &quot;name&quot; + QUOTE + COLON +  QUOTE + getLabel() + QUOTE + COMMA +
+                                                 ^~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Polyline.h:218:49: note: suggested alternative: ‘getName’
+       QUOTE + &quot;name&quot; + QUOTE + COLON +  QUOTE + getLabel() + QUOTE + COMMA +
+                                                 ^~~~~~~~
+                                                 getName
+In file included from MyHashtable.hpp:10,
+                 from PQBook.cpp:8:
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h: In member function ‘void bridges::bridges::datastructure::Rectangle::translate(float, float)’:
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:106:25: error: ‘getLocation’ was not declared in this scope
+      const float *loc = getLocation();
+                         ^~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:106:25: note: suggested alternative: ‘location’
+      const float *loc = getLocation();
+                         ^~~~~~~~~~~
+                         location
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:108:6: error: ‘translatePoint’ was not declared in this scope
+      translatePoint (myloc, tx, ty);
+      ^~~~~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:108:6: note: suggested alternative: ‘translate’
+      translatePoint (myloc, tx, ty);
+      ^~~~~~~~~~~~~~
+      translate
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:109:6: error: ‘setLocation’ was not declared in this scope
+      setLocation(myloc[0], myloc[1]);
+      ^~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:109:6: note: suggested alternative: ‘location’
+      setLocation(myloc[0], myloc[1]);
+      ^~~~~~~~~~~
+      location
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h: In member function ‘void bridges::bridges::datastructure::Rectangle::scale(float, float)’:
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:121:6: error: ‘scalePoint’ was not declared in this scope
+      scalePoint (pt, sx, sy);
+      ^~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:121:6: note: suggested alternative: ‘scale’
+      scalePoint (pt, sx, sy);
+      ^~~~~~~~~~
+      scale
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h: In member function ‘std::vector&lt;float&gt; bridges::bridges::datastructure::Rectangle::getDimensions() const’:
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:135:30: error: ‘getLocation’ was not declared in this scope
+      const float *location = getLocation();
+                              ^~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:135:30: note: suggested alternative: ‘location’
+      const float *location = getLocation();
+                              ^~~~~~~~~~~
+                              location
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h: In member function ‘void bridges::bridges::datastructure::Rectangle::setRectangle(float, float, float, float)’:
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:158:6: error: ‘setLocation’ was not declared in this scope
+      setLocation (float(locx), float(locy));
+      ^~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:158:6: note: suggested alternative: ‘location’
+      setLocation (float(locx), float(locy));
+      ^~~~~~~~~~~
+      location
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:161:6: error: ‘setShapeType’ was not declared in this scope
+      setShapeType(&quot;rect&quot;);
+      ^~~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:161:6: note: suggested alternative: ‘shape_type’
+      setShapeType(&quot;rect&quot;);
+      ^~~~~~~~~~~~
+      shape_type
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h: In member function ‘virtual const string bridges::bridges::datastructure::Rectangle::getSymbolRepresentation() const’:
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:171:26: error: ‘getSymbolAttributeRepresentation’ was not declared in this scope
+      string shape_json = getSymbolAttributeRepresentation();
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:171:26: note: suggested alternative: ‘getSymbolRepresentation’
+      string shape_json = getSymbolAttributeRepresentation();
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                          getSymbolRepresentation
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:173:21: error: ‘getShapeType’ was not declared in this scope
+      string shape = getShapeType();
+                     ^~~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:173:21: note: suggested alternative: ‘shape_type’
+      string shape = getShapeType();
+                     ^~~~~~~~~~~~
+                     shape_type
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:175:49: error: ‘getLabel’ was not declared in this scope
+       QUOTE + &quot;name&quot; + QUOTE + COLON +  QUOTE + getLabel() + QUOTE + COMMA +
+                                                 ^~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:175:49: note: suggested alternative: ‘getName’
+       QUOTE + &quot;name&quot; + QUOTE + COLON +  QUOTE + getLabel() + QUOTE + COMMA +
+                                                 ^~~~~~~~
+                                                 getName
+In file included from PQBook.cpp:8:
+MyHashtable.hpp: At global scope:
+MyHashtable.hpp:172:27: error: ‘bridges::bridges::Bridges’ has not been declared
+   void visualize(bridges::Bridges&amp; bridges_inst) {
+                           ^~~~~~~
+MyHashtable.hpp: In member function ‘void bridges::MyHashtable&lt;K, V&gt;::visualize(int&amp;)’:
+MyHashtable.hpp:174:5: error: ‘SymbolCollection’ was not declared in this scope
+     SymbolCollection* vis = new SymbolCollection();
+     ^~~~~~~~~~~~~~~~
+MyHashtable.hpp:174:5: note: suggested alternative:
+In file included from MyHashtable.hpp:7,
+                 from PQBook.cpp:8:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:38:9: note:   ‘bridges::bridges::datastructure::SymbolCollection’
+   class SymbolCollection : public  DataStructure {
+         ^~~~~~~~~~~~~~~~
+In file included from PQBook.cpp:8:
+MyHashtable.hpp:174:23: error: ‘vis’ was not declared in this scope
+     SymbolCollection* vis = new SymbolCollection();
+                       ^~~
+MyHashtable.hpp:174:33: error: expected type-specifier before ‘SymbolCollection’
+     SymbolCollection* vis = new SymbolCollection();
+                                 ^~~~~~~~~~~~~~~~
+MyHashtable.hpp:174:32: error: expected ‘;’ before ‘SymbolCollection’
+     SymbolCollection* vis = new SymbolCollection();
+                                ^~~~~~~~~~~~~~~~~
+                                ;
+MyHashtable.hpp:175:5: error: ‘Rectangle’ was not declared in this scope
+     Rectangle* rect;
+     ^~~~~~~~~
+MyHashtable.hpp:175:5: note: suggested alternative:
+In file included from MyHashtable.hpp:10,
+                 from PQBook.cpp:8:
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:22:9: note:   ‘bridges::bridges::datastructure::Rectangle’
+   class Rectangle : public Symbol {
+         ^~~~~~~~~
+In file included from PQBook.cpp:8:
+MyHashtable.hpp:175:16: error: ‘rect’ was not declared in this scope
+     Rectangle* rect;
+                ^~~~
+MyHashtable.hpp:175:16: note: suggested alternative: ‘recv’
+     Rectangle* rect;
+                ^~~~
+                recv
+MyHashtable.hpp:176:5: error: ‘Label’ was not declared in this scope
+     Label* label;
+     ^~~~~
+MyHashtable.hpp:176:5: note: suggested alternative:
+In file included from MyHashtable.hpp:8,
+                 from PQBook.cpp:8:
+/home/bridges-testing/bridges-cxx-install/include/Label.h:26:9: note:   ‘bridges::bridges::datastructure::Label’
+   class Label : public Symbol {
+         ^~~~~
+In file included from PQBook.cpp:8:
+MyHashtable.hpp:176:12: error: ‘label’ was not declared in this scope
+     Label* label;
+            ^~~~~
+MyHashtable.hpp:176:12: note: suggested alternative: ‘labs’
+     Label* label;
+            ^~~~~
+            labs
+MyHashtable.hpp:177:5: error: ‘Polyline’ was not declared in this scope
+     Polyline* line;
+     ^~~~~~~~
+MyHashtable.hpp:177:5: note: suggested alternative:
+In file included from MyHashtable.hpp:9,
+                 from PQBook.cpp:8:
+/home/bridges-testing/bridges-cxx-install/include/Polyline.h:24:9: note:   ‘bridges::bridges::datastructure::Polyline’
+   class Polyline : public Symbol {
+         ^~~~~~~~
+In file included from PQBook.cpp:8:
+MyHashtable.hpp:177:15: error: ‘line’ was not declared in this scope
+     Polyline* line;
+               ^~~~
+MyHashtable.hpp:177:15: note: suggested alternative: ‘link’
+     Polyline* line;
+               ^~~~
+               link
+MyHashtable.hpp:193:18: error: expected type-specifier before ‘Rectangle’
+       rect = new Rectangle(x, y, 25, 25);
+                  ^~~~~~~~~
+MyHashtable.hpp:193:17: error: expected ‘;’ before ‘Rectangle’
+       rect = new Rectangle(x, y, 25, 25);
+                 ^~~~~~~~~~
+                 ;
+MyHashtable.hpp:198:19: error: expected type-specifier before ‘Label’
+       label = new Label(std::to_string(i));
+                   ^~~~~
+MyHashtable.hpp:198:18: error: expected ‘;’ before ‘Label’
+       label = new Label(std::to_string(i));
+                  ^~~~~~
+                  ;
+MyHashtable.hpp:208:13: error: expected type-specifier before ‘Rectangle’
+  rect = new Rectangle(x, y, 100, 25);
+             ^~~~~~~~~
+MyHashtable.hpp:208:12: error: expected ‘;’ before ‘Rectangle’
+  rect = new Rectangle(x, y, 100, 25);
+            ^~~~~~~~~~
+            ;
+MyHashtable.hpp:213:14: error: expected type-specifier before ‘Label’
+  label = new Label(node-&gt;key + &quot;: &quot; + std::to_string(node-&gt;value));
+              ^~~~~
+MyHashtable.hpp:213:13: error: expected ‘;’ before ‘Label’
+  label = new Label(node-&gt;key + &quot;: &quot; + std::to_string(node-&gt;value));
+             ^~~~~~
+             ;
+MyHashtable.hpp:219:13: error: expected type-specifier before ‘Polyline’
+  line = new Polyline();
+             ^~~~~~~~
+MyHashtable.hpp:219:12: error: expected ‘;’ before ‘Polyline’
+  line = new Polyline();
+            ^~~~~~~~~
+            ;
+MyHashtable.hpp:237:18: error: expected type-specifier before ‘Rectangle’
+       rect = new Rectangle(x, y, 100, 20);
+                  ^~~~~~~~~
+MyHashtable.hpp:237:17: error: expected ‘;’ before ‘Rectangle’
+       rect = new Rectangle(x, y, 100, 20);
+                 ^~~~~~~~~~
+                 ;
+MyHashtable.hpp:242:19: error: expected type-specifier before ‘Label’
+       label = new Label(&quot;null&quot;);
+                   ^~~~~
+MyHashtable.hpp:242:18: error: expected ‘;’ before ‘Label’
+       label = new Label(&quot;null&quot;);
+                  ^~~~~~
+                  ;
+MyHashtable.hpp:251:18: error: request for member ‘setDataStructure’ in ‘bridges_inst’, which is of non-class type ‘int’
+     bridges_inst.setDataStructure(vis);
+                  ^~~~~~~~~~~~~~~~
+MyHashtable.hpp:252:18: error: request for member ‘visualize’ in ‘bridges_inst’, which is of non-class type ‘int’
+     bridges_inst.visualize();
+                  ^~~~~~~~~
+In file included from bst.h:14,
+                 from PQBook.cpp:9:
+/home/bridges-testing/bridges-cxx-install/include/BSTElement.h: In member function ‘virtual const string bridges::bridges::datastructure::BSTElement&lt;K, E&gt;::getElementRepresentation() const’:
+/home/bridges-testing/bridges-cxx-install/include/BSTElement.h:135:21: error: ‘bridges::bridges::JSONUtil’ has not been declared
+      using bridges::JSONUtil::JSONencode;
+                     ^~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/BSTElement.h:142:48: error: there are no arguments to ‘JSONencode’ that depend on a template parameter, so a declaration of ‘JSONencode’ must be available [-fpermissive]
+        COMMA + QUOTE + &quot;key&quot; + QUOTE + COLON + JSONencode(conv.str())
+                                                ^~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/BSTElement.h:142:48: note: (if you use ‘-fpermissive’, G++ will accept your code, but allowing the use of an undeclared name is deprecated)
+In file included from PQBook.cpp:9:
+bst.h: At global scope:
+bst.h:27:17: error: ‘BSTElement’ was not declared in this scope
+     std::vector&lt;BSTElement&lt;Key, E&gt;*&gt; stack;
+                 ^~~~~~~~~~
+bst.h:27:17: note: suggested alternative:
+In file included from bst.h:14,
+                 from PQBook.cpp:9:
+/home/bridges-testing/bridges-cxx-install/include/BSTElement.h:31:9: note:   ‘bridges::bridges::datastructure::BSTElement’
+   class BSTElement : public BinTreeElement&lt;E&gt; {
+         ^~~~~~~~~~
+In file included from PQBook.cpp:9:
+bst.h:27:34: error: template argument 1 is invalid
+     std::vector&lt;BSTElement&lt;Key, E&gt;*&gt; stack;
+                                  ^
+bst.h:27:36: error: expected unqualified-id before ‘&gt;’ token
+     std::vector&lt;BSTElement&lt;Key, E&gt;*&gt; stack;
+                                    ^
+bst.h:28:5: error: ‘BSTElement’ does not name a type
+     BSTElement&lt;Key, E&gt;* cur;
+     ^~~~~~~~~~
+bst.h:30:25: error: expected ‘)’ before ‘&lt;’ token
+     bst_iter (BSTElement&lt;Key, E&gt;* bste)
+              ~          ^
+                         )
+bst.h:73:5: error: ‘BSTElement’ does not name a type
+     BSTElement&lt;Key, E&gt;* root;  // Root of the BST
+     ^~~~~~~~~~
+bst.h:77:20: error: ‘BSTElement’ has not been declared
+     void clearhelp(BSTElement&lt;Key, E&gt;*);
+                    ^~~~~~~~~~
+bst.h:77:30: error: expected ‘,’ or ‘...’ before ‘&lt;’ token
+     void clearhelp(BSTElement&lt;Key, E&gt;*);
+                              ^
+bst.h:78:5: error: ‘BSTElement’ does not name a type
+     BSTElement&lt;Key, E&gt;* inserthelp(BSTElement&lt;Key, E&gt;*, const Key&amp;, const E&amp;);
+     ^~~~~~~~~~
+bst.h:79:5: error: ‘BSTElement’ does not name a type
+     BSTElement&lt;Key, E&gt;* deletemin(BSTElement&lt;Key, E&gt;*);
+     ^~~~~~~~~~
+bst.h:80:5: error: ‘BSTElement’ does not name a type
+     BSTElement&lt;Key, E&gt;* getmin(BSTElement&lt;Key, E&gt;*);
+     ^~~~~~~~~~
+bst.h:81:5: error: ‘BSTElement’ does not name a type
+     BSTElement&lt;Key, E&gt;* removehelp(BSTElement&lt;Key, E&gt;*, const Key&amp;);
+     ^~~~~~~~~~
+bst.h:82:5: error: ‘BSTElement’ does not name a type
+     BSTElement&lt;Key, E&gt;* findhelp(BSTElement&lt;Key, E&gt;*, const Key&amp;) const;
+     ^~~~~~~~~~
+bst.h:83:20: error: ‘BSTElement’ has not been declared
+     void printhelp(BSTElement&lt;Key, E&gt;*, int) const;
+                    ^~~~~~~~~~
+bst.h:83:30: error: expected ‘,’ or ‘...’ before ‘&lt;’ token
+     void printhelp(BSTElement&lt;Key, E&gt;*, int) const;
+                              ^
+bst.h:99:16: error: ‘BSTElement’ has not been declared
+   void vishelp(BSTElement&lt;Key, E&gt;* b) {
+                ^~~~~~~~~~
+bst.h:99:26: error: expected ‘,’ or ‘...’ before ‘&lt;’ token
+   void vishelp(BSTElement&lt;Key, E&gt;* b) {
+                          ^
+bst.h:123:5: error: ‘BSTElement’ does not name a type
+     BSTElement&lt;Key, E&gt; *getRoot() {
+     ^~~~~~~~~~
+bst.h:138:5: error: ‘BSTElement’ does not name a type
+     BSTElement&lt;Key, E&gt;* remove(const Key&amp; k) {
+     ^~~~~~~~~~
+bst.h:168:5: error: ‘BSTElement’ does not name a type
+     BSTElement&lt;Key, E&gt;* find(const Key&amp; k) const {
+     ^~~~~~~~~~
+bst.h: In member function ‘virtual bool bridges::BST&lt;Key, E&gt;::bst_iter::operator==(bridges::BST&lt;Key, E&gt;::dict_iter&amp;)’:
+bst.h:44:14: error: ‘cur’ was not declared in this scope
+       return cur == a.cur;
+              ^~~
+bst.h: In member function ‘virtual bool bridges::BST&lt;Key, E&gt;::bst_iter::operator!=(bridges::BST&lt;Key, E&gt;::dict_iter&amp;)’:
+bst.h:48:14: error: ‘cur’ was not declared in this scope
+       return cur != a.cur;
+              ^~~
+bst.h: In member function ‘virtual bridges::BST&lt;Key, E&gt;::dict_iter&amp; bridges::BST&lt;Key, E&gt;::bst_iter::operator++()’:
+bst.h:53:16: error: missing template arguments before ‘.’ token
+       if (stack.size() &gt; 0) {
+                ^
+bst.h:54:2: error: ‘cur’ was not declared in this scope
+  cur = stack.back();
+  ^~~
+bst.h:54:13: error: missing template arguments before ‘.’ token
+  cur = stack.back();
+             ^
+bst.h:55:7: error: missing template arguments before ‘.’ token
+  stack.pop_back();
+       ^
+bst.h:57:9: error: missing template arguments before ‘.’ token
+    stack.push_back(cur-&gt;getLeft());
+         ^
+bst.h:59:9: error: missing template arguments before ‘.’ token
+    stack.push_back(cur-&gt;getRight());
+         ^
+bst.h:62:2: error: ‘cur’ was not declared in this scope
+  cur = nullptr;
+  ^~~
+bst.h: In member function ‘virtual std::pair&lt;_T1, _T2&gt; bridges::BST&lt;Key, E&gt;::bst_iter::operator*()’:
+bst.h:67:29: error: ‘cur’ was not declared in this scope
+       return std::make_pair(cur-&gt;getKey(), cur-&gt;getValue());
+                             ^~~
+bst.h: In constructor ‘bridges::BST&lt;Key, E&gt;::BST(E)’:
+bst.h:92:7: error: ‘root’ was not declared in this scope
+       root = NULL;    // Constructor
+       ^~~~
+bst.h:92:7: note: suggested alternative: ‘chroot’
+       root = NULL;    // Constructor
+       ^~~~
+       chroot
+bst.h: In destructor ‘bridges::BST&lt;Key, E&gt;::~BST()’:
+bst.h:96:17: error: ‘root’ was not declared in this scope
+       clearhelp(root);    // Destructor
+                 ^~~~
+bst.h:96:17: note: suggested alternative: ‘chroot’
+       clearhelp(root);    // Destructor
+                 ^~~~
+                 chroot
+bst.h: In member function ‘void bridges::BST&lt;Key, E&gt;::vishelp(int)’:
+bst.h:100:9: error: ‘b’ was not declared in this scope
+     if (b == nullptr) return;
+         ^
+bst.h:102:5: error: ‘b’ was not declared in this scope
+     b-&gt;setLabel(std::to_string(b-&gt;getValue()));
+     ^
+bst.h: In member function ‘void bridges::BST&lt;Key, E&gt;::visualize(bridges::Bridges&amp;)’:
+bst.h:109:9: error: ‘root’ was not declared in this scope
+     if (root == nullptr)
+         ^~~~
+bst.h:109:9: note: suggested alternative: ‘chroot’
+     if (root == nullptr)
+         ^~~~
+         chroot
+bst.h:112:13: error: ‘root’ was not declared in this scope
+     vishelp(root);
+             ^~~~
+bst.h:112:13: note: suggested alternative: ‘chroot’
+     vishelp(root);
+             ^~~~
+             chroot
+bst.h: In member function ‘void bridges::BST&lt;Key, E&gt;::clear()’:
+bst.h:118:17: error: ‘root’ was not declared in this scope
+       clearhelp(root);
+                 ^~~~
+bst.h:118:17: note: suggested alternative: ‘chroot’
+       clearhelp(root);
+                 ^~~~
+                 chroot
+bst.h: In member function ‘void bridges::BST&lt;Key, E&gt;::insert(const Key&amp;, const E&amp;)’:
+bst.h:131:7: error: ‘root’ was not declared in this scope
+       root = inserthelp(root, k, e);
+       ^~~~
+bst.h:131:7: note: suggested alternative: ‘chroot’
+       root = inserthelp(root, k, e);
+       ^~~~
+       chroot
+bst.h: In member function ‘E bridges::BST&lt;Key, E&gt;::removeAny()’:
+bst.h:149:11: error: ‘root’ was not declared in this scope
+       if (root != NULL) {
+           ^~~~
+bst.h:149:11: note: suggested alternative: ‘chroot’
+       if (root != NULL) {
+           ^~~~
+           chroot
+bst.h:151:16: error: there are no arguments to ‘removehelp’ that depend on a template parameter, so a declaration of ‘removehelp’ must be available [-fpermissive]
+         root = removehelp(root, root-&gt;getKey());
+                ^~~~~~~~~~
+bst.h: In member function ‘void bridges::BST&lt;Key, E&gt;::print() const’:
+bst.h:195:11: error: ‘root’ was not declared in this scope
+       if (root == NULL)
+           ^~~~
+bst.h:195:11: note: suggested alternative: ‘chroot’
+       if (root == NULL)
+           ^~~~
+           chroot
+bst.h: In member function ‘virtual std::unique_ptr&lt;typename Dictionary&lt;K, V&gt;::dict_iter&gt; bridges::BST&lt;Key, E&gt;::realBegin()’:
+bst.h:202:85: error: ‘root’ was not declared in this scope
+   virtual std::unique_ptr&lt;dict_iter&gt; realBegin() {return std::make_unique&lt;bst_iter&gt;(root);}
+                                                                                     ^~~~
+bst.h:202:85: note: suggested alternative: ‘chroot’
+   virtual std::unique_ptr&lt;dict_iter&gt; realBegin() {return std::make_unique&lt;bst_iter&gt;(root);}
+                                                                                     ^~~~
+                                                                                     chroot
+bst.h: At global scope:
+bst.h:210:11: error: variable or field ‘clearhelp’ declared void
+ clearhelp(BSTElement&lt;Key, E&gt;* root) {
+           ^~~~~~~~~~
+bst.h:210:11: error: ‘BSTElement’ was not declared in this scope
+bst.h:210:11: note: suggested alternative:
+In file included from bst.h:14,
+                 from PQBook.cpp:9:
+/home/bridges-testing/bridges-cxx-install/include/BSTElement.h:31:9: note:   ‘bridges::bridges::datastructure::BSTElement’
+   class BSTElement : public BinTreeElement&lt;E&gt; {
+         ^~~~~~~~~~
+In file included from PQBook.cpp:9:
+bst.h:210:25: error: expected primary-expression before ‘,’ token
+ clearhelp(BSTElement&lt;Key, E&gt;* root) {
+                         ^
+bst.h:210:28: error: expected primary-expression before ‘&gt;’ token
+ clearhelp(BSTElement&lt;Key, E&gt;* root) {
+                            ^
+bst.h:210:31: error: ‘root’ was not declared in this scope
+ clearhelp(BSTElement&lt;Key, E&gt;* root) {
+                               ^~~~
+bst.h:210:31: note: suggested alternative: ‘chroot’
+ clearhelp(BSTElement&lt;Key, E&gt;* root) {
+                               ^~~~
+                               chroot
+bst.h:220:1: error: ‘BSTElement’ does not name a type
+ BSTElement&lt;Key, E&gt;* BST&lt;Key, E&gt;::inserthelp(BSTElement&lt;Key, E&gt;* root, const Key&amp; k, const E&amp; it) {
+ ^~~~~~~~~~
+bst.h:236:1: error: ‘BSTElement’ does not name a type
+ BSTElement&lt;Key, E&gt;* BST&lt;Key, E&gt;::
+ ^~~~~~~~~~
+bst.h:244:1: error: ‘BSTElement’ does not name a type
+ BSTElement&lt;Key, E&gt;* BST&lt;Key, E&gt;::
+ ^~~~~~~~~~
+bst.h:257:1: error: ‘BSTElement’ does not name a type
+ BSTElement&lt;Key, E&gt;* BST&lt;Key, E&gt;::
+ ^~~~~~~~~~
+bst.h:288:1: error: ‘BSTElement’ does not name a type
+ BSTElement&lt;Key, E&gt; *BST&lt;Key, E&gt;::findhelp(BSTElement&lt;Key, E&gt;* root,
+ ^~~~~~~~~~
+bst.h:303:11: error: variable or field ‘printhelp’ declared void
+ printhelp(BSTElement&lt;Key, E&gt;* root, int level) const {
+           ^~~~~~~~~~
+bst.h:303:11: error: ‘BSTElement’ was not declared in this scope
+bst.h:303:11: note: suggested alternative:
+In file included from bst.h:14,
+                 from PQBook.cpp:9:
+/home/bridges-testing/bridges-cxx-install/include/BSTElement.h:31:9: note:   ‘bridges::bridges::datastructure::BSTElement’
+   class BSTElement : public BinTreeElement&lt;E&gt; {
+         ^~~~~~~~~~
+In file included from PQBook.cpp:9:
+bst.h:303:25: error: expected primary-expression before ‘,’ token
+ printhelp(BSTElement&lt;Key, E&gt;* root, int level) const {
+                         ^
+bst.h:303:28: error: expected primary-expression before ‘&gt;’ token
+ printhelp(BSTElement&lt;Key, E&gt;* root, int level) const {
+                            ^
+bst.h:303:31: error: ‘root’ was not declared in this scope
+ printhelp(BSTElement&lt;Key, E&gt;* root, int level) const {
+                               ^~~~
+bst.h:303:31: note: suggested alternative: ‘chroot’
+ printhelp(BSTElement&lt;Key, E&gt;* root, int level) const {
+                               ^~~~
+                               chroot
+bst.h:303:37: error: expected primary-expression before ‘int’
+ printhelp(BSTElement&lt;Key, E&gt;* root, int level) const {
+                                     ^~~
+PQBook.cpp: In function ‘int bridges::main()’:
+PQBook.cpp:88:23: error: no matching function for call to ‘bridges::MyHashtable&lt;std::__cxx11::basic_string&lt;char&gt;, int&gt;::visualize(bridges::Bridges&amp;)’
+   ht.visualize(bridges);
+                       ^
+In file included from PQBook.cpp:8:
+MyHashtable.hpp:172:8: note: candidate: ‘void bridges::MyHashtable&lt;K, V&gt;::visualize(int&amp;) [with K = std::__cxx11::basic_string&lt;char&gt;; V = int]’
+   void visualize(bridges::Bridges&amp; bridges_inst) {
+        ^~~~~~~~~
+MyHashtable.hpp:172:8: note:   no known conversion for argument 1 from ‘bridges::Bridges’ to ‘int&amp;’
+PQBook.cpp: At global scope:
+PQBook.cpp:117:1: error: expected ‘}’ at end of input
+ }
+ ^
+In file included from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
+                 from MyHashtable.hpp:7,
+                 from PQBook.cpp:8:
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:16:19: note: to match this ‘{’
+ namespace bridges {
+                   ^
+In file included from PQBook.cpp:9:
+bst.h: In instantiation of ‘E bridges::BST&lt;Key, E&gt;::get(const Key&amp;) const [with Key = std::__cxx11::basic_string&lt;char&gt;; E = int]’:
+bst.h:173:13:   required from here
+bst.h:174:20: error: no matching function for call to ‘find(const std::__cxx11::basic_string&lt;char&gt;&amp;)’
+     auto it = find (k);
+               ~~~~~^~~
+In file included from /usr/include/c++/8/bits/locale_facets.h:48,
+                 from /usr/include/c++/8/bits/basic_ios.h:37,
+                 from /usr/include/c++/8/ios:44,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iostream:39,
+                 from /home/bridges-testing/bridges-cxx-install/include/Bridges.h:4,
+                 from PQBook.cpp:1:
+/usr/include/c++/8/bits/streambuf_iterator.h:368:5: note: candidate: ‘template&lt;class _CharT2&gt; typename __gnu_cxx::__enable_if&lt;std::__is_char&lt;_CharT2&gt;::__value, std::istreambuf_iterator&lt;_CharT&gt; &gt;::__type std::find(std::istreambuf_iterator&lt;_CharT&gt;, std::istreambuf_iterator&lt;_CharT&gt;, const _CharT2&amp;)’
+     find(istreambuf_iterator&lt;_CharT&gt; __first,
+     ^~~~
+/usr/include/c++/8/bits/streambuf_iterator.h:368:5: note:   template argument deduction/substitution failed:
+In file included from PQBook.cpp:9:
+bst.h:174:20: note:   ‘std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘std::istreambuf_iterator&lt;_CharT&gt;’
+     auto it = find (k);
+               ~~~~~^~~
+In file included from /usr/include/c++/8/algorithm:62,
+                 from /home/bridges-testing/bridges-cxx-install/include/Bridges.h:5,
+                 from PQBook.cpp:1:
+/usr/include/c++/8/bits/stl_algo.h:3897:5: note: candidate: ‘template&lt;class _IIter, class _Tp&gt; _IIter std::find(_IIter, _IIter, const _Tp&amp;)’
+     find(_InputIterator __first, _InputIterator __last,
+     ^~~~
+/usr/include/c++/8/bits/stl_algo.h:3897:5: note:   template argument deduction/substitution failed:
+In file included from PQBook.cpp:9:
+bst.h:174:20: note:   candidate expects 3 arguments, 1 provided
+     auto it = find (k);
+               ~~~~~^~~
+bst.h: In instantiation of ‘void bridges::BST&lt;Key, E&gt;::set(const Key&amp;, const E&amp;) [with Key = std::__cxx11::basic_string&lt;char&gt;; E = int]’:
+bst.h:181:16:   required from here
+bst.h:182:20: error: no matching function for call to ‘find(const std::__cxx11::basic_string&lt;char&gt;&amp;)’
+     auto it = find (k);
+               ~~~~~^~~
+In file included from /usr/include/c++/8/bits/locale_facets.h:48,
+                 from /usr/include/c++/8/bits/basic_ios.h:37,
+                 from /usr/include/c++/8/ios:44,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iostream:39,
+                 from /home/bridges-testing/bridges-cxx-install/include/Bridges.h:4,
+                 from PQBook.cpp:1:
+/usr/include/c++/8/bits/streambuf_iterator.h:368:5: note: candidate: ‘template&lt;class _CharT2&gt; typename __gnu_cxx::__enable_if&lt;std::__is_char&lt;_CharT2&gt;::__value, std::istreambuf_iterator&lt;_CharT&gt; &gt;::__type std::find(std::istreambuf_iterator&lt;_CharT&gt;, std::istreambuf_iterator&lt;_CharT&gt;, const _CharT2&amp;)’
+     find(istreambuf_iterator&lt;_CharT&gt; __first,
+     ^~~~
+/usr/include/c++/8/bits/streambuf_iterator.h:368:5: note:   template argument deduction/substitution failed:
+In file included from PQBook.cpp:9:
+bst.h:182:20: note:   ‘std::__cxx11::basic_string&lt;char&gt;’ is not derived from ‘std::istreambuf_iterator&lt;_CharT&gt;’
+     auto it = find (k);
+               ~~~~~^~~
+In file included from /usr/include/c++/8/algorithm:62,
+                 from /home/bridges-testing/bridges-cxx-install/include/Bridges.h:5,
+                 from PQBook.cpp:1:
+/usr/include/c++/8/bits/stl_algo.h:3897:5: note: candidate: ‘template&lt;class _IIter, class _Tp&gt; _IIter std::find(_IIter, _IIter, const _Tp&amp;)’
+     find(_InputIterator __first, _InputIterator __last,
+     ^~~~
+/usr/include/c++/8/bits/stl_algo.h:3897:5: note:   template argument deduction/substitution failed:
+In file included from PQBook.cpp:9:
+bst.h:182:20: note:   candidate expects 3 arguments, 1 provided
+     auto it = find (k);
+               ~~~~~^~~
+bst.h: In instantiation of ‘void bridges::BST&lt;Key, E&gt;::deleteKey(const Key&amp;) [with Key = std::__cxx11::basic_string&lt;char&gt;; E = int]’:
+bst.h:159:16:   required from here
+bst.h:160:19: error: no matching function for call to ‘remove(const std::__cxx11::basic_string&lt;char&gt;&amp;)’
+     delete remove (k);
+            ~~~~~~~^~~
+In file included from /usr/include/c++/8/cstdio:42,
+                 from /usr/include/c++/8/ext/string_conversions.h:43,
+                 from /usr/include/c++/8/bits/basic_string.h:6400,
+                 from /usr/include/c++/8/string:52,
+                 from /usr/include/c++/8/bits/locale_classes.h:40,
+                 from /usr/include/c++/8/bits/ios_base.h:41,
+                 from /usr/include/c++/8/ios:42,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iostream:39,
+                 from /home/bridges-testing/bridges-cxx-install/include/Bridges.h:4,
+                 from PQBook.cpp:1:
+/usr/include/stdio.h:146:12: note: candidate: ‘int remove(const char*)’
+ extern int remove (const char *__filename) __THROW;
+            ^~~~~~
+/usr/include/stdio.h:146:12: note:   no known conversion for argument 1 from ‘const std::__cxx11::basic_string&lt;char&gt;’ to ‘const char*’
+In file included from /usr/include/c++/8/algorithm:62,
+                 from /home/bridges-testing/bridges-cxx-install/include/Bridges.h:5,
+                 from PQBook.cpp:1:
+/usr/include/c++/8/bits/stl_algo.h:896:5: note: candidate: ‘template&lt;class _FIter, class _Tp&gt; _FIter std::remove(_FIter, _FIter, const _Tp&amp;)’
+     remove(_ForwardIterator __first, _ForwardIterator __last,
+     ^~~~~~
+/usr/include/c++/8/bits/stl_algo.h:896:5: note:   template argument deduction/substitution failed:
+In file included from PQBook.cpp:9:
+bst.h:160:19: note:   candidate expects 3 arguments, 1 provided
+     delete remove (k);
+            ~~~~~~~^~~
+In file included from /usr/include/c++/8/bits/locale_conv.h:41,
+                 from /usr/include/c++/8/locale:43,
+                 from /usr/include/c++/8/regex:44,
+                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
+                 from /home/bridges-testing/bridges-cxx-install/include/ElementVisualizer.h:4,
+                 from /home/bridges-testing/bridges-cxx-install/include/Element.h:12,
+                 from /home/bridges-testing/bridges-cxx-install/include/SLelement.h:5,
+                 from /home/bridges-testing/bridges-cxx-install/include/GraphAdjList.h:11,
+                 from /home/bridges-testing/bridges-cxx-install/include/./data_src/OSMData.h:17,
+                 from /home/bridges-testing/bridges-cxx-install/include/DataSource.h:19,
+                 from PQBook.cpp:2:
+/usr/include/c++/8/bits/unique_ptr.h: In instantiation of ‘typename std::_MakeUniq&lt;_Tp&gt;::__single_object std::make_unique(_Args&amp;&amp; ...) [with _Tp = bridges::BST&lt;std::__cxx11::basic_string&lt;char&gt;, int&gt;::bst_iter; _Args = {std::nullptr_t}; typename std::_MakeUniq&lt;_Tp&gt;::__single_object = std::unique_ptr&lt;bridges::BST&lt;std::__cxx11::basic_string&lt;char&gt;, int&gt;::bst_iter, std::default_delete&lt;bridges::BST&lt;std::__cxx11::basic_string&lt;char&gt;, int&gt;::bst_iter&gt; &gt;]’:
+bst.h:203:82:   required from ‘std::unique_ptr&lt;typename Dictionary&lt;K, V&gt;::dict_iter&gt; bridges::BST&lt;Key, E&gt;::realEnd() [with Key = std::__cxx11::basic_string&lt;char&gt;; E = int; typename Dictionary&lt;K, V&gt;::dict_iter = Dictionary&lt;std::__cxx11::basic_string&lt;char&gt;, int&gt;::dict_iter]’
+bst.h:203:38:   required from here
+/usr/include/c++/8/bits/unique_ptr.h:831:30: error: no matching function for call to ‘bridges::BST&lt;std::__cxx11::basic_string&lt;char&gt;, int&gt;::bst_iter::bst_iter(std::nullptr_t)’
+     { return unique_ptr&lt;_Tp&gt;(new _Tp(std::forward&lt;_Args&gt;(__args)...)); }
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from PQBook.cpp:9:
+bst.h:26:10: note: candidate: ‘constexpr bridges::BST&lt;std::__cxx11::basic_string&lt;char&gt;, int&gt;::bst_iter::bst_iter()’
+   struct bst_iter: public dict_iter {
+          ^~~~~~~~
+bst.h:26:10: note:   candidate expects 0 arguments, 1 provided
+bst.h:26:10: note: candidate: ‘constexpr bridges::BST&lt;std::__cxx11::basic_string&lt;char&gt;, int&gt;::bst_iter::bst_iter(const bridges::BST&lt;std::__cxx11::basic_string&lt;char&gt;, int&gt;::bst_iter&amp;)’
+bst.h:26:10: note:   no known conversion for argument 1 from ‘std::nullptr_t’ to ‘const bridges::BST&lt;std::__cxx11::basic_string&lt;char&gt;, int&gt;::bst_iter&amp;’
+bst.h:26:10: note: candidate: ‘constexpr bridges::BST&lt;std::__cxx11::basic_string&lt;char&gt;, int&gt;::bst_iter::bst_iter(bridges::BST&lt;std::__cxx11::basic_string&lt;char&gt;, int&gt;::bst_iter&amp;&amp;)’
+bst.h:26:10: note:   no known conversion for argument 1 from ‘std::nullptr_t’ to ‘bridges::BST&lt;std::__cxx11::basic_string&lt;char&gt;, int&gt;::bst_iter&amp;&amp;’
+make: *** [Makefile:26: PQBook.o] Error 1
+could not compile c++_answer/ for assignment in ../assignmentdb/8-PQBook/c++_answer
 </code></pre>
 </div>
-<div class="success">
+<div class="failure">
 <h3><span id="cxxlog8-runanswer">Run for Assignment 8</span></h3>
-<pre><code>Guessing ./PQBook is the right binary file where main is
-
-Within 1
-fairest 1
-foe 1
-lies 1
-with 1
-thou 1
-famine 1
-beauty's 1
-glutton 1
-this 1
-else 1
-art 1
-Feed'st 1
-be 1
-herald 1
-now 1
-cruel 1
-die 1
-too 1
-we 1
-to 3
-to 3
-to 2
-should 1
-And 2
-thine 2
-And 2
-a 1
-eyes 1
-thine 2
-world 1
-niggarding 1
-sweet 1
-fuel 1
-light's 1
-content 1
-ornament 1
-bright 1
-abundance 1
-flame 1
-increase 1
-and 1
-Making 1
-decease 1
-in 1
-thy 4
-thy 4
-thy 3
-thy 2
-But 2
-But 2
-own 2
-own 2
-time 1
-grave 1
-only 1
-bear 1
-riper 1
-never 1
-due 1
-churl 1
-contracted 1
-waste 1
-memory 1
-fresh 1
-thereby 1
-by 2
-or 1
-self 2
-self 2
-self-substantial 1
-by 2
-buriest 1
-Thy 1
-From 1
-tender 2
-that 1
-tender 2
-To 1
-as 1
-rose 1
-creatures 1
-world's 2
-mak'st 1
-world's 2
-the 6
-the 6
-the 5
-Pity 1
-the 4
-the 3
-heir 1
-the 2
-eat 1
-bud 1
-where 1
-His 1
-thee 1
-spring 1
-gaudy 1
-might 2
-might 2
-That 1
-Thou 1
-his 1
-desire 1
-Success: Assignment posted to the server. 
-Check out your visualization at:
-
-http://bridges-cs.herokuapp.com/assignments/108/bridges_testing
-
-Success: Assignment posted to the server. 
-Check out your visualization at:
-
-http://bridges-cs.herokuapp.com/assignments/108/bridges_testing
-
-1 Within
-1 fairest
-1 lies
-1 beauty's
-1 now
-1 niggarding
-1 memory
-1 where
-1 as
-1 should
-1 flame
-1 Thou
-1 only
-1 art
-1 we
-1 content
-1 or
-1 gaudy
-1 mak'st
-1 a
-1 decease
-1 due
-1 heir
-1 thou
-1 this
-1 die
-1 fuel
-1 thereby
-1 thee
-1 creatures
-1 and
-1 Thy
-1 desire
-1 riper
-1 be
-1 bright
-1 time
-1 contracted
-1 eat
-1 foe
-1 with
-1 glutton
-1 cruel
-1 sweet
-1 fresh
-1 His
-1 rose
-1 increase
-1 buriest
-1 his
-1 bear
-1 Pity
-1 Feed'st
-1 ornament
-1 eyes
-1 in
-1 that
-1 churl
-1 famine
-1 else
-1 too
-1 light's
-1 spring
-1 Making
-1 From
-1 never
-1 herald
-1 abundance
-1 self-substantial
-1 That
-1 grave
-1 world
-1 To
-1 waste
-1 bud
-2 by
-2 own
-2 tender
-2 But
-2 thine
-2 self
-2 might
-2 tender
-2 thine
-2 thy
-2 And
-2 self
-2 might
-2 own
-2 world's
-2 the
-2 by
-2 But
-2 world's
-2 And
-2 to
-Success: Assignment posted to the server. 
-Check out your visualization at:
-
-http://bridges-cs.herokuapp.com/assignments/108/bridges_testing
-
+<pre><code>can't guess a binary file to run
+could not run c++_answer for assignment in ../assignmentdb/8-PQBook/c++_answer
 </code></pre>
 </div>
     
@@ -1296,8 +1916,8 @@ g++ -o 2048 2048.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ -pthread
 <h3><span id="cxxlog11-runanswer">Run for Assignment 11</span></h3>
 <pre><code>Guessing ./2048 is the right binary file where main is
 
-[2021-03-30 03:48:17] [connect] Successful connection
-[2021-03-30 03:48:17] [connect] WebSocket Connection 52.70.158.182:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617090496 101
+[2021-03-31 03:47:47] [connect] Successful connection
+[2021-03-31 03:47:47] [connect] WebSocket Connection 34.199.176.103:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617176867 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -1338,8 +1958,8 @@ g++ -o AStarMaze pathfinder.o -g -L /home/bridges-testing/bridges-cxx-install/li
 <h3><span id="cxxlog12-runanswer">Run for Assignment 12</span></h3>
 <pre><code>Guessing ./AStarMaze is the right binary file where main is
 
-[2021-03-30 03:48:27] [connect] Successful connection
-[2021-03-30 03:48:27] [connect] WebSocket Connection 52.70.158.182:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617090507 101
+[2021-03-31 03:47:57] [connect] Successful connection
+[2021-03-31 03:47:57] [connect] WebSocket Connection 34.199.176.103:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617176877 101
 (0, 0)
 (1, 0)
 (2, 0)
@@ -2341,8 +2961,8 @@ g++ -o InfiniteRunner runner.o -g -L /home/bridges-testing/bridges-cxx-install/l
 <h3><span id="cxxlog13-runanswer">Run for Assignment 13</span></h3>
 <pre><code>Guessing ./InfiniteRunner is the right binary file where main is
 
-[2021-03-30 03:48:36] [connect] Successful connection
-[2021-03-30 03:48:36] [connect] WebSocket Connection 54.146.159.110:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617090516 101
+[2021-03-31 03:48:07] [connect] Successful connection
+[2021-03-31 03:48:07] [connect] WebSocket Connection 52.54.11.249:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617176887 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -2397,8 +3017,8 @@ g++ -o SpreadingFire SpreadingFire.o -g -L /home/bridges-testing/bridges-cxx-ins
 <h3><span id="cxxlog14-runanswer">Run for Assignment 14</span></h3>
 <pre><code>Guessing ./SpreadingFire is the right binary file where main is
 
-[2021-03-30 03:48:44] [connect] Successful connection
-[2021-03-30 03:48:44] [connect] WebSocket Connection 3.215.250.63:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617090524 101
+[2021-03-31 03:48:14] [connect] Successful connection
+[2021-03-31 03:48:14] [connect] WebSocket Connection 52.7.82.76:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617176894 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -2439,8 +3059,8 @@ g++ -o FallingSand FallingSand.o -g -L /home/bridges-testing/bridges-cxx-install
 <h3><span id="cxxlog15-runanswer">Run for Assignment 15</span></h3>
 <pre><code>Guessing ./FallingSand is the right binary file where main is
 
-[2021-03-30 03:48:53] [connect] Successful connection
-[2021-03-30 03:48:54] [connect] WebSocket Connection 52.207.10.65:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617090533 101
+[2021-03-31 03:48:24] [connect] Successful connection
+[2021-03-31 03:48:24] [connect] WebSocket Connection 34.231.44.95:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617176904 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -2521,8 +3141,8 @@ g++ -o ControlsTutorial Controls_Tutorial.o -g -L /home/bridges-testing/bridges-
 <h3><span id="cxxlog17-runanswer">Run for Assignment 17</span></h3>
 <pre><code>Guessing ./ControlsTutorial is the right binary file where main is
 
-[2021-03-30 03:49:15] [connect] Successful connection
-[2021-03-30 03:49:15] [connect] WebSocket Connection 52.70.158.182:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617090555 101
+[2021-03-31 03:48:45] [connect] Successful connection
+[2021-03-31 03:48:45] [connect] WebSocket Connection 34.199.176.103:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617176925 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -2563,8 +3183,8 @@ g++ -o ControlsTutorial2 Controls_Tutorial2.o -g -L /home/bridges-testing/bridge
 <h3><span id="cxxlog18-runanswer">Run for Assignment 18</span></h3>
 <pre><code>Guessing ./ControlsTutorial2 is the right binary file where main is
 
-[2021-03-30 03:49:24] [connect] Successful connection
-[2021-03-30 03:49:24] [connect] WebSocket Connection 34.195.54.37:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617090564 101
+[2021-03-31 03:48:55] [connect] Successful connection
+[2021-03-31 03:48:55] [connect] WebSocket Connection 52.5.6.26:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617176935 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -2609,8 +3229,8 @@ g++ -o BugStomp BugStomp.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ 
 <h3><span id="cxxlog19-runanswer">Run for Assignment 19</span></h3>
 <pre><code>Guessing ./BugStomp is the right binary file where main is
 
-[2021-03-30 03:49:34] [connect] Successful connection
-[2021-03-30 03:49:34] [connect] WebSocket Connection 34.195.54.37:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617090574 101
+[2021-03-31 03:49:04] [connect] Successful connection
+[2021-03-31 03:49:04] [connect] WebSocket Connection 52.5.6.26:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617176944 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -2651,8 +3271,8 @@ g++ -o Minesweeper minesweeper.o -g -L /home/bridges-testing/bridges-cxx-install
 <h3><span id="cxxlog20-runanswer">Run for Assignment 20</span></h3>
 <pre><code>Guessing ./Minesweeper is the right binary file where main is
 
-[2021-03-30 03:49:44] [connect] Successful connection
-[2021-03-30 03:49:44] [connect] WebSocket Connection 52.1.61.222:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617090584 101
+[2021-03-31 03:49:14] [connect] Successful connection
+[2021-03-31 03:49:14] [connect] WebSocket Connection 3.215.250.63:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617176954 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -2693,8 +3313,8 @@ g++ -o RaceCar RaceCar.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ -p
 <h3><span id="cxxlog21-runanswer">Run for Assignment 21</span></h3>
 <pre><code>Guessing ./RaceCar is the right binary file where main is
 
-[2021-03-30 03:49:53] [connect] Successful connection
-[2021-03-30 03:49:53] [connect] WebSocket Connection 52.207.10.65:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617090593 101
+[2021-03-31 03:49:23] [connect] Successful connection
+[2021-03-31 03:49:23] [connect] WebSocket Connection 34.206.57.22:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617176963 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -2735,8 +3355,8 @@ g++ -o Snake Snake.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ -pthre
 <h3><span id="cxxlog22-runanswer">Run for Assignment 22</span></h3>
 <pre><code>Guessing ./Snake is the right binary file where main is
 
-[2021-03-30 03:50:02] [connect] Successful connection
-[2021-03-30 03:50:02] [connect] WebSocket Connection 34.233.106.96:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617090602 101
+[2021-03-31 03:49:33] [connect] Successful connection
+[2021-03-31 03:49:33] [connect] WebSocket Connection 3.94.248.118:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617176973 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -2881,12 +3501,278 @@ rm TowersOfHanoi
 rm: cannot remove 'TowersOfHanoi': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
 g++ -g  -std=c++14 -I /home/bridges-testing/bridges-cxx-install/include/ -c toh.cpp -o toh.o
+In file included from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
+                 from toh.cpp:2:
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:432:3: error: expected ‘;’ after class definition
+  }
+   ^
+   ;
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h: In member function ‘void bridges::datastructure::Symbol::matMult(float (*)[3], float (*)[3], float*)’:
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:69:7: error: ‘m3’ was not declared in this scope
+       m3[i][j]+=m1[i][k]*m2[k][j];
+       ^~
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:69:7: note: suggested alternative: ‘m1’
+       m3[i][j]+=m1[i][k]*m2[k][j];
+       ^~
+       m1
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h: In member function ‘void bridges::datastructure::Symbol::copyMat(float (*)[3], float (*)[3])’:
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:77:4: error: expected primary-expression before ‘public’
+    public:
+    ^~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:89:5: error: ‘virtual’ outside class declaration
+     virtual const string getSymbolRepresentation() const  = 0;
+     ^~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:89:52: error: non-member function ‘const string bridges::datastructure::getSymbolRepresentation()’ cannot have cv-qualifier
+     virtual const string getSymbolRepresentation() const  = 0;
+                                                    ^~~~~
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:89:52: warning: declaration of ‘const string bridges::datastructure::getSymbolRepresentation()’ has ‘extern’ and is initialized
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:89:61: error: function ‘const string bridges::datastructure::getSymbolRepresentation()’ is initialized like a variable
+     virtual const string getSymbolRepresentation() const  = 0;
+                                                             ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:95:5: error: ‘virtual’ outside class declaration
+     virtual vector&lt;float&gt; getDimensions() const = 0;
+     ^~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:95:43: error: non-member function ‘std::vector&lt;float&gt; bridges::datastructure::getDimensions()’ cannot have cv-qualifier
+     virtual vector&lt;float&gt; getDimensions() const = 0;
+                                           ^~~~~
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:95:43: warning: declaration of ‘std::vector&lt;float&gt; bridges::datastructure::getDimensions()’ has ‘extern’ and is initialized
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:95:51: error: function ‘std::vector&lt;float&gt; bridges::datastructure::getDimensions()’ is initialized like a variable
+     virtual vector&lt;float&gt; getDimensions() const = 0;
+                                                   ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:102:11: error: expected primary-expression before ‘(’ token
+     Symbol(string symb) {
+           ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:102:19: error: expected primary-expression before ‘symb’
+     Symbol(string symb) {
+                   ^~~~
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:114:25: error: a function-definition is not allowed here before ‘{’ token
+     int getIdentifier() {
+                         ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:123:31: error: a function-definition is not allowed here before ‘{’ token
+     void setLabel(string lbl) {
+                               ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:132:32: error: a function-definition is not allowed here before ‘{’ token
+     void setFillColor(Color c) {
+                                ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:140:33: error: a function-definition is not allowed here before ‘{’ token
+     void setFillColor(string c) {
+                                 ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:148:26: error: a function-definition is not allowed here before ‘{’ token
+     Color getFillColor() {
+                          ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:157:34: error: a function-definition is not allowed here before ‘{’ token
+     void setStrokeColor(Color c) {
+                                  ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:166:35: error: a function-definition is not allowed here before ‘{’ token
+     void setStrokeColor(string c) {
+                                   ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:175:28: error: a function-definition is not allowed here before ‘{’ token
+     Color getStrokeColor() {
+                            ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:184:43: error: a function-definition is not allowed here before ‘{’ token
+     void setStrokeWidth(float strk_width) {
+                                           ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:196:28: error: a function-definition is not allowed here before ‘{’ token
+     float getStrokeWidth() {
+                            ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:205:31: error: a function-definition is not allowed here before ‘{’ token
+     void setOpacity(float op) {
+                               ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:217:24: error: a function-definition is not allowed here before ‘{’ token
+     float getOpacity() {
+                        ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:226:34: error: a function-definition is not allowed here before ‘{’ token
+     void setStrokeDash(int dash) {
+                                  ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:238:25: error: a function-definition is not allowed here before ‘{’ token
+     int getStrokeDash() {
+                         ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:248:36: error: a function-definition is not allowed here before ‘{’ token
+     void setLocation(int x, int y) {
+                                    ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:258:42: error: a function-definition is not allowed here before ‘{’ token
+     void setLocation(double x, double y) {
+                                          ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:269:40: error: a function-definition is not allowed here before ‘{’ token
+     void setLocation(float x, float y) {
+                                        ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:283:38: error: a function-definition is not allowed here before ‘{’ token
+     const float *getLocation() const {
+                                      ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:292:29: error: a function-definition is not allowed here before ‘{’ token
+     string getName()  const {
+                             ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:296:4: error: expected primary-expression before ‘protected’
+    protected:
+    ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:310:33: error: a function-definition is not allowed here before ‘{’ token
+     string getShapeType() const {
+                                 ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:331:57: error: a function-definition is not allowed here before ‘{’ token
+     void translatePoint (float *pt, float tx, float ty) {
+                                                         ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:346:53: error: a function-definition is not allowed here before ‘{’ token
+     void scalePoint (float *pt, float sx, float sy) {
+                                                     ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:362:53: error: a function-definition is not allowed here before ‘{’ token
+     void rotatePoint (float *pt, float angle) const {
+                                                     ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:385:59: error: a function-definition is not allowed here before ‘{’ token
+     const string getSymbolAttributeRepresentation() const {
+                                                           ^
+In file included from toh.cpp:2:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h: In member function ‘void bridges::bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol*)’:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:100:17: error: ‘class bridges::datastructure::Symbol’ has no member named ‘getIdentifier’; did you mean ‘identifier’?
+      symbols[s-&gt;getIdentifier()] = s;
+                 ^~~~~~~~~~~~~
+                 identifier
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h: In member function ‘void bridges::bridges::datastructure::SymbolCollection::updateAxisDomains(const bridges::datastructure::Symbol*) const’:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:112:30: error: ‘const class bridges::datastructure::Symbol’ has no member named ‘getDimensions’
+      vector&lt;float&gt; dims = s-&gt;getDimensions();
+                              ^~~~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h: In member function ‘virtual const string bridges::bridges::datastructure::SymbolCollection::getDataStructureRepresentation() const’:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:152:22: error: ‘class bridges::datastructure::Symbol’ has no member named ‘getSymbolRepresentation’
+        entry.second-&gt;getSymbolRepresentation() + COMMA;
+                      ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from toh.cpp:3:
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h: In member function ‘void bridges::bridges::datastructure::Rectangle::translate(float, float)’:
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:106:25: error: ‘getLocation’ was not declared in this scope
+      const float *loc = getLocation();
+                         ^~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:106:25: note: suggested alternative: ‘location’
+      const float *loc = getLocation();
+                         ^~~~~~~~~~~
+                         location
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:108:6: error: ‘translatePoint’ was not declared in this scope
+      translatePoint (myloc, tx, ty);
+      ^~~~~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:108:6: note: suggested alternative: ‘translate’
+      translatePoint (myloc, tx, ty);
+      ^~~~~~~~~~~~~~
+      translate
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:109:6: error: ‘setLocation’ was not declared in this scope
+      setLocation(myloc[0], myloc[1]);
+      ^~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:109:6: note: suggested alternative: ‘location’
+      setLocation(myloc[0], myloc[1]);
+      ^~~~~~~~~~~
+      location
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h: In member function ‘void bridges::bridges::datastructure::Rectangle::scale(float, float)’:
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:121:6: error: ‘scalePoint’ was not declared in this scope
+      scalePoint (pt, sx, sy);
+      ^~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:121:6: note: suggested alternative: ‘scale’
+      scalePoint (pt, sx, sy);
+      ^~~~~~~~~~
+      scale
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h: In member function ‘std::vector&lt;float&gt; bridges::bridges::datastructure::Rectangle::getDimensions() const’:
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:135:30: error: ‘getLocation’ was not declared in this scope
+      const float *location = getLocation();
+                              ^~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:135:30: note: suggested alternative: ‘location’
+      const float *location = getLocation();
+                              ^~~~~~~~~~~
+                              location
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h: In member function ‘void bridges::bridges::datastructure::Rectangle::setRectangle(float, float, float, float)’:
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:158:6: error: ‘setLocation’ was not declared in this scope
+      setLocation (float(locx), float(locy));
+      ^~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:158:6: note: suggested alternative: ‘location’
+      setLocation (float(locx), float(locy));
+      ^~~~~~~~~~~
+      location
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:161:6: error: ‘setShapeType’ was not declared in this scope
+      setShapeType(&quot;rect&quot;);
+      ^~~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:161:6: note: suggested alternative: ‘shape_type’
+      setShapeType(&quot;rect&quot;);
+      ^~~~~~~~~~~~
+      shape_type
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h: In member function ‘virtual const string bridges::bridges::datastructure::Rectangle::getSymbolRepresentation() const’:
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:171:26: error: ‘getSymbolAttributeRepresentation’ was not declared in this scope
+      string shape_json = getSymbolAttributeRepresentation();
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:171:26: note: suggested alternative: ‘getSymbolRepresentation’
+      string shape_json = getSymbolAttributeRepresentation();
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                          getSymbolRepresentation
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:173:21: error: ‘getShapeType’ was not declared in this scope
+      string shape = getShapeType();
+                     ^~~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:173:21: note: suggested alternative: ‘shape_type’
+      string shape = getShapeType();
+                     ^~~~~~~~~~~~
+                     shape_type
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:175:49: error: ‘getLabel’ was not declared in this scope
+       QUOTE + &quot;name&quot; + QUOTE + COLON +  QUOTE + getLabel() + QUOTE + COMMA +
+                                                 ^~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:175:49: note: suggested alternative: ‘getName’
+       QUOTE + &quot;name&quot; + QUOTE + COLON +  QUOTE + getLabel() + QUOTE + COMMA +
+                                                 ^~~~~~~~
+                                                 getName
+toh.cpp: At global scope:
 toh.cpp:15:5: error: ‘bridges’ does not name a type
      bridges.setTitle(&quot;Towers of Hanoi&quot;);
      ^~~~~~~
 toh.cpp:16:5: error: ‘bridges’ does not name a type
      bridges.setDescription(&quot;Solve the towers of hanoi problem with loops.&quot;);
      ^~~~~~~
+toh.cpp:18:5: error: ‘SymbolCollection’ does not name a type
+     SymbolCollection sc = SymbolCollection();
+     ^~~~~~~~~~~~~~~~
+toh.cpp:21:5: error: ‘Rectangle’ does not name a type
+     Rectangle srcPeg = Rectangle(-50, 0, 10, 30);
+     ^~~~~~~~~
+toh.cpp:22:5: error: ‘Rectangle’ does not name a type
+     Rectangle destPeg = Rectangle(0, 0, 10, 30);
+     ^~~~~~~~~
+toh.cpp:23:5: error: ‘Rectangle’ does not name a type
+     Rectangle auxPeg = Rectangle(50, 0, 10, 30);
+     ^~~~~~~~~
+toh.cpp:26:5: error: ‘Rectangle’ does not name a type
+     Rectangle disk1 = Rectangle(-50, 10, 20, 10);
+     ^~~~~~~~~
+toh.cpp:27:5: error: ‘Rectangle’ does not name a type
+     Rectangle disk2 = Rectangle(-50, 0, 30, 10);
+     ^~~~~~~~~
+toh.cpp:28:5: error: ‘Rectangle’ does not name a type
+     Rectangle disk3 = Rectangle(-50, -10, 40, 10);
+     ^~~~~~~~~
+toh.cpp: In constructor ‘bridges::TOHData::TOHData()’:
+toh.cpp:31:7: error: ‘sc’ was not declared in this scope
+       sc.addSymbol(&amp;srcPeg);
+       ^~
+toh.cpp:31:21: error: ‘srcPeg’ was not declared in this scope
+       sc.addSymbol(&amp;srcPeg);
+                     ^~~~~~
+toh.cpp:31:21: note: suggested alternative: ‘socket’
+       sc.addSymbol(&amp;srcPeg);
+                     ^~~~~~
+                     socket
+toh.cpp:32:21: error: ‘destPeg’ was not declared in this scope
+       sc.addSymbol(&amp;destPeg);
+                     ^~~~~~~
+toh.cpp:33:21: error: ‘auxPeg’ was not declared in this scope
+       sc.addSymbol(&amp;auxPeg);
+                     ^~~~~~
+toh.cpp:35:21: error: ‘disk1’ was not declared in this scope
+       sc.addSymbol(&amp;disk1);
+                     ^~~~~
+toh.cpp:36:21: error: ‘disk2’ was not declared in this scope
+       sc.addSymbol(&amp;disk2);
+                     ^~~~~
+toh.cpp:37:21: error: ‘disk3’ was not declared in this scope
+       sc.addSymbol(&amp;disk3);
+                     ^~~~~
+toh.cpp: At global scope:
+toh.cpp:67:1: error: expected ‘}’ at end of input
+ }
+ ^
+In file included from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
+                 from toh.cpp:2:
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:16:19: note: to match this ‘{’
+ namespace bridges {
+                   ^
 make: *** [Makefile:26: toh.o] Error 1
 could not compile c++/ for assignment in ../assignmentdb/26-TowersOfHanoi/c++
 </code></pre>
@@ -2901,12 +3787,325 @@ rm TowersOfHanoi
 rm: cannot remove 'TowersOfHanoi': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
 g++ -g  -std=c++14 -I /home/bridges-testing/bridges-cxx-install/include/ -c toh.cpp -o toh.o
+In file included from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
+                 from toh.cpp:2:
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:432:3: error: expected ‘;’ after class definition
+  }
+   ^
+   ;
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h: In member function ‘void bridges::datastructure::Symbol::matMult(float (*)[3], float (*)[3], float*)’:
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:69:7: error: ‘m3’ was not declared in this scope
+       m3[i][j]+=m1[i][k]*m2[k][j];
+       ^~
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:69:7: note: suggested alternative: ‘m1’
+       m3[i][j]+=m1[i][k]*m2[k][j];
+       ^~
+       m1
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h: In member function ‘void bridges::datastructure::Symbol::copyMat(float (*)[3], float (*)[3])’:
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:77:4: error: expected primary-expression before ‘public’
+    public:
+    ^~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:89:5: error: ‘virtual’ outside class declaration
+     virtual const string getSymbolRepresentation() const  = 0;
+     ^~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:89:52: error: non-member function ‘const string bridges::datastructure::getSymbolRepresentation()’ cannot have cv-qualifier
+     virtual const string getSymbolRepresentation() const  = 0;
+                                                    ^~~~~
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:89:52: warning: declaration of ‘const string bridges::datastructure::getSymbolRepresentation()’ has ‘extern’ and is initialized
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:89:61: error: function ‘const string bridges::datastructure::getSymbolRepresentation()’ is initialized like a variable
+     virtual const string getSymbolRepresentation() const  = 0;
+                                                             ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:95:5: error: ‘virtual’ outside class declaration
+     virtual vector&lt;float&gt; getDimensions() const = 0;
+     ^~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:95:43: error: non-member function ‘std::vector&lt;float&gt; bridges::datastructure::getDimensions()’ cannot have cv-qualifier
+     virtual vector&lt;float&gt; getDimensions() const = 0;
+                                           ^~~~~
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:95:43: warning: declaration of ‘std::vector&lt;float&gt; bridges::datastructure::getDimensions()’ has ‘extern’ and is initialized
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:95:51: error: function ‘std::vector&lt;float&gt; bridges::datastructure::getDimensions()’ is initialized like a variable
+     virtual vector&lt;float&gt; getDimensions() const = 0;
+                                                   ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:102:11: error: expected primary-expression before ‘(’ token
+     Symbol(string symb) {
+           ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:102:19: error: expected primary-expression before ‘symb’
+     Symbol(string symb) {
+                   ^~~~
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:114:25: error: a function-definition is not allowed here before ‘{’ token
+     int getIdentifier() {
+                         ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:123:31: error: a function-definition is not allowed here before ‘{’ token
+     void setLabel(string lbl) {
+                               ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:132:32: error: a function-definition is not allowed here before ‘{’ token
+     void setFillColor(Color c) {
+                                ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:140:33: error: a function-definition is not allowed here before ‘{’ token
+     void setFillColor(string c) {
+                                 ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:148:26: error: a function-definition is not allowed here before ‘{’ token
+     Color getFillColor() {
+                          ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:157:34: error: a function-definition is not allowed here before ‘{’ token
+     void setStrokeColor(Color c) {
+                                  ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:166:35: error: a function-definition is not allowed here before ‘{’ token
+     void setStrokeColor(string c) {
+                                   ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:175:28: error: a function-definition is not allowed here before ‘{’ token
+     Color getStrokeColor() {
+                            ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:184:43: error: a function-definition is not allowed here before ‘{’ token
+     void setStrokeWidth(float strk_width) {
+                                           ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:196:28: error: a function-definition is not allowed here before ‘{’ token
+     float getStrokeWidth() {
+                            ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:205:31: error: a function-definition is not allowed here before ‘{’ token
+     void setOpacity(float op) {
+                               ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:217:24: error: a function-definition is not allowed here before ‘{’ token
+     float getOpacity() {
+                        ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:226:34: error: a function-definition is not allowed here before ‘{’ token
+     void setStrokeDash(int dash) {
+                                  ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:238:25: error: a function-definition is not allowed here before ‘{’ token
+     int getStrokeDash() {
+                         ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:248:36: error: a function-definition is not allowed here before ‘{’ token
+     void setLocation(int x, int y) {
+                                    ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:258:42: error: a function-definition is not allowed here before ‘{’ token
+     void setLocation(double x, double y) {
+                                          ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:269:40: error: a function-definition is not allowed here before ‘{’ token
+     void setLocation(float x, float y) {
+                                        ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:283:38: error: a function-definition is not allowed here before ‘{’ token
+     const float *getLocation() const {
+                                      ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:292:29: error: a function-definition is not allowed here before ‘{’ token
+     string getName()  const {
+                             ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:296:4: error: expected primary-expression before ‘protected’
+    protected:
+    ^~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:310:33: error: a function-definition is not allowed here before ‘{’ token
+     string getShapeType() const {
+                                 ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:331:57: error: a function-definition is not allowed here before ‘{’ token
+     void translatePoint (float *pt, float tx, float ty) {
+                                                         ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:346:53: error: a function-definition is not allowed here before ‘{’ token
+     void scalePoint (float *pt, float sx, float sy) {
+                                                     ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:362:53: error: a function-definition is not allowed here before ‘{’ token
+     void rotatePoint (float *pt, float angle) const {
+                                                     ^
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:385:59: error: a function-definition is not allowed here before ‘{’ token
+     const string getSymbolAttributeRepresentation() const {
+                                                           ^
+In file included from toh.cpp:2:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h: In member function ‘void bridges::bridges::datastructure::SymbolCollection::addSymbol(bridges::datastructure::Symbol*)’:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:100:17: error: ‘class bridges::datastructure::Symbol’ has no member named ‘getIdentifier’; did you mean ‘identifier’?
+      symbols[s-&gt;getIdentifier()] = s;
+                 ^~~~~~~~~~~~~
+                 identifier
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h: In member function ‘void bridges::bridges::datastructure::SymbolCollection::updateAxisDomains(const bridges::datastructure::Symbol*) const’:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:112:30: error: ‘const class bridges::datastructure::Symbol’ has no member named ‘getDimensions’
+      vector&lt;float&gt; dims = s-&gt;getDimensions();
+                              ^~~~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h: In member function ‘virtual const string bridges::bridges::datastructure::SymbolCollection::getDataStructureRepresentation() const’:
+/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:152:22: error: ‘class bridges::datastructure::Symbol’ has no member named ‘getSymbolRepresentation’
+        entry.second-&gt;getSymbolRepresentation() + COMMA;
+                      ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from toh.cpp:3:
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h: In member function ‘void bridges::bridges::datastructure::Rectangle::translate(float, float)’:
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:106:25: error: ‘getLocation’ was not declared in this scope
+      const float *loc = getLocation();
+                         ^~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:106:25: note: suggested alternative: ‘location’
+      const float *loc = getLocation();
+                         ^~~~~~~~~~~
+                         location
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:108:6: error: ‘translatePoint’ was not declared in this scope
+      translatePoint (myloc, tx, ty);
+      ^~~~~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:108:6: note: suggested alternative: ‘translate’
+      translatePoint (myloc, tx, ty);
+      ^~~~~~~~~~~~~~
+      translate
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:109:6: error: ‘setLocation’ was not declared in this scope
+      setLocation(myloc[0], myloc[1]);
+      ^~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:109:6: note: suggested alternative: ‘location’
+      setLocation(myloc[0], myloc[1]);
+      ^~~~~~~~~~~
+      location
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h: In member function ‘void bridges::bridges::datastructure::Rectangle::scale(float, float)’:
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:121:6: error: ‘scalePoint’ was not declared in this scope
+      scalePoint (pt, sx, sy);
+      ^~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:121:6: note: suggested alternative: ‘scale’
+      scalePoint (pt, sx, sy);
+      ^~~~~~~~~~
+      scale
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h: In member function ‘std::vector&lt;float&gt; bridges::bridges::datastructure::Rectangle::getDimensions() const’:
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:135:30: error: ‘getLocation’ was not declared in this scope
+      const float *location = getLocation();
+                              ^~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:135:30: note: suggested alternative: ‘location’
+      const float *location = getLocation();
+                              ^~~~~~~~~~~
+                              location
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h: In member function ‘void bridges::bridges::datastructure::Rectangle::setRectangle(float, float, float, float)’:
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:158:6: error: ‘setLocation’ was not declared in this scope
+      setLocation (float(locx), float(locy));
+      ^~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:158:6: note: suggested alternative: ‘location’
+      setLocation (float(locx), float(locy));
+      ^~~~~~~~~~~
+      location
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:161:6: error: ‘setShapeType’ was not declared in this scope
+      setShapeType(&quot;rect&quot;);
+      ^~~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:161:6: note: suggested alternative: ‘shape_type’
+      setShapeType(&quot;rect&quot;);
+      ^~~~~~~~~~~~
+      shape_type
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h: In member function ‘virtual const string bridges::bridges::datastructure::Rectangle::getSymbolRepresentation() const’:
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:171:26: error: ‘getSymbolAttributeRepresentation’ was not declared in this scope
+      string shape_json = getSymbolAttributeRepresentation();
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:171:26: note: suggested alternative: ‘getSymbolRepresentation’
+      string shape_json = getSymbolAttributeRepresentation();
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                          getSymbolRepresentation
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:173:21: error: ‘getShapeType’ was not declared in this scope
+      string shape = getShapeType();
+                     ^~~~~~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:173:21: note: suggested alternative: ‘shape_type’
+      string shape = getShapeType();
+                     ^~~~~~~~~~~~
+                     shape_type
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:175:49: error: ‘getLabel’ was not declared in this scope
+       QUOTE + &quot;name&quot; + QUOTE + COLON +  QUOTE + getLabel() + QUOTE + COMMA +
+                                                 ^~~~~~~~
+/home/bridges-testing/bridges-cxx-install/include/Rectangle.h:175:49: note: suggested alternative: ‘getName’
+       QUOTE + &quot;name&quot; + QUOTE + COLON +  QUOTE + getLabel() + QUOTE + COMMA +
+                                                 ^~~~~~~~
+                                                 getName
+toh.cpp: At global scope:
 toh.cpp:15:5: error: ‘bridges’ does not name a type
      bridges.setTitle(&quot;Towers of Hanoi&quot;);
      ^~~~~~~
 toh.cpp:16:5: error: ‘bridges’ does not name a type
      bridges.setDescription(&quot;Solve the towers of hanoi problem with loops.&quot;);
      ^~~~~~~
+toh.cpp:18:5: error: ‘SymbolCollection’ does not name a type
+     SymbolCollection sc = SymbolCollection();
+     ^~~~~~~~~~~~~~~~
+toh.cpp:21:5: error: ‘Rectangle’ does not name a type
+     Rectangle srcPeg = Rectangle(-50, 0, 10, 30);
+     ^~~~~~~~~
+toh.cpp:22:5: error: ‘Rectangle’ does not name a type
+     Rectangle destPeg = Rectangle(0, 0, 10, 30);
+     ^~~~~~~~~
+toh.cpp:23:5: error: ‘Rectangle’ does not name a type
+     Rectangle auxPeg = Rectangle(50, 0, 10, 30);
+     ^~~~~~~~~
+toh.cpp:26:5: error: ‘Rectangle’ does not name a type
+     Rectangle disk1 = Rectangle(-50, 10, 20, 10);
+     ^~~~~~~~~
+toh.cpp:27:5: error: ‘Rectangle’ does not name a type
+     Rectangle disk2 = Rectangle(-50, 0, 30, 10);
+     ^~~~~~~~~
+toh.cpp:28:5: error: ‘Rectangle’ does not name a type
+     Rectangle disk3 = Rectangle(-50, -10, 40, 10);
+     ^~~~~~~~~
+toh.cpp: In constructor ‘bridges::TOHData::TOHData()’:
+toh.cpp:35:7: error: ‘sc’ was not declared in this scope
+       sc.addSymbol(&amp;srcPeg);
+       ^~
+toh.cpp:35:7: note: suggested alternative: ‘src’
+       sc.addSymbol(&amp;srcPeg);
+       ^~
+       src
+toh.cpp:35:21: error: ‘srcPeg’ was not declared in this scope
+       sc.addSymbol(&amp;srcPeg);
+                     ^~~~~~
+toh.cpp:35:21: note: suggested alternative: ‘src’
+       sc.addSymbol(&amp;srcPeg);
+                     ^~~~~~
+                     src
+toh.cpp:36:21: error: ‘destPeg’ was not declared in this scope
+       sc.addSymbol(&amp;destPeg);
+                     ^~~~~~~
+toh.cpp:36:21: note: suggested alternative: ‘dest’
+       sc.addSymbol(&amp;destPeg);
+                     ^~~~~~~
+                     dest
+toh.cpp:37:21: error: ‘auxPeg’ was not declared in this scope
+       sc.addSymbol(&amp;auxPeg);
+                     ^~~~~~
+toh.cpp:37:21: note: suggested alternative: ‘aux’
+       sc.addSymbol(&amp;auxPeg);
+                     ^~~~~~
+                     aux
+toh.cpp:39:21: error: ‘disk1’ was not declared in this scope
+       sc.addSymbol(&amp;disk1);
+                     ^~~~~
+toh.cpp:40:21: error: ‘disk2’ was not declared in this scope
+       sc.addSymbol(&amp;disk2);
+                     ^~~~~
+toh.cpp:41:21: error: ‘disk3’ was not declared in this scope
+       sc.addSymbol(&amp;disk3);
+                     ^~~~~
+toh.cpp: In member function ‘void bridges::TOHData::displayCurrent()’:
+toh.cpp:47:11: error: ‘disk1’ was not declared in this scope
+           disk1.setLocation(-50, 10);
+           ^~~~~
+toh.cpp:50:11: error: ‘disk2’ was not declared in this scope
+           disk2.setLocation(-50, 0);
+           ^~~~~
+toh.cpp:53:11: error: ‘disk3’ was not declared in this scope
+           disk3.setLocation(-50, -10);
+           ^~~~~
+toh.cpp:59:11: error: ‘disk1’ was not declared in this scope
+           disk1.setLocation(0, 10);
+           ^~~~~
+toh.cpp:62:11: error: ‘disk2’ was not declared in this scope
+           disk2.setLocation(0, 0);
+           ^~~~~
+toh.cpp:65:11: error: ‘disk3’ was not declared in this scope
+           disk3.setLocation(0, -10);
+           ^~~~~
+toh.cpp:71:11: error: ‘disk1’ was not declared in this scope
+           disk1.setLocation(50, 10);
+           ^~~~~
+toh.cpp:74:11: error: ‘disk2’ was not declared in this scope
+           disk2.setLocation(50, 0);
+           ^~~~~
+toh.cpp:77:11: error: ‘disk3’ was not declared in this scope
+           disk3.setLocation(50, -10);
+           ^~~~~
+toh.cpp:81:32: error: ‘sc’ was not declared in this scope
+       bridges.setDataStructure(sc);
+                                ^~
+toh.cpp:81:32: note: suggested alternative: ‘src’
+       bridges.setDataStructure(sc);
+                                ^~
+                                src
+toh.cpp: At global scope:
+toh.cpp:159:1: error: expected ‘}’ at end of input
+ }
+ ^
+In file included from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
+                 from toh.cpp:2:
+/home/bridges-testing/bridges-cxx-install/include/Symbol.h:16:19: note: to match this ‘{’
+ namespace bridges {
+                   ^
 make: *** [Makefile:26: toh.o] Error 1
 could not compile c++_answer/ for assignment in ../assignmentdb/26-TowersOfHanoi/c++_answer
 </code></pre>
@@ -2948,8 +4147,8 @@ g++ -o SmileyFace SmileyFace.o -g -L /home/bridges-testing/bridges-cxx-install/l
 <h3><span id="cxxlog27-runanswer">Run for Assignment 27</span></h3>
 <pre><code>Guessing ./SmileyFace is the right binary file where main is
 
-[2021-03-30 03:50:50] [connect] Successful connection
-[2021-03-30 03:50:50] [connect] WebSocket Connection 52.2.88.196:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617090650 101
+[2021-03-31 03:50:20] [connect] Successful connection
+[2021-03-31 03:50:20] [connect] WebSocket Connection 52.73.228.252:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617177020 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -3227,9 +4426,9 @@ getting year 2016
 getting year 2017
 getting year 2018
 getting year 2019
-data get: 5.6933 seconds
+data get: 5.67342 seconds
 yearlb: 1999 vertices: 37146 edge: 215190
-graphbuild get: 3.75667 seconds
+graphbuild get: 3.72509 seconds
 Samuel L. Jackson 0.000261638
 James Franco 0.000232458
 Willem Dafoe 0.000211881
@@ -3240,7 +4439,7 @@ Bruce Willis 0.000206027
 Danny Glover 0.000200199
 Nicolas Cage 0.000194383
 Brian Cox 0.000191628
-prtime : 6.92043 seconds
+prtime : 6.64714 seconds
 getting year 1998
 getting year 1999
 getting year 2000
@@ -3262,9 +4461,9 @@ getting year 2015
 getting year 2016
 getting year 2017
 getting year 2018
-data get: 5.63472 seconds
+data get: 5.61539 seconds
 yearlb: 1998 vertices: 37169 edge: 213912
-graphbuild get: 3.67172 seconds
+graphbuild get: 3.6172 seconds
 Samuel L. Jackson 0.000247931
 James Franco 0.000230911
 Eric Roberts 0.000211202
@@ -3275,7 +4474,7 @@ Willem Dafoe 0.000201577
 Brian Cox 0.000200362
 Danny Glover 0.000192113
 Morgan Freeman 0.000190518
-prtime : 6.71549 seconds
+prtime : 6.63031 seconds
 getting year 1997
 getting year 1998
 getting year 1999
@@ -3297,9 +4496,9 @@ getting year 2014
 getting year 2015
 getting year 2016
 getting year 2017
-data get: 5.57538 seconds
+data get: 5.55649 seconds
 yearlb: 1997 vertices: 37181 edge: 211937
-graphbuild get: 3.60894 seconds
+graphbuild get: 3.58094 seconds
 Samuel L. Jackson 0.000251519
 James Franco 0.000224486
 Eric Roberts 0.000212408
@@ -3310,7 +4509,7 @@ Bruce Willis 0.000198552
 Brian Cox 0.000197416
 Peter Stormare 0.00019063
 Morgan Freeman 0.000190617
-prtime : 6.63172 seconds
+prtime : 6.58374 seconds
 getting year 1996
 getting year 1997
 getting year 1998
@@ -3375,8 +4574,8 @@ g++ -o TicTacToe tic_tac_toe.o -g -L /home/bridges-testing/bridges-cxx-install/l
 <h3><span id="cxxlog32-runanswer">Run for Assignment 32</span></h3>
 <pre><code>Guessing ./TicTacToe is the right binary file where main is
 
-[2021-03-30 03:53:55] [connect] Successful connection
-[2021-03-30 03:53:55] [connect] WebSocket Connection 3.225.35.251:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617090835 101
+[2021-03-31 03:53:25] [connect] Successful connection
+[2021-03-31 03:53:25] [connect] WebSocket Connection 34.200.179.238:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617177205 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -3483,8 +4682,8 @@ g++ -o GameTutorial GameTutorial.o -g -L /home/bridges-testing/bridges-cxx-insta
 <h3><span id="cxxlog34-runanswer">Run for Assignment 34</span></h3>
 <pre><code>Guessing ./GameTutorial is the right binary file where main is
 
-[2021-03-30 03:54:09] [connect] Successful connection
-[2021-03-30 03:54:09] [connect] WebSocket Connection 3.225.35.251:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617090849 101
+[2021-03-31 03:53:39] [connect] Successful connection
+[2021-03-31 03:53:39] [connect] WebSocket Connection 34.200.179.238:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617177219 101
 Size:10,10
 Setting framelimit to 10
 Success: Assignment posted to the server. 
@@ -3677,7 +4876,7 @@ Check out your visualization at:
 
 http://bridges-cs.herokuapp.com/assignments/40/bridges_testing
 
-width,height, maxval:21973,-1575590576,0
+width,height, maxval:22076,-699042480,0
 Success: Assignment posted to the server. 
 Check out your visualization at:
 
@@ -3716,8 +4915,8 @@ g++ -o SpaceInvaders SpaceInvaders.o -g -L /home/bridges-testing/bridges-cxx-ins
 <h3><span id="cxxlog41-runanswer">Run for Assignment 41</span></h3>
 <pre><code>Guessing ./SpaceInvaders is the right binary file where main is
 
-[2021-03-30 03:54:45] [connect] Successful connection
-[2021-03-30 03:54:45] [connect] WebSocket Connection 3.213.233.190:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617090885 101
+[2021-03-31 03:54:15] [connect] Successful connection
+[2021-03-31 03:54:15] [connect] WebSocket Connection 34.199.25.232:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617177255 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -4401,7 +5600,7 @@ Check out your visualization at:
 
 http://bridges-cs.herokuapp.com/assignments/143/bridges_testing
 
-elapsed time: 0.213838s
+elapsed time: 0.892283s
 Success: Assignment posted to the server. 
 Check out your visualization at:
 
@@ -4460,8 +5659,8 @@ g++ -o ExplorerRobot ExplorerRobot.o -g -L /home/bridges-testing/bridges-cxx-ins
 <h3><span id="cxxlog45-runanswer">Run for Assignment 45</span></h3>
 <pre><code>Guessing ./ExplorerRobot is the right binary file where main is
 
-[2021-03-30 03:55:11] [connect] Successful connection
-[2021-03-30 03:55:12] [connect] WebSocket Connection 34.199.176.68:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617090911 101
+[2021-03-31 03:54:42] [connect] Successful connection
+[2021-03-31 03:54:42] [connect] WebSocket Connection 3.212.104.174:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1617177282 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
