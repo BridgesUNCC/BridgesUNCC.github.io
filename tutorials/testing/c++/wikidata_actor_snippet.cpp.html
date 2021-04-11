@@ -29,10 +29,15 @@
 	<span class="Comment">// data are available from the early 20th century to now.</span>
 	std::vector&lt;MovieActorWikidata&gt; v = ds.getWikidataActorMovie(<span class="Constant">1955</span>, <span class="Constant">1955</span>);
 
-	<span class="Comment">// print out the first record of the dataset</span>
-	cout &lt;&lt; <span class="Constant">&quot;Actor-Movie Data:&quot;</span> &lt;&lt; endl
-	     &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Movie: &quot;</span> &lt;&lt; v[<span class="Constant">0</span>].getMovieURI() &lt;&lt; <span class="Constant">&quot; </span><span class="Special">\&quot;</span><span class="Constant">&quot;</span>&lt;&lt;v[<span class="Constant">0</span>].getMovieName()&lt;&lt; <span class="Constant">&quot;</span><span class="Special">\&quot;\n</span><span class="Constant">&quot;</span>
-	     &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Actor: &quot;</span> &lt;&lt; v[<span class="Constant">0</span>].getActorURI() &lt;&lt; <span class="Constant">&quot; </span><span class="Special">\&quot;</span><span class="Constant">&quot;</span>&lt;&lt;v[<span class="Constant">0</span>].getActorName() &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\&quot;\n</span><span class="Constant">&quot;</span>;
+	<span class="Comment">// print the count of the records in 1955</span>
+	cout &lt;&lt; <span class="Constant">&quot;Data Records in 1955: &quot;</span> &lt;&lt; v.size() &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+
+	<span class="Comment">// print out the first 3 records of the dataset</span>
+
+	<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; <span class="Constant">3</span>; k++)
+		cout &lt;&lt; <span class="Constant">&quot;Actor-Movie Data:&quot;</span> &lt;&lt; endl
+	     &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Movie: &quot;</span> &lt;&lt; v[k].getMovieURI() &lt;&lt; <span class="Constant">&quot; </span><span class="Special">\&quot;</span><span class="Constant">&quot;</span>&lt;&lt;v[k].getMovieName()&lt;&lt; <span class="Constant">&quot;</span><span class="Special">\&quot;\n</span><span class="Constant">&quot;</span>
+	     &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Actor: &quot;</span> &lt;&lt; v[k].getActorURI() &lt;&lt; <span class="Constant">&quot; </span><span class="Special">\&quot;</span><span class="Constant">&quot;</span>&lt;&lt;v[k].getActorName() &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\&quot;\n</span><span class="Constant">&quot;</span>;
 
 	<span class="Statement">return</span> <span class="Constant">0</span>;
 }

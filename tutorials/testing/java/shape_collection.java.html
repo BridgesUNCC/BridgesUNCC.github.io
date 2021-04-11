@@ -70,17 +70,17 @@
 
 		Label l = <span class="Statement">new</span> Label();
 		l.setLocation(<span class="Constant">0.0f</span>, <span class="Constant">25.0f</span>);
-		l.setFontSize(<span class="Constant">12</span>);
+		l.setFontSize(<span class="Constant">12.0f</span>);
 		l.setStrokeWidth(<span class="Constant">1.0f</span>);
 		l.setLabel(<span class="Constant">&quot;test label&quot;</span>);
 		l.setStrokeColor(<span class="Constant">&quot;purple&quot;</span>);
+		l.setRotationAngle(<span class="Constant">90.0f</span>);
 		sc.addSymbol(l);
 
 		<span class="Comment">// set visualizer type</span>
 		bridges.setDataStructure(sc);
 
 		<span class="Comment">// visualize the JSON and Collection</span>
-		<span class="Comment">//	bridges.setVisualizeJSONFlag(true);</span>
 		bridges.visualize();
 	}
 }

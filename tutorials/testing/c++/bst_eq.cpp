@@ -12,7 +12,7 @@ using namespace bridges::dataset;
 BSTElement<float, EarthquakeUSGS> *insert (BSTElement<float, EarthquakeUSGS> *rt,
 	BSTElement<float, EarthquakeUSGS> *new_el);
 
-int max_quakes = 25;
+int max_quakes = 1500;
 
 int main(int argc, char **argv) {
 	// create Bridges object
@@ -33,13 +33,28 @@ int main(int argc, char **argv) {
 	// insert quake records into the tree
 	for (int k = 0; k < max_quakes; k++) {
 		EarthquakeUSGS eq = eq_list[k];
-		BSTElement<float, EarthquakeUSGS>
-		*bst_node = new BSTElement<float, EarthquakeUSGS>(eq.getMagnitude(), eq);
-		bst_node->setLabel(eq.getTitle() + "\nLat/Long: ( " +
-			to_string(eq.getLatit()) + "," + to_string(eq.getLongit()) + " )\n" +
-			eq.getDateStr());
-		root = insert (root, bst_node);
-		root->setColor("red");
+		if (eq.getMagnitude() > 3.) {
+			BSTElement<float, EarthquakeUSGS>
+				*bst_node = new BSTElement<float, EarthquakeUSGS>(eq.getMagnitude(), eq);
+			if (eq.getMagnitude() > 3.0 && eq.getMagnitude() < 4.0)  {
+				bst_node->setColor("green");
+				bst_node->setSize (20.0);
+			}
+			else if (eq.getMagnitude() > 4.0 && eq.getMagnitude() < 5.0) {
+				bst_node->setColor("orange");
+				bst_node->setSize (30.0);
+			}
+			else { 
+				bst_node->setColor("red");
+				bst_node->setSize (40.0);
+			}
+					
+			bst_node->setLabel(eq.getTitle() + "\nLat/Long: ( " +
+				to_string(eq.getLatit()) + "," + to_string(eq.getLongit()) + " )\n" +
+				eq.getDateStr());
+			root = insert (root, bst_node);
+			root->setColor("red");
+		}
 	}
 
 	// visualize the binary search tree

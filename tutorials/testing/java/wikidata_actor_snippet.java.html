@@ -1,0 +1,41 @@
+<pre id='vimCodeElement'>
+<span class="Comment">/**</span>
+<span class="Comment"> *</span><span class="Special"> Created by Lucas Estrella on 1/31/2017.</span>
+<span class="Comment"> * lestrell@uncc.edu</span>
+<span class="Comment"> */</span>
+<span class="PreProc">import</span> java.util.ArrayList;
+
+<span class="PreProc">import</span> bridges.connect.Bridges;
+<span class="PreProc">import</span> bridges.connect.DataSource;
+<span class="PreProc">import</span> bridges.data_src_dependent.ActorMovieWikidata;
+
+<span class="Comment">// This program fragment illustrates how to access and read the Wikidata actor/movie data</span>
+
+<span class="Type">public</span> <span class="Type">class</span> wikidata_actor_snippet {
+
+	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) <span class="Type">throws</span> Exception {
+
+		<span class="Comment">// note: you must fill in with your Bridges credentials</span>
+		Bridges bridges = <span class="Statement">new</span> Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+			<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+		<span class="Comment">// set title</span>
+		bridges.setTitle(<span class="Constant">&quot;Accessing Wikidata Movie/Actor Data&quot;</span>);
+
+		<span class="Comment">// create data source object</span>
+        DataSource ds = bridges.getDataSource();
+
+		<span class="Comment">// Get a List of Wikidata actor/movie  records from Bridges</span>
+		<span class="Comment">// get the actor movie Wikidata data through the BRIDGES API for 1955.</span>
+		<span class="Comment">// data are available from the early 20th century to now.</span>
+		ArrayList&lt;ActorMovieWikidata&gt; list = ds.getWikidataActorMovie(<span class="Constant">1955</span>, <span class="Constant">1955</span>);
+
+		System.out.println(<span class="Constant">&quot;Data Records in 1955: &quot;</span> + list.size() + <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>);
+
+		<span class="Comment">// print out the first 3 records of the dataset</span>
+		<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; <span class="Constant">3</span>; k++)
+			System.out.println(<span class="Constant">&quot;Actor-Movie Data:</span><span class="Special">\n</span><span class="Constant">&quot;</span> +
+				<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Movie: &quot;</span> + list.get(k).getMovieURI()  + <span class="Constant">&quot; </span><span class="Special">\&quot;</span><span class="Constant">&quot;</span>  + list.get(k).getMovieName() + <span class="Constant">&quot;</span><span class="Special">\&quot;\n</span><span class="Constant">&quot;</span> +
+	     		<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Actor: &quot;</span> +  list.get(k).getActorURI() + <span class="Constant">&quot; </span><span class="Special">\&quot;</span><span class="Constant">&quot;</span> + list.get(k).getActorName() + <span class="Constant">&quot;</span><span class="Special">\&quot;\n</span><span class="Constant">&quot;</span>);
+	}
+}
+</pre>

@@ -22,8 +22,8 @@ int main(int argc, char **argv) {
 	DataSource ds;
 	OSMData osm_data;
 	try {
-	  osm_data = ds.getOSMData(35.28, -80.75, 35.32, -80.71);
-	  //osm_data = ds.getOSMData("Charlotte, North Carolina");
+	   osm_data = ds.getOSMData(35.28, -80.75, 35.32, -80.71);
+	  // osm_data = ds.getOSMData("Charlotte, North Carolina");
 	}
 	catch (std::string s) {
 		std::cerr << "Exception: " << s << "\n";

@@ -1,0 +1,62 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges.symbol_collection <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.circle <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.polygon <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.rectangle <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.label <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.color <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+    args = sys.argv[<span class="Constant">1</span>:]
+
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
+    bridges.connector.set_server(<span class="Constant">&quot;</span><span class="Constant">clone</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># title, description</span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">Label Test</span><span class="Constant">&quot;</span>)
+
+    sc = SymbolCollection()
+
+    l = Label()
+    l.set_location(-<span class="Constant">20</span>, <span class="Constant">50</span>)
+    l.font_size =  <span class="Constant">8.</span>
+    l.stroke_width = <span class="Constant">0.1</span>
+    l.label = <span class="Constant">&quot;</span><span class="Constant">abcdljjjlllmmmm</span><span class="Constant">&quot;</span>
+    l.stroke_color = <span class="Constant">&quot;</span><span class="Constant">purple</span><span class="Constant">&quot;</span>
+    l.rotation_angle = -<span class="Constant">45.</span>
+    sc.add_symbol(l)
+
+    bbox = l.get_bounding_box()
+
+    <span class="Comment"># draw a rectangle</span>
+    r1 = Rectangle(locx=bbox[<span class="Constant">0</span>], locy=bbox[<span class="Constant">1</span>], w = bbox[<span class="Constant">2</span>]-bbox[<span class="Constant">0</span>], h = bbox[<span class="Constant">3</span>]-bbox[<span class="Constant">1</span>])
+    r1.fill_color = <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>
+    r1.opacity = <span class="Constant">0.2</span>
+    sc.add_symbol(r1)
+
+
+    l2 = Label()
+    l2.set_location(<span class="Constant">20</span>, <span class="Constant">50</span>)
+    l2.font_size =  <span class="Constant">18.</span>
+    l2.label = <span class="Constant">&quot;</span><span class="Constant">ABCDLJJJIIILLLMMMM</span><span class="Constant">&quot;</span>
+    l2.stroke_width = <span class="Constant">0.1</span>
+    l2.stroke_color = <span class="Constant">&quot;</span><span class="Constant">purple</span><span class="Constant">&quot;</span>
+    l2.rotation_angle = <span class="Constant">25.</span>
+    sc.add_symbol(l2)
+    bbox = l2.get_bounding_box()
+
+    r2 = Rectangle(locx=bbox[<span class="Constant">0</span>], locy=bbox[<span class="Constant">1</span>], w = bbox[<span class="Constant">2</span>]-bbox[<span class="Constant">0</span>], h = bbox[<span class="Constant">3</span>]-bbox[<span class="Constant">1</span>])
+    r2.fill_color = <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>
+    r2.opacity = <span class="Constant">0.2</span>
+    sc.add_symbol(r2)
+
+    bridges.set_data_structure(sc)
+    bridges.visualize()
+
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
+    main()
+</pre>

@@ -25,9 +25,8 @@ int main(int argc, char*argv[]) {
 	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID",
 		"YOUR_API_KEY");
 
-    bridges.setTitle("Audio Mixing");
-    bridges.setDescription("sine");
-
+	bridges.setTitle("Audio Signals: Play and Display Using BRIDGES");
+	bridges.setDescription("This example shows support for displaying and playing audio signals using BRIDGES; the bottom view shows the fraction of signal between the two red cursors (initially at the far ends of the signal. Move them around to zoom into the signal");
 
     AudioClip clip (44100*.25, 1, 32, 44100);
 

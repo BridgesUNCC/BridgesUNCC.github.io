@@ -75,10 +75,13 @@
 	l.setStrokeWidth(<span class="Constant">1.0f</span>);
 	l.setLabel(<span class="Constant">&quot;test label&quot;</span>);
 	l.setStrokeColor(<span class="Constant">&quot;purple&quot;</span>);
+	l.setRotationAngle(<span class="Constant">90.</span>);
 	sc.addSymbol(&amp;l);
 
 	<span class="Comment">// set visualizer type</span>
 	bridges.setDataStructure(sc);
+
+	bridges.setVisualizeJSONFlag(<span class="Constant">true</span>);
 
 	<span class="Comment">// visualize the JSON and Collection</span>
 	bridges.visualize();

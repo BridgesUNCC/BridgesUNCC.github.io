@@ -85,7 +85,7 @@ public class face_shp_coll {
 		// add a title to the figure
 		Label l = new Label();
 		l.setLocation(-50.0f, 100.0f);
-		l.setFontSize(16);
+		l.setFontSize(16.0f);
 		l.setStrokeWidth(1.0f);
 		l.setLabel("Its a Dorky Looking Face!");
 		l.setStrokeColor("purple");

@@ -1,0 +1,28 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges.color_grid <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.color <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.data_src_dependent <span class="PreProc">import</span> data_source
+<span class="PreProc">import</span> sys
+<span class="PreProc">import</span> os
+
+<span class="Comment"># illustrates retrieving actor-movie data from WikiData</span>
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
+
+    bridges.set_title (<span class="Constant">&quot;</span><span class="Constant">Accessing Wikidata Movie/Actor Data</span><span class="Constant">&quot;</span>)
+
+    <span class="Identifier">list</span>  = data_source.get_wiki_data_actor_movie(<span class="Constant">1955</span>, <span class="Constant">1955</span>)
+    <span class="Identifier">print</span> (<span class="Constant">&quot;</span><span class="Constant">Data Records in 1955: </span><span class="Constant">&quot;</span> + <span class="Identifier">str</span>(<span class="Identifier">len</span>(<span class="Identifier">list</span>)) + <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>)
+    <span class="Identifier">print</span> (<span class="Constant">&quot;</span><span class="Constant">First 3 records:</span><span class="Special">\n</span><span class="Constant">&quot;</span>)
+    <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Constant">3</span>):
+        <span class="Identifier">print</span>(<span class="Identifier">str</span>(i) + <span class="Constant">&quot;</span><span class="Constant">)Actor-Movie Data:</span><span class="Special">\n</span><span class="Constant">&quot;</span> +
+             <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Movie: </span><span class="Constant">&quot;</span> + <span class="Identifier">list</span>[i].movie_uri + <span class="Constant">&quot;</span><span class="Constant">, </span><span class="Constant">&quot;</span> + <span class="Identifier">list</span>[i].movie_name + <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span> +
+             <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Actor: </span><span class="Constant">&quot;</span> + <span class="Identifier">list</span>[i].actor_uri + <span class="Constant">&quot;</span><span class="Constant">, </span><span class="Constant">&quot;</span> + <span class="Identifier">list</span>[i].actor_name + <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>)
+
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
+    main()
+</pre>

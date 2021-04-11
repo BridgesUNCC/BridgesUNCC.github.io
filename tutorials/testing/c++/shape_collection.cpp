@@ -74,10 +74,13 @@ int main(int argc, char **argv) {
 	l.setStrokeWidth(1.0f);
 	l.setLabel("test label");
 	l.setStrokeColor("purple");
+	l.setRotationAngle(90.);
 	sc.addSymbol(&l);
 
 	// set visualizer type
 	bridges.setDataStructure(sc);
+
+	bridges.setVisualizeJSONFlag(true);
 
 	// visualize the JSON and Collection
 	bridges.visualize();

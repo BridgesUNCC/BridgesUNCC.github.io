@@ -69,17 +69,17 @@ public class shape_collection {
 
 		Label l = new Label();
 		l.setLocation(0.0f, 25.0f);
-		l.setFontSize(12);
+		l.setFontSize(12.0f);
 		l.setStrokeWidth(1.0f);
 		l.setLabel("test label");
 		l.setStrokeColor("purple");
+		l.setRotationAngle(90.0f);
 		sc.addSymbol(l);
 
 		// set visualizer type
 		bridges.setDataStructure(sc);
 
 		// visualize the JSON and Collection
-		//	bridges.setVisualizeJSONFlag(true);
 		bridges.visualize();
 	}
 }

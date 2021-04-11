@@ -6,7 +6,7 @@ import bridges.connect.DataSource;
 import bridges.data_src_dependent.Amenities;
 import bridges.data_src_dependent.AmenityData;
 
-public class osm_amenity {
+public class osm_amenity_snippet {
 	public static void main(String[] args) throws Exception {
 
 		// initialize Bridges

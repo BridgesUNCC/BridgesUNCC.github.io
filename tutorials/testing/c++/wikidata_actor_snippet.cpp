@@ -28,10 +28,15 @@ int main(int argc, char **argv) {
 	// data are available from the early 20th century to now.
 	std::vector<MovieActorWikidata> v = ds.getWikidataActorMovie(1955, 1955);
 
-	// print out the first record of the dataset
-	cout << "Actor-Movie Data:" << endl
-	     << "\tMovie: " << v[0].getMovieURI() << " \""<<v[0].getMovieName()<< "\"\n"
-	     << "\tActor: " << v[0].getActorURI() << " \""<<v[0].getActorName() << "\"\n";
+	// print the count of the records in 1955
+	cout << "Data Records in 1955: " << v.size() << "\n";
+	
+	// print out the first 3 records of the dataset
+	
+	for (int k = 0; k < 3; k++)
+		cout << "Actor-Movie Data:" << endl
+	     << "\tMovie: " << v[k].getMovieURI() << " \""<<v[k].getMovieName()<< "\"\n"
+	     << "\tActor: " << v[k].getActorURI() << " \""<<v[k].getActorName() << "\"\n";
 
 	return 0;
 }

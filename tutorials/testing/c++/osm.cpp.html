@@ -23,8 +23,8 @@
 	DataSource ds;
 	OSMData osm_data;
 	<span class="Statement">try</span> {
-	  osm_data = ds.getOSMData(<span class="Constant">35.28</span>, -<span class="Constant">80.75</span>, <span class="Constant">35.32</span>, -<span class="Constant">80.71</span>);
-	  <span class="Comment">//osm_data = ds.getOSMData(&quot;Charlotte, North Carolina&quot;);</span>
+	   osm_data = ds.getOSMData(<span class="Constant">35.28</span>, -<span class="Constant">80.75</span>, <span class="Constant">35.32</span>, -<span class="Constant">80.71</span>);
+	  <span class="Comment">// osm_data = ds.getOSMData(&quot;Charlotte, North Carolina&quot;);</span>
 	}
 	<span class="Statement">catch</span> (std::string s) {
 		std::cerr &lt;&lt; <span class="Constant">&quot;Exception: &quot;</span> &lt;&lt; s &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
