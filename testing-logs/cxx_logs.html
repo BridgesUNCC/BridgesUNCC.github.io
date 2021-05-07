@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for C++</h1>
-	<p>Running at Thu 06 May 2021 03:45:06 AM EDT</p>
+	<p>Running at Fri 07 May 2021 03:45:19 AM EDT</p>
   <div id="summary0" class="success">
     <h2><a href="cxx_logs.html#cxxlog0">Assignment 0</a> </h2>
     <p>
@@ -142,13 +142,13 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summary13" class="success">
+  <div id="summary13" class="failure">
     <h2><a href="cxx_logs.html#cxxlog13">Assignment 13</a> </h2>
     <p>
       <ul>
         <li> Build : <a href="cxx_logs.html#cxxlog13-buildscaffold">success</a></li>
-        <li> Build : <a href="cxx_logs.html#cxxlog13-buildanswer">success</a></li>
-        <li> Run : <a href="cxx_logs.html#cxxlog13-runanswer">success</a></li>
+        <li> Build : <a href="cxx_logs.html#cxxlog13-buildanswer">error</a></li>
+        <li> Run : <a href="cxx_logs.html#cxxlog13-runanswer">error</a></li>
       </ul>
     </p>
   </div>
@@ -1296,8 +1296,8 @@ g++ -o 2048 2048.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ -pthread
 <h3><span id="cxxlog11-runanswer">Run for Assignment 11</span></h3>
 <pre><code>Guessing ./2048 is the right binary file where main is
 
-[2021-05-06 03:48:05] [connect] Successful connection
-[2021-05-06 03:48:05] [connect] WebSocket Connection 52.1.50.245:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620287285 101
+[2021-05-07 03:48:14] [connect] Successful connection
+[2021-05-07 03:48:14] [connect] WebSocket Connection 52.0.146.19:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620373694 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -1338,8 +1338,8 @@ g++ -o AStarMaze pathfinder.o -g -L /home/bridges-testing/bridges-cxx-install/li
 <h3><span id="cxxlog12-runanswer">Run for Assignment 12</span></h3>
 <pre><code>Guessing ./AStarMaze is the right binary file where main is
 
-[2021-05-06 03:48:15] [connect] Successful connection
-[2021-05-06 03:48:15] [connect] WebSocket Connection 52.1.50.245:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620287295 101
+[2021-05-07 03:48:25] [connect] Successful connection
+[2021-05-07 03:48:25] [connect] WebSocket Connection 52.0.146.19:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620373705 101
 (0, 0)
 (1, 0)
 (2, 0)
@@ -2326,7 +2326,7 @@ g++ -g  -std=c++14 -I /home/bridges-testing/bridges-cxx-install/include/ -c runn
 g++ -o InfiniteRunner runner.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ -pthread -lcurl -l bridges 
 </code></pre>
 </div>
-<div class="success">
+<div class="failure">
 <h3><span id="cxxlog13-buildanswer">Build for Assignment 13</span></h3>
 <pre><code>Compiling c++_answer/ for assignment in ../assignmentdb/13-InfiniteRunner/c++_answer
 rm runner.o
@@ -2334,22 +2334,18 @@ rm InfiniteRunner
 rm: cannot remove 'InfiniteRunner': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
 g++ -g  -std=c++14 -I /home/bridges-testing/bridges-cxx-install/include/ -c runner.cpp -o runner.o
-g++ -o InfiniteRunner runner.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ -pthread -lcurl -l bridges 
+runner.cpp: In member function ‘void Runner::printScore()’:
+runner.cpp:182:29: error: ‘numberList’ was not declared in this scope
+    drawSymbol(0, size[0]-1, numberList[score%10], NamedColor::green);
+                             ^~~~~~~~~~
+make: *** [Makefile:26: runner.o] Error 1
+could not compile c++_answer/ for assignment in ../assignmentdb/13-InfiniteRunner/c++_answer
 </code></pre>
 </div>
-<div class="success">
+<div class="failure">
 <h3><span id="cxxlog13-runanswer">Run for Assignment 13</span></h3>
-<pre><code>Guessing ./InfiniteRunner is the right binary file where main is
-
-[2021-05-06 03:48:25] [connect] Successful connection
-[2021-05-06 03:48:25] [connect] WebSocket Connection 52.23.15.172:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620287305 101
-Setting framelimit to 10
-Success: Assignment posted to the server. 
-Check out your visualization at:
-
-http://bridges-games.herokuapp.com/assignments/113/bridges_testing
-
-sio closed
+<pre><code>can't guess a binary file to run
+could not run c++_answer for assignment in ../assignmentdb/13-InfiniteRunner/c++_answer
 </code></pre>
 </div>
     
@@ -2397,8 +2393,8 @@ g++ -o SpreadingFire SpreadingFire.o -g -L /home/bridges-testing/bridges-cxx-ins
 <h3><span id="cxxlog14-runanswer">Run for Assignment 14</span></h3>
 <pre><code>Guessing ./SpreadingFire is the right binary file where main is
 
-[2021-05-06 03:48:32] [connect] Successful connection
-[2021-05-06 03:48:32] [connect] WebSocket Connection 52.2.212.80:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620287312 101
+[2021-05-07 03:48:39] [connect] Successful connection
+[2021-05-07 03:48:39] [connect] WebSocket Connection 52.73.217.224:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620373719 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -2439,8 +2435,8 @@ g++ -o FallingSand FallingSand.o -g -L /home/bridges-testing/bridges-cxx-install
 <h3><span id="cxxlog15-runanswer">Run for Assignment 15</span></h3>
 <pre><code>Guessing ./FallingSand is the right binary file where main is
 
-[2021-05-06 03:48:42] [connect] Successful connection
-[2021-05-06 03:48:42] [connect] WebSocket Connection 3.225.122.170:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620287322 101
+[2021-05-07 03:48:48] [connect] Successful connection
+[2021-05-07 03:48:48] [connect] WebSocket Connection 52.3.54.153:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620373728 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -2521,8 +2517,8 @@ g++ -o ControlsTutorial Controls_Tutorial.o -g -L /home/bridges-testing/bridges-
 <h3><span id="cxxlog17-runanswer">Run for Assignment 17</span></h3>
 <pre><code>Guessing ./ControlsTutorial is the right binary file where main is
 
-[2021-05-06 03:49:04] [connect] Successful connection
-[2021-05-06 03:49:04] [connect] WebSocket Connection 52.3.28.124:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620287344 101
+[2021-05-07 03:49:10] [connect] Successful connection
+[2021-05-07 03:49:10] [connect] WebSocket Connection 35.170.181.200:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620373750 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -2563,8 +2559,8 @@ g++ -o ControlsTutorial2 Controls_Tutorial2.o -g -L /home/bridges-testing/bridge
 <h3><span id="cxxlog18-runanswer">Run for Assignment 18</span></h3>
 <pre><code>Guessing ./ControlsTutorial2 is the right binary file where main is
 
-[2021-05-06 03:49:14] [connect] Successful connection
-[2021-05-06 03:49:14] [connect] WebSocket Connection 52.3.28.124:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620287354 101
+[2021-05-07 03:49:19] [connect] Successful connection
+[2021-05-07 03:49:19] [connect] WebSocket Connection 34.199.176.103:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620373759 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -2609,8 +2605,8 @@ g++ -o BugStomp BugStomp.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ 
 <h3><span id="cxxlog19-runanswer">Run for Assignment 19</span></h3>
 <pre><code>Guessing ./BugStomp is the right binary file where main is
 
-[2021-05-06 03:49:23] [connect] Successful connection
-[2021-05-06 03:49:23] [connect] WebSocket Connection 3.218.119.28:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620287363 101
+[2021-05-07 03:49:29] [connect] Successful connection
+[2021-05-07 03:49:29] [connect] WebSocket Connection 34.199.176.103:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620373769 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -2651,8 +2647,8 @@ g++ -o Minesweeper minesweeper.o -g -L /home/bridges-testing/bridges-cxx-install
 <h3><span id="cxxlog20-runanswer">Run for Assignment 20</span></h3>
 <pre><code>Guessing ./Minesweeper is the right binary file where main is
 
-[2021-05-06 03:49:33] [connect] Successful connection
-[2021-05-06 03:49:33] [connect] WebSocket Connection 34.202.64.39:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620287373 101
+[2021-05-07 03:49:38] [connect] Successful connection
+[2021-05-07 03:49:38] [connect] WebSocket Connection 3.219.185.113:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620373778 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -2693,8 +2689,8 @@ g++ -o RaceCar RaceCar.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ -p
 <h3><span id="cxxlog21-runanswer">Run for Assignment 21</span></h3>
 <pre><code>Guessing ./RaceCar is the right binary file where main is
 
-[2021-05-06 03:49:43] [connect] Successful connection
-[2021-05-06 03:49:43] [connect] WebSocket Connection 52.72.98.175:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620287382 101
+[2021-05-07 03:49:48] [connect] Successful connection
+[2021-05-07 03:49:48] [connect] WebSocket Connection 54.196.59.195:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620373788 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -2735,8 +2731,8 @@ g++ -o Snake Snake.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ -pthre
 <h3><span id="cxxlog22-runanswer">Run for Assignment 22</span></h3>
 <pre><code>Guessing ./Snake is the right binary file where main is
 
-[2021-05-06 03:49:52] [connect] Successful connection
-[2021-05-06 03:49:52] [connect] WebSocket Connection 52.3.28.124:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620287392 101
+[2021-05-07 03:49:57] [connect] Successful connection
+[2021-05-07 03:49:57] [connect] WebSocket Connection 3.89.53.154:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620373797 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -2948,8 +2944,8 @@ g++ -o SmileyFace SmileyFace.o -g -L /home/bridges-testing/bridges-cxx-install/l
 <h3><span id="cxxlog27-runanswer">Run for Assignment 27</span></h3>
 <pre><code>Guessing ./SmileyFace is the right binary file where main is
 
-[2021-05-06 03:50:40] [connect] Successful connection
-[2021-05-06 03:50:40] [connect] WebSocket Connection 54.167.125.52:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620287440 101
+[2021-05-07 03:50:45] [connect] Successful connection
+[2021-05-07 03:50:45] [connect] WebSocket Connection 34.237.129.228:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620373845 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -3177,6 +3173,7 @@ getting year 2017
 getting year 2018
 getting year 2019
 *getting year 1993
+getting year 1994
 Alarm clock
 could not run c++_answer for assignment in ../assignmentdb/30-TemporalBaconNumber/c++_answer
 </code></pre>
@@ -3227,9 +3224,9 @@ getting year 2016
 getting year 2017
 getting year 2018
 getting year 2019
-data get: 5.69628 seconds
+data get: 5.67329 seconds
 yearlb: 1999 vertices: 37146 edge: 215190
-graphbuild get: 3.86688 seconds
+graphbuild get: 3.71141 seconds
 Samuel L. Jackson 0.000261638
 James Franco 0.000232458
 Willem Dafoe 0.000211881
@@ -3240,7 +3237,7 @@ Bruce Willis 0.000206027
 Danny Glover 0.000200199
 Nicolas Cage 0.000194383
 Brian Cox 0.000191628
-prtime : 7.4401 seconds
+prtime : 6.76012 seconds
 getting year 1998
 getting year 1999
 getting year 2000
@@ -3262,9 +3259,9 @@ getting year 2015
 getting year 2016
 getting year 2017
 getting year 2018
-data get: 5.63667 seconds
+data get: 5.63286 seconds
 yearlb: 1998 vertices: 37169 edge: 213912
-graphbuild get: 3.77712 seconds
+graphbuild get: 3.69886 seconds
 Samuel L. Jackson 0.000247931
 James Franco 0.000230911
 Eric Roberts 0.000211202
@@ -3275,7 +3272,7 @@ Willem Dafoe 0.000201577
 Brian Cox 0.000200362
 Danny Glover 0.000192113
 Morgan Freeman 0.000190518
-prtime : 7.33596 seconds
+prtime : 6.61446 seconds
 getting year 1997
 getting year 1998
 getting year 1999
@@ -3297,9 +3294,9 @@ getting year 2014
 getting year 2015
 getting year 2016
 getting year 2017
-data get: 5.58227 seconds
+data get: 5.55548 seconds
 yearlb: 1997 vertices: 37181 edge: 211937
-graphbuild get: 3.73235 seconds
+graphbuild get: 3.56844 seconds
 Samuel L. Jackson 0.000251519
 James Franco 0.000224486
 Eric Roberts 0.000212408
@@ -3310,7 +3307,7 @@ Bruce Willis 0.000198552
 Brian Cox 0.000197416
 Peter Stormare 0.00019063
 Morgan Freeman 0.000190617
-prtime : 7.10811 seconds
+prtime : 6.54777 seconds
 getting year 1996
 getting year 1997
 getting year 1998
@@ -3375,8 +3372,8 @@ g++ -o TicTacToe tic_tac_toe.o -g -L /home/bridges-testing/bridges-cxx-install/l
 <h3><span id="cxxlog32-runanswer">Run for Assignment 32</span></h3>
 <pre><code>Guessing ./TicTacToe is the right binary file where main is
 
-[2021-05-06 03:53:46] [connect] Successful connection
-[2021-05-06 03:53:46] [connect] WebSocket Connection 54.196.59.195:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620287626 101
+[2021-05-07 03:53:50] [connect] Successful connection
+[2021-05-07 03:53:50] [connect] WebSocket Connection 54.82.188.107:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620374030 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -3483,8 +3480,8 @@ g++ -o GameTutorial GameTutorial.o -g -L /home/bridges-testing/bridges-cxx-insta
 <h3><span id="cxxlog34-runanswer">Run for Assignment 34</span></h3>
 <pre><code>Guessing ./GameTutorial is the right binary file where main is
 
-[2021-05-06 03:54:01] [connect] Successful connection
-[2021-05-06 03:54:01] [connect] WebSocket Connection 54.196.59.195:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620287641 101
+[2021-05-07 03:54:04] [connect] Successful connection
+[2021-05-07 03:54:04] [connect] WebSocket Connection 54.82.188.107:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620374044 101
 Size:10,10
 Setting framelimit to 10
 Success: Assignment posted to the server. 
@@ -3677,7 +3674,7 @@ Check out your visualization at:
 
 http://bridges-cs.herokuapp.com/assignments/40/bridges_testing
 
-width,height, maxval:22026,789103952,0
+width,height, maxval:22011,904832336,0
 Success: Assignment posted to the server. 
 Check out your visualization at:
 
@@ -3716,8 +3713,8 @@ g++ -o SpaceInvaders SpaceInvaders.o -g -L /home/bridges-testing/bridges-cxx-ins
 <h3><span id="cxxlog41-runanswer">Run for Assignment 41</span></h3>
 <pre><code>Guessing ./SpaceInvaders is the right binary file where main is
 
-[2021-05-06 03:54:37] [connect] Successful connection
-[2021-05-06 03:54:37] [connect] WebSocket Connection 3.222.7.196:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620287677 101
+[2021-05-07 03:54:40] [connect] Successful connection
+[2021-05-07 03:54:40] [connect] WebSocket Connection 52.5.6.26:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620374080 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
@@ -4401,7 +4398,7 @@ Check out your visualization at:
 
 http://bridges-cs.herokuapp.com/assignments/143/bridges_testing
 
-elapsed time: 0.14757s
+elapsed time: 0.144704s
 Success: Assignment posted to the server. 
 Check out your visualization at:
 
@@ -4460,8 +4457,8 @@ g++ -o ExplorerRobot ExplorerRobot.o -g -L /home/bridges-testing/bridges-cxx-ins
 <h3><span id="cxxlog45-runanswer">Run for Assignment 45</span></h3>
 <pre><code>Guessing ./ExplorerRobot is the right binary file where main is
 
-[2021-05-06 03:55:04] [connect] Successful connection
-[2021-05-06 03:55:04] [connect] WebSocket Connection 52.204.192.110:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620287704 101
+[2021-05-07 03:55:06] [connect] Successful connection
+[2021-05-07 03:55:06] [connect] WebSocket Connection 52.200.31.227:80 v-2 &quot;WebSocket++/0.8.1&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1620374106 101
 Setting framelimit to 10
 Success: Assignment posted to the server. 
 Check out your visualization at:
