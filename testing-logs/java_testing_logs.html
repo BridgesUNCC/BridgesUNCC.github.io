@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Java</h1>
-	<p>Running at Tue 11 May 2021 03:36:52 AM EDT</p>
+	<p>Running at Wed 12 May 2021 03:36:57 AM EDT</p>
   <div id="summaryarray1d.java" class="success">
     <h2><a href="java_testing_logs.html#javalogarray1d.java">Test array1d.java</a> </h2>
     <p>
@@ -363,12 +363,12 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summarysong_lyrics_snippet.java" class="success">
+  <div id="summarysong_lyrics_snippet.java" class="failure">
     <h2><a href="java_testing_logs.html#javalogsong_lyrics_snippet.java">Test song_lyrics_snippet.java</a> </h2>
     <p>
       <ul>
         <li> Build : <a href="java_testing_logs.html#javalogsong_lyrics_snippet.java-buildtest">success</a></li>
-        <li> Run : <a href="java_testing_logs.html#javalogsong_lyrics_snippet.java-runtest">success</a></li>
+        <li> Run : <a href="java_testing_logs.html#javalogsong_lyrics_snippet.java-runtest">error</a></li>
       </ul>
     </p>
   </div>
@@ -975,10 +975,10 @@ first 10 elevations:
 <div class="success">
 <h3><span id="javalogeq_snippet.java-runtest">Run for test eq_snippet.java</span></h3>
 <pre><code>Earthquake 0:
-	Magnitude:1.83000004
-	Date:May 11 2021  03:24:23.540 EDT
-	Location: 10 km ENE of Pāhala, Hawaii
-	Lat/Long:19.2348327636719,-155.380828857422
+	Magnitude:2.65
+	Date:May 12 2021  03:11:39.780 EDT
+	Location: 12km NW of Petrolia, CA
+	Lat/Long:40.3901672,-124.3926697
 </code></pre>
 </div>
     
@@ -1036,10 +1036,10 @@ could not run test game_size_test.java
 </div>
 <div class="success">
 <h3><span id="javaloggame_snippet.java-runtest">Run for test game_snippet.java</span></h3>
-<pre><code>Disney Infinity 
-PC
-8.7
-[Action]
+<pre><code>Pac-Man World 3
+Nintendo DS
+4.0
+[Platformer]
 </code></pre>
 </div>
     
@@ -1176,8 +1176,8 @@ http://bridges-cs.herokuapp.com/assignments/2022/bridges_testing
 </div>
 <div class="success">
 <h3><span id="javalogimdb_snippet.java-runtest">Run for test imdb_snippet.java</span></h3>
-<pre><code>Kevin_Bacon_(I)
-Sleepers_(1996)
+<pre><code>Bill_Murray_(I)
+Getting_G'd_Up_(2000)
 </code></pre>
 </div>
     
@@ -1437,11 +1437,11 @@ http://bridges-clone.herokuapp.com/assignments/2034/bridges_testing
 </div>
 <div class="success">
 <h3><span id="javalogshakespeare_snippet.java-runtest">Run for test shakespeare_snippet.java</span></h3>
-<pre><code>Sonnet 153
+<pre><code>Sonnet 154
 poem
-Cupid laid by his brand and fell asleep,
- A maid of Dian's this advantage found,
- And his love-kindl...
+The little Love-god lying once asleep,
+ Laid by his side his heart-inflaming brand,
+ Whilst many nym...
 </code></pre>
 </div>
     
@@ -1526,91 +1526,12 @@ http://bridges-cs.herokuapp.com/assignments/2038/bridges_testing
 <pre><code>Compiling test song_lyrics_snippet.java
 </code></pre>
 </div>
-<div class="success">
+<div class="failure">
 <h3><span id="javalogsong_lyrics_snippet.java-runtest">Run for test song_lyrics_snippet.java</span></h3>
-<pre><code>Harder, Better, Faster, Stronger
-Daft Punk
-Discovery
-2001-02-26
-
-
-[Intro]
-Work it, make it
-Do it, makes us
-Harder, better
-Faster, stronger
-More than, hour
-Hour, never
-Ever, after
-Work is, over
-Work it, make it
-Do it, makes us
-Harder, better
-Faster, stronger
-
-[Chorus 1]
-Work it harder, make it better
-Do it faster, makes us stronger
-More than ever, hour after hour
-Work is never over
-Work it harder, make it better
-Do it faster, makes us stronger
-More than ever, hour after hour
-Work is never over
-Work it harder, make it better
-Do it faster, makes us stronger
-More than ever, hour after hour
-Work is never over
-Work it harder, make it better
-Do it faster, makes us stronger
-More than ever, hour after hour
-Work is never over
-Work it harder, make it better
-Do it faster, makes us stronger
-More than ever, hour after hour
-Work is never over
-Work it harder, make it better
-Do it faster, makes us
-More than ever, hour after hour
-Work is never over
-Work it harder, make it better
-Do it faster, makes us stronger
-More than ever, hour after hour
-Work is never over
-
-[Chorus 2]
-Work it harder, make it
-Do it faster, makes us
-More than ever, hour after hour
-Work is never over
-Work it harder, make it better
-Do it faster, makes us stronger
-More than ever, hour after hour
-Work is never over
-Work it, make it better
-Do it faster, makes us stronger
-More than ever, hour after hour
-Work is never over
-Work it harder, make it better
-Do it faster, makes us stronger
-More than ever, hour after hour
-Work is never over
-Work it harder, make it better
-Do it faster, makes us stronger
-More than ever, hour after hour
-Work is never over
-
-[Outro]
-Work it harder
-Do it faster
-More than ever, hour
-Work is never over
-Work it harder, make it better
-Do it faster, makes us stronger
-More than ever, hour after hour
-Work is never over
-
-
+<pre><code>Exception in thread &quot;main&quot; org.apache.http.client.HttpResponseException: HTTP Request Failed. Error Code: 404. Message: &quot;    lyrics = html.find('div', class_=\&quot;lyrics\&quot;).get_text()\nAttributeError: 'NoneType' object has no attribute 'get_text'\n&quot;
+	at bridges.connect.DataSource.getSong(DataSource.java:676)
+	at song_lyrics_snippet.main(song_lyrics_snippet.java:24)
+could not run test song_lyrics_snippet.java
 </code></pre>
 </div>
     
