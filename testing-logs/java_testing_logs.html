@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Java</h1>
-	<p>Running at Fri 11 Jun 2021 03:37:26 AM EDT</p>
+	<p>Running at Sat 12 Jun 2021 03:36:43 AM EDT</p>
   <div id="summaryarray1d.java" class="success">
     <h2><a href="java_testing_logs.html#javalogarray1d.java">Test array1d.java</a> </h2>
     <p>
@@ -219,12 +219,12 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summarygutenberg_snippet.java" class="failure">
+  <div id="summarygutenberg_snippet.java" class="success">
     <h2><a href="java_testing_logs.html#javaloggutenberg_snippet.java">Test gutenberg_snippet.java</a> </h2>
     <p>
       <ul>
-        <li> Build : <a href="java_testing_logs.html#javaloggutenberg_snippet.java-buildtest">error</a></li>
-        <li> Run : <a href="java_testing_logs.html#javaloggutenberg_snippet.java-runtest">error</a></li>
+        <li> Build : <a href="java_testing_logs.html#javaloggutenberg_snippet.java-buildtest">success</a></li>
+        <li> Run : <a href="java_testing_logs.html#javaloggutenberg_snippet.java-runtest">success</a></li>
       </ul>
     </p>
   </div>
@@ -984,10 +984,10 @@ first 10 elevations:
 <div class="success">
 <h3><span id="javalogeq_snippet.java-runtest">Run for test eq_snippet.java</span></h3>
 <pre><code>Earthquake 0:
-	Magnitude:0.95
-	Date:Jun 11 2021  03:30:12.680 EDT
-	Location: 25km NNE of Trona, CA
-	Lat/Long:35.983,-117.3245
+	Magnitude:1.51
+	Date:Jun 12 2021  03:26:30.380 EDT
+	Location: 12km WSW of Niland, CA
+	Lat/Long:33.2165,-115.6393333
 </code></pre>
 </div>
     
@@ -1045,10 +1045,10 @@ could not run test game_size_test.java
 </div>
 <div class="success">
 <h3><span id="javaloggame_snippet.java-runtest">Run for test game_snippet.java</span></h3>
-<pre><code>Star Trek: Shattered Universe
-PlayStation 2
-3.9
-[Shooter]
+<pre><code>Zax: The Alien Hunter
+PC
+7.7
+[Action]
 </code></pre>
 </div>
     
@@ -1148,21 +1148,64 @@ http://bridges-cs.herokuapp.com/assignments/2022/bridges_testing
     <div id="javaloggutenberg_snippet.java" class="logdetails">
       <h2>Test gutenberg_snippet.java full log</h2>
     
-<div class="failure">
+<div class="success">
 <h3><span id="javaloggutenberg_snippet.java-buildtest">Build for test gutenberg_snippet.java</span></h3>
 <pre><code>Compiling test gutenberg_snippet.java
-gutenberg_snippet.java:26: error: array required, but List&lt;GutenbergMeta&gt; found
-        System.out.println(data[1].getTitle());
-                               ^
-1 error
-could not compile java_answer/ for assignment in
 </code></pre>
 </div>
-<div class="failure">
+<div class="success">
 <h3><span id="javaloggutenberg_snippet.java-runtest">Run for test gutenberg_snippet.java</span></h3>
-<pre><code>Error: Could not find or load main class gutenberg_snippet
-Caused by: java.lang.ClassNotFoundException: gutenberg_snippet
-could not run test gutenberg_snippet.java
+<pre><code>Meta data for 1 book: Moby Dick, by Id
+	Id: 2701
+	Title: Moby Dick; Or, The Whale
+	Language: en
+	Date Added:2001-07-01
+Retrieving books by title: Pride and Prejudice
+	Id: 1342
+	Title: Pride and Prejudice
+	Language: en
+	Date Added: 1998-06-01
+	Id: 20686
+	Title: Pride and Prejudice
+	Language: en
+	Date Added: 2007-02-03
+Retrieving books by Language: English
+	Id: 3926
+	Title: Monsieur, Madame, and Bébé — Complete
+	Language: en
+	Date Added: 2004-10-30
+	Id: 888
+	Title: The Lazy Tour of Two Idle Apprentices
+	Language: en
+	Date Added: 1997-04-01
+Retrieving books by Date: 2018
+	Id: 24564
+	Title: A Manual of the Operations of Surgery
+For the Use of Senior Students, House Surgeons, and Junior Practitioners
+	Language: en
+	Date Added: 2008-02-11
+	Id: 56330
+	Title: Handbuch der chemischen Technologie
+Achte Auflage
+	Language: de
+	Date Added: 2018-01-07
+Retrievina book text: Moby Dick
+Printing the first 100 characters of the book
+
+
+
+
+
+MOBY DICK; OR THE WHALE
+
+By Herman Melville
+
+
+
+
+Original Transcriber's Notes:
+
+This text is a c
 </code></pre>
 </div>
     
@@ -1210,8 +1253,8 @@ could not run test gutenberg_snippet.java
 </div>
 <div class="success">
 <h3><span id="javalogimdb_snippet.java-runtest">Run for test imdb_snippet.java</span></h3>
-<pre><code>Cary_Grant
-Suspicion_(1941)
+<pre><code>Kevin_Bacon_(I)
+Little_Vicious,_A_(1991)
 </code></pre>
 </div>
     
@@ -1471,11 +1514,11 @@ http://bridges-clone.herokuapp.com/assignments/2035/bridges_testing
 </div>
 <div class="success">
 <h3><span id="javalogshakespeare_snippet.java-runtest">Run for test shakespeare_snippet.java</span></h3>
-<pre><code>Sonnet 112
+<pre><code>Sonnet 131
 poem
-Your love and pity doth th' impression fill,
- Which vulgar scandal stamped upon my brow,
- For what c...
+Thou art as tyrannous, so as thou art,
+ As those whose beauties proudly make them cruel;
+ For well t...
 </code></pre>
 </div>
     
@@ -1562,7 +1605,7 @@ http://bridges-cs.herokuapp.com/assignments/2039/bridges_testing
 </div>
 <div class="failure">
 <h3><span id="javalogsong_lyrics_snippet.java-runtest">Run for test song_lyrics_snippet.java</span></h3>
-<pre><code>Exception in thread &quot;main&quot; org.apache.http.client.HttpResponseException: HTTP Request Failed. Error Code: 404. Message: &quot;AttributeError: 'NoneType' object has no attribute 'get_text'\n&quot;
+<pre><code>Exception in thread &quot;main&quot; org.apache.http.client.HttpResponseException: HTTP Request Failed. Error Code: 404. Message: &quot;    lyrics = lyrics_from_song_json(song_json)\n  File \&quot;/app/server/api/song/GeniusSearch.py\&quot;, line 78, in lyrics_from_song_json\n    lyrics = html.find('div', class_=\&quot;lyrics\&quot;).get_text()\nAttributeError: 'NoneType' object has no attribute 'get_text'\n&quot;
 	at bridges.connect.DataSource.getSong(DataSource.java:676)
 	at song_lyrics_snippet.main(song_lyrics_snippet.java:24)
 could not run test song_lyrics_snippet.java
