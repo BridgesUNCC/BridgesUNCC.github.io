@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Java</h1>
-	<p>Running at Mon 14 Jun 2021 03:37:01 AM EDT</p>
+	<p>Running at Tue 15 Jun 2021 03:37:22 AM EDT</p>
   <div id="summaryarray1d.java" class="success">
     <h2><a href="java_testing_logs.html#javalogarray1d.java">Test array1d.java</a> </h2>
     <p>
@@ -219,12 +219,12 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summarygutenberg_snippet.java" class="success">
+  <div id="summarygutenberg_snippet.java" class="failure">
     <h2><a href="java_testing_logs.html#javaloggutenberg_snippet.java">Test gutenberg_snippet.java</a> </h2>
     <p>
       <ul>
         <li> Build : <a href="java_testing_logs.html#javaloggutenberg_snippet.java-buildtest">success</a></li>
-        <li> Run : <a href="java_testing_logs.html#javaloggutenberg_snippet.java-runtest">success</a></li>
+        <li> Run : <a href="java_testing_logs.html#javaloggutenberg_snippet.java-runtest">error</a></li>
       </ul>
     </p>
   </div>
@@ -788,11 +788,11 @@ http://bridges-cs.herokuapp.com/assignments/2007/bridges_testing
 <pre><code>16512
 Incident 0:
 	Type: Mortality
-	Year: 1999
-	Population: 2293259
+	Year: 2000
+	Population: 2302835
 	Race: All Races
 	Gender: Female
-	CrudeRate: 190.4(more rate information available) 
+	CrudeRate: 192.2(more rate information available) 
 	Location: 32.799, -86.8073
 	Count: 0
 </code></pre>
@@ -954,7 +954,8 @@ http://bridges-cs.herokuapp.com/assignments/2013/bridges_testing
 </div>
 <div class="success">
 <h3><span id="javalogelevation_snippet.java-runtest">Run for test elevation_snippet.java</span></h3>
-<pre><code>Width: 54
+<pre><code>[Data request:] Status code:200
+Width: 54
 Height: 59
 Resolution: 0.020011111111
 Lower Left Corner: 98.0259, 41.329622222222
@@ -984,10 +985,10 @@ first 10 elevations:
 <div class="success">
 <h3><span id="javalogeq_snippet.java-runtest">Run for test eq_snippet.java</span></h3>
 <pre><code>Earthquake 0:
-	Magnitude:1.5
-	Date:Jun 14 2021  03:24:54.630 EDT
-	Location: 10km NW of Parkfield, CA
-	Lat/Long:35.9575005,-120.510498
+	Magnitude:1.37
+	Date:Jun 15 2021  03:26:09.460 EDT
+	Location: 8km W of Salton City, CA
+	Lat/Long:33.2958333,-116.048
 </code></pre>
 </div>
     
@@ -1045,9 +1046,9 @@ could not run test game_size_test.java
 </div>
 <div class="success">
 <h3><span id="javaloggame_snippet.java-runtest">Run for test game_snippet.java</span></h3>
-<pre><code>Rig Racer 2
-Wii
-3.0
+<pre><code>MotoGP [2003]
+Wireless
+5.0
 [Racing]
 </code></pre>
 </div>
@@ -1153,7 +1154,7 @@ http://bridges-cs.herokuapp.com/assignments/2022/bridges_testing
 <pre><code>Compiling test gutenberg_snippet.java
 </code></pre>
 </div>
-<div class="success">
+<div class="failure">
 <h3><span id="javaloggutenberg_snippet.java-runtest">Run for test gutenberg_snippet.java</span></h3>
 <pre><code>Meta data for 1 book: Moby Dick, by Id
 	Id: 2701
@@ -1189,23 +1190,14 @@ For the Use of Senior Students, House Surgeons, and Junior Practitioners
 Achte Auflage
 	Language: de
 	Date Added: 2018-01-07
-Retrievina book text: Moby Dick
-Printing the first 100 characters of the book
-
-
-
-
-
-MOBY DICK; OR THE WHALE
-
-By Herman Melville
-
-
-
-
-Original Transcriber's Notes:
-
-This text is a c
+Retrieving book text: Moby Dick
+Error parsing the returned JSON
+Printing the first 300 characters of the book
+Exception in thread &quot;main&quot; java.lang.StringIndexOutOfBoundsException: begin 0, end 300, length 0
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:3319)
+	at java.base/java.lang.String.substring(String.java:1874)
+	at gutenberg_snippet.main(gutenberg_snippet.java:64)
+could not run test gutenberg_snippet.java
 </code></pre>
 </div>
     
@@ -1220,25 +1212,22 @@ This text is a c
 </div>
 <div class="success">
 <h3><span id="javalogguttenberg_snippet.java-runtest">Run for test guttenberg_snippet.java</span></h3>
-<pre><code>Guttenberg Book Data:	Author: Austen, Jane
-	Author Birth: 1775
-	Author Death: 1775
-	Title: Pride and Prejudice
+<pre><code>Guttenberg Book Data:	Author: Wilde, Oscar
+	Author Birth: 1854
+	Author Death: 1854
+	Title: The Importance of Being Earnest: A Trivial Comedy for Serious People
 	Language: 
 		en
 	Subject: 
-		sisters
-		courtship
-		social classes
+		identity (psychology)
+		comedies
 		england
-		domestic fiction
-		young women
-		love stories
-	Num Downloads: 36576
-	Num Words: 121533
-	Num Difficult Words: 9032
-	Num Sentences: 6511
-	Num Characters: 586794
+		foundlings
+	Num Downloads: 13638
+	Num Words: 20625
+	Num Difficult Words: 2387
+	Num Sentences: 1994
+	Num Characters: 101906
 </code></pre>
 </div>
     
@@ -1253,8 +1242,8 @@ This text is a c
 </div>
 <div class="success">
 <h3><span id="javalogimdb_snippet.java-runtest">Run for test imdb_snippet.java</span></h3>
-<pre><code>Allen_Covert
-Adam_Sandler_Goes_to_Hell_(2001)
+<pre><code>Al_Pacino
+America_at_the_Movies_(1976)
 </code></pre>
 </div>
     
@@ -1437,7 +1426,8 @@ http://bridges-cs.herokuapp.com/assignments/2031/bridges_testing
 </div>
 <div class="success">
 <h3><span id="javalogosm.java-runtest">Run for test osm.java</span></h3>
-<pre><code>
+<pre><code>[Data request:] Status code:200
+
 Check Your Visualization at the following link:
 
 http://bridges-cs.herokuapp.com/assignments/2032/bridges_testing
@@ -1457,7 +1447,8 @@ http://bridges-cs.herokuapp.com/assignments/2032/bridges_testing
 </div>
 <div class="success">
 <h3><span id="javalogosm_amenity_snippet.java-runtest">Run for test osm_amenity_snippet.java</span></h3>
-<pre><code>Total Points: 3262
+<pre><code>[Data request:] Status code:200
+Total Points: 3262
 ID: 6.0471261E7
 Name: Cafe Saint Ex
 Lat: 38.9154205
@@ -1476,7 +1467,8 @@ Lon: -77.0317015
 </div>
 <div class="success">
 <h3><span id="javalogosm_snippet.java-runtest">Run for test osm_snippet.java</span></h3>
-<pre><code>Number of Vertices [Charlotte]:1387
+<pre><code>[Data request:] Status code:200
+Number of Vertices [Charlotte]:1387
 Number of Edges [Charlotte]:3015
 Location of first vertex [Cartesian Coord]: -657.974041556194,-4700.217494637191
 </code></pre>
@@ -1514,11 +1506,11 @@ http://bridges-clone.herokuapp.com/assignments/2035/bridges_testing
 </div>
 <div class="success">
 <h3><span id="javalogshakespeare_snippet.java-runtest">Run for test shakespeare_snippet.java</span></h3>
-<pre><code>Sonnet 90
+<pre><code>Sonnet 99
 poem
-Then hate me when thou wilt, if ever, now,
- Now while the world is bent my deeds to cross,
- join wit...
+The forward violet thus did I chide,
+ Sweet thief, whence didst thou steal thy sweet that smells,
+ I...
 </code></pre>
 </div>
     
@@ -2165,7 +2157,7 @@ http://bridges-cs.herokuapp.com/assignments/2061/bridges_testing
 </div>
 <div class="success">
 <h3><span id="javalogwikidata_actor_snippet.java-runtest">Run for test wikidata_actor_snippet.java</span></h3>
-<pre><code>Data Records in 1955: 3190
+<pre><code>Data Records in 1955: 3233
 
 Actor-Movie Data:
 	Movie: Q34414 &quot;Rear Window&quot;
