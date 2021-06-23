@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Java</h1>
-	<p>Running at Tue 22 Jun 2021 03:37:08 AM EDT</p>
+	<p>Running at Wed 23 Jun 2021 03:37:08 AM EDT</p>
   <div id="summaryarray1d.java" class="success">
     <h2><a href="java_testing_logs.html#javalogarray1d.java">Test array1d.java</a> </h2>
     <p>
@@ -156,12 +156,12 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summaryface_shp_coll.java" class="success">
+  <div id="summaryface_shp_coll.java" class="failure">
     <h2><a href="java_testing_logs.html#javalogface_shp_coll.java">Test face_shp_coll.java</a> </h2>
     <p>
       <ul>
-        <li> Build : <a href="java_testing_logs.html#javalogface_shp_coll.java-buildtest">success</a></li>
-        <li> Run : <a href="java_testing_logs.html#javalogface_shp_coll.java-runtest">success</a></li>
+        <li> Build : <a href="java_testing_logs.html#javalogface_shp_coll.java-buildtest">error</a></li>
+        <li> Run : <a href="java_testing_logs.html#javalogface_shp_coll.java-runtest">error</a></li>
       </ul>
     </p>
   </div>
@@ -282,12 +282,12 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summarymixed_assignments.java" class="success">
+  <div id="summarymixed_assignments.java" class="failure">
     <h2><a href="java_testing_logs.html#javalogmixed_assignments.java">Test mixed_assignments.java</a> </h2>
     <p>
       <ul>
-        <li> Build : <a href="java_testing_logs.html#javalogmixed_assignments.java-buildtest">success</a></li>
-        <li> Run : <a href="java_testing_logs.html#javalogmixed_assignments.java-runtest">success</a></li>
+        <li> Build : <a href="java_testing_logs.html#javalogmixed_assignments.java-buildtest">error</a></li>
+        <li> Run : <a href="java_testing_logs.html#javalogmixed_assignments.java-runtest">error</a></li>
       </ul>
     </p>
   </div>
@@ -327,12 +327,12 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summaryrotate_label.java" class="success">
+  <div id="summaryrotate_label.java" class="failure">
     <h2><a href="java_testing_logs.html#javalogrotate_label.java">Test rotate_label.java</a> </h2>
     <p>
       <ul>
-        <li> Build : <a href="java_testing_logs.html#javalogrotate_label.java-buildtest">success</a></li>
-        <li> Run : <a href="java_testing_logs.html#javalogrotate_label.java-runtest">success</a></li>
+        <li> Build : <a href="java_testing_logs.html#javalogrotate_label.java-buildtest">error</a></li>
+        <li> Run : <a href="java_testing_logs.html#javalogrotate_label.java-runtest">error</a></li>
       </ul>
     </p>
   </div>
@@ -788,11 +788,11 @@ http://bridges-cs.herokuapp.com/assignments/2007/bridges_testing
 <pre><code>16512
 Incident 0:
 	Type: Mortality
-	Year: 2000
-	Population: 2302835
+	Year: 1999
+	Population: 2293259
 	Race: All Races
 	Gender: Female
-	CrudeRate: 192.2(more rate information available) 
+	CrudeRate: 190.4(more rate information available) 
 	Location: 32.799, -86.8073
 	Count: 0
 </code></pre>
@@ -984,10 +984,10 @@ first 10 elevations:
 <div class="success">
 <h3><span id="javalogeq_snippet.java-runtest">Run for test eq_snippet.java</span></h3>
 <pre><code>Earthquake 0:
-	Magnitude:2.1
-	Date:Jun 22 2021  03:20:09.895 EDT
-	Location: 28 km SSE of Mina, Nevada
-	Lat/Long:38.1359,-118.0354
+	Magnitude:2.0
+	Date:Jun 23 2021  03:25:12.535 EDT
+	Location: 18 km E of Chickaloon, Alaska
+	Lat/Long:61.7702,-148.1192
 </code></pre>
 </div>
     
@@ -995,19 +995,73 @@ first 10 elevations:
     <div id="javalogface_shp_coll.java" class="logdetails">
       <h2>Test face_shp_coll.java full log</h2>
     
-<div class="success">
+<div class="failure">
 <h3><span id="javalogface_shp_coll.java-buildtest">Build for test face_shp_coll.java</span></h3>
 <pre><code>Compiling test face_shp_coll.java
+face_shp_coll.java:5: error: cannot find symbol
+import bridges.base.Label;
+                   ^
+  symbol:   class Label
+  location: package bridges.base
+face_shp_coll.java:40: error: cannot find symbol
+		s2.translate(tf[0], tf[1]);
+		  ^
+  symbol:   method translate(float,float)
+  location: variable s2 of type Circle
+face_shp_coll.java:41: error: cannot find symbol
+		s2.scale(0.3f);
+		  ^
+  symbol:   method scale(float)
+  location: variable s2 of type Circle
+face_shp_coll.java:50: error: cannot find symbol
+		s3.translate(tf[0], tf[1]);
+		  ^
+  symbol:   method translate(float,float)
+  location: variable s3 of type Circle
+face_shp_coll.java:51: error: cannot find symbol
+		s3.scale(0.3f);
+		  ^
+  symbol:   method scale(float)
+  location: variable s3 of type Circle
+face_shp_coll.java:63: error: cannot find symbol
+		s4.scale(sf[0], sf[1]);
+		  ^
+  symbol:   method scale(float,float)
+  location: variable s4 of type Rectangle
+face_shp_coll.java:64: error: cannot find symbol
+		s4.translate(tf[0], tf[1]);
+		  ^
+  symbol:   method translate(float,float)
+  location: variable s4 of type Rectangle
+face_shp_coll.java:75: error: cannot find symbol
+		s5.scale(sf[0], sf[1]);
+		  ^
+  symbol:   method scale(float,float)
+  location: variable s5 of type Rectangle
+face_shp_coll.java:76: error: cannot find symbol
+		s5.translate(tf[0], tf[1]);
+		  ^
+  symbol:   method translate(float,float)
+  location: variable s5 of type Rectangle
+face_shp_coll.java:89: error: cannot find symbol
+		Label l = new Label();
+		^
+  symbol:   class Label
+  location: class face_shp_coll
+face_shp_coll.java:89: error: cannot find symbol
+		Label l = new Label();
+		              ^
+  symbol:   class Label
+  location: class face_shp_coll
+11 errors
+could not compile java_answer/ for assignment in
 </code></pre>
 </div>
-<div class="success">
+<div class="failure">
 <h3><span id="javalogface_shp_coll.java-runtest">Run for test face_shp_coll.java</span></h3>
-<pre><code>
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2016/bridges_testing
-
-
+<pre><code>Error: Could not find or load main class face_shp_coll
+Caused by: java.lang.ClassNotFoundException: face_shp_coll
+could not run test face_shp_coll.java
 </code></pre>
 </div>
     
@@ -1045,10 +1099,10 @@ could not run test game_size_test.java
 </div>
 <div class="success">
 <h3><span id="javaloggame_snippet.java-runtest">Run for test game_snippet.java</span></h3>
-<pre><code>The Walking Dead: Season Two -- Episode 2: A House Divided
-Xbox 360
-9.5
-[Adventure]
+<pre><code>Crash-Course Domo
+Nintendo DSi
+5.5
+[Racing]
 </code></pre>
 </div>
     
@@ -1211,22 +1265,25 @@ could not run test gutenberg_snippet.java
 </div>
 <div class="success">
 <h3><span id="javalogguttenberg_snippet.java-runtest">Run for test guttenberg_snippet.java</span></h3>
-<pre><code>Guttenberg Book Data:	Author: Wilde, Oscar
-	Author Birth: 1854
-	Author Death: 1854
-	Title: The Importance of Being Earnest: A Trivial Comedy for Serious People
+<pre><code>Guttenberg Book Data:	Author: Austen, Jane
+	Author Birth: 1775
+	Author Death: 1775
+	Title: Pride and Prejudice
 	Language: 
 		en
 	Subject: 
-		identity (psychology)
-		comedies
+		sisters
+		courtship
+		social classes
 		england
-		foundlings
-	Num Downloads: 13638
-	Num Words: 20625
-	Num Difficult Words: 2387
-	Num Sentences: 1994
-	Num Characters: 101906
+		domestic fiction
+		young women
+		love stories
+	Num Downloads: 36576
+	Num Words: 121533
+	Num Difficult Words: 9032
+	Num Sentences: 6511
+	Num Characters: 586794
 </code></pre>
 </div>
     
@@ -1241,8 +1298,8 @@ could not run test gutenberg_snippet.java
 </div>
 <div class="success">
 <h3><span id="javalogimdb_snippet.java-runtest">Run for test imdb_snippet.java</span></h3>
-<pre><code>Leonard_Nimoy
-Mind_Meld:_Secrets_Behind_the_Voyage_of_a_Lifetime_(2001)
+<pre><code>Paul_Reubens
+Matilda_(1996)
 </code></pre>
 </div>
     
@@ -1354,43 +1411,23 @@ could not run test minimal_game.java
     <div id="javalogmixed_assignments.java" class="logdetails">
       <h2>Test mixed_assignments.java full log</h2>
     
-<div class="success">
+<div class="failure">
 <h3><span id="javalogmixed_assignments.java-buildtest">Build for test mixed_assignments.java</span></h3>
 <pre><code>Compiling test mixed_assignments.java
+mixed_assignments.java:9: error: cannot find symbol
+import bridges.base.Label;
+                   ^
+  symbol:   class Label
+  location: package bridges.base
+1 error
+could not compile java_answer/ for assignment in
 </code></pre>
 </div>
-<div class="success">
+<div class="failure">
 <h3><span id="javalogmixed_assignments.java-runtest">Run for test mixed_assignments.java</span></h3>
-<pre><code>
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2030/bridges_testing
-
-
-
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2030/bridges_testing
-
-
-
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2030/bridges_testing
-
-
-
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2030/bridges_testing
-
-
-
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2030/bridges_testing
-
-
+<pre><code>Error: Could not find or load main class mixed_assignments
+Caused by: java.lang.ClassNotFoundException: mixed_assignments
+could not run test mixed_assignments.java
 </code></pre>
 </div>
     
@@ -1474,20 +1511,53 @@ Location of first vertex [Cartesian Coord]: -657.974041556194,-4700.217494637191
     <div id="javalogrotate_label.java" class="logdetails">
       <h2>Test rotate_label.java full log</h2>
     
-<div class="success">
+<div class="failure">
 <h3><span id="javalogrotate_label.java-buildtest">Build for test rotate_label.java</span></h3>
 <pre><code>Compiling test rotate_label.java
+rotate_label.java:5: error: cannot find symbol
+import bridges.base.Label;
+                   ^
+  symbol:   class Label
+  location: package bridges.base
+rotate_label.java:31: error: cannot find symbol
+		Label l = new Label();
+		^
+  symbol:   class Label
+  location: class rotate_label
+rotate_label.java:31: error: cannot find symbol
+		Label l = new Label();
+		              ^
+  symbol:   class Label
+  location: class rotate_label
+rotate_label.java:41: error: cannot find symbol
+		Label l2 = new Label();
+		^
+  symbol:   class Label
+  location: class rotate_label
+rotate_label.java:41: error: cannot find symbol
+		Label l2 = new Label();
+		               ^
+  symbol:   class Label
+  location: class rotate_label
+rotate_label.java:51: error: cannot find symbol
+		Label l3 = new Label();
+		^
+  symbol:   class Label
+  location: class rotate_label
+rotate_label.java:51: error: cannot find symbol
+		Label l3 = new Label();
+		               ^
+  symbol:   class Label
+  location: class rotate_label
+7 errors
+could not compile java_answer/ for assignment in
 </code></pre>
 </div>
-<div class="success">
+<div class="failure">
 <h3><span id="javalogrotate_label.java-runtest">Run for test rotate_label.java</span></h3>
-<pre><code>Bbox dims:59.6,-50.000008,80.4,110.00001
-
-Check Your Visualization at the following link:
-
-http://bridges-clone.herokuapp.com/assignments/2035/bridges_testing
-
-
+<pre><code>Error: Could not find or load main class rotate_label
+Caused by: java.lang.ClassNotFoundException: rotate_label
+could not run test rotate_label.java
 </code></pre>
 </div>
     
@@ -1502,17 +1572,11 @@ http://bridges-clone.herokuapp.com/assignments/2035/bridges_testing
 </div>
 <div class="success">
 <h3><span id="javalogshakespeare_snippet.java-runtest">Run for test shakespeare_snippet.java</span></h3>
-<pre><code>The Two Gentlemen Of Verona
-play
-1595
-
-THE TWO GENTLEMEN OF VERONA
-
-by William Shakespeare
-
-DRAMATIS PERSONAE
-
- DUKE OF MILAN, father...
+<pre><code>Sonnet 50
+poem
+How heavy do I journey on the way,
+ When what I seek (my weary travel's end)
+ Doth teach that case a...
 </code></pre>
 </div>
     
@@ -1528,6 +1592,9 @@ DRAMATIS PERSONAE
 <div class="success">
 <h3><span id="javalogshape_collection.java-runtest">Run for test shape_collection.java</span></h3>
 <pre><code>
+JSON String:
+{&quot;visual&quot;:&quot;SymbolCollectionV2&quot;,&quot;title&quot;:&quot;Symbol Collection&quot;,&quot;description&quot;:&quot;Red square, green circle, magenta horizontal and vertical lines, and a test label with a purple outline.&quot;,&quot;coord_system_type&quot;:&quot;cartesian&quot;,&quot;map_overlay&quot;:false,&quot;display_mode&quot;:&quot;slide&quot;,&quot;domainX&quot;:[-100.0,100.0],&quot;domainY&quot;:[-100.0,100.0],&quot;symbols&quot;:[{&quot;lowerleftcorner&quot;:[-25.0,0.0],&quot;width&quot;:50.0,&quot;ID&quot;:0,&quot;type&quot;:&quot;rect&quot;,&quot;fill-color&quot;:[255,0,0,1.0],&quot;height&quot;:50.0},{&quot;r&quot;:25.0,&quot;center&quot;:[25.0,0.0],&quot;ID&quot;:1,&quot;type&quot;:&quot;circle&quot;,&quot;fill-color&quot;:[0,128,0,1.0]},{&quot;stroke-width&quot;:2.0,&quot;ID&quot;:2,&quot;type&quot;:&quot;polygon&quot;,&quot;stroke-color&quot;:[153,50,204,1.0],&quot;points&quot;:[-25.0,-10.0,25.0,-10.0,0.0,50.0]},{&quot;stroke-width&quot;:2.0,&quot;ID&quot;:3,&quot;type&quot;:&quot;polyline&quot;,&quot;stroke-color&quot;:[255,0,255,1.0],&quot;points&quot;:[-100.0,0.0,100.0,0.0]},{&quot;stroke-width&quot;:2.0,&quot;ID&quot;:4,&quot;type&quot;:&quot;polyline&quot;,&quot;points&quot;:[0.0,-100.0,0.0,100.0]},{&quot;stroke-width&quot;:3.0,&quot;ID&quot;:5,&quot;type&quot;:&quot;polygon&quot;,&quot;fill-color&quot;:[255,255,0,1.0],&quot;stroke-color&quot;:[0,255,255,1.0],&quot;points&quot;:[-30.0,40.0,30.0,40.0,0.0,80.0]},{&quot;anchor-location&quot;:[0.0,25.0],&quot;font-size&quot;:12.0,&quot;stroke-width&quot;:1.0,&quot;text&quot;:&quot;test label&quot;,&quot;ID&quot;:6,&quot;type&quot;:&quot;&quot;,&quot;stroke-color&quot;:[128,0,128,1.0]},{&quot;transform&quot;:[1.0,0.0,30.0,0.0,1.0,20.0],&quot;ID&quot;:7,&quot;type&quot;:&quot;group&quot;},{&quot;anchor-location&quot;:[0.0,25.0],&quot;font-size&quot;:12.0,&quot;stroke-width&quot;:1.0,&quot;text&quot;:&quot;test label translated&quot;,&quot;ID&quot;:8,&quot;type&quot;:&quot;&quot;,&quot;stroke-color&quot;:[128,0,128,1.0],&quot;parentID&quot;:7},{&quot;transform&quot;:[1.0,0.0,30.0,0.0,1.0,20.0],&quot;ID&quot;:9,&quot;type&quot;:&quot;group&quot;,&quot;parentID&quot;:7},{&quot;anchor-location&quot;:[0.0,25.0],&quot;font-size&quot;:12.0,&quot;stroke-width&quot;:1.0,&quot;text&quot;:&quot;test label translated more&quot;,&quot;ID&quot;:10,&quot;type&quot;:&quot;&quot;,&quot;stroke-color&quot;:[128,0,128,1.0],&quot;parentID&quot;:9}]}
+
 Check Your Visualization at the following link:
 
 http://bridges-cs.herokuapp.com/assignments/2037/bridges_testing
@@ -1599,7 +1666,7 @@ http://bridges-cs.herokuapp.com/assignments/2039/bridges_testing
 </div>
 <div class="failure">
 <h3><span id="javalogsong_lyrics_snippet.java-runtest">Run for test song_lyrics_snippet.java</span></h3>
-<pre><code>Exception in thread &quot;main&quot; org.apache.http.client.HttpResponseException: HTTP Request Failed. Error Code: 404. Message: &quot;AttributeError: 'NoneType' object has no attribute 'get_text'\n&quot;
+<pre><code>Exception in thread &quot;main&quot; org.apache.http.client.HttpResponseException: HTTP Request Failed. Error Code: 404. Message: &quot;    lyrics = lyrics_from_song_json(song_json)\n  File \&quot;/app/server/api/song/GeniusSearch.py\&quot;, line 78, in lyrics_from_song_json\n    lyrics = html.find('div', class_=\&quot;lyrics\&quot;).get_text()\nAttributeError: 'NoneType' object has no attribute 'get_text'\n&quot;
 	at bridges.connect.DataSource.getSong(DataSource.java:676)
 	at song_lyrics_snippet.main(song_lyrics_snippet.java:24)
 could not run test song_lyrics_snippet.java
