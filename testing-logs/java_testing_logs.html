@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Java</h1>
-	<p>Running at Thu 24 Jun 2021 03:37:09 AM EDT</p>
+	<p>Running at Fri 25 Jun 2021 03:37:06 AM EDT</p>
   <div id="summaryarray1d.java" class="success">
     <h2><a href="java_testing_logs.html#javalogarray1d.java">Test array1d.java</a> </h2>
     <p>
@@ -984,10 +984,10 @@ first 10 elevations:
 <div class="success">
 <h3><span id="javalogeq_snippet.java-runtest">Run for test eq_snippet.java</span></h3>
 <pre><code>Earthquake 0:
-	Magnitude:0.96
-	Date:Jun 24 2021  03:23:20.730 EDT
-	Location: 16km SSW of Searles Valley, CA
-	Lat/Long:35.6301667,-117.4426667
+	Magnitude:1.17
+	Date:Jun 25 2021  03:06:15.800 EDT
+	Location: 6km NW of The Geysers, CA
+	Lat/Long:38.824501,-122.8001633
 </code></pre>
 </div>
     
@@ -1003,46 +1003,20 @@ import bridges.base.Label;
                    ^
   symbol:   class Label
   location: package bridges.base
-face_shp_coll.java:40: error: cannot find symbol
-		s2.translate(tf[0], tf[1]);
-		  ^
-  symbol:   method translate(float,float)
-  location: variable s2 of type Circle
-face_shp_coll.java:41: error: cannot find symbol
+face_shp_coll.java:41: error: no suitable method found for scale(float)
 		s2.scale(0.3f);
 		  ^
-  symbol:   method scale(float)
-  location: variable s2 of type Circle
-face_shp_coll.java:50: error: cannot find symbol
-		s3.translate(tf[0], tf[1]);
-		  ^
-  symbol:   method translate(float,float)
-  location: variable s3 of type Circle
-face_shp_coll.java:51: error: cannot find symbol
+    method Symbol.scale(float,float) is not applicable
+      (actual and formal argument lists differ in length)
+    method Symbol.scale(float,float,float,float) is not applicable
+      (actual and formal argument lists differ in length)
+face_shp_coll.java:51: error: no suitable method found for scale(float)
 		s3.scale(0.3f);
 		  ^
-  symbol:   method scale(float)
-  location: variable s3 of type Circle
-face_shp_coll.java:63: error: cannot find symbol
-		s4.scale(sf[0], sf[1]);
-		  ^
-  symbol:   method scale(float,float)
-  location: variable s4 of type Rectangle
-face_shp_coll.java:64: error: cannot find symbol
-		s4.translate(tf[0], tf[1]);
-		  ^
-  symbol:   method translate(float,float)
-  location: variable s4 of type Rectangle
-face_shp_coll.java:75: error: cannot find symbol
-		s5.scale(sf[0], sf[1]);
-		  ^
-  symbol:   method scale(float,float)
-  location: variable s5 of type Rectangle
-face_shp_coll.java:76: error: cannot find symbol
-		s5.translate(tf[0], tf[1]);
-		  ^
-  symbol:   method translate(float,float)
-  location: variable s5 of type Rectangle
+    method Symbol.scale(float,float) is not applicable
+      (actual and formal argument lists differ in length)
+    method Symbol.scale(float,float,float,float) is not applicable
+      (actual and formal argument lists differ in length)
 face_shp_coll.java:89: error: cannot find symbol
 		Label l = new Label();
 		^
@@ -1053,7 +1027,7 @@ face_shp_coll.java:89: error: cannot find symbol
 		              ^
   symbol:   class Label
   location: class face_shp_coll
-11 errors
+5 errors
 could not compile java_answer/ for assignment in
 </code></pre>
 </div>
@@ -1099,10 +1073,10 @@ could not run test game_size_test.java
 </div>
 <div class="success">
 <h3><span id="javaloggame_snippet.java-runtest">Run for test game_snippet.java</span></h3>
-<pre><code>Ty the Tasmanian Tiger 2: Bush Rescue
-Xbox
-7.0
-[Platformer]
+<pre><code>Fray
+PC
+2.0
+[Action]
 </code></pre>
 </div>
     
@@ -1403,8 +1377,8 @@ could not run test gutenberg_snippet.java
 </div>
 <div class="success">
 <h3><span id="javalogimdb_snippet.java-runtest">Run for test imdb_snippet.java</span></h3>
-<pre><code>Clark_Gable
-Johnstown_Flood,_The_(1926)
+<pre><code>Erica_Long
+Being_John_Malkovich_(1999)
 </code></pre>
 </div>
     
@@ -1524,7 +1498,23 @@ import bridges.base.Label;
                    ^
   symbol:   class Label
   location: package bridges.base
-1 error
+mixed_assignments.java:96: error: incompatible types: Color cannot be converted to String
+		r1.setFillColor(new Color(&quot;black&quot;));
+		                ^
+mixed_assignments.java:100: error: incompatible types: Color cannot be converted to String
+		s1.setFillColor(new Color(&quot;yellow&quot;));
+		                ^
+mixed_assignments.java:104: error: incompatible types: Color cannot be converted to String
+		s2.setFillColor(new Color(&quot;yellow&quot;));
+		                ^
+mixed_assignments.java:108: error: incompatible types: Color cannot be converted to String
+		s3.setFillColor(new Color(&quot;yellow&quot;));
+		                ^
+mixed_assignments.java:112: error: incompatible types: Color cannot be converted to String
+		s4.setFillColor(new Color(&quot;yellow&quot;));
+		                ^
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+6 errors
 could not compile java_answer/ for assignment in
 </code></pre>
 </div>
@@ -1677,11 +1667,19 @@ could not run test rotate_label.java
 </div>
 <div class="success">
 <h3><span id="javalogshakespeare_snippet.java-runtest">Run for test shakespeare_snippet.java</span></h3>
-<pre><code>Sonnet 142
-poem
-Love is my sin, and thy dear virtue hate,
- Hate of my sin, grounded on sinful loving,
- O but with mi...
+<pre><code>The Tragedy Of Romeo And Juliet
+play
+1595
+
+THE TRAGEDY OF ROMEO AND JULIET
+
+by William Shakespeare
+
+Dramatis Personae
+
+ Chorus.
+
+ Escalus...
 </code></pre>
 </div>
     
@@ -1698,7 +1696,7 @@ Love is my sin, and thy dear virtue hate,
 <h3><span id="javalogshape_collection.java-runtest">Run for test shape_collection.java</span></h3>
 <pre><code>
 JSON String:
-{&quot;visual&quot;:&quot;SymbolCollectionV2&quot;,&quot;title&quot;:&quot;Symbol Collection&quot;,&quot;description&quot;:&quot;Red square, green circle, magenta horizontal and vertical lines, and a test label with a purple outline.&quot;,&quot;coord_system_type&quot;:&quot;cartesian&quot;,&quot;map_overlay&quot;:false,&quot;display_mode&quot;:&quot;slide&quot;,&quot;domainX&quot;:[-100.0,100.0],&quot;domainY&quot;:[-100.0,100.0],&quot;symbols&quot;:[{&quot;lowerleftcorner&quot;:[-25.0,0.0],&quot;width&quot;:50.0,&quot;ID&quot;:0,&quot;type&quot;:&quot;rect&quot;,&quot;fill-color&quot;:[255,0,0,1.0],&quot;height&quot;:50.0},{&quot;r&quot;:25.0,&quot;center&quot;:[25.0,0.0],&quot;ID&quot;:1,&quot;type&quot;:&quot;circle&quot;,&quot;fill-color&quot;:[0,128,0,1.0]},{&quot;stroke-width&quot;:2.0,&quot;ID&quot;:2,&quot;type&quot;:&quot;polygon&quot;,&quot;stroke-color&quot;:[153,50,204,1.0],&quot;points&quot;:[-25.0,-10.0,25.0,-10.0,0.0,50.0]},{&quot;stroke-width&quot;:2.0,&quot;ID&quot;:3,&quot;type&quot;:&quot;polyline&quot;,&quot;stroke-color&quot;:[255,0,255,1.0],&quot;points&quot;:[-100.0,0.0,100.0,0.0]},{&quot;stroke-width&quot;:2.0,&quot;ID&quot;:4,&quot;type&quot;:&quot;polyline&quot;,&quot;points&quot;:[0.0,-100.0,0.0,100.0]},{&quot;stroke-width&quot;:3.0,&quot;ID&quot;:5,&quot;type&quot;:&quot;polygon&quot;,&quot;fill-color&quot;:[255,255,0,1.0],&quot;stroke-color&quot;:[0,255,255,1.0],&quot;points&quot;:[-30.0,40.0,30.0,40.0,0.0,80.0]},{&quot;anchor-location&quot;:[0.0,25.0],&quot;font-size&quot;:12.0,&quot;stroke-width&quot;:1.0,&quot;text&quot;:&quot;test label&quot;,&quot;ID&quot;:6,&quot;type&quot;:&quot;text&quot;,&quot;stroke-color&quot;:[128,0,128,1.0]},{&quot;transform&quot;:[1.0,0.0,0.0,1.0,30.0,20.0],&quot;ID&quot;:7,&quot;type&quot;:&quot;group&quot;},{&quot;anchor-location&quot;:[0.0,25.0],&quot;font-size&quot;:12.0,&quot;stroke-width&quot;:1.0,&quot;text&quot;:&quot;test label translated&quot;,&quot;ID&quot;:8,&quot;type&quot;:&quot;text&quot;,&quot;stroke-color&quot;:[128,0,128,1.0],&quot;parentID&quot;:7},{&quot;transform&quot;:[1.0,0.0,0.0,1.0,30.0,20.0],&quot;ID&quot;:9,&quot;type&quot;:&quot;group&quot;,&quot;parentID&quot;:7},{&quot;anchor-location&quot;:[0.0,25.0],&quot;font-size&quot;:12.0,&quot;stroke-width&quot;:1.0,&quot;text&quot;:&quot;test label translated more&quot;,&quot;ID&quot;:10,&quot;type&quot;:&quot;text&quot;,&quot;stroke-color&quot;:[128,0,128,1.0],&quot;parentID&quot;:9}]}
+{&quot;visual&quot;:&quot;SymbolCollectionV2&quot;,&quot;title&quot;:&quot;Symbol Collection&quot;,&quot;description&quot;:&quot;Red square, green circle, magenta horizontal and vertical lines, and a test label with a purple outline.&quot;,&quot;coord_system_type&quot;:&quot;cartesian&quot;,&quot;map_overlay&quot;:false,&quot;display_mode&quot;:&quot;slide&quot;,&quot;domainX&quot;:[-100.0,100.0],&quot;domainY&quot;:[-100.0,100.0],&quot;symbols&quot;:[{&quot;lowerleftcorner&quot;:[-25.0,0.0],&quot;width&quot;:50.0,&quot;ID&quot;:0,&quot;type&quot;:&quot;rect&quot;,&quot;fill-color&quot;:[255,0,0,1.0],&quot;height&quot;:50.0},{&quot;r&quot;:25.0,&quot;center&quot;:[25.0,0.0],&quot;ID&quot;:1,&quot;type&quot;:&quot;circle&quot;,&quot;fill-color&quot;:[0,128,0,1.0]},{&quot;stroke-width&quot;:2.0,&quot;ID&quot;:2,&quot;type&quot;:&quot;polygon&quot;,&quot;stroke-color&quot;:[153,50,204,1.0],&quot;points&quot;:[-25.0,-10.0,25.0,-10.0,0.0,50.0]},{&quot;stroke-width&quot;:2.0,&quot;ID&quot;:3,&quot;type&quot;:&quot;polyline&quot;,&quot;stroke-color&quot;:[255,0,255,1.0],&quot;points&quot;:[-100.0,0.0,100.0,0.0]},{&quot;stroke-width&quot;:2.0,&quot;ID&quot;:4,&quot;type&quot;:&quot;polyline&quot;,&quot;points&quot;:[0.0,-100.0,0.0,100.0]},{&quot;stroke-width&quot;:3.0,&quot;ID&quot;:5,&quot;type&quot;:&quot;polygon&quot;,&quot;fill-color&quot;:[255,255,0,1.0],&quot;stroke-color&quot;:[0,255,255,1.0],&quot;points&quot;:[-30.0,40.0,30.0,40.0,0.0,80.0]},{&quot;anchor-location&quot;:[0.0,25.0],&quot;font-size&quot;:12.0,&quot;stroke-width&quot;:1.0,&quot;text&quot;:&quot;test label&quot;,&quot;ID&quot;:6,&quot;type&quot;:&quot;text&quot;,&quot;stroke-color&quot;:[128,0,128,1.0]},{&quot;ID&quot;:7,&quot;type&quot;:&quot;group&quot;},{&quot;anchor-location&quot;:[0.0,25.0],&quot;font-size&quot;:12.0,&quot;stroke-width&quot;:1.0,&quot;text&quot;:&quot;test label translated&quot;,&quot;ID&quot;:8,&quot;type&quot;:&quot;text&quot;,&quot;stroke-color&quot;:[128,0,128,1.0],&quot;parentID&quot;:7},{&quot;ID&quot;:9,&quot;type&quot;:&quot;group&quot;,&quot;parentID&quot;:7},{&quot;anchor-location&quot;:[0.0,25.0],&quot;font-size&quot;:12.0,&quot;stroke-width&quot;:1.0,&quot;text&quot;:&quot;test label translated more&quot;,&quot;ID&quot;:10,&quot;type&quot;:&quot;text&quot;,&quot;stroke-color&quot;:[128,0,128,1.0],&quot;parentID&quot;:9}]}
 
 Check Your Visualization at the following link:
 
@@ -1771,7 +1769,7 @@ http://bridges-cs.herokuapp.com/assignments/2039/bridges_testing
 </div>
 <div class="failure">
 <h3><span id="javalogsong_lyrics_snippet.java-runtest">Run for test song_lyrics_snippet.java</span></h3>
-<pre><code>Exception in thread &quot;main&quot; org.apache.http.client.HttpResponseException: HTTP Request Failed. Error Code: 404. Message: &quot;    lyrics = lyrics_from_song_json(song_json)\n  File \&quot;/app/server/api/song/GeniusSearch.py\&quot;, line 78, in lyrics_from_song_json\n    lyrics = html.find('div', class_=\&quot;lyrics\&quot;).get_text()\nAttributeError: 'NoneType' object has no attribute 'get_text'\n&quot;
+<pre><code>Exception in thread &quot;main&quot; org.apache.http.client.HttpResponseException: HTTP Request Failed. Error Code: 404. Message: &quot;AttributeError: 'NoneType' object has no attribute 'get_text'\n&quot;
 	at bridges.connect.DataSource.getSong(DataSource.java:676)
 	at song_lyrics_snippet.main(song_lyrics_snippet.java:24)
 could not run test song_lyrics_snippet.java
