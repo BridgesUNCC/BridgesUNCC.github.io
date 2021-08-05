@@ -22,7 +22,7 @@
 		bridges.setTitle(<span class="Constant">&quot;Accessing Wikidata Movie/Actor Data&quot;</span>);
 
 		<span class="Comment">// create data source object</span>
-        DataSource ds = bridges.getDataSource();
+		DataSource ds = bridges.getDataSource();
 
 		<span class="Comment">// Get a List of Wikidata actor/movie  records from Bridges</span>
 		<span class="Comment">// get the actor movie Wikidata data through the BRIDGES API for 1955.</span>
@@ -35,7 +35,7 @@
 		<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; <span class="Constant">3</span>; k++)
 			System.out.println(<span class="Constant">&quot;Actor-Movie Data:</span><span class="Special">\n</span><span class="Constant">&quot;</span> +
 				<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Movie: &quot;</span> + list.get(k).getMovieURI()  + <span class="Constant">&quot; </span><span class="Special">\&quot;</span><span class="Constant">&quot;</span>  + list.get(k).getMovieName() + <span class="Constant">&quot;</span><span class="Special">\&quot;\n</span><span class="Constant">&quot;</span> +
-	     		<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Actor: &quot;</span> +  list.get(k).getActorURI() + <span class="Constant">&quot; </span><span class="Special">\&quot;</span><span class="Constant">&quot;</span> + list.get(k).getActorName() + <span class="Constant">&quot;</span><span class="Special">\&quot;\n</span><span class="Constant">&quot;</span>);
+				<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Actor: &quot;</span> +  list.get(k).getActorURI() + <span class="Constant">&quot; </span><span class="Special">\&quot;</span><span class="Constant">&quot;</span> + list.get(k).getActorName() + <span class="Constant">&quot;</span><span class="Special">\&quot;\n</span><span class="Constant">&quot;</span>);
 	}
 }
 </pre>

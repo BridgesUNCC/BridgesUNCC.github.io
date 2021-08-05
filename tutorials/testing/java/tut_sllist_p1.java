@@ -3,7 +3,7 @@ import bridges.base.SLelement;
 import java.util.Iterator;
 
 //
-// This tutorial creates a set of singly linked list elements, links them 
+// This tutorial creates a set of singly linked list elements, links them
 // and displays them
 //
 // Reference: SLelement, Bridges classes
@@ -20,7 +20,7 @@ public class tut_sllist_p1 {
 		bridges.setTitle("A Single Linked List Example");
 
 		// set  description
-		bridges.setDescription("A singly linked list of 4 nodes with names; the nodes in this example use string as the generic type"); 
+		bridges.setDescription("A singly linked list of 4 nodes with names; the nodes in this example use string as the generic type");
 
 		// create the linked list elements with student names
 		SLelement<String>  st0 = new SLelement<String> ("Gretel Chaney");

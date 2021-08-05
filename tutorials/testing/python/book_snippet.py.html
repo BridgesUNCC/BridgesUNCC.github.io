@@ -1,0 +1,26 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.data_src_dependent.data_source <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
+<span class="PreProc">import</span> random
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+    args = sys.argv[<span class="Constant">1</span>:]
+
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(<span class="Identifier">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
+
+    <span class="Statement">if</span> <span class="Identifier">len</span>(args) &gt; <span class="Constant">3</span>:
+        bridges.connector.set_server(args[<span class="Constant">3</span>])
+
+    book_list = get_gutenberg_book_data()
+
+    book1 = book_list[random.randrange(<span class="Identifier">len</span>(book_list))]
+
+    <span class="Identifier">print</span>(book1.get_title())
+    <span class="Identifier">print</span>(book1.get_author_name())
+    <span class="Identifier">print</span>(book1.get_genre())
+
+<span class="Statement">if</span> __name__ == <span class="Constant">'</span><span class="Constant">__main__</span><span class="Constant">'</span>:
+    main()
+</pre>

@@ -1,0 +1,53 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.kd_tree_element <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
+
+args = sys.argv[<span class="Constant">1</span>:]
+
+<span class="Comment"># create the Bridges object, set credentials</span>
+
+bridges = Bridges(<span class="Identifier">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
+
+<span class="Statement">if</span> <span class="Identifier">len</span>(args) &gt; <span class="Constant">3</span>:
+    bridges.connector.set_server(args[<span class="Constant">3</span>])
+
+<span class="Comment">#Title and Description</span>
+bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">A Kd Tree Example</span><span class="Constant">&quot;</span>)
+bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">A three-level tree with partitioners cycling between X and Y.</span><span class="Constant">&quot;</span>
+                + <span class="Constant">&quot;</span><span class="Constant"> The root node color is set to red while the leaf nodes that represent code letters are set to orange.</span><span class="Constant">&quot;</span>)
+
+t0 = KDTreeElement(key = <span class="Constant">50</span>, dim = <span class="Constant">0</span>)
+t1 = KDTreeElement(key = <span class="Constant">25</span>, dim = <span class="Constant">1</span>)
+t2 = KDTreeElement(key = <span class="Constant">75</span>, dim = <span class="Constant">1</span>)
+t3 = KDTreeElement(key = <span class="Constant">20</span>, dim = <span class="Constant">0</span>)
+t4 = KDTreeElement(key = <span class="Constant">30</span>, dim = <span class="Constant">0</span>)
+t5 = KDTreeElement(key = <span class="Constant">60</span>, dim = <span class="Constant">0</span>)
+t6 = KDTreeElement(key = <span class="Constant">80</span>, dim = <span class="Constant">0</span>)
+
+t0.set_left(t1)
+t0.set_right(t2)
+t1.set_left(t3)
+t1.set_label(<span class="Constant">&quot;</span><span class="Constant">X</span><span class="Constant">&quot;</span>)
+t1.set_right(t4)
+t2.set_left(t5)
+t2.set_left(t6)
+
+t0.set_label(<span class="Constant">&quot;</span><span class="Constant">X</span><span class="Constant">&quot;</span>)
+t1.set_label(<span class="Constant">&quot;</span><span class="Constant">Y</span><span class="Constant">&quot;</span>)
+t2.set_label(<span class="Constant">&quot;</span><span class="Constant">Y</span><span class="Constant">&quot;</span>)
+t3.set_label(<span class="Constant">&quot;</span><span class="Constant">X</span><span class="Constant">&quot;</span>)
+t4.set_label(<span class="Constant">&quot;</span><span class="Constant">X</span><span class="Constant">&quot;</span>)
+t5.set_label(<span class="Constant">&quot;</span><span class="Constant">X</span><span class="Constant">&quot;</span>)
+t6.set_label(<span class="Constant">&quot;</span><span class="Constant">X</span><span class="Constant">&quot;</span>)
+
+t0.get_visualizer().set_color(<span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>)
+
+t1.get_visualizer().set_color(<span class="Constant">&quot;</span><span class="Constant">orange</span><span class="Constant">&quot;</span>)
+t4.get_visualizer().set_color(<span class="Constant">&quot;</span><span class="Constant">orange</span><span class="Constant">&quot;</span>)
+t5.get_visualizer().set_color(<span class="Constant">&quot;</span><span class="Constant">orange</span><span class="Constant">&quot;</span>)
+t6.get_visualizer().set_color(<span class="Constant">&quot;</span><span class="Constant">orange</span><span class="Constant">&quot;</span>)
+
+bridges.set_data_structure(t0)
+bridges.visualize()
+</pre>

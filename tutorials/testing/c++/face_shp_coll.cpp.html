@@ -5,7 +5,7 @@
 <span class="PreProc">#include </span><span class="Constant">&quot;Polygon.h&quot;</span>
 <span class="PreProc">#include </span><span class="Constant">&quot;Polyline.h&quot;</span>
 <span class="PreProc">#include </span><span class="Constant">&quot;Circle.h&quot;</span>
-<span class="PreProc">#include </span><span class="Constant">&quot;Label.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Text.h&quot;</span>
 
 <span class="Statement">using</span> <span class="Type">namespace</span> bridges;
 
@@ -24,7 +24,7 @@
 	Circle s1(<span class="Constant">50</span>);
 	s1.setStrokeColor(<span class="Constant">&quot;red&quot;</span>);
 	s1.setStrokeWidth(<span class="Constant">2.0</span>);
-	sc.addSymbol(&amp;s1);
+	sc.addSymbol(s1);
 
 	<span class="Comment">// left eye, use translation and scale to locate and shape it</span>
 	Circle s2(<span class="Constant">25</span>);
@@ -34,7 +34,7 @@
 	<span class="Type">float</span> sf[] = {<span class="Constant">0.5</span>, <span class="Constant">0.5</span>};
 	s2.translate(tf[<span class="Constant">0</span>], tf[<span class="Constant">1</span>]);
 	s2.scale(<span class="Constant">0.3</span>);
-	sc.addSymbol(&amp;s2);
+	sc.addSymbol(s2);
 
 	<span class="Comment">// right eye, similarly</span>
 	Circle s3(<span class="Constant">25</span>);
@@ -44,7 +44,7 @@
 	tf[<span class="Constant">1</span>] = <span class="Constant">20.</span>;
 	s3.translate(tf[<span class="Constant">0</span>], tf[<span class="Constant">1</span>]);
 	s3.scale(<span class="Constant">0.3</span>);
-	sc.addSymbol(&amp;s3);
+	sc.addSymbol(s3);
 
 
 	<span class="Comment">// nose is a rectangle, use scale and translation</span>
@@ -57,7 +57,7 @@
 	tf[<span class="Constant">1</span>] = -<span class="Constant">10.0</span>;
 	s4.scale(sf[<span class="Constant">0</span>], sf[<span class="Constant">1</span>]);
 	s4.translate(tf[<span class="Constant">0</span>], tf[<span class="Constant">1</span>]);
-	sc.addSymbol(&amp;s4);
+	sc.addSymbol(s4);
 
 	<span class="Comment">// mouth is a rectangle, use scale and translation</span>
 	Rectangle s5(<span class="Constant">0</span>, <span class="Constant">0</span>, <span class="Constant">10</span>, <span class="Constant">10</span>);
@@ -69,7 +69,7 @@
 	tf[<span class="Constant">1</span>] = -<span class="Constant">40.0</span>;
 	s5.scale(sf[<span class="Constant">0</span>], sf[<span class="Constant">1</span>]);
 	s5.translate(tf[<span class="Constant">0</span>], tf[<span class="Constant">1</span>]);
-	sc.addSymbol(&amp;s5);
+	sc.addSymbol(s5);
 
 	<span class="Comment">// put a hat on the head</span>
 	Polyline s6;
@@ -78,16 +78,16 @@
 	s6.addPoint(<span class="Constant">50.0f</span>, <span class="Constant">22.0f</span>);
 	s6.setStrokeColor(<span class="Constant">&quot;darkorchid&quot;</span>);
 	s6.setStrokeWidth(<span class="Constant">3.0f</span>);
-	sc.addSymbol(&amp;s6);
+	sc.addSymbol(s6);
 
 	<span class="Comment">// add a title to the figure</span>
-	Label l;
-	l.setLocation(-<span class="Constant">50</span>, <span class="Constant">100</span>);
+	Text l;
+	l.setAnchorLocation(-<span class="Constant">50</span>, <span class="Constant">100</span>);
 	l.setFontSize(<span class="Constant">16</span>);
 	l.setStrokeWidth(<span class="Constant">1.0f</span>);
-	l.setLabel(<span class="Constant">&quot;Its a Dorky Looking Face!&quot;</span>);
+	l.setText(<span class="Constant">&quot;Its a Dorky Looking Face!&quot;</span>);
 	l.setStrokeColor(<span class="Constant">&quot;purple&quot;</span>);
-	sc.addSymbol(&amp;l);
+	sc.addSymbol(l);
 
 	<span class="Comment">// set visualizer type</span>
 	bridges.setDataStructure(sc);

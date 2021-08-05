@@ -13,7 +13,7 @@
 BSTElement&lt;<span class="Type">float</span>, EarthquakeUSGS&gt; *insert (BSTElement&lt;<span class="Type">float</span>, EarthquakeUSGS&gt; *rt,
 	BSTElement&lt;<span class="Type">float</span>, EarthquakeUSGS&gt; *new_el);
 
-<span class="Type">int</span> max_quakes = <span class="Constant">1500</span>;
+<span class="Type">int</span> max_quakes = <span class="Constant">25</span>;
 
 <span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
 	<span class="Comment">// create Bridges object</span>
@@ -34,28 +34,13 @@ BSTElement&lt;<span class="Type">float</span>, EarthquakeUSGS&gt; *insert (BSTEl
 	<span class="Comment">// insert quake records into the tree</span>
 	<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; max_quakes; k++) {
 		EarthquakeUSGS eq = eq_list[k];
-		<span class="Statement">if</span> (eq.getMagnitude() &gt; <span class="Constant">3.</span>) {
-			BSTElement&lt;<span class="Type">float</span>, EarthquakeUSGS&gt;
-				*bst_node = <span class="Statement">new</span> BSTElement&lt;<span class="Type">float</span>, EarthquakeUSGS&gt;(eq.getMagnitude(), eq);
-			<span class="Statement">if</span> (eq.getMagnitude() &gt; <span class="Constant">3.0</span> &amp;&amp; eq.getMagnitude() &lt; <span class="Constant">4.0</span>)  {
-				bst_node-&gt;setColor(<span class="Constant">&quot;green&quot;</span>);
-				bst_node-&gt;setSize (<span class="Constant">20.0</span>);
-			}
-			<span class="Statement">else</span> <span class="Statement">if</span> (eq.getMagnitude() &gt; <span class="Constant">4.0</span> &amp;&amp; eq.getMagnitude() &lt; <span class="Constant">5.0</span>) {
-				bst_node-&gt;setColor(<span class="Constant">&quot;orange&quot;</span>);
-				bst_node-&gt;setSize (<span class="Constant">30.0</span>);
-			}
-			<span class="Statement">else</span> {
-				bst_node-&gt;setColor(<span class="Constant">&quot;red&quot;</span>);
-				bst_node-&gt;setSize (<span class="Constant">40.0</span>);
-			}
-
-			bst_node-&gt;setLabel(eq.getTitle() + <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">Lat/Long: ( &quot;</span> +
-				to_string(eq.getLatit()) + <span class="Constant">&quot;,&quot;</span> + to_string(eq.getLongit()) + <span class="Constant">&quot; )</span><span class="Special">\n</span><span class="Constant">&quot;</span> +
-				eq.getDateStr());
-			root = insert (root, bst_node);
-			root-&gt;setColor(<span class="Constant">&quot;red&quot;</span>);
-		}
+		BSTElement&lt;<span class="Type">float</span>, EarthquakeUSGS&gt;
+		*bst_node = <span class="Statement">new</span> BSTElement&lt;<span class="Type">float</span>, EarthquakeUSGS&gt;(eq.getMagnitude(), eq);
+		bst_node-&gt;setLabel(eq.getTitle() + <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">Lat/Long: ( &quot;</span> +
+			to_string(eq.getLatit()) + <span class="Constant">&quot;,&quot;</span> + to_string(eq.getLongit()) + <span class="Constant">&quot; )</span><span class="Special">\n</span><span class="Constant">&quot;</span> +
+			eq.getDateStr());
+		root = insert (root, bst_node);
+		root-&gt;setColor(<span class="Constant">&quot;red&quot;</span>);
 	}
 
 	<span class="Comment">// visualize the binary search tree</span>

@@ -1,0 +1,79 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">import</span> bridges.connect.Bridges;
+<span class="PreProc">import</span> bridges.connect.DataSource;
+<span class="PreProc">import</span> bridges.data_src_dependent.Amenities;
+<span class="PreProc">import</span> bridges.data_src_dependent.*;
+<span class="PreProc">import</span> java.util.*;
+
+
+
+<span class="Type">public</span> <span class="Type">class</span> gutenberg_snippet {
+	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) <span class="Type">throws</span> Exception {
+
+		<span class="Comment">//create the Bridges object</span>
+		Bridges bridges = <span class="Statement">new</span> Bridges(<span class="Constant">0</span>, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+		<span class="Comment">//create a bridges datasource object to use and</span>
+		<span class="Comment">//retrieve the gutenberg books</span>
+		DataSource ds = bridges.getDataSource();
+
+		<span class="Comment">//Get Meta data for a single book</span>
+
+
+		<span class="Comment">//Get Meta data for a book</span>
+
+		System.out.println(<span class="Constant">&quot;Meta data for 1 book: Moby Dick, by Id&quot;</span>);
+		GutenbergMeta b = ds.getAGutenbergBookMetaData (<span class="Constant">2701</span>);
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Id: &quot;</span> + b.getId());
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Title: &quot;</span> + b.getTitle());
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Language: &quot;</span> + b.getLanguage());
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Date Added:&quot;</span> + b.getDate());
+
+		System.out.println(<span class="Constant">&quot;Retrieving books by title: Pride and Prejudice&quot;</span>);
+		List&lt;GutenbergMeta&gt; blist = ds.getGutenbergBookMetaData(<span class="Constant">&quot;Pride and Prejudice&quot;</span>, <span class="Constant">&quot;title&quot;</span>);
+		<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; <span class="Constant">2</span>; k++) {
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Id: &quot;</span> + blist.get(k).getId());
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Title: &quot;</span> + blist.get(k).getTitle());
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Language: &quot;</span> + blist.get(k).getLanguage());
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Date Added: &quot;</span> + blist.get(k).getDate());
+		}
+
+		System.out.println(<span class="Constant">&quot;Retrieving books by Language: English&quot;</span>);
+		blist = ds.getGutenbergBookMetaData(<span class="Constant">&quot;en&quot;</span>, <span class="Constant">&quot;language&quot;</span>);
+		<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; <span class="Constant">2</span>; k++) {
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Id: &quot;</span> + blist.get(k).getId());
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Title: &quot;</span> + blist.get(k).getTitle());
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Language: &quot;</span> + blist.get(k).getLanguage());
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Date Added: &quot;</span> + blist.get(k).getDate());
+		}
+
+		System.out.println(<span class="Constant">&quot;Retrieving books by Date: 2018&quot;</span>);
+		blist = ds.getGutenbergBookMetaData(<span class="Constant">&quot;2018-01-01&quot;</span>, <span class="Constant">&quot;date&quot;</span>);
+		<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; <span class="Constant">2</span>; k++) {
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Id: &quot;</span> + blist.get(k).getId());
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Title: &quot;</span> + blist.get(k).getTitle());
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Language: &quot;</span> + blist.get(k).getLanguage());
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Date Added: &quot;</span> + blist.get(k).getDate());
+		}
+		System.out.println(<span class="Constant">&quot;Retrieving books by Author: Mark Twain&quot;</span>);
+		blist = ds.getGutenbergBookMetaData(<span class="Constant">&quot;Mark Twain&quot;</span>, <span class="Constant">&quot;author&quot;</span>);
+		<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; blist.size(); k++) {
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Id: &quot;</span> + blist.get(k).getId());
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Title: &quot;</span> + blist.get(k).getTitle());
+			String[] authors = blist.get(k).getAuthors();
+			System.out.print(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Authors:&quot;</span>);
+			<span class="Statement">for</span> (<span class="Type">int</span> j = <span class="Constant">0</span>; j &lt; authors.length; j++)
+				System.out.println(authors[j] + <span class="Constant">&quot;,&quot;</span>);
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Language: &quot;</span> + blist.get(k).getLanguage());
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Date Added: &quot;</span> + blist.get(k).getDate());
+		}
+
+		System.out.println (<span class="Constant">&quot;Retrieving book text: Moby Dick&quot;</span>);
+		String book = ds.getGutenbergBookText(<span class="Constant">2701</span>);
+
+		<span class="Comment">// print the first 300 chars of the book</span>
+		System.out.println(<span class="Constant">&quot;Printing the first 300 characters of the book&quot;</span>);
+		System.out.println(book.substring(<span class="Constant">0</span>, <span class="Constant">300</span>));
+	}
+}
+</pre>

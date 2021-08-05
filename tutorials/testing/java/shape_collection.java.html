@@ -3,10 +3,11 @@
 <span class="PreProc">import</span> bridges.base.SymbolCollection;
 <span class="PreProc">import</span> bridges.base.Rectangle;
 <span class="PreProc">import</span> bridges.base.Circle;
-<span class="PreProc">import</span> bridges.base.Label;
+<span class="PreProc">import</span> bridges.base.Text;
 <span class="PreProc">import</span> bridges.base.Polyline;
 <span class="PreProc">import</span> bridges.base.Polygon;
 <span class="PreProc">import</span> bridges.base.Color;
+<span class="PreProc">import</span> bridges.base.SymbolGroup;
 
 
 <span class="Type">public</span> <span class="Type">class</span> shape_collection {
@@ -27,11 +28,13 @@
 		<span class="Comment">// draw a rectangle</span>
 		Rectangle s1 = <span class="Statement">new</span> Rectangle(-<span class="Constant">25.0f</span>, <span class="Constant">0.0f</span>, <span class="Constant">50.0f</span>, <span class="Constant">50.0f</span>);
 		s1.setFillColor(<span class="Constant">&quot;red&quot;</span>);
+		s1.setOpacity(<span class="Constant">0.3f</span>);
 		sc.addSymbol(s1);
 
 		<span class="Comment">// and a circle next to it</span>
 		Circle s2 = <span class="Statement">new</span> Circle(<span class="Constant">25.0f</span>, <span class="Constant">0.0f</span>, <span class="Constant">25.0f</span>);
 		s2.setFillColor(<span class="Constant">&quot;green&quot;</span>);
+		s1.setOpacity(<span class="Constant">0.1f</span>);
 		sc.addSymbol(s2);
 
 		<span class="Comment">// draw a triangle above</span>
@@ -57,6 +60,13 @@
 		s5.setStrokeWidth(<span class="Constant">2.0f</span>);
 		sc.addSymbol(s5);
 
+		Polyline s5b = <span class="Statement">new</span> Polyline();
+		s5b.addPoint(<span class="Constant">50.0f</span>, -<span class="Constant">100.0f</span>);
+		s5b.addPoint(<span class="Constant">50.0f</span>, <span class="Constant">100.0f</span>);
+		s5b.addPoint(<span class="Constant">70.0f</span>, <span class="Constant">120.0f</span>);
+		s5b.setStrokeWidth(<span class="Constant">2.0f</span>);
+		sc.addSymbol(s5b);
+
 		Polygon s6 = <span class="Statement">new</span> Polygon();
 		s6.addPoint (-<span class="Constant">30.0f</span>, <span class="Constant">40.0f</span>);
 		s6.addPoint (<span class="Constant">30.0f</span>, <span class="Constant">40.0f</span>);
@@ -68,19 +78,50 @@
 
 
 
-		Label l = <span class="Statement">new</span> Label();
-		l.setLocation(<span class="Constant">0.0f</span>, <span class="Constant">25.0f</span>);
-		l.setFontSize(<span class="Constant">12.0f</span>);
-		l.setStrokeWidth(<span class="Constant">1.0f</span>);
-		l.setLabel(<span class="Constant">&quot;test label&quot;</span>);
+		Text l = <span class="Statement">new</span> Text();
+		l.setAnchorLocation(<span class="Constant">0.0f</span>, <span class="Constant">25.0f</span>);
+		l.setFontSize(<span class="Constant">18f</span>);
+		l.setStrokeWidth(<span class="Constant">2.0f</span>);
+		l.setOpacity(<span class="Constant">.3f</span>);
+		l.setText(<span class="Constant">&quot;test label1&quot;</span>);
 		l.setStrokeColor(<span class="Constant">&quot;purple&quot;</span>);
-		l.setRotationAngle(<span class="Constant">90.0f</span>);
 		sc.addSymbol(l);
+
+
+		SymbolGroup group = <span class="Statement">new</span> SymbolGroup();
+		sc.addSymbol(group);
+		group.setTransform(<span class="Constant">1</span>,<span class="Constant">0</span>,<span class="Constant">0</span>,<span class="Constant">1</span>,<span class="Constant">30</span>,<span class="Constant">20</span>);
+
+
+		Text l2 = <span class="Statement">new</span> Text();
+		l2.setAnchorLocation(<span class="Constant">0.0f</span>, <span class="Constant">25.0f</span>);
+		l2.setFontSize(<span class="Constant">12f</span>);
+		l2.setStrokeWidth(<span class="Constant">1.0f</span>);
+		l2.setText(<span class="Constant">&quot;test label translated and scaled&quot;</span>);
+		l2.setStrokeColor(<span class="Constant">&quot;purple&quot;</span>);
+		l2.scale(<span class="Constant">2.0f</span>, <span class="Constant">1.0f</span>);
+		group.addSymbol(l2);
+
+		SymbolGroup group2 = <span class="Statement">new</span> SymbolGroup();
+		group.addSymbol(group2);
+		group2.setTransform(<span class="Constant">1</span>,<span class="Constant">0</span>,<span class="Constant">0</span>,<span class="Constant">1</span>,<span class="Constant">30</span>,<span class="Constant">20</span>);
+		group2.rotate(<span class="Constant">20</span>);
+
+		Text l3 = <span class="Statement">new</span> Text();
+		l3.setAnchorLocation(<span class="Constant">0.0f</span>, <span class="Constant">25.0f</span>);
+		l3.setFontSize(<span class="Constant">12f</span>);
+		l3.setStrokeWidth(<span class="Constant">1.0f</span>);
+		l3.setText(<span class="Constant">&quot;test label translated more&quot;</span>);
+		l3.setStrokeColor(<span class="Constant">&quot;purple&quot;</span>);
+		l3.setAnchorAlignment(<span class="Constant">&quot;top&quot;</span>, <span class="Constant">&quot;middle&quot;</span>);
+		group2.addSymbol(l3);
+
 
 		<span class="Comment">// set visualizer type</span>
 		bridges.setDataStructure(sc);
 
 		<span class="Comment">// visualize the JSON and Collection</span>
+		bridges.setVisualizeJSON(<span class="Constant">true</span>);
 		bridges.visualize();
 	}
 }

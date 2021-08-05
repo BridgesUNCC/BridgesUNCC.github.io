@@ -3,12 +3,12 @@ import bridges.base.SLelement;
 import java.util.Iterator;
 
 //
-// In part 3 of this tutorial we demonstrate more advanced features such as 
+// In part 3 of this tutorial we demonstrate more advanced features such as
 // using iterators to traverse lists, which are more convenient than working
 // with the underlying element objects. To keep the tutorial simple, we will ignore
 // styling (that was illustrated in part 2).
 //
-// Reference Classes: SLelement, Bridges 
+// Reference Classes: SLelement, Bridges
 //
 
 
@@ -49,21 +49,21 @@ public class tut_sllist_p3 {
 		// print the names of the students in the list using iteration
 
 		// Using a regular for loop on BRIDGES elements
-		System.out.println("Using a regular for loop.."); 
+		System.out.println("Using a regular for loop..");
 		for (SLelement<String> el = st0; el != null; el = el.getNext())
 			System.out.println("\t" +  el.getValue());
 
 		// using a forward iterator
-		System.out.println("Using a forward iterator..\n"); 
+		System.out.println("Using a forward iterator..\n");
 		Iterator<String> iter = st0.iterator();
 		while (iter.hasNext()) {
 			System.out.println("\t" + iter.next());
 		}
 
 		// using a for-each loop
-        System.out.println("Using range loop:");
-        for (String s : st0)
-            System.out.println("\t " + s);
+		System.out.println("Using range loop:");
+		for (String s : st0)
+			System.out.println("\t " + s);
 
 		// tell Bridges the head of the list
 		bridges.setDataStructure(st0);

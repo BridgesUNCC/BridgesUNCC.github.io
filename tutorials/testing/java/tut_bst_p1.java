@@ -12,7 +12,7 @@ public class tut_bst_p1 {
 		//create the Bridges object, set credentials
 		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID",
 			"YOUR_API_KEY");
-		// set title 
+		// set title
 		bridges.setTitle("A Simple  Binary Search Tree Example");
 
 		// set description
@@ -36,7 +36,7 @@ public class tut_bst_p1 {
 		node2.setRight(node3);
 		node1.setRight(node4);
 		node1.setLeft(node5);
-		
+
 
 		// privide BRIDGES a handle to the root of the tree
 		bridges.setDataStructure(root);

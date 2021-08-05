@@ -1,0 +1,47 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">import</span> bridges.connect.Bridges;
+<span class="PreProc">import</span> bridges.base.Array3D;
+<span class="PreProc">import</span> bridges.base.Element;
+
+<span class="Type">public</span> <span class="Type">class</span> arr3d {
+	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) <span class="Type">throws</span> Exception {
+
+		<span class="Comment">//create the Bridges object</span>
+		Bridges bridges = <span class="Statement">new</span> Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+			<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+		<span class="Comment">// title, description</span>
+		bridges.setTitle(<span class="Constant">&quot;Three-Dimensional Array Example&quot;</span>);
+		bridges.setDescription(<span class="Constant">&quot;A 3 dimensional array with visual attributes. The third dimension is illustrated as a sequence of 2D slices&quot;</span>);
+
+		<span class="Comment">// specify array dimensions and create 3D array</span>
+		<span class="Type">int</span> num_slices = <span class="Constant">4</span>, num_rows = <span class="Constant">4</span>, num_cols = <span class="Constant">4</span>;
+		Array3D&lt;Integer&gt; my_array = <span class="Statement">new</span> Array3D&lt;Integer&gt; (num_slices, num_rows, num_cols);
+
+		<span class="Comment">// populate the elements with their array position</span>
+		<span class="Type">int</span> n  = <span class="Constant">0</span>;
+		<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; num_slices; k++) {
+			<span class="Statement">for</span> (<span class="Type">int</span> j = <span class="Constant">0</span>; j &lt; num_rows; j++) {
+				<span class="Statement">for</span> (<span class="Type">int</span> i = <span class="Constant">0</span>; i &lt; num_cols; i++) {
+					my_array.getElement(k, j, i).setLabel(<span class="Constant">&quot;El &quot;</span> + String.valueOf(n));
+					n++;
+				}
+			}
+		}
+
+		<span class="Comment">// color some of the elements</span>
+		my_array.getElement(<span class="Constant">0</span>, <span class="Constant">0</span>, <span class="Constant">0</span>).setColor(<span class="Constant">&quot;red&quot;</span>);
+		my_array.getElement(<span class="Constant">0</span>, <span class="Constant">3</span>, <span class="Constant">0</span>).setColor(<span class="Constant">&quot;green&quot;</span>);
+		my_array.getElement(<span class="Constant">1</span>, <span class="Constant">1</span>, <span class="Constant">0</span>).setColor(<span class="Constant">&quot;cyan&quot;</span>);
+		my_array.getElement(<span class="Constant">2</span>, <span class="Constant">2</span>, <span class="Constant">0</span>).setColor(<span class="Constant">&quot;yellow&quot;</span>);
+		my_array.getElement(<span class="Constant">3</span>, <span class="Constant">0</span>, <span class="Constant">0</span>).setColor(<span class="Constant">&quot;blue&quot;</span>);
+		my_array.getElement(<span class="Constant">3</span>, <span class="Constant">3</span>, <span class="Constant">3</span>).setColor(<span class="Constant">&quot;magenta&quot;</span>);
+
+		<span class="Comment">//set visualizer type</span>
+		bridges.setDataStructure(my_array);
+
+		<span class="Comment">// visualize the list</span>
+		bridges.visualize();
+	}
+}
+
+</pre>

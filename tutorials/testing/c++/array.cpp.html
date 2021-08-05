@@ -1,0 +1,34 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Array.h&quot;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
+
+<span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
+
+	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+	Array&lt;<span class="Type">int</span>&gt; arr (<span class="Constant">10</span>);
+
+	<span class="Statement">for</span> (<span class="Type">int</span> j = <span class="Constant">0</span>; j &lt; <span class="Constant">10</span>; j++) {
+		arr.getElement(j).setValue(j * j);
+		arr.getElement(j).setLabel(to_string(arr.getElement(j).getValue()));
+	}
+
+	arr.getElement(<span class="Constant">0</span>).setColor(<span class="Constant">&quot;red&quot;</span>);
+	arr.getElement(<span class="Constant">1</span>).setColor(<span class="Constant">&quot;green&quot;</span>);
+	arr.getElement(<span class="Constant">2</span>).setColor(<span class="Constant">&quot;blue&quot;</span>);
+	arr.getElement(<span class="Constant">3</span>).setColor(<span class="Constant">&quot;cyan&quot;</span>);
+	arr.getElement(<span class="Constant">4</span>).setColor(<span class="Constant">&quot;magenta&quot;</span>);
+	arr.getElement(<span class="Constant">5</span>).setColor(<span class="Constant">&quot;yellow&quot;</span>);
+	arr.getElement(<span class="Constant">6</span>).setColor(<span class="Constant">&quot;red&quot;</span>);
+	arr.getElement(<span class="Constant">7</span>).setColor(<span class="Constant">&quot;green&quot;</span>);
+	arr.getElement(<span class="Constant">8</span>).setColor(<span class="Constant">&quot;blue&quot;</span>);
+	arr.getElement(<span class="Constant">9</span>).setColor(<span class="Constant">&quot;black&quot;</span>);
+
+	bridges.setDataStructure(&amp;arr);
+	bridges.visualize();
+
+	<span class="Statement">return</span> <span class="Constant">0</span>;
+}
+</pre>

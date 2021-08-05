@@ -38,20 +38,20 @@ public class tut_array1d_p3 {
 		System.out.println ("Using regular for loop..");
 		for (int k = 0; k < 10; k++)
 			System.out.println("\t" + arr.getElement(k).getValue());
-		
+
 
 		//use an iterator to print the values of the array
-		
-		System.out.println("Using an iterator..\n"); 
-		Iterator<Integer> iter = arr.iterator();
-        while (iter.hasNext()) {
-            System.out.println("\t" + iter.next());
-        }
 
-        // using a for-each loop
-        System.out.println("Using range loop:");
-        for (int  s : arr)
-            System.out.println("\t " + s);
+		System.out.println("Using an iterator..\n");
+		Iterator<Integer> iter = arr.iterator();
+		while (iter.hasNext()) {
+			System.out.println("\t" + iter.next());
+		}
+
+		// using a for-each loop
+		System.out.println("Using range loop:");
+		for (int  s : arr)
+			System.out.println("\t " + s);
 
 		// tell Bridges the  datastructure to visualize
 		bridges.setDataStructure(arr);

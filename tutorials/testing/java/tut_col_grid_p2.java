@@ -21,7 +21,7 @@ public class tut_col_grid_p2 {
 		Bridges bridges = new Bridges(YOUR_ASSIGNMENT_NUMBER, "YOUR_USER_ID",
 			"YOUR_API_KEY");
 		// set title
-    	bridges.setTitle("BRIDGES Color Grid Tutorial - Part 1");
+		bridges.setTitle("BRIDGES Color Grid Tutorial - Part 1");
 
 		// set description
 		bridges.setDescription("This is an example to illustrate different ways of setting colors in the ColorGrid");
@@ -37,7 +37,7 @@ public class tut_col_grid_p2 {
 		// color a few squares and make a + sign at the center
 		// using named colors - full set of colors detailed in
 		// in the Color class
-		
+
 		cg.set(5, 5, red);
 		cg.set(5, 4, blue);
 		cg.set(5, 6, blue);
@@ -50,7 +50,7 @@ public class tut_col_grid_p2 {
 		// visualize
 		bridges.visualize();
 
-		// you can also use r,g, b, triplets to specify color 
+		// you can also use r,g, b, triplets to specify color
 		// (in the range 0-255, for r, g, b and 0.0-1.0f for opacity)
 		red =  new Color(255, 0, 0);
 		green =  new Color(0, 255, 0);
@@ -61,10 +61,10 @@ public class tut_col_grid_p2 {
 		cg.set(5, 6, blue);
 		cg.set(4, 5, green);
 		cg.set(6, 5, green);
-		
+
 		// visualize again
 		bridges.visualize();
-		
+
 		red =  new Color(255, 0, 0, 0.5f);
 		green =  new Color(0, 255, 0, 0.5f);
 		blue =  new Color(0, 0, 255, 0.5f);
@@ -76,8 +76,8 @@ public class tut_col_grid_p2 {
 		cg.set(5, 6, blue);
 		cg.set(4, 5, green);
 		cg.set(6, 5, green);
-		
-		// visualize again -- note that you will see tabs to switch between 
+
+		// visualize again -- note that you will see tabs to switch between
 		// the 3 visualizations
 		bridges.visualize();
 	}

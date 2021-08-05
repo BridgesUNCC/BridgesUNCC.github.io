@@ -29,7 +29,7 @@
 
 		<span class="Type">int</span> width = <span class="Constant">10</span>, height = <span class="Constant">10</span>;
 
-		<span class="Comment">// create a 10 by 10 color grid </span>
+		<span class="Comment">// create a 10 by 10 color grid</span>
 		ColorGrid cg  = <span class="Statement">new</span> ColorGrid(width, height, <span class="Statement">new</span> Color(<span class="Constant">&quot;lightgoldenrodyellow&quot;</span>));
 
 		<span class="Comment">// create a checkerboard pattern of  10 x 10 squares</span>
@@ -45,25 +45,25 @@
 		Color blue = <span class="Statement">new</span> Color(<span class="Constant">&quot;blue&quot;</span>);
 
 		<span class="Statement">for</span> (<span class="Type">int</span> j = <span class="Constant">0</span>; j &lt; num_squares_y;  j++)
-		<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; num_squares_x;  k++) {
-			<span class="Comment">// use even/odd of pixel to figure out the color of the square</span>
-			Boolean x_even = (k % <span class="Constant">2</span>) == <span class="Constant">0</span>;
-			Boolean y_even = (j % <span class="Constant">2</span>) == <span class="Constant">0</span>;
+			<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; num_squares_x;  k++) {
+				<span class="Comment">// use even/odd of pixel to figure out the color of the square</span>
+				Boolean x_even = (k % <span class="Constant">2</span>) == <span class="Constant">0</span>;
+				Boolean y_even = (j % <span class="Constant">2</span>) == <span class="Constant">0</span>;
 
-			<span class="Statement">if</span> (y_even)
-				col = (x_even) ? red : blue;
-			<span class="Statement">else</span>
-				col = (x_even) ? blue : red;
+				<span class="Statement">if</span> (y_even)
+					col = (x_even) ? red : blue;
+				<span class="Statement">else</span>
+					col = (x_even) ? blue : red;
 
-			<span class="Comment">// find the address of the square</span>
-			<span class="Type">int</span> origin_x = k * sq_width;
-			<span class="Type">int</span> origin_y = j * sq_height;
+				<span class="Comment">// find the address of the square</span>
+				<span class="Type">int</span> origin_x = k * sq_width;
+				<span class="Type">int</span> origin_y = j * sq_height;
 
-			<span class="Comment">// color the square</span>
-			<span class="Statement">for</span> (<span class="Type">int</span> row = origin_y; row &lt; origin_y + sq_height; row++)
-			<span class="Statement">for</span> (<span class="Type">int</span> column = origin_x; column &lt; origin_x + sq_width; column++)
-				cg.set(row, column, col);
-		}
+				<span class="Comment">// color the square</span>
+				<span class="Statement">for</span> (<span class="Type">int</span> row = origin_y; row &lt; origin_y + sq_height; row++)
+					<span class="Statement">for</span> (<span class="Type">int</span> column = origin_x; column &lt; origin_x + sq_width; column++)
+						cg.set(row, column, col);
+			}
 
 		<span class="Comment">// tell Bridges the the color grid object to visualize</span>
 		bridges.setDataStructure(cg);

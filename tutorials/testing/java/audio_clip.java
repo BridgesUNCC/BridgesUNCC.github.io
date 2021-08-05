@@ -63,9 +63,9 @@ public class audio_clip {
 
 		AudioClip ac6 = new AudioClip("../../data/piano.wav");
 
-        bridges.setDataStructure(ac6);
+		bridges.setDataStructure(ac6);
 
-        bridges.visualize();
+		bridges.visualize();
 
 
 	}

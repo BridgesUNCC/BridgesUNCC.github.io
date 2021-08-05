@@ -38,35 +38,35 @@ public class tut_dllist_p2 {
 		el3.setNext(el4);
 		el4.setPrev(el3);
 
-		// style the nodes and links in the list 
-		
+		// style the nodes and links in the list
+
 		// color the elements
 		el0.setColor("red");
 		el1.setColor("green");
 		el2.setColor("blue");
 		el3.setColor("cyan");
 		el4.setColor("yellow");
-		
+
 		// element size
 		el0.setSize(40);
 		el1.setSize(40);
-		
+
 		// element opacity
 		el1.setOpacity(0.2f);
 		el3.setOpacity(0.2f);
-		
+
 		// shape
 		el2.setShape("triangle");
 		el3.setShape("square");
-		
+
 		// thickness
 		el3.getLinkVisualizer(el4).setThickness(6.0f);
 		el4.getLinkVisualizer(el3).setThickness(6.0f);
-		
+
 		// link color
 		el3.getLinkVisualizer(el4).setColor("orange");
 		el4.getLinkVisualizer(el3).setColor("orange");
-		
+
 		// link label
 		el0.getLinkVisualizer(el1).setLabel("Chaney-->Kyler");
 		el1.getLinkVisualizer(el0).setLabel("Kyler-->Chaney");

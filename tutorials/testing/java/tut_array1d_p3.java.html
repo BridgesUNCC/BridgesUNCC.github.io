@@ -45,14 +45,14 @@
 
 		System.out.println(<span class="Constant">&quot;Using an iterator..</span><span class="Special">\n</span><span class="Constant">&quot;</span>);
 		Iterator&lt;Integer&gt; iter = arr.iterator();
-        <span class="Statement">while</span> (iter.hasNext()) {
-            System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">&quot;</span> + iter.next());
-        }
+		<span class="Statement">while</span> (iter.hasNext()) {
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">&quot;</span> + iter.next());
+		}
 
-        <span class="Comment">// using a for-each loop</span>
-        System.out.println(<span class="Constant">&quot;Using range loop:&quot;</span>);
-        <span class="Statement">for</span> (<span class="Type">int</span>  s : arr)
-            System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant"> &quot;</span> + s);
+		<span class="Comment">// using a for-each loop</span>
+		System.out.println(<span class="Constant">&quot;Using range loop:&quot;</span>);
+		<span class="Statement">for</span> (<span class="Type">int</span>  s : arr)
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant"> &quot;</span> + s);
 
 		<span class="Comment">// tell Bridges the  datastructure to visualize</span>
 		bridges.setDataStructure(arr);

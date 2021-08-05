@@ -2,10 +2,11 @@ import bridges.connect.Bridges;
 import bridges.base.SymbolCollection;
 import bridges.base.Rectangle;
 import bridges.base.Circle;
-import bridges.base.Label;
+import bridges.base.Text;
 import bridges.base.Polyline;
 import bridges.base.Polygon;
 import bridges.base.Color;
+import bridges.base.SymbolGroup;
 
 
 public class shape_collection {
@@ -26,11 +27,13 @@ public class shape_collection {
 		// draw a rectangle
 		Rectangle s1 = new Rectangle(-25.0f, 0.0f, 50.0f, 50.0f);
 		s1.setFillColor("red");
+		s1.setOpacity(0.3f);
 		sc.addSymbol(s1);
 
 		// and a circle next to it
 		Circle s2 = new Circle(25.0f, 0.0f, 25.0f);
 		s2.setFillColor("green");
+		s1.setOpacity(0.1f);
 		sc.addSymbol(s2);
 
 		// draw a triangle above
@@ -56,6 +59,13 @@ public class shape_collection {
 		s5.setStrokeWidth(2.0f);
 		sc.addSymbol(s5);
 
+		Polyline s5b = new Polyline();
+		s5b.addPoint(50.0f, -100.0f);
+		s5b.addPoint(50.0f, 100.0f);
+		s5b.addPoint(70.0f, 120.0f);
+		s5b.setStrokeWidth(2.0f);
+		sc.addSymbol(s5b);
+		
 		Polygon s6 = new Polygon();
 		s6.addPoint (-30.0f, 40.0f);
 		s6.addPoint (30.0f, 40.0f);
@@ -67,19 +77,50 @@ public class shape_collection {
 
 
 
-		Label l = new Label();
-		l.setLocation(0.0f, 25.0f);
-		l.setFontSize(12.0f);
-		l.setStrokeWidth(1.0f);
-		l.setLabel("test label");
+		Text l = new Text();
+		l.setAnchorLocation(0.0f, 25.0f);
+		l.setFontSize(18f);
+		l.setStrokeWidth(2.0f);
+		l.setOpacity(.3f);
+		l.setText("test label1");
 		l.setStrokeColor("purple");
-		l.setRotationAngle(90.0f);
 		sc.addSymbol(l);
 
+
+		SymbolGroup group = new SymbolGroup();
+		sc.addSymbol(group);
+		group.setTransform(1,0,0,1,30,20);
+		
+		
+		Text l2 = new Text();
+		l2.setAnchorLocation(0.0f, 25.0f);
+		l2.setFontSize(12f);
+		l2.setStrokeWidth(1.0f);
+		l2.setText("test label translated and scaled");
+		l2.setStrokeColor("purple");
+		l2.scale(2.0f, 1.0f);
+		group.addSymbol(l2);
+		
+		SymbolGroup group2 = new SymbolGroup();
+		group.addSymbol(group2);
+		group2.setTransform(1,0,0,1,30,20);
+		group2.rotate(20);
+		
+		Text l3 = new Text();
+		l3.setAnchorLocation(0.0f, 25.0f);
+		l3.setFontSize(12f);
+		l3.setStrokeWidth(1.0f);
+		l3.setText("test label translated more");
+		l3.setStrokeColor("purple");
+		l3.setAnchorAlignment("top", "middle");
+		group2.addSymbol(l3);
+		
+		
 		// set visualizer type
 		bridges.setDataStructure(sc);
 
 		// visualize the JSON and Collection
+		bridges.setVisualizeJSON(true);
 		bridges.visualize();
 	}
 }

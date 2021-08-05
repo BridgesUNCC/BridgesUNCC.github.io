@@ -23,7 +23,7 @@ public class graph_alist_empty {
 		// create an adjacency list based graph
 		GraphAdjListSimple<String> g = new GraphAdjListSimple<String>();
 
-		String kevin_bacon = "Kevin_Bacon_(I)", denzel_washington = "Denzel_Washington", noone= "NoOne";
+		String kevin_bacon = "Kevin_Bacon_(I)", denzel_washington = "Denzel_Washington", noone = "NoOne";
 		g.addVertex(kevin_bacon, "");
 		g.addVertex(denzel_washington, "");
 		g.addVertex(noone, "");
@@ -42,6 +42,6 @@ public class graph_alist_empty {
 			String from = edge.getFrom(), to = edge.getTo();
 		}
 
-		
+
 	}
 }

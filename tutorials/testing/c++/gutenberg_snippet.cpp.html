@@ -1,0 +1,111 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> std;
+
+<span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;DataSource.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;data_src/GutenbergBook.h&quot;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
+
+
+<span class="Comment">// this program illustrates how to access the Gutenberg book meta data</span>
+<span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
+
+	<span class="Comment">// create bridges object</span>
+	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+
+	<span class="Comment">// set title</span>
+	bridges.setTitle(<span class="Constant">&quot;Accessing Gutenberg Book Collection Meta Data&quot;</span>);
+
+	<span class="Comment">// read the Gutenberg book data</span>
+	DataSource ds (&amp;bridges);
+
+	cout &lt;&lt; <span class="Constant">&quot;Retrieving a single book's metadata</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+
+	GutenbergBook b = ds.getGutenbergBookMetaData(<span class="Constant">2701</span>);<span class="Comment">// Moby Dick</span>
+	cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n\t</span><span class="Constant">Title: &quot;</span>  &lt;&lt; b.getTitle() &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+	cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Id: &quot;</span> &lt;&lt; b.getId();
+	cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n\t</span><span class="Constant">Language:&quot;</span> &lt;&lt; b.getLang();
+	cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n\t</span><span class="Constant">Authors:&quot;</span>;
+	<span class="Statement">for</span> (<span class="Type">auto</span>&amp; k: b.getAuthors())
+		cout &lt;&lt; k &lt;&lt; <span class="Constant">&quot;,&quot;</span>;
+
+	cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">Retrieving books  by title: Pride and Prejudice&quot;</span>  &lt;&lt; endl;
+	vector&lt;GutenbergBook&gt; gbook_list = ds.getGutenbergBookMetaData(<span class="Constant">&quot;Pride and Prejudice&quot;</span>, <span class="Constant">&quot;title&quot;</span>);
+	cout &lt;&lt; <span class="Constant">&quot;Print the first 3 books of search results</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+	<span class="Type">int</span> n = <span class="Constant">0</span>;
+	<span class="Statement">for</span> (<span class="Type">auto</span>&amp; b : gbook_list) {
+		cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Id: &quot;</span> &lt;&lt; b.getId();
+		cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n\t</span><span class="Constant">Language:&quot;</span> &lt;&lt; b.getLang();
+		cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n\t</span><span class="Constant">Authors:&quot;</span>;
+		<span class="Statement">for</span> (<span class="Type">auto</span>&amp; k: b.getAuthors())
+			cout &lt;&lt; k &lt;&lt; <span class="Constant">&quot;,&quot;</span>;
+		cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n\t</span><span class="Constant">Title: &quot;</span>  &lt;&lt; b.getTitle() &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+		<span class="Statement">if</span> (++n == <span class="Constant">3</span>) <span class="Statement">break</span>;
+	}
+	gbook_list.clear();
+
+	cout &lt;&lt; <span class="Constant">&quot;Retrieving books by Language: English&quot;</span>  &lt;&lt; endl;
+	gbook_list = ds.getGutenbergBookMetaData(<span class="Constant">&quot;en&quot;</span>, <span class="Constant">&quot;language&quot;</span>);
+	cout &lt;&lt; <span class="Constant">&quot;Print the first 3 books of search results</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+	n = <span class="Constant">0</span>;
+	<span class="Statement">for</span> (<span class="Type">auto</span>&amp; b : gbook_list) {
+		cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Id: &quot;</span> &lt;&lt; b.getId();
+		cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n\t</span><span class="Constant">Language:&quot;</span> &lt;&lt; b.getLang();
+		cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n\t</span><span class="Constant">Authors:&quot;</span>;
+		<span class="Statement">for</span> (<span class="Type">auto</span>&amp; k: b.getAuthors())
+			cout &lt;&lt; k &lt;&lt; <span class="Constant">&quot;,&quot;</span>;
+		cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n\t</span><span class="Constant">Title: &quot;</span>  &lt;&lt; b.getTitle() &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+		<span class="Statement">if</span> (++n == <span class="Constant">3</span>) <span class="Statement">break</span>;
+	}
+	gbook_list.clear();
+
+	cout &lt;&lt; <span class="Constant">&quot;Retrieving books by Date: 2018&quot;</span>  &lt;&lt; endl;
+	gbook_list = ds.getGutenbergBookMetaData(<span class="Constant">&quot;2018-01-01&quot;</span>, <span class="Constant">&quot;date&quot;</span>);
+	cout &lt;&lt; <span class="Constant">&quot;Print the first 3 books of search results</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+	n = <span class="Constant">0</span>;
+	<span class="Statement">for</span> (<span class="Type">auto</span>&amp; b : gbook_list) {
+		cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Id: &quot;</span> &lt;&lt; b.getId();
+		cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n\t</span><span class="Constant">Language:&quot;</span> &lt;&lt; b.getLang();
+		cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n\t</span><span class="Constant">Authors:&quot;</span>;
+		<span class="Statement">for</span> (<span class="Type">auto</span>&amp; k: b.getAuthors())
+			cout &lt;&lt; k &lt;&lt; <span class="Constant">&quot;,&quot;</span>;
+		cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n\t</span><span class="Constant">Title: &quot;</span>  &lt;&lt; b.getTitle();
+		cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n\t</span><span class="Constant">Date: &quot;</span>  &lt;&lt; b.getDateAdded() &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+		<span class="Statement">if</span> (++n == <span class="Constant">3</span>) <span class="Statement">break</span>;
+	}
+	gbook_list.clear();
+
+	cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+	cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">Retrieving books  by Author: Mark Twain&quot;</span>  &lt;&lt; endl;
+	gbook_list = ds.getGutenbergBookMetaData(<span class="Constant">&quot;Mark Twain&quot;</span>, <span class="Constant">&quot;author&quot;</span>);
+	cout &lt;&lt; <span class="Constant">&quot;Print the first 3 books of search results</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+    n = <span class="Constant">0</span>;
+	<span class="Statement">for</span> (<span class="Type">auto</span>&amp; b : gbook_list) {
+		cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Id: &quot;</span> &lt;&lt; b.getId();
+		cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n\t</span><span class="Constant">Title: &quot;</span>  &lt;&lt; b.getTitle();
+		cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n\t</span><span class="Constant">Language:&quot;</span> &lt;&lt; b.getLang();
+		cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n\t</span><span class="Constant">Authors:&quot;</span>;
+		<span class="Statement">for</span> (<span class="Type">auto</span>&amp; k: b.getAuthors())
+			cout &lt;&lt; k &lt;&lt; <span class="Constant">&quot;,&quot;</span>;
+		<span class="Statement">if</span> (++n == <span class="Constant">3</span>) <span class="Statement">break</span>;
+    	cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+    }
+    cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+
+	cout &lt;&lt; <span class="Constant">&quot;Testing  Getting Moby Dick text..</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+
+	string moby_dick_str = ds.getGutenbergBookText(<span class="Constant">2701</span>);
+
+	cout &lt;&lt; <span class="Constant">&quot;Moby Dick: Size : &quot;</span> &lt;&lt; moby_dick_str.size() &lt;&lt; <span class="Constant">&quot;chars.</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+	cout &lt;&lt; <span class="Constant">&quot;First 300 chars..</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+	<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; <span class="Constant">300</span>; k++)
+		cout &lt;&lt; moby_dick_str[k];
+	cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+
+	<span class="Statement">return</span> <span class="Constant">0</span>;
+}
+</pre>

@@ -1,0 +1,101 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;SymbolCollection.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;SymbolGroup.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Rectangle.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Polyline.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Polygon.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Circle.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Text.h&quot;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
+
+SymbolGroup anchorTest(string alignLR, string alignTB);
+
+<span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
+	<span class="Comment">// create Bridges object</span>
+	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+		<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+	<span class="Comment">// title, description</span>
+	bridges.setTitle(<span class="Constant">&quot;Symbol Collection&quot;</span>);
+	bridges.setDescription(<span class="Constant">&quot;Illustrates features aligning text in BRIDGES; follows SVG features&quot;</span>);
+
+	SymbolCollection sc;
+	sc.setViewport(-<span class="Constant">100</span>, <span class="Constant">400</span>, -<span class="Constant">100</span>, <span class="Constant">700</span>);
+
+	SymbolGroup g[<span class="Constant">15</span>];
+
+	g[<span class="Constant">0</span>] = anchorTest(<span class="Constant">&quot;left&quot;</span>, <span class="Constant">&quot;bottom&quot;</span>); g[<span class="Constant">0</span>].translate(<span class="Constant">0</span>,<span class="Constant">0</span>); sc.addSymbol(&amp;g[<span class="Constant">0</span>]);
+
+
+	g[<span class="Constant">1</span>] = anchorTest(<span class="Constant">&quot;middle&quot;</span>, <span class="Constant">&quot;bottom&quot;</span>); g[<span class="Constant">1</span>].translate(<span class="Constant">120</span>,<span class="Constant">0</span>); sc.addSymbol(&amp;g[<span class="Constant">1</span>]);
+
+	g[<span class="Constant">2</span>] = anchorTest(<span class="Constant">&quot;right&quot;</span>, <span class="Constant">&quot;bottom&quot;</span>); g[<span class="Constant">2</span>].translate(<span class="Constant">240</span>, <span class="Constant">0</span>); sc.addSymbol(&amp;g[<span class="Constant">2</span>]);
+
+	g[<span class="Constant">3</span>] = anchorTest(<span class="Constant">&quot;left&quot;</span>, <span class="Constant">&quot;embottom&quot;</span>); g[<span class="Constant">3</span>].translate(<span class="Constant">0</span>, <span class="Constant">150</span>); sc.addSymbol(&amp;g[<span class="Constant">3</span>]);
+
+	g[<span class="Constant">4</span>] = anchorTest(<span class="Constant">&quot;middle&quot;</span>, <span class="Constant">&quot;embottom&quot;</span>); g[<span class="Constant">4</span>].translate(<span class="Constant">120</span>, <span class="Constant">150</span>); sc.addSymbol(&amp;g[<span class="Constant">4</span>]);
+
+	g[<span class="Constant">5</span>] = anchorTest(<span class="Constant">&quot;right&quot;</span>, <span class="Constant">&quot;embottom&quot;</span>); g[<span class="Constant">5</span>].translate(<span class="Constant">240</span>, <span class="Constant">150</span>); sc.addSymbol(&amp;g[<span class="Constant">5</span>]);
+
+	g[<span class="Constant">6</span>] = anchorTest(<span class="Constant">&quot;left&quot;</span>, <span class="Constant">&quot;middle&quot;</span>); g[<span class="Constant">6</span>].translate(<span class="Constant">0</span>, <span class="Constant">300</span>); sc.addSymbol(&amp;g[<span class="Constant">6</span>]);
+
+	g[<span class="Constant">7</span>] = anchorTest(<span class="Constant">&quot;middle&quot;</span>, <span class="Constant">&quot;middle&quot;</span>); g[<span class="Constant">7</span>].translate(<span class="Constant">120</span>, <span class="Constant">300</span>); sc.addSymbol(&amp;g[<span class="Constant">7</span>]);
+
+	g[<span class="Constant">8</span>] = anchorTest(<span class="Constant">&quot;right&quot;</span>, <span class="Constant">&quot;middle&quot;</span>); g[<span class="Constant">8</span>].translate(<span class="Constant">240</span>, <span class="Constant">300</span>); sc.addSymbol(&amp;g[<span class="Constant">8</span>]);
+
+	g[<span class="Constant">9</span>] = anchorTest(<span class="Constant">&quot;left&quot;</span>, <span class="Constant">&quot;emtop&quot;</span>); g[<span class="Constant">9</span>].translate(<span class="Constant">0</span>, <span class="Constant">450</span>); sc.addSymbol(&amp;g[<span class="Constant">9</span>]);
+
+	g[<span class="Constant">10</span>] = anchorTest(<span class="Constant">&quot;middle&quot;</span>, <span class="Constant">&quot;emtop&quot;</span>); g[<span class="Constant">10</span>].translate(<span class="Constant">120</span>, <span class="Constant">450</span>); sc.addSymbol(&amp;g[<span class="Constant">10</span>]);
+
+	g[<span class="Constant">11</span>] = anchorTest(<span class="Constant">&quot;right&quot;</span>, <span class="Constant">&quot;emtop&quot;</span>); g[<span class="Constant">11</span>].translate(<span class="Constant">240</span>, <span class="Constant">450</span>); sc.addSymbol(&amp;g[<span class="Constant">11</span>]);
+
+	g[<span class="Constant">12</span>] = anchorTest(<span class="Constant">&quot;left&quot;</span>, <span class="Constant">&quot;top&quot;</span>); g[<span class="Constant">12</span>].translate(<span class="Constant">0</span>, <span class="Constant">600</span>); sc.addSymbol(&amp;g[<span class="Constant">12</span>]);
+
+	g[<span class="Constant">13</span>] = anchorTest(<span class="Constant">&quot;middle&quot;</span>, <span class="Constant">&quot;top&quot;</span>); g[<span class="Constant">13</span>].translate(<span class="Constant">120</span>, <span class="Constant">600</span>); sc.addSymbol(&amp;g[<span class="Constant">13</span>]);
+
+	g[<span class="Constant">14</span>] = anchorTest(<span class="Constant">&quot;right&quot;</span>, <span class="Constant">&quot;top&quot;</span>); g[<span class="Constant">14</span>].translate(<span class="Constant">240</span>, <span class="Constant">600</span>); sc.addSymbol(&amp;g[<span class="Constant">14</span>]);
+
+	<span class="Comment">// set visualizer type</span>
+	bridges.setDataStructure(sc);
+
+<span class="Comment">//	bridges.setVisualizeJSONFlag(true);</span>
+
+	<span class="Comment">// visualize the JSON and Collection</span>
+	bridges.visualize();
+
+	<span class="Statement">return</span> <span class="Constant">0</span>;
+}
+
+SymbolGroup anchorTest(string alignLR, string alignTB) {
+	SymbolGroup sg;
+
+	Polyline *xaxis = <span class="Statement">new</span> Polyline;
+	xaxis-&gt;addPoint (-<span class="Constant">50.0f</span>, <span class="Constant">0.0f</span>);
+	xaxis-&gt;addPoint (<span class="Constant">50.0f</span>, <span class="Constant">0.0f</span>);
+	xaxis-&gt;setStrokeColor(Color(<span class="Constant">&quot;black&quot;</span>)).setStrokeWidth(<span class="Constant">1.0f</span>);
+	sg.addSymbol(xaxis);
+
+
+	Polyline *yaxis = <span class="Statement">new</span> Polyline;
+	yaxis-&gt;addPoint (<span class="Constant">0.0f</span>, -<span class="Constant">50.0f</span>);
+	yaxis-&gt;addPoint (<span class="Constant">0.0f</span>, <span class="Constant">50.0f</span>);
+	yaxis-&gt;setStrokeColor(Color(<span class="Constant">&quot;black&quot;</span>)).setStrokeWidth(<span class="Constant">1.0f</span>);
+	sg.addSymbol(yaxis);
+
+	<span class="Comment">//sample text</span>
+    Text *l = <span class="Statement">new</span> Text;
+    l-&gt;setFontSize(<span class="Constant">10.f</span>).setStrokeWidth(<span class="Constant">1.0f</span>).setStrokeColor(Color(<span class="Constant">&quot;black&quot;</span>));
+    l-&gt;setText(<span class="Constant">&quot;Something&quot;</span>).setAnchorAlignment(alignLR, alignTB);
+    sg.addSymbol(l);
+
+    <span class="Comment">//title</span>
+    Text *t = <span class="Statement">new</span> Text;
+    t-&gt;setFontSize(<span class="Constant">10.0f</span>).setStrokeWidth(<span class="Constant">1.0f</span>).setStrokeColor(Color(<span class="Constant">&quot;black&quot;</span>));
+    t-&gt;setText(alignLR +<span class="Constant">&quot; &quot;</span>+ alignTB).setAnchorLocation(<span class="Constant">0.0f</span>, -<span class="Constant">50.0f</span>).setAnchorAlignment(<span class="Constant">&quot;middle&quot;</span>, <span class="Constant">&quot;top&quot;</span>);
+    sg.addSymbol(t);
+
+	<span class="Statement">return</span>  sg;
+}
+</pre>

@@ -28,7 +28,7 @@ public class tut_col_grid_p3 {
 
 		int width = 10, height = 10;
 
-		// create a 10 by 10 color grid 
+		// create a 10 by 10 color grid
 		ColorGrid cg  = new ColorGrid(width, height, new Color("lightgoldenrodyellow"));
 
 		// create a checkerboard pattern of  10 x 10 squares
@@ -36,7 +36,7 @@ public class tut_col_grid_p3 {
 		int num_squares_y = 10;
 
 		// compute square dimensions
-		int sq_width = width / num_squares_x, 
+		int sq_width = width / num_squares_x,
 			sq_height = width / num_squares_y;
 
 		Color col = new Color("white");
@@ -44,25 +44,25 @@ public class tut_col_grid_p3 {
 		Color blue = new Color("blue");
 
 		for (int j = 0; j < num_squares_y;  j++)
-		for (int k = 0; k < num_squares_x;  k++) {
-			// use even/odd of pixel to figure out the color of the square
-			Boolean x_even = (k % 2) == 0;
-			Boolean y_even = (j % 2) == 0;
-	
-			if (y_even)
-				col = (x_even) ? red : blue;
-			else
-				col = (x_even) ? blue : red;
-	
-			// find the address of the square
-			int origin_x = k * sq_width;
-			int origin_y = j * sq_height;
-	
-			// color the square
-			for (int row = origin_y; row < origin_y + sq_height; row++)
-			for (int column = origin_x; column < origin_x + sq_width; column++)
-				cg.set(row, column, col);
-		}
+			for (int k = 0; k < num_squares_x;  k++) {
+				// use even/odd of pixel to figure out the color of the square
+				Boolean x_even = (k % 2) == 0;
+				Boolean y_even = (j % 2) == 0;
+
+				if (y_even)
+					col = (x_even) ? red : blue;
+				else
+					col = (x_even) ? blue : red;
+
+				// find the address of the square
+				int origin_x = k * sq_width;
+				int origin_y = j * sq_height;
+
+				// color the square
+				for (int row = origin_y; row < origin_y + sq_height; row++)
+					for (int column = origin_x; column < origin_x + sq_width; column++)
+						cg.set(row, column, col);
+			}
 
 		// tell Bridges the the color grid object to visualize
 		bridges.setDataStructure(cg);

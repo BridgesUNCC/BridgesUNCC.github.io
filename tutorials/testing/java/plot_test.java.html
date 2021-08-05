@@ -1,0 +1,60 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">import</span> bridges.base.Plot;
+<span class="PreProc">import</span> bridges.base.BenchMarking;
+<span class="PreProc">import</span> bridges.connect.Bridges;
+<span class="PreProc">import</span> bridges.validation.RateLimitException;
+
+<span class="PreProc">import</span> java.io.IOException;
+<span class="PreProc">import</span> java.util.*;
+<span class="PreProc">import</span> java.util.function.Consumer;
+
+<span class="Type">public</span> <span class="Type">class</span> plot_test {
+
+	<span class="Type">static</span> Consumer &lt;<span class="Type">int</span>[]&gt; sort = arr -&gt; {
+		<span class="Type">int</span> n = arr.length;
+
+        <span class="Comment">// One by one move boundary of unsorted subarray </span>
+        <span class="Statement">for</span> (<span class="Type">int</span> i = <span class="Constant">0</span>; i &lt; n-<span class="Constant">1</span>; i++)
+        {
+            <span class="Comment">// Find the minimum element in unsorted array </span>
+            <span class="Type">int</span> min_idx = i;
+            <span class="Statement">for</span> (<span class="Type">int</span> j = i+<span class="Constant">1</span>; j &lt; n; j++)
+                <span class="Statement">if</span> (arr[j] &lt; arr[min_idx])
+                    min_idx = j;
+
+            <span class="Comment">// Swap the found minimum element with the first </span>
+            <span class="Comment">// element </span>
+            <span class="Type">int</span> temp = arr[min_idx];
+            arr[min_idx] = arr[i];
+            arr[i] = temp;
+        }
+	};
+
+	<span class="Type">static</span> Consumer &lt;<span class="Type">int</span>[]&gt; bubbleSort = arr -&gt; {
+		<span class="Type">int</span> n = arr.length;
+        <span class="Statement">for</span> (<span class="Type">int</span> i = <span class="Constant">0</span>; i &lt; n-<span class="Constant">1</span>; i++)
+            <span class="Statement">for</span> (<span class="Type">int</span> j = <span class="Constant">0</span>; j &lt; n-i-<span class="Constant">1</span>; j++)
+                <span class="Statement">if</span> (arr[j] &gt; arr[j+<span class="Constant">1</span>])
+                {
+                    <span class="Type">int</span> temp = arr[j];
+                    arr[j] = arr[j+<span class="Constant">1</span>];
+                    arr[j+<span class="Constant">1</span>] = temp;
+                }
+	};
+
+	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) <span class="Type">throws</span> IOException, RateLimitException, InterruptedException {
+		Bridges bridges = <span class="Statement">new</span> Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+										<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+    <span class="Comment">//bridges.setVisualizeJSON(true);</span>
+
+		Plot plot = <span class="Statement">new</span> Plot(<span class="Constant">&quot;Sort Runtime&quot;</span>);
+		BenchMarking bench = <span class="Statement">new</span> BenchMarking(plot);
+		bench.run(<span class="Constant">&quot;InsertSort&quot;</span>, <span class="Constant">100</span>, <span class="Constant">10000</span>, sort);
+		bench.run(<span class="Constant">&quot;bubblesort&quot;</span>, <span class="Constant">100</span>, <span class="Constant">10000</span>, bubbleSort);
+
+		bridges.setDataStructure(plot);
+		bridges.visualize();
+	}
+
+}
+</pre>

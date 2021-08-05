@@ -21,10 +21,10 @@ public class osm_amenity_snippet {
 		AmenityData amenity_data = ds.getAmenityData(38.77657, -77.20918, 39.03198, -76.8999, "food");
 
 		System.out.println("Total Points: " + amenity_data.getCount());
-        System.out.println("ID: " + amenity_data.getAmenities().get(0).getId());
-        System.out.println("Name: " + amenity_data.getAmenities().get(0).getName());
-        System.out.println("Lat: " + amenity_data.getAmenities().get(0).getLat());
-        System.out.println("Lon: " + amenity_data.getAmenities().get(0).getLon());
-        
+		System.out.println("ID: " + amenity_data.getAmenities().get(0).getId());
+		System.out.println("Name: " + amenity_data.getAmenities().get(0).getName());
+		System.out.println("Lat: " + amenity_data.getAmenities().get(0).getLat());
+		System.out.println("Lon: " + amenity_data.getAmenities().get(0).getLon());
+
 	}
 }

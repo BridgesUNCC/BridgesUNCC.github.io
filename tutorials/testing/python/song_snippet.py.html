@@ -1,0 +1,26 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.data_src_dependent.data_source <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
+<span class="PreProc">import</span> random
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+    args = sys.argv[<span class="Constant">1</span>:]
+
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># get a song</span>
+    song = get_song(<span class="Constant">&quot;</span><span class="Constant">Harder Faster Better Stronger</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">Daft Punk</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># print its lyrics</span>
+    <span class="Identifier">print</span>(song.song_title)
+    <span class="Identifier">print</span>(song.artist)
+    <span class="Identifier">print</span>(song.album_title)
+    <span class="Identifier">print</span>(song.release_date)
+    <span class="Identifier">print</span>(song.lyrics)
+
+
+<span class="Statement">if</span> __name__ == <span class="Constant">'</span><span class="Constant">__main__</span><span class="Constant">'</span>:
+    main()
+</pre>

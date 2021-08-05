@@ -1,0 +1,106 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">import</span> java.util.ArrayList;
+<span class="PreProc">import</span> java.lang.String;
+<span class="PreProc">import</span> bridges.base.Element;
+<span class="PreProc">import</span> bridges.base.SLelement;
+<span class="PreProc">import</span> bridges.base.GraphAdjListSimple;
+<span class="PreProc">import</span> bridges.base.Edge;
+<span class="PreProc">import</span> bridges.connect.Bridges;
+<span class="PreProc">import</span> bridges.connect.DataSource;
+<span class="PreProc">import</span> bridges.data_src_dependent.ActorMovieIMDB;
+
+<span class="Type">public</span> <span class="Type">class</span> graph_al {
+	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) <span class="Type">throws</span> Exception {
+
+		<span class="Comment">// initialize Bridges</span>
+		Bridges bridges = <span class="Statement">new</span> Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+			<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+		<span class="Comment">// title, description</span>
+		bridges.setTitle(<span class="Constant">&quot;A Simple Graph (Adjacency List) Example using IMDB Actor/Movie Data&quot;</span>);
+		bridges.setDescription(<span class="Constant">&quot;Two lists each having an actor as the root node with 15 movies they played in as leaf nodes. &quot;</span>
+			+	<span class="Constant">&quot;Root nodes are both red, Kevin Bacon's leaf nodes are green and Denzel Washington's leaf nodes are neutral.&quot;</span>);
+
+		DataSource ds = bridges.getDataSource();
+		ArrayList&lt;ActorMovieIMDB&gt;  actor_movie_data =
+			(ArrayList&lt;ActorMovieIMDB&gt;) ds.getActorMovieIMDBData(<span class="Constant">1813</span>);
+
+
+		<span class="Comment">// create an adjacency list based graph</span>
+		GraphAdjListSimple&lt;String&gt; g = <span class="Statement">new</span> GraphAdjListSimple&lt;String&gt;();
+
+		<span class="Comment">// first create vertices for two actors and add them to the graph</span>
+		String kevin_bacon = <span class="Constant">&quot;Kevin_Bacon_(I)&quot;</span>, denzel_washington = <span class="Constant">&quot;Denzel_Washington&quot;</span>;
+		g.addVertex(kevin_bacon, <span class="Constant">&quot;&quot;</span>);
+		g.addVertex(denzel_washington, <span class="Constant">&quot;&quot;</span>);
+
+		<span class="Comment">// color the two actor nodes</span>
+		g.getVertex(kevin_bacon).setColor(<span class="Constant">&quot;red&quot;</span>);
+		g.getVertex(kevin_bacon).setSize(<span class="Constant">30</span>);
+		g.getVertex(denzel_washington).setColor(<span class="Constant">&quot;red&quot;</span>);
+		g.getVertex(denzel_washington).setSize(<span class="Constant">30</span>);
+
+		<span class="Comment">// add an edge between the two actors kevin_bacon and denzel_washington,</span>
+		<span class="Comment">// the third parameter is the edge weight</span>
+		g.addEdge(kevin_bacon, denzel_washington);
+		g.getLinkVisualizer(kevin_bacon, denzel_washington).setColor(<span class="Constant">&quot;magenta&quot;</span>);
+		g.getLinkVisualizer(kevin_bacon, denzel_washington).setThickness(<span class="Constant">4.0f</span>);
+
+		<span class="Comment">// get their nodes</span>
+		Element v1 = g.getVertex(kevin_bacon);
+		Element v2 = g.getVertex(denzel_washington);
+
+		<span class="Comment">// we will find the first 15 immediate neighbors of of the two actors</span>
+		<span class="Comment">// and color those links and nodes by followng their adjacency lists</span>
+		<span class="Type">int</span> cnt1 = <span class="Constant">0</span>, cnt2 = <span class="Constant">0</span>;
+		<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; actor_movie_data.size(); k++) {
+			<span class="Comment">// from the actor movie data, get an actor-movie pair</span>
+			String a = actor_movie_data.get(k).getActor();
+			String m = actor_movie_data.get(k).getMovie();
+
+			<span class="Statement">if</span> (a.equals(kevin_bacon) &amp;&amp; cnt1 &lt; <span class="Constant">15</span>) {
+
+				<span class="Comment">// add vertices for this movie  and an edge for the link</span>
+				g.addVertex(m, <span class="Constant">&quot;&quot;</span>);
+				g.addEdge(kevin_bacon, m);
+				g.addEdge(m, kevin_bacon);
+
+				<span class="Comment">// make the movie node a bit transparent</span>
+				g.getVertex(m).setOpacity(<span class="Constant">0.7f</span>);
+				cnt1++;
+			}
+			<span class="Statement">else</span> <span class="Statement">if</span> (a.equals(denzel_washington) &amp;&amp; cnt2 &lt; <span class="Constant">15</span>) {
+				<span class="Comment">// add vertices for this movie  and an edge for the link</span>
+				g.addVertex(m, <span class="Constant">&quot;&quot;</span>);
+				g.addEdge(denzel_washington, m);
+				g.addEdge(m, denzel_washington);
+				<span class="Comment">// make the movie node a bit transparent</span>
+				g.getVertex(m).setOpacity(<span class="Constant">0.7f</span>);
+				cnt2++;
+			}
+		}
+
+		<span class="Comment">// Next, we illustrate traversing the adacency list and color the</span>
+		<span class="Comment">// movie nodes adjacent to the Kevin Bacon node.</span>
+
+		<span class="Comment">// first get the adjacency list for Kevin Bacon</span>
+		<span class="Comment">// traverse the adjacency list</span>
+		<span class="Statement">for</span> (Edge&lt;String, String&gt; edge : g.outgoingEdgeSetOf(kevin_bacon)) {
+			String from = edge.getFrom(), to = edge.getTo();
+			<span class="Statement">if</span> (!to.equals(denzel_washington))
+				edge.setColor(<span class="Constant">&quot;turquoise&quot;</span>);
+		}
+		<span class="Statement">for</span> (Edge&lt;String, String&gt; edge : g.outgoingEdgeSetOf(denzel_washington)) {
+			String from = edge.getFrom(), to = edge.getTo();
+			<span class="Statement">if</span> (!to.equals(kevin_bacon))
+				edge.setColor(<span class="Constant">&quot;orange&quot;</span>);
+		}
+
+		<span class="Comment">// Pass the graph object to BRIDGES</span>
+		bridges.setDataStructure(g);
+
+		<span class="Comment">// Finaly we call the visualize function</span>
+		bridges.visualize();
+	}
+}
+</pre>

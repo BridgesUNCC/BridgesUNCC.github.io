@@ -2,7 +2,7 @@ import bridges.base.DLelement;
 import bridges.connect.Bridges;
 import java.util.Iterator;
 
-// This tutorial creates a number of BRIDGES doubly linked list elements, 
+// This tutorial creates a number of BRIDGES doubly linked list elements,
 // links them into a list and displays them
 
 public class tut_dllist_p1 {

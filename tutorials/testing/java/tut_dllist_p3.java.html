@@ -3,11 +3,11 @@
 <span class="PreProc">import</span> bridges.connect.Bridges;
 <span class="PreProc">import</span> java.util.Iterator;
 
-<span class="Comment">// Part 3 of this tutorial illustrates iterators that can be used to </span>
+<span class="Comment">// Part 3 of this tutorial illustrates iterators that can be used to</span>
 <span class="Comment">// traverse doubly linked lists</span>
 <span class="Comment">//</span>
 <span class="Comment">// We will continue to use the same list</span>
-<span class="Comment">// </span>
+<span class="Comment">//</span>
 
 <span class="Type">public</span> <span class="Type">class</span> tut_dllist_p3 {
 
@@ -44,29 +44,29 @@
 
 
 		<span class="Comment">// print the elements of the list -- using a regular for loop</span>
-        System.out.println(<span class="Constant">&quot;Printing list elements --  regular for loop:&quot;</span>);
+		System.out.println(<span class="Constant">&quot;Printing list elements --  regular for loop:&quot;</span>);
 		<span class="Statement">for</span> (DLelement&lt;String&gt; el = el0; el != <span class="Constant">null</span>; el = el.getNext())
 			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant"> &quot;</span> + el0.getLabel());
 
 
-		<span class="Comment">// print the elements of the list -- using a forward iterator </span>
-        System.out.println(<span class="Constant">&quot;Printing list elements --  using forward iterator:&quot;</span>);
-        Iterator&lt;String&gt; iter = el0.iterator();
-        <span class="Statement">while</span> (iter.hasNext()) {
-            System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">&quot;</span> + iter.next());
-        }
+		<span class="Comment">// print the elements of the list -- using a forward iterator</span>
+		System.out.println(<span class="Constant">&quot;Printing list elements --  using forward iterator:&quot;</span>);
+		Iterator&lt;String&gt; iter = el0.iterator();
+		<span class="Statement">while</span> (iter.hasNext()) {
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">&quot;</span> + iter.next());
+		}
 
 		<span class="Comment">// print the elements of the list -- using range loop</span>
-        System.out.println(<span class="Constant">&quot;Printing list elements --  using range loop:&quot;</span>);
-        <span class="Statement">for</span> (String s : el0)
-            System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant"> &quot;</span> + s);
+		System.out.println(<span class="Constant">&quot;Printing list elements --  using range loop:&quot;</span>);
+		<span class="Statement">for</span> (String s : el0)
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant"> &quot;</span> + s);
 
-        <span class="Comment">// use the reverse iterator</span>
-        System.out.println(<span class="Constant">&quot;Printing list elements --  using reverse iterator:&quot;</span>);
-        iter = el4.reverse_iterator();
-        <span class="Statement">while</span> (iter.hasNext()) {
-            System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">&quot;</span> + iter.next());
-        }
+		<span class="Comment">// use the reverse iterator</span>
+		System.out.println(<span class="Constant">&quot;Printing list elements --  using reverse iterator:&quot;</span>);
+		iter = el4.reverse_iterator();
+		<span class="Statement">while</span> (iter.hasNext()) {
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">&quot;</span> + iter.next());
+		}
 
 		<span class="Comment">// provide BRIDGES the head of the list</span>
 		bridges.setDataStructure(el0);

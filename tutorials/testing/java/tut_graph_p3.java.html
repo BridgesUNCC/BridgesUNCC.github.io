@@ -7,8 +7,8 @@
 <span class="PreProc">import</span> bridges.base.Edge;
 <span class="PreProc">import</span> bridges.connect.Bridges;
 
-<span class="Comment">// In Part 3 of this tutorial will demonstrate some advanced features </span>
-<span class="Comment">// of adjacency list // based graphs in BRIDGES, such as graph traversal </span>
+<span class="Comment">// In Part 3 of this tutorial will demonstrate some advanced features</span>
+<span class="Comment">// of adjacency list // based graphs in BRIDGES, such as graph traversal</span>
 <span class="Comment">// and iterators that make it more convenient.</span>
 <span class="Comment">//</span>
 <span class="Comment">// We will continue using the same graph of actors</span>
@@ -22,7 +22,7 @@
 		Bridges bridges = <span class="Statement">new</span> Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
 			<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 
-		<span class="Comment">// set a title </span>
+		<span class="Comment">// set a title</span>
 		bridges.setTitle(<span class="Constant">&quot;A Simple Adjacency list based Graph Example.&quot;</span>);
 
 		<span class="Comment">// set  description</span>
@@ -63,8 +63,8 @@
 		<span class="Comment">// using core BRIDGES classes to print who Kevin Bacon is connected to</span>
 		System.out.println(<span class="Constant">&quot;Using core Bridges classes:&quot;</span>);
 		<span class="Statement">for</span> (SLelement&lt;Edge&lt;String, String&gt;&gt; sle =
-					graph.getAdjacencyList(kevin_bacon);
-					sle != <span class="Constant">null</span>; sle = sle.getNext()) {
+				graph.getAdjacencyList(kevin_bacon);
+			sle != <span class="Constant">null</span>; sle = sle.getNext()) {
 			Edge&lt;String, String&gt; edge = sle.getValue();
 			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">&quot;</span> + edge.getFrom() +  <span class="Constant">&quot; --&gt; &quot;</span> +  edge.getTo() );
 		}
@@ -73,9 +73,9 @@
 		System.out.println(<span class="Constant">&quot;Using iterators&quot;</span>);
 		<span class="Statement">for</span> (Edge&lt;String, String&gt; edge : graph.outgoingEdgeSetOf(kevin_bacon)) {
 			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">&quot;</span> + edge.getFrom() + <span class="Constant">&quot;--&gt;&quot;</span> + edge.getTo());
-        }
+		}
 
-		<span class="Comment">// finally, list the vertices of the graph, using iterators </span>
+		<span class="Comment">// finally, list the vertices of the graph, using iterators</span>
 		System.out.println(<span class="Constant">&quot;Using iterators to print the graph vertices[Method 1]:&quot;</span>);
 		Iterator it = graph.getVertices().keySet().iterator();
 		<span class="Statement">while</span> (it.hasNext())

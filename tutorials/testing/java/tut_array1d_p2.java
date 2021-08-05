@@ -1,8 +1,8 @@
 import bridges.connect.Bridges;
 import bridges.base.Array1D;
 
-// Part 2 of this tutorial describes how to style arrays created using BRIDGES 
-// We will use the sam array as Part 1 
+// Part 2 of this tutorial describes how to style arrays created using BRIDGES
+// We will use the sam array as Part 1
 
 public class tut_array1d_p2 {
 	public static void main(String[] args) throws Exception {
@@ -29,9 +29,9 @@ public class tut_array1d_p2 {
 			// use the array values to label the elements
 			arr.getElement(k).setLabel(String.valueOf(arr.getElement(k).getValue()));
 		}
-		// style the array - only color, opacity and label are supported 
+		// style the array - only color, opacity and label are supported
 		// for arrays
-    
+
 		// color the elements
 		arr.getElement(0).setColor("red");
 		arr.getElement(1).setColor("green");

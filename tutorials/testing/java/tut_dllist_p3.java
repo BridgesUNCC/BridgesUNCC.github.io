@@ -2,11 +2,11 @@ import bridges.base.DLelement;
 import bridges.connect.Bridges;
 import java.util.Iterator;
 
-// Part 3 of this tutorial illustrates iterators that can be used to 
+// Part 3 of this tutorial illustrates iterators that can be used to
 // traverse doubly linked lists
 //
 // We will continue to use the same list
-// 
+//
 
 public class tut_dllist_p3 {
 
@@ -43,29 +43,29 @@ public class tut_dllist_p3 {
 
 
 		// print the elements of the list -- using a regular for loop
-        System.out.println("Printing list elements --  regular for loop:");
+		System.out.println("Printing list elements --  regular for loop:");
 		for (DLelement<String> el = el0; el != null; el = el.getNext())
 			System.out.println("\t " + el0.getLabel());
-			
 
-		// print the elements of the list -- using a forward iterator 
-        System.out.println("Printing list elements --  using forward iterator:");
-        Iterator<String> iter = el0.iterator();
-        while (iter.hasNext()) {
-            System.out.println("\t" + iter.next());
-        }
+
+		// print the elements of the list -- using a forward iterator
+		System.out.println("Printing list elements --  using forward iterator:");
+		Iterator<String> iter = el0.iterator();
+		while (iter.hasNext()) {
+			System.out.println("\t" + iter.next());
+		}
 
 		// print the elements of the list -- using range loop
-        System.out.println("Printing list elements --  using range loop:");
-        for (String s : el0)
-            System.out.println("\t " + s);
+		System.out.println("Printing list elements --  using range loop:");
+		for (String s : el0)
+			System.out.println("\t " + s);
 
-        // use the reverse iterator
-        System.out.println("Printing list elements --  using reverse iterator:");
-        iter = el4.reverse_iterator();
-        while (iter.hasNext()) {
-            System.out.println("\t" + iter.next());
-        }
+		// use the reverse iterator
+		System.out.println("Printing list elements --  using reverse iterator:");
+		iter = el4.reverse_iterator();
+		while (iter.hasNext()) {
+			System.out.println("\t" + iter.next());
+		}
 
 		// provide BRIDGES the head of the list
 		bridges.setDataStructure(el0);
