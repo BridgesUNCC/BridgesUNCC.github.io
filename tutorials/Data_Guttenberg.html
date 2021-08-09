@@ -28,18 +28,32 @@
 <header w3-include-html="./Tutorial_Header.html"></header>
 
 <main>
-<h2>Guttenberg Book Collection MetaData</h2>
+<h2>Gutenberg Book Collection</h2>
 <p>
-Metadata from the top 1000 books (by download) from Project Gutenberg. This dataset is adapted 
-from the Classics CSV Library, part of the CORGIS Dataset Project at Virginia Tech.
-This data set represents meta data of 1000 books in the Guttenberg collection. Each book
-record contains the title, author, author's birth and death dates, languages, subjects, 
-number of words, number of difficult words, number of sentences and number of characters. 
+BRIDGES provides easy access to <a href="https://www.gutenberg.org/">Gutenberg</a> book meta and text data. You are able to retreive entire book texts as well as meta
+information on the books avalible. This meta data that you can request or search for includes: ID, Title, Language, date issued, authors, genres, and library of congress classifications. 
+Users are able to search the meta index for certain matching values as well. 
+</p>
+<p>
+The list of searchable catagories includes:
+<ul>
+    <li>id</li>
+    <li>title</li>
+    <li>author</li>
+    <li>date</li>
+    <li>language</li>
+    <li>genre</li>
+	<li>loc</li>
+</ul>
+</p>
+
+<h3>Suggested Examples:</h3>
+<p>data_source.get_gutenberg_book_metadata("Shakespeare, William", "author")<br>data_source.gutenberg_book_text(2701)</p>
 <p>
 The program snippet below illustrates how to access this dataset.
 </p>
 
-<h2>Accessing Earthquake Data: An Example BRIDGES program</h2>
+<h2>Accessing Gutenberg Data: An Example BRIDGES program</h2>
 <div w3-include-html="./bridges_data_access_elements.html"></div> 
 
 
