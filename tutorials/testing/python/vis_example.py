@@ -8,7 +8,7 @@ def main():
     bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY")
 
     # set title, description
-    bridges.set_title("A Visualization Attributes Related Example Using Doubly Linked List")
+    bridges.set_title("A Visualization Attributes Related Example")
 
 	# create list elements
     el0 = DLelement(e="element0",  label="Element 0")

@@ -7,6 +7,7 @@ from bridges.polyline import *
 from bridges.rectangle import *
 from bridges.label import *
 from bridges.color import *
+from bridges.text import *
 import sys
 
 def main():
@@ -72,8 +73,8 @@ def main():
     sc.add_symbol(s5);
 
     # add a title to figure
-    l = Label()
-    l.set_location(-70, 120)
+    l = Text()
+    l.set_anchor_location(-70, 120)
     l.font_size = 16
     l.stroke_width = 1.0
     l.label = "Its a Dorky Looking Face!"

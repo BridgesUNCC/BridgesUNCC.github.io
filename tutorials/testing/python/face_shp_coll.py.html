@@ -8,6 +8,7 @@
 <span class="PreProc">from</span> bridges.rectangle <span class="PreProc">import</span> *
 <span class="PreProc">from</span> bridges.label <span class="PreProc">import</span> *
 <span class="PreProc">from</span> bridges.color <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.text <span class="PreProc">import</span> *
 <span class="PreProc">import</span> sys
 
 <span class="Statement">def</span> <span class="Identifier">main</span>():
@@ -73,8 +74,8 @@
     sc.add_symbol(s5);
 
     <span class="Comment"># add a title to figure</span>
-    l = Label()
-    l.set_location(-<span class="Constant">70</span>, <span class="Constant">120</span>)
+    l = Text()
+    l.set_anchor_location(-<span class="Constant">70</span>, <span class="Constant">120</span>)
     l.font_size = <span class="Constant">16</span>
     l.stroke_width = <span class="Constant">1.0</span>
     l.label = <span class="Constant">&quot;</span><span class="Constant">Its a Dorky Looking Face!</span><span class="Constant">&quot;</span>

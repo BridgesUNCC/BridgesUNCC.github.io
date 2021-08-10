@@ -7,7 +7,6 @@
 <span class="PreProc">import</span> bridges.base.SymbolCollection;
 <span class="PreProc">import</span> bridges.base.Rectangle;
 <span class="PreProc">import</span> bridges.base.Circle;
-<span class="PreProc">import</span> bridges.base.Label;
 <span class="PreProc">import</span> bridges.base.Polygon;
 <span class="PreProc">import</span> bridges.base.Color;
 <span class="PreProc">import</span> bridges.base.ColorGrid;
@@ -93,23 +92,23 @@
 		SymbolCollection sc = <span class="Statement">new</span> SymbolCollection();
 
 		Rectangle r1 = <span class="Statement">new</span> Rectangle(<span class="Constant">0.0f</span>, <span class="Constant">0.0f</span>, <span class="Constant">25</span>, <span class="Constant">25</span>);
-		r1.setFillColor(<span class="Statement">new</span> Color(<span class="Constant">&quot;black&quot;</span>));
+		r1.setFillColor(<span class="Constant">&quot;black&quot;</span>);
 		sc.addSymbol(r1);
 
 		Circle s1 = <span class="Statement">new</span> Circle(<span class="Constant">25.0f</span>, <span class="Constant">0.0f</span>, <span class="Constant">10</span>);
-		s1.setFillColor(<span class="Statement">new</span> Color(<span class="Constant">&quot;yellow&quot;</span>));
+		s1.setFillColor(<span class="Constant">&quot;yellow&quot;</span>);
 		sc.addSymbol(s1);
 
 		Circle s2 = <span class="Statement">new</span> Circle(-<span class="Constant">25.0f</span>, <span class="Constant">0.0f</span>, <span class="Constant">10</span>);
-		s2.setFillColor(<span class="Statement">new</span> Color(<span class="Constant">&quot;yellow&quot;</span>));
+		s2.setFillColor(<span class="Constant">&quot;yellow&quot;</span>);
 		sc.addSymbol(s2);
 
 		Circle s3 = <span class="Statement">new</span> Circle(<span class="Constant">0.0f</span>, <span class="Constant">25.0f</span>, <span class="Constant">10</span>);
-		s3.setFillColor(<span class="Statement">new</span> Color(<span class="Constant">&quot;yellow&quot;</span>));
+		s3.setFillColor(<span class="Constant">&quot;yellow&quot;</span>);
 		sc.addSymbol(s3);
 
 		Circle s4 = <span class="Statement">new</span> Circle(<span class="Constant">0.0f</span>, -<span class="Constant">25.0f</span>, <span class="Constant">10</span>);
-		s4.setFillColor(<span class="Statement">new</span> Color(<span class="Constant">&quot;yellow&quot;</span>));
+		s4.setFillColor(<span class="Constant">&quot;yellow&quot;</span>);
 		sc.addSymbol(s4);
 
 		<span class="Comment">// set data structure and visualize</span>

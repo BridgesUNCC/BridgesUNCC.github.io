@@ -26,41 +26,41 @@
 	<span class="Comment">// draw a rectangle</span>
 	Rectangle s1(-<span class="Constant">25.0f</span>, <span class="Constant">0.0f</span>, <span class="Constant">50.0f</span>, <span class="Constant">50.0f</span>);
 	s1.setFillColor(Color(<span class="Constant">&quot;red&quot;</span>)).setLayer(<span class="Constant">1</span>);
-	sg.addSymbol(&amp;s1);
+	sg.addSymbol(s1);
 
 	<span class="Comment">// and a circle next to it</span>
 	Circle s2(<span class="Constant">25.0f</span>, <span class="Constant">0.0f</span>, <span class="Constant">25.0f</span>);
 	s2.setFillColor(Color(<span class="Constant">&quot;green&quot;</span>)).setLayer(<span class="Constant">2</span>);
-	sg.addSymbol(&amp;s2);
+	sg.addSymbol(s2);
 
 	Text t;
 	t.setText(<span class="Constant">&quot;group above with rectangle over circle&quot;</span>);
 	t.setFontSize(<span class="Constant">10</span>).setStrokeWidth(<span class="Constant">1</span>).setStrokeColor(Color(<span class="Constant">&quot;black&quot;</span>));
-	sg.addSymbol(&amp;t);
+	sg.addSymbol(t);
 
 	sg.setLayer(<span class="Constant">1</span>);
-	sc.addSymbol(&amp;sg);
+	sc.addSymbol(sg);
 
 	SymbolGroup sg2;
 	<span class="Comment">// draw a rectangle</span>
 	Rectangle s3(-<span class="Constant">25.0f</span>, <span class="Constant">0.0f</span>, <span class="Constant">50.0f</span>, <span class="Constant">50.0f</span>);
 	s3.setFillColor(Color(<span class="Constant">&quot;yellow&quot;</span>)).setLayer(<span class="Constant">4</span>);
-	sg2.addSymbol(&amp;s3);
+	sg2.addSymbol(s3);
 
 	<span class="Comment">// and a circle next to it</span>
 	Circle s4(<span class="Constant">25.0f</span>, <span class="Constant">0.0f</span>, <span class="Constant">25.0f</span>);
 	s4.setFillColor(Color(<span class="Constant">&quot;blue&quot;</span>)).setLayer(<span class="Constant">3</span>);
-	sg2.addSymbol(&amp;s4);
+	sg2.addSymbol(s4);
 
 	Text t2;
 	t2.setText(<span class="Constant">&quot;group below with circle over rectangle&quot;</span>);
 	t2.setFontSize(<span class="Constant">12</span>).setStrokeWidth(<span class="Constant">1</span>).setStrokeColor(Color(<span class="Constant">&quot;black&quot;</span>));
-	sg2.addSymbol(&amp;t2);
+	sg2.addSymbol(t2);
 	sg2.setLayer(<span class="Constant">2</span>);
 
 	sg2.translate(<span class="Constant">30.0f</span>, <span class="Constant">30.0f</span>);
 
-	sc.addSymbol(&amp;sg2);
+	sc.addSymbol(sg2);
 
 	<span class="Comment">// set visualizer type</span>
 	bridges.setDataStructure(sc);

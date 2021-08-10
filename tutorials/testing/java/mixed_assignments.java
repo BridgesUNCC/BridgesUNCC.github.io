@@ -6,7 +6,6 @@ import bridges.base.Element;
 import bridges.base.SymbolCollection;
 import bridges.base.Rectangle;
 import bridges.base.Circle;
-import bridges.base.Label;
 import bridges.base.Polygon;
 import bridges.base.Color;
 import bridges.base.ColorGrid;
@@ -92,23 +91,23 @@ public class mixed_assignments {
 		SymbolCollection sc = new SymbolCollection();
 
 		Rectangle r1 = new Rectangle(0.0f, 0.0f, 25, 25);
-		r1.setFillColor(new Color("black"));
+		r1.setFillColor("black");
 		sc.addSymbol(r1);
 
 		Circle s1 = new Circle(25.0f, 0.0f, 10);
-		s1.setFillColor(new Color("yellow"));
+		s1.setFillColor("yellow");
 		sc.addSymbol(s1);
 
 		Circle s2 = new Circle(-25.0f, 0.0f, 10);
-		s2.setFillColor(new Color("yellow"));
+		s2.setFillColor("yellow");
 		sc.addSymbol(s2);
 
 		Circle s3 = new Circle(0.0f, 25.0f, 10);
-		s3.setFillColor(new Color("yellow"));
+		s3.setFillColor("yellow");
 		sc.addSymbol(s3);
 
 		Circle s4 = new Circle(0.0f, -25.0f, 10);
-		s4.setFillColor(new Color("yellow"));
+		s4.setFillColor("yellow");
 		sc.addSymbol(s4);
 
 		// set data structure and visualize

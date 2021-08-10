@@ -3,7 +3,7 @@
 <span class="PreProc">import</span> bridges.base.SymbolCollection;
 <span class="PreProc">import</span> bridges.base.Rectangle;
 <span class="PreProc">import</span> bridges.base.Circle;
-<span class="PreProc">import</span> bridges.base.Label;
+<span class="PreProc">import</span> bridges.base.Text;
 <span class="PreProc">import</span> bridges.base.Polyline;
 <span class="PreProc">import</span> bridges.base.Polygon;
 <span class="PreProc">import</span> bridges.base.Color;
@@ -84,8 +84,8 @@
 		sc.addSymbol(s6);
 
 		<span class="Comment">// add a title to the figure</span>
-		Label l = <span class="Statement">new</span> Label();
-		l.setLocation(-<span class="Constant">50.0f</span>, <span class="Constant">100.0f</span>);
+		Text l = <span class="Statement">new</span> Text();
+		l.setAnchorLocation(-<span class="Constant">50.0f</span>, <span class="Constant">100.0f</span>);
 		l.setFontSize(<span class="Constant">16.0f</span>);
 		l.setStrokeWidth(<span class="Constant">1.0f</span>);
 		l.setLabel(<span class="Constant">&quot;Its a Dorky Looking Face!&quot;</span>);

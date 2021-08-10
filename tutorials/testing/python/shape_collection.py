@@ -5,6 +5,7 @@ from bridges.polygon import *
 from bridges.rectangle import *
 from bridges.label import *
 from bridges.color import *
+from bridges.text import *
 import sys
 
 def main():
@@ -63,8 +64,8 @@ def main():
     s6.stroke_width = 3.0
     sc.add_symbol(s6)
 
-    l = Label()
-    l.set_location(0, 25)
+    l = Text()
+    l.set_anchor_location(0, 25)
     l.font_size = 12
     l.stroke_width = 1.0
     l.label = "test label"

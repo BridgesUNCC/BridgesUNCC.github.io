@@ -2,7 +2,7 @@ import bridges.connect.Bridges;
 import bridges.base.SymbolCollection;
 import bridges.base.Rectangle;
 import bridges.base.Circle;
-import bridges.base.Label;
+import bridges.base.Text;
 import bridges.base.Polyline;
 import bridges.base.Polygon;
 import bridges.base.Color;
@@ -83,8 +83,8 @@ public class face_shp_coll {
 		sc.addSymbol(s6);
 
 		// add a title to the figure
-		Label l = new Label();
-		l.setLocation(-50.0f, 100.0f);
+		Text l = new Text();
+		l.setAnchorLocation(-50.0f, 100.0f);
 		l.setFontSize(16.0f);
 		l.setStrokeWidth(1.0f);
 		l.setLabel("Its a Dorky Looking Face!");

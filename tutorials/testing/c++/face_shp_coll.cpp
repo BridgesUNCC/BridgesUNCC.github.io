@@ -22,6 +22,7 @@ int main (int argc, char **argv) {
 	// face itself is a circle
 	Circle s1(50);
 	s1.setStrokeColor("red");
+	s1.setFillColor(Color(255,255,255,0.));
 	s1.setStrokeWidth(2.0);
 	sc.addSymbol(s1);
 
@@ -29,6 +30,7 @@ int main (int argc, char **argv) {
 	Circle s2(25);
 	s2.setStrokeColor("green");
 	s2.setStrokeWidth(1.2);
+	s2.setFillColor(Color(255,255,255,0.));
 	float tf[] = {-25., 20.};
 	float sf[] = {0.5, 0.5};
 	s2.translate(tf[0], tf[1]);
@@ -39,6 +41,7 @@ int main (int argc, char **argv) {
 	Circle s3(25);
 	s3.setStrokeColor("green");
 	s3.setStrokeWidth(1.3);
+	s3.setFillColor(Color(255,255,255,0.));
 	tf[0] = 25.;
 	tf[1] = 20.;
 	s3.translate(tf[0], tf[1]);
@@ -65,7 +68,7 @@ int main (int argc, char **argv) {
 	sf[0] = 3.;
 	sf[1] = 0.5;
 	tf[0] = 0.;
-	tf[1] = -40.0;
+	tf[1] = -45.0;
 	s5.scale(sf[0], sf[1]);
 	s5.translate(tf[0], tf[1]);
 	sc.addSymbol(s5);
@@ -76,6 +79,8 @@ int main (int argc, char **argv) {
 	s6.addPoint(0.0f, 120.0f);
 	s6.addPoint(50.0f, 22.0f);
 	s6.setStrokeColor("darkorchid");
+	s6.setFillColor(Color(255,255,255,0.));
+
 	s6.setStrokeWidth(3.0f);
 	sc.addSymbol(s6);
 
@@ -86,6 +91,7 @@ int main (int argc, char **argv) {
 	l.setStrokeWidth(1.0f);
 	l.setText("Its a Dorky Looking Face!");
 	l.setStrokeColor("purple");
+	l.setFillColor("purple");
 	sc.addSymbol(l);
 
 	// set visualizer type

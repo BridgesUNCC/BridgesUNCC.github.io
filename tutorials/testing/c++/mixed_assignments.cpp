@@ -3,7 +3,6 @@
 #include "Array2D.h"
 #include "Rectangle.h"
 #include "Circle.h"
-#include "Label.h"
 #include "Polygon.h"
 #include "Color.h"
 #include "ColorGrid.h"
@@ -90,24 +89,24 @@ int main(int argc, char **argv) {
 	// Shape collection
 	SymbolCollection sc;
 
-	Rectangle *r1 = new Rectangle(0.0f, 0.0f, 25, 25);
-	r1->setFillColor("black");
+	Rectangle r1 (0.0f, 0.0f, 25, 25);
+	r1.setFillColor("black");
 	sc.addSymbol(r1);
 
-	Circle *s1 = new Circle(25.0f, 0.0f, 10);
-	s1->setFillColor("yellow");
+	Circle s1 (25.0f, 0.0f, 10);
+	s1.setFillColor("yellow");
 	sc.addSymbol(s1);
 
-	Circle *s2 = new Circle(-25.0f, 0.0f, 10);
-	s2->setFillColor("yellow");
+	Circle s2 (-25.0f, 0.0f, 10);
+	s2.setFillColor("yellow");
 	sc.addSymbol(s2);
 
-	Circle *s3 = new Circle(0.0f, 25.0f, 10);
-	s3->setFillColor("yellow");
+	Circle s3 (0.0f, 25.0f, 10);
+	s3.setFillColor("yellow");
 	sc.addSymbol(s3);
 
-	Circle *s4 = new Circle(0.0f, -25.0f, 10);
-	s4->setFillColor("yellow");
+	Circle s4 (0.0f, -25.0f, 10);
+	s4.setFillColor("yellow");
 	sc.addSymbol(s4);
 
 	// set data structure and visualize
@@ -115,12 +114,6 @@ int main(int argc, char **argv) {
 	bridges.setDataStructure(sc);
 	bridges.visualize();
 
-	delete r1;
-	delete s1;
-	delete s2;	
-	delete s3;
-	delete s4;
-		
 
 	// color grid
 	int rows = 30, cols = 30;

@@ -25,41 +25,41 @@ int main(int argc, char **argv) {
 	// draw a rectangle
 	Rectangle s1(-25.0f, 0.0f, 50.0f, 50.0f);
 	s1.setFillColor(Color("red")).setLayer(1);
-	sg.addSymbol(&s1);
+	sg.addSymbol(s1);
 
 	// and a circle next to it
 	Circle s2(25.0f, 0.0f, 25.0f);
 	s2.setFillColor(Color("green")).setLayer(2);
-	sg.addSymbol(&s2);
+	sg.addSymbol(s2);
 
 	Text t;
 	t.setText("group above with rectangle over circle");
 	t.setFontSize(10).setStrokeWidth(1).setStrokeColor(Color("black"));
-	sg.addSymbol(&t);
+	sg.addSymbol(t);
 
 	sg.setLayer(1);
-	sc.addSymbol(&sg);
+	sc.addSymbol(sg);
 
 	SymbolGroup sg2;
 	// draw a rectangle
 	Rectangle s3(-25.0f, 0.0f, 50.0f, 50.0f);
 	s3.setFillColor(Color("yellow")).setLayer(4);
-	sg2.addSymbol(&s3);
+	sg2.addSymbol(s3);
 
 	// and a circle next to it
 	Circle s4(25.0f, 0.0f, 25.0f);
 	s4.setFillColor(Color("blue")).setLayer(3);
-	sg2.addSymbol(&s4);
+	sg2.addSymbol(s4);
 
 	Text t2;
 	t2.setText("group below with circle over rectangle");
 	t2.setFontSize(12).setStrokeWidth(1).setStrokeColor(Color("black"));
-	sg2.addSymbol(&t2);
+	sg2.addSymbol(t2);
 	sg2.setLayer(2);
 
 	sg2.translate(30.0f, 30.0f);
 
-	sc.addSymbol(&sg2);
+	sc.addSymbol(sg2);
 
 	// set visualizer type
 	bridges.setDataStructure(sc);

@@ -4,7 +4,6 @@
 <span class="PreProc">#include </span><span class="Constant">&quot;Array2D.h&quot;</span>
 <span class="PreProc">#include </span><span class="Constant">&quot;Rectangle.h&quot;</span>
 <span class="PreProc">#include </span><span class="Constant">&quot;Circle.h&quot;</span>
-<span class="PreProc">#include </span><span class="Constant">&quot;Label.h&quot;</span>
 <span class="PreProc">#include </span><span class="Constant">&quot;Polygon.h&quot;</span>
 <span class="PreProc">#include </span><span class="Constant">&quot;Color.h&quot;</span>
 <span class="PreProc">#include </span><span class="Constant">&quot;ColorGrid.h&quot;</span>
@@ -91,36 +90,30 @@
 	<span class="Comment">// Shape collection</span>
 	SymbolCollection sc;
 
-	Rectangle *r1 = <span class="Statement">new</span> Rectangle(<span class="Constant">0.0f</span>, <span class="Constant">0.0f</span>, <span class="Constant">25</span>, <span class="Constant">25</span>);
-	r1-&gt;setFillColor(<span class="Constant">&quot;black&quot;</span>);
+	Rectangle r1 (<span class="Constant">0.0f</span>, <span class="Constant">0.0f</span>, <span class="Constant">25</span>, <span class="Constant">25</span>);
+	r1.setFillColor(<span class="Constant">&quot;black&quot;</span>);
 	sc.addSymbol(r1);
 
-	Circle *s1 = <span class="Statement">new</span> Circle(<span class="Constant">25.0f</span>, <span class="Constant">0.0f</span>, <span class="Constant">10</span>);
-	s1-&gt;setFillColor(<span class="Constant">&quot;yellow&quot;</span>);
+	Circle s1 (<span class="Constant">25.0f</span>, <span class="Constant">0.0f</span>, <span class="Constant">10</span>);
+	s1.setFillColor(<span class="Constant">&quot;yellow&quot;</span>);
 	sc.addSymbol(s1);
 
-	Circle *s2 = <span class="Statement">new</span> Circle(-<span class="Constant">25.0f</span>, <span class="Constant">0.0f</span>, <span class="Constant">10</span>);
-	s2-&gt;setFillColor(<span class="Constant">&quot;yellow&quot;</span>);
+	Circle s2 (-<span class="Constant">25.0f</span>, <span class="Constant">0.0f</span>, <span class="Constant">10</span>);
+	s2.setFillColor(<span class="Constant">&quot;yellow&quot;</span>);
 	sc.addSymbol(s2);
 
-	Circle *s3 = <span class="Statement">new</span> Circle(<span class="Constant">0.0f</span>, <span class="Constant">25.0f</span>, <span class="Constant">10</span>);
-	s3-&gt;setFillColor(<span class="Constant">&quot;yellow&quot;</span>);
+	Circle s3 (<span class="Constant">0.0f</span>, <span class="Constant">25.0f</span>, <span class="Constant">10</span>);
+	s3.setFillColor(<span class="Constant">&quot;yellow&quot;</span>);
 	sc.addSymbol(s3);
 
-	Circle *s4 = <span class="Statement">new</span> Circle(<span class="Constant">0.0f</span>, -<span class="Constant">25.0f</span>, <span class="Constant">10</span>);
-	s4-&gt;setFillColor(<span class="Constant">&quot;yellow&quot;</span>);
+	Circle s4 (<span class="Constant">0.0f</span>, -<span class="Constant">25.0f</span>, <span class="Constant">10</span>);
+	s4.setFillColor(<span class="Constant">&quot;yellow&quot;</span>);
 	sc.addSymbol(s4);
 
 	<span class="Comment">// set data structure and visualize</span>
 	bridges.setTitle(<span class="Constant">&quot;A Symbol Collection&quot;</span>);
 	bridges.setDataStructure(sc);
 	bridges.visualize();
-
-	<span class="Statement">delete</span> r1;
-	<span class="Statement">delete</span> s1;
-	<span class="Statement">delete</span> s2;
-	<span class="Statement">delete</span> s3;
-	<span class="Statement">delete</span> s4;
 
 
 	<span class="Comment">// color grid</span>
