@@ -1,0 +1,236 @@
+\hypertarget{classbridges_1_1base_1_1_audio_clip}{}\section{bridges.\+base.\+Audio\+Clip Class Reference}
+\label{classbridges_1_1base_1_1_audio_clip}\index{bridges.\+base.\+Audio\+Clip@{bridges.\+base.\+Audio\+Clip}}
+Inheritance diagram for bridges.\+base.\+Audio\+Clip\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbridges_1_1base_1_1_audio_clip}
+\end{center}
+\end{figure}
+
+
+\subsection{Detailed Description}
+This class provides support for reading, modifying, and playing, audio waveform. 
+
+This class provides a way to represent an \hyperlink{classbridges_1_1base_1_1_audio_clip}{Audio\+Clip} (think of a .W\+AV file) in Bridges as waveforms.
+
+An \hyperlink{classbridges_1_1base_1_1_audio_clip}{Audio\+Clip} can be composed of multiple channels\+: a stereo sound would be composed of 2 channels (Left and Right), a mono sound would be composed of a single channel. A 5.\+1 sound would be composed of 6 channels. When building an \hyperlink{classbridges_1_1base_1_1_audio_clip}{Audio\+Clip} from a file, the number of channels is taken from the file; some constructors have a num\+Channels that enables to pass the number of channels explicitly. If unsure, one can know how many channels are in an audio clip using \hyperlink{classbridges_1_1base_1_1_audio_clip_a09e8b5da5249851f7583e910f24b0395}{get\+Num\+Channels()}.
+
+Each channel is essentially a 1D signal. That is to say, it is an array of values that represent how far the membrane of a speaker should be from its resting position. The quality of the sound is controlled by two parameters\+: sampling rate and sampling depth.
+
+Sampling rate tells how many positions per second are encoded by the \hyperlink{classbridges_1_1base_1_1_audio_clip}{Audio\+Clip}. It is expressed in Hertz. CD quality is 44100\+Hz; while walkie-\/talkies use 8000\+Hz. It is set automatically if read from a file; or it can be passed as the sample\+Rate parameter to some of the constructors. The sampling rate can be obtained from an \hyperlink{classbridges_1_1base_1_1_audio_clip}{Audio\+Clip} using \hyperlink{classbridges_1_1base_1_1_audio_clip_a610df43929946a6186e6739e361916eb}{get\+Sample\+Rate()}.
+
+The length of an \hyperlink{classbridges_1_1base_1_1_audio_clip}{Audio\+Clip} is expressed in number of samples. So if an \hyperlink{classbridges_1_1base_1_1_audio_clip}{Audio\+Clip} is composed of 16,000 samples with a sampling rate of 8000\+Hz, the clip would be 2 seconds long. The number of samples can obtained with \hyperlink{classbridges_1_1base_1_1_audio_clip_a8ad739b7a085787028b4278d65b1b3f4}{get\+Sample\+Count()}; it is set from a file or can be passed as the sample\+Count parameter of some of the constructor.
+
+The sampling depth indicates how many different positions the membrane can take. It is typically expressed in bits with supported values being 8-\/bit, 16-\/bit, 24-\/bit, and 32-\/bit. If a clip is encoded with a depth of 8 bits, the membrane can take 2$^\wedge$8 different position ranging from -\/128 to +127, with 0 being the resting position. The sampling depth is read from files or passed as the sample\+Bits parameter of the constructor. The sampling depth of an existing clip can be obtained with \hyperlink{classbridges_1_1base_1_1_audio_clip_a59e5a3f38768e52c15e43b5679f3f09c}{get\+Sample\+Bits()}.
+
+The individual samples are accessed with the \hyperlink{classbridges_1_1base_1_1_audio_clip_a0db520ed7ad301161e03a55b783856f8}{get\+Sample()} and \hyperlink{classbridges_1_1base_1_1_audio_clip_a896e82f2788b319569c4f0e8f919ffc9}{set\+Sample()} functions. The samples are integer values in the \mbox{[}-\/2$^\wedge$(\hyperlink{classbridges_1_1base_1_1_audio_clip_a59e5a3f38768e52c15e43b5679f3f09c}{get\+Sample\+Bits()}-\/1) ; 2$^\wedge$(\hyperlink{classbridges_1_1base_1_1_audio_clip_a59e5a3f38768e52c15e43b5679f3f09c}{get\+Sample\+Bits()}-\/1)\mbox{[} range. The functions allow to specify for channel and sample index. \subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbridges_1_1base_1_1_audio_clip_a83e87997fd53dbcbde7680b90c1ff3f2}{Audio\+Clip} (int sample\+Count, int num\+Channels, int sample\+Bits, int sample\+Rate)
+\begin{DoxyCompactList}\small\item\em create an audio clip \end{DoxyCompactList}\item 
+\hyperlink{classbridges_1_1base_1_1_audio_clip_aece4ed61f09688a54e636ce3dc206239}{Audio\+Clip} (Wav\+File wav\+File)  throws I\+O\+Exception 
+\begin{DoxyCompactList}\small\item\em create an audio clip from a Wav\+File object \end{DoxyCompactList}\item 
+\hyperlink{classbridges_1_1base_1_1_audio_clip_a70d5f6f10dad6da2f27bb04b7021e2fa}{Audio\+Clip} (String file)  throws I\+O\+Exception 
+\begin{DoxyCompactList}\small\item\em create an audio clip from a File \end{DoxyCompactList}\item 
+\hyperlink{classbridges_1_1base_1_1_audio_clip_aca2a5258c29b104bf8216ae5ec3c5938}{Audio\+Clip} (int sample\+Count, int num\+Channels)
+\begin{DoxyCompactList}\small\item\em create an audio clip \end{DoxyCompactList}\item 
+int \hyperlink{classbridges_1_1base_1_1_audio_clip_a09e8b5da5249851f7583e910f24b0395}{get\+Num\+Channels} ()
+\begin{DoxyCompactList}\small\item\em returns the number of channels of the clip \end{DoxyCompactList}\item 
+int \hyperlink{classbridges_1_1base_1_1_audio_clip_a610df43929946a6186e6739e361916eb}{get\+Sample\+Rate} ()
+\begin{DoxyCompactList}\small\item\em returns the sampling rate of the clip \end{DoxyCompactList}\item 
+int \hyperlink{classbridges_1_1base_1_1_audio_clip_a8ad739b7a085787028b4278d65b1b3f4}{get\+Sample\+Count} ()
+\begin{DoxyCompactList}\small\item\em returns the number of samples in the clip \end{DoxyCompactList}\item 
+int \hyperlink{classbridges_1_1base_1_1_audio_clip_a59e5a3f38768e52c15e43b5679f3f09c}{get\+Sample\+Bits} ()
+\begin{DoxyCompactList}\small\item\em returns the sampling depth. \end{DoxyCompactList}\item 
+int \hyperlink{classbridges_1_1base_1_1_audio_clip_a0db520ed7ad301161e03a55b783856f8}{get\+Sample} (int channel\+Index, int sample\+Index)
+\begin{DoxyCompactList}\small\item\em access a particular sample \end{DoxyCompactList}\item 
+void \hyperlink{classbridges_1_1base_1_1_audio_clip_a896e82f2788b319569c4f0e8f919ffc9}{set\+Sample} (int channel\+Index, int sample\+Index, int value)
+\begin{DoxyCompactList}\small\item\em change a particular sample \end{DoxyCompactList}\item 
+String \hyperlink{classbridges_1_1base_1_1_audio_clip_ad1941b14198946a14d218d7be47f94b5}{get\+Data\+Struct\+Type} ()
+\item 
+String \hyperlink{classbridges_1_1base_1_1_audio_clip_a8ed51c9a938b94d11f274d663a0c9fd4}{get\+Data\+Structure\+Representation} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_audio_clip_a83e87997fd53dbcbde7680b90c1ff3f2}\label{classbridges_1_1base_1_1_audio_clip_a83e87997fd53dbcbde7680b90c1ff3f2}} 
+\index{bridges\+::base\+::\+Audio\+Clip@{bridges\+::base\+::\+Audio\+Clip}!Audio\+Clip@{Audio\+Clip}}
+\index{Audio\+Clip@{Audio\+Clip}!bridges\+::base\+::\+Audio\+Clip@{bridges\+::base\+::\+Audio\+Clip}}
+\subsubsection{\texorpdfstring{Audio\+Clip()}{AudioClip()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily bridges.\+base.\+Audio\+Clip.\+Audio\+Clip (\begin{DoxyParamCaption}\item[{int}]{sample\+Count,  }\item[{int}]{num\+Channels,  }\item[{int}]{sample\+Bits,  }\item[{int}]{sample\+Rate }\end{DoxyParamCaption})}
+
+
+
+create an audio clip 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Channels} & the number of channels \\
+\hline
+{\em sample\+Count} & the total number of samples \\
+\hline
+{\em sample\+Bits} & the bits per sample \\
+\hline
+{\em sample\+Rate} & the sampling rate (Hz, or cycles per sec) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_audio_clip_aece4ed61f09688a54e636ce3dc206239}\label{classbridges_1_1base_1_1_audio_clip_aece4ed61f09688a54e636ce3dc206239}} 
+\index{bridges\+::base\+::\+Audio\+Clip@{bridges\+::base\+::\+Audio\+Clip}!Audio\+Clip@{Audio\+Clip}}
+\index{Audio\+Clip@{Audio\+Clip}!bridges\+::base\+::\+Audio\+Clip@{bridges\+::base\+::\+Audio\+Clip}}
+\subsubsection{\texorpdfstring{Audio\+Clip()}{AudioClip()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily bridges.\+base.\+Audio\+Clip.\+Audio\+Clip (\begin{DoxyParamCaption}\item[{Wav\+File}]{wav\+File }\end{DoxyParamCaption}) throws I\+O\+Exception}
+
+
+
+create an audio clip from a Wav\+File object 
+
+\mbox{\Hypertarget{classbridges_1_1base_1_1_audio_clip_a70d5f6f10dad6da2f27bb04b7021e2fa}\label{classbridges_1_1base_1_1_audio_clip_a70d5f6f10dad6da2f27bb04b7021e2fa}} 
+\index{bridges\+::base\+::\+Audio\+Clip@{bridges\+::base\+::\+Audio\+Clip}!Audio\+Clip@{Audio\+Clip}}
+\index{Audio\+Clip@{Audio\+Clip}!bridges\+::base\+::\+Audio\+Clip@{bridges\+::base\+::\+Audio\+Clip}}
+\subsubsection{\texorpdfstring{Audio\+Clip()}{AudioClip()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily bridges.\+base.\+Audio\+Clip.\+Audio\+Clip (\begin{DoxyParamCaption}\item[{String}]{file }\end{DoxyParamCaption}) throws I\+O\+Exception}
+
+
+
+create an audio clip from a File 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & name of the file (should be a Wave file) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_audio_clip_aca2a5258c29b104bf8216ae5ec3c5938}\label{classbridges_1_1base_1_1_audio_clip_aca2a5258c29b104bf8216ae5ec3c5938}} 
+\index{bridges\+::base\+::\+Audio\+Clip@{bridges\+::base\+::\+Audio\+Clip}!Audio\+Clip@{Audio\+Clip}}
+\index{Audio\+Clip@{Audio\+Clip}!bridges\+::base\+::\+Audio\+Clip@{bridges\+::base\+::\+Audio\+Clip}}
+\subsubsection{\texorpdfstring{Audio\+Clip()}{AudioClip()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily bridges.\+base.\+Audio\+Clip.\+Audio\+Clip (\begin{DoxyParamCaption}\item[{int}]{sample\+Count,  }\item[{int}]{num\+Channels }\end{DoxyParamCaption})}
+
+
+
+create an audio clip 
+
+creates an \hyperlink{classbridges_1_1base_1_1_audio_clip}{Audio\+Clip} with num\+Channels channels, sample\+Count samples at 44100 Hz with a depth of 32 bits 
+\begin{DoxyParams}{Parameters}
+{\em num\+Channels} & the number of channels \\
+\hline
+{\em sample\+Count} & the total number of samples \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_audio_clip_ad1941b14198946a14d218d7be47f94b5}\label{classbridges_1_1base_1_1_audio_clip_ad1941b14198946a14d218d7be47f94b5}} 
+\index{bridges\+::base\+::\+Audio\+Clip@{bridges\+::base\+::\+Audio\+Clip}!get\+Data\+Struct\+Type@{get\+Data\+Struct\+Type}}
+\index{get\+Data\+Struct\+Type@{get\+Data\+Struct\+Type}!bridges\+::base\+::\+Audio\+Clip@{bridges\+::base\+::\+Audio\+Clip}}
+\subsubsection{\texorpdfstring{get\+Data\+Struct\+Type()}{getDataStructType()}}
+{\footnotesize\ttfamily String bridges.\+base.\+Audio\+Clip.\+get\+Data\+Struct\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1base_1_1_audio_clip_a8ed51c9a938b94d11f274d663a0c9fd4}\label{classbridges_1_1base_1_1_audio_clip_a8ed51c9a938b94d11f274d663a0c9fd4}} 
+\index{bridges\+::base\+::\+Audio\+Clip@{bridges\+::base\+::\+Audio\+Clip}!get\+Data\+Structure\+Representation@{get\+Data\+Structure\+Representation}}
+\index{get\+Data\+Structure\+Representation@{get\+Data\+Structure\+Representation}!bridges\+::base\+::\+Audio\+Clip@{bridges\+::base\+::\+Audio\+Clip}}
+\subsubsection{\texorpdfstring{get\+Data\+Structure\+Representation()}{getDataStructureRepresentation()}}
+{\footnotesize\ttfamily String bridges.\+base.\+Audio\+Clip.\+get\+Data\+Structure\+Representation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1base_1_1_audio_clip_a09e8b5da5249851f7583e910f24b0395}\label{classbridges_1_1base_1_1_audio_clip_a09e8b5da5249851f7583e910f24b0395}} 
+\index{bridges\+::base\+::\+Audio\+Clip@{bridges\+::base\+::\+Audio\+Clip}!get\+Num\+Channels@{get\+Num\+Channels}}
+\index{get\+Num\+Channels@{get\+Num\+Channels}!bridges\+::base\+::\+Audio\+Clip@{bridges\+::base\+::\+Audio\+Clip}}
+\subsubsection{\texorpdfstring{get\+Num\+Channels()}{getNumChannels()}}
+{\footnotesize\ttfamily int bridges.\+base.\+Audio\+Clip.\+get\+Num\+Channels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns the number of channels of the clip 
+
+\begin{DoxyReturn}{Returns}
+the number of channels of the clip (1 for mono, 2 for stereo, ...) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_audio_clip_a0db520ed7ad301161e03a55b783856f8}\label{classbridges_1_1base_1_1_audio_clip_a0db520ed7ad301161e03a55b783856f8}} 
+\index{bridges\+::base\+::\+Audio\+Clip@{bridges\+::base\+::\+Audio\+Clip}!get\+Sample@{get\+Sample}}
+\index{get\+Sample@{get\+Sample}!bridges\+::base\+::\+Audio\+Clip@{bridges\+::base\+::\+Audio\+Clip}}
+\subsubsection{\texorpdfstring{get\+Sample()}{getSample()}}
+{\footnotesize\ttfamily int bridges.\+base.\+Audio\+Clip.\+get\+Sample (\begin{DoxyParamCaption}\item[{int}]{channel\+Index,  }\item[{int}]{sample\+Index }\end{DoxyParamCaption})}
+
+
+
+access a particular sample 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel\+Index} & the index of the channel that will be accessed (in the \mbox{[}0;\hyperlink{classbridges_1_1base_1_1_audio_clip_a09e8b5da5249851f7583e910f24b0395}{get\+Num\+Channels()}-\/1\mbox{]} range). \\
+\hline
+{\em sample\+Index} & the index of the sample that will be accessed (in the \mbox{[}0;\hyperlink{classbridges_1_1base_1_1_audio_clip_a8ad739b7a085787028b4278d65b1b3f4}{get\+Sample\+Count()}-\/1\mbox{]} range). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the sample value (in \mbox{[}-\/2$^\wedge$(\hyperlink{classbridges_1_1base_1_1_audio_clip_a59e5a3f38768e52c15e43b5679f3f09c}{get\+Sample\+Bits()}-\/1) ; 2$^\wedge$(\hyperlink{classbridges_1_1base_1_1_audio_clip_a59e5a3f38768e52c15e43b5679f3f09c}{get\+Sample\+Bits()}-\/1)) range). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_audio_clip_a59e5a3f38768e52c15e43b5679f3f09c}\label{classbridges_1_1base_1_1_audio_clip_a59e5a3f38768e52c15e43b5679f3f09c}} 
+\index{bridges\+::base\+::\+Audio\+Clip@{bridges\+::base\+::\+Audio\+Clip}!get\+Sample\+Bits@{get\+Sample\+Bits}}
+\index{get\+Sample\+Bits@{get\+Sample\+Bits}!bridges\+::base\+::\+Audio\+Clip@{bridges\+::base\+::\+Audio\+Clip}}
+\subsubsection{\texorpdfstring{get\+Sample\+Bits()}{getSampleBits()}}
+{\footnotesize\ttfamily int bridges.\+base.\+Audio\+Clip.\+get\+Sample\+Bits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns the sampling depth. 
+
+The sampling depth indicates how many bits are used to encode each individual samples. The values supported are only 8, 16, 24, and 32.
+
+All samples must be in the \mbox{[}-\/2$^\wedge$(\hyperlink{classbridges_1_1base_1_1_audio_clip_a59e5a3f38768e52c15e43b5679f3f09c}{get\+Sample\+Bits()}-\/1) ; 2$^\wedge$(\hyperlink{classbridges_1_1base_1_1_audio_clip_a59e5a3f38768e52c15e43b5679f3f09c}{get\+Sample\+Bits()}-\/1)) range. that is to say, for 8-\/bit, in the \mbox{[}-\/256;255\mbox{]} range.
+
+\begin{DoxyReturn}{Returns}
+the sampling depth. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_audio_clip_a8ad739b7a085787028b4278d65b1b3f4}\label{classbridges_1_1base_1_1_audio_clip_a8ad739b7a085787028b4278d65b1b3f4}} 
+\index{bridges\+::base\+::\+Audio\+Clip@{bridges\+::base\+::\+Audio\+Clip}!get\+Sample\+Count@{get\+Sample\+Count}}
+\index{get\+Sample\+Count@{get\+Sample\+Count}!bridges\+::base\+::\+Audio\+Clip@{bridges\+::base\+::\+Audio\+Clip}}
+\subsubsection{\texorpdfstring{get\+Sample\+Count()}{getSampleCount()}}
+{\footnotesize\ttfamily int bridges.\+base.\+Audio\+Clip.\+get\+Sample\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns the number of samples in the clip 
+
+The length of the clip in second is \hyperlink{classbridges_1_1base_1_1_audio_clip_a8ad739b7a085787028b4278d65b1b3f4}{get\+Sample\+Count()}/((double) \hyperlink{classbridges_1_1base_1_1_audio_clip_a610df43929946a6186e6739e361916eb}{get\+Sample\+Rate()})
+
+\begin{DoxyReturn}{Returns}
+the number of samples in the clip 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_audio_clip_a610df43929946a6186e6739e361916eb}\label{classbridges_1_1base_1_1_audio_clip_a610df43929946a6186e6739e361916eb}} 
+\index{bridges\+::base\+::\+Audio\+Clip@{bridges\+::base\+::\+Audio\+Clip}!get\+Sample\+Rate@{get\+Sample\+Rate}}
+\index{get\+Sample\+Rate@{get\+Sample\+Rate}!bridges\+::base\+::\+Audio\+Clip@{bridges\+::base\+::\+Audio\+Clip}}
+\subsubsection{\texorpdfstring{get\+Sample\+Rate()}{getSampleRate()}}
+{\footnotesize\ttfamily int bridges.\+base.\+Audio\+Clip.\+get\+Sample\+Rate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns the sampling rate of the clip 
+
+\begin{DoxyReturn}{Returns}
+the sampling rate of the clip in Hertz. (CD quality is 44100\+Hz for instance) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_audio_clip_a896e82f2788b319569c4f0e8f919ffc9}\label{classbridges_1_1base_1_1_audio_clip_a896e82f2788b319569c4f0e8f919ffc9}} 
+\index{bridges\+::base\+::\+Audio\+Clip@{bridges\+::base\+::\+Audio\+Clip}!set\+Sample@{set\+Sample}}
+\index{set\+Sample@{set\+Sample}!bridges\+::base\+::\+Audio\+Clip@{bridges\+::base\+::\+Audio\+Clip}}
+\subsubsection{\texorpdfstring{set\+Sample()}{setSample()}}
+{\footnotesize\ttfamily void bridges.\+base.\+Audio\+Clip.\+set\+Sample (\begin{DoxyParamCaption}\item[{int}]{channel\+Index,  }\item[{int}]{sample\+Index,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+change a particular sample 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel\+Index} & the index of the channel that will be accessed (in the \mbox{[}0;\hyperlink{classbridges_1_1base_1_1_audio_clip_a09e8b5da5249851f7583e910f24b0395}{get\+Num\+Channels()}-\/1\mbox{]} range). \\
+\hline
+{\em sample\+Index} & the index of the sample that will be accessed (in the \mbox{[}0;\hyperlink{classbridges_1_1base_1_1_audio_clip_a8ad739b7a085787028b4278d65b1b3f4}{get\+Sample\+Count()}-\/1\mbox{]} range). \\
+\hline
+{\em value} & the sample value (in \mbox{[}-\/2$^\wedge$(\hyperlink{classbridges_1_1base_1_1_audio_clip_a59e5a3f38768e52c15e43b5679f3f09c}{get\+Sample\+Bits()}-\/1) ; 2$^\wedge$(\hyperlink{classbridges_1_1base_1_1_audio_clip_a59e5a3f38768e52c15e43b5679f3f09c}{get\+Sample\+Bits()}-\/1)) range). \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/erik/work/bridges/bridges-\/java/src/main/java/bridges/base/\hyperlink{_audio_clip_8java}{Audio\+Clip.\+java}\end{DoxyCompactItemize}

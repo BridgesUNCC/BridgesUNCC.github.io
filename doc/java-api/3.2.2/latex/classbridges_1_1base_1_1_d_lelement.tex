@@ -1,0 +1,214 @@
+\hypertarget{classbridges_1_1base_1_1_d_lelement}{}\section{bridges.\+base.\+D\+Lelement$<$ E $>$ Class Template Reference}
+\label{classbridges_1_1base_1_1_d_lelement}\index{bridges.\+base.\+D\+Lelement$<$ E $>$@{bridges.\+base.\+D\+Lelement$<$ E $>$}}
+Inheritance diagram for bridges.\+base.\+D\+Lelement$<$ E $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.402516cm]{classbridges_1_1base_1_1_d_lelement}
+\end{center}
+\end{figure}
+
+
+\subsection{Detailed Description}
+This class is used to create doubly linked element objects. 
+
+This class extends \hyperlink{classbridges_1_1base_1_1_element}{Element} and takes a generic parameter E representing application specific data. This element forms the basic building block for doubly linked lists. Doubly linked elements have two links, \char`\"{}next\char`\"{} and \char`\"{}previous\char`\"{}, that point to the previous and succeeding nodes along the list.
+
+Elements contain a visualizer (\hyperlink{classbridges_1_1base_1_1_element_visualizer}{Element\+Visualizer}) object for setting visual attributes (color, shape, opacity, size), necessary for displaying them in a web browser.
+
+Elements also have a \hyperlink{classbridges_1_1base_1_1_link_visualizer}{Link\+Visualizer} object that is used when they are linked to another element, appropriate for setting link attributes, such as in linked lists, between the current element and its next or previous nodes.
+
+\begin{DoxyAuthor}{Author}
+Mihai Mehedint, Kalpathi Subramanian
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+6/22/16, 1/7/17, 5/17/17, 7/14/19
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+Example Tutorial at ~\newline
+ \href{http://bridgesuncc.github.io/tutorials/DoublyLinkedList.html}{\tt http\+://bridgesuncc.\+github.\+io/tutorials/\+Doubly\+Linked\+List.\+html}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em E} & The generic parameter object that is part of this element, representing application specific data. \\
+\hline
+\end{DoxyParams}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries D\+Lelement\+Reverse\+Iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbridges_1_1base_1_1_d_lelement_a525b572340e161d9c430baff10b64ab2}{D\+Lelement} ()
+\item 
+\hyperlink{classbridges_1_1base_1_1_d_lelement_a6aa1d4a3dad4a196c2ed079d108562bc}{D\+Lelement} (String label, E e)
+\item 
+\hyperlink{classbridges_1_1base_1_1_d_lelement_ab1e4eace66bb1b097463c4f04e964cd0}{D\+Lelement} (\hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}$<$ E $>$ \hyperlink{classbridges_1_1base_1_1_s_lelement_abf61c96a74ad319d561c6952ea388e0e}{next}, \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}$<$ E $>$ \hyperlink{classbridges_1_1base_1_1_d_lelement_a6eba4876f820b75ac6bde01d7dea9da7}{prev})
+\item 
+\hyperlink{classbridges_1_1base_1_1_d_lelement_a3ffba30204a2ea6939b07b0ded123af5}{D\+Lelement} (E e, \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}$<$ E $>$ \hyperlink{classbridges_1_1base_1_1_s_lelement_abf61c96a74ad319d561c6952ea388e0e}{next}, \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}$<$ E $>$ \hyperlink{classbridges_1_1base_1_1_d_lelement_a6eba4876f820b75ac6bde01d7dea9da7}{prev})
+\item 
+String \hyperlink{classbridges_1_1base_1_1_d_lelement_a4a0e8f7bd377a652927a741e70aae6d3}{get\+Data\+Struct\+Type} ()
+\item 
+\hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}$<$ E $>$ \hyperlink{classbridges_1_1base_1_1_d_lelement_a35e88e8d991d6f23ec63b3ef3f6cce4e}{get\+Next} ()
+\item 
+void \hyperlink{classbridges_1_1base_1_1_d_lelement_aa18aff21854e4fe372dfefef04b325fe}{set\+Next} (\hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}$<$ E $>$ nxt)
+\item 
+\hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}$<$ E $>$ \hyperlink{classbridges_1_1base_1_1_d_lelement_a859f08f38513ecdfff0eb11bd2b98ce7}{get\+Prev} ()
+\item 
+void \hyperlink{classbridges_1_1base_1_1_d_lelement_a152a06add922290d48b2d4affc87d592}{set\+Prev} (\hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}$<$ E $>$ prv)
+\item 
+String \hyperlink{classbridges_1_1base_1_1_d_lelement_aefe2e582992a9e574d733f109add80f2}{get\+Data\+Structure\+Representation} ()
+\item 
+Iterator$<$ E $>$ \hyperlink{classbridges_1_1base_1_1_d_lelement_aaa90db2862f43b5ef07face87fcd8588}{reverse\+\_\+iterator} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}$<$ E $>$ \hyperlink{classbridges_1_1base_1_1_d_lelement_a6eba4876f820b75ac6bde01d7dea9da7}{prev}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_d_lelement_a525b572340e161d9c430baff10b64ab2}\label{classbridges_1_1base_1_1_d_lelement_a525b572340e161d9c430baff10b64ab2}} 
+\index{bridges\+::base\+::\+D\+Lelement@{bridges\+::base\+::\+D\+Lelement}!D\+Lelement@{D\+Lelement}}
+\index{D\+Lelement@{D\+Lelement}!bridges\+::base\+::\+D\+Lelement@{bridges\+::base\+::\+D\+Lelement}}
+\subsubsection{\texorpdfstring{D\+Lelement()}{DLelement()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_d_lelement}{bridges.\+base.\+D\+Lelement}$<$ E $>$.\hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructs an empty \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} with next and prev pointers set to null. \mbox{\Hypertarget{classbridges_1_1base_1_1_d_lelement_a6aa1d4a3dad4a196c2ed079d108562bc}\label{classbridges_1_1base_1_1_d_lelement_a6aa1d4a3dad4a196c2ed079d108562bc}} 
+\index{bridges\+::base\+::\+D\+Lelement@{bridges\+::base\+::\+D\+Lelement}!D\+Lelement@{D\+Lelement}}
+\index{D\+Lelement@{D\+Lelement}!bridges\+::base\+::\+D\+Lelement@{bridges\+::base\+::\+D\+Lelement}}
+\subsubsection{\texorpdfstring{D\+Lelement()}{DLelement()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_d_lelement}{bridges.\+base.\+D\+Lelement}$<$ E $>$.\hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} (\begin{DoxyParamCaption}\item[{String}]{label,  }\item[{E}]{e }\end{DoxyParamCaption})}
+
+Constructs a \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} labeled \char`\"{}label\char`\"{}, holding an object \char`\"{}e\char`\"{}, with next and prev pointers set to null.
+
+
+\begin{DoxyParams}{Parameters}
+{\em label} & the label for this \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} that shows up on the Bridges visualization \\
+\hline
+{\em e} & the genereic object that is held in this element. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_d_lelement_ab1e4eace66bb1b097463c4f04e964cd0}\label{classbridges_1_1base_1_1_d_lelement_ab1e4eace66bb1b097463c4f04e964cd0}} 
+\index{bridges\+::base\+::\+D\+Lelement@{bridges\+::base\+::\+D\+Lelement}!D\+Lelement@{D\+Lelement}}
+\index{D\+Lelement@{D\+Lelement}!bridges\+::base\+::\+D\+Lelement@{bridges\+::base\+::\+D\+Lelement}}
+\subsubsection{\texorpdfstring{D\+Lelement()}{DLelement()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_d_lelement}{bridges.\+base.\+D\+Lelement}$<$ E $>$.\hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}$<$ E $>$}]{next,  }\item[{\hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}$<$ E $>$}]{prev }\end{DoxyParamCaption})}
+
+Constructs an empty \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} with the next pointer set to the \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} \char`\"{}next\char`\"{} and the prev pointer set to \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} \char`\"{}prev\char`\"{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em next} & the \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} that should be assigned to the next pointer \\
+\hline
+{\em prev} & the \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} that should be assigned to the prev pointer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_d_lelement_a3ffba30204a2ea6939b07b0ded123af5}\label{classbridges_1_1base_1_1_d_lelement_a3ffba30204a2ea6939b07b0ded123af5}} 
+\index{bridges\+::base\+::\+D\+Lelement@{bridges\+::base\+::\+D\+Lelement}!D\+Lelement@{D\+Lelement}}
+\index{D\+Lelement@{D\+Lelement}!bridges\+::base\+::\+D\+Lelement@{bridges\+::base\+::\+D\+Lelement}}
+\subsubsection{\texorpdfstring{D\+Lelement()}{DLelement()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_d_lelement}{bridges.\+base.\+D\+Lelement}$<$ E $>$.\hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} (\begin{DoxyParamCaption}\item[{E}]{e,  }\item[{\hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}$<$ E $>$}]{next,  }\item[{\hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}$<$ E $>$}]{prev }\end{DoxyParamCaption})}
+
+Constructs a \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} holding an object \char`\"{}e\char`\"{}, with the next pointer set to the \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} \char`\"{}next\char`\"{} and the prev pointer set to \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} \char`\"{}prev\char`\"{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & the genereic object that this \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} is holding \\
+\hline
+{\em next} & the \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} that should be assigned to the next pointer \\
+\hline
+{\em prev} & the \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} that should be assigned to the prev pointer \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_d_lelement_a4a0e8f7bd377a652927a741e70aae6d3}\label{classbridges_1_1base_1_1_d_lelement_a4a0e8f7bd377a652927a741e70aae6d3}} 
+\index{bridges\+::base\+::\+D\+Lelement@{bridges\+::base\+::\+D\+Lelement}!get\+Data\+Struct\+Type@{get\+Data\+Struct\+Type}}
+\index{get\+Data\+Struct\+Type@{get\+Data\+Struct\+Type}!bridges\+::base\+::\+D\+Lelement@{bridges\+::base\+::\+D\+Lelement}}
+\subsubsection{\texorpdfstring{get\+Data\+Struct\+Type()}{getDataStructType()}}
+{\footnotesize\ttfamily String \hyperlink{classbridges_1_1base_1_1_d_lelement}{bridges.\+base.\+D\+Lelement}$<$ E $>$.get\+Data\+Struct\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method gets the data structure type
+
+\begin{DoxyReturn}{Returns}
+The date structure type as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_d_lelement_aefe2e582992a9e574d733f109add80f2}\label{classbridges_1_1base_1_1_d_lelement_aefe2e582992a9e574d733f109add80f2}} 
+\index{bridges\+::base\+::\+D\+Lelement@{bridges\+::base\+::\+D\+Lelement}!get\+Data\+Structure\+Representation@{get\+Data\+Structure\+Representation}}
+\index{get\+Data\+Structure\+Representation@{get\+Data\+Structure\+Representation}!bridges\+::base\+::\+D\+Lelement@{bridges\+::base\+::\+D\+Lelement}}
+\subsubsection{\texorpdfstring{get\+Data\+Structure\+Representation()}{getDataStructureRepresentation()}}
+{\footnotesize\ttfamily String \hyperlink{classbridges_1_1base_1_1_d_lelement}{bridges.\+base.\+D\+Lelement}$<$ E $>$.get\+Data\+Structure\+Representation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1base_1_1_d_lelement_a35e88e8d991d6f23ec63b3ef3f6cce4e}\label{classbridges_1_1base_1_1_d_lelement_a35e88e8d991d6f23ec63b3ef3f6cce4e}} 
+\index{bridges\+::base\+::\+D\+Lelement@{bridges\+::base\+::\+D\+Lelement}!get\+Next@{get\+Next}}
+\index{get\+Next@{get\+Next}!bridges\+::base\+::\+D\+Lelement@{bridges\+::base\+::\+D\+Lelement}}
+\subsubsection{\texorpdfstring{get\+Next()}{getNext()}}
+{\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}$<$E$>$ \hyperlink{classbridges_1_1base_1_1_d_lelement}{bridges.\+base.\+D\+Lelement}$<$ E $>$.get\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns the pointer to the next \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}
+
+\begin{DoxyReturn}{Returns}
+the \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} assigned to the next pointer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_d_lelement_a859f08f38513ecdfff0eb11bd2b98ce7}\label{classbridges_1_1base_1_1_d_lelement_a859f08f38513ecdfff0eb11bd2b98ce7}} 
+\index{bridges\+::base\+::\+D\+Lelement@{bridges\+::base\+::\+D\+Lelement}!get\+Prev@{get\+Prev}}
+\index{get\+Prev@{get\+Prev}!bridges\+::base\+::\+D\+Lelement@{bridges\+::base\+::\+D\+Lelement}}
+\subsubsection{\texorpdfstring{get\+Prev()}{getPrev()}}
+{\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}$<$E$>$ \hyperlink{classbridges_1_1base_1_1_d_lelement}{bridges.\+base.\+D\+Lelement}$<$ E $>$.get\+Prev (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method returns the pointer to the previous \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}
+
+\begin{DoxyReturn}{Returns}
+the \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} assigned to the prev pointer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_d_lelement_aaa90db2862f43b5ef07face87fcd8588}\label{classbridges_1_1base_1_1_d_lelement_aaa90db2862f43b5ef07face87fcd8588}} 
+\index{bridges\+::base\+::\+D\+Lelement@{bridges\+::base\+::\+D\+Lelement}!reverse\+\_\+iterator@{reverse\+\_\+iterator}}
+\index{reverse\+\_\+iterator@{reverse\+\_\+iterator}!bridges\+::base\+::\+D\+Lelement@{bridges\+::base\+::\+D\+Lelement}}
+\subsubsection{\texorpdfstring{reverse\+\_\+iterator()}{reverse\_iterator()}}
+{\footnotesize\ttfamily Iterator$<$E$>$ \hyperlink{classbridges_1_1base_1_1_d_lelement}{bridges.\+base.\+D\+Lelement}$<$ E $>$.reverse\+\_\+iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return an reverse iterator over the elements in the array. This is generally not called directly, but is called by Java when used in a \char`\"{}simple\char`\"{} for loops \mbox{\Hypertarget{classbridges_1_1base_1_1_d_lelement_aa18aff21854e4fe372dfefef04b325fe}\label{classbridges_1_1base_1_1_d_lelement_aa18aff21854e4fe372dfefef04b325fe}} 
+\index{bridges\+::base\+::\+D\+Lelement@{bridges\+::base\+::\+D\+Lelement}!set\+Next@{set\+Next}}
+\index{set\+Next@{set\+Next}!bridges\+::base\+::\+D\+Lelement@{bridges\+::base\+::\+D\+Lelement}}
+\subsubsection{\texorpdfstring{set\+Next()}{setNext()}}
+{\footnotesize\ttfamily void \hyperlink{classbridges_1_1base_1_1_d_lelement}{bridges.\+base.\+D\+Lelement}$<$ E $>$.set\+Next (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}$<$ E $>$}]{nxt }\end{DoxyParamCaption})}
+
+This method sets the pointer to the next \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}
+
+
+\begin{DoxyParams}{Parameters}
+{\em nxt} & the \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} that should be assigned to the next pointer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_d_lelement_a152a06add922290d48b2d4affc87d592}\label{classbridges_1_1base_1_1_d_lelement_a152a06add922290d48b2d4affc87d592}} 
+\index{bridges\+::base\+::\+D\+Lelement@{bridges\+::base\+::\+D\+Lelement}!set\+Prev@{set\+Prev}}
+\index{set\+Prev@{set\+Prev}!bridges\+::base\+::\+D\+Lelement@{bridges\+::base\+::\+D\+Lelement}}
+\subsubsection{\texorpdfstring{set\+Prev()}{setPrev()}}
+{\footnotesize\ttfamily void \hyperlink{classbridges_1_1base_1_1_d_lelement}{bridges.\+base.\+D\+Lelement}$<$ E $>$.set\+Prev (\begin{DoxyParamCaption}\item[{\hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}$<$ E $>$}]{prv }\end{DoxyParamCaption})}
+
+This method sets the pointer to the previous \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}
+
+
+\begin{DoxyParams}{Parameters}
+{\em prv} & the \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement} that should be assigned to the prev pointer \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_d_lelement_a6eba4876f820b75ac6bde01d7dea9da7}\label{classbridges_1_1base_1_1_d_lelement_a6eba4876f820b75ac6bde01d7dea9da7}} 
+\index{bridges\+::base\+::\+D\+Lelement@{bridges\+::base\+::\+D\+Lelement}!prev@{prev}}
+\index{prev@{prev}!bridges\+::base\+::\+D\+Lelement@{bridges\+::base\+::\+D\+Lelement}}
+\subsubsection{\texorpdfstring{prev}{prev}}
+{\footnotesize\ttfamily \hyperlink{classbridges_1_1base_1_1_d_lelement}{D\+Lelement}$<$E$>$ \hyperlink{classbridges_1_1base_1_1_d_lelement}{bridges.\+base.\+D\+Lelement}$<$ E $>$.prev\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/erik/work/bridges/bridges-\/java/src/main/java/bridges/base/\hyperlink{_d_lelement_8java}{D\+Lelement.\+java}\end{DoxyCompactItemize}

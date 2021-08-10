@@ -1,0 +1,281 @@
+\hypertarget{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark}{}\section{bridges.\+sorting\+\_\+benchmark.\+Sorting\+Benchmark Class Reference}
+\label{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark}\index{bridges.\+sorting\+\_\+benchmark.\+Sorting\+Benchmark@{bridges.\+sorting\+\_\+benchmark.\+Sorting\+Benchmark}}
+
+
+\subsection{Detailed Description}
+Benchmarks sorting algorithm. 
+
+Benchmarks sorting algorithms and add time series to a Line\+Chart.
+
+The benchmark goes from an initial size controlled by set\+Base\+Size() to a largest size controlled by set\+Max\+Size(). One can also set a maximum time spent on a particular run using set\+Time\+Cap().
+
+The benchmark goes from a array size of n to the next one of geo\+Base n + increment, where the base is controlled by geometric and increment is controlled by increment. For simpler use one can set a purley linear sampling with \hyperlink{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_ab5bfca8680018f4c043a78b25dbc1948}{linear\+\_\+range()} or a purely geometric one with \hyperlink{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_ac9bc45a12b3ebab79d05785c01e4a99e}{geometric\+\_\+range()}.
+
+sorting algorithms can be passed to the run function for being benchmarked. A typical use would look something like
+
+
+\begin{DoxyCode}
+\textcolor{keyword}{def }mysort(int array, int arraysize)
+lc = LineChart();
+sb SortingBenchmark(lc);
+sb.linear\_range (100, 1000, 5);
+sb.run(\textcolor{stringliteral}{"mysortingalgorithm"}, mysort);
+\end{DoxyCode}
+
+
+\begin{DoxyAuthor}{Author}
+Erik Saule 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+07/20/2019 
+\end{DoxyDate}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a703f01c41d21cf5127eeff8918a4adbd}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, p)
+\item 
+def \hyperlink{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a2cc8cc19c22027fc9b53d2fc13e47a0a}{plot} (self)
+\item 
+def \hyperlink{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a39a40658212ca6ecb39870b6ec135e37}{plot} (self, p)
+\item 
+def \hyperlink{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a14ce3cee6cd2a7233b894abb32cebc06}{max\+\_\+size} (self)
+\begin{DoxyCompactList}\small\item\em Getter for the max\+\_\+size of array. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_ac315d63ef7b22cf5b4835663bd1cf809}{max\+\_\+size} (self, size)
+\begin{DoxyCompactList}\small\item\em Puts a cap on the largest array to be used. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a77d0f3d1afe635237de0353c372fadea}{base\+\_\+size} (self)
+\item 
+def \hyperlink{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a14aeb9e7fe1b8ca6b9fabc83e68caa6b}{base\+\_\+size} (self, size)
+\begin{DoxyCompactList}\small\item\em Smallest array to be used. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a13b121b5fdecf989544638a94d6498d8}{increment} (self)
+\item 
+def \hyperlink{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a3a2f43cd8fdb9f5ca88bd0ac9e6d0e2e}{increment} (self, inc)
+\begin{DoxyCompactList}\small\item\em Sets the increment for the benchmark size. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a0ccdd8c0ab411934335c41814325e2c1}{geometric} (self)
+\item 
+def \hyperlink{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a003c4fe5333585f2130609ea24e3eb72}{geometric} (self, base)
+\begin{DoxyCompactList}\small\item\em Sets a geometric progression for the benchmark size. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a125d5bf68c5eb0fa1b319e37582fdc42}{time\+\_\+cap} (self)
+\item 
+def \hyperlink{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_af0705baca355e23e9e92f8d85a5fd33f}{time\+\_\+cap} (self, cap\+\_\+in\+\_\+ms)
+\item 
+def \hyperlink{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_ab5bfca8680018f4c043a78b25dbc1948}{linear\+\_\+range} (self, base\+\_\+sz, max\+\_\+sz, nb\+\_\+point)
+\item 
+def \hyperlink{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_ac9bc45a12b3ebab79d05785c01e4a99e}{geometric\+\_\+range} (self, base\+\_\+sz, max\+\_\+sz, base)
+\item 
+def \hyperlink{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a419601bff1043add1068cc957c924f49}{run} (self, algo\+\_\+name, runnable)
+\begin{DoxyCompactList}\small\item\em benchmark one implementation \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_ae7fb15c11ff3cd6f17a2966f70d26a92}{r}
+\item 
+\hyperlink{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_abe5f172441e50097fecbd69fb724fd62}{debug}
+\item 
+\hyperlink{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a5cf6780eab930f6dc96a517839c14bf7}{base\+\_\+size}
+\item 
+\hyperlink{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_af1aa3db22656da5aad6992547146e1c7}{max\+\_\+size}
+\item 
+\hyperlink{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_aa3b593efe1eac874fcb18a326b1b51d1}{increment}
+\item 
+\hyperlink{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a3f5b4fe45cba8268f53716f6eb322a66}{geometric}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a703f01c41d21cf5127eeff8918a4adbd}\label{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a703f01c41d21cf5127eeff8918a4adbd}} 
+\index{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def bridges.\+sorting\+\_\+benchmark.\+Sorting\+Benchmark.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{p }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a77d0f3d1afe635237de0353c372fadea}\label{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a77d0f3d1afe635237de0353c372fadea}} 
+\index{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}!base\+\_\+size@{base\+\_\+size}}
+\index{base\+\_\+size@{base\+\_\+size}!bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}}
+\subsubsection{\texorpdfstring{base\+\_\+size()}{base\_size()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def bridges.\+sorting\+\_\+benchmark.\+Sorting\+Benchmark.\+base\+\_\+size (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a14aeb9e7fe1b8ca6b9fabc83e68caa6b}\label{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a14aeb9e7fe1b8ca6b9fabc83e68caa6b}} 
+\index{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}!base\+\_\+size@{base\+\_\+size}}
+\index{base\+\_\+size@{base\+\_\+size}!bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}}
+\subsubsection{\texorpdfstring{base\+\_\+size()}{base\_size()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def bridges.\+sorting\+\_\+benchmark.\+Sorting\+Benchmark.\+base\+\_\+size (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{size }\end{DoxyParamCaption})}
+
+
+
+Smallest array to be used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & size of the smallest array to use \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a0ccdd8c0ab411934335c41814325e2c1}\label{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a0ccdd8c0ab411934335c41814325e2c1}} 
+\index{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}!geometric@{geometric}}
+\index{geometric@{geometric}!bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}}
+\subsubsection{\texorpdfstring{geometric()}{geometric()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def bridges.\+sorting\+\_\+benchmark.\+Sorting\+Benchmark.\+geometric (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a003c4fe5333585f2130609ea24e3eb72}\label{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a003c4fe5333585f2130609ea24e3eb72}} 
+\index{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}!geometric@{geometric}}
+\index{geometric@{geometric}!bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}}
+\subsubsection{\texorpdfstring{geometric()}{geometric()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def bridges.\+sorting\+\_\+benchmark.\+Sorting\+Benchmark.\+geometric (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{base }\end{DoxyParamCaption})}
+
+
+
+Sets a geometric progression for the benchmark size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & new base of the geometric progression \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_ac9bc45a12b3ebab79d05785c01e4a99e}\label{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_ac9bc45a12b3ebab79d05785c01e4a99e}} 
+\index{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}!geometric\+\_\+range@{geometric\+\_\+range}}
+\index{geometric\+\_\+range@{geometric\+\_\+range}!bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}}
+\subsubsection{\texorpdfstring{geometric\+\_\+range()}{geometric\_range()}}
+{\footnotesize\ttfamily def bridges.\+sorting\+\_\+benchmark.\+Sorting\+Benchmark.\+geometric\+\_\+range (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{base\+\_\+sz,  }\item[{}]{max\+\_\+sz,  }\item[{}]{base }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a13b121b5fdecf989544638a94d6498d8}\label{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a13b121b5fdecf989544638a94d6498d8}} 
+\index{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}!increment@{increment}}
+\index{increment@{increment}!bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}}
+\subsubsection{\texorpdfstring{increment()}{increment()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def bridges.\+sorting\+\_\+benchmark.\+Sorting\+Benchmark.\+increment (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a3a2f43cd8fdb9f5ca88bd0ac9e6d0e2e}\label{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a3a2f43cd8fdb9f5ca88bd0ac9e6d0e2e}} 
+\index{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}!increment@{increment}}
+\index{increment@{increment}!bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}}
+\subsubsection{\texorpdfstring{increment()}{increment()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def bridges.\+sorting\+\_\+benchmark.\+Sorting\+Benchmark.\+increment (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{inc }\end{DoxyParamCaption})}
+
+
+
+Sets the increment for the benchmark size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inc} & new value of the increment \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_ab5bfca8680018f4c043a78b25dbc1948}\label{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_ab5bfca8680018f4c043a78b25dbc1948}} 
+\index{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}!linear\+\_\+range@{linear\+\_\+range}}
+\index{linear\+\_\+range@{linear\+\_\+range}!bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}}
+\subsubsection{\texorpdfstring{linear\+\_\+range()}{linear\_range()}}
+{\footnotesize\ttfamily def bridges.\+sorting\+\_\+benchmark.\+Sorting\+Benchmark.\+linear\+\_\+range (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{base\+\_\+sz,  }\item[{}]{max\+\_\+sz,  }\item[{}]{nb\+\_\+point }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a14ce3cee6cd2a7233b894abb32cebc06}\label{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a14ce3cee6cd2a7233b894abb32cebc06}} 
+\index{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}!max\+\_\+size@{max\+\_\+size}}
+\index{max\+\_\+size@{max\+\_\+size}!bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}}
+\subsubsection{\texorpdfstring{max\+\_\+size()}{max\_size()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def bridges.\+sorting\+\_\+benchmark.\+Sorting\+Benchmark.\+max\+\_\+size (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Getter for the max\+\_\+size of array. 
+
+\begin{DoxyReturn}{Returns}
+the max size 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_ac315d63ef7b22cf5b4835663bd1cf809}\label{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_ac315d63ef7b22cf5b4835663bd1cf809}} 
+\index{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}!max\+\_\+size@{max\+\_\+size}}
+\index{max\+\_\+size@{max\+\_\+size}!bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}}
+\subsubsection{\texorpdfstring{max\+\_\+size()}{max\_size()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def bridges.\+sorting\+\_\+benchmark.\+Sorting\+Benchmark.\+max\+\_\+size (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{size }\end{DoxyParamCaption})}
+
+
+
+Puts a cap on the largest array to be used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Maximum size considered \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a2cc8cc19c22027fc9b53d2fc13e47a0a}\label{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a2cc8cc19c22027fc9b53d2fc13e47a0a}} 
+\index{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}!plot@{plot}}
+\index{plot@{plot}!bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}}
+\subsubsection{\texorpdfstring{plot()}{plot()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def bridges.\+sorting\+\_\+benchmark.\+Sorting\+Benchmark.\+plot (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a39a40658212ca6ecb39870b6ec135e37}\label{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a39a40658212ca6ecb39870b6ec135e37}} 
+\index{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}!plot@{plot}}
+\index{plot@{plot}!bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}}
+\subsubsection{\texorpdfstring{plot()}{plot()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def bridges.\+sorting\+\_\+benchmark.\+Sorting\+Benchmark.\+plot (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{p }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a419601bff1043add1068cc957c924f49}\label{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a419601bff1043add1068cc957c924f49}} 
+\index{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}!run@{run}}
+\index{run@{run}!bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily def bridges.\+sorting\+\_\+benchmark.\+Sorting\+Benchmark.\+run (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{algo\+\_\+name,  }\item[{}]{runnable }\end{DoxyParamCaption})}
+
+
+
+benchmark one implementation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em algo\+\_\+name} & screen name of the algorithm to be used in the visualization \\
+\hline
+{\em runnable} & pointer to the sorting function to benchmark \+:return\+: \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a125d5bf68c5eb0fa1b319e37582fdc42}\label{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a125d5bf68c5eb0fa1b319e37582fdc42}} 
+\index{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}!time\+\_\+cap@{time\+\_\+cap}}
+\index{time\+\_\+cap@{time\+\_\+cap}!bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}}
+\subsubsection{\texorpdfstring{time\+\_\+cap()}{time\_cap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def bridges.\+sorting\+\_\+benchmark.\+Sorting\+Benchmark.\+time\+\_\+cap (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_af0705baca355e23e9e92f8d85a5fd33f}\label{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_af0705baca355e23e9e92f8d85a5fd33f}} 
+\index{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}!time\+\_\+cap@{time\+\_\+cap}}
+\index{time\+\_\+cap@{time\+\_\+cap}!bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}}
+\subsubsection{\texorpdfstring{time\+\_\+cap()}{time\_cap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def bridges.\+sorting\+\_\+benchmark.\+Sorting\+Benchmark.\+time\+\_\+cap (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cap\+\_\+in\+\_\+ms }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a5cf6780eab930f6dc96a517839c14bf7}\label{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a5cf6780eab930f6dc96a517839c14bf7}} 
+\index{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}!base\+\_\+size@{base\+\_\+size}}
+\index{base\+\_\+size@{base\+\_\+size}!bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}}
+\subsubsection{\texorpdfstring{base\+\_\+size}{base\_size}}
+{\footnotesize\ttfamily bridges.\+sorting\+\_\+benchmark.\+Sorting\+Benchmark.\+base\+\_\+size}
+
+\mbox{\Hypertarget{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_abe5f172441e50097fecbd69fb724fd62}\label{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_abe5f172441e50097fecbd69fb724fd62}} 
+\index{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}!debug@{debug}}
+\index{debug@{debug}!bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}}
+\subsubsection{\texorpdfstring{debug}{debug}}
+{\footnotesize\ttfamily bridges.\+sorting\+\_\+benchmark.\+Sorting\+Benchmark.\+debug}
+
+\mbox{\Hypertarget{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a3f5b4fe45cba8268f53716f6eb322a66}\label{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_a3f5b4fe45cba8268f53716f6eb322a66}} 
+\index{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}!geometric@{geometric}}
+\index{geometric@{geometric}!bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}}
+\subsubsection{\texorpdfstring{geometric}{geometric}}
+{\footnotesize\ttfamily bridges.\+sorting\+\_\+benchmark.\+Sorting\+Benchmark.\+geometric}
+
+\mbox{\Hypertarget{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_aa3b593efe1eac874fcb18a326b1b51d1}\label{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_aa3b593efe1eac874fcb18a326b1b51d1}} 
+\index{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}!increment@{increment}}
+\index{increment@{increment}!bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}}
+\subsubsection{\texorpdfstring{increment}{increment}}
+{\footnotesize\ttfamily bridges.\+sorting\+\_\+benchmark.\+Sorting\+Benchmark.\+increment}
+
+\mbox{\Hypertarget{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_af1aa3db22656da5aad6992547146e1c7}\label{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_af1aa3db22656da5aad6992547146e1c7}} 
+\index{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}!max\+\_\+size@{max\+\_\+size}}
+\index{max\+\_\+size@{max\+\_\+size}!bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}}
+\subsubsection{\texorpdfstring{max\+\_\+size}{max\_size}}
+{\footnotesize\ttfamily bridges.\+sorting\+\_\+benchmark.\+Sorting\+Benchmark.\+max\+\_\+size}
+
+\mbox{\Hypertarget{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_ae7fb15c11ff3cd6f17a2966f70d26a92}\label{classbridges_1_1sorting__benchmark_1_1_sorting_benchmark_ae7fb15c11ff3cd6f17a2966f70d26a92}} 
+\index{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}!r@{r}}
+\index{r@{r}!bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark@{bridges\+::sorting\+\_\+benchmark\+::\+Sorting\+Benchmark}}
+\subsubsection{\texorpdfstring{r}{r}}
+{\footnotesize\ttfamily bridges.\+sorting\+\_\+benchmark.\+Sorting\+Benchmark.\+r}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/erik/work/bridges/bridges-\/python/bridges/\hyperlink{sorting__benchmark_8py}{sorting\+\_\+benchmark.\+py}\end{DoxyCompactItemize}

@@ -1,0 +1,131 @@
+\hypertarget{classbridges_1_1polyline_1_1_polyline}{}\section{bridges.\+polyline.\+Polyline Class Reference}
+\label{classbridges_1_1polyline_1_1_polyline}\index{bridges.\+polyline.\+Polyline@{bridges.\+polyline.\+Polyline}}
+Inheritance diagram for bridges.\+polyline.\+Polyline\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classbridges_1_1polyline_1_1_polyline}
+\end{center}
+\end{figure}
+
+
+\subsection{Detailed Description}
+This class defines a polygon and is part of the symbol collection. 
+
+A polygon has a set of vertices, with vertices connected by line segments. It differs from the polyline in the sense that the last and first vertex are connect to close the shape.
+
+\begin{DoxyAuthor}{Author}
+David Burlinson, Kalpathi Subramanian
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2018, 7/23/19, 1/2/21
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+Shape collection tutorial, \href{http://bridgesuncc.github.io/tutorials/Symbol_Collection.html}{\tt http\+://bridgesuncc.\+github.\+io/tutorials/\+Symbol\+\_\+\+Collection.\+html} 
+\end{DoxySeeAlso}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classbridges_1_1polyline_1_1_polyline_a536cf599bc221283c8e8d6df2324f23e}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, pts=None)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1polyline_1_1_polyline_aae397f351a52883654e1edbb1069369e}{get\+\_\+symbol\+\_\+type} (self)
+\begin{DoxyCompactList}\small\item\em Get the name of the symbol. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1polyline_1_1_polyline_a0afbd2327d8dcba63809a6be07704753}{add\+\_\+point} (self, x, y)
+\begin{DoxyCompactList}\small\item\em Add a point to the polyline. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1polyline_1_1_polyline_ad1671a5857ad9e4010b7783b472c83fa}{points} (self)
+\begin{DoxyCompactList}\small\item\em Get the number of points in polyline. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1polyline_1_1_polyline_ad543fcb38cb561b71d2ae2a9a88d9888}{points} (self, pts)
+\begin{DoxyCompactList}\small\item\em Set the number of points in polyline. \end{DoxyCompactList}\item 
+def \hyperlink{classbridges_1_1polyline_1_1_polyline_a7f99e9e20c90068713b54ad64df3f193}{get\+\_\+json\+\_\+representation} (self)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1polyline_1_1_polyline_a536cf599bc221283c8e8d6df2324f23e}\label{classbridges_1_1polyline_1_1_polyline_a536cf599bc221283c8e8d6df2324f23e}} 
+\index{bridges\+::polyline\+::\+Polyline@{bridges\+::polyline\+::\+Polyline}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!bridges\+::polyline\+::\+Polyline@{bridges\+::polyline\+::\+Polyline}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def bridges.\+polyline.\+Polyline.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{pts = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Sets the number of points in the polyline
+
+
+\begin{DoxyParams}{Parameters}
+{\em pts} & number of points to be used in constructing the polyline \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1polyline_1_1_polyline_a0afbd2327d8dcba63809a6be07704753}\label{classbridges_1_1polyline_1_1_polyline_a0afbd2327d8dcba63809a6be07704753}} 
+\index{bridges\+::polyline\+::\+Polyline@{bridges\+::polyline\+::\+Polyline}!add\+\_\+point@{add\+\_\+point}}
+\index{add\+\_\+point@{add\+\_\+point}!bridges\+::polyline\+::\+Polyline@{bridges\+::polyline\+::\+Polyline}}
+\subsubsection{\texorpdfstring{add\+\_\+point()}{add\_point()}}
+{\footnotesize\ttfamily def bridges.\+polyline.\+Polyline.\+add\+\_\+point (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})}
+
+
+
+Add a point to the polyline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & point\textquotesingle{}s x coordinate \\
+\hline
+{\em y} & point\textquotesingle{}s y coordinate \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1polyline_1_1_polyline_a7f99e9e20c90068713b54ad64df3f193}\label{classbridges_1_1polyline_1_1_polyline_a7f99e9e20c90068713b54ad64df3f193}} 
+\index{bridges\+::polyline\+::\+Polyline@{bridges\+::polyline\+::\+Polyline}!get\+\_\+json\+\_\+representation@{get\+\_\+json\+\_\+representation}}
+\index{get\+\_\+json\+\_\+representation@{get\+\_\+json\+\_\+representation}!bridges\+::polyline\+::\+Polyline@{bridges\+::polyline\+::\+Polyline}}
+\subsubsection{\texorpdfstring{get\+\_\+json\+\_\+representation()}{get\_json\_representation()}}
+{\footnotesize\ttfamily def bridges.\+polyline.\+Polyline.\+get\+\_\+json\+\_\+representation (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1polyline_1_1_polyline_aae397f351a52883654e1edbb1069369e}\label{classbridges_1_1polyline_1_1_polyline_aae397f351a52883654e1edbb1069369e}} 
+\index{bridges\+::polyline\+::\+Polyline@{bridges\+::polyline\+::\+Polyline}!get\+\_\+symbol\+\_\+type@{get\+\_\+symbol\+\_\+type}}
+\index{get\+\_\+symbol\+\_\+type@{get\+\_\+symbol\+\_\+type}!bridges\+::polyline\+::\+Polyline@{bridges\+::polyline\+::\+Polyline}}
+\subsubsection{\texorpdfstring{get\+\_\+symbol\+\_\+type()}{get\_symbol\_type()}}
+{\footnotesize\ttfamily def bridges.\+polyline.\+Polyline.\+get\+\_\+symbol\+\_\+type (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the name of the symbol. 
+
+\begin{DoxyReturn}{Returns}
+the symbol name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1polyline_1_1_polyline_ad1671a5857ad9e4010b7783b472c83fa}\label{classbridges_1_1polyline_1_1_polyline_ad1671a5857ad9e4010b7783b472c83fa}} 
+\index{bridges\+::polyline\+::\+Polyline@{bridges\+::polyline\+::\+Polyline}!points@{points}}
+\index{points@{points}!bridges\+::polyline\+::\+Polyline@{bridges\+::polyline\+::\+Polyline}}
+\subsubsection{\texorpdfstring{points()}{points()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def bridges.\+polyline.\+Polyline.\+points (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the number of points in polyline. 
+
+\begin{DoxyReturn}{Returns}
+the number of points in symbol. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1polyline_1_1_polyline_ad543fcb38cb561b71d2ae2a9a88d9888}\label{classbridges_1_1polyline_1_1_polyline_ad543fcb38cb561b71d2ae2a9a88d9888}} 
+\index{bridges\+::polyline\+::\+Polyline@{bridges\+::polyline\+::\+Polyline}!points@{points}}
+\index{points@{points}!bridges\+::polyline\+::\+Polyline@{bridges\+::polyline\+::\+Polyline}}
+\subsubsection{\texorpdfstring{points()}{points()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def bridges.\+polyline.\+Polyline.\+points (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{pts }\end{DoxyParamCaption})}
+
+
+
+Set the number of points in polyline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pts} & the number of points in symbol. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/erik/work/bridges/bridges-\/python/bridges/\hyperlink{polyline_8py}{polyline.\+py}\end{DoxyCompactItemize}
