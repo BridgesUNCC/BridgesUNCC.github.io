@@ -17,7 +17,7 @@
   <script src="https://www.w3schools.com/lib/w3data.js"></script>
   <script src="./tutorial.js"></script>
 
-  <title>Bridges - Hello World Visualization Tutorial</title>
+  <title>Bridges - Elevation Tutorial</title>
 
   <script src="./prettyprint.js" defer></script>
 </head>
@@ -30,15 +30,19 @@
 <main>
   <h2>Elevation Dataset from NOAA</h2>
 <p>
-BRIDGES provides easy access to <a href="https://www.noaa.gov/">NOAA</a>'s elevation data.
+BRIDGES provides easy access to <a href="https://www.ngdc.noaa.gov/mgg/global/">NOAA Grid Extraction</a>'s elevation data. This dataset is able to 
+provide an ASCII grid of elevation values from the ETOPO1 elevation map. The resolution for this map is about 1 arc minute.
 </p>
 <p>
 The program snippet below illustrates how to obtain elevation using a bounding box of latitude and longitude.
+When using a bounding box for your input slection put the coordinates in the order of minLat, minLon, maxLat, maxLon or (SWNE).
 </p>
 
-<h2>Accessing Elevation  Data: An Example BRIDGES program</h2>
-<div w3-include-html="./bridges_data_access_elements.html"></div> 
+<h3>Suggested Examples:</h3>
+<p>data_source.get_elevation_data([36.8241, -116.8369, 35.7797, -117.4074])<br>data_source.get_elevation_data([49.0872, -113.6184, 47.3746, -114.8143])<br>data_source.get_elevation_data([40.1924, -79.3980, 37.5021, -81.8810])</p>
 
+
+<h2>Accessing Elevation  Data: An Example BRIDGES program</h2>
 
   <div class="tabs">
     <div onclick="displayCode('Java',this)">Java</div>
