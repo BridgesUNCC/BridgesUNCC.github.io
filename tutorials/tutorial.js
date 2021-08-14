@@ -1,5 +1,5 @@
-//tabbing logic
-function displayCode(param,caller)
+///////////tabbing logic ///////////
+function displayCode(param,caller)//this one is deprecated
 {
 	var tabs = document.querySelectorAll("*.tabs > *");
 	for(var i=0;i<tabs.length;i++)
