@@ -40,6 +40,9 @@ function activateAllTabs() {
 
 }
 
+window.addEventListener("load", activateAllTabs, false);
+window.addEventListener("load", w3IncludeHTML, false);
+
 
 //bridges iframe
 
