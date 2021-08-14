@@ -143,6 +143,8 @@ main li
 	line-height: 18px;
 	margin-bottom: 12px;
 }
+
+/* tabs are the class used for the button that trigger code snippets*/
 main *.tabs
 {
 	height:2em;
@@ -153,7 +155,11 @@ main *.tabs > *
 	box-sizing: border-box;
 	text-align:center;
 	padding-top:2px;
-	width:15em;
+	/*Setting the width with min-width is preferable for smaller window
+  sizes than with width. Using max-width would look bad on full screen windows */
+	min-width: 7em;
+	/*width:15em;*/
+	/*max-width: 30%;*/
 	height:inherit;
 	border-radius: .5em .5em 0em 0em;
 	border: 1px solid #999;

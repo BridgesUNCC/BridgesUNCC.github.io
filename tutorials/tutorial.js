@@ -29,7 +29,10 @@ function displayCodeSnippet(turnOn, category, caller)
 
 function activateAllTabs() {
     let tabs = document.querySelectorAll("*.tabs > *");
-    //console.log(tabs);
+
+    // Going backwards makes the first tab of each section the visible
+    // one.  Going forward would make the last tab visible which is
+    // visually awkward as a default choice.
     for(let i=tabs.length-1;i>=0;i--)
     {
 	tabs[i].click();
