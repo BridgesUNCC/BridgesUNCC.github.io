@@ -32,19 +32,35 @@
 	to generate visualizations that does not directly fit a specific data structure, but assists 
 	illustrating its underlying concepts. For example, the Towers of Hanoi problem can be implemented 
 	using a set of simple shapes : 3 circles for the disks and 3 long thin rectangles to represent
-	the towers. SymbolCollection works currently in BRIDGES with 4 shapes: Rectangle, Circle, Polygon
+	the towers. SymbolCollection works currently in BRIDGES with 5 shapes: Rectangle, Circle, Polygon, Polyline
 	and a Label (facilitates textual information on the visualization). See the associated help pages
 	for the API. Each symbol has a name, location (where it will be placed on the display) and
 	other common stylistic attributes. The subclasses of Symbol have more specific geometric 
-	properties (width, height for rectangle, radius for circle, list of points for Polygon, etc). The 
+	properties: width, height for rectangle, center, radius for circle, list of points for Polygon,Polyline. The 
 	example below illustrates how to construct shapes and its corresponding visualization.
+	<p>
+	All shapes (except the Label) can be transformed by translation, scaling or rotation. 
+	Combinations of transforms are composed, by premultiplication, i.e., if a rectangle is 
+	specified to be translated and then rotated, then the translation will be applied
+	first to its vertices, followed by rotation.
+	<p>
+	SymbolCollection also supports groups (as in SVG); symbols can be put together in groups,
+    and groups can be within groups. Groups can take a transformation matrix as its attribute,
+	which will transform the entire group of symbols and possibly applying any transformations
+	the symbols within that group may themselves specify.
+	<p>
+	Finally, ordering is implemented as a symbol attribute, termed layer. These are used to 
+	specify the depth of a symbol and used by the rendering algorithm to draw shapes in
+	the specified order. Layers are integers, and smaller the integer, the closer the shape is
+	towards the viewer.
 	<hr/>
 
-	<h2>SymbolCollection - Example BRIDGES Program - Illustraing the various shapes supported by  BRIDGES</h2>
-	<div w3-include-html="bridges_program_elements.html"></div> 
-	<h2> Example Details</h2>
+	<h2>SymbolCollection - Example BRIDGES Programs that  illustraing the various features
+	of symbols</h2>
+	<h2> 1. Getting Started: A barebones example to display shapes</h2>
 	<ul>
-	  <li> In this example, we illustrate the various symbols supporte by BRIDGES. You will see a red
+	  <li> In this example, we illustrate the various symbols supported by BRIDGES. 
+		You will see a red
 	    rectangle and gree circle and two crossed lines, built by a set of points on a polygon.
 	</ul>
 	<h2>Here's the final code:</h2>
@@ -57,16 +73,83 @@
 	</div>
 	<div class="tabContents">
 	  <div id="Java">
-	    <pre w3-include-html="./testing/java/shape_collection.java.html" class="prettyprint" />
+	    <pre w3-include-html="./testing/java/tut_shapes_p1.java.html" class="prettyprint" />
 	  </div>
 	  <div id="C++">
-	    <pre w3-include-html="./testing/c++/shape_collection.cpp.html" class="prettyprint" />
+	    <pre w3-include-html="./testing/c++/tut_shapes_p1.cpp.html" class="prettyprint" />
 	  </div>
 	  <div id="Python">
-	    <pre w3-include-html="./testing/python/shape_collection.py.html" class="prettyprint" />
+	    <pre w3-include-html="./testing/python/tut-shapes_p1.py.html" class="prettyprint" />
 	  </div>
 	</div>
 
+	<h2> 2. Using symbol groups with shapes </h2>
+	<ul>
+	  <li> In this example, we illustrate how to group symbols to create a hierarchical
+		structures. Two groups are illustrated, but note that groups can be within groups.
+	</ul>
+	<h2>Here's the final code:</h2>
+	<div class="tabs">
+	  <div onclick="displayCode('Java',this)">Java</div>
+	  <div onclick="displayCode('C++',this)" >C++</div>
+	  <div onclick="displayCode('Python',this)" >Python</div>
+	</div>
+	<div class="tabContents">
+	  <div id="Java">
+	    <pre w3-include-html="./testing/java/tut_shapes_p2.java.html" class="prettyprint" />
+	  </div>
+	  <div id="C++">
+	    <pre w3-include-html="./testing/c++/tut_shapes_p2.cpp.html" class="prettyprint" />
+	  </div>
+	  <div id="Python">
+	    <pre w3-include-html="./testing/python/tut-shapes_p2.py.html" class="prettyprint" />
+	  </div>
+	</div>
+
+	<h2> 3. Using layers with symbols to specify drawing order</h2>
+	<ul>
+	  <li> In this example, we illustrate how to put symbols into layers so as to 
+	specify a desired drawing orderl 
+	</ul>
+	<h2>Here's the final code:</h2>
+	<div class="tabs">
+	  <div onclick="displayCode('Java',this)">Java</div>
+	  <div onclick="displayCode('C++',this)" >C++</div>
+	  <div onclick="displayCode('Python',this)" >Python</div>
+	</div>
+	<div class="tabContents">
+	  <div id="Java">
+	  <pre w3-include-html="./testing/java/shape_collection_layer.java.html" class="prettyprint" />
+	  </div>
+	  <div id="C++">
+	    <pre w3-include-html="./testing/c++/shape_collection_layer.cpp.html" class="prettyprint" />
+	  </div>
+	  <div id="Python">
+	  <pre w3-include-html="./testing/python/shape_collection_layer.py.html" class="prettyprint" />
+	  </div>
+
+	<h2> 4. Text alignment with Symbols</h2>
+	<ul>
+	  <li> In this example, we illustrate the different ways text labels can be aligned, given
+		its location. 
+	</ul>
+	<h2>Here's the final code:</h2>
+	<div class="tabs">
+	  <div onclick="displayCode('Java',this)">Java</div>
+	  <div onclick="displayCode('C++',this)" >C++</div>
+	  <div onclick="displayCode('Python',this)" >Python</div>
+	</div>
+	<div class="tabContents">
+	  <div id="Java">
+	  <pre w3-include-html="./testing/java/shape_collection_textalign.java.html" class="prettyprint" />
+	  </div>
+	  <div id="C++">
+	    <pre w3-include-html="./testing/c++/shape_collection_textalign.cpp.html" class="prettyprint" />
+	  </div>
+	  <div id="Python">
+	  <pre w3-include-html="./testing/python/shape_collection_textalign.py.html" class="prettyprint" />
+	  </div>
+	</div>
 
 	<h2>Bridges Visualization</h2>
 	<ul>
