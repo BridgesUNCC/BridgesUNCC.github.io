@@ -1,0 +1,182 @@
+\hypertarget{classbridges_1_1datastructure_1_1_b_t_element}{}\doxysection{bridges\+::datastructure\+::BTElement$<$ E $>$ Class Template Reference}
+\label{classbridges_1_1datastructure_1_1_b_t_element}\index{bridges::datastructure::BTElement$<$ E $>$@{bridges::datastructure::BTElement$<$ E $>$}}
+
+
+{\ttfamily \#include $<$BTElement.\+h$>$}
+
+Inheritance diagram for bridges\+::datastructure\+::BTElement$<$ E $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classbridges_1_1datastructure_1_1_b_t_element}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename E$>$\newline
+class bridges\+::datastructure\+::\+BTElement$<$ E $>$}
+
+This class can be used to create binary tree elements, derived from \mbox{\hyperlink{classbridges_1_1datastructure_1_1_tree_element}{Tree\+Element}}. 
+
+This class can be used to create binary tree elements, with left and right subtrees
+
+
+\begin{DoxyParams}{Parameters}
+{\em E} & the application data type\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Kalpathi Subramanian 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+6/12/15 
+\end{DoxyDate}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element_a7d93a35b1f2553cfd92a289a363caa5a}{BTElement}} (\mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{BTElement}} $\ast$l, \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{BTElement}} $\ast$r, const E \&e=E(), const string \&lab=string())
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{BTElement}} with the provided value, label, left and right BTElements. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element_a1bea31e483a1bf737e5da5cc9178bc3d}{BTElement}} (const E \&e=E(), const string \&lab=string())
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{BTElement}} with the provided value and label, setting the left and right \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{BTElement}} to nullptr. \end{DoxyCompactList}\item 
+virtual const string \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element_a2118b6b74f3fe0fec39e3b258a7dee89}{get\+DStype}} () const override
+\item 
+virtual \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{BTElement}} $\ast$ \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element_aaa551a4f24bb7ed63fd39e9c4153402b}{get\+Left}} ()
+\item 
+virtual const \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{BTElement}} $\ast$ \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element_aa13df422de48c6297223c3c28caf9277}{get\+Left}} () const
+\item 
+void \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element_a6baeb1237f1879eb6a04fc144a7b55d6}{set\+Left}} (\mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{BTElement}} $\ast$l)
+\item 
+virtual \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{BTElement}} $\ast$ \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element_a3f73fcc5a7ed1af1a628803879682f80}{get\+Right}} ()
+\item 
+virtual const \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{BTElement}} $\ast$ \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element_afc0f4e1454bbdfb6a61ae9acf606e22a}{get\+Right}} () const
+\item 
+void \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element_a016dfb73d148418ba581cfec96375db3}{set\+Right}} (\mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{BTElement}} $\ast$r)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_b_t_element_a7d93a35b1f2553cfd92a289a363caa5a}\label{classbridges_1_1datastructure_1_1_b_t_element_a7d93a35b1f2553cfd92a289a363caa5a}} 
+\index{bridges::datastructure::BTElement$<$ E $>$@{bridges::datastructure::BTElement$<$ E $>$}!BTElement@{BTElement}}
+\index{BTElement@{BTElement}!bridges::datastructure::BTElement$<$ E $>$@{bridges::datastructure::BTElement$<$ E $>$}}
+\doxysubsubsection{\texorpdfstring{BTElement()}{BTElement()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename E $>$ \\
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{bridges\+::datastructure\+::\+BTElement}}$<$ E $>$\+::\mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{BTElement}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{BTElement}}$<$ E $>$ $\ast$}]{l,  }\item[{\mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{BTElement}}$<$ E $>$ $\ast$}]{r,  }\item[{const E \&}]{e = {\ttfamily E()},  }\item[{const string \&}]{lab = {\ttfamily string()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{BTElement}} with the provided value, label, left and right BTElements. 
+
+The defaults will be used if not provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & The left \mbox{\hyperlink{classbridges_1_1datastructure_1_1_tree_element}{Tree\+Element}} \\
+\hline
+{\em r} & The right \mbox{\hyperlink{classbridges_1_1datastructure_1_1_tree_element}{Tree\+Element}} \\
+\hline
+{\em e} & The data to hold \\
+\hline
+{\em lab} & The label to show \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_b_t_element_a1bea31e483a1bf737e5da5cc9178bc3d}\label{classbridges_1_1datastructure_1_1_b_t_element_a1bea31e483a1bf737e5da5cc9178bc3d}} 
+\index{bridges::datastructure::BTElement$<$ E $>$@{bridges::datastructure::BTElement$<$ E $>$}!BTElement@{BTElement}}
+\index{BTElement@{BTElement}!bridges::datastructure::BTElement$<$ E $>$@{bridges::datastructure::BTElement$<$ E $>$}}
+\doxysubsubsection{\texorpdfstring{BTElement()}{BTElement()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename E $>$ \\
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{bridges\+::datastructure\+::\+BTElement}}$<$ E $>$\+::\mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{BTElement}} (\begin{DoxyParamCaption}\item[{const E \&}]{e = {\ttfamily E()},  }\item[{const string \&}]{lab = {\ttfamily string()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{BTElement}} with the provided value and label, setting the left and right \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{BTElement}} to nullptr. 
+
+The defaults will be used if not provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The data to hold \\
+\hline
+{\em lab} & The label to show \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_b_t_element_a2118b6b74f3fe0fec39e3b258a7dee89}\label{classbridges_1_1datastructure_1_1_b_t_element_a2118b6b74f3fe0fec39e3b258a7dee89}} 
+\index{bridges::datastructure::BTElement$<$ E $>$@{bridges::datastructure::BTElement$<$ E $>$}!getDStype@{getDStype}}
+\index{getDStype@{getDStype}!bridges::datastructure::BTElement$<$ E $>$@{bridges::datastructure::BTElement$<$ E $>$}}
+\doxysubsubsection{\texorpdfstring{getDStype()}{getDStype()}}
+{\footnotesize\ttfamily template$<$typename E $>$ \\
+virtual const string \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{bridges\+::datastructure\+::\+BTElement}}$<$ E $>$\+::get\+DStype (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the data structure type 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbridges_1_1datastructure_1_1_tree_element_a897f34ea284da45e1dc869c3e3b6c9a4}{bridges\+::datastructure\+::\+Tree\+Element$<$ E $>$}}.
+
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_b_t_element_aaa551a4f24bb7ed63fd39e9c4153402b}\label{classbridges_1_1datastructure_1_1_b_t_element_aaa551a4f24bb7ed63fd39e9c4153402b}} 
+\index{bridges::datastructure::BTElement$<$ E $>$@{bridges::datastructure::BTElement$<$ E $>$}!getLeft@{getLeft}}
+\index{getLeft@{getLeft}!bridges::datastructure::BTElement$<$ E $>$@{bridges::datastructure::BTElement$<$ E $>$}}
+\doxysubsubsection{\texorpdfstring{getLeft()}{getLeft()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename E $>$ \\
+virtual \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{BTElement}}$\ast$ \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{bridges\+::datastructure\+::\+BTElement}}$<$ E $>$\+::get\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The left \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{BTElement}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_b_t_element_aa13df422de48c6297223c3c28caf9277}\label{classbridges_1_1datastructure_1_1_b_t_element_aa13df422de48c6297223c3c28caf9277}} 
+\index{bridges::datastructure::BTElement$<$ E $>$@{bridges::datastructure::BTElement$<$ E $>$}!getLeft@{getLeft}}
+\index{getLeft@{getLeft}!bridges::datastructure::BTElement$<$ E $>$@{bridges::datastructure::BTElement$<$ E $>$}}
+\doxysubsubsection{\texorpdfstring{getLeft()}{getLeft()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename E $>$ \\
+virtual const \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{BTElement}}$\ast$ \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{bridges\+::datastructure\+::\+BTElement}}$<$ E $>$\+::get\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Constant version \mbox{\Hypertarget{classbridges_1_1datastructure_1_1_b_t_element_a3f73fcc5a7ed1af1a628803879682f80}\label{classbridges_1_1datastructure_1_1_b_t_element_a3f73fcc5a7ed1af1a628803879682f80}} 
+\index{bridges::datastructure::BTElement$<$ E $>$@{bridges::datastructure::BTElement$<$ E $>$}!getRight@{getRight}}
+\index{getRight@{getRight}!bridges::datastructure::BTElement$<$ E $>$@{bridges::datastructure::BTElement$<$ E $>$}}
+\doxysubsubsection{\texorpdfstring{getRight()}{getRight()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename E $>$ \\
+virtual \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{BTElement}}$\ast$ \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{bridges\+::datastructure\+::\+BTElement}}$<$ E $>$\+::get\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The right \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{BTElement}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_b_t_element_afc0f4e1454bbdfb6a61ae9acf606e22a}\label{classbridges_1_1datastructure_1_1_b_t_element_afc0f4e1454bbdfb6a61ae9acf606e22a}} 
+\index{bridges::datastructure::BTElement$<$ E $>$@{bridges::datastructure::BTElement$<$ E $>$}!getRight@{getRight}}
+\index{getRight@{getRight}!bridges::datastructure::BTElement$<$ E $>$@{bridges::datastructure::BTElement$<$ E $>$}}
+\doxysubsubsection{\texorpdfstring{getRight()}{getRight()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename E $>$ \\
+virtual const \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{BTElement}}$\ast$ \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{bridges\+::datastructure\+::\+BTElement}}$<$ E $>$\+::get\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Constant version \mbox{\Hypertarget{classbridges_1_1datastructure_1_1_b_t_element_a6baeb1237f1879eb6a04fc144a7b55d6}\label{classbridges_1_1datastructure_1_1_b_t_element_a6baeb1237f1879eb6a04fc144a7b55d6}} 
+\index{bridges::datastructure::BTElement$<$ E $>$@{bridges::datastructure::BTElement$<$ E $>$}!setLeft@{setLeft}}
+\index{setLeft@{setLeft}!bridges::datastructure::BTElement$<$ E $>$@{bridges::datastructure::BTElement$<$ E $>$}}
+\doxysubsubsection{\texorpdfstring{setLeft()}{setLeft()}}
+{\footnotesize\ttfamily template$<$typename E $>$ \\
+void \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{bridges\+::datastructure\+::\+BTElement}}$<$ E $>$\+::set\+Left (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{BTElement}}$<$ E $>$ $\ast$}]{l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets left to \char`\"{}l\char`\"{}
+\begin{DoxyParams}{Parameters}
+{\em l} & The left \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{BTElement}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_b_t_element_a016dfb73d148418ba581cfec96375db3}\label{classbridges_1_1datastructure_1_1_b_t_element_a016dfb73d148418ba581cfec96375db3}} 
+\index{bridges::datastructure::BTElement$<$ E $>$@{bridges::datastructure::BTElement$<$ E $>$}!setRight@{setRight}}
+\index{setRight@{setRight}!bridges::datastructure::BTElement$<$ E $>$@{bridges::datastructure::BTElement$<$ E $>$}}
+\doxysubsubsection{\texorpdfstring{setRight()}{setRight()}}
+{\footnotesize\ttfamily template$<$typename E $>$ \\
+void \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{bridges\+::datastructure\+::\+BTElement}}$<$ E $>$\+::set\+Right (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{BTElement}}$<$ E $>$ $\ast$}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets right to \char`\"{}r\char`\"{}
+\begin{DoxyParams}{Parameters}
+{\em r} & The right \mbox{\hyperlink{classbridges_1_1datastructure_1_1_b_t_element}{BTElement}} \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/erik/work/bridges/bridges-\/cxx/src/\mbox{\hyperlink{_b_t_element_8h}{BTElement.\+h}}\end{DoxyCompactItemize}

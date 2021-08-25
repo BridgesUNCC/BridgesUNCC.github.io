@@ -1,0 +1,231 @@
+\hypertarget{classbridges_1_1datastructure_1_1_array3_d}{}\doxysection{bridges\+::datastructure\+::Array3D$<$ E $>$ Class Template Reference}
+\label{classbridges_1_1datastructure_1_1_array3_d}\index{bridges::datastructure::Array3D$<$ E $>$@{bridges::datastructure::Array3D$<$ E $>$}}
+
+
+{\ttfamily \#include $<$Array3\+D.\+h$>$}
+
+Inheritance diagram for bridges\+::datastructure\+::Array3D$<$ E $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classbridges_1_1datastructure_1_1_array3_d}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename E$>$\newline
+class bridges\+::datastructure\+::\+Array3\+D$<$ E $>$}
+
+A BRIDGES array type. 
+
+This class can be used to create 3D arrays of any type.
+
+The access to the values stored are done directly using bracket operators such as
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array3D<std::string> arr(19, 30, 30);}
+\DoxyCodeLine{arr [12][25][12] = \textcolor{stringliteral}{"{}hello!"{}};}
+
+\end{DoxyCode}
+
+
+Entries in the array can be styled by showing a label and changing the color of an entry. This is achieved by styling the underlying element to a particular entry of the array such as\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Array3D<std::string> arr(19, 30, 3);}
+\DoxyCodeLine{arr.getElement(12, 25, 0).setColor(\textcolor{stringliteral}{"{}yellow"{}});}
+\DoxyCodeLine{arr.getElement(12, 25, 2).setLabel(\textcolor{stringliteral}{"{}Hi there"{}});}
+
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+See tutorial at\+: \href{https://bridgesuncc.github.io/tutorials/Array.html}{\texttt{ https\+://bridgesuncc.\+github.\+io/tutorials/\+Array.\+html}}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em E} & the application data type\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Kalpathi Subramanian 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7/16/19 
+\end{DoxyDate}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structbridges_1_1datastructure_1_1_array3_d_1_1_bracket__helper}{Bracket\+\_\+helper}}
+\begin{DoxyCompactList}\small\item\em Bracker\+\_\+helper class to make \mbox{[}\mbox{]} operators work on array 2d. You should never use it directly. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structbridges_1_1datastructure_1_1_array3_d_1_1_bracket__helper2}{Bracket\+\_\+helper2}}
+\begin{DoxyCompactList}\small\item\em Bracker\+\_\+helper class to make \mbox{[}\mbox{]}\mbox{[}\mbox{]} operators work on array 2d. You should never use it directly. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structbridges_1_1datastructure_1_1_array3_d_1_1_bracket__helper2__const}{Bracket\+\_\+helper2\+\_\+const}}
+\begin{DoxyCompactList}\small\item\em helper2 const class is to make \mbox{[}\mbox{]}\mbox{[}\mbox{]} operators work on array 2d. You should never use it directly \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structbridges_1_1datastructure_1_1_array3_d_1_1_bracket__helper__const}{Bracket\+\_\+helper\+\_\+const}}
+\begin{DoxyCompactList}\small\item\em helper const class is to make \mbox{[}\mbox{]}\mbox{[}\mbox{]} operators work on array 2d. You should never use it directly \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classbridges_1_1datastructure_1_1_array3_d_afad3212fe6c2954859a7ea6dce7a739c}{$\sim$\+Array3D}} ()
+\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_array3_d_af2d55bb9cf9057b9d5af4a24c6dc3173}{Array3D}} (int slices, int rows, int columns)
+\item 
+int \mbox{\hyperlink{classbridges_1_1datastructure_1_1_array3_d_a73aebe1098512ca4196cb8da0eb493fe}{get\+Num\+Rows}} ()
+\item 
+int \mbox{\hyperlink{classbridges_1_1datastructure_1_1_array3_d_acbd00c0c4448ff7ff03c76bc0701f602}{get\+Num\+Columns}} ()
+\item 
+int \mbox{\hyperlink{classbridges_1_1datastructure_1_1_array3_d_ad2fb0a0b8be702944c25b6fc807263f7}{get\+Num\+Slices}} ()
+\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_element}{Element}}$<$ E $>$ \& \mbox{\hyperlink{classbridges_1_1datastructure_1_1_array3_d_a1e4a2bea4f3a292289cfc0a4d530108f}{get\+Element}} (int slice, int row, int col)
+\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_element}{Element}}$<$ E $>$ const  \& \mbox{\hyperlink{classbridges_1_1datastructure_1_1_array3_d_a8f9d33a89196ef13839f30334b25476d}{get\+Element}} (int slice, int row, int col) const
+\item 
+void \mbox{\hyperlink{classbridges_1_1datastructure_1_1_array3_d_aaad4c68544d51cade79f318230ab2bcf}{set\+Element}} (int slice, int row, int col, \mbox{\hyperlink{classbridges_1_1datastructure_1_1_element}{Element}}$<$ E $>$ el)
+\item 
+\mbox{\hyperlink{structbridges_1_1datastructure_1_1_array3_d_1_1_bracket__helper}{Bracket\+\_\+helper}} \mbox{\hyperlink{classbridges_1_1datastructure_1_1_array3_d_a0b285b00e5d152d2968bee6b3aaf9349}{operator\mbox{[}$\,$\mbox{]}}} (int index)
+\begin{DoxyCompactList}\small\item\em enables using the bracket \mbox{[}\mbox{]} operator \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structbridges_1_1datastructure_1_1_array3_d_1_1_bracket__helper__const}{Bracket\+\_\+helper\+\_\+const}} \mbox{\hyperlink{classbridges_1_1datastructure_1_1_array3_d_acfc0446c919e7ca70cc31d0624b3bcd1}{operator\mbox{[}$\,$\mbox{]}}} (int index) const
+\begin{DoxyCompactList}\small\item\em helper const class is to make \mbox{[}\mbox{]} operators work on array 2d. You should never use it directly \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_array3_d_afad3212fe6c2954859a7ea6dce7a739c}\label{classbridges_1_1datastructure_1_1_array3_d_afad3212fe6c2954859a7ea6dce7a739c}} 
+\index{bridges::datastructure::Array3D$<$ E $>$@{bridges::datastructure::Array3D$<$ E $>$}!````~Array3D@{$\sim$Array3D}}
+\index{````~Array3D@{$\sim$Array3D}!bridges::datastructure::Array3D$<$ E $>$@{bridges::datastructure::Array3D$<$ E $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Array3D()}{~Array3D()}}
+{\footnotesize\ttfamily template$<$typename E $>$ \\
+virtual \mbox{\hyperlink{classbridges_1_1datastructure_1_1_array3_d}{bridges\+::datastructure\+::\+Array3D}}$<$ E $>$\+::$\sim$\mbox{\hyperlink{classbridges_1_1datastructure_1_1_array3_d}{Array3D}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_array3_d_af2d55bb9cf9057b9d5af4a24c6dc3173}\label{classbridges_1_1datastructure_1_1_array3_d_af2d55bb9cf9057b9d5af4a24c6dc3173}} 
+\index{bridges::datastructure::Array3D$<$ E $>$@{bridges::datastructure::Array3D$<$ E $>$}!Array3D@{Array3D}}
+\index{Array3D@{Array3D}!bridges::datastructure::Array3D$<$ E $>$@{bridges::datastructure::Array3D$<$ E $>$}}
+\doxysubsubsection{\texorpdfstring{Array3D()}{Array3D()}}
+{\footnotesize\ttfamily template$<$typename E $>$ \\
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_array3_d}{bridges\+::datastructure\+::\+Array3D}}$<$ E $>$\+::\mbox{\hyperlink{classbridges_1_1datastructure_1_1_array3_d}{Array3D}} (\begin{DoxyParamCaption}\item[{int}]{slices,  }\item[{int}]{rows,  }\item[{int}]{columns }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+builds a 3D array. param slices number of slices (depth) param rows number of rows (height) param columns number of columns (width) 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_array3_d_a1e4a2bea4f3a292289cfc0a4d530108f}\label{classbridges_1_1datastructure_1_1_array3_d_a1e4a2bea4f3a292289cfc0a4d530108f}} 
+\index{bridges::datastructure::Array3D$<$ E $>$@{bridges::datastructure::Array3D$<$ E $>$}!getElement@{getElement}}
+\index{getElement@{getElement}!bridges::datastructure::Array3D$<$ E $>$@{bridges::datastructure::Array3D$<$ E $>$}}
+\doxysubsubsection{\texorpdfstring{getElement()}{getElement()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename E $>$ \\
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_element}{Element}}$<$E$>$\& \mbox{\hyperlink{classbridges_1_1datastructure_1_1_array3_d}{bridges\+::datastructure\+::\+Array3D}}$<$ E $>$\+::get\+Element (\begin{DoxyParamCaption}\item[{int}]{slice,  }\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the object at (slice, row, col) for 3D arrays
+
+
+\begin{DoxyParams}{Parameters}
+{\em slice} & -\/ slice index \\
+\hline
+{\em row} & -\/ row index \\
+\hline
+{\em col} & -\/ column index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Element$<$\+E$>$ object at slice, row, col 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_array3_d_a8f9d33a89196ef13839f30334b25476d}\label{classbridges_1_1datastructure_1_1_array3_d_a8f9d33a89196ef13839f30334b25476d}} 
+\index{bridges::datastructure::Array3D$<$ E $>$@{bridges::datastructure::Array3D$<$ E $>$}!getElement@{getElement}}
+\index{getElement@{getElement}!bridges::datastructure::Array3D$<$ E $>$@{bridges::datastructure::Array3D$<$ E $>$}}
+\doxysubsubsection{\texorpdfstring{getElement()}{getElement()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename E $>$ \\
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_element}{Element}}$<$E$>$ const\& \mbox{\hyperlink{classbridges_1_1datastructure_1_1_array3_d}{bridges\+::datastructure\+::\+Array3D}}$<$ E $>$\+::get\+Element (\begin{DoxyParamCaption}\item[{int}]{slice,  }\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the object at (slice, rows, col) for 3D arrays
+
+
+\begin{DoxyParams}{Parameters}
+{\em col} & column index \\
+\hline
+{\em row} & row index \\
+\hline
+{\em slice} & slice index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the \mbox{\hyperlink{classbridges_1_1datastructure_1_1_element}{Element}} at (slice, rows, col) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_array3_d_acbd00c0c4448ff7ff03c76bc0701f602}\label{classbridges_1_1datastructure_1_1_array3_d_acbd00c0c4448ff7ff03c76bc0701f602}} 
+\index{bridges::datastructure::Array3D$<$ E $>$@{bridges::datastructure::Array3D$<$ E $>$}!getNumColumns@{getNumColumns}}
+\index{getNumColumns@{getNumColumns}!bridges::datastructure::Array3D$<$ E $>$@{bridges::datastructure::Array3D$<$ E $>$}}
+\doxysubsubsection{\texorpdfstring{getNumColumns()}{getNumColumns()}}
+{\footnotesize\ttfamily template$<$typename E $>$ \\
+int \mbox{\hyperlink{classbridges_1_1datastructure_1_1_array3_d}{bridges\+::datastructure\+::\+Array3D}}$<$ E $>$\+::get\+Num\+Columns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the number of columns of the 3D array \begin{DoxyReturn}{Returns}
+number of columns 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_array3_d_a73aebe1098512ca4196cb8da0eb493fe}\label{classbridges_1_1datastructure_1_1_array3_d_a73aebe1098512ca4196cb8da0eb493fe}} 
+\index{bridges::datastructure::Array3D$<$ E $>$@{bridges::datastructure::Array3D$<$ E $>$}!getNumRows@{getNumRows}}
+\index{getNumRows@{getNumRows}!bridges::datastructure::Array3D$<$ E $>$@{bridges::datastructure::Array3D$<$ E $>$}}
+\doxysubsubsection{\texorpdfstring{getNumRows()}{getNumRows()}}
+{\footnotesize\ttfamily template$<$typename E $>$ \\
+int \mbox{\hyperlink{classbridges_1_1datastructure_1_1_array3_d}{bridges\+::datastructure\+::\+Array3D}}$<$ E $>$\+::get\+Num\+Rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the number of rows of the 3D array \begin{DoxyReturn}{Returns}
+number of rows 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_array3_d_ad2fb0a0b8be702944c25b6fc807263f7}\label{classbridges_1_1datastructure_1_1_array3_d_ad2fb0a0b8be702944c25b6fc807263f7}} 
+\index{bridges::datastructure::Array3D$<$ E $>$@{bridges::datastructure::Array3D$<$ E $>$}!getNumSlices@{getNumSlices}}
+\index{getNumSlices@{getNumSlices}!bridges::datastructure::Array3D$<$ E $>$@{bridges::datastructure::Array3D$<$ E $>$}}
+\doxysubsubsection{\texorpdfstring{getNumSlices()}{getNumSlices()}}
+{\footnotesize\ttfamily template$<$typename E $>$ \\
+int \mbox{\hyperlink{classbridges_1_1datastructure_1_1_array3_d}{bridges\+::datastructure\+::\+Array3D}}$<$ E $>$\+::get\+Num\+Slices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the number of slices of the 3D array \begin{DoxyReturn}{Returns}
+number of slices 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_array3_d_a0b285b00e5d152d2968bee6b3aaf9349}\label{classbridges_1_1datastructure_1_1_array3_d_a0b285b00e5d152d2968bee6b3aaf9349}} 
+\index{bridges::datastructure::Array3D$<$ E $>$@{bridges::datastructure::Array3D$<$ E $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!bridges::datastructure::Array3D$<$ E $>$@{bridges::datastructure::Array3D$<$ E $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename E $>$ \\
+\mbox{\hyperlink{structbridges_1_1datastructure_1_1_array3_d_1_1_bracket__helper}{Bracket\+\_\+helper}} \mbox{\hyperlink{classbridges_1_1datastructure_1_1_array3_d}{bridges\+::datastructure\+::\+Array3D}}$<$ E $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+enables using the bracket \mbox{[}\mbox{]} operator 
+
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_array3_d_acfc0446c919e7ca70cc31d0624b3bcd1}\label{classbridges_1_1datastructure_1_1_array3_d_acfc0446c919e7ca70cc31d0624b3bcd1}} 
+\index{bridges::datastructure::Array3D$<$ E $>$@{bridges::datastructure::Array3D$<$ E $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!bridges::datastructure::Array3D$<$ E $>$@{bridges::datastructure::Array3D$<$ E $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename E $>$ \\
+\mbox{\hyperlink{structbridges_1_1datastructure_1_1_array3_d_1_1_bracket__helper__const}{Bracket\+\_\+helper\+\_\+const}} \mbox{\hyperlink{classbridges_1_1datastructure_1_1_array3_d}{bridges\+::datastructure\+::\+Array3D}}$<$ E $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+helper const class is to make \mbox{[}\mbox{]} operators work on array 2d. You should never use it directly 
+
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_array3_d_aaad4c68544d51cade79f318230ab2bcf}\label{classbridges_1_1datastructure_1_1_array3_d_aaad4c68544d51cade79f318230ab2bcf}} 
+\index{bridges::datastructure::Array3D$<$ E $>$@{bridges::datastructure::Array3D$<$ E $>$}!setElement@{setElement}}
+\index{setElement@{setElement}!bridges::datastructure::Array3D$<$ E $>$@{bridges::datastructure::Array3D$<$ E $>$}}
+\doxysubsubsection{\texorpdfstring{setElement()}{setElement()}}
+{\footnotesize\ttfamily template$<$typename E $>$ \\
+void \mbox{\hyperlink{classbridges_1_1datastructure_1_1_array3_d}{bridges\+::datastructure\+::\+Array3D}}$<$ E $>$\+::set\+Element (\begin{DoxyParamCaption}\item[{int}]{slice,  }\item[{int}]{row,  }\item[{int}]{col,  }\item[{\mbox{\hyperlink{classbridges_1_1datastructure_1_1_element}{Element}}$<$ E $>$}]{el }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the object at index slice, row, col -\/ 3D array
+
+
+\begin{DoxyParams}{Parameters}
+{\em slice} & slice index into the array \\
+\hline
+{\em col} & column index into the array \\
+\hline
+{\em row} & row index into the array \\
+\hline
+{\em el} & -\/ \mbox{\hyperlink{classbridges_1_1datastructure_1_1_element}{Element}} object \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/erik/work/bridges/bridges-\/cxx/src/\mbox{\hyperlink{_array3_d_8h}{Array3\+D.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,494 @@
+\hypertarget{classbridges_1_1dataset_1_1_cancer_incidence}{}\doxysection{bridges\+::dataset\+::Cancer\+Incidence Class Reference}
+\label{classbridges_1_1dataset_1_1_cancer_incidence}\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+
+
+{\ttfamily \#include $<$Cancer\+Incidence.\+h$>$}
+
+
+
+\doxysubsection{Detailed Description}
+A class representing the attributes for cancer incidence. 
+
+From the United States Cancer Statistics as part of the U.\+S. Center for Disease Control, the following data set focuses on the crude rate for all types of cancer reported for different demograpic groups. Significant groupings include age, gender, race and geographical area.
+
+One does not typically create an object from this type, but rather obtain them by calling \mbox{\hyperlink{classbridges_1_1_data_source_a52d8161e7c093ab3615acea7085f6689}{bridges\+::\+Data\+Source\+::get\+Cancer\+Incidence\+Data()}}
+
+\begin{DoxySeeAlso}{See also}
+Refer to tutorial examples on how to use this \mbox{\hyperlink{namespacebridges_1_1dataset}{dataset}}\+: \href{https://bridgesuncc.github.io/tutorials/Data_CancerIncidence.html}{\texttt{ https\+://bridgesuncc.\+github.\+io/tutorials/\+Data\+\_\+\+Cancer\+Incidence.\+html}} ~\newline
+ Data\+: Courtesy of Corgis Datasets, 2017 Link\+: \href{http://www.cdc.gov/cancer/npcr/uscs/download_data.htm}{\texttt{ http\+://www.\+cdc.\+gov/cancer/npcr/uscs/download\+\_\+data.\+htm}}
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Kalpathi Subramanian 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+June, 2017 
+\end{DoxyDate}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_a2a6314af5704aa8f9f962738e12cd9dc}{Cancer\+Incidence}} ()
+\item 
+double \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_abb8b465d513b8e7113c0dda4f1381b36}{get\+Age\+Adjusted\+Rate}} () const
+\item 
+void \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_a435d5bd5a9c8680c3e2c94c8b7fad79f}{set\+Age\+Adjusted\+Rate}} (double aar)
+\item 
+double \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_aacd1d64c111c166bfdfc022c03276d16}{get\+Age\+Adjusted\+CI\+\_\+\+Lower}} () const
+\item 
+void \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_ac747ae48aa5619cb41d8296420eb3925}{set\+Age\+Adjusted\+CI\+\_\+\+Lower}} (double ci\+\_\+l)
+\item 
+double \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_aa4c0975807e67227388f23fbf92e0867}{get\+Age\+Adjusted\+CI\+\_\+\+Upper}} () const
+\item 
+void \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_a7cece904f540224984518679bc4ae544}{set\+Age\+Adjusted\+CI\+\_\+\+Upper}} (double ci\+\_\+u)
+\item 
+double \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_aee79da5ad2ce63e44f4400276cc78f63}{get\+Crude\+Rate}} () const
+\item 
+void \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_ad9bcbee58cbcb2b23d50f78e034faeb3}{set\+Crude\+Rate}} (double cr)
+\item 
+double \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_a66d6a4f6a977c04480610d7fc7c7093b}{get\+Crude\+Rate\+\_\+\+CI\+\_\+\+Lower}} () const
+\item 
+void \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_af75985ca4df5b0138312128580281cd8}{set\+Crude\+Rate\+\_\+\+CI\+\_\+\+Lower}} (double cr\+\_\+l)
+\item 
+double \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_a173b07266305744cac5f853cac7a089e}{get\+Crude\+Rate\+\_\+\+CI\+\_\+\+Upper}} () const
+\item 
+void \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_a9fa8b9c9fc4874e45d21612c817ed394}{set\+Crude\+Rate\+\_\+\+CI\+\_\+\+Upper}} (double cr\+\_\+u)
+\begin{DoxyCompactList}\small\item\em Set crude rate CI (upper) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_a106905192829e115ed5e1f911d4c8c08}{get\+Year}} () const
+\begin{DoxyCompactList}\small\item\em Get the year of this cancer record. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_a833ce8f785d61a5271a2ef949ed76680}{set\+Year}} (int y)
+\item 
+string \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_a0c4dcbde0ad1f81ffe4016c12d08c4c1}{get\+Gender}} () const
+\begin{DoxyCompactList}\small\item\em Get the gender of the group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_aaf7aa19ce1946af9443e1584e5998e7b}{set\+Gender}} (const string \&g)
+\begin{DoxyCompactList}\small\item\em Set gender of the record. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_aacbcdf37d86455d9cbd2a50e9370625e}{get\+Race}} () const
+\begin{DoxyCompactList}\small\item\em Get the race of the group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_ac19844df029b7dc4595205e9660d53e2}{set\+Race}} (const string \&r)
+\begin{DoxyCompactList}\small\item\em Set race. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_a964d0fcc125808e457b1fd2f79cf43bf}{get\+Event\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Get the event type (incidence, mortality, etc) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_aab3f76d957b69ef5fcefb491388e1d29}{set\+Event\+Type}} (const string \&et)
+\begin{DoxyCompactList}\small\item\em Set event type. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_a7f34f811c1e0a40e52e91d55653fe656}{get\+Population}} () const
+\begin{DoxyCompactList}\small\item\em Get the population size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_a468eae18b9af44a25fe3f586283875e4}{set\+Population}} (int pop)
+\begin{DoxyCompactList}\small\item\em Set population size. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_abb62f6d102dc571ab46b633de8365b86}{get\+Affected\+Area}} () const
+\begin{DoxyCompactList}\small\item\em Get the cancer incidence area (state, region, etc) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_a0eaa01e6c760702ca0e69dca16919c9b}{set\+Affected\+Area}} (const string \&area)
+\begin{DoxyCompactList}\small\item\em Set cancer incidenc area. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_a3841428ae70cac0663153d22a46080df}{get\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of people affected in this group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_ac7083b46243f611392d33fc1c2dbce0d}{set\+Count}} (int c)
+\begin{DoxyCompactList}\small\item\em Set cancer incidence count. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_a982dc26b86ddeddf57d284b78dfd0752}{get\+LocationX}} () const
+\item 
+void \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_af373c05a20c7a230f62be3ed53889787}{set\+LocationX}} (double locX)
+\begin{DoxyCompactList}\small\item\em Set location (X coord) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_af962caa4876c628cae5beaca9780650e}{get\+LocationY}} () const
+\begin{DoxyCompactList}\small\item\em Get the Y coordinate of location. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1dataset_1_1_cancer_incidence_ab18e0703f97909a0a37c5e9a3460736a}{set\+LocationY}} (double locY)
+\begin{DoxyCompactList}\small\item\em Set location (Y coord) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_a2a6314af5704aa8f9f962738e12cd9dc}\label{classbridges_1_1dataset_1_1_cancer_incidence_a2a6314af5704aa8f9f962738e12cd9dc}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!CancerIncidence@{CancerIncidence}}
+\index{CancerIncidence@{CancerIncidence}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{CancerIncidence()}{CancerIncidence()}}
+{\footnotesize\ttfamily bridges\+::dataset\+::\+Cancer\+Incidence\+::\+Cancer\+Incidence (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_abb62f6d102dc571ab46b633de8365b86}\label{classbridges_1_1dataset_1_1_cancer_incidence_abb62f6d102dc571ab46b633de8365b86}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!getAffectedArea@{getAffectedArea}}
+\index{getAffectedArea@{getAffectedArea}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{getAffectedArea()}{getAffectedArea()}}
+{\footnotesize\ttfamily string bridges\+::dataset\+::\+Cancer\+Incidence\+::get\+Affected\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the cancer incidence area (state, region, etc) 
+
+\begin{DoxyReturn}{Returns}
+area 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_aacd1d64c111c166bfdfc022c03276d16}\label{classbridges_1_1dataset_1_1_cancer_incidence_aacd1d64c111c166bfdfc022c03276d16}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!getAgeAdjustedCI\_Lower@{getAgeAdjustedCI\_Lower}}
+\index{getAgeAdjustedCI\_Lower@{getAgeAdjustedCI\_Lower}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{getAgeAdjustedCI\_Lower()}{getAgeAdjustedCI\_Lower()}}
+{\footnotesize\ttfamily double bridges\+::dataset\+::\+Cancer\+Incidence\+::get\+Age\+Adjusted\+CI\+\_\+\+Lower (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the expected cancer rate confidence interval(lower), adjusted for age of participants.
+
+\begin{DoxyReturn}{Returns}
+cancer confidence interval (lower) rate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_aa4c0975807e67227388f23fbf92e0867}\label{classbridges_1_1dataset_1_1_cancer_incidence_aa4c0975807e67227388f23fbf92e0867}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!getAgeAdjustedCI\_Upper@{getAgeAdjustedCI\_Upper}}
+\index{getAgeAdjustedCI\_Upper@{getAgeAdjustedCI\_Upper}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{getAgeAdjustedCI\_Upper()}{getAgeAdjustedCI\_Upper()}}
+{\footnotesize\ttfamily double bridges\+::dataset\+::\+Cancer\+Incidence\+::get\+Age\+Adjusted\+CI\+\_\+\+Upper (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the expected cancer rate confidence interval(upper), adjusted for age of participants.
+
+\begin{DoxyReturn}{Returns}
+cancer conf interval (lower) rate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_abb8b465d513b8e7113c0dda4f1381b36}\label{classbridges_1_1dataset_1_1_cancer_incidence_abb8b465d513b8e7113c0dda4f1381b36}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!getAgeAdjustedRate@{getAgeAdjustedRate}}
+\index{getAgeAdjustedRate@{getAgeAdjustedRate}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{getAgeAdjustedRate()}{getAgeAdjustedRate()}}
+{\footnotesize\ttfamily double bridges\+::dataset\+::\+Cancer\+Incidence\+::get\+Age\+Adjusted\+Rate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the expected cancer rate, adjusted for age of participants.
+
+\begin{DoxyReturn}{Returns}
+cancer rate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_a3841428ae70cac0663153d22a46080df}\label{classbridges_1_1dataset_1_1_cancer_incidence_a3841428ae70cac0663153d22a46080df}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!getCount@{getCount}}
+\index{getCount@{getCount}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{getCount()}{getCount()}}
+{\footnotesize\ttfamily int bridges\+::dataset\+::\+Cancer\+Incidence\+::get\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the number of people affected in this group. 
+
+\begin{DoxyReturn}{Returns}
+incidence count 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_aee79da5ad2ce63e44f4400276cc78f63}\label{classbridges_1_1dataset_1_1_cancer_incidence_aee79da5ad2ce63e44f4400276cc78f63}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!getCrudeRate@{getCrudeRate}}
+\index{getCrudeRate@{getCrudeRate}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{getCrudeRate()}{getCrudeRate()}}
+{\footnotesize\ttfamily double bridges\+::dataset\+::\+Cancer\+Incidence\+::get\+Crude\+Rate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the cancer rate, adjusted for population
+
+\begin{DoxyReturn}{Returns}
+crude cancer rate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_a66d6a4f6a977c04480610d7fc7c7093b}\label{classbridges_1_1dataset_1_1_cancer_incidence_a66d6a4f6a977c04480610d7fc7c7093b}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!getCrudeRate\_CI\_Lower@{getCrudeRate\_CI\_Lower}}
+\index{getCrudeRate\_CI\_Lower@{getCrudeRate\_CI\_Lower}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{getCrudeRate\_CI\_Lower()}{getCrudeRate\_CI\_Lower()}}
+{\footnotesize\ttfamily double bridges\+::dataset\+::\+Cancer\+Incidence\+::get\+Crude\+Rate\+\_\+\+CI\+\_\+\+Lower (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the expected cancer crude rate confidence interval(lower), adjusted for age of participants.
+
+\begin{DoxyReturn}{Returns}
+cancer conf interval (lower) rate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_a173b07266305744cac5f853cac7a089e}\label{classbridges_1_1dataset_1_1_cancer_incidence_a173b07266305744cac5f853cac7a089e}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!getCrudeRate\_CI\_Upper@{getCrudeRate\_CI\_Upper}}
+\index{getCrudeRate\_CI\_Upper@{getCrudeRate\_CI\_Upper}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{getCrudeRate\_CI\_Upper()}{getCrudeRate\_CI\_Upper()}}
+{\footnotesize\ttfamily double bridges\+::dataset\+::\+Cancer\+Incidence\+::get\+Crude\+Rate\+\_\+\+CI\+\_\+\+Upper (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the expected cancer crude rate confidence interval(upper), adjusted for age of participants.
+
+\begin{DoxyReturn}{Returns}
+cancer crude rate CI (upper) rate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_a964d0fcc125808e457b1fd2f79cf43bf}\label{classbridges_1_1dataset_1_1_cancer_incidence_a964d0fcc125808e457b1fd2f79cf43bf}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!getEventType@{getEventType}}
+\index{getEventType@{getEventType}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{getEventType()}{getEventType()}}
+{\footnotesize\ttfamily string bridges\+::dataset\+::\+Cancer\+Incidence\+::get\+Event\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the event type (incidence, mortality, etc) 
+
+\begin{DoxyReturn}{Returns}
+event type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_a0c4dcbde0ad1f81ffe4016c12d08c4c1}\label{classbridges_1_1dataset_1_1_cancer_incidence_a0c4dcbde0ad1f81ffe4016c12d08c4c1}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!getGender@{getGender}}
+\index{getGender@{getGender}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{getGender()}{getGender()}}
+{\footnotesize\ttfamily string bridges\+::dataset\+::\+Cancer\+Incidence\+::get\+Gender (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the gender of the group. 
+
+\begin{DoxyReturn}{Returns}
+gender, can be \char`\"{}male\char`\"{}, \char`\"{}female\char`\"{}, \char`\"{}male and female\char`\"{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_a982dc26b86ddeddf57d284b78dfd0752}\label{classbridges_1_1dataset_1_1_cancer_incidence_a982dc26b86ddeddf57d284b78dfd0752}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!getLocationX@{getLocationX}}
+\index{getLocationX@{getLocationX}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{getLocationX()}{getLocationX()}}
+{\footnotesize\ttfamily double bridges\+::dataset\+::\+Cancer\+Incidence\+::get\+LocationX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the X coordinate of location
+
+\begin{DoxyReturn}{Returns}
+x coordinate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_af962caa4876c628cae5beaca9780650e}\label{classbridges_1_1dataset_1_1_cancer_incidence_af962caa4876c628cae5beaca9780650e}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!getLocationY@{getLocationY}}
+\index{getLocationY@{getLocationY}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{getLocationY()}{getLocationY()}}
+{\footnotesize\ttfamily double bridges\+::dataset\+::\+Cancer\+Incidence\+::get\+LocationY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Y coordinate of location. 
+
+\begin{DoxyReturn}{Returns}
+y coordinate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_a7f34f811c1e0a40e52e91d55653fe656}\label{classbridges_1_1dataset_1_1_cancer_incidence_a7f34f811c1e0a40e52e91d55653fe656}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!getPopulation@{getPopulation}}
+\index{getPopulation@{getPopulation}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{getPopulation()}{getPopulation()}}
+{\footnotesize\ttfamily int bridges\+::dataset\+::\+Cancer\+Incidence\+::get\+Population (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the population size. 
+
+\begin{DoxyReturn}{Returns}
+population 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_aacbcdf37d86455d9cbd2a50e9370625e}\label{classbridges_1_1dataset_1_1_cancer_incidence_aacbcdf37d86455d9cbd2a50e9370625e}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!getRace@{getRace}}
+\index{getRace@{getRace}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{getRace()}{getRace()}}
+{\footnotesize\ttfamily string bridges\+::dataset\+::\+Cancer\+Incidence\+::get\+Race (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the race of the group. 
+
+\begin{DoxyReturn}{Returns}
+race (All Races, etc) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_a106905192829e115ed5e1f911d4c8c08}\label{classbridges_1_1dataset_1_1_cancer_incidence_a106905192829e115ed5e1f911d4c8c08}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!getYear@{getYear}}
+\index{getYear@{getYear}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{getYear()}{getYear()}}
+{\footnotesize\ttfamily int bridges\+::dataset\+::\+Cancer\+Incidence\+::get\+Year (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the year of this cancer record. 
+
+\begin{DoxyReturn}{Returns}
+year of the record 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_a0eaa01e6c760702ca0e69dca16919c9b}\label{classbridges_1_1dataset_1_1_cancer_incidence_a0eaa01e6c760702ca0e69dca16919c9b}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!setAffectedArea@{setAffectedArea}}
+\index{setAffectedArea@{setAffectedArea}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{setAffectedArea()}{setAffectedArea()}}
+{\footnotesize\ttfamily void bridges\+::dataset\+::\+Cancer\+Incidence\+::set\+Affected\+Area (\begin{DoxyParamCaption}\item[{const string \&}]{area }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set cancer incidenc area. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em area} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_ac747ae48aa5619cb41d8296420eb3925}\label{classbridges_1_1dataset_1_1_cancer_incidence_ac747ae48aa5619cb41d8296420eb3925}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!setAgeAdjustedCI\_Lower@{setAgeAdjustedCI\_Lower}}
+\index{setAgeAdjustedCI\_Lower@{setAgeAdjustedCI\_Lower}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{setAgeAdjustedCI\_Lower()}{setAgeAdjustedCI\_Lower()}}
+{\footnotesize\ttfamily void bridges\+::dataset\+::\+Cancer\+Incidence\+::set\+Age\+Adjusted\+CI\+\_\+\+Lower (\begin{DoxyParamCaption}\item[{double}]{ci\+\_\+l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set age adjusted cancer conf interval (lower)
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ci\+\_\+l} & age adjusted cancer conf interval (lower) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_a7cece904f540224984518679bc4ae544}\label{classbridges_1_1dataset_1_1_cancer_incidence_a7cece904f540224984518679bc4ae544}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!setAgeAdjustedCI\_Upper@{setAgeAdjustedCI\_Upper}}
+\index{setAgeAdjustedCI\_Upper@{setAgeAdjustedCI\_Upper}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{setAgeAdjustedCI\_Upper()}{setAgeAdjustedCI\_Upper()}}
+{\footnotesize\ttfamily void bridges\+::dataset\+::\+Cancer\+Incidence\+::set\+Age\+Adjusted\+CI\+\_\+\+Upper (\begin{DoxyParamCaption}\item[{double}]{ci\+\_\+u }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set age adjusted cancer conf interval (upper)
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ci\+\_\+u} & age adjusted cancer conf interval (upper) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_a435d5bd5a9c8680c3e2c94c8b7fad79f}\label{classbridges_1_1dataset_1_1_cancer_incidence_a435d5bd5a9c8680c3e2c94c8b7fad79f}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!setAgeAdjustedRate@{setAgeAdjustedRate}}
+\index{setAgeAdjustedRate@{setAgeAdjustedRate}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{setAgeAdjustedRate()}{setAgeAdjustedRate()}}
+{\footnotesize\ttfamily void bridges\+::dataset\+::\+Cancer\+Incidence\+::set\+Age\+Adjusted\+Rate (\begin{DoxyParamCaption}\item[{double}]{aar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set age adjusted cancer rate
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em aar} & age adjusted rate \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_ac7083b46243f611392d33fc1c2dbce0d}\label{classbridges_1_1dataset_1_1_cancer_incidence_ac7083b46243f611392d33fc1c2dbce0d}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!setCount@{setCount}}
+\index{setCount@{setCount}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{setCount()}{setCount()}}
+{\footnotesize\ttfamily void bridges\+::dataset\+::\+Cancer\+Incidence\+::set\+Count (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set cancer incidence count. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & cancer incidence count \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_ad9bcbee58cbcb2b23d50f78e034faeb3}\label{classbridges_1_1dataset_1_1_cancer_incidence_ad9bcbee58cbcb2b23d50f78e034faeb3}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!setCrudeRate@{setCrudeRate}}
+\index{setCrudeRate@{setCrudeRate}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{setCrudeRate()}{setCrudeRate()}}
+{\footnotesize\ttfamily void bridges\+::dataset\+::\+Cancer\+Incidence\+::set\+Crude\+Rate (\begin{DoxyParamCaption}\item[{double}]{cr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set cancer rate, adjusted for population
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cr} & cancer rate \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_af75985ca4df5b0138312128580281cd8}\label{classbridges_1_1dataset_1_1_cancer_incidence_af75985ca4df5b0138312128580281cd8}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!setCrudeRate\_CI\_Lower@{setCrudeRate\_CI\_Lower}}
+\index{setCrudeRate\_CI\_Lower@{setCrudeRate\_CI\_Lower}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{setCrudeRate\_CI\_Lower()}{setCrudeRate\_CI\_Lower()}}
+{\footnotesize\ttfamily void bridges\+::dataset\+::\+Cancer\+Incidence\+::set\+Crude\+Rate\+\_\+\+CI\+\_\+\+Lower (\begin{DoxyParamCaption}\item[{double}]{cr\+\_\+l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set age adjusted cancer crude conf interval (lower)
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cr\+\_\+l} & age adjusted cancer crude conf interval (lower) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_a9fa8b9c9fc4874e45d21612c817ed394}\label{classbridges_1_1dataset_1_1_cancer_incidence_a9fa8b9c9fc4874e45d21612c817ed394}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!setCrudeRate\_CI\_Upper@{setCrudeRate\_CI\_Upper}}
+\index{setCrudeRate\_CI\_Upper@{setCrudeRate\_CI\_Upper}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{setCrudeRate\_CI\_Upper()}{setCrudeRate\_CI\_Upper()}}
+{\footnotesize\ttfamily void bridges\+::dataset\+::\+Cancer\+Incidence\+::set\+Crude\+Rate\+\_\+\+CI\+\_\+\+Upper (\begin{DoxyParamCaption}\item[{double}]{cr\+\_\+u }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set crude rate CI (upper) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cr\+\_\+u} & upper bound for crude rate confidence interval \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_aab3f76d957b69ef5fcefb491388e1d29}\label{classbridges_1_1dataset_1_1_cancer_incidence_aab3f76d957b69ef5fcefb491388e1d29}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!setEventType@{setEventType}}
+\index{setEventType@{setEventType}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{setEventType()}{setEventType()}}
+{\footnotesize\ttfamily void bridges\+::dataset\+::\+Cancer\+Incidence\+::set\+Event\+Type (\begin{DoxyParamCaption}\item[{const string \&}]{et }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set event type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em et} & event type \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_aaf7aa19ce1946af9443e1584e5998e7b}\label{classbridges_1_1dataset_1_1_cancer_incidence_aaf7aa19ce1946af9443e1584e5998e7b}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!setGender@{setGender}}
+\index{setGender@{setGender}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{setGender()}{setGender()}}
+{\footnotesize\ttfamily void bridges\+::dataset\+::\+Cancer\+Incidence\+::set\+Gender (\begin{DoxyParamCaption}\item[{const string \&}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set gender of the record. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em g} & gender to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_af373c05a20c7a230f62be3ed53889787}\label{classbridges_1_1dataset_1_1_cancer_incidence_af373c05a20c7a230f62be3ed53889787}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!setLocationX@{setLocationX}}
+\index{setLocationX@{setLocationX}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{setLocationX()}{setLocationX()}}
+{\footnotesize\ttfamily void bridges\+::dataset\+::\+Cancer\+Incidence\+::set\+LocationX (\begin{DoxyParamCaption}\item[{double}]{locX }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set location (X coord) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em locX} & X coordinate of location \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_ab18e0703f97909a0a37c5e9a3460736a}\label{classbridges_1_1dataset_1_1_cancer_incidence_ab18e0703f97909a0a37c5e9a3460736a}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!setLocationY@{setLocationY}}
+\index{setLocationY@{setLocationY}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{setLocationY()}{setLocationY()}}
+{\footnotesize\ttfamily void bridges\+::dataset\+::\+Cancer\+Incidence\+::set\+LocationY (\begin{DoxyParamCaption}\item[{double}]{locY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set location (Y coord) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em locY} & Y coordinate of location \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_a468eae18b9af44a25fe3f586283875e4}\label{classbridges_1_1dataset_1_1_cancer_incidence_a468eae18b9af44a25fe3f586283875e4}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!setPopulation@{setPopulation}}
+\index{setPopulation@{setPopulation}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{setPopulation()}{setPopulation()}}
+{\footnotesize\ttfamily void bridges\+::dataset\+::\+Cancer\+Incidence\+::set\+Population (\begin{DoxyParamCaption}\item[{int}]{pop }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set population size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pop} & population \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_ac19844df029b7dc4595205e9660d53e2}\label{classbridges_1_1dataset_1_1_cancer_incidence_ac19844df029b7dc4595205e9660d53e2}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!setRace@{setRace}}
+\index{setRace@{setRace}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{setRace()}{setRace()}}
+{\footnotesize\ttfamily void bridges\+::dataset\+::\+Cancer\+Incidence\+::set\+Race (\begin{DoxyParamCaption}\item[{const string \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set race. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em r} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_cancer_incidence_a833ce8f785d61a5271a2ef949ed76680}\label{classbridges_1_1dataset_1_1_cancer_incidence_a833ce8f785d61a5271a2ef949ed76680}} 
+\index{bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}!setYear@{setYear}}
+\index{setYear@{setYear}!bridges::dataset::CancerIncidence@{bridges::dataset::CancerIncidence}}
+\doxysubsubsection{\texorpdfstring{setYear()}{setYear()}}
+{\footnotesize\ttfamily void bridges\+::dataset\+::\+Cancer\+Incidence\+::set\+Year (\begin{DoxyParamCaption}\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/erik/work/bridges/bridges-\/cxx/src/data\+\_\+src/\mbox{\hyperlink{_cancer_incidence_8h}{Cancer\+Incidence.\+h}}\end{DoxyCompactItemize}

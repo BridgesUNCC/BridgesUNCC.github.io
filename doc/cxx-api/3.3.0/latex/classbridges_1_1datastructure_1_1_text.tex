@@ -1,0 +1,295 @@
+\hypertarget{classbridges_1_1datastructure_1_1_text}{}\doxysection{bridges\+::datastructure\+::Text Class Reference}
+\label{classbridges_1_1datastructure_1_1_text}\index{bridges::datastructure::Text@{bridges::datastructure::Text}}
+
+
+{\ttfamily \#include $<$Text.\+h$>$}
+
+Inheritance diagram for bridges\+::datastructure\+::Text\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbridges_1_1datastructure_1_1_text}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Detailed Description}
+This is a label object and used for defining text labels as part of the symbol collection. 
+
+\begin{DoxyAuthor}{Author}
+Kalpathi Subramanian 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+12/23/18, 12/28/20 
+\end{DoxyDate}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_text_aa6ba3a8ed63b848bfab02c6c444a3559}{Text}} ()
+\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_text_afcfc2b00059263b7e44ff60c25a64b56}{Text}} (const \mbox{\hyperlink{classbridges_1_1datastructure_1_1_text}{Text}} \&t)
+\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_text}{Text}} \& \mbox{\hyperlink{classbridges_1_1datastructure_1_1_text_ad61a09265cc7c7b44b3d39c0140927ea}{operator=}} (const \mbox{\hyperlink{classbridges_1_1datastructure_1_1_text}{Text}} \&t)
+\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_text_a9c5ff8c25a39680605e4efb8d66d0a9a}{Text}} (string l)
+\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_text_a041e6ab367876ba1d6306438d2ff4bf1}{$\sim$\+Text}} ()
+\item 
+virtual string \mbox{\hyperlink{classbridges_1_1datastructure_1_1_text_a039d614f2f74fe4dbb74e7b3410f53d9}{get\+Shape\+Type}} () const override
+\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_text}{Text}} \& \mbox{\hyperlink{classbridges_1_1datastructure_1_1_text_a436eec269f97fc54a1ca4fd8c4f68545}{set\+Text}} (string lbl)
+\begin{DoxyCompactList}\small\item\em Set the label text. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classbridges_1_1datastructure_1_1_text_a0485be6f3213dd8ab8cbe0266dda3afe}{get\+Text}} () const
+\begin{DoxyCompactList}\small\item\em Get the symbol label. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_text}{Text}} \& \mbox{\hyperlink{classbridges_1_1datastructure_1_1_text_afc919b73ccbc5b331da644b9ce940806}{set\+Anchor\+Location}} (float $\ast$loc)
+\begin{DoxyCompactList}\small\item\em This method sets the label origin;. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_text}{Text}} \& \mbox{\hyperlink{classbridges_1_1datastructure_1_1_text_ac7339ebe2bdbcd293c71650fbb0e084d}{set\+Anchor\+Location}} (float locx, float locy)
+\begin{DoxyCompactList}\small\item\em This method sets the label origin;. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_text}{Text}} \& \mbox{\hyperlink{classbridges_1_1datastructure_1_1_text_a9acc48755b386fb4e9200b69b1accc90}{set\+Anchor\+Alignment}} (string type\+LR, string type\+TB)
+\item 
+float $\ast$ \mbox{\hyperlink{classbridges_1_1datastructure_1_1_text_af3153c5f010f408e11ffde68d1f0bfa4}{get\+Anchor\+Location}} ()
+\begin{DoxyCompactList}\small\item\em This method gets the label anchor location;. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}} \& \mbox{\hyperlink{classbridges_1_1datastructure_1_1_text_ae0f9d5e7719d8ed7d2883d838572b49f}{set\+Anchor\+Type}} (string type)
+\begin{DoxyCompactList}\small\item\em This method sets the label\textquotesingle{}s anchor type. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classbridges_1_1datastructure_1_1_text_a25aad3b651977113d202e75ab54507fa}{get\+Anchor\+Type}} ()
+\begin{DoxyCompactList}\small\item\em This method gets the label\textquotesingle{}s anchor type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}} \& \mbox{\hyperlink{classbridges_1_1datastructure_1_1_text_aead39c229a800902d9c07ab5a07dcd56}{set\+Font\+Size}} (float sz)
+\begin{DoxyCompactList}\small\item\em This method sets the font size. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classbridges_1_1datastructure_1_1_text_a6912ecdb2380f78d6f749638fbf80aa6}{get\+Font\+Size}} ()
+\begin{DoxyCompactList}\small\item\em This method gets the font size. \end{DoxyCompactList}\item 
+const string \mbox{\hyperlink{classbridges_1_1datastructure_1_1_text_ab326f0cf60addd3027a02fd1f90b6961}{get\+Symbol\+Representation}} () const override
+\begin{DoxyCompactList}\small\item\em This method returns the JSON representation of the shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_text_aa6ba3a8ed63b848bfab02c6c444a3559}\label{classbridges_1_1datastructure_1_1_text_aa6ba3a8ed63b848bfab02c6c444a3559}} 
+\index{bridges::datastructure::Text@{bridges::datastructure::Text}!Text@{Text}}
+\index{Text@{Text}!bridges::datastructure::Text@{bridges::datastructure::Text}}
+\doxysubsubsection{\texorpdfstring{Text()}{Text()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bridges\+::datastructure\+::\+Text\+::\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+constructors \mbox{\Hypertarget{classbridges_1_1datastructure_1_1_text_afcfc2b00059263b7e44ff60c25a64b56}\label{classbridges_1_1datastructure_1_1_text_afcfc2b00059263b7e44ff60c25a64b56}} 
+\index{bridges::datastructure::Text@{bridges::datastructure::Text}!Text@{Text}}
+\index{Text@{Text}!bridges::datastructure::Text@{bridges::datastructure::Text}}
+\doxysubsubsection{\texorpdfstring{Text()}{Text()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bridges\+::datastructure\+::\+Text\+::\+Text (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbridges_1_1datastructure_1_1_text}{Text}} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_text_a9c5ff8c25a39680605e4efb8d66d0a9a}\label{classbridges_1_1datastructure_1_1_text_a9c5ff8c25a39680605e4efb8d66d0a9a}} 
+\index{bridges::datastructure::Text@{bridges::datastructure::Text}!Text@{Text}}
+\index{Text@{Text}!bridges::datastructure::Text@{bridges::datastructure::Text}}
+\doxysubsubsection{\texorpdfstring{Text()}{Text()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bridges\+::datastructure\+::\+Text\+::\+Text (\begin{DoxyParamCaption}\item[{string}]{l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a label object with label l
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & label \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_text_a041e6ab367876ba1d6306438d2ff4bf1}\label{classbridges_1_1datastructure_1_1_text_a041e6ab367876ba1d6306438d2ff4bf1}} 
+\index{bridges::datastructure::Text@{bridges::datastructure::Text}!````~Text@{$\sim$Text}}
+\index{````~Text@{$\sim$Text}!bridges::datastructure::Text@{bridges::datastructure::Text}}
+\doxysubsubsection{\texorpdfstring{$\sim$Text()}{~Text()}}
+{\footnotesize\ttfamily bridges\+::datastructure\+::\+Text\+::$\sim$\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_text_af3153c5f010f408e11ffde68d1f0bfa4}\label{classbridges_1_1datastructure_1_1_text_af3153c5f010f408e11ffde68d1f0bfa4}} 
+\index{bridges::datastructure::Text@{bridges::datastructure::Text}!getAnchorLocation@{getAnchorLocation}}
+\index{getAnchorLocation@{getAnchorLocation}!bridges::datastructure::Text@{bridges::datastructure::Text}}
+\doxysubsubsection{\texorpdfstring{getAnchorLocation()}{getAnchorLocation()}}
+{\footnotesize\ttfamily float$\ast$ bridges\+::datastructure\+::\+Text\+::get\+Anchor\+Location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method gets the label anchor location;. 
+
+\begin{DoxyReturn}{Returns}
+anchor location (x, y) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_text_a25aad3b651977113d202e75ab54507fa}\label{classbridges_1_1datastructure_1_1_text_a25aad3b651977113d202e75ab54507fa}} 
+\index{bridges::datastructure::Text@{bridges::datastructure::Text}!getAnchorType@{getAnchorType}}
+\index{getAnchorType@{getAnchorType}!bridges::datastructure::Text@{bridges::datastructure::Text}}
+\doxysubsubsection{\texorpdfstring{getAnchorType()}{getAnchorType()}}
+{\footnotesize\ttfamily string bridges\+::datastructure\+::\+Text\+::get\+Anchor\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method gets the label\textquotesingle{}s anchor type. 
+
+\begin{DoxyReturn}{Returns}
+type ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_text_a6912ecdb2380f78d6f749638fbf80aa6}\label{classbridges_1_1datastructure_1_1_text_a6912ecdb2380f78d6f749638fbf80aa6}} 
+\index{bridges::datastructure::Text@{bridges::datastructure::Text}!getFontSize@{getFontSize}}
+\index{getFontSize@{getFontSize}!bridges::datastructure::Text@{bridges::datastructure::Text}}
+\doxysubsubsection{\texorpdfstring{getFontSize()}{getFontSize()}}
+{\footnotesize\ttfamily int bridges\+::datastructure\+::\+Text\+::get\+Font\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method gets the font size. 
+
+\begin{DoxyReturn}{Returns}
+font size 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_text_a039d614f2f74fe4dbb74e7b3410f53d9}\label{classbridges_1_1datastructure_1_1_text_a039d614f2f74fe4dbb74e7b3410f53d9}} 
+\index{bridges::datastructure::Text@{bridges::datastructure::Text}!getShapeType@{getShapeType}}
+\index{getShapeType@{getShapeType}!bridges::datastructure::Text@{bridges::datastructure::Text}}
+\doxysubsubsection{\texorpdfstring{getShapeType()}{getShapeType()}}
+{\footnotesize\ttfamily virtual string bridges\+::datastructure\+::\+Text\+::get\+Shape\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get the symbol type -\/ implemented in subclasses
+
+\begin{DoxyReturn}{Returns}
+the shape type 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_a1fb7cabce2915b103b8474658e8549f8}{bridges\+::datastructure\+::\+Symbol}}.
+
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_text_ab326f0cf60addd3027a02fd1f90b6961}\label{classbridges_1_1datastructure_1_1_text_ab326f0cf60addd3027a02fd1f90b6961}} 
+\index{bridges::datastructure::Text@{bridges::datastructure::Text}!getSymbolRepresentation@{getSymbolRepresentation}}
+\index{getSymbolRepresentation@{getSymbolRepresentation}!bridges::datastructure::Text@{bridges::datastructure::Text}}
+\doxysubsubsection{\texorpdfstring{getSymbolRepresentation()}{getSymbolRepresentation()}}
+{\footnotesize\ttfamily const string bridges\+::datastructure\+::\+Text\+::get\+Symbol\+Representation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This method returns the JSON representation of the shape. 
+
+\begin{DoxyReturn}{Returns}
+string JSON string 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_a8044b3da559dcd9de8510ae339f126c8}{bridges\+::datastructure\+::\+Symbol}}.
+
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_text_a0485be6f3213dd8ab8cbe0266dda3afe}\label{classbridges_1_1datastructure_1_1_text_a0485be6f3213dd8ab8cbe0266dda3afe}} 
+\index{bridges::datastructure::Text@{bridges::datastructure::Text}!getText@{getText}}
+\index{getText@{getText}!bridges::datastructure::Text@{bridges::datastructure::Text}}
+\doxysubsubsection{\texorpdfstring{getText()}{getText()}}
+{\footnotesize\ttfamily string bridges\+::datastructure\+::\+Text\+::get\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the symbol label. 
+
+\begin{DoxyReturn}{Returns}
+the text label 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_text_ad61a09265cc7c7b44b3d39c0140927ea}\label{classbridges_1_1datastructure_1_1_text_ad61a09265cc7c7b44b3d39c0140927ea}} 
+\index{bridges::datastructure::Text@{bridges::datastructure::Text}!operator=@{operator=}}
+\index{operator=@{operator=}!bridges::datastructure::Text@{bridges::datastructure::Text}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1datastructure_1_1_text}{Text}}\& bridges\+::datastructure\+::\+Text\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbridges_1_1datastructure_1_1_text}{Text}} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_text_a9acc48755b386fb4e9200b69b1accc90}\label{classbridges_1_1datastructure_1_1_text_a9acc48755b386fb4e9200b69b1accc90}} 
+\index{bridges::datastructure::Text@{bridges::datastructure::Text}!setAnchorAlignment@{setAnchorAlignment}}
+\index{setAnchorAlignment@{setAnchorAlignment}!bridges::datastructure::Text@{bridges::datastructure::Text}}
+\doxysubsubsection{\texorpdfstring{setAnchorAlignment()}{setAnchorAlignment()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1datastructure_1_1_text}{Text}}\& bridges\+::datastructure\+::\+Text\+::set\+Anchor\+Alignment (\begin{DoxyParamCaption}\item[{string}]{type\+LR,  }\item[{string}]{type\+TB }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the alignment parameters for the text label
+
+
+\begin{DoxyParams}{Parameters}
+{\em type\+LR} & valid parameters are \char`\"{}left\char`\"{}, \char`\"{}middle\char`\"{}, and \char`\"{}right\char`\"{} \\
+\hline
+{\em type\+TB} & valid parameters are \char`\"{}top\char`\"{}, \char`\"{}bottom\char`\"{}, \char`\"{}embottom\char`\"{}, \char`\"{}emtop\char`\"{}, \char`\"{}middle\char`\"{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+symbol 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_text_afc919b73ccbc5b331da644b9ce940806}\label{classbridges_1_1datastructure_1_1_text_afc919b73ccbc5b331da644b9ce940806}} 
+\index{bridges::datastructure::Text@{bridges::datastructure::Text}!setAnchorLocation@{setAnchorLocation}}
+\index{setAnchorLocation@{setAnchorLocation}!bridges::datastructure::Text@{bridges::datastructure::Text}}
+\doxysubsubsection{\texorpdfstring{setAnchorLocation()}{setAnchorLocation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1datastructure_1_1_text}{Text}}\& bridges\+::datastructure\+::\+Text\+::set\+Anchor\+Location (\begin{DoxyParamCaption}\item[{float $\ast$}]{loc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method sets the label origin;. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em loc} & coordinates of label location \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_text_ac7339ebe2bdbcd293c71650fbb0e084d}\label{classbridges_1_1datastructure_1_1_text_ac7339ebe2bdbcd293c71650fbb0e084d}} 
+\index{bridges::datastructure::Text@{bridges::datastructure::Text}!setAnchorLocation@{setAnchorLocation}}
+\index{setAnchorLocation@{setAnchorLocation}!bridges::datastructure::Text@{bridges::datastructure::Text}}
+\doxysubsubsection{\texorpdfstring{setAnchorLocation()}{setAnchorLocation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1datastructure_1_1_text}{Text}}\& bridges\+::datastructure\+::\+Text\+::set\+Anchor\+Location (\begin{DoxyParamCaption}\item[{float}]{locx,  }\item[{float}]{locy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method sets the label origin;. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em locx} & x coordinate of label location \\
+\hline
+{\em locy} & y coordinate of label location \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_text_ae0f9d5e7719d8ed7d2883d838572b49f}\label{classbridges_1_1datastructure_1_1_text_ae0f9d5e7719d8ed7d2883d838572b49f}} 
+\index{bridges::datastructure::Text@{bridges::datastructure::Text}!setAnchorType@{setAnchorType}}
+\index{setAnchorType@{setAnchorType}!bridges::datastructure::Text@{bridges::datastructure::Text}}
+\doxysubsubsection{\texorpdfstring{setAnchorType()}{setAnchorType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}}\& bridges\+::datastructure\+::\+Text\+::set\+Anchor\+Type (\begin{DoxyParamCaption}\item[{string}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method sets the label\textquotesingle{}s anchor type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+symbol 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_text_aead39c229a800902d9c07ab5a07dcd56}\label{classbridges_1_1datastructure_1_1_text_aead39c229a800902d9c07ab5a07dcd56}} 
+\index{bridges::datastructure::Text@{bridges::datastructure::Text}!setFontSize@{setFontSize}}
+\index{setFontSize@{setFontSize}!bridges::datastructure::Text@{bridges::datastructure::Text}}
+\doxysubsubsection{\texorpdfstring{setFontSize()}{setFontSize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}}\& bridges\+::datastructure\+::\+Text\+::set\+Font\+Size (\begin{DoxyParamCaption}\item[{float}]{sz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method sets the font size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sz} & font size\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+symbol 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_text_a436eec269f97fc54a1ca4fd8c4f68545}\label{classbridges_1_1datastructure_1_1_text_a436eec269f97fc54a1ca4fd8c4f68545}} 
+\index{bridges::datastructure::Text@{bridges::datastructure::Text}!setText@{setText}}
+\index{setText@{setText}!bridges::datastructure::Text@{bridges::datastructure::Text}}
+\doxysubsubsection{\texorpdfstring{setText()}{setText()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1datastructure_1_1_text}{Text}}\& bridges\+::datastructure\+::\+Text\+::set\+Text (\begin{DoxyParamCaption}\item[{string}]{lbl }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the label text. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lbl} & the text to set \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/erik/work/bridges/bridges-\/cxx/src/\mbox{\hyperlink{_text_8h}{Text.\+h}}\end{DoxyCompactItemize}

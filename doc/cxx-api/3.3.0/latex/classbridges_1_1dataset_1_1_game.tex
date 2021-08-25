@@ -1,0 +1,167 @@
+\hypertarget{classbridges_1_1dataset_1_1_game}{}\doxysection{bridges\+::dataset\+::Game Class Reference}
+\label{classbridges_1_1dataset_1_1_game}\index{bridges::dataset::Game@{bridges::dataset::Game}}
+
+
+{\ttfamily \#include $<$Game.\+h$>$}
+
+
+
+\doxysubsection{Detailed Description}
+A \mbox{\hyperlink{classbridges_1_1dataset_1_1_game}{Game}} object, used along with the Games data source. 
+
+This is a convenience class provided for users who wish to use this data source as part of their application. It provides an API that makes it easy to access the attributes of this data set.
+
+Each game record has title, platform on which it can be played, rating, and a list of genres.
+
+One would not normally create an object of this type, but rather obtain them through a call to \mbox{\hyperlink{classbridges_1_1_data_source_aa902e1dffd4169e2f6e6820299b8cde1}{bridges\+::\+Data\+Source\+::get\+Game\+Data()}}.
+
+\begin{DoxySeeAlso}{See also}
+Refer to tutorial examples on how to use this \mbox{\hyperlink{namespacebridges_1_1dataset}{dataset}}\+: \href{https://bridgesuncc.github.io/tutorials/Data_IGN_Games.html}{\texttt{ https\+://bridgesuncc.\+github.\+io/tutorials/\+Data\+\_\+\+IGN\+\_\+\+Games.\+html}}
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Kalpathi Subramanian 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2/1/17, 12/26/20 
+\end{DoxyDate}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbridges_1_1dataset_1_1_game_a69c089990808d1466b97ced4dd480c28}{Game}} ()
+\item 
+\mbox{\hyperlink{classbridges_1_1dataset_1_1_game_a09fd0fc1cf743bf5f21e1443ec06a675}{Game}} (const string \&title, const string \&platform, double rating, const vector$<$ string $>$ \&genre)
+\item 
+string \mbox{\hyperlink{classbridges_1_1dataset_1_1_game_a5a58695599b120677ebf6631b8c66d68}{get\+Title}} () const
+\item 
+void \mbox{\hyperlink{classbridges_1_1dataset_1_1_game_a8f8f6e03458c05e20b0b446f9ddd211a}{set\+Title}} (const string \&title)
+\item 
+string \mbox{\hyperlink{classbridges_1_1dataset_1_1_game_ab3e2c8d319e7ef0b72d20c2d7153d35b}{get\+Platform\+Type}} () const
+\item 
+void \mbox{\hyperlink{classbridges_1_1dataset_1_1_game_a4a37e5db557c7d4cde50ac33fbee1a34}{set\+Platform\+Type}} (const string \&platform)
+\item 
+double \mbox{\hyperlink{classbridges_1_1dataset_1_1_game_aaada99b6ee03515d543fd8717fab592c}{get\+Rating}} () const
+\item 
+void \mbox{\hyperlink{classbridges_1_1dataset_1_1_game_a95038f714770bb2e12aeed91614264db}{set\+Rating}} (double rating)
+\item 
+vector$<$ string $>$ \mbox{\hyperlink{classbridges_1_1dataset_1_1_game_a2ef20a6fc43d2475cf48befe9f3bf0e6}{get\+Game\+Genre}} () const
+\item 
+void \mbox{\hyperlink{classbridges_1_1dataset_1_1_game_a83030f4b359bc194bff103e6da5c7fd9}{set\+Game\+Genre}} (const vector$<$ string $>$ \&genre)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_game_a69c089990808d1466b97ced4dd480c28}\label{classbridges_1_1dataset_1_1_game_a69c089990808d1466b97ced4dd480c28}} 
+\index{bridges::dataset::Game@{bridges::dataset::Game}!Game@{Game}}
+\index{Game@{Game}!bridges::dataset::Game@{bridges::dataset::Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bridges\+::dataset\+::\+Game\+::\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor \mbox{\Hypertarget{classbridges_1_1dataset_1_1_game_a09fd0fc1cf743bf5f21e1443ec06a675}\label{classbridges_1_1dataset_1_1_game_a09fd0fc1cf743bf5f21e1443ec06a675}} 
+\index{bridges::dataset::Game@{bridges::dataset::Game}!Game@{Game}}
+\index{Game@{Game}!bridges::dataset::Game@{bridges::dataset::Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bridges\+::dataset\+::\+Game\+::\+Game (\begin{DoxyParamCaption}\item[{const string \&}]{title,  }\item[{const string \&}]{platform,  }\item[{double}]{rating,  }\item[{const vector$<$ string $>$ \&}]{genre }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & title of game \\
+\hline
+{\em platform} & platform on which it can be played (String) \\
+\hline
+{\em rating} & rating of game (double) \\
+\hline
+{\em genre} & genres of game (vector of strings) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_game_a2ef20a6fc43d2475cf48befe9f3bf0e6}\label{classbridges_1_1dataset_1_1_game_a2ef20a6fc43d2475cf48befe9f3bf0e6}} 
+\index{bridges::dataset::Game@{bridges::dataset::Game}!getGameGenre@{getGameGenre}}
+\index{getGameGenre@{getGameGenre}!bridges::dataset::Game@{bridges::dataset::Game}}
+\doxysubsubsection{\texorpdfstring{getGameGenre()}{getGameGenre()}}
+{\footnotesize\ttfamily vector$<$string$>$ bridges\+::dataset\+::\+Game\+::get\+Game\+Genre (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+set genres of game 
+\begin{DoxyParams}{Parameters}
+{\em genre} & genres to be set (vector of strings) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_game_ab3e2c8d319e7ef0b72d20c2d7153d35b}\label{classbridges_1_1dataset_1_1_game_ab3e2c8d319e7ef0b72d20c2d7153d35b}} 
+\index{bridges::dataset::Game@{bridges::dataset::Game}!getPlatformType@{getPlatformType}}
+\index{getPlatformType@{getPlatformType}!bridges::dataset::Game@{bridges::dataset::Game}}
+\doxysubsubsection{\texorpdfstring{getPlatformType()}{getPlatformType()}}
+{\footnotesize\ttfamily string bridges\+::dataset\+::\+Game\+::get\+Platform\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get platform type of game \begin{DoxyReturn}{Returns}
+platform types (string) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_game_aaada99b6ee03515d543fd8717fab592c}\label{classbridges_1_1dataset_1_1_game_aaada99b6ee03515d543fd8717fab592c}} 
+\index{bridges::dataset::Game@{bridges::dataset::Game}!getRating@{getRating}}
+\index{getRating@{getRating}!bridges::dataset::Game@{bridges::dataset::Game}}
+\doxysubsubsection{\texorpdfstring{getRating()}{getRating()}}
+{\footnotesize\ttfamily double bridges\+::dataset\+::\+Game\+::get\+Rating (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get rating of game \begin{DoxyReturn}{Returns}
+rating (double) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_game_a5a58695599b120677ebf6631b8c66d68}\label{classbridges_1_1dataset_1_1_game_a5a58695599b120677ebf6631b8c66d68}} 
+\index{bridges::dataset::Game@{bridges::dataset::Game}!getTitle@{getTitle}}
+\index{getTitle@{getTitle}!bridges::dataset::Game@{bridges::dataset::Game}}
+\doxysubsubsection{\texorpdfstring{getTitle()}{getTitle()}}
+{\footnotesize\ttfamily string bridges\+::dataset\+::\+Game\+::get\+Title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get title of game \begin{DoxyReturn}{Returns}
+title of game (string) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_game_a83030f4b359bc194bff103e6da5c7fd9}\label{classbridges_1_1dataset_1_1_game_a83030f4b359bc194bff103e6da5c7fd9}} 
+\index{bridges::dataset::Game@{bridges::dataset::Game}!setGameGenre@{setGameGenre}}
+\index{setGameGenre@{setGameGenre}!bridges::dataset::Game@{bridges::dataset::Game}}
+\doxysubsubsection{\texorpdfstring{setGameGenre()}{setGameGenre()}}
+{\footnotesize\ttfamily void bridges\+::dataset\+::\+Game\+::set\+Game\+Genre (\begin{DoxyParamCaption}\item[{const vector$<$ string $>$ \&}]{genre }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+set genres of game 
+\begin{DoxyParams}{Parameters}
+{\em genre} & genres to be set (vector of strings) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_game_a4a37e5db557c7d4cde50ac33fbee1a34}\label{classbridges_1_1dataset_1_1_game_a4a37e5db557c7d4cde50ac33fbee1a34}} 
+\index{bridges::dataset::Game@{bridges::dataset::Game}!setPlatformType@{setPlatformType}}
+\index{setPlatformType@{setPlatformType}!bridges::dataset::Game@{bridges::dataset::Game}}
+\doxysubsubsection{\texorpdfstring{setPlatformType()}{setPlatformType()}}
+{\footnotesize\ttfamily void bridges\+::dataset\+::\+Game\+::set\+Platform\+Type (\begin{DoxyParamCaption}\item[{const string \&}]{platform }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+set platform type of game 
+\begin{DoxyParams}{Parameters}
+{\em platform} & platform type to be set (string) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_game_a95038f714770bb2e12aeed91614264db}\label{classbridges_1_1dataset_1_1_game_a95038f714770bb2e12aeed91614264db}} 
+\index{bridges::dataset::Game@{bridges::dataset::Game}!setRating@{setRating}}
+\index{setRating@{setRating}!bridges::dataset::Game@{bridges::dataset::Game}}
+\doxysubsubsection{\texorpdfstring{setRating()}{setRating()}}
+{\footnotesize\ttfamily void bridges\+::dataset\+::\+Game\+::set\+Rating (\begin{DoxyParamCaption}\item[{double}]{rating }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+set rating of game 
+\begin{DoxyParams}{Parameters}
+{\em rating} & rating to be set (double) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_game_a8f8f6e03458c05e20b0b446f9ddd211a}\label{classbridges_1_1dataset_1_1_game_a8f8f6e03458c05e20b0b446f9ddd211a}} 
+\index{bridges::dataset::Game@{bridges::dataset::Game}!setTitle@{setTitle}}
+\index{setTitle@{setTitle}!bridges::dataset::Game@{bridges::dataset::Game}}
+\doxysubsubsection{\texorpdfstring{setTitle()}{setTitle()}}
+{\footnotesize\ttfamily void bridges\+::dataset\+::\+Game\+::set\+Title (\begin{DoxyParamCaption}\item[{const string \&}]{title }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+set title of game 
+\begin{DoxyParams}{Parameters}
+{\em title} & game title to be set (string) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/erik/work/bridges/bridges-\/cxx/src/data\+\_\+src/\mbox{\hyperlink{_game_8h}{Game.\+h}}\end{DoxyCompactItemize}

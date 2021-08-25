@@ -1,0 +1,117 @@
+\hypertarget{classsio_1_1event}{}\doxysection{sio\+::event Class Reference}
+\label{classsio_1_1event}\index{sio::event@{sio::event}}
+
+
+{\ttfamily \#include $<$sio\+\_\+socket.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \& \mbox{\hyperlink{classsio_1_1event_a248d2f8a20d6915059ec8cee5cf7449d}{get\+\_\+nsp}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{classsio_1_1event_ac5049d464f6b37a92739bbbaee700f7f}{get\+\_\+name}} () const
+\item 
+const \mbox{\hyperlink{classsio_1_1message_a6340b6fef57e4516eb17928b1885a615}{message\+::ptr}} \& \mbox{\hyperlink{classsio_1_1event_af72f3e38225ee8768c183d28d717a3da}{get\+\_\+message}} () const
+\item 
+const \mbox{\hyperlink{classsio_1_1message_1_1list}{message\+::list}} \& \mbox{\hyperlink{classsio_1_1event_aaeab1effd6c5d26a8da946b13c42437d}{get\+\_\+messages}} () const
+\item 
+bool \mbox{\hyperlink{classsio_1_1event_ac6e186489b8452bbc32cc734b3dc099c}{need\+\_\+ack}} () const
+\item 
+void \mbox{\hyperlink{classsio_1_1event_a9f7d62c97996e85bdff7de53932a595a}{put\+\_\+ack\+\_\+message}} (\mbox{\hyperlink{classsio_1_1message_1_1list}{message\+::list}} const \&ack\+\_\+message)
+\item 
+\mbox{\hyperlink{classsio_1_1message_1_1list}{message\+::list}} const  \& \mbox{\hyperlink{classsio_1_1event_a03d343ade27c0cdf35f4e31ea996e7da}{get\+\_\+ack\+\_\+message}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsio_1_1event_a33a61e908fbc2fec7273db572b77fbd2}{event}} (std\+::string const \&nsp, std\+::string const \&name, \mbox{\hyperlink{classsio_1_1message_1_1list}{message\+::list}} const \&messages, bool \mbox{\hyperlink{classsio_1_1event_ac6e186489b8452bbc32cc734b3dc099c}{need\+\_\+ack}})
+\item 
+\mbox{\hyperlink{classsio_1_1event_a6f053dd419d8260c4ec28f278504ab19}{event}} (std\+::string const \&nsp, std\+::string const \&name, \mbox{\hyperlink{classsio_1_1message_1_1list}{message\+::list}} \&\&messages, bool \mbox{\hyperlink{classsio_1_1event_ac6e186489b8452bbc32cc734b3dc099c}{need\+\_\+ack}})
+\item 
+\mbox{\hyperlink{classsio_1_1message_1_1list}{message\+::list}} \& \mbox{\hyperlink{classsio_1_1event_a777c67213b1373320bd759225fe62716}{get\+\_\+ack\+\_\+message\+\_\+impl}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsio_1_1event_ac57524faa4b3dfacdf1bceec92894a03}{event\+\_\+adapter}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsio_1_1event_a33a61e908fbc2fec7273db572b77fbd2}\label{classsio_1_1event_a33a61e908fbc2fec7273db572b77fbd2}} 
+\index{sio::event@{sio::event}!event@{event}}
+\index{event@{event}!sio::event@{sio::event}}
+\doxysubsubsection{\texorpdfstring{event()}{event()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sio\+::event\+::event (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{nsp,  }\item[{std\+::string const \&}]{name,  }\item[{\mbox{\hyperlink{classsio_1_1message_1_1list}{message\+::list}} const \&}]{messages,  }\item[{bool}]{need\+\_\+ack }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsio_1_1event_a6f053dd419d8260c4ec28f278504ab19}\label{classsio_1_1event_a6f053dd419d8260c4ec28f278504ab19}} 
+\index{sio::event@{sio::event}!event@{event}}
+\index{event@{event}!sio::event@{sio::event}}
+\doxysubsubsection{\texorpdfstring{event()}{event()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily sio\+::event\+::event (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{nsp,  }\item[{std\+::string const \&}]{name,  }\item[{\mbox{\hyperlink{classsio_1_1message_1_1list}{message\+::list}} \&\&}]{messages,  }\item[{bool}]{need\+\_\+ack }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsio_1_1event_a03d343ade27c0cdf35f4e31ea996e7da}\label{classsio_1_1event_a03d343ade27c0cdf35f4e31ea996e7da}} 
+\index{sio::event@{sio::event}!get\_ack\_message@{get\_ack\_message}}
+\index{get\_ack\_message@{get\_ack\_message}!sio::event@{sio::event}}
+\doxysubsubsection{\texorpdfstring{get\_ack\_message()}{get\_ack\_message()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsio_1_1message_1_1list}{message\+::list}} const\& sio\+::event\+::get\+\_\+ack\+\_\+message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classsio_1_1event_a777c67213b1373320bd759225fe62716}\label{classsio_1_1event_a777c67213b1373320bd759225fe62716}} 
+\index{sio::event@{sio::event}!get\_ack\_message\_impl@{get\_ack\_message\_impl}}
+\index{get\_ack\_message\_impl@{get\_ack\_message\_impl}!sio::event@{sio::event}}
+\doxysubsubsection{\texorpdfstring{get\_ack\_message\_impl()}{get\_ack\_message\_impl()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsio_1_1message_1_1list}{message\+::list}}\& sio\+::event\+::get\+\_\+ack\+\_\+message\+\_\+impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classsio_1_1event_af72f3e38225ee8768c183d28d717a3da}\label{classsio_1_1event_af72f3e38225ee8768c183d28d717a3da}} 
+\index{sio::event@{sio::event}!get\_message@{get\_message}}
+\index{get\_message@{get\_message}!sio::event@{sio::event}}
+\doxysubsubsection{\texorpdfstring{get\_message()}{get\_message()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classsio_1_1message_a6340b6fef57e4516eb17928b1885a615}{message\+::ptr}}\& sio\+::event\+::get\+\_\+message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classsio_1_1event_aaeab1effd6c5d26a8da946b13c42437d}\label{classsio_1_1event_aaeab1effd6c5d26a8da946b13c42437d}} 
+\index{sio::event@{sio::event}!get\_messages@{get\_messages}}
+\index{get\_messages@{get\_messages}!sio::event@{sio::event}}
+\doxysubsubsection{\texorpdfstring{get\_messages()}{get\_messages()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classsio_1_1message_1_1list}{message\+::list}}\& sio\+::event\+::get\+\_\+messages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classsio_1_1event_ac5049d464f6b37a92739bbbaee700f7f}\label{classsio_1_1event_ac5049d464f6b37a92739bbbaee700f7f}} 
+\index{sio::event@{sio::event}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!sio::event@{sio::event}}
+\doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
+{\footnotesize\ttfamily const std\+::string\& sio\+::event\+::get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classsio_1_1event_a248d2f8a20d6915059ec8cee5cf7449d}\label{classsio_1_1event_a248d2f8a20d6915059ec8cee5cf7449d}} 
+\index{sio::event@{sio::event}!get\_nsp@{get\_nsp}}
+\index{get\_nsp@{get\_nsp}!sio::event@{sio::event}}
+\doxysubsubsection{\texorpdfstring{get\_nsp()}{get\_nsp()}}
+{\footnotesize\ttfamily const std\+::string\& sio\+::event\+::get\+\_\+nsp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classsio_1_1event_ac6e186489b8452bbc32cc734b3dc099c}\label{classsio_1_1event_ac6e186489b8452bbc32cc734b3dc099c}} 
+\index{sio::event@{sio::event}!need\_ack@{need\_ack}}
+\index{need\_ack@{need\_ack}!sio::event@{sio::event}}
+\doxysubsubsection{\texorpdfstring{need\_ack()}{need\_ack()}}
+{\footnotesize\ttfamily bool sio\+::event\+::need\+\_\+ack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classsio_1_1event_a9f7d62c97996e85bdff7de53932a595a}\label{classsio_1_1event_a9f7d62c97996e85bdff7de53932a595a}} 
+\index{sio::event@{sio::event}!put\_ack\_message@{put\_ack\_message}}
+\index{put\_ack\_message@{put\_ack\_message}!sio::event@{sio::event}}
+\doxysubsubsection{\texorpdfstring{put\_ack\_message()}{put\_ack\_message()}}
+{\footnotesize\ttfamily void sio\+::event\+::put\+\_\+ack\+\_\+message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsio_1_1message_1_1list}{message\+::list}} const \&}]{ack\+\_\+message }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classsio_1_1event_ac57524faa4b3dfacdf1bceec92894a03}\label{classsio_1_1event_ac57524faa4b3dfacdf1bceec92894a03}} 
+\index{sio::event@{sio::event}!event\_adapter@{event\_adapter}}
+\index{event\_adapter@{event\_adapter}!sio::event@{sio::event}}
+\doxysubsubsection{\texorpdfstring{event\_adapter}{event\_adapter}}
+{\footnotesize\ttfamily friend class event\+\_\+adapter\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/erik/work/bridges/bridges-\/cxx/src/\mbox{\hyperlink{sio__socket_8h}{sio\+\_\+socket.\+h}}\end{DoxyCompactItemize}

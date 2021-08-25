@@ -1,0 +1,501 @@
+\hypertarget{classbridges_1_1datastructure_1_1_symbol}{}\doxysection{bridges\+::datastructure\+::Symbol Class Reference}
+\label{classbridges_1_1datastructure_1_1_symbol}\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+
+
+{\ttfamily \#include $<$Symbol.\+h$>$}
+
+Inheritance diagram for bridges\+::datastructure\+::Symbol\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.500000cm]{classbridges_1_1datastructure_1_1_symbol}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Detailed Description}
+This is an abstract class for deriving a number of \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}} shape objects, for use in a \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_collection}{Symbol\+Collection}}. Symbols correspond to a simplified subset of SVG paths and shapes for custom visual representations in BRIDGES. 
+
+Currently shapes supported are rectangle, circle, polygon, label; each shape has a name, location (x, y) and appropriate geometric and non-\/geometric attributes
+
+\begin{DoxyAuthor}{Author}
+David Burlinson, Kalpathi Subramanian, Erik Saule 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+12/24/18, 7/12/19, 12/28/20, 7/2/21, 7/7/21 
+\end{DoxyDate}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_a6169106c021d20752abba3cd266ecfb0}{Symbol}} ()
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_ab19c9471100339ca240db841a21b800c}{Symbol}} (const \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}} \&s)
+\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}} \& \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_a9a67f28b905c36cab31ca4e7b59927ee}{operator=}} (const \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}} \&s)
+\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_a70c071bd1e73f333c006190c17efba2c}{$\sim$\+Symbol}} ()
+\item 
+virtual const string \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_a8044b3da559dcd9de8510ae339f126c8}{get\+Symbol\+Representation}} () const =0
+\begin{DoxyCompactList}\small\item\em Virtual method to get the JSON representation of the symbol. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_a58d987ff096da9ab6a8bccea85954218}{get\+Identifier}} () const
+\begin{DoxyCompactList}\small\item\em return the symbol identifier. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}} \& \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_a2786b248aaf84552b3ae7864f936e3da}{set\+Fill\+Color}} (\mbox{\hyperlink{classbridges_1_1datastructure_1_1_color}{Color}} c)
+\begin{DoxyCompactList}\small\item\em Set the symbol fill color. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}} \& \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_abf6302892e46e7d2c1afaf21f0d57d6a}{set\+Fill\+Color}} (string c)
+\begin{DoxyCompactList}\small\item\em This method sets the symbol fill color. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_color}{Color}} \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_aa01f67739906515e00474c43f0ffc66e}{get\+Fill\+Color}} () const
+\begin{DoxyCompactList}\small\item\em This method gets fill color. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}} \& \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_a07b5f56354740a4c8d2b53aef638e4e6}{set\+Stroke\+Color}} (\mbox{\hyperlink{classbridges_1_1datastructure_1_1_color}{Color}} c)
+\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}} \& \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_a6df1acb340b625fc5d480daaf220075d}{set\+Stroke\+Color}} (string c)
+\begin{DoxyCompactList}\small\item\em This method sets the symbol stroke color. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_color}{Color}} \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_aa99d36f97deaf99bee1d61778c85e87d}{get\+Stroke\+Color}} ()
+\begin{DoxyCompactList}\small\item\em This method gets stroke color. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}} \& \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_a7c888fae7333c7ed9edf9c33dae6ad8c}{set\+Stroke\+Width}} (float strk\+\_\+width)
+\begin{DoxyCompactList}\small\item\em This method sets the symbol stroke width. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_a02d4f1567c23b054f74dd8f3d0555a32}{get\+Stroke\+Width}} () const
+\begin{DoxyCompactList}\small\item\em This method gets stroke width. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}} \& \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_a5cecb1e3a9e3b95307f94f6d2a4383a2}{set\+Opacity}} (float op)
+\begin{DoxyCompactList}\small\item\em This method sets the symbol opacity. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_a2630c19b6efdda481556195fa149c334}{get\+Opacity}} () const
+\begin{DoxyCompactList}\small\item\em This method gets symbol opacity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}} \& \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_ac6cbd0714fef49709b85ef28de8d993c}{set\+Stroke\+Dash}} (int dash)
+\begin{DoxyCompactList}\small\item\em This method sets the stroke dash level. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_a1a47a1a3b4bedf3486e4f48b5979da1a}{get\+Stroke\+Dash}} () const
+\begin{DoxyCompactList}\small\item\em This method gets stroke dash level. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}} \& \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_a0b0489bf812271875be5f0f10be568a1}{set\+Layer}} (int l)
+\item 
+int \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_a422ce7cdf2cbafd28e399ea9d7e16f2a}{get\+Layer}} () const
+\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}} \& \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_a2b62e07a6d9c1015e212f4dc0cea1858}{translate}} (float tx, float ty)
+\begin{DoxyCompactList}\small\item\em Translate a 2D point. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}} \& \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_a3801b726e1d6bacd4706fe8b5466b8e6}{scale}} (float sx, float sy)
+\begin{DoxyCompactList}\small\item\em Scale a \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}} \& \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_a444bdb4259285dc95e13d27303f94102}{scale}} (float scalefactor)
+\begin{DoxyCompactList}\small\item\em Scale a \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}} \& \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_a85f585750a1948576548349619233bb3}{rotate}} (float angle)
+\begin{DoxyCompactList}\small\item\em Rotate a 2D point (about Z) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}} \& \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_af19cf1d01da1070509bf7c8fce36b3ce}{scale}} (float sx, float sy, float px, float py)
+\begin{DoxyCompactList}\small\item\em Scale about an arbitrary point (px, py) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}} \& \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_a6464d5a9ce0405097871ef7e6e015e7b}{rotate}} (float angle, float px, float py)
+\begin{DoxyCompactList}\small\item\em Rotate a 2D point about an arbitrary point (px, py) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}} \& \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_a0afcc5b50d056e40900ef9bac6c2c3d0}{set\+Transform}} (float a, float b, float c, float d, float e, float f)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual string \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_a1fb7cabce2915b103b8474658e8549f8}{get\+Shape\+Type}} () const =0
+\item 
+const string \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_ab9a92e73867a95e8cc3e63cad75d266a}{get\+Symbol\+Attribute\+Representation}} () const
+\begin{DoxyCompactList}\small\item\em Get the JSON of the symbol representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_symbol_a6169106c021d20752abba3cd266ecfb0}\label{classbridges_1_1datastructure_1_1_symbol_a6169106c021d20752abba3cd266ecfb0}} 
+\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}!Symbol@{Symbol}}
+\index{Symbol@{Symbol}!bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+\doxysubsubsection{\texorpdfstring{Symbol()}{Symbol()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bridges\+::datastructure\+::\+Symbol\+::\+Symbol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+default constructor 
+
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_symbol_ab19c9471100339ca240db841a21b800c}\label{classbridges_1_1datastructure_1_1_symbol_ab19c9471100339ca240db841a21b800c}} 
+\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}!Symbol@{Symbol}}
+\index{Symbol@{Symbol}!bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+\doxysubsubsection{\texorpdfstring{Symbol()}{Symbol()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bridges\+::datastructure\+::\+Symbol\+::\+Symbol (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}} \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_symbol_a70c071bd1e73f333c006190c17efba2c}\label{classbridges_1_1datastructure_1_1_symbol_a70c071bd1e73f333c006190c17efba2c}} 
+\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}!````~Symbol@{$\sim$Symbol}}
+\index{````~Symbol@{$\sim$Symbol}!bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+\doxysubsubsection{\texorpdfstring{$\sim$Symbol()}{~Symbol()}}
+{\footnotesize\ttfamily bridges\+::datastructure\+::\+Symbol\+::$\sim$\+Symbol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_symbol_aa01f67739906515e00474c43f0ffc66e}\label{classbridges_1_1datastructure_1_1_symbol_aa01f67739906515e00474c43f0ffc66e}} 
+\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}!getFillColor@{getFillColor}}
+\index{getFillColor@{getFillColor}!bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+\doxysubsubsection{\texorpdfstring{getFillColor()}{getFillColor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1datastructure_1_1_color}{Color}} bridges\+::datastructure\+::\+Symbol\+::get\+Fill\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method gets fill color. 
+
+\begin{DoxyReturn}{Returns}
+fill color 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_symbol_a58d987ff096da9ab6a8bccea85954218}\label{classbridges_1_1datastructure_1_1_symbol_a58d987ff096da9ab6a8bccea85954218}} 
+\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}!getIdentifier@{getIdentifier}}
+\index{getIdentifier@{getIdentifier}!bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+\doxysubsubsection{\texorpdfstring{getIdentifier()}{getIdentifier()}}
+{\footnotesize\ttfamily int bridges\+::datastructure\+::\+Symbol\+::get\+Identifier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return the symbol identifier. 
+
+Maintains unique identifiers of symbols and returns the \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}}\textquotesingle{}s unique identifier
+
+\begin{DoxyReturn}{Returns}
+the identifier 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_symbol_a422ce7cdf2cbafd28e399ea9d7e16f2a}\label{classbridges_1_1datastructure_1_1_symbol_a422ce7cdf2cbafd28e399ea9d7e16f2a}} 
+\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}!getLayer@{getLayer}}
+\index{getLayer@{getLayer}!bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+\doxysubsubsection{\texorpdfstring{getLayer()}{getLayer()}}
+{\footnotesize\ttfamily int bridges\+::datastructure\+::\+Symbol\+::get\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+This method gets layer
+
+\begin{DoxyReturn}{Returns}
+layer layer (lower value closer to camera) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_symbol_a2630c19b6efdda481556195fa149c334}\label{classbridges_1_1datastructure_1_1_symbol_a2630c19b6efdda481556195fa149c334}} 
+\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}!getOpacity@{getOpacity}}
+\index{getOpacity@{getOpacity}!bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+\doxysubsubsection{\texorpdfstring{getOpacity()}{getOpacity()}}
+{\footnotesize\ttfamily float bridges\+::datastructure\+::\+Symbol\+::get\+Opacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method gets symbol opacity. 
+
+\begin{DoxyReturn}{Returns}
+symbol opacity 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_symbol_a1fb7cabce2915b103b8474658e8549f8}\label{classbridges_1_1datastructure_1_1_symbol_a1fb7cabce2915b103b8474658e8549f8}} 
+\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}!getShapeType@{getShapeType}}
+\index{getShapeType@{getShapeType}!bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+\doxysubsubsection{\texorpdfstring{getShapeType()}{getShapeType()}}
+{\footnotesize\ttfamily virtual string bridges\+::datastructure\+::\+Symbol\+::get\+Shape\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Get the symbol type -\/ implemented in subclasses
+
+\begin{DoxyReturn}{Returns}
+the shape type 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classbridges_1_1datastructure_1_1_text_a039d614f2f74fe4dbb74e7b3410f53d9}{bridges\+::datastructure\+::\+Text}}, \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_group_a64dfd163d201b6759b1d21f90584e670}{bridges\+::datastructure\+::\+Symbol\+Group}}, \mbox{\hyperlink{classbridges_1_1datastructure_1_1_rectangle_abb3d8cace529aae9a405909844ed1ae0}{bridges\+::datastructure\+::\+Rectangle}}, \mbox{\hyperlink{classbridges_1_1datastructure_1_1_polyline_a5cd5cf2265353c90e91564121583aed1}{bridges\+::datastructure\+::\+Polyline}}, \mbox{\hyperlink{classbridges_1_1datastructure_1_1_polygon_a9e575d921e7883815f4505ebb13fffe4}{bridges\+::datastructure\+::\+Polygon}}, and \mbox{\hyperlink{classbridges_1_1datastructure_1_1_circle_aa865c28869b28bbf6416e5a36b7f5102}{bridges\+::datastructure\+::\+Circle}}.
+
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_symbol_aa99d36f97deaf99bee1d61778c85e87d}\label{classbridges_1_1datastructure_1_1_symbol_aa99d36f97deaf99bee1d61778c85e87d}} 
+\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}!getStrokeColor@{getStrokeColor}}
+\index{getStrokeColor@{getStrokeColor}!bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+\doxysubsubsection{\texorpdfstring{getStrokeColor()}{getStrokeColor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1datastructure_1_1_color}{Color}} bridges\+::datastructure\+::\+Symbol\+::get\+Stroke\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method gets stroke color. 
+
+\begin{DoxyReturn}{Returns}
+stroke color 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_symbol_a1a47a1a3b4bedf3486e4f48b5979da1a}\label{classbridges_1_1datastructure_1_1_symbol_a1a47a1a3b4bedf3486e4f48b5979da1a}} 
+\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}!getStrokeDash@{getStrokeDash}}
+\index{getStrokeDash@{getStrokeDash}!bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+\doxysubsubsection{\texorpdfstring{getStrokeDash()}{getStrokeDash()}}
+{\footnotesize\ttfamily int bridges\+::datastructure\+::\+Symbol\+::get\+Stroke\+Dash (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method gets stroke dash level. 
+
+\begin{DoxyReturn}{Returns}
+stroke dash level 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_symbol_a02d4f1567c23b054f74dd8f3d0555a32}\label{classbridges_1_1datastructure_1_1_symbol_a02d4f1567c23b054f74dd8f3d0555a32}} 
+\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}!getStrokeWidth@{getStrokeWidth}}
+\index{getStrokeWidth@{getStrokeWidth}!bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+\doxysubsubsection{\texorpdfstring{getStrokeWidth()}{getStrokeWidth()}}
+{\footnotesize\ttfamily float bridges\+::datastructure\+::\+Symbol\+::get\+Stroke\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method gets stroke width. 
+
+\begin{DoxyReturn}{Returns}
+stroke width 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_symbol_ab9a92e73867a95e8cc3e63cad75d266a}\label{classbridges_1_1datastructure_1_1_symbol_ab9a92e73867a95e8cc3e63cad75d266a}} 
+\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}!getSymbolAttributeRepresentation@{getSymbolAttributeRepresentation}}
+\index{getSymbolAttributeRepresentation@{getSymbolAttributeRepresentation}!bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+\doxysubsubsection{\texorpdfstring{getSymbolAttributeRepresentation()}{getSymbolAttributeRepresentation()}}
+{\footnotesize\ttfamily const string bridges\+::datastructure\+::\+Symbol\+::get\+Symbol\+Attribute\+Representation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Get the JSON of the symbol representation. 
+
+This method gets the JSON representation of all of the symbol attributes
+
+\begin{DoxyReturn}{Returns}
+JSON string of symbol attributes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_symbol_a8044b3da559dcd9de8510ae339f126c8}\label{classbridges_1_1datastructure_1_1_symbol_a8044b3da559dcd9de8510ae339f126c8}} 
+\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}!getSymbolRepresentation@{getSymbolRepresentation}}
+\index{getSymbolRepresentation@{getSymbolRepresentation}!bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+\doxysubsubsection{\texorpdfstring{getSymbolRepresentation()}{getSymbolRepresentation()}}
+{\footnotesize\ttfamily virtual const string bridges\+::datastructure\+::\+Symbol\+::get\+Symbol\+Representation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Virtual method to get the JSON representation of the symbol. 
+
+
+
+Implemented in \mbox{\hyperlink{classbridges_1_1datastructure_1_1_text_ab326f0cf60addd3027a02fd1f90b6961}{bridges\+::datastructure\+::\+Text}}, \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol_group_af3a4109c7a19314a611e879cb2b0aeca}{bridges\+::datastructure\+::\+Symbol\+Group}}, \mbox{\hyperlink{classbridges_1_1datastructure_1_1_rectangle_a13fa4e45a78fdc7c49bfe566cb809ab3}{bridges\+::datastructure\+::\+Rectangle}}, \mbox{\hyperlink{classbridges_1_1datastructure_1_1_polyline_ab78c7200a23cdd652fd5a9722ac4526d}{bridges\+::datastructure\+::\+Polyline}}, and \mbox{\hyperlink{classbridges_1_1datastructure_1_1_circle_a5b896b2aba1fd468f9ddb3aa3b719fe9}{bridges\+::datastructure\+::\+Circle}}.
+
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_symbol_a9a67f28b905c36cab31ca4e7b59927ee}\label{classbridges_1_1datastructure_1_1_symbol_a9a67f28b905c36cab31ca4e7b59927ee}} 
+\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}!operator=@{operator=}}
+\index{operator=@{operator=}!bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}}\& bridges\+::datastructure\+::\+Symbol\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}} \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_symbol_a85f585750a1948576548349619233bb3}\label{classbridges_1_1datastructure_1_1_symbol_a85f585750a1948576548349619233bb3}} 
+\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}!rotate@{rotate}}
+\index{rotate@{rotate}!bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}}\& bridges\+::datastructure\+::\+Symbol\+::rotate (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rotate a 2D point (about Z) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pt} & 2D point (x, y) \\
+\hline
+{\em angle} & rotation angle in degrees (positive is counter clockwise, negative is clockwise) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_symbol_a6464d5a9ce0405097871ef7e6e015e7b}\label{classbridges_1_1datastructure_1_1_symbol_a6464d5a9ce0405097871ef7e6e015e7b}} 
+\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}!rotate@{rotate}}
+\index{rotate@{rotate}!bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}}\& bridges\+::datastructure\+::\+Symbol\+::rotate (\begin{DoxyParamCaption}\item[{float}]{angle,  }\item[{float}]{px,  }\item[{float}]{py }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rotate a 2D point about an arbitrary point (px, py) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & rotation angle in degrees \\
+\hline
+{\em pt} & 2D point (px, py) (positive is counter clockwise, negative is clockwise) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_symbol_a444bdb4259285dc95e13d27303f94102}\label{classbridges_1_1datastructure_1_1_symbol_a444bdb4259285dc95e13d27303f94102}} 
+\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}!scale@{scale}}
+\index{scale@{scale}!bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}}\& bridges\+::datastructure\+::\+Symbol\+::scale (\begin{DoxyParamCaption}\item[{float}]{scalefactor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Scale a \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pt} & 2D point (x, y) \\
+\hline
+{\em scalefactor} & scale factors along both axis \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_symbol_a3801b726e1d6bacd4706fe8b5466b8e6}\label{classbridges_1_1datastructure_1_1_symbol_a3801b726e1d6bacd4706fe8b5466b8e6}} 
+\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}!scale@{scale}}
+\index{scale@{scale}!bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}}\& bridges\+::datastructure\+::\+Symbol\+::scale (\begin{DoxyParamCaption}\item[{float}]{sx,  }\item[{float}]{sy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Scale a \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pt} & 2D point (x, y) \\
+\hline
+{\em sx,sy} & scale factors along each axis \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_symbol_af19cf1d01da1070509bf7c8fce36b3ce}\label{classbridges_1_1datastructure_1_1_symbol_af19cf1d01da1070509bf7c8fce36b3ce}} 
+\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}!scale@{scale}}
+\index{scale@{scale}!bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}}\& bridges\+::datastructure\+::\+Symbol\+::scale (\begin{DoxyParamCaption}\item[{float}]{sx,  }\item[{float}]{sy,  }\item[{float}]{px,  }\item[{float}]{py }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Scale about an arbitrary point (px, py) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sx,scale} & factors along X \\
+\hline
+{\em sy,scale} & factors along X \\
+\hline
+{\em px} & x coord of point \\
+\hline
+{\em py} & y coord of point \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_symbol_a2786b248aaf84552b3ae7864f936e3da}\label{classbridges_1_1datastructure_1_1_symbol_a2786b248aaf84552b3ae7864f936e3da}} 
+\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}!setFillColor@{setFillColor}}
+\index{setFillColor@{setFillColor}!bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+\doxysubsubsection{\texorpdfstring{setFillColor()}{setFillColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}}\& bridges\+::datastructure\+::\+Symbol\+::set\+Fill\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1datastructure_1_1_color}{Color}}}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the symbol fill color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & the color to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_symbol_abf6302892e46e7d2c1afaf21f0d57d6a}\label{classbridges_1_1datastructure_1_1_symbol_abf6302892e46e7d2c1afaf21f0d57d6a}} 
+\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}!setFillColor@{setFillColor}}
+\index{setFillColor@{setFillColor}!bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+\doxysubsubsection{\texorpdfstring{setFillColor()}{setFillColor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}}\& bridges\+::datastructure\+::\+Symbol\+::set\+Fill\+Color (\begin{DoxyParamCaption}\item[{string}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method sets the symbol fill color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & the named color to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_symbol_a0b0489bf812271875be5f0f10be568a1}\label{classbridges_1_1datastructure_1_1_symbol_a0b0489bf812271875be5f0f10be568a1}} 
+\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}!setLayer@{setLayer}}
+\index{setLayer@{setLayer}!bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+\doxysubsubsection{\texorpdfstring{setLayer()}{setLayer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}}\& bridges\+::datastructure\+::\+Symbol\+::set\+Layer (\begin{DoxyParamCaption}\item[{int}]{l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This method sets the layer the symbol sits on
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & layer (lower value closer to camera) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the symbol 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_symbol_a5cecb1e3a9e3b95307f94f6d2a4383a2}\label{classbridges_1_1datastructure_1_1_symbol_a5cecb1e3a9e3b95307f94f6d2a4383a2}} 
+\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}!setOpacity@{setOpacity}}
+\index{setOpacity@{setOpacity}!bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+\doxysubsubsection{\texorpdfstring{setOpacity()}{setOpacity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}}\& bridges\+::datastructure\+::\+Symbol\+::set\+Opacity (\begin{DoxyParamCaption}\item[{float}]{op }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method sets the symbol opacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em op} & the opacity to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_symbol_a07b5f56354740a4c8d2b53aef638e4e6}\label{classbridges_1_1datastructure_1_1_symbol_a07b5f56354740a4c8d2b53aef638e4e6}} 
+\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}!setStrokeColor@{setStrokeColor}}
+\index{setStrokeColor@{setStrokeColor}!bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+\doxysubsubsection{\texorpdfstring{setStrokeColor()}{setStrokeColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}}\& bridges\+::datastructure\+::\+Symbol\+::set\+Stroke\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1datastructure_1_1_color}{Color}}}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This method sets the symbol stroke color
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & the color to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_symbol_a6df1acb340b625fc5d480daaf220075d}\label{classbridges_1_1datastructure_1_1_symbol_a6df1acb340b625fc5d480daaf220075d}} 
+\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}!setStrokeColor@{setStrokeColor}}
+\index{setStrokeColor@{setStrokeColor}!bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+\doxysubsubsection{\texorpdfstring{setStrokeColor()}{setStrokeColor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}}\& bridges\+::datastructure\+::\+Symbol\+::set\+Stroke\+Color (\begin{DoxyParamCaption}\item[{string}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method sets the symbol stroke color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & the named color to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_symbol_ac6cbd0714fef49709b85ef28de8d993c}\label{classbridges_1_1datastructure_1_1_symbol_ac6cbd0714fef49709b85ef28de8d993c}} 
+\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}!setStrokeDash@{setStrokeDash}}
+\index{setStrokeDash@{setStrokeDash}!bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+\doxysubsubsection{\texorpdfstring{setStrokeDash()}{setStrokeDash()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}}\& bridges\+::datastructure\+::\+Symbol\+::set\+Stroke\+Dash (\begin{DoxyParamCaption}\item[{int}]{dash }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method sets the stroke dash level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dash} & dash level \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_symbol_a7c888fae7333c7ed9edf9c33dae6ad8c}\label{classbridges_1_1datastructure_1_1_symbol_a7c888fae7333c7ed9edf9c33dae6ad8c}} 
+\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}!setStrokeWidth@{setStrokeWidth}}
+\index{setStrokeWidth@{setStrokeWidth}!bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+\doxysubsubsection{\texorpdfstring{setStrokeWidth()}{setStrokeWidth()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}}\& bridges\+::datastructure\+::\+Symbol\+::set\+Stroke\+Width (\begin{DoxyParamCaption}\item[{float}]{strk\+\_\+width }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method sets the symbol stroke width. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em strk\+\_\+width} & the stroke width to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_symbol_a0afcc5b50d056e40900ef9bac6c2c3d0}\label{classbridges_1_1datastructure_1_1_symbol_a0afcc5b50d056e40900ef9bac6c2c3d0}} 
+\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}!setTransform@{setTransform}}
+\index{setTransform@{setTransform}!bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+\doxysubsubsection{\texorpdfstring{setTransform()}{setTransform()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}}\& bridges\+::datastructure\+::\+Symbol\+::set\+Transform (\begin{DoxyParamCaption}\item[{float}]{a,  }\item[{float}]{b,  }\item[{float}]{c,  }\item[{float}]{d,  }\item[{float}]{e,  }\item[{float}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Directly sets the transform matrix; note that the parameters are provided in column major order
+
+
+\begin{DoxyParams}{Parameters}
+{\em a,b,c,d,e,f} & fills the first two rows of the matrix \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1datastructure_1_1_symbol_a2b62e07a6d9c1015e212f4dc0cea1858}\label{classbridges_1_1datastructure_1_1_symbol_a2b62e07a6d9c1015e212f4dc0cea1858}} 
+\index{bridges::datastructure::Symbol@{bridges::datastructure::Symbol}!translate@{translate}}
+\index{translate@{translate}!bridges::datastructure::Symbol@{bridges::datastructure::Symbol}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1datastructure_1_1_symbol}{Symbol}}\& bridges\+::datastructure\+::\+Symbol\+::translate (\begin{DoxyParamCaption}\item[{float}]{tx,  }\item[{float}]{ty }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Translate a 2D point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pt} & 2D point (x, y) \\
+\hline
+{\em tx,ty} & translation vector \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/erik/work/bridges/bridges-\/cxx/src/\mbox{\hyperlink{_symbol_8h}{Symbol.\+h}}\end{DoxyCompactItemize}

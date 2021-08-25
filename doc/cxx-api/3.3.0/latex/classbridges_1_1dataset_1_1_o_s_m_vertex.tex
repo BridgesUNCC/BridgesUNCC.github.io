@@ -1,0 +1,183 @@
+\hypertarget{classbridges_1_1dataset_1_1_o_s_m_vertex}{}\doxysection{bridges\+::dataset\+::OSMVertex Class Reference}
+\label{classbridges_1_1dataset_1_1_o_s_m_vertex}\index{bridges::dataset::OSMVertex@{bridges::dataset::OSMVertex}}
+
+
+{\ttfamily \#include $<$OSMVertex.\+h$>$}
+
+
+
+\doxysubsection{Detailed Description}
+Class that hold Open Street Map vertices. 
+
+Class that holds Open Street Map vertices from \href{https://openstreetmap.org}{\texttt{ https\+://openstreetmap.\+org}} Objects from this class are typically not created by the user but contained in the Osm\+Data object returned by \mbox{\hyperlink{classbridges_1_1_data_source_a57736934a90bdb86948a7c338ec81a2d}{bridges\+::\+Data\+Source\+::get\+OSMData()}}
+
+\begin{DoxySeeAlso}{See also}
+Check out how to use OSM data at\+: \href{https://bridgesuncc.github.io/tutorials/Data_OSM.html}{\texttt{ https\+://bridgesuncc.\+github.\+io/tutorials/\+Data\+\_\+\+OSM.\+html}}
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Erik Saule, Kalpathi Subramanian 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2/14/19, 12/28/20 
+\end{DoxyDate}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef long \mbox{\hyperlink{classbridges_1_1dataset_1_1_o_s_m_vertex_ad166f13b0aefbdc05a273546f2a3bb96}{OSMVertex\+ID}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbridges_1_1dataset_1_1_o_s_m_vertex_aa5d6ef7aef3bb762665aa6ab3a2658f6}{OSMVertex}} ()
+\item 
+\mbox{\hyperlink{classbridges_1_1dataset_1_1_o_s_m_vertex_a9ad9739ae1da536fe5e66b2f07b8ba1d}{OSMVertex}} (\mbox{\hyperlink{classbridges_1_1dataset_1_1_o_s_m_vertex_ad166f13b0aefbdc05a273546f2a3bb96}{OSMVertex\+ID}} vid, double latit, double longit)
+\item 
+\mbox{\hyperlink{classbridges_1_1dataset_1_1_o_s_m_vertex_a0459f92f161c9e1d465c5142b947a704}{OSMVertex}} (const \mbox{\hyperlink{classbridges_1_1dataset_1_1_o_s_m_vertex}{OSMVertex}} $\ast$vert)
+\item 
+double \mbox{\hyperlink{classbridges_1_1dataset_1_1_o_s_m_vertex_a1f41a5f01d68747ee04b5c5eaa629c6e}{get\+Latitude}} () const
+\item 
+void \mbox{\hyperlink{classbridges_1_1dataset_1_1_o_s_m_vertex_af4ab2d69122919f504b78bd9540ccaa1}{set\+Latitude}} (double latit)
+\item 
+double \mbox{\hyperlink{classbridges_1_1dataset_1_1_o_s_m_vertex_a98e17875d886a63ed73a6f77cc26686d}{get\+Longitude}} () const
+\item 
+void \mbox{\hyperlink{classbridges_1_1dataset_1_1_o_s_m_vertex_a48e077133233ba705342ba955c6fdc23}{set\+Longitude}} (double longit)
+\item 
+void \mbox{\hyperlink{classbridges_1_1dataset_1_1_o_s_m_vertex_a0151ea438e8265b184a91c9591aa8a12}{get\+Cartesian\+Coords}} (double $\ast$coords) const
+\item 
+void \mbox{\hyperlink{classbridges_1_1dataset_1_1_o_s_m_vertex_ae16bbcdef938da97f2c665825ecac346}{set\+Vertex\+ID}} (\mbox{\hyperlink{classbridges_1_1dataset_1_1_o_s_m_vertex_ad166f13b0aefbdc05a273546f2a3bb96}{OSMVertex\+ID}} vid)
+\item 
+\mbox{\hyperlink{classbridges_1_1dataset_1_1_o_s_m_vertex_ad166f13b0aefbdc05a273546f2a3bb96}{OSMVertex\+ID}} \mbox{\hyperlink{classbridges_1_1dataset_1_1_o_s_m_vertex_a92f3b28a05940e4c45a0cf933c3fab2c}{get\+Vertex\+ID}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_o_s_m_vertex_ad166f13b0aefbdc05a273546f2a3bb96}\label{classbridges_1_1dataset_1_1_o_s_m_vertex_ad166f13b0aefbdc05a273546f2a3bb96}} 
+\index{bridges::dataset::OSMVertex@{bridges::dataset::OSMVertex}!OSMVertexID@{OSMVertexID}}
+\index{OSMVertexID@{OSMVertexID}!bridges::dataset::OSMVertex@{bridges::dataset::OSMVertex}}
+\doxysubsubsection{\texorpdfstring{OSMVertexID}{OSMVertexID}}
+{\footnotesize\ttfamily typedef long \mbox{\hyperlink{classbridges_1_1dataset_1_1_o_s_m_vertex_ad166f13b0aefbdc05a273546f2a3bb96}{bridges\+::dataset\+::\+OSMVertex\+::\+OSMVertex\+ID}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_o_s_m_vertex_aa5d6ef7aef3bb762665aa6ab3a2658f6}\label{classbridges_1_1dataset_1_1_o_s_m_vertex_aa5d6ef7aef3bb762665aa6ab3a2658f6}} 
+\index{bridges::dataset::OSMVertex@{bridges::dataset::OSMVertex}!OSMVertex@{OSMVertex}}
+\index{OSMVertex@{OSMVertex}!bridges::dataset::OSMVertex@{bridges::dataset::OSMVertex}}
+\doxysubsubsection{\texorpdfstring{OSMVertex()}{OSMVertex()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bridges\+::dataset\+::\+OSMVertex\+::\+OSMVertex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default Constructor \mbox{\Hypertarget{classbridges_1_1dataset_1_1_o_s_m_vertex_a9ad9739ae1da536fe5e66b2f07b8ba1d}\label{classbridges_1_1dataset_1_1_o_s_m_vertex_a9ad9739ae1da536fe5e66b2f07b8ba1d}} 
+\index{bridges::dataset::OSMVertex@{bridges::dataset::OSMVertex}!OSMVertex@{OSMVertex}}
+\index{OSMVertex@{OSMVertex}!bridges::dataset::OSMVertex@{bridges::dataset::OSMVertex}}
+\doxysubsubsection{\texorpdfstring{OSMVertex()}{OSMVertex()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bridges\+::dataset\+::\+OSMVertex\+::\+OSMVertex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1dataset_1_1_o_s_m_vertex_ad166f13b0aefbdc05a273546f2a3bb96}{OSMVertex\+ID}}}]{vid,  }\item[{double}]{latit,  }\item[{double}]{longit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em vid} & id of vertex \\
+\hline
+{\em latit} & latitude position of vertex \\
+\hline
+{\em longit} & longitude position of vertex \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_o_s_m_vertex_a0459f92f161c9e1d465c5142b947a704}\label{classbridges_1_1dataset_1_1_o_s_m_vertex_a0459f92f161c9e1d465c5142b947a704}} 
+\index{bridges::dataset::OSMVertex@{bridges::dataset::OSMVertex}!OSMVertex@{OSMVertex}}
+\index{OSMVertex@{OSMVertex}!bridges::dataset::OSMVertex@{bridges::dataset::OSMVertex}}
+\doxysubsubsection{\texorpdfstring{OSMVertex()}{OSMVertex()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bridges\+::dataset\+::\+OSMVertex\+::\+OSMVertex (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbridges_1_1dataset_1_1_o_s_m_vertex}{OSMVertex}} $\ast$}]{vert }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em vert} & vertex whose attributes copied into this object \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_o_s_m_vertex_a0151ea438e8265b184a91c9591aa8a12}\label{classbridges_1_1dataset_1_1_o_s_m_vertex_a0151ea438e8265b184a91c9591aa8a12}} 
+\index{bridges::dataset::OSMVertex@{bridges::dataset::OSMVertex}!getCartesianCoords@{getCartesianCoords}}
+\index{getCartesianCoords@{getCartesianCoords}!bridges::dataset::OSMVertex@{bridges::dataset::OSMVertex}}
+\doxysubsubsection{\texorpdfstring{getCartesianCoords()}{getCartesianCoords()}}
+{\footnotesize\ttfamily void bridges\+::dataset\+::\+OSMVertex\+::get\+Cartesian\+Coords (\begin{DoxyParamCaption}\item[{double $\ast$}]{coords }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get Cartesian coords of provided lat/long position
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em coords} & cartesian coordinate coords\mbox{[}0\mbox{]} is x, coords\mbox{[}1\mbox{]} is y \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_o_s_m_vertex_a1f41a5f01d68747ee04b5c5eaa629c6e}\label{classbridges_1_1dataset_1_1_o_s_m_vertex_a1f41a5f01d68747ee04b5c5eaa629c6e}} 
+\index{bridges::dataset::OSMVertex@{bridges::dataset::OSMVertex}!getLatitude@{getLatitude}}
+\index{getLatitude@{getLatitude}!bridges::dataset::OSMVertex@{bridges::dataset::OSMVertex}}
+\doxysubsubsection{\texorpdfstring{getLatitude()}{getLatitude()}}
+{\footnotesize\ttfamily double bridges\+::dataset\+::\+OSMVertex\+::get\+Latitude (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get latitude of node
+
+\begin{DoxyReturn}{Returns}
+latitude of the vertex 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_o_s_m_vertex_a98e17875d886a63ed73a6f77cc26686d}\label{classbridges_1_1dataset_1_1_o_s_m_vertex_a98e17875d886a63ed73a6f77cc26686d}} 
+\index{bridges::dataset::OSMVertex@{bridges::dataset::OSMVertex}!getLongitude@{getLongitude}}
+\index{getLongitude@{getLongitude}!bridges::dataset::OSMVertex@{bridges::dataset::OSMVertex}}
+\doxysubsubsection{\texorpdfstring{getLongitude()}{getLongitude()}}
+{\footnotesize\ttfamily double bridges\+::dataset\+::\+OSMVertex\+::get\+Longitude (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get longitude of vertex
+
+\begin{DoxyReturn}{Returns}
+longitude of node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_o_s_m_vertex_a92f3b28a05940e4c45a0cf933c3fab2c}\label{classbridges_1_1dataset_1_1_o_s_m_vertex_a92f3b28a05940e4c45a0cf933c3fab2c}} 
+\index{bridges::dataset::OSMVertex@{bridges::dataset::OSMVertex}!getVertexID@{getVertexID}}
+\index{getVertexID@{getVertexID}!bridges::dataset::OSMVertex@{bridges::dataset::OSMVertex}}
+\doxysubsubsection{\texorpdfstring{getVertexID()}{getVertexID()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1dataset_1_1_o_s_m_vertex_ad166f13b0aefbdc05a273546f2a3bb96}{OSMVertex\+ID}} bridges\+::dataset\+::\+OSMVertex\+::get\+Vertex\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get id of this vertex \begin{DoxyReturn}{Returns}
+id of this vertex 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_o_s_m_vertex_af4ab2d69122919f504b78bd9540ccaa1}\label{classbridges_1_1dataset_1_1_o_s_m_vertex_af4ab2d69122919f504b78bd9540ccaa1}} 
+\index{bridges::dataset::OSMVertex@{bridges::dataset::OSMVertex}!setLatitude@{setLatitude}}
+\index{setLatitude@{setLatitude}!bridges::dataset::OSMVertex@{bridges::dataset::OSMVertex}}
+\doxysubsubsection{\texorpdfstring{setLatitude()}{setLatitude()}}
+{\footnotesize\ttfamily void bridges\+::dataset\+::\+OSMVertex\+::set\+Latitude (\begin{DoxyParamCaption}\item[{double}]{latit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+set latitude of quake location
+
+
+\begin{DoxyParams}{Parameters}
+{\em latit} & latitude of node to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_o_s_m_vertex_a48e077133233ba705342ba955c6fdc23}\label{classbridges_1_1dataset_1_1_o_s_m_vertex_a48e077133233ba705342ba955c6fdc23}} 
+\index{bridges::dataset::OSMVertex@{bridges::dataset::OSMVertex}!setLongitude@{setLongitude}}
+\index{setLongitude@{setLongitude}!bridges::dataset::OSMVertex@{bridges::dataset::OSMVertex}}
+\doxysubsubsection{\texorpdfstring{setLongitude()}{setLongitude()}}
+{\footnotesize\ttfamily void bridges\+::dataset\+::\+OSMVertex\+::set\+Longitude (\begin{DoxyParamCaption}\item[{double}]{longit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+set longitude of vertex
+
+
+\begin{DoxyParams}{Parameters}
+{\em longit} & longitude to be set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1dataset_1_1_o_s_m_vertex_ae16bbcdef938da97f2c665825ecac346}\label{classbridges_1_1dataset_1_1_o_s_m_vertex_ae16bbcdef938da97f2c665825ecac346}} 
+\index{bridges::dataset::OSMVertex@{bridges::dataset::OSMVertex}!setVertexID@{setVertexID}}
+\index{setVertexID@{setVertexID}!bridges::dataset::OSMVertex@{bridges::dataset::OSMVertex}}
+\doxysubsubsection{\texorpdfstring{setVertexID()}{setVertexID()}}
+{\footnotesize\ttfamily void bridges\+::dataset\+::\+OSMVertex\+::set\+Vertex\+ID (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1dataset_1_1_o_s_m_vertex_ad166f13b0aefbdc05a273546f2a3bb96}{OSMVertex\+ID}}}]{vid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+set id of this vertex 
+\begin{DoxyParams}{Parameters}
+{\em vid} & vertex id to be used for this vertex \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/erik/work/bridges/bridges-\/cxx/src/data\+\_\+src/\mbox{\hyperlink{_o_s_m_vertex_8h}{OSMVertex.\+h}}\end{DoxyCompactItemize}

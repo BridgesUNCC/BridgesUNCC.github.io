@@ -1,0 +1,235 @@
+\hypertarget{classsio_1_1message}{}\doxysection{sio\+::message Class Reference}
+\label{classsio_1_1message}\index{sio::message@{sio::message}}
+
+
+{\ttfamily \#include $<$sio\+\_\+message.\+h$>$}
+
+Inheritance diagram for sio\+::message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=9.000000cm]{classsio_1_1message}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsio_1_1message_1_1list}{list}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769}{flag}} \{ \newline
+\mbox{\hyperlink{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769a6ffb67dfa74fef6da742b056a65871ae}{flag\+\_\+integer}}
+, \mbox{\hyperlink{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769a5f4b2264d8c16031d3f3f43c2f246f0f}{flag\+\_\+double}}
+, \mbox{\hyperlink{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769a25057139980e46d1a27cd184cf32e564}{flag\+\_\+string}}
+, \mbox{\hyperlink{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769a004bcfc6977e87ae3752493f78180b72}{flag\+\_\+binary}}
+, \newline
+\mbox{\hyperlink{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769a4965ec8ed49a302baf6fb6f720ff10fb}{flag\+\_\+array}}
+, \mbox{\hyperlink{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769a8707b49b4ab6d18bc8ec6c42379f217d}{flag\+\_\+object}}
+, \mbox{\hyperlink{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769a97c7fce25aecaae75b690216a7ac2eb4}{flag\+\_\+boolean}}
+, \mbox{\hyperlink{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769abf8e5572bf864afa7bc55ee3142a109e}{flag\+\_\+null}}
+ \}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsio_1_1message}{message}} $>$ \mbox{\hyperlink{classsio_1_1message_a6340b6fef57e4516eb17928b1885a615}{ptr}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classsio_1_1message_a0fe3f725f2cd8b207b43a9dbe24fe1c5}{$\sim$message}} ()
+\item 
+\mbox{\hyperlink{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769}{flag}} \mbox{\hyperlink{classsio_1_1message_a2c8eb600ca29b420a5a1d826f0f6d5e6}{get\+\_\+flag}} () const
+\item 
+virtual bool \mbox{\hyperlink{classsio_1_1message_a3acbec589c3dc214d44dd4db1a6f8a2c}{get\+\_\+bool}} () const
+\item 
+virtual int64\+\_\+t \mbox{\hyperlink{classsio_1_1message_ae77c363200284d6741f0ac92f0e13ed2}{get\+\_\+int}} () const
+\item 
+virtual double \mbox{\hyperlink{classsio_1_1message_aa89963cd233b29653df1ce1943f9ea57}{get\+\_\+double}} () const
+\item 
+virtual std\+::string const  \& \mbox{\hyperlink{classsio_1_1message_a8e923d7e688e1bc69b586ef33684dd7a}{get\+\_\+string}} () const
+\item 
+virtual std\+::shared\+\_\+ptr$<$ const std\+::string $>$ const  \& \mbox{\hyperlink{classsio_1_1message_a55b9eeeb305f46bbf21ae339501174c2}{get\+\_\+binary}} () const
+\item 
+virtual const std\+::vector$<$ \mbox{\hyperlink{classsio_1_1message_a6340b6fef57e4516eb17928b1885a615}{ptr}} $>$ \& \mbox{\hyperlink{classsio_1_1message_af310192e16427f655dc89c627aae4fe7}{get\+\_\+vector}} () const
+\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{classsio_1_1message_a6340b6fef57e4516eb17928b1885a615}{ptr}} $>$ \& \mbox{\hyperlink{classsio_1_1message_af62004da998c98ee7039a26d809c44d3}{get\+\_\+vector}} ()
+\item 
+virtual const std\+::map$<$ std\+::string, \mbox{\hyperlink{classsio_1_1message_a6340b6fef57e4516eb17928b1885a615}{message\+::ptr}} $>$ \& \mbox{\hyperlink{classsio_1_1message_a954a981a468fcea36ff19cce6ae7fd5e}{get\+\_\+map}} () const
+\item 
+virtual std\+::map$<$ std\+::string, \mbox{\hyperlink{classsio_1_1message_a6340b6fef57e4516eb17928b1885a615}{message\+::ptr}} $>$ \& \mbox{\hyperlink{classsio_1_1message_a6ca4aee4616aa9dfde4de317d5efd125}{get\+\_\+map}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsio_1_1message_a592180d0792737b4bb73f5e5c30e386e}{message}} (\mbox{\hyperlink{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769}{flag}} f)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classsio_1_1message_a6340b6fef57e4516eb17928b1885a615}\label{classsio_1_1message_a6340b6fef57e4516eb17928b1885a615}} 
+\index{sio::message@{sio::message}!ptr@{ptr}}
+\index{ptr@{ptr}!sio::message@{sio::message}}
+\doxysubsubsection{\texorpdfstring{ptr}{ptr}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classsio_1_1message}{message}}$>$ \mbox{\hyperlink{classsio_1_1message_a6340b6fef57e4516eb17928b1885a615}{sio\+::message\+::ptr}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769}\label{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769}} 
+\index{sio::message@{sio::message}!flag@{flag}}
+\index{flag@{flag}!sio::message@{sio::message}}
+\doxysubsubsection{\texorpdfstring{flag}{flag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769}{sio\+::message\+::flag}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{flag\_integer@{flag\_integer}!sio::message@{sio::message}}\index{sio::message@{sio::message}!flag\_integer@{flag\_integer}}}\mbox{\Hypertarget{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769a6ffb67dfa74fef6da742b056a65871ae}\label{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769a6ffb67dfa74fef6da742b056a65871ae}} 
+flag\+\_\+integer&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{flag\_double@{flag\_double}!sio::message@{sio::message}}\index{sio::message@{sio::message}!flag\_double@{flag\_double}}}\mbox{\Hypertarget{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769a5f4b2264d8c16031d3f3f43c2f246f0f}\label{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769a5f4b2264d8c16031d3f3f43c2f246f0f}} 
+flag\+\_\+double&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{flag\_string@{flag\_string}!sio::message@{sio::message}}\index{sio::message@{sio::message}!flag\_string@{flag\_string}}}\mbox{\Hypertarget{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769a25057139980e46d1a27cd184cf32e564}\label{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769a25057139980e46d1a27cd184cf32e564}} 
+flag\+\_\+string&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{flag\_binary@{flag\_binary}!sio::message@{sio::message}}\index{sio::message@{sio::message}!flag\_binary@{flag\_binary}}}\mbox{\Hypertarget{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769a004bcfc6977e87ae3752493f78180b72}\label{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769a004bcfc6977e87ae3752493f78180b72}} 
+flag\+\_\+binary&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{flag\_array@{flag\_array}!sio::message@{sio::message}}\index{sio::message@{sio::message}!flag\_array@{flag\_array}}}\mbox{\Hypertarget{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769a4965ec8ed49a302baf6fb6f720ff10fb}\label{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769a4965ec8ed49a302baf6fb6f720ff10fb}} 
+flag\+\_\+array&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{flag\_object@{flag\_object}!sio::message@{sio::message}}\index{sio::message@{sio::message}!flag\_object@{flag\_object}}}\mbox{\Hypertarget{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769a8707b49b4ab6d18bc8ec6c42379f217d}\label{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769a8707b49b4ab6d18bc8ec6c42379f217d}} 
+flag\+\_\+object&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{flag\_boolean@{flag\_boolean}!sio::message@{sio::message}}\index{sio::message@{sio::message}!flag\_boolean@{flag\_boolean}}}\mbox{\Hypertarget{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769a97c7fce25aecaae75b690216a7ac2eb4}\label{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769a97c7fce25aecaae75b690216a7ac2eb4}} 
+flag\+\_\+boolean&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{flag\_null@{flag\_null}!sio::message@{sio::message}}\index{sio::message@{sio::message}!flag\_null@{flag\_null}}}\mbox{\Hypertarget{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769abf8e5572bf864afa7bc55ee3142a109e}\label{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769abf8e5572bf864afa7bc55ee3142a109e}} 
+flag\+\_\+null&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsio_1_1message_a0fe3f725f2cd8b207b43a9dbe24fe1c5}\label{classsio_1_1message_a0fe3f725f2cd8b207b43a9dbe24fe1c5}} 
+\index{sio::message@{sio::message}!````~message@{$\sim$message}}
+\index{````~message@{$\sim$message}!sio::message@{sio::message}}
+\doxysubsubsection{\texorpdfstring{$\sim$message()}{~message()}}
+{\footnotesize\ttfamily virtual sio\+::message\+::$\sim$message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classsio_1_1message_a592180d0792737b4bb73f5e5c30e386e}\label{classsio_1_1message_a592180d0792737b4bb73f5e5c30e386e}} 
+\index{sio::message@{sio::message}!message@{message}}
+\index{message@{message}!sio::message@{sio::message}}
+\doxysubsubsection{\texorpdfstring{message()}{message()}}
+{\footnotesize\ttfamily sio\+::message\+::message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769}{flag}}}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsio_1_1message_a55b9eeeb305f46bbf21ae339501174c2}\label{classsio_1_1message_a55b9eeeb305f46bbf21ae339501174c2}} 
+\index{sio::message@{sio::message}!get\_binary@{get\_binary}}
+\index{get\_binary@{get\_binary}!sio::message@{sio::message}}
+\doxysubsubsection{\texorpdfstring{get\_binary()}{get\_binary()}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$const std\+::string$>$ const\& sio\+::message\+::get\+\_\+binary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classsio_1_1binary__message_aac4db910fd9afb507ef0750394c5cd29}{sio\+::binary\+\_\+message}}.
+
+\mbox{\Hypertarget{classsio_1_1message_a3acbec589c3dc214d44dd4db1a6f8a2c}\label{classsio_1_1message_a3acbec589c3dc214d44dd4db1a6f8a2c}} 
+\index{sio::message@{sio::message}!get\_bool@{get\_bool}}
+\index{get\_bool@{get\_bool}!sio::message@{sio::message}}
+\doxysubsubsection{\texorpdfstring{get\_bool()}{get\_bool()}}
+{\footnotesize\ttfamily virtual bool sio\+::message\+::get\+\_\+bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classsio_1_1bool__message_aca66ff64b5ac4198c5292e26abdf9e92}{sio\+::bool\+\_\+message}}.
+
+\mbox{\Hypertarget{classsio_1_1message_aa89963cd233b29653df1ce1943f9ea57}\label{classsio_1_1message_aa89963cd233b29653df1ce1943f9ea57}} 
+\index{sio::message@{sio::message}!get\_double@{get\_double}}
+\index{get\_double@{get\_double}!sio::message@{sio::message}}
+\doxysubsubsection{\texorpdfstring{get\_double()}{get\_double()}}
+{\footnotesize\ttfamily virtual double sio\+::message\+::get\+\_\+double (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classsio_1_1double__message_a0ab6e4c4e579356b367bb0ef37e79c62}{sio\+::double\+\_\+message}}, and \mbox{\hyperlink{classsio_1_1int__message_a7fdc141b0fe04ce1b75054b6de110f2c}{sio\+::int\+\_\+message}}.
+
+\mbox{\Hypertarget{classsio_1_1message_a2c8eb600ca29b420a5a1d826f0f6d5e6}\label{classsio_1_1message_a2c8eb600ca29b420a5a1d826f0f6d5e6}} 
+\index{sio::message@{sio::message}!get\_flag@{get\_flag}}
+\index{get\_flag@{get\_flag}!sio::message@{sio::message}}
+\doxysubsubsection{\texorpdfstring{get\_flag()}{get\_flag()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsio_1_1message_a5274f78a8f77cd535d4acf476badf769}{flag}} sio\+::message\+::get\+\_\+flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsio_1_1message_ae77c363200284d6741f0ac92f0e13ed2}\label{classsio_1_1message_ae77c363200284d6741f0ac92f0e13ed2}} 
+\index{sio::message@{sio::message}!get\_int@{get\_int}}
+\index{get\_int@{get\_int}!sio::message@{sio::message}}
+\doxysubsubsection{\texorpdfstring{get\_int()}{get\_int()}}
+{\footnotesize\ttfamily virtual int64\+\_\+t sio\+::message\+::get\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classsio_1_1int__message_ad9159e1285bd3efd15b8f87699a9b133}{sio\+::int\+\_\+message}}.
+
+\mbox{\Hypertarget{classsio_1_1message_a6ca4aee4616aa9dfde4de317d5efd125}\label{classsio_1_1message_a6ca4aee4616aa9dfde4de317d5efd125}} 
+\index{sio::message@{sio::message}!get\_map@{get\_map}}
+\index{get\_map@{get\_map}!sio::message@{sio::message}}
+\doxysubsubsection{\texorpdfstring{get\_map()}{get\_map()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual std\+::map$<$std\+::string, \mbox{\hyperlink{classsio_1_1message_a6340b6fef57e4516eb17928b1885a615}{message\+::ptr}}$>$\& sio\+::message\+::get\+\_\+map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classsio_1_1object__message_ac024fab0eb24248150ab318a4b937b4e}{sio\+::object\+\_\+message}}.
+
+\mbox{\Hypertarget{classsio_1_1message_a954a981a468fcea36ff19cce6ae7fd5e}\label{classsio_1_1message_a954a981a468fcea36ff19cce6ae7fd5e}} 
+\index{sio::message@{sio::message}!get\_map@{get\_map}}
+\index{get\_map@{get\_map}!sio::message@{sio::message}}
+\doxysubsubsection{\texorpdfstring{get\_map()}{get\_map()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual const std\+::map$<$std\+::string, \mbox{\hyperlink{classsio_1_1message_a6340b6fef57e4516eb17928b1885a615}{message\+::ptr}}$>$\& sio\+::message\+::get\+\_\+map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classsio_1_1object__message_a35d7f1d654b2a3b753ac01444635203e}{sio\+::object\+\_\+message}}.
+
+\mbox{\Hypertarget{classsio_1_1message_a8e923d7e688e1bc69b586ef33684dd7a}\label{classsio_1_1message_a8e923d7e688e1bc69b586ef33684dd7a}} 
+\index{sio::message@{sio::message}!get\_string@{get\_string}}
+\index{get\_string@{get\_string}!sio::message@{sio::message}}
+\doxysubsubsection{\texorpdfstring{get\_string()}{get\_string()}}
+{\footnotesize\ttfamily virtual std\+::string const\& sio\+::message\+::get\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classsio_1_1string__message_a8c79f0c15468e15251029c9f1612ca44}{sio\+::string\+\_\+message}}.
+
+\mbox{\Hypertarget{classsio_1_1message_af62004da998c98ee7039a26d809c44d3}\label{classsio_1_1message_af62004da998c98ee7039a26d809c44d3}} 
+\index{sio::message@{sio::message}!get\_vector@{get\_vector}}
+\index{get\_vector@{get\_vector}!sio::message@{sio::message}}
+\doxysubsubsection{\texorpdfstring{get\_vector()}{get\_vector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual std\+::vector$<$\mbox{\hyperlink{classsio_1_1message_a6340b6fef57e4516eb17928b1885a615}{ptr}}$>$\& sio\+::message\+::get\+\_\+vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classsio_1_1array__message_a7d039c4e78bb01f5e19921e0f09509c2}{sio\+::array\+\_\+message}}.
+
+\mbox{\Hypertarget{classsio_1_1message_af310192e16427f655dc89c627aae4fe7}\label{classsio_1_1message_af310192e16427f655dc89c627aae4fe7}} 
+\index{sio::message@{sio::message}!get\_vector@{get\_vector}}
+\index{get\_vector@{get\_vector}!sio::message@{sio::message}}
+\doxysubsubsection{\texorpdfstring{get\_vector()}{get\_vector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual const std\+::vector$<$\mbox{\hyperlink{classsio_1_1message_a6340b6fef57e4516eb17928b1885a615}{ptr}}$>$\& sio\+::message\+::get\+\_\+vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classsio_1_1array__message_a298e6b4d041e95ac5b90cdff6fdef5fb}{sio\+::array\+\_\+message}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/erik/work/bridges/bridges-\/cxx/src/\mbox{\hyperlink{sio__message_8h}{sio\+\_\+message.\+h}}\end{DoxyCompactItemize}

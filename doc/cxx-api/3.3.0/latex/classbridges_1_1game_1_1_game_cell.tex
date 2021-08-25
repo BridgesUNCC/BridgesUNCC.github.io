@@ -1,0 +1,161 @@
+\hypertarget{classbridges_1_1game_1_1_game_cell}{}\doxysection{bridges\+::game\+::Game\+Cell Class Reference}
+\label{classbridges_1_1game_1_1_game_cell}\index{bridges::game::GameCell@{bridges::game::GameCell}}
+
+
+{\ttfamily \#include $<$Game\+Grid.\+h$>$}
+
+
+
+\doxysubsection{Detailed Description}
+This class represents a single cell of the Game Grid. 
+
+This class is part of the \mbox{\hyperlink{classbridges_1_1_bridges}{Bridges}} Game API Each cell of the game grid contains background and foreground colors, and a symbol. Refer to the Named\+Color and Named\+Symbol definitions for a list of colors and symbols that can be used.
+
+\begin{DoxySeeAlso}{See also}
+See the detailed BRIDGES \mbox{\hyperlink{namespacebridges_1_1game}{game}} tutorial for examples at \href{https://bridgesuncc.github.io/tutorials/NonBlockingGame.html}{\texttt{ https\+://bridgesuncc.\+github.\+io/tutorials/\+Non\+Blocking\+Game.\+html}}
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Erik Saule, 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2018, 2019, 12/28/20 
+\end{DoxyDate}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbridges_1_1game_1_1_game_cell_a750114853f2f0f7519cb663352230868}{Game\+Cell}} ()
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1game_1_1_game_cell_a743b618fc8553aa9aac33ddc3bb65a79}{Game\+Cell}} (\mbox{\hyperlink{namespacebridges_1_1game_afaa832a4322b25b6a4ebfba832f10f26}{Named\+Color}} bg, \mbox{\hyperlink{namespacebridges_1_1game_afaa832a4322b25b6a4ebfba832f10f26}{Named\+Color}} fg, \mbox{\hyperlink{namespacebridges_1_1game_ab9a19c7ab6e2ebac2f95180e21733487}{Named\+Symbol}} symbol)
+\item 
+void \mbox{\hyperlink{classbridges_1_1game_1_1_game_cell_ac2ee6a35500564b3df970551dcf56892}{set\+BGColor}} (\mbox{\hyperlink{namespacebridges_1_1game_afaa832a4322b25b6a4ebfba832f10f26}{Named\+Color}} bg)
+\begin{DoxyCompactList}\small\item\em Set background color using Named\+Color Enum argument. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1game_1_1_game_cell_a899b56c1561ca4acacc42e9d740aa19a}{set\+FGColor}} (\mbox{\hyperlink{namespacebridges_1_1game_afaa832a4322b25b6a4ebfba832f10f26}{Named\+Color}} fg)
+\begin{DoxyCompactList}\small\item\em Set foreground color using Named\+Color Enum argument. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbridges_1_1game_1_1_game_cell_abd0dde526adf160bf5d026e24410645a}{set\+Symbol}} (\mbox{\hyperlink{namespacebridges_1_1game_ab9a19c7ab6e2ebac2f95180e21733487}{Named\+Symbol}} s)
+\begin{DoxyCompactList}\small\item\em Set symbol using int argument. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebridges_1_1game_afaa832a4322b25b6a4ebfba832f10f26}{Named\+Color}} \mbox{\hyperlink{classbridges_1_1game_1_1_game_cell_abfe53785cb331ee73455ef4f7c2f1ba6}{get\+BGColor}} () const
+\begin{DoxyCompactList}\small\item\em Get background color of cell. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebridges_1_1game_afaa832a4322b25b6a4ebfba832f10f26}{Named\+Color}} \mbox{\hyperlink{classbridges_1_1game_1_1_game_cell_af9269057618ffdd503768ccd6b6e6f56}{get\+FGColor}} () const
+\begin{DoxyCompactList}\small\item\em Get foreground color of cell. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebridges_1_1game_ab9a19c7ab6e2ebac2f95180e21733487}{Named\+Symbol}} \mbox{\hyperlink{classbridges_1_1game_1_1_game_cell_a55ed5769afe548a707117379425613f0}{get\+Symbol}} () const
+\begin{DoxyCompactList}\small\item\em Get cell symbol. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1game_1_1_game_cell_a750114853f2f0f7519cb663352230868}\label{classbridges_1_1game_1_1_game_cell_a750114853f2f0f7519cb663352230868}} 
+\index{bridges::game::GameCell@{bridges::game::GameCell}!GameCell@{GameCell}}
+\index{GameCell@{GameCell}!bridges::game::GameCell@{bridges::game::GameCell}}
+\doxysubsubsection{\texorpdfstring{GameCell()}{GameCell()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bridges\+::game\+::\+Game\+Cell\+::\+Game\+Cell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+constructor 
+
+\mbox{\Hypertarget{classbridges_1_1game_1_1_game_cell_a743b618fc8553aa9aac33ddc3bb65a79}\label{classbridges_1_1game_1_1_game_cell_a743b618fc8553aa9aac33ddc3bb65a79}} 
+\index{bridges::game::GameCell@{bridges::game::GameCell}!GameCell@{GameCell}}
+\index{GameCell@{GameCell}!bridges::game::GameCell@{bridges::game::GameCell}}
+\doxysubsubsection{\texorpdfstring{GameCell()}{GameCell()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bridges\+::game\+::\+Game\+Cell\+::\+Game\+Cell (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebridges_1_1game_afaa832a4322b25b6a4ebfba832f10f26}{Named\+Color}}}]{bg,  }\item[{\mbox{\hyperlink{namespacebridges_1_1game_afaa832a4322b25b6a4ebfba832f10f26}{Named\+Color}}}]{fg,  }\item[{\mbox{\hyperlink{namespacebridges_1_1game_ab9a19c7ab6e2ebac2f95180e21733487}{Named\+Symbol}}}]{symbol }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+constructor 
+\begin{DoxyParams}{Parameters}
+{\em bg} & background color \\
+\hline
+{\em fg} & foreground color \\
+\hline
+{\em symbol} & symbol a this cell \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1game_1_1_game_cell_abfe53785cb331ee73455ef4f7c2f1ba6}\label{classbridges_1_1game_1_1_game_cell_abfe53785cb331ee73455ef4f7c2f1ba6}} 
+\index{bridges::game::GameCell@{bridges::game::GameCell}!getBGColor@{getBGColor}}
+\index{getBGColor@{getBGColor}!bridges::game::GameCell@{bridges::game::GameCell}}
+\doxysubsubsection{\texorpdfstring{getBGColor()}{getBGColor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebridges_1_1game_afaa832a4322b25b6a4ebfba832f10f26}{Named\+Color}} bridges\+::game\+::\+Game\+Cell\+::get\+BGColor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get background color of cell. 
+
+\begin{DoxyReturn}{Returns}
+background color of cell 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1game_1_1_game_cell_af9269057618ffdd503768ccd6b6e6f56}\label{classbridges_1_1game_1_1_game_cell_af9269057618ffdd503768ccd6b6e6f56}} 
+\index{bridges::game::GameCell@{bridges::game::GameCell}!getFGColor@{getFGColor}}
+\index{getFGColor@{getFGColor}!bridges::game::GameCell@{bridges::game::GameCell}}
+\doxysubsubsection{\texorpdfstring{getFGColor()}{getFGColor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebridges_1_1game_afaa832a4322b25b6a4ebfba832f10f26}{Named\+Color}} bridges\+::game\+::\+Game\+Cell\+::get\+FGColor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get foreground color of cell. 
+
+\begin{DoxyReturn}{Returns}
+foreground color of cell 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1game_1_1_game_cell_a55ed5769afe548a707117379425613f0}\label{classbridges_1_1game_1_1_game_cell_a55ed5769afe548a707117379425613f0}} 
+\index{bridges::game::GameCell@{bridges::game::GameCell}!getSymbol@{getSymbol}}
+\index{getSymbol@{getSymbol}!bridges::game::GameCell@{bridges::game::GameCell}}
+\doxysubsubsection{\texorpdfstring{getSymbol()}{getSymbol()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebridges_1_1game_ab9a19c7ab6e2ebac2f95180e21733487}{Named\+Symbol}} bridges\+::game\+::\+Game\+Cell\+::get\+Symbol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get cell symbol. 
+
+\begin{DoxyReturn}{Returns}
+symbol at this cell 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1game_1_1_game_cell_ac2ee6a35500564b3df970551dcf56892}\label{classbridges_1_1game_1_1_game_cell_ac2ee6a35500564b3df970551dcf56892}} 
+\index{bridges::game::GameCell@{bridges::game::GameCell}!setBGColor@{setBGColor}}
+\index{setBGColor@{setBGColor}!bridges::game::GameCell@{bridges::game::GameCell}}
+\doxysubsubsection{\texorpdfstring{setBGColor()}{setBGColor()}}
+{\footnotesize\ttfamily void bridges\+::game\+::\+Game\+Cell\+::set\+BGColor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebridges_1_1game_afaa832a4322b25b6a4ebfba832f10f26}{Named\+Color}}}]{bg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set background color using Named\+Color Enum argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bg} & -\/ Named Color from the Named\+Color enum \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1game_1_1_game_cell_a899b56c1561ca4acacc42e9d740aa19a}\label{classbridges_1_1game_1_1_game_cell_a899b56c1561ca4acacc42e9d740aa19a}} 
+\index{bridges::game::GameCell@{bridges::game::GameCell}!setFGColor@{setFGColor}}
+\index{setFGColor@{setFGColor}!bridges::game::GameCell@{bridges::game::GameCell}}
+\doxysubsubsection{\texorpdfstring{setFGColor()}{setFGColor()}}
+{\footnotesize\ttfamily void bridges\+::game\+::\+Game\+Cell\+::set\+FGColor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebridges_1_1game_afaa832a4322b25b6a4ebfba832f10f26}{Named\+Color}}}]{fg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set foreground color using Named\+Color Enum argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fg} & -\/ Named Color from the Named\+Color enum \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1game_1_1_game_cell_abd0dde526adf160bf5d026e24410645a}\label{classbridges_1_1game_1_1_game_cell_abd0dde526adf160bf5d026e24410645a}} 
+\index{bridges::game::GameCell@{bridges::game::GameCell}!setSymbol@{setSymbol}}
+\index{setSymbol@{setSymbol}!bridges::game::GameCell@{bridges::game::GameCell}}
+\doxysubsubsection{\texorpdfstring{setSymbol()}{setSymbol()}}
+{\footnotesize\ttfamily void bridges\+::game\+::\+Game\+Cell\+::set\+Symbol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebridges_1_1game_ab9a19c7ab6e2ebac2f95180e21733487}{Named\+Symbol}}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set symbol using int argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & -\/ Named symbol \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/erik/work/bridges/bridges-\/cxx/src/\mbox{\hyperlink{_game_grid_8h}{Game\+Grid.\+h}}\end{DoxyCompactItemize}
