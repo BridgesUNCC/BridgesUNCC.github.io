@@ -16,8 +16,7 @@ int main(int argc, char **argv) {
 
 	// title, description
 	bridges.setTitle("Symbol Collection");
-	bridges.setDescription("Red square, green circle, magenta horizontal and vertical lines, "
-		"and a test label with a purple outline.");
+	bridges.setDescription("Red square, green circle, magenta horizontal and vertical lines, and a test label with a purple outline.");
 
 
 	// create some symbols and add to symbol collection
@@ -35,20 +34,18 @@ int main(int argc, char **argv) {
 	s1->setFillColor(Color("yellow"));
 	s1->setOpacity(0.1f);
 	
-	
-	
 	// and a circle next to it
 	Circle s2(50, 0, 25);
 	s2.setFillColor(Color("green"));
 	s2.setOpacity(1.0f);
-//	sc.addSymbol(&s2);
 
-	// draw a triangle above
+	// create a symbol group and put s1 and s2 into it
 	SymbolGroup g;
 		g.translate(3., 10.);
 		g.addSymbolPtr(s1);
 		g.addSymbol(s2);
 
+	// add the group in the symbol collection 
 	SymbolCollection sc2;
 		sc2.addSymbol (g);
 
@@ -87,8 +84,7 @@ int main(int argc, char **argv) {
 	s6.setOpacity(1.0f);
 	sc.addSymbol(s6);
 
-
-
+	// an example text label
 	Text l;
 	float loc[2] = {0, 25};
 	l.setAnchorLocation(loc);
@@ -103,8 +99,6 @@ int main(int argc, char **argv) {
 
 	// set visualizer type
 	bridges.setDataStructure(sc);
-
-	bridges.setVisualizeJSONFlag(true);
 
 	// visualize the JSON and Collection
 	bridges.visualize();

@@ -1,0 +1,91 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.data_src_dependent <span class="PreProc">import</span> data_source
+
+<span class="Statement">class</span> <span class="Identifier">Image</span>():
+    <span class="Statement">def</span> <span class="Identifier">__init__</span>(self):
+<span class="Comment">#        self.ele_obj = data_source.get_elevation_data([6.020558108041891,46.10757941505641,9.707863253414155,47.77059916141684]) #Switzerland</span>
+        self.ele_obj = data_source.get_elevation_data([<span class="Constant">6.0</span>,<span class="Constant">46.10</span>, <span class="Constant">9.0</span>,<span class="Constant">47.7</span>]) <span class="Comment">#Switzerland</span>
+
+        <span class="Comment"># Create the image file header</span>
+        self.header = <span class="Constant">&quot;</span><span class="Constant">Hello</span><span class="Constant">&quot;</span>
+
+        self.width = <span class="Identifier">int</span>(self.ele_obj.cols)
+        self.height = <span class="Identifier">int</span>(self.ele_obj.rows)
+        self.max_val = <span class="Identifier">int</span>(self.ele_obj.maxVal)
+
+        self.data = self.ele_obj.data
+        self.pixee = []
+        <span class="Comment"># Read the actual image data</span>
+        x_val = <span class="Constant">0</span>
+        y_val = <span class="Constant">0</span>
+
+
+        <span class="Statement">while</span> (y_val &lt; <span class="Identifier">len</span>(self.data)):
+            x_val = <span class="Constant">0</span>
+            <span class="Statement">while</span> (x_val &lt; <span class="Identifier">len</span>(self.data[y_val])):
+                self.pixee.append([y_val, x_val, <span class="Identifier">int</span>(self.data[y_val][x_val])])
+                x_val += <span class="Constant">1</span>
+            y_val += <span class="Constant">1</span>
+
+
+    <span class="Statement">def</span> <span class="Identifier">get_pixel</span>(self, x, y):
+        <span class="Comment"># Return the color of the pixel at x y</span>
+        <span class="Statement">return</span> self.pixee[x + y * self.width]
+
+    <span class="Statement">def</span> <span class="Identifier">get_image</span>(self):
+        <span class="Comment"># Return this image as a ColorGrid image</span>
+        cg = ColorGrid(self.height, self.width)
+
+        <span class="Statement">for</span> y <span class="Statement">in</span> <span class="Identifier">range</span>(self.height):
+            <span class="Statement">for</span> x <span class="Statement">in</span> <span class="Identifier">range</span>(self.width):
+                pix = self.get_pixel(x, y)
+                <span class="Statement">if</span>(pix[<span class="Constant">0</span>] == <span class="Constant">255</span> <span class="Statement">and</span> pix[<span class="Constant">1</span>] == <span class="Constant">0</span> <span class="Statement">and</span> pix[<span class="Constant">2</span>] == <span class="Constant">0</span>):
+                    cg.set(y, x, Color(<span class="Constant">255</span>, <span class="Constant">0</span>, <span class="Constant">0</span>))
+                <span class="Statement">else</span>:
+                    cg.set(y, x, Color(pix[<span class="Constant">2</span>]*<span class="Constant">255</span>/self.max_val, pix[<span class="Constant">2</span>]*<span class="Constant">255</span>/self.max_val, pix[<span class="Constant">2</span>]*<span class="Constant">255</span>/self.max_val))
+
+        <span class="Statement">return</span> cg
+
+    <span class="Statement">def</span> <span class="Identifier">set_pixel</span>(self, x, y, color):
+        <span class="Comment"># Set the color of the pixel at x, y</span>
+        self.pixee[x + y * self.width] = color
+
+    <span class="Statement">def</span> <span class="Identifier">greedy_path</span>(self, start_y):
+        <span class="Comment"># Run the greedy path from (0, start_y) to the right of the image</span>
+
+        current = [<span class="Constant">0</span>, start_y]
+        self.set_pixel(current[<span class="Constant">0</span>], current[<span class="Constant">1</span>], [<span class="Constant">255</span>, <span class="Constant">0</span>, <span class="Constant">0</span>])
+
+        <span class="Comment"># Check the least of the 3 right pixels and move there</span>
+        <span class="Statement">for</span> x <span class="Statement">in</span> <span class="Identifier">range</span>(self.width-<span class="Constant">1</span>):
+            least = current[<span class="Constant">1</span>]
+            <span class="Statement">for</span> y <span class="Statement">in</span> [-<span class="Constant">1</span>, <span class="Constant">1</span>]:
+                <span class="Comment"># Out of bounds of the image just skip</span>
+                <span class="Statement">if</span> current[<span class="Constant">1</span>] + y &lt;= <span class="Constant">0</span> <span class="Statement">or</span> current[<span class="Constant">1</span>] + y &gt; self.height:
+                    <span class="Statement">continue</span>
+
+                <span class="Statement">if</span> self.get_pixel(current[<span class="Constant">0</span>] + <span class="Constant">1</span>, least)[<span class="Constant">2</span>] &lt; self.get_pixel(current[<span class="Constant">0</span>] + <span class="Constant">1</span>, current[<span class="Constant">1</span>] + y)[<span class="Constant">2</span>]:
+                    least = current[<span class="Constant">1</span>] + y
+
+            current[<span class="Constant">0</span>] += <span class="Constant">1</span>
+            current[<span class="Constant">1</span>] = least
+            self.set_pixel(current[<span class="Constant">0</span>], current[<span class="Constant">1</span>], [<span class="Constant">255</span>, <span class="Constant">0</span>, <span class="Constant">0</span>])
+
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
+
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">Mountain Paths - Greedy Algorithms Example</span><span class="Constant">&quot;</span>)
+    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">Path through the mountains through the lowest elevation.</span><span class="Constant">&quot;</span>)
+
+    img = Image()
+
+    img.greedy_path(img.height // <span class="Constant">2</span>)
+
+    bridges.set_data_structure(img.get_image())
+    bridges.visualize()
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
+    main()
+</pre>

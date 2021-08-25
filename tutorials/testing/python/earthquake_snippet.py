@@ -24,5 +24,5 @@ def main():
     print(quake1.time)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

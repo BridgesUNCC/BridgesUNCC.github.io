@@ -25,28 +25,28 @@ t4 = KDTreeElement(key = <span class="Constant">30</span>, dim = <span class="Co
 t5 = KDTreeElement(key = <span class="Constant">60</span>, dim = <span class="Constant">0</span>)
 t6 = KDTreeElement(key = <span class="Constant">80</span>, dim = <span class="Constant">0</span>)
 
-t0.set_left(t1)
-t0.set_right(t2)
-t1.set_left(t3)
-t1.set_label(<span class="Constant">&quot;</span><span class="Constant">X</span><span class="Constant">&quot;</span>)
-t1.set_right(t4)
-t2.set_left(t5)
-t2.set_left(t6)
+t0.left = t1
+t0.right = t2
+t1.left = t3
+t1.label = <span class="Constant">&quot;</span><span class="Constant">X</span><span class="Constant">&quot;</span>
+t1.right = t4
+t2.left = t5
+t2.right = t6
 
-t0.set_label(<span class="Constant">&quot;</span><span class="Constant">X</span><span class="Constant">&quot;</span>)
-t1.set_label(<span class="Constant">&quot;</span><span class="Constant">Y</span><span class="Constant">&quot;</span>)
-t2.set_label(<span class="Constant">&quot;</span><span class="Constant">Y</span><span class="Constant">&quot;</span>)
-t3.set_label(<span class="Constant">&quot;</span><span class="Constant">X</span><span class="Constant">&quot;</span>)
-t4.set_label(<span class="Constant">&quot;</span><span class="Constant">X</span><span class="Constant">&quot;</span>)
-t5.set_label(<span class="Constant">&quot;</span><span class="Constant">X</span><span class="Constant">&quot;</span>)
-t6.set_label(<span class="Constant">&quot;</span><span class="Constant">X</span><span class="Constant">&quot;</span>)
+t0.label = <span class="Constant">&quot;</span><span class="Constant">X</span><span class="Constant">&quot;</span>
+t1.label = <span class="Constant">&quot;</span><span class="Constant">Y</span><span class="Constant">&quot;</span>
+t2.label = <span class="Constant">&quot;</span><span class="Constant">Y</span><span class="Constant">&quot;</span>
+t3.label = <span class="Constant">&quot;</span><span class="Constant">X</span><span class="Constant">&quot;</span>
+t4.label = <span class="Constant">&quot;</span><span class="Constant">X</span><span class="Constant">&quot;</span>
+t5.label = <span class="Constant">&quot;</span><span class="Constant">X</span><span class="Constant">&quot;</span>
+t6.label = <span class="Constant">&quot;</span><span class="Constant">X</span><span class="Constant">&quot;</span>
 
-t0.get_visualizer().set_color(<span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>)
+t0.color = <span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>
 
-t1.get_visualizer().set_color(<span class="Constant">&quot;</span><span class="Constant">orange</span><span class="Constant">&quot;</span>)
-t4.get_visualizer().set_color(<span class="Constant">&quot;</span><span class="Constant">orange</span><span class="Constant">&quot;</span>)
-t5.get_visualizer().set_color(<span class="Constant">&quot;</span><span class="Constant">orange</span><span class="Constant">&quot;</span>)
-t6.get_visualizer().set_color(<span class="Constant">&quot;</span><span class="Constant">orange</span><span class="Constant">&quot;</span>)
+t1.color = <span class="Constant">&quot;</span><span class="Constant">orange</span><span class="Constant">&quot;</span>
+t4.color = <span class="Constant">&quot;</span><span class="Constant">orange</span><span class="Constant">&quot;</span>
+t5.color = <span class="Constant">&quot;</span><span class="Constant">orange</span><span class="Constant">&quot;</span>
+t6.color = <span class="Constant">&quot;</span><span class="Constant">orange</span><span class="Constant">&quot;</span>
 
 bridges.set_data_structure(t0)
 bridges.visualize()

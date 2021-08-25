@@ -17,8 +17,7 @@
 
 	<span class="Comment">// title, description</span>
 	bridges.setTitle(<span class="Constant">&quot;Symbol Collection&quot;</span>);
-	bridges.setDescription(<span class="Constant">&quot;Red square, green circle, magenta horizontal and vertical lines, &quot;</span>
-		<span class="Constant">&quot;and a test label with a purple outline.&quot;</span>);
+	bridges.setDescription(<span class="Constant">&quot;Red square, green circle, magenta horizontal and vertical lines, and a test label with a purple outline.&quot;</span>);
 
 
 	<span class="Comment">// create some symbols and add to symbol collection</span>
@@ -36,20 +35,18 @@
 	s1-&gt;setFillColor(Color(<span class="Constant">&quot;yellow&quot;</span>));
 	s1-&gt;setOpacity(<span class="Constant">0.1f</span>);
 
-
-
 	<span class="Comment">// and a circle next to it</span>
 	Circle s2(<span class="Constant">50</span>, <span class="Constant">0</span>, <span class="Constant">25</span>);
 	s2.setFillColor(Color(<span class="Constant">&quot;green&quot;</span>));
 	s2.setOpacity(<span class="Constant">1.0f</span>);
-<span class="Comment">//	sc.addSymbol(&amp;s2);</span>
 
-	<span class="Comment">// draw a triangle above</span>
+	<span class="Comment">// create a symbol group and put s1 and s2 into it</span>
 	SymbolGroup g;
 		g.translate(<span class="Constant">3.</span>, <span class="Constant">10.</span>);
 		g.addSymbolPtr(s1);
 		g.addSymbol(s2);
 
+	<span class="Comment">// add the group in the symbol collection </span>
 	SymbolCollection sc2;
 		sc2.addSymbol (g);
 
@@ -88,8 +85,7 @@
 	s6.setOpacity(<span class="Constant">1.0f</span>);
 	sc.addSymbol(s6);
 
-
-
+	<span class="Comment">// an example text label</span>
 	Text l;
 	<span class="Type">float</span> loc[<span class="Constant">2</span>] = {<span class="Constant">0</span>, <span class="Constant">25</span>};
 	l.setAnchorLocation(loc);
@@ -104,8 +100,6 @@
 
 	<span class="Comment">// set visualizer type</span>
 	bridges.setDataStructure(sc);
-
-	bridges.setVisualizeJSONFlag(<span class="Constant">true</span>);
 
 	<span class="Comment">// visualize the JSON and Collection</span>
 	bridges.visualize();

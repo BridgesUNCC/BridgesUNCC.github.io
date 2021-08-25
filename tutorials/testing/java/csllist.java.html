@@ -2,6 +2,8 @@
 <span class="PreProc">import</span> bridges.base.CircSLelement;
 <span class="PreProc">import</span> bridges.connect.Bridges;
 
+<span class="PreProc">import</span> java.util.Iterator;
+
 <span class="Type">public</span> <span class="Type">class</span> csllist {
 
 	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) <span class="Type">throws</span> Exception {
@@ -30,6 +32,13 @@
 
 		<span class="Comment">// link the last to the first</span>
 		el4.setNext(el0);
+
+        <span class="Comment">// use the iterator</span>
+        System.out.println(<span class="Constant">&quot;Using iterators..&quot;</span>);
+        Iterator&lt;String&gt; iter = el0.iterator();
+		<span class="Statement">do</span> {
+            System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">&quot;</span> + iter.next());
+		} <span class="Statement">while</span> (iter.hasNext());
 
 		<span class="Comment">// set colors for list elements - see the Color class for supported colors</span>
 		el0.setColor(<span class="Constant">&quot;red&quot;</span>);

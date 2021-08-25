@@ -12,13 +12,13 @@ def main():
     if len(args) > 3:
         bridges.connector.set_server(args[3])
 
-    book_list = get_gutenberg_book_data()
+        book_list = get_gutenberg_book_data()
 
-    book1 = book_list[random.randrange(len(book_list))]
+        book1 = book_list[random.randrange(len(book_list))]
 
-    print(book1.get_title())
-    print(book1.get_author_name())
-    print(book1.get_genre())
+        print(book1.title)
+        print(book1.name)
+        print(book1.genre)
 
-if __name__ == '__main__':
-    main()
+    if __name__ == '__main__':
+        main()
