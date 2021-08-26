@@ -1,0 +1,171 @@
+\hypertarget{classbridges_1_1circ__sl__element_1_1_circ_s_lelement}{}\doxysection{bridges.\+circ\+\_\+sl\+\_\+element.\+Circ\+SLelement Class Reference}
+\label{classbridges_1_1circ__sl__element_1_1_circ_s_lelement}\index{bridges.circ\_sl\_element.CircSLelement@{bridges.circ\_sl\_element.CircSLelement}}
+Inheritance diagram for bridges.\+circ\+\_\+sl\+\_\+element.\+Circ\+SLelement\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classbridges_1_1circ__sl__element_1_1_circ_s_lelement}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Detailed Description}
+This class can be used to instantiate Singly Linked Circular List Elements. 
+
+Structurally they are the same as singly linked elements except that each node constructed with the next point pointing to itself; User\textquotesingle{}s implementation of the circularly linked list needs to ensure that the last node points to first node of the list, as the visualization generation is dependent on this.
+
+Elements have labels (string) that are displayed on the visualization. Elements take an generic object as a user defined parameter, E, which can be any native type or object.
+
+Elements contains a visualizer (Element\+Visualizer) object for setting visual attributes (color, shape, opacity, size), necessary for displaying them in a web browser.
+
+Elements also have a Link\+Visualizer object that is used when they are linked to another element, appropriate for setting link attributes, between an element and its next element.
+
+\begin{DoxyAuthor}{Author}
+Kalpathi Subramanian, Matthew Mc\+Quaigue
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+6/22/16, 1/7/17, 5/17/17, 7/23/19, 12/29/20
+\end{DoxyDate}
+Circular singly linked list tutorial\+: \href{https://bridgesuncc.github.io/tutorials/CircularSinglyLinkedList.html}{\texttt{ https\+://bridgesuncc.\+github.\+io/tutorials/\+Circular\+Singly\+Linked\+List.\+html}} \doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classbridges_1_1circ__sl__element_1_1_circ_s_lelement_a3885ad93ae1368cfef8296ace0ab22c8}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$$\ast$kwargs)
+\begin{DoxyCompactList}\small\item\em The constructor for a Circular Singly Linked Element. \end{DoxyCompactList}\item 
+str \mbox{\hyperlink{classbridges_1_1circ__sl__element_1_1_circ_s_lelement_a417f0fa7de0f4d1017ca7a27870c45d3}{get\+\_\+data\+\_\+structure\+\_\+type}} (self)
+\begin{DoxyCompactList}\small\item\em Gets the data structure type. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1circ__sl__element_1_1_circ_s_lelement_a5abc123aa4a20414a02785f3b1cc342a}{next}} (self)
+\begin{DoxyCompactList}\small\item\em Getter for the next element of this \mbox{\hyperlink{classbridges_1_1circ__sl__element_1_1_circ_s_lelement}{Circ\+SLelement}}. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{classbridges_1_1circ__sl__element_1_1_circ_s_lelement_a19e7629abd5d54b9471c5167f0395ec6}{next}} (self, n)
+\begin{DoxyCompactList}\small\item\em Setter for the next element in Circular list. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1circ__sl__element_1_1_circ_s_lelement_a8c95461772d1f997afa11e2cabc3fd21}{iterator}} (self)
+\begin{DoxyCompactList}\small\item\em list iterator for use in range loops \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbridges_1_1circ__sl__element_1_1_circ_s_lelement_afc8fa34bcbc539e7966db5ec471e3959}{next}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1circ__sl__element_1_1_circ_s_lelement_a3885ad93ae1368cfef8296ace0ab22c8}\label{classbridges_1_1circ__sl__element_1_1_circ_s_lelement_a3885ad93ae1368cfef8296ace0ab22c8}} 
+\index{bridges.circ\_sl\_element.CircSLelement@{bridges.circ\_sl\_element.CircSLelement}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!bridges.circ\_sl\_element.CircSLelement@{bridges.circ\_sl\_element.CircSLelement}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None bridges.\+circ\+\_\+sl\+\_\+element.\+Circ\+SLelement.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+The constructor for a Circular Singly Linked Element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & the generic object that this \mbox{\hyperlink{classbridges_1_1circ__sl__element_1_1_circ_s_lelement}{Circ\+SLelement}} will hold \\
+\hline
+{\em label} & The label of this \mbox{\hyperlink{classbridges_1_1circ__sl__element_1_1_circ_s_lelement}{Circ\+SLelement}} \\
+\hline
+{\em next} & The \mbox{\hyperlink{classbridges_1_1circ__sl__element_1_1_circ_s_lelement}{Circ\+SLelement}} that should be assigned to the next pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+
+None 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbridges_1_1sl__element_1_1_s_lelement_a0824caaa305931953bf3f6d53d3a3d14}{bridges.\+sl\+\_\+element.\+SLelement}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1circ__sl__element_1_1_circ_s_lelement_a417f0fa7de0f4d1017ca7a27870c45d3}\label{classbridges_1_1circ__sl__element_1_1_circ_s_lelement_a417f0fa7de0f4d1017ca7a27870c45d3}} 
+\index{bridges.circ\_sl\_element.CircSLelement@{bridges.circ\_sl\_element.CircSLelement}!get\_data\_structure\_type@{get\_data\_structure\_type}}
+\index{get\_data\_structure\_type@{get\_data\_structure\_type}!bridges.circ\_sl\_element.CircSLelement@{bridges.circ\_sl\_element.CircSLelement}}
+\doxysubsubsection{\texorpdfstring{get\_data\_structure\_type()}{get\_data\_structure\_type()}}
+{\footnotesize\ttfamily  str bridges.\+circ\+\_\+sl\+\_\+element.\+Circ\+SLelement.\+get\+\_\+data\+\_\+structure\+\_\+type (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Gets the data structure type. 
+
+\begin{DoxyReturn}{Returns}
+
+
+str representing the data structure type 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbridges_1_1sl__element_1_1_s_lelement_ae6d1c0479d0ed763e1ea54f5d2f9a0eb}{bridges.\+sl\+\_\+element.\+SLelement}}.
+
+\mbox{\Hypertarget{classbridges_1_1circ__sl__element_1_1_circ_s_lelement_a8c95461772d1f997afa11e2cabc3fd21}\label{classbridges_1_1circ__sl__element_1_1_circ_s_lelement_a8c95461772d1f997afa11e2cabc3fd21}} 
+\index{bridges.circ\_sl\_element.CircSLelement@{bridges.circ\_sl\_element.CircSLelement}!iterator@{iterator}}
+\index{iterator@{iterator}!bridges.circ\_sl\_element.CircSLelement@{bridges.circ\_sl\_element.CircSLelement}}
+\doxysubsubsection{\texorpdfstring{iterator()}{iterator()}}
+{\footnotesize\ttfamily def bridges.\+circ\+\_\+sl\+\_\+element.\+Circ\+SLelement.\+iterator (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+list iterator for use in range loops 
+
+
+
+Reimplemented from \mbox{\hyperlink{classbridges_1_1sl__element_1_1_s_lelement_a60570a813d474577ab1150bdd60137f9}{bridges.\+sl\+\_\+element.\+SLelement}}.
+
+\mbox{\Hypertarget{classbridges_1_1circ__sl__element_1_1_circ_s_lelement_a5abc123aa4a20414a02785f3b1cc342a}\label{classbridges_1_1circ__sl__element_1_1_circ_s_lelement_a5abc123aa4a20414a02785f3b1cc342a}} 
+\index{bridges.circ\_sl\_element.CircSLelement@{bridges.circ\_sl\_element.CircSLelement}!next@{next}}
+\index{next@{next}!bridges.circ\_sl\_element.CircSLelement@{bridges.circ\_sl\_element.CircSLelement}}
+\doxysubsubsection{\texorpdfstring{next()}{next()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def bridges.\+circ\+\_\+sl\+\_\+element.\+Circ\+SLelement.\+next (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Getter for the next element of this \mbox{\hyperlink{classbridges_1_1circ__sl__element_1_1_circ_s_lelement}{Circ\+SLelement}}. 
+
+\begin{DoxyReturn}{Returns}
+
+
+\mbox{\hyperlink{classbridges_1_1circ__sl__element_1_1_circ_s_lelement}{Circ\+SLelement}} the element that follows this element 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbridges_1_1sl__element_1_1_s_lelement_acef793fc5e2533fb91795d01904e8b6d}{bridges.\+sl\+\_\+element.\+SLelement}}.
+
+\mbox{\Hypertarget{classbridges_1_1circ__sl__element_1_1_circ_s_lelement_a19e7629abd5d54b9471c5167f0395ec6}\label{classbridges_1_1circ__sl__element_1_1_circ_s_lelement_a19e7629abd5d54b9471c5167f0395ec6}} 
+\index{bridges.circ\_sl\_element.CircSLelement@{bridges.circ\_sl\_element.CircSLelement}!next@{next}}
+\index{next@{next}!bridges.circ\_sl\_element.CircSLelement@{bridges.circ\_sl\_element.CircSLelement}}
+\doxysubsubsection{\texorpdfstring{next()}{next()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily  None bridges.\+circ\+\_\+sl\+\_\+element.\+Circ\+SLelement.\+next (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{n }\end{DoxyParamCaption})}
+
+
+
+Setter for the next element in Circular list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & the next element to be set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\begin{DoxyParagraph}{None}
+
+\end{DoxyParagraph}
+
+
+Reimplemented from \mbox{\hyperlink{classbridges_1_1sl__element_1_1_s_lelement_a210373939597f4c3bcc26fff98b4e44f}{bridges.\+sl\+\_\+element.\+SLelement}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbridges_1_1circ__sl__element_1_1_circ_s_lelement_afc8fa34bcbc539e7966db5ec471e3959}\label{classbridges_1_1circ__sl__element_1_1_circ_s_lelement_afc8fa34bcbc539e7966db5ec471e3959}} 
+\index{bridges.circ\_sl\_element.CircSLelement@{bridges.circ\_sl\_element.CircSLelement}!next@{next}}
+\index{next@{next}!bridges.circ\_sl\_element.CircSLelement@{bridges.circ\_sl\_element.CircSLelement}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily bridges.\+circ\+\_\+sl\+\_\+element.\+Circ\+SLelement.\+next}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/python/bridges/\mbox{\hyperlink{circ__sl__element_8py}{circ\+\_\+sl\+\_\+element.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,227 @@
+\hypertarget{classbridges_1_1dl__element_1_1_d_lelement}{}\doxysection{bridges.\+dl\+\_\+element.\+DLelement Class Reference}
+\label{classbridges_1_1dl__element_1_1_d_lelement}\index{bridges.dl\_element.DLelement@{bridges.dl\_element.DLelement}}
+Inheritance diagram for bridges.\+dl\+\_\+element.\+DLelement\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classbridges_1_1dl__element_1_1_d_lelement}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Detailed Description}
+This class is used to create doubly linked element objects. 
+
+This class extends Element and takes a generic parameter $<$\+E$>$ representing application specific data. This element forms the basic building block for doubly linked lists. Doubly linked elements have two links, \char`\"{}next\char`\"{} and \char`\"{}previous\char`\"{}, that point to the previous and succeeding nodes along the list.
+
+Elements contain a visualizer (Element\+Visualizer) object for setting visual attributes (color, shape, opacity, size), necessary for displaying them in a web browser.
+
+Elements also have a Link\+Visualizer object that is used when they are linked to another element, appropriate for setting link attributes, such as in linked lists, between the current element and its next or previous nodes.
+
+\begin{DoxyAuthor}{Author}
+Mihai Mehedint, Kalpathi Subramanian 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2018, 6/24/19
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+Doubly Linked List tutorial \+: \href{https://bridgesuncc.github.io/tutorials/DoublyLinkedList.html}{\texttt{ https\+://bridgesuncc.\+github.\+io/tutorials/\+Doubly\+Linked\+List.\+html}} 
+\end{DoxySeeAlso}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classbridges_1_1dl__element_1_1_d_lelement_aee09aaea8dbbab75d75a573da25c817c}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$args, $\ast$$\ast$kwargs)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classbridges_1_1dl__element_1_1_d_lelement}{DLelement}}. \end{DoxyCompactList}\item 
+str \mbox{\hyperlink{classbridges_1_1dl__element_1_1_d_lelement_a6ffddb5ac79a3945c1559dbc2236ab81}{get\+\_\+data\+\_\+structure\+\_\+type}} (self)
+\begin{DoxyCompactList}\small\item\em This method gets the data structure type. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1dl__element_1_1_d_lelement_a43077e810ec453c9cd512ba75819e28a}{next}} (self)
+\begin{DoxyCompactList}\small\item\em Getter for the next element in Dlelement. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1dl__element_1_1_d_lelement_ae46f630cd7384689d4305770e6b2c7c1}{next}} (self, el)
+\begin{DoxyCompactList}\small\item\em Setter for the next element. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1dl__element_1_1_d_lelement_a66e7c4bfb2216a68744fe58c24e9917f}{prev}} (self)
+\begin{DoxyCompactList}\small\item\em Getter for the prev element in Dlelement. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1dl__element_1_1_d_lelement_a17c371ec0c38e9555e55551d9be4d185}{prev}} (self, el)
+\begin{DoxyCompactList}\small\item\em Setter for the prev element. \end{DoxyCompactList}\item 
+dict \mbox{\hyperlink{classbridges_1_1dl__element_1_1_d_lelement_aa64bd3f44ef45870456bf7bea80daadd}{get\+\_\+data\+\_\+structure\+\_\+representation}} (self)
+\begin{DoxyCompactList}\small\item\em Getter for the json representation of this list. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1dl__element_1_1_d_lelement_a2baa040819283ef3adcda70b630de421}{reverse\+\_\+iterator}} (self)
+\begin{DoxyCompactList}\small\item\em This iterator is used with range loops. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1dl__element_1_1_d_lelement_aee09aaea8dbbab75d75a573da25c817c}\label{classbridges_1_1dl__element_1_1_d_lelement_aee09aaea8dbbab75d75a573da25c817c}} 
+\index{bridges.dl\_element.DLelement@{bridges.dl\_element.DLelement}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!bridges.dl\_element.DLelement@{bridges.dl\_element.DLelement}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None bridges.\+dl\+\_\+element.\+DLelement.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{classbridges_1_1dl__element_1_1_d_lelement}{DLelement}}. 
+
+\begin{DoxyVerb}       (object) e: the genereic application specific object that DLelement is holding
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em next} & the \mbox{\hyperlink{classbridges_1_1dl__element_1_1_d_lelement}{DLelement}} that should be assigned to the next pointer \\
+\hline
+{\em prev} & the \mbox{\hyperlink{classbridges_1_1dl__element_1_1_d_lelement}{DLelement}} that should be assigned to the prev pointer (str) label\+: the label for this \mbox{\hyperlink{classbridges_1_1dl__element_1_1_d_lelement}{DLelement}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyParagraph}{Return}
+None 
+\end{DoxyParagraph}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1dl__element_1_1_d_lelement_aa64bd3f44ef45870456bf7bea80daadd}\label{classbridges_1_1dl__element_1_1_d_lelement_aa64bd3f44ef45870456bf7bea80daadd}} 
+\index{bridges.dl\_element.DLelement@{bridges.dl\_element.DLelement}!get\_data\_structure\_representation@{get\_data\_structure\_representation}}
+\index{get\_data\_structure\_representation@{get\_data\_structure\_representation}!bridges.dl\_element.DLelement@{bridges.dl\_element.DLelement}}
+\doxysubsubsection{\texorpdfstring{get\_data\_structure\_representation()}{get\_data\_structure\_representation()}}
+{\footnotesize\ttfamily  dict bridges.\+dl\+\_\+element.\+DLelement.\+get\+\_\+data\+\_\+structure\+\_\+representation (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Getter for the json representation of this list. 
+
+\begin{DoxyReturn}{Returns}
+
+
+dict representing the JSON format 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbridges_1_1sl__element_1_1_s_lelement_adcf1fd38e95d8bbcfa64dac7262c0285}{bridges.\+sl\+\_\+element.\+SLelement}}.
+
+\mbox{\Hypertarget{classbridges_1_1dl__element_1_1_d_lelement_a6ffddb5ac79a3945c1559dbc2236ab81}\label{classbridges_1_1dl__element_1_1_d_lelement_a6ffddb5ac79a3945c1559dbc2236ab81}} 
+\index{bridges.dl\_element.DLelement@{bridges.dl\_element.DLelement}!get\_data\_structure\_type@{get\_data\_structure\_type}}
+\index{get\_data\_structure\_type@{get\_data\_structure\_type}!bridges.dl\_element.DLelement@{bridges.dl\_element.DLelement}}
+\doxysubsubsection{\texorpdfstring{get\_data\_structure\_type()}{get\_data\_structure\_type()}}
+{\footnotesize\ttfamily  str bridges.\+dl\+\_\+element.\+DLelement.\+get\+\_\+data\+\_\+structure\+\_\+type (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This method gets the data structure type. 
+
+\begin{DoxyReturn}{Returns}
+
+
+str representing the data structure type 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbridges_1_1sl__element_1_1_s_lelement_ae6d1c0479d0ed763e1ea54f5d2f9a0eb}{bridges.\+sl\+\_\+element.\+SLelement}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classbridges_1_1circ__dl__element_1_1_circ_d_lelement_a86837fc443104b20589874000821afbd}{bridges.\+circ\+\_\+dl\+\_\+element.\+Circ\+DLelement}}.
+
+\mbox{\Hypertarget{classbridges_1_1dl__element_1_1_d_lelement_a43077e810ec453c9cd512ba75819e28a}\label{classbridges_1_1dl__element_1_1_d_lelement_a43077e810ec453c9cd512ba75819e28a}} 
+\index{bridges.dl\_element.DLelement@{bridges.dl\_element.DLelement}!next@{next}}
+\index{next@{next}!bridges.dl\_element.DLelement@{bridges.dl\_element.DLelement}}
+\doxysubsubsection{\texorpdfstring{next()}{next()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def bridges.\+dl\+\_\+element.\+DLelement.\+next (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Getter for the next element in Dlelement. 
+
+\begin{DoxyReturn}{Returns}
+element pointed to by this element 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbridges_1_1sl__element_1_1_s_lelement_acef793fc5e2533fb91795d01904e8b6d}{bridges.\+sl\+\_\+element.\+SLelement}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classbridges_1_1circ__dl__element_1_1_circ_d_lelement_a09b8b12344743709cce1d5fd926b88e9}{bridges.\+circ\+\_\+dl\+\_\+element.\+Circ\+DLelement}}.
+
+\mbox{\Hypertarget{classbridges_1_1dl__element_1_1_d_lelement_ae46f630cd7384689d4305770e6b2c7c1}\label{classbridges_1_1dl__element_1_1_d_lelement_ae46f630cd7384689d4305770e6b2c7c1}} 
+\index{bridges.dl\_element.DLelement@{bridges.dl\_element.DLelement}!next@{next}}
+\index{next@{next}!bridges.dl\_element.DLelement@{bridges.dl\_element.DLelement}}
+\doxysubsubsection{\texorpdfstring{next()}{next()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def bridges.\+dl\+\_\+element.\+DLelement.\+next (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{el }\end{DoxyParamCaption})}
+
+
+
+Setter for the next element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em el} & element to be set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+
+None 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbridges_1_1sl__element_1_1_s_lelement_a210373939597f4c3bcc26fff98b4e44f}{bridges.\+sl\+\_\+element.\+SLelement}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classbridges_1_1circ__dl__element_1_1_circ_d_lelement_adb12e76948e7515f1987fc3bdbe0e861}{bridges.\+circ\+\_\+dl\+\_\+element.\+Circ\+DLelement}}.
+
+\mbox{\Hypertarget{classbridges_1_1dl__element_1_1_d_lelement_a66e7c4bfb2216a68744fe58c24e9917f}\label{classbridges_1_1dl__element_1_1_d_lelement_a66e7c4bfb2216a68744fe58c24e9917f}} 
+\index{bridges.dl\_element.DLelement@{bridges.dl\_element.DLelement}!prev@{prev}}
+\index{prev@{prev}!bridges.dl\_element.DLelement@{bridges.dl\_element.DLelement}}
+\doxysubsubsection{\texorpdfstring{prev()}{prev()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def bridges.\+dl\+\_\+element.\+DLelement.\+prev (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Getter for the prev element in Dlelement. 
+
+\begin{DoxyReturn}{Returns}
+element that is prior to this element 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classbridges_1_1circ__dl__element_1_1_circ_d_lelement_aa2ebe17f407680a6a4fc886ef9516d61}{bridges.\+circ\+\_\+dl\+\_\+element.\+Circ\+DLelement}}.
+
+\mbox{\Hypertarget{classbridges_1_1dl__element_1_1_d_lelement_a17c371ec0c38e9555e55551d9be4d185}\label{classbridges_1_1dl__element_1_1_d_lelement_a17c371ec0c38e9555e55551d9be4d185}} 
+\index{bridges.dl\_element.DLelement@{bridges.dl\_element.DLelement}!prev@{prev}}
+\index{prev@{prev}!bridges.dl\_element.DLelement@{bridges.dl\_element.DLelement}}
+\doxysubsubsection{\texorpdfstring{prev()}{prev()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def bridges.\+dl\+\_\+element.\+DLelement.\+prev (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{el }\end{DoxyParamCaption})}
+
+
+
+Setter for the prev element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em el} & element to be set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+
+None 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classbridges_1_1circ__dl__element_1_1_circ_d_lelement_a0c61c5aefd9fb24c320e9f879d5a2e10}{bridges.\+circ\+\_\+dl\+\_\+element.\+Circ\+DLelement}}.
+
+\mbox{\Hypertarget{classbridges_1_1dl__element_1_1_d_lelement_a2baa040819283ef3adcda70b630de421}\label{classbridges_1_1dl__element_1_1_d_lelement_a2baa040819283ef3adcda70b630de421}} 
+\index{bridges.dl\_element.DLelement@{bridges.dl\_element.DLelement}!reverse\_iterator@{reverse\_iterator}}
+\index{reverse\_iterator@{reverse\_iterator}!bridges.dl\_element.DLelement@{bridges.dl\_element.DLelement}}
+\doxysubsubsection{\texorpdfstring{reverse\_iterator()}{reverse\_iterator()}}
+{\footnotesize\ttfamily def bridges.\+dl\+\_\+element.\+DLelement.\+reverse\+\_\+iterator (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+This iterator is used with range loops. 
+
+
+
+Reimplemented in \mbox{\hyperlink{classbridges_1_1circ__dl__element_1_1_circ_d_lelement_ae92b2635ac5d448f4ad90d058fb5e4ab}{bridges.\+circ\+\_\+dl\+\_\+element.\+Circ\+DLelement}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/python/bridges/\mbox{\hyperlink{dl__element_8py}{dl\+\_\+element.\+py}}\end{DoxyCompactItemize}

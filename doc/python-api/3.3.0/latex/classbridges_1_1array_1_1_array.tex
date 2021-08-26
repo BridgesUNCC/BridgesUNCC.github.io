@@ -1,0 +1,320 @@
+\hypertarget{classbridges_1_1array_1_1_array}{}\doxysection{bridges.\+array.\+Array Class Reference}
+\label{classbridges_1_1array_1_1_array}\index{bridges.array.Array@{bridges.array.Array}}
+Inheritance diagram for bridges.\+array.\+Array\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbridges_1_1array_1_1_array}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Detailed Description}
+This class can be used to create arrays of type Element$<$\+E$>$. 
+
+\begin{DoxyAuthor}{Author}
+Matthew Mc\+Quaigue
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/8/16, 6/09/19
+\end{DoxyDate}
+This class can be used to create arrays of type Element$<$\+E$>$ where E is a generic object representing application specific data.
+
+Arrays are internally represented as 1D arrays; currently 1D, 2D and 3D arrays are supported.
+
+Example Tutorial at\+: \href{https://bridgesuncc.github.io/tutorials/Array.html}{\texttt{ https\+://bridgesuncc.\+github.\+io/tutorials/\+Array.\+html}} (1D, 2D, and 3D \mbox{\hyperlink{classbridges_1_1array_1_1_array}{Array}}) \doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classbridges_1_1array_1_1_array_a84c1237ed71850f141cd0cac5a8f77c3}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$$\ast$kwargs)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classbridges_1_1array_1_1_array}{Array}} constructor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classbridges_1_1array_1_1_array_a4d7ea01781326e1b07a297f54ddcba2d}{num\+\_\+dims}} (self)
+\begin{DoxyCompactList}\small\item\em Getter for representing the number of dimensions in the array. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{classbridges_1_1array_1_1_array_afea12a8b38ac62d46413e557c3c1d89d}{num\+\_\+dims}} (self, int value)
+\begin{DoxyCompactList}\small\item\em Setter function for the number of dimensions for the array. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classbridges_1_1array_1_1_array_a479be9c2ec7aace6db3bec8b48a53ac7}{size}} (self)
+\begin{DoxyCompactList}\small\item\em Getter for representing the size of array. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{classbridges_1_1array_1_1_array_a50f6b3cf7794221428038cc84f868e25}{size}} (self, int sz)
+\begin{DoxyCompactList}\small\item\em Setter for representing the size of the array. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{classbridges_1_1array_1_1_array_aa503ee9a06a60ddf8acb9e5dc49c820a}{set\+\_\+size}} (self, int nd, list dim)
+\begin{DoxyCompactList}\small\item\em Set the size of each dimensions; also allocates array space. \end{DoxyCompactList}\item 
+str \mbox{\hyperlink{classbridges_1_1array_1_1_array_aa52e4e7984fa0cc6ed1f160d25dfe14e}{get\+\_\+data\+\_\+structure\+\_\+type}} (self)
+\begin{DoxyCompactList}\small\item\em Gets the data structure type. \end{DoxyCompactList}\item 
+list \mbox{\hyperlink{classbridges_1_1array_1_1_array_a522509608957badbb17197b0bb7d11e6}{get\+\_\+dimensions}} (self)
+\begin{DoxyCompactList}\small\item\em Get the size of each dimensions. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1array_1_1_array_a2951a024fefc11202bc8036b2314bb42}{get\+\_\+element}} (self, $\ast$args, $\ast$$\ast$kwargs)
+\begin{DoxyCompactList}\small\item\em Getter function for an element in the array at given position. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1array_1_1_array_ab43ea53de915dec3a57c32918979300b}{set\+\_\+element}} (self, $\ast$args, $\ast$$\ast$kwargs)
+\begin{DoxyCompactList}\small\item\em Setter function for an element in the array at given position. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classbridges_1_1array_1_1_array_ad97d5a2cb4bffa4a6bcdb15a3ece0974}{\+\_\+\+\_\+getitem\+\_\+\+\_\+}} (self, item)
+\item 
+def \mbox{\hyperlink{classbridges_1_1array_1_1_array_a97fd57b09a0b8ae221ecaa50c1c483b1}{\+\_\+\+\_\+setitem\+\_\+\+\_\+}} (self, key, value)
+\item 
+dict \mbox{\hyperlink{classbridges_1_1array_1_1_array_aaec9bd4d74389f4de5a47f3485a47ce0}{get\+\_\+data\+\_\+structure\+\_\+representation}} (self)
+\begin{DoxyCompactList}\small\item\em Generating the JSON string for a bridges array object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbridges_1_1array_1_1_array_a2c28c3658312289dc2ae78f4099d4c76}{num\+\_\+dims}}
+\item 
+\mbox{\hyperlink{classbridges_1_1array_1_1_array_aeac1b1639d0284500f354d41b40c38f7}{size}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{classbridges_1_1array_1_1_array_a69f2c673a6077e203b3e916dd73cd243}{dims}} = \mbox{[}1,1,1\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1array_1_1_array_a84c1237ed71850f141cd0cac5a8f77c3}\label{classbridges_1_1array_1_1_array_a84c1237ed71850f141cd0cac5a8f77c3}} 
+\index{bridges.array.Array@{bridges.array.Array}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!bridges.array.Array@{bridges.array.Array}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def bridges.\+array.\+Array.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classbridges_1_1array_1_1_array}{Array}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dims} & size of each dimension (array) \\
+\hline
+{\em num\+\_\+dims} & The dimensions of the array (1-\/3). Defaults to 1 dimension (int) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+
+None 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classbridges_1_1array3d_1_1_array3_d_a24ea126f1007b53eaf420e32f086cac3}{bridges.\+array3d.\+Array3D}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1array_1_1_array_ad97d5a2cb4bffa4a6bcdb15a3ece0974}\label{classbridges_1_1array_1_1_array_ad97d5a2cb4bffa4a6bcdb15a3ece0974}} 
+\index{bridges.array.Array@{bridges.array.Array}!\_\_getitem\_\_@{\_\_getitem\_\_}}
+\index{\_\_getitem\_\_@{\_\_getitem\_\_}!bridges.array.Array@{bridges.array.Array}}
+\doxysubsubsection{\texorpdfstring{\_\_getitem\_\_()}{\_\_getitem\_\_()}}
+{\footnotesize\ttfamily def bridges.\+array.\+Array.\+\_\+\+\_\+getitem\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{item }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1array_1_1_array_a97fd57b09a0b8ae221ecaa50c1c483b1}\label{classbridges_1_1array_1_1_array_a97fd57b09a0b8ae221ecaa50c1c483b1}} 
+\index{bridges.array.Array@{bridges.array.Array}!\_\_setitem\_\_@{\_\_setitem\_\_}}
+\index{\_\_setitem\_\_@{\_\_setitem\_\_}!bridges.array.Array@{bridges.array.Array}}
+\doxysubsubsection{\texorpdfstring{\_\_setitem\_\_()}{\_\_setitem\_\_()}}
+{\footnotesize\ttfamily def bridges.\+array.\+Array.\+\_\+\+\_\+setitem\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{key,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1array_1_1_array_aaec9bd4d74389f4de5a47f3485a47ce0}\label{classbridges_1_1array_1_1_array_aaec9bd4d74389f4de5a47f3485a47ce0}} 
+\index{bridges.array.Array@{bridges.array.Array}!get\_data\_structure\_representation@{get\_data\_structure\_representation}}
+\index{get\_data\_structure\_representation@{get\_data\_structure\_representation}!bridges.array.Array@{bridges.array.Array}}
+\doxysubsubsection{\texorpdfstring{get\_data\_structure\_representation()}{get\_data\_structure\_representation()}}
+{\footnotesize\ttfamily  dict bridges.\+array.\+Array.\+get\+\_\+data\+\_\+structure\+\_\+representation (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Generating the JSON string for a bridges array object. 
+
+\begin{DoxyReturn}{Returns}
+
+
+dict the dict that will represent the json when dumped 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1array_1_1_array_aa52e4e7984fa0cc6ed1f160d25dfe14e}\label{classbridges_1_1array_1_1_array_aa52e4e7984fa0cc6ed1f160d25dfe14e}} 
+\index{bridges.array.Array@{bridges.array.Array}!get\_data\_structure\_type@{get\_data\_structure\_type}}
+\index{get\_data\_structure\_type@{get\_data\_structure\_type}!bridges.array.Array@{bridges.array.Array}}
+\doxysubsubsection{\texorpdfstring{get\_data\_structure\_type()}{get\_data\_structure\_type()}}
+{\footnotesize\ttfamily  str bridges.\+array.\+Array.\+get\+\_\+data\+\_\+structure\+\_\+type (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Gets the data structure type. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Value\+Error} & if number of dimensions is $<$ 1 or $>$ 3 \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+
+
+str type of data structure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1array_1_1_array_a522509608957badbb17197b0bb7d11e6}\label{classbridges_1_1array_1_1_array_a522509608957badbb17197b0bb7d11e6}} 
+\index{bridges.array.Array@{bridges.array.Array}!get\_dimensions@{get\_dimensions}}
+\index{get\_dimensions@{get\_dimensions}!bridges.array.Array@{bridges.array.Array}}
+\doxysubsubsection{\texorpdfstring{get\_dimensions()}{get\_dimensions()}}
+{\footnotesize\ttfamily  list bridges.\+array.\+Array.\+get\+\_\+dimensions (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the size of each dimensions. 
+
+\begin{DoxyReturn}{Returns}
+
+
+list size of each dimension 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1array_1_1_array_a2951a024fefc11202bc8036b2314bb42}\label{classbridges_1_1array_1_1_array_a2951a024fefc11202bc8036b2314bb42}} 
+\index{bridges.array.Array@{bridges.array.Array}!get\_element@{get\_element}}
+\index{get\_element@{get\_element}!bridges.array.Array@{bridges.array.Array}}
+\doxysubsubsection{\texorpdfstring{get\_element()}{get\_element()}}
+{\footnotesize\ttfamily def bridges.\+array.\+Array.\+get\+\_\+element (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Getter function for an element in the array at given position. 
+
+\begin{DoxyVerb}       (int) x,y,z,: indices
+
+       (int) index: the index of array to get in array
+       (int) x: column index into array
+       (int) y: row index into array
+       (int) z: slice index into array
+\end{DoxyVerb}
+ \begin{DoxyReturn}{Returns}
+
+
+Element the element at position given 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1array_1_1_array_a4d7ea01781326e1b07a297f54ddcba2d}\label{classbridges_1_1array_1_1_array_a4d7ea01781326e1b07a297f54ddcba2d}} 
+\index{bridges.array.Array@{bridges.array.Array}!num\_dims@{num\_dims}}
+\index{num\_dims@{num\_dims}!bridges.array.Array@{bridges.array.Array}}
+\doxysubsubsection{\texorpdfstring{num\_dims()}{num\_dims()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily  int bridges.\+array.\+Array.\+num\+\_\+dims (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Getter for representing the number of dimensions in the array. 
+
+\begin{DoxyReturn}{Returns}
+
+
+int number of dimensions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1array_1_1_array_afea12a8b38ac62d46413e557c3c1d89d}\label{classbridges_1_1array_1_1_array_afea12a8b38ac62d46413e557c3c1d89d}} 
+\index{bridges.array.Array@{bridges.array.Array}!num\_dims@{num\_dims}}
+\index{num\_dims@{num\_dims}!bridges.array.Array@{bridges.array.Array}}
+\doxysubsubsection{\texorpdfstring{num\_dims()}{num\_dims()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily  None bridges.\+array.\+Array.\+num\+\_\+dims (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+Setter function for the number of dimensions for the array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & An integer for the number of dimensions (Between 1 and 3 inclusive) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+
+None
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Value\+Error} & if dimension passed in is $<$ 1 or $>$ 3 \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classbridges_1_1array_1_1_array_ab43ea53de915dec3a57c32918979300b}\label{classbridges_1_1array_1_1_array_ab43ea53de915dec3a57c32918979300b}} 
+\index{bridges.array.Array@{bridges.array.Array}!set\_element@{set\_element}}
+\index{set\_element@{set\_element}!bridges.array.Array@{bridges.array.Array}}
+\doxysubsubsection{\texorpdfstring{set\_element()}{set\_element()}}
+{\footnotesize\ttfamily def bridges.\+array.\+Array.\+set\+\_\+element (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Setter function for an element in the array at given position. 
+
+\begin{DoxyVerb}       (int) x,y,z: indices
+       (Element) el: element object to be assigned to index, always last position arg if using unnamed args
+
+       (Element) el: element object to be assigned to index
+       (int) index: the index of array to get in array
+       (int) x: column index into array
+       (int) y: row index into array
+       (int) z: slice index into array
+\end{DoxyVerb}
+ \begin{DoxyReturn}{Returns}
+
+
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1array_1_1_array_aa503ee9a06a60ddf8acb9e5dc49c820a}\label{classbridges_1_1array_1_1_array_aa503ee9a06a60ddf8acb9e5dc49c820a}} 
+\index{bridges.array.Array@{bridges.array.Array}!set\_size@{set\_size}}
+\index{set\_size@{set\_size}!bridges.array.Array@{bridges.array.Array}}
+\doxysubsubsection{\texorpdfstring{set\_size()}{set\_size()}}
+{\footnotesize\ttfamily  None bridges.\+array.\+Array.\+set\+\_\+size (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{int}]{nd,  }\item[{list}]{dim }\end{DoxyParamCaption})}
+
+
+
+Set the size of each dimensions; also allocates array space. 
+
+\begin{DoxyVerb}       (int) nd: number of dimensions
+       (list) dim: size of each dimension
+\end{DoxyVerb}
+ \begin{DoxyReturn}{Returns}
+
+
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1array_1_1_array_a479be9c2ec7aace6db3bec8b48a53ac7}\label{classbridges_1_1array_1_1_array_a479be9c2ec7aace6db3bec8b48a53ac7}} 
+\index{bridges.array.Array@{bridges.array.Array}!size@{size}}
+\index{size@{size}!bridges.array.Array@{bridges.array.Array}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily  int bridges.\+array.\+Array.\+size (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Getter for representing the size of array. 
+
+\begin{DoxyReturn}{Returns}
+
+
+int the size 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1array_1_1_array_a50f6b3cf7794221428038cc84f868e25}\label{classbridges_1_1array_1_1_array_a50f6b3cf7794221428038cc84f868e25}} 
+\index{bridges.array.Array@{bridges.array.Array}!size@{size}}
+\index{size@{size}!bridges.array.Array@{bridges.array.Array}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily  None bridges.\+array.\+Array.\+size (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{int}]{sz }\end{DoxyParamCaption})}
+
+
+
+Setter for representing the size of the array. 
+
+\begin{DoxyVerb}       (int) sz: The size to be set for array
+\end{DoxyVerb}
+ \begin{DoxyReturn}{Returns}
+
+
+None 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbridges_1_1array_1_1_array_a69f2c673a6077e203b3e916dd73cd243}\label{classbridges_1_1array_1_1_array_a69f2c673a6077e203b3e916dd73cd243}} 
+\index{bridges.array.Array@{bridges.array.Array}!dims@{dims}}
+\index{dims@{dims}!bridges.array.Array@{bridges.array.Array}}
+\doxysubsubsection{\texorpdfstring{dims}{dims}}
+{\footnotesize\ttfamily list bridges.\+array.\+Array.\+dims = \mbox{[}1,1,1\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbridges_1_1array_1_1_array_a2c28c3658312289dc2ae78f4099d4c76}\label{classbridges_1_1array_1_1_array_a2c28c3658312289dc2ae78f4099d4c76}} 
+\index{bridges.array.Array@{bridges.array.Array}!num\_dims@{num\_dims}}
+\index{num\_dims@{num\_dims}!bridges.array.Array@{bridges.array.Array}}
+\doxysubsubsection{\texorpdfstring{num\_dims}{num\_dims}}
+{\footnotesize\ttfamily bridges.\+array.\+Array.\+num\+\_\+dims}
+
+\mbox{\Hypertarget{classbridges_1_1array_1_1_array_aeac1b1639d0284500f354d41b40c38f7}\label{classbridges_1_1array_1_1_array_aeac1b1639d0284500f354d41b40c38f7}} 
+\index{bridges.array.Array@{bridges.array.Array}!size@{size}}
+\index{size@{size}!bridges.array.Array@{bridges.array.Array}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily bridges.\+array.\+Array.\+size}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/python/bridges/\mbox{\hyperlink{array_8py}{array.\+py}}\end{DoxyCompactItemize}

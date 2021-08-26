@@ -1,0 +1,187 @@
+\hypertarget{classbridges_1_1circle_1_1_circle}{}\doxysection{bridges.\+circle.\+Circle Class Reference}
+\label{classbridges_1_1circle_1_1_circle}\index{bridges.circle.Circle@{bridges.circle.Circle}}
+Inheritance diagram for bridges.\+circle.\+Circle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbridges_1_1circle_1_1_circle}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classbridges_1_1circle_1_1_circle_a60369252614097265daa56881e961f9f}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$$\ast$kwargs)
+\begin{DoxyCompactList}\small\item\em Constructor for a circle symbol. \end{DoxyCompactList}\item 
+str \mbox{\hyperlink{classbridges_1_1circle_1_1_circle_ade31e7b5074d0b7d466bbb824cad29de}{get\+\_\+shape\+\_\+type}} (self)
+\begin{DoxyCompactList}\small\item\em Gets the name of the shape/symbol. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classbridges_1_1circle_1_1_circle_a6903e60b2342b366d456217756018f4f}{radius}} (self)
+\begin{DoxyCompactList}\small\item\em Getter function for the radius of this circle. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{classbridges_1_1circle_1_1_circle_a4048e6ffd463e53ec4eec43695240dc8}{radius}} (self, r)
+\begin{DoxyCompactList}\small\item\em Setter for the radius of this circle. \end{DoxyCompactList}\item 
+None \mbox{\hyperlink{classbridges_1_1circle_1_1_circle_a7144baba783d925fec886c1a27511be1}{set\+\_\+circle}} (self, \mbox{\hyperlink{classbridges_1_1circle_1_1_circle_a23b8dd93569e14abc63c41aa78e4c1a6}{locx}}, \mbox{\hyperlink{classbridges_1_1circle_1_1_circle_a2f2e3b85639957633057eb0d0bbdd190}{locy}}, r)
+\begin{DoxyCompactList}\small\item\em Set the location and size of the circle. \end{DoxyCompactList}\item 
+dict \mbox{\hyperlink{classbridges_1_1circle_1_1_circle_ad694ef551d1d26078bddbecaed711ca1}{get\+\_\+json\+\_\+representation}} (self)
+\begin{DoxyCompactList}\small\item\em Get the json representation of the \mbox{\hyperlink{classbridges_1_1circle_1_1_circle}{Circle}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbridges_1_1circle_1_1_circle_a23b8dd93569e14abc63c41aa78e4c1a6}{locx}}
+\item 
+\mbox{\hyperlink{classbridges_1_1circle_1_1_circle_a2f2e3b85639957633057eb0d0bbdd190}{locy}}
+\item 
+\mbox{\hyperlink{classbridges_1_1circle_1_1_circle_ab52ae32c28ea4175b815a7b04491205b}{radius}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1circle_1_1_circle_a60369252614097265daa56881e961f9f}\label{classbridges_1_1circle_1_1_circle_a60369252614097265daa56881e961f9f}} 
+\index{bridges.circle.Circle@{bridges.circle.Circle}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!bridges.circle.Circle@{bridges.circle.Circle}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None bridges.\+circle.\+Circle.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Constructor for a circle symbol. 
+
+\begin{DoxyVerb}       (int) locx: x location of the circle
+       (int) locy: y location of the circle
+       (float) r: radius of the circle
+\end{DoxyVerb}
+ \begin{DoxyReturn}{Returns}
+
+
+None
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Value\+Error} & if the radius is not a positive number \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1circle_1_1_circle_ad694ef551d1d26078bddbecaed711ca1}\label{classbridges_1_1circle_1_1_circle_ad694ef551d1d26078bddbecaed711ca1}} 
+\index{bridges.circle.Circle@{bridges.circle.Circle}!get\_json\_representation@{get\_json\_representation}}
+\index{get\_json\_representation@{get\_json\_representation}!bridges.circle.Circle@{bridges.circle.Circle}}
+\doxysubsubsection{\texorpdfstring{get\_json\_representation()}{get\_json\_representation()}}
+{\footnotesize\ttfamily  dict bridges.\+circle.\+Circle.\+get\+\_\+json\+\_\+representation (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Get the json representation of the \mbox{\hyperlink{classbridges_1_1circle_1_1_circle}{Circle}} object. 
+
+\begin{DoxyReturn}{Returns}
+
+
+dict representing the JSON 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbridges_1_1symbol_1_1_symbol_a891a710ff160439aa6dc476ce057f22e}{bridges.\+symbol.\+Symbol}}.
+
+\mbox{\Hypertarget{classbridges_1_1circle_1_1_circle_ade31e7b5074d0b7d466bbb824cad29de}\label{classbridges_1_1circle_1_1_circle_ade31e7b5074d0b7d466bbb824cad29de}} 
+\index{bridges.circle.Circle@{bridges.circle.Circle}!get\_shape\_type@{get\_shape\_type}}
+\index{get\_shape\_type@{get\_shape\_type}!bridges.circle.Circle@{bridges.circle.Circle}}
+\doxysubsubsection{\texorpdfstring{get\_shape\_type()}{get\_shape\_type()}}
+{\footnotesize\ttfamily  str bridges.\+circle.\+Circle.\+get\+\_\+shape\+\_\+type (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Gets the name of the shape/symbol. 
+
+\begin{DoxyReturn}{Returns}
+
+
+str representing the name 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbridges_1_1symbol_1_1_symbol_a92110f90e5a34104eb1eab6f9903deda}{bridges.\+symbol.\+Symbol}}.
+
+\mbox{\Hypertarget{classbridges_1_1circle_1_1_circle_a6903e60b2342b366d456217756018f4f}\label{classbridges_1_1circle_1_1_circle_a6903e60b2342b366d456217756018f4f}} 
+\index{bridges.circle.Circle@{bridges.circle.Circle}!radius@{radius}}
+\index{radius@{radius}!bridges.circle.Circle@{bridges.circle.Circle}}
+\doxysubsubsection{\texorpdfstring{radius()}{radius()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily  float bridges.\+circle.\+Circle.\+radius (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Getter function for the radius of this circle. 
+
+\begin{DoxyReturn}{Returns}
+
+
+float representing radius 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1circle_1_1_circle_a4048e6ffd463e53ec4eec43695240dc8}\label{classbridges_1_1circle_1_1_circle_a4048e6ffd463e53ec4eec43695240dc8}} 
+\index{bridges.circle.Circle@{bridges.circle.Circle}!radius@{radius}}
+\index{radius@{radius}!bridges.circle.Circle@{bridges.circle.Circle}}
+\doxysubsubsection{\texorpdfstring{radius()}{radius()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily  None bridges.\+circle.\+Circle.\+radius (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{r }\end{DoxyParamCaption})}
+
+
+
+Setter for the radius of this circle. 
+
+\begin{DoxyVerb}       (float) r: radius to be set
+\end{DoxyVerb}
+ \begin{DoxyReturn}{Returns}
+
+
+None
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Value\+Error} & if the radius is not a positive number \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classbridges_1_1circle_1_1_circle_a7144baba783d925fec886c1a27511be1}\label{classbridges_1_1circle_1_1_circle_a7144baba783d925fec886c1a27511be1}} 
+\index{bridges.circle.Circle@{bridges.circle.Circle}!set\_circle@{set\_circle}}
+\index{set\_circle@{set\_circle}!bridges.circle.Circle@{bridges.circle.Circle}}
+\doxysubsubsection{\texorpdfstring{set\_circle()}{set\_circle()}}
+{\footnotesize\ttfamily  None bridges.\+circle.\+Circle.\+set\+\_\+circle (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{locx,  }\item[{}]{locy,  }\item[{}]{r }\end{DoxyParamCaption})}
+
+
+
+Set the location and size of the circle. 
+
+\begin{DoxyVerb}       (int) locx: x coordinate of the center of the circle
+       (int) locy: y coordinate of the center of the circle
+       (float) r: radius of the circle
+\end{DoxyVerb}
+ \begin{DoxyReturn}{Returns}
+
+
+None
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Value\+Error} & if the radius is not a positive number \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbridges_1_1circle_1_1_circle_a23b8dd93569e14abc63c41aa78e4c1a6}\label{classbridges_1_1circle_1_1_circle_a23b8dd93569e14abc63c41aa78e4c1a6}} 
+\index{bridges.circle.Circle@{bridges.circle.Circle}!locx@{locx}}
+\index{locx@{locx}!bridges.circle.Circle@{bridges.circle.Circle}}
+\doxysubsubsection{\texorpdfstring{locx}{locx}}
+{\footnotesize\ttfamily bridges.\+circle.\+Circle.\+locx}
+
+\mbox{\Hypertarget{classbridges_1_1circle_1_1_circle_a2f2e3b85639957633057eb0d0bbdd190}\label{classbridges_1_1circle_1_1_circle_a2f2e3b85639957633057eb0d0bbdd190}} 
+\index{bridges.circle.Circle@{bridges.circle.Circle}!locy@{locy}}
+\index{locy@{locy}!bridges.circle.Circle@{bridges.circle.Circle}}
+\doxysubsubsection{\texorpdfstring{locy}{locy}}
+{\footnotesize\ttfamily bridges.\+circle.\+Circle.\+locy}
+
+\mbox{\Hypertarget{classbridges_1_1circle_1_1_circle_ab52ae32c28ea4175b815a7b04491205b}\label{classbridges_1_1circle_1_1_circle_ab52ae32c28ea4175b815a7b04491205b}} 
+\index{bridges.circle.Circle@{bridges.circle.Circle}!radius@{radius}}
+\index{radius@{radius}!bridges.circle.Circle@{bridges.circle.Circle}}
+\doxysubsubsection{\texorpdfstring{radius}{radius}}
+{\footnotesize\ttfamily bridges.\+circle.\+Circle.\+radius}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/client/python/bridges/\mbox{\hyperlink{circle_8py}{circle.\+py}}\end{DoxyCompactItemize}
