@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quote_1895',['QUOTE',['../namespacebridges.html#acd8357e88562cbb7e60bea3fac422ac3',1,'bridges']]]
+  ['points_1869',['points',['../classbridges_1_1datastructure_1_1_polyline.html#a0df21b6c3cc82930a93a495de5affda7',1,'bridges::datastructure::Polyline']]]
 ];

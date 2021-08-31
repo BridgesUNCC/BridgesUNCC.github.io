@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['wave_1902',['wave',['../structbridges_1_1_wave_header.html#a7f2215f8069f1ea4e5400c8452868fd3',1,'bridges::WaveHeader']]],
-  ['why_1903',['why',['../structrapidjson__exception.html#a6b432b89bd7052332bc923f274249e1e',1,'rapidjson_exception']]]
+  ['tag_1875',['tag',['../classbridges_1_1datastructure_1_1_m_lelement.html#aef061a364a85ebb0c0f2cdaff8c726e6',1,'bridges::datastructure::MLelement']]],
+  ['time_5fcap_1876',['time_cap',['../classbridges_1_1benchmark_1_1_graph_benchmark.html#a59938016b721fb6db2ff8bdb2c9d41c1',1,'bridges::benchmark::GraphBenchmark']]]
 ];
