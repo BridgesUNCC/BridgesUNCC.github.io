@@ -24,6 +24,7 @@
     </div>
     
     <h2>BRIDGES (Java): Getting Started (Setup)</h2>
+	<i> Note. The following set up instructions used Eclipse Version 2021-12(4.22.0) which was running JRE 17 on OSX; BRIDGES requires the use of Java 8 or later</i> <br> <p>
     <table class = "setup_table-part1">
       <thead>
 	<tr> 
@@ -31,7 +32,7 @@
 	  <ul> <li> If you do not have Eclipse 
 	      installed, download it from the 
 	      <a href = "http://www.eclipse.org/downloads"> Eclipse site</a> 
-	      and install it on your computer <b>(Eclipse IDE 2020-09)</b>. 
+	      and install it on your computer <b>(Eclipse IDE 2020-09)</b>.
 	  </ul>
 	</tr>
 	<tr> 
@@ -70,11 +71,12 @@
 	      <li> In the new window change the <i>Project name</i> 
 		field to your project name, then make sure the 
 		<i>JRE Execution Environmen</i> is <b>JavaSE-8 or above </b>. 
+        Here we are using Java version 17.
 		Click <i>Finish</i>  n the lower right-hand corner.
 	    </ul>
 	  </td>
 	  <td class = "col-md-8">  
-	    <img src = "./img/Tutorialv2/JavaProject.png" width = "800"></img>
+	    <img src = "./img/Tutorialv2/JavaVersion.png" width = "800"></img>
 	  </td>
 	</tr>
 	<tr> <td class = "col-md-2"> <b>Step 5a: Import Jar File into project</b>
@@ -83,10 +85,11 @@
 		<a href = "http://bridgesuncc.github.io">
 		  Bridges home page </a> and save it somewhere convenient on your drive.
 	      <li> On Eclipse, right-click your project in the 
-		Package Explorer window then click: 
-		<i> Build Path --> Add External Archives</i>
+		Package Explorer window then click on Properties; you will see a 
+		dialog widget come up. Navigate  to   
+		<i> Java Build Path --> Class Path</i> and then click on <i>Add External Jars </i>. You should see the following configuration.
 	    </ul>
-	  <td class = "col-md-8"> <img src = "./img/Tutorialv3/addArchive.png" width = "800"></img>
+	  <td class = "col-md-8"> <img src = "./img/Tutorialv2/addArchive.png" width = "800"></img>
           </td>
 	</tr>
 	<tr>
@@ -97,7 +100,7 @@
 	    </ul>
 	  </td>
 	  <td class = "col-md-8">  
-	    <img src = "./img/Tutorialv3/bridges_jar.png" width = "800"></img>
+	    <img src = "./img/Tutorialv2/bridges_jar.png" width = "800"></img>
 	  </td>
 	</tr>
 	<tr>
@@ -114,7 +117,7 @@
 	    </ul>
 	  </td>
 	  <td class = "col-md-8">  
-	    <img src = "./img/Tutorialv3/ReferencedLib.png" width = "800"></img>
+	    <img src = "./img/Tutorialv2/referenced_lib.png" width = "500"></img>
 	  </td>
 	</tr>
       </thead>
@@ -290,9 +293,7 @@
 <tr> 
   <td class = "col-md-2"> <b>Step 3: Running your Bridges program</b>
     <ul>
-      <li> Once your code is in, run your project
-      <li> <i> Run-->Run </i>
-      <li> <i> Run-->Run As -->Java Application</i>
+      <li> Once your code is in, run your project; the first time you might need to choose Run as --> Java Application. After that hitting the Play button would suffice.
     </ul>
   </td>
   <td class = "col-md-8">
