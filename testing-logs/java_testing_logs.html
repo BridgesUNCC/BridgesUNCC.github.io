@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Java</h1>
-	<p>Running at Fri 07 Jan 2022 03:37:45 AM EST</p>
+	<p>Running at Sat 08 Jan 2022 03:37:46 AM EST</p>
   <div id="summaryarray1d.java" class="success">
     <h2><a href="java_testing_logs.html#javalogarray1d.java">Test array1d.java</a> </h2>
     <p>
@@ -75,12 +75,12 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summarybst_eq.java" class="success">
+  <div id="summarybst_eq.java" class="failure">
     <h2><a href="java_testing_logs.html#javalogbst_eq.java">Test bst_eq.java</a> </h2>
     <p>
       <ul>
         <li> Build Test : <a href="java_testing_logs.html#javalogbst_eq.java-buildtest">success</a></li>
-        <li> Run Test : <a href="java_testing_logs.html#javalogbst_eq.java-runtest">success</a></li>
+        <li> Run Test : <a href="java_testing_logs.html#javalogbst_eq.java-runtest">error</a></li>
       </ul>
     </p>
   </div>
@@ -147,12 +147,12 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summaryeq_snippet.java" class="success">
+  <div id="summaryeq_snippet.java" class="failure">
     <h2><a href="java_testing_logs.html#javalogeq_snippet.java">Test eq_snippet.java</a> </h2>
     <p>
       <ul>
         <li> Build Test : <a href="java_testing_logs.html#javalogeq_snippet.java-buildtest">success</a></li>
-        <li> Run Test : <a href="java_testing_logs.html#javalogeq_snippet.java-runtest">success</a></li>
+        <li> Run Test : <a href="java_testing_logs.html#javalogeq_snippet.java-runtest">error</a></li>
       </ul>
     </p>
   </div>
@@ -781,14 +781,12 @@ http://bridges-cs.herokuapp.com/assignments/2006/bridges_testing
 <pre><code>Compiling test bst_eq.java
 </code></pre>
 </div>
-<div class="success">
+<div class="failure">
 <h3><!-- raw HTML omitted -->Run Test for test bst_eq.java<!-- raw HTML omitted --></h3>
-<pre><code>
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/2007/bridges_testing
-
-
+<pre><code>Exception in thread &quot;main&quot; org.apache.http.client.HttpResponseException: HTTP Request Failed. Error Code: 500
+	at bridges.connect.DataSource.getEarthquakeUSGSData(DataSource.java:181)
+	at bst_eq.main(bst_eq.java:25)
+could not run test bst_eq.java
 </code></pre>
 </div>
     
@@ -999,13 +997,12 @@ first 10 elevations:
 <pre><code>Compiling test eq_snippet.java
 </code></pre>
 </div>
-<div class="success">
+<div class="failure">
 <h3><!-- raw HTML omitted -->Run Test for test eq_snippet.java<!-- raw HTML omitted --></h3>
-<pre><code>Earthquake 0:
-	Magnitude:1.8
-	Date:Jan 07 2022  03:25:10.647 EST
-	Location: 60 km SSW of Tatitlek, Alaska
-	Lat/Long:60.3555,-147.0692
+<pre><code>Exception in thread &quot;main&quot; org.apache.http.client.HttpResponseException: HTTP Request Failed. Error Code: 500
+	at bridges.connect.DataSource.getEarthquakeUSGSData(DataSource.java:181)
+	at eq_snippet.main(eq_snippet.java:20)
+could not run test eq_snippet.java
 </code></pre>
 </div>
     
@@ -1063,10 +1060,10 @@ could not run test game_size_test.java
 </div>
 <div class="success">
 <h3><!-- raw HTML omitted -->Run Test for test game_snippet.java<!-- raw HTML omitted --></h3>
-<pre><code>Ford Racing 3
-Nintendo DS
-5.0
-[Racing]
+<pre><code>My Horse &amp;amp; Me
+Wii
+4.5
+[Simulation]
 </code></pre>
 </div>
     
@@ -1331,8 +1328,8 @@ could not run test gutenberg_snippet.java
 </div>
 <div class="success">
 <h3><!-- raw HTML omitted -->Run Test for test imdb_snippet.java<!-- raw HTML omitted --></h3>
-<pre><code>Morgan_Freeman_(I)
-Power_of_One,_The_(1992)
+<pre><code>Christian_Slater
+Contender,_The_(2000)
 </code></pre>
 </div>
     
@@ -1571,11 +1568,11 @@ Location of first vertex [Cartesian Coord]: -657.974041556194,-4700.217494637191
 </div>
 <div class="success">
 <h3><!-- raw HTML omitted -->Run Test for test shakespeare_snippet.java<!-- raw HTML omitted --></h3>
-<pre><code>Sonnet 35
+<pre><code>Sonnet 71
 poem
-No more be grieved at that which thou hast done,
- Roses have thorns, and silver fountains mud,
- Clou...
+No longer mourn for me when I am dead,
+ Than you shall hear the surly sullen bell
+ Give warning to t...
 </code></pre>
 </div>
     
@@ -2412,16 +2409,16 @@ http://bridges-cs.herokuapp.com/assignments/2063/bridges_testing
 <pre><code>Data Records in 1955: 3348
 
 Actor-Movie Data:
-	Movie: Q73944 &quot;Two Tickets to Broadway&quot;
-	Actor: Q166212 &quot;Eddie Bracken&quot;
+	Movie: Q50937 &quot;It Came from Beneath the Sea&quot;
+	Actor: Q440298 &quot;Faith Domergue&quot;
 
 Actor-Movie Data:
-	Movie: Q73944 &quot;Two Tickets to Broadway&quot;
-	Actor: Q205314 &quot;Janet Leigh&quot;
+	Movie: Q50937 &quot;It Came from Beneath the Sea&quot;
+	Actor: Q541016 &quot;Ian Keith&quot;
 
 Actor-Movie Data:
-	Movie: Q73944 &quot;Two Tickets to Broadway&quot;
-	Actor: Q237864 &quot;Vera Miles&quot;
+	Movie: Q50937 &quot;It Came from Beneath the Sea&quot;
+	Actor: Q925911 &quot;Kenneth Tobey&quot;
 
 </code></pre>
 </div>
