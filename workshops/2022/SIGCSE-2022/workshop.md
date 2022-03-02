@@ -12,6 +12,8 @@ Access [slides](talk.pdf).
 
 [ACM/IEEE CS 2013 curriculum guidelines](https://www.acm.org/binaries/content/assets/education/cs2013_web_final.pdf)
 
+[NSF/IEEE-TCPP Parallel and Distributed Computing 2012](https://tcpp.cs.gsu.edu/curriculum/?q=home)
+
 #### What do other instructors do in their course?
 
 Coverage of:
