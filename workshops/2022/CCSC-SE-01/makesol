@@ -1,0 +1,31 @@
+#!/bin/bash
+
+OUT=$(pwd)/sols/
+
+
+makesol() {
+	  PB=$1
+	  
+	  (
+		cd ~/work/bridges/bridges-assignments/assignmentdb
+	  	cd ${PB}
+		(
+			cd c++_answer
+			zip ${OUT}/${PB}-cpp.zip $(git ls-files)
+		)
+		(
+			cd java_answer
+			zip ${OUT}/${PB}-java.zip $(git ls-files)
+		)
+		(
+			cd python_answer
+			zip ${OUT}/${PB}-python.zip $(git ls-files)
+		)	
+	)
+}
+
+makesol 1-ListIMDB
+makesol 9-ShortestPathOSM
+makesol 7-GridLyrics
+makesol 37-BST_Earthquakes
+makesol 33-AudioMixing
