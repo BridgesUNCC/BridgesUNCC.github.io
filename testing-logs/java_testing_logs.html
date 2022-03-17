@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Java</h1>
-	<p>Running at Wed 16 Mar 2022 03:38:06 AM EDT</p>
+	<p>Running at Thu 17 Mar 2022 03:38:29 AM EDT</p>
   <div id="summaryarray1d.java" class="success">
     <h2><a href="java_testing_logs.html#javalogarray1d.java">Test array1d.java</a> </h2>
     <p>
@@ -84,12 +84,12 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summarycancer_snippet.java" class="success">
+  <div id="summarycancer_snippet.java" class="failure">
     <h2><a href="java_testing_logs.html#javalogcancer_snippet.java">Test cancer_snippet.java</a> </h2>
     <p>
       <ul>
         <li> Build Test : <a href="java_testing_logs.html#javalogcancer_snippet.java-buildtest">success</a></li>
-        <li> Run Test : <a href="java_testing_logs.html#javalogcancer_snippet.java-runtest">success</a></li>
+        <li> Run Test : <a href="java_testing_logs.html#javalogcancer_snippet.java-runtest">error</a></li>
       </ul>
     </p>
   </div>
@@ -318,12 +318,12 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summaryshakespeare_snippet.java" class="success">
+  <div id="summaryshakespeare_snippet.java" class="failure">
     <h2><a href="java_testing_logs.html#javalogshakespeare_snippet.java">Test shakespeare_snippet.java</a> </h2>
     <p>
       <ul>
         <li> Build Test : <a href="java_testing_logs.html#javalogshakespeare_snippet.java-buildtest">success</a></li>
-        <li> Run Test : <a href="java_testing_logs.html#javalogshakespeare_snippet.java-runtest">success</a></li>
+        <li> Run Test : <a href="java_testing_logs.html#javalogshakespeare_snippet.java-runtest">error</a></li>
       </ul>
     </p>
   </div>
@@ -801,18 +801,12 @@ http://bridges-cs.herokuapp.com/assignments/2007/bridges_testing
 <pre><code>Compiling test cancer_snippet.java
 </code></pre>
 </div>
-<div class="success">
+<div class="failure">
 <h3><!-- raw HTML omitted -->Run Test for test cancer_snippet.java<!-- raw HTML omitted --></h3>
-<pre><code>16512
-Incident 0:
-	Type: Mortality
-	Year: 2000
-	Population: 2302835
-	Race: All Races
-	Gender: Female
-	CrudeRate: 192.2(more rate information available) 
-	Location: 32.799, -86.8073
-	Count: 0
+<pre><code>Exception in thread &quot;main&quot; org.apache.http.client.HttpResponseException: HTTP Request Failed. Error Code: 503
+	at bridges.connect.DataSource.getCancerIncidenceData(DataSource.java:336)
+	at cancer_snippet.main(cancer_snippet.java:19)
+could not run test cancer_snippet.java
 </code></pre>
 </div>
     
@@ -1002,10 +996,10 @@ first 10 elevations:
 <div class="success">
 <h3><!-- raw HTML omitted -->Run Test for test eq_snippet.java<!-- raw HTML omitted --></h3>
 <pre><code>Earthquake 0:
-	Magnitude:1.11
-	Date:Mar 16 2022  03:26:12.740 EDT
-	Location: 3km WSW of Cobb, CA
-	Lat/Long:38.8151665,-122.7614975
+	Magnitude:1.3
+	Date:Mar 17 2022  03:34:32.118 EDT
+	Location: 17 km NNW of Four Mile Road, Alaska
+	Lat/Long:64.7488,-149.2536
 </code></pre>
 </div>
     
@@ -1063,10 +1057,10 @@ could not run test game_size_test.java
 </div>
 <div class="success">
 <h3><!-- raw HTML omitted -->Run Test for test game_snippet.java<!-- raw HTML omitted --></h3>
-<pre><code>Yu-Gi-Oh! Reshef of Destruction
-Game Boy Advance
-5.5
-[Card, Battle]
+<pre><code>PGA Tour 96
+PlayStation
+7.0
+[Sports]
 </code></pre>
 </div>
     
@@ -1331,8 +1325,8 @@ could not run test gutenberg_snippet.java
 </div>
 <div class="success">
 <h3><!-- raw HTML omitted -->Run Test for test imdb_snippet.java<!-- raw HTML omitted --></h3>
-<pre><code>Billy_Bob_Thornton
-Pushing_Tin_(1999)
+<pre><code>Clark_Gable
+No_Man_of_Her_Own_(1932)
 </code></pre>
 </div>
     
@@ -1569,13 +1563,14 @@ Location of first vertex [Cartesian Coord]: -657.974041556194,-4700.217494637191
 <pre><code>Compiling test shakespeare_snippet.java
 </code></pre>
 </div>
-<div class="success">
+<div class="failure">
 <h3><!-- raw HTML omitted -->Run Test for test shakespeare_snippet.java<!-- raw HTML omitted --></h3>
-<pre><code>Sonnet 151
-poem
-Love is too young to know what conscience is,
- Yet who knows not conscience is born of love?
- Then g...
+<pre><code>Exception in thread &quot;main&quot; org.apache.http.client.HttpResponseException: HTTP Request Failed. Error Code: 503
+	at bridges.connect.DataSource.getShakespeareData(DataSource.java:259)
+	at bridges.connect.DataSource.getShakespeareData(DataSource.java:269)
+	at bridges.connect.DataSource.getShakespeareData(DataSource.java:203)
+	at shakespeare_snippet.main(shakespeare_snippet.java:17)
+could not run test shakespeare_snippet.java
 </code></pre>
 </div>
     
@@ -2412,16 +2407,16 @@ http://bridges-cs.herokuapp.com/assignments/2063/bridges_testing
 <pre><code>Data Records in 1955: 3363
 
 Actor-Movie Data:
-	Movie: Q200482 &quot;The Glass Slipper&quot;
-	Actor: Q230023 &quot;Leslie Caron&quot;
+	Movie: Q73944 &quot;Two Tickets to Broadway&quot;
+	Actor: Q166212 &quot;Eddie Bracken&quot;
 
 Actor-Movie Data:
-	Movie: Q200482 &quot;The Glass Slipper&quot;
-	Actor: Q233009 &quot;Elsa Lanchester&quot;
+	Movie: Q73944 &quot;Two Tickets to Broadway&quot;
+	Actor: Q205314 &quot;Janet Leigh&quot;
 
 Actor-Movie Data:
-	Movie: Q200482 &quot;The Glass Slipper&quot;
-	Actor: Q450012 &quot;Amanda Blake&quot;
+	Movie: Q73944 &quot;Two Tickets to Broadway&quot;
+	Actor: Q237864 &quot;Vera Miles&quot;
 
 </code></pre>
 </div>
