@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Python</h1>
-	<p>Running at Tue 22 Mar 2022 03:46:31 AM EDT</p>
+	<p>Running at Tue 29 Mar 2022 03:44:34 AM EDT</p>
   <div id="summaryarray1d.py" class="success">
     <h2><a href="python_testing_logs.html#pythonlogarray1d.py">Test array1d.py</a> </h2>
     <p>
@@ -76,11 +76,11 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summarycancer_snippet.py" class="failure">
+  <div id="summarycancer_snippet.py" class="success">
     <h2><a href="python_testing_logs.html#pythonlogcancer_snippet.py">Test cancer_snippet.py</a> </h2>
     <p>
       <ul>
-        <li> Run Test : <a href="python_testing_logs.html#pythonlogcancer_snippet.py-runtest">error</a></li>
+        <li> Run Test : <a href="python_testing_logs.html#pythonlogcancer_snippet.py-runtest">success</a></li>
       </ul>
     </p>
   </div>
@@ -276,11 +276,11 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summaryshakespeare_snippet.py" class="failure">
+  <div id="summaryshakespeare_snippet.py" class="success">
     <h2><a href="python_testing_logs.html#pythonlogshakespeare_snippet.py">Test shakespeare_snippet.py</a> </h2>
     <p>
       <ul>
-        <li> Run Test : <a href="python_testing_logs.html#pythonlogshakespeare_snippet.py-runtest">error</a></li>
+        <li> Run Test : <a href="python_testing_logs.html#pythonlogshakespeare_snippet.py-runtest">success</a></li>
       </ul>
     </p>
   </div>
@@ -782,7 +782,7 @@ http://bridges-cs.herokuapp.com/assignments/3007/bridges_testing
     <div id="pythonlogcancer_snippet.py" class="logdetails">
       <h2>Test cancer_snippet.py full log</h2>
     
-<div class="failure">
+<div class="success">
 <h3><!-- raw HTML omitted -->Run Test for test cancer_snippet.py<!-- raw HTML omitted --></h3>
 <pre><code>/home/bridges-testing/.local/lib/python3.9/site-packages/bridges-3.3.0-py3.9.egg/bridges/symbol.py:258: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
 /home/bridges-testing/.local/lib/python3.9/site-packages/bridges-3.3.0-py3.9.egg/bridges/symbol.py:262: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
@@ -794,22 +794,15 @@ http://bridges-cs.herokuapp.com/assignments/3007/bridges_testing
 /home/bridges-testing/.local/lib/python3.9/site-packages/bridges-3.3.0-py3.9.egg/bridges/symbol.py:267: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
 /home/bridges-testing/.local/lib/python3.9/site-packages/bridges-3.3.0-py3.9.egg/bridges/symbol.py:281: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
 /home/bridges-testing/.local/lib/python3.9/site-packages/bridges-3.3.0-py3.9.egg/bridges/symbol.py:295: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
-Traceback (most recent call last):
-  File &quot;/home/bridges-testing/bridges-client-testing/python/web_tutorial_testing/cancer_snippet.py&quot;, line 39, in &lt;module&gt;
-    main()
-  File &quot;/home/bridges-testing/bridges-client-testing/python/web_tutorial_testing/cancer_snippet.py&quot;, line 19, in main
-    my_list = get_cancer_incident_data()
-  File &quot;/home/bridges-testing/.local/lib/python3.9/site-packages/bridges-3.3.0-py3.9.egg/bridges/data_src_dependent/data_source.py&quot;, line 322, in get_cancer_incident_data
-  File &quot;/usr/lib/python3/dist-packages/requests/models.py&quot;, line 900, in json
-    return complexjson.loads(self.text, **kwargs)
-  File &quot;/usr/lib/python3.9/json/__init__.py&quot;, line 346, in loads
-    return _default_decoder.decode(s)
-  File &quot;/usr/lib/python3.9/json/decoder.py&quot;, line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-  File &quot;/usr/lib/python3.9/json/decoder.py&quot;, line 355, in raw_decode
-    raise JSONDecodeError(&quot;Expecting value&quot;, s, err.value) from None
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-could not run test cancer_snippet.py
+Record 1:
+	Type: Mortality
+	Year: 2000
+	Population: 2302835
+	Race: All Races
+	Gender: 
+	CrudeRate: 192.2(more rate information available) 
+	Location: 32.799, -86.8073
+	Count: 0
 </code></pre>
 </div>
     
@@ -906,7 +899,7 @@ http://bridges-cs.herokuapp.com/assignments/3011/bridges_testing
 /home/bridges-testing/.local/lib/python3.9/site-packages/bridges-3.3.0-py3.9.egg/bridges/symbol.py:281: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
 /home/bridges-testing/.local/lib/python3.9/site-packages/bridges-3.3.0-py3.9.egg/bridges/symbol.py:295: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
 passing student credentials to server..
-Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f603cd2ab20&gt;
+Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7fc5137e7b20&gt;
 limiting number of frame to 10
 
 Check Your Visualization at the following link:
@@ -994,10 +987,10 @@ First 10 elevations:
 /home/bridges-testing/.local/lib/python3.9/site-packages/bridges-3.3.0-py3.9.egg/bridges/symbol.py:267: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
 /home/bridges-testing/.local/lib/python3.9/site-packages/bridges-3.3.0-py3.9.egg/bridges/symbol.py:281: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
 /home/bridges-testing/.local/lib/python3.9/site-packages/bridges-3.3.0-py3.9.egg/bridges/symbol.py:295: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
-Magnitude: 2.05999994
-Date: 2022-03-22 07:41:53
-Location:2 km SSE of Pāhala, Hawaii
-Lat/Long:19.1786670684814,-155.468338012695
+Magnitude: 1.42
+Date: 2022-03-29 07:14:35
+Location:12km ENE of Ridgecrest, CA
+Lat/Long:35.6563333,-117.5536667
 </code></pre>
 </div>
     
@@ -1059,7 +1052,7 @@ http://bridges-cs.herokuapp.com/assignments/3016/bridges_testing
 /home/bridges-testing/.local/lib/python3.9/site-packages/bridges-3.3.0-py3.9.egg/bridges/symbol.py:281: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
 /home/bridges-testing/.local/lib/python3.9/site-packages/bridges-3.3.0-py3.9.egg/bridges/symbol.py:295: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
 passing student credentials to server..
-Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f049cedab50&gt;
+Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f0fdaa55b50&gt;
 limiting number of frame to 10
 
 Check Your Visualization at the following link:
@@ -1088,10 +1081,10 @@ disconnected
 /home/bridges-testing/.local/lib/python3.9/site-packages/bridges-3.3.0-py3.9.egg/bridges/symbol.py:267: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
 /home/bridges-testing/.local/lib/python3.9/site-packages/bridges-3.3.0-py3.9.egg/bridges/symbol.py:281: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
 /home/bridges-testing/.local/lib/python3.9/site-packages/bridges-3.3.0-py3.9.egg/bridges/symbol.py:295: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
-Lost Planet 2
-Xbox 360
-6
-['Shooter']
+Rubiks World
+Wii
+6.5
+['Puzzle']
 </code></pre>
 </div>
     
@@ -1244,8 +1237,8 @@ http://bridges-cs.herokuapp.com/assignments/3023/bridges_testing
 /home/bridges-testing/.local/lib/python3.9/site-packages/bridges-3.3.0-py3.9.egg/bridges/symbol.py:267: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
 /home/bridges-testing/.local/lib/python3.9/site-packages/bridges-3.3.0-py3.9.egg/bridges/symbol.py:281: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
 /home/bridges-testing/.local/lib/python3.9/site-packages/bridges-3.3.0-py3.9.egg/bridges/symbol.py:295: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
-Al_Pacino
-Frankie_and_Johnny_(1991)
+Paul_Reubens
+Big_Top_Pee-wee_(1988)
 </code></pre>
 </div>
     
@@ -1266,7 +1259,7 @@ Frankie_and_Johnny_(1991)
 /home/bridges-testing/.local/lib/python3.9/site-packages/bridges-3.3.0-py3.9.egg/bridges/symbol.py:281: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
 /home/bridges-testing/.local/lib/python3.9/site-packages/bridges-3.3.0-py3.9.egg/bridges/symbol.py:295: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
 passing student credentials to server..
-Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f389fb1af70&gt;
+Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f0f2aa11f70&gt;
 limiting number of frame to 10
 
 Check Your Visualization at the following link:
@@ -1364,7 +1357,7 @@ http://bridges-cs.herokuapp.com/assignments/3027/bridges_testing
 /home/bridges-testing/.local/lib/python3.9/site-packages/bridges-3.3.0-py3.9.egg/bridges/symbol.py:281: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
 /home/bridges-testing/.local/lib/python3.9/site-packages/bridges-3.3.0-py3.9.egg/bridges/symbol.py:295: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
 passing student credentials to server..
-Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7fbe0261af70&gt;
+Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f78763eaf70&gt;
 limiting number of frame to 10
 
 Check Your Visualization at the following link:
@@ -1510,7 +1503,7 @@ Cartesian Coordinate of first vertex: 827.1273231300758, -5144.073405550668
     <div id="pythonlogshakespeare_snippet.py" class="logdetails">
       <h2>Test shakespeare_snippet.py full log</h2>
     
-<div class="failure">
+<div class="success">
 <h3><!-- raw HTML omitted -->Run Test for test shakespeare_snippet.py<!-- raw HTML omitted --></h3>
 <pre><code>/home/bridges-testing/.local/lib/python3.9/site-packages/bridges-3.3.0-py3.9.egg/bridges/symbol.py:258: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
 /home/bridges-testing/.local/lib/python3.9/site-packages/bridges-3.3.0-py3.9.egg/bridges/symbol.py:262: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
@@ -1522,22 +1515,11 @@ Cartesian Coordinate of first vertex: 827.1273231300758, -5144.073405550668
 /home/bridges-testing/.local/lib/python3.9/site-packages/bridges-3.3.0-py3.9.egg/bridges/symbol.py:267: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
 /home/bridges-testing/.local/lib/python3.9/site-packages/bridges-3.3.0-py3.9.egg/bridges/symbol.py:281: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
 /home/bridges-testing/.local/lib/python3.9/site-packages/bridges-3.3.0-py3.9.egg/bridges/symbol.py:295: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
-Traceback (most recent call last):
-  File &quot;/home/bridges-testing/bridges-client-testing/python/web_tutorial_testing/shakespeare_snippet.py&quot;, line 30, in &lt;module&gt;
-    main()
-  File &quot;/home/bridges-testing/bridges-client-testing/python/web_tutorial_testing/shakespeare_snippet.py&quot;, line 18, in main
-    my_list = get_shakespeare_data()
-  File &quot;/home/bridges-testing/.local/lib/python3.9/site-packages/bridges-3.3.0-py3.9.egg/bridges/data_src_dependent/data_source.py&quot;, line 241, in get_shakespeare_data
-  File &quot;/usr/lib/python3/dist-packages/requests/models.py&quot;, line 900, in json
-    return complexjson.loads(self.text, **kwargs)
-  File &quot;/usr/lib/python3.9/json/__init__.py&quot;, line 346, in loads
-    return _default_decoder.decode(s)
-  File &quot;/usr/lib/python3.9/json/decoder.py&quot;, line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-  File &quot;/usr/lib/python3.9/json/decoder.py&quot;, line 355, in raw_decode
-    raise JSONDecodeError(&quot;Expecting value&quot;, s, err.value) from None
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-could not run test shakespeare_snippet.py
+Sonnet 15
+poem
+When I consider every thing that grows
+ Holds in perfection but a little moment.
+ That this huge sta
 </code></pre>
 </div>
     
