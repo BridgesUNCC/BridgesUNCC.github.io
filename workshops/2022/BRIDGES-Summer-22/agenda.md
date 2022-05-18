@@ -53,10 +53,10 @@
 
 If you have additional questions, please reach out to us:
 
-[** Email Link:** Kalpathi Subramanian](mailto:krs@uncc.edu?subject=BRIDGES%20Summer22%20Workshop)
+[**Email Link:**  Kalpathi Subramanian](mailto:krs@uncc.edu?subject=BRIDGES%20Summer22%20Workshop)
 
-[** Email Link:** Erik Saule](mailto:esaule@uncc.edu?subject=BRIDGES%20Summer22%20Workshop)
+[**Email Link:**  Erik Saule](mailto:esaule@uncc.edu?subject=BRIDGES%20Summer22%20Workshop)
 
-[** Email Link:** Jamie Payton](mailto:payton@temple.edu?subject=BRIDGES%20Summer22%20Workshop)
+[**Email Link:**  Jamie Payton](mailto:payton@temple.edu?subject=BRIDGES%20Summer22%20Workshop)
 
 </body>
