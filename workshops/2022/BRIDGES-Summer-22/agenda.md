@@ -41,8 +41,7 @@
 |  8 - 8.30am | Breakfast  |
 |  8.30 - 10.30am | BRIDGES Assignment 2 - Make it 'Class Ready' |
 |  10.30 - 10.50 | Coffee Break |
-|  10.50 - 12pm  | Continued work on Assignment 2 or start
-			Assignment 3 |
+|  10.50 - 12pm  | Continued work on Assignment 2 or start Assignment 3 |
 |  12 - 1.30pm  | Lunch   |
 |  1.30 - 3.30pm |  Assignment 3 - Make it 'Class Ready'  |
 |  3.35 - 3.50pm  | Coffee Break  |
@@ -54,7 +53,10 @@
 
 If you have additional questions, please reach out to us:
 
-[Email Kalpathi Subramanian](mailto:krs@uncc.edu?subject=BRIDGES%20Summer22%20Workshop)
-[Email Erik Saule](mailto:esaule@uncc.edu?subject=BRIDGES%20Summer22%20Workshop)
-[Email Jamie Payton](mailto:payton@temple.edu?subject=BRIDGES%20Summer22%20Workshop)
+[Email Link: Kalpathi Subramanian](mailto:krs@uncc.edu?subject=BRIDGES%20Summer22%20Workshop)
+
+[Email Link: Erik Saule](mailto:esaule@uncc.edu?subject=BRIDGES%20Summer22%20Workshop)
+
+[Email Link: Jamie Payton](mailto:payton@temple.edu?subject=BRIDGES%20Summer22%20Workshop)
+
 </body>
