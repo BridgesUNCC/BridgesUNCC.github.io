@@ -34,6 +34,9 @@ addassignment "56-2DIndexing"
 addsubgroup "Input/Output"
 addassignment "10-HurricaneTracker"
 
+addsubgroup "1D Arrays"
+addassignment "33-AudioMixing"
+
 addsubgroup "2D Arrays"
 addassignment "6-GridSquareFill"
 addassignment "7-GridLyrics"
