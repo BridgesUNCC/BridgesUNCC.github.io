@@ -17,3 +17,7 @@ cd ${DEST}
 git add *
 git commit -am "updating website"
 
+echo ===========================================================================
+A commit has been created on the website repostiory. But it has not been pushed.
+echo ===========================================================================
+

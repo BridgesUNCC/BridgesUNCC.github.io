@@ -9,6 +9,9 @@ openswim.zip:
 agenda.html: agenda.md
 	cmark-gfm --extension table agenda.md > agenda.html
 
+openswimhtml:
+	./gen_html.sh
+
 slides/cloud9.pdf: slides/cloud9.tex
 	cd slides && pdflatex cloud9.tex
 

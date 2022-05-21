@@ -34,6 +34,15 @@
 |  10.30 - 10.50  | Coffee Break |
 |  10.50 - 12pm   | BRIDGES Assignment Repository |
 |                 | [slides](slides/whatispossible.pdf) |
+|                 | *CS1*                               |
+|                 | [Audio Processing](openswim/33-AudioMixing/README.html) |
+|                 | [Image Blur](openswim/image_blur/README.html) |
+|                 | *Data Structure*                    |
+|                 | [Expression Tree](openswim/expression_tree/README.html) |
+|                 | [Graph IMDB](openswim/graphIMDB/README.html) |
+|                 | *Algorithms*                        |
+|                 | [Complexity Matters](openswim/complexity_matters/README.html) |
+|                 | [Mountain Path](openswim/23-MountainPaths/README.html) |
 |  12 - 1.30pm    | Lunch  | 
 |  1.30 - 2pm     | **Plan:** Which assignment maps to which course module? (Existing or New)- Leveraging CS Materials  |
 |  2 - 3.30pm     | Take 1 easy case - make it 'class ready' | 
