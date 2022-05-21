@@ -91,7 +91,7 @@ ignores that there is a key and a value.) Note that it uses
 information about the size of the subheaps being stored at each node
 of the heap.
 
-```algorithm
+<pre><code> 
 Heap {
   Key
   HeapLeft
@@ -118,7 +118,7 @@ insert (Heap h, k) {
 
   return h
 }
-```
+</code></pre>
 
 2. Write a pop function that return the element with the lowest key.
 

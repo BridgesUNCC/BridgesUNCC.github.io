@@ -1,77 +1,68 @@
-Book Distance
-=============
+Book Distance through Text Analysis
+=====================================
 
-Overview
---------
+Goals
+-----
 
-Using a simple metric, compute the distance between books using
-Dictionary data structure. Then find clusters of books.
-
-Principle
----------
+Implement a word frequency list for a book and use it to compare similarity to other books.
 
 Tasks
 -----
 
-### Access a book through BRIDGES API
+1. Get book meta data information using Bridges API: DataSource.getGutenbergMetaData()
 
-for instance a shakespeare poem is good to start with
+2. With the meta data, get the books by ID using Bridges API: DataSource.getGutenbergBookText()
 
-### Compute the Word frequency vector of the book
+3. Generate a word frequency list with the book text
 
-#### Compute word occurence vector
+4. Compare two frequency lists to determine the similarity between book texts. Can use a L1 Norm comparison. 
 
-Simply count how many time each words appear
+5. Generate a graphadjlist using the similarity values and book nodes.
 
-#### Compute word frequency vector
+Example output
+--------------
 
-1. count how many words in the document
+<img src="figures/book_analysis.png" alt="Sample Output" width="400px" />
 
-2. Divide all counts by the total number of words to get a frequency vector.
+Varients
+--------
 
-### Compare two books
+One can change the complextiy of the comparison algorithm to one that is L2 Norm (Euclidean Distance)
+or even L3 Norm.
 
-1. Access two books
+How did you display the similarity value? One can switch up the visual aspect 
+of the assignment to convey different meanings. You can display a 
 
-2. Derive word frequency vectors
+Changing the dataset used for this comparison could be a good way to get more 
+engagement in the assignment. Using song lyrics is a good alternative to 
+the gutenberg data.
 
-3. Compute L2 distance between the two vectors
+### Help
+#### For C++
+[Bridges documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_bridges.html)
 
-4. Observe how two close books are more similar than two distant book
-(say 2 books by shakespeare and a book by Shakespear and one by Mark
-Twain)
+[GraphAdjList documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_graph_adj_list.html)
 
+[GutenbergData documentation](https://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1dataset_1_1_gutenberg_book.html)
 
-#### Variants
+[DataSource documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_data_source.html)
 
-1. use tfidf
-2. use cosine similarity
+#### For Java
 
-### Implement your own Dictionary
+[Bridges documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1connect_1_1_bridges.html)
 
-#### Using an Array
+[GraphAdjList documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_graph_adj_list.html)
 
-#### Using a Sorted Array
+[GutenbergData documentation](https://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1data__src__dependent_1_1_gutenberg_meta.html)
 
-#### Using a Linked List
+[DataSource documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1connect_1_1_data_source.html)
 
-#### Using a BST
+#### For Python
 
-#### Using a HashMap
+[Bridges documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1bridges_1_1_bridges.html)
 
-#### Implement multiple Dictionary and compare their performance
+[GraphAdjList documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1graph__adj__list_1_1_graph_adj_list.html)
 
-### Island Clustering
+[GutenbergData documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1data__src__dependent_1_1osm_1_1_osm_data.html)
 
-1. For all books available, compute all pairwise distance
-
-2. Build an islanding graph, aka, a graph where
-  1. Each Book is a different vertex.
-  2. There is an edge between two books if their distance is smaller than T (a user specified threshold)
-  3. Build the graph using Bridges Adjacency List interface
-
-3. Visualize the graph in BRIDGES
-
-4. Observe how the graph change when the threshold varies. Do cluster
-appear? Do they make sense?
-
+[DataSource documentation](https://bridgesuncc.github.io/doc/python-api/current/html/namespacebridges_1_1data__src__dependent_1_1data__source.html)

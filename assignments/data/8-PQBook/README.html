@@ -97,34 +97,34 @@ ignores that there is a key and a value.) Note that it uses
 information about the size of the subheaps being stored at each node
 of the heap.</p>
 
-<p>```algorithm
+<pre><code> 
 Heap {
   Key
   HeapLeft
   SizeHeapLeft
   HeapRight
   SizeHeapRight
-}</p>
+}
 
-<p>insert (Heap h, k) {
+insert (Heap h, k) {
   if (h is empty)
-    return makenewheap (k)</p>
+    return makenewheap (k)
 
-<p>if (k &lt; h.Key)
-    swap k and h.Key</p>
+  if (k < h.Key)
+    swap k and h.Key
 
-<p>if (SizeHeapLeft &lt; SizeHeapRight)
+  if (SizeHeapLeft < SizeHeapRight)
     //push left
     SizeHeapLeft = SizeHeapLeft + 1
     HeapLeft = insert (h.HeapLeft, k)
   else
     //push right
     SizeHeapRight = SizeHeapRight + 1
-    HeapRight = insert (h.HeapRight, k)</p>
+    HeapRight = insert (h.HeapRight, k)
 
-<p>return h
+  return h
 }
-```</p>
+</code></pre>
 
 <ol>
 <li><p>Write a pop function that return the element with the lowest key.</p></li>
