@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['length_5fof_5ffmt_1888',['length_of_fmt',['../structbridges_1_1_wave_header.html#a886a118d4fb80b91e397479526683199',1,'bridges::WaveHeader']]],
-  ['linenumber_1889',['linenumber',['../structrapidjson__exception.html#a9c0263f853d8a17911e29cae66708e67',1,'rapidjson_exception']]],
-  ['links_1890',['links',['../classbridges_1_1datastructure_1_1_element.html#ac296ae66e6b04e95f31f4134228524f8',1,'bridges::datastructure::Element']]]
+  ['key_1862',['key',['../classbridges_1_1datastructure_1_1_b_s_t_element.html#ac1d971f8379c4ce6b956ebd635c88895',1,'bridges::datastructure::BSTElement']]]
 ];
