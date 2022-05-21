@@ -28,6 +28,7 @@ addassignment "19-Bugstomp"
 addsubgroup "Loops"
 addassignment "25-Patterns"
 addassignment "23-MountainPaths"
+addassignment "33-AudioMixing"
 addassignment "56-2DIndexing"
 
 addsubgroup "Input/Output"

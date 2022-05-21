@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['tag_1904',['tag',['../classbridges_1_1datastructure_1_1_m_lelement.html#aef061a364a85ebb0c0f2cdaff8c726e6',1,'bridges::datastructure::MLelement']]],
-  ['time_5fcap_1905',['time_cap',['../classbridges_1_1benchmark_1_1_graph_benchmark.html#a59938016b721fb6db2ff8bdb2c9d41c1',1,'bridges::benchmark::GraphBenchmark']]]
+  ['sample_5frate_1877',['sample_rate',['../structbridges_1_1_wave_header.html#a5dc65cbc1d601a5e613a4512f8add13f',1,'bridges::WaveHeader']]],
+  ['sub_5flist_1878',['sub_list',['../classbridges_1_1datastructure_1_1_m_lelement.html#afe31ff363c0861efb8eacc12f2a651df',1,'bridges::datastructure::MLelement']]]
 ];
