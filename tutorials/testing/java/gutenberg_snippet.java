@@ -67,8 +67,8 @@ public class gutenberg_snippet {
 			System.out.println("\tDate Added: " + blist.get(k).getDate());
 		}
 
-		System.out.println ("Retrieving book text: Moby Dick");
-		String book = ds.getGutenbergBookText(2701);
+		System.out.println ("Retrieving book text: PRIDE AND PREJUDICE");
+		String book = ds.getGutenbergBookText(1342);
 
 		// print the first 300 chars of the book
 		System.out.println("Printing the first 300 characters of the book");
