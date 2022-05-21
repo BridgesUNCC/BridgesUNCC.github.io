@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['mesh_2epy_121',['mesh.py',['../mesh_8py.html',1,'']]],
-  ['ml_5felement_2epy_122',['ml_element.py',['../ml__element_8py.html',1,'']]],
-  ['movie_5factor_5fwiki_5fdata_2epy_123',['movie_actor_wiki_data.py',['../movie__actor__wiki__data_8py.html',1,'']]]
+  ['j_493',['J',['../classbridges_1_1named__symbol_1_1_named_symbol.html#ab202355c03209937ec4c11a64bc60baa',1,'bridges.named_symbol.NamedSymbol.J()'],['../classbridges_1_1named__symbol_1_1_named_symbol.html#a6fb7530d36db6f8c519097e9ab70a5e3',1,'bridges.named_symbol.NamedSymbol.j()']]]
 ];

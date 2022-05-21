@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['sample_5frate_1902',['sample_rate',['../structbridges_1_1_wave_header.html#a5dc65cbc1d601a5e613a4512f8add13f',1,'bridges::WaveHeader']]],
-  ['sub_5flist_1903',['sub_list',['../classbridges_1_1datastructure_1_1_m_lelement.html#afe31ff363c0861efb8eacc12f2a651df',1,'bridges::datastructure::MLelement']]]
+  ['riff_1875',['riff',['../structbridges_1_1_wave_header.html#ab4bf9c00a2bfd2ef5eea23c8865b781a',1,'bridges::WaveHeader']]],
+  ['row_1876',['row',['../structbridges_1_1datastructure_1_1_array2_d_1_1_bracket__helper.html#a6f09a65776d572d4fdfedb6c3a822e2a',1,'bridges::datastructure::Array2D::Bracket_helper::row()'],['../structbridges_1_1datastructure_1_1_array2_d_1_1_bracket__helper__const.html#a1c82a30f3c342a90c009abb400b5557d',1,'bridges::datastructure::Array2D::Bracket_helper_const::row()']]]
 ];
