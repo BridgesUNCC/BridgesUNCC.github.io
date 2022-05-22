@@ -11,6 +11,8 @@
 |                  | [slides](slides/engagement_bridges.pdf) |
 |  9.15 - 9.45am   | Course Design, Alignment, CS Materials  |
 |                  | [slides](slides/coursestructure_csmat.pdf) |
+|                  | [An alignment example: ITCS 6114](slides/sturcture_figs/6114.html) |
+|                  | [CS Materials](https://cs-materials.herokuapp.com/) |
 |  9.45 - 9.55am   |  Q&A  |
 |  10 - 10.15am    |  Coffee Break |
 |  10.15 - 11.45am | Key in Module 1 into CS Materials |
@@ -31,9 +33,6 @@
 |                 | [slides](slides/bridgestutorial.pdf) |
 |  8.50 - 10.30am | BRIDGES Open SWIM  (Solve a problem with BRIDGES)  |
 |                 | [all scaffolds](openswim.zip)                       |
-|  10.30 - 10.50  | Coffee Break |
-|  10.50 - 12pm   | BRIDGES Assignment Repository |
-|                 | [slides](slides/whatispossible.pdf) |
 |                 | *CS1*                               |
 |                 | [Audio Processing](openswim/33-AudioMixing/README.html) |
 |                 | [Image Blur](openswim/image_blur/README.html) |
@@ -43,6 +42,10 @@
 |                 | *Algorithms*                        |
 |                 | [Complexity Matters](openswim/complexity_matters/README.html) |
 |                 | [Mountain Path](openswim/23-MountainPaths/README.html) |
+|  10.30 - 10.50  | Coffee Break |
+|  10.50 - 12pm   | What is possible in BRIDGES? |
+|                 | [slides](slides/whatispossible.pdf) |
+|                 | [Assignment Repository](https://bridgesuncc.github.io/newassignments.html) |
 |  12 - 1.30pm    | Lunch  | 
 |  1.30 - 2pm     | **Plan:** Which assignment maps to which course module? (Existing or New)- Leveraging CS Materials  |
 |  2 - 3.30pm     | Take 1 easy case - make it 'class ready' | 
@@ -65,6 +68,7 @@
 |  4.10 - 4.30pm  | Plan work before semester start.  |
 |                 | [slides](slides/goingfurther.pdf) |
 |  4.30 - 5pm     | Feedback, Survey  |
+|                 | [Survey link](https://uncc.qualtrics.com/jfe/form/SV_8qrqXA56YIwKCeq) |
 
 ## Additional Information
 
