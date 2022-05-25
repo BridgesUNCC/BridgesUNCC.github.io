@@ -16,8 +16,8 @@
 |  9.45 - 9.55am   |  Q&A  |
 |  10 - 10.15am    |  Coffee Break |
 |  10.15 - 11.45am | Key in Module 1 into CS Materials |
-|                  | [slides](slides/coursestructure_csmat.pdf) |
-|                  | [Google Drive](https://drive.google.com/drive/u/0/folders/1uwBf4wXveJJk8RQ24BmWKhy1f5WjxgBH)                                           |
+|                  | [slides]( slides/coursestructure_csmat.pdf ) |
+|                  | [Google Drive]( https://drive.google.com/drive/u/0/folders/1uwBf4wXveJJk8RQ24BmWKhy1f5WjxgBH ) |
 |  11.45 - 1.30pm  | Lunch |
 |  1.30 - 3.30pm   | Key in Remaining Course Modules |
 |  3.30 - 3.50pm   | Coffee Break |
