@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for C++</h1>
-	<p>Running at Wed 25 May 2022 03:46:28 AM EDT</p>
+	<p>Running at Thu 26 May 2022 03:46:30 AM EDT</p>
   <div id="summary0" class="success">
     <h2><a href="cxx_logs.html#cxxlog0">Assignment 0</a> </h2>
     <p>
@@ -276,7 +276,7 @@ background-color: springgreen;
     <h2><a href="cxx_logs.html#cxxlog26">Assignment 26</a> </h2>
     <p>
       <ul>
-        <li> Build Scaffold : <a href="cxx_logs.html#cxxlog26-buildscaffold">error</a></li>
+        <li> Build Scaffold : <a href="cxx_logs.html#cxxlog26-buildscaffold">success</a></li>
         <li> Build Answer : <a href="cxx_logs.html#cxxlog26-buildanswer">error</a></li>
         <li> Run Answer : <a href="cxx_logs.html#cxxlog26-runanswer">error</a></li>
       </ul>
@@ -2104,7 +2104,7 @@ http://bridges-cs.herokuapp.com/assignments/125/bridges_testing
     <div id="cxxlog26" class="logdetails">
       <h2>Assignment 26 full log</h2>
     
-<div class="failure">
+<div class="success">
 <h3 id="cxxlog26-buildscaffold">Build Scaffold for Assignment 26</h3>
 <pre><code>Compiling c++/ for assignment in ../assignmentdb/26-TowersOfHanoi/c++
 rm toh.o
@@ -2114,230 +2114,7 @@ rm TowersOfHanoi
 rm: cannot remove 'TowersOfHanoi': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
 g++ -g  -std=c++14 -I /home/bridges-testing/bridges-cxx-install/include/ -c toh.cpp -o toh.o
-toh.cpp:15:5: error: ‘bridges’ does not name a type
-   15 |     bridges.setTitle(&quot;Towers of Hanoi&quot;);
-      |     ^~~~~~~
-toh.cpp:16:5: error: ‘bridges’ does not name a type
-   16 |     bridges.setDescription(&quot;Solve the towers of hanoi problem with loops.&quot;);
-      |     ^~~~~~~
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h: In instantiation of ‘void bridges::datastructure::SymbolCollection::addSymbol(T) [with T = bridges::datastructure::Rectangle*]’:
-toh.cpp:31:27:   required from here
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:103:21: error: no matching function for call to ‘std::shared_ptr&lt;bridges::datastructure::Symbol&gt;::shared_ptr(std::shared_ptr&lt;bridges::datastructure::Rectangle*&gt;&amp;)’
-  103 |       addSymbolPtr ((std::shared_ptr&lt;Symbol&gt;)pt);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from /usr/include/c++/10/memory:84,
-                 from /usr/include/c++/10/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/Symbol.h:14,
-                 from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
-                 from toh.cpp:2:
-/usr/include/c++/10/bits/shared_ptr.h:416:7: note: candidate: ‘std::shared_ptr&lt;_Tp&gt;::shared_ptr(const std::weak_ptr&lt;_Tp&gt;&amp;, std::nothrow_t) [with _Tp = bridges::datastructure::Symbol]’
-  416 |       shared_ptr(const weak_ptr&lt;_Tp&gt;&amp; __r, std::nothrow_t)
-      |       ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:416:7: note:   candidate expects 2 arguments, 1 provided
-/usr/include/c++/10/bits/shared_ptr.h:407:2: note: candidate: ‘template&lt;class _Alloc, class ... _Args&gt; std::shared_ptr&lt;_Tp&gt;::shared_ptr(std::_Sp_alloc_shared_tag&lt;_Tp&gt;, _Args&amp;&amp; ...) [with _Alloc = _Alloc; _Args = {_Args ...}; _Tp = bridges::datastructure::Symbol]’
-  407 |  shared_ptr(_Sp_alloc_shared_tag&lt;_Alloc&gt; __tag, _Args&amp;&amp;... __args)
-      |  ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:407:2: note:   template argument deduction/substitution failed:
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:103:21: note:   ‘std::shared_ptr&lt;bridges::datastructure::Rectangle*&gt;’ is not derived from ‘std::_Sp_alloc_shared_tag&lt;_Tp&gt;’
-  103 |       addSymbolPtr ((std::shared_ptr&lt;Symbol&gt;)pt);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from /usr/include/c++/10/memory:84,
-                 from /usr/include/c++/10/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/Symbol.h:14,
-                 from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
-                 from toh.cpp:2:
-/usr/include/c++/10/bits/shared_ptr.h:356:17: note: candidate: ‘constexpr std::shared_ptr&lt;_Tp&gt;::shared_ptr(std::nullptr_t) [with _Tp = bridges::datastructure::Symbol; std::nullptr_t = std::nullptr_t]’
-  356 |       constexpr shared_ptr(nullptr_t) noexcept : shared_ptr() { }
-      |                 ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:356:28: note:   no known conversion for argument 1 from ‘std::shared_ptr&lt;bridges::datastructure::Rectangle*&gt;’ to ‘std::nullptr_t’
-  356 |       constexpr shared_ptr(nullptr_t) noexcept : shared_ptr() { }
-      |                            ^~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:348:2: note: candidate: ‘template&lt;class _Yp, class _Del, std::shared_ptr&lt;bridges::datastructure::Symbol&gt;::_Constructible&lt;std::unique_ptr&lt;_Tp, _Dp&gt;, std::__sp_array_delete&gt;* &lt;anonymous&gt; &gt; std::shared_ptr&lt;_Tp&gt;::shared_ptr(std::unique_ptr&lt;_Up, _Ep&gt;&amp;&amp;) [with _Yp = _Yp; _Del = _Del; std::shared_ptr&lt;_Tp&gt;::_Constructible&lt;std::unique_ptr&lt;_Up, _Ep&gt;, std::__sp_array_delete&gt;* &lt;anonymous&gt; = &lt;anonymous&gt;; _Tp = bridges::datastructure::Symbol]’
-  348 |  shared_ptr(unique_ptr&lt;_Yp, _Del&gt;&amp;&amp; __r)
-      |  ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:348:2: note:   template argument deduction/substitution failed:
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:103:21: note:   ‘std::shared_ptr&lt;bridges::datastructure::Rectangle*&gt;’ is not derived from ‘std::unique_ptr&lt;_Tp, _Dp&gt;’
-  103 |       addSymbolPtr ((std::shared_ptr&lt;Symbol&gt;)pt);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from /usr/include/c++/10/memory:84,
-                 from /usr/include/c++/10/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/Symbol.h:14,
-                 from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
-                 from toh.cpp:2:
-/usr/include/c++/10/bits/shared_ptr.h:339:2: note: candidate: ‘template&lt;class _Yp, class _Del, class&gt; std::shared_ptr&lt;_Tp&gt;::shared_ptr(std::unique_ptr&lt;_Up, _Ep&gt;&amp;&amp;) [with _Yp = _Yp; _Del = _Del; &lt;template-parameter-2-3&gt; = &lt;template-parameter-1-3&gt;; _Tp = bridges::datastructure::Symbol]’
-  339 |  shared_ptr(unique_ptr&lt;_Yp, _Del&gt;&amp;&amp; __r)
-      |  ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:339:2: note:   template argument deduction/substitution failed:
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:103:21: note:   ‘std::shared_ptr&lt;bridges::datastructure::Rectangle*&gt;’ is not derived from ‘std::unique_ptr&lt;_Tp, _Dp&gt;’
-  103 |       addSymbolPtr ((std::shared_ptr&lt;Symbol&gt;)pt);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from /usr/include/c++/10/memory:84,
-                 from /usr/include/c++/10/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/Symbol.h:14,
-                 from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
-                 from toh.cpp:2:
-/usr/include/c++/10/bits/shared_ptr.h:331:2: note: candidate: ‘template&lt;class _Yp, class&gt; std::shared_ptr&lt;_Tp&gt;::shared_ptr(std::auto_ptr&lt;_Up&gt;&amp;&amp;) [with _Yp = _Tp1; &lt;template-parameter-2-2&gt; = &lt;template-parameter-1-2&gt;; _Tp = bridges::datastructure::Symbol]’
-  331 |  shared_ptr(auto_ptr&lt;_Yp&gt;&amp;&amp; __r);
-      |  ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:331:2: note:   template argument deduction/substitution failed:
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:103:21: note:   ‘std::shared_ptr&lt;bridges::datastructure::Rectangle*&gt;’ is not derived from ‘std::auto_ptr&lt;_Up&gt;’
-  103 |       addSymbolPtr ((std::shared_ptr&lt;Symbol&gt;)pt);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from /usr/include/c++/10/memory:84,
-                 from /usr/include/c++/10/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/Symbol.h:14,
-                 from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
-                 from toh.cpp:2:
-/usr/include/c++/10/bits/shared_ptr.h:324:11: note: candidate: ‘template&lt;class _Yp, class&gt; std::shared_ptr&lt;_Tp&gt;::shared_ptr(const std::weak_ptr&lt;_Yp&gt;&amp;) [with _Yp = _Yp; &lt;template-parameter-2-2&gt; = &lt;template-parameter-1-2&gt;; _Tp = bridges::datastructure::Symbol]’
-  324 |  explicit shared_ptr(const weak_ptr&lt;_Yp&gt;&amp; __r)
-      |           ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:324:11: note:   template argument deduction/substitution failed:
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:103:21: note:   ‘std::shared_ptr&lt;bridges::datastructure::Rectangle*&gt;’ is not derived from ‘const std::weak_ptr&lt;_Tp&gt;’
-  103 |       addSymbolPtr ((std::shared_ptr&lt;Symbol&gt;)pt);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from /usr/include/c++/10/memory:84,
-                 from /usr/include/c++/10/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/Symbol.h:14,
-                 from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
-                 from toh.cpp:2:
-/usr/include/c++/10/bits/shared_ptr.h:312:2: note: candidate: ‘template&lt;class _Yp, class&gt; std::shared_ptr&lt;_Tp&gt;::shared_ptr(std::shared_ptr&lt;_Yp&gt;&amp;&amp;) [with _Yp = _Yp; &lt;template-parameter-2-2&gt; = &lt;template-parameter-1-2&gt;; _Tp = bridges::datastructure::Symbol]’
-  312 |  shared_ptr(shared_ptr&lt;_Yp&gt;&amp;&amp; __r) noexcept
-      |  ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:312:2: note:   template argument deduction/substitution failed:
-/usr/include/c++/10/bits/shared_ptr.h: In substitution of ‘template&lt;class _Tp&gt; template&lt;class ... _Args&gt; using _Constructible = typename std::enable_if&lt;std::is_constructible&lt;std::__shared_ptr&lt;_Tp&gt;, _Args ...&gt;::value&gt;::type [with _Args = {std::shared_ptr&lt;bridges::datastructure::Rectangle*&gt;}; _Tp = bridges::datastructure::Symbol]’:
-/usr/include/c++/10/bits/shared_ptr.h:311:30:   required from ‘void bridges::datastructure::SymbolCollection::addSymbol(T) [with T = bridges::datastructure::Rectangle*]’
-toh.cpp:31:27:   required from here
-/usr/include/c++/10/bits/shared_ptr.h:124:8: error: no type named ‘type’ in ‘struct std::enable_if&lt;false, void&gt;’
-  124 |  using _Constructible = typename enable_if&lt;
-      |        ^~~~~~~~~~~~~~
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h: In instantiation of ‘void bridges::datastructure::SymbolCollection::addSymbol(T) [with T = bridges::datastructure::Rectangle*]’:
-toh.cpp:31:27:   required from here
-/usr/include/c++/10/bits/shared_ptr.h:303:7: note: candidate: ‘std::shared_ptr&lt;_Tp&gt;::shared_ptr(std::shared_ptr&lt;_Tp&gt;&amp;&amp;) [with _Tp = bridges::datastructure::Symbol]’
-  303 |       shared_ptr(shared_ptr&amp;&amp; __r) noexcept
-      |       ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:303:31: note:   no known conversion for argument 1 from ‘std::shared_ptr&lt;bridges::datastructure::Rectangle*&gt;’ to ‘std::shared_ptr&lt;bridges::datastructure::Symbol&gt;&amp;&amp;’
-  303 |       shared_ptr(shared_ptr&amp;&amp; __r) noexcept
-      |                  ~~~~~~~~~~~~~^~~
-/usr/include/c++/10/bits/shared_ptr.h:295:2: note: candidate: ‘template&lt;class _Yp, class&gt; std::shared_ptr&lt;_Tp&gt;::shared_ptr(const std::shared_ptr&lt;_Yp&gt;&amp;) [with _Yp = _Yp; &lt;template-parameter-2-2&gt; = &lt;template-parameter-1-2&gt;; _Tp = bridges::datastructure::Symbol]’
-  295 |  shared_ptr(const shared_ptr&lt;_Yp&gt;&amp; __r) noexcept
-      |  ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:295:2: note:   template argument deduction/substitution failed:
-/usr/include/c++/10/bits/shared_ptr.h: In substitution of ‘template&lt;class _Tp&gt; template&lt;class ... _Args&gt; using _Constructible = typename std::enable_if&lt;std::is_constructible&lt;std::__shared_ptr&lt;_Tp&gt;, _Args ...&gt;::value&gt;::type [with _Args = {const std::shared_ptr&lt;bridges::datastructure::Rectangle*&gt;&amp;}; _Tp = bridges::datastructure::Symbol]’:
-/usr/include/c++/10/bits/shared_ptr.h:294:9:   required from ‘void bridges::datastructure::SymbolCollection::addSymbol(T) [with T = bridges::datastructure::Rectangle*]’
-toh.cpp:31:27:   required from here
-/usr/include/c++/10/bits/shared_ptr.h:124:8: error: no type named ‘type’ in ‘struct std::enable_if&lt;false, void&gt;’
-  124 |  using _Constructible = typename enable_if&lt;
-      |        ^~~~~~~~~~~~~~
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h: In instantiation of ‘void bridges::datastructure::SymbolCollection::addSymbol(T) [with T = bridges::datastructure::Rectangle*]’:
-toh.cpp:31:27:   required from here
-/usr/include/c++/10/bits/shared_ptr.h:256:2: note: candidate: ‘template&lt;class _Yp&gt; std::shared_ptr&lt;_Tp&gt;::shared_ptr(const std::shared_ptr&lt;_Yp&gt;&amp;, std::shared_ptr&lt;_Tp&gt;::element_type*) [with _Yp = _Yp; _Tp = bridges::datastructure::Symbol]’
-  256 |  shared_ptr(const shared_ptr&lt;_Yp&gt;&amp; __r, element_type* __p) noexcept
-      |  ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:256:2: note:   template argument deduction/substitution failed:
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:103:21: note:   candidate expects 2 arguments, 1 provided
-  103 |       addSymbolPtr ((std::shared_ptr&lt;Symbol&gt;)pt);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from /usr/include/c++/10/memory:84,
-                 from /usr/include/c++/10/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/Symbol.h:14,
-                 from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
-                 from toh.cpp:2:
-/usr/include/c++/10/bits/shared_ptr.h:232:2: note: candidate: ‘template&lt;class _Deleter, class _Alloc&gt; std::shared_ptr&lt;_Tp&gt;::shared_ptr(std::nullptr_t, _Deleter, _Alloc) [with _Deleter = _Deleter; _Alloc = _Alloc; _Tp = bridges::datastructure::Symbol]’
-  232 |  shared_ptr(nullptr_t __p, _Deleter __d, _Alloc __a)
-      |  ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:232:2: note:   template argument deduction/substitution failed:
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:103:21: note:   candidate expects 3 arguments, 1 provided
-  103 |       addSymbolPtr ((std::shared_ptr&lt;Symbol&gt;)pt);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from /usr/include/c++/10/memory:84,
-                 from /usr/include/c++/10/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/Symbol.h:14,
-                 from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
-                 from toh.cpp:2:
-/usr/include/c++/10/bits/shared_ptr.h:213:2: note: candidate: ‘template&lt;class _Yp, class _Deleter, class _Alloc, class&gt; std::shared_ptr&lt;_Tp&gt;::shared_ptr(_Yp*, _Deleter, _Alloc) [with _Yp = _Yp; _Deleter = _Deleter; _Alloc = _Alloc; &lt;template-parameter-2-4&gt; = &lt;template-parameter-1-4&gt;; _Tp = bridges::datastructure::Symbol]’
-  213 |  shared_ptr(_Yp* __p, _Deleter __d, _Alloc __a)
-      |  ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:213:2: note:   template argument deduction/substitution failed:
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:103:21: note:   mismatched types ‘_Yp*’ and ‘std::shared_ptr&lt;bridges::datastructure::Rectangle*&gt;’
-  103 |       addSymbolPtr ((std::shared_ptr&lt;Symbol&gt;)pt);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from /usr/include/c++/10/memory:84,
-                 from /usr/include/c++/10/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/Symbol.h:14,
-                 from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
-                 from toh.cpp:2:
-/usr/include/c++/10/bits/shared_ptr.h:193:2: note: candidate: ‘template&lt;class _Deleter&gt; std::shared_ptr&lt;_Tp&gt;::shared_ptr(std::nullptr_t, _Deleter) [with _Deleter = _Deleter; _Tp = bridges::datastructure::Symbol]’
-  193 |  shared_ptr(nullptr_t __p, _Deleter __d)
-      |  ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:193:2: note:   template argument deduction/substitution failed:
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:103:21: note:   candidate expects 2 arguments, 1 provided
-  103 |       addSymbolPtr ((std::shared_ptr&lt;Symbol&gt;)pt);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from /usr/include/c++/10/memory:84,
-                 from /usr/include/c++/10/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/Symbol.h:14,
-                 from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
-                 from toh.cpp:2:
-/usr/include/c++/10/bits/shared_ptr.h:176:2: note: candidate: ‘template&lt;class _Yp, class _Deleter, class&gt; std::shared_ptr&lt;_Tp&gt;::shared_ptr(_Yp*, _Deleter) [with _Yp = _Yp; _Deleter = _Deleter; &lt;template-parameter-2-3&gt; = &lt;template-parameter-1-3&gt;; _Tp = bridges::datastructure::Symbol]’
-  176 |  shared_ptr(_Yp* __p, _Deleter __d)
-      |  ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:176:2: note:   template argument deduction/substitution failed:
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:103:21: note:   mismatched types ‘_Yp*’ and ‘std::shared_ptr&lt;bridges::datastructure::Rectangle*&gt;’
-  103 |       addSymbolPtr ((std::shared_ptr&lt;Symbol&gt;)pt);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from /usr/include/c++/10/memory:84,
-                 from /usr/include/c++/10/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/Symbol.h:14,
-                 from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
-                 from toh.cpp:2:
-/usr/include/c++/10/bits/shared_ptr.h:159:2: note: candidate: ‘template&lt;class _Yp, class&gt; std::shared_ptr&lt;_Tp&gt;::shared_ptr(_Yp*) [with _Yp = _Yp; &lt;template-parameter-2-2&gt; = &lt;template-parameter-1-2&gt;; _Tp = bridges::datastructure::Symbol]’
-  159 |  shared_ptr(_Yp* __p) : __shared_ptr&lt;_Tp&gt;(__p) { }
-      |  ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:159:2: note:   template argument deduction/substitution failed:
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:103:21: note:   mismatched types ‘_Yp*’ and ‘std::shared_ptr&lt;bridges::datastructure::Rectangle*&gt;’
-  103 |       addSymbolPtr ((std::shared_ptr&lt;Symbol&gt;)pt);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from /usr/include/c++/10/memory:84,
-                 from /usr/include/c++/10/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/Symbol.h:14,
-                 from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
-                 from toh.cpp:2:
-/usr/include/c++/10/bits/shared_ptr.h:149:7: note: candidate: ‘std::shared_ptr&lt;_Tp&gt;::shared_ptr(const std::shared_ptr&lt;_Tp&gt;&amp;) [with _Tp = bridges::datastructure::Symbol]’
-  149 |       shared_ptr(const shared_ptr&amp;) noexcept = default; ///&lt; Copy constructor
-      |       ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:149:18: note:   no known conversion for argument 1 from ‘std::shared_ptr&lt;bridges::datastructure::Rectangle*&gt;’ to ‘const std::shared_ptr&lt;bridges::datastructure::Symbol&gt;&amp;’
-  149 |       shared_ptr(const shared_ptr&amp;) noexcept = default; ///&lt; Copy constructor
-      |                  ^~~~~~~~~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:147:17: note: candidate: ‘constexpr std::shared_ptr&lt;_Tp&gt;::shared_ptr() [with _Tp = bridges::datastructure::Symbol]’
-  147 |       constexpr shared_ptr() noexcept : __shared_ptr&lt;_Tp&gt;() { }
-      |                 ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:147:17: note:   candidate expects 0 arguments, 1 provided
-make: *** [Makefile:26: toh.o] Error 1
-could not compile c++/ for assignment in ../assignmentdb/26-TowersOfHanoi/c++
+g++ -o TowersOfHanoi toh.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ -pthread -lcurl -l bridges 
 </code></pre>
 </div>
 <div class="failure">
@@ -2350,256 +2127,16 @@ rm TowersOfHanoi
 rm: cannot remove 'TowersOfHanoi': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
 g++ -g  -std=c++14 -I /home/bridges-testing/bridges-cxx-install/include/ -c toh.cpp -o toh.o
-toh.cpp:15:5: error: ‘bridges’ does not name a type
-   15 |     bridges.setTitle(&quot;Towers of Hanoi&quot;);
-      |     ^~~~~~~
-toh.cpp:16:5: error: ‘bridges’ does not name a type
-   16 |     bridges.setDescription(&quot;Solve the towers of hanoi problem with loops.&quot;);
-      |     ^~~~~~~
-toh.cpp: In member function ‘void TOHData::displayCurrent()’:
-toh.cpp:47:17: error: ‘class bridges::datastructure::Rectangle’ has no member named ‘setLocation’
-   47 |           disk1.setLocation(-50, 10);
-      |                 ^~~~~~~~~~~
-toh.cpp:50:17: error: ‘class bridges::datastructure::Rectangle’ has no member named ‘setLocation’
-   50 |           disk2.setLocation(-50, 0);
-      |                 ^~~~~~~~~~~
-toh.cpp:53:17: error: ‘class bridges::datastructure::Rectangle’ has no member named ‘setLocation’
-   53 |           disk3.setLocation(-50, -10);
-      |                 ^~~~~~~~~~~
-toh.cpp:59:17: error: ‘class bridges::datastructure::Rectangle’ has no member named ‘setLocation’
-   59 |           disk1.setLocation(0, 10);
-      |                 ^~~~~~~~~~~
-toh.cpp:62:17: error: ‘class bridges::datastructure::Rectangle’ has no member named ‘setLocation’
-   62 |           disk2.setLocation(0, 0);
-      |                 ^~~~~~~~~~~
-toh.cpp:65:17: error: ‘class bridges::datastructure::Rectangle’ has no member named ‘setLocation’
-   65 |           disk3.setLocation(0, -10);
-      |                 ^~~~~~~~~~~
-toh.cpp:71:17: error: ‘class bridges::datastructure::Rectangle’ has no member named ‘setLocation’
-   71 |           disk1.setLocation(50, 10);
-      |                 ^~~~~~~~~~~
-toh.cpp:74:17: error: ‘class bridges::datastructure::Rectangle’ has no member named ‘setLocation’
-   74 |           disk2.setLocation(50, 0);
-      |                 ^~~~~~~~~~~
-toh.cpp:77:17: error: ‘class bridges::datastructure::Rectangle’ has no member named ‘setLocation’
-   77 |           disk3.setLocation(50, -10);
-      |                 ^~~~~~~~~~~
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h: In instantiation of ‘void bridges::datastructure::SymbolCollection::addSymbol(T) [with T = bridges::datastructure::Rectangle*]’:
-toh.cpp:35:27:   required from here
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:103:21: error: no matching function for call to ‘std::shared_ptr&lt;bridges::datastructure::Symbol&gt;::shared_ptr(std::shared_ptr&lt;bridges::datastructure::Rectangle*&gt;&amp;)’
-  103 |       addSymbolPtr ((std::shared_ptr&lt;Symbol&gt;)pt);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from /usr/include/c++/10/memory:84,
-                 from /usr/include/c++/10/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/Symbol.h:14,
-                 from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
-                 from toh.cpp:2:
-/usr/include/c++/10/bits/shared_ptr.h:416:7: note: candidate: ‘std::shared_ptr&lt;_Tp&gt;::shared_ptr(const std::weak_ptr&lt;_Tp&gt;&amp;, std::nothrow_t) [with _Tp = bridges::datastructure::Symbol]’
-  416 |       shared_ptr(const weak_ptr&lt;_Tp&gt;&amp; __r, std::nothrow_t)
-      |       ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:416:7: note:   candidate expects 2 arguments, 1 provided
-/usr/include/c++/10/bits/shared_ptr.h:407:2: note: candidate: ‘template&lt;class _Alloc, class ... _Args&gt; std::shared_ptr&lt;_Tp&gt;::shared_ptr(std::_Sp_alloc_shared_tag&lt;_Tp&gt;, _Args&amp;&amp; ...) [with _Alloc = _Alloc; _Args = {_Args ...}; _Tp = bridges::datastructure::Symbol]’
-  407 |  shared_ptr(_Sp_alloc_shared_tag&lt;_Alloc&gt; __tag, _Args&amp;&amp;... __args)
-      |  ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:407:2: note:   template argument deduction/substitution failed:
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:103:21: note:   ‘std::shared_ptr&lt;bridges::datastructure::Rectangle*&gt;’ is not derived from ‘std::_Sp_alloc_shared_tag&lt;_Tp&gt;’
-  103 |       addSymbolPtr ((std::shared_ptr&lt;Symbol&gt;)pt);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from /usr/include/c++/10/memory:84,
-                 from /usr/include/c++/10/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/Symbol.h:14,
-                 from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
-                 from toh.cpp:2:
-/usr/include/c++/10/bits/shared_ptr.h:356:17: note: candidate: ‘constexpr std::shared_ptr&lt;_Tp&gt;::shared_ptr(std::nullptr_t) [with _Tp = bridges::datastructure::Symbol; std::nullptr_t = std::nullptr_t]’
-  356 |       constexpr shared_ptr(nullptr_t) noexcept : shared_ptr() { }
-      |                 ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:356:28: note:   no known conversion for argument 1 from ‘std::shared_ptr&lt;bridges::datastructure::Rectangle*&gt;’ to ‘std::nullptr_t’
-  356 |       constexpr shared_ptr(nullptr_t) noexcept : shared_ptr() { }
-      |                            ^~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:348:2: note: candidate: ‘template&lt;class _Yp, class _Del, std::shared_ptr&lt;bridges::datastructure::Symbol&gt;::_Constructible&lt;std::unique_ptr&lt;_Tp, _Dp&gt;, std::__sp_array_delete&gt;* &lt;anonymous&gt; &gt; std::shared_ptr&lt;_Tp&gt;::shared_ptr(std::unique_ptr&lt;_Up, _Ep&gt;&amp;&amp;) [with _Yp = _Yp; _Del = _Del; std::shared_ptr&lt;_Tp&gt;::_Constructible&lt;std::unique_ptr&lt;_Up, _Ep&gt;, std::__sp_array_delete&gt;* &lt;anonymous&gt; = &lt;anonymous&gt;; _Tp = bridges::datastructure::Symbol]’
-  348 |  shared_ptr(unique_ptr&lt;_Yp, _Del&gt;&amp;&amp; __r)
-      |  ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:348:2: note:   template argument deduction/substitution failed:
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:103:21: note:   ‘std::shared_ptr&lt;bridges::datastructure::Rectangle*&gt;’ is not derived from ‘std::unique_ptr&lt;_Tp, _Dp&gt;’
-  103 |       addSymbolPtr ((std::shared_ptr&lt;Symbol&gt;)pt);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from /usr/include/c++/10/memory:84,
-                 from /usr/include/c++/10/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/Symbol.h:14,
-                 from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
-                 from toh.cpp:2:
-/usr/include/c++/10/bits/shared_ptr.h:339:2: note: candidate: ‘template&lt;class _Yp, class _Del, class&gt; std::shared_ptr&lt;_Tp&gt;::shared_ptr(std::unique_ptr&lt;_Up, _Ep&gt;&amp;&amp;) [with _Yp = _Yp; _Del = _Del; &lt;template-parameter-2-3&gt; = &lt;template-parameter-1-3&gt;; _Tp = bridges::datastructure::Symbol]’
-  339 |  shared_ptr(unique_ptr&lt;_Yp, _Del&gt;&amp;&amp; __r)
-      |  ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:339:2: note:   template argument deduction/substitution failed:
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:103:21: note:   ‘std::shared_ptr&lt;bridges::datastructure::Rectangle*&gt;’ is not derived from ‘std::unique_ptr&lt;_Tp, _Dp&gt;’
-  103 |       addSymbolPtr ((std::shared_ptr&lt;Symbol&gt;)pt);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from /usr/include/c++/10/memory:84,
-                 from /usr/include/c++/10/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/Symbol.h:14,
-                 from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
-                 from toh.cpp:2:
-/usr/include/c++/10/bits/shared_ptr.h:331:2: note: candidate: ‘template&lt;class _Yp, class&gt; std::shared_ptr&lt;_Tp&gt;::shared_ptr(std::auto_ptr&lt;_Up&gt;&amp;&amp;) [with _Yp = _Tp1; &lt;template-parameter-2-2&gt; = &lt;template-parameter-1-2&gt;; _Tp = bridges::datastructure::Symbol]’
-  331 |  shared_ptr(auto_ptr&lt;_Yp&gt;&amp;&amp; __r);
-      |  ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:331:2: note:   template argument deduction/substitution failed:
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:103:21: note:   ‘std::shared_ptr&lt;bridges::datastructure::Rectangle*&gt;’ is not derived from ‘std::auto_ptr&lt;_Up&gt;’
-  103 |       addSymbolPtr ((std::shared_ptr&lt;Symbol&gt;)pt);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from /usr/include/c++/10/memory:84,
-                 from /usr/include/c++/10/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/Symbol.h:14,
-                 from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
-                 from toh.cpp:2:
-/usr/include/c++/10/bits/shared_ptr.h:324:11: note: candidate: ‘template&lt;class _Yp, class&gt; std::shared_ptr&lt;_Tp&gt;::shared_ptr(const std::weak_ptr&lt;_Yp&gt;&amp;) [with _Yp = _Yp; &lt;template-parameter-2-2&gt; = &lt;template-parameter-1-2&gt;; _Tp = bridges::datastructure::Symbol]’
-  324 |  explicit shared_ptr(const weak_ptr&lt;_Yp&gt;&amp; __r)
-      |           ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:324:11: note:   template argument deduction/substitution failed:
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:103:21: note:   ‘std::shared_ptr&lt;bridges::datastructure::Rectangle*&gt;’ is not derived from ‘const std::weak_ptr&lt;_Tp&gt;’
-  103 |       addSymbolPtr ((std::shared_ptr&lt;Symbol&gt;)pt);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from /usr/include/c++/10/memory:84,
-                 from /usr/include/c++/10/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/Symbol.h:14,
-                 from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
-                 from toh.cpp:2:
-/usr/include/c++/10/bits/shared_ptr.h:312:2: note: candidate: ‘template&lt;class _Yp, class&gt; std::shared_ptr&lt;_Tp&gt;::shared_ptr(std::shared_ptr&lt;_Yp&gt;&amp;&amp;) [with _Yp = _Yp; &lt;template-parameter-2-2&gt; = &lt;template-parameter-1-2&gt;; _Tp = bridges::datastructure::Symbol]’
-  312 |  shared_ptr(shared_ptr&lt;_Yp&gt;&amp;&amp; __r) noexcept
-      |  ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:312:2: note:   template argument deduction/substitution failed:
-/usr/include/c++/10/bits/shared_ptr.h: In substitution of ‘template&lt;class _Tp&gt; template&lt;class ... _Args&gt; using _Constructible = typename std::enable_if&lt;std::is_constructible&lt;std::__shared_ptr&lt;_Tp&gt;, _Args ...&gt;::value&gt;::type [with _Args = {std::shared_ptr&lt;bridges::datastructure::Rectangle*&gt;}; _Tp = bridges::datastructure::Symbol]’:
-/usr/include/c++/10/bits/shared_ptr.h:311:30:   required from ‘void bridges::datastructure::SymbolCollection::addSymbol(T) [with T = bridges::datastructure::Rectangle*]’
-toh.cpp:35:27:   required from here
-/usr/include/c++/10/bits/shared_ptr.h:124:8: error: no type named ‘type’ in ‘struct std::enable_if&lt;false, void&gt;’
-  124 |  using _Constructible = typename enable_if&lt;
-      |        ^~~~~~~~~~~~~~
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h: In instantiation of ‘void bridges::datastructure::SymbolCollection::addSymbol(T) [with T = bridges::datastructure::Rectangle*]’:
-toh.cpp:35:27:   required from here
-/usr/include/c++/10/bits/shared_ptr.h:303:7: note: candidate: ‘std::shared_ptr&lt;_Tp&gt;::shared_ptr(std::shared_ptr&lt;_Tp&gt;&amp;&amp;) [with _Tp = bridges::datastructure::Symbol]’
-  303 |       shared_ptr(shared_ptr&amp;&amp; __r) noexcept
-      |       ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:303:31: note:   no known conversion for argument 1 from ‘std::shared_ptr&lt;bridges::datastructure::Rectangle*&gt;’ to ‘std::shared_ptr&lt;bridges::datastructure::Symbol&gt;&amp;&amp;’
-  303 |       shared_ptr(shared_ptr&amp;&amp; __r) noexcept
-      |                  ~~~~~~~~~~~~~^~~
-/usr/include/c++/10/bits/shared_ptr.h:295:2: note: candidate: ‘template&lt;class _Yp, class&gt; std::shared_ptr&lt;_Tp&gt;::shared_ptr(const std::shared_ptr&lt;_Yp&gt;&amp;) [with _Yp = _Yp; &lt;template-parameter-2-2&gt; = &lt;template-parameter-1-2&gt;; _Tp = bridges::datastructure::Symbol]’
-  295 |  shared_ptr(const shared_ptr&lt;_Yp&gt;&amp; __r) noexcept
-      |  ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:295:2: note:   template argument deduction/substitution failed:
-/usr/include/c++/10/bits/shared_ptr.h: In substitution of ‘template&lt;class _Tp&gt; template&lt;class ... _Args&gt; using _Constructible = typename std::enable_if&lt;std::is_constructible&lt;std::__shared_ptr&lt;_Tp&gt;, _Args ...&gt;::value&gt;::type [with _Args = {const std::shared_ptr&lt;bridges::datastructure::Rectangle*&gt;&amp;}; _Tp = bridges::datastructure::Symbol]’:
-/usr/include/c++/10/bits/shared_ptr.h:294:9:   required from ‘void bridges::datastructure::SymbolCollection::addSymbol(T) [with T = bridges::datastructure::Rectangle*]’
-toh.cpp:35:27:   required from here
-/usr/include/c++/10/bits/shared_ptr.h:124:8: error: no type named ‘type’ in ‘struct std::enable_if&lt;false, void&gt;’
-  124 |  using _Constructible = typename enable_if&lt;
-      |        ^~~~~~~~~~~~~~
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h: In instantiation of ‘void bridges::datastructure::SymbolCollection::addSymbol(T) [with T = bridges::datastructure::Rectangle*]’:
-toh.cpp:35:27:   required from here
-/usr/include/c++/10/bits/shared_ptr.h:256:2: note: candidate: ‘template&lt;class _Yp&gt; std::shared_ptr&lt;_Tp&gt;::shared_ptr(const std::shared_ptr&lt;_Yp&gt;&amp;, std::shared_ptr&lt;_Tp&gt;::element_type*) [with _Yp = _Yp; _Tp = bridges::datastructure::Symbol]’
-  256 |  shared_ptr(const shared_ptr&lt;_Yp&gt;&amp; __r, element_type* __p) noexcept
-      |  ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:256:2: note:   template argument deduction/substitution failed:
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:103:21: note:   candidate expects 2 arguments, 1 provided
-  103 |       addSymbolPtr ((std::shared_ptr&lt;Symbol&gt;)pt);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from /usr/include/c++/10/memory:84,
-                 from /usr/include/c++/10/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/Symbol.h:14,
-                 from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
-                 from toh.cpp:2:
-/usr/include/c++/10/bits/shared_ptr.h:232:2: note: candidate: ‘template&lt;class _Deleter, class _Alloc&gt; std::shared_ptr&lt;_Tp&gt;::shared_ptr(std::nullptr_t, _Deleter, _Alloc) [with _Deleter = _Deleter; _Alloc = _Alloc; _Tp = bridges::datastructure::Symbol]’
-  232 |  shared_ptr(nullptr_t __p, _Deleter __d, _Alloc __a)
-      |  ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:232:2: note:   template argument deduction/substitution failed:
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:103:21: note:   candidate expects 3 arguments, 1 provided
-  103 |       addSymbolPtr ((std::shared_ptr&lt;Symbol&gt;)pt);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from /usr/include/c++/10/memory:84,
-                 from /usr/include/c++/10/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/Symbol.h:14,
-                 from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
-                 from toh.cpp:2:
-/usr/include/c++/10/bits/shared_ptr.h:213:2: note: candidate: ‘template&lt;class _Yp, class _Deleter, class _Alloc, class&gt; std::shared_ptr&lt;_Tp&gt;::shared_ptr(_Yp*, _Deleter, _Alloc) [with _Yp = _Yp; _Deleter = _Deleter; _Alloc = _Alloc; &lt;template-parameter-2-4&gt; = &lt;template-parameter-1-4&gt;; _Tp = bridges::datastructure::Symbol]’
-  213 |  shared_ptr(_Yp* __p, _Deleter __d, _Alloc __a)
-      |  ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:213:2: note:   template argument deduction/substitution failed:
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:103:21: note:   mismatched types ‘_Yp*’ and ‘std::shared_ptr&lt;bridges::datastructure::Rectangle*&gt;’
-  103 |       addSymbolPtr ((std::shared_ptr&lt;Symbol&gt;)pt);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from /usr/include/c++/10/memory:84,
-                 from /usr/include/c++/10/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/Symbol.h:14,
-                 from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
-                 from toh.cpp:2:
-/usr/include/c++/10/bits/shared_ptr.h:193:2: note: candidate: ‘template&lt;class _Deleter&gt; std::shared_ptr&lt;_Tp&gt;::shared_ptr(std::nullptr_t, _Deleter) [with _Deleter = _Deleter; _Tp = bridges::datastructure::Symbol]’
-  193 |  shared_ptr(nullptr_t __p, _Deleter __d)
-      |  ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:193:2: note:   template argument deduction/substitution failed:
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:103:21: note:   candidate expects 2 arguments, 1 provided
-  103 |       addSymbolPtr ((std::shared_ptr&lt;Symbol&gt;)pt);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from /usr/include/c++/10/memory:84,
-                 from /usr/include/c++/10/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/Symbol.h:14,
-                 from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
-                 from toh.cpp:2:
-/usr/include/c++/10/bits/shared_ptr.h:176:2: note: candidate: ‘template&lt;class _Yp, class _Deleter, class&gt; std::shared_ptr&lt;_Tp&gt;::shared_ptr(_Yp*, _Deleter) [with _Yp = _Yp; _Deleter = _Deleter; &lt;template-parameter-2-3&gt; = &lt;template-parameter-1-3&gt;; _Tp = bridges::datastructure::Symbol]’
-  176 |  shared_ptr(_Yp* __p, _Deleter __d)
-      |  ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:176:2: note:   template argument deduction/substitution failed:
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:103:21: note:   mismatched types ‘_Yp*’ and ‘std::shared_ptr&lt;bridges::datastructure::Rectangle*&gt;’
-  103 |       addSymbolPtr ((std::shared_ptr&lt;Symbol&gt;)pt);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from /usr/include/c++/10/memory:84,
-                 from /usr/include/c++/10/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/Symbol.h:14,
-                 from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
-                 from toh.cpp:2:
-/usr/include/c++/10/bits/shared_ptr.h:159:2: note: candidate: ‘template&lt;class _Yp, class&gt; std::shared_ptr&lt;_Tp&gt;::shared_ptr(_Yp*) [with _Yp = _Yp; &lt;template-parameter-2-2&gt; = &lt;template-parameter-1-2&gt;; _Tp = bridges::datastructure::Symbol]’
-  159 |  shared_ptr(_Yp* __p) : __shared_ptr&lt;_Tp&gt;(__p) { }
-      |  ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:159:2: note:   template argument deduction/substitution failed:
-In file included from toh.cpp:2:
-/home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:103:21: note:   mismatched types ‘_Yp*’ and ‘std::shared_ptr&lt;bridges::datastructure::Rectangle*&gt;’
-  103 |       addSymbolPtr ((std::shared_ptr&lt;Symbol&gt;)pt);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from /usr/include/c++/10/memory:84,
-                 from /usr/include/c++/10/regex:45,
-                 from /home/bridges-testing/bridges-cxx-install/include/Color.h:6,
-                 from /home/bridges-testing/bridges-cxx-install/include/Symbol.h:14,
-                 from /home/bridges-testing/bridges-cxx-install/include/SymbolCollection.h:9,
-                 from toh.cpp:2:
-/usr/include/c++/10/bits/shared_ptr.h:149:7: note: candidate: ‘std::shared_ptr&lt;_Tp&gt;::shared_ptr(const std::shared_ptr&lt;_Tp&gt;&amp;) [with _Tp = bridges::datastructure::Symbol]’
-  149 |       shared_ptr(const shared_ptr&amp;) noexcept = default; ///&lt; Copy constructor
-      |       ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:149:18: note:   no known conversion for argument 1 from ‘std::shared_ptr&lt;bridges::datastructure::Rectangle*&gt;’ to ‘const std::shared_ptr&lt;bridges::datastructure::Symbol&gt;&amp;’
-  149 |       shared_ptr(const shared_ptr&amp;) noexcept = default; ///&lt; Copy constructor
-      |                  ^~~~~~~~~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:147:17: note: candidate: ‘constexpr std::shared_ptr&lt;_Tp&gt;::shared_ptr() [with _Tp = bridges::datastructure::Symbol]’
-  147 |       constexpr shared_ptr() noexcept : __shared_ptr&lt;_Tp&gt;() { }
-      |                 ^~~~~~~~~~
-/usr/include/c++/10/bits/shared_ptr.h:147:17: note:   candidate expects 0 arguments, 1 provided
+toh.cpp: In function ‘void moveStack(Hanoi&amp;, int, int, int)’:
+toh.cpp:20:22: error: expected primary-expression before ‘,’ token
+   20 |     moveStack(bridges, nt, from, interm, howmany -1);
+      |                      ^
+toh.cpp:21:22: error: expected primary-expression before ‘,’ token
+   21 |     moveStack(bridges, nt, from, to, 1);
+      |                      ^
+toh.cpp:22:22: error: expected primary-expression before ‘,’ token
+   22 |     moveStack(bridges, nt, interm, to, howmany -1);
+      |                      ^
 make: *** [Makefile:26: toh.o] Error 1
 could not compile c++_answer/ for assignment in ../assignmentdb/26-TowersOfHanoi/c++_answer
 </code></pre>
@@ -2781,10 +2318,6 @@ getting year 2019
 getting year 2018
 getting year 2019
 *getting year 2016
-getting year 2017
-getting year 2018
-getting year 2019
-*getting year 2015
 Alarm clock
 could not run c++_answer for assignment in ../assignmentdb/30-TemporalBaconNumber/c++_answer
 </code></pre>
@@ -2818,8 +2351,6 @@ getting year 1999
 getting year 2000
 getting year 2001
 getting year 2002
-getting year 2003
-getting year 2004
 Alarm clock
 could not run c++_answer for assignment in ../assignmentdb/31-TemporalPageRank/c++_answer
 </code></pre>
@@ -3106,7 +2637,152 @@ g++ -o geological_survey geological_survey.o -g -L /home/bridges-testing/bridges
 <h3 id="cxxlog38-runanswer">Run Answer for Assignment 38</h3>
 <pre><code>Guessing ./geological_survey is the right binary file where main is
 
+M 1.4 - 3km SE of San Ardo, CA
+M 1.2 - 7km W of Cobb, CA
+M 1.3 - 21 km WNW of Tatitlek, Alaska
+M 2.6 - 15 km SSE of Guánica, Puerto Rico
+M 2.4 - 6km WNW of Cobb, CA
+M 2.3 - 6 km WSW of Fuig, Puerto Rico
+M 2.3 - 11 km SE of Pāhala, Hawaii
+M 4.7 - 153 km E of Kimbe, Papua New Guinea
+M 1.0 - 16 km SSE of Chenega, Alaska
+M 1.8 - 14 km SE of Chenega, Alaska
+M 1.5 - 29 km ESE of Minto, Alaska
+M 1.1 - 5km NE of Banning, CA
+M 1.5 - 6km W of Cobb, CA
+M 2.0 - 25 km WNW of Volcano, Hawaii
+M 2.1 - 3 km S of Pāhala, Hawaii
+M 1.1 - 2km W of Anderson Springs, CA
+M 1.3 - 24km SW of Bodfish, CA
+M 2.0 - 1km SSW of Round Valley, CA
+M 2.9 - 0km WSW of Round Valley, CA
+M 2.5 - 3 km SSW of Pāhala, Hawaii
+M 1.5 - 6km W of Cobb, CA
+M 1.5 - 5km N of Moreno Valley, CA
+M 1.8 - 5 km ENE of Pāhala, Hawaii
+M 4.6 - 22 km ENE of Aras-asan, Philippines
+M 1.3 - 50 km SE of Denali National Park, Alaska
+M 3.7 - 84 km SSW of Unalaska, Alaska
+M 4.3 - 107 km WSW of Colchani, Bolivia
+M 2.2 - 71 km W of Tyonek, Alaska
+M 1.1 - 53 km WNW of Cantwell, Alaska
+M 2.1 - 45 km NW of Ninilchik, Alaska
+M 2.0 - 42 km ESE of Leilani Estates, Hawaii
+M 1.0 - 54 km WNW of Beluga, Alaska
+M 1.6 - 13km SE of Anza, CA
+M 1.2 - 5km NNW of The Geysers, CA
+M 1.2 - 35 km SE of Mina, Nevada
+M 2.3 - 7 km S of Indios, Puerto Rico
+M 4.6 - 0 km NNE of Hihifo, Tonga
+M 2.6 - 58 km S of Whites City, New Mexico
+M 5.0 - 98 km NNW of Neiafu, Tonga
+M 1.2 - 13km SE of Anza, CA
+M 1.7 - 18 km NNW of Stagecoach, Nevada
+M 1.4 Quarry Blast - 4km NNW of Boron, CA
+M 1.0 - 64 km WNW of Karluk, Alaska
+M 1.5 - 8 km NE of Fox, Alaska
+M 4.6 - 47 km ENE of Tocopilla, Chile
+M 1.1 - 8 km W of Point MacKenzie, Alaska
+M 1.1 - 8km NW of The Geysers, CA
+M 1.2 - 14 km N of Meadow Lakes, Alaska
+M 1.7 - 6km ENE of Progreso, B.C., MX
+M 2.6 - 13 km SW of Karluk, Alaska
+M 2.1 - 15 km NNE of Sutcliffe, Nevada
+M 4.6 - 128 km SSW of Koróni, Greece
+M 5.5 - 5 km NNE of Santa María Ecatepec, Mexico
+M 2.5 - 10km SSW of Ridgemark, CA
+M 1.2 - 1 km NNW of La Parguera, Puerto Rico
+M 1.2 Quarry Blast - 2km SSE of Home Gardens, CA
+M 2.6 - 25 km SW of Mina, Nevada
+M 1.0 - 14km N of Banning, CA
+M 4.2 - 50 km ESE of Yujing, Taiwan
+M 2.7 - 48 km SSW of Glacier View, Alaska
+M 2.8 - 75 km SSW of Kaktovik, Alaska
+M 1.5 - 6km NNW of Round Valley, CA
+M 1.5 - 7km N of Santa Margarita, CA
+M 2.3 - 26 km W of Volcano, Hawaii
+M 5.0 - 49 km WSW of Masachapa, Nicaragua
+M 4.3 - 28 km WSW of San Isidro, Costa Rica
+M 2.0 - 20 km NNE of Sutcliffe, Nevada
+M 2.3 - 19 km NNE of Sutcliffe, Nevada
+M 1.4 - 22 km NNE of Sutcliffe, Nevada
+M 1.9 - 13 km SSE of Volcano, Hawaii
+M 1.3 - 36 km N of Chickaloon, Alaska
+M 2.2 - 9 km E of Pāhala, Hawaii
+M 1.4 - 14km W of Searles Valley, CA
+M 1.2 - 45 km NNW of Glacier View, Alaska
+M 1.0 - 6km W of Cobb, CA
+M 1.8 - 53 km W of Nanwalek, Alaska
+M 2.6 - 8km ESE of Piru, CA
+M 1.5 - 13km WNW of Toms Place, CA
+M 1.5 - 10 km W of Diamond Ridge, Alaska
+M 2.0 - 5km N of Lancaster, CA
+M 1.1 - 28 km NW of Valdez, Alaska
+M 2.2 - 5 km SSE of Guánica, Puerto Rico
+M 2.3 - 2 km W of Indios, Puerto Rico
+M 1.4 - 94 km SSE of Ruby, Alaska
+M 1.1 - 3km ESE of Aromas, CA
+M 1.0 - 62 km WNW of Anchor Point, Alaska
+M 1.2 - 13km N of Borrego Springs, CA
+M 1.1 - 20km SW of Ocotillo Wells, CA
+M 5.2 - South Indian Ocean
+M 1.9 - 3 km WSW of Indios, Puerto Rico
+M 1.3 - 128 km WNW of Yakutat, Alaska
+M 1.0 - 6 km N of Point MacKenzie, Alaska
+M 1.4 - 15km NE of Coachella, CA
+M 2.2 - 1 km WSW of Guayanilla, Puerto Rico
+M 2.0 - 2 km WSW of Pāhala, Hawaii
+M 1.5 - 18km SE of Pinnacles, CA
+M 1.0 - 50 km NNW of Glacier View, Alaska
+M 1.6 - 6km NNE of Tres Pinos, CA
+M 1.5 - 6km NE of Progreso, B.C., MX
+M 3.2 - 48 km SE of Punta Cana, Dominican Republic
+M 1.0 - 11km NE of Borrego Springs, CA
+M 2.9 - 67 km ESE of Denali National Park, Alaska
+M 1.9 - 5 km SSE of Pāhala, Hawaii
+M 1.4 - 20 km NNE of Sutcliffe, Nevada
+M 1.3 - 4km SSE of The Geysers, CA
+M 1.9 - 4km SSE of The Geysers, CA
+M 1.2 - 35 km WNW of Anchor Point, Alaska
+M 1.5 - 56 km W of Nikiski, Alaska
+M 1.7 - 47 km WNW of Beluga, Alaska
+M 1.2 - 28 km ESE of Skwentna, Alaska
+M 1.4 - 6km ENE of Progreso, B.C., MX
+M 1.0 - 8 km NNW of Minto, Alaska
+M 1.3 - 8km SE of Progreso, B.C., MX
+M 1.3 - 16 km NNE of Sutcliffe, Nevada
+M 1.7 - 16 km E of Point Possession, Alaska
+M 1.7 - 14km E of Pinnacles, CA
+M 2.2 - 18 km NNE of Sutcliffe, Nevada
+M 2.6 - 6 km WNW of Molalla, Oregon
+M 1.1 - 23 km NE of Sutcliffe, Nevada
+M 3.1 - 70 km ESE of Sand Point, Alaska
+M 1.5 - 28km ESE of Campo, CA
+M 1.9 - 15 km NNE of Sutcliffe, Nevada
+M 1.8 - 107 km WSW of Mosquito Lake, Alaska
+M 2.0 - 101 km NNW of Yakutat, Alaska
+M 2.6 - 23 km NNE of Sutcliffe, Nevada
+M 3.2 - 57 km S of Whites City, New Mexico
+M 1.1 - 8 km NE of Sutcliffe, Nevada
+M 2.6 - 22 km NNE of Sutcliffe, Nevada
+M 1.5 - 33 km E of Skwentna, Alaska
+M 1.3 - 6km SE of Progreso, B.C., MX
+M 1.4 - 24 km N of Akhiok, Alaska
+M 1.8 - 21 km NNE of Sutcliffe, Nevada
+M 1.9 - 19 km NE of Sutcliffe, Nevada
+M 1.7 - 20 km NNE of Sutcliffe, Nevada
+M 1.7 - 19 km NNE of Sutcliffe, Nevada
+M 2.0 - 4km S of Frazier Park, CA
+M 2.4 - 18 km NE of Sutcliffe, Nevada
+M 1.1 - 66 km SE of Pope-Vannoy Landing, Alaska
+M 2.5 - 57 km SSW of Tanana, Alaska
+M 2.2 - 4 km WSW of Fuig, Puerto Rico
+M 1.1 - 27km ESE of Campo, CA
+M 1.0 - 59 km SSW of Tanana, Alaska
+M 1.1 - 28 km E of Chase, Alaska
+M 2.0 - 6km ENE of Progreso, B.C., MX
 M 1.8 - 6km ESE of Progreso, B.C., MX
+M 1.1 - 1km SSW of Round Valley, CA
 M 1.5 - 6km ENE of Progreso, B.C., MX
 M 1.8 - 68 km SSW of Chenega, Alaska
 M 1.6 - 14km WNW of Progreso, B.C., MX
@@ -3661,151 +3337,6 @@ M 2.0 - 64 km WNW of Anchor Point, Alaska
 M 1.2 - 18 km S of Tatitlek, Alaska
 M 2.1 - 5 km W of Happy Valley, Alaska
 M 1.6 - 9km NE of Coso Junction, CA
-M 2.2 - 17 km SSE of Honaunau-Napoopoo, Hawaii
-M 1.3 - 13 km S of Skwentna, Alaska
-M 1.8 - 11 km WSW of Tatitlek, Alaska
-M 5.5 - 48 km NE of Al Hoceïma, Morocco
-M 1.2 - 56 km W of Anchor Point, Alaska
-M 1.1 - 18 km NNE of Hope, Alaska
-M 1.3 - 47 km E of Huslia, Alaska
-M 2.5 - 10km ESE of Borrego Springs, CA
-M 2.3 - 2 km ENE of Maria Antonia, Puerto Rico
-M 1.2 - 7km NW of The Geysers, CA
-M 1.8 - 9km NE of Coso Junction, CA
-M 1.1 - 33km ENE of Olancha, CA
-M 1.7 - 1km NNW of The Geysers, CA
-M 1.2 - 6km NW of The Geysers, CA
-M 1.1 - 12km ENE of Carpinteria, CA
-M 4.4 - 21 km W of Jacó, Costa Rica
-M 1.1 - 13km WNW of Anza, CA
-M 1.1 - 14 km E of Talkeetna, Alaska
-M 2.3 - 6 km NW of Medford, Oklahoma
-M 1.2 - 2km E of Rosemead, CA
-M 2.4 - 4 km SW of Liborio Negron Torres, Puerto Rico
-M 2.3 - 12 km SSE of La Parguera, Puerto Rico
-M 2.1 - 28 km S of Denali National Park, Alaska
-M 2.5 - 6 km NW of Medford, Oklahoma
-M 3.7 - 5 km SSE of Maria Antonia, Puerto Rico
-M 3.7 - 7 km SSE of Maria Antonia, Puerto Rico
-M 1.9 - 66 km WNW of Karluk, Alaska
-M 1.4 - 53 km NNW of Aleneva, Alaska
-M 5.8 - 82 km NW of Coquimbo, Chile
-M 1.0 - Central Alaska
-M 1.2 - 79 km SSE of Kokhanok, Alaska
-M 1.1 - 37 km ENE of Cantwell, Alaska
-M 2.5 - 41km S of Qualeys Camp, NV
-M 1.2 - 13km NE of Kernville, CA
-M 2.4 - 3 km SW of Guánica, Puerto Rico
-M 1.7 - 93 km WNW of Skwentna, Alaska
-M 1.2 - 4km NNW of The Geysers, CA
-M 5.0 - Kermadec Islands, New Zealand
-M 2.1 - 61 km SW of Cantwell, Alaska
-M 4.3 - 97 km WSW of Masachapa, Nicaragua
-M 1.0 - 23 km W of Nikiski, Alaska
-M 1.1 - 6km NW of The Geysers, CA
-M 1.8 - 3 km S of Pāhala, Hawaii
-M 2.2 - 33 km SE of Skwentna, Alaska
-M 4.9 - 74 km E of Kangding, China
-M 1.6 - 3km S of Diablo, CA
-M 1.9 - 18km SE of Lone Pine, CA
-M 1.4 - 59 km S of Glacier View, Alaska
-M 4.7 - 108 km SW of Santiago, Peru
-M 1.2 - South Carolina
-M 1.9 - 4 km SSW of Volcano, Hawaii
-M 1.9 - 3 km SSW of Pāhala, Hawaii
-M 1.6 - 19km E of Tres Pinos, CA
-M 1.3 - 35 km NW of Valdez, Alaska
-M 2.0 - 17km SSE of Progreso, B.C., MX
-M 1.7 - 41 km ENE of Yakutat, Alaska
-M 1.9 - 4 km S of Pāhala, Hawaii
-M 1.1 - 73 km ESE of Denali National Park, Alaska
-M 1.0 - 26 km NNE of Chase, Alaska
-M 1.7 - 3 km S of Houston, Alaska
-M 1.0 - 7km NW of The Geysers, CA
-M 1.4 - 39 km WNW of Skwentna, Alaska
-M 1.0 - 10km NW of The Geysers, CA
-M 1.0 - 16 km S of Trapper Creek, Alaska
-M 2.3 - 2 km S of Guánica, Puerto Rico
-M 2.1 - 0 km SW of Indios, Puerto Rico
-M 1.6 - 4 km ENE of Coleville, California
-M 1.9 - 12 km SE of Pāhala, Hawaii
-M 2.0 - 11 km E of Pāhala, Hawaii
-M 1.5 Quarry Blast - 5km SSE of Home Gardens, CA
-M 1.0 - 55 km SSW of Cantwell, Alaska
-M 2.0 - 5 km SSE of Pāhala, Hawaii
-M 1.2 - 33 km ESE of West Yellowstone, Montana
-M 1.4 - 20 km WSW of Valdez, Alaska
-M 1.0 - 7km NW of The Geysers, CA
-M 1.8 - 13 km E of King Salmon, Alaska
-M 1.0 - 8km WNW of Cobb, CA
-M 1.3 - 2 km WSW of Hebgen Lake Estates, Montana
-M 1.6 - 45 km S of Glacier View, Alaska
-M 1.9 - 5km SE of Coso Junction, CA
-M 1.7 - 35 km WSW of Karluk, Alaska
-M 1.0 - 53 km ENE of Chase, Alaska
-M 2.6 - 38km ESE of Shaver Lake, CA
-M 1.9 - 6 km N of Ames, Oklahoma
-M 1.6 - 3 km SE of Hennessey, Oklahoma
-M 2.0 - 26 km WNW of Volcano, Hawaii
-M 2.4 - 70 km W of Petersville, Alaska
-M 1.4 - 60 km S of Glacier View, Alaska
-M 1.0 - 12km SW of Searles Valley, CA
-M 1.8 - 1 km SSW of Pāhala, Hawaii
-M 1.7 - 10km SSW of Holtville, CA
-M 2.0 - 3 km SW of Guánica, Puerto Rico
-M 1.7 - 5km WNW of Cobb, CA
-M 2.2 - 82 km WSW of Karluk, Alaska
-M 2.5 - 64 km S of Cantwell, Alaska
-M 1.2 - 5km WNW of Cobb, CA
-M 2.3 - 3 km N of Guayanilla, Puerto Rico
-M 2.0 - 45 km ESE of Pedro Bay, Alaska
-M 1.6 - 58 km SE of Denali National Park, Alaska
-M 5.1 - 143 km NW of Ternate, Indonesia
-M 1.3 - 8km WNW of Bayview-Montalvin, CA
-M 1.3 - 81 km W of Karluk, Alaska
-M 1.0 - 3km ESE of Anza, CA
-M 1.2 - 3km SE of Anza, CA
-M 1.0 - 3km SE of Anza, CA
-M 1.1 - 7km NW of The Geysers, CA
-M 1.4 - 8km S of Brawley, CA
-M 1.4 - 4km E of Newport Beach, CA
-M 2.0 - 1km SSE of Walker, CA
-M 2.1 - 13km SE of Pinnacles, CA
-M 1.1 - 19 km ESE of Susitna North, Alaska
-M 1.8 - 56 km WNW of Tatitlek, Alaska
-M 1.4 - 50 km WSW of Cantwell, Alaska
-M 1.2 - 51 km W of Nanwalek, Alaska
-M 1.8 - 2km NW of Claremont, CA
-M 1.4 - 8 km NW of Anderson, Alaska
-M 1.2 - 4km W of Cobb, CA
-M 2.7 - 17km ESE of Anza, CA
-M 1.3 - 12km S of Livermore, CA
-M 4.8 - 214 km ENE of Levuka, Fiji
-M 1.4 - 7km WSW of Anza, CA
-M 1.1 - 4km S of Charter Oak, CA
-M 1.2 - 17km SSW of Trona, CA
-M 3.2 - 21 km SSE of Naalehu, Hawaii
-M 2.8 - 11 km E of Pāhala, Hawaii
-M 2.0 - 32 km WNW of Anchor Point, Alaska
-M 2.3 - 7 km ENE of Pāhala, Hawaii
-M 2.0 - 7 km ENE of Pāhala, Hawaii
-M 4.9 - 227 km SSE of Katsuura, Japan
-M 1.4 - 6km NW of The Geysers, CA
-M 1.1 - 11 km ESE of Elmendorf Air Force Base, Alaska
-M 1.9 - 17km SE of Lone Pine, CA
-M 6.7 - Macquarie Island region
-M 5.5 - Macquarie Island region
-M 2.0 - 3 km SSW of Pāhala, Hawaii
-M 6.0 - 24 km SE of Hihifo, Tonga
-M 5.8 - 37 km S of Hihifo, Tonga
-M 1.1 - 18 km NNE of Huslia, Alaska
-M 1.9 - 3 km W of Fuig, Puerto Rico
-M 1.2 - 4 km WSW of Ridgeway, Alaska
-M 1.3 - 55 km WSW of Healy, Alaska
-M 2.1 - 0 km S of Palomas, Puerto Rico
-M 1.4 - 91 km NW of Yakutat, Alaska
-M 2.1 - 9 km E of Pāhala, Hawaii
-M 2.3 - 1 km SSW of Pāhala, Hawaii
 Success: Assignment posted to the server. 
 Check out your visualization at:
 
@@ -3896,7 +3427,7 @@ Check out your visualization at:
 
 http://bridges-cs.herokuapp.com/assignments/40/bridges_testing
 
-width,height, maxval:22017,-911199610,255
+width,height, maxval:22081,-628632954,255
 Success: Assignment posted to the server. 
 Check out your visualization at:
 
@@ -4633,7 +4164,7 @@ Check out your visualization at:
 
 http://bridges-cs.herokuapp.com/assignments/143/bridges_testing
 
-elapsed time: 0.31253s
+elapsed time: 0.291265s
 Success: Assignment posted to the server. 
 Check out your visualization at:
 
@@ -5350,9 +4881,6 @@ Hitting hash URL: gutenberg28815
 Checking the cache:  hash code: gutenberg3059
 Hitting data URL: http://bridges-data-server-gutenberg-t.bridgesuncc.org//book?id=3059
 Hitting hash URL: gutenberg3059
-Checking the cache:  hash code: gutenberg30613
-Hitting data URL: http://bridges-data-server-gutenberg-t.bridgesuncc.org//book?id=30613
-Hitting hash URL: gutenberg30613
 Alarm clock
 could not run c++_answer for assignment in ../assignmentdb/57-BookAnalysis/c++_answer
 </code></pre>
