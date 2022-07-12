@@ -1,0 +1,81 @@
+<pre id='vimCodeElement'>
+<span class="Comment">/**</span>
+<span class="Comment"> *</span><span class="Special"> Created by Kalpathi Subramanian</span>
+<span class="Comment"> *</span><span class="Special"> Date : 7/17/2018.</span>
+<span class="Comment"> *</span>
+<span class="Comment"> * krs@uncc.edu</span>
+<span class="Comment"> */</span>
+<span class="PreProc">import</span> java.lang.String;
+<span class="PreProc">import</span> bridges.connect.Bridges;
+<span class="PreProc">import</span> bridges.base.SLelement;
+<span class="PreProc">import</span> bridges.base.Color;
+<span class="PreProc">import</span> bridges.base.ColorGrid;
+
+<span class="Comment">/**</span>
+<span class="Comment"> *</span><span class="Special">  This example illustrates the use of the Grid type and its subclass, a ColorGrid.</span>
+<span class="Comment"> *  The example builds  a checkerboard with two different colors</span>
+<span class="Comment"> *</span>
+<span class="Comment"> */</span>
+
+<span class="Type">public</span> <span class="Type">class</span> color_grid2 {
+
+	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) <span class="Type">throws</span> Exception {
+
+		<span class="Comment">// This example illustrates using the Bridges color grid</span>
+		<span class="Comment">// We will build a checker grid using two different colors</span>
+
+		<span class="Comment">// initialize BRIDGES</span>
+		Bridges bridges = <span class="Statement">new</span> Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+			<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+		<span class="Type">int</span> width = <span class="Constant">100</span>, height = <span class="Constant">100</span>;
+
+		Color blue = <span class="Statement">new</span> Color(<span class="Constant">&quot;blue&quot;</span>);
+		Color red = <span class="Statement">new</span> Color(<span class="Constant">&quot;red&quot;</span>);
+
+		ColorGrid cg  = <span class="Statement">new</span> ColorGrid(width, height, red);
+
+		<span class="Comment">// create a checkerboard pattern</span>
+		<span class="Comment">// 10 x 10 grid</span>
+		<span class="Type">int</span> num_squares_x = <span class="Constant">10</span>;
+		<span class="Type">int</span> num_squares_y = <span class="Constant">10</span>;
+
+		<span class="Comment">// compute square dimensions</span>
+		<span class="Type">int</span> sq_width = width / num_squares_x, sq_height = width / num_squares_y;
+
+		<span class="Statement">for</span> (<span class="Type">int</span> j = <span class="Constant">0</span>; j &lt; num_squares_y;  j++)
+			<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; num_squares_x;  k++) {
+
+				<span class="Comment">// use even/odd value of pixel to</span>
+				<span class="Comment">// figure out the color of the square</span>
+				Boolean x_even = (k % <span class="Constant">2</span>) == <span class="Constant">0</span>;
+				Boolean y_even = (j % <span class="Constant">2</span>) == <span class="Constant">0</span>;
+
+				Color col;
+
+				<span class="Statement">if</span> (y_even)
+					col = (x_even) ? red : blue;
+				<span class="Statement">else</span>
+					col = (x_even) ? blue : red;
+
+				<span class="Comment">// find the address of the square</span>
+				<span class="Type">int</span> origin_x = k * sq_width;
+				<span class="Type">int</span> origin_y = j * sq_height;
+
+				<span class="Comment">// color the square</span>
+				<span class="Statement">for</span> (<span class="Type">int</span> row = origin_y; row &lt; origin_y + sq_height; row++)
+					<span class="Statement">for</span> (<span class="Type">int</span> column = origin_x; column &lt; origin_x + sq_width; column++)
+						cg.set(row, column, col);
+			}
+
+		bridges.setDataStructure(cg);
+
+		bridges.visualize();
+
+		cg.resize(height/<span class="Constant">2</span>, width/<span class="Constant">2</span>);
+		bridges.visualize();
+		cg.resize(height*<span class="Constant">2</span>, width*<span class="Constant">2</span>);
+		bridges.visualize();
+	}
+}
+</pre>
