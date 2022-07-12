@@ -1,29 +1,29 @@
 <pre id='vimCodeElement'>
-<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *^M
-<span class="PreProc">from</span> bridges.color <span class="PreProc">import</span> *^M
-<span class="PreProc">from</span> bridges.data_src_dependent <span class="PreProc">import</span> data_source^M
-<span class="PreProc">import</span> sys^M
-<span class="PreProc">import</span> os^M
-^M
-<span class="Statement">def</span> <span class="Identifier">main</span>():^M
-^M
-    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)^M
-^M
-    reddit_obj = data_source.reddit_data(<span class="Constant">&quot;</span><span class="Constant">askscience</span><span class="Constant">&quot;</span>)^M
-    ^M
-    <span class="Statement">for</span> reddit_post <span class="Statement">in</span> reddit_obj:^M
-        <span class="Identifier">print</span>(f<span class="Constant">&quot;</span><span class="Constant">Title: {reddit_post.title}</span><span class="Constant">&quot;</span>)^M
-        <span class="Identifier">print</span>(f<span class="Constant">&quot;</span><span class="Constant">Author: {reddit_post.author}</span><span class="Constant">&quot;</span>)^M
-        <span class="Identifier">print</span>(f<span class="Constant">&quot;</span><span class="Constant">Score: {reddit_post.score}</span><span class="Constant">&quot;</span>)^M
-        <span class="Identifier">print</span>(f<span class="Constant">&quot;</span><span class="Constant">Vote Ratio: {reddit_post.vote_ratio}</span><span class="Constant">&quot;</span>)^M
-        <span class="Identifier">print</span>(f<span class="Constant">&quot;</span><span class="Constant">Comment Count: {reddit_post.comment_count}</span><span class="Constant">&quot;</span>)^M
-        <span class="Identifier">print</span>(f<span class="Constant">&quot;</span><span class="Constant">Subreddit: {reddit_post.subreddit}</span><span class="Constant">&quot;</span>)^M
-        <span class="Identifier">print</span>(f<span class="Constant">&quot;</span><span class="Constant">PostTime: {reddit_post.post_time}</span><span class="Constant">&quot;</span>)^M
-        <span class="Identifier">print</span>(f<span class="Constant">&quot;</span><span class="Constant">URL: {reddit_post.url}</span><span class="Constant">&quot;</span>)^M
-        <span class="Identifier">print</span>(f<span class="Constant">&quot;</span><span class="Constant">Text: {reddit_post.text}</span><span class="Constant">&quot;</span>)^M
-        <span class="Identifier">print</span>(<span class="Constant">&quot;&quot;</span>)^M
-^M
-^M
-<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:^M
-    main()^M
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.color <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.data_src_dependent <span class="PreProc">import</span> data_source
+<span class="PreProc">import</span> sys
+<span class="PreProc">import</span> os
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
+
+    reddit_obj = data_source.reddit_data(<span class="Constant">&quot;</span><span class="Constant">askscience</span><span class="Constant">&quot;</span>)
+
+    <span class="Statement">for</span> reddit_post <span class="Statement">in</span> reddit_obj:
+        <span class="Identifier">print</span>(f<span class="Constant">&quot;</span><span class="Constant">Title: {reddit_post.title}</span><span class="Constant">&quot;</span>)
+        <span class="Identifier">print</span>(f<span class="Constant">&quot;</span><span class="Constant">Author: {reddit_post.author}</span><span class="Constant">&quot;</span>)
+        <span class="Identifier">print</span>(f<span class="Constant">&quot;</span><span class="Constant">Score: {reddit_post.score}</span><span class="Constant">&quot;</span>)
+        <span class="Identifier">print</span>(f<span class="Constant">&quot;</span><span class="Constant">Vote Ratio: {reddit_post.vote_ratio}</span><span class="Constant">&quot;</span>)
+        <span class="Identifier">print</span>(f<span class="Constant">&quot;</span><span class="Constant">Comment Count: {reddit_post.comment_count}</span><span class="Constant">&quot;</span>)
+        <span class="Identifier">print</span>(f<span class="Constant">&quot;</span><span class="Constant">Subreddit: {reddit_post.subreddit}</span><span class="Constant">&quot;</span>)
+        <span class="Identifier">print</span>(f<span class="Constant">&quot;</span><span class="Constant">PostTime: {reddit_post.post_time}</span><span class="Constant">&quot;</span>)
+        <span class="Identifier">print</span>(f<span class="Constant">&quot;</span><span class="Constant">URL: {reddit_post.url}</span><span class="Constant">&quot;</span>)
+        <span class="Identifier">print</span>(f<span class="Constant">&quot;</span><span class="Constant">Text: {reddit_post.text}</span><span class="Constant">&quot;</span>)
+        <span class="Identifier">print</span>(<span class="Constant">&quot;&quot;</span>)
+
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
+    main()
 </pre>
