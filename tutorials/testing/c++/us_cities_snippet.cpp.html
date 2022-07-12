@@ -1,0 +1,65 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> std;
+
+<span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;DataSource.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;data_src/USCities.h&quot;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
+
+<span class="Comment">// this program illustrates how to access the data of the US and World </span>
+<span class="Comment">//	city data</span>
+<span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
+
+	<span class="Comment">// create bridges object</span>
+	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+	<span class="Comment">// set title</span>
+	bridges.setTitle(<span class="Constant">&quot;Accessing US City data&quot;</span>);
+
+	DataSource ds (&amp;bridges);
+
+	cout &lt;&lt; <span class="Constant">&quot;Retrieving a set of US cities&quot;</span> &lt;&lt; endl;
+
+	<span class="Comment">// Parameters to the query are through an unordered map</span>
+	<span class="Comment">// you may use any subset of parameters to filter the US city data</span>
+	<span class="Comment">// results will be filtered to satisfy all specified parameters</span>
+	<span class="Comment">// for example if you provide population ane elevation ranges, then only those</span>
+	<span class="Comment">// cities matching those ranges will be retrieved</span>
+
+	<span class="Comment">// Parameters include</span>
+	<span class="Comment">// population range - specify  min and max population values</span>
+	<span class="Comment">// elevation range - specify  min and max elevation values - note elevation can be</span>
+	<span class="Comment">//   				negative (below sealevel!</span>
+	<span class="Comment">// Lat/Long bounding box -- specified by minLatLong, maxLatLong pairs of values</span>
+	<span class="Comment">// state  - state name -- cities within that state will be retrieved</span>
+	<span class="Comment">// city   - city name  -- if it matches, it will be retrieved</span>
+	<span class="Comment">// limit  - limit the output to a specified number of cities</span>
+
+
+	<span class="Comment">// output upto 25 cities of North carolina  with a population ranging from 200K to 1M</span>
+
+	unordered_map&lt;string, string&gt; city_params {
+			{<span class="Constant">&quot;minPopulation&quot;</span>,<span class="Constant">&quot;200000&quot;</span>},
+			{<span class="Constant">&quot;maxPopulation&quot;</span>,<span class="Constant">&quot;1000000&quot;</span>},
+			{<span class="Constant">&quot;state&quot;</span>, <span class="Constant">&quot;NC&quot;</span>},
+			{<span class="Constant">&quot;minLatLong&quot;</span>, <span class="Constant">&quot;[34.025348,-85.352783]&quot;</span>},
+			{<span class="Constant">&quot;maxLatLong&quot;</span>, <span class="Constant">&quot;[36.800488,-75.300293]&quot;</span>},
+			{<span class="Constant">&quot;limit&quot;</span>, <span class="Constant">&quot;25&quot;</span>}
+		};
+
+	vector&lt;USCities&gt;  us_cities = ds.getUSCities(city_params);
+	cout &lt;&lt; <span class="Constant">&quot;US Cities : </span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+	<span class="Statement">for</span> (<span class="Type">auto</span> c : us_cities)
+		cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span> &lt;&lt; c.getCity() &lt;&lt; <span class="Constant">&quot;,&quot;</span> &lt;&lt; c.getState() &lt;&lt; <span class="Constant">&quot;:&quot;</span> &lt;&lt;
+			<span class="Constant">&quot; Population: &quot;</span> &lt;&lt;  c.getPopulation()  &lt;&lt;
+			<span class="Constant">&quot;, Elevation: &quot;</span>  &lt;&lt;  c.getElevation()
+			&lt;&lt; <span class="Constant">&quot;, Lat/Long: &quot;</span> &lt;&lt; c.getLatitude() &lt;&lt; <span class="Constant">&quot;,&quot;</span> &lt;&lt; c.getLongitude();
+
+	cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+
+	<span class="Statement">return</span> <span class="Constant">0</span>;
+}
+</pre>
