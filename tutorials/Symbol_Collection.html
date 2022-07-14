@@ -28,7 +28,7 @@
 
       <main>
 	<br>
-	The SymbolCollection class is a container for holding a variety of shapes that can be used
+	<p>The SymbolCollection class is a container for holding a variety of shapes that can be used
 	to generate visualizations that does not directly fit a specific data structure, but assists 
 	illustrating its underlying concepts. For example, the Towers of Hanoi problem can be implemented 
 	using a set of simple shapes : 3 circles for the disks and 3 long thin rectangles to represent
@@ -37,25 +37,40 @@
 	for the API. Each symbol has a name, location (where it will be placed on the display) and
 	other common stylistic attributes. The subclasses of Symbol have more specific geometric 
 	properties: width, height for rectangle, center, radius for circle, list of points for Polygon,Polyline. The 
-	example below illustrates how to construct shapes and its corresponding visualization.
+	example below illustrates how to construct shapes and its corresponding visualization.</p>
 	<p>
 	All shapes (except the Label) can be transformed by translation, scaling or rotation. 
 	Combinations of transforms are composed, by premultiplication, i.e., if a rectangle is 
 	specified to be translated and then rotated, then the translation will be applied
-	first to its vertices, followed by rotation.
+	first to its vertices, followed by rotation.</p>
 	<p>
 	SymbolCollection also supports groups (as in SVG); symbols can be put together in groups,
     and groups can be within groups. Groups can take a transformation matrix as its attribute,
 	which will transform the entire group of symbols and possibly applying any transformations
-	the symbols within that group may themselves specify.
+	the symbols within that group may themselves specify.</p>
 	<p>
 	Finally, ordering is implemented as a symbol attribute, termed layer. These are used to 
 	specify the depth of a symbol and used by the rendering algorithm to draw shapes in
 	the specified order. Layers are integers, and smaller the integer, the closer the shape is
-	towards the viewer.
+	towards the viewer.</p>
 	<hr/>
 
-	<h2>SymbolCollection - Example BRIDGES Programs that  illustraing the various features
+	
+	 <h3> See also</h3>
+<p>This tutorial gives an introduction to the usage of ColorGrid. You can find the complete documentation of the features in the Doxygen documentation of the following classes and functions: </p>
+	  <ol>
+
+	    <li> SymbolCollection  <a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_symbol_collection.html">[Java]</a> <a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_symbol_collection.html">[C++]</a> <a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1symbol__collection_1_1_symbol_collection.html">[Python]</a></li>
+	    <li> Symbol  <a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_symbol.html">[Java]</a> <a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_symbol.html">[C++]</a> <a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1symbol_1_1_symbol.html">[Python]</a></li>
+	    <li> Circle  <a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_circle.html">[Java]</a> <a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_circle.html">[C++]</a> <a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1circle_1_1_circle.html">[Python]</a></li>
+	    <li> Polyline  <a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_polyline.html">[Java]</a> <a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_polyline.html">[C++]</a> <a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1polyline_1_1_polyline.html">[Python]</a></li>
+	    <li> Polygon  <a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_polygon.html">[Java]</a> <a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_polygon.html">[C++]</a> <a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1polygon_1_1_polygon.html">[Python]</a></li>
+	    <li> Rectangle  <a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_rectangle.html">[Java]</a> <a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_rectangle.html">[C++]</a> <a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1rectangle_1_1_rectangle.html">[Python]</a></li>
+	    <li> SymbolGroup <a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_symbol_group.html">[Java]</a> <a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_symbol_group.html">[C++]</a> <a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1symbol__group_1_1_symbol_group.html">[Python]</a></li>
+	    <li> Text  <a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_text.html">[Java]</a> <a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_text.html">[C++]</a> <a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1text_1_1_text.html">[Python]</a></li>
+	  </ol>
+	  
+	<h2>SymbolCollection - Example BRIDGES Programs that  illustrate the various features
 	of symbols</h2>
 	<h2> 1. Getting Started: A barebones example to display shapes</h2>
 	<ul>
