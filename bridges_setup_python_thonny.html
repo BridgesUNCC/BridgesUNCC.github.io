@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BRIDGES Python Setup Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- w3IncludeHTML() -->
+    <script src="https://www.w3schools.com/lib/w3data.js"></script>
+
+    <!-- all pages need those. -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/bridges.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/glyphicon.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/footer.css">
+  </head>
+  <body>
+    <div w3-include-html="./navbar.html">
+      <script>
+	w3IncludeHTML();
+      </script>
+    </div>
+
+    <h2>BRIDGES(Python): Using Thonny </h2>
+    
+    <table class = "setup_table-part1">
+      <thead>
+	<tr>
+	  <td>
+	  <b>Step 1: Install Thonny </b>
+	  <ul> <li> If you do not have Thonny
+	      installed, 
+	      <a href = "https://thonny.org/"> download Thonny </a>
+	      and install it on your computer.
+	  </ul>
+	  <td class = "col-md-2">
+	    <img src = "./img/bridges_setup/thonny/thonny.png" width = "800"></img>
+	  </td>
+	</tr>
+	<tr>
+	<td>
+	  <b>Step 2: Create Bridges Account</b>
+	  <ul> <li> Visit the Bridges
+	      <a href = "http://bridgesuncc.github.io">
+		main page</a> and create yourself an account
+	      by clicking the login button
+	      on the top navigation bar. <b>Please ensure that
+		your user id is devoid of spaces, as it will be
+		used as part of the web link for your projects.</b>
+	      After creating your account, click on your profile
+	      name in the upper right corner to view your
+	      profile. Once in your profile, you will see your
+	      API Key; you will need this API key in part 2
+	      of the tutorial(as well as in every BRIDGES program
+	      you write). 
+	  </ul>
+	</td>
+	</tr>
+	<tr>
+	  <td class = "col-md-2"> <b>Step 3a: Thonny Environment Setup </b>
+	    <ul>
+	      <li> Open the Thonny application, you should see something like this, with
+			an empty text editor and a console window below it:
+	    </ul>
+	  </td>
+	  <td class = "col-md-8">
+	    <img src = "./img/bridges_setup/thonny/init_window.png" width = "800"></img>
+	  </td>
+	</tr>
+	<tr>
+	  <td class = "col-md-2"> <b>Step 3b: Check Python interpreter,
+			Install Bridges package</b>
+	    <ul>
+	      	<li> Click on the menu button, <b> Tools-->Manage Packages</b>. This will 
+				bring up a pop up window to show the packages currently installed on
+				the system (see adjacent window); the window shows BRIDGES already 
+				installed. If you dont see it (very likely!) type <i>bridges</i> in the
+				search bar and once it shows up, click on it and install the Bridges 
+				package.  You should see a package list as shown in the adjacent image.
+				Go back to the main IDE.
+			<li> Thonny comes with an old version of Python (3.7.9); you can use a more
+				recent version (3.8 or higher recommended). 
+	    </ul>
+	  </td>
+	  <td class = "col-md-8">
+	    <img src = "./img/bridges_setup/thonny/package_install.png" width = "800"></img>
+	  </td>
+	</tr>
+	<tr>
+	<td class = "col-md-2"> <b>Step 4a: Load and run an example BRIDGES program</b>
+		<ul>
+		<li> Go the <a href="https://bridgesuncc.github.io/tutorials/Overview.html"> 
+			BRIDGES Tutorial</a> site and copy/paste a python tutorial program into 
+			the main window.
+		<li> Thonny saves programs on the local drive; Save your program by clicking on
+			<i> File-->Save</i> and pick a convenient location in your file system.
+		<li> Set an assignment number, and your credentials in the line that creates 
+			the Bridges object  at the beginning of the program.
+		<li> Run the program by hitting the <b> play </b>  
+		<li> You will see a link printed on the console. Use that to visualize the
+			output.
+	</td>
+	 <td class = "col-md-8">
+	    <img src = "./img/bridges_setup/thonny/bridges_program.png" width = "800" border = "1px"></img>
+	    <img src = "./img/bridges_setup/thonny/run_bridges.png" width = "800" border = "1px"></img>
+      </td>
+	</tr>
+	<tr>
+		<td class = "col-md-2"> <b> Note: Using a different Python Interpreter </b>
+		To use a more recent python version, you must install python on your computer and
+		also install Bridges using the pip3 command (pip3 install bridges). The <i>Tools-->Options</i> button provides the option to choose a different python interpreter.
+		<td>
+	</tr>
+</tbody>
+</table>
+<div w3-include-html="./footer.html"></div>
+</body>
+</html>
