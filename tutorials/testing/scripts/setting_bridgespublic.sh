@@ -101,6 +101,10 @@ FORCE_BRIDGES_ASSIGNMENT=10150 ./tut_graph_p1 9999 fakename fakeapi
 FORCE_BRIDGES_ASSIGNMENT=10160 ./tut_graph_p2 9999 fakename fakeapi
 FORCE_BRIDGES_ASSIGNMENT=10170 ./tut_graph_p3 9999 fakename fakeapi
 
+## tutorials added : 7/19/22
+
+FORCE_BRIDGES_ASSIGNMENT=10180 ./tut_linechart 9999 fakename fakeapi
+
 
 ## games don't produce useful visualization
 
