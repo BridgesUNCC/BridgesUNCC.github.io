@@ -1,5 +1,4 @@
 
-.prettyprint ol.linenums > li { list-style-type: decimal; }
 
 .btn-primary:hover {
     color: #000 !important;
@@ -7,15 +6,16 @@
 
 body
 {
-	border-top: 7px solid #3498db;
+    /* border-top: 7px solid #3498db; */
 	margin: 0px;
-	padding: 25px 40px 0px;
+	padding: 25px 40px 0px 40px;
 	text-align: center;
-  display:inline-block;
+  display:block;
   /*min-width:100%;*/
-  width:100vw;
+  width: calc(100vw - 40px );
   box-sizing: border-box;
 }
+
 body > *:not(script)
 {
   line-height: 22px;
@@ -27,7 +27,7 @@ body > *:not(script)
 h1
 {
 	font-weight: 800;
-	font-size: 32px;
+	font-size: 250%;
 	line-height: 40px;
 	margin-top: 0px;
 	margin-bottom: 14px;
@@ -35,7 +35,7 @@ h1
 h2
 {
 	font-weight: 600;
-	font-size: 24px;
+	font-size: 200%;
 	line-height: 30px;
 	margin-top: 30px;
 	margin-bottom: 10px;
@@ -46,14 +46,20 @@ h3, h4
 	margin-top: 30px;
 	margin-bottom: 20px;
 }
-h3, h4
+h3
 {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 180%;
+}
+h4
+{
+    font-weight: 600;
+    font-size: 150%;
 }
 
+
 html,body{
-  overflow-x: hidden !important;
+  overflow-x: visible !important;
 }
 
 
@@ -62,7 +68,7 @@ html,body{
     padding: 5px !important;
   }
   main{
-  	width: 100vw !important;
+  	width: calc(90vw -  80px) !important;
   }
   h1,h2,h3,h4,h5,h6,p,li{
     padding: 20px;
@@ -70,11 +76,9 @@ html,body{
   main *.tabContents {
     padding: 0em !important;
     /*border: 1px solid #999;*/
+  }
 }
-}
-pre{
-  overflow: auto !important;
-}
+
 main ul
 {
 	margin-left: .5em;
@@ -139,6 +143,19 @@ main *.tabContents > *[active=true]
 {
 	display:block;
 }
+
+
+pre{
+  overflow: auto !important;
+}
+
+#vimCodeElement {
+    width: calc(99vw - 80px - 4em ); /* 80px from body's padding 4em from tabContents*/
+}
+
+.prettyprint ol.linenums > li { list-style-type: decimal; }
+
+
 /*main code
 {
 	display: block;
@@ -153,7 +170,7 @@ main *.tabContents > *[active=true]
 main *.iframe-wrapper
 {
 	/*width:530px;*/
-	overflow:hidden;
+	overflow: hidden;
 	height:650px;
 	/*margin:auto;*/
 }
