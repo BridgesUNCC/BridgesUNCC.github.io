@@ -27,43 +27,45 @@
       <header w3-include-html="./Tutorial_Header.html"></header>
 
       <main>
-		<h2> Line Chart Tutorial </h2>
+		<h1> Line Chart Tutorial </h1>
+		<p>
 		BRIDGES provides a basic set of line charts 
 		(https://en.wikipedia.org/wiki/Line_chart)
 		for plotting single or 
-		multiple functions; its most often useful in benchmarking algorithms.
-		<p>
-		<img src = "./images/line_chart.png" width="800"></img>
+		multiple functions; its most often useful in benchmarking algorithms.</p>
 		<p>
 		Individual functions are represented by  pairs of arrays, say
 		xdata and ydata such that
         there is a point at (xdata[0], ydata[0]), an other at (xdata[1],
         ydata[1]), ... One can add a series by passing the two arrays using
         setDataSeries() or add the arrays individually using setXData() and
-        setYData().
+        setYData().</p>
 		<p>
         The different series have a label associated with them by default
-        which can be disabled (see toggleSeriesLabel())
+        which can be disabled (see toggleSeriesLabel())</p>
 		<p>
 		The data is typically shown with axes that use a linear
         scale. However, the scale can be changed to logarithmic for each
-        axis individually (see toggleLogarithmicX() and
-        toggleLogarithmic()). 
+        axis individually (see toggleLogarithmicX() and 
+       toggleLogarithmic()). </p>
 		<p>
         The LineChart can have a title (see getTitle() and setTitle()) and
-        a subtitle (see setSubTitle() and getSubTitle()).
+        a subtitle (see setSubTitle() and getSubTitle()).</p>
 		<p>
 		This tutorial will illustrate  the use of line charts to  draw 
-		functions in both linear and logarithmic scale.
+		functions in both linear and logarithmic scale.</p>
 
 		<h3> See also </h3>
-		See complete documentation of Line charts for 
+		<p>See complete documentation of Line charts for 
 		<a href = "https://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_line_chart.html"> C++</a>, 
 		<a href = "https://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_line_chart.html"> Java </a>, or 
 		<a href = "https://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1line__chart_1_1_line_chart.html"> Python</a>
-		<p>
+		</p>
 
-		      Here is the code for this tutorial. The expected visualization follows that. Hit
+		<h2>Code Example</h2>
+		
+		<p>
+		  Here is the code for this tutorial. The expected visualization follows that. Hit
         the 'l' button to turn on the labels.
     </p>
     
@@ -74,9 +76,9 @@
     </div>
 
     <div class="tabContents snippet1">
-      <div id="Java" w3-include-html="./Java_LineChart.html"></div>
-      <div id="C++"  w3-include-html="./Cpp_LineChart.html"></div>
-      <div id="Python"  w3-include-html="./Python_LineChart.html"></div>
+      <div id="Java" w3-include-html="testing/java/linechart.java.html"></div>
+      <div id="C++"  w3-include-html="testing/c++/linechart.cpp.html"></div>
+      <div id="Python"  w3-include-html="testing/python/linechart.py.html "></div>
     </div>
     <p>
     If you follow the URL given to you when the application runs, it
@@ -87,9 +89,9 @@
     </p> 
 	</p> 
     <div class="iframe-wrapper">
-    <iframe src="https://bridges-cs.herokuapp.com/assignments/10030/bridges_public" scrolling="no">
+    <iframe src="https://bridges-cs.herokuapp.com/assignments/10180/bridges_public" scrolling="no">
         <p>Sorry, your browser doesn't seem to support iframes -
-            <a href="https://bridges-cs.herokuapp.com/assignments/10030/bridges_public" scrolling="no">Frame Link</a>
+            <a href="https://bridges-cs.herokuapp.com/assignments/10180/bridges_public" scrolling="no">Frame Link</a>
         </p>
     </iframe>
     </div>
