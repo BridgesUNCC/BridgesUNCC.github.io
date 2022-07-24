@@ -11,7 +11,7 @@
 |                  | [slides](slides/engagement_bridges.pdf) |
 |  9.15 - 9.45am   | Course Design, Alignment |
 |                  | [slides](slides/coursestructure_csmat.pdf) |
-|                  | [An alignment example: ITCS 6114](slides/sturcture_figs/6114.html) |
+|                  | [An alignment example: ITCS 6114](slides/structure_figs/6114.html) |
 |  9.45 - 10am   |  Q&A  |
 |  10am - 10.20am    |  Coffee Break |
 |  10.20 -11am         | organize existing materials (lecture, activity, exam) in modules and upload to google drive  |
