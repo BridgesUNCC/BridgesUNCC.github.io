@@ -76,118 +76,41 @@
 	    <img src = "./img/Tutorialv3/java/bluej/new_proj.png" width = "800" />
 	  </td>
 	</tr>
-	<tr>
-	  <td class = "col-md-2"> <b>Step 4: Create a Bridges Program</b>
-	    <ul> 
-	      <li> We will illustrate a Singly Linked List Bridges program
-		here - for more details of this program, refer to the 
-		<a href = "http://bridgesuncc.github.io/Hello_World_Tutorials/Overview.html"> User Guide /Tutorials</a> 
-		that  provides fully documented Bridges examples for each 
-		data structure. 
-	      <li> You may add the BRIDGES program to <b>sllist</b>
-		created in <b>Step 3</b> or by 
-		choosing <i>Edit-->Add Class from File</i> and 
-		importing the class from a file.
-	      <li> Put in your BRIDGES credentials into the first statement of 
-		the program; they should both be strings.
-	    </ul>
-	  </td>
-	<td>
-    <b><i>
-	import bridges.connect.Bridges; <br> 
-	import bridges.base.SLelement; <p> <p>
-	</b>
-
-	  public class sllist { <p>
-	  &nbsp&nbsp&nbsp&nbsp	public static void main(String[] args) throws Exception{ <p>
-
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp //create the Bridges object and set title for the project <p>
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Bridges<String> bridges = new Bridges<String>(0, "YOUR_USER_ID", "YOUR_API_KEY"); <p>
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp bridges.setTitle("A Singly Linked List Example");<p>
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp bridges.setTitle("A Linked List is a linear collection of elements");<p>
-	
-
-		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp //create linked list elements <br>
-		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp SLelement &lt String &gt sle0 = new SLelement &lt String &gt ("First", "");<br>
-		  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp SLelement &lt String &gt sle1 = new SLelement &lt String &gt("Second", ""); <p>
-		  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp SLelement &lt String &gt sle2 = new SLelement &lt String &gt("Third", ""); <p>
-		  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp SLelement &lt String &gt sle3 = new SLelement &lt String &gt("Fourth", ""); <p>
-
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp // link the elements<br>
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle0.setNext(sle1); <p>
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle1.setNext(sle2); <p>
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle2.setNext(sle3); <p>
-
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp //edit some visual properties of the two elements <br>
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle0.getVisualizer().setSize(40); <br>
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle1.getVisualizer().setColor("red"); <br>
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle0.getLinkVisualizer(sle1).setThickness(2); <br>
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle1.getLinkVisualizer(sle2).setColor("blue"); <p>
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle3.getVisualizer().setColor("cyan"); <br>
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle2.getLinkVisualizer(sle3).setThickness(10); <br>
-
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle0.getVisualizer().setColor("red"); <br>
-
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp //pass the first element of the list <br>
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspbridges.setDataStructure(sle0); <p>
-
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp // visualize the list <br>
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp bridges.visualize(); <p> </i> </b>
-    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp} <br>
-    &nbsp&nbsp&nbsp&nbsp}<br>
-  </td>
-	  <td class = "col-md-8">  
-	    <img src = "./img/Tutorialv2/java/bluej/program.png" width = "800" />
-	  </td>
-	</tr>
-	<tr> <td class = "col-md-2"> <b>Step 5: Import Jar File into project</b>
+	<tr> <td class = "col-md-2"> <b>Step 4: Import Jar File into project</b>
 	    <ul>
-	      <li> Download the Bridges.jar file from 
+	      <li> Download the Bridges.jar file (version 3.4.0) from 
 		<a href = "http://bridgesuncc.github.io">
 		  Bridges Website (Downloads button)</a> and save it somewhere convenient 
 		on your drive.
 	      <li> On BlueJ, follow <i>BlueJ-->Preferences</i> and select the <i>Libraries</i> tab;
 	      <li> Click the <i>Add  File</i> button, to add the downloaded BRIDGES 
-		Jar file. <b>You will need to restart BlueJ for the library to 
+		Jar file. <b>You will need to quit and restart BlueJ for the library to 
 		  be loaded!</b>
 	    </ul>
 	  <td class = "col-md-8"> <img src = "./img/Tutorialv2/java/bluej/load_jar.png" width = "800" />
           </td>
 	</tr>
 	<tr>
-	  <td class = "col-md-2"> <b>Step 6: Compile and Execute Bridges 
-	      Program</b>
+	  <td class = "col-md-2"> <b>Step 4: Create, Compile, and Run a Bridges Program</b>
 	    <ul> 
-	      <li>  To compile a class, click on the <i>Compile </i> button
-		on the text editor.
-	      <li> To compile the whole project, click on the 
-		<i>Compile </i> button on the project window
-	      <li> To execute the program, right click on the project and
-		select(execute) the main() function.
-	      <li> On the console window, the user will be pointed to a
-		web link for viewing the visualization of the 
-		singly linked list.
+	      <li> We will illustrate a Singly Linked List Bridges program
+		here. 
+		<li> Go to this 
+            <a href = "https://bridgesuncc.github.io/tutorials/testing/java/tut_sllist_p1.java.html"> BRIDGES Tutorial</a> and copy/paste the Java program into 
+            the main window by creating a class. Set the class name in the IDE 
+			to match the class name in the program
+        <li> Set an assignment number, and your credentials in the line that 
+				creates the Bridges object  at the beginning of the program.   
+		<li> Compile the program by clicking on the <b> compile </b> button.
+	    <li> To execute the program, right click on the project and
+				click on the the main() method.
+		<li> If the program compiles and executes without errors, a web link will be output that can be followed to see the linked list visualization.
 	    </ul>
 	  </td>
 	  <td class = "col-md-8">  
-	    <img src = "./img/Tutorialv2/java/bluej/exec_program.png" width = "700" />
+	    <img src = "./img/bridges_setup/bluej/bridges_program.png" width = "800" />
+	    <img src = "./img/bridges_setup/bluej/run_program.png" width = "700" />
 	    <img src = "./img/Tutorialv2/java/bluej/weblink.png" width = "700" />
-	  </td>
-	</tr>
-	<tr>
-	  <td class = "col-md-2"> <b>Step 7: Visualization</b>
-	    <ul>
-	      <li> If your program compiles and executes  without errors 
-		the weblink points to a visualization of your data 
-		structure.
-	      <li> Paste this link in your browser and see the result.
-	      <li> Your visualization should something like this.
-	      <li> You can do limited interactive operations on  the
-		display window - move the nodes, mouse over to see labels,									move the entire visualization, etc.
-	    </ul>
-	  </td>
-	  <td class = "col-md-8">  
-	    <img src = "./img/Tutorialv3/java/bluej/vis.png" width = "800" />
 	  </td>
 	</tr>
       </thead>

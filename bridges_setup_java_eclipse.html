@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>BRIDGES Java Setup Page For Eclipse IDE</title>
+    <title>BRIDGES Java Setup For Eclipse IDE</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -23,7 +23,7 @@
       </script>
     </div>
     
-    <h2>BRIDGES (Java): Getting Started (Setup)</h2>
+    <h2>BRIDGES Java with Eclipse IDE</h2>
 	<i> <b>Note. The following set up instructions used Eclipse Version 2021-12(4.22.0) which is running JRE 17 on OSX; BRIDGES requires the use of Java 8 or later</i></b> <br> <p>
     <table class = "setup_table-part1">
       <thead>
@@ -87,16 +87,13 @@
 	      <li> On Eclipse, right-click your project in the 
 		Package Explorer window then click on Properties; you will see a 
 		dialog widget come up. Navigate  to   
-		<i> Java Build Path --> Class Path</i> and then click on <i>Add External Jars </i>. You should see the following configuration.
-	    </ul>
-	  <td class = "col-md-8"> <img src = "./img/Tutorialv2/addArchive.png" width = "800"></img>
-          </td>
+		<i> Java Build Path --> Class Path</i> and then click on <i>Add External Archives </i>. You should see the following configuration.
 	</tr>
 	<tr>
 	  <td class = "col-md-2"> <b>Step 5b: Import BRIDGES Jar file</b>
 	    <ul> 
 	      <li>  Locate and select the Bridges.jar file you saved 
-		earlier to import it into your new project
+		earlier to import it into your new project (current version 3.4.0)
 	    </ul>
 	  </td>
 	  <td class = "col-md-8">  
@@ -120,200 +117,23 @@
 	    <img src = "./img/Tutorialv2/referenced_lib.png" width = "500"></img>
 	  </td>
 	</tr>
-      </thead>
-    </table>
-    <p>
-      <h3 class = "sep_heading">BRIDGES:Getting Started(Your First Bridges Program)</h3>
-
-      <table class = "table table-bordered">
-	<tbody>
-	  <tr>
-	    <td class = "col-md-2"> <b>Step 1a: Create a new class</b>
+	<tr>
+	    <td class = "col-md-2"> <b>Step 7. Load and Run a BRIDGES Example program.</b>
 	      <ul>
-		<li> Create a new class within your project
-		<li> <i> File-->New-->Class </i>
-	      </ul>
-	    </td>
-	    <td class = "col-md-8"> 
-	      <img src = "./img/Tutorialv3/newClass.png" width="800"></img>
-	    </td>
-	  </tr>
-	  <tr> 
-	    <td class = "col-md-2"> <b>Step 1b: Create a new class</b>
-	      <li> In the New Java Class window set the Package field to your name
-	      <li> Set the Name field to HelloWorld (this is the name of the class)
-              <li> Tick the box to create public static void main(String[] args) 
-	      <li> to make Eclipse create a main method in our new class 
-	      <li> Click Finish in the bottom right-hand corner
-	    </td>
-	    <td class = "col-md-8">
-	      <img src = "./img/Tutorialv2/class.png" width="800"></img>
-            </td>
-	  </tr>
-	  <tr>
-	    <td class = "col-md-2"> <b>Step 2: Now build the Bridges Program to 
-		illustrate a singly linked list</b>
-	      <ul>
-		<li> First import the relevant Bridges classes
-	      </ul>
-	    </td>
-	    <td class = "col-md-8">
-	      <ul>
-		<i>import bridges.connect.Bridges;</i> <br>
-		<i>import bridges.base.SLelement;</i>
-	      </ul>
-	    </td>
-	  </tr>
-	  <tr>
-	    <td class = "col-md-2"> 
-	      <ul>
-		<li> Create the bridges object with your API Key and User ID. 
-		  Since we want our project to print out ``Hello World" 
-		  use String as the type. Also provide a title for the project.
-	      </ul>
-	    </td>
-	    <td class = "col-md-8">
-	      <ul>
-		<i>  Bridges  bridges = new Bridges(0, "YOUR_USER_ID", "YOUR_API_KEY");</i><p>
-		<i>  bridges.setTitle("Hello World");</i>
-
-	      </ul>
-	    </td>
-	  </tr>
-	  <tr>
-	    <td class = "col-md-2"> 
-	      <ul>
-		<li> Create two singly-linked elements. Singly-linked elements 
-		  can be linked together to create a linked-list structure.
-	      </ul>
-	    </td>
-	    <td class = "col-md-8">
-	      <ul>
-		<i> SLelement &lt String &gt sle0 = new SLelement &lt String &gt ("Hello", "");<br>
-		      SLelement &lt String &gt sle1 = new SLelement &lt String &gt ("World", "");</i>  
-	      </ul>
-	    </td>
-	  </tr>
-	  <tr>
-	    <td class = "col-md-2"> 
-	      <ul>
-		<li>  Link the elements
-	      </ul>
-	    </td>
-	    <td class = "col-md-8">
-	      <ul>
-		<i>   sle0.setNext(sle1);</i>
-	      </ul>
-	    </td>
-	  </tr>
-</tr>
-<tr>
-  <td class = "col-md-2"> 
-    <ul>
-      <li> Set visual attributes of the elements
-    </ul>
-  </td>
-  <td class = "col-md-8">
-    <ul>
-      <i>	sle0.getVisualizer().setColor("black"); <br>
-	sle0.getVisualizer().setOpacity(0.5); <br>
-	sle1.getVisualizer().setColor("green"); </i>
-    </ul>
-  </td>
-</tr>
-<tr>
-<tr>
-  <td class = "col-md-2"> 
-    <ul>
-      <li> Pass the handle of your data structure (reference to the 
-	first element) of your data structure
-    </ul>
-  </td>
-  <td class = "col-md-8">
-    <ul>
-      <i>  bridges.setDataStructure(sle0);  <br></i>
-    </ul>
-  </td>
-</tr>
-<tr>
-<tr>
-  <td class = "col-md-2"> 
-    <ul>
-      <li> Visualize the data structure
-    </ul>
-  </td>
-  <td class = "col-md-8">
-    <ul>
-      <i>  bridges.visualize();  <br></i>
-    </ul>
-  </td>
-</tr>
-<tr>
-<tr>
-  <td class = "col-md-2"> 
-    <ul>
-      <li> To summarize, your HelloWorld.java should look like this:
-    </ul>
-  </td>
-  <td class = "col-md-8">
-    <b><i>
-	import bridges.connect.Bridges; <br> 
-	import bridges.base.SLelement; <p> <p>
-
-	  public class sllist { <p>
-	  &nbsp&nbsp&nbsp&nbsp	public static void main(String[] args) throws Exception{ <p>
-
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp //create the Bridges object and set title for the project <p>
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Bridges<String> bridges = new Bridges<String>(0, "YOUR_USER_ID", "YOUR_API_KEY"); <p>
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp bridges.setTitle("Hello World");<p>
-	
-
-		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp //create two singly-linked elements <br>
-		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp SLelement &lt String &gt sle0 = new SLelement &lt String &gt ("Hello", ""); <br>
-		  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp SLelement &lt String &gt sle1 = new SLelement &lt String &gt("World", ""); <p>
-
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp // create a singly-linked list <br>
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp // by adding sle1 as sle0's next element <br>
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle0.setNext(sle1); <p>
-
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp //edit some visual properties of the two elements <br>
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle0.getVisualizer().setColor("black"); <br>
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle0.getVisualizer().setOpacity(0.5f); <br>
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle1.getVisualizer().setColor("green"); <p>
-
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp //pass the first element of the list <br>
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspbridges.setDataStructure(sle0); <p>
-
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp // visualize the list <br>
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp bridges.visualize(); <p> </i> </b>
-    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp} <br>
-    &nbsp&nbsp&nbsp&nbsp}<br>
-  </td>
-</tr>
-<tr> 
-  <td class = "col-md-2"> <b>Step 3: Running your Bridges program</b>
-    <ul>
-      <li> Once your code is in, run your project; the first time you might need to choose Run as --> Java Application. After that hitting the Play button would suffice.
-    </ul>
-  </td>
-  <td class = "col-md-8">
-    <img src = "./img/Tutorialv2/runAs.png" width="800"></img>
-  </td>
-</tr>
-</tr>
-<tr> 
-  <td class = "col-md-2"> <b>Step 4: Visualize your data structure</b>
-    <ul>
-      <li> If your code compiles correctly, the Eclipse console will 
-	give you a link to the Bridges website. to view the 
-	visualization. Copy/paste this link into your favorite 
-	browser to view a visualization of the data structure 
-	you just created. 
-    </ul>
-  </td>
-  <td class = "col-md-8">
-    <img src = "./img/Tutorialv2/HelloWorld.png" width="800"></img>
-  </td>
+			<li> Go to this 
+            <a href = "https://bridgesuncc.github.io/tutorials/testing/java/tut_sllist_p1.java.html" > BRIDGES Tutorial</a> and copy/paste the Java tutorial program into 
+            the main window into a new file.
+        <li> Set an assignment number, and your credentials in the line that creates 
+            the Bridges object  at the beginning of the program.
+        <li> Run the program by hitting the <b> play </b>  
+        <li> You will see a link printed on the console. Use that to visualize the
+            output.
+		</ul>
+        </td>
+        <td class = "col-md-8">
+        <img src = "./img/bridges_setup/eclipse/bridges_program.png" width = "800" border="1px"></img>
+        </td>
+	</tr>
 </tr>
 </tbody>
 </table>
