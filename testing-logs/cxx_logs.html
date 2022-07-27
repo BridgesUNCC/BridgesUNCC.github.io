@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for C++</h1>
-	<p>Running at Tue 26 Jul 2022 03:47:12 AM EDT</p>
+	<p>Running at Wed 27 Jul 2022 03:47:43 AM EDT</p>
   <div id="summary0" class="success">
     <h2><a href="cxx_logs.html#cxxlog0">Assignment 0</a> </h2>
     <p>
@@ -152,11 +152,11 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summary14" class="failure">
+  <div id="summary14" class="success">
     <h2><a href="cxx_logs.html#cxxlog14">Assignment 14</a> </h2>
     <p>
       <ul>
-        <li> Build Scaffold : <a href="cxx_logs.html#cxxlog14-buildscaffold">error</a></li>
+        <li> Build Scaffold : <a href="cxx_logs.html#cxxlog14-buildscaffold">success</a></li>
         <li> Build Answer : <a href="cxx_logs.html#cxxlog14-buildanswer">success</a></li>
         <li> Run Answer : <a href="cxx_logs.html#cxxlog14-runanswer">success</a></li>
       </ul>
@@ -362,13 +362,13 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summary35" class="failure">
+  <div id="summary35" class="success">
     <h2><a href="cxx_logs.html#cxxlog35">Assignment 35</a> </h2>
     <p>
       <ul>
         <li> Build Scaffold : <a href="cxx_logs.html#cxxlog35-buildscaffold">success</a></li>
-        <li> Build Answer : <a href="cxx_logs.html#cxxlog35-buildanswer">error</a></li>
-        <li> Run Answer : <a href="cxx_logs.html#cxxlog35-runanswer">error</a></li>
+        <li> Build Answer : <a href="cxx_logs.html#cxxlog35-buildanswer">success</a></li>
+        <li> Run Answer : <a href="cxx_logs.html#cxxlog35-runanswer">success</a></li>
       </ul>
     </p>
   </div>
@@ -1394,8 +1394,8 @@ g++ -o 2048 2048.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ -pthread
 <pre><code>Guessing ./2048 is the right binary file where main is
 
 connecting SocketIO with http://bridges-games.herokuapp.com
-[2022-07-26 03:50:21] [connect] Successful connection
-[2022-07-26 03:50:21] [connect] WebSocket Connection 174.129.128.48:80 v-2 &quot;WebSocket++/0.8.2&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1658821821 101
+[2022-07-27 03:50:52] [connect] Successful connection
+[2022-07-27 03:50:52] [connect] WebSocket Connection 174.129.128.48:80 v-2 &quot;WebSocket++/0.8.2&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1658908252 101
 connected!!
 sockopen on namespace /
 Sending credentials
@@ -1445,8 +1445,8 @@ g++ -o AStarMaze pathfinder.o -g -L /home/bridges-testing/bridges-cxx-install/li
 <pre><code>Guessing ./AStarMaze is the right binary file where main is
 
 connecting SocketIO with http://bridges-games.herokuapp.com
-[2022-07-26 03:50:33] [connect] Successful connection
-[2022-07-26 03:50:33] [connect] WebSocket Connection 54.205.8.205:80 v-2 &quot;WebSocket++/0.8.2&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1658821833 101
+[2022-07-27 03:51:04] [connect] Successful connection
+[2022-07-27 03:51:04] [connect] WebSocket Connection 18.211.231.38:80 v-2 &quot;WebSocket++/0.8.2&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1658908264 101
 connected!!
 sockopen on namespace /
 Sending credentials
@@ -2470,7 +2470,7 @@ could not run c++_answer for assignment in ../assignmentdb/13-InfiniteRunner/c++
     <div id="cxxlog14" class="logdetails">
       <h2>Assignment 14 full log</h2>
     
-<div class="failure">
+<div class="success">
 <h3 id="cxxlog14-buildscaffold">Build Scaffold for Assignment 14</h3>
 <pre><code>Compiling c++/ for assignment in ../assignmentdb/14-SpreadingFire/c++
 rm SpreadingFire.o
@@ -2480,16 +2480,7 @@ rm SpreadingFire
 rm: cannot remove 'SpreadingFire': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
 g++ -g  -std=c++14 -I /home/bridges-testing/bridges-cxx-install/include/ -c SpreadingFire.cpp -o SpreadingFire.o
-SpreadingFire.cpp: In function ‘int main(int, char**)’:
-SpreadingFire.cpp:60:3: error: ‘my_game’ was not declared in this scope
-   60 |   my_game bridges_g (114, &quot;BRIDGES_USER_ID&quot;, &quot;BRIDGES_API_KEY&quot;);
-      |   ^~~~~~~
-SpreadingFire.cpp:62:3: error: ‘bridges_g’ was not declared in this scope; did you mean ‘bridges’?
-   62 |   bridges_g.start();
-      |   ^~~~~~~~~
-      |   bridges
-make: *** [Makefile:26: SpreadingFire.o] Error 1
-could not compile c++/ for assignment in ../assignmentdb/14-SpreadingFire/c++
+g++ -o SpreadingFire SpreadingFire.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ -pthread -lcurl -l bridges 
 </code></pre>
 </div>
 <div class="success">
@@ -2508,8 +2499,8 @@ g++ -o SpreadingFire SpreadingFire.o -g -L /home/bridges-testing/bridges-cxx-ins
 <pre><code>Guessing ./SpreadingFire is the right binary file where main is
 
 connecting SocketIO with http://bridges-games.herokuapp.com
-[2022-07-26 03:50:50] [connect] Successful connection
-[2022-07-26 03:50:50] [connect] WebSocket Connection 54.235.77.118:80 v-2 &quot;WebSocket++/0.8.2&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1658821850 101
+[2022-07-27 03:51:23] [connect] Successful connection
+[2022-07-27 03:51:23] [connect] WebSocket Connection 18.211.231.38:80 v-2 &quot;WebSocket++/0.8.2&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1658908283 101
 connected!!
 sockopen on namespace /
 Sending credentials
@@ -2559,8 +2550,8 @@ g++ -o FallingSand FallingSand.o -g -L /home/bridges-testing/bridges-cxx-install
 <pre><code>Guessing ./FallingSand is the right binary file where main is
 
 connecting SocketIO with http://bridges-games.herokuapp.com
-[2022-07-26 03:51:02] [connect] Successful connection
-[2022-07-26 03:51:02] [connect] WebSocket Connection 54.205.8.205:80 v-2 &quot;WebSocket++/0.8.2&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1658821862 101
+[2022-07-27 03:51:35] [connect] Successful connection
+[2022-07-27 03:51:35] [connect] WebSocket Connection 54.235.77.118:80 v-2 &quot;WebSocket++/0.8.2&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1658908295 101
 connected!!
 sockopen on namespace /
 Sending credentials
@@ -2650,8 +2641,8 @@ g++ -o ControlsTutorial Controls_Tutorial.o -g -L /home/bridges-testing/bridges-
 <pre><code>Guessing ./ControlsTutorial is the right binary file where main is
 
 connecting SocketIO with http://bridges-games.herokuapp.com
-[2022-07-26 03:51:26] [connect] Successful connection
-[2022-07-26 03:51:26] [connect] WebSocket Connection 54.235.77.118:80 v-2 &quot;WebSocket++/0.8.2&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1658821886 101
+[2022-07-27 03:51:59] [connect] Successful connection
+[2022-07-27 03:51:59] [connect] WebSocket Connection 18.211.231.38:80 v-2 &quot;WebSocket++/0.8.2&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1658908319 101
 connected!!
 sockopen on namespace /
 Sending credentials
@@ -2701,8 +2692,8 @@ g++ -o ControlsTutorial2 Controls_Tutorial2.o -g -L /home/bridges-testing/bridge
 <pre><code>Guessing ./ControlsTutorial2 is the right binary file where main is
 
 connecting SocketIO with http://bridges-games.herokuapp.com
-[2022-07-26 03:51:37] [connect] Successful connection
-[2022-07-26 03:51:37] [connect] WebSocket Connection 54.235.77.118:80 v-2 &quot;WebSocket++/0.8.2&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1658821897 101
+[2022-07-27 03:52:11] [connect] Successful connection
+[2022-07-27 03:52:11] [connect] WebSocket Connection 54.235.77.118:80 v-2 &quot;WebSocket++/0.8.2&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1658908330 101
 connected!!
 sockopen on namespace /
 Sending credentials
@@ -2756,8 +2747,8 @@ g++ -o BugStomp BugStomp.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ 
 <pre><code>Guessing ./BugStomp is the right binary file where main is
 
 connecting SocketIO with http://bridges-games.herokuapp.com
-[2022-07-26 03:51:48] [connect] Successful connection
-[2022-07-26 03:51:48] [connect] WebSocket Connection 54.205.8.205:80 v-2 &quot;WebSocket++/0.8.2&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1658821908 101
+[2022-07-27 03:52:22] [connect] Successful connection
+[2022-07-27 03:52:22] [connect] WebSocket Connection 54.205.8.205:80 v-2 &quot;WebSocket++/0.8.2&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1658908342 101
 connected!!
 sockopen on namespace /
 Sending credentials
@@ -2807,8 +2798,8 @@ g++ -o Minesweeper minesweeper.o -g -L /home/bridges-testing/bridges-cxx-install
 <pre><code>Guessing ./Minesweeper is the right binary file where main is
 
 connecting SocketIO with http://bridges-games.herokuapp.com
-[2022-07-26 03:52:00] [connect] Successful connection
-[2022-07-26 03:52:00] [connect] WebSocket Connection 54.205.8.205:80 v-2 &quot;WebSocket++/0.8.2&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1658821920 101
+[2022-07-27 03:52:33] [connect] Successful connection
+[2022-07-27 03:52:33] [connect] WebSocket Connection 18.211.231.38:80 v-2 &quot;WebSocket++/0.8.2&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1658908353 101
 connected!!
 sockopen on namespace /
 Sending credentials
@@ -2858,8 +2849,8 @@ g++ -o RaceCar RaceCar.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ -p
 <pre><code>Guessing ./RaceCar is the right binary file where main is
 
 connecting SocketIO with http://bridges-games.herokuapp.com
-[2022-07-26 03:52:11] [connect] Successful connection
-[2022-07-26 03:52:11] [connect] WebSocket Connection 54.205.8.205:80 v-2 &quot;WebSocket++/0.8.2&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1658821931 101
+[2022-07-27 03:52:45] [connect] Successful connection
+[2022-07-27 03:52:45] [connect] WebSocket Connection 54.235.77.118:80 v-2 &quot;WebSocket++/0.8.2&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1658908365 101
 connected!!
 sockopen on namespace /
 Sending credentials
@@ -2909,8 +2900,8 @@ g++ -o Snake Snake.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ -pthre
 <pre><code>Guessing ./Snake is the right binary file where main is
 
 connecting SocketIO with http://bridges-games.herokuapp.com
-[2022-07-26 03:52:22] [connect] Successful connection
-[2022-07-26 03:52:22] [connect] WebSocket Connection 54.235.77.118:80 v-2 &quot;WebSocket++/0.8.2&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1658821942 101
+[2022-07-27 03:52:56] [connect] Successful connection
+[2022-07-27 03:52:56] [connect] WebSocket Connection 54.205.8.205:80 v-2 &quot;WebSocket++/0.8.2&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1658908376 101
 connected!!
 sockopen on namespace /
 Sending credentials
@@ -3275,8 +3266,8 @@ g++ -o SmileyFace SmileyFace.o -g -L /home/bridges-testing/bridges-cxx-install/l
 <pre><code>Guessing ./SmileyFace is the right binary file where main is
 
 connecting SocketIO with http://bridges-games.herokuapp.com
-[2022-07-26 03:53:24] [connect] Successful connection
-[2022-07-26 03:53:24] [connect] WebSocket Connection 18.211.231.38:80 v-2 &quot;WebSocket++/0.8.2&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1658822004 101
+[2022-07-27 03:53:58] [connect] Successful connection
+[2022-07-27 03:53:58] [connect] WebSocket Connection 54.235.77.118:80 v-2 &quot;WebSocket++/0.8.2&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1658908438 101
 connected!!
 sockopen on namespace /
 Sending credentials
@@ -3407,15 +3398,6 @@ g++ -o TemporalBaconNumber wikidata_actor.o -g -L /home/bridges-testing/bridges-
 
 *getting year 2019
 *getting year 2018
-getting year 2019
-*getting year 2017
-getting year 2018
-getting year 2019
-*getting year 2016
-getting year 2017
-getting year 2018
-getting year 2019
-*getting year 2015
 Alarm clock
 could not run c++_answer for assignment in ../assignmentdb/30-TemporalBaconNumber/c++_answer
 </code></pre>
@@ -3588,8 +3570,8 @@ g++ -o GameTutorial GameTutorial.o -g -L /home/bridges-testing/bridges-cxx-insta
 <pre><code>Guessing ./GameTutorial is the right binary file where main is
 
 connecting SocketIO with http://bridges-games.herokuapp.com
-[2022-07-26 03:56:46] [connect] Successful connection
-[2022-07-26 03:56:46] [connect] WebSocket Connection 54.235.77.118:80 v-2 &quot;WebSocket++/0.8.2&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1658822206 101
+[2022-07-27 03:57:20] [connect] Successful connection
+[2022-07-27 03:57:20] [connect] WebSocket Connection 18.211.231.38:80 v-2 &quot;WebSocket++/0.8.2&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1658908640 101
 connected!!
 sockopen on namespace /
 Sending credentials
@@ -3624,18 +3606,41 @@ g++ -g  -std=c++14 -I /home/bridges-testing/bridges-cxx-install/include/ -c conn
 g++ -o connect4 connect4.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ -pthread -lcurl -l bridges 
 </code></pre>
 </div>
-<div class="failure">
+<div class="success">
 <h3 id="cxxlog35-buildanswer">Build Answer for Assignment 35</h3>
 <pre><code>Compiling c++_answer/ for assignment in ../assignmentdb/35-ConnectFour/c++_answer
-make: *** No rule to make target 'clean'.  Stop.
-make: *** No targets specified and no makefile found.  Stop.
-could not compile c++_answer/ for assignment in ../assignmentdb/35-ConnectFour/c++_answer
+rm connect4.o
+rm: cannot remove 'connect4.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
+rm connect4
+rm: cannot remove 'connect4': No such file or directory
+make: [Makefile:32: clean] Error 1 (ignored)
+g++ -g  -std=c++14 -I /home/bridges-testing/bridges-cxx-install/include/ -c connect4.cpp -o connect4.o
+g++ -o connect4 connect4.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ -pthread -lcurl -l bridges 
 </code></pre>
 </div>
-<div class="failure">
+<div class="success">
 <h3 id="cxxlog35-runanswer">Run Answer for Assignment 35</h3>
-<pre><code>can't guess a binary file to run
-could not run c++_answer for assignment in ../assignmentdb/35-ConnectFour/c++_answer
+<pre><code>Guessing ./connect4 is the right binary file where main is
+
+connecting SocketIO with http://bridges-games.herokuapp.com
+[2022-07-27 03:57:31] [connect] Successful connection
+[2022-07-27 03:57:31] [connect] WebSocket Connection 54.205.8.205:80 v-2 &quot;WebSocket++/0.8.2&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1658908651 101
+connected!!
+sockopen on namespace /
+Sending credentials
+Credentials sent
+announcement something
+Sending credentials
+Credentials sent
+Setting framelimit to 10
+announcement something
+Success: Assignment posted to the server. 
+Check out your visualization at:
+
+http://bridges-games.herokuapp.com/assignments/132/bridges_testing
+
+sio closed
 </code></pre>
 </div>
     
@@ -3721,6 +3726,151 @@ g++ -o geological_survey geological_survey.o -g -L /home/bridges-testing/bridges
 <h3 id="cxxlog38-runanswer">Run Answer for Assignment 38</h3>
 <pre><code>Guessing ./geological_survey is the right binary file where main is
 
+M 3.4 - 44 km ESE of Naalehu, Hawaii
+M 1.4 - 22km ESE of Little Lake, CA
+M 2.0 - 52 km ESE of Naalehu, Hawaii
+M 2.0 - 9 km ENE of Pāhala, Hawaii
+M 2.9 - 45 km ESE of Naalehu, Hawaii
+M 2.2 - 9 km ENE of Pāhala, Hawaii
+M 3.1 - 46 km ESE of Naalehu, Hawaii
+M 1.4 - 28 km ESE of Pedro Bay, Alaska
+M 1.4 - 51 km S of Denali National Park, Alaska
+M 1.0 - 30 km SE of Mina, Nevada
+M 1.8 - 8 km ENE of Pāhala, Hawaii
+M 3.8 - 55 km S of Whites City, New Mexico
+M 2.1 - 1 km SSE of Maria Antonia, Puerto Rico
+M 2.2 - 37 km NNE of Dyer, Nevada
+M 1.5 - 4km ESE of Yucca Valley, CA
+M 1.4 - 32km ENE of Primo Tapia, B.C., MX
+M 1.2 - 25 km W of Karluk, Alaska
+M 2.1 - 62km SSW of Progreso, B.C., MX
+M 1.9 - 22 km SSW of Anchorage, Alaska
+M 2.7 - 57 km S of Whites City, New Mexico
+M 1.8 - 9km SW of Niland, CA
+M 3.6 - 55 km S of Whites City, New Mexico
+M 3.9 - 58 km S of Whites City, New Mexico
+M 1.1 - 27 km NNW of Petersville, Alaska
+M 1.4 - 6km W of Cobb, CA
+M 2.3 - 10 km ENE of Pāhala, Hawaii
+M 2.0 - 4 km S of Palmarejo, Puerto Rico
+M 1.9 - 29 km E of Honaunau-Napoopoo, Hawaii
+M 2.5 - 3 km S of Saint Regis Falls, New York
+M 1.4 - 81 km N of Aleneva, Alaska
+M 1.6 - 26 km NNW of Glacier View, Alaska
+M 4.7 - south of the Fiji Islands
+M 1.2 - 5 km ENE of Coleville, California
+M 4.4 - 42 km ESE of Naalehu, Hawaii
+M 2.2 - 14 km W of Point Possession, Alaska
+M 1.9 - 23 km S of Denali National Park, Alaska
+M 3.2 - 9 km ENE of Pāhala, Hawaii
+M 1.9 - 9 km E of Pāhala, Hawaii
+M 1.7 - 55 km SW of Karluk, Alaska
+M 3.9 - 9 km ENE of Pāhala, Hawaii
+M 1.9 - 23 km S of Fern Forest, Hawaii
+M 2.3 - 5 km SE of Boquerón, Puerto Rico
+M 4.9 - 14 km ESE of Dolores, Philippines
+M 4.8 - 17 km SE of Bantay, Philippines
+M 2.2 - 8 km WSW of Volcano, Hawaii
+M 2.2 - 12 km SSE of Guánica, Puerto Rico
+M 4.7 - 6 km NNW of Bantay, Philippines
+M 2.2 - 2 km S of Pāhala, Hawaii
+M 1.2 - 12km SW of Searles Valley, CA
+M 1.6 - 85 km ESE of Ugashik, Alaska
+M 1.7 - 50 km SSW of Harding-Birch Lakes, Alaska
+M 5.0 - south of the Fiji Islands
+M 1.9 - 83 km W of Karluk, Alaska
+M 1.6 - 8km SSE of Mineral, CA
+M 2.0 - 26 km WSW of Tonopah, Nevada
+M 4.9 - 3 km NNW of San Ramon, Philippines
+M 2.1 - 21 km S of Fern Forest, Hawaii
+M 2.9 - 23 km N of Isabela, Puerto Rico
+M 1.8 - 80 km ENE of Lime Village, Alaska
+M 1.6 - 76 km ENE of Lime Village, Alaska
+M 7.1 - 11 km ESE of Dolores, Philippines
+M 1.2 - 16km ENE of Borrego Springs, CA
+M 2.0 - 62 km SSE of Port Graham, Alaska
+M 1.9 - 5 km SSW of Captain Cook, Hawaii
+M 5.0 - 94 km SSE of Kieta, Papua New Guinea
+M 2.1 - 4 km SSW of Indios, Puerto Rico
+M 1.7 - 70 km ENE of Lime Village, Alaska
+M 1.1 - 0 km NE of Walker, California
+M 1.1 Quarry Blast - 2km SE of Home Gardens, CA
+M 2.1 - 16km NW of Parkfield, CA
+M 1.3 Quarry Blast - 4km NNW of Boron, CA
+M 2.0 - 8km NNE of Petrolia, CA
+M 1.6 - 62 km ESE of Pedro Bay, Alaska
+M 2.0 - 10km SE of Pinnacles, CA
+M 1.9 - 6 km W of Point Possession, Alaska
+M 4.7 - Fiji region
+M 1.2 - 18 km WSW of Point Possession, Alaska
+M 2.8 - 11km WSW of Petrolia, CA
+M 1.6 - 6km SSW of Mojave, CA
+M 2.3 - 1km NE of Hollister, CA
+M 1.6 - 13 km NW of Nikiski, Alaska
+M 1.2 - 9km SSE of Mammoth Lakes, CA
+M 1.4 - 4km NNE of McCloud, CA
+M 2.0 - 3km NNE of McCloud, CA
+M 1.1 - 18km E of Julian, CA
+M 4.9 - 53 km SSW of Jurm, Afghanistan
+M 4.5 - 127 km SSW of Dompu, Indonesia
+M 2.6 - 57 km S of Whites City, New Mexico
+M 2.3 - 10km N of Lake Pillsbury, CA
+M 2.5 - 86 km W of Karluk, Alaska
+M 1.1 - 20km ENE of Thousand Palms, CA
+M 1.8 - 8 km S of Pāhala, Hawaii
+M 1.1 - 23 km NNW of Mina, Nevada
+M 2.1 - 15 km S of Volcano, Hawaii
+M 1.2 - 6 km NW of Schurz, Nevada
+M 1.3 Explosion - 9 km S of Cascadia, Oregon
+M 1.8 - 9km NNE of Bella Vista, CA
+M 2.4 - 84 km S of Eureka, Nevada
+M 1.7 - 6km S of Yucca Valley, CA
+M 1.8 - 10 km NW of Old Harbor, Alaska
+M 2.6 - 42 km S of Mākena, Hawaii
+M 3.1 - 237 km SE of Chiniak, Alaska
+M 1.2 - 12km N of Ocotillo Wells, CA
+M 1.2 - 14km S of Olancha, CA
+M 1.5 - 56 km S of Kingston, Nevada
+M 1.6 Quarry Blast - 2 km SW of Hulbert, Oklahoma
+M 1.0 - 7km SSE of Idyllwild, CA
+M 1.4 - 16 km NNW of Beluga, Alaska
+M 1.6 - 53 km N of Chase, Alaska
+M 2.2 - 4 km SSW of Pāhala, Hawaii
+M 1.1 - 9km NNW of Sea Ranch, CA
+M 1.2 - 9km SSW of Salton City, CA
+M 1.6 - 31 km SE of Mina, Nevada
+M 4.6 - 28 km NE of Khawhai, India
+M 1.3 - 14 km ESE of Tyonek, Alaska
+M 2.9 - 265 km W of Port Orford, Oregon
+M 1.8 - 9km W of Laytonville, CA
+M 1.6 - 97 km NNW of Rachel, Nevada
+M 3.1 - 58 km S of Whites City, New Mexico
+M 1.2 - 7km NW of The Geysers, CA
+M 4.2 - 95 km W of San Antonio de los Cobres, Argentina
+M 1.6 - 10km SSW of Salton City, CA
+M 1.6 - 21 km E of Beluga, Alaska
+M 4.1 - Myanmar
+M 3.6 - 9 km WSW of Superior, Nebraska
+M 2.5 - Central Alaska
+M 4.4 - Bonin Islands, Japan region
+M 4.9 - 48 km N of Finschhafen, Papua New Guinea
+M 2.3 - 6km W of Cobb, CA
+M 5.3 - 109 km NE of Gisborne, New Zealand
+M 1.2 - 4km E of Johannesburg, CA
+M 1.3 - 5 km W of Big Lake, Alaska
+M 5.0 - Owen Fracture Zone region
+M 1.7 - 11 km W of Tyonek, Alaska
+M 2.2 - 77 km N of Aleneva, Alaska
+M 1.2 - 11km WSW of Searles Valley, CA
+M 1.1 - 7km SSW of The Geysers, CA
+M 1.4 - 3km NE of Muscoy, CA
+M 1.7 - 56 km E of Port Alsworth, Alaska
+M 1.8 - 11 km SSE of Volcano, Hawaii
+M 1.3 - 2km SW of Salton City, CA
+M 3.8 - 94 km N of Cruz Bay, U.S. Virgin Islands
+M 1.3 - 8 km WSW of Nenana, Alaska
+M 1.6 - 9km N of Big Bear Lake, CA
+M 1.4 - 15 km SSE of Susitna North, Alaska
 M 2.0 - 8 km ENE of Pāhala, Hawaii
 M 2.3 - 30 km NE of Paxson, Alaska
 M 2.0 - 123 km WSW of Hawaiian Ocean View, Hawaii
@@ -4276,151 +4426,6 @@ M 1.6 - 4 km WNW of Wasilla, Alaska
 M 4.6 - 178 km SSE of Naze, Japan
 M 2.0 - 8 km ENE of Pāhala, Hawaii
 M 2.3 - 90 km SE of Kingston, Nevada
-M 2.1 - 11 km ENE of Pāhala, Hawaii
-M 2.5 - 13km SW of Olancha, CA
-M 2.4 - 0 km WSW of Caruthersville, Missouri
-M 1.6 - 18km NNE of Neenach, CA
-M 1.3 - 15 km SSE of Sunnyside, Utah
-M 2.4 - 10 km WSW of Volcano, Hawaii
-M 1.4 - 14 km SSE of Sunnyside, Utah
-M 1.6 - 16km WSW of Toms Place, CA
-M 1.1 - 21 km NNW of Mina, Nevada
-M 2.0 - 11 km SSE of Guánica, Puerto Rico
-M 1.4 - 7km S of Mojave, CA
-M 1.6 - 20 km NNE of Whittier, Alaska
-M 1.0 - 12km WSW of Morongo Valley, CA
-M 1.6 - 28 km W of Petersville, Alaska
-M 2.5 - 13km SE of Pinnacles, CA
-M 2.4 - 30km WSW of Olancha, CA
-M 1.4 - 10km NNE of Gonzales, CA
-M 1.5 - 38 km SSE of Kingston, Nevada
-M 1.9 - 15 km SSE of Sunnyside, Utah
-M 4.9 - 269 km WNW of Neiafu, Tonga
-M 2.2 - 8 km E of Pāhala, Hawaii
-M 1.4 - 13 km SSE of Sunnyside, Utah
-M 1.4 - 45 km SSE of Nelchina, Alaska
-M 1.5 - 7km SE of Pinnacles, CA
-M 1.0 - 10km SSW of Searles Valley, CA
-M 2.2 - 8 km E of Pāhala, Hawaii
-M 3.0 - 8 km SW of Lebanon, Oklahoma
-M 1.3 - 15 km ENE of Susitna, Alaska
-M 1.7 - 4 km WSW of Guánica, Puerto Rico
-M 1.3 - Central Alaska
-M 1.4 - 60 km ESE of Knik River, Alaska
-M 1.6 - 14 km SSE of Sunnyside, Utah
-M 1.4 - 27 km S of Port Graham, Alaska
-M 2.6 - 1 km NNW of Indios, Puerto Rico
-M 2.5 - 7km ENE of Hidden Valley Lake, CA
-M 1.4 - 35 km WNW of Valdez, Alaska
-M 1.3 - 15 km SSE of Sunnyside, Utah
-M 2.4 - 24km NE of Pinnacles, CA
-M 2.4 - 13 km SSW of Port Lions, Alaska
-M 1.2 - 20km ESE of Little Lake, CA
-M 2.9 - 54 km SSW of Cantwell, Alaska
-M 1.8 - 31 km SSW of Skwentna, Alaska
-M 1.5 - 32 km E of Pedro Bay, Alaska
-M 2.5 - 44 km WSW of Tatitlek, Alaska
-M 1.6 - 10km NW of Parkfield, CA
-M 1.4 - Utah
-M 1.8 - 9 km ENE of Pāhala, Hawaii
-M 2.0 - 10 km ESE of Jefferson, Oklahoma
-M 1.5 - 54 km NW of Skwentna, Alaska
-M 1.1 - 16 km ESE of Alamo, Nevada
-M 1.1 - 38 km E of Stevens Village, Alaska
-M 1.1 - 12km SE of Bodfish, CA
-M 1.2 - 33 km ESE of Susitna North, Alaska
-M 1.4 - 90 km S of Eureka, Nevada
-M 1.2 - 59 km SSE of Cantwell, Alaska
-M 1.7 - 89 km S of Eureka, Nevada
-M 1.1 - 57 km SW of Cantwell, Alaska
-M 1.4 - 10km SSW of Ojai, CA
-M 1.4 - 2km NE of Loma Linda, CA
-M 1.3 - 9 km N of Minto, Alaska
-M 1.1 - 34 km WSW of Cantwell, Alaska
-M 1.2 - 35 km SSW of Denali National Park, Alaska
-M 2.5 - 7 km E of Pāhala, Hawaii
-M 1.5 - 88 km S of Eureka, Nevada
-M 1.2 - 67 km ESE of Pope-Vannoy Landing, Alaska
-M 1.5 - 15 km N of Point Possession, Alaska
-M 1.9 - 24 km N of Pāhala, Hawaii
-M 1.8 - 22 km ENE of Honaunau-Napoopoo, Hawaii
-M 1.5 - 11km W of Progreso, B.C., MX
-M 1.7 - 7 km SW of Volcano, Hawaii
-M 1.1 - 39 km SSE of Dyer, Nevada
-M 4.8 - 14 km N of Limín Khersonísou, Greece
-M 1.4 - 39 km NNW of Valdez, Alaska
-M 1.9 - 10 km NE of Alamo, Nevada
-M 1.1 - 9 km SSW of South Van Horn, Alaska
-M 1.0 - Central Alaska
-M 1.9 - 11 km ENE of Pāhala, Hawaii
-M 1.7 - 6km NW of Parkfield, CA
-M 1.5 - 29km ESE of Campo, CA
-M 1.8 - 32km SE of Johannesburg, CA
-M 2.3 - 22 km E of Honaunau-Napoopoo, Hawaii
-M 1.8 - 10 km ENE of Pāhala, Hawaii
-M 1.0 - 5km NNW of The Geysers, CA
-M 2.6 - 7 km E of La Parguera, Puerto Rico
-M 1.6 - 24 km WNW of Salamatof, Alaska
-M 1.4 - 1km WSW of Pacifica, CA
-M 1.2 - 23km NE of Primo Tapia, B.C., MX
-M 1.5 - 6km NNW of Ventura, CA
-M 4.7 - Ecuador
-M 2.0 - 81 km SSW of Eureka, Nevada
-M 1.2 - 18km N of Borrego Springs, CA
-M 2.3 - 1 km NNE of Yauco, Puerto Rico
-M 1.0 - 2km WNW of Anderson Springs, CA
-M 1.9 - 5 km E of La Parguera, Puerto Rico
-M 1.6 - 7km NW of The Geysers, CA
-M 1.6 - 9km ESE of Bodfish, CA
-M 1.9 - 20 km ENE of Honaunau-Napoopoo, Hawaii
-M 4.7 - 84 km SSW of Gorontalo, Indonesia
-M 2.9 - 20 km E of Honaunau-Napoopoo, Hawaii
-M 5.0 - 97 km SE of Pondaguitan, Philippines
-M 1.3 - 13km SE of Bodfish, CA
-M 1.1 - 4km SW of Salton City, CA
-M 2.1 - 89 km SE of Kingston, Nevada
-M 2.5 - 2 km SW of San Antonio, Puerto Rico
-M 1.6 - 31 km SE of Mina, Nevada
-M 4.8 - 67 km WNW of Sardinal, Costa Rica
-M 3.0 - 8 km NNW of Dorado, Puerto Rico
-M 2.0 - 6 km WSW of Guánica, Puerto Rico
-M 1.7 - 5 km SSW of Palmarejo, Puerto Rico
-M 4.6 - 53 km S of Champerico, Guatemala
-M 1.2 - 31 km N of Karluk, Alaska
-M 1.4 - 4km NNW of Muscoy, CA
-M 2.5 - 7km NW of The Geysers, CA
-M 1.9 - 22 km ENE of Willow, Alaska
-M 4.6 - 40 km NNW of Changji, China
-M 1.7 - 6km WSW of Marina del Rey, CA
-M 2.2 - 4 km SSW of Pāhala, Hawaii
-M 2.1 - 7 km WSW of Fuig, Puerto Rico
-M 1.6 - 12km SE of Bodfish, CA
-M 4.8 - Kermadec Islands region
-M 4.4 - 233 km W of Adak, Alaska
-M 1.4 - 30 km NNE of Skwentna, Alaska
-M 2.3 - 14km SW of Searles Valley, CA
-M 4.5 - 121 km ENE of Kuril’sk, Russia
-M 1.7 - 96 km S of Eureka, Nevada
-M 1.8 - 8 km E of Pāhala, Hawaii
-M 4.5 - 56 km SSW of Masachapa, Nicaragua
-M 4.5 - 47 km SSW of Bengkulu, Indonesia
-M 1.4 - 72 km E of Cantwell, Alaska
-M 5.4 - 46 km SSW of Bengkulu, Indonesia
-M 2.1 - 7km SW of Ridgemark, CA
-M 1.7 - 91 km WSW of Preston, Nevada
-M 1.1 - 14km WSW of Searles Valley, CA
-M 1.5 Quarry Blast - 5km NNW of Boron, CA
-M 2.1 - 14 km SSE of Fallon Station, Nevada
-M 1.6 - 13 km WNW of Two Rivers, Alaska
-M 1.0 - 80 km E of Denali Park, Alaska
-M 1.3 - 36 km SSE of Cantwell, Alaska
-M 1.4 - 25 km SW of Anchor Point, Alaska
-M 2.0 - 34 km SE of Mina, Nevada
-M 1.1 - 73 km N of Chickaloon, Alaska
-M 4.3 - 26 km E of Mawlaik, Myanmar
-M 1.4 - 14 km SSE of Sunnyside, Utah
-M 2.1 - 21 km ESE of Chickaloon, Alaska
-M 1.7 - 13km W of Toms Place, CA
 Success: Assignment posted to the server. 
 Check out your visualization at:
 
@@ -4511,7 +4516,7 @@ Check out your visualization at:
 
 http://bridges-cs.herokuapp.com/assignments/40/bridges_testing
 
-width,height, maxval:22092,-661783444,255
+width,height, maxval:22034,-1051390868,255
 Success: Assignment posted to the server. 
 Check out your visualization at:
 
@@ -4551,8 +4556,8 @@ g++ -o SpaceInvaders SpaceInvaders.o -g -L /home/bridges-testing/bridges-cxx-ins
 <pre><code>Guessing ./SpaceInvaders is the right binary file where main is
 
 connecting SocketIO with http://bridges-games.herokuapp.com
-[2022-07-26 03:57:43] [connect] Successful connection
-[2022-07-26 03:57:43] [connect] WebSocket Connection 54.205.8.205:80 v-2 &quot;WebSocket++/0.8.2&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1658822263 101
+[2022-07-27 03:58:23] [connect] Successful connection
+[2022-07-27 03:58:23] [connect] WebSocket Connection 174.129.128.48:80 v-2 &quot;WebSocket++/0.8.2&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1658908703 101
 connected!!
 sockopen on namespace /
 Sending credentials
@@ -5246,7 +5251,7 @@ Check out your visualization at:
 
 http://bridges-cs.herokuapp.com/assignments/143/bridges_testing
 
-elapsed time: 0.159664s
+elapsed time: 0.142319s
 Success: Assignment posted to the server. 
 Check out your visualization at:
 
@@ -5313,8 +5318,8 @@ g++ -o ExplorerRobot ExplorerRobot.o -g -L /home/bridges-testing/bridges-cxx-ins
 <pre><code>Guessing ./ExplorerRobot is the right binary file where main is
 
 connecting SocketIO with http://bridges-games.herokuapp.com
-[2022-07-26 03:58:16] [connect] Successful connection
-[2022-07-26 03:58:16] [connect] WebSocket Connection 54.205.8.205:80 v-2 &quot;WebSocket++/0.8.2&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1658822296 101
+[2022-07-27 03:58:55] [connect] Successful connection
+[2022-07-27 03:58:55] [connect] WebSocket Connection 54.205.8.205:80 v-2 &quot;WebSocket++/0.8.2&quot; /socket.io/?EIO=4&amp;transport=websocket&amp;t=1658908735 101
 connected!!
 sockopen on namespace /
 Sending credentials
@@ -5942,27 +5947,6 @@ Hitting data URL: http://bridges-data-server-gutenberg-t.bridgesuncc.org//book?i
 Hitting hash URL: gutenberg2199
 Checking the cache:  hash code: gutenberg22382
 Hitting data URL: http://bridges-data-server-gutenberg-t.bridgesuncc.org//book?id=22382
-Hitting hash URL: gutenberg22382
-Checking the cache:  hash code: gutenberg24269
-Hitting data URL: http://bridges-data-server-gutenberg-t.bridgesuncc.org//book?id=24269
-Hitting hash URL: gutenberg24269
-Checking the cache:  hash code: gutenberg24385
-Hitting data URL: http://bridges-data-server-gutenberg-t.bridgesuncc.org//book?id=24385
-Hitting hash URL: gutenberg24385
-Checking the cache:  hash code: gutenberg24856
-Hitting data URL: http://bridges-data-server-gutenberg-t.bridgesuncc.org//book?id=24856
-Hitting hash URL: gutenberg24856
-Checking the cache:  hash code: gutenberg25188
-Hitting data URL: http://bridges-data-server-gutenberg-t.bridgesuncc.org//book?id=25188
-Hitting hash URL: gutenberg25188
-Checking the cache:  hash code: gutenberg28815
-Hitting data URL: http://bridges-data-server-gutenberg-t.bridgesuncc.org//book?id=28815
-Hitting hash URL: gutenberg28815
-Checking the cache:  hash code: gutenberg3059
-Hitting data URL: http://bridges-data-server-gutenberg-t.bridgesuncc.org//book?id=3059
-Hitting hash URL: gutenberg3059
-Checking the cache:  hash code: gutenberg30613
-Hitting data URL: http://bridges-data-server-gutenberg-t.bridgesuncc.org//book?id=30613
 Alarm clock
 could not run c++_answer for assignment in ../assignmentdb/57-BookAnalysis/c++_answer
 </code></pre>
