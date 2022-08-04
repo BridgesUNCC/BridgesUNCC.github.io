@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for C++</h1>
-	<p>Running at Wed 03 Aug 2022 03:47:42 AM EDT</p>
+	<p>Running at Thu 04 Aug 2022 03:48:34 AM EDT</p>
   <div id="summary0" class="success">
     <h2><a href="cxx_logs.html#cxxlog0">Assignment 0</a> </h2>
     <p>
@@ -82,13 +82,13 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summary7" class="failure">
+  <div id="summary7" class="success">
     <h2><a href="cxx_logs.html#cxxlog7">Assignment 7</a> </h2>
     <p>
       <ul>
         <li> Build Scaffold : <a href="cxx_logs.html#cxxlog7-buildscaffold">success</a></li>
         <li> Build Answer : <a href="cxx_logs.html#cxxlog7-buildanswer">success</a></li>
-        <li> Run Answer : <a href="cxx_logs.html#cxxlog7-runanswer">error</a></li>
+        <li> Run Answer : <a href="cxx_logs.html#cxxlog7-runanswer">success</a></li>
       </ul>
     </p>
   </div>
@@ -418,7 +418,7 @@ background-color: springgreen;
       <ul>
         <li> Build Scaffold : <a href="cxx_logs.html#cxxlog40-buildscaffold">error</a></li>
         <li> Build Answer : <a href="cxx_logs.html#cxxlog40-buildanswer">success</a></li>
-        <li> Run Answer : <a href="cxx_logs.html#cxxlog40-runanswer">error</a></li>
+        <li> Run Answer : <a href="cxx_logs.html#cxxlog40-runanswer">success</a></li>
       </ul>
     </p>
   </div>
@@ -957,34 +957,36 @@ g++ -g  -std=c++14 -I /home/bridges-testing/bridges-cxx-install/include/ -c Grid
 g++ -o GridLyrics GridLyrics.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ -pthread -lcurl -l bridges 
 </code></pre>
 </div>
-<div class="failure">
+<div class="success">
 <h3 id="cxxlog7-runanswer">Run Answer for Assignment 7</h3>
 <pre><code>Guessing ./GridLyrics is the right binary file where main is
 
 url: http://bridgesdata.herokuapp.com/api/songs/find/Harder%20Faster%20Better%20Stronger?artistName=Daft%20Punk
-terminate called after throwing an instance of 'bridges::HTTPException'
-  what():  HTTPException raised when hitting http://bridgesdata.herokuapp.com/api/songs/find/Harder%20Faster%20Better%20Stronger?artistName=Daft%20Punk
-HTTP code: 404
-HTTP/1.1 404 Not Found
-Server: Cowboy
-Connection: keep-alive
-X-Dns-Prefetch-Control: off
-X-Frame-Options: SAMEORIGIN
-Strict-Transport-Security: max-age=15552000; includeSubDomains
-X-Download-Options: noopen
-X-Content-Type-Options: nosniff
-X-Xss-Protection: 1; mode=block
-Content-Type: application/json; charset=utf-8
-Content-Length: 4
-Etag: W/&quot;4-HQJhQpjpHo8tO2muCUH6gUmiBaI&quot;
-Vary: Accept-Encoding
-Date: Wed, 03 Aug 2022 07:49:45 GMT
-Via: 1.1 vegur
+Work
+it
+make
+it
+Do
+it
+makes
+us
+Harder
+better
+Faster
+stronger
+More
+than
+hour
+Hour
+never
+Ever
+after
+Work
+Success: Assignment posted to the server. 
+Check out your visualization at:
 
+http://bridges-cs.herokuapp.com/assignments/107/bridges_testing
 
-&quot;\n&quot;
-Aborted
-could not run c++_answer for assignment in ../assignmentdb/7-GridLyrics/c++_answer
 </code></pre>
 </div>
     
@@ -1337,6 +1339,8 @@ http://bridges-cs.herokuapp.com/assignments/110/bridges_testing
 <h3 id="cxxlog11-buildscaffold">Build Scaffold for Assignment 11</h3>
 <pre><code>Compiling c++/ for assignment in ../assignmentdb/11-2048Game/c++
 rm 2048.o
+rm: cannot remove '2048.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm 2048
 rm: cannot remove '2048': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -1364,6 +1368,8 @@ could not compile c++/ for assignment in ../assignmentdb/11-2048Game/c++
 <h3 id="cxxlog11-buildanswer">Build Answer for Assignment 11</h3>
 <pre><code>Compiling c++_answer/ for assignment in ../assignmentdb/11-2048Game/c++_answer
 rm 2048.o
+rm: cannot remove '2048.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm 2048
 rm: cannot remove '2048': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -1394,6 +1400,8 @@ could not run c++_answer for assignment in ../assignmentdb/11-2048Game/c++_answe
 <h3 id="cxxlog12-buildscaffold">Build Scaffold for Assignment 12</h3>
 <pre><code>Compiling c++/ for assignment in ../assignmentdb/12-AStarMaze/c++
 rm pathfinder.o
+rm: cannot remove 'pathfinder.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm AStarMaze
 rm: cannot remove 'AStarMaze': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -1413,6 +1421,8 @@ could not compile c++/ for assignment in ../assignmentdb/12-AStarMaze/c++
 <h3 id="cxxlog12-buildanswer">Build Answer for Assignment 12</h3>
 <pre><code>Compiling c++_answer/ for assignment in ../assignmentdb/12-AStarMaze/c++_answer
 rm pathfinder.o
+rm: cannot remove 'pathfinder.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm AStarMaze
 rm: cannot remove 'AStarMaze': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -1443,6 +1453,8 @@ could not run c++_answer for assignment in ../assignmentdb/12-AStarMaze/c++_answ
 <h3 id="cxxlog13-buildscaffold">Build Scaffold for Assignment 13</h3>
 <pre><code>Compiling c++/ for assignment in ../assignmentdb/13-InfiniteRunner/c++
 rm runner.o
+rm: cannot remove 'runner.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm InfiniteRunner
 rm: cannot remove 'InfiniteRunner': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -1498,6 +1510,8 @@ could not run c++_answer for assignment in ../assignmentdb/13-InfiniteRunner/c++
 <h3 id="cxxlog14-buildscaffold">Build Scaffold for Assignment 14</h3>
 <pre><code>Compiling c++/ for assignment in ../assignmentdb/14-SpreadingFire/c++
 rm SpreadingFire.o
+rm: cannot remove 'SpreadingFire.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm SpreadingFire
 rm: cannot remove 'SpreadingFire': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -1517,6 +1531,8 @@ could not compile c++/ for assignment in ../assignmentdb/14-SpreadingFire/c++
 <h3 id="cxxlog14-buildanswer">Build Answer for Assignment 14</h3>
 <pre><code>Compiling c++_answer/ for assignment in ../assignmentdb/14-SpreadingFire/c++_answer
 rm SpreadingFire.o
+rm: cannot remove 'SpreadingFire.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm SpreadingFire
 rm: cannot remove 'SpreadingFire': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -1547,6 +1563,8 @@ could not run c++_answer for assignment in ../assignmentdb/14-SpreadingFire/c++_
 <h3 id="cxxlog15-buildscaffold">Build Scaffold for Assignment 15</h3>
 <pre><code>Compiling c++/ for assignment in ../assignmentdb/15-FallingSand/c++
 rm FallingSand.o
+rm: cannot remove 'FallingSand.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm FallingSand
 rm: cannot remove 'FallingSand': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -1566,6 +1584,8 @@ could not compile c++/ for assignment in ../assignmentdb/15-FallingSand/c++
 <h3 id="cxxlog15-buildanswer">Build Answer for Assignment 15</h3>
 <pre><code>Compiling c++_answer/ for assignment in ../assignmentdb/15-FallingSand/c++_answer
 rm FallingSand.o
+rm: cannot remove 'FallingSand.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm FallingSand
 rm: cannot remove 'FallingSand': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -1636,6 +1656,8 @@ http://bridges-cs.herokuapp.com/assignments/116/bridges_testing
 <h3 id="cxxlog17-buildscaffold">Build Scaffold for Assignment 17</h3>
 <pre><code>Compiling c++/ for assignment in ../assignmentdb/17-ControlsTutorial/c++
 rm Controls_Tutorial.o
+rm: cannot remove 'Controls_Tutorial.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm ControlsTutorial
 rm: cannot remove 'ControlsTutorial': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -1655,6 +1677,8 @@ could not compile c++/ for assignment in ../assignmentdb/17-ControlsTutorial/c++
 <h3 id="cxxlog17-buildanswer">Build Answer for Assignment 17</h3>
 <pre><code>Compiling c++_answer/ for assignment in ../assignmentdb/17-ControlsTutorial/c++_answer
 rm Controls_Tutorial.o
+rm: cannot remove 'Controls_Tutorial.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm ControlsTutorial
 rm: cannot remove 'ControlsTutorial': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -1685,6 +1709,8 @@ could not run c++_answer for assignment in ../assignmentdb/17-ControlsTutorial/c
 <h3 id="cxxlog18-buildscaffold">Build Scaffold for Assignment 18</h3>
 <pre><code>Compiling c++/ for assignment in ../assignmentdb/18-ControlsTutorialTwo/c++
 rm Controls_Tutorial2.o
+rm: cannot remove 'Controls_Tutorial2.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm ControlTutorial2
 rm: cannot remove 'ControlTutorial2': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -1704,6 +1730,8 @@ could not compile c++/ for assignment in ../assignmentdb/18-ControlsTutorialTwo/
 <h3 id="cxxlog18-buildanswer">Build Answer for Assignment 18</h3>
 <pre><code>Compiling c++_answer/ for assignment in ../assignmentdb/18-ControlsTutorialTwo/c++_answer
 rm Controls_Tutorial2.o
+rm: cannot remove 'Controls_Tutorial2.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm ControlsTutorial2
 rm: cannot remove 'ControlsTutorial2': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -1734,6 +1762,8 @@ could not run c++_answer for assignment in ../assignmentdb/18-ControlsTutorialTw
 <h3 id="cxxlog19-buildscaffold">Build Scaffold for Assignment 19</h3>
 <pre><code>Compiling c++/ for assignment in ../assignmentdb/19-Bugstomp/c++
 rm BugStomp.o
+rm: cannot remove 'BugStomp.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm BugStomp
 rm: cannot remove 'BugStomp': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -1757,6 +1787,8 @@ could not compile c++/ for assignment in ../assignmentdb/19-Bugstomp/c++
 <h3 id="cxxlog19-buildanswer">Build Answer for Assignment 19</h3>
 <pre><code>Compiling c++_answer/ for assignment in ../assignmentdb/19-Bugstomp/c++_answer
 rm BugStomp.o
+rm: cannot remove 'BugStomp.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm BugStomp
 rm: cannot remove 'BugStomp': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -1787,6 +1819,8 @@ could not run c++_answer for assignment in ../assignmentdb/19-Bugstomp/c++_answe
 <h3 id="cxxlog20-buildscaffold">Build Scaffold for Assignment 20</h3>
 <pre><code>Compiling c++/ for assignment in ../assignmentdb/20-Minesweeper/c++
 rm minesweeper.o
+rm: cannot remove 'minesweeper.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm Minesweeper
 rm: cannot remove 'Minesweeper': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -1806,6 +1840,8 @@ could not compile c++/ for assignment in ../assignmentdb/20-Minesweeper/c++
 <h3 id="cxxlog20-buildanswer">Build Answer for Assignment 20</h3>
 <pre><code>Compiling c++_answer/ for assignment in ../assignmentdb/20-Minesweeper/c++_answer
 rm minesweeper.o
+rm: cannot remove 'minesweeper.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm Minesweeper
 rm: cannot remove 'Minesweeper': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -1836,6 +1872,8 @@ could not run c++_answer for assignment in ../assignmentdb/20-Minesweeper/c++_an
 <h3 id="cxxlog21-buildscaffold">Build Scaffold for Assignment 21</h3>
 <pre><code>Compiling c++/ for assignment in ../assignmentdb/21-RaceCar/c++
 rm RaceCar.o
+rm: cannot remove 'RaceCar.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm RaceCar
 rm: cannot remove 'RaceCar': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -1855,6 +1893,8 @@ could not compile c++/ for assignment in ../assignmentdb/21-RaceCar/c++
 <h3 id="cxxlog21-buildanswer">Build Answer for Assignment 21</h3>
 <pre><code>Compiling c++_answer/ for assignment in ../assignmentdb/21-RaceCar/c++_answer
 rm RaceCar.o
+rm: cannot remove 'RaceCar.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm RaceCar
 rm: cannot remove 'RaceCar': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -1885,6 +1925,8 @@ could not run c++_answer for assignment in ../assignmentdb/21-RaceCar/c++_answer
 <h3 id="cxxlog22-buildscaffold">Build Scaffold for Assignment 22</h3>
 <pre><code>Compiling c++/ for assignment in ../assignmentdb/22-Snake/c++
 rm Snake.o
+rm: cannot remove 'Snake.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm Snake
 rm: cannot remove 'Snake': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -1904,6 +1946,8 @@ could not compile c++/ for assignment in ../assignmentdb/22-Snake/c++
 <h3 id="cxxlog22-buildanswer">Build Answer for Assignment 22</h3>
 <pre><code>Compiling c++_answer/ for assignment in ../assignmentdb/22-Snake/c++_answer
 rm Snake.o
+rm: cannot remove 'Snake.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm Snake
 rm: cannot remove 'Snake': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -2249,6 +2293,8 @@ http://bridges-cs.herokuapp.com/assignments/126/bridges_testing
 <h3 id="cxxlog27-buildscaffold">Build Scaffold for Assignment 27</h3>
 <pre><code>Compiling c++/ for assignment in ../assignmentdb/27-GameGridBasic/c++
 rm SmileyFace.o
+rm: cannot remove 'SmileyFace.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm SmileyFace
 rm: cannot remove 'SmileyFace': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -2268,6 +2314,8 @@ could not compile c++/ for assignment in ../assignmentdb/27-GameGridBasic/c++
 <h3 id="cxxlog27-buildanswer">Build Answer for Assignment 27</h3>
 <pre><code>Compiling c++_answer/ for assignment in ../assignmentdb/27-GameGridBasic/c++_answer
 rm SmileyFace.o
+rm: cannot remove 'SmileyFace.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm SmileyFace
 rm: cannot remove 'SmileyFace': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -2405,6 +2453,7 @@ URL: https://query.wikidata.org/sparql?query=SELECT%20%3Fmovie%20%3FmovieLabel%2
 *getting year 2018
 URL: https://query.wikidata.org/sparql?query=SELECT%20%3Fmovie%20%3FmovieLabel%20%3Factor%20%3FactorLabel%20WHERE%20%7B%20%20%3Fmovie%20wdt%3AP31%20wd%3AQ11424.%20%20%3Fmovie%20wdt%3AP161%20%3Factor.%20%20%3Fmovie%20wdt%3AP364%20wd%3AQ1860.%20%20%3Fmovie%20wdt%3AP577%20%3Fdate.%20%20FILTER%28YEAR%28%3Fdate%29%20%3E%3D%202018%20%26%26%20YEAR%28%3Fdate%29%20%3C%3D%202018%29.%20%20%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22.%20%7D%20%7D&amp;format=json
 getting year 2019
+*getting year 2017
 Alarm clock
 could not run c++_answer for assignment in ../assignmentdb/30-TemporalBaconNumber/c++_answer
 </code></pre>
@@ -2452,6 +2501,8 @@ could not run c++_answer for assignment in ../assignmentdb/31-TemporalPageRank/c
 <h3 id="cxxlog32-buildscaffold">Build Scaffold for Assignment 32</h3>
 <pre><code>Compiling c++/ for assignment in ../assignmentdb/32-TicTacToe/c++
 rm tic_tac_toe_scaffold.o
+rm: cannot remove 'tic_tac_toe_scaffold.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm TicTacToe
 rm: cannot remove 'TicTacToe': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -2564,6 +2615,8 @@ http://bridges-cs.herokuapp.com/assignments/133/bridges_testing
 <h3 id="cxxlog34-buildscaffold">Build Scaffold for Assignment 34</h3>
 <pre><code>Compiling c++/ for assignment in ../assignmentdb/34-GameTutorials/c++
 rm GameTutorial.o
+rm: cannot remove 'GameTutorial.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm GameTutorial
 rm: cannot remove 'GameTutorial': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -2583,6 +2636,8 @@ could not compile c++/ for assignment in ../assignmentdb/34-GameTutorials/c++
 <h3 id="cxxlog34-buildanswer">Build Answer for Assignment 34</h3>
 <pre><code>Compiling c++_answer/ for assignment in ../assignmentdb/34-GameTutorials/c++_answer
 rm GameTutorial.o
+rm: cannot remove 'GameTutorial.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm GameTutorial
 rm: cannot remove 'GameTutorial': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -2613,6 +2668,8 @@ could not run c++_answer for assignment in ../assignmentdb/34-GameTutorials/c++_
 <h3 id="cxxlog35-buildscaffold">Build Scaffold for Assignment 35</h3>
 <pre><code>Compiling c++/ for assignment in ../assignmentdb/35-ConnectFour/c++
 rm connect4.o
+rm: cannot remove 'connect4.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm connect4
 rm: cannot remove 'connect4': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -2632,6 +2689,8 @@ could not compile c++/ for assignment in ../assignmentdb/35-ConnectFour/c++
 <h3 id="cxxlog35-buildanswer">Build Answer for Assignment 35</h3>
 <pre><code>Compiling c++_answer/ for assignment in ../assignmentdb/35-ConnectFour/c++_answer
 rm connect4.o
+rm: cannot remove 'connect4.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm connect4
 rm: cannot remove 'connect4': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -2736,6 +2795,111 @@ g++ -o geological_survey geological_survey.o -g -L /home/bridges-testing/bridges
 <h3 id="cxxlog38-runanswer">Run Answer for Assignment 38</h3>
 <pre><code>Guessing ./geological_survey is the right binary file where main is
 
+M 1.7 - 29 km SSW of Mina, Nevada
+M 1.9 - 10km W of El Sauzal, B.C., MX
+M 1.5 - 34km NNW of Searles Valley, CA
+M 1.2 - 15km ESE of Bodfish, CA
+M 1.2 - 22km N of Yucca Valley, CA
+M 1.0 - 4km W of Cobb, CA
+M 1.3 - 26 km SSW of Mina, Nevada
+M 4.5 - Izu Islands, Japan region
+M 1.2 - 31 km SE of Chickaloon, Alaska
+M 1.1 - 7 km NNE of Talkeetna, Alaska
+M 4.9 - 146 km E of ‘Ohonua, Tonga
+M 1.7 - 2 km NNE of Okeene, Oklahoma
+M 1.3 - 10 km W of Healy, Alaska
+M 1.6 - 57 km N of Chase, Alaska
+M 3.7 - 54 km SSW of Whites City, New Mexico
+M 2.7 - 36 km SSW of Los Ybanez, Texas
+M 4.6 - Kuril Islands
+M 1.5 - 41 km W of Petersville, Alaska
+M 2.1 - 6 km WSW of Guánica, Puerto Rico
+M 4.3 - Fiji region
+M 2.7 - 27 km E of Honaunau-Napoopoo, Hawaii
+M 4.8 - Izu Islands, Japan region
+M 1.2 - 3km SE of Loma Linda, CA
+M 1.4 - 11 km S of Sierraville, California
+M 1.9 - 7 km ENE of Pāhala, Hawaii
+M 2.0 - Island of Hawaii, Hawaii
+M 1.9 - 27 km W of Volcano, Hawaii
+M 1.4 - 26km NNE of Kernville, CA
+M 1.8 - 64 km W of Happy Valley, Alaska
+M 1.8 - 54 km WNW of Nanwalek, Alaska
+M 1.7 - 26km NNE of Kernville, CA
+M 1.0 - 22 km SSW of Mammoth, Wyoming
+M 1.5 - 19km SE of Pinnacles, CA
+M 2.5 - 154 km W of Gold Beach, Oregon
+M 4.7 - South Sandwich Islands region
+M 1.4 - 10km W of Wrightwood, CA
+M 4.2 - 2 km N of La Concepción, Nicaragua
+M 1.1 - 14km NE of Borrego Springs, CA
+M 1.4 - 12 km NE of Badger, Alaska
+M 1.2 - 13km SE of Tehachapi, CA
+M 3.3 - 4km SSW of Llano, CA
+M 1.5 - 48 km NE of Whittier, Alaska
+M 1.1 - 34 km S of Silver Gate, Montana
+M 4.4 - 154 km WSW of Palaióchora, Greece
+M 2.3 - 12 km ESE of Happy Valley, Alaska
+M 1.6 - 30 km E of Honaunau-Napoopoo, Hawaii
+M 1.6 - 14 km SSE of Sunnyside, Utah
+M 2.1 - 4 km S of Guánica, Puerto Rico
+M 2.2 - 4 km SSE of Pāhala, Hawaii
+M 1.6 - Central Alaska
+M 2.2 - 6 km ENE of Pāhala, Hawaii
+M 1.2 - 9km E of Borrego Springs, CA
+M 1.1 - 30 km SSE of Denali National Park, Alaska
+M 1.2 - 24 km ESE of Denali National Park, Alaska
+M 2.2 - 11 km ENE of Pāhala, Hawaii
+M 2.1 - 36 km NNW of Glacier View, Alaska
+M 2.3 - 2 km SSW of Pāhala, Hawaii
+M 1.6 - 7km SSE of Banning, CA
+M 1.1 - 23km ENE of Little Lake, CA
+M 2.5 - 88 km SE of Kingston, Nevada
+M 1.5 - 57 km W of Clear, Alaska, Alaska
+M 2.3 - 1 km S of Capitanejo, Puerto Rico
+M 1.0 - 6km ESE of Valle Vista, CA
+M 1.1 - 67 km W of Happy Valley, Alaska
+M 3.0 - 26 km WSW of Stella, Puerto Rico
+M 1.2 - 36 km NW of Silver Peak, Nevada
+M 2.3 - 26 km E of Honaunau-Napoopoo, Hawaii
+M 1.9 - 40 km WNW of Clam Gulch, Alaska
+M 1.6 - 1km NNW of The Geysers, CA
+M 2.3 - 5 km SSW of Pāhala, Hawaii
+M 1.8 - 4 km SSW of Pāhala, Hawaii
+M 1.8 - Central Alaska
+M 1.9 - 62 km NW of Petersville, Alaska
+M 5.4 - Kermadec Islands region
+M 1.4 - 17km ESE of Little Lake, CA
+M 1.7 - 35 km SE of Knik River, Alaska
+M 2.0 - 11 km ESE of Beluga, Alaska
+M 1.2 - 16 km NW of Bridgeport, California
+M 1.8 - 17km NNW of Bridgeport, CA
+M 3.0 - 1 km NE of La Playa, Puerto Rico
+M 1.1 - 26 km SSE of Mina, Nevada
+M 1.3 - 23km NE of Arvin, CA
+M 4.2 - 59 km SE of Tekirova, Turkey
+M 1.1 - 17 km S of Susitna, Alaska
+M 2.0 - 10 km ENE of Pāhala, Hawaii
+M 4.7 - 115 km WSW of Gorontalo, Indonesia
+M 1.8 - 15km SW of Vandenberg Air Force Base, CA
+M 1.9 - 14km W of Lanare, CA
+M 1.9 - 27 km E of Honaunau-Napoopoo, Hawaii
+M 1.4 - 28 km E of Honaunau-Napoopoo, Hawaii
+M 1.5 - 28 km E of Honaunau-Napoopoo, Hawaii
+M 1.5 - 27 km E of Honaunau-Napoopoo, Hawaii
+M 1.8 - 61 km WNW of Tyonek, Alaska
+M 2.4 - 26 km E of Honaunau-Napoopoo, Hawaii
+M 2.4 - 10 km E of Pāhala, Hawaii
+M 1.6 - 28 km E of Honaunau-Napoopoo, Hawaii
+M 1.3 - 11 km SSW of Sierraville, California
+M 1.9 - 27 km E of Honaunau-Napoopoo, Hawaii
+M 4.9 - 27 km NW of Pante Makasar, Timor Leste
+M 1.6 - 26 km E of Honaunau-Napoopoo, Hawaii
+M 1.6 - 27 km E of Honaunau-Napoopoo, Hawaii
+M 2.3 - 25 km E of Honaunau-Napoopoo, Hawaii
+M 1.2 - 27 km E of Honaunau-Napoopoo, Hawaii
+M 1.1 - 26 km E of Honaunau-Napoopoo, Hawaii
+M 1.3 - 29 km E of Honaunau-Napoopoo, Hawaii
 M 1.3 - 16km WSW of Toms Place, CA
 M 1.5 - Island of Hawaii, Hawaii
 M 1.4 - 27 km E of Honaunau-Napoopoo, Hawaii
@@ -3331,111 +3495,6 @@ M 2.3 - 70 km ESE of New Allakaket, Alaska
 M 1.1 - 10km W of Ojai, CA
 M 4.4 - 35 km SW of Challapata, Bolivia
 M 1.9 - 8 km SE of Beaver, Alaska
-M 4.1 - 16 km SE of Tomakomai, Japan
-M 1.1 - 48 km SSE of Denali National Park, Alaska
-M 2.3 - 20 km WSW of Chenega, Alaska
-M 1.1 - 37 km ENE of Chase, Alaska
-M 1.7 - 24 km SE of Denali National Park, Alaska
-M 1.3 - 24 km WNW of Susitna, Alaska
-M 4.9 - 261 km SE of Vilyuchinsk, Russia
-M 2.1 - 9 km ENE of Pāhala, Hawaii
-M 5.3 - Izu Islands, Japan region
-M 1.6 - 27 km SE of Skwentna, Alaska
-M 1.8 - 20 km N of Meadow Lakes, Alaska
-M 2.2 - 18 km S of Susitna North, Alaska
-M 1.8 - 11 km ENE of Pāhala, Hawaii
-M 4.4 - 28 km NNW of Tapay, Peru
-M 1.8 - 3km W of Cobb, CA
-M 1.3 - 19 km SW of Lowell Point, Alaska
-M 1.0 - 6km NNW of The Geysers, CA
-M 1.2 - 51 km SE of Pope-Vannoy Landing, Alaska
-M 1.4 Quarry Blast - 9km NNW of Big Bear Lake, CA
-M 5.2 - 170 km SE of Kuril’sk, Russia
-M 4.9 - 162 km S of Luwuk, Indonesia
-M 1.1 - 21 km NNW of Sutton-Alpine, Alaska
-M 1.7 - 69 km WNW of Ninilchik, Alaska
-M 2.5 - 11km WNW of Little Grass Valley, CA
-M 1.9 - 2 km E of Indios, Puerto Rico
-M 1.2 - 32 km E of Chase, Alaska
-M 5.1 - Bonin Islands, Japan region
-M 2.0 - 13km NNE of Goleta, CA
-M 1.1 - 3 km NE of Lakewood, Washington
-M 1.9 - 4 km NNE of Ninilchik, Alaska
-M 1.7 - 4 km W of Dover, Oklahoma
-M 1.2 - 6km WNW of Cobb, CA
-M 2.0 - western Texas
-M 2.3 - 7 km ESE of La Parguera, Puerto Rico
-M 4.5 - 136 km NE of San Pedro de Atacama, Chile
-M 2.2 - 2 km SSE of Pāhala, Hawaii
-M 5.6 - 13 km E of Mugur-Aksy, Russia
-M 3.2 - 172 km ESE of Chignik, Alaska
-M 4.5 - 28 km NNW of Bedugul, Indonesia
-M 2.0 - 8 km SE of La Parguera, Puerto Rico
-M 1.9 - 75 km ENE of Ugashik, Alaska
-M 1.4 - 57 km WNW of Tatitlek, Alaska
-M 5.1 - Scotia Sea
-M 1.4 - 4km SW of Salton City, CA
-M 1.4 - 13 km ESE of Graniteville, California
-M 1.1 - 0 km WSW of Big Lake, Alaska
-M 4.7 - 63 km S of Kēng Tung, Myanmar
-M 1.9 - 3 km WNW of Dover, Oklahoma
-M 1.1 - 11km NNE of Borrego Springs, CA
-M 4.8 - 50 km N of Tachilek, Myanmar
-M 1.0 - 13km SE of Bodfish, CA
-M 1.4 - 4km SW of Tres Pinos, CA
-M 1.3 - Central Alaska
-M 1.4 - 70 km ESE of Denali National Park, Alaska
-M 1.7 - 34 km ENE of Whittier, Alaska
-M 1.6 - 45 km NNE of Chickaloon, Alaska
-M 1.1 - 12 km NNW of Sterling, Alaska
-M 1.4 - 18 km N of Sterling, Alaska
-M 4.7 - Chagos Archipelago region
-M 1.3 - 57 km NNE of Aleneva, Alaska
-M 1.7 - 61 km SE of Kokhanok, Alaska
-M 1.8 - 14km ESE of Mammoth Lakes, CA
-M 1.2 - 9km NNE of Borrego Springs, CA
-M 2.1 - 8 km ENE of Chenega, Alaska
-M 1.9 - 9 km NE of Pāhala, Hawaii
-M 1.9 - 10 km NE of Pāhala, Hawaii
-M 1.8 - 11 km ENE of Pāhala, Hawaii
-M 1.9 - 11 km E of Pāhala, Hawaii
-M 1.6 - 2km NE of Pinnacles, CA
-M 3.1 - 56 km S of Whites City, New Mexico
-M 3.1 - 55 km S of Whites City, New Mexico
-M 1.3 - 14km WSW of Searles Valley, CA
-M 2.2 - 14km NE of Ridgecrest, CA
-M 1.2 - 84 km ESE of Denali Park, Alaska
-M 4.4 - Fiji region
-M 1.5 - 74 km N of Aleneva, Alaska
-M 1.1 - 6km N of Little Lake, CA
-M 1.7 - 4 km SSW of Pāhala, Hawaii
-M 2.0 - 15 km ESE of Crowder, Oklahoma
-M 1.1 - 48 km NNE of Chase, Alaska
-M 1.5 - 6km SSW of Brentwood, CA
-M 1.4 - 4km SW of Salton City, CA
-M 3.9 - 77 km NE of Cruz Bay, U.S. Virgin Islands
-M 4.4 - 50 km SW of Ovalle, Chile
-M 4.5 - 40 km W of Santa Cruz, Costa Rica
-M 2.5 - Puerto Rico region
-M 1.9 - 38 km WNW of Ninilchik, Alaska
-M 4.6 - 50 km NE of Oxapampa, Peru
-M 4.6 - Izu Islands, Japan region
-M 1.3 - 34 km SE of Mina, Nevada
-M 1.1 - 44 km WNW of Tatitlek, Alaska
-M 2.6 - 60 km S of Whites City, New Mexico
-M 4.7 - Izu Islands, Japan region
-M 1.2 - 9 km ENE of Fox, Alaska
-M 1.9 - 6 km ENE of La Parguera, Puerto Rico
-M 4.4 - Izu Islands, Japan region
-M 1.0 - 13km SSW of Borrego Springs, CA
-M 2.0 - 2 km S of Pāhala, Hawaii
-M 1.3 - 51 km N of Sutton-Alpine, Alaska
-M 1.4 - 34 km SE of Mina, Nevada
-M 1.5 - 44 km WNW of Skwentna, Alaska
-M 1.5 - 15 km SSE of Sunnyside, Utah
-M 1.5 - 12km ESE of Gilroy, CA
-M 1.1 - 61 km WNW of Nanwalek, Alaska
-M 2.1 - 3km N of Escondido, CA
 Success: Assignment posted to the server. 
 Check out your visualization at:
 
@@ -3496,7 +3555,7 @@ g++ -g  -std=c++14 -I /home/bridges-testing/bridges-cxx-install/include/ -c Imag
 g++ -o ImageProcess ImageProcess.o -g -L /home/bridges-testing/bridges-cxx-install/lib/ -pthread -lcurl -l bridges 
 </code></pre>
 </div>
-<div class="failure">
+<div class="success">
 <h3 id="cxxlog40-runanswer">Run Answer for Assignment 40</h3>
 <pre><code>Guessing ./ImageProcess is the right binary file where main is
 
@@ -3526,10 +3585,12 @@ Check out your visualization at:
 
 http://bridges-cs.herokuapp.com/assignments/40/bridges_testing
 
-width,height, maxval:22036,2021499248,255
-terminate called after throwing an instance of 'std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;'
-Aborted
-could not run c++_answer for assignment in ../assignmentdb/40-ImageProcessing/c++_answer
+width,height, maxval:21978,-277331600,255
+Success: Assignment posted to the server. 
+Check out your visualization at:
+
+http://bridges-cs.herokuapp.com/assignments/40/bridges_testing
+
 </code></pre>
 </div>
     
@@ -3541,6 +3602,8 @@ could not run c++_answer for assignment in ../assignmentdb/40-ImageProcessing/c+
 <h3 id="cxxlog41-buildscaffold">Build Scaffold for Assignment 41</h3>
 <pre><code>Compiling c++/ for assignment in ../assignmentdb/41-SpaceInvaders/c++
 rm SpaceInvaders.o
+rm: cannot remove 'SpaceInvaders.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm SpaceInvaders
 rm: cannot remove 'SpaceInvaders': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -3560,6 +3623,8 @@ could not compile c++/ for assignment in ../assignmentdb/41-SpaceInvaders/c++
 <h3 id="cxxlog41-buildanswer">Build Answer for Assignment 41</h3>
 <pre><code>Compiling c++_answer/ for assignment in ../assignmentdb/41-SpaceInvaders/c++_answer
 rm SpaceInvaders.o
+rm: cannot remove 'SpaceInvaders.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm SpaceInvaders
 rm: cannot remove 'SpaceInvaders': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -4257,7 +4322,7 @@ Check out your visualization at:
 
 http://bridges-cs.herokuapp.com/assignments/143/bridges_testing
 
-elapsed time: 0.173913s
+elapsed time: 0.188776s
 Success: Assignment posted to the server. 
 Check out your visualization at:
 
@@ -4301,6 +4366,8 @@ could not run c++_answer for assignment in ../assignmentdb/44-MST-Cities/c++_ans
 <h3 id="cxxlog45-buildscaffold">Build Scaffold for Assignment 45</h3>
 <pre><code>Compiling c++/ for assignment in ../assignmentdb/45-ExplorerRobot/c++
 rm ExplorerRobot.o
+rm: cannot remove 'ExplorerRobot.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm ExplorerRobot
 rm: cannot remove 'ExplorerRobot': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
@@ -4320,6 +4387,8 @@ could not compile c++/ for assignment in ../assignmentdb/45-ExplorerRobot/c++
 <h3 id="cxxlog45-buildanswer">Build Answer for Assignment 45</h3>
 <pre><code>Compiling c++_answer/ for assignment in ../assignmentdb/45-ExplorerRobot/c++_answer
 rm ExplorerRobot.o
+rm: cannot remove 'ExplorerRobot.o': No such file or directory
+make: [Makefile:31: clean] Error 1 (ignored)
 rm ExplorerRobot
 rm: cannot remove 'ExplorerRobot': No such file or directory
 make: [Makefile:32: clean] Error 1 (ignored)
