@@ -70,7 +70,7 @@ addassignment "26-TowersOfHanoi"
 addassignment "22-Snake"
 
 addsubgroup "Trees"
-addassignment "37-BST_Earthquakes"
+addassignment "5-BST_Earthquakes"
 addassignment "8-PQBook"
 addassignment "24-ImageCompressionKdTree"
 addassignment "39-BookDistance"
