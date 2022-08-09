@@ -1,0 +1,47 @@
+<h1>Assignment 55 - Frequency Player</h1>
+
+<h2>Goals</h2>
+
+<p>The purpose of this assignment is to learn to
+ - Use methods/functions to compartmentalize code
+ - Use loops to iterate over large quantities of items
+ - Apply simple mathematical concepts in code
+ - Understand and cast between data types</p>
+
+<h2>Programming</h2>
+
+<h3>Tasks</h3>
+
+<ul>
+<li>Complete the <code>generateSineSample()</code> method. It should return a sample value according to the mathematical formula for a sine wave,
+which is <code>A * sin(2 * pi * f * t)</code>, where A is amplitude, f is frequency, and t is time.</li>
+<li>Reassign <code>firstSample</code> and <code>lastSample</code> so that they use the <code>start</code> and <code>end</code> parameters in the method.
+<code>start</code> and <code>end</code> are measured in seconds, so you'll need to convert those to sample indices somehow.</li>
+<li>If a sine wave ends on a sample value other than zero, it makes a noticeable cracking noise.
+Try listening for it in the middle of the clip after completing step 2.
+To fix this, you'll need to reassign <code>lastSample</code> so that it's close to the <code>end</code> second, but still ends on a sample with a value of zero.
+The <code>period</code> variable may be useful for this, although it isn't strictly necessary.</li>
+</ul>
+
+<h3>Important Functions</h3>
+
+<ul>
+<li>Math.sin() outputs the sine of the value passed into it.</li>
+<li>ac.getSampleRate(), where ac is an AudioClip, gets the sample rate of that AudioClip.</li>
+<li>ac.setSample(channel, index, value), where ac is an AudioClip, sets the sample at the index to the value passed in.
+See the documentation for language-specific details.</li>
+</ul>
+
+<h3>Help</h3>
+
+<h4>For Java</h4>
+
+<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_audio_clip.html">AudioClip documentation</a></p>
+
+<h4>For C++</h4>
+
+<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_audio_clip.html">AudioClip documentation</a></p>
+
+<h4>For Python</h4>
+
+<p><a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1audio__clip_1_1_audio_clip.html">AudioClip documentation</a></p>

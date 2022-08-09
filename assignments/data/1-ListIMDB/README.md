@@ -1,11 +1,15 @@
 Assignment 1 - List IMDB
 ========================
+
 Goals
 ------
 The purpose of this assignment is to learn to
 1. Access remote data through BRIDGES.
 2. Manipulate a linked list.
-You will generate a visualization that looks like [that](http://bridges-cs.herokuapp.com/assignments/1/bridges_workshop)!
+You will generate a visualization that looks like this:
+
+<img src="./figures/fig1.png" alt="drawing" width="350"></img>
+
 
 Programming part
 ---------------------

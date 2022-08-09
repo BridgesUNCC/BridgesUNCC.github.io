@@ -29,13 +29,16 @@ addsubgroup "Loops"
 addassignment "25-Patterns"
 addassignment "23-MountainPaths"
 addassignment "33-AudioMixing"
+addassignment "52-AudioWave"
 addassignment "56-2DIndexing"
+addassignment "55-FrequencyPlayer"
 
 addsubgroup "Input/Output"
 addassignment "10-HurricaneTracker"
 
 addsubgroup "1D Arrays"
 addassignment "33-AudioMixing"
+addassignment "55-FrequencyPlayer"
 
 addsubgroup "2D Arrays"
 addassignment "6-GridSquareFill"
@@ -43,9 +46,11 @@ addassignment "7-GridLyrics"
 addassignment "16-ImagePuzzle"
 addassignment "40-ImageProcessing"
 addassignment "56-2DIndexing"
-
+addassignment "52-AudioWave"
 
 addsubgroup "Games"
+addassignment "17-ControlsTutorial"
+addassignment "18-ControlsTutorialTwo"
 addassignment "11-2048Game"
 addassignment "13-InfiniteRunner"
 addassignment "20-Minesweeper"
@@ -54,6 +59,14 @@ addassignment "22-Snake"
 addassignment "32-TicTacToe"
 addassignment "36-Pong"
 addassignment "35-ConnectFour"
+addassignment "41-SpaceInvaders"
+
+
+addsubgroup "Audio"
+addassignment "55-FrequencyPlayer"
+addassignment "52-AudioWave"
+addassignment "33-AudioMixing"
+
 
 addsubgroup "Simulation"
 addassignment "14-SpreadingFire"
@@ -70,10 +83,11 @@ addassignment "26-TowersOfHanoi"
 addassignment "22-Snake"
 
 addsubgroup "Trees"
-addassignment "37-BST_Earthquakes"
+addassignment "5-BST_Earthquakes"
 addassignment "8-PQBook"
 addassignment "24-ImageCompressionKdTree"
 addassignment "39-BookDistance"
+addassignment "60-Quadtree-CityData"
 
 addsubgroup "Hashing, Hash Tables, and Hash Maps"
 addassignment "8-PQBook"
@@ -88,6 +102,7 @@ addassignment "9-ShortestPathOSM"
 addassignment "31-TemporalPageRank"
 addassignment "39-BookDistance"
 
+
 addgroup "Algorithms"
 addsubgroup "Big Oh"
 addassignment "28-BigOhMatters"
@@ -95,24 +110,28 @@ addassignment "28-BigOhMatters"
 addsubgroup "Sorting"
 addassignment "29-SortingBenchmark"
 
+addsubgroup "Divide and Conquer"
+addassignment "59-ConvexHull_CityData"
+
+
 addsubgroup "Complexity of Graph Problems"
 addassignment "9-ShortestPathOSM"
 addassignment "30-TemporalBaconNumber"
 addassignment "31-TemporalPageRank"
 
 addsubgroup "Spanning Tree"
-addassignment "38-GeologicalSurvey"
-
-addsubgroup "Matching"
-addassignment "38-GeologicalSurvey"
+addassignment "44-MST-Cities"
 
 addsubgroup "Spatial Problems"
 addassignment "43-SpatialIndexing"
+addassignment "59-ConvexHull_CityData"
+addassignment "60-Quadtree-CityData"
 
 addsubgroup "Greedy Algorithms"
 addassignment "23-MountainPaths"
 addassignment "9-ShortestPathOSM"
 addassignment "38-GeologicalSurvey"
+addassignment "44-MST-Cities"
 
 addsubgroup "Dynamic Programing"
 addassignment "23-MountainPaths"

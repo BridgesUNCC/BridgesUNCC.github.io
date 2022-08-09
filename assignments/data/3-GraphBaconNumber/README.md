@@ -1,6 +1,9 @@
 Assignment 3 - Graph Bacon Number
 =================================
 
+<img src="./figures/fig1.png" alt="drawing" width="350"></img>
+
+
 Goals
 -----
 
@@ -10,7 +13,7 @@ The purpose of this assignment is to learn to
 2. Compute BFS on that graph.
 3. Highlight a shortest path in the graph.
 
-You will generate a visualization that looks like [that](http://bridges-cs.herokuapp.com/assignments/3/bridges_workshop)!
+You will generate a visualization that looks like the figure above.
 
 Programming part
 ----------------
@@ -78,15 +81,15 @@ BFS(G=(V,E), root)
 
 [std::unordered_map documentation](http://en.cppreference.com/w/cpp/container/unordered_map)
 
-[Element documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_element.html)
+[Element documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_element.html)
 
-[GraphAdjList documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_graph_adj_list.html)
+[GraphAdjList documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_graph_adj_list.html)
 
-[ElementVisualizer documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_element_visualizer.html)
+[ElementVisualizer documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_element_visualizer.html)
 
-[LinkVisualizer documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_link_visualizer.html)
+[LinkVisualizer documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_link_visualizer.html)
 
-[ActorMovieIMDB documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_actor_movie_i_m_d_b.html)
+[ActorMovieIMDB documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1dataset_1_1_actor_movie_i_m_d_b.html)
 
 #### for Python
 

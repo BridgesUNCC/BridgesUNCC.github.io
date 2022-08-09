@@ -28,13 +28,15 @@ Programming part
 
 ### Help
 #### C++
-[Bridges documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/namespacebridges_1_1_bridges.html)
+[Bridges documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_bridges.html)
 
 [SymbolCollection documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_symbol_collection.html)
+
 ####  Java
 [Bridges documentation](http://bridgesuncc.github.io/doc/java-api/current/html/namespacebridges_1_1base.html)
 
 [SymbolCollection documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_symbol_collection.html)
+
 #### Python
 [Bridges documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1bridges_1_1_bridges.html)
 

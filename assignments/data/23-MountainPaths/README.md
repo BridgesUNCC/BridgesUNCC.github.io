@@ -126,7 +126,7 @@ issues with the BRIDGES API. This is an active project.
 
 #### for Python
 
-[Elevation Data Documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1data__src__dependent_1_1elevation_1_1_ele_data.html)
+[Elevation Data Documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1data__src__dependent_1_1elevation_1_1_elevation_data.html)
 
 [ColorGrid documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1color__grid_1_1_color_grid.html)
 

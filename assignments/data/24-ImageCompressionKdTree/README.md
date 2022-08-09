@@ -65,8 +65,8 @@ images using K-D Trees.
 ### Tasks:
 
 1.  *Preparation:* 
-	1. Go through the BRIDGES API for both the **[K-D Tree Element](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_kd_tree_element.html)** and 
-	the **[ColorGrid](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_color_grid.html)** types and look at the tutorial examples to understand its usage.  In particular, understand 
+	1. Go through the BRIDGES API for both the **[K-D Tree Element](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_kd_tree_element.html)** and 
+	the **[ColorGrid](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_color_grid.html)** types and look at the tutorial examples to understand its usage.  In particular, understand 
 the class hierarchy for tree structures (Java and Python users: check the Java or Python API for these class defintions in BRIDGES).
 	2. Go through the K-D Tree and ColorGrid tutorials in BRIDGES and build these and ensure you 
 		get the same visualizations.
@@ -202,13 +202,13 @@ the BRIDGES API. This is an active project.
 
 #### for C++
 
-[K-D Tree Element documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_kd_tree_element.html)
+[K-D Tree Element documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_kd_tree_element.html)
 
-[ColorGrid documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_color_grid.html)
+[ColorGrid documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_color_grid.html)
 
-[Color documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_color.html)
+[Color documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_color.html)
 
-[Bridges documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classes.html)
+[Bridges documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_bridges.html)
 
 #### for Java
 [K-D Tree Element documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_kd_tree_element.html)

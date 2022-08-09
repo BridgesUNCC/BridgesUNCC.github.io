@@ -1,6 +1,10 @@
 Shakespearean Words
 ===================
 
+<img src="./figures/ht.png" alt="drawing" width="500"></img>
+<img src="./figures/tree.png" alt="drawing" width="500"></img>
+
+
 Goals
 -----
 
@@ -10,7 +14,7 @@ The purpose of this assignment is to learn to
 2. Write a Dictionary using BRIDGES
 3. Write your own tree based data structure: A Binary Min-Heap
 
-You will generate a visualization that looks like [that](http://bridges-cs.herokuapp.com/assignments/8/bridges_workshop)!
+You will generate a visualization that illustrates the hash table and tree representations used in the assignment.
 
 Purpose
 -------
