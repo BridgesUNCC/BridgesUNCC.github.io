@@ -2,6 +2,9 @@
 Assignment 6 - Square Fill
 ====================
 
+<img src="./figures/GridFillExample.png" alt="drawing" width="350"></img>
+
+
 Goals
 -----
 
@@ -11,7 +14,7 @@ The purpose of this assignment is to learn to
 2. Generate colorful squares
 
 
-You will generate a visualization that looks like [that](http://bridges-cs.herokuapp.com/assignments/6/bridges_workshop)!
+You will generate a visualization that looks like in the figure aboce.
 
 Programming part
 ----------------
@@ -42,11 +45,11 @@ Reference
 
 #### C++
 
-[ColorGrid documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_color_grid.html)
+[ColorGrid documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_color_grid.html)
 
-[Color documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_color.html)
+[Color documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_color.html)
 
-[Bridges documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/namespacebridges_1_1_bridges.html)
+[Bridges documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_bridges.html)
 
 #### Python
 

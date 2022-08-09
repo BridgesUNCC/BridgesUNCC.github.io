@@ -1,12 +1,16 @@
 Assignment 37 - BST Construction Using Earthquake Data from USGS
 ================================================================
+
+<img src="./figures/fig1.png" alt="drawing" width="350"></img>
+
+
 Goals
 ------
 The purpose of this assignment is to learn to
 1. Access remote data through BRIDGES.
 2. Manipulate a binary search tree using th earthquake magnitude (or some other attribute) as a search key
 
-You will generate a visualization that looks like [that](http://bridges-cs.herokuapp.com/assignments/37/bridges_workshop)!
+You will generate a visualization that looks like the figure above.
 
 Programming part
 ---------------------

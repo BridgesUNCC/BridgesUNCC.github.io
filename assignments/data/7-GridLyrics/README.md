@@ -1,6 +1,8 @@
 Repetition in Lyrics
 ====================
 
+<img src="figures/icon.png" alt="Sample Output" width="400px" />
+
 Goals
 -----
 
@@ -9,9 +11,8 @@ The purpose of this assignment is to learn to
 2. Manipulate a `ColorGrid` object.
 3. Show repetition patterns in songs.
 
-You will generate a visualization that looks like [that](http://bridges-cs.herokuapp.com/assignments/7/bridges_workshop)!
+You will generate a visualization that looks like in the figure above.
 
-<img src="figures/icon.png" alt="Sample Output" width="400px" />
 
 Programming part
 ----------------

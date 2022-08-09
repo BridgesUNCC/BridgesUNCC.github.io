@@ -1,6 +1,8 @@
 Earthquake Tracker
 ==================
 
+<img src="./figures/fig1.png" alt="drawing" width="350"></img>
+
 Goals
 -----
 
@@ -9,8 +11,9 @@ The purpose of this assignment is to learn to
 1. Access and manipulate remote data through BRIDGES.
 2. Manipulate a `GraphAdjList` object.
 3. Display a location on a map.
+4. Optionally, perform basic graph operation (connected component)
 
-You will be building a visualization that looks like [that](http://bridges-cs.herokuapp.com/assignments/4/bridges_workshop)!
+You will be building a visualization that looks like in the figure above.
 
 Programming part
 ----------------
@@ -48,6 +51,15 @@ locations of the 100 strongest earthquakes.
 1. Deactivate the map overlay (already done in the scaffolding).
 2. Unpin the vertices by setting their location to infinity.
 3. Compile, run, and visualize.
+
+
+### (Optionally) Compute connected component
+
+1. unmark all vertices
+2. find an unmarked vertex
+3. flood its component and color its vertices
+4. go back to 2 as long as there are unmarked vertices
+5. Compile, run, and visualize.
 
 ### Help
 
