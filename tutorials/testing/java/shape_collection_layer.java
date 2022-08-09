@@ -88,8 +88,7 @@ public class shape_collection_layer {
 		// set visualizer type
 		bridges.setDataStructure(sc);
 
-		// visualize the JSON and Collection
-		bridges.setVisualizeJSON(true);
+		// visualize
 		bridges.visualize();
 	}
 }

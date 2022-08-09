@@ -2,14 +2,14 @@ import java.util.List;
 import java.util.HashMap;
 import bridges.connect.Bridges;
 import bridges.connect.DataSource;
-import bridges.data_src_dependent.USCities;
+import bridges.data_src_dependent.City;
 
-// This program fragment illustrates how to access the USGS earthquake data
+// This program fragment illustrates how to access the US Cities  data
 public class us_cities_snippet {
 	public static void main(String[] args) throws Exception {
 
 		// create Bridges object
-		Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
+		Bridges bridges = new Bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
 		// read the earth quake  data and build the BST
 		bridges.setTitle("Accessing US City Data)");
 
@@ -37,13 +37,16 @@ public class us_cities_snippet {
 
 		// use a hashmap to specify the parameters to the query
 		HashMap<String, String> map = new HashMap<String, String>();
-			map.put ("population", "200000");
-			map.put ("minLatLong",  "34.025348,-85.352783");
-			map.put ("maxLatLong",  "36.800488,-75.300293");
+			map.put ("min_pop", "100000");
+			map.put ("max_pop", "1000000");
+			map.put ("min_lat",  "34.025348");
+			map.put ("min_long", "-85.352783");
+			map.put ("max_lat",  "36.800488");
+			map.put ("max_long", "-75.300293");
 			map.put ("limit", "25");
 
 		// get the cities
-		List<USCities> cities = ds.getUSCitiesData(map);
+		List<City> cities = ds.getUSCitiesData(map);
 		System.out.println ("Testing 'limit = 25', 'population = 200000' and 'lat/long'  attribute..got " + 
 				cities.size() + " cities"); 
 

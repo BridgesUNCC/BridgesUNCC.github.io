@@ -1,0 +1,62 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges <span class="PreProc">import</span> *
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+    args = sys.argv[<span class="Constant">1</span>:]
+
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(ASSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">API_KEY</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment">#Set the projection to equirectangular. Currently for using the World map</span>
+    <span class="Comment">#Only equirectangular is supported</span>
+    bridges.set_coord_system_type(<span class="Constant">&quot;</span><span class="Constant">equirectangular</span><span class="Constant">&quot;</span>)
+    bridges.set_map_overlay(<span class="Identifier">True</span>)
+    <span class="Comment">#Here we set the properties of the map. The first element is the map we are using,</span>
+    <span class="Comment">#The second is what part of the map we want. Here we get all countries.</span>
+    bridges.map = [<span class="Constant">&quot;</span><span class="Constant">world</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">all</span><span class="Constant">&quot;</span>]
+
+    <span class="Comment">#here we create a symbol collection structure. This data structure will be</span>
+    <span class="Comment">#displayed over the map with cities drawn as circles in their lat long location.</span>
+    sc = SymbolCollection()
+
+    <span class="Comment">#First we get cities with a population greater than 500,000</span>
+    cities  = get_us_cities_data(min_pop=<span class="Constant">500000</span>)
+
+    <span class="Comment">#for each of these cities we create a circle with the cities lat long and its position and add it to the symbol collection</span>
+    <span class="Statement">for</span> i <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Identifier">len</span>(cities)):
+        s3 = Circle(locx=cities[i].lon, locy=cities[i].lat, r=<span class="Constant">0.5</span>)
+        s3.fill_color = <span class="Constant">&quot;</span><span class="Constant">green</span><span class="Constant">&quot;</span>
+        s3.opacity = <span class="Constant">1.0</span>
+        sc.add_symbol(s3)
+
+    <span class="Comment">#visualize the structure</span>
+    bridges.set_data_structure(sc)
+    bridges.visualize()
+
+
+    <span class="Comment">#now we set the world map to just show the US.</span>
+    bridges.map = [<span class="Constant">&quot;</span><span class="Constant">world</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">united states of america</span><span class="Constant">&quot;</span>]
+
+    bridges.set_data_structure(sc)
+    bridges.visualize()
+
+    <span class="Comment">#We can also set the map the to a more detailed version if the US.</span>
+    <span class="Comment">#The map only supports albersusa as a projection type</span>
+    bridges.set_coord_system_type(<span class="Constant">&quot;</span><span class="Constant">albersusa</span><span class="Constant">&quot;</span>)
+    <span class="Comment">#Here we set the first element to show the US map and the second to show all states.</span>
+    bridges.map = [<span class="Constant">&quot;</span><span class="Constant">us</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">all</span><span class="Constant">&quot;</span>]
+
+    bridges.set_data_structure(sc)
+    bridges.visualize()
+
+    <span class="Comment">#Changing the second element we can choose which state of the US to visualize</span>
+    <span class="Comment">#Here we visualize north carolina</span>
+    bridges.map = [<span class="Constant">&quot;</span><span class="Constant">us</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">north carolina</span><span class="Constant">&quot;</span>]
+
+
+    bridges.set_data_structure(sc)
+    bridges.visualize()
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
+    main()
+</pre>

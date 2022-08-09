@@ -81,7 +81,7 @@ public class tut_shapes_p2 {
 		// set visualizer type
 		bridges.setDataStructure(sc);
 
-		// visualize the JSON and Collection
+		// visualize 
 		bridges.visualize();
 	}
 }

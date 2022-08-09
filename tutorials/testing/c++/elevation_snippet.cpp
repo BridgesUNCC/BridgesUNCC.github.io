@@ -29,7 +29,7 @@ int main(int argc, char **argv) {
 	// print the data dimensions  and the firs 10 elevation data values
 	cout << "\tWidth: " << elev_data.getCols() << endl
 		<< "\tHeight: " << elev_data.getRows() << endl
-		<< "\tResolution: " <<  elev_data.getCellSize() << endl 
+		<< "\tCell Size: " << elev_data.getCellSize() << endl
 		<< "\tLower Left Corner: "  << elev_data.getxll()  << 
 				 ", " <<  elev_data.getyll() <<endl;
 

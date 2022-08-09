@@ -9,7 +9,7 @@ public class reddit_snippet {
 	public static void main(String[] args) throws Exception {
 
 		// create Bridges object
-		Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
+		Bridges bridges = new Bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
     
 		DataSource ds = bridges.getDataSource();
 

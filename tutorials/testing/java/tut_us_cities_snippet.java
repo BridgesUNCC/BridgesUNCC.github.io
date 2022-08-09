@@ -2,14 +2,14 @@ import java.util.List;
 import java.util.HashMap;
 import bridges.connect.Bridges;
 import bridges.connect.DataSource;
-import bridges.data_src_dependent.USCities;
+import bridges.data_src_dependent.City;
 
 // This program fragment illustrates how to access the USGS earthquake data
 public class tut_us_cities_snippet {
 	public static void main(String[] args) throws Exception {
 
 		// create Bridges object
-		Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
+		Bridges bridges = new Bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
 		// read the earth quake  data and build the BST
 		bridges.setTitle("Accessing US City Data)");
 
@@ -37,13 +37,13 @@ public class tut_us_cities_snippet {
 
 		// use a hashmap to specify the parameters to the query
 		HashMap<String, String> map = new HashMap<String, String>();
-			map.put ("minPopulation", "200000");
-			map.put ("maxPopulation", "1000000");
+			map.put ("min_pop", "200000");
+			map.put ("max_pop", "1000000");
 			map.put ("state", "NC");
 			map.put ("limit", "25");
 
 		// get the cities
-		List<USCities> cities = ds.getUSCitiesData(map);
+		List<City> cities = ds.getUSCitiesData(map);
 		System.out.println ("Upto 25 cities in North Carolina with population between 200K and 1M");
 
 		// print the records

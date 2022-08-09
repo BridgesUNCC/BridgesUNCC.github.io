@@ -1,11 +1,11 @@
 <pre id='vimCodeElement'>
 <span class="PreProc">import</span> java.lang.String;
+<span class="PreProc">import</span> java.util.Vector;
 <span class="PreProc">import</span> bridges.base.SLelement;
 <span class="PreProc">import</span> bridges.base.GraphAdjList;
 <span class="PreProc">import</span> bridges.connect.Bridges;
 <span class="PreProc">import</span> bridges.connect.DataSource;
-<span class="PreProc">import</span> bridges.data_src_dependent.Amenities;
-<span class="PreProc">import</span> bridges.data_src_dependent.AmenityData;
+<span class="PreProc">import</span> bridges.data_src_dependent.Amenity;
 
 <span class="Type">public</span> <span class="Type">class</span> osm_amenity_snippet {
 	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) <span class="Type">throws</span> Exception {
@@ -19,13 +19,16 @@
 
 		<span class="Comment">// get the OSM data</span>
 		DataSource ds = bridges.getDataSource();
-		AmenityData amenity_data = ds.getAmenityData(<span class="Constant">38.77657</span>, -<span class="Constant">77.20918</span>, <span class="Constant">39.03198</span>, -<span class="Constant">76.8999</span>, <span class="Constant">&quot;food&quot;</span>);
+		Vector&lt;Amenity&gt;  amenities = ds.getAmenityData(<span class="Constant">38.77657</span>, -<span class="Constant">77.20918</span>, <span class="Constant">39.03198</span>, -<span class="Constant">76.8999</span>, <span class="Constant">&quot;food&quot;</span>);
 
-		System.out.println(<span class="Constant">&quot;Total Points: &quot;</span> + amenity_data.getCount());
-		System.out.println(<span class="Constant">&quot;ID: &quot;</span> + amenity_data.getAmenities().get(<span class="Constant">0</span>).getId());
-		System.out.println(<span class="Constant">&quot;Name: &quot;</span> + amenity_data.getAmenities().get(<span class="Constant">0</span>).getName());
-		System.out.println(<span class="Constant">&quot;Lat: &quot;</span> + amenity_data.getAmenities().get(<span class="Constant">0</span>).getLat());
-		System.out.println(<span class="Constant">&quot;Lon: &quot;</span> + amenity_data.getAmenities().get(<span class="Constant">0</span>).getLon());
+		System.out.println(<span class="Constant">&quot;Printing the first 5 amenities..&quot;</span>);
+		<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; <span class="Constant">5</span>; k++) {
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">ID: &quot;</span> + amenities.get(k).getId());
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Name: &quot;</span> + amenities.get(k).getName());
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Lat: &quot;</span> + amenities.get(k).getLat());
+			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Lon: &quot;</span> + amenities.get(k).getLon());
+		System.out.println(<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>);
+		}
 
 	}
 }

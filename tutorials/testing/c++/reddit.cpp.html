@@ -32,19 +32,22 @@
 	}
 
 	vector&lt;Reddit&gt; reddit_list = ds.getRedditData(<span class="Constant">&quot;askscience&quot;</span>, -<span class="Constant">9999</span>);
-	std::cout&lt;&lt;<span class="Constant">&quot;&quot;</span>&lt;&lt;reddit_list.size()&lt;&lt;<span class="Constant">&quot; post returned&quot;</span>&lt;&lt;<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+	std::cout&lt;&lt;<span class="Constant">&quot;&quot;</span>&lt;&lt;reddit_list.size()&lt;&lt;<span class="Constant">&quot; posts returned&quot;</span>&lt;&lt;<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+	<span class="Type">int</span> limit = <span class="Constant">10</span>, k = <span class="Constant">0</span>;
 	<span class="Statement">for</span> (<span class="Type">auto</span> post : reddit_list) {
-	  std::cout&lt;&lt;<span class="Constant">&quot;ID: &quot;</span>&lt;&lt;post.getID()&lt;&lt;<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
-	  std::cout&lt;&lt;<span class="Constant">&quot;Title: &quot;</span>&lt;&lt;post.getTitle()&lt;&lt;<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
-	  std::cout&lt;&lt;<span class="Constant">&quot;Author: &quot;</span>&lt;&lt;post.getAuthor()&lt;&lt;<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
-	  std::cout&lt;&lt;<span class="Constant">&quot;Score: &quot;</span>&lt;&lt;post.getScore()&lt;&lt;<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
-	  std::cout&lt;&lt;<span class="Constant">&quot;VoteRatio: &quot;</span>&lt;&lt;post.getVoteRatio()&lt;&lt;<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
-	  std::cout&lt;&lt;<span class="Constant">&quot;CommentCount: &quot;</span>&lt;&lt;post.getCommentCount()&lt;&lt;<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
-	  std::cout&lt;&lt;<span class="Constant">&quot;Subreddit: &quot;</span>&lt;&lt;post.getSubreddit()&lt;&lt;<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
-	  std::cout&lt;&lt;<span class="Constant">&quot;PostTime: &quot;</span>&lt;&lt;post.getPostTime()&lt;&lt;<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
-	  std::cout&lt;&lt;<span class="Constant">&quot;URL: &quot;</span>&lt;&lt;post.getURL()&lt;&lt;<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
-	  std::cout&lt;&lt;<span class="Constant">&quot;Text: &quot;</span>&lt;&lt;post.getText()&lt;&lt;<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
-	  std::cout&lt;&lt;<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+	  <span class="Statement">if</span> (k++ &lt; limit) {
+	  	std::cout&lt;&lt;<span class="Constant">&quot;ID: &quot;</span>&lt;&lt;post.getID()&lt;&lt;<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+	  	std::cout&lt;&lt;<span class="Constant">&quot;Title: &quot;</span>&lt;&lt;post.getTitle()&lt;&lt;<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+	  	std::cout&lt;&lt;<span class="Constant">&quot;Author: &quot;</span>&lt;&lt;post.getAuthor()&lt;&lt;<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+	  	std::cout&lt;&lt;<span class="Constant">&quot;Score: &quot;</span>&lt;&lt;post.getScore()&lt;&lt;<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+	  	std::cout&lt;&lt;<span class="Constant">&quot;VoteRatio: &quot;</span>&lt;&lt;post.getVoteRatio()&lt;&lt;<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+	  	std::cout&lt;&lt;<span class="Constant">&quot;CommentCount: &quot;</span>&lt;&lt;post.getCommentCount()&lt;&lt;<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+	  	std::cout&lt;&lt;<span class="Constant">&quot;Subreddit: &quot;</span>&lt;&lt;post.getSubreddit()&lt;&lt;<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+	  	std::cout&lt;&lt;<span class="Constant">&quot;PostTime: &quot;</span>&lt;&lt;post.getPostTime()&lt;&lt;<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+	  	std::cout&lt;&lt;<span class="Constant">&quot;URL: &quot;</span>&lt;&lt;post.getURL()&lt;&lt;<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+	  	std::cout&lt;&lt;<span class="Constant">&quot;Text: &quot;</span>&lt;&lt;post.getText()&lt;&lt;<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+	  	std::cout&lt;&lt;<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+	  }
 	}
 
 

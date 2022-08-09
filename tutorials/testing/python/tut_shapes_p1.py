@@ -3,7 +3,7 @@ from bridges.bridges import *
 from bridges.circle import *
 from bridges.polygon import *
 from bridges.rectangle import *
-from bridges.label import *
+from bridges.text import *
 from bridges.color import *
 from bridges.text import *
 import sys

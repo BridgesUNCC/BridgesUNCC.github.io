@@ -3,14 +3,14 @@
 <span class="PreProc">import</span> java.util.HashMap;
 <span class="PreProc">import</span> bridges.connect.Bridges;
 <span class="PreProc">import</span> bridges.connect.DataSource;
-<span class="PreProc">import</span> bridges.data_src_dependent.USCities;
+<span class="PreProc">import</span> bridges.data_src_dependent.City;
 
-<span class="Comment">// This program fragment illustrates how to access the USGS earthquake data</span>
+<span class="Comment">// This program fragment illustrates how to access the US Cities  data</span>
 <span class="Type">public</span> <span class="Type">class</span> us_cities_snippet {
 	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) <span class="Type">throws</span> Exception {
 
 		<span class="Comment">// create Bridges object</span>
-		Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+		Bridges bridges = <span class="Statement">new</span> Bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
 		<span class="Comment">// read the earth quake  data and build the BST</span>
 		bridges.setTitle(<span class="Constant">&quot;Accessing US City Data)&quot;</span>);
 
@@ -38,13 +38,16 @@
 
 		<span class="Comment">// use a hashmap to specify the parameters to the query</span>
 		HashMap&lt;String, String&gt; map = <span class="Statement">new</span> HashMap&lt;String, String&gt;();
-			map.put (<span class="Constant">&quot;population&quot;</span>, <span class="Constant">&quot;200000&quot;</span>);
-			map.put (<span class="Constant">&quot;minLatLong&quot;</span>,  <span class="Constant">&quot;34.025348,-85.352783&quot;</span>);
-			map.put (<span class="Constant">&quot;maxLatLong&quot;</span>,  <span class="Constant">&quot;36.800488,-75.300293&quot;</span>);
+			map.put (<span class="Constant">&quot;min_pop&quot;</span>, <span class="Constant">&quot;100000&quot;</span>);
+			map.put (<span class="Constant">&quot;max_pop&quot;</span>, <span class="Constant">&quot;1000000&quot;</span>);
+			map.put (<span class="Constant">&quot;min_lat&quot;</span>,  <span class="Constant">&quot;34.025348&quot;</span>);
+			map.put (<span class="Constant">&quot;min_long&quot;</span>, <span class="Constant">&quot;-85.352783&quot;</span>);
+			map.put (<span class="Constant">&quot;max_lat&quot;</span>,  <span class="Constant">&quot;36.800488&quot;</span>);
+			map.put (<span class="Constant">&quot;max_long&quot;</span>, <span class="Constant">&quot;-75.300293&quot;</span>);
 			map.put (<span class="Constant">&quot;limit&quot;</span>, <span class="Constant">&quot;25&quot;</span>);
 
 		<span class="Comment">// get the cities</span>
-		List&lt;USCities&gt; cities = ds.getUSCitiesData(map);
+		List&lt;City&gt; cities = ds.getUSCitiesData(map);
 		System.out.println (<span class="Constant">&quot;Testing 'limit = 25', 'population = 200000' and 'lat/long'  attribute..got &quot;</span> +
 				cities.size() + <span class="Constant">&quot; cities&quot;</span>);
 

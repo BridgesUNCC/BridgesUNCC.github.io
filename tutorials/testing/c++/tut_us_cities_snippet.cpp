@@ -4,7 +4,7 @@ using namespace std;
 
 #include "Bridges.h"
 #include "DataSource.h"
-#include "data_src/USCities.h"
+#include "data_src/City.h"
 
 using namespace bridges;
 
@@ -43,13 +43,13 @@ int main(int argc, char **argv) {
 	// population, and limit parametes
 
 	unordered_map<string, string> city_params {
-			{"minPopulation","200000"}, 
-			{"maxPopulation","1000000"}, 
+			{"min_pop","200000"}, 
+			{"max_pop","1000000"}, 
 			{"state", "NC"},
 			{"limit", "25"}
 		};
 
-	vector<USCities>  us_cities = ds.getUSCities(city_params);
+	vector<City>  us_cities = ds.getUSCities(city_params);
 	cout << "US Cities (tested for limit of 25 cities, population over 200K, and lat/long Bounding Box: (34.025348,-85.352783), (36.800488,-75.300293):\n";
 	for (auto c : us_cities)
 		cout << "\n" << c.getCity() << "," << c.getState() << ":" << 

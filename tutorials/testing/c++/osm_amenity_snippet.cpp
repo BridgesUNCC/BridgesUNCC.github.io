@@ -2,8 +2,7 @@
 #include "DataSource.h"
 #include <iostream>
 #include <string>
-#include "data_src/Amenities.h"
-#include "data_src/AmenityData.h"
+#include "data_src/Amenity.h"
 
 // An example illustrating how to extract amenity attributes from OpenStreetMap datasets
  
@@ -16,12 +15,11 @@ int main(int argc, char **argv) {
 	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY");
 
 	DataSource ds(bridges);
-	AmenityData amenity_data = ds.getAmenityData(38.77657, -77.20918, 39.03198, -76.8999, "food");
+	vector<Amenity> amenities = ds.getAmenityData(38.77657, -77.20918, 39.03198, -76.8999, "food");
 //	AmenityData amenity_data = ds.getAmenityData("Charlotte, North Carolina", "food");
 
-	cout << "Total Amenities: " <<  amenity_data.getCount() << "\n";
+	cout << "Total Amenities: " <<  amenities.size() << "\n";
 
-	vector<Amenities> amenities = amenity_data.getAmenities();
 	cout << "The first 5 amenities:\n";
 
 	for (int k = 0; k < 5; k++) {

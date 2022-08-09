@@ -4,7 +4,7 @@ from bridges.array2d import *
 from bridges.circ_sl_element import *
 from bridges.rectangle import *
 from bridges.circle import *
-from bridges.label import *
+from bridges.text import *
 from bridges.polygon import *
 from bridges.polyline import *
 from bridges.color import *

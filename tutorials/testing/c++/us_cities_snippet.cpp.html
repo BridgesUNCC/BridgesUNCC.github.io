@@ -5,7 +5,7 @@
 
 <span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
 <span class="PreProc">#include </span><span class="Constant">&quot;DataSource.h&quot;</span>
-<span class="PreProc">#include </span><span class="Constant">&quot;data_src/USCities.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;data_src/City.h&quot;</span>
 
 <span class="Statement">using</span> <span class="Type">namespace</span> bridges;
 
@@ -42,15 +42,17 @@
 	<span class="Comment">// output upto 25 cities of North carolina  with a population ranging from 200K to 1M</span>
 
 	unordered_map&lt;string, string&gt; city_params {
-			{<span class="Constant">&quot;minPopulation&quot;</span>,<span class="Constant">&quot;200000&quot;</span>},
-			{<span class="Constant">&quot;maxPopulation&quot;</span>,<span class="Constant">&quot;1000000&quot;</span>},
+			{<span class="Constant">&quot;min_pop&quot;</span>,<span class="Constant">&quot;100000&quot;</span>},
+			{<span class="Constant">&quot;max_pop&quot;</span>,<span class="Constant">&quot;1000000&quot;</span>},
 			{<span class="Constant">&quot;state&quot;</span>, <span class="Constant">&quot;NC&quot;</span>},
-			{<span class="Constant">&quot;minLatLong&quot;</span>, <span class="Constant">&quot;[34.025348,-85.352783]&quot;</span>},
-			{<span class="Constant">&quot;maxLatLong&quot;</span>, <span class="Constant">&quot;[36.800488,-75.300293]&quot;</span>},
+			{<span class="Constant">&quot;min_lat&quot;</span>, <span class="Constant">&quot;35.025348&quot;</span>},
+			{<span class="Constant">&quot;min_long&quot;</span>, <span class="Constant">&quot;-85.352783&quot;</span>},
+			{<span class="Constant">&quot;max_lat&quot;</span>, <span class="Constant">&quot;36.800488&quot;</span>},
+			{<span class="Constant">&quot;max_long&quot;</span>, <span class="Constant">&quot;-75.300293&quot;</span>},
 			{<span class="Constant">&quot;limit&quot;</span>, <span class="Constant">&quot;25&quot;</span>}
 		};
 
-	vector&lt;USCities&gt;  us_cities = ds.getUSCities(city_params);
+	vector&lt;City&gt;  us_cities = ds.getUSCities(city_params);
 	cout &lt;&lt; <span class="Constant">&quot;US Cities : </span><span class="Special">\n</span><span class="Constant">&quot;</span>;
 	<span class="Statement">for</span> (<span class="Type">auto</span> c : us_cities)
 		cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span> &lt;&lt; c.getCity() &lt;&lt; <span class="Constant">&quot;,&quot;</span> &lt;&lt; c.getState() &lt;&lt; <span class="Constant">&quot;:&quot;</span> &lt;&lt;

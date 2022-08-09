@@ -53,9 +53,15 @@ def main():
         el = el.next
 
 
-    #list = SLelementIterator(st0);
-    #while list.has_next():
-    #    print (next(list))
+    print("\nUsing a list iterator..\n"); 
+    list_iter = SLelementIterator(st0);
+    i = 0
+    st = st0
+    while list_iter.has_next():
+        print (st.value)
+        st = list_iter.next()
+        i = i+1
+
     # tell Bridges the head of the list
     bridges.set_data_structure(st0)
 

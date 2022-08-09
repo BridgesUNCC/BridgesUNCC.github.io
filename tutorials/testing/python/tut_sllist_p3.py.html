@@ -54,9 +54,15 @@
         el = el.next
 
 
-    <span class="Comment">#list = SLelementIterator(st0);</span>
-    <span class="Comment">#while list.has_next():</span>
-    <span class="Comment">#    print (next(list))</span>
+    <span class="Identifier">print</span>(<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">Using a list iterator..</span><span class="Special">\n</span><span class="Constant">&quot;</span>);
+    list_iter = SLelementIterator(st0);
+    i = <span class="Constant">0</span>
+    st = st0
+    <span class="Statement">while</span> list_iter.has_next():
+        <span class="Identifier">print</span> (st.value)
+        st = list_iter.next()
+        i = i+<span class="Constant">1</span>
+
     <span class="Comment"># tell Bridges the head of the list</span>
     bridges.set_data_structure(st0)
 

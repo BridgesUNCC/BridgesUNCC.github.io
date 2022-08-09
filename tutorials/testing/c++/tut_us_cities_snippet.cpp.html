@@ -5,7 +5,7 @@
 
 <span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
 <span class="PreProc">#include </span><span class="Constant">&quot;DataSource.h&quot;</span>
-<span class="PreProc">#include </span><span class="Constant">&quot;data_src/USCities.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;data_src/City.h&quot;</span>
 
 <span class="Statement">using</span> <span class="Type">namespace</span> bridges;
 
@@ -44,13 +44,13 @@
 	<span class="Comment">// population, and limit parametes</span>
 
 	unordered_map&lt;string, string&gt; city_params {
-			{<span class="Constant">&quot;minPopulation&quot;</span>,<span class="Constant">&quot;200000&quot;</span>},
-			{<span class="Constant">&quot;maxPopulation&quot;</span>,<span class="Constant">&quot;1000000&quot;</span>},
+			{<span class="Constant">&quot;min_pop&quot;</span>,<span class="Constant">&quot;200000&quot;</span>},
+			{<span class="Constant">&quot;max_pop&quot;</span>,<span class="Constant">&quot;1000000&quot;</span>},
 			{<span class="Constant">&quot;state&quot;</span>, <span class="Constant">&quot;NC&quot;</span>},
 			{<span class="Constant">&quot;limit&quot;</span>, <span class="Constant">&quot;25&quot;</span>}
 		};
 
-	vector&lt;USCities&gt;  us_cities = ds.getUSCities(city_params);
+	vector&lt;City&gt;  us_cities = ds.getUSCities(city_params);
 	cout &lt;&lt; <span class="Constant">&quot;US Cities (tested for limit of 25 cities, population over 200K, and lat/long Bounding Box: (34.025348,-85.352783), (36.800488,-75.300293):</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
 	<span class="Statement">for</span> (<span class="Type">auto</span> c : us_cities)
 		cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span> &lt;&lt; c.getCity() &lt;&lt; <span class="Constant">&quot;,&quot;</span> &lt;&lt; c.getState() &lt;&lt; <span class="Constant">&quot;:&quot;</span> &lt;&lt;

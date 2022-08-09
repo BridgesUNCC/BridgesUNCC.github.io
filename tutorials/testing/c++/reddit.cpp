@@ -31,19 +31,22 @@ int main(int argc, char **argv) {
 	}
 
 	vector<Reddit> reddit_list = ds.getRedditData("askscience", -9999);
-	std::cout<<""<<reddit_list.size()<<" post returned"<<"\n";
+	std::cout<<""<<reddit_list.size()<<" posts returned"<<"\n";
+	int limit = 10, k = 0;
 	for (auto post : reddit_list) {
-	  std::cout<<"ID: "<<post.getID()<<"\n";
-	  std::cout<<"Title: "<<post.getTitle()<<"\n";
-	  std::cout<<"Author: "<<post.getAuthor()<<"\n";
-	  std::cout<<"Score: "<<post.getScore()<<"\n";
-	  std::cout<<"VoteRatio: "<<post.getVoteRatio()<<"\n";
-	  std::cout<<"CommentCount: "<<post.getCommentCount()<<"\n";
-	  std::cout<<"Subreddit: "<<post.getSubreddit()<<"\n";
-	  std::cout<<"PostTime: "<<post.getPostTime()<<"\n";
-	  std::cout<<"URL: "<<post.getURL()<<"\n";
-	  std::cout<<"Text: "<<post.getText()<<"\n";
-	  std::cout<<"\n";
+	  if (k++ < limit) {
+	  	std::cout<<"ID: "<<post.getID()<<"\n";
+	  	std::cout<<"Title: "<<post.getTitle()<<"\n";
+	  	std::cout<<"Author: "<<post.getAuthor()<<"\n";
+	  	std::cout<<"Score: "<<post.getScore()<<"\n";
+	  	std::cout<<"VoteRatio: "<<post.getVoteRatio()<<"\n";
+	  	std::cout<<"CommentCount: "<<post.getCommentCount()<<"\n";
+	  	std::cout<<"Subreddit: "<<post.getSubreddit()<<"\n";
+	  	std::cout<<"PostTime: "<<post.getPostTime()<<"\n";
+	  	std::cout<<"URL: "<<post.getURL()<<"\n";
+	  	std::cout<<"Text: "<<post.getText()<<"\n";
+	  	std::cout<<"\n";
+	  }
 	}
 	
 	

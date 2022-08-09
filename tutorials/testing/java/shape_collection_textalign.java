@@ -167,7 +167,6 @@ public class shape_collection_textalign {
 		bridges.setDataStructure(sc);
 
 		// visualize the JSON and Collection
-		bridges.setVisualizeJSON(true);
 		bridges.visualize();
 	}
 }

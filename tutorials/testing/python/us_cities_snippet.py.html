@@ -23,14 +23,15 @@
 
     <span class="Comment">#int: limit - which is to limit the number of results returned</span>
     <span class="Comment">#str: state - get only results with this state. the state must be the Acronym ex&#0058; NC, NV, CA...etc</span>
-    <span class="Comment">#int: elevation - get only results with elevation greater than this number</span>
-    <span class="Comment">#int: population - get only results with populationg greater than this number</span>
+    <span class="Comment">#int: min_elevation - get only results with elevation greater than this number</span>
+    <span class="Comment">#int: max_elevation - get only results with elevation lesser than this number</span>
+    <span class="Comment">#int: min_pop - get only results with populationg greater than this number</span>
+    <span class="Comment">#int: max_pop - get only results with populationg lesser than this number</span>
 
-    <span class="Comment">#you can pass a min lat long and max lat long parameter to get only results within a latlong bounding box:</span>
-
-    <span class="Comment">#list: minll - is the minimum lat and long value for bounding box ex&#0058; minll = [34.025348,-85.352783]</span>
-    <span class="Comment">#list: maxll - is the maximum lat and long value for bounding box ex&#0058; maxll = [36.800488,-75.300293]</span>
-    <span class="Comment">#</span>
+    <span class="Comment">#double: min_lat - get cities with latitude greater than this number</span>
+    <span class="Comment">#double: max_lat - get cities with latitude smaller than this number</span>
+    <span class="Comment">#double: min_long - get cities with longitude greater than this number</span>
+    <span class="Comment">#double: max_long - get cities with longitude smaller than this number</span>
 
     <span class="Comment"># omitting all arguments will get all data within the database</span>
     <span class="Comment"># cities_data = data_source.get_us_cities_data()</span>
@@ -53,7 +54,9 @@
     <span class="Comment">#cities_data = data_source.get_us_cities_data(limit = 10, min_pop=2000000)</span>
 
     <span class="Comment">#combining all parameters</span>
-    cities_data = data_source.get_us_cities_data(limit = <span class="Constant">25</span>, state = <span class="Constant">'</span><span class="Constant">NC</span><span class="Constant">'</span>, min_elev= -<span class="Constant">100</span>, min_pop =  <span class="Constant">10000</span>, max_pop = <span class="Constant">1000000</span>, minll = [<span class="Constant">34.025348</span>,-<span class="Constant">85.352783</span>], maxll = [<span class="Constant">36.800488</span>,-<span class="Constant">75.300293</span>])
+
+    cities_data = data_source.get_us_cities_data(limit = <span class="Constant">25</span>, state = <span class="Constant">'</span><span class="Constant">NC</span><span class="Constant">'</span>, min_elev= -<span class="Constant">100</span>, min_pop =  <span class="Constant">200000</span>, max_pop = <span class="Constant">1000000</span>, min_lat = <span class="Constant">34.025348</span>, min_long = -<span class="Constant">85.352783</span>, max_lat = <span class="Constant">36.800488</span>, max_long = -<span class="Constant">75.300293</span>)
+
     <span class="Statement">for</span> c <span class="Statement">in</span> cities_data:
        <span class="Identifier">print</span>(c.city + <span class="Constant">&quot;</span><span class="Constant">, </span><span class="Constant">&quot;</span> + c.state + <span class="Constant">&quot;</span><span class="Constant">: population: </span><span class="Constant">&quot;</span> + <span class="Identifier">str</span>(c.population) + <span class="Constant">&quot;</span><span class="Constant">, </span><span class="Constant">&quot;</span> + <span class="Constant">&quot;</span><span class="Constant">elevation: </span><span class="Constant">&quot;</span> + <span class="Identifier">str</span>(c.elevation) + <span class="Constant">&quot;</span><span class="Constant">, lat/long: </span><span class="Constant">&quot;</span> + <span class="Identifier">str</span>(c.lat) + <span class="Constant">&quot;</span><span class="Constant">,</span><span class="Constant">&quot;</span> + <span class="Identifier">str</span>(c.lon))
 
@@ -64,6 +67,6 @@
        <span class="Identifier">print</span>(c.city + <span class="Constant">&quot;</span><span class="Constant">, </span><span class="Constant">&quot;</span> + c.state + <span class="Constant">&quot;</span><span class="Constant">: population: </span><span class="Constant">&quot;</span> + <span class="Identifier">str</span>(c.population) + <span class="Constant">&quot;</span><span class="Constant">, </span><span class="Constant">&quot;</span> + <span class="Constant">&quot;</span><span class="Constant">elevation: </span><span class="Constant">&quot;</span> + <span class="Identifier">str</span>(c.elevation) + <span class="Constant">&quot;</span><span class="Constant">, lat/long: </span><span class="Constant">&quot;</span> + <span class="Identifier">str</span>(c.lat) + <span class="Constant">&quot;</span><span class="Constant">,</span><span class="Constant">&quot;</span> + <span class="Identifier">str</span>(c.lon))
 
 
-<span class="Statement">if</span> __name__ == <span class="Constant">'</span><span class="Constant">__main__</span><span class="Constant">'</span>:
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
     main()
 </pre>

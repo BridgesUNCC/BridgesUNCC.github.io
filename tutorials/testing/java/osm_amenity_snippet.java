@@ -1,10 +1,10 @@
 import java.lang.String;
+import java.util.Vector;
 import bridges.base.SLelement;
 import bridges.base.GraphAdjList;
 import bridges.connect.Bridges;
 import bridges.connect.DataSource;
-import bridges.data_src_dependent.Amenities;
-import bridges.data_src_dependent.AmenityData;
+import bridges.data_src_dependent.Amenity;
 
 public class osm_amenity_snippet {
 	public static void main(String[] args) throws Exception {
@@ -18,13 +18,16 @@ public class osm_amenity_snippet {
 
 		// get the OSM data
 		DataSource ds = bridges.getDataSource();
-		AmenityData amenity_data = ds.getAmenityData(38.77657, -77.20918, 39.03198, -76.8999, "food");
+		Vector<Amenity>  amenities = ds.getAmenityData(38.77657, -77.20918, 39.03198, -76.8999, "food");
 
-		System.out.println("Total Points: " + amenity_data.getCount());
-		System.out.println("ID: " + amenity_data.getAmenities().get(0).getId());
-		System.out.println("Name: " + amenity_data.getAmenities().get(0).getName());
-		System.out.println("Lat: " + amenity_data.getAmenities().get(0).getLat());
-		System.out.println("Lon: " + amenity_data.getAmenities().get(0).getLon());
+		System.out.println("Printing the first 5 amenities..");
+		for (int k = 0; k < 5; k++) {
+			System.out.println("\tID: " + amenities.get(k).getId());
+			System.out.println("\tName: " + amenities.get(k).getName());
+			System.out.println("\tLat: " + amenities.get(k).getLat());
+			System.out.println("\tLon: " + amenities.get(k).getLon());
+		System.out.println("\n");
+		}
 
 	}
 }

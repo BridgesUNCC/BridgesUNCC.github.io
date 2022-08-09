@@ -5,7 +5,7 @@ from bridges.rectangle import *
 from bridges.polygon import *
 from bridges.polyline import *
 from bridges.rectangle import *
-from bridges.label import *
+from bridges.text import *
 from bridges.color import *
 from bridges.text import *
 import sys
