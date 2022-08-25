@@ -8,7 +8,6 @@ def main():
     # This tutorial describes how to create a 1 dimensional array, populate
     # it with integer values and display them
 
-    args = sys.argv[1:]
 
     # create the Bridges object, set credentials
     bridges = Bridges(ASSIGNMENT_NUMBER, "USER_ID", "API_KEY")

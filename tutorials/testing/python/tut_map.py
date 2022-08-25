@@ -1,10 +1,9 @@
 from bridges import *
 
 def main():
-    args = sys.argv[1:]
 
     # create the Bridges object, set credentials
-    bridges = Bridges(ASSIGNMENT_NUMBER, "USER_ID", "API_KEY")
+        bridges = Bridges(ASSIGNMENT_NUMBER, "USER_ID", "API_KEY")
 
     #Set the projection to equirectangular. Currently for using the World map
     #Only equirectangular is supported

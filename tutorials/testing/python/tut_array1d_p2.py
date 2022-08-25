@@ -9,7 +9,6 @@ def main():
     # Part 2 of this tutorial describes how to style arrays created 
     # using BRIDGES.  We will use the same array as Part 1 
 
-    args = sys.argv[1:]
 
     # create the Bridges object, set credentials
     bridges = Bridges(ASSIGNMENT_NUMBER, "USER_ID", "API_KEY")

@@ -1,0 +1,48 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">import</span> bridges.base.LineChart;
+<span class="PreProc">import</span> bridges.connect.Bridges;
+<span class="PreProc">import</span> bridges.validation.RateLimitException;
+
+<span class="PreProc">import</span> java.io.IOException;
+<span class="PreProc">import</span> java.util.*;
+<span class="PreProc">import</span> java.util.function.Consumer;
+
+<span class="Type">public</span> <span class="Type">class</span> tut_linechart {
+
+	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) <span class="Type">throws</span> IOException, RateLimitException, InterruptedException {
+		Bridges bridges = <span class="Statement">new</span> Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+			<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+		<span class="Comment">// create plot, set title</span>
+		LineChart plot = <span class="Statement">new</span> LineChart();
+		plot.setTitle(<span class="Constant">&quot;linechart plot&quot;</span>);
+
+		<span class="Comment">// plot 1 with 3 points</span>
+		<span class="Type">double</span> x1[] = <span class="Statement">new</span> <span class="Type">double</span>[] {<span class="Constant">1</span>, <span class="Constant">3</span>, <span class="Constant">5</span>, <span class="Constant">20</span>};
+		<span class="Type">double</span> y1[] = <span class="Statement">new</span> <span class="Type">double</span>[] {<span class="Constant">2</span>, <span class="Constant">3</span>, <span class="Constant">5</span>, <span class="Constant">20</span>};
+		plot.setDataSeries(<span class="Constant">&quot;1&quot;</span>, x1, y1);
+
+		<span class="Comment">// plot 2 with 2 points</span>
+		<span class="Type">double</span> x2[] = <span class="Statement">new</span> <span class="Type">double</span>[] {<span class="Constant">2</span>, <span class="Constant">15.2</span>,  <span class="Constant">40</span>};
+		<span class="Type">double</span> y2[] = <span class="Statement">new</span> <span class="Type">double</span>[] {<span class="Constant">4</span>, <span class="Constant">30.5</span>, <span class="Constant">400.99</span>};
+		plot.setDataSeries(<span class="Constant">&quot;2&quot;</span>, x2, y2);
+
+		<span class="Comment">// visualize</span>
+		bridges.setDataStructure(plot);
+		bridges.visualize();
+
+
+		<span class="Comment">// plot using logarithmic scale</span>
+		plot.toggleLogarithmicX(<span class="Constant">true</span>);
+		plot.toggleLogarithmicY(<span class="Constant">true</span>);
+
+		<span class="Comment">// allow mouse tracking</span>
+		plot.toggleMouseTrack(<span class="Constant">true</span>);
+
+
+		<span class="Comment">// visualize</span>
+		bridges.visualize();
+	}
+
+}
+</pre>

@@ -26,7 +26,7 @@ def main():
     
     reddit_obj = data_source.reddit_data("askscience")
 
-    reddit_obj = reddit_obj[0:10] #clamping to the first 10 entry to make output shorter
+    reddit_obj = reddit_obj[0:3] #clamping to the first 10 entry to make output shorter
     
     for reddit_post in reddit_obj:
         print(f"Title: {reddit_post.title}")

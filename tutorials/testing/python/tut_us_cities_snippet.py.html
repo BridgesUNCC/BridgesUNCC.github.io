@@ -5,17 +5,9 @@
 
 <span class="Comment">#how to use the USCities Dataset</span>
 <span class="Statement">def</span> <span class="Identifier">main</span>():
-    args = sys.argv[<span class="Constant">1</span>:]
 
     <span class="Comment"># create the Bridges object, set credentials</span>
     bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
-
-    <span class="Comment"># create the Bridges object, set credentials</span>
-
-    bridges = Bridges(<span class="Identifier">int</span>(args[<span class="Constant">0</span>]), args[<span class="Constant">1</span>], args[<span class="Constant">2</span>])
-
-    <span class="Statement">if</span> <span class="Identifier">len</span>(args) &gt; <span class="Constant">3</span>:
-        bridges.connector.set_server(args[<span class="Constant">3</span>])
 
     <span class="Comment"># getting cities in North Carolina with populatino range or 200K-1M, limit to 25 cities</span>
 	<span class="Comment"># other parameters include elevation range, lat/long range</span>

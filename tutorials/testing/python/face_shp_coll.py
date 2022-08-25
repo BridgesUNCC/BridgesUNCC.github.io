@@ -11,7 +11,6 @@ from bridges.text import *
 import sys
 
 def main():
-    args = sys.argv[1:]
 
     # create the Bridges object, set credentials
     bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY")

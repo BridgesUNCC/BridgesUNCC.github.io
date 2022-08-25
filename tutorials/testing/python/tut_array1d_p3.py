@@ -8,7 +8,6 @@ def main():
     # Part 3 of this tutorial describes how to use iterators with arrays
     # We will use the same example array 
 
-    args = sys.argv[1:]
 
     # create the Bridges object, set credentials
     bridges = Bridges(ASSIGNMENT_NUMBER, "USER_ID", "API_KEY")

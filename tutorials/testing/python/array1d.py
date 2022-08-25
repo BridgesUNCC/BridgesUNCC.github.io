@@ -5,7 +5,6 @@ import sys
 
 
 def main():
-    args = sys.argv[1:]
 
     # create the Bridges object, set credentials
     bridges = Bridges(ASSIGNMENT_NUMBER, "USER_ID", "API_KEY")

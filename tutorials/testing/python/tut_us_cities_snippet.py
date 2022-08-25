@@ -4,17 +4,9 @@ from bridges.data_src_dependent import data_source
 
 #how to use the USCities Dataset
 def main():
-    args = sys.argv[1:]
 
     # create the Bridges object, set credentials
     bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, "YOUR_USER_ID", "YOUR_API_KEY")
-
-    # create the Bridges object, set credentials
-
-    bridges = Bridges(int(args[0]), args[1], args[2])
-
-    if len(args) > 3:
-        bridges.connector.set_server(args[3])
 
     # getting cities in North Carolina with populatino range or 200K-1M, limit to 25 cities
 	# other parameters include elevation range, lat/long range
