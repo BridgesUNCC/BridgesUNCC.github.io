@@ -1,0 +1,174 @@
+\hypertarget{classbridges_1_1_link_visualizer}{}\section{bridges\+::Link\+Visualizer Class Reference}
+\label{classbridges_1_1_link_visualizer}\index{bridges::LinkVisualizer@{bridges::LinkVisualizer}}
+
+
+This class maintains the visual properties of links within data structures.  
+
+
+
+
+{\ttfamily \#include $<$Link\+Visualizer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbridges_1_1_link_visualizer_a69a84adf2b85773120d3f6afd938488e}{Link\+Visualizer}} (\mbox{\hyperlink{classbridges_1_1_color}{Color}} col=\mbox{\hyperlink{classbridges_1_1_link_visualizer_a5e121c52fc270337c58413d0fd72cf58}{D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+L\+OR}}(), double th=\mbox{\hyperlink{classbridges_1_1_link_visualizer_a6d05e052d64964d876f557901635079d}{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+H\+I\+C\+K\+N\+E\+SS}}())
+\item 
+string \mbox{\hyperlink{classbridges_1_1_link_visualizer_a4711364bd9108a03c6867ee2282d9fea}{get\+Label}} () const
+\item 
+void \mbox{\hyperlink{classbridges_1_1_link_visualizer_a7e590ad57c51ef16a1d46e05ffdf1fb3}{set\+Label}} (const string \&lab)
+\item 
+void \mbox{\hyperlink{classbridges_1_1_link_visualizer_a92a88e0e4c2f0c8c68f33578743c6502}{set\+Thickness}} (const double \&th)
+\item 
+double \mbox{\hyperlink{classbridges_1_1_link_visualizer_ae08a5f5fc9e83ea3b3d4ebebc245d3b4}{get\+Thickness}} () const
+\item 
+void \mbox{\hyperlink{classbridges_1_1_link_visualizer_adedc1f2b7d5d562b115ef9d8ae19fa73}{set\+Color}} (const \mbox{\hyperlink{classbridges_1_1_color}{Color}} \&col)
+\item 
+void \mbox{\hyperlink{classbridges_1_1_link_visualizer_ae9901d2bb4fab91af73723bfbbbcc9b4}{set\+Color}} (const string col)
+\item 
+\mbox{\hyperlink{classbridges_1_1_color}{Color}} \mbox{\hyperlink{classbridges_1_1_link_visualizer_a794ab99f7dc3ec9b27961e7f6072181a}{get\+Color}} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr double \mbox{\hyperlink{classbridges_1_1_link_visualizer_a6d05e052d64964d876f557901635079d}{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+H\+I\+C\+K\+N\+E\+SS}} ()
+\item 
+static \mbox{\hyperlink{classbridges_1_1_color}{Color}} \mbox{\hyperlink{classbridges_1_1_link_visualizer_a5e121c52fc270337c58413d0fd72cf58}{D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+L\+OR}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class maintains the visual properties of links within data structures. 
+
+This class is used to keep the visual properties of links that are part of data structures such as linked lists, pointer based trees, link based graph representations, etc. Relevant attributes include color and thickness
+
+Objects of this class are stored as properties of Elements. A user may manipulate the \mbox{\hyperlink{classbridges_1_1_link_visualizer}{Link\+Visualizer}} returned from the \mbox{\hyperlink{classbridges_1_1_element}{Element}}\textquotesingle{}s get\+Link\+Visualizer() method.
+
+B\+R\+I\+D\+G\+ES supports color of any legal named C\+SS or \#hexadecimal value. Default\+: opaque black Thickness values must range from \mbox{[}1.\+0,10.\+0\mbox{]}. Default\+: 1.\+0
+
+\begin{DoxyAuthor}{Author}
+Kalpathi Subramanian, Dakota Carmer 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+6/29/15, 6/10/16 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1_link_visualizer_a69a84adf2b85773120d3f6afd938488e}\label{classbridges_1_1_link_visualizer_a69a84adf2b85773120d3f6afd938488e}} 
+\index{bridges::LinkVisualizer@{bridges::LinkVisualizer}!LinkVisualizer@{LinkVisualizer}}
+\index{LinkVisualizer@{LinkVisualizer}!bridges::LinkVisualizer@{bridges::LinkVisualizer}}
+\subsubsection{\texorpdfstring{LinkVisualizer()}{LinkVisualizer()}}
+{\footnotesize\ttfamily bridges\+::\+Link\+Visualizer\+::\+Link\+Visualizer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1_color}{Color}}}]{col = {\ttfamily \mbox{\hyperlink{classbridges_1_1_link_visualizer_a5e121c52fc270337c58413d0fd72cf58}{D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+L\+OR}}()},  }\item[{double}]{th = {\ttfamily \mbox{\hyperlink{classbridges_1_1_link_visualizer_a6d05e052d64964d876f557901635079d}{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+H\+I\+C\+K\+N\+E\+SS}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs a \mbox{\hyperlink{classbridges_1_1_link_visualizer}{Link\+Visualizer}} with the specified color and thickness. The defaults will be used if not provided (black,1)
+
+
+\begin{DoxyParams}{Parameters}
+{\em col} & Link color \\
+\hline
+{\em thick} & Link thickness \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1_link_visualizer_a5e121c52fc270337c58413d0fd72cf58}\label{classbridges_1_1_link_visualizer_a5e121c52fc270337c58413d0fd72cf58}} 
+\index{bridges::LinkVisualizer@{bridges::LinkVisualizer}!DEFAULT\_COLOR@{DEFAULT\_COLOR}}
+\index{DEFAULT\_COLOR@{DEFAULT\_COLOR}!bridges::LinkVisualizer@{bridges::LinkVisualizer}}
+\subsubsection{\texorpdfstring{DEFAULT\_COLOR()}{DEFAULT\_COLOR()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classbridges_1_1_color}{Color}} bridges\+::\+Link\+Visualizer\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+L\+OR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbridges_1_1_link_visualizer_a6d05e052d64964d876f557901635079d}\label{classbridges_1_1_link_visualizer_a6d05e052d64964d876f557901635079d}} 
+\index{bridges::LinkVisualizer@{bridges::LinkVisualizer}!DEFAULT\_THICKNESS@{DEFAULT\_THICKNESS}}
+\index{DEFAULT\_THICKNESS@{DEFAULT\_THICKNESS}!bridges::LinkVisualizer@{bridges::LinkVisualizer}}
+\subsubsection{\texorpdfstring{DEFAULT\_THICKNESS()}{DEFAULT\_THICKNESS()}}
+{\footnotesize\ttfamily static constexpr double bridges\+::\+Link\+Visualizer\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+H\+I\+C\+K\+N\+E\+SS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbridges_1_1_link_visualizer_a794ab99f7dc3ec9b27961e7f6072181a}\label{classbridges_1_1_link_visualizer_a794ab99f7dc3ec9b27961e7f6072181a}} 
+\index{bridges::LinkVisualizer@{bridges::LinkVisualizer}!getColor@{getColor}}
+\index{getColor@{getColor}!bridges::LinkVisualizer@{bridges::LinkVisualizer}}
+\subsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1_color}{Color}} bridges\+::\+Link\+Visualizer\+::get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The color of the link 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_link_visualizer_a4711364bd9108a03c6867ee2282d9fea}\label{classbridges_1_1_link_visualizer_a4711364bd9108a03c6867ee2282d9fea}} 
+\index{bridges::LinkVisualizer@{bridges::LinkVisualizer}!getLabel@{getLabel}}
+\index{getLabel@{getLabel}!bridges::LinkVisualizer@{bridges::LinkVisualizer}}
+\subsubsection{\texorpdfstring{getLabel()}{getLabel()}}
+{\footnotesize\ttfamily string bridges\+::\+Link\+Visualizer\+::get\+Label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The label of the element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_link_visualizer_ae08a5f5fc9e83ea3b3d4ebebc245d3b4}\label{classbridges_1_1_link_visualizer_ae08a5f5fc9e83ea3b3d4ebebc245d3b4}} 
+\index{bridges::LinkVisualizer@{bridges::LinkVisualizer}!getThickness@{getThickness}}
+\index{getThickness@{getThickness}!bridges::LinkVisualizer@{bridges::LinkVisualizer}}
+\subsubsection{\texorpdfstring{getThickness()}{getThickness()}}
+{\footnotesize\ttfamily double bridges\+::\+Link\+Visualizer\+::get\+Thickness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+Size in pixels of the link\textquotesingle{}s line thickness 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_link_visualizer_adedc1f2b7d5d562b115ef9d8ae19fa73}\label{classbridges_1_1_link_visualizer_adedc1f2b7d5d562b115ef9d8ae19fa73}} 
+\index{bridges::LinkVisualizer@{bridges::LinkVisualizer}!setColor@{setColor}}
+\index{setColor@{setColor}!bridges::LinkVisualizer@{bridges::LinkVisualizer}}
+\subsubsection{\texorpdfstring{setColor()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void bridges\+::\+Link\+Visualizer\+::set\+Color (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbridges_1_1_color}{Color}} \&}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the color to \char`\"{}col\char`\"{}, default black
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The color of the element \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1_link_visualizer_ae9901d2bb4fab91af73723bfbbbcc9b4}\label{classbridges_1_1_link_visualizer_ae9901d2bb4fab91af73723bfbbbcc9b4}} 
+\index{bridges::LinkVisualizer@{bridges::LinkVisualizer}!setColor@{setColor}}
+\index{setColor@{setColor}!bridges::LinkVisualizer@{bridges::LinkVisualizer}}
+\subsubsection{\texorpdfstring{setColor()}{setColor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void bridges\+::\+Link\+Visualizer\+::set\+Color (\begin{DoxyParamCaption}\item[{const string}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the color to a named color \char`\"{}col\char`\"{} 
+\begin{DoxyParams}{Parameters}
+{\em color} & The color name \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1_link_visualizer_a7e590ad57c51ef16a1d46e05ffdf1fb3}\label{classbridges_1_1_link_visualizer_a7e590ad57c51ef16a1d46e05ffdf1fb3}} 
+\index{bridges::LinkVisualizer@{bridges::LinkVisualizer}!setLabel@{setLabel}}
+\index{setLabel@{setLabel}!bridges::LinkVisualizer@{bridges::LinkVisualizer}}
+\subsubsection{\texorpdfstring{setLabel()}{setLabel()}}
+{\footnotesize\ttfamily void bridges\+::\+Link\+Visualizer\+::set\+Label (\begin{DoxyParamCaption}\item[{const string \&}]{lab }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets label to \char`\"{}lab\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em lab} & The label of the element \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1_link_visualizer_a92a88e0e4c2f0c8c68f33578743c6502}\label{classbridges_1_1_link_visualizer_a92a88e0e4c2f0c8c68f33578743c6502}} 
+\index{bridges::LinkVisualizer@{bridges::LinkVisualizer}!setThickness@{setThickness}}
+\index{setThickness@{setThickness}!bridges::LinkVisualizer@{bridges::LinkVisualizer}}
+\subsubsection{\texorpdfstring{setThickness()}{setThickness()}}
+{\footnotesize\ttfamily void bridges\+::\+Link\+Visualizer\+::set\+Thickness (\begin{DoxyParamCaption}\item[{const double \&}]{th }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the thickness to \char`\"{}thick\char`\"{} Valid Range\+:\mbox{[}1,10\mbox{]} Default\+: 1
+
+
+\begin{DoxyParams}{Parameters}
+{\em thick} & The size in pixels of the link\textquotesingle{}s line weight \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em string} & If invalid thickness \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/cxx/src/\mbox{\hyperlink{_link_visualizer_8h}{Link\+Visualizer.\+h}}\end{DoxyCompactItemize}

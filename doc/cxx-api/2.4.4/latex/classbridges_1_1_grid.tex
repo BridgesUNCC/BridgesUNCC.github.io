@@ -1,0 +1,225 @@
+\hypertarget{classbridges_1_1_grid}{}\section{bridges\+::Grid$<$ E $>$ Class Template Reference}
+\label{classbridges_1_1_grid}\index{bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}}
+
+
+This is a class in B\+R\+I\+D\+G\+ES for representing an (n x n) grid.  
+
+
+
+
+{\ttfamily \#include $<$Grid.\+h$>$}
+
+Inheritance diagram for bridges\+::Grid$<$ E $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbridges_1_1_grid}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classbridges_1_1_grid_1_1_bracket_helper}{Bracket\+Helper}}
+\item 
+class \mbox{\hyperlink{classbridges_1_1_grid_1_1_bracket_helper_const}{Bracket\+Helper\+Const}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual const string \mbox{\hyperlink{classbridges_1_1_grid_ab701d081de4f7ffafb15966758dd5446}{get\+D\+Stype}} () const override
+\item 
+\mbox{\hyperlink{classbridges_1_1_grid_af8bb9244c4c713f2325af6d4754ad1e9}{Grid}} (int rows, int cols)
+\item 
+\mbox{\hyperlink{classbridges_1_1_grid_a711e05a933c2a11c9e2775c74e6cf80d}{Grid}} ()
+\item 
+\mbox{\hyperlink{classbridges_1_1_grid_ad5c6c5e87eb40446ac794c5479937f87}{Grid}} (int $\ast$size)
+\item 
+\mbox{\hyperlink{classbridges_1_1_grid_aff3e633c9454fbc66cab5ffe0c6812db}{Grid}} (const \mbox{\hyperlink{classbridges_1_1_grid}{Grid}} \&\mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50edab2f5ff47436671b6e533d8dc3614845d}{g}})
+\item 
+virtual \mbox{\hyperlink{classbridges_1_1_grid_a46cc94397ea38211349b10e3629b2590}{$\sim$\+Grid}} ()
+\item 
+\mbox{\hyperlink{classbridges_1_1_grid}{Grid}} \& \mbox{\hyperlink{classbridges_1_1_grid_ad5b960f574d1f5bddfffbfd8ce2d870b}{operator=}} (const \mbox{\hyperlink{classbridges_1_1_grid}{Grid}} \&\mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50edab2f5ff47436671b6e533d8dc3614845d}{g}})
+\item 
+void \mbox{\hyperlink{classbridges_1_1_grid_a8e5e4d92097f9d1481a14219eb5cc5a8}{set\+Dimensions}} (int rows, int cols)
+\item 
+int $\ast$ \mbox{\hyperlink{classbridges_1_1_grid_ad21e4fc94483ef822fda9b74a52b9f48}{get\+Dimensions}} ()
+\item 
+\mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} const  \& \mbox{\hyperlink{classbridges_1_1_grid_a6d6a2db1f64de5cbe4786f2f923cd4ba}{get}} (int row, int col) const
+\item 
+void \mbox{\hyperlink{classbridges_1_1_grid_acd750e5886349488257aba85f0b06f6f}{set}} (int row, int col, \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} val)
+\item 
+\mbox{\hyperlink{classbridges_1_1_grid_1_1_bracket_helper_const}{Bracket\+Helper\+Const}} \mbox{\hyperlink{classbridges_1_1_grid_ac49b7eb0ffe27d665b56655e2ef6fe7d}{operator\mbox{[}$\,$\mbox{]}}} (int row) const
+\begin{DoxyCompactList}\small\item\em provides the necessary abstraction to do something = grid\mbox{[}x\mbox{]}\mbox{[}y\mbox{]}; \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbridges_1_1_grid_1_1_bracket_helper}{Bracket\+Helper}} \mbox{\hyperlink{classbridges_1_1_grid_ae7abc13b8aebe96372b05013a993c33b}{operator\mbox{[}$\,$\mbox{]}}} (int row)
+\begin{DoxyCompactList}\small\item\em provides the necessary abstraction to do grid\mbox{[}x\mbox{]}\mbox{[}y\mbox{]} = something; \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $\ast$$\ast$ \mbox{\hyperlink{classbridges_1_1_grid_aea6c38498d477f09dc03906ee6fb6e19}{grid}} = nullptr
+\item 
+int \mbox{\hyperlink{classbridges_1_1_grid_af7c3a077b54e3346621e54276c1fa13e}{grid\+Size}} \mbox{[}2\mbox{]}
+\item 
+int \mbox{\hyperlink{classbridges_1_1_grid_a800909a94e0affac82da79cf3e6d03e5}{max\+Grid\+Size}} \mbox{[}2\mbox{]} = \{1080, 1920\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename E$>$\newline
+class bridges\+::\+Grid$<$ E $>$}
+
+This is a class in B\+R\+I\+D\+G\+ES for representing an (n x n) grid. 
+
+This class will be useful in applications such as image processing, board games, etc.
+
+\begin{DoxyAuthor}{Author}
+David Burlinson, C++ port Kalpathi Subramanian
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em E} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1_grid_af8bb9244c4c713f2325af6d4754ad1e9}\label{classbridges_1_1_grid_af8bb9244c4c713f2325af6d4754ad1e9}} 
+\index{bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}!Grid@{Grid}}
+\index{Grid@{Grid}!bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}}
+\subsubsection{\texorpdfstring{Grid()}{Grid()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+\mbox{\hyperlink{classbridges_1_1_grid}{bridges\+::\+Grid}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$\+::\mbox{\hyperlink{classbridges_1_1_grid}{Grid}} (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{cols }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{classbridges_1_1_grid}{Grid}} constructors \mbox{\Hypertarget{classbridges_1_1_grid_a711e05a933c2a11c9e2775c74e6cf80d}\label{classbridges_1_1_grid_a711e05a933c2a11c9e2775c74e6cf80d}} 
+\index{bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}!Grid@{Grid}}
+\index{Grid@{Grid}!bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}}
+\subsubsection{\texorpdfstring{Grid()}{Grid()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+\mbox{\hyperlink{classbridges_1_1_grid}{bridges\+::\+Grid}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$\+::\mbox{\hyperlink{classbridges_1_1_grid}{Grid}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1_grid_ad5c6c5e87eb40446ac794c5479937f87}\label{classbridges_1_1_grid_ad5c6c5e87eb40446ac794c5479937f87}} 
+\index{bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}!Grid@{Grid}}
+\index{Grid@{Grid}!bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}}
+\subsubsection{\texorpdfstring{Grid()}{Grid()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+\mbox{\hyperlink{classbridges_1_1_grid}{bridges\+::\+Grid}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$\+::\mbox{\hyperlink{classbridges_1_1_grid}{Grid}} (\begin{DoxyParamCaption}\item[{int $\ast$}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classbridges_1_1_grid_aff3e633c9454fbc66cab5ffe0c6812db}\label{classbridges_1_1_grid_aff3e633c9454fbc66cab5ffe0c6812db}} 
+\index{bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}!Grid@{Grid}}
+\index{Grid@{Grid}!bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}}
+\subsubsection{\texorpdfstring{Grid()}{Grid()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+\mbox{\hyperlink{classbridges_1_1_grid}{bridges\+::\+Grid}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$\+::\mbox{\hyperlink{classbridges_1_1_grid}{Grid}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbridges_1_1_grid}{Grid}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$ \&}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1_grid_a46cc94397ea38211349b10e3629b2590}\label{classbridges_1_1_grid_a46cc94397ea38211349b10e3629b2590}} 
+\index{bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}!````~Grid@{$\sim$Grid}}
+\index{````~Grid@{$\sim$Grid}!bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}}
+\subsubsection{\texorpdfstring{$\sim$Grid()}{~Grid()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+virtual \mbox{\hyperlink{classbridges_1_1_grid}{bridges\+::\+Grid}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$\+::$\sim$\mbox{\hyperlink{classbridges_1_1_grid}{Grid}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1_grid_a6d6a2db1f64de5cbe4786f2f923cd4ba}\label{classbridges_1_1_grid_a6d6a2db1f64de5cbe4786f2f923cd4ba}} 
+\index{bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}!get@{get}}
+\index{get@{get}!bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+\mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} const\& \mbox{\hyperlink{classbridges_1_1_grid}{bridges\+::\+Grid}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$\+::get (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1_grid_ad21e4fc94483ef822fda9b74a52b9f48}\label{classbridges_1_1_grid_ad21e4fc94483ef822fda9b74a52b9f48}} 
+\index{bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}!getDimensions@{getDimensions}}
+\index{getDimensions@{getDimensions}!bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}}
+\subsubsection{\texorpdfstring{getDimensions()}{getDimensions()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+int$\ast$ \mbox{\hyperlink{classbridges_1_1_grid}{bridges\+::\+Grid}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$\+::get\+Dimensions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1_grid_ab701d081de4f7ffafb15966758dd5446}\label{classbridges_1_1_grid_ab701d081de4f7ffafb15966758dd5446}} 
+\index{bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}!getDStype@{getDStype}}
+\index{getDStype@{getDStype}!bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}}
+\subsubsection{\texorpdfstring{getDStype()}{getDStype()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+virtual const string \mbox{\hyperlink{classbridges_1_1_grid}{bridges\+::\+Grid}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$\+::get\+D\+Stype (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The string representation of this data structure type 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbridges_1_1_data_structure_a957a63b106e340bc753620c650632bdc}{bridges\+::\+Data\+Structure}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classbridges_1_1_game_grid_a668f4f82739798f808a9f0b582d49dac}{bridges\+::\+Game\+Grid}}, and \mbox{\hyperlink{classbridges_1_1_color_grid_a6bb93994dade8e79a197459532dad153}{bridges\+::\+Color\+Grid}}.
+
+\mbox{\Hypertarget{classbridges_1_1_grid_ad5b960f574d1f5bddfffbfd8ce2d870b}\label{classbridges_1_1_grid_ad5b960f574d1f5bddfffbfd8ce2d870b}} 
+\index{bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+\mbox{\hyperlink{classbridges_1_1_grid}{Grid}}\& \mbox{\hyperlink{classbridges_1_1_grid}{bridges\+::\+Grid}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbridges_1_1_grid}{Grid}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$ \&}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1_grid_ac49b7eb0ffe27d665b56655e2ef6fe7d}\label{classbridges_1_1_grid_ac49b7eb0ffe27d665b56655e2ef6fe7d}} 
+\index{bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+\mbox{\hyperlink{classbridges_1_1_grid_1_1_bracket_helper_const}{Bracket\+Helper\+Const}} \mbox{\hyperlink{classbridges_1_1_grid}{bridges\+::\+Grid}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+provides the necessary abstraction to do something = grid\mbox{[}x\mbox{]}\mbox{[}y\mbox{]}; 
+
+\mbox{\Hypertarget{classbridges_1_1_grid_ae7abc13b8aebe96372b05013a993c33b}\label{classbridges_1_1_grid_ae7abc13b8aebe96372b05013a993c33b}} 
+\index{bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+\mbox{\hyperlink{classbridges_1_1_grid_1_1_bracket_helper}{Bracket\+Helper}} \mbox{\hyperlink{classbridges_1_1_grid}{bridges\+::\+Grid}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+provides the necessary abstraction to do grid\mbox{[}x\mbox{]}\mbox{[}y\mbox{]} = something; 
+
+\mbox{\Hypertarget{classbridges_1_1_grid_acd750e5886349488257aba85f0b06f6f}\label{classbridges_1_1_grid_acd750e5886349488257aba85f0b06f6f}} 
+\index{bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}!set@{set}}
+\index{set@{set}!bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}}
+\subsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+void \mbox{\hyperlink{classbridges_1_1_grid}{bridges\+::\+Grid}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$\+::set (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col,  }\item[{\mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}}}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbridges_1_1_grid_a8e5e4d92097f9d1481a14219eb5cc5a8}\label{classbridges_1_1_grid_a8e5e4d92097f9d1481a14219eb5cc5a8}} 
+\index{bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}!setDimensions@{setDimensions}}
+\index{setDimensions@{setDimensions}!bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}}
+\subsubsection{\texorpdfstring{setDimensions()}{setDimensions()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+void \mbox{\hyperlink{classbridges_1_1_grid}{bridges\+::\+Grid}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$\+::set\+Dimensions (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{cols }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classbridges_1_1_grid_aea6c38498d477f09dc03906ee6fb6e19}\label{classbridges_1_1_grid_aea6c38498d477f09dc03906ee6fb6e19}} 
+\index{bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}!grid@{grid}}
+\index{grid@{grid}!bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}}
+\subsubsection{\texorpdfstring{grid}{grid}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+\mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}}$\ast$$\ast$ \mbox{\hyperlink{classbridges_1_1_grid}{bridges\+::\+Grid}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$\+::grid = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classbridges_1_1_grid_af7c3a077b54e3346621e54276c1fa13e}\label{classbridges_1_1_grid_af7c3a077b54e3346621e54276c1fa13e}} 
+\index{bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}!gridSize@{gridSize}}
+\index{gridSize@{gridSize}!bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}}
+\subsubsection{\texorpdfstring{gridSize}{gridSize}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+int \mbox{\hyperlink{classbridges_1_1_grid}{bridges\+::\+Grid}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$\+::grid\+Size\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classbridges_1_1_grid_a800909a94e0affac82da79cf3e6d03e5}\label{classbridges_1_1_grid_a800909a94e0affac82da79cf3e6d03e5}} 
+\index{bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}!maxGridSize@{maxGridSize}}
+\index{maxGridSize@{maxGridSize}!bridges::Grid$<$ E $>$@{bridges::Grid$<$ E $>$}}
+\subsubsection{\texorpdfstring{maxGridSize}{maxGridSize}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+int \mbox{\hyperlink{classbridges_1_1_grid}{bridges\+::\+Grid}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$\+::max\+Grid\+Size\mbox{[}2\mbox{]} = \{1080, 1920\}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/cxx/src/\mbox{\hyperlink{_grid_8h}{Grid.\+h}}\end{DoxyCompactItemize}

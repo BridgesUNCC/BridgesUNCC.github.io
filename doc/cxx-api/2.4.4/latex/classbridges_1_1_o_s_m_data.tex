@@ -1,0 +1,241 @@
+\hypertarget{classbridges_1_1_o_s_m_data}{}\section{bridges\+::O\+S\+M\+Data Class Reference}
+\label{classbridges_1_1_o_s_m_data}\index{bridges::OSMData@{bridges::OSMData}}
+
+
+Class that hold Open Street Map vertices.  
+
+
+
+
+{\ttfamily \#include $<$O\+S\+M\+Data.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classbridges_1_1_o_s_m_data_a3f4f59ddcfb8d01e737106a3e48a1b52}{get\+Graph}} (\mbox{\hyperlink{classbridges_1_1_graph_adj_list}{Graph\+Adj\+List}}$<$ int, \mbox{\hyperlink{classbridges_1_1_o_s_m_vertex}{O\+S\+M\+Vertex}}, double $>$ $\ast$gr) const
+\item 
+\mbox{\hyperlink{classbridges_1_1_o_s_m_data_a8abc19a052659621f74d7cbe354f90e9}{O\+S\+M\+Data}} ()
+\item 
+const string \& \mbox{\hyperlink{classbridges_1_1_o_s_m_data_a420a29bced0d8c04bc5afcb9adf0621a}{get\+Name}} () const
+\item 
+void \mbox{\hyperlink{classbridges_1_1_o_s_m_data_afd9750f005c1cee41f54b93de3a9c241}{set\+Name}} (const string \&\mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda7b8b965ad4bca0e41ab51de7b31363a1}{n}})
+\item 
+void \mbox{\hyperlink{classbridges_1_1_o_s_m_data_ad342159a5b7647238fda36ae91d0836e}{get\+Lat\+Long\+Range}} (double $\ast$lat\+\_\+range, double $\ast$longit\+\_\+range) const
+\item 
+void \mbox{\hyperlink{classbridges_1_1_o_s_m_data_a75197b6c3de0ada8c69aae3051368d00}{set\+Lat\+Long\+Range}} (double $\ast$lat\+\_\+range, double $\ast$longit\+\_\+range)
+\item 
+void \mbox{\hyperlink{classbridges_1_1_o_s_m_data_a4ddb01d0735da5e21fd8e33d1d5203ad}{set\+Lat\+Long\+Range}} (double lat\+\_\+min, double lat\+\_\+max, double long\+\_\+min, double long\+\_\+max)
+\item 
+void \mbox{\hyperlink{classbridges_1_1_o_s_m_data_ade3af326972e31ce991798e800fbbd5b}{get\+Cartesian\+Coords\+Range}} (double $\ast$xrange, double $\ast$yrange) const
+\item 
+void \mbox{\hyperlink{classbridges_1_1_o_s_m_data_ab61b84e459e01baa7f2c00da47ff4ccf}{set\+Cartesian\+Coords\+Range}} (double $\ast$xrange, double $\ast$yrange)
+\item 
+const vector$<$ \mbox{\hyperlink{classbridges_1_1_o_s_m_vertex}{O\+S\+M\+Vertex}} $>$ \& \mbox{\hyperlink{classbridges_1_1_o_s_m_data_a2f8fd5e4d3d0252ae7afae32f9ccc4fa}{get\+Vertices}} () const
+\item 
+void \mbox{\hyperlink{classbridges_1_1_o_s_m_data_aafb30f3266813b4ad8526312d4914f91}{set\+Vertices}} (const vector$<$ \mbox{\hyperlink{classbridges_1_1_o_s_m_vertex}{O\+S\+M\+Vertex}} $>$ \&verts)
+\item 
+const vector$<$ \mbox{\hyperlink{classbridges_1_1_o_s_m_edge}{O\+S\+M\+Edge}} $>$ \& \mbox{\hyperlink{classbridges_1_1_o_s_m_data_a0a226c840f69547f5d4e53dd7d4ef5d3}{get\+Edges}} () const
+\item 
+void \mbox{\hyperlink{classbridges_1_1_o_s_m_data_a3448ae401b5c5253262cc9c386dba1a9}{set\+Edges}} (const vector$<$ \mbox{\hyperlink{classbridges_1_1_o_s_m_edge}{O\+S\+M\+Edge}} $>$ \&\mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50edae1671797c52e15f763380b45e841ec32}{e}})
+\item 
+void \mbox{\hyperlink{classbridges_1_1_o_s_m_data_a30f6f5c0f20660fdb903bfe6fef4d4e0}{to\+Cartesian\+Coords}} (double lat, double longit, double $\ast$coords)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class that hold Open Street Map vertices. 
+
+Class that holds Open Street Map data, from \href{https://openstreetmap.org}{\texttt{ https\+://openstreetmap.\+org}}
+
+Kalpathi Subramanian, 2/16/19 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1_o_s_m_data_a8abc19a052659621f74d7cbe354f90e9}\label{classbridges_1_1_o_s_m_data_a8abc19a052659621f74d7cbe354f90e9}} 
+\index{bridges::OSMData@{bridges::OSMData}!OSMData@{OSMData}}
+\index{OSMData@{OSMData}!bridges::OSMData@{bridges::OSMData}}
+\subsubsection{\texorpdfstring{OSMData()}{OSMData()}}
+{\footnotesize\ttfamily bridges\+::\+O\+S\+M\+Data\+::\+O\+S\+M\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1_o_s_m_data_ade3af326972e31ce991798e800fbbd5b}\label{classbridges_1_1_o_s_m_data_ade3af326972e31ce991798e800fbbd5b}} 
+\index{bridges::OSMData@{bridges::OSMData}!getCartesianCoordsRange@{getCartesianCoordsRange}}
+\index{getCartesianCoordsRange@{getCartesianCoordsRange}!bridges::OSMData@{bridges::OSMData}}
+\subsubsection{\texorpdfstring{getCartesianCoordsRange()}{getCartesianCoordsRange()}}
+{\footnotesize\ttfamily void bridges\+::\+O\+S\+M\+Data\+::get\+Cartesian\+Coords\+Range (\begin{DoxyParamCaption}\item[{double $\ast$}]{xrange,  }\item[{double $\ast$}]{yrange }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get the range of dataset in Cartesian coords
+
+
+\begin{DoxyParams}{Parameters}
+{\em xrange\mbox{[}2\mbox{]}} & \\
+\hline
+{\em yrange\mbox{[}2\mbox{]}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_o_s_m_data_a0a226c840f69547f5d4e53dd7d4ef5d3}\label{classbridges_1_1_o_s_m_data_a0a226c840f69547f5d4e53dd7d4ef5d3}} 
+\index{bridges::OSMData@{bridges::OSMData}!getEdges@{getEdges}}
+\index{getEdges@{getEdges}!bridges::OSMData@{bridges::OSMData}}
+\subsubsection{\texorpdfstring{getEdges()}{getEdges()}}
+{\footnotesize\ttfamily const vector$<$\mbox{\hyperlink{classbridges_1_1_o_s_m_edge}{O\+S\+M\+Edge}}$>$\& bridges\+::\+O\+S\+M\+Data\+::get\+Edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get edges
+
+\begin{DoxyReturn}{Returns}
+edges (std\+::vector) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_o_s_m_data_a3f4f59ddcfb8d01e737106a3e48a1b52}\label{classbridges_1_1_o_s_m_data_a3f4f59ddcfb8d01e737106a3e48a1b52}} 
+\index{bridges::OSMData@{bridges::OSMData}!getGraph@{getGraph}}
+\index{getGraph@{getGraph}!bridges::OSMData@{bridges::OSMData}}
+\subsubsection{\texorpdfstring{getGraph()}{getGraph()}}
+{\footnotesize\ttfamily void bridges\+::\+O\+S\+M\+Data\+::get\+Graph (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1_graph_adj_list}{Graph\+Adj\+List}}$<$ int, \mbox{\hyperlink{classbridges_1_1_o_s_m_vertex}{O\+S\+M\+Vertex}}, double $>$ $\ast$}]{gr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a graph out of the vertex an edge data of the O\+SM object. The graph will associate the length of the edge to the graph edge. No data is bound to the vertices.
+
+The vertices of the graph will be located at the location where given in the data set converted to cartesian coordinate. \mbox{\Hypertarget{classbridges_1_1_o_s_m_data_ad342159a5b7647238fda36ae91d0836e}\label{classbridges_1_1_o_s_m_data_ad342159a5b7647238fda36ae91d0836e}} 
+\index{bridges::OSMData@{bridges::OSMData}!getLatLongRange@{getLatLongRange}}
+\index{getLatLongRange@{getLatLongRange}!bridges::OSMData@{bridges::OSMData}}
+\subsubsection{\texorpdfstring{getLatLongRange()}{getLatLongRange()}}
+{\footnotesize\ttfamily void bridges\+::\+O\+S\+M\+Data\+::get\+Lat\+Long\+Range (\begin{DoxyParamCaption}\item[{double $\ast$}]{lat\+\_\+range,  }\item[{double $\ast$}]{longit\+\_\+range }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get the Latitude and Longitude range of the dataset
+
+
+\begin{DoxyParams}{Parameters}
+{\em lat\+\_\+range} & \\
+\hline
+{\em longit\+\_\+range} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_o_s_m_data_a420a29bced0d8c04bc5afcb9adf0621a}\label{classbridges_1_1_o_s_m_data_a420a29bced0d8c04bc5afcb9adf0621a}} 
+\index{bridges::OSMData@{bridges::OSMData}!getName@{getName}}
+\index{getName@{getName}!bridges::OSMData@{bridges::OSMData}}
+\subsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily const string\& bridges\+::\+O\+S\+M\+Data\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get the name of the dataset
+
+\begin{DoxyReturn}{Returns}
+name (string) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_o_s_m_data_a2f8fd5e4d3d0252ae7afae32f9ccc4fa}\label{classbridges_1_1_o_s_m_data_a2f8fd5e4d3d0252ae7afae32f9ccc4fa}} 
+\index{bridges::OSMData@{bridges::OSMData}!getVertices@{getVertices}}
+\index{getVertices@{getVertices}!bridges::OSMData@{bridges::OSMData}}
+\subsubsection{\texorpdfstring{getVertices()}{getVertices()}}
+{\footnotesize\ttfamily const vector$<$\mbox{\hyperlink{classbridges_1_1_o_s_m_vertex}{O\+S\+M\+Vertex}}$>$\& bridges\+::\+O\+S\+M\+Data\+::get\+Vertices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get vertices
+
+\begin{DoxyReturn}{Returns}
+vertices (std\+::vector) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_o_s_m_data_ab61b84e459e01baa7f2c00da47ff4ccf}\label{classbridges_1_1_o_s_m_data_ab61b84e459e01baa7f2c00da47ff4ccf}} 
+\index{bridges::OSMData@{bridges::OSMData}!setCartesianCoordsRange@{setCartesianCoordsRange}}
+\index{setCartesianCoordsRange@{setCartesianCoordsRange}!bridges::OSMData@{bridges::OSMData}}
+\subsubsection{\texorpdfstring{setCartesianCoordsRange()}{setCartesianCoordsRange()}}
+{\footnotesize\ttfamily void bridges\+::\+O\+S\+M\+Data\+::set\+Cartesian\+Coords\+Range (\begin{DoxyParamCaption}\item[{double $\ast$}]{xrange,  }\item[{double $\ast$}]{yrange }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+set the range of dataset in Cartesian coords
+
+
+\begin{DoxyParams}{Parameters}
+{\em xrange\mbox{[}2\mbox{]}} & \\
+\hline
+{\em yrange\mbox{[}2\mbox{]}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_o_s_m_data_a3448ae401b5c5253262cc9c386dba1a9}\label{classbridges_1_1_o_s_m_data_a3448ae401b5c5253262cc9c386dba1a9}} 
+\index{bridges::OSMData@{bridges::OSMData}!setEdges@{setEdges}}
+\index{setEdges@{setEdges}!bridges::OSMData@{bridges::OSMData}}
+\subsubsection{\texorpdfstring{setEdges()}{setEdges()}}
+{\footnotesize\ttfamily void bridges\+::\+O\+S\+M\+Data\+::set\+Edges (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classbridges_1_1_o_s_m_edge}{O\+S\+M\+Edge}} $>$ \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+set edges
+
+
+\begin{DoxyParams}{Parameters}
+{\em edges} & (std\+::vector) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1_o_s_m_data_a75197b6c3de0ada8c69aae3051368d00}\label{classbridges_1_1_o_s_m_data_a75197b6c3de0ada8c69aae3051368d00}} 
+\index{bridges::OSMData@{bridges::OSMData}!setLatLongRange@{setLatLongRange}}
+\index{setLatLongRange@{setLatLongRange}!bridges::OSMData@{bridges::OSMData}}
+\subsubsection{\texorpdfstring{setLatLongRange()}{setLatLongRange()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void bridges\+::\+O\+S\+M\+Data\+::set\+Lat\+Long\+Range (\begin{DoxyParamCaption}\item[{double $\ast$}]{lat\+\_\+range,  }\item[{double $\ast$}]{longit\+\_\+range }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+set the latitude and longitude range of the dataset
+
+
+\begin{DoxyParams}{Parameters}
+{\em lat\+\_\+range} & \\
+\hline
+{\em longit\+\_\+range} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1_o_s_m_data_a4ddb01d0735da5e21fd8e33d1d5203ad}\label{classbridges_1_1_o_s_m_data_a4ddb01d0735da5e21fd8e33d1d5203ad}} 
+\index{bridges::OSMData@{bridges::OSMData}!setLatLongRange@{setLatLongRange}}
+\index{setLatLongRange@{setLatLongRange}!bridges::OSMData@{bridges::OSMData}}
+\subsubsection{\texorpdfstring{setLatLongRange()}{setLatLongRange()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void bridges\+::\+O\+S\+M\+Data\+::set\+Lat\+Long\+Range (\begin{DoxyParamCaption}\item[{double}]{lat\+\_\+min,  }\item[{double}]{lat\+\_\+max,  }\item[{double}]{long\+\_\+min,  }\item[{double}]{long\+\_\+max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+set the range of the dataset
+
+
+\begin{DoxyParams}{Parameters}
+{\em lat\+\_\+min} & \\
+\hline
+{\em long\+\_\+min} & \\
+\hline
+{\em lat\+\_\+max} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1_o_s_m_data_afd9750f005c1cee41f54b93de3a9c241}\label{classbridges_1_1_o_s_m_data_afd9750f005c1cee41f54b93de3a9c241}} 
+\index{bridges::OSMData@{bridges::OSMData}!setName@{setName}}
+\index{setName@{setName}!bridges::OSMData@{bridges::OSMData}}
+\subsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void bridges\+::\+O\+S\+M\+Data\+::set\+Name (\begin{DoxyParamCaption}\item[{const string \&}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+get the name of the dataset
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & (string) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1_o_s_m_data_aafb30f3266813b4ad8526312d4914f91}\label{classbridges_1_1_o_s_m_data_aafb30f3266813b4ad8526312d4914f91}} 
+\index{bridges::OSMData@{bridges::OSMData}!setVertices@{setVertices}}
+\index{setVertices@{setVertices}!bridges::OSMData@{bridges::OSMData}}
+\subsubsection{\texorpdfstring{setVertices()}{setVertices()}}
+{\footnotesize\ttfamily void bridges\+::\+O\+S\+M\+Data\+::set\+Vertices (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classbridges_1_1_o_s_m_vertex}{O\+S\+M\+Vertex}} $>$ \&}]{verts }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+set vertices
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertices} & (std\+::vector) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1_o_s_m_data_a30f6f5c0f20660fdb903bfe6fef4d4e0}\label{classbridges_1_1_o_s_m_data_a30f6f5c0f20660fdb903bfe6fef4d4e0}} 
+\index{bridges::OSMData@{bridges::OSMData}!toCartesianCoords@{toCartesianCoords}}
+\index{toCartesianCoords@{toCartesianCoords}!bridges::OSMData@{bridges::OSMData}}
+\subsubsection{\texorpdfstring{toCartesianCoords()}{toCartesianCoords()}}
+{\footnotesize\ttfamily void bridges\+::\+O\+S\+M\+Data\+::to\+Cartesian\+Coords (\begin{DoxyParamCaption}\item[{double}]{lat,  }\item[{double}]{longit,  }\item[{double $\ast$}]{coords }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+convert lat/long coords to Cartesian 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/cxx/src/data\+\_\+src/\mbox{\hyperlink{_o_s_m_data_8h}{O\+S\+M\+Data.\+h}}\end{DoxyCompactItemize}

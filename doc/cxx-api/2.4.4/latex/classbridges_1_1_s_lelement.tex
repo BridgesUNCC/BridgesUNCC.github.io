@@ -1,0 +1,223 @@
+\hypertarget{classbridges_1_1_s_lelement}{}\section{bridges\+::S\+Lelement$<$ E $>$ Class Template Reference}
+\label{classbridges_1_1_s_lelement}\index{bridges::SLelement$<$ E $>$@{bridges::SLelement$<$ E $>$}}
+
+
+The singly linked list element, derived from \mbox{\hyperlink{classbridges_1_1_element}{Element}}.  
+
+
+
+
+{\ttfamily \#include $<$S\+Lelement.\+h$>$}
+
+Inheritance diagram for bridges\+::S\+Lelement$<$ E $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classbridges_1_1_s_lelement}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classbridges_1_1_s_lelement_1_1_s_lelement__constlisthelper}{S\+Lelement\+\_\+constlisthelper}}
+\item 
+class \mbox{\hyperlink{classbridges_1_1_s_lelement_1_1_s_lelement__listhelper}{S\+Lelement\+\_\+listhelper}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbridges_1_1_s_lelement_a9ddac46a935b85cde76305135d16de0a}{S\+Lelement}} (\mbox{\hyperlink{classbridges_1_1_s_lelement}{S\+Lelement}} $\ast$\mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda7b8b965ad4bca0e41ab51de7b31363a1}{n}}, const \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} \&val=\mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}}(), const string \&lab=string())
+\item 
+\mbox{\hyperlink{classbridges_1_1_s_lelement_a76423021747b1f2090847c418c13352b}{S\+Lelement}} (const \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} \&val=\mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}}(), const string \&lab=string())
+\item 
+virtual const string \mbox{\hyperlink{classbridges_1_1_s_lelement_a136330b3481a47b3edb429f323274655}{get\+D\+Stype}} () const override
+\item 
+virtual \mbox{\hyperlink{classbridges_1_1_s_lelement}{S\+Lelement}} $\ast$ \mbox{\hyperlink{classbridges_1_1_s_lelement_a5bd74108a9aa49339378bf62cdbb19ca}{get\+Next}} ()
+\item 
+virtual const \mbox{\hyperlink{classbridges_1_1_s_lelement}{S\+Lelement}} $\ast$ \mbox{\hyperlink{classbridges_1_1_s_lelement_a4422b7731a84734d312b8cd8e241b1e8}{get\+Next}} () const
+\item 
+void \mbox{\hyperlink{classbridges_1_1_s_lelement_a347f8809406f930ce83bf44764a4f1b5}{set\+Next}} (\mbox{\hyperlink{classbridges_1_1_s_lelement}{S\+Lelement}} $\ast$\mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda7b8b965ad4bca0e41ab51de7b31363a1}{n}})
+\item 
+virtual void \mbox{\hyperlink{classbridges_1_1_s_lelement_ac747648849874407e9d907bb4557dd52}{cleanup}} () override
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual const pair$<$ string, string $>$ \mbox{\hyperlink{classbridges_1_1_s_lelement_a876b5af820b5fdac4854ace6a9c2e2a5}{generate\+J\+S\+ON}} (vector$<$ const \mbox{\hyperlink{classbridges_1_1_s_lelement}{S\+Lelement}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$ $\ast$ $>$ nodes) const
+\item 
+virtual void \mbox{\hyperlink{classbridges_1_1_s_lelement_abcd5b5a42ce5641e988f5e00eace7b0a}{get\+List\+Elements}} (vector$<$ const \mbox{\hyperlink{classbridges_1_1_s_lelement}{S\+Lelement}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$ $\ast$ $>$ \&nodes) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbridges_1_1_s_lelement}{S\+Lelement}} $\ast$ \mbox{\hyperlink{classbridges_1_1_s_lelement_ad7449d10a09ebc52653a7baed812aa43}{next}} = nullptr
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename E$>$\newline
+class bridges\+::\+S\+Lelement$<$ E $>$}
+
+The singly linked list element, derived from \mbox{\hyperlink{classbridges_1_1_element}{Element}}. 
+
+This class can be used to create singly linked elements, with a next \mbox{\hyperlink{classbridges_1_1_s_lelement}{S\+Lelement}} pointer
+
+Generic Parameters\+: E the application data type
+
+\begin{DoxyAuthor}{Author}
+Kalpathi Subramanian 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+6/11/15 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1_s_lelement_a9ddac46a935b85cde76305135d16de0a}\label{classbridges_1_1_s_lelement_a9ddac46a935b85cde76305135d16de0a}} 
+\index{bridges::SLelement$<$ E $>$@{bridges::SLelement$<$ E $>$}!SLelement@{SLelement}}
+\index{SLelement@{SLelement}!bridges::SLelement$<$ E $>$@{bridges::SLelement$<$ E $>$}}
+\subsubsection{\texorpdfstring{SLelement()}{SLelement()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+\mbox{\hyperlink{classbridges_1_1_s_lelement}{bridges\+::\+S\+Lelement}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$\+::\mbox{\hyperlink{classbridges_1_1_s_lelement}{S\+Lelement}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1_s_lelement}{S\+Lelement}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$ $\ast$}]{n,  }\item[{const \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} \&}]{val = {\ttfamily \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}}()},  }\item[{const string \&}]{lab = {\ttfamily string()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs an slelement with the provided value, label, and next slelement. The defaults will be used if not provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The data to hold \\
+\hline
+{\em lab} & The label to show \\
+\hline
+{\em n} & The next \mbox{\hyperlink{classbridges_1_1_s_lelement}{S\+Lelement}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1_s_lelement_a76423021747b1f2090847c418c13352b}\label{classbridges_1_1_s_lelement_a76423021747b1f2090847c418c13352b}} 
+\index{bridges::SLelement$<$ E $>$@{bridges::SLelement$<$ E $>$}!SLelement@{SLelement}}
+\index{SLelement@{SLelement}!bridges::SLelement$<$ E $>$@{bridges::SLelement$<$ E $>$}}
+\subsubsection{\texorpdfstring{SLelement()}{SLelement()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+\mbox{\hyperlink{classbridges_1_1_s_lelement}{bridges\+::\+S\+Lelement}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$\+::\mbox{\hyperlink{classbridges_1_1_s_lelement}{S\+Lelement}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} \&}]{val = {\ttfamily \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}}()},  }\item[{const string \&}]{lab = {\ttfamily string()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs an slelement with the provided value and label, setting the next slelement to N\+U\+LL. The defaults will be used if not provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The data to hold \\
+\hline
+{\em lab} & The label to show \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1_s_lelement_ac747648849874407e9d907bb4557dd52}\label{classbridges_1_1_s_lelement_ac747648849874407e9d907bb4557dd52}} 
+\index{bridges::SLelement$<$ E $>$@{bridges::SLelement$<$ E $>$}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!bridges::SLelement$<$ E $>$@{bridges::SLelement$<$ E $>$}}
+\subsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+virtual void \mbox{\hyperlink{classbridges_1_1_s_lelement}{bridges\+::\+S\+Lelement}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Calls delete on itself and each next linked S\+Lelement$\ast$
+
+\begin{DoxyWarning}{Warning}
+Only call if these S\+Lelements were all dynamicaly allocated(aka\+: using new) 
+
+If linked list contains redundant links, delete will be called multiple times on it, leading to undefined behavior 
+\end{DoxyWarning}
+
+
+Reimplemented from \mbox{\hyperlink{classbridges_1_1_data_structure_ac3ad75810fd77f0ad35b9b5123d2c8f8}{bridges\+::\+Data\+Structure}}.
+
+\mbox{\Hypertarget{classbridges_1_1_s_lelement_a876b5af820b5fdac4854ace6a9c2e2a5}\label{classbridges_1_1_s_lelement_a876b5af820b5fdac4854ace6a9c2e2a5}} 
+\index{bridges::SLelement$<$ E $>$@{bridges::SLelement$<$ E $>$}!generateJSON@{generateJSON}}
+\index{generateJSON@{generateJSON}!bridges::SLelement$<$ E $>$@{bridges::SLelement$<$ E $>$}}
+\subsubsection{\texorpdfstring{generateJSON()}{generateJSON()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+virtual const pair$<$string, string$>$ \mbox{\hyperlink{classbridges_1_1_s_lelement}{bridges\+::\+S\+Lelement}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$\+::generate\+J\+S\+ON (\begin{DoxyParamCaption}\item[{vector$<$ const \mbox{\hyperlink{classbridges_1_1_s_lelement}{S\+Lelement}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$ $\ast$ $>$}]{nodes }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classbridges_1_1_s_lelement_a136330b3481a47b3edb429f323274655}\label{classbridges_1_1_s_lelement_a136330b3481a47b3edb429f323274655}} 
+\index{bridges::SLelement$<$ E $>$@{bridges::SLelement$<$ E $>$}!getDStype@{getDStype}}
+\index{getDStype@{getDStype}!bridges::SLelement$<$ E $>$@{bridges::SLelement$<$ E $>$}}
+\subsubsection{\texorpdfstring{getDStype()}{getDStype()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+virtual const string \mbox{\hyperlink{classbridges_1_1_s_lelement}{bridges\+::\+S\+Lelement}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$\+::get\+D\+Stype (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The string representation of this data structure type 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbridges_1_1_data_structure_a957a63b106e340bc753620c650632bdc}{bridges\+::\+Data\+Structure}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classbridges_1_1_m_lelement_af6e8a50c38e6481ce2c569d0174c564e}{bridges\+::\+M\+Lelement$<$ E $>$}}, \mbox{\hyperlink{classbridges_1_1_circ_d_lelement_a0e199fe681755df694807261ce2460c2}{bridges\+::\+Circ\+D\+Lelement$<$ E $>$}}, \mbox{\hyperlink{classbridges_1_1_circ_s_lelement_a4b27c205af46162371e3ffe05cbbe3d5}{bridges\+::\+Circ\+S\+Lelement$<$ E $>$}}, and \mbox{\hyperlink{classbridges_1_1_d_lelement_a109be7aba8bd3d0450859938b5d3144c}{bridges\+::\+D\+Lelement$<$ E $>$}}.
+
+\mbox{\Hypertarget{classbridges_1_1_s_lelement_abcd5b5a42ce5641e988f5e00eace7b0a}\label{classbridges_1_1_s_lelement_abcd5b5a42ce5641e988f5e00eace7b0a}} 
+\index{bridges::SLelement$<$ E $>$@{bridges::SLelement$<$ E $>$}!getListElements@{getListElements}}
+\index{getListElements@{getListElements}!bridges::SLelement$<$ E $>$@{bridges::SLelement$<$ E $>$}}
+\subsubsection{\texorpdfstring{getListElements()}{getListElements()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+virtual void \mbox{\hyperlink{classbridges_1_1_s_lelement}{bridges\+::\+S\+Lelement}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$\+::get\+List\+Elements (\begin{DoxyParamCaption}\item[{vector$<$ const \mbox{\hyperlink{classbridges_1_1_s_lelement}{S\+Lelement}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$ $\ast$ $>$ \&}]{nodes }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Get the list of nodes
+
+
+\begin{DoxyParams}{Parameters}
+{\em nodes} & The list of nodes \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1_s_lelement_a5bd74108a9aa49339378bf62cdbb19ca}\label{classbridges_1_1_s_lelement_a5bd74108a9aa49339378bf62cdbb19ca}} 
+\index{bridges::SLelement$<$ E $>$@{bridges::SLelement$<$ E $>$}!getNext@{getNext}}
+\index{getNext@{getNext}!bridges::SLelement$<$ E $>$@{bridges::SLelement$<$ E $>$}}
+\subsubsection{\texorpdfstring{getNext()}{getNext()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+virtual \mbox{\hyperlink{classbridges_1_1_s_lelement}{S\+Lelement}}$\ast$ \mbox{\hyperlink{classbridges_1_1_s_lelement}{bridges\+::\+S\+Lelement}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$\+::get\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The next \mbox{\hyperlink{classbridges_1_1_s_lelement}{S\+Lelement}} 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classbridges_1_1_m_lelement_aceebd292e7d497f44eea5c4845e7709f}{bridges\+::\+M\+Lelement$<$ E $>$}}, \mbox{\hyperlink{classbridges_1_1_circ_d_lelement_a52996d42efc5680d1f8b406143abfee5}{bridges\+::\+Circ\+D\+Lelement$<$ E $>$}}, \mbox{\hyperlink{classbridges_1_1_circ_s_lelement_aab863627c125c6f1075af7e7b7f340cf}{bridges\+::\+Circ\+S\+Lelement$<$ E $>$}}, and \mbox{\hyperlink{classbridges_1_1_d_lelement_a0c713707d8c7d0a97fe4194ed6592ede}{bridges\+::\+D\+Lelement$<$ E $>$}}.
+
+\mbox{\Hypertarget{classbridges_1_1_s_lelement_a4422b7731a84734d312b8cd8e241b1e8}\label{classbridges_1_1_s_lelement_a4422b7731a84734d312b8cd8e241b1e8}} 
+\index{bridges::SLelement$<$ E $>$@{bridges::SLelement$<$ E $>$}!getNext@{getNext}}
+\index{getNext@{getNext}!bridges::SLelement$<$ E $>$@{bridges::SLelement$<$ E $>$}}
+\subsubsection{\texorpdfstring{getNext()}{getNext()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+virtual const \mbox{\hyperlink{classbridges_1_1_s_lelement}{S\+Lelement}}$\ast$ \mbox{\hyperlink{classbridges_1_1_s_lelement}{bridges\+::\+S\+Lelement}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$\+::get\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Constant version 
+
+Reimplemented in \mbox{\hyperlink{classbridges_1_1_m_lelement_aef3e5750e334331597bce94710745d1e}{bridges\+::\+M\+Lelement$<$ E $>$}}, \mbox{\hyperlink{classbridges_1_1_circ_d_lelement_ac266d60bd2f7ce92cb38a12875a6a468}{bridges\+::\+Circ\+D\+Lelement$<$ E $>$}}, and \mbox{\hyperlink{classbridges_1_1_d_lelement_a648012849263b4b1cd2d504d5e5fd880}{bridges\+::\+D\+Lelement$<$ E $>$}}.
+
+\mbox{\Hypertarget{classbridges_1_1_s_lelement_a347f8809406f930ce83bf44764a4f1b5}\label{classbridges_1_1_s_lelement_a347f8809406f930ce83bf44764a4f1b5}} 
+\index{bridges::SLelement$<$ E $>$@{bridges::SLelement$<$ E $>$}!setNext@{setNext}}
+\index{setNext@{setNext}!bridges::SLelement$<$ E $>$@{bridges::SLelement$<$ E $>$}}
+\subsubsection{\texorpdfstring{setNext()}{setNext()}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+void \mbox{\hyperlink{classbridges_1_1_s_lelement}{bridges\+::\+S\+Lelement}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$\+::set\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1_s_lelement}{S\+Lelement}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$ $\ast$}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets next link to \char`\"{}n\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The next \mbox{\hyperlink{classbridges_1_1_s_lelement}{S\+Lelement}} \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classbridges_1_1_s_lelement_ad7449d10a09ebc52653a7baed812aa43}\label{classbridges_1_1_s_lelement_ad7449d10a09ebc52653a7baed812aa43}} 
+\index{bridges::SLelement$<$ E $>$@{bridges::SLelement$<$ E $>$}!next@{next}}
+\index{next@{next}!bridges::SLelement$<$ E $>$@{bridges::SLelement$<$ E $>$}}
+\subsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily template$<$typename E$>$ \\
+\mbox{\hyperlink{classbridges_1_1_s_lelement}{S\+Lelement}}$\ast$ \mbox{\hyperlink{classbridges_1_1_s_lelement}{bridges\+::\+S\+Lelement}}$<$ \mbox{\hyperlink{namespacebridges_acfb0a4f7877d8f63de3e6862004c50eda3a3ea00cfc35332cedf6e5e9a32e94da}{E}} $>$\+::next = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/cxx/src/\mbox{\hyperlink{_s_lelement_8h}{S\+Lelement.\+h}}\end{DoxyCompactItemize}

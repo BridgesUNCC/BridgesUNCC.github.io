@@ -1,0 +1,217 @@
+\hypertarget{classbridges_1_1base_1_1_s_lelement}{}\section{bridges.\+base.\+S\+Lelement$<$ E $>$ Class Template Reference}
+\label{classbridges_1_1base_1_1_s_lelement}\index{bridges.base.SLelement$<$ E $>$@{bridges.base.SLelement$<$ E $>$}}
+Inheritance diagram for bridges.\+base.\+S\+Lelement$<$ E $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.402516cm]{classbridges_1_1base_1_1_s_lelement}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries S\+Lelement\+Iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement_ab9c8a08dadd76d7e0c29d7c41cf277c4}{S\+Lelement}} ()
+\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement_a8e32c9b9e8fc8f9f1eccb14b97e031e7}{S\+Lelement}} (String label, E e)
+\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement_abc5e333fd2f3289eede108175908f97d}{S\+Lelement}} (E e, \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}}$<$ E $>$ \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement_abf61c96a74ad319d561c6952ea388e0e}{next}})
+\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement_aa40c4c7bda4d7a852edb21a8ed537cae}{S\+Lelement}} (E e)
+\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement_ab5b1c20ba1d1923fad0780052fb51c99}{S\+Lelement}} (\mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}}$<$ E $>$ \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement_abf61c96a74ad319d561c6952ea388e0e}{next}})
+\item 
+String \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement_a8c48a2d34b238fa0ae7bf2d1ee58ea88}{get\+Data\+Struct\+Type}} ()
+\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}}$<$ E $>$ \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement_a060c4671e05e3f20b16630343393b80d}{get\+Next}} ()
+\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement_afdd42f03071b2614822b73729e1a5a1a}{set\+Next}} (\mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}}$<$ E $>$ \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement_abf61c96a74ad319d561c6952ea388e0e}{next}})
+\item 
+String \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement_af0ec4da5b29d0f5ab6ab38e91cca51f9}{to\+String}} ()
+\item 
+String \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement_a2928f5e8640deaceeecf01adcd75669b}{get\+Data\+Structure\+Representation}} ()
+\item 
+Iterator$<$ \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}}$<$ E $>$ $>$ \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement_a2ecf938707a8009f28dcb98112ede9d9}{iterator}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement_abadffea339171349a8e86ded9cd3fe21}{get\+List\+Elements}} (Vector$<$ \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}}$<$ E $>$$>$ nodes)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}}$<$ E $>$ \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement_abf61c96a74ad319d561c6952ea388e0e}{next}} = null
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}@brief This class can be used to instantiate Singly Linked Elements.
+
+This class extends Element and takes a generic parameter <E>
+\end{DoxyVerb}
+ representing application specific data. This element forms the basic building block for singly linked lists. Singly linked elements have a field pointing to the next element along the list.
+
+\begin{DoxyVerb}Elements contain a visualizer (ElementVisualizer) object for setting visual
+\end{DoxyVerb}
+ attributes (color, shape, opacity, size), necessary for displaying them in a web browser.
+
+Elements also have a \mbox{\hyperlink{classbridges_1_1base_1_1_link_visualizer}{Link\+Visualizer}} object, that is used when they are linked to another element, appropriate for setting link attributes, for instance, between the current element and its next element.
+
+\begin{DoxyAuthor}{Author}
+Mihai Mehedint, Kalpathi Subramanian
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+6/22/16, 1/7/17, 5/17/17
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em $<$\+E$>$} & The generic parameter object that is part of this element, representing application specific data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Example Tutorial at ~\newline
+ \href{http://bridgesuncc.github.io/Hello_World_Tutorials/SLL.html}{\texttt{ http\+://bridgesuncc.\+github.\+io/\+Hello\+\_\+\+World\+\_\+\+Tutorials/\+S\+L\+L.\+html}} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_s_lelement_ab9c8a08dadd76d7e0c29d7c41cf277c4}\label{classbridges_1_1base_1_1_s_lelement_ab9c8a08dadd76d7e0c29d7c41cf277c4}} 
+\index{bridges.base.SLelement$<$ E $>$@{bridges.base.SLelement$<$ E $>$}!SLelement@{SLelement}}
+\index{SLelement@{SLelement}!bridges.base.SLelement$<$ E $>$@{bridges.base.SLelement$<$ E $>$}}
+\subsubsection{\texorpdfstring{SLelement()}{SLelement()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{bridges.\+base.\+S\+Lelement}}$<$ E $>$.\mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This constructor creates an \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}} object and sets the next pointer to null \mbox{\Hypertarget{classbridges_1_1base_1_1_s_lelement_a8e32c9b9e8fc8f9f1eccb14b97e031e7}\label{classbridges_1_1base_1_1_s_lelement_a8e32c9b9e8fc8f9f1eccb14b97e031e7}} 
+\index{bridges.base.SLelement$<$ E $>$@{bridges.base.SLelement$<$ E $>$}!SLelement@{SLelement}}
+\index{SLelement@{SLelement}!bridges.base.SLelement$<$ E $>$@{bridges.base.SLelement$<$ E $>$}}
+\subsubsection{\texorpdfstring{SLelement()}{SLelement()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{bridges.\+base.\+S\+Lelement}}$<$ E $>$.\mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}} (\begin{DoxyParamCaption}\item[{String}]{label,  }\item[{E}]{e }\end{DoxyParamCaption})}
+
+This constructor creates an \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}} object of generic parameter object E, and label \char`\"{}label\char`\"{} and sets the next pointer to null
+
+
+\begin{DoxyParams}{Parameters}
+{\em label} & the label of \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}} that shows up on the Bridges visualization \\
+\hline
+{\em e} & the generic object that this \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}} will hold \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_s_lelement_abc5e333fd2f3289eede108175908f97d}\label{classbridges_1_1base_1_1_s_lelement_abc5e333fd2f3289eede108175908f97d}} 
+\index{bridges.base.SLelement$<$ E $>$@{bridges.base.SLelement$<$ E $>$}!SLelement@{SLelement}}
+\index{SLelement@{SLelement}!bridges.base.SLelement$<$ E $>$@{bridges.base.SLelement$<$ E $>$}}
+\subsubsection{\texorpdfstring{SLelement()}{SLelement()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{bridges.\+base.\+S\+Lelement}}$<$ E $>$.\mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}} (\begin{DoxyParamCaption}\item[{E}]{e,  }\item[{\mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}}$<$ E $>$}]{next }\end{DoxyParamCaption})}
+
+Creates a new element with value \char`\"{}e\char`\"{} and sets the next pointer to the \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}} referenced by the \char`\"{}next\char`\"{} argument
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & the generic object that this element will hold \\
+\hline
+{\em next} & the element that should be assigned to the next pointer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_s_lelement_aa40c4c7bda4d7a852edb21a8ed537cae}\label{classbridges_1_1base_1_1_s_lelement_aa40c4c7bda4d7a852edb21a8ed537cae}} 
+\index{bridges.base.SLelement$<$ E $>$@{bridges.base.SLelement$<$ E $>$}!SLelement@{SLelement}}
+\index{SLelement@{SLelement}!bridges.base.SLelement$<$ E $>$@{bridges.base.SLelement$<$ E $>$}}
+\subsubsection{\texorpdfstring{SLelement()}{SLelement()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{bridges.\+base.\+S\+Lelement}}$<$ E $>$.\mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}} (\begin{DoxyParamCaption}\item[{E}]{e }\end{DoxyParamCaption})}
+
+Creates a new element with value \char`\"{}e\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & the generic object that this element will hold \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_s_lelement_ab5b1c20ba1d1923fad0780052fb51c99}\label{classbridges_1_1base_1_1_s_lelement_ab5b1c20ba1d1923fad0780052fb51c99}} 
+\index{bridges.base.SLelement$<$ E $>$@{bridges.base.SLelement$<$ E $>$}!SLelement@{SLelement}}
+\index{SLelement@{SLelement}!bridges.base.SLelement$<$ E $>$@{bridges.base.SLelement$<$ E $>$}}
+\subsubsection{\texorpdfstring{SLelement()}{SLelement()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{bridges.\+base.\+S\+Lelement}}$<$ E $>$.\mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}}$<$ E $>$}]{next }\end{DoxyParamCaption})}
+
+Creates a new element and sets the next pointer to the \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}} \char`\"{}next\char`\"{} 
+\begin{DoxyParams}{Parameters}
+{\em next} & the \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}} that should be assigned to the next pointer \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_s_lelement_a8c48a2d34b238fa0ae7bf2d1ee58ea88}\label{classbridges_1_1base_1_1_s_lelement_a8c48a2d34b238fa0ae7bf2d1ee58ea88}} 
+\index{bridges.base.SLelement$<$ E $>$@{bridges.base.SLelement$<$ E $>$}!getDataStructType@{getDataStructType}}
+\index{getDataStructType@{getDataStructType}!bridges.base.SLelement$<$ E $>$@{bridges.base.SLelement$<$ E $>$}}
+\subsubsection{\texorpdfstring{getDataStructType()}{getDataStructType()}}
+{\footnotesize\ttfamily String \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{bridges.\+base.\+S\+Lelement}}$<$ E $>$.get\+Data\+Struct\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method gets the data structure type
+
+\begin{DoxyReturn}{Returns}
+The date structure type as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_s_lelement_a2928f5e8640deaceeecf01adcd75669b}\label{classbridges_1_1base_1_1_s_lelement_a2928f5e8640deaceeecf01adcd75669b}} 
+\index{bridges.base.SLelement$<$ E $>$@{bridges.base.SLelement$<$ E $>$}!getDataStructureRepresentation@{getDataStructureRepresentation}}
+\index{getDataStructureRepresentation@{getDataStructureRepresentation}!bridges.base.SLelement$<$ E $>$@{bridges.base.SLelement$<$ E $>$}}
+\subsubsection{\texorpdfstring{getDataStructureRepresentation()}{getDataStructureRepresentation()}}
+{\footnotesize\ttfamily String \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{bridges.\+base.\+S\+Lelement}}$<$ E $>$.get\+Data\+Structure\+Representation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1base_1_1_s_lelement_abadffea339171349a8e86ded9cd3fe21}\label{classbridges_1_1base_1_1_s_lelement_abadffea339171349a8e86ded9cd3fe21}} 
+\index{bridges.base.SLelement$<$ E $>$@{bridges.base.SLelement$<$ E $>$}!getListElements@{getListElements}}
+\index{getListElements@{getListElements}!bridges.base.SLelement$<$ E $>$@{bridges.base.SLelement$<$ E $>$}}
+\subsubsection{\texorpdfstring{getListElements()}{getListElements()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{bridges.\+base.\+S\+Lelement}}$<$ E $>$.get\+List\+Elements (\begin{DoxyParamCaption}\item[{Vector$<$ \mbox{\hyperlink{classbridges_1_1base_1_1_element}{Element}}$<$ E $>$$>$}]{nodes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classbridges_1_1base_1_1_s_lelement_a060c4671e05e3f20b16630343393b80d}\label{classbridges_1_1base_1_1_s_lelement_a060c4671e05e3f20b16630343393b80d}} 
+\index{bridges.base.SLelement$<$ E $>$@{bridges.base.SLelement$<$ E $>$}!getNext@{getNext}}
+\index{getNext@{getNext}!bridges.base.SLelement$<$ E $>$@{bridges.base.SLelement$<$ E $>$}}
+\subsubsection{\texorpdfstring{getNext()}{getNext()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}}$<$E$>$ \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{bridges.\+base.\+S\+Lelement}}$<$ E $>$.get\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the element following this element
+
+\begin{DoxyReturn}{Returns}
+S\+Lelement$<$\+E$>$ assigned to next 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_s_lelement_a2ecf938707a8009f28dcb98112ede9d9}\label{classbridges_1_1base_1_1_s_lelement_a2ecf938707a8009f28dcb98112ede9d9}} 
+\index{bridges.base.SLelement$<$ E $>$@{bridges.base.SLelement$<$ E $>$}!iterator@{iterator}}
+\index{iterator@{iterator}!bridges.base.SLelement$<$ E $>$@{bridges.base.SLelement$<$ E $>$}}
+\subsubsection{\texorpdfstring{iterator()}{iterator()}}
+{\footnotesize\ttfamily Iterator$<$\mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}}$<$E$>$ $>$ \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{bridges.\+base.\+S\+Lelement}}$<$ E $>$.iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbridges_1_1base_1_1_s_lelement_afdd42f03071b2614822b73729e1a5a1a}\label{classbridges_1_1base_1_1_s_lelement_afdd42f03071b2614822b73729e1a5a1a}} 
+\index{bridges.base.SLelement$<$ E $>$@{bridges.base.SLelement$<$ E $>$}!setNext@{setNext}}
+\index{setNext@{setNext}!bridges.base.SLelement$<$ E $>$@{bridges.base.SLelement$<$ E $>$}}
+\subsubsection{\texorpdfstring{setNext()}{setNext()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{bridges.\+base.\+S\+Lelement}}$<$ E $>$.set\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}}$<$ E $>$}]{next }\end{DoxyParamCaption})}
+
+Sets the element to point to the next \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em next} & S\+Lelement$<$\+E$>$ that should be assigned to the next pointer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_s_lelement_af0ec4da5b29d0f5ab6ab38e91cca51f9}\label{classbridges_1_1base_1_1_s_lelement_af0ec4da5b29d0f5ab6ab38e91cca51f9}} 
+\index{bridges.base.SLelement$<$ E $>$@{bridges.base.SLelement$<$ E $>$}!toString@{toString}}
+\index{toString@{toString}!bridges.base.SLelement$<$ E $>$@{bridges.base.SLelement$<$ E $>$}}
+\subsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily String \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{bridges.\+base.\+S\+Lelement}}$<$ E $>$.to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classbridges_1_1base_1_1_s_lelement_abf61c96a74ad319d561c6952ea388e0e}\label{classbridges_1_1base_1_1_s_lelement_abf61c96a74ad319d561c6952ea388e0e}} 
+\index{bridges.base.SLelement$<$ E $>$@{bridges.base.SLelement$<$ E $>$}!next@{next}}
+\index{next@{next}!bridges.base.SLelement$<$ E $>$@{bridges.base.SLelement$<$ E $>$}}
+\subsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{S\+Lelement}}$<$E$>$ \mbox{\hyperlink{classbridges_1_1base_1_1_s_lelement}{bridges.\+base.\+S\+Lelement}}$<$ E $>$.next = null\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/kalpathi/gr/bridges/java/src/main/java/bridges/base/\mbox{\hyperlink{_s_lelement_8java}{S\+Lelement.\+java}}\end{DoxyCompactItemize}
