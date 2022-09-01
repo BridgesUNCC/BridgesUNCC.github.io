@@ -68,8 +68,8 @@ Expected Output:
 The first figure shows all of the US cities plotted. The rectangle is much
 larger, since cities in Alaska and Hawaii are included. The second figure shows a set of 100 cities searched for and labeled.  The large orange city is Charlotte, NC!
 
-![Quadtree with all US Cities plotted](fig/qtree1.png)
-![Quadtree Search for 100 cities](fig/qtree2.png)
+![Quadtree with all US Cities plotted](figures/qtree1.png)
+![Quadtree Search for 100 cities](figures/qtree2.png)
 
 
 ### Help
