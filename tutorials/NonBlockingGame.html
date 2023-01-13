@@ -219,6 +219,8 @@
 	
 	<h2>3. Capturing User Input.</h2>
 
+	<h3>Using the keyboard raw state</h3>
+	
 	<p>At each frame of the game, the gameLoop() function is
 	  executed. The programmer can query the user input with functions
 	  which return booleans that indicate whether that particular key is
@@ -259,6 +261,44 @@
 	  gameLoop() function if the up arrow was pressed at the frame
 	  before. Therefore, if the up arrow is no longer pressed, it is
 	  necessary to remove the symbols by setting them to 'none'.</p>
+
+	<h3>Using the Fire interface </h3>
+
+	<p>The raw state of the keyboard will have an action executed
+	  at each frame of the game if the key stays pressed. In many
+	  games, this is not what you want. Think of a navigating a
+	  menu, you usually do not want that pressing a key to change
+	  which option of the menu is selected at each frame.</p>
+
+	<p>The Fire interface enables to only have an event happen
+	  every so many frames when the button is left pressed. You
+	  can configure the cooldown of a button (how many frames will
+	  pass between two activations) with the SetupFire
+	  functions. (There is a function for each key:
+	  keyUpSetupFire(), keyDownSetupFire(), ...). Each key has a
+	  Fire function such as keyUpFire(), keyDownFire() to know
+	  whether the current frame is a fire frame for the particular
+	  key. </p>
+	<p>If you run the following code, you will see that as long as
+	you to not press the up key, the state of the fire event is
+	false. If you leave the key pressed, the fire event will
+	happen every 20 frames. That cooldown of 20 frame was setup in
+	the  initialize() function.</p>
+
+	<div class="tabs snippet4">
+	  <div onclick="displayCodeSnippet('Java4', 'snippet4', this)">Java</div>
+	  <div onclick="displayCodeSnippet('C++4', 'snippet4', this)" >C++</div>
+	  <div onclick="displayCodeSnippet('Python4', 'snippet4', this)" >Python</div>
+	</div>
+	<div class="tabContents snippet4">
+	  <div id="Java4" w3-include-html="./Java_NonBlockingGame-Input.html"></div>
+	  <div id="C++4"  w3-include-html="testing/c++/non_blocking_game_fire.cpp.html"></div>
+	  <div id="Python4"  w3-include-html="./Python_NonBlockingGame-Input.html"></div>
+	</div>
+
+	
+	<h3>Using the state</h3>
+
 	
 	<h2>Going Further</h2>
 
