@@ -1,6 +1,7 @@
 <pre id='vimCodeElement'>
 <span class="PreProc">import</span> bridges.base.CircDLelement;
 <span class="PreProc">import</span> bridges.connect.Bridges;
+<span class="PreProc">import</span> java.util.Iterator;
 
 <span class="Type">public</span> <span class="Type">class</span> cdllist {
 
@@ -32,6 +33,26 @@
 		<span class="Comment">// link the last element to the first</span>
 		el4.setNext (el0);
 		el0.setPrev (el4);
+
+		<span class="Comment">// test CurcDLelement iterators</span>
+
+
+        System.out.println(<span class="Constant">&quot;Using foreach range loop.&quot;</span>);
+        Iterator&lt;String&gt; iter = el0.iterator();
+		<span class="Statement">for</span> (String s : el0)
+            System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">&quot;</span> + iter.next());
+
+        <span class="Comment">// use the iterator</span>
+        System.out.println(<span class="Constant">&quot;Using iterators..&quot;</span>);
+		iter = el0.iterator();
+		<span class="Statement">while</span> (iter.hasNext())
+            System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">&quot;</span> + iter.next());
+		<span class="Comment">// test reverse iterator</span>
+		System.out.println(<span class="Constant">&quot;Using reverse iterator..&quot;</span>);
+        iter = el0.reverse_iterator();
+		<span class="Statement">while</span> (iter.hasNext())
+            System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">&quot;</span> + iter.next());
+
 
 		<span class="Comment">// set colors for list elements - see the Color class for supported colors</span>
 		el0.setColor(<span class="Constant">&quot;red&quot;</span>);
