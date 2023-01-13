@@ -282,8 +282,8 @@
 	<p>If you run the following code, you will see that as long as
 	you to not press the up key, the state of the fire event is
 	false. If you leave the key pressed, the fire event will
-	happen every 20 frames. That cooldown of 20 frame was setup in
-	the  initialize() function.</p>
+	happen every 20 frames. That cooldown of 20 frames is setup in
+	the initialize() function.</p>
 
 	<div class="tabs snippet4">
 	  <div onclick="displayCodeSnippet('Java4', 'snippet4', this)">Java</div>
@@ -296,15 +296,53 @@
 	  <div id="Python4"  w3-include-html="./Python_NonBlockingGame-Input.html"></div>
 	</div>
 
+	<h3>Using the pressed/release interface</h3>
+
+	<p>Finally, you may prefer to use an interface that looks more
+	  like a pressed/released interface. Think of a button in you
+	  typical graphical interface. When you click on it, something
+	  happens when you push the button and when you release the
+	  button.</p>
 	
-	<h3>Using the state</h3>
+	<p>Bridges non blocking games provide you an interface to
+	  enable these types of behavior more easily. A key can be in
+	  one of four state: Just Pressed, Still Pressed, Just Not
+	  Pressed, and Still Not Pressed. At rest a key is in the
+	  Still Not Pressed state. When you push on the key, it will
+	  go in the Just Pressed state for a single frame. On
+	  following frames it will be in the Still Pressed state. Once
+	  you release the key it will be in the Just Not Pressed state
+	  for a single frame; and it will be in the Still Not Pressed
+	  state on the following frames.</p>
+
+	<p>Each key has four functions that tell you whether you are
+	in a particular state or not: keyUpJustPressed(),
+	keyUpStillPressed(), keyUpJustNotPressed(),
+	keyUpStillNotPressed(), keyDownJustPressed(),
+	keyDownStillPressed(), keyDownJustNotPressed(),
+	  keyDownStillNotPressed(), ...</p>
+
+	<p>Running the following code will show you how the key cycle
+	through the four states when you press and release it.</p>
+
+	<div class="tabs snippet5">
+	  <div onclick="displayCodeSnippet('Java5', 'snippet5', this)">Java</div>
+	  <div onclick="displayCodeSnippet('C++5', 'snippet5', this)" >C++</div>
+	  <div onclick="displayCodeSnippet('Python5', 'snippet5', this)" >Python</div>
+	</div>
+	<div class="tabContents snippet5">
+	  <div id="Java5" w3-include-html="./Java_NonBlockingGame-Input.html"></div>
+	  <div id="C++5"  w3-include-html="testing/c++/non_blocking_game_state.cpp.html"></div>
+	  <div id="Python5"  w3-include-html="./Python_NonBlockingGame-Input.html"></div>
+	</div>
+
 
 	
 	<h2>Going Further</h2>
 
 	<p>Despite the NonBlockingGame API is very simple, it is sufficient
 	  to make a wide variety of games. Really most games from the early
-	  games followed a similar
+	  history of video games followed a similar
 	  pattern. <a href="https://en.wikipedia.org/wiki/Adventure_(Atari_2600)">Adventure</a>,
 	  <a href="https://en.wikipedia.org/wiki/Rogue_(video_game)">Rogue</a>,
 	  <a href="https://en.wikipedia.org/wiki/Snake_(video_game_genre)">Snake</a>,
@@ -316,7 +354,8 @@
 	  <a href="https://en.wikipedia.org/wiki/Tetris">Tetris</a>,
 	  <a href="https://en.wikipedia.org/wiki/Advance_Wars">Advance Wars</a>,
 	  <a href="https://en.wikipedia.org/wiki/Sokoban">Sokoban</a>,
-	  Chess all follow a similar pattern.</p>
+	  <a href="https://en.wikipedia.org/wiki/Chess">Chess</a>
+	  all follow a similar pattern.</p>
 	
 	<p>Check Bridges <a href="../newassignments.html">assignment</a> page for games to make. The simpler
 	  ones to start with are probably Bugstomp, 2048, and Snake.</p>
