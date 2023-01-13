@@ -1,0 +1,29 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges <span class="PreProc">import</span> *
+
+<span class="Statement">class</span> <span class="Identifier">ControlsTutorial</span>(NonBlockingGame):
+    <span class="Statement">def</span> <span class="Identifier">__init__</span>(self, assid, login, apikey):
+        <span class="Identifier">super</span>(ControlsTutorial, self).__init__(assid, login, apikey, <span class="Constant">3</span>, <span class="Constant">3</span>)
+
+    <span class="Statement">def</span> <span class="Identifier">initialize</span>(self):
+        <span class="Statement">for</span> col <span class="Statement">in</span> <span class="Identifier">range</span> (<span class="Constant">0</span>,<span class="Constant">3</span>):
+            <span class="Statement">for</span> row <span class="Statement">in</span> <span class="Identifier">range</span> (<span class="Constant">0</span>,<span class="Constant">3</span>):
+                self.set_bg_color(col, row, NamedColor.white)
+
+        self.draw_symbol(<span class="Constant">0</span>, <span class="Constant">2</span>, NamedSymbol.F, NamedColor.black)
+        self.key_up_setup_fire(<span class="Constant">20</span>)
+
+    <span class="Statement">def</span> <span class="Identifier">game_loop</span>(self):
+        <span class="Statement">if</span> self.key_up_fire():
+            self.draw_symbol(<span class="Constant">0</span>, <span class="Constant">0</span>, NamedSymbol.X, NamedColor.black)
+        <span class="Statement">else</span>:
+            self.draw_symbol(<span class="Constant">0</span>, <span class="Constant">0</span>, NamedSymbol.none, NamedColor.black)
+
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+    game = ControlsTutorial(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
+    game.start()
+
+<span class="Statement">if</span> __name__ == <span class="Constant">'</span><span class="Constant">__main__</span><span class="Constant">'</span>:
+    main()
+</pre>
