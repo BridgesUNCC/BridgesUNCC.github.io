@@ -11,16 +11,20 @@
   }
 
   <span class="Type">virtual</span> <span class="Type">void</span> initialize() <span class="Type">override</span> {
-      drawSymbol(<span class="Constant">0</span>, <span class="Constant">2</span>, NamedSymbol::F, NamedColor::black);
-  }
+    keyUpSetupFire(<span class="Constant">20</span>);  <span class="Comment">// only fire every 20 frames</span>
 
-  <span class="Type">virtual</span> <span class="Type">void</span> gameLoop() <span class="Type">override</span> {
+    <span class="Comment">// setup display</span>
     <span class="Statement">for</span> (<span class="Type">int</span> r = <span class="Constant">0</span>; r &lt; <span class="Constant">3</span>; r++) {
       <span class="Statement">for</span> (<span class="Type">int</span> c = <span class="Constant">0</span>; c &lt; <span class="Constant">3</span>; c++) {
         setBGColor(r, c, NamedColor::white);
       }
     }
 
+    drawSymbol(<span class="Constant">0</span>, <span class="Constant">2</span>, NamedSymbol::F, NamedColor::black);
+  }
+
+  <span class="Type">virtual</span> <span class="Type">void</span> gameLoop() <span class="Type">override</span> {
+    <span class="Comment">//even with the button pressed, X will only appear every 20 frames</span>
     <span class="Statement">if</span> (keyUpFire())
       drawSymbol(<span class="Constant">0</span>, <span class="Constant">0</span>, NamedSymbol::X, NamedColor::black);
     <span class="Statement">else</span>

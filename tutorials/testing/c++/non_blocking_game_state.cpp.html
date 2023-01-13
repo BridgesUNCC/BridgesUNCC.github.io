@@ -1,0 +1,64 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">#include </span><span class="Constant">&lt;NonBlockingGame.h&gt;</span>
+<span class="PreProc">#include </span><span class="Constant">&lt;iostream&gt;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges::game;
+
+<span class="Type">struct</span> my_game : <span class="Statement">public</span> NonBlockingGame {
+
+  my_game(<span class="Type">int</span> assID, std::string username, std::string apikey)
+    : NonBlockingGame (assID, username, apikey, <span class="Constant">5</span>, <span class="Constant">5</span>) {
+    setTitle(<span class="Constant">&quot;My First Game!&quot;</span>);
+    setDescription(<span class="Constant">&quot;Test out your controls here&quot;</span>);
+  }
+
+  <span class="Type">virtual</span> <span class="Type">void</span> initialize() <span class="Type">override</span> {
+    <span class="Statement">for</span> (<span class="Type">int</span> r = <span class="Constant">0</span>; r &lt; <span class="Constant">5</span>; r++) {
+      <span class="Statement">for</span> (<span class="Type">int</span> c = <span class="Constant">0</span>; c &lt; <span class="Constant">5</span>; c++) {
+        setBGColor(r, c, NamedColor::white);
+      }
+    }
+
+    drawSymbol(<span class="Constant">0</span>, <span class="Constant">2</span>, NamedSymbol::J, NamedColor::black);
+    drawSymbol(<span class="Constant">0</span>, <span class="Constant">3</span>, NamedSymbol::P, NamedColor::black);
+    drawSymbol(<span class="Constant">1</span>, <span class="Constant">2</span>, NamedSymbol::S, NamedColor::black);
+    drawSymbol(<span class="Constant">1</span>, <span class="Constant">3</span>, NamedSymbol::P, NamedColor::black);
+    drawSymbol(<span class="Constant">2</span>, <span class="Constant">2</span>, NamedSymbol::J, NamedColor::black);
+    drawSymbol(<span class="Constant">2</span>, <span class="Constant">3</span>, NamedSymbol::N, NamedColor::black);
+    drawSymbol(<span class="Constant">2</span>, <span class="Constant">4</span>, NamedSymbol::P, NamedColor::black);
+    drawSymbol(<span class="Constant">3</span>, <span class="Constant">2</span>, NamedSymbol::S, NamedColor::black);
+    drawSymbol(<span class="Constant">3</span>, <span class="Constant">3</span>, NamedSymbol::N, NamedColor::black);
+    drawSymbol(<span class="Constant">3</span>, <span class="Constant">4</span>, NamedSymbol::P, NamedColor::black);
+  }
+
+  <span class="Type">virtual</span> <span class="Type">void</span> gameLoop() <span class="Type">override</span> {
+
+      <span class="Statement">if</span> (keyUpJustPressed())
+	drawSymbol(<span class="Constant">0</span>, <span class="Constant">0</span>, NamedSymbol::X, NamedColor::black);
+      <span class="Statement">else</span>
+	drawSymbol(<span class="Constant">0</span>, <span class="Constant">0</span>, NamedSymbol::none, NamedColor::black);
+
+      <span class="Statement">if</span> (keyUpStillPressed())
+	drawSymbol(<span class="Constant">1</span>, <span class="Constant">0</span>, NamedSymbol::X, NamedColor::black);
+      <span class="Statement">else</span>
+	drawSymbol(<span class="Constant">1</span>, <span class="Constant">0</span>, NamedSymbol::none, NamedColor::black);
+
+      <span class="Statement">if</span> (keyUpJustNotPressed())
+	drawSymbol(<span class="Constant">2</span>, <span class="Constant">0</span>, NamedSymbol::X, NamedColor::black);
+      <span class="Statement">else</span>
+	drawSymbol(<span class="Constant">2</span>, <span class="Constant">0</span>, NamedSymbol::none, NamedColor::black);
+
+      <span class="Statement">if</span> (keyUpStillNotPressed())
+	drawSymbol(<span class="Constant">3</span>, <span class="Constant">0</span>, NamedSymbol::X, NamedColor::black);
+      <span class="Statement">else</span>
+	drawSymbol(<span class="Constant">3</span>, <span class="Constant">0</span>, NamedSymbol::none, NamedColor::black);
+  }
+};
+
+<span class="Type">int</span> main (<span class="Type">int</span> argc, <span class="Type">char</span>** argv) {
+	my_game g(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+		<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+  g.start();
+}
+</pre>
