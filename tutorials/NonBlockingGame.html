@@ -271,7 +271,7 @@
 	  which option of the menu is selected at each frame.</p>
 
 	<p>The Fire interface enables to only have an event happen
-	  every so many frames when the button is left pressed. You
+	  every so-many frames when the button is left pressed. You
 	  can configure the cooldown of a button (how many frames will
 	  pass between two activations) with the SetupFire
 	  functions. (There is a function for each key:
@@ -296,18 +296,18 @@
 	  <div id="Python4"  w3-include-html="./Python_NonBlockingGame-Input.html"></div>
 	</div>
 
-	<h3>Using the pressed/release interface</h3>
+	<h3>Using the pressed/released interface</h3>
 
 	<p>Finally, you may prefer to use an interface that looks more
-	  like a pressed/released interface. Think of a button in you
+	  like a pressed/released interface. Think of a button in your
 	  typical graphical interface. When you click on it, something
 	  happens when you push the button and when you release the
 	  button.</p>
 	
-	<p>Bridges non blocking games provide you an interface to
+	<p>Bridges non blocking game framework provides you an interface to
 	  enable these types of behavior more easily. A key can be in
 	  one of four state: Just Pressed, Still Pressed, Just Not
-	  Pressed, and Still Not Pressed. At rest a key is in the
+	  Pressed, and Still Not Pressed. At rest, a key is in the
 	  Still Not Pressed state. When you push on the key, it will
 	  go in the Just Pressed state for a single frame. On
 	  following frames it will be in the Still Pressed state. Once
