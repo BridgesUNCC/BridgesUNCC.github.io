@@ -60,7 +60,7 @@
 	<td colspan = "col-md-2">
 	<b>Step 3: Get Installation template to install BRIDGES and its Dependencies</b> 
 	Repl.it allows Repls (programs) to be installed via a template mechanism;
-	You will import a BRIDGES C++ Replit template from a git repository, that will
+	You will import a BRIDGES C++ Replit template from a git repository, and 
 	create an example BRIDGES program. This involves the following steps.
 	<ul> 
 		<li> Once you are logged in, look for the blue <b> + Create</b> button on the top
@@ -71,8 +71,6 @@
 			IDE popup wih an editor on the left and a console on the right 
 			(see adjacent image). Click on the file CxxTest.cpp and you will 
 			see the trivial BRIDGES Hello World  program.
-		<li>At the top of the Files menu, click the three dots and select "Show hidden files". Navigate to your .replit file. 
-			Save the top 3 lines in this file, and delete the rest of the file contents. repl.it automatically overwrites this file and running Bridges will not work unless the .replit file is modified.</li>
 	</ul>
 	</td>
 	<td class = "col-md-2"> 
@@ -84,8 +82,7 @@
 	<tr>
         <td class = "col-md-2"> <b>Step 4: Load and run an example BRIDGES program</b>
         <ul>
-        <li> Go the <a href="https://bridgesuncc.github.io/tutorials/Overview.htm
-l"> 
+        <li> Go to the <a href="https://bridgesuncc.github.io/tutorials/testing/java/tut_sllist_p1.java.html"> 
             BRIDGES Tutorial</a> site and copy/paste a C++ tutorial program into 
             the main window.
         <li> Set an assignment number, and your credentials (assignment number, BRIDGES 
@@ -99,13 +96,32 @@ l">
         <img src = "./img/bridges_setup/replit_cxx/bridges_program.png" width = "800" border="1px"></img>
         <img src = "./img/bridges_setup/replit_cxx/run_bridges.png" width = "800" border="1px"></img>
         </td>
+		<td>
+		</td>
     </tr>
 	<tr>
 	<td>
 	<b> Please Note:</b> 
 	<ul> 
+	<li> <b> For Instructors:</b> The easiest way to get students set up with
+		replit is as follows:
+		<ul> 
+			<li> Create a C++ Replit template as detailed above (Steps 1,2, 3). </li>
+			<li> Decide on the scaffold C++ program you want to create 
+				for your students to get started on your assignment and 
+				make that part of the Repl; if this has more than 1 source
+				file, then these can be added to the Makefile in the SRCS line.
+			<li> Save the repl and go back to your list of repls.</li>
+			<li> Publish your repl (blue button on the top right); follow the
+				steps and you will see a link that can be transmitted to the
+				students </li>
+			<li> Students can use the link to clone the repl and get started
+				on their assignment; they will need no additional setup, unless
+				they add new source files, or change their source file 
+				names, etc (Makefile will need editing). </li>
+		</ul>
 	<li> Each new repl (BRIDGES program) will require the above steps to access
-		the BRIDGES API. 
+		the BRIDGES API. </li>
 	<li> Note that a specific BRIDGES program might require additional
 		include files. Refer to the <a href = "https://bridgesuncc.github.io/doc/cxx-api/current/html/index.html"> BRIDGES C++ documentation</a> and  <a href = "https://bridgesuncc.github.io/tutorials/Overview.html"> BRIDGES Tutorials</a> for additional help.
 	<li> A typical C++ program will have multiple source and include files. 
