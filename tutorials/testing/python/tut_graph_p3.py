@@ -62,7 +62,7 @@ def main():
         sle = sle.next
 
     # using iterators to print the actors Kevin Bacon is connected to
-    print("\nUsing iterator to print who Kevin Bacon is connected to\n")
+    print("\nUsing iterator to print the movies that Kevin Bacon is adjacent to\n")
     for edge in graph.out_going_edge_set_of(kevin_bacon):
         print(edge.fromv + "--->" + edge.tov)
 

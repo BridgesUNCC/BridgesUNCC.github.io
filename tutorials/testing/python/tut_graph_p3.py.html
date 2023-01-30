@@ -63,7 +63,7 @@
         sle = sle.next
 
     <span class="Comment"># using iterators to print the actors Kevin Bacon is connected to</span>
-    <span class="Identifier">print</span>(<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">Using iterator to print who Kevin Bacon is connected to</span><span class="Special">\n</span><span class="Constant">&quot;</span>)
+    <span class="Identifier">print</span>(<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">Using iterator to print the movies that Kevin Bacon is adjacent to</span><span class="Special">\n</span><span class="Constant">&quot;</span>)
     <span class="Statement">for</span> edge <span class="Statement">in</span> graph.out_going_edge_set_of(kevin_bacon):
         <span class="Identifier">print</span>(edge.fromv + <span class="Constant">&quot;</span><span class="Constant">---&gt;</span><span class="Constant">&quot;</span> + edge.tov)
 

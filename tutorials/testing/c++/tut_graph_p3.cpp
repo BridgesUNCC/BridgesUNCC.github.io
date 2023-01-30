@@ -58,7 +58,7 @@ int main(int argc, char **argv) {
 
 	// Next, we illustrate traversing the adacency list  in different ways
 
-	// using core BRIDGES classes to print who Kevin Bacon is connected to
+	// using core BRIDGES classes to print the movies that Kevin Bacon is adjacent to
 	cout << "Using core Bridges classes\n" << endl;
 	for (SLelement<Edge<string>> *sle = graph.getAdjacencyList(kevin_bacon);
 						sle != nullptr; sle = sle->getNext()) {
