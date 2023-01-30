@@ -68,7 +68,7 @@ public class tut_graph_p3 {
 			System.out.println("\t" + edge.getFrom() +  " --> " +  edge.getTo() );
 		}
 
-		// using iterators to print the actors Kevin Bacon is connected to
+		// using iterators to print the movies Kevin Bacon is adjacent to
 		System.out.println("Using iterators");
 		for (Edge<String, String> edge : graph.outgoingEdgeSetOf(kevin_bacon)) {
 			System.out.println("\t" + edge.getFrom() + "-->" + edge.getTo());

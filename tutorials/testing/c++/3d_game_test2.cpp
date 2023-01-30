@@ -52,12 +52,14 @@ struct Test3DAPI: public NonBlockingGame3D {
         iTime += 1;
 		Scene sc = getCurrentScene();
 		TerrainMesh& mesh = sc.get("terr");
+		vector<float> verts = sc.get("terr").getVertices();
+		vector<float> cols = sc.get("terr").getColors();
         for(int i = 0; i < sc.get("terr").getRows(); i++){
 			for(int j = 0; j < sc.get("terr").getCols(); j++){
-				mesh.getVertices().push_back(sin(iTime + i + j) * 100);
-				mesh.getColors().push_back(sin(iTime + i));
-				mesh.getColors().push_back(sin(iTime + i+j));
-				mesh.getColors().push_back(sin(iTime + j));
+				verts.push_back(sin(iTime + i + j) * 100);
+				cols.push_back(sin(iTime + i));
+				cols.push_back(sin(iTime + i+j));
+				cols.push_back(sin(iTime + j));
 			}
         }
     }

@@ -69,7 +69,7 @@
 			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">&quot;</span> + edge.getFrom() +  <span class="Constant">&quot; --&gt; &quot;</span> +  edge.getTo() );
 		}
 
-		<span class="Comment">// using iterators to print the actors Kevin Bacon is connected to</span>
+		<span class="Comment">// using iterators to print the movies Kevin Bacon is adjacent to</span>
 		System.out.println(<span class="Constant">&quot;Using iterators&quot;</span>);
 		<span class="Statement">for</span> (Edge&lt;String, String&gt; edge : graph.outgoingEdgeSetOf(kevin_bacon)) {
 			System.out.println(<span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">&quot;</span> + edge.getFrom() + <span class="Constant">&quot;--&gt;&quot;</span> + edge.getTo());
