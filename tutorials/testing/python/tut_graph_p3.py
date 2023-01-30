@@ -54,14 +54,14 @@ def main():
     # Next, we illustrate traversing the adacency list  in different ways
     # using core BRIDGES classes to print who Kevin Bacon is connected to
 
-    print("Using core Bridges classes to print who Kevin Bacon is connected to\n")
+    print("Using core Bridges classes to print movies that Kevin Bacon is adjacent tdo\n")
     sle = graph.get_adjacency_list(kevin_bacon)
     while sle != None:
         edge = sle.value;
         print(edge.fromv + " --> " + sle.value.tov)
         sle = sle.next
 
-    # using iterators to print the actors Kevin Bacon is connected to
+    # using iterators to print the movies that Kevin Bacon is adjacent to
     print("\nUsing iterator to print the movies that Kevin Bacon is adjacent to\n")
     for edge in graph.out_going_edge_set_of(kevin_bacon):
         print(edge.fromv + "--->" + edge.tov)

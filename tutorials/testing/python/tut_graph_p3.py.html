@@ -55,14 +55,14 @@
     <span class="Comment"># Next, we illustrate traversing the adacency list  in different ways</span>
     <span class="Comment"># using core BRIDGES classes to print who Kevin Bacon is connected to</span>
 
-    <span class="Identifier">print</span>(<span class="Constant">&quot;</span><span class="Constant">Using core Bridges classes to print who Kevin Bacon is connected to</span><span class="Special">\n</span><span class="Constant">&quot;</span>)
+    <span class="Identifier">print</span>(<span class="Constant">&quot;</span><span class="Constant">Using core Bridges classes to print movies that Kevin Bacon is adjacent tdo</span><span class="Special">\n</span><span class="Constant">&quot;</span>)
     sle = graph.get_adjacency_list(kevin_bacon)
     <span class="Statement">while</span> sle != <span class="Identifier">None</span>:
         edge = sle.value;
         <span class="Identifier">print</span>(edge.fromv + <span class="Constant">&quot;</span><span class="Constant"> --&gt; </span><span class="Constant">&quot;</span> + sle.value.tov)
         sle = sle.next
 
-    <span class="Comment"># using iterators to print the actors Kevin Bacon is connected to</span>
+    <span class="Comment"># using iterators to print the movies that Kevin Bacon is adjacent to</span>
     <span class="Identifier">print</span>(<span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">Using iterator to print the movies that Kevin Bacon is adjacent to</span><span class="Special">\n</span><span class="Constant">&quot;</span>)
     <span class="Statement">for</span> edge <span class="Statement">in</span> graph.out_going_edge_set_of(kevin_bacon):
         <span class="Identifier">print</span>(edge.fromv + <span class="Constant">&quot;</span><span class="Constant">---&gt;</span><span class="Constant">&quot;</span> + edge.tov)

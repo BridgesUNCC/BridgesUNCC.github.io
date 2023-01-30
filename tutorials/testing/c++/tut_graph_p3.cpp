@@ -67,7 +67,7 @@ int main(int argc, char **argv) {
 	}
 
 
-	// using iterators to print the actors Kevin Bacon is connected to
+	// using iterators to print the movies that Kevin Bacon is adjacent to
 	cout << "Using iterators\n" << endl;
 	for (auto& edge : graph.outgoingEdgeSetOf(kevin_bacon)) {
 		string from = edge.from(), to = edge.to();

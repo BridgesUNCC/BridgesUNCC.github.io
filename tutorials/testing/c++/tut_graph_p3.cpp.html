@@ -68,7 +68,7 @@
 	}
 
 
-	<span class="Comment">// using iterators to print the actors Kevin Bacon is connected to</span>
+	<span class="Comment">// using iterators to print the movies that Kevin Bacon is adjacent to</span>
 	cout &lt;&lt; <span class="Constant">&quot;Using iterators</span><span class="Special">\n</span><span class="Constant">&quot;</span> &lt;&lt; endl;
 	<span class="Statement">for</span> (<span class="Type">auto</span>&amp; edge : graph.outgoingEdgeSetOf(kevin_bacon)) {
 		string from = edge.from(), to = edge.to();
