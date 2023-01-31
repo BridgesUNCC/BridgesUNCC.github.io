@@ -52,9 +52,9 @@ def main():
     graph.add_edge(brad_pitt, denzel_washington)
 
     # Next, we illustrate traversing the adacency list  in different ways
-    # using core BRIDGES classes to print who Kevin Bacon is connected to
 
-    print("Using core Bridges classes to print movies that Kevin Bacon is adjacent tdo\n")
+    # using core BRIDGES classes to print movies that Kevin Bacon is  adjacent to
+    print("Using core Bridges classes to print movies that Kevin Bacon is adjacent to\n")
     sle = graph.get_adjacency_list(kevin_bacon)
     while sle != None:
         edge = sle.value;

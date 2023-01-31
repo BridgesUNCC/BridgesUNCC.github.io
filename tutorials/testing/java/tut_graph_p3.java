@@ -59,7 +59,7 @@ public class tut_graph_p3 {
 
 		// Next, we illustrate traversing the adacency list  in different ways
 
-		// using core BRIDGES classes to print the movies that Kevin Bacon is adjacen to
+		// using core BRIDGES classes to print the movies that Kevin Bacon is adjacent to
 		System.out.println("Using core Bridges classes:");
 		for (SLelement<Edge<String, String>> sle =
 				graph.getAdjacencyList(kevin_bacon);
