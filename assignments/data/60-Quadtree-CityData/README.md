@@ -75,7 +75,39 @@ larger, since cities in Alaska and Hawaii are included. The second figure shows 
 ### Help
 #### For C++
 [SymbolCollection documentation](https://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_symbol_collection.html)
+
+[Rectangle](https://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_rectangle.html)
+
+[Circle](https://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_circle.html)
+
+[Polyline](https://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_polyline.html)
+
+[Polygon](https://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_polygon.html)
+
+[Text](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_text.html)
+
 #### For Java
 [SymbolCollection documentation](https://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_symbol_collection.html)
+
+[Rectangle](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_rectangle.html)
+
+[Circle](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_circle.html)
+
+[Polygon](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_polygon.html)
+
+[Polyline](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_polyline.html)
+
+[Text](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_text.html)
+
 #### For Python
 [SymbolCollection documentation](https://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1symbol__collection_1_1_symbol_collection.html)
+
+[Rectangle](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1rectangle_1_1_rectangle.html)
+
+[Circle](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1circle_1_1_circle.html)
+
+[Polygon](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1polygon_1_1_polygon.html)
+
+[Polyline](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1polyline_1_1_polyline.html)
+
+[Text](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1text_1_1_text.html)
