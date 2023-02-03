@@ -1,4 +1,4 @@
-git Assignment 15 : Falling Sand
+Assignment 15 : Falling Sand
 ============================
 
 Source
