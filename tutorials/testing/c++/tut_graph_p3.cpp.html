@@ -59,7 +59,7 @@
 
 	<span class="Comment">// Next, we illustrate traversing the adacency list  in different ways</span>
 
-	<span class="Comment">// using core BRIDGES classes to print who Kevin Bacon is connected to</span>
+	<span class="Comment">// using core BRIDGES classes to print the movies that Kevin Bacon is adjacent to</span>
 	cout &lt;&lt; <span class="Constant">&quot;Using core Bridges classes</span><span class="Special">\n</span><span class="Constant">&quot;</span> &lt;&lt; endl;
 	<span class="Statement">for</span> (SLelement&lt;Edge&lt;string&gt;&gt; *sle = graph.getAdjacencyList(kevin_bacon);
 						sle != <span class="Constant">nullptr</span>; sle = sle-&gt;getNext()) {
@@ -68,7 +68,7 @@
 	}
 
 
-	<span class="Comment">// using iterators to print the actors Kevin Bacon is connected to</span>
+	<span class="Comment">// using iterators to print the movies that Kevin Bacon is adjacent to</span>
 	cout &lt;&lt; <span class="Constant">&quot;Using iterators</span><span class="Special">\n</span><span class="Constant">&quot;</span> &lt;&lt; endl;
 	<span class="Statement">for</span> (<span class="Type">auto</span>&amp; edge : graph.outgoingEdgeSetOf(kevin_bacon)) {
 		string from = edge.from(), to = edge.to();

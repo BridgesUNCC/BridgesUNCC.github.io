@@ -59,7 +59,7 @@ public class tut_graph_p3 {
 
 		// Next, we illustrate traversing the adacency list  in different ways
 
-		// using core BRIDGES classes to print who Kevin Bacon is connected to
+		// using core BRIDGES classes to print the movies that Kevin Bacon is adjacent to
 		System.out.println("Using core Bridges classes:");
 		for (SLelement<Edge<String, String>> sle =
 				graph.getAdjacencyList(kevin_bacon);
@@ -68,7 +68,7 @@ public class tut_graph_p3 {
 			System.out.println("\t" + edge.getFrom() +  " --> " +  edge.getTo() );
 		}
 
-		// using iterators to print the actors Kevin Bacon is connected to
+		// using iterators to print the movies Kevin Bacon is adjacent to
 		System.out.println("Using iterators");
 		for (Edge<String, String> edge : graph.outgoingEdgeSetOf(kevin_bacon)) {
 			System.out.println("\t" + edge.getFrom() + "-->" + edge.getTo());

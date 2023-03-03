@@ -1,0 +1,73 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;DataSource.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;TerrainMesh.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;data_src/ElevationData.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;NonBlockingGame3D.h&quot;</span>
+
+<span class="PreProc">#include </span><span class="Constant">&quot;Scene.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Camera.h&quot;</span>
+
+<span class="PreProc">#include </span><span class="Constant">&lt;iostream&gt;</span>
+<span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
+<span class="PreProc">#include </span><span class="Constant">&lt;vector&gt;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> std;
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges::game;
+
+<span class="Type">struct</span> Test3DAPI: <span class="Statement">public</span> NonBlockingGame3D {
+    <span class="Type">int</span> frame;
+    <span class="Type">bool</span> flag;
+    <span class="Type">double</span> iTime;
+
+    Test3DAPI(<span class="Type">int</span> assID, string username, string apikey): NonBlockingGame3D(<span class="Constant">0</span>, username, apikey){
+        frame = <span class="Constant">0</span>;
+        flag = <span class="Constant">true</span>;
+        iTime = <span class="Constant">0.0</span>;
+    }
+
+    <span class="Type">virtual</span> <span class="Type">void</span> initialize() <span class="Type">override</span> {
+        DataSource ds;
+        dataset::ElevationData elev_data;
+		elev_data = ds.getElevationData(<span class="Constant">33.394759</span>, -<span class="Constant">122.299805</span>, <span class="Constant">42.747012</span>,
+											-<span class="Constant">114.916992</span>, <span class="Constant">0.2</span>);
+<span class="Comment">//		elev_data = ds.getElevationData(33.394759, -122.299805, 36.747012,</span>
+<span class="Comment">//											-118.916992, 0.2);</span>
+        vector&lt;<span class="Type">float</span>&gt; verts;
+		<span class="Statement">for</span> (<span class="Type">auto</span> v : elev_data.getData())
+                verts.push_back (v);
+
+
+        TerrainMesh terrain(<span class="Constant">&quot;terr&quot;</span>, elev_data.getRows(), elev_data.getCols(),
+												verts);
+        <span class="Type">float</span> position[] = {<span class="Constant">0</span>., <span class="Constant">0</span>., <span class="Constant">0</span>.};
+
+		<span class="Comment">// get the current scene object</span>
+		Scene scene;
+        scene.add(terrain);
+		addScene(scene);
+    }
+
+    <span class="Type">virtual</span> <span class="Type">void</span> gameLoop() <span class="Type">override</span> {
+        iTime += <span class="Constant">1</span>;
+		Scene sc = getCurrentScene();
+		TerrainMesh&amp; mesh = sc.get(<span class="Constant">&quot;terr&quot;</span>);
+		vector&lt;<span class="Type">float</span>&gt; verts = sc.get(<span class="Constant">&quot;terr&quot;</span>).getVertices();
+		vector&lt;<span class="Type">float</span>&gt; cols = sc.get(<span class="Constant">&quot;terr&quot;</span>).getColors();
+        <span class="Statement">for</span>(<span class="Type">int</span> i = <span class="Constant">0</span>; i &lt; sc.get(<span class="Constant">&quot;terr&quot;</span>).getRows(); i++){
+			<span class="Statement">for</span>(<span class="Type">int</span> j = <span class="Constant">0</span>; j &lt; sc.get(<span class="Constant">&quot;terr&quot;</span>).getCols(); j++){
+				verts.push_back(sin(iTime + i + j) * <span class="Constant">100</span>);
+				cols.push_back(sin(iTime + i));
+				cols.push_back(sin(iTime + i+j));
+				cols.push_back(sin(iTime + j));
+			}
+        }
+    }
+};
+<span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span>** argv) {
+	Test3DAPI terrain_navigation(<span class="Constant">10</span>, <span class="Constant">&quot;kalpathi60&quot;</span>, <span class="Constant">&quot;486749122386&quot;</span>);
+	terrain_navigation.start();
+}
+
+</pre>

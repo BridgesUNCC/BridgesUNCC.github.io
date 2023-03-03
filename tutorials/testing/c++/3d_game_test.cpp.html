@@ -41,7 +41,7 @@
 
         TerrainMesh terrain(<span class="Constant">&quot;terr&quot;</span>, elev_data.getRows(), elev_data.getCols(),
 												verts);
-        <span class="Type">float</span> position[] = {<span class="Constant">0.</span>, <span class="Constant">0.</span>, <span class="Constant">0.</span>};
+        <span class="Type">float</span> position[] = {<span class="Constant">0</span>., <span class="Constant">0</span>., <span class="Constant">0</span>.};
 
 		<span class="Comment">// get the current scene object</span>
 		Scene scene;
@@ -52,14 +52,13 @@
     <span class="Type">virtual</span> <span class="Type">void</span> gameLoop() <span class="Type">override</span> {
         iTime += <span class="Constant">1</span>;
 		Scene sc = getCurrentScene();
-		vector&lt;<span class="Type">float</span>&gt; verts = sc.get(<span class="Constant">&quot;terr&quot;</span>).getVertices();
-		vector&lt;<span class="Type">float</span>&gt; cols  = sc.get(<span class="Constant">&quot;terr&quot;</span>).getColors();
+		TerrainMesh&amp; mesh = sc.get(<span class="Constant">&quot;terr&quot;</span>);
         <span class="Statement">for</span>(<span class="Type">int</span> i = <span class="Constant">0</span>; i &lt; sc.get(<span class="Constant">&quot;terr&quot;</span>).getRows(); i++){
 			<span class="Statement">for</span>(<span class="Type">int</span> j = <span class="Constant">0</span>; j &lt; sc.get(<span class="Constant">&quot;terr&quot;</span>).getCols(); j++){
-				verts.push_back(sin(iTime + i + j) * <span class="Constant">100</span>);
-				cols.push_back(sin(iTime + i));
-				cols.push_back(sin(iTime + i+j));
-				cols.push_back(sin(iTime + j));
+				mesh.getVertices().push_back(sin(iTime + i + j) * <span class="Constant">100</span>);
+				mesh.getColors().push_back(sin(iTime + i));
+				mesh.getColors().push_back(sin(iTime + i+j));
+				mesh.getColors().push_back(sin(iTime + j));
 			}
         }
     }

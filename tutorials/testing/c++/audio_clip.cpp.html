@@ -29,21 +29,21 @@
 	bridges.setTitle(<span class="Constant">&quot;Audio Signals: Play and Display Using BRIDGES&quot;</span>);
 	bridges.setDescription(<span class="Constant">&quot;This example shows support for displaying and playing audio signals using BRIDGES; the bottom view shows the fraction of signal between the two red cursors (initially at the far ends of the signal. Move them around to zoom into the signal&quot;</span>);
 
-    AudioClip clip (<span class="Constant">44100</span>*<span class="Constant">.25</span>, <span class="Constant">1</span>, <span class="Constant">32</span>, <span class="Constant">44100</span>);
+    AudioClip clip (<span class="Constant">44100</span>*.<span class="Constant">25</span>, <span class="Constant">1</span>, <span class="Constant">32</span>, <span class="Constant">44100</span>);
 
     generateSine(&amp;clip, <span class="Constant">32</span>);
 
     bridges.setDataStructure(clip);
     bridges.visualize();
 
-    AudioClip clip2 (<span class="Constant">44100</span>*<span class="Constant">.25</span>, <span class="Constant">1</span>, <span class="Constant">8</span>, <span class="Constant">44100</span>);
+    AudioClip clip2 (<span class="Constant">44100</span>*.<span class="Constant">25</span>, <span class="Constant">1</span>, <span class="Constant">8</span>, <span class="Constant">44100</span>);
 
     generateSine(&amp;clip2, <span class="Constant">8</span>);
 
     bridges.setDataStructure(clip2);
     bridges.visualize();
 
-    AudioClip clip3 (<span class="Constant">44100</span>*<span class="Constant">.25</span>, <span class="Constant">1</span>, <span class="Constant">16</span>, <span class="Constant">44100</span>);
+    AudioClip clip3 (<span class="Constant">44100</span>*.<span class="Constant">25</span>, <span class="Constant">1</span>, <span class="Constant">16</span>, <span class="Constant">44100</span>);
 
     generateSine(&amp;clip3, <span class="Constant">16</span>);
 
