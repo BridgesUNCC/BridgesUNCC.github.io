@@ -1,0 +1,26 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">import</span> bridges.games.*;
+<span class="PreProc">import</span> bridges.base.*;
+
+<span class="Type">class</span> MinimalGame <span class="Type">extends</span> NonBlockingGame {
+    <span class="Type">public</span> MinimalGame(<span class="Type">int</span> assignmentnumber, String username, String apikey) {
+	<span class="Type">super</span> (assignmentnumber, username,  apikey, <span class="Constant">10</span>, <span class="Constant">10</span>);
+	<span class="Comment">//this created a game board of 10x10 into assignment 1</span>
+    }
+
+    <span class="Type">public</span> <span class="Type">void</span> initialize() {
+	<span class="Comment">//This function is executed once at the beginning of the game</span>
+    }
+
+    <span class="Type">public</span> <span class="Type">void</span> gameLoop() {
+	<span class="Comment">//This function is executed each frame of the game</span>
+    }
+
+    <span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span>  main (String args[]) {
+    MinimalGame g = <span class="Statement">new</span> MinimalGame(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+			<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+    g.start();
+    }
+}
+</pre>

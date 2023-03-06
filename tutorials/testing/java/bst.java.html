@@ -1,0 +1,63 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">import</span> bridges.connect.Bridges;
+<span class="PreProc">import</span> bridges.connect.DataSource;
+<span class="PreProc">import</span> bridges.base.BSTElement;
+<span class="PreProc">import</span> bridges.data_src_dependent.EarthquakeUSGS;
+<span class="PreProc">import</span> bridges.data_src_dependent.Tweet;
+<span class="PreProc">import</span> bridges.data_src_dependent.USGSaccount;
+<span class="PreProc">import</span> java.util.List;
+
+<span class="Type">public</span> <span class="Type">class</span> bst {
+	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) <span class="Type">throws</span> Exception {
+
+
+		<span class="Comment">//create the Bridges object</span>
+		Bridges bridges = <span class="Statement">new</span> Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+			<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+		<span class="Comment">// title, description</span>
+		bridges.setTitle(<span class="Constant">&quot;A Binary Search Tree Example with Earthquake Data&quot;</span>);
+		bridges.setDescription(<span class="Constant">&quot;10 sets of earthquake are gathered and sorted with nodes whos magnitude is greater than &quot;</span>
+			+ <span class="Constant">&quot;the parent is set to the right and nodes with a magnitude less than the parent set to the left. &quot;</span>
+			+ <span class="Constant">&quot;The root is set to red the leaf nodes are neutral.&quot;</span>);
+
+
+		<span class="Comment">// Retrieve a list of 25 earthquake  records  from USGS using the BRIDGES API</span>
+		<span class="Type">int</span> Max_Quakes = <span class="Constant">25</span>;
+
+		DataSource ds = bridges.getDataSource();
+		List&lt;EarthquakeUSGS&gt; eqlist = ds.getEarthquakeUSGSData(Max_Quakes);
+
+		<span class="Comment">// create BST nodes and insert into a tree</span>
+		BSTElement&lt;Double, EarthquakeUSGS&gt; root = <span class="Constant">null</span>;
+		<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; Max_Quakes; k++) {
+			BSTElement&lt;Double, EarthquakeUSGS&gt; bst_node =
+				<span class="Statement">new</span> BSTElement&lt;Double, EarthquakeUSGS&gt;(eqlist.get(k).getMagnitude(), eqlist.get(k));
+			<span class="Comment">// set label of the node</span>
+			bst_node.setLabel(eqlist.get(k).getTitle() + <span class="Constant">&quot;</span><span class="Special">\n\n</span><span class="Constant">Lat/Long: ( &quot;</span> +
+				eqlist.get(k).getLatit() + <span class="Constant">&quot;,&quot;</span> + eqlist.get(k).getLongit() + <span class="Constant">&quot; )</span><span class="Special">\n\n</span><span class="Constant">&quot;</span> +
+				eqlist.get(k).getTime());
+			root = insert_R (root, bst_node);
+		}
+
+
+		<span class="Comment">// set some visual attributes</span>
+		root.setColor(<span class="Constant">&quot;red&quot;</span>);
+
+		<span class="Comment">//set visualizer type</span>
+		bridges.setDataStructure(root);
+		<span class="Comment">// visualize the tree</span>
+		bridges.visualize();
+	}
+	<span class="Comment">// recursive insert method to insert nodes into a binary search tree</span>
+	<span class="Type">public</span> <span class="Type">static</span> BSTElement&lt;Double, EarthquakeUSGS&gt; insert_R (BSTElement&lt;Double, EarthquakeUSGS&gt; rt,
+		BSTElement&lt;Double, EarthquakeUSGS&gt; new_el) {
+		<span class="Statement">if</span> (rt == <span class="Constant">null</span>)
+			<span class="Statement">return</span> new_el;
+		<span class="Statement">else</span> <span class="Statement">if</span> (new_el.getKey() &lt; rt.getKey())
+			rt.setLeft(insert_R(rt.getLeft(), new_el));
+		<span class="Statement">else</span>
+			rt.setRight(insert_R(rt.getRight(), new_el));
+		<span class="Statement">return</span> rt;
+	}
+}
+</pre>

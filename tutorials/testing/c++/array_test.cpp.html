@@ -1,0 +1,45 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Array2D.h&quot;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> std;
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
+
+<span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
+
+	<span class="Comment">// create Bridges object</span>
+	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+		<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+	<span class="Comment">// title, description</span>
+	bridges.setTitle(<span class="Constant">&quot;Two-Dimensional Array Example&quot;</span>);
+	bridges.setDescription(<span class="Constant">&quot;A TwoD array with four rows and four columns. &quot;</span>
+		<span class="Constant">&quot;Row one left to right: red, neutral, neutral, blue. &quot;</span>
+		<span class="Constant">&quot;Row two left to right: neutral, cyan, neutral, neutral. &quot;</span>
+		<span class="Constant">&quot;Row three left to right: neutral, neutral, yellow, neutral. &quot;</span>
+		<span class="Constant">&quot;Row four left to right: green, neutral, neutral, magenta.&quot;</span>);
+
+	<span class="Comment">// create, populate 2D array</span>
+	<span class="Type">int</span> dims[<span class="Constant">2</span>] = {<span class="Constant">4</span>, <span class="Constant">4</span>};
+	Array2D&lt;string&gt; arr(dims[<span class="Constant">1</span>], dims[<span class="Constant">0</span>]);
+
+	<span class="Statement">for</span> (<span class="Type">int</span> i = <span class="Constant">0</span>; i &lt; dims[<span class="Constant">0</span>]; i++)
+		<span class="Statement">for</span> (<span class="Type">int</span> j = <span class="Constant">0</span>; j &lt; dims[<span class="Constant">1</span>]; j++)
+			arr.getElement(i, j).setLabel(<span class="Constant">&quot;El &quot;</span> + to_string(j * dims[<span class="Constant">0</span>] + i));
+
+	<span class="Comment">// set visual attributes</span>
+	arr.getElement(<span class="Constant">0</span>, <span class="Constant">0</span>).setColor(<span class="Constant">&quot;red&quot;</span>);
+	arr.getElement(<span class="Constant">0</span>, <span class="Constant">3</span>).setColor(<span class="Constant">&quot;green&quot;</span>);
+	arr.getElement(<span class="Constant">3</span>, <span class="Constant">0</span>).setColor(<span class="Constant">&quot;blue&quot;</span>);
+	arr.getElement(<span class="Constant">3</span>, <span class="Constant">3</span>).setColor(<span class="Constant">&quot;magenta&quot;</span>);
+	arr.getElement(<span class="Constant">1</span>, <span class="Constant">1</span>).setColor(<span class="Constant">&quot;cyan&quot;</span>);
+	arr.getElement(<span class="Constant">2</span>, <span class="Constant">2</span>).setColor(<span class="Constant">&quot;yellow&quot;</span>);
+
+	<span class="Comment">// visualize</span>
+	bridges.setDataStructure(&amp;arr);
+	bridges.visualize();
+
+	<span class="Statement">return</span> <span class="Constant">0</span>;
+}
+</pre>

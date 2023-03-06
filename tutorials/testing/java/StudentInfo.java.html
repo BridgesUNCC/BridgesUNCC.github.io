@@ -1,0 +1,143 @@
+<pre id='vimCodeElement'>
+<span class="Type">public</span> <span class="Type">class</span> StudentInfo {
+	<span class="Type">private</span> String studentID,
+			fullName,
+			program,
+			email,
+			dislikeColor,
+			favoriteColor;
+
+	<span class="Type">private</span> <span class="Type">boolean</span> visited;
+
+	<span class="Type">public</span> <span class="Type">boolean</span> isVisited() {
+		<span class="Statement">return</span> visited;
+	}
+
+	<span class="Type">public</span> <span class="Type">void</span> setVisited(<span class="Type">boolean</span> visited) {
+		<span class="Type">this</span>.visited = visited;
+	}
+
+	<span class="Type">private</span> <span class="Type">double</span> studentCreditHours;
+
+	<span class="Comment">/**</span>
+<span class="Comment">	 </span><span class="Comment">* </span><span class="Special">@param</span><span class="Identifier"> studentID</span>
+<span class="Comment">	 * </span><span class="Special">@param</span><span class="Identifier"> fullName</span>
+<span class="Comment">	 * </span><span class="Special">@param</span><span class="Identifier"> program</span>
+<span class="Comment">	 * </span><span class="Special">@param</span><span class="Identifier"> email</span>
+<span class="Comment">	 */</span>
+	<span class="Type">public</span> StudentInfo(String studentID,
+		String fullName,
+		String program,
+		String email,
+		String dislikeColor,
+		String favoriteColor,
+		<span class="Type">double</span> studentCreditHours) {
+		<span class="Type">this</span>.studentID = studentID;
+		<span class="Type">this</span>.fullName = fullName;
+		<span class="Type">this</span>.program = program;
+		<span class="Type">this</span>.email = email;
+		<span class="Type">this</span>.dislikeColor = dislikeColor;
+		<span class="Type">this</span>.favoriteColor = favoriteColor;
+		<span class="Type">this</span>.studentCreditHours = studentCreditHours;
+	}
+
+	<span class="Comment">/**</span>
+<span class="Comment">	 </span><span class="Comment">* </span><span class="Special">@return</span><span class="Comment"> studentID</span>
+<span class="Comment">	 */</span>
+	<span class="Type">public</span> String getStudentID() {
+		<span class="Statement">return</span> studentID;
+	}
+
+	<span class="Comment">/**</span>
+<span class="Comment">	 </span><span class="Comment">* </span><span class="Special">@param</span><span class="Identifier"> studentID</span>
+<span class="Comment">	 */</span>
+	<span class="Type">public</span> <span class="Type">void</span> setStudentID(String studentID) {
+		<span class="Type">this</span>.studentID = studentID;
+	}
+
+	<span class="Comment">/**</span>
+<span class="Comment">	 </span><span class="Comment">* </span><span class="Special">@return</span><span class="Comment"> fullName</span>
+<span class="Comment">	 */</span>
+	<span class="Type">public</span> String getFullName() {
+		<span class="Statement">return</span> fullName;
+	}
+
+	<span class="Comment">/**</span>
+<span class="Comment">	 </span><span class="Comment">* </span><span class="Special">@param</span><span class="Identifier"> fullName</span>
+<span class="Comment">	 */</span>
+	<span class="Type">public</span> <span class="Type">void</span> setFullName(String fullName) {
+		<span class="Type">this</span>.fullName = fullName;
+	}
+
+	<span class="Comment">/**</span>
+<span class="Comment">	 </span><span class="Comment">* </span><span class="Special">@return</span><span class="Comment"> program</span>
+<span class="Comment">	 */</span>
+	<span class="Type">public</span> String getProgram() {
+		<span class="Statement">return</span> program;
+	}
+
+	<span class="Comment">/**</span>
+<span class="Comment">	 </span><span class="Comment">* </span><span class="Special">@param</span><span class="Identifier"> program</span>
+<span class="Comment">	 */</span>
+	<span class="Type">public</span> <span class="Type">void</span> setProgram(String program) {
+		<span class="Type">this</span>.program = program;
+	}
+
+	<span class="Comment">/**</span>
+<span class="Comment">	 </span><span class="Comment">* </span><span class="Special">@return</span><span class="Comment"> email</span>
+<span class="Comment">	 */</span>
+	<span class="Type">public</span> String getEmail() {
+		<span class="Statement">return</span> email;
+	}
+
+	<span class="Comment">/**</span>
+<span class="Comment">	 </span><span class="Comment">* </span><span class="Special">@param</span><span class="Identifier"> email</span>
+<span class="Comment">	 */</span>
+	<span class="Type">public</span> <span class="Type">void</span> setEmail(String email) {
+		<span class="Type">this</span>.email = email;
+	}
+
+
+	<span class="Comment">/**</span>
+<span class="Comment">	 </span><span class="Comment">* </span><span class="Special">@return</span><span class="Comment"> favoriteColor</span>
+<span class="Comment">	 */</span>
+	<span class="Type">public</span> String getFavoriteColor() {
+		<span class="Statement">return</span> favoriteColor;
+	}
+
+	<span class="Comment">/**</span>
+<span class="Comment">	 </span><span class="Comment">* </span><span class="Special">@param</span><span class="Identifier"> favoriteColor</span>
+<span class="Comment">	 */</span>
+	<span class="Type">public</span> <span class="Type">void</span> setFavoriteColor(String favoriteColor) {
+		<span class="Type">this</span>.favoriteColor = favoriteColor;
+	}
+
+
+	<span class="Type">public</span> String getDislikeColor() {
+		<span class="Statement">return</span> dislikeColor;
+	}
+
+	<span class="Type">public</span> <span class="Type">void</span> setDislikeColor(String dislikeColor) {
+		<span class="Type">this</span>.dislikeColor = dislikeColor;
+	}
+
+	<span class="Type">public</span> <span class="Type">double</span> getStudentCreditHours() {
+		<span class="Statement">return</span> studentCreditHours;
+	}
+
+	<span class="Type">public</span> <span class="Type">void</span> setStudentCreditHours(<span class="Type">double</span> studentCreditHours) {
+		<span class="Type">this</span>.studentCreditHours = studentCreditHours;
+	}
+
+	<span class="Type">public</span> String getStudentLabel() {
+		String label =
+			fullName      +  <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>   +
+			<span class="Constant">&quot;Email: &quot;</span> +		       email         +  <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>   +
+			<span class="Constant">&quot;Program: &quot;</span> + 			 program       +  <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>   +
+			<span class="Constant">&quot;Student ID: &quot;</span> + 		 studentID     +  <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>   +
+			<span class="Constant">&quot;Favorite Color: &quot;</span> + favoriteColor +  <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+
+		<span class="Statement">return</span> label;
+	}
+}
+</pre>

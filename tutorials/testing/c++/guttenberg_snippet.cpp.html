@@ -1,0 +1,53 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> std;
+
+<span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;DataSource.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;data_src/GutenbergBook.h&quot;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
+
+
+<span class="Comment">// this program illustrates how to access the Gutenberg book meta data</span>
+<span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
+
+	<span class="Comment">// create bridges object</span>
+	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+		<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+
+	<span class="Comment">// set title</span>
+	bridges.setTitle(<span class="Constant">&quot;Accessing Gutenberg Book Collection Meta Data&quot;</span>);
+
+	<span class="Comment">// read the Gutenberg book data</span>
+	DataSource ds (&amp;bridges);
+	vector&lt;GutenbergBook&gt; book_list = ds.getGutenbergBookData();
+
+	<span class="Comment">// print the first book record</span>
+	cout &lt;&lt; <span class="Constant">&quot;Guttenberg Book Data:&quot;</span>
+		&lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Author: &quot;</span>  &lt;&lt; book_list[<span class="Constant">0</span>].getAuthorName() &lt;&lt; endl
+		&lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Author Birth: &quot;</span>  &lt;&lt; book_list[<span class="Constant">0</span>].getAuthorBirth() &lt;&lt; endl
+		&lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Author Death: &quot;</span>  &lt;&lt; book_list[<span class="Constant">0</span>].getAuthorBirth() &lt;&lt; endl
+		&lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Title: &quot;</span>  &lt;&lt; book_list[<span class="Constant">0</span>].getTitle() &lt;&lt; endl;
+	cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Language: &quot;</span>;
+	<span class="Statement">for</span> (<span class="Type">auto</span>&amp; i : book_list[<span class="Constant">0</span>].getLang())
+		cout &lt;&lt; i &lt;&lt; <span class="Constant">&quot;,&quot;</span>;
+	cout &lt;&lt; endl &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Subject: &quot;</span>;
+	<span class="Statement">for</span> (<span class="Type">auto</span>&amp; i : book_list[<span class="Constant">0</span>].getSubject())
+		cout &lt;&lt; i &lt;&lt; <span class="Constant">&quot;,&quot;</span>;
+	cout &lt;&lt; endl &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Num Downloads: &quot;</span>  &lt;&lt; book_list[<span class="Constant">0</span>].getNumDownloads() &lt;&lt; endl
+		&lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Num Words: &quot;</span>  &lt;&lt; book_list[<span class="Constant">0</span>].getNumWords() &lt;&lt; endl
+		&lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Num Difficult Words: &quot;</span>  &lt;&lt; book_list[<span class="Constant">0</span>].getNumDifficultWords() &lt;&lt; endl
+		&lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Num Sentences: &quot;</span>  &lt;&lt;  book_list[<span class="Constant">0</span>].getNumSentences() &lt;&lt; endl
+		&lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Num Characters: &quot;</span>  &lt;&lt;  book_list[<span class="Constant">0</span>].getNumChars() &lt;&lt; endl;
+
+	<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; book_list.size(); k++) {
+		GutenbergBook b = book_list[k];
+	}
+
+
+	<span class="Statement">return</span> <span class="Constant">0</span>;
+}
+</pre>

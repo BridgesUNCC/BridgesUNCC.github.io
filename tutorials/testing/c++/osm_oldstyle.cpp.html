@@ -1,0 +1,63 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;DataSource.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;GraphAdjList.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&lt;iostream&gt;</span>
+<span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
+<span class="PreProc">#include </span><span class="Constant">&lt;unordered_map&gt;</span>
+<span class="PreProc">#include </span><span class="Constant">&lt;fstream&gt;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;data_src/OSMData.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;data_src/OSMVertex.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;data_src/OSMEdge.h&quot;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> std;
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
+
+<span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
+
+	<span class="Comment">// create Bridges object</span>
+	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+	<span class="Comment">//create the Bridges object, set credentials</span>
+
+	bridges.setServer(<span class="Constant">&quot;clone&quot;</span>);
+
+	DataSource  *ds = <span class="Statement">new</span> DataSource;
+	<span class="Comment">/*</span>
+<span class="Comment">		OSMData osm_data = ds-&gt;getOSMData(&quot;uncc_campus&quot;);</span>
+<span class="Comment">	</span><span class="Comment">*/</span>
+	OSMData osm_data;
+	<span class="Statement">try</span> {
+		osm_data = ds-&gt;getOSMDataOld(<span class="Constant">&quot;uncc_campus&quot;</span>);
+	}
+	<span class="Statement">catch</span> (std::string s) {
+		std::cerr &lt;&lt; <span class="Constant">&quot;Exception: &quot;</span> &lt;&lt; s &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+	}
+	vector&lt;OSMVertex&gt; vertices = osm_data.getVertices();
+	vector&lt;OSMEdge&gt; edges = osm_data.getEdges();
+
+	GraphAdjList&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;  *gr = <span class="Statement">new</span> GraphAdjList&lt;<span class="Type">int</span>, <span class="Type">int</span>&gt;;
+	<span class="Type">double</span> coords[<span class="Constant">2</span>];
+
+	<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; vertices.size(); k++) {
+		gr-&gt;addVertex(k);
+		vertices[k].getCartesianCoords(coords);
+		gr-&gt;getVertex(k)-&gt;setLocation(coords[<span class="Constant">0</span>], coords[<span class="Constant">1</span>]);
+		gr-&gt;getVertex(k)-&gt;setColor(Color(<span class="Constant">&quot;green&quot;</span>));
+	}
+	<span class="Statement">for</span> (<span class="Type">int</span> k = <span class="Constant">0</span>; k &lt; edges.size(); k++) {
+		gr-&gt;addEdge(edges[k].getSourceVertex(), edges[k].getDestinationVertex(),
+			edges[k].getEdgeLength() );
+		gr-&gt;getLinkVisualizer(edges[k].getSourceVertex(), edges[k].getDestinationVertex())-&gt;setColor(Color(<span class="Constant">&quot;red&quot;</span>));
+
+	}
+
+	gr-&gt;forceLargeVisualization(<span class="Constant">true</span>);
+	bridges.setDataStructure(gr);
+	bridges.visualize();
+
+	<span class="Comment">// create graph object</span>
+
+	<span class="Statement">return</span> <span class="Constant">0</span>;
+}
+</pre>
