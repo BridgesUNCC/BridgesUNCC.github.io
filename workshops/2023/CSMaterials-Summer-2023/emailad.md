@@ -34,3 +34,23 @@ hpc-announce
 Anu Bourgeois (for diffusion to IPDPS registered attendees)
 Sushil Prasad (for diffusion to CDER)
 Suzanne Matthews (for diffusion to a dive into system and cs in parallel)
+deburekr@eckerd.edu Dr. Kelly Debure (contact for CS, Eckerd College)
+sarkar@usf.edu Sudeep Sarkar (Chair of CSE, University of South Florida)
+jgourd@ut.edu Jean Gourd (Chair of CS, University of Tampa)
+Damla.Turgut@ucf.edu Dr. Damla Turgut (Chair of CS, University of Central Florida)
+dmyers@rollins.edu Dan S. Myers (Chair of computer science, Rollins College)
+
+to send:
+
+Subject: CS Material workshop on May 13-14 in Saint Petersburg, Florida (Colocated with IPDPS)
+
+Dear Dr.
+
+I am organizing an NSF-funded event in Saint Petersburg, Florida which
+I think could be of interest to your CS faculty. If you think it is
+appropriate, would you mind forwarding the information to them?
+
+Best,
+
+Erik
+
