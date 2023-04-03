@@ -24,3 +24,13 @@ More information: http://bridgesuncc.github.io/workshops/2023/CSMaterials-Summer
 
 If you can not attend this workshop, we are also running another one
 on June 12-14 in Charlotte, NC. ( https://forms.gle/NMjSGKrspPiAGq5m6 )
+
+
+Sent to:
+SIGCSE-Members
+MyColleagues
+announce@IPDPS
+hpc-announce
+Anu Bourgeois (for diffusion to IPDPS registered attendees)
+Sushil Prasad (for diffusion to CDER)
+Suzanne Matthews (for diffusion to a dive into system and cs in parallel)
