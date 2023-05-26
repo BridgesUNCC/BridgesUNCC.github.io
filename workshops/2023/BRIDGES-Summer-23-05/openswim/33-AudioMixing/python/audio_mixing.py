@@ -31,8 +31,16 @@ def main() -> None:
     ac_bass = AudioClip("../audio/bass.wav")
 
     # Apply simple mixing of the two AudioClips and visualize
-    ac_mix = mix_clips(ac_piano, ac_bass)
-    bridges.set_data_structure(ac_mix)
+	
+    #ac_mix = mix_clips(ac_piano, ac_bass)
+
+	
+
+    # the following lines show how to visualize and play the audio segments you have loaded
+    bridges.set_data_structure(ac_piano)
+    bridges.visualize()
+
+    bridges.set_data_structure(ac_bass)
     bridges.visualize()
 
     #as a bonus problem. One could mix two clips with a fade in/fade out

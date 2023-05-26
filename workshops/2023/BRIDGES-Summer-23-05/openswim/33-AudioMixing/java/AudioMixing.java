@@ -61,8 +61,8 @@ public class AudioMixing {
 		
 		// Apply simple mixing of the two AudioClips and visualize
 		AudioClip acMix = mixClips(acPiano, acBass);
-		bridges.setDataStructure(acMix);
-		bridges.visualize();
-		
+        // uncomment the following two lines when you hve implemented the mixing
+		// bridges.setDataStructure(acMix);
+		// bridges.visualize();
 	}
 }

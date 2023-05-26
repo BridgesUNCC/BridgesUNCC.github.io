@@ -44,7 +44,10 @@ public class mount_path {
 
   public static ColorGrid getImage(ElevationData elev) {
       // TODO
-      ColorGrid cg = null;
+      // the following line just creates an empty color grid object so the compiler is happy
+      // your solution will process the elevation data and return a color grid object with the 
+	  // the processed output
+      ColorGrid cg = new ColorGrid(elev.getRows(), elev.getCols());
 
       //
       // Use elev.getRows(), elev.getCols(), elev.get(r,c) to access data.

@@ -6,7 +6,11 @@ from bridges.color import *
 def get_image(elev_data):
         # TODO
         # Return this elevation data as a ColorGrid image
-        cg = None
+        #cg = None
+        # the following line simply creates a color grid (so it doesnt generate a compiler error!); 
+        # your implementation should process
+        # the elevation data and return the color grid
+        cg = ColorGrid(elev_data.rows, elev_data.cols)
         # use elev_data.rows, elev_data.cols, elev_data.data[r][c] to access data.
         # create colorgrid with ColorGrid(nbrows, nbcols)
         # fill with .set(row, col, Color())

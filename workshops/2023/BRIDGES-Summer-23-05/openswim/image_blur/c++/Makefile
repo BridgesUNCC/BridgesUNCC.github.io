@@ -1,4 +1,4 @@
-SRCS = main.cpp
+SRCS = image_process.cpp
 EXE=image_process
 
 
