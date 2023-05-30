@@ -7,11 +7,11 @@
 |  8 - 8.30am      |  Breakfast |
 |  8.30 - 9am      | Introductions, Workshop Objectives, Organization |
 |                  | [slides](slides/objective.pdf) |
-|  9 - 9.15am      | Engagement (What is it? How BRIDGES can help!) |
+|  9 - 9.15am      | Engagement (What is it?, How BRIDGES can help) |
 |                  | [slides](slides/engagement_bridges.pdf) |
 |  9.15 - 9.35am   | Course Design, Alignment  |
 |                  | [slides](slides/coursestructure_csmat.pdf) |
-|                  | [An alignment example: ITCS 6114](slides/sturcture_figs/6114.html) |
+|                  | [An alignment example: ITCS 6114](slides/structure_figs/6114.html) |
 |  9.35 - 10am   |  A message from our Evaluator  |
 |  10 - 10.15am    |  Coffee Break |
 |  10.15 - 10.35am | Put your class content on Google Drive. |
@@ -19,7 +19,7 @@
 |                  | [Google Drive](https://drive.google.com/drive/folders/1WtChXa8hXEHPIAOkrlMnqpWeJrjNV6-E?usp=share_link )                                           |
 |  10.35 - 11am  | What is BRIDGES?  |
 |                 | [slides](slides/bridgestutorial.pdf) |
-|  11am - 12pm | BRIDGES **Open SWIM**  (Solve a problem with BRIDGES)  |
+|  11am - 12pm | BRIDGES Open SWIM  (Solve a problem with BRIDGES)  |
 |                 | [all scaffolds](openswim.zip)                       |
 |                 | **CS1**                               |
 |                 | [Audio Processing](openswim/33-AudioMixing/README.html) |
@@ -52,10 +52,10 @@
 |                   | what BRIDGES features does it leverage? |
 |  9.30am - 10.30am | Report on assignment choices to the group |
 |  10.30 - 11am   | Coffee Break |
-|  11 - 12pm  | **BRIDGES Assignment 1** : Make the easiest assignment 'class ready' | 
+|  11 - 12pm  | Take the easiest assignment planned - make it 'class ready' | 
 |  12 - 1.30pm    | Lunch  | 
 |  1.30 - 3pm  | Complete BRIDGES Assignment 1  | 
-|              | Start **BRIDGES Assignment 2** - Make it 'Class Ready'                               |
+|              | Start BRIDGES Assignment 2 - Make it 'Class Ready'                               |
 |  3pm - 3.30pm  | Coffee Break | 
 |  3.30 - 5pm |  Complete BRIDGES Assignment 2 |
 |  5pm and after  | Happy Hour, Dinner|
@@ -65,7 +65,7 @@
 |  Time  |  Activity  |
 |  ----- |  ------ |
 |  8 - 8.30am     | Breakfast  |
-|  8.30 - 10.30am  |  **BRIDGES Assignment 3** - Make it 'Class Ready'  |
+|  8.30 - 10.30am  |  BRIDGES Assignment 3 - Make it 'Class Ready'  |
 |  10.30 - 11am  | Coffee Break |
 |  11.10am - 11.30am  | Going Forward  |
 |                 | [slides](slides/goingfurther.pdf) |
