@@ -32,6 +32,9 @@ addassignment "33-AudioMixing"
 addassignment "52-AudioWave"
 addassignment "56-2DIndexing"
 addassignment "55-FrequencyPlayer"
+addassignment "68-MusicNotes-CS2"
+addassignment "65-Reddit"
+
 
 addsubgroup "Input/Output"
 addassignment "10-HurricaneTracker"
@@ -39,6 +42,8 @@ addassignment "10-HurricaneTracker"
 addsubgroup "1D Arrays"
 addassignment "33-AudioMixing"
 addassignment "55-FrequencyPlayer"
+addassignment "68-MusicNotes-CS2"
+addassignment "65-Reddit"
 
 addsubgroup "2D Arrays"
 addassignment "6-GridSquareFill"
@@ -60,13 +65,14 @@ addassignment "32-TicTacToe"
 addassignment "36-Pong"
 addassignment "35-ConnectFour"
 addassignment "41-SpaceInvaders"
+addassignment "69-SnakeQueue"
 
 
 addsubgroup "Audio"
 addassignment "55-FrequencyPlayer"
 addassignment "52-AudioWave"
 addassignment "33-AudioMixing"
-
+addassignment "68-MusicNotes-CS2"
 
 addsubgroup "Simulation"
 addassignment "14-SpreadingFire"
@@ -81,6 +87,7 @@ addsubgroup "Stacks and Queues"
 addassignment "12-AStarMaze"
 addassignment "26-TowersOfHanoi"
 addassignment "22-Snake"
+addassignment "69-SnakeQueue"
 
 addsubgroup "Trees"
 addassignment "5-BST_Earthquakes"
@@ -109,6 +116,9 @@ addassignment "28-BigOhMatters"
 
 addsubgroup "Sorting"
 addassignment "29-SortingBenchmark"
+
+addsubgroup "Brute Force"
+addassignment "64-Voronoi_Diagram"
 
 addsubgroup "Divide and Conquer"
 addassignment "59-ConvexHull_CityData"

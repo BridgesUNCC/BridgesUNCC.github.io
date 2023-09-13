@@ -8,9 +8,9 @@ Layers - Generating layers of pixels from a 2D Grid
 3. CS concepts: 2D array addressing 
 
 ## Source
-This assignment is  part of a larger assignment [insert link here] on 
-determining the closest point to a given point within a 2D map, eg., finding
-the nearest restaurant from a given location.
+This assignment can be thought of as a good exercise for 2D indexing and 
+has an application for searching for  closest point/entity 
+within a 2D map, eg., finding the nearest restaurant from a given location.
 
 ## Description
 As part of the more interesting problem of finding the nearest location of
@@ -47,20 +47,22 @@ you never run out of the grid. The visualization, that uses a Color Grid provide
 first mark the start cell and for each layer (layer number can be 
 as large as the grid width or height) you identify the neighbors. This is
 done in 4 parts: identify the top row neighbors, then the bottom row neighbirs
-and then the left and right columns.
+and then the left and right columns. The simpler version allows existing cells to be visited more than once.
 
-3. You can optimize the algorithm and ensure each cell is visited exactly  once.
+3. You can optimize the algorithm and ensure each cell is visited exactly once.
 For instance, after you visit the top and bottom row neighbors, the left and
 right columns will have 1 fewer cell to visit. When the algorithm gets close
 to the boundary, you need to ensure if the neighbors do exist or not and 
 appropriately adjust for that. Any of the 2 rows or columns can be missing as
-the algorithm gets close to the boundary.
+the algorithm gets close to the boundary. While this is trickier to implement, this would be an excellent way to think through 2D indexing.
 
 4. As you identify each cell in a layer, mark the colorgrid entry with a color
 for that layer. Thus, once your algorithm completes normally, you can check
 the visualization to see if the layers were computed correctly! An easy way to 
 debug!
 
+5. You might want have a destination cell in a chosen color. When that cell is
+reached, the program can output the number of cells visited and display the visualization.
 
 ## Variants
 

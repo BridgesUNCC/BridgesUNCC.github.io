@@ -1,63 +1,47 @@
 <h1>Book Distance through Text Analysis</h1>
-
 <h2>Goals</h2>
-
 <p>Implement a word frequency list for a book and use it to compare similarity to other books.</p>
-
 <h2>Tasks</h2>
-
 <ol>
-<li><p>Get book meta data information using Bridges API: DataSource.getGutenbergMetaData()</p></li>
-<li><p>With the meta data, get the books by ID using Bridges API: DataSource.getGutenbergBookText()</p></li>
-<li><p>Generate a word frequency list with the book text</p></li>
-<li><p>Compare two frequency lists to determine the similarity between book texts. Can use a L1 Norm comparison. </p></li>
-<li><p>Generate a graphadjlist using the similarity values and book nodes.</p></li>
+<li>
+<p>Get book meta data information using Bridges API: DataSource.getGutenbergMetaData()</p>
+</li>
+<li>
+<p>With the meta data, get the books by ID using Bridges API: DataSource.getGutenbergBookText()</p>
+</li>
+<li>
+<p>Generate a word frequency list with the book text</p>
+</li>
+<li>
+<p>Compare two frequency lists to determine the similarity between book texts. Can use a L1 Norm comparison.</p>
+</li>
+<li>
+<p>Generate a graphadjlist using the similarity values and book nodes.</p>
+</li>
 </ol>
-
 <h2>Example output</h2>
-
-<p><img src="figures/book_analysis.png" alt="Sample Output" width="400px" /></p>
-
+<!-- raw HTML omitted -->
 <h2>Varients</h2>
-
 <p>One can change the complextiy of the comparison algorithm to one that is L2 Norm (Euclidean Distance)
 or even L3 Norm.</p>
-
-<p>How did you display the similarity value? One can switch up the visual aspect 
-of the assignment to convey different meanings. You can display a </p>
-
-<p>Changing the dataset used for this comparison could be a good way to get more 
-engagement in the assignment. Using song lyrics is a good alternative to 
+<p>How did you display the similarity value? One can switch up the visual aspect
+of the assignment to convey different meanings. You can display a</p>
+<p>Changing the dataset used for this comparison could be a good way to get more
+engagement in the assignment. Using song lyrics is a good alternative to
 the gutenberg data.</p>
-
 <h3>Help</h3>
-
 <h4>For C++</h4>
-
 <p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_bridges.html">Bridges documentation</a></p>
-
 <p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_graph_adj_list.html">GraphAdjList documentation</a></p>
-
 <p><a href="https://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1dataset_1_1_gutenberg_book.html">GutenbergData documentation</a></p>
-
 <p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_data_source.html">DataSource documentation</a></p>
-
 <h4>For Java</h4>
-
 <p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1connect_1_1_bridges.html">Bridges documentation</a></p>
-
 <p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_graph_adj_list.html">GraphAdjList documentation</a></p>
-
 <p><a href="https://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1data__src__dependent_1_1_gutenberg_meta.html">GutenbergData documentation</a></p>
-
 <p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1connect_1_1_data_source.html">DataSource documentation</a></p>
-
 <h4>For Python</h4>
-
 <p><a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1bridges_1_1_bridges.html">Bridges documentation</a></p>
-
 <p><a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1graph__adj__list_1_1_graph_adj_list.html">GraphAdjList documentation</a></p>
-
 <p><a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1data__src__dependent_1_1osm_1_1_osm_data.html">GutenbergData documentation</a></p>
-
 <p><a href="https://bridgesuncc.github.io/doc/python-api/current/html/namespacebridges_1_1data__src__dependent_1_1data__source.html">DataSource documentation</a></p>

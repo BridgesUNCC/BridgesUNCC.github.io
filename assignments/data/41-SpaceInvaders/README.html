@@ -1,51 +1,39 @@
 <h1>Assignment 41 - Space Invaders Game</h1>
-
 <h2>Goals</h2>
-
-<p>The purpose of this assignment is to learn to
- - Organize data in two-dimensional arrays
- - Use enums to store information
- - Practice using nested for loops
- - Use basic OOP techniques</p>
-
-<h2>Programming</h2>
-
-<h3>Tasks</h3>
-
+<p>The purpose of this assignment is to learn to</p>
 <ul>
-<li>Implement the generateBoardBackground() method such that each background tile is assigned a color. The color(s) you 
+<li>Organize data in two-dimensional arrays</li>
+<li>Use enums to store information</li>
+<li>Practice using nested for loops</li>
+<li>Use basic OOP techniques</li>
+</ul>
+<h2>Programming</h2>
+<h3>Tasks</h3>
+<ul>
+<li>Implement the generateBoardBackground() method such that each background tile is assigned a color. The color(s) you
 use or any patterns you want to add are up to you.</li>
-<li>Complete the movePlayer() method. The playerX and playerY variables should be updated according to the keys the 
-player presses. Ensure that the program does not crash if the player tries to move out of bounds. </li>
+<li>Complete the movePlayer() method. The playerX and playerY variables should be updated according to the keys the
+player presses. Ensure that the program does not crash if the player tries to move out of bounds.</li>
 <li>Complete the playerFire() method. When the player presses space, a new PlayerProjectile should be added to
 playerProjectiles.</li>
-<li>Complete the moveEnemies() method. Each enemy should move in the direction described by the enemyMoveDirection 
+<li>Complete the moveEnemies() method. Each enemy should move in the direction described by the enemyMoveDirection
 variable. If any enemy tries to move off the bottom of the board, the game should end.</li>
-<li>Complete the enemyFire() method. A random enemy should be selected and an enemyProjectile should be created at their 
+<li>Complete the enemyFire() method. A random enemy should be selected and an enemyProjectile should be created at their
 position.</li>
-<li>Complete the checkProjectileCollision() method. If a playerProjectile and an enemy are in the same location, delete 
+<li>Complete the checkProjectileCollision() method. If a playerProjectile and an enemy are in the same location, delete
 both. If an enemyProjectile and the player are in the same location, end the game.</li>
 </ul>
-
 <h3>Important Functions</h3>
-
 <ul>
 <li>The gameLoop() function loops until the game is over.</li>
 <li>quit() stops the game.</li>
 <li>start() starts the game and calls the initialize() function once before it starts the gameLoop() function.</li>
 <li>render() sends your updated game grid to the server once. This is a blocking game function.</li>
 </ul>
-
 <h3>Help</h3>
-
 <h4>For Java</h4>
-
 <p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1games_1_1_non_blocking_game.html">NonBlockingGame documentation</a></p>
-
 <h4>For C++</h4>
-
 <p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1game_1_1_non_blocking_game.html">NonBlockingGame documentation</a></p>
-
 <h4>For Python</h4>
-
 <p><a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1non__blocking__game_1_1_non_blocking_game.html">NonBlockingGame documentation</a></p>

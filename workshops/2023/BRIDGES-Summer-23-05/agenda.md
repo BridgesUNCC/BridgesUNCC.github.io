@@ -1,0 +1,86 @@
+# Agenda: Summer 2023 BRIDGES Workshop: Real World Data, Visualizations and Engaging Assignments Using BRIDGES 
+
+## Day 1 (May 30)
+
+|  Time  |  Activity  |
+|  ----- |  ------ |
+|  8 - 8.30am      |  Breakfast |
+|  8.30 - 9am      | Introductions, Workshop Objectives, Organization |
+|                  | [slides](slides/objective.pdf) |
+|  9 - 9.15am      | Engagement (What is it?, How BRIDGES can help) |
+|                  | [slides](slides/engagement_bridges.pdf) |
+|  9.15 - 9.35am   | Course Design, Alignment  |
+|                  | [slides](slides/coursestructure_csmat.pdf) |
+|                  | [An alignment example: ITCS 6114](slides/structure_figs/6114.html) |
+|  9.35 - 10am   |  A message from our Evaluator  |
+|  10 - 10.15am    |  Coffee Break |
+|  10.15 - 10.35am | Put your class content on Google Drive. |
+|                  | Organize per module/chapter |
+|                  | [Google Drive](https://drive.google.com/drive/folders/1WtChXa8hXEHPIAOkrlMnqpWeJrjNV6-E?usp=share_link )                                           |
+|  10.35 - 11am  | What is BRIDGES?  |
+|                 | [slides](slides/bridgestutorial.pdf) |
+|  11am - 12pm | BRIDGES Open SWIM  (Solve a problem with BRIDGES)  |
+|                 | [all scaffolds](openswim.zip)                       |
+|                 | **CS1**                               |
+|                 | [Audio Processing](openswim/33-AudioMixing/README.html) |
+|                 | [Image Blur](openswim/image_blur/README.html) |
+|                 | **Data Structure**                    |
+|                 | [Expression Tree](openswim/expression_tree/README.html) |
+|                 | [Graph IMDB](openswim/graphIMDB/README.html) |
+|                 | **Algorithms**                        |
+|                 | [Complexity Matters](openswim/complexity_matters/README.html) |
+|                 | [Mountain Path](openswim/23-MountainPaths/README.html) |
+|  12pm - 1.30pm  | Lunch |
+|  1.30pm - 3pm   | Open SWIM some more |
+|  3pm - 3.30pm   | Q&A |
+|  3.30 - 3.50pm   | Coffee Break |
+|  3.50 - 4.30pm   | What is possible in BRIDGES? |
+|                 | [slides](slides/whatispossible.pdf) |
+|                 | [Assignment Repository](https://bridgesuncc.github.io/newassignments.html) |
+| 4.30pm - 5pm | Discussion  |
+|  5pm and after   |  Happy Hour, Dinner |
+
+
+## Day 2 (May 31)
+
+|  Time  |  Activity  |
+|  ----- |  ------ |
+|  8 - 8.30am     |  Breakfast |
+|  8.30 - 9.30am     | **Plan:** Which assignment to use in course? (Existing or New) |
+|                   | For each assignment, which module does it go into ? |
+|                   | what are the learning outcomes? |
+|                   | what BRIDGES features does it leverage? |
+|  9.30am - 10.30am | Report on assignment choices to the group |
+|  10.30 - 11am   | Coffee Break |
+|  11 - 12pm  | Take the easiest assignment planned - make it 'class ready' | 
+|  12 - 1.30pm    | Lunch  | 
+|  1.30 - 3pm  | Complete BRIDGES Assignment 1  | 
+|              | Start BRIDGES Assignment 2 - Make it 'Class Ready'                               |
+|  3pm - 3.30pm  | Coffee Break | 
+|  3.30 - 5pm |  Complete BRIDGES Assignment 2 |
+|  5pm and after  | Happy Hour, Dinner|
+
+## Day 3 (June 1)
+
+|  Time  |  Activity  |
+|  ----- |  ------ |
+|  8 - 8.30am     | Breakfast  |
+|  8.30 - 10.30am  |  BRIDGES Assignment 3 - Make it 'Class Ready'  |
+|  10.30 - 11am  | Coffee Break |
+|  11.10am - 11.30am  | Going Forward  |
+|                 | [slides](slides/goingfurther.pdf) |
+|  11.30am - 12pm     | Feedback, Survey  |
+|                 | [Survey link]( https://uncc.qualtrics.com/jfe/form/SV_bgxw85Ztuirjltz ) |
+|  12 - 1.30pm    | Closing discussions during lunch (with whomever is still around) |
+
+
+
+## Additional Information
+
+If you have additional questions, please reach out to us via **Email** :
+
+[***Kalpathi Subramanian***](mailto:krs@uncc.edu?subject=BRIDGES%20Summer22%20Workshop)
+
+[***Erik Saule***](mailto:esaule@uncc.edu?subject=BRIDGES%20Summer22%20Workshop)
+
+[***Jamie Payton***](mailto:payton@temple.edu?subject=BRIDGES%20Summer22%20Workshop)
