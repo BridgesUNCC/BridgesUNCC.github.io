@@ -38,12 +38,14 @@ addassignment "65-Reddit"
 
 addsubgroup "Input/Output"
 addassignment "10-HurricaneTracker"
+addassignment "72-PixelDrawing"
 
 addsubgroup "1D Arrays"
 addassignment "33-AudioMixing"
 addassignment "55-FrequencyPlayer"
 addassignment "68-MusicNotes-CS2"
 addassignment "65-Reddit"
+addassignment "70-WordleBot"
 
 addsubgroup "2D Arrays"
 addassignment "6-GridSquareFill"
@@ -52,6 +54,8 @@ addassignment "16-ImagePuzzle"
 addassignment "40-ImageProcessing"
 addassignment "56-2DIndexing"
 addassignment "52-AudioWave"
+addassignment "71-PiEstimation"
+
 
 addsubgroup "Games"
 addassignment "17-ControlsTutorial"
@@ -89,6 +93,12 @@ addassignment "26-TowersOfHanoi"
 addassignment "22-Snake"
 addassignment "69-SnakeQueue"
 
+addsubgroup "Recursion"
+addassignment "26-TowersOfHanoi"
+addassignment "74-Fractals"
+addassignment "75-KochCurve"
+addassignment "76-Zcurve"
+
 addsubgroup "Trees"
 addassignment "5-BST_Earthquakes"
 addassignment "8-PQBook"
@@ -123,6 +133,11 @@ addassignment "64-Voronoi_Diagram"
 addsubgroup "Divide and Conquer"
 addassignment "59-ConvexHull_CityData"
 
+addsubgroup "Search space"
+addassignment "70-WordleBot"
+addassignment "12-AStarMaze"
+addassignment "9-ShortestPathOSM"
+addassignment "23-MountainPaths"
 
 addsubgroup "Complexity of Graph Problems"
 addassignment "9-ShortestPathOSM"
