@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Python</h1>
-	<p>Running at Sun Dec  3 03:51:47 AM EST 2023</p>
+	<p>Running at Sun Dec 10 03:51:23 AM EST 2023</p>
   <div id="summaryarray1d.py" class="success">
     <h2><a href="python_testing_logs.html#pythonlogarray1d.py">Test array1d.py</a> </h2>
     <p>
@@ -204,11 +204,11 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summarygutenberg_snippet.py" class="success">
+  <div id="summarygutenberg_snippet.py" class="failure">
     <h2><a href="python_testing_logs.html#pythonloggutenberg_snippet.py">Test gutenberg_snippet.py</a> </h2>
     <p>
       <ul>
-        <li> Run Test : <a href="python_testing_logs.html#pythonloggutenberg_snippet.py-runtest">success</a></li>
+        <li> Run Test : <a href="python_testing_logs.html#pythonloggutenberg_snippet.py-runtest">error</a></li>
       </ul>
     </p>
   </div>
@@ -832,7 +832,7 @@ http://bridges-cs.herokuapp.com/assignments/3011/bridges_testing
     
 <div class="success">
 <h3 id="pythonlogdisplay_game.py-runtest">Run Test for test display_game.py</h3>
-<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f6bd672d810&gt;
+<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f8c5edff650&gt;
 limiting number of frame to 10
 
 Check Your Visualization at the following link:
@@ -890,10 +890,10 @@ First 10 elevations:
     
 <div class="success">
 <h3 id="pythonlogeq_snippet.py-runtest">Run Test for test eq_snippet.py</h3>
-<pre><code>Magnitude: 1.98000002
-Date: 2023-12-03 08:02:56
-Location:Hawaii region, Hawaii
-Lat/Long:19.4138336181641,-155.274169921875
+<pre><code>Magnitude: 1.4
+Date: 2023-12-10 08:10:57
+Location:11 km ENE of Fox, Alaska
+Lat/Long:64.9941,-147.3944
 </code></pre>
 </div>
     
@@ -934,7 +934,7 @@ http://bridges-cs.herokuapp.com/assignments/3016/bridges_testing
     
 <div class="success">
 <h3 id="pythonloggame_size_test.py-runtest">Run Test for test game_size_test.py</h3>
-<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f92b7d9f590&gt;
+<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7effaf530e10&gt;
 limiting number of frame to 10
 
 Check Your Visualization at the following link:
@@ -953,10 +953,10 @@ disconnected
     
 <div class="success">
 <h3 id="pythonloggame_snippet.py-runtest">Run Test for test game_snippet.py</h3>
-<pre><code>Sonic the Hedgehog 2
-Master System
-8
-['Platformer']
+<pre><code>Star Wars Rogue Squadron II: Rogue Leader
+GameCube
+9.1
+['Flight', 'Action']
 </code></pre>
 </div>
     
@@ -1047,7 +1047,7 @@ http://bridges-cs.herokuapp.com/assignments/3023/bridges_testing
     <div id="pythonloggutenberg_snippet.py" class="logdetails">
       <h2>Test gutenberg_snippet.py full log</h2>
     
-<div class="success">
+<div class="failure">
 <h3 id="pythonloggutenberg_snippet.py-runtest">Run Test for test gutenberg_snippet.py</h3>
 <pre><code>Id: 2701
 Title: Moby Dick; Or, The Whale
@@ -1080,40 +1080,25 @@ The Complete Works of William Shakespeare
 
 Get text of Moby Dick (id: 2701)
 
+500 Server Error: INTERNAL SERVER ERROR for url: http://bridges-data-server-gutenberg.bridgesuncc.org/book?id=2701
+Traceback (most recent call last):
+  File &quot;/home/bridges-testing/.local/lib/python3.11/site-packages/bridges-3.4.3-py3.11.egg/bridges/data_src_dependent/data_source.py&quot;, line 1190, in gutenberg_book_text
+  File &quot;/home/bridges-testing/.local/lib/python3.11/site-packages/bridges-3.4.3-py3.11.egg/bridges/data_src_dependent/data_source.py&quot;, line 891, in _server_request
+  File &quot;/usr/lib/python3/dist-packages/requests/models.py&quot;, line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://bridges-data-server-gutenberg.bridgesuncc.org/book?id=2701
 
-Printing the first 300  characters..
+During handling of the above exception, another exception occurred:
 
-
-
-MOBY-DICK;
-
-or, THE WHALE.
-
-By Herman Melville
-
-
-
-CONTENTS
-
-ETYMOLOGY.
-
-EXTRACTS (Supplied by a Sub-Sub-Librarian).
-
-CHAPTER 1. Loomings.
-
-CHAPTER 2. The Carpet-Bag.
-
-CHAPTER 3. The Spouter-Inn.
-
-CHAPTER 4. The Counterpane.
-
-CHAPTER 5. Breakfast.
-
-CHAPTER 6. The Street.
-
-CHAPTER 7. The Chapel.
-
-C
+Traceback (most recent call last):
+  File &quot;/home/bridges-testing/bridges-client-testing/python/web_tutorial_testing/gutenberg_snippet.py&quot;, line 61, in &lt;module&gt;
+    main()
+  File &quot;/home/bridges-testing/bridges-client-testing/python/web_tutorial_testing/gutenberg_snippet.py&quot;, line 52, in main
+    text = data_source.gutenberg_book_text(2701)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/home/bridges-testing/.local/lib/python3.11/site-packages/bridges-3.4.3-py3.11.egg/bridges/data_src_dependent/data_source.py&quot;, line 1195, in gutenberg_book_text
+RuntimeError: 500 Server Error: INTERNAL SERVER ERROR for url: http://bridges-data-server-gutenberg.bridgesuncc.org/book?id=2701
+could not run test gutenberg_snippet.py
 </code></pre>
 </div>
     
@@ -1123,8 +1108,8 @@ C
     
 <div class="success">
 <h3 id="pythonlogimdb_snippet.py-runtest">Run Test for test imdb_snippet.py</h3>
-<pre><code>Billy_Bob_Thornton
-Living_and_Working_in_Space:_The_Countdown_Has_Begun_(1993)
+<pre><code>Christopher_Lee_(I)
+1941_(1979)
 </code></pre>
 </div>
     
@@ -1134,7 +1119,7 @@ Living_and_Working_in_Space:_The_Countdown_Has_Begun_(1993)
     
 <div class="success">
 <h3 id="pythonloginput_game.py-runtest">Run Test for test input_game.py</h3>
-<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f218aa0b2d0&gt;
+<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f5dc289f110&gt;
 limiting number of frame to 10
 
 Check Your Visualization at the following link:
@@ -1201,7 +1186,7 @@ http://bridges-cs.herokuapp.com/assignments/3028/bridges_testing
     
 <div class="success">
 <h3 id="pythonlogminimal_game.py-runtest">Run Test for test minimal_game.py</h3>
-<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f7598501c10&gt;
+<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f163769ec10&gt;
 limiting number of frame to 10
 
 Check Your Visualization at the following link:
@@ -1330,21 +1315,21 @@ Cartesian Coordinate of first vertex: 827.1273231300758, -5144.073405550668
     
 <div class="success">
 <h3 id="pythonlogreddit.py-runtest">Run Test for test reddit.py</h3>
-<pre><code>Title: French pilot sentenced for decapitating skydiver with wing of plane
-Author: rabblebowser
-Score: 521
-Comment Count: 129
+<pre><code>Title: Aretha Franklin's sons are awarded property thanks to a will found in a couch
+Author: AudibleNod
+Score: 2253
+Comment Count: 94
 Subreddit: news
-Title: Woodbury County supervisor's wife found guilty of 52 counts of voter fraud
-Title: US govt pays AT&amp;T to let cops search Americans' phone records – 'usually' without a warrant
-Title: U.S. thwarts plot to kill Sikh separatist, issues warning to India - FT
-Title: Sony Facing $7.9 Billion Mass Lawsuit over PlayStation Store Prices
-Title: Former Maryland mayor Patrick Wojahn sentenced to 30 years in prison for child sexual abuse material
-Title: Judge finds evidence that Tesla, Musk knew about Autopilot defect
-Title: A population of hard-to-eradicate ‘super pigs’ in Canada is threatening to invade the US
-Title: Maryland passed a strict gun licensing law after Sandy Hook. An appeals court just struck it down
-Title: Former Trump Org. controller breaks down in tears on witness stand in fraud trial
-Title: Rainbow Bridge between US, Canada closed following explosion
+Title: Mark Cuban is selling majority stake in the Dallas Mavericks to the Adelson family
+Title: Co-founder of Students for Trump charged with assault
+Title: Massachusetts becomes fifth state in nation to make prison calls free
+Title: U.S. life expectancy starts to recover after sharp pandemic decline
+Title: U.S. GDP Grew at a 5.2% Rate in the Third Quarter, Even Stronger than First Indicated
+Title: At least one dead as US Osprey aircraft crashes off coast of Japan
+Title: Tensions build at Arizona farms as foreign firms exploit unregulated water | AP News
+Title: Number of Suicides in the US in 2022 Reaches Record Level
+Title: US charges Indian man in alleged assassination plot
+Title: Mali, dubbed the &quot;world's saddest elephant,&quot; has died after decades in captivity at the Manila Zoo
 =====
 Available subreddits:
 gadgets
@@ -1395,37 +1380,38 @@ UpliftingNews
 InternetIsBeautiful
 science
 =====
-Title: It's often stated that animals like cockroaches, sharks, and alligators have remained unchanged for millions of years. How true is that? Is it just morphological or are they also genetically close enough to be the same species?
-Author: FinalFate
-Score: 1520
-Vote Ratio: 0.94
-Comment Count: 239
+Title: How does a caterpillar turn into a butterfly at a cellular level? What happens to trigger the various stages? Are their factors that would prevent it or delay it? Or is it inevitable in this species? What causes the cellular change? Is there anything remotely similar in certain human cells?
+Author: DadJ0ker
+Score: 2225
+Vote Ratio: 0.93
+Comment Count: 150
 Subreddit: askscience
-PostTime: 1684289382
-URL: https://www.reddit.com/r/askscience/comments/13jocfw/its_often_stated_that_animals_like_cockroaches/
-Text: 
+PostTime: 1684674182
+URL: https://www.reddit.com/r/askscience/comments/13nsv30/how_does_a_caterpillar_turn_into_a_butterfly_at_a/
+Text: We’ve all learned about it at school, but I don’t remember any discussion about what is really happening at the cellular level. What is different about that species that allows it to live as one thing, then have cells transform into something so (seemingly) different?
 
-Title: How genetically different are mice that have evolved over decades in the depths of the London Underground and the above ground city mice?
-Author: SWithnell
-Score: 3257
-Vote Ratio: 0.95
-Comment Count: 239
+Title: What would happen if you made a gigantic sphere of water in space?
+Author: kb3uoe
+Score: 820
+Vote Ratio: 0.9
+Comment Count: 246
 Subreddit: askscience
-PostTime: 1684314890
-URL: https://www.reddit.com/r/askscience/comments/13jwhw4/how_genetically_different_are_mice_that_have/
-Text: The Underground mice are subject to high levels of carbon, oil, ozone and I haven't a clue what they eat.   They are always coated in pollutants and spend a lot of time in very low light levels.
+PostTime: 1684716181
+URL: https://www.reddit.com/r/askscience/comments/13obj0l/what_would_happen_if_you_made_a_gigantic_sphere/
+Text: Would the water eventually compress under its own weight? How, if water is incompressible? What would happen if it did compress? Would it freeze? Boil?
 
-Title: By le chatlier's principle, if hair bleaching is an exothermic reaction, why do hair salons use heat lamps to &quot;speed up&quot; the process?
-Author: None
-Score: 88
-Vote Ratio: 0.85
-Comment Count: 13
+I've asked this question a few times but never gotten much of an answer. Please help me out, I've been dying to know what others think.
+
+Title: Are levels of self-esteem 'contagious' in group settings?
+Author: OrdinaryCow
+Score: 1324
+Vote Ratio: 0.91
+Comment Count: 59
 Subreddit: askscience
-PostTime: 1684333997
-URL: https://www.reddit.com/r/askscience/comments/13k3hd1/by_le_chatliers_principle_if_hair_bleaching_is_an/
-Text: Cosmetology to chemistry pls
-
-Edit: thanks yall s/o to irreversible reactions
+PostTime: 1684748732
+URL: https://www.reddit.com/r/askscience/comments/13om7u1/are_levels_of_selfesteem_contagious_in_group/
+Text: I was wondering whether an individual is more likely to adapt to a groups or partners level of self-esteem?  
+The only mechanism I could think of would be SIT, if true.
 
 </code></pre>
 </div>
@@ -1436,37 +1422,38 @@ Edit: thanks yall s/o to irreversible reactions
     
 <div class="success">
 <h3 id="pythonlogreddit_snippet.py-runtest">Run Test for test reddit_snippet.py</h3>
-<pre><code>Title: It's often stated that animals like cockroaches, sharks, and alligators have remained unchanged for millions of years. How true is that? Is it just morphological or are they also genetically close enough to be the same species?
-Author: FinalFate
-Score: 1520
-Vote Ratio: 0.94
-Comment Count: 239
+<pre><code>Title: How does a caterpillar turn into a butterfly at a cellular level? What happens to trigger the various stages? Are their factors that would prevent it or delay it? Or is it inevitable in this species? What causes the cellular change? Is there anything remotely similar in certain human cells?
+Author: DadJ0ker
+Score: 2225
+Vote Ratio: 0.93
+Comment Count: 150
 Subreddit: askscience
-PostTime: 1684289382
-URL: https://www.reddit.com/r/askscience/comments/13jocfw/its_often_stated_that_animals_like_cockroaches/
-Text: 
+PostTime: 1684674182
+URL: https://www.reddit.com/r/askscience/comments/13nsv30/how_does_a_caterpillar_turn_into_a_butterfly_at_a/
+Text: We’ve all learned about it at school, but I don’t remember any discussion about what is really happening at the cellular level. What is different about that species that allows it to live as one thing, then have cells transform into something so (seemingly) different?
 
-Title: How genetically different are mice that have evolved over decades in the depths of the London Underground and the above ground city mice?
-Author: SWithnell
-Score: 3257
-Vote Ratio: 0.95
-Comment Count: 239
+Title: What would happen if you made a gigantic sphere of water in space?
+Author: kb3uoe
+Score: 820
+Vote Ratio: 0.9
+Comment Count: 246
 Subreddit: askscience
-PostTime: 1684314890
-URL: https://www.reddit.com/r/askscience/comments/13jwhw4/how_genetically_different_are_mice_that_have/
-Text: The Underground mice are subject to high levels of carbon, oil, ozone and I haven't a clue what they eat.   They are always coated in pollutants and spend a lot of time in very low light levels.
+PostTime: 1684716181
+URL: https://www.reddit.com/r/askscience/comments/13obj0l/what_would_happen_if_you_made_a_gigantic_sphere/
+Text: Would the water eventually compress under its own weight? How, if water is incompressible? What would happen if it did compress? Would it freeze? Boil?
 
-Title: By le chatlier's principle, if hair bleaching is an exothermic reaction, why do hair salons use heat lamps to &quot;speed up&quot; the process?
-Author: None
-Score: 88
-Vote Ratio: 0.85
-Comment Count: 13
+I've asked this question a few times but never gotten much of an answer. Please help me out, I've been dying to know what others think.
+
+Title: Are levels of self-esteem 'contagious' in group settings?
+Author: OrdinaryCow
+Score: 1324
+Vote Ratio: 0.91
+Comment Count: 59
 Subreddit: askscience
-PostTime: 1684333997
-URL: https://www.reddit.com/r/askscience/comments/13k3hd1/by_le_chatliers_principle_if_hair_bleaching_is_an/
-Text: Cosmetology to chemistry pls
-
-Edit: thanks yall s/o to irreversible reactions
+PostTime: 1684748732
+URL: https://www.reddit.com/r/askscience/comments/13om7u1/are_levels_of_selfesteem_contagious_in_group/
+Text: I was wondering whether an individual is more likely to adapt to a groups or partners level of self-esteem?  
+The only mechanism I could think of would be SIT, if true.
 
 </code></pre>
 </div>
@@ -1477,11 +1464,11 @@ Edit: thanks yall s/o to irreversible reactions
     
 <div class="success">
 <h3 id="pythonlogshakespeare_snippet.py-runtest">Run Test for test shakespeare_snippet.py</h3>
-<pre><code>Sonnet 152
+<pre><code>Sonnet 115
 poem
-In loving thee thou know'st I am forsworn,
- But thou art twice forsworn to me love swearing,
- In act
+Those lines that I before have writ do lie,
+ Even those that said I could not love you dearer,
+ Yet 
 </code></pre>
 </div>
     
@@ -2173,12 +2160,12 @@ http://bridges-cs.herokuapp.com/assignments/3066/bridges_testing
 <div class="success">
 <h3 id="pythonlogtut_us_cities_snippet.py-runtest">Run Test for test tut_us_cities_snippet.py</h3>
 <pre><code>Charlotte, NC: population: 874579, elevation: 229, lat/long: 35.22709,-80.84313
+Durham, NC: population: 257636, elevation: 123, lat/long: 35.99403,-78.89862
 Fayetteville, NC: population: 201963, elevation: 29, lat/long: 35.05266,-78.87836
 Greensboro, NC: population: 285342, elevation: 266, lat/long: 36.07264,-79.79198
-Durham, NC: population: 257636, elevation: 123, lat/long: 35.99403,-78.89862
 Raleigh, NC: population: 451066, elevation: 96, lat/long: 35.7721,-78.63861
-West Raleigh, NC: population: 338759, elevation: 122, lat/long: 35.78682,-78.66389
 Winston-Salem, NC: population: 241218, elevation: 293, lat/long: 36.09986,-80.24422
+West Raleigh, NC: population: 338759, elevation: 122, lat/long: 35.78682,-78.66389
 </code></pre>
 </div>
     
@@ -2189,34 +2176,34 @@ Winston-Salem, NC: population: 241218, elevation: 293, lat/long: 36.09986,-80.24
 <div class="success">
 <h3 id="pythonlogus_cities_snippet.py-runtest">Run Test for test us_cities_snippet.py</h3>
 <pre><code>Charlotte, NC: population: 874579, elevation: 229, lat/long: 35.22709,-80.84313
+Durham, NC: population: 257636, elevation: 123, lat/long: 35.99403,-78.89862
 Fayetteville, NC: population: 201963, elevation: 29, lat/long: 35.05266,-78.87836
 Greensboro, NC: population: 285342, elevation: 266, lat/long: 36.07264,-79.79198
-Durham, NC: population: 257636, elevation: 123, lat/long: 35.99403,-78.89862
 Raleigh, NC: population: 451066, elevation: 96, lat/long: 35.7721,-78.63861
-West Raleigh, NC: population: 338759, elevation: 122, lat/long: 35.78682,-78.66389
 Winston-Salem, NC: population: 241218, elevation: 293, lat/long: 36.09986,-80.24422
+West Raleigh, NC: population: 338759, elevation: 122, lat/long: 35.78682,-78.66389
 
 Cities with negative elevation..
 
 Bradenton Beach, FL: population: 1171, elevation: -3, lat/long: 27.46698,-82.70399
 Timberlane, LA: population: 10243, elevation: -1, lat/long: 29.87743,-90.03202
 Terrytown, LA: population: 23319, elevation: -1, lat/long: 29.91021,-90.03257
-Coachella, CA: population: 44635, elevation: -21, lat/long: 33.6803,-116.17389
-El Centro, CA: population: 43956, elevation: -12, lat/long: 32.792,-115.56305
-Calipatria, CA: population: 7424, elevation: -55, lat/long: 33.1256,-115.51415
 Brawley, CA: population: 25897, elevation: -34, lat/long: 32.97866,-115.53027
+Calipatria, CA: population: 7424, elevation: -55, lat/long: 33.1256,-115.51415
+Coachella, CA: population: 44635, elevation: -21, lat/long: 33.6803,-116.17389
+Holtville, CA: population: 6404, elevation: -3, lat/long: 32.81116,-115.38026
+El Centro, CA: population: 43956, elevation: -12, lat/long: 32.792,-115.56305
 Desert Shores, CA: population: 1104, elevation: -60, lat/long: 33.4042,-116.03972
 Imperial, CA: population: 17095, elevation: -18, lat/long: 32.84755,-115.56944
-Indio, CA: population: 87533, elevation: -4, lat/long: 33.7207,-116.21677
 Heber, CA: population: 4275, elevation: -3, lat/long: 32.73089,-115.52972
-Mecca, CA: population: 8577, elevation: -57, lat/long: 33.57219,-116.0782
-Holtville, CA: population: 6404, elevation: -3, lat/long: 32.81116,-115.38026
-Niland, CA: population: 1006, elevation: -43, lat/long: 33.24004,-115.51888
+Indio, CA: population: 87533, elevation: -4, lat/long: 33.7207,-116.21677
 Oasis, CA: population: 6890, elevation: -44, lat/long: 33.46586,-116.09889
+Mecca, CA: population: 8577, elevation: -57, lat/long: 33.57219,-116.0782
+Niland, CA: population: 1006, elevation: -43, lat/long: 33.24004,-115.51888
+Salton City, CA: population: 3763, elevation: -38, lat/long: 33.29865,-115.95611
 Thermal, CA: population: 2865, elevation: -36, lat/long: 33.6403,-116.13945
 Seeley, CA: population: 1739, elevation: -11, lat/long: 32.79311,-115.69111
 Vista Santa Rosa, CA: population: 2926, elevation: -21, lat/long: 33.6278,-116.21806
-Salton City, CA: population: 3763, elevation: -38, lat/long: 33.29865,-115.95611
 Westmorland, CA: population: 2267, elevation: -50, lat/long: 33.03727,-115.62138
 </code></pre>
 </div>
@@ -2248,16 +2235,16 @@ Data Records in 1955: 4218
 First 3 records:
 
 0)Actor-Movie Data:
-	Movie: Q331017, To Catch a Thief
-	Actor: Q1667630, Steven Geray
+	Movie: Q34414, Rear Window
+	Actor: Q3925, Grace Kelly
 
 1)Actor-Movie Data:
-	Movie: Q331017, To Catch a Thief
-	Actor: Q2064625, Roland Lesaffre
+	Movie: Q34414, Rear Window
+	Actor: Q7374, Alfred Hitchcock
 
 2)Actor-Movie Data:
-	Movie: Q331017, To Catch a Thief
-	Actor: Q2373976, Dominique Davray
+	Movie: Q34414, Rear Window
+	Actor: Q102462, James Stewart
 
 </code></pre>
 </div>
