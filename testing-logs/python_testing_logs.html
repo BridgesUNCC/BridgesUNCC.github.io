@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Python</h1>
-	<p>Running at Sun Dec 24 03:51:00 AM EST 2023</p>
+	<p>Running at Sun Dec 31 03:50:52 AM EST 2023</p>
   <div id="summaryarray1d.py" class="success">
     <h2><a href="python_testing_logs.html#pythonlogarray1d.py">Test array1d.py</a> </h2>
     <p>
@@ -124,11 +124,11 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summaryelevation_snippet.py" class="success">
+  <div id="summaryelevation_snippet.py" class="failure">
     <h2><a href="python_testing_logs.html#pythonlogelevation_snippet.py">Test elevation_snippet.py</a> </h2>
     <p>
       <ul>
-        <li> Run Test : <a href="python_testing_logs.html#pythonlogelevation_snippet.py-runtest">success</a></li>
+        <li> Run Test : <a href="python_testing_logs.html#pythonlogelevation_snippet.py-runtest">error</a></li>
       </ul>
     </p>
   </div>
@@ -292,19 +292,19 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summaryreddit.py" class="success">
+  <div id="summaryreddit.py" class="failure">
     <h2><a href="python_testing_logs.html#pythonlogreddit.py">Test reddit.py</a> </h2>
     <p>
       <ul>
-        <li> Run Test : <a href="python_testing_logs.html#pythonlogreddit.py-runtest">success</a></li>
+        <li> Run Test : <a href="python_testing_logs.html#pythonlogreddit.py-runtest">error</a></li>
       </ul>
     </p>
   </div>
-  <div id="summaryreddit_snippet.py" class="success">
+  <div id="summaryreddit_snippet.py" class="failure">
     <h2><a href="python_testing_logs.html#pythonlogreddit_snippet.py">Test reddit_snippet.py</a> </h2>
     <p>
       <ul>
-        <li> Run Test : <a href="python_testing_logs.html#pythonlogreddit_snippet.py-runtest">success</a></li>
+        <li> Run Test : <a href="python_testing_logs.html#pythonlogreddit_snippet.py-runtest">error</a></li>
       </ul>
     </p>
   </div>
@@ -832,7 +832,7 @@ http://bridges-cs.herokuapp.com/assignments/3011/bridges_testing
     
 <div class="success">
 <h3 id="pythonlogdisplay_game.py-runtest">Run Test for test display_game.py</h3>
-<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f3029826e90&gt;
+<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7fdb07d2f590&gt;
 limiting number of frame to 10
 
 Check Your Visualization at the following link:
@@ -864,23 +864,17 @@ http://bridges-cs.herokuapp.com/assignments/3013/bridges_testing
     <div id="pythonlogelevation_snippet.py" class="logdetails">
       <h2>Test elevation_snippet.py full log</h2>
     
-<div class="success">
+<div class="failure">
 <h3 id="pythonlogelevation_snippet.py-runtest">Run Test for test elevation_snippet.py</h3>
-<pre><code>Width: 65
-Height: 89
-Coordinate of lower left corner: -98.0259, 41.030154615385
-Spatial resolution: 0.016624615385
-First 10 elevations:
-504
-504
-500
-502
-501
-497
-491
-488
-497
-510
+<pre><code>Traceback (most recent call last):
+  File &quot;/home/bridges-testing/bridges-client-testing/python/web_tutorial_testing/elevation_snippet.py&quot;, line 31, in &lt;module&gt;
+    main()
+  File &quot;/home/bridges-testing/bridges-client-testing/python/web_tutorial_testing/elevation_snippet.py&quot;, line 17, in main
+    ele_obj = data_source.get_elevation_data([41.03133177632377, -98.02593749997456, 42.508577297430456, -96.94531249997696])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/home/bridges-testing/.local/lib/python3.11/site-packages/bridges-3.4.3-py3.11.egg/bridges/data_src_dependent/data_source.py&quot;, line 946, in get_elevation_data
+ValueError: invalid literal for int() with base 10: 'again...'
+could not run test elevation_snippet.py
 </code></pre>
 </div>
     
@@ -890,10 +884,10 @@ First 10 elevations:
     
 <div class="success">
 <h3 id="pythonlogeq_snippet.py-runtest">Run Test for test eq_snippet.py</h3>
-<pre><code>Magnitude: 2.3
-Date: 2023-12-24 08:19:46
-Location:1 km NNW of Soldotna, Alaska
-Lat/Long:60.5025,-151.0748
+<pre><code>Magnitude: 1.2
+Date: 2023-12-31 08:30:15
+Location:33 km W of Anderson, Alaska
+Lat/Long:64.2998,-149.8618
 </code></pre>
 </div>
     
@@ -934,7 +928,7 @@ http://bridges-cs.herokuapp.com/assignments/3016/bridges_testing
     
 <div class="success">
 <h3 id="pythonloggame_size_test.py-runtest">Run Test for test game_size_test.py</h3>
-<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f253b1aff90&gt;
+<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f120396d050&gt;
 limiting number of frame to 10
 
 Check Your Visualization at the following link:
@@ -953,10 +947,10 @@ disconnected
     
 <div class="success">
 <h3 id="pythonloggame_snippet.py-runtest">Run Test for test game_snippet.py</h3>
-<pre><code>Rugrats in Paris -- The Movie
-Nintendo 64
-6
-['Platformer']
+<pre><code>ATV Offroad Fury 
+PlayStation 2
+8.7
+['Racing']
 </code></pre>
 </div>
     
@@ -1108,8 +1102,8 @@ could not run test gutenberg_snippet.py
     
 <div class="success">
 <h3 id="pythonlogimdb_snippet.py-runtest">Run Test for test imdb_snippet.py</h3>
-<pre><code>Alyson_Hannigan
-Boys_and_Girls_(2000)
+<pre><code>Billy_Bob_Thornton
+Armageddon_(1998)
 </code></pre>
 </div>
     
@@ -1119,7 +1113,7 @@ Boys_and_Girls_(2000)
     
 <div class="success">
 <h3 id="pythonloginput_game.py-runtest">Run Test for test input_game.py</h3>
-<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f581789ae10&gt;
+<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f6c60e9b650&gt;
 limiting number of frame to 10
 
 Check Your Visualization at the following link:
@@ -1186,7 +1180,7 @@ http://bridges-cs.herokuapp.com/assignments/3028/bridges_testing
     
 <div class="success">
 <h3 id="pythonlogminimal_game.py-runtest">Run Test for test minimal_game.py</h3>
-<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7fe05ee5aa10&gt;
+<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f220af9b090&gt;
 limiting number of frame to 10
 
 Check Your Visualization at the following link:
@@ -1262,14 +1256,10 @@ http://bridges-cs.herokuapp.com/assignments/3031/bridges_testing
 <h3 id="pythonlogosm.py-runtest">Run Test for test osm.py</h3>
 <pre><code>url: http://bridges-data-server-osm.bridgesuncc.org/loc?location=Charlotte%2C%20North%20Carolina&amp;level=default
 hash_url: http://bridges-data-server-osm.bridgesuncc.org/hash?location=Charlotte%2C%20North%20Carolina&amp;level=default
-Number of Vertices [Charlotte]: 11085
-Number of Edges [Charlotte]: 17582
-
-Check Your Visualization at the following link:
-
-http://bridges-cs.herokuapp.com/assignments/3032/bridges_testing
-
-
+Error: Corrupted JSON download...
+Attempting redownload...
+Error: Redownload attempt failed
+Expecting value: line 1 column 1 (char 0)
 </code></pre>
 </div>
     
@@ -1302,10 +1292,10 @@ Amenity 4:  Lat=35.2518095 Long=-80.7653476 Name=Briarwood Elementary School Id=
 <h3 id="pythonlogosm_snippet.py-runtest">Run Test for test osm_snippet.py</h3>
 <pre><code>url: http://bridges-data-server-osm.bridgesuncc.org/loc?location=Charlotte%2C%20North%20Carolina&amp;level=default
 hash_url: http://bridges-data-server-osm.bridgesuncc.org/hash?location=Charlotte%2C%20North%20Carolina&amp;level=default
-Number of Vertices [Charlotte]: 11085
-Number of Edges [Charlotte]: 17582
-Position of first vertex: lat=35.224978 long=-80.865467
-Cartesian Coordinate of first vertex: 827.1273231300758, -5144.073405550668
+Error: Corrupted JSON download...
+Attempting redownload...
+Error: Redownload attempt failed
+Expecting value: line 1 column 1 (char 0)
 </code></pre>
 </div>
     
@@ -1313,23 +1303,23 @@ Cartesian Coordinate of first vertex: 827.1273231300758, -5144.073405550668
     <div id="pythonlogreddit.py" class="logdetails">
       <h2>Test reddit.py full log</h2>
     
-<div class="success">
+<div class="failure">
 <h3 id="pythonlogreddit.py-runtest">Run Test for test reddit.py</h3>
-<pre><code>Title: OpenAI and Axel Springer strike unprecedented deal to offer news in ChatGPT
-Author: selling_goose
-Score: 186
-Comment Count: 46
+<pre><code>Title: Quaker Oats recalls dozens of products over foodborne illness risk | CNN Business
+Author: fogvalanche
+Score: 2697
+Comment Count: 164
 Subreddit: news
-Title: Russia has lost 87% of troops it had prior to start of Ukraine war, according to US intelligence assessment
-Title: Satanic Temple plans ‘After School Satan Club’ at Memphis elementary school
-Title: Andre Braugher Dead: ‘Homicide’, ‘Brooklyn Nine-Nine’ Actor Was 61
-Title: Hundreds of formerly homeless people get evicted after L.A. nonprofit fails to pay rent on time
-Title: Argentina's President-elect Milei replies to Musk's interest: 'We need to talk, Elon'
-Title: A former Los Angeles police detective for years hid the truth about how she killed her ex's new wife. Now, she could go free.
-Title: US wildlife managers capture wandering Mexican wolf, attempt dating game ahead of breeding season
-Title: Loveland to pay $400,000 over Colorado DUI arrest, Driver had no alcohol, drugs in system
-Title: Supreme Court agrees to hear showdown over abortion pill access
-Title: Virginia DoorDash driver carjacked at gunpoint by an 11-year-old
+Title: Councillor detonates three grenades in Ukrainian village council meeting, injuring 26 with six in critical condition
+Title: Alex Jones offers $55m to Sandy Hook families to satisfy $1.5bn judgment
+Title: Mother of 6-year-old who shot teacher in Virginia gets 2 years in prison for child neglect
+Title: Federal judge denies cattle industry’s request to temporarily halt wolf reintroduction in Colorado
+Title: US Senate confirms Shreveport attorney as first Black judge in Louisiana’s Western District
+Title: Chicago dad who told his ex ‘If I can’t have them neither can you’ pleads guilty to killing 3 kids
+Title: Arizona's governor is sending the state's National Guard to the border to help with a migrant influx
+Title: US Navy shoots down 15 Houthi drones over Red Sea
+Title: PFAS 'Forever Chemicals' Found in Freshwater Fish, Yet Most States Don't Warn Residents
+Title: Texas power plants have no responsibility to provide electricity in emergencies, judges rule
 =====
 Available subreddits:
 gadgets
@@ -1380,36 +1370,24 @@ UpliftingNews
 InternetIsBeautiful
 science
 =====
-Title: What were dinosaur immune systems like? How were they different from animals today?
-Author: Lechuga257
-Score: 1354
-Vote Ratio: 0.9
-Comment Count: 165
-Subreddit: askscience
-PostTime: 1685524157
-URL: https://www.reddit.com/r/askscience/comments/13wh0c5/what_were_dinosaur_immune_systems_like_how_were/
-Text: 
-
-Title: Why is it that when our pupils dilate for reasons unrelated to the brightness of our environment (i.e., when we're attracted to someone) we don't seem to perceive a change in brightness in our vision?
-Author: mdC__
-Score: 1465
-Vote Ratio: 0.94
-Comment Count: 64
-Subreddit: askscience
-PostTime: 1685534293
-URL: https://www.reddit.com/r/askscience/comments/13wk7d0/why_is_it_that_when_our_pupils_dilate_for_reasons/
-Text: 
-
-Title: what is the reason behind the duffy blood group's immunity toward malaria ?
-Author: katyusha_SK
-Score: 164
-Vote Ratio: 0.86
-Comment Count: 12
-Subreddit: askscience
-PostTime: 1685572308
-URL: https://www.reddit.com/r/askscience/comments/13x0bnz/what_is_the_reason_behind_the_duffy_blood_groups/
-Text: 
-
+Traceback (most recent call last):
+  File &quot;/home/bridges-testing/bridges-client-testing/python/web_tutorial_testing/reddit.py&quot;, line 49, in &lt;module&gt;
+    main()
+  File &quot;/home/bridges-testing/bridges-client-testing/python/web_tutorial_testing/reddit.py&quot;, line 31, in main
+    reddit_obj = data_source.reddit_data(&quot;askscience&quot;)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/home/bridges-testing/.local/lib/python3.11/site-packages/bridges-3.4.3-py3.11.egg/bridges/data_src_dependent/data_source.py&quot;, line 1223, in reddit_data
+  File &quot;/usr/lib/python3.11/json/__init__.py&quot;, line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/usr/lib/python3.11/json/decoder.py&quot;, line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/usr/lib/python3.11/json/decoder.py&quot;, line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Unterminated string starting at: line 1 column 70967 (char 70966)
+could not run test reddit.py
 </code></pre>
 </div>
     
@@ -1417,38 +1395,26 @@ Text:
     <div id="pythonlogreddit_snippet.py" class="logdetails">
       <h2>Test reddit_snippet.py full log</h2>
     
-<div class="success">
+<div class="failure">
 <h3 id="pythonlogreddit_snippet.py-runtest">Run Test for test reddit_snippet.py</h3>
-<pre><code>Title: What were dinosaur immune systems like? How were they different from animals today?
-Author: Lechuga257
-Score: 1354
-Vote Ratio: 0.9
-Comment Count: 165
-Subreddit: askscience
-PostTime: 1685524157
-URL: https://www.reddit.com/r/askscience/comments/13wh0c5/what_were_dinosaur_immune_systems_like_how_were/
-Text: 
-
-Title: Why is it that when our pupils dilate for reasons unrelated to the brightness of our environment (i.e., when we're attracted to someone) we don't seem to perceive a change in brightness in our vision?
-Author: mdC__
-Score: 1465
-Vote Ratio: 0.94
-Comment Count: 64
-Subreddit: askscience
-PostTime: 1685534293
-URL: https://www.reddit.com/r/askscience/comments/13wk7d0/why_is_it_that_when_our_pupils_dilate_for_reasons/
-Text: 
-
-Title: what is the reason behind the duffy blood group's immunity toward malaria ?
-Author: katyusha_SK
-Score: 164
-Vote Ratio: 0.86
-Comment Count: 12
-Subreddit: askscience
-PostTime: 1685572308
-URL: https://www.reddit.com/r/askscience/comments/13x0bnz/what_is_the_reason_behind_the_duffy_blood_groups/
-Text: 
-
+<pre><code>Traceback (most recent call last):
+  File &quot;/home/bridges-testing/bridges-client-testing/python/web_tutorial_testing/reddit_snippet.py&quot;, line 32, in &lt;module&gt;
+    main()
+  File &quot;/home/bridges-testing/bridges-client-testing/python/web_tutorial_testing/reddit_snippet.py&quot;, line 16, in main
+    reddit_obj = data_source.reddit_data(&quot;askscience&quot;)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/home/bridges-testing/.local/lib/python3.11/site-packages/bridges-3.4.3-py3.11.egg/bridges/data_src_dependent/data_source.py&quot;, line 1223, in reddit_data
+  File &quot;/usr/lib/python3.11/json/__init__.py&quot;, line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/usr/lib/python3.11/json/decoder.py&quot;, line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/usr/lib/python3.11/json/decoder.py&quot;, line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Unterminated string starting at: line 1 column 43098 (char 43097)
+could not run test reddit_snippet.py
 </code></pre>
 </div>
     
@@ -1458,11 +1424,11 @@ Text:
     
 <div class="success">
 <h3 id="pythonlogshakespeare_snippet.py-runtest">Run Test for test shakespeare_snippet.py</h3>
-<pre><code>Sonnet 35
+<pre><code>Sonnet 41
 poem
-No more be grieved at that which thou hast done,
- Roses have thorns, and silver fountains mud,
- Clou
+Those pretty wrongs that liberty commits,
+ When I am sometime absent from thy heart,
+ Thy beauty, an
 </code></pre>
 </div>
     
@@ -2182,23 +2148,23 @@ Cities with negative elevation..
 Bradenton Beach, FL: population: 1171, elevation: -3, lat/long: 27.46698,-82.70399
 Terrytown, LA: population: 23319, elevation: -1, lat/long: 29.91021,-90.03257
 Timberlane, LA: population: 10243, elevation: -1, lat/long: 29.87743,-90.03202
-Brawley, CA: population: 25897, elevation: -34, lat/long: 32.97866,-115.53027
 Coachella, CA: population: 44635, elevation: -21, lat/long: 33.6803,-116.17389
 Calipatria, CA: population: 7424, elevation: -55, lat/long: 33.1256,-115.51415
-Holtville, CA: population: 6404, elevation: -3, lat/long: 32.81116,-115.38026
-El Centro, CA: population: 43956, elevation: -12, lat/long: 32.792,-115.56305
+Brawley, CA: population: 25897, elevation: -34, lat/long: 32.97866,-115.53027
 Desert Shores, CA: population: 1104, elevation: -60, lat/long: 33.4042,-116.03972
+El Centro, CA: population: 43956, elevation: -12, lat/long: 32.792,-115.56305
+Heber, CA: population: 4275, elevation: -3, lat/long: 32.73089,-115.52972
 Indio, CA: population: 87533, elevation: -4, lat/long: 33.7207,-116.21677
 Imperial, CA: population: 17095, elevation: -18, lat/long: 32.84755,-115.56944
-Heber, CA: population: 4275, elevation: -3, lat/long: 32.73089,-115.52972
-Oasis, CA: population: 6890, elevation: -44, lat/long: 33.46586,-116.09889
 Mecca, CA: population: 8577, elevation: -57, lat/long: 33.57219,-116.0782
+Holtville, CA: population: 6404, elevation: -3, lat/long: 32.81116,-115.38026
 Niland, CA: population: 1006, elevation: -43, lat/long: 33.24004,-115.51888
+Oasis, CA: population: 6890, elevation: -44, lat/long: 33.46586,-116.09889
+Seeley, CA: population: 1739, elevation: -11, lat/long: 32.79311,-115.69111
 Salton City, CA: population: 3763, elevation: -38, lat/long: 33.29865,-115.95611
 Thermal, CA: population: 2865, elevation: -36, lat/long: 33.6403,-116.13945
-Seeley, CA: population: 1739, elevation: -11, lat/long: 32.79311,-115.69111
-Vista Santa Rosa, CA: population: 2926, elevation: -21, lat/long: 33.6278,-116.21806
 Westmorland, CA: population: 2267, elevation: -50, lat/long: 33.03727,-115.62138
+Vista Santa Rosa, CA: population: 2926, elevation: -21, lat/long: 33.6278,-116.21806
 </code></pre>
 </div>
     
@@ -2229,16 +2195,16 @@ Data Records in 1955: 4218
 First 3 records:
 
 0)Actor-Movie Data:
-	Movie: Q34414, Rear Window
+	Movie: Q331017, To Catch a Thief
 	Actor: Q3925, Grace Kelly
 
 1)Actor-Movie Data:
-	Movie: Q34414, Rear Window
+	Movie: Q331017, To Catch a Thief
 	Actor: Q7374, Alfred Hitchcock
 
 2)Actor-Movie Data:
-	Movie: Q34414, Rear Window
-	Actor: Q102462, James Stewart
+	Movie: Q331017, To Catch a Thief
+	Actor: Q83410, Cary Grant
 
 </code></pre>
 </div>
