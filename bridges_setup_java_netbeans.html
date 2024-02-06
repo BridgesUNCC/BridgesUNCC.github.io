@@ -120,149 +120,15 @@
 
       <table class = "table table-bordered">
 	<tbody>
-	  <tr>
-	    <td class = "col-md-2"> <b>Step 1: Build the Bridges Program to
-		illustrate a singly linked list</b>
-	      <ul>
-		<li> First import the relevant Bridges classes
-	      </ul>
-	    </td>
-	    <td class = "col-md-8">
-	      <ul>
-		<i>import bridges.connect.Bridges;</i> <br>
-		<i>import bridges.base.SLelement;</i>
-	      </ul>
-	    </td>
-	  </tr>
-	  <tr>
-	    <td class = "col-md-2">
-	      <ul>
-		<li> Create the bridges object with your API Key and User ID.
-		  Since we want our project to print out ``Hello World"
-		  use String as the type.
-	      </ul>
-	    </td>
-	    <td class = "col-md-8">
-	      <ul>
-		<i>  Bridges<String>  bridges = new Bridges<String>(0,
-		      "YOUR_ USER_ID", "YOUR_API_KEY");</i>
-	      </ul>
-	    </td>
-	  </tr>
-	  <tr>
-	    <td class = "col-md-2">
-	      <ul>
-		<li> Create two singly-linked elements. Singly-linked elements
-		  can be linked together to create a linked-list structure.
-	      </ul>
-	    </td>
-	    <td class = "col-md-8">
-	      <ul>
-		<i> SLelement<String> sle0 = new SLelement<String>("Hello", "");<br>
-		      SLelement<String> sle1 = new SLelement<String>("World", "");</i>
-	      </ul>
-	    </td>
-	  </tr>
-	  <tr>
-	    <td class = "col-md-2">
-	      <ul>
-		<li>  Link the elements
-	      </ul>
-	    </td>
-	    <td class = "col-md-8">
-	      <ul>
-		<i>   sle0.setNext(sle1);</i>
-	      </ul>
-	    </td>
-	  </tr>
-</tr>
 <tr>
-  <td class = "col-md-2">
+  <td class = "col-md-2"> <b>Step 1: Build the Bridges Program to
+	illustrate a singly linked list</b>
     <ul>
-      <li> Set visual attributes of the elements
-    </ul>
-  </td>
-  <td class = "col-md-8">
-    <ul>
-      <i>	sle0.getVisualizer().setColor("black"); <br>
-	sle0.getVisualizer().setOpacity((float)0.5); <br>
-	sle1.getVisualizer().setColor("green"); </i>
-    </ul>
-  </td>
-</tr>
-<tr>
-<tr>
-  <td class = "col-md-2">
-    <ul>
-      <li> Pass the handle of your data structure (reference to the
-	first element) of your data structure
-    </ul>
-  </td>
-  <td class = "col-md-8">
-    <ul>
-      <i>  bridges.setDataStructure(sle0);  <br></i>
-    </ul>
-  </td>
-</tr>
-<tr>
-<tr>
-  <td class = "col-md-2">
-    <ul>
-      <li> Visualize the data structure
-    </ul>
-  </td>
-  <td class = "col-md-8">
-    <ul>
-      <i>  bridges.visualize();  <br></i>
-    </ul>
-  </td>
-</tr>
-<tr>
-<tr>
-  <td class = "col-md-2">
-    <ul>
-      <li> To summarize, your HelloWorld.java should look like this:
-    </ul>
-  </td>
-  <td class = "col-md-8">
-    <b><i>
-	import bridges.connect.Bridges; <br>
-	import bridges.base.SLelement; <p> <p>
-
-	  public class HelloWorld { <p>
-	  &nbsp&nbsp&nbsp&nbsp	public static void main(String[] args) throws Exception{ <p>
-
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp //create the Bridges object <p>
-	  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Bridges<String> bridges = new Bridges<String>(0, "YOUR_USER_ID", "YOUR_API_KEY"); <p>
-
-		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp //create two singly-linked elements <br>
-		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp SLelement sle0 = new SLelement<String>("Hello", ""); <br>
-		  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp SLelement sle1 = new SLelement<String>("World", ""); <p>
-
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp // create a singly-linked list <br>
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp // by adding sle1 as sle0's next element <br>
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle0.setNext(sle1); <p>
-
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp //edit some visual properties of the two elements <br>
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle0.getVisualizer().setColor("black"); <br>
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle0.getVisualizer().setOpacity((float)0.5); <br>
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp sle1.getVisualizer().setColor("green"); <p>
-		      
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp //pass the first element of the list <br>
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspbridges.setDataStructure(sle0); <p>
-		      
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp // visualize the list <br>
-		      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp bridges.visualize(); <p> </i> </b>
-    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp} <br>
-    &nbsp&nbsp&nbsp&nbsp}<br>
-  </td>
-</tr>
-<tr>
-  <td class = "col-md-2"> <b>Step 3: Running your Bridges program</b>
-    <ul>
-      <li> Once your code is in, run your project
-      <li> <i> Run-->Run </i>
-      <li> <i> Run-->Run As -->Java Application</i>
+      <li> Go to this <a href = "https://bridgesuncc.github.io/tutorials/testing/java/tut_sllist_p1.java.html">BRIDGES Tutorial</a> 
+		and copy/paste the Java tutorial program into the main window into a new file. 
+		Make sure the file name matches the class name! 
+      <li> Set an assignment number, and your credentials in the line that creates the Bridges object at the beginning of the program. 
+		As a reminder, you can find your username and API key from the Bridges profile page.
     </ul>
   </td>
   <td class = "col-md-8">
@@ -271,8 +137,9 @@
 </tr>
 </tr>
 <tr>
-  <td class = "col-md-2"> <b>Step 4: Visualize your data structure</b>
+  <td class = "col-md-2"> <b>Step 2: Visualize your data structure</b>
     <ul>
+	  <li> Run the Netbeans project.
       <li> If your code compiles correctly, the NetBeans console will
 	give you a link to the Bridges website. to view the
 	visualization. Copy/paste this link into your favorite
