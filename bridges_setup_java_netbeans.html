@@ -37,27 +37,27 @@
 	</tr>
 	<tr>
 	  <b>Step 2: Create Bridges Account</b>
-	  <ul> <li> Visit the Bridges
-	      <a href = "http://bridgesuncc.github.io">
-		main page</a> and create yourself an account
-	      by clicking the login button
-	      on the top navigation bar. <b>Please ensure that
-		your user id is devoid of spaces, as it will be
-		used as part of the web link for your projects.</b>
-	      After creating your account, click on your profile
-	      name in the upper right corner to view your
-	      profile. Once in your profile, you will see your
-	      API Key; you will need this API key in part 2
-	      of the tutorial(as well as in every BRIDGES program
-	      you write). <b>NOTE:</b> Make sure to remember
-	      your password. There is no password recovery option,
-	      and you can only have one account per email address.
+	  <ul> <li> Visit the Bridges 
+		<a href = "http://bridgesuncc.github.io"> main page</a> 
+		   and create yourself an account by clicking the login button
+		   on the top navigation bar.  Click "Sign Up!" near the bottom of the page. 
+		   <li>Please ensure that your user id is devoid of spaces, as it will be 
+		   used as part of the web link for your projects.
+		   <li>After creating your account, click 
+		   on the profile tab in the upper right corner to 
+		   view your profile. Here will see your account details and
+		   <b>API Key</b>; you will need this API key later
+		   in the tutorial (as well as in every BRIDGES program 
+		   you write). 
+		   <li><b>NOTE: Make sure to remember 
+		   your password</b>. 
 	  </ul>
 	</tr>
 	<tr>
 	  <td class = "col-md-2"> <b>Step 3: Create a Java Project</b>
 	    <ul>
-	      <li> <i> File-->New Project-->Java Application-->Next</i>
+	      <li> Open the Netbeans IDE 
+			<li> <i> File-->New Project-->Java with Ant-->Java Application-->Next</i>
 	    </ul>
 	  </td>
 	  <td class = "col-md-8">
@@ -67,8 +67,7 @@
 	<tr>
 	  <td class = "col-md-2"> <b>Step 4: Name Project </b>
 	    <ul>
-	      <li> In the new window change the <i>Project name</i>
-		field to your user name, and choose prject path. Click Finish.
+	      <li> In the new window change the <i>Project name</i> and choose a path. Click Finish.
 	    </ul>
 	  </td>
 	  <td class = "col-md-8">
@@ -79,10 +78,10 @@
 	    <ul>
 	      <li> Download the Bridges.jar file from
 		<a href = "http://bridgesuncc.github.io/">
-		  Bridges home page </a> and save it somewhere convenient on your drive.
-	      <li> On NetBeans, right-click your project in the
-		Package Explorer window then click:
-		<i> Set Configuration --> Customize</i>
+		  Bridges home page </a> (Downloads --> Java Client) and save it somewhere convenient on your drive.
+	      <li> On NetBeans, right-click on the <i>libraries</i> folder under the project in the
+		Package Explorer window. Click:
+		<i> Add Jar/Folder </i>
 	    </ul>
 	  <td class = "col-md-8"> <img src = "./img/Tutorialv2/java/netbeans/setconf.png" width = "800"></img>
           </td>
@@ -90,23 +89,12 @@
         <tr>
 	  <td class = "col-md-2"> <b>Step 5b: Import BRIDGES Jar file</b>
 	    <ul>
-	      <li>  Navigate to the Libraries tab and click <i>Add JAR/Folder</i>
-                <b>Make sure your JDK is 1.8 or above.</b>
+	      <li>  Navigate to the Bridges.jar file you downloaded earlier. 
+			<li> Click open once the file is selected. This will add the Bridges library to your project
 	    </ul>
 	  </td>
 	  <td class = "col-md-8">
 	    <img src = "./img/Tutorialv2/java/netbeans/addlibrary.png" width = "800"></img>
-	  </td>
-	</tr>
-	<tr>
-	  <td class = "col-md-2"> <b>Step 5c: Import BRIDGES Jar file</b>
-	    <ul>
-	      <li>  Locate and select the Bridges.jar file you saved
-		earlier to import it into your new project.
-	    </ul>
-	  </td>
-	  <td class = "col-md-8">
-	    <img src = "./img/Tutorialv2/java/netbeans/findLibrary.png" width = "800"></img>
 	  </td>
 	</tr>
 	<tr>
@@ -116,8 +104,7 @@
 		file, look under the Libraries section of
 		your project in the Package Explorer window in NetBeans.
 	      <li> If you have got a Project in the NetBeans Package
-		Explorer with your username as the project name, and the
-		referenced libraries section shows the bridges Jar file,
+		Explorer, and the referenced libraries section shows the bridges Jar file,
 		you have completed the setup and are ready to build
 		the Hello World class!
 	    </ul>
@@ -134,29 +121,7 @@
       <table class = "table table-bordered">
 	<tbody>
 	  <tr>
-	    <td class = "col-md-2"> <b>Step 1a: Create a new class</b>
-	      <ul>
-		<li> Create a new class within your project
-		<li> <i> Right Click package-->New-->Java Class </i>
-		<li> Select Java Main Class in File Types
-	      </ul>
-	    </td>
-	    <td class = "col-md-8">
-	      <img src = "./img/Tutorialv2/java/netbeans/newClass.png" width="800"></img>
-	    </td>
-	  </tr>
-	  <tr>
-	    <td class = "col-md-2"> <b>Step 1b: Create a new class</b>
-	      <li> In the New Java Class window set the Package field to your name
-	      <li> Set the Name field to HelloWorld (this is the name of the class)
-	      <li> Click Finish in the bottom right-hand corner
-	    </td>
-	    <td class = "col-md-8">
-	      <img src = "./img/Tutorialv2/java/netbeans/classConf.png" width="800"></img>
-            </td>
-	  </tr>
-	  <tr>
-	    <td class = "col-md-2"> <b>Step 2: Now build the Bridges Program to
+	    <td class = "col-md-2"> <b>Step 1: Build the Bridges Program to
 		illustrate a singly linked list</b>
 	      <ul>
 		<li> First import the relevant Bridges classes
