@@ -44,34 +44,44 @@
 	    <b>Step 2: Create Bridges Account</b> 
 	    <ul> <li>  Visit the Bridges 
 		<a href = "http://bridgesuncc.github.io"> main page</a> 
-		and create yourself an account by clicking the 
-		login button on the top navigation bar. 
-		Please ensure that 
+		and create an account by clicking the 
+		login button on the top navigation bar. Click "Sign Up!" near the bottom of the new window. 
+		<li>Please ensure that 
                 your user id is devoid of spaces, as it will be 
                 used as part of the web link for your projects.
-		After creating your account, click 
-		on your profile name in the upper right corner to 
-		view your profile. Once in your profile, you will see your
-		API Key; you will need this API key in part 2 
-		of the tutorial(as well as in every BRIDGES program 
-		you write). <b>NOTE:</b> Make sure to remember 
+		<li>After creating your account, click 
+		on the profile tab in the uppper-right corner. In this window, you will see your account details and
+		API Key; you will need this API key later in the tutorial (as well as in every BRIDGES program 
+		you write).
+		<li><b>NOTE:</b> Make sure to remember 
 		your password. There is no password recovery option, 
 		and you can only have one account per email address.
 	    </ul>
 	  </td>
 	</tr>
-	<tr> <td class = "col-md-2"> <b>Step 3: Import Jar File into project</b>
+	<tr> <td class = "col-md-2"> <b>Step 3: Create a new project</b>
 	    <ul>
-	      <li> Download the Bridges.jar file (current version is 3.4.0) from 
+	      <li> Navigate to File -> New -> Project.
+		  <li> In the next window, name your project and set its path. Make sure your project is using Java and 'Add Sample Code' is selected.
+		  <li> Press 'Create'
+		</ul>
+	</td>
+	<td class = "col-md-8">
+		<img src = "./img/Tutorial/java/intellij/createProject.png" width = "400"></img>
+	</td>
+	</tr>
+	<tr> <td class = "col-md-2"> <b>Step 3: Import the Jar File into project</b>
+	    <ul>
+	      <li> Download the latest Bridges.jar file from 
 		<a href = "http://bridgesuncc.github.io">
 		  Bridges home page</a> and save it somewhere convenient 
 		on your drive.
-	      <li> On IntelliJ, right click on your project and select 
-		<i>Open  Module Settings</i> Select <i>Modules</i> which will
+	      <li> In IntelliJ, right click on your new project in the explorer window and select 
+		<i>Open  Module Settings</i>. Select <i>Modules</i> which will
 		show all the modules/Jars currently loaded.
-	      <li> Click on the <i>+ </i> button on the bottom left of the 
-		window, and select <i> Dependencies tab </i>. Navigate
-		to the folder containing the BRIDGES Jar file and load it in as a Jar archive.
+	      <li> Open the dependencies tab near the top of the page. Then, click on the <i>+</i> icon.
+		  <li> <i>Jars or Directories</i>
+		  <li> This will open your systems file explorer. Navigate to the Bridges Jar file you downloaded earlier and click open.
 	      <li> You should now see the BRIDGES Jar file as part of the 
 		project. Hit Ok to get rid of the window.
 	    </ul>
@@ -84,20 +94,18 @@
 	<tr>
 	<td class = "col-md-2"> <b>Step 4: Create, Build, Execute  a BRIDGES Java Program</b> 
 	    <ul> 
-	      <li> Open <i> File-->New-->Project</i> 
 		  <li> Go to this 
             <a href = "https://bridgesuncc.github.io/tutorials/testing/java/tut_sllist_p1.java.html">
             BRIDGES Tutorial</a> and copy/paste the Java tutorial program into 
-            the main window by creating a new file. Set the file name to match the class name
-        <li> Set an assignment number, and your credentials in the line that creates 
-            the Bridges object  at the beginning of the program.
-        <li> Run the program by hitting the <b> Build Project (hammer icon) </b> followed
-		by hitting the <b> Run (Play) button </b>.  
+            the main java file. Make sure the file and class name match!
+        <li> Initialize the bridges object with an assignment number (it can be any num), and your user ID and API key 
+			you generated at the start of the tutorial. 
+        <li> Run the program by hitting the <b> Run button (Triangle icon) </b> in the upper-right corner.
         <li> You will see a link printed on the console. Use that to visualize the
             output as seen in the image.
         </td>
         <td class = "col-md-8">
-        <img src = "./img/bridges_setup/intellij/bridges_program.png" width = "800"></img>
+        <img src = "./img/Tutorial/java/intellij/bridges_output.png" width = "800"></img>
         </td>
     </tr>
     </thead>
