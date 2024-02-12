@@ -1,6 +1,6 @@
 #!/bin/sh
 
-wget http://bridgesuncc.github.io/sw/bridges-java-3.1.0.jar -O ~/bridges-java.jar
+wget http://bridgesuncc.github.io/sw/bridges-java-LATEST.jar -O ~/bridges-java.jar
 
 cat >> ~/.bashrc <<EOF
 

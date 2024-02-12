@@ -2,7 +2,7 @@
 
 rm -r bridges-java.jar
 
-wget http://bridgesuncc.github.io/sw/bridges-java-3.3.0.jar -O ~/bridges-java.jar
+wget http://bridgesuncc.github.io/sw/bridges-java-LATEST.jar -O ~/bridges-java.jar
 
 cat >> ~/.profile <<EOF
 
