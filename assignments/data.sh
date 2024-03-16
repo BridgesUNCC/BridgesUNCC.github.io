@@ -64,7 +64,7 @@ addsubgroup "Simulation"
 addassignment "14-SpreadingFire"
 addassignment "15-FallingSand"
 
-addgroup "Data Structure"
+addgroup "Data Structures"
 addsubgroup "LinkedList"
 addassignment "1-ListIMDB"
 addassignment "2-ListEQ"

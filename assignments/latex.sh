@@ -15,8 +15,9 @@ addgroup() {
     closegroup
     
     cat <<EOF
-$groupname
-\begin{itemize}
+\column{.32\linewidth}
+\begin{block}{$groupname}
+\tiny
 EOF
     groupsopen="yes"
 }
@@ -26,8 +27,8 @@ addsubgroup() {
     closesubgroup
     
     cat <<EOF
-  \item $subgroupname
-  \begin{itemize}
+
+    \textbf{${subgroupname}:}
 EOF
     subgroupsopen="yes"
 }
@@ -43,40 +44,63 @@ addassignment() {
 	prettyname=$(cat ${srcdir}/prettyname)
     fi
 
-    
-    cat <<EOF
-    \item $prettyname
+    if [ "${assignmentopen}" ];
+    then
+	cat <<EOF
+;
 EOF
+    fi
+    echo -n \ \ \ \ \ \ $prettyname
+
+    assignmentopen="yes"
 }
 
 closegroup() {
+    closesubgroup
+
     if [ "${groupsopen}" ];
     then
 	cat<<EOF
-\end{itemize}
+\end{block}
+
 EOF
 	groupsopen=""
     fi
 }
 
 closesubgroup() {
+    closeassignment
     if [ "${subgroupsopen}" ];
     then
 	cat<<EOF
-  \end{itemize}
+
 EOF
 	subgroupsopen=""
+    fi
+}
+
+closeassignment() {
+    if [ "${assignmentopen}" ];
+    then
+	assignmentopen=""
     fi
 }
 
 
 
 closeout() {
-    closesubgroup
     closegroup
  
 }
 
+cat<<EOF
+\begin{columns}[T]
+EOF
+    
 . ./data.sh
 
 closeout
+
+cat<<EOF
+\end{columns}
+EOF
