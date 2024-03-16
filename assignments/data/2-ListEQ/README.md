@@ -1,20 +1,28 @@
+# Assignment 2 - List Earthquake
 
-Assignment 2 - List Earthquake
-========================
+## Example Output
 
 <img src="./figures/fig1.png" alt="drawing" width="350"></img>
 
 
-Goals
-------
+## Learning Outcomes
+
+1. Linked Lists
+2. Nodes
+
+
+## Goals
 The purpose of this assignment is to learn to
 1. Change the style of nodes.
 2. Use the earthquake data.
 You will generate a visualization that looks like the figure above.
 
-### Programming part
+
+## Description
+
 ### Task
 Style a linked list of earthquake records.
+
 ### Node styling
 1. Open your scaffold code.
 2. Plug in your credentials.
@@ -23,7 +31,13 @@ Style a linked list of earthquake records.
 5. Get the `ElementVisualizer` object from the `SLelement`.
 6. Change the element size based on the earthquake magnitude.
 7. Give the element a different shape if the earthquake is in Hawaii, and yet another shape if it is in Alaska.
-### Help
+
+
+## Extensions
+
+
+## Help
+
 #### For Java
 [SLelement documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_s_lelement.html)
 

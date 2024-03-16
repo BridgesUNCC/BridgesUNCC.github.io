@@ -1,22 +1,29 @@
+# Assignment 12 - A* Maze
 
-Assignment 12 - A* Maze
-===========================
-
-Source
-------
+## Source
 
 This is a nifty assignment from 2008 proposed by Don Blaheta.
 [Source](http://nifty.stanford.edu/2008/blaheta-maze/)
 
-Goals
- -----
+
+## Learning Outcomes
+
+1. Stacks
+2. Queues
+3. Shortest Path
+4. Graphing
+
+
+## Goals
+
  The purpose of this assignment is to learn to
  1. Generate a random maze on a 2D Grid
  2. Write the A* algorithm for traversing a grid 
  3. Display the algorithm at each step to the grid as it traverses the maze
 
-Programming
------------
+
+## Description
+
 #### Tasks
 - Create a maze on a 2D grid. There are many maze algorithms 
 - Write a pathfinder using the A* algorithm to traverse the 2D grid
@@ -30,13 +37,21 @@ There are plenty of algorithms for generating a maze. Prims algorithms is a good
 #### Create the pathfinder
 Create a pathfinder that uses the A* algorithm to traverse the grid towards a goal point.
 
-### Help
-[AStar Explanation](https://www.geeksforgeeks.org/a-search-algorithm/)
-[Maze Algorithms](https://en.wikipedia.org/wiki/Maze_generation_algorithm)
-#### For C++
 
+## Extensions
+
+
+## Help
+
+#### For Java
+[AStar Explanation(Geeks for Geeks](https://www.geeksforgeeks.org/a-search-algorithm/)
+
+[NonBlockingGame](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1games_1_1_non_blocking_game.html)
+
+[Maze Algorithms(Wikipedia)](https://en.wikipedia.org/wiki/Maze_generation_algorithm)
+
+#### For C++
 [NonBlockingGame documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1game_1_1_non_blocking_game.html)
 
 #### For Python
-
 [NonBlockingGame documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1non__blocking__game_1_1_non_blocking_game.html)

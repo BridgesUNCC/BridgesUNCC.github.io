@@ -1,19 +1,29 @@
-Bridges Games Controls Tutorial
-===============================
+# Assignment 17 - Bridges Games Controls Tutorial
 
-Goals
------
+## Example Output
+
+<img src="./Controls.png" alt="image" width="550"></img>
+
+
+## Learning Outcomes
+
+1. Loops
+2. Grids
+
+
+## Goals
 
 To teach students the functions that allow them to interact with their games.
-
 1. Understand the main variables used to run a bridges game.
 2. Learn about the initialize() method.
 3. Understand ways students can implement their own methods and how to traverse the grid using for loops.
 4. Learn about the gameLoop() method and the 10 different controls available in non-Blocking games.
 5. Prepare the main method and run a game.
 
-Variables
----------
+
+## Description 
+
+#### Variables
 
 Sets the size of the students grid. Grids are limited to 1024 cells. The largest square grid available is 32 x 32.
 - int gridColumns
@@ -24,8 +34,7 @@ Variables that will change the color and symbols despalayed in the game.
 - NamedColor mySymbolColor
 - NamedSymbol mySymbol
 
-Functions
----------
+#### Functions
 
 initialize()
 - A required bridges function. This runs before the game loop begins allowing the students an oppertunity to set the colors and symbols of their game before it starts.
@@ -45,19 +54,21 @@ Boolean values that are true when a specific key is being pressed.
 -keyQ()
 -keySpace()
 
-Main Method and Student Class Object
-------------------------------------
+#### Main Method and Student Class Object
 
 Students must structure their class object to call "super" and pass the variables of their bridges account in order for the bridges server to visualize their game.
 Within the Class object students can also set their games title and a short description of the game. They must ensure the start() function is called here.
 
-Help
-----
+
+## Extensions
+
+
+## Help
 
 #### For C++
 [NonBlockingGame documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1game_1_1_non_blocking_game.html)
 
-####For Java
+#### For Java
 [NonBlockingGame documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1games_1_1_non_blocking_game.html)
 
 #### For Python
