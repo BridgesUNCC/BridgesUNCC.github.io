@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Java</h1>
-	<p>Running at Sun Mar 10 03:42:32 AM EDT 2024</p>
+	<p>Running at Sun Mar 17 03:42:11 AM EDT 2024</p>
   <div id="summaryarray1d.java" class="success">
     <h2><a href="java_testing_logs.html#javalogarray1d.java">Test array1d.java</a> </h2>
     <p>
@@ -905,11 +905,11 @@ http://bridges-cs.herokuapp.com/assignments/2007/bridges_testing
 <pre><code>16512
 Incident 0:
 	Type: Mortality
-	Year: 2000
-	Population: 2302835
+	Year: 1999
+	Population: 2293259
 	Race: All Races
 	Gender: Female
-	CrudeRate: 192.2(more rate information available) 
+	CrudeRate: 190.4(more rate information available) 
 	Location: 32.799, -86.8073
 	Count: 0
 </code></pre>
@@ -1152,10 +1152,10 @@ first 10 elevations:
 <div class="success">
 <h3 id="javalogeq_snippet.java-runtest">Run Test for test eq_snippet.java</h3>
 <pre><code>Earthquake 0:
-	Magnitude:1.9
-	Date:Mar 10 2024  03:37:44.510 EDT
-	Location: 55 km SW of Covenant Life, Alaska
-	Lat/Long:59.0089,-136.5919
+	Magnitude:2.1
+	Date:Mar 17 2024  03:13:41.815 EDT
+	Location: 64 km NE of Ouzinkie, Alaska
+	Lat/Long:58.2483,-151.6068
 </code></pre>
 </div>
     
@@ -1212,10 +1212,10 @@ Shutting down ...
 </div>
 <div class="success">
 <h3 id="javaloggame_snippet.java-runtest">Run Test for test game_snippet.java</h3>
-<pre><code>Gretzky NHL 06
-PlayStation 2
-6.8
-[Sports]
+<pre><code>007: The World is Not Enough
+PlayStation
+6.9
+[Action]
 </code></pre>
 </div>
     
@@ -1457,17 +1457,12 @@ From My Autobiography
 	Language: en
 	Date Added: 2009-05-14
 Retrieving book text: PRIDE AND PREJUDICE
-Exception in thread &quot;main&quot; org.apache.http.ConnectionClosedException: Premature end of Content-Length delimited message body (expected: 785660; received: 44977
-	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:180)
-	at org.apache.http.conn.EofSensorInputStream.read(EofSensorInputStream.java:137)
-	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
-	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
-	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
-	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
-	at java.base/java.io.Reader.read(Reader.java:250)
-	at org.apache.http.util.EntityUtils.toString(EntityUtils.java:244)
-	at org.apache.http.util.EntityUtils.toString(EntityUtils.java:288)
-	at bridges.connect.DataSource.requestJSON(DataSource.java:1211)
+Exception in thread &quot;main&quot; org.apache.http.client.HttpResponseException: Http Request Failed. Error Code:500. Message:&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 3.2 Final//EN&quot;&gt;
+&lt;title&gt;500 Internal Server Error&lt;/title&gt;
+&lt;h1&gt;Internal Server Error&lt;/h1&gt;
+&lt;p&gt;The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.&lt;/p&gt;
+
+	at bridges.connect.DataSource.requestJSON(DataSource.java:1220)
 	at bridges.connect.DataSource.getGutenbergBookText(DataSource.java:1326)
 	at gutenberg_snippet.main(gutenberg_snippet.java:71)
 could not run test gutenberg_snippet.java
@@ -1485,8 +1480,8 @@ could not run test gutenberg_snippet.java
 </div>
 <div class="success">
 <h3 id="javalogimdb_snippet.java-runtest">Run Test for test imdb_snippet.java</h3>
-<pre><code>Brigitte_Bardot
-A_coeur_joie_(1967)
+<pre><code>Alan_Rickman
+Winter_Guest,_The_(1997)
 </code></pre>
 </div>
     
@@ -1921,11 +1916,18 @@ could not run test reddit_snippet.java
 </div>
 <div class="success">
 <h3 id="javalogshakespeare_snippet.java-runtest">Run Test for test shakespeare_snippet.java</h3>
-<pre><code>Sonnet 113
-poem
-Since I left you, mine eye is in my mind,
- And that which governs me to go about,
- Doth part his fun...
+<pre><code>The Taming Of The Shrew
+play
+1594
+
+THE TAMING OF THE SHREW
+
+by William Shakespeare
+
+Dramatis Personae
+
+ Persons in the Induction
+...
 </code></pre>
 </div>
     
@@ -2763,9 +2765,9 @@ US Cities Retrieved
 	Durham, NC:  Population: 257636, Elevation: 123, Lat/Long: 35.99403,-78.89862
 	Fayetteville, NC:  Population: 201963, Elevation: 29, Lat/Long: 35.05266,-78.87836
 	Greensboro, NC:  Population: 285342, Elevation: 266, Lat/Long: 36.07264,-79.79198
-	West Raleigh, NC:  Population: 338759, Elevation: 122, Lat/Long: 35.78682,-78.66389
 	Raleigh, NC:  Population: 451066, Elevation: 96, Lat/Long: 35.7721,-78.63861
 	Winston-Salem, NC:  Population: 241218, Elevation: 293, Lat/Long: 36.09986,-80.24422
+	West Raleigh, NC:  Population: 338759, Elevation: 122, Lat/Long: 35.78682,-78.66389
 </code></pre>
 </div>
     
@@ -2786,16 +2788,16 @@ US Cities Retrieved
 	Cary, NC:  Population: 159769, Elevation: 152, Lat/Long: 35.79154,-78.78112
 	Charlotte, NC:  Population: 874579, Elevation: 229, Lat/Long: 35.22709,-80.84313
 	Durham, NC:  Population: 257636, Elevation: 123, Lat/Long: 35.99403,-78.89862
-	High Point, NC:  Population: 110268, Elevation: 281, Lat/Long: 35.95569,-80.00532
 	Fayetteville, NC:  Population: 201963, Elevation: 29, Lat/Long: 35.05266,-78.87836
 	Greensboro, NC:  Population: 285342, Elevation: 266, Lat/Long: 36.07264,-79.79198
-	West Raleigh, NC:  Population: 338759, Elevation: 122, Lat/Long: 35.78682,-78.66389
+	High Point, NC:  Population: 110268, Elevation: 281, Lat/Long: 35.95569,-80.00532
 	Raleigh, NC:  Population: 451066, Elevation: 96, Lat/Long: 35.7721,-78.63861
-	Wilmington, NC:  Population: 115933, Elevation: 9, Lat/Long: 34.22573,-77.94471
 	Winston-Salem, NC:  Population: 241218, Elevation: 293, Lat/Long: 36.09986,-80.24422
-	Chattanooga, TN:  Population: 176588, Elevation: 206, Lat/Long: 35.04563,-85.30968
+	Wilmington, NC:  Population: 115933, Elevation: 9, Lat/Long: 34.22573,-77.94471
+	West Raleigh, NC:  Population: 338759, Elevation: 122, Lat/Long: 35.78682,-78.66389
 	East Chattanooga, TN:  Population: 154024, Elevation: 208, Lat/Long: 35.06535,-85.24912
 	Knoxville, TN:  Population: 185291, Elevation: 276, Lat/Long: 35.96064,-83.92074
+	Chattanooga, TN:  Population: 176588, Elevation: 206, Lat/Long: 35.04563,-85.30968
 </code></pre>
 </div>
     
@@ -2834,15 +2836,15 @@ http://bridges-cs.herokuapp.com/assignments/2074/bridges_testing
 
 Actor-Movie Data:
 	Movie: Q331017 &quot;To Catch a Thief&quot;
-	Actor: Q3925 &quot;Grace Kelly&quot;
+	Actor: Q513849 &quot;Bess Flowers&quot;
 
 Actor-Movie Data:
 	Movie: Q331017 &quot;To Catch a Thief&quot;
-	Actor: Q7374 &quot;Alfred Hitchcock&quot;
+	Actor: Q541270 &quot;Jessie Royce Landis&quot;
 
 Actor-Movie Data:
 	Movie: Q331017 &quot;To Catch a Thief&quot;
-	Actor: Q83410 &quot;Cary Grant&quot;
+	Actor: Q921945 &quot;John Williams&quot;
 
 </code></pre>
 </div>

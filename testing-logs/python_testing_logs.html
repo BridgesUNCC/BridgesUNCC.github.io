@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Python</h1>
-	<p>Running at Sun Mar 10 03:51:29 AM EDT 2024</p>
+	<p>Running at Sun Mar 17 03:51:18 AM EDT 2024</p>
   <div id="summaryarray1d.py" class="success">
     <h2><a href="python_testing_logs.html#pythonlogarray1d.py">Test array1d.py</a> </h2>
     <p>
@@ -778,11 +778,11 @@ http://bridges-cs.herokuapp.com/assignments/3007/bridges_testing
 <h3 id="pythonlogcancer_snippet.py-runtest">Run Test for test cancer_snippet.py</h3>
 <pre><code>Record 1:
 	Type: Mortality
-	Year: 2000
-	Population: 2302835
+	Year: 1999
+	Population: 2293259
 	Race: All Races
 	Gender: 
-	CrudeRate: 192.2(more rate information available) 
+	CrudeRate: 190.4(more rate information available) 
 	Location: 32.799, -86.8073
 	Count: 0
 </code></pre>
@@ -856,7 +856,7 @@ http://bridges-cs.herokuapp.com/assignments/3012/bridges_testing
     
 <div class="success">
 <h3 id="pythonlogdisplay_game.py-runtest">Run Test for test display_game.py</h3>
-<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7fe3ce650490&gt;
+<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f3b6afa8b50&gt;
 limiting number of frame to 10
 
 Check Your Visualization at the following link:
@@ -914,10 +914,10 @@ First 10 elevations:
     
 <div class="success">
 <h3 id="pythonlogeq_snippet.py-runtest">Run Test for test eq_snippet.py</h3>
-<pre><code>Magnitude: 1.9
-Date: 2024-03-10 07:37:44
-Location:55 km SW of Covenant Life, Alaska
-Lat/Long:59.0089,-136.5919
+<pre><code>Magnitude: 2.1
+Date: 2024-03-17 07:13:41
+Location:64 km NE of Ouzinkie, Alaska
+Lat/Long:58.2483,-151.6068
 </code></pre>
 </div>
     
@@ -958,7 +958,7 @@ http://bridges-cs.herokuapp.com/assignments/3017/bridges_testing
     
 <div class="success">
 <h3 id="pythonloggame_size_test.py-runtest">Run Test for test game_size_test.py</h3>
-<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7fade9465290&gt;
+<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f273e6a9750&gt;
 limiting number of frame to 10
 
 Check Your Visualization at the following link:
@@ -977,10 +977,10 @@ disconnected
     
 <div class="success">
 <h3 id="pythonloggame_snippet.py-runtest">Run Test for test game_snippet.py</h3>
-<pre><code>Vigilante 8: Second Offense
-Dreamcast
-8.6
-['Action']
+<pre><code>Truth or Lies
+Xbox 360
+4
+['Trivia']
 </code></pre>
 </div>
     
@@ -1104,23 +1104,24 @@ The Complete Works of William Shakespeare
 
 Get text of Moby Dick (id: 2701)
 
+500 Server Error: INTERNAL SERVER ERROR for url: http://bridges-data-server-gutenberg.bridgesuncc.org/book?id=2701
+Traceback (most recent call last):
+  File &quot;/home/bridges-testing/.local/lib/python3.11/site-packages/bridges-3.4.3-py3.11.egg/bridges/data_src_dependent/data_source.py&quot;, line 1190, in gutenberg_book_text
+  File &quot;/home/bridges-testing/.local/lib/python3.11/site-packages/bridges-3.4.3-py3.11.egg/bridges/data_src_dependent/data_source.py&quot;, line 891, in _server_request
+  File &quot;/usr/lib/python3/dist-packages/requests/models.py&quot;, line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: INTERNAL SERVER ERROR for url: http://bridges-data-server-gutenberg.bridgesuncc.org/book?id=2701
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File &quot;/home/bridges-testing/bridges-client-testing/python/web_tutorial_testing/gutenberg_snippet.py&quot;, line 61, in &lt;module&gt;
     main()
   File &quot;/home/bridges-testing/bridges-client-testing/python/web_tutorial_testing/gutenberg_snippet.py&quot;, line 52, in main
     text = data_source.gutenberg_book_text(2701)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/home/bridges-testing/.local/lib/python3.11/site-packages/bridges-3.4.3-py3.11.egg/bridges/data_src_dependent/data_source.py&quot;, line 1197, in gutenberg_book_text
-  File &quot;/usr/lib/python3.11/json/__init__.py&quot;, line 346, in loads
-    return _default_decoder.decode(s)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/usr/lib/python3.11/json/decoder.py&quot;, line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/usr/lib/python3.11/json/decoder.py&quot;, line 353, in raw_decode
-    obj, end = self.scan_once(s, idx)
-               ^^^^^^^^^^^^^^^^^^^^^^
-json.decoder.JSONDecodeError: Unterminated string starting at: line 1 column 9 (char 8)
+  File &quot;/home/bridges-testing/.local/lib/python3.11/site-packages/bridges-3.4.3-py3.11.egg/bridges/data_src_dependent/data_source.py&quot;, line 1195, in gutenberg_book_text
+RuntimeError: 500 Server Error: INTERNAL SERVER ERROR for url: http://bridges-data-server-gutenberg.bridgesuncc.org/book?id=2701
 could not run test gutenberg_snippet.py
 </code></pre>
 </div>
@@ -1132,7 +1133,7 @@ could not run test gutenberg_snippet.py
 <div class="success">
 <h3 id="pythonlogimdb_snippet.py-runtest">Run Test for test imdb_snippet.py</h3>
 <pre><code>Christopher_Lee_(I)
-Vengeance_of_Fu_Manchu,_The_(1967)
+Many_Faces_of_Christopher_Lee,_The_(1996)
 </code></pre>
 </div>
     
@@ -1142,7 +1143,7 @@ Vengeance_of_Fu_Manchu,_The_(1967)
     
 <div class="success">
 <h3 id="pythonloginput_game.py-runtest">Run Test for test input_game.py</h3>
-<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f392b0fc0d0&gt;
+<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7ffbbde2fd10&gt;
 limiting number of frame to 10
 
 Check Your Visualization at the following link:
@@ -1209,7 +1210,7 @@ http://bridges-cs.herokuapp.com/assignments/3029/bridges_testing
     
 <div class="success">
 <h3 id="pythonlogminimal_game.py-runtest">Run Test for test minimal_game.py</h3>
-<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f3329b63d90&gt;
+<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7ff07c7ffdd0&gt;
 limiting number of frame to 10
 
 Check Your Visualization at the following link:
@@ -1415,7 +1416,7 @@ Traceback (most recent call last):
   File &quot;/usr/lib/python3.11/json/decoder.py&quot;, line 353, in raw_decode
     obj, end = self.scan_once(s, idx)
                ^^^^^^^^^^^^^^^^^^^^^^
-json.decoder.JSONDecodeError: Unterminated string starting at: line 1 column 44726 (char 44725)
+json.decoder.JSONDecodeError: Unterminated string starting at: line 1 column 69265 (char 69264)
 could not run test reddit.py
 </code></pre>
 </div>
@@ -1442,7 +1443,7 @@ could not run test reddit.py
   File &quot;/usr/lib/python3.11/json/decoder.py&quot;, line 353, in raw_decode
     obj, end = self.scan_once(s, idx)
                ^^^^^^^^^^^^^^^^^^^^^^
-json.decoder.JSONDecodeError: Unterminated string starting at: line 1 column 44726 (char 44725)
+json.decoder.JSONDecodeError: Unterminated string starting at: line 1 column 41642 (char 41641)
 could not run test reddit_snippet.py
 </code></pre>
 </div>
@@ -1453,11 +1454,11 @@ could not run test reddit_snippet.py
     
 <div class="success">
 <h3 id="pythonlogshakespeare_snippet.py-runtest">Run Test for test shakespeare_snippet.py</h3>
-<pre><code>Sonnet 123
+<pre><code>Sonnet 117
 poem
-No! Time, thou shalt not boast that I do change,
- Thy pyramids built up with newer might
- To me are 
+Accuse me thus, that I have scanted all,
+ Wherein I should your great deserts repay,
+ Forgot upon yo
 </code></pre>
 </div>
     
@@ -2152,9 +2153,9 @@ http://bridges-cs.herokuapp.com/assignments/3067/bridges_testing
 Durham, NC: population: 257636, elevation: 123, lat/long: 35.99403,-78.89862
 Fayetteville, NC: population: 201963, elevation: 29, lat/long: 35.05266,-78.87836
 Greensboro, NC: population: 285342, elevation: 266, lat/long: 36.07264,-79.79198
-West Raleigh, NC: population: 338759, elevation: 122, lat/long: 35.78682,-78.66389
 Raleigh, NC: population: 451066, elevation: 96, lat/long: 35.7721,-78.63861
 Winston-Salem, NC: population: 241218, elevation: 293, lat/long: 36.09986,-80.24422
+West Raleigh, NC: population: 338759, elevation: 122, lat/long: 35.78682,-78.66389
 </code></pre>
 </div>
     
@@ -2168,31 +2169,31 @@ Winston-Salem, NC: population: 241218, elevation: 293, lat/long: 36.09986,-80.24
 Durham, NC: population: 257636, elevation: 123, lat/long: 35.99403,-78.89862
 Fayetteville, NC: population: 201963, elevation: 29, lat/long: 35.05266,-78.87836
 Greensboro, NC: population: 285342, elevation: 266, lat/long: 36.07264,-79.79198
-West Raleigh, NC: population: 338759, elevation: 122, lat/long: 35.78682,-78.66389
 Raleigh, NC: population: 451066, elevation: 96, lat/long: 35.7721,-78.63861
 Winston-Salem, NC: population: 241218, elevation: 293, lat/long: 36.09986,-80.24422
+West Raleigh, NC: population: 338759, elevation: 122, lat/long: 35.78682,-78.66389
 
 Cities with negative elevation..
 
 Bradenton Beach, FL: population: 1171, elevation: -3, lat/long: 27.46698,-82.70399
-Terrytown, LA: population: 23319, elevation: -1, lat/long: 29.91021,-90.03257
 Timberlane, LA: population: 10243, elevation: -1, lat/long: 29.87743,-90.03202
-Brawley, CA: population: 25897, elevation: -34, lat/long: 32.97866,-115.53027
+Terrytown, LA: population: 23319, elevation: -1, lat/long: 29.91021,-90.03257
 Coachella, CA: population: 44635, elevation: -21, lat/long: 33.6803,-116.17389
 Calipatria, CA: population: 7424, elevation: -55, lat/long: 33.1256,-115.51415
-Indio, CA: population: 87533, elevation: -4, lat/long: 33.7207,-116.21677
-Desert Shores, CA: population: 1104, elevation: -60, lat/long: 33.4042,-116.03972
 El Centro, CA: population: 43956, elevation: -12, lat/long: 32.792,-115.56305
-Holtville, CA: population: 6404, elevation: -3, lat/long: 32.81116,-115.38026
-Heber, CA: population: 4275, elevation: -3, lat/long: 32.73089,-115.52972
+Brawley, CA: population: 25897, elevation: -34, lat/long: 32.97866,-115.53027
+Desert Shores, CA: population: 1104, elevation: -60, lat/long: 33.4042,-116.03972
 Imperial, CA: population: 17095, elevation: -18, lat/long: 32.84755,-115.56944
+Heber, CA: population: 4275, elevation: -3, lat/long: 32.73089,-115.52972
+Indio, CA: population: 87533, elevation: -4, lat/long: 33.7207,-116.21677
 Mecca, CA: population: 8577, elevation: -57, lat/long: 33.57219,-116.0782
-Oasis, CA: population: 6890, elevation: -44, lat/long: 33.46586,-116.09889
 Niland, CA: population: 1006, elevation: -43, lat/long: 33.24004,-115.51888
-Salton City, CA: population: 3763, elevation: -38, lat/long: 33.29865,-115.95611
-Seeley, CA: population: 1739, elevation: -11, lat/long: 32.79311,-115.69111
+Holtville, CA: population: 6404, elevation: -3, lat/long: 32.81116,-115.38026
 Thermal, CA: population: 2865, elevation: -36, lat/long: 33.6403,-116.13945
+Oasis, CA: population: 6890, elevation: -44, lat/long: 33.46586,-116.09889
 Vista Santa Rosa, CA: population: 2926, elevation: -21, lat/long: 33.6278,-116.21806
+Seeley, CA: population: 1739, elevation: -11, lat/long: 32.79311,-115.69111
+Salton City, CA: population: 3763, elevation: -38, lat/long: 33.29865,-115.95611
 Westmorland, CA: population: 2267, elevation: -50, lat/long: 33.03727,-115.62138
 </code></pre>
 </div>
@@ -2224,16 +2225,16 @@ Data Records in 1955: 4282
 First 3 records:
 
 0)Actor-Movie Data:
-	Movie: Q73944, Two Tickets to Broadway
-	Actor: Q166212, Eddie Bracken
+	Movie: Q331017, To Catch a Thief
+	Actor: Q921945, John Williams
 
 1)Actor-Movie Data:
-	Movie: Q73944, Two Tickets to Broadway
-	Actor: Q205314, Janet Leigh
+	Movie: Q331017, To Catch a Thief
+	Actor: Q965918, Charles Vanel
 
 2)Actor-Movie Data:
-	Movie: Q73944, Two Tickets to Broadway
-	Actor: Q237864, Vera Miles
+	Movie: Q331017, To Catch a Thief
+	Actor: Q1667630, Steven Geray
 
 </code></pre>
 </div>
