@@ -1,15 +1,27 @@
-Minesweeper Game
-================
+# Assignment 20 - Minesweeper Game
 
-Goals
- -----
+## Example Output
+
+<img src="./Minesweeper.png" alt="image" width="550"></img>
+
+
+## Learning Outcomes
+
+1. Loops
+2. 2D Arrays
+3. Recursion
+
+
+## Goals
+
  The purpose of this assignment is to learn to
  1. How to maintain states of multiple 2D arrays.
  2. Test conditions between multiple arrays.
  3. Improve efficiency in using loops and switch statements.
 
-Programming
------------
+
+## Description
+
 ### Tasks
 - Initialize a 2D array the size of your game grid.
 - Initialize the NamedColors of your mines, the layer covering the mines, the players carrot.
@@ -19,9 +31,8 @@ Programming
 - If there is no bomb the game of minesweeper generally reveals some of the spaces around the empty space that was selected.
 - Add a replay and a quit button.
 
-More Details to Get You Started
--------------------------------
-###Key Press Events - NonBlocking Games
+### More Details to Get You Started
+#### Key Press Events - NonBlocking Games
 - keyUp()
 - keyDown()
 - keyLeft()
@@ -33,7 +44,7 @@ More Details to Get You Started
 - keyA()
 - keyD()
 
-###Key Press Events - Blocking Games
+#### Key Press Events - Blocking Games
 - getKeyPress(); Returns a string.
 - "ArrowLeft"
 - "ArrowRight"
@@ -45,20 +56,29 @@ More Details to Get You Started
 - "d"
 - etc...
 
-###Variables, Colors, and Sprite Symbols
+#### Variables, Colors, and Sprite Symbols
 - NamedSymbol.symbolname;
 - NamedColor.colorname;
 - drawSymbol(column, row, NamedSymbol, NamedColor);
 - setBGColor(column, row, NamedColor);
 
-###Important Functions
+#### Important Functions
 - The gameLoop() function loops until the game is over.
 - quit() stops the game.
 - start() starts the game and calls the initialize() function once before it starts the gameLoop() function.
 - render() sends your updated game grid to the server once. This is a blocking game function.
 
-### Help
+
+## Extensions
+
+
+## Help
+
+#### For Java
+[NonBlockingGame documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1games_1_1_non_blocking_game.html)
+
 #### For C++
 [NonBlockingGame documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1game_1_1_non_blocking_game.html)
+
 #### For Python
 [NonBlockingGame documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1non__blocking__game_1_1_non_blocking_game.html)

@@ -1,23 +1,28 @@
-Shakespearean Words
-===================
+# Assignment 8 - Shakespearean Words
+
+## Example Output
 
 <img src="./figures/ht.png" alt="drawing" width="500"></img>
 <img src="./figures/tree.png" alt="drawing" width="500"></img>
 
 
-Goals
------
+## Learning Outcomes
+
+1. Binary Search Tree
+2. Hash tab;es
+3. Heaps
+
+
+## Goals
 
 The purpose of this assignment is to learn to
-
 1. Access Shakespeare's work with BRIDGES
 2. Write a Dictionary using BRIDGES
 3. Write your own tree based data structure: A Binary Min-Heap
 
 You will generate a visualization that illustrates the hash table and tree representations used in the assignment.
 
-Purpose
--------
+### Purpose
 
 The purpose of the assignment is to analyze out of Shakespeare works
 which words are used most often. The assignment is in two
@@ -27,8 +32,7 @@ Binary Search Tree. Then, we will extract the words used most
 often. This will be accomplished using a Min Heap.
 
 
-Programming part
-----------------
+## Description
 
 ### Counting word appearances using a Dictionary and a custom implementation
 
@@ -64,11 +68,6 @@ for each word w in document
 2. Implement you own Dictionary using a Binary Search Tree leveraging the BSTElement of BRIDGES.
 3. Visualize the Dictionary using BRIDGES.
 
-#### If you have time
-
-1. Implement the Dictionary using a HashTable.
-2. Use BRIDGES SymbolCollection to generate a visualization of the HashTable.
-3. Use all of Shakespeare work and measure the performance difference between the HashTable and the BST implementations.
 
 ### Extracting the most frequent words using a Min Heap 
 
@@ -129,22 +128,26 @@ insert (Heap h, k) {
 3. Use the heap to identify the most occuring words in Shakespeare
 work.
 
+
+## Extensions
+
+#### If you have time
+
+1. Implement the Dictionary using a HashTable.
+2. Use BRIDGES SymbolCollection to generate a visualization of the HashTable.
+3. Use all of Shakespeare work and measure the performance difference between the HashTable and the BST implementations.
+
 #### If you have time
 
 1. Use all of Shakespeare's works.
-
 2. Using the pop function, keep only the 100 most occuring words in the heap at any time.
-
-3. Measure the performance difference between keeping all entries in
-the heap and only the top-100 most occuring words.
-
+3. Measure the performance difference between keeping all entries in the heap and only the top-100 most occuring words.
 4. Style the heap so that words with more than 1000 occurences are highlighted.
 
 
-### Help
+## Help
 
-#### for Java
-
+#### For Java
 [Color documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_color.html)
 
 [BinTreeElement documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_bin_tree_element.html)
@@ -153,8 +156,7 @@ the heap and only the top-100 most occuring words.
 
 [Bridges class documentation](http://bridgesuncc.github.io/doc/java-api/current/html/namespacebridges_1_1base.html)
 
-#### for C++
-
+#### For C++
 [Color documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_color.html)
 
 [BinTreeElement documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_bin_tree_element.html)
@@ -162,7 +164,6 @@ the heap and only the top-100 most occuring words.
 [DataSource documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_data_source.html)
 
 [Shakespeare documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1dataset_1_1_shakespeare.html)
-
 
 #### For Python
 [Bridges documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1bridges_1_1_bridges.html)

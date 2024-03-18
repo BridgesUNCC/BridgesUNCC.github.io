@@ -1,6 +1,13 @@
-<h1>Shakespearean Words</h1>
+<h1>Assignment 8 - Shakespearean Words</h1>
+<h2>Example Output</h2>
 <p><!-- raw HTML omitted --><!-- raw HTML omitted -->
 <!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2>Learning Outcomes</h2>
+<ol>
+<li>Binary Search Tree</li>
+<li>Hash tab;es</li>
+<li>Heaps</li>
+</ol>
 <h2>Goals</h2>
 <p>The purpose of this assignment is to learn to</p>
 <ol>
@@ -9,14 +16,14 @@
 <li>Write your own tree based data structure: A Binary Min-Heap</li>
 </ol>
 <p>You will generate a visualization that illustrates the hash table and tree representations used in the assignment.</p>
-<h2>Purpose</h2>
+<h3>Purpose</h3>
 <p>The purpose of the assignment is to analyze out of Shakespeare works
 which words are used most often. The assignment is in two
 pieces. First, we will need to count how many times each words
 appear. This will be accomplished using a Dictionary implemented as a
 Binary Search Tree. Then, we will extract the words used most
 often. This will be accomplished using a Min Heap.</p>
-<h2>Programming part</h2>
+<h2>Description</h2>
 <h3>Counting word appearances using a Dictionary and a custom implementation</h3>
 <p>A Dictionary (sometimes called associative arrays) enable to store and
 retrieve (key, value) pairs. In this assignment they will be useful to
@@ -36,12 +43,6 @@ words then becomes:</p>
 <li>Use the Dictionary implementation to compute the number of occurencecs of each word.</li>
 <li>Implement you own Dictionary using a Binary Search Tree leveraging the BSTElement of BRIDGES.</li>
 <li>Visualize the Dictionary using BRIDGES.</li>
-</ol>
-<h4>If you have time</h4>
-<ol>
-<li>Implement the Dictionary using a HashTable.</li>
-<li>Use BRIDGES SymbolCollection to generate a visualization of the HashTable.</li>
-<li>Use all of Shakespeare work and measure the performance difference between the HashTable and the BST implementations.</li>
 </ol>
 <h3>Extracting the most frequent words using a Min Heap</h3>
 <p>The purpose of this task is to build a MinHeap in BRIDGES
@@ -74,29 +75,27 @@ of the heap.</p>
 work.</p>
 </li>
 </ol>
+<h2>Extensions</h2>
 <h4>If you have time</h4>
 <ol>
-<li>
-<p>Use all of Shakespeare's works.</p>
-</li>
-<li>
-<p>Using the pop function, keep only the 100 most occuring words in the heap at any time.</p>
-</li>
-<li>
-<p>Measure the performance difference between keeping all entries in
-the heap and only the top-100 most occuring words.</p>
-</li>
-<li>
-<p>Style the heap so that words with more than 1000 occurences are highlighted.</p>
-</li>
+<li>Implement the Dictionary using a HashTable.</li>
+<li>Use BRIDGES SymbolCollection to generate a visualization of the HashTable.</li>
+<li>Use all of Shakespeare work and measure the performance difference between the HashTable and the BST implementations.</li>
 </ol>
-<h3>Help</h3>
-<h4>for Java</h4>
+<h4>If you have time</h4>
+<ol>
+<li>Use all of Shakespeare's works.</li>
+<li>Using the pop function, keep only the 100 most occuring words in the heap at any time.</li>
+<li>Measure the performance difference between keeping all entries in the heap and only the top-100 most occuring words.</li>
+<li>Style the heap so that words with more than 1000 occurences are highlighted.</li>
+</ol>
+<h2>Help</h2>
+<h4>For Java</h4>
 <p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_color.html">Color documentation</a></p>
 <p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_bin_tree_element.html">BinTreeElement documentation</a></p>
 <p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1data__src__dependent_1_1_shakespeare.html">Shakespeare documentation</a></p>
 <p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/namespacebridges_1_1base.html">Bridges class documentation</a></p>
-<h4>for C++</h4>
+<h4>For C++</h4>
 <p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_color.html">Color documentation</a></p>
 <p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_bin_tree_element.html">BinTreeElement documentation</a></p>
 <p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_data_source.html">DataSource documentation</a></p>

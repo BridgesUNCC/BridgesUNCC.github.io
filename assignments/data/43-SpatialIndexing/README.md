@@ -1,5 +1,8 @@
-Spatial Indexing : Finding Closest Point in a  Map from a Given Location
-=======================================================================
+# Spatial Indexing - 43
+
+## Example Images
+<img src="./figures/fig1.png" alt="Example" width="550px"></img>
+<img src="./figures/fig2.png" alt="Example" width="550px"></img>
 
 ## Goals
 
@@ -8,11 +11,6 @@ Spatial Indexing : Finding Closest Point in a  Map from a Given Location
 	amenity of that type
 3. CS concepts: 2D array addressing, using acceleration structures 
 	for efficient search
-
-## Source
-In this assignment we will use Open Street map data to retrieve a set of 
-locations from a specified section of a city or region. BRIDGES API will be
-used to retrieve OpenStreet Map data. 
 
 
 ## Description
@@ -25,13 +23,10 @@ Lat/Long values. Your goal is, given a 2D location (X, Y), to find the
 closest point on the map. Given that the data can contain tens of thousands
 of locations, you will use a uniform grid to accelerate the search.
 
-
-### Search Algorithm:
-
+### Search Algorithm 
 You want an algorithm that is scalable to very large datasets; hence you will
 use a data structure to make this process efficient. A uniform grid overlaid
-on the search area will be used to hold the location data. The algorithm
-will broadly consist of the following steps:
+on the search area will be used to hold the location data. 
 
 1. A uniform 2D grid of a  specified size will be used to store the 
 location data. Each of the location will be inserted into its appropriate
@@ -53,16 +48,13 @@ is retained. Note that the cell may not contain any points.
 	stored smallest distance would the correponding cells need to be searched.
 
 5. As needed, the algorithm proceeds layer by layer starting from the query
-cell. See the following two figures that illustrates the layers generated 
-(step 3), displayed in a ColorGrid:
-
-<img src="./figures/fig1.png" alt="drawing" width="350"></img>
-<img src="./figures/fig2.png" alt="drawing" width="350"></img>
+cell. See the two figures above that illustrates the layers generated 
+(step 3), displayed in a ColorGrid.
 
 6. If a layer results in no updates to the closest point, then the algorithm
 	can be terminated.
 
-## Tasks
+### Tasks
 
 1. Get the OpenStreet map data. The BRIDGES API will be used to obtain this 
 data. Note that the data size has limitations, requiring the bounding box
@@ -92,15 +84,15 @@ queried by the algorithm by recording the cell indices and display them (colored
 being computed correctly (link to 2D assignment).
 
 
-## Variants
+## Extensions
 
-One can make variants of this assignment: 
+One can make extensions to this assignment: 
 
 Instead of just looking at Lat/Long data, you might retrieve a set of
 resturant locations (say Macdonald's) and look for the closest Macdonalds
 from your location(home), or the nearest hospital, fire station, etc.
 
-## Additional Help:
+## Help
 
 [BRIDGES Team:](http://bridgesuncc.github.io/) Contact the BRIDGES team for any 
 issues with the BRIDGES API. This is an active project.

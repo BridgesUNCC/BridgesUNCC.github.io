@@ -1,34 +1,27 @@
-Processing 2D Images
-====================
+# Processing 2D Images - 40
 
-## Goals
+## Example Images
+
+<img src="./figures/yosemite.jpg" alt="Example Image" width="550px" /> 
+<img src="./figures/Lenna.jpg" alt="Example Image" width="550px" />
+
+ ## Goals
 
 1. Working with 2D images.
 2. Implementing simple operations on images, such as color manipulation, 
 	filtering.
 3. CS concepts: 2D array addressing, processing
 
-## Source
-This assignment was adapted from a similar assignment(reference unknown); the 
-main difference is it eases the ability to work with the BRIDGES API which
-helps with displaying the image  using a BRIDGES data structure.
-
 ## Description
 Students are provided with sample images in a simple text format (eg., PPM) 
 that they read and display using the ColorGrid datatype (an abstraction for 
 images). Students are asked to perform a number of simple processing 
-operations on the provided input images, such as the one given below. 
-
-**Example Images**
-
-<img src="./figures/yosemite.jpg" alt="Example Image" width="300px" /> 
-<img src="./figures/Lenna.jpg" alt="Example Image" width="250px" />
+operations on the provided input images, such as the one given above. 
 
 Students are provided with a skeleton of an Image class that they will use
 to implement the required image processing operations listed below.
-
  
-## Tasks
+### Tasks
 
 1. **Read Input Image.** You will read images in PPM (text) format, with all 
 	of the data in pure text form. This is a simple format with a header 
@@ -74,7 +67,7 @@ to implement the required image processing operations listed below.
 		then it becomes 255-100 = 155.
 
 
-## Variants/Extensions/Engagement
+## Extensions
 
 1. **Image Representation:** Images can be represented internally as a 1D array
 	or 2D array. Representing as a 1D array  allows students to practice 
@@ -90,7 +83,7 @@ to implement the required image processing operations listed below.
 	creativity of students are very powerful engagement indicators. Ensure
 	they are shared with the whole class.
 
-## Additional Help:
+## Help
 
 [BRIDGES Team:](http://bridgesuncc.github.io/) Contact the BRIDGES team for any 
 issues with the BRIDGES API. This is an active project.

@@ -1,9 +1,11 @@
-Minimum Spanning Tree on  US Cities (Prim's Algorithm)
-=====================================================
+# Minimum Spanning Tree on US Cities - 44
 
-Goals
------
+## Example Image
 
+<img src="figures/figure-1" alt="Example Simple" width="550px" />
+<img src="figures/figure-2" alt="Example Named" width="550px" />
+
+## Goals
 The purpose of this assignment is to learn to
 
 1. Implement Prim's Minimum Spanning Tree Algorithm and demonstrate its
@@ -12,14 +14,12 @@ The purpose of this assignment is to learn to
 3. Experiment with two variants of the algorithm
 3. Visualize the results using BRIDGES
 
-Programming
-----------------
 
+## Description
 ### Tasks
-1. Build the graph using the US City data - refer to the tutorial on
-	[US cities](http://bridgesuncc.github.io/tutorials/Data_USCities.html)
+1. Build the graph using the US City data - refer to the tutorial in help
 	for accessing the data
-2. Implement Prim's MST algorithm, using the US City data a
+2. Implement Prim's MST algorithm, using the US City data
 	* Variant 1: Greedy operation uses the entire unvisited graph
 	* Variant 2: Greedy operation visits only the fringe nodes of the tree
 
@@ -27,15 +27,20 @@ Programming
     * Highlight the starting city
     * Label the nodes with city names 
     * Use the map facilities in BRIDGDES to embed the  MST in a US map, using
-	 the setMapOverla()y and setMap() methods of the BRIDGES class.
+	 the setMapOverlay() and setMap() methods of the BRIDGES class.
 
-![Example 1](figures/figure-1.png)
-![Example 2](figures/figure-2.png)
+## Extensions
+	Greedy Search operation uses the entire unvisited graph 
+	Greedy Search operation visits only the fringe nodes of the tree
 
-### References
+## Help
 
-[GraphAdjList Java](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_graph_adj_list.html)  
-[GraphAdjList C++](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_graph_adj_list.html)   
+[US cities](http://bridgesuncc.github.io/tutorials/Data_USCities.html)
+### Java
+[GraphAdjList ](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_graph_adj_list.html)  
+### C++
+[GraphAdjList ](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_graph_adj_list.html)   
+### Python
 [GraphAdjList Python](https://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1graph__adj__list_1_1_graph_adj_list.html)
 
 
