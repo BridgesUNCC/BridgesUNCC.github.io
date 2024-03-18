@@ -1,26 +1,31 @@
-# Book Distance through Text Analysis - 39
+Book Distance through Text Analysis
+=====================================
 
-
-## Example output
-
-<img src="figures/book_analysis.png" alt="Sample Output" width="550px" />
-
-## Goals
+Goals
+-----
 
 Implement a word frequency list for a book and use it to compare similarity to other books.
 
-## Description
+Tasks
+-----
 
-### Tasks
+1. Get book meta data information using Bridges API: DataSource.getGutenbergMetaData()
 
+2. With the meta data, get the books by ID using Bridges API: DataSource.getGutenbergBookText()
 
-1. With the meta data, get the books by ID using Bridges API: DataSource.getGutenbergBookText()
+3. Generate a word frequency list with the book text
 
-2. Generate a word frequency list with the book text
+4. Compare two frequency lists to determine the similarity between book texts. Can use a L1 Norm comparison. 
 
-3. Compare two frequency lists to determine the similarity between book texts. Can use a L1 Norm comparison. 
+5. Generate a graphadjlist using the similarity values and book nodes.
 
-## Extensions
+Example output
+--------------
+
+<img src="figures/book_analysis.png" alt="Sample Output" width="400px" />
+
+Varients
+--------
 
 One can change the complextiy of the comparison algorithm to one that is L2 Norm (Euclidean Distance)
 or even L3 Norm.
@@ -61,4 +66,3 @@ the gutenberg data.
 [GutenbergData documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1data__src__dependent_1_1osm_1_1_osm_data.html)
 
 [DataSource documentation](https://bridgesuncc.github.io/doc/python-api/current/html/namespacebridges_1_1data__src__dependent_1_1data__source.html)
-

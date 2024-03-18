@@ -1,22 +1,13 @@
-# Assignment 9 - Shortest Path in Real Cities
+Shortest Path in Real Cities
+============================
 
-## Example Output
-
-<img src="figures/Minneapolis.png" alt="Sample Output" width="400px" />
-
-
-## Learning Outcomes
-
-1. Dijkstra's Alogrithm
-2. Hashmaps
-3. Encapsulation
-
-
-## Goals
+Goals
+-----
 
 Implement Dijkstra's algorithm and run it on a real world scenario: your city's map.
 
-#### Tasks
+Tasks
+-----
 
 1. Get map information for your city using Bridges API: DataSource.getOSMData()
 
@@ -35,7 +26,13 @@ shortest path algorithm such as Dijkstra's algorithm.
 5. Color the map based on their distance from the source vertex.
 
 
-#### Variants
+Sample Output
+-------------
+
+<img src="figures/Minneapolis.png" alt="Sample Output" width="400px" />
+
+Variants
+--------
 
 One can see the complexity of the algorithm by running larger and
 larger maps. You can plot the runtime of the algorithm as a function
@@ -52,12 +49,7 @@ Bridges.
 Identifying the vertex the closest to a coordinate is a good
 application for using quad-trees.
 
-
-## Extensions
-
-
-## Help
-
+### Help
 #### For C++
 [Bridges documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_bridges.html)
 
@@ -70,6 +62,7 @@ application for using quad-trees.
 [DataSource documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_data_source.html)
 
 #### For Java
+
 [Bridges documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1connect_1_1_bridges.html)
 
 [GraphAdjList documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_graph_adj_list.html)
@@ -81,6 +74,7 @@ application for using quad-trees.
 [DataSource documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1connect_1_1_data_source.html)
 
 #### For Python
+
 [Bridges documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1bridges_1_1_bridges.html)
 
 [GraphAdjList documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1graph__adj__list_1_1_graph_adj_list.html)

@@ -1,20 +1,25 @@
-# GeologicalSurvey - 38
+Geological Survey
+=================
 
-![Geological](./figures/icon.png)
-
-
-## Learning Outcomes
-
-## Goals
+Overview
+--------
 
 You are a geologist and you want to survey the location of recent
 earthquake. Find a route through all the earthquake site to minimize
 total distance travelled.
 
+Greedy
+------
 
-## Description
+We will use a greedy algorithm to solve the problem. That is to say,
+when we are at a location, we will go next to the closest location
+that has not been visited so far. A greedy algorithm will not return
+the best route through all the locations, but it provides a decent
+solution to the problem quickly.
 
-### Tasks
+Programming
+-----------
+
 1. Get location of recent earthquake using Bridges API.
 
 2. Use an array of boolean to record whether a location has been visited or not.
@@ -26,33 +31,24 @@ visited and which is the closest to a location.
 
 5. Write the code to compute a tour using the greedy principle.
 
+6. Display the tour using Bridges API. You can use the graph data structure to display the tour.
 
-## Extensions
+Variants
+--------
 
-* Brute Force
+### Brute Force
 
-* Integer Linear Programming
+### Integer Linear Programming
 
-* Branch and Bound
+### Branch and Bound
 
-* Christofides
-    * A 2-approximation based on building spanning trees
+### Christofides
 
-* 3/2 approximation
-    * A refinement of Christofides based on spanning trees and matching
+A 2-approximation based on building spanning trees
 
-* Meta Heuristics
+#### 3/2 approximation
 
-## Help
+A refinement of Christofides based on spanning trees and matching
 
-### For C++
-[Graph Visualization Documentation](https://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_graph_adj_list.html)
-[Earthquake Documentation](https://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1dataset_1_1_earthquake_u_s_g_s.html)
+### Meta Heuristics
 
-### For Java
-[Graph Visualization Documentation](https://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_graph_adj_list.html)
-[Earthquake Documentation](https://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1data__src__dependent_1_1_earthquake_u_s_g_s.html)
-
-### For Python
-[Graph Visualization Documentation](https://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1graph__adj__list_1_1_graph_adj_list.html)
-[Earthquake Documentation](https://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1data__src__dependent_1_1earthquake__usgs_1_1_earthquake_u_s_g_s.html)

@@ -1,40 +1,36 @@
-# Assignment 3 - Graph Bacon Number
-
-## Example Output
+Assignment 3 - Graph Bacon Number
+=================================
 
 <img src="./figures/fig1.png" alt="drawing" width="350"></img>
 
 
-## Leearning Outcomes
-
-1. Data Parsing and Visualization
-2. Hashmaps
-3. Queues
-4. Algorithm Complexity
-
-
-## Goals
+Goals
+-----
 
 The purpose of this assignment is to learn to
+
 1. Use the IMDB Actor Movie graph.
 2. Compute BFS on that graph.
 3. Highlight a shortest path in the graph.
 
 You will generate a visualization that looks like the figure above.
 
-## Description
+Programming part
+----------------
 
 ### Task
 
 Highlight the shortest path between two actors in a Movie Actor graph.
 
 ### Getting Started
+
 1. Open your scaffolded code.
 2. Plug in your credentials.
 3. Change the style of nodes Cate_Blanchett and Kevin_Bacon_(I), directly attached nodes, and directly attached edges.
 4. Compile, run, and visualize.
 
 ### Perform BFS
+
 1. Write a BFS traversal in `getBaconNumber` that keeps track of parent information. Here is the algorithm:
 
 ```algorithm
@@ -55,18 +51,16 @@ BFS(G=(V,E), root)
 3. We recommend using a built-in queue, such as Java's `ArrayDeque` or C++'s `std::queue`.
 
 ### Style the BFS path
+
 1. Start from the Cate_Blanchett node.
 2. Color the current node red and make it bigger.
 3. Style the edge from the current node to its parent. Make it red and bigger.
 4. Go to the parent node and go back to 2 until Kevin_Bacon_(I) has been reached.
 
+### Help
 
-## Extensions
+#### for Java
 
-
-## Help
-
-#### For Java
 [ArrayDeque documentation](https://docs.oracle.com/javase/7/docs/api/java/util/ArrayDeque.html)
 
 [HashMap documentation](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html)
@@ -81,7 +75,8 @@ BFS(G=(V,E), root)
 
 [ActorMovieIMDB documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1data__src__dependent_1_1_actor_movie_i_m_d_b.html)
 
-#### For C++
+#### for C++
+
 [std::queue documentation](http://en.cppreference.com/w/cpp/container/queue)
 
 [std::unordered_map documentation](http://en.cppreference.com/w/cpp/container/unordered_map)
@@ -96,7 +91,8 @@ BFS(G=(V,E), root)
 
 [ActorMovieIMDB documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1dataset_1_1_actor_movie_i_m_d_b.html)
 
-#### For Python
+#### for Python
+
 [Queue documentation](https://docs.python.org/3/library/queue.html)
 
 [Element documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1element_1_1_element.html)

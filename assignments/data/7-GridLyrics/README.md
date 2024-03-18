@@ -1,19 +1,10 @@
-# Assignment 7 - Repetition in Lyrics
-
-## Example Output
+Repetition in Lyrics
+====================
 
 <img src="figures/icon.png" alt="Sample Output" width="400px" />
 
-
-## Learning Outcomes
-
-1. Arrays
-2. String Manipluation
-3. Conditions
-4. Loops
-
-
-## Goals
+Goals
+-----
 
 The purpose of this assignment is to learn to
 1. Access lyrics data through BRIDGES.
@@ -23,7 +14,8 @@ The purpose of this assignment is to learn to
 You will generate a visualization that looks like in the figure above.
 
 
-## Description
+Programming part
+----------------
 
 ### Task
 
@@ -73,15 +65,15 @@ In this assignment, the objective is to pull a song from Bridges, split the lyri
 
 7. After filling out your grid, set it as the data structure on your Bridges object, and run the code.
 
-## Extensions
 
+### Help
 
-## Help
+#### for Java
 
-#### For Java
 [ColorGrid documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_color_grid.html)
 
 [Color documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_color.html)
+
 
 [DataSource documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1connect_1_1_data_source.html)
 
@@ -89,7 +81,8 @@ In this assignment, the objective is to pull a song from Bridges, split the lyri
 
 [Bridges class documentation](http://bridgesuncc.github.io/doc/java-api/current/html/namespacebridges_1_1base.html)
 
-#### For C++
+#### for C++
+
 [ColorGrid documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_color_grid.html)
 
 [Color documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_color.html)

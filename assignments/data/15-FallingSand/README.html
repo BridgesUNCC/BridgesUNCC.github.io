@@ -1,0 +1,48 @@
+<h1>Assignment 15 : Falling Sand</h1>
+<h2>Source</h2>
+<p>This is a nifty assignment from 2017 proposed by Dave Feinberg.
+<a href="http://nifty.stanford.edu/2017/feinberg-falling-sand/">Source</a></p>
+<h2>Goals</h2>
+<p>The purpose of this assignment is to learn to</p>
+<ul>
+<li>Organize data in two-dimensional arrays</li>
+<li>Use data from arrays to control conditional statements</li>
+<li>Practice recursion</li>
+<li>Practice simulation techniques</li>
+<li>Practice debuging using real-time interactions with visualizations</li>
+</ul>
+<h2>Programming</h2>
+<h4>Tasks</h4>
+<ul>
+<li>Use loops to populate and update a grid with values that represent multiple elements.</li>
+<li>Define the behavior of a grid cell that contains a water, metal, sand, or empty spaces.</li>
+<li>Use keypress events to change the type of element that is selected.</li>
+<li>Indicate the currently selected element by chaning the color of the cursor cell.</li>
+<li>Update the color of the grid cell when the elemental values change.</li>
+<li>Draw metal containers within the grid to test waters reaction. Water should fill closed containers and fall over the side when full.</li>
+<li>Make sand fall through the water and increase the waters height.</li>
+</ul>
+<h4>Water</h4>
+<p>Water falls down when the space below is empty, if the space below is sand, metal or the bottom of the container the water should test if there is also a solid on either side of it or if it should flow left or right.</p>
+<p>The answer uses the key &quot;w&quot; to switch to placing water</p>
+<h4>Sand</h4>
+<p>Sand falls through water and down through empty spaces. It makes water rise as well. It wont fall through metal or the bottom of the container though. If sand is stacked more than three cells high then it will fall left or right depending on if there is water or an empty space next to it.</p>
+<p>The answer uses the key &quot;s&quot; to switch to placing sand</p>
+<h4>Aluminum</h4>
+<p>None of the other basic elements go through Aluminum. Aluminum also doesn't fall when placed even if there's an empty space under it. Aluminum can be used as a container higher up in the grid.</p>
+<p>The answer uses the key &quot;a&quot; to switch to placing Aluminum</p>
+<h4>Answer KeyBinds</h4>
+<p>All the Keybinds in the answer and scafold are using the <a href="https://bridgesuncc.github.io/tutorials/NonBlockingGame.html">fire interface</a>
+Arrow Keys - move cursor around
+w - switch to water mode
+a - switch to aluminum mode
+s - switch to sand mode
+d - switch to delete mode (this will delete whatever is under your cursor)
+space - activate the mode (place items or delete)</p>
+<h4>Additional Topic Ideas</h4>
+<p>Students can define the behavior of different types of elements not described in the original problem. Using over 100 colors and symbols to represent these elements in a grid. For example, lava is an element which could move through metal and also evaporate water turning it into steam which would react differently to the other elements.</p>
+<h3>Help</h3>
+<h4>For C++</h4>
+<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1game_1_1_non_blocking_game.html">NonBlockingGame documentation</a></p>
+<h4>For Python</h4>
+<p><a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1non__blocking__game_1_1_non_blocking_game.html">NonBlockingGame documentation</a></p>

@@ -1,13 +1,16 @@
-# Space Invaders Game - 41
+Assignment 41 - Space Invaders Game
+============
 
-## Goals
+Goals
+-----
 The purpose of this assignment is to learn to
  - Organize data in two-dimensional arrays
  - Use enums to store information
  - Practice using nested for loops
  - Use basic OOP techniques
 
-## Description
+Programming
+-----------
 ### Tasks
  - Implement the generateBoardBackground() method such that each background tile is assigned a color. The color(s) you 
  use or any patterns you want to add are up to you.
@@ -23,19 +26,13 @@ The purpose of this assignment is to learn to
  both. If an enemyProjectile and the player are in the same location, end the game.
  
 
-
+### Important Functions
 - The gameLoop() function loops until the game is over.
 - quit() stops the game.
 - start() starts the game and calls the initialize() function once before it starts the gameLoop() function.
 - render() sends your updated game grid to the server once. This is a blocking game function.
 
 ### Help
-
-- The gameLoop() function loops until the game is over.
-- quit() stops the game.
-- start() starts the game and calls the initialize() function once before it starts the gameLoop() function.
-- render() sends your updated game grid to the server once. This is a blocking game function.
-
 #### For Java
 [NonBlockingGame documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1games_1_1_non_blocking_game.html)
 #### For C++

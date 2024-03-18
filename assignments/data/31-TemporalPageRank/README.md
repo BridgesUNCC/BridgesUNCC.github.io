@@ -1,4 +1,4 @@
-Assignment 31 - Temporal Page Rank
+Assignment 32 - Temporal Page Rank
 ==================================
 
 This assignment is a more advanced version of [Bacon

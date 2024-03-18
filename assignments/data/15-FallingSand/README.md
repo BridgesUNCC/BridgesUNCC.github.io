@@ -1,26 +1,15 @@
-# Assignment 15 - Falling Sand
+Assignment 15 : Falling Sand
+============================
 
-## Example Output
-
-<img src="./sand.png" alt="image" width="550"></img>
-
-
-#### Source
+Source
+------
 
 This is a nifty assignment from 2017 proposed by Dave Feinberg.
 [Source](http://nifty.stanford.edu/2017/feinberg-falling-sand/)
 
 
-## Learning Outcomes
-
-1. Loops
-2. Recursion
-3. Conditions
-4. 2D Arrays
-
-
-## Goals
-
+Goals
+-----
 The purpose of this assignment is to learn to 
  - Organize data in two-dimensional arrays
  - Use data from arrays to control conditional statements
@@ -28,9 +17,8 @@ The purpose of this assignment is to learn to
  - Practice simulation techniques
  - Practice debuging using real-time interactions with visualizations
 
-
-## Description
-
+Programming
+-----------
 #### Tasks
  - Use loops to populate and update a grid with values that represent multiple elements.
  - Define the behavior of a grid cell that contains a water, metal, sand, or empty spaces.
@@ -67,17 +55,8 @@ space - activate the mode (place items or delete)
 #### Additional Topic Ideas
 Students can define the behavior of different types of elements not described in the original problem. Using over 100 colors and symbols to represent these elements in a grid. For example, lava is an element which could move through metal and also evaporate water turning it into steam which would react differently to the other elements.
 
-
-## Extensions
-
-
-## Help
-
-#### For Java
-[NonBlockingGame documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1games_1_1_non_blocking_game.html)
-
+### Help
 #### For C++
 [NonBlockingGame documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1game_1_1_non_blocking_game.html)
-
 #### For Python
 [NonBlockingGame documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1non__blocking__game_1_1_non_blocking_game.html)
