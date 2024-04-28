@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Python</h1>
-	<p>Running at Sun Apr 21 03:52:20 AM EDT 2024</p>
+	<p>Running at Sun Apr 28 03:51:24 AM EDT 2024</p>
   <div id="summaryarray1d.py" class="success">
     <h2><a href="python_testing_logs.html#pythonlogarray1d.py">Test array1d.py</a> </h2>
     <p>
@@ -76,11 +76,11 @@ background-color: springgreen;
       </ul>
     </p>
   </div>
-  <div id="summarycancer_snippet.py" class="failure">
+  <div id="summarycancer_snippet.py" class="success">
     <h2><a href="python_testing_logs.html#pythonlogcancer_snippet.py">Test cancer_snippet.py</a> </h2>
     <p>
       <ul>
-        <li> Run Test : <a href="python_testing_logs.html#pythonlogcancer_snippet.py-runtest">error</a></li>
+        <li> Run Test : <a href="python_testing_logs.html#pythonlogcancer_snippet.py-runtest">success</a></li>
       </ul>
     </p>
   </div>
@@ -774,35 +774,17 @@ http://bridges-cs.herokuapp.com/assignments/3007/bridges_testing
     <div id="pythonlogcancer_snippet.py" class="logdetails">
       <h2>Test cancer_snippet.py full log</h2>
     
-<div class="failure">
+<div class="success">
 <h3 id="pythonlogcancer_snippet.py-runtest">Run Test for test cancer_snippet.py</h3>
-<pre><code>Traceback (most recent call last):
-  File &quot;/usr/lib/python3/dist-packages/requests/models.py&quot;, line 971, in json
-    return complexjson.loads(self.text, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/usr/lib/python3.11/json/__init__.py&quot;, line 346, in loads
-    return _default_decoder.decode(s)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/usr/lib/python3.11/json/decoder.py&quot;, line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/usr/lib/python3.11/json/decoder.py&quot;, line 355, in raw_decode
-    raise JSONDecodeError(&quot;Expecting value&quot;, s, err.value) from None
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File &quot;/home/bridges-testing/bridges-client-testing/python/web_tutorial_testing/cancer_snippet.py&quot;, line 37, in &lt;module&gt;
-    main()
-  File &quot;/home/bridges-testing/bridges-client-testing/python/web_tutorial_testing/cancer_snippet.py&quot;, line 17, in main
-    my_list = get_cancer_incident_data()
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;/home/bridges-testing/.local/lib/python3.11/site-packages/bridges-3.4.3-py3.11.egg/bridges/data_src_dependent/data_source.py&quot;, line 464, in get_cancer_incident_data
-  File &quot;/usr/lib/python3/dist-packages/requests/models.py&quot;, line 975, in json
-    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
-requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-could not run test cancer_snippet.py
+<pre><code>Record 1:
+	Type: Mortality
+	Year: 1999
+	Population: 2293259
+	Race: All Races
+	Gender: 
+	CrudeRate: 190.4(more rate information available) 
+	Location: 32.799, -86.8073
+	Count: 0
 </code></pre>
 </div>
     
@@ -874,7 +856,7 @@ http://bridges-cs.herokuapp.com/assignments/3012/bridges_testing
     
 <div class="success">
 <h3 id="pythonlogdisplay_game.py-runtest">Run Test for test display_game.py</h3>
-<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7efc3d538d90&gt;
+<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f01f37ac350&gt;
 limiting number of frame to 10
 
 Check Your Visualization at the following link:
@@ -932,10 +914,10 @@ First 10 elevations:
     
 <div class="success">
 <h3 id="pythonlogeq_snippet.py-runtest">Run Test for test eq_snippet.py</h3>
-<pre><code>Magnitude: 2.27
-Date: 2024-04-21 07:42:57
-Location:2 km S of Cromberg, CA
-Lat/Long:39.8521652,-120.7051697
+<pre><code>Magnitude: 1.96
+Date: 2024-04-28 07:22:49
+Location:10 km SSW of Volcano, Hawaii
+Lat/Long:19.3651676177979,-155.286163330078
 </code></pre>
 </div>
     
@@ -976,7 +958,7 @@ http://bridges-cs.herokuapp.com/assignments/3017/bridges_testing
     
 <div class="success">
 <h3 id="pythonloggame_size_test.py-runtest">Run Test for test game_size_test.py</h3>
-<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7f9e51d772d0&gt;
+<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7fa73c1658d0&gt;
 limiting number of frame to 10
 
 Check Your Visualization at the following link:
@@ -995,10 +977,10 @@ disconnected
     
 <div class="success">
 <h3 id="pythonloggame_snippet.py-runtest">Run Test for test game_snippet.py</h3>
-<pre><code>Virtua Tennis 2009
-Wii
-7.8
-['Sports']
+<pre><code>Frogger 2: Swampys Revenge
+Dreamcast
+8.2
+['Action']
 </code></pre>
 </div>
     
@@ -1165,8 +1147,8 @@ C
     
 <div class="success">
 <h3 id="pythonlogimdb_snippet.py-runtest">Run Test for test imdb_snippet.py</h3>
-<pre><code>Billy_Bob_Thornton
-Bad_News_Bears,_The_(2006)
+<pre><code>Catherine_Zeta-Jones
+Smoke_&amp;_Mirrors_(2004)
 </code></pre>
 </div>
     
@@ -1176,7 +1158,7 @@ Bad_News_Bears,_The_(2006)
     
 <div class="success">
 <h3 id="pythonloginput_game.py-runtest">Run Test for test input_game.py</h3>
-<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7ff7d0ca4510&gt;
+<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7fbf12c84e50&gt;
 limiting number of frame to 10
 
 Check Your Visualization at the following link:
@@ -1243,7 +1225,7 @@ http://bridges-cs.herokuapp.com/assignments/3029/bridges_testing
     
 <div class="success">
 <h3 id="pythonlogminimal_game.py-runtest">Run Test for test minimal_game.py</h3>
-<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7fcef36a7ed0&gt;
+<pre><code>Subscribing to keypress events.. &lt;bridges.input_helper.InputHelper object at 0x7fceba0a7cd0&gt;
 limiting number of frame to 10
 
 Check Your Visualization at the following link:
@@ -1372,21 +1354,21 @@ Cartesian Coordinate of first vertex: 827.1273231300758, -5144.073405550668
     
 <div class="success">
 <h3 id="pythonlogreddit.py-runtest">Run Test for test reddit.py</h3>
-<pre><code>Title: US woman who stole Ashley Biden's diary sentenced to a month in prison
-Author: houstontexas2022
-Score: 10332
-Comment Count: 504
+<pre><code>Title: Secret Russian foreign policy document urges action to weaken the U.S.
+Author: rhino910
+Score: 1832
+Comment Count: 124
 Subreddit: news
-Title: British physicist Peter Higgs, physicist who discovered Higgs boson, dies aged 94
-Title: James and Jennifer Crumbley each sentenced to 10 to 15 years in prison
-Title: Arizona Supreme Court rules state must adhere to century-old law banning nearly all abortions | CNN
-Title: Appeals court rejects Donald Trump’s latest attempt to delay April 15 hush money criminal trial
-Title: A whistleblower claims that Boeing’s 787 Dreamliner is flawed. The FAA is investigating
-Title: Grandparents accused of killing 3-year-old grandson, police say
-Title: Missouri executes Brian Dorsey for 2006 double murder after mercy bid backed by 72 correctional officers
-Title: Air Canada Boeing 737 makes emergency landing after technical issue – NBC4 Washington
-Title: Littleton Public School bus aide fired after Colorado students with autism &quot;tortured and traumatized&quot;
-Title: Florida pre-med student stabs mother more than 70 times, killing her during visit, authorities say
+Title: NPR suspends journalist who publicly accused network of liberal bias
+Title: Ohio man fatally shot Uber driver after scam phone calls targeted both of them, authorities say
+Title: Nestlé adds sugar to infant milk sold in poorer countries, report finds | Global development
+Title: Judge awards $23.5 million to undercover St. Louis officer beaten by colleagues during protest
+Title: Tesla seeks to reinstate Elon Musk $56 billion pay deal in shareholder vote
+Title: Russia-linked hacking group suspected of carrying out cyberattack on Texas water facility, cybersecurity firm says
+Title: Man with 5-foot snake attempts to rob store three times, police say
+Title: Supreme Court makes it easier to sue for job discrimination over forced transfers
+Title: US FAA issues ground stop advisory for Alaska Airlines
+Title: Twitter’s AI-powered trending tab mistakes jokes about Klay Thompson’s poor game as vandalism accusations
 =====
 Available subreddits:
 gadgets
@@ -1437,35 +1419,55 @@ UpliftingNews
 InternetIsBeautiful
 science
 =====
-Title: Question from my 8 year old: Can insects die of old age?
-Author: JackSupern0va
-Score: 520
-Vote Ratio: 0.88
-Comment Count: 153
+Title: Why do many orthopaedic surgeons discourage weightlifting when research encourages it?
+Author: Starlight-x
+Score: 554
+Vote Ratio: 0.76
+Comment Count: 177
 Subreddit: askscience
-PostTime: 1694193699
-URL: https://www.reddit.com/r/askscience/comments/16dgh1p/question_from_my_8_year_old_can_insects_die_of/
-Text: I was legitimately stumped and curious myself!
+PostTime: 1694667957
+URL: https://www.reddit.com/r/askscience/comments/16i9ddg/why_do_many_orthopaedic_surgeons_discourage/
+Text: For surgically treated (osteotomies) hip dysplasia (HD) I know several orthopaedic surgeons that discourage any kind of high impact activities; no jumping, running, lower body weight lifting (beyond even 5lbs), excessive hip flexion, etc. even years after surgery. The only exercises recommended were the elliptical and cycling, with light resistance activities (ex. with an ankle weight) and this advice has persisted until now. When I asked for more information, one doctor explained high impact exercises would degrade the hips faster because surgeries to fix HD create an abnormal joint shape that, with weight-bearing, degrade the connected bone due to the absence of cartilage to mitigate the friction.
 
-Title: How exactly are bombs defused?
-Author: throwtheclownaway20
-Score: 990
-Vote Ratio: 0.91
-Comment Count: 293
-Subreddit: askscience
-PostTime: 1694256813
-URL: https://www.reddit.com/r/askscience/comments/16e2s1w/how_exactly_are_bombs_defused/
-Text: Do real-life bombs *have* to be defused in the ultra-careful &quot;is it the red wire or blue wire&quot; way we see in movies or (barring something like a remote detonator or dead man's switch) is it as easy as just simply pulling out/cutting all the wires at once?
+However, I studied bio-medical science and read several journal articles published in the last 20 years that have *recommended* (or have not discouraged) weight lifting (high impact) with HD. I did not evaluate any articles based on if they were RCTs, nor did I weigh different sample sizes, length of follow-up, etc. I don't believe any of the linked studies looked at long-term outcomes (10+ years) of high impact activities on the actual bone, just reported pain and strength levels:
 
-Title: I read that we haven't had this much CO2 in the atmosphere since 5 million years ago. How much higher was the sea level back then?
-Author: Additional-Excuse257
-Score: 129
-Vote Ratio: 0.79
+* [Feasibility and acceptability of a six-month exercise and patient education intervention for patients with hip dysplasia: A mixed methods study](https://www.sciencedirect.com/science/article/pii/S2468781222001151): progressive resistance training improved pain levels and hip strength.
+* [Progressive resistance training in patients with hip dysplasia: A feasibility study](https://pubmed.ncbi.nlm.nih.gov/30132502/): Progressive resistance training led to stronger leg muscles and better pain levels.\*(fixed the link)
+* [Does hip muscle strength and functional performance differ between football players with and without hip dysplasia?](https://pubmed.ncbi.nlm.nih.gov/37598519/): Similar levels of hip muscle strength and functional performance were found in active football players with and without hip dysplasia. Authors were not sure if it was due to less advanced HD being present.
+* [Rehabilitation Guidelines for Use Following a Periacetabular Osteotomy (PAO): A North American Based Delphi Consensus:](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9528724/) a panel of physiotherapists recommend a full return to sports with no limitations to weight-bearing activities 20 weeks after osteotomies (surgery to mediate HD)
+
+However, my question is why orthopaedic doctors believe high impact activities have such a negative impact on HD when the (limited) research I've read point in the opposite direction. Is this just established knowledge among surgeons that has not been researched properly? Am I not researching the right terms or journals?
+
+This question has confused me, so I would appreciate any answers! Thank you.  
+
+
+  
+Edit: By contrast, as study [Activity level and severity of dysplasia predict age atbernese periacetabular osteotomy for symptomatichip dysplasia](https://core.ac.uk/reader/70385647) found a correlation between high activity levels (measured on a scale from low to high impact) in those with hip dysplasia and fewer years before the need for an osteotomy (hip surgery).   
+
+
+Like the above research, can't really answer my question, but there is evidence of a negative effect of high impact activities on prognosis. They used the UCLA score of activity with high impact examples like jogging, tennis, sports, skiing, etc. and didn't mention weightlifting, but I think it's safe to include in the list.
+
+Title: Why does the hydrogen nuclei split in different states when exposed to an external magnetic field?
+Author: TeaWallet
+Score: 17
+Vote Ratio: 0.78
 Comment Count: 14
 Subreddit: askscience
-PostTime: 1694287753
-URL: https://www.reddit.com/r/askscience/comments/16eeeu3/i_read_that_we_havent_had_this_much_co2_in_the/
-Text: Is there a graph showing historic co2 rates and co2 levels? I understand ice core direct measurements don't go that far back but was wondering if anyone had found any other way of deducing this information.
+PostTime: 1694694863
+URL: https://www.reddit.com/r/askscience/comments/16ih9dw/why_does_the_hydrogen_nuclei_split_in_different/
+Text: In Hydrogen NMR spectroscopy, the splitting of the hydrogen nuclei in the alpha state and beta state is taken advantage of to be used to work out the different resosance frequencies of a molecule to determine its composotion 
+
+Or atleast that is my understanding of the topic from the textbook, not sure if I'm 100% accurate on the description there but my question being is why do the hydrogen nuclei split into 2 different states in the first place?
+
+Title: Is Grass blade a Single Organism?
+Author: Fun-Pay3731
+Score: 31
+Vote Ratio: 0.92
+Comment Count: 5
+Subreddit: askscience
+PostTime: 1694703958
+URL: https://www.reddit.com/r/askscience/comments/16iku3c/is_grass_blade_a_single_organism/
+Text: Is every individual blade of grass (or few blades of grass) a single Organism or a whole field of grass a single Organism? If they are different then do they compete for resources? Does it reproduce with different genes from different patches of grass? How does it all work?
 
 </code></pre>
 </div>
@@ -1476,35 +1478,55 @@ Text: Is there a graph showing historic co2 rates and co2 levels? I understand i
     
 <div class="success">
 <h3 id="pythonlogreddit_snippet.py-runtest">Run Test for test reddit_snippet.py</h3>
-<pre><code>Title: Question from my 8 year old: Can insects die of old age?
-Author: JackSupern0va
-Score: 520
-Vote Ratio: 0.88
-Comment Count: 153
+<pre><code>Title: Why do many orthopaedic surgeons discourage weightlifting when research encourages it?
+Author: Starlight-x
+Score: 554
+Vote Ratio: 0.76
+Comment Count: 177
 Subreddit: askscience
-PostTime: 1694193699
-URL: https://www.reddit.com/r/askscience/comments/16dgh1p/question_from_my_8_year_old_can_insects_die_of/
-Text: I was legitimately stumped and curious myself!
+PostTime: 1694667957
+URL: https://www.reddit.com/r/askscience/comments/16i9ddg/why_do_many_orthopaedic_surgeons_discourage/
+Text: For surgically treated (osteotomies) hip dysplasia (HD) I know several orthopaedic surgeons that discourage any kind of high impact activities; no jumping, running, lower body weight lifting (beyond even 5lbs), excessive hip flexion, etc. even years after surgery. The only exercises recommended were the elliptical and cycling, with light resistance activities (ex. with an ankle weight) and this advice has persisted until now. When I asked for more information, one doctor explained high impact exercises would degrade the hips faster because surgeries to fix HD create an abnormal joint shape that, with weight-bearing, degrade the connected bone due to the absence of cartilage to mitigate the friction.
 
-Title: How exactly are bombs defused?
-Author: throwtheclownaway20
-Score: 990
-Vote Ratio: 0.91
-Comment Count: 293
-Subreddit: askscience
-PostTime: 1694256813
-URL: https://www.reddit.com/r/askscience/comments/16e2s1w/how_exactly_are_bombs_defused/
-Text: Do real-life bombs *have* to be defused in the ultra-careful &quot;is it the red wire or blue wire&quot; way we see in movies or (barring something like a remote detonator or dead man's switch) is it as easy as just simply pulling out/cutting all the wires at once?
+However, I studied bio-medical science and read several journal articles published in the last 20 years that have *recommended* (or have not discouraged) weight lifting (high impact) with HD. I did not evaluate any articles based on if they were RCTs, nor did I weigh different sample sizes, length of follow-up, etc. I don't believe any of the linked studies looked at long-term outcomes (10+ years) of high impact activities on the actual bone, just reported pain and strength levels:
 
-Title: I read that we haven't had this much CO2 in the atmosphere since 5 million years ago. How much higher was the sea level back then?
-Author: Additional-Excuse257
-Score: 129
-Vote Ratio: 0.79
+* [Feasibility and acceptability of a six-month exercise and patient education intervention for patients with hip dysplasia: A mixed methods study](https://www.sciencedirect.com/science/article/pii/S2468781222001151): progressive resistance training improved pain levels and hip strength.
+* [Progressive resistance training in patients with hip dysplasia: A feasibility study](https://pubmed.ncbi.nlm.nih.gov/30132502/): Progressive resistance training led to stronger leg muscles and better pain levels.\*(fixed the link)
+* [Does hip muscle strength and functional performance differ between football players with and without hip dysplasia?](https://pubmed.ncbi.nlm.nih.gov/37598519/): Similar levels of hip muscle strength and functional performance were found in active football players with and without hip dysplasia. Authors were not sure if it was due to less advanced HD being present.
+* [Rehabilitation Guidelines for Use Following a Periacetabular Osteotomy (PAO): A North American Based Delphi Consensus:](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9528724/) a panel of physiotherapists recommend a full return to sports with no limitations to weight-bearing activities 20 weeks after osteotomies (surgery to mediate HD)
+
+However, my question is why orthopaedic doctors believe high impact activities have such a negative impact on HD when the (limited) research I've read point in the opposite direction. Is this just established knowledge among surgeons that has not been researched properly? Am I not researching the right terms or journals?
+
+This question has confused me, so I would appreciate any answers! Thank you.  
+
+
+  
+Edit: By contrast, as study [Activity level and severity of dysplasia predict age atbernese periacetabular osteotomy for symptomatichip dysplasia](https://core.ac.uk/reader/70385647) found a correlation between high activity levels (measured on a scale from low to high impact) in those with hip dysplasia and fewer years before the need for an osteotomy (hip surgery).   
+
+
+Like the above research, can't really answer my question, but there is evidence of a negative effect of high impact activities on prognosis. They used the UCLA score of activity with high impact examples like jogging, tennis, sports, skiing, etc. and didn't mention weightlifting, but I think it's safe to include in the list.
+
+Title: Why does the hydrogen nuclei split in different states when exposed to an external magnetic field?
+Author: TeaWallet
+Score: 17
+Vote Ratio: 0.78
 Comment Count: 14
 Subreddit: askscience
-PostTime: 1694287753
-URL: https://www.reddit.com/r/askscience/comments/16eeeu3/i_read_that_we_havent_had_this_much_co2_in_the/
-Text: Is there a graph showing historic co2 rates and co2 levels? I understand ice core direct measurements don't go that far back but was wondering if anyone had found any other way of deducing this information.
+PostTime: 1694694863
+URL: https://www.reddit.com/r/askscience/comments/16ih9dw/why_does_the_hydrogen_nuclei_split_in_different/
+Text: In Hydrogen NMR spectroscopy, the splitting of the hydrogen nuclei in the alpha state and beta state is taken advantage of to be used to work out the different resosance frequencies of a molecule to determine its composotion 
+
+Or atleast that is my understanding of the topic from the textbook, not sure if I'm 100% accurate on the description there but my question being is why do the hydrogen nuclei split into 2 different states in the first place?
+
+Title: Is Grass blade a Single Organism?
+Author: Fun-Pay3731
+Score: 31
+Vote Ratio: 0.92
+Comment Count: 5
+Subreddit: askscience
+PostTime: 1694703958
+URL: https://www.reddit.com/r/askscience/comments/16iku3c/is_grass_blade_a_single_organism/
+Text: Is every individual blade of grass (or few blades of grass) a single Organism or a whole field of grass a single Organism? If they are different then do they compete for resources? Does it reproduce with different genes from different patches of grass? How does it all work?
 
 </code></pre>
 </div>
@@ -1515,11 +1537,11 @@ Text: Is there a graph showing historic co2 rates and co2 levels? I understand i
     
 <div class="success">
 <h3 id="pythonlogshakespeare_snippet.py-runtest">Run Test for test shakespeare_snippet.py</h3>
-<pre><code>Sonnet 56
+<pre><code>Sonnet 28
 poem
-Sweet love renew thy force, be it not said
- Thy edge should blunter be than appetite,
- Which but to-
+How can I then return in happy plight
+ That am debarred the benefit of rest?
+ When day's oppression 
 </code></pre>
 </div>
     
@@ -2210,8 +2232,8 @@ http://bridges-cs.herokuapp.com/assignments/3067/bridges_testing
     
 <div class="success">
 <h3 id="pythonlogtut_us_cities_snippet.py-runtest">Run Test for test tut_us_cities_snippet.py</h3>
-<pre><code>Durham, NC: population: 257636, elevation: 123, lat/long: 35.99403,-78.89862
-Charlotte, NC: population: 874579, elevation: 229, lat/long: 35.22709,-80.84313
+<pre><code>Charlotte, NC: population: 874579, elevation: 229, lat/long: 35.22709,-80.84313
+Durham, NC: population: 257636, elevation: 123, lat/long: 35.99403,-78.89862
 Fayetteville, NC: population: 201963, elevation: 29, lat/long: 35.05266,-78.87836
 Greensboro, NC: population: 285342, elevation: 266, lat/long: 36.07264,-79.79198
 Raleigh, NC: population: 451066, elevation: 96, lat/long: 35.7721,-78.63861
@@ -2226,8 +2248,8 @@ Winston-Salem, NC: population: 241218, elevation: 293, lat/long: 36.09986,-80.24
     
 <div class="success">
 <h3 id="pythonlogus_cities_snippet.py-runtest">Run Test for test us_cities_snippet.py</h3>
-<pre><code>Durham, NC: population: 257636, elevation: 123, lat/long: 35.99403,-78.89862
-Charlotte, NC: population: 874579, elevation: 229, lat/long: 35.22709,-80.84313
+<pre><code>Charlotte, NC: population: 874579, elevation: 229, lat/long: 35.22709,-80.84313
+Durham, NC: population: 257636, elevation: 123, lat/long: 35.99403,-78.89862
 Fayetteville, NC: population: 201963, elevation: 29, lat/long: 35.05266,-78.87836
 Greensboro, NC: population: 285342, elevation: 266, lat/long: 36.07264,-79.79198
 Raleigh, NC: population: 451066, elevation: 96, lat/long: 35.7721,-78.63861
@@ -2241,20 +2263,20 @@ Terrytown, LA: population: 23319, elevation: -1, lat/long: 29.91021,-90.03257
 Timberlane, LA: population: 10243, elevation: -1, lat/long: 29.87743,-90.03202
 Brawley, CA: population: 25897, elevation: -34, lat/long: 32.97866,-115.53027
 Calipatria, CA: population: 7424, elevation: -55, lat/long: 33.1256,-115.51415
-Coachella, CA: population: 44635, elevation: -21, lat/long: 33.6803,-116.17389
-Indio, CA: population: 87533, elevation: -4, lat/long: 33.7207,-116.21677
 Desert Shores, CA: population: 1104, elevation: -60, lat/long: 33.4042,-116.03972
+Coachella, CA: population: 44635, elevation: -21, lat/long: 33.6803,-116.17389
+Heber, CA: population: 4275, elevation: -3, lat/long: 32.73089,-115.52972
 El Centro, CA: population: 43956, elevation: -12, lat/long: 32.792,-115.56305
 Holtville, CA: population: 6404, elevation: -3, lat/long: 32.81116,-115.38026
-Heber, CA: population: 4275, elevation: -3, lat/long: 32.73089,-115.52972
+Indio, CA: population: 87533, elevation: -4, lat/long: 33.7207,-116.21677
 Imperial, CA: population: 17095, elevation: -18, lat/long: 32.84755,-115.56944
-Mecca, CA: population: 8577, elevation: -57, lat/long: 33.57219,-116.0782
 Oasis, CA: population: 6890, elevation: -44, lat/long: 33.46586,-116.09889
+Mecca, CA: population: 8577, elevation: -57, lat/long: 33.57219,-116.0782
 Niland, CA: population: 1006, elevation: -43, lat/long: 33.24004,-115.51888
 Salton City, CA: population: 3763, elevation: -38, lat/long: 33.29865,-115.95611
 Seeley, CA: population: 1739, elevation: -11, lat/long: 32.79311,-115.69111
-Thermal, CA: population: 2865, elevation: -36, lat/long: 33.6403,-116.13945
 Westmorland, CA: population: 2267, elevation: -50, lat/long: 33.03727,-115.62138
+Thermal, CA: population: 2865, elevation: -36, lat/long: 33.6403,-116.13945
 Vista Santa Rosa, CA: population: 2926, elevation: -21, lat/long: 33.6278,-116.21806
 </code></pre>
 </div>
@@ -2281,21 +2303,21 @@ http://bridges-cs.herokuapp.com/assignments/3070/bridges_testing
 <div class="success">
 <h3 id="pythonlogwikidata_actor_snippet.py-runtest">Run Test for test wikidata_actor_snippet.py</h3>
 <pre><code>wikidata-actormovie-1955-1955
-Data Records in 1955: 4293
+Data Records in 1955: 4304
 
 First 3 records:
 
 0)Actor-Movie Data:
-	Movie: Q331017, To Catch a Thief
+	Movie: Q34414, Rear Window
 	Actor: Q3925, Grace Kelly
 
 1)Actor-Movie Data:
-	Movie: Q331017, To Catch a Thief
+	Movie: Q34414, Rear Window
 	Actor: Q7374, Alfred Hitchcock
 
 2)Actor-Movie Data:
-	Movie: Q331017, To Catch a Thief
-	Actor: Q83410, Cary Grant
+	Movie: Q34414, Rear Window
+	Actor: Q102462, James Stewart
 
 </code></pre>
 </div>
