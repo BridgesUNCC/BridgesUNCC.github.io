@@ -11,7 +11,7 @@ background-color: springgreen;
     </head>
     <body>
 	<h1>Testing logs for Java</h1>
-	<p>Running at Sun May 12 03:42:35 AM EDT 2024</p>
+	<p>Running at Sun May 19 03:42:00 AM EDT 2024</p>
   <div id="summaryarray1d.java" class="success">
     <h2><a href="java_testing_logs.html#javalogarray1d.java">Test array1d.java</a> </h2>
     <p>
@@ -1144,10 +1144,10 @@ could not run test elevation_snippet.java
 <div class="success">
 <h3 id="javalogeq_snippet.java-runtest">Run Test for test eq_snippet.java</h3>
 <pre><code>Earthquake 0:
-	Magnitude:1.36
-	Date:May 12 2024  03:12:30.120 EDT
-	Location: 24 km ENE of Little Lake, CA
-	Lat/Long:35.9851667,-117.6463333
+	Magnitude:2.18
+	Date:May 19 2024  03:34:14.270 EDT
+	Location: 7 km S of Brawley, CA
+	Lat/Long:32.9196667,-115.538
 </code></pre>
 </div>
     
@@ -1204,10 +1204,10 @@ Shutting down ...
 </div>
 <div class="success">
 <h3 id="javaloggame_snippet.java-runtest">Run Test for test game_snippet.java</h3>
-<pre><code>Puzzle Challenge: Crosswords and More!
-PlayStation Portable
-6.4
-[Puzzle, Compilation]
+<pre><code>Lemmings
+Wireless
+8.0
+[Puzzle, Adventure]
 </code></pre>
 </div>
     
@@ -1449,17 +1449,12 @@ From My Autobiography
 	Language: en
 	Date Added: 2009-05-14
 Retrieving book text: PRIDE AND PREJUDICE
-Exception in thread &quot;main&quot; org.apache.http.ConnectionClosedException: Premature end of Content-Length delimited message body (expected: 785660; received: 70969
-	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:180)
-	at org.apache.http.conn.EofSensorInputStream.read(EofSensorInputStream.java:137)
-	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
-	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
-	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
-	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
-	at java.base/java.io.Reader.read(Reader.java:250)
-	at org.apache.http.util.EntityUtils.toString(EntityUtils.java:244)
-	at org.apache.http.util.EntityUtils.toString(EntityUtils.java:288)
-	at bridges.connect.DataSource.requestJSON(DataSource.java:1211)
+Exception in thread &quot;main&quot; org.apache.http.client.HttpResponseException: Http Request Failed. Error Code:500. Message:&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 3.2 Final//EN&quot;&gt;
+&lt;title&gt;500 Internal Server Error&lt;/title&gt;
+&lt;h1&gt;Internal Server Error&lt;/h1&gt;
+&lt;p&gt;The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.&lt;/p&gt;
+
+	at bridges.connect.DataSource.requestJSON(DataSource.java:1220)
 	at bridges.connect.DataSource.getGutenbergBookText(DataSource.java:1326)
 	at gutenberg_snippet.main(gutenberg_snippet.java:71)
 could not run test gutenberg_snippet.java
@@ -1477,8 +1472,8 @@ could not run test gutenberg_snippet.java
 </div>
 <div class="success">
 <h3 id="javalogimdb_snippet.java-runtest">Run Test for test imdb_snippet.java</h3>
-<pre><code>Mickey_Mantle
-Greatest_Summer_of_My_Life:_Billy_Crystal_and_the_Making_of_'61*',_The_(2001)
+<pre><code>Charlie_Sheen
+Being_John_Malkovich_(1999)
 </code></pre>
 </div>
     
@@ -1913,11 +1908,11 @@ could not run test reddit_snippet.java
 </div>
 <div class="success">
 <h3 id="javalogshakespeare_snippet.java-runtest">Run Test for test shakespeare_snippet.java</h3>
-<pre><code>Sonnet 84
+<pre><code>Sonnet 86
 poem
-Who is it that says most, which can say more,
- Than this rich praise, that you alone, are you?
- In w...
+Was it the proud full sail of his great verse,
+ Bound for the prize of (all too precious) you,
+ That...
 </code></pre>
 </div>
     
@@ -2751,13 +2746,13 @@ http://bridges-cs.herokuapp.com/assignments/2071/bridges_testing
 <pre><code>URL: http://bridgesdata.herokuapp.com/api/us_cities?state=NC&amp;minPopulation=200000&amp;maxPopulation=1000000&amp;limit=25
 Upto 25 cities in North Carolina with population between 200K and 1M
 US Cities Retrieved
+	Durham, NC:  Population: 257636, Elevation: 123, Lat/Long: 35.99403,-78.89862
 	Charlotte, NC:  Population: 874579, Elevation: 229, Lat/Long: 35.22709,-80.84313
 	Fayetteville, NC:  Population: 201963, Elevation: 29, Lat/Long: 35.05266,-78.87836
 	Greensboro, NC:  Population: 285342, Elevation: 266, Lat/Long: 36.07264,-79.79198
-	Durham, NC:  Population: 257636, Elevation: 123, Lat/Long: 35.99403,-78.89862
-	Raleigh, NC:  Population: 451066, Elevation: 96, Lat/Long: 35.7721,-78.63861
-	West Raleigh, NC:  Population: 338759, Elevation: 122, Lat/Long: 35.78682,-78.66389
 	Winston-Salem, NC:  Population: 241218, Elevation: 293, Lat/Long: 36.09986,-80.24422
+	West Raleigh, NC:  Population: 338759, Elevation: 122, Lat/Long: 35.78682,-78.66389
+	Raleigh, NC:  Population: 451066, Elevation: 96, Lat/Long: 35.7721,-78.63861
 </code></pre>
 </div>
     
@@ -2775,18 +2770,18 @@ US Cities Retrieved
 <pre><code>URL: http://bridgesdata.herokuapp.com/api/us_cities?minLat=34.025348&amp;maxLat=36.800488&amp;minLong=-85.352783&amp;maxLong=-75.300293&amp;minPopulation=100000&amp;maxPopulation=1000000&amp;limit=25
 Testing 'limit = 25', 'population = 200000' and 'lat/long'  attribute..got 13 cities
 US Cities Retrieved
+	Durham, NC:  Population: 257636, Elevation: 123, Lat/Long: 35.99403,-78.89862
+	High Point, NC:  Population: 110268, Elevation: 281, Lat/Long: 35.95569,-80.00532
 	Cary, NC:  Population: 159769, Elevation: 152, Lat/Long: 35.79154,-78.78112
 	Charlotte, NC:  Population: 874579, Elevation: 229, Lat/Long: 35.22709,-80.84313
-	High Point, NC:  Population: 110268, Elevation: 281, Lat/Long: 35.95569,-80.00532
 	Fayetteville, NC:  Population: 201963, Elevation: 29, Lat/Long: 35.05266,-78.87836
 	Greensboro, NC:  Population: 285342, Elevation: 266, Lat/Long: 36.07264,-79.79198
-	Durham, NC:  Population: 257636, Elevation: 123, Lat/Long: 35.99403,-78.89862
-	Raleigh, NC:  Population: 451066, Elevation: 96, Lat/Long: 35.7721,-78.63861
-	West Raleigh, NC:  Population: 338759, Elevation: 122, Lat/Long: 35.78682,-78.66389
 	Winston-Salem, NC:  Population: 241218, Elevation: 293, Lat/Long: 36.09986,-80.24422
 	Wilmington, NC:  Population: 115933, Elevation: 9, Lat/Long: 34.22573,-77.94471
-	East Chattanooga, TN:  Population: 154024, Elevation: 208, Lat/Long: 35.06535,-85.24912
+	West Raleigh, NC:  Population: 338759, Elevation: 122, Lat/Long: 35.78682,-78.66389
+	Raleigh, NC:  Population: 451066, Elevation: 96, Lat/Long: 35.7721,-78.63861
 	Chattanooga, TN:  Population: 176588, Elevation: 206, Lat/Long: 35.04563,-85.30968
+	East Chattanooga, TN:  Population: 154024, Elevation: 208, Lat/Long: 35.06535,-85.24912
 	Knoxville, TN:  Population: 185291, Elevation: 276, Lat/Long: 35.96064,-83.92074
 </code></pre>
 </div>
@@ -2825,16 +2820,16 @@ http://bridges-cs.herokuapp.com/assignments/2074/bridges_testing
 <pre><code>Data Records in 1955: 4302
 
 Actor-Movie Data:
-	Movie: Q50937 &quot;It Came from Beneath the Sea&quot;
-	Actor: Q440298 &quot;Faith Domergue&quot;
+	Movie: Q427534 &quot;The Court-Martial of Billy Mitchell&quot;
+	Actor: Q93957 &quot;Gary Cooper&quot;
 
 Actor-Movie Data:
-	Movie: Q50937 &quot;It Came from Beneath the Sea&quot;
-	Actor: Q541016 &quot;Ian Keith&quot;
+	Movie: Q427534 &quot;The Court-Martial of Billy Mitchell&quot;
+	Actor: Q156532 &quot;Peter Graves&quot;
 
 Actor-Movie Data:
-	Movie: Q50937 &quot;It Came from Beneath the Sea&quot;
-	Actor: Q925911 &quot;Kenneth Tobey&quot;
+	Movie: Q427534 &quot;The Court-Martial of Billy Mitchell&quot;
+	Actor: Q233843 &quot;Elizabeth Montgomery&quot;
 
 </code></pre>
 </div>
