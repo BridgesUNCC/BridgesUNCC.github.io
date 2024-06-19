@@ -1,0 +1,283 @@
+<h1>Plan for ITCS 6114: Algorithms and Data Structures</h1>
+
+<h2>Overreaching Learning Outcomes</h2>
+
+<p>OLO1. Articulate that design, complexity, and correctness of algorithms and data structures matter in the real world</p>
+
+<p>OLO2. Design correct and low complexity algorithms and data structures by employing standard techniques</p>
+
+<p>OLO3. Analyze and implement given algorithms and data structures</p>
+
+<p>OLO4. Recognize faulty algorithmic logic</p>
+
+<h2>Detailed Learning Outcomes</h2>
+
+<h3>On Complexity</h3>
+
+<p>DLOC1. Interpret complexity notation and their implications on the performance/resource consumption of algorithms (OLO1, OLO2)</p>
+
+<p>DLOC2. Articulate the real-world implication of the design of algorithms and data structures in term of performance  (OLO1)</p>
+
+<p>DLOC3. Derive the complexity of algorithms using various techniques (for instance, master theorem, amortized analysis, and average case analysis) (OLO1, OLO2, OLO3, OLO4)</p>
+
+<p>DLOC4. Prove the NP-Completeness of classic problems (OLO2, OLO4)</p>
+
+<p>DLOC5. Leverage the P != NP conjecture to recognize dubious algorithmic claims (OLO4)</p>
+
+<h3>On Correctness</h3>
+
+<p>DLOCo1. Recognize and prove the invariant of data structures and algorithms (OLO2, OLO4)</p>
+
+<h3>On Data Structures</h3>
+
+<p>DLOD1. Design, analyze, and implement tree-based indexes (OLO2, OLO3)</p>
+
+<p>DLOD2. Design, analyze, and implement hash-based indexes (OLO2, OLO3)</p>
+
+<p>DLOD3. Design, analyze, and implement classic algorithms on graphs (OLO2, OLO3)</p>
+
+<h3>On Algorithmic Techniques</h3>
+
+<p>DLOA1. Create, analyze, and implement divide and conquer algorithms (OLO2, OLO3)</p>
+
+<p>DLOA2. Create, analyze, and implement greedy algorithms (OLO2, OLO3)</p>
+
+<p>DLOA3. Create, analyze, and implement dynamic programming algorithms (OLO2, OLO3)</p>
+
+<h1>Agenda.</h1>
+
+<p>Note that Lecture could be an actual lecture, or student watching a video, or reading text book, or wikipedia.</p>
+
+<p>Activity is something student do maybe in class, in pair, or for the next session, usually graded in some sense (could be detailed grading, could be pass/fail).</p>
+
+<h2>Week 1. Sep 8.</h2>
+
+<p>Lecture:</p>
+
+<ol>
+<li>Introduction.</li>
+<li>Complexity notations [DLOC1].</li>
+</ol>
+
+<p>Activity:</p>
+
+<ol>
+<li>Proving simple complexity notation properties [DLOC1].</li>
+<li>Interpreting complexity notation in term of practical cost or feasibility [DLOC1, DLOC2].</li>
+</ol>
+
+<h2>Week 2. Sep 15.</h2>
+
+<p>Lecture:</p>
+
+<ol>
+<li>Analyzing simple algorithms [DLOC3].</li>
+<li>Invariant and correctness [DLOCo1].</li>
+<li>Simple recursive complexity formulas [DLOC3].</li>
+</ol>
+
+<p>Activity:</p>
+
+<ol>
+<li>Given simple algorithms (binary search, insertion sort, simple nearest neighboor), prove their correctness and complexity [DLOCo1, DLOC3].</li>
+<li>Implement and benchmark insertion sort and simple nearest neighboor [DLOC1, DLOC2].</li>
+</ol>
+
+<h2>Week 3. Sep 22.</h2>
+
+<p>Lecture:</p>
+
+<ol>
+<li>Divide and Conquer [DLOA1].</li>
+<li>Merge sort [DLOA1, DLOCo1].</li>
+<li>Master Theorem [DLOC3].</li>
+</ol>
+
+<p>Activity:</p>
+
+<ol>
+<li>Solve some other problem using D&amp;C [DLOA1].</li>
+<li>Implement and benchmark Merge Sort [DLOC2]. </li>
+</ol>
+
+<h2>Week 4. Sep 29.</h2>
+
+<p>Lecture:</p>
+
+<ol>
+<li>Tree-based indexing [DLOD1].</li>
+<li>Invariant of data structure [DLOCo1].</li>
+<li>Using BST for associative array [DLOD1, DLOC2].</li>
+</ol>
+
+<p>Activity:</p>
+
+<ol>
+<li>Run BST manually on toy example [DLOD1].</li>
+<li>Design, analyze, and implement a tree base index for nearest neighbor query [DLOD1, DLOC2]. </li>
+</ol>
+
+<h2>Week 5. Oct 6.</h2>
+
+<p>Lecture:</p>
+
+<ol>
+<li>Average case analysis (both for randomized algorithms and deterministic algorithm under input stochastic distribution) [DLOC3].</li>
+<li>Quick Sort. [DLOA1]</li>
+</ol>
+
+<p>Activity:</p>
+
+<ol>
+<li>Revisit quad-tree average case analysis under uniform distribution assumption [DLOC3].</li>
+<li>Implement and benchmark Quick Sort? [DLOC2]</li>
+</ol>
+
+<h2>Week 6. Oct 13.</h2>
+
+<p>Mid Term.</p>
+
+<h2>Week 7. Oct 20.</h2>
+
+<p>Lecture:</p>
+
+<ol>
+<li>Hashing and hash tables [DLOD2].</li>
+<li>Invariant and complexity [DLOCo1, DLOC3].</li>
+<li>Usage for associative array. [DLOC2]</li>
+</ol>
+
+<p>Activity:</p>
+
+<ol>
+<li>Run hashing manually on toy example [DLOD2].</li>
+<li>Design, analyze, and implement a hashing based method for nearest neighboor [DLOC2, DLOC3, DLOD2].</li>
+</ol>
+
+<h2>Week 8. Oct 27.</h2>
+
+<p>Lecture:</p>
+
+<ol>
+<li>Basic graphs [DLOD3].</li>
+<li>Representations[DLOD3].</li>
+<li>BFS/DFS [DLOD3].</li>
+<li>Bipartite graph?[DLOD3]</li>
+</ol>
+
+<p>Activity:</p>
+
+<ol>
+<li>Topological sort [DLOD3].</li>
+<li>(Implementation on UNCC BS in CS course? Critical Path of parallel algorithms[DLOC2]? maybe LS for P|prec|Cmax[DLOC2]?)</li>
+<li>BFS[DLOD3].</li>
+<li>(Implementation: Bacon number with benchmark[DLOC2]? Garbage collection in VMs[DLOC2]?) </li>
+</ol>
+
+<h2>Week 9. Nov 3.</h2>
+
+<p>Lecture:</p>
+
+<ol>
+<li>Greedy algorithms [DLOA2].</li>
+<li>Greedy property [DLOCo1].</li>
+<li>Complexity [DLOC3].</li>
+<li>On some simple problem, Maybe 1 | | \sum C_i?</li>
+</ol>
+
+<p>Activity:</p>
+
+<ol>
+<li>Coin change [DLOA2].</li>
+<li>Values of coin change where greedy doesn't work [DLOCo1].</li>
+<li>Given a greedy algortihm for Knapsack, why doesn't it work [DLOCo1]?</li>
+</ol>
+
+<h2>Week 10. Nov 10.</h2>
+
+<p>Lecture:</p>
+
+<ol>
+<li>Spanning trees [DLOD3].</li>
+<li>Either Kruskal or Prim [DLOA2].</li>
+<li>union-find data structure [DLOD1].</li>
+</ol>
+
+<p>Activity:</p>
+
+<ol>
+<li>Run algorithm on a toy graph[DLOD2, DLOA2].</li>
+<li>Spanning tree in Charlotte's road[DLOC2]?</li>
+</ol>
+
+<h2>Week 11. Nov 17.</h2>
+
+<p>Lecture:</p>
+
+<ol>
+<li>Dynamic program[DLOA3].</li>
+<li>Optimal substructure[DLOA3, DLOCo1].</li>
+<li>Deriving complexity[DLOC3].</li>
+<li>Two types of implementations [DLOD2].</li>
+</ol>
+
+<p>Activity:</p>
+
+<ol>
+<li>Dynamic program on Knapsack[DLOA3]? Dynamic Programming on Bin Packing[DLOA3]?</li>
+<li>Dynamic Programming for optimal BST given access probabilities[DLOA3 DLOD1]?</li>
+<li>Implementation of one problem [DLOA3, DLOD2]</li>
+</ol>
+
+<h2>Week 12. Nov 24.</h2>
+
+<p>Lecture:</p>
+
+<ol>
+<li>Shortest Path[DLOD3].</li>
+<li>Ford Bellman[DLOD3, DLOA3]</li>
+<li>Dijkstra[DLOD3, DLOA2].</li>
+</ol>
+
+<p>Activity:</p>
+
+<ol>
+<li>Run both algorithms on toy graph[DLOD3, DLOA2, DLOA3].</li>
+<li>Implement and benchmark both shortest path algorithms on Charlotte's graph [DLOA2, DLOA3, DLOD3, DLOC2].</li>
+</ol>
+
+<h2>Week 13. Dec 1.</h2>
+
+<p>Lecture:</p>
+
+<ol>
+<li>Network flow[DLOD3].</li>
+<li>Ford-Fulkerson[DLOD3]. </li>
+<li>max flow-min cut duality theorem.</li>
+</ol>
+
+<p>Activity:</p>
+
+<ol>
+<li>Bipartite matching[DLOD3].</li>
+<li>Modeling problems as network flow[DLOC2?].</li>
+</ol>
+
+<h2>Week 14. Dec 8.</h2>
+
+<p>Lecture:</p>
+
+<ol>
+<li>NP Completeness[DLOC4, DLOC5].</li>
+<li>Reductions[DLOC4].</li>
+</ol>
+
+<p>Activity:
+1. Some classic reduction HP-HC, BP-Knapsack, 2part-knapsack, take your pick[DLOC4].
+2. "Are these claims credible possibles"? [DLOC5] (for instance Is there a contradiction between the dynamic programming for Knapsack and Bin Packing and their NP-Completeness)</p>
+
+<h2>Week 15. Dec 15.</h2>
+
+<p>Buffer. If there is time, approximation algorithm, or branch and bound, or meta heuristics, or ILP</p>
+
+<h2>Final. Dec 22.</h2>

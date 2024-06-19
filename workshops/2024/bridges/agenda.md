@@ -1,4 +1,4 @@
-# Agenda: Summer 2023 BRIDGES Workshop: Real World Data, Visualizations and Engaging Assignments Using BRIDGES 
+# Agenda: Summer 2024 BRIDGES Workshop: Real World Data, Visualizations and Engaging Assignments Using BRIDGES 
 
 ## Day 1 (June 24)
 
