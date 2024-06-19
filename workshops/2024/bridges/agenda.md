@@ -16,7 +16,7 @@
 |  10 - 10.15am    |  Coffee Break |
 |  10.15 - 10.35am | Put your class content on Google Drive. |
 |                  | Organize per module/chapter |
-|                  | [Google Drive](https://drive.google.com/drive/folders/1WtChXa8hXEHPIAOkrlMnqpWeJrjNV6-E?usp=share_link )                                           |
+|                  | [Google Drive](https://drive.google.com/drive/u/0/folders/1EHdqO6UZlaja-hgX9MTeT09_yhl0AXJS )                                           |
 |  10.35 - 11am  | What is BRIDGES?  |
 |                 | [slides](slides/bridgestutorial.pdf) |
 |  11am - 12pm | BRIDGES Open SWIM  (Solve a problem with BRIDGES)  |
