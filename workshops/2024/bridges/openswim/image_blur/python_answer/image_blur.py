@@ -8,7 +8,7 @@ def main():
     bridges.set_title("An example of image processing: Grayscale conversion, Image Blurring.")
 
     #read image into colorgrid
-    cg = read('./yosemite.ppm')
+    cg = read('../images/yosemite.ppm')
 
     #display colorgrid image
     bridges.set_data_structure(cg)
