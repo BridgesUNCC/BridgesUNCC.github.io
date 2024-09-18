@@ -17,7 +17,11 @@ public class reddit_snippet {
 
 		// get some data from the  "Ask Science" subreddit
 		ArrayList<Reddit> reddit_posts = ds.getRedditData("askscience");
+		int count = 0;
 		for (Reddit r: reddit_posts) {
+		    ++count;
+		    if (count > 10)
+			break;
 		    System.out.println("ID: "+r.getID());
 		    System.out.println("Title: "+r.getTitle());
 		    System.out.println("Author: "+r.getAuthor());

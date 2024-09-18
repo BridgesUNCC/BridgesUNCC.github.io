@@ -21,11 +21,15 @@
 	<span class="Comment">// Get a List of Elevation data  records from Bridges</span>
 	<span class="Statement">try</span> {
 		elev_data = ds.getElevationData(<span class="Constant">41.03133177632377</span>, -<span class="Constant">98.02593749997456</span>,
-					<span class="Constant">42.508577297430456</span>, -<span class="Constant">96.94531249997696</span>, <span class="Constant">0.02</span>);
+					<span class="Constant">42.508577297430456</span>, -<span class="Constant">96.94531249997696</span>);
 	}
 	<span class="Statement">catch</span> (std::string s) {
 		std::cerr &lt;&lt; <span class="Constant">&quot;Exception: &quot;</span> &lt;&lt; s &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
 	}
+	<span class="Statement">catch</span> (<span class="Type">char</span> <span class="Type">const</span>* s) {
+		std::cerr &lt;&lt; <span class="Constant">&quot;Exception: &quot;</span> &lt;&lt; s &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\n</span><span class="Constant">&quot;</span>;
+	}
+
 
 	<span class="Comment">// print the data dimensions  and the firs 10 elevation data values</span>
 	cout &lt;&lt; <span class="Constant">&quot;</span><span class="Special">\t</span><span class="Constant">Width: &quot;</span> &lt;&lt; elev_data.getCols() &lt;&lt; endl

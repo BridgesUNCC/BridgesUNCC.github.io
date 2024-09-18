@@ -1,0 +1,45 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges.color_grid <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.color <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+    <span class="Comment"># This example illustrates using the Bridges color grid</span>
+    <span class="Comment"># We will build a checker grid using two different colors</span>
+
+
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># title, description</span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">A CheckerBoard Example Using Grid Type</span><span class="Constant">&quot;</span>)
+    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">This is an example of the color grid with height and width 10. </span><span class="Constant">&quot;</span>
+        +   <span class="Constant">&quot;</span><span class="Constant">This example alternates between blue and red starting with red at the top left corner of the grid.</span><span class="Constant">&quot;</span>)
+
+
+    blue = Color(col_name=<span class="Constant">&quot;</span><span class="Constant">blue</span><span class="Constant">&quot;</span>)
+    red = Color(col_name=<span class="Constant">&quot;</span><span class="Constant">red</span><span class="Constant">&quot;</span>)
+
+    width = <span class="Constant">128</span>
+    height = <span class="Constant">128</span>
+    cg = ColorGrid(width, height, blue)
+
+    <span class="Comment">### This particular test checks for an edge case in how RLE encoding works.</span>
+    <span class="Comment">### If the last chunk of the RLE encoding is exactly the size of the RLE supported buffer</span>
+    <span class="Comment">### does it handle it correctly?</span>
+
+    <span class="Comment"># color the square</span>
+    <span class="Statement">for</span> y <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Constant">0</span>,width):
+        <span class="Statement">for</span> x <span class="Statement">in</span> <span class="Identifier">range</span>(<span class="Constant">0</span>, height):
+            cg.set(x, y, red)
+
+    bridges.set_data_structure(cg)
+
+    bridges.visualize()
+
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
+    main()
+
+</pre>

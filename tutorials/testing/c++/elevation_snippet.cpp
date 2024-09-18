@@ -20,12 +20,16 @@ int main(int argc, char **argv) {
 	// Get a List of Elevation data  records from Bridges
 	try {
 		elev_data = ds.getElevationData(41.03133177632377, -98.02593749997456, 
-					42.508577297430456, -96.94531249997696, 0.02);
+					42.508577297430456, -96.94531249997696);
 	}
 	catch (std::string s) {
 		std::cerr << "Exception: " << s << "\n";
 	}
+	catch (char const* s) {
+		std::cerr << "Exception: " << s << "\n";
+	}
 
+	
 	// print the data dimensions  and the firs 10 elevation data values
 	cout << "\tWidth: " << elev_data.getCols() << endl
 		<< "\tHeight: " << elev_data.getRows() << endl

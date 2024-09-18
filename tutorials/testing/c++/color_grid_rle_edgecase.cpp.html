@@ -1,0 +1,40 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> std;
+
+<span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;Color.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;ColorGrid.h&quot;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
+
+<span class="Comment">// This example illustrates using the Bridges color grid</span>
+<span class="Comment">// We will build a checker grid using two different colors</span>
+
+<span class="Type">int</span> main(<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
+	<span class="Comment">// create Bridges object</span>
+	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+		<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+	<span class="Comment">// set title, description</span>
+	bridges.setTitle(<span class="Constant">&quot;A CheckerBoard Example Using Grid Type&quot;</span>);
+	bridges.setDescription(<span class="Constant">&quot;This is an example of the color grid with height and width 10. &quot;</span>
+		<span class="Constant">&quot;This example alternates between blue and red starting with red at the top left corner of the grid.&quot;</span>);
+	<span class="Type">int</span> width = <span class="Constant">128</span>;
+	<span class="Type">int</span> height = <span class="Constant">128</span>;
+
+	ColorGrid cg(width, height, Color(<span class="Constant">&quot;red&quot;</span>));
+
+	<span class="Comment">// color the square</span>
+	<span class="Statement">for</span> (<span class="Type">int</span> row = <span class="Constant">0</span>; row &lt; width; row++)
+	  <span class="Statement">for</span> (<span class="Type">int</span> column = <span class="Constant">0</span>; column &lt; height; column++)
+	    cg.set(row, column, Color(<span class="Constant">&quot;blue&quot;</span>));
+
+	bridges.setDataStructure(&amp;cg);
+
+	bridges.visualize();
+
+	<span class="Statement">return</span> <span class="Constant">0</span>;
+}
+</pre>

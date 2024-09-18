@@ -23,7 +23,12 @@ int main(int argc, char **argv) {
 
 	vector<Reddit> reddit_list = ds.getRedditData("askscience");
 	std::cout<<""<<reddit_list.size()<<" post returned"<<"\n";
+	std::cout<<"Printing at most 10\n";
+	int count = 0;
 	for (auto post : reddit_list) {
+	  ++count;
+	  if (count >10)
+	    break;
 	  std::cout<<"ID: "<<post.getID()<<"\n";
 	  std::cout<<"Title: "<<post.getTitle()<<"\n";
 	  std::cout<<"Author: "<<post.getAuthor()<<"\n";

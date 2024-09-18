@@ -18,7 +18,11 @@
 
 		<span class="Comment">// get some data from the  &quot;Ask Science&quot; subreddit</span>
 		ArrayList&lt;Reddit&gt; reddit_posts = ds.getRedditData(<span class="Constant">&quot;askscience&quot;</span>);
+		<span class="Type">int</span> count = <span class="Constant">0</span>;
 		<span class="Statement">for</span> (Reddit r: reddit_posts) {
+		    ++count;
+		    <span class="Statement">if</span> (count &gt; <span class="Constant">10</span>)
+			<span class="Statement">break</span>;
 		    System.out.println(<span class="Constant">&quot;ID: &quot;</span>+r.getID());
 		    System.out.println(<span class="Constant">&quot;Title: &quot;</span>+r.getTitle());
 		    System.out.println(<span class="Constant">&quot;Author: &quot;</span>+r.getAuthor());

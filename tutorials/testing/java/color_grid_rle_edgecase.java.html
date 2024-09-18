@@ -1,0 +1,52 @@
+<pre id='vimCodeElement'>
+<span class="Comment">/**</span>
+<span class="Comment"> *</span><span class="Special"> Created by Kalpathi Subramanian</span>
+<span class="Comment"> *</span><span class="Special"> Date : 7/17/2018.</span>
+<span class="Comment"> *</span>
+<span class="Comment"> * krs@uncc.edu</span>
+<span class="Comment"> */</span>
+<span class="PreProc">import</span> java.lang.String;
+<span class="PreProc">import</span> bridges.connect.Bridges;
+<span class="PreProc">import</span> bridges.base.SLelement;
+<span class="PreProc">import</span> bridges.base.Color;
+<span class="PreProc">import</span> bridges.base.ColorGrid;
+
+<span class="Comment">/**</span>
+<span class="Comment"> *</span><span class="Special">  This example illustrates the use of the Grid type and its subclass, a ColorGrid.</span>
+<span class="Comment"> *  The example builds  a checkerboard with two different colors</span>
+<span class="Comment"> *</span>
+<span class="Comment"> */</span>
+
+<span class="Type">public</span> <span class="Type">class</span> color_grid_rle_edgecase {
+
+	<span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) <span class="Type">throws</span> Exception {
+
+		<span class="Comment">// This example illustrates using the Bridges color grid</span>
+		<span class="Comment">// We will build a checker grid using two different colors</span>
+
+		<span class="Comment">// initialize BRIDGES</span>
+		Bridges bridges = <span class="Statement">new</span> Bridges(YOUR_ASSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>,
+			<span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+    <span class="Comment">/// This test tries to trigger a very specific bug in colorgrid.</span>
+    <span class="Comment">/// It happens whenever the RLE buffer is exactly full in the last</span>
+    <span class="Comment">/// buffer it sends, causing a potential edge case.</span>
+
+    <span class="Type">int</span> width = <span class="Constant">128</span>;
+<span class="Type">int</span> height = <span class="Constant">128</span>;
+
+		Color blue = <span class="Statement">new</span> Color(<span class="Constant">&quot;blue&quot;</span>);
+		Color red = <span class="Statement">new</span> Color(<span class="Constant">&quot;red&quot;</span>);
+
+		ColorGrid cg  = <span class="Statement">new</span> ColorGrid(width, height, red);
+
+		<span class="Statement">for</span> (<span class="Type">int</span> row = <span class="Constant">0</span>; row &lt; height; row++)
+		    <span class="Statement">for</span> (<span class="Type">int</span> column = <span class="Constant">0</span>; column &lt; width; column++)
+			cg.set(row, column, blue);
+
+		bridges.setDataStructure(cg);
+
+		bridges.visualize();
+	}
+}
+</pre>

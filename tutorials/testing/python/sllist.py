@@ -33,6 +33,8 @@ def main():
     el0.get_link_visualizer(el1).color = "green"
     el3.get_link_visualizer(el4).color = "magenta"
 
+    bridges.element_label_flag = True
+    bridges.link_label_flag = True
     # visualize
     bridges.set_data_structure(el0)
     bridges.visualize()

@@ -1,0 +1,45 @@
+<pre id='vimCodeElement'>
+<span class="Comment">/*</span><span class="Comment">*</span>
+<span class="Comment"> * Created by Kalpathi Subramanian, 9/15/2024</span>
+<span class="Comment"> * krs@uncc.edu</span>
+<span class="Comment"> </span><span class="Comment">*/</span>
+
+<span class="PreProc">#include </span><span class="Constant">&quot;Bridges.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;DataSource.h&quot;</span>
+<span class="PreProc">#include </span><span class="Constant">&quot;BarChart.h&quot;</span>
+
+<span class="PreProc">#include </span><span class="Constant">&lt;iostream&gt;</span>
+<span class="PreProc">#include </span><span class="Constant">&lt;string&gt;</span>
+<span class="PreProc">#include </span><span class="Constant">&lt;vector&gt;</span>
+
+<span class="Statement">using</span> <span class="Type">namespace</span> std;
+<span class="Statement">using</span> <span class="Type">namespace</span> bridges;
+
+
+<span class="Type">int</span> main (<span class="Type">int</span> argc, <span class="Type">char</span> **argv) {
+	<span class="Comment">// create Bridges object</span>
+	Bridges bridges (YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;YOUR_USER_ID&quot;</span>, <span class="Constant">&quot;YOUR_API_KEY&quot;</span>);
+
+	BarChart bar;
+	bar.setTitle(<span class="Constant">&quot;Hello World BarChart!&quot;</span>);
+	bar.setSubTitle(<span class="Constant">&quot;Woah!&quot;</span>);
+	bar.setCategoriesLabel(<span class="Constant">&quot;Continents&quot;</span>);
+	bar.setValueLabel(<span class="Constant">&quot;Population (in millions)&quot;</span>);
+	bar.setBarOrientation(<span class="Constant">&quot;horizontal&quot;</span>);
+	bar.setTooltipSuffix(<span class="Constant">&quot; millions&quot;</span>);
+
+	vector&lt;string&gt; bins{<span class="Constant">&quot;Africa&quot;</span>, <span class="Constant">&quot;America&quot;</span>, <span class="Constant">&quot;Asia&quot;</span>, <span class="Constant">&quot;Europe&quot;</span>};
+	bar.setCategories(bins);
+
+	vector&lt;<span class="Type">double</span>&gt; y1{<span class="Constant">10</span>, <span class="Constant">100</span>, <span class="Constant">40</span>, <span class="Constant">23</span>};
+	vector&lt;<span class="Type">double</span>&gt; y2{<span class="Constant">100</span>, <span class="Constant">10</span>, <span class="Constant">80</span>, <span class="Constant">232</span>};
+	bar.addDataSeries(<span class="Constant">&quot;year 1&quot;</span>, y1);
+	bar.addDataSeries(<span class="Constant">&quot;year 2&quot;</span>, y2);
+
+	bridges.setDataStructure(bar);
+	bridges.visualize();
+
+
+	<span class="Statement">return</span> <span class="Constant">0</span>;
+}
+</pre>

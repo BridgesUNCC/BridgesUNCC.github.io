@@ -1,0 +1,37 @@
+<pre id='vimCodeElement'>
+<span class="PreProc">from</span> bridges.bridges <span class="PreProc">import</span> *
+<span class="PreProc">from</span> bridges.bar_chart <span class="PreProc">import</span> *
+<span class="PreProc">import</span> sys
+
+
+<span class="Statement">def</span> <span class="Identifier">main</span>():
+    <span class="Comment"># create the Bridges object, set credentials</span>
+    bridges = Bridges(YOUR_ASSSIGNMENT_NUMBER, <span class="Constant">&quot;</span><span class="Constant">YOUR_USER_ID</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">YOUR_API_KEY</span><span class="Constant">&quot;</span>)
+
+    <span class="Comment"># title, description</span>
+    bridges.set_title(<span class="Constant">&quot;</span><span class="Constant">BarChart Tutorial</span><span class="Constant">&quot;</span>)
+    bridges.set_description(<span class="Constant">&quot;</span><span class="Constant">BarCharts are cool!</span><span class="Constant">&quot;</span>)
+
+    bc = BarChart()
+    bc.title = <span class="Constant">&quot;</span><span class="Constant">Hello World BarChart!</span><span class="Constant">&quot;</span>
+    bc.subtitle = <span class="Constant">&quot;</span><span class="Constant">woah!</span><span class="Constant">&quot;</span>
+    bc.categories_label = <span class="Constant">&quot;</span><span class="Constant">Continents</span><span class="Constant">&quot;</span>
+    bc.value_label = <span class="Constant">&quot;</span><span class="Constant">Population (in millions)</span><span class="Constant">&quot;</span>
+    bc.orientation = <span class="Constant">&quot;</span><span class="Constant">horizontal</span><span class="Constant">&quot;</span>
+    bc.tooltip_suffix = <span class="Constant">&quot;</span><span class="Constant"> millions</span><span class="Constant">&quot;</span>
+
+    bc.categories = [<span class="Constant">&quot;</span><span class="Constant">Africa</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">America</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">Asia</span><span class="Constant">&quot;</span>, <span class="Constant">&quot;</span><span class="Constant">Europe</span><span class="Constant">&quot;</span>]
+
+    bc.add_data_series (<span class="Constant">&quot;</span><span class="Constant">year 1</span><span class="Constant">&quot;</span>, [<span class="Constant">10</span>, <span class="Constant">100</span>, <span class="Constant">40</span>, <span class="Constant">23</span>])
+    bc.add_data_series (<span class="Constant">&quot;</span><span class="Constant">year 2</span><span class="Constant">&quot;</span>, [<span class="Constant">100</span>, <span class="Constant">10</span>, <span class="Constant">80</span>, <span class="Constant">232</span>])
+
+    <span class="Comment"># set visualizer type</span>
+    bridges.set_data_structure(bc)
+    <span class="Comment"># visualize the tree</span>
+    bridges.visualize()
+
+
+<span class="Statement">if</span> __name__ == <span class="Constant">&quot;</span><span class="Constant">__main__</span><span class="Constant">&quot;</span>:
+    main()
+
+</pre>
