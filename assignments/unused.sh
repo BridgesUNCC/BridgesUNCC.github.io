@@ -10,7 +10,7 @@ then
     exit 1
 fi
 
-grep addassign generate.sh | cut -d \" -f 2  | sort  | uniq > /tmp/a
+grep addassign data.sh | cut -d \" -f 2  | sort  | uniq > /tmp/a
 
 ls -1 ${BRIDGESASSIGNMENT}/assignmentdb | grep -- - | sort  > /tmp/b
 
