@@ -1,5 +1,0 @@
-var searchData=
-[
-  ['url',['url',['../class_bridges_1_1data__src__dependent_1_1book_1_1_book.html#a243366fff7196a0f06e9dc5f4bc17b0e',1,'Bridges.data_src_dependent.book.Book.url()'],['../class_bridges_1_1data__src__dependent_1_1earthquake__usgs_1_1_earthquake_u_s_g_s.html#a1a7fcadbb52ac42ff2bc2de24906140f',1,'Bridges.data_src_dependent.earthquake_usgs.EarthquakeUSGS.url()'],['../class_bridges_1_1data__src__dependent_1_1gutenberg__book_1_1_gutenberg_book.html#a77bf5cb37ad09e8c5fa06eee5e8a582b',1,'Bridges.data_src_dependent.gutenberg_book.GutenbergBook.url()']]],
-  ['username',['username',['../class_bridges_1_1bridges_1_1_bridges.html#a09593511340ae03bed2abbf9dd12f48f',1,'Bridges.bridges.Bridges.username()'],['../class_bridges_1_1bridges_1_1_bridges.html#afe26b5521aae689055377e6f2e6a7212',1,'Bridges.bridges.Bridges.username()'],['../class_bridges_1_1connector_1_1_connector.html#aeab093f0dd4b59e46ab280bf7af5ffb8',1,'Bridges.connector.Connector.username()'],['../class_bridges_1_1connector_1_1_connector.html#ab87dbc1ca549f3c2b4ac5a19abcc20e0',1,'Bridges.connector.Connector.username()']]]
-];
