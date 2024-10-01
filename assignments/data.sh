@@ -16,11 +16,13 @@ addassignment "56-2DIndexing"
 addassignment "55-FrequencyPlayer"
 addassignment "68-MusicNotes-CS2"
 addassignment "65-Reddit"
-
+addassignment "37-SubsamplingBitDepth"
 
 addsubgroup "Input/Output"
 addassignment "10-HurricaneTracker"
 addassignment "72-PixelDrawing"
+addassignment "68-MusicNotes-CS2"
+addassignment "55-FrequencyPlayer"
 
 addsubgroup "1D Arrays"
 addassignment "33-AudioMixing"
@@ -28,6 +30,7 @@ addassignment "55-FrequencyPlayer"
 addassignment "68-MusicNotes-CS2"
 addassignment "65-Reddit"
 addassignment "70-WordleBot"
+addassignment "37-SubsamplingBitDepth"
 
 addsubgroup "2D Arrays"
 addassignment "6-GridSquareFill"
@@ -59,6 +62,7 @@ addassignment "55-FrequencyPlayer"
 addassignment "52-AudioWave"
 addassignment "33-AudioMixing"
 addassignment "68-MusicNotes-CS2"
+addassignment "37-SubsamplingBitDepth"
 
 addsubgroup "Simulation"
 addassignment "14-SpreadingFire"
@@ -100,6 +104,7 @@ addassignment "4-GraphEQ"
 addassignment "9-ShortestPathOSM"
 addassignment "31-TemporalPageRank"
 addassignment "39-BookDistance"
+addassignment "66-Chess-Data"
 
 
 addgroup "Algorithms"
