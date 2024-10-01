@@ -1,14 +1,22 @@
-Draw a Smiley Face!
-==================
+# Assignment 27 - Draw a Smiley Face!
 
-Goals
------
+## Example Output
+
+<img src="./.png" alt="image" width="550"></img>
+
+
+## Learning Outcomes
+1. Grid Manipulation
+2. Object Oriented Programming
+
+
+## Goals
 
 1. Learn how to add the Bridges library to a project.
 2. Practice using the Bridges variables and functions to draw sprites and colors on a game grid.
 
-Programming
------------
+
+## Description
 
 ###Tasks
 
@@ -19,7 +27,12 @@ Programming
 - Run your code and follow the link in the output to view your grid.
 - Make changes as needed to adjust how your grid looks.
 
-### Help
+
+## Extensions
+
+
+## Help
+
 #### For C++
 [NonBlockingGame documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1game_1_1_non_blocking_game.html)
 #### For Java

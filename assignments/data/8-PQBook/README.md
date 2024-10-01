@@ -9,7 +9,7 @@
 ## Learning Outcomes
 
 1. Binary Search Tree
-2. Hash tab;es
+2. Hash tables
 3. Heaps
 
 

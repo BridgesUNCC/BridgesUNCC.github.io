@@ -36,13 +36,14 @@ Build a queue of notes from a file
 
 #### Java
 [Bridges Audio Clip](https://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_audio_clip.html)
+
 [Java Queue](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html)
 
 #### C++ 
 
-ToDo
-
+[Bridges Audio Clip](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_audio_clip.html)
 
 #### Python 
 
-ToDo
+[Bridges Audio Clip](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1audio__clip_1_1_audio_clip.html)
+

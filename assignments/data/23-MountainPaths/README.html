@@ -1,13 +1,22 @@
-<h1>Mountain Paths - Determining a path of low elevation through a mountain</h1>
+<h1>Assignment 23 - Mountain Paths - Determining a path of low elevation through a mountain</h1>
+<h2>Example Output</h2>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2>Source</h2>
+<p>This assignment is adapted from a **<a href="http://nifty.stanford.edu/">Nifty</a>  assignment
+from 2016 proposed by Baker Franke. See **<a href="http://nifty.stanford.edu/2016/franke-mountain-paths/">Source</a></p>
+<h2>Learning Outcomes</h2>
+<ol>
+<li>Greedy Algorithm</li>
+<li>2D Arrays</li>
+<li>Data Visulization</li>
+<li>Modifying Datastructures</li>
+</ol>
 <h2>Goals</h2>
 <ol>
 <li>Working with 2D images of elevation maps</li>
 <li>Understanding Greedy algorithms and its application to a real-world application</li>
 <li>CS concepts: 2D array addressing, greedy algorithms</li>
 </ol>
-<h2>Source</h2>
-<p>This assignment is adapted from a **<a href="http://nifty.stanford.edu/">Nifty</a>  assignment
-from 2016 proposed by Baker Franke. See **<a href="http://nifty.stanford.edu/2016/franke-mountain-paths/">Source</a></p>
 <h2>Description</h2>
 <p>You are given elevation data of a mountainous region in the form of a 2D array of integers
 (see example image below of one of the datasets). Your goal is to find a path that takes
@@ -29,7 +38,7 @@ causes the smallest change (least effort to walk).  The idea is to start from an
 of the image (say the leftmost column), then make moves based on the pixels to the right,
 each time choosing the pixel that results in the smallest change. Your goal is to reach
 the right edge of the image.</p>
-<h2>Tasks</h2>
+<h3>Tasks</h3>
 <ol>
 <li>
 <p><em>get dataset, visualize as an image</em> You will use BRIDGES to define a lat/long range (rectangular bounding box of your choice) to access the elevation data (returned in an object
@@ -64,7 +73,7 @@ path (see example above). You can have a simple User Interface to specify the st
 point and rerun your program to display different paths.</p>
 </li>
 </ol>
-<h2>Variants</h2>
+<h2>Extensions</h2>
 <p>One can make variants of this assignment. Indeed, the greedy
 algorithm presented above is a heuristic; it does not return the path
 that sees the lowest change of elevation across the entire mountain. It only makes a
@@ -86,24 +95,24 @@ elevation.</p>
 traversed and the total change of elevation as a bi objective optimization problem.</p>
 </li>
 </ol>
-<h2>Additional Help:</h2>
+<h2>Help:</h2>
 <p><a href="http://bridgesuncc.github.io/">BRIDGES Team:</a> Contact the BRIDGES team for any
 issues with the BRIDGES API. This is an active project.</p>
-<h4>for Java</h4>
-<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1data__src__dependent_1_1_elevation_data.html">ElevationData Documentation</a></p>
-<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1connect_1_1_data_source.html">DataSource</a></p>
-<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_color_grid.html">ColorGrid documentation</a></p>
-<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_color.html">Color documentation</a></p>
-<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1connect_1_1_bridges.html">Bridges class documentation</a></p>
-<h4>for C++</h4>
-<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1dataset_1_1_elevation_data.html">ElevationData Documentation</a></p>
-<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_data_source.html">DataSource</a></p>
-<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_color_grid.html">ColorGrid documentation</a></p>
-<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_color.html">Color documentation</a></p>
-<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_bridges.html">Bridges Class documentation</a></p>
-<h4>for Python</h4>
-<p><a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1data__src__dependent_1_1elevation_1_1_elevation_data.html">Elevation Data Documentation</a></p>
-<p><a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1color__grid_1_1_color_grid.html">ColorGrid documentation</a></p>
-<p><a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1color_1_1_color.html">Color documentation</a></p>
-<p><a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1bridges_1_1_bridges.html">Bridges documentation</a></p>
-<p><a href="http://bridgesuncc.github.io/doc/python-api/current/html/data__source_8py.html">DataSource</a></p>
+<h4>For Java</h4>
+<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1data__src__dependent_1_1_elevation_data.html">ElevationData Documentation</a>
+<a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1connect_1_1_data_source.html">DataSource</a>
+<a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_color_grid.html">ColorGrid documentation</a>
+<a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_color.html">Color documentation</a>
+<a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1connect_1_1_bridges.html">Bridges class documentation</a></p>
+<h4>For C++</h4>
+<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1dataset_1_1_elevation_data.html">ElevationData Documentation</a>
+<a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_data_source.html">DataSource</a>
+<a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_color_grid.html">ColorGrid documentation</a>
+<a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_color.html">Color documentation</a>
+<a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_bridges.html">Bridges Class documentation</a></p>
+<h4>For Python</h4>
+<p><a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1data__src__dependent_1_1elevation_1_1_elevation_data.html">Elevation Data Documentation</a>
+<a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1color__grid_1_1_color_grid.html">ColorGrid documentation</a>
+<a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1color_1_1_color.html">Color documentation</a>
+<a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1bridges_1_1_bridges.html">Bridges documentation</a>
+<a href="http://bridgesuncc.github.io/doc/python-api/current/html/data__source_8py.html">DataSource</a></p>

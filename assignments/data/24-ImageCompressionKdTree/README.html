@@ -1,13 +1,20 @@
-<h1>Representing and Compressing Images Using K-D Trees</h1>
+<h1>Assignment 24 - Representing and Compressing Images Using K-D Trees</h1>
+<h2>Example Output</h2>
+<p><img src="./figures/square.png" alt="Square Image!" />
+<img src="./figures/square_tree.png" alt="Kd tree of Image!" /></p>
+<h2>Learning Outcomes</h2>
+<ol>
+<li>Recursion</li>
+<li>Data Visualization</li>
+<li>K-D Tree</li>
+</ol>
 <h2>Goals</h2>
 <ol>
-<li>Work with and manipulate binary search trees; here we use a spatial search tree, which is
-similar to quadtree or octree.</li>
-<li>Introduce students to images, their representation and compression using approximate
-representations.</li>
+<li>Work with and manipulate binary search trees; here we use a spatial search tree, which is similar to quadtree or octree.</li>
+<li>Introduce students to images, their representation and compression using approximate representations.</li>
 <li>Introduce students to BRIDGES Tree hierarchy, use of inheritance and polymorphism</li>
 </ol>
-<h2>Background</h2>
+<h2>Description</h2>
 <p>K-D trees (K stands for the number of dimensions) are a spatial equivalent  of the more familiar
 binary search trees, that usually have integer keys to facililtate efficient (log n) search).
 K-D trees  belong to the class of spatial search  tree structures, that include quadtrees,
@@ -22,7 +29,7 @@ a 3 level partitioning:</p>
 <p><img src="./figures/kdt-3-level.png" alt="Example of a 3 level Two dimensional K-D tree partitioned square!" /></p>
 <p><em>Illustrates a 2D region's partitioning with horizontal (X) and vertically (Y) oriented partitioners</em></p>
 <p>In the figures above, a 2D region is being partitioned. The first partitioner is the white line that goes across the region, dividing it into two subregions (these become children of the root node of the tree. At the next level, the yellow lines partition the two subregions creating two of their own children each. Finally the blue lines subdivide at the third level. Each region can contain data (di s) that can be  points or other information that can then be searched for efficiently knowing the location of the partitioning lines.</p>
-<h2>Example</h2>
+<h3>Example</h3>
 <p><img src="./figures/square.png" alt="Square Image!" />
 <img src="./figures/square_tree.png" alt="Kd tree of Image!" /></p>
 <p><em>Application of K-D Trees to representing a shape. Here the green square (left image)  is a
@@ -38,7 +45,6 @@ image rectangle into a set of  smaller sized rectangular regions  to represent t
 The entire image is now  represented by the tree with enough information (leaf nodes will have
 the region geometry and its color) to generate the image.</p>
 <p>Applications: Refer to the Wikipedia page on <strong><a href="https://en.wikipedia.org/wiki/K-d_tree">K-D trees</a></strong>  for additional information  and applications.</p>
-<h2>Project</h2>
 <p>You will use the  K-D TreeElement class structure as a subclass of the BinTreeElement defined in
 BRIDGES. You will use this structure along with the ColorGrid type to represent
 images using K-D Trees.</p>
@@ -132,7 +138,7 @@ tree) and generate a series of images of increasing detail.</p>
 	return nullptr;
 }
 </code></pre>
-<h3>Region Homogeneity:</h3>
+<h4>Region Homogeneity:</h4>
 <p>We need to be able to compute how homogeneous a region is before
 deciding to partition that region. You will write two versions of this function</p>
 <p><em>IsRegionHomogeneous ()</em></p>
@@ -169,11 +175,11 @@ pick a value between first and the second third (between (10+40/3,  50-40/3).  I
 width (max-min)  is less than  3, then return true (homogeneous) to avoid degenerate cases).</p>
 </li>
 </ol>
-<h3>Visualization:</h3>
+<h4>Visualization:</h4>
 <p>Note that we are using the ColorGrid type to fill the image with the region colors (r, g and b),
 so that we can visualize it with BRIDGES.  Follow the Colorgrid tutorials for filling in regions
 with the computed colors (as required by the ColorRegion() function above).</p>
-<h3>Extensions</h3>
+<h2>Extensions</h2>
 <p>The project can be extended in a number of ways to reinforce tree structures and explore
 applications:</p>
 <ol>
@@ -188,20 +194,19 @@ factor.</li>
 perspective.</li>
 </ol>
 <h2>Help</h2>
-<p><a href="http://bridgesuncc.github.io/">BRIDGES Team:</a> Contact the BRIDGES team for any issues with
-the BRIDGES API. This is an active project.</p>
-<h4>for C++</h4>
-<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_kd_tree_element.html">K-D Tree Element documentation</a></p>
-<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_color_grid.html">ColorGrid documentation</a></p>
-<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_color.html">Color documentation</a></p>
-<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_bridges.html">Bridges documentation</a></p>
-<h4>for Java</h4>
-<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_kd_tree_element.html">K-D Tree Element documentation</a></p>
-<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_color_grid.html">ColorGrid documentation</a></p>
-<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_color.html">Color documentation</a></p>
-<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/namespacebridges_1_1base.html">Bridges class documentation</a></p>
-<h4>for Python</h4>
-<p><a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1kd__tree__element_1_1_k_d_tree_element.html">K-D Tree Element documentation</a></p>
-<p><a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1color__grid_1_1_color_grid.html">ColorGrid documentation</a></p>
-<p><a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1color_1_1_color.html">Color documentation</a></p>
-<p><a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1bridges_1_1_bridges.html">Bridges documentation</a></p>
+<p><a href="http://bridgesuncc.github.io/">BRIDGES Team:</a> Contact the BRIDGES team for any issues with the BRIDGES API. This is an active project.</p>
+<h4>For C++</h4>
+<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_kd_tree_element.html">K-D Tree Element documentation</a>
+<a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_color_grid.html">ColorGrid documentation</a>
+<a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_color.html">Color documentation</a>
+<a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_bridges.html">Bridges documentation</a></p>
+<h4>For Java</h4>
+<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_kd_tree_element.html">K-D Tree Element documentation</a>
+<a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_color_grid.html">ColorGrid documentation</a>
+<a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_color.html">Color documentation</a>
+<a href="http://bridgesuncc.github.io/doc/java-api/current/html/namespacebridges_1_1base.html">Bridges class documentation</a></p>
+<h4>For Python</h4>
+<p><a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1kd__tree__element_1_1_k_d_tree_element.html">K-D Tree Element documentation</a>
+<a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1color__grid_1_1_color_grid.html">ColorGrid documentation</a>
+<a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1color_1_1_color.html">Color documentation</a>
+<a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1bridges_1_1_bridges.html">Bridges documentation</a></p>

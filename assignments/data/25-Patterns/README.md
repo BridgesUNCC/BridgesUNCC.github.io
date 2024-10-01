@@ -1,15 +1,29 @@
-Patterns
-========
+# Assignment 25 - Patterns
 
-Goals
------
-1) Learn how to modify and display a ColorGrid using Bridges
-2) Learn how to set/change colors for each pixel in the grid
-2) Practice using simple loops to display patterns using the BRIDGES 
- ColorGrid data structure
+## Example Output
 
-ColorGrid
----------
+<img src="./.png" alt="image" width="550"></img>
+
+
+## Learning Outcomes
+
+1. 2D Arrays
+2. Loops
+3. Conditions
+4. Visualization
+
+
+## Goals
+
+1. Learn how to modify and display a ColorGrid using Bridges
+2.   Learn how to set/change colors for each pixel in the grid
+3.   Practice using simple loops to display patterns using the BRIDGES ColorGrid data structure
+
+
+## Description
+
+### ColorGrid
+
 The BRIDGES ColorGrid class is an abstraction for representing 2D images. 
 It serves as a convenient way to display operations on images or other
 two dimensional structures. A similar structure is used in the BRIDGES Game 
@@ -29,27 +43,22 @@ mascot, team.
 - Quadrants, Cut the image in four quadrants of different colors
 - Or make a customized pattern of your own
 
-### Help
+## Extensions
+
+
+## Help
+
 #### for C++
-
 [ColorGrid documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_color_grid.html)
-
 [Color documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_color.html)
-
 [Bridges class documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_bridges.html)
 
 #### for Java
-
 [ColorGrid documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_color_grid.html)
-
 [Color documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_color.html)
-
 [Bridges class documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1connect_1_1_bridges.html)
 
 #### for Python
-
 [ColorGrid documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1color__grid_1_1_color_grid.html)
-
 [Color documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1color_1_1_color.html)
-
 [Bridges class documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1bridges_1_1_bridges.html)

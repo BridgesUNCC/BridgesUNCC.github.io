@@ -1,16 +1,20 @@
 Assignment 55 - Frequency Player
 ============
 
-Goals
------
+## Example Image
+
+<img src="figures/audioAfter.png" alt="After Threshold Applied" width="550px"></img>
+
+## Goals
+
 The purpose of this assignment is to learn to
  - Use methods/functions to compartmentalize code
  - Use loops to iterate over large quantities of items
  - Apply simple mathematical concepts in code
  - Understand and cast between data types
 
-Programming
------------
+## Description
+
 ### Tasks
  - Complete the `generateSineSample()` method. It should return a sample value according to the mathematical formula for a sine wave,
  which is `A * sin(2 * pi * f * t)`, where A is amplitude, f is frequency, and t is time.
@@ -28,10 +32,10 @@ Programming
 - ac.setSample(channel, index, value), where ac is an AudioClip, sets the sample at the index to the value passed in.
 See the documentation for language-specific details.
 
-### Help
-#### For Java
+## Help
+### For Java
 [AudioClip documentation](http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_audio_clip.html)
-#### For C++
+### For C++
 [AudioClip documentation](http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_audio_clip.html)
-#### For Python
+### For Python
 [AudioClip documentation](http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1audio__clip_1_1_audio_clip.html)

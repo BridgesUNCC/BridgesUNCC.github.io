@@ -52,4 +52,3 @@ The goal of this part is to fade one audio source out while another audio source
 
 #### For Python
 [AudioClip Documentation](https://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1audio__clip_1_1_audio_clip.html)
-
