@@ -24,7 +24,10 @@ npm install broken-link-checker
 ### check
 
 ```
-node_modules/broken-link-checker/bin/blc -r http://bridgesuncc.github.io
+node_modules/broken-link-checker/bin/blc -r  http://bridgesuncc.github.io | tee /tmp/report
+node_modules/broken-link-checker/bin/blc -r http://bridgesuncc.github.io/navbar.html | tee -a /tmp/report
+node_modules/broken-link-checker/bin/blc -r http://bridgesuncc.github.io/tutorials/Tutorial_Header.html | tee -a /tmp/report
+grep -v ───OK /tmp/report #note that these are not dashes before OK
 ```
 
 
