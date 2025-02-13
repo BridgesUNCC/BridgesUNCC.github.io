@@ -31,3 +31,7 @@ echo              REPORT
 echo ================================
 
 echo ${REPORT}
+
+echo ================================
+
+echo Note that the new assignment data has been commited to git but not pushed
