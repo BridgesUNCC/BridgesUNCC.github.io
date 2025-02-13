@@ -1,6 +1,10 @@
 Assignment 32 - Tic Tac Toe
 ===========================
 
+## Image
+
+<img src="./figures/icon.png" alt="drawing" width="350"></img>
+
 Goals
 -----
 

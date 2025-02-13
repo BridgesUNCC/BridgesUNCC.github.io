@@ -5,6 +5,9 @@ The classic game of Snake. Move a "snake" (line of sprites) along a 2D grid atte
 If the snake  runs into itself the game is over and the player has lost.
 The objective  of the game is to make the snake as big as possible.
 
+<img src="./figures/icon.png" alt="image" width="550"></img>
+
+
 Learning Goals
 --------------
 1. Loops, Conditionals and minimally struct/classes

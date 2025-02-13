@@ -3,7 +3,7 @@ Assignment 55 - Frequency Player
 
 ## Example Image
 
-<img src="figures/audioAfter.png" alt="After Threshold Applied" width="550px"></img>
+<img src="./figures/defaultFreq.png" alt="After Threshold Applied" width="550px"></img>
 
 ## Goals
 

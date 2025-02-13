@@ -2,7 +2,7 @@
 
 ## Example Output
 
-<img src="./.png" alt="image" width="550"></img>
+<img src="./figures/icon.png" alt="image" width="550"></img>
 
 
 ## Learning Outcomes

@@ -5,6 +5,10 @@
 This is a nifty assignment from 2008 proposed by Don Blaheta.
 [Source](http://nifty.stanford.edu/2008/blaheta-maze/)
 
+## Image
+
+<img src="./figures/icon.png" alt="drawing" width="350"></img>
+
 
 ## Learning Outcomes
 

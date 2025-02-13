@@ -1,0 +1,55 @@
+<h1>ColorEncoding</h1>
+<p>This assignment let students explore the implication of encoding of
+colors in graphics.</p>
+<h2>Learning outcome</h2>
+<p>-write a basic image generation code
+-interpolate values linearly
+-understand the impact of bit-depth in color encoding
+-using random dithering to combat discretization</p>
+<h2>Steps</h2>
+<h3>Step 1</h3>
+<p>Write a code that create a Color Grid of a given size (say 800x800)
+and which given two colors. (Say white and black.) creates a gradient
+where the top left pixel is one color (say white) and the bottom right pixel
+is the other color (say black). And that interpolate through all
+shades (here of grey) in between.</p>
+<p>A common way to do this is to first write a color interpolation
+function that takes two colors and a blending parameter <code>b</code> in [0,1]
+and that returns a color that takes a fraction <code>b</code> of its channel from
+one color and <code>1-b</code> from the other.</p>
+<p>Then for each pixel of the image, set its color to be the blended
+color between the top left and the top right pixel, with a blending
+parameter set to the distance between the pixel and top left to the
+distance between teh top left pixel and the bottom right pixel.</p>
+<h3>Step 2</h3>
+<p>Adjust the code to generate a color gradient from color rgb(24,24,24),
+rgb(48,48,48).</p>
+<p>Is there something off about the image you generated? Does it look
+&quot;banded&quot; to you (you may need to adjust your screen's brightness to
+see it.)</p>
+<p>Why do you think this is happenning? Have you seen this effect before?
+It is common in poorly compressed videos with dark scenes.</p>
+<h3>Step 3</h3>
+<p>The problem comes from the rounding that happens, if a blended channel
+should have value say <code>3.4</code>, it gets truncated to the lower integer
+<code>3</code>, which makes a band all the pixels of blended value 3.0 up to
+<code>3.9999</code> get rounded to <code>3</code>.</p>
+<p>An idea to correct this effect is to round probabilistically so that a
+channel of blended value <code>3.4</code> actually has an expected value of <code>3.4</code>
+(instead of <code>3.0</code> in the previous version).</p>
+<p>A way to do this is with a value of <code>x.y</code> to give value <code>x+1</code> with
+probability <code>y</code> and <code>x</code> with probability <code>1-y</code>.</p>
+<p>Implement this. Does this correct the visual bending effect?</p>
+<h2>Help</h2>
+<h3>for C++</h3>
+<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_color_grid.html">ColorGrid documentation</a></p>
+<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_color.html">Color documentation</a></p>
+<p><a href="http://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1_bridges.html">Bridges class documentation</a></p>
+<h3>for Java</h3>
+<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_color_grid.html">ColorGrid documentation</a></p>
+<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_color.html">Color documentation</a></p>
+<p><a href="http://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1connect_1_1_bridges.html">Bridges class documentation</a></p>
+<h3>for Python</h3>
+<p><a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1color__grid_1_1_color_grid.html">ColorGrid documentation</a></p>
+<p><a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1color_1_1_color.html">Color documentation</a></p>
+<p><a href="http://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1bridges_1_1_bridges.html">Bridges class documentation</a></p>

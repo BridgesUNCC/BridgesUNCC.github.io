@@ -2,8 +2,8 @@
 
 ## Example Image
 
-<img src="figures/figure-1" alt="Example Simple" width="550px" />
-<img src="figures/figure-2" alt="Example Named" width="550px" />
+<img src="figures/figure-1.png" alt="Example Simple" width="550px" />
+<img src="figures/figure-2.png" alt="Example Named" width="550px" />
 
 ## Goals
 The purpose of this assignment is to learn to
