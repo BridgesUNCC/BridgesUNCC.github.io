@@ -4,6 +4,11 @@ Assignment 31 - Temporal Page Rank
 This assignment is a more advanced version of [Bacon
 Number](http://bridgesuncc.github.io/assignments/data//3-GraphBaconNumber/README.html)
 
+## Image
+
+<img src="./figures/figure.JPG" alt="drawing" width="350"></img>
+
+
 Goals
 -----
 

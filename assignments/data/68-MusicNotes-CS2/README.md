@@ -8,6 +8,8 @@ fact, this would increase engagement of the assignment as it provides choices
 for students to choose their own songs and share the assignemnt output 
 with others.  
 
+<img src="./figures/icon.png" alt="image" width="550"></img>
+
 
 Goals
 ------

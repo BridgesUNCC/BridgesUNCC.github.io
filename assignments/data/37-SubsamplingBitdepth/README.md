@@ -2,9 +2,9 @@
 
 ## Example Images
 
-<img src="figures/audio32" alt="32 Bit Audio" width="550px"></img>
+<img src="./figures/audio32.png" alt="32 Bit Audio" width="550px"></img>
 
-<img src="figures/audio8" alt="8 Bit Audio" width="550px"></img>
+<img src="./figures/audio8.png" alt="8 Bit Audio" width="550px"></img>
 
 ## Goals
 

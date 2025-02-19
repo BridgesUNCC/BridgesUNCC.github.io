@@ -1,8 +1,8 @@
 # Spatial Indexing - 43
 
 ## Example Images
-<img src="./figures/fig1.png" alt="Example" width="550px"></img>
-<img src="./figures/fig2.png" alt="Example" width="550px"></img>
+<img src="./figures/icon.png" alt="Example" width="550px"></img>
+<img src="./figures/icon.svg" alt="Example" width="550px"></img>
 
 ## Goals
 

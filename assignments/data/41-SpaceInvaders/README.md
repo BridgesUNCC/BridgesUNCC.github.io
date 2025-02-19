@@ -1,5 +1,9 @@
 # Space Invaders Game - 41
 
+## Image
+
+<img src="./figures/icon.png" alt="drawing" width="350"></img>
+
 ## Goals
 The purpose of this assignment is to learn to
  - Organize data in two-dimensional arrays
