@@ -34,7 +34,7 @@ Build a queue of notes from a file
     * Iterate over the queue again to add each note to the audio clip
 
 ### Reference
-[Music Theory Converting Notes to HZ](https://pages.mtu.edu/~suits/notefreqs.html)
+[Converting Notes to HZ](https://en.wikipedia.org/wiki/Piano_key_frequencies)
 
 #### Java
 [Bridges Audio Clip](https://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_audio_clip.html)
