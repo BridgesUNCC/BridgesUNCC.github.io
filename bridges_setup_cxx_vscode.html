@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BRIDGES-C++ Setup Page for VS Code</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- w3IncludeHTML() -->
+    <script src="https://www.w3schools.com/lib/w3data.js"></script>
+
+    <!-- all pages need those. -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/bridges.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/glyphicon.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/footer.css">
+  </head>
+  <body>
+
+    <div w3-include-html="./navbar.html">
+      <script>
+	w3IncludeHTML();
+      </script>
+    </div>
+    
+    <h2>BRIDGES(C++) With VS Code:Getting Started</h2>
+    <table class = "table table-bordered">
+      <thead>
+	<tr> <td class = "col-md-2"> <b>Step 1: Install WSL and Ubuntu</b> 
+		<ul>
+		<li> Open PowerShell and run the following command:<p>
+         	<i> wsl --install -d ubuntu </i> <p>
+		<li> Follow  the prompts to create a local Ubuntu account;
+			<b> Remember the password you set!</b>
+		</td>
+	</tr>
+	<tr> <td class = "col-md-2"> <b>Step 2: Install VS Code</b> 
+	    <ul> 
+	    <li> If you do not have VS code installed, download it from 
+		<a href="https://code.visualstudio.com/"> VS Code Site</a> 
+		and install it on your computer. 
+	    </ul>
+	  </td>
+	  <td class = "col-md-8"> 
+	    <img src = "./img/vs_code/vs_code1.png" width = "800"></img> 
+	  </td>
+	</tr>
+	<tr> 
+	  <td colspan = "2">
+	    <b>Step 3: Set Up VS Code and WSL </b> 
+	    <ul>  
+			<li> Open VSCode
+			<li> Go to the Extensions tab and install the WSL Extension
+			<li> Follow the prompts to connect your WSL instance with VSCode
+	    </ul>
+	  </td>
+	</tr>
+	<tr>
+	  <td class = "col-md-2"> <b>Step 4: Install Needed Ubuntu Linux Packages</b> 
+	    <ul> 
+		<li> Press  <b> 'ctrl + shift +' to open the terminal
+		<li> Run the following commands from the terminal: <p>
+			<i> sudo apt update </i> <br>
+			<i>sudo apt install gcc </i><br>
+			<i>sudo apt install build-essential </i><br>
+			<i>sudo apt install g++-14 </i><br>
+			<i>sudo apt install gdb </i><p>
+			<i>sudo apt install libcurl4-openssl-dev </i><br>
+	    </ul>
+	  </td> 
+	  <td class = "col-md-8">  
+	  </td>
+	</tr>
+<tr> 
+	  <td class="col-md-2">
+	    <b>Step 2: Create Bridges Account</b> 
+	    Visit the Bridges 
+	    <a href = "http://bridgesuncc.github.io"> main page</a> 
+	    and create yourself an account by clicking the login button
+	    on the top navigation bar.  Please ensure that 
+            your user id is devoid of spaces, as it will be 
+            used as part of the web link for your projects.
+	    After creating your account, click 
+	    on your profile name in the upper right corner to 
+	    view your profile. Once in your profile, you will see your
+	    API Key; you will need this API key later
+	    in the tutorial(as well as in every BRIDGES program 
+	    you write). <b>NOTE:</b> Make sure to remember 
+	    your password. 
+	  </td>
+	  <td class = "col-md-8"> 
+	    <img src = "./img/vs_code/bridges_login.png" width = "800"></img> 
+	  </td>
+</tr>
+	<tr>
+	  <td class = "col-md-2"> <b>Step 5: Set up Project Directory </b>
+	    <ul> 
+		<li> At this point, you have an Ubuntu linux system on your Windows machine and you can directly work on it like any other Linux machine and run BRIDGES programs. The compiler 
+is g++ and any additional needed tools can be installed using the <i>apt </i> tool. 
+		<li> To use the VSCode IDE and Debugger, you will need to set up
+			a project and add files to it and set up its configuration in a
+			file called <i>tasks.json</i>
+		<li> Use VSCode's menus to create a new project and then create
+			 a file for your BRIDGES program.
+		<li> Go to the <a href = "https://bridgesuncc.github.io/tutorials/SinglyLinkedList.html"> BRIDGES Tutorial Page</a> and copy  a C++ tutorial program
+	into a file, for instance a singly linked list example.
+		<li> Copy paste this program into your source code file.
+		<li> Create a folder called <i>.vscode</i> in your project (alternately,
+		the first time you hit the <i>Play</i> button, this will be created).
+		<li> Add this <a href = "img/vs_code/tasks.json"> tasks.json</a> file
+			in the .vscode directory
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td class = "col-md-2"> <b>Step 5: Configuring VS Code</b>
+	<ul> 
+	<li> Your <i>tasks.json</i>, which is a JSON file, is used to build 
+		the compile command that will
+		be used by VS code to execute your project. You will
+		need to make the following changes to run BRIDGES programs without errors
+	<li> Take a look at that file using a text editor. Make sure your compile 
+	command is set to <i>/usr/bin/g++</i>
+	<li> Next look at the <i>args</i> variable, containing a number of 
+		options. It is a sequence of option flags and its corresponding values.
+		You will need to modify two of the arguments that pertains to your
+		BRIDGES installation:
+	<li> <i> -I </i> argument is the path to your BRIDGES include files;
+		modify this path to where you placed your BRIDGES source files and
+		point to its <i>include</i> folder
+	<li> <i> -L </i> argument is the path to your BRIDGES library;
+		modify this path to where you placed your BRIDGES source files and
+		point to its <i>lib</i> folder
+	</ul>
+	<li> You should not  have to change any other option. 
+
+	</td>
+</tr>
+<tr>
+	<td class = "col-md-2"> <b>Step 5: Running your BRIDGES program</b>
+	<ul> 
+	<li> Hit the <i> Play </i> button to run your program
+	<li> If prompted, select <b>Build with G++</b> from the dropdown
+	<li> You should see your compilation happening on your Terminal(Console)
+and you will see a web link appearing 
+	</ul>
+	</td>
+</tr>
+<div w3-include-html="./footer.html"></div>
+</body>
+</html>
+

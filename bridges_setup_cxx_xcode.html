@@ -22,7 +22,8 @@
       </script>
     </div>
     
-    <h2>BRIDGES-C++: Getting Started[XCode]</h2>
+    <h2>BRIDGES-C++: Getting Started[XCode]</h2> <p>
+	<i> Note: These instructions generated using <b>Xcode version 16.4</b></i> 
     <table class = "table table-bordered">
       <thead>
 	<tr> 
@@ -97,8 +98,8 @@
 	    </ul>
 	  </td> 
 	  <td class = "col-md-8">  
-	    <img src = "./img/Tutorial/cxx/xcode/new_proj.png" width = "400"></img> 
-	    <img src = "./img/Tutorial/cxx/xcode/new_proj2.png" width = "400"></img> 
+	    <img src = "./img/bridges_setup/c++/xcode/new_proj.png" width = "400"></img> 
+	    <img src = "./img/bridges_setup/c++/xcode/new_proj2.png" width = "400"></img> 
 	  </td>
 	</tr>
 	<tr>
@@ -115,7 +116,7 @@
 	    </ul>
 	  </td>
 	  <td class = "col-md-8">  
-	    <img src = "./img/Tutorial/cxx/xcode/bridges_src.png" width = "800"></img> 
+	    <img src = "./img/bridges_setup/c++/xcode/bridges_src.png" width = "800"></img> 
 	  </td>
 	</tr>
 	<tr> <td class = "col-md-2"> <b>Step 6: Project Settings</b>
@@ -143,32 +144,26 @@
 		  <li> Click anywhere else to get rid of the 
 		    editor box.
 		</ul>
-	      <li> <b> Library Paths:</b> You will need to specify
-                the path to the CURL library(this is usually under
-		the lib folder of your CURL installation).
 		<ul>
 		  <li> Look for the "Library Search Paths" right 
 		    under "Header Search Paths"
 		  <li> Similar to the previous step, double click to
 		    bring up the Editor box and enter Library Search
 		    path.	
+	      <li>  The search could be something like <i>/Users/your-username/local/curl850/lib)</i>
 		  <li> Click anywhere else to get rid of the 
 		    editor box.
 		</ul>
-	      <li> <b> Link the CURL Library</b>
+	      <li> <b> Link the CURL and Bridges Libraries</b>
 		<ul>
-		  <li> Scroll to top of Settings and click on
-		    <i> Build Phases</i> Select "Link Binary with
-		    Libraries".
-		  <li> Click the <b>+</b> button  and select 
-		    <b>Add Other</b>. Navigate to your Curl 
-		    library installation and add the library
-		    (liburl.dylib) to the project.
+		  <li> Scroll to "Linking-General" section and look for "Other Linker Flags"
+		  <li> Click the <b>+</b> button  and add the Bridges library with 
+			<i>-l bridges"</i>.  Repeat for the Curl library and type <i> -l curl </i>
 		</ul>
 		<td class = "col-md-8"> 
-		  <img src = "./img/Tutorial/cxx/xcode/includes.png" width = "800"></img> <p><p>
-		    <img src = "./img/Tutorial/cxx/xcode/lib_path.png" width = "800"></img>
-		    <img src = "./img/Tutorial/cxx/xcode/lib.png" width = "800"></img>
+		  <img src = "./img/bridges_setup/c++/xcode/includes.png" width = "800"></img> <p><p>
+		    <img src = "./img/bridges_setup/c++/xcode/lib_path.png" width = "800"></img>
+		    <img src = "./img/bridges_setup/c++/xcode/lib.png" width = "800"></img>
                 </td>
 	</tr>
 	<tr>
@@ -187,7 +182,7 @@
 
 	  </td>
 	  <td class = "col-md-8">  
-	    <img src = "./img/Tutorial/cxx/xcode/run.png" width = "800"></img>
+	    <img src = "./img/bridges_setup/c++/xcode/run.png" width = "800"></img>
 	  </td>
 	</tr>
 	<tr>
@@ -203,7 +198,7 @@
 	    </ul>
 	  </td>
 	  <td class = "col-md-8">  
-	    <img src = "./img/Tutorial/cxx/xcode/sllist.png" width = "800"></img>
+	    <img src = "./img/bridges_setup/c++/xcode/sllist.png" width = "800"></img>
 	  </td>
 	</tr>
       </thead>
