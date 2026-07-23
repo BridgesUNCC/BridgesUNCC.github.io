@@ -1,0 +1,59 @@
+<h1>Assignment 87 - Seam Carving Images</h1>
+
+<p><img src="" alt="Example Simple" width="550px" /></p>
+
+<h2>Learning Outcomes</h2>
+
+<p>Resize images with a shortest path algorithm</p>
+
+<h2>Goals</h2>
+
+<ol>
+<li>File I/O</li>
+<li>2D arrays (Image processing/filtering)</li>
+<li>Alg Design: Dynamic Progamming</li>
+<li>Alg Design: Greedy approach (graph shortest paths)</li>
+</ol>
+
+<p><img src="./figures/orig.png" alt="image" width="450"></img><br>
+<b> Original Image</b><br>
+<img src="./figures/energy.png" alt="image" width="450"></img><br>
+<b> Energy Image </b><br>
+<img src="./figures/seams.png" alt="image" width="450"></img><br>
+<b> Horizontal and Vertical Seams</b></p>
+
+<p>You will generate a visualization that looks like the figures above.</p>
+
+<h3>Task</h3>
+
+<p>Visualize a resized version  of a given image while retaining key image objects
+and features</p>
+
+<h3>Steps</h3>
+
+<ol>
+<li>Read the given image </li>
+<li>Compute the energy at each pixel using central differences in X and Y and summing the squares of the gradients in red, green, blue components</li>
+<li>Identify vertical and horizontal seams by determining a sequence of pixels that minimize the energy sum along the seam.</li>
+<li>Can use a dynamic programming  or a shortest path approach to the optimization.
+<ol>
+<li>For dynamic programming, start with the bottom row  with the energy values. Then update the rows above forming the optimal energy sums, using the 3 nearest neighbors (left, middle, right). For horizontal seams, start from the right most column.</li>
+<li>For shortest path approach, build a graph with each pixel forming edges to its 3 nearest neighbors (down for vertical, right for horizontal seams). Create a node to connect to all pixels in the top row and another to connect to the pixels in teh bottom row. Run Dijkstra's shortest path algorithm.</li>
+</ol></li>
+<li>Identify the pixels in the seam by following the smallest pixel in each row (for vertical seam) or column (for horizontal seam), among the 3 nearest neighbors.</li>
+<li>Remove the identified seam pixels </li>
+</ol>
+
+<h2>Help</h2>
+
+<h4>for Java</h4>
+
+<p><a href="https://bridgesuncc.github.io/doc/java-api/current/html/classbridges_1_1base_1_1_color_grid.html">ColorGrid Class</a></p>
+
+<h4>for C++</h4>
+
+<p><a href="https://bridgesuncc.github.io/doc/cxx-api/current/html/classbridges_1_1datastructure_1_1_color_grid.html">ColorGrid Class</a></p>
+
+<h4>For Python</h4>
+
+<p><a href="https://bridgesuncc.github.io/doc/python-api/current/html/classbridges_1_1color__grid_1_1_color_grid.html">ColorGrid Class</a></p>
