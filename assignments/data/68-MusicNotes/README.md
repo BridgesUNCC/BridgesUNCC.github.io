@@ -1,5 +1,5 @@
-Assignment 68 - Music Notes for cs2
-========================
+Melody -- Music Notes 
+=====================
 
 This assignment is a good introduction to queues, as well as reading from a file.
 

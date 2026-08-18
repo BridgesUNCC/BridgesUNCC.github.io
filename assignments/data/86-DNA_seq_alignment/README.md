@@ -1,0 +1,46 @@
+# Assignment 86 - DNA Sequence Alignment and Similarity Clustering
+
+<img src="./figures/cluster_tree.png" alt="Cluster Tree" width="450px" />
+<b> Part of the tree cluster </b>
+<img src="./figures/score.png" alt="Needlemen-Wunch on a simple example" width="200px"/>
+<b> Needlemen-Wunch Score on a 2 alphabet example</b>
+
+## Learning Outcomes
+
+The purpose of this assignment (inspired by a SIGCSE Nifty assignment) is to
+compute the similarity of 70 organisms using their DNA sequences and build
+a resulting tree or dendrogram that displays their similarities. 
+
+1. File I/O (read the provided data files)
+2. String processing (DNA sequence comparison using the Needleman-Wunch 
+			alg. to compute a score
+3. Algorithm Design:
+	1. Brute Force  (single link clustering)
+	2.  Minimum Spanning Tree (Kruskal's alg for computing disjoint sets)
+4. Data Structures: lists, dictionaries, binary tree, strings
+
+## Example Output
+
+You will generate a visualization that looks like the figure above.
+
+
+### Steps
+1. Read the input data files (organisms, DNA sequences, BLOSUM tables)
+2. Implement the Needleman-Wunsch algorithm for similarity computation
+3. Implement a single-linkage clustering algorithm (exhaustive search) to group species with similar comparison scores
+4. Implement Kruskal's MST algorith for more efficient clustering.
+5.  Create a Binary Tree using BRIDGES to display the clustering, with unique species as the leaf nodes and clusters represented by internal nodes.
+
+## Help
+
+#### for Java
+
+[BinaryTree Class](https://bridgesuncc.github.io/doc/java-api/3.4.3-8-g731f2b7/html/)
+
+#### for C++
+
+[BinaryTree Class](https://bridgesuncc.github.io/doc/cxx-api/3.4.4-32-gf4d4148/html/)
+
+#### For Python
+
+[BinaryTree Class](https://bridgesuncc.github.io/doc/python-api/3.4.4-26-g1c7f7ad/html/)
